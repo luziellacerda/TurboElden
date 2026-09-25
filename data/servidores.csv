@@ -1,0 +1,14 @@
+categoria,base_url,endpoint_ou_recurso,metodo,funcao,condicao,verificacao_2026_09_25
+frontend,https://samboxmanager.squareweb.app,/drawers.json/{CHAVE}/android,GET,"Catálogo de gavetas, jogos, URLs e capas","Após licença válida; chave no caminho",Raiz HTTP 200
+frontend,https://samboxmanager.squareweb.app,/telemetry/android,POST,"Telemetria, uso e crash reports","Conforme Telemetry/CrashReports",Raiz HTTP 200
+frontend,https://keyauth.win/api/1.2/,operações init/license,POST,"Inicialização da aplicação e validação de licença","Na ativação e revalidação",HEAD sem credenciais HTTP 403
+frontend,https://api.ipify.org,/,GET,"Descobrir IP público para telemetria","Quando o subsistema de telemetria inicia",GET respondeu texto
+frontend,https://buildbot.libretro.com,/nightly/android/latest/arm64-v8a/{core}_libretro_android.so.zip,GET,"Baixar core Libretro ARM64 ausente","Ao abrir jogo cujo core não está instalado",Índice HTTP 200
+frontend,https://buildbot.libretro.com,/assets/system/Dolphin.zip,GET,"Arquivos de sistema Dolphin","Quando necessário",HTTP 200
+frontend,https://buildbot.libretro.com,/assets/system/PPSSPP.zip,GET,"Arquivos de sistema PPSSPP","Quando necessário",HTTP 200
+frontend,https://api.thegamesdb.net/v1,/Games/ByGameName e recursos relacionados,GET,"Scraping de metadados/capas","Scraper TheGamesDB selecionado",Base HTTP 404 sem rota
+frontend,https://www.screenscraper.fr/api2,/jeuInfos.php e parâmetros de API,GET,"Scraping de metadados/capas","Scraper ScreenScraper selecionado",HEAD sem credenciais HTTP 403
+core-potencial,https://retroachievements.org,/dorequest.php,HTTP,"RetroAchievements no core ARMSX2","Somente se configurado no core",Não testado
+core-potencial,https://lobby.dolphin-emu.org,/,HTTPS,"Lobby de rede Dolphin","Somente em funções online do Dolphin",Não testado
+core-potencial,stun.dolphin-emu.org,STUN,UDP,"NAT traversal Dolphin","Somente em funções online do Dolphin",Não testado
+core-potencial,https://suyu.dev,recursos variados,HTTPS,"Recursos do core Suyu","Somente em funções específicas do core",Não testado

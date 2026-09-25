@@ -1,0 +1,42 @@
+sistema,aliases_observados,formatos_observados,core_ou_engine,estado_da_evidencia
+Arcade,"arcade fbneo fba mame mame2003 atomiswave awave naomi naomi2",".zip .7z .lst .dat","fbneo / mame2003_plus / fbalpha2012",Confirmado por strings e lógica de catálogo
+Capcom CPS1/2/3,"cps1 cps2 cps3 capcomcps1 capcomcps2 capcomcps3",".zip","fbalpha2012_cps1/cps2/cps3 ou fbneo",Confirmado parcialmente
+Atomiswave/Naomi,"atomiswave awave naomi naomi2",".gdi .cdi .chd .cue .bin .elf .m3u .zip",flycast,Confirmado parcialmente
+Atari 2600,"atari2600 a2600",".a26 .bin .zip",stella,Plataforma/formato confirmados; core inferido
+Atari 7800,"atari7800 a7800",".a78 .bin .zip",prosystem,Plataforma/formato confirmados; core inferido
+Atari Jaguar,"jaguar atarijaguar",".j64 .jag .rom .abs .cof .bin .prg .zip",virtualjaguar,Confirmado por strings
+Atari Lynx,"atarilynx lynx",".lnx .zip",handy/mednafen_lynx,Confirmado parcialmente
+ColecoVision,"colecovision coleco",".col .rom .zip",gearcoleco/bluemsx,Plataforma/formato confirmados; core inferido
+Dreamcast,"dreamcast dc",".gdi .cdi .chd .cue .bin .elf .m3u .zip",flycast,Confirmado por strings
+Game Boy,"gb gameboy",".gb .zip",gambatte,Plataforma/formato confirmados; core inferido
+Game Boy Color,"gbc gameboycolor",".gbc .gb .zip",gambatte,Plataforma/formato confirmados; core inferido
+Game Boy Advance,"gba gameboyadvance",".gba .zip",mgba/gpsp,Plataforma/formato confirmados; core inferido
+Game Gear,"gamegear gg segagamegear",".gg .zip",gearsystem/genesis_plus_gx,Plataforma/formato confirmados; core inferido
+Game & Watch,"gameandwatch gw gamewatch",".mgw",gw,Confirmado por strings
+Nintendo GameCube,"gamecube gc ngc",".iso .gcm .gcz .ciso .rvz .wbfs .wia .dol .elf .m3u",dolphin_libretro_android.so,Confirmado e embutido
+Master System,"mastersystem sms segamastersystem",".sms .zip",genesis_plus_gx/gearsystem,Plataforma/formato confirmados; core inferido
+Mega Drive/Genesis,"megadrive genesis md segagenesis segamegadrive",".md .gen .smd .bin .sms .zip",genesis_plus_gx/picodrive,Plataforma/formato confirmados; core inferido
+MSX,"msx msx1 msx2",".rom .mx1 .mx2 .dsk .cas .m3u .zip .7z",bluemsx/fmsx,Confirmado parcialmente
+Neo Geo,"neogeo",".zip",fbneo/fbalpha2012_neogeo,Confirmado parcialmente
+Neo Geo CD,"neogeocd neocd ngcd neogeocdz",".cue .ccd .chd .iso .m3u .zip",neocd,Confirmado parcialmente
+Neo Geo Pocket/Color,"ngp ngpc neogeopocket neogeopocketcolor",".ngp .ngc .zip",mednafen_ngp,Confirmado por strings
+Nintendo Entertainment System/FDS,"nes famicom fc nintendoentertainmentsystem nintendinho fds famicomdisksystem",".nes .fds .unf .unif .zip",fceumm,Confirmado por strings
+Nintendo 64,"n64 nintendo64",".n64 .z64 .v64 .zip",mupen64plus_next_gles3_libretro_android.so,Confirmado e embutido
+Nintendo DS,"nds ds nintendods",".nds .zip",melonds,Confirmado por strings
+Nintendo 3DS,"3ds nintendo3ds",".3ds .3dsx .cci .cxi .cia .app .elf .axf",citra,Confirmado por strings; core baixável
+Nintendo Switch,"switch nintendoswitch nsw ns",".nsp .xci .nca .nro",suyu_libretro_android.so,Confirmado e embutido
+Odyssey 2/Videopac,"o2em odyssey2 odyssey videopac",".bin .zip",o2em,Confirmado por strings
+PC Engine/TurboGrafx-16,"pcengine pce tg16 turbografx16 turbografx",".pce .zip",mednafen_pce_fast,Confirmado parcialmente
+PC Engine CD/TurboGrafx-CD,"pcenginecd tg16cd turbografxcd",".pce .sgx .cue .ccd .chd .zip",mednafen_pce_fast,Confirmado parcialmente
+SuperGrafx,"supergrafx sgx pcenginesupergrafx",".pce .sgx .cue .ccd .chd .zip",mednafen_supergrafx,Confirmado por strings
+PlayStation,"psx ps1 playstation playstation1 psone",".pbp .cue .chd .bin .iso .img .m3u",pcsx_rearmed/mednafen_psx,Confirmado parcialmente
+PlayStation 2,"ps2 playstation2 ps2br playstation2br",".iso .chd .cso .zso .bin .elf .gz .mdf .nrg .img .m3u",armsx2_libretro_android.so,Confirmado e embutido
+PSP,"psp playstationportable",".iso .cso .pbp .chd .elf .prx .zip",ppsspp,Confirmado; core/pacote baixável
+Sega 32X,"sega32x 32x",".32x .zip",picodrive,Plataforma/formato confirmados; core inferido
+Sega CD/Mega-CD,"segacd megacd",".cue .ccd .chd .iso .m3u .zip",genesis_plus_gx/picodrive,Plataforma/formato confirmados; core inferido
+Sega Saturn,"saturn segasaturn ss",".cue .ccd .chd .iso .m3u .zip",yabasanshiro_libretro_android.so,Confirmado e embutido
+SG-1000,"sg-1000",".bin .zip",genesis_plus_gx/gearsystem,Plataforma confirmada; formato/core inferidos
+Super Nintendo,"snes sfc superfamicom supernintendo supernes satellaview",".smc .sfc .fig .swc .bs .zip",snes9x,Confirmado por strings
+Virtual Boy,"virtualboy vb",".vb .vboy .zip",mednafen_vb,Confirmado por strings
+Nintendo Wii,"wii nintendowii",".iso .wbfs .rvz .ciso .gcz .wia .wad .dol .elf .m3u",dolphin_libretro_android.so,Confirmado e embutido
+WonderSwan/Color,"wonderswan wsc ws wonderswancolor",".ws .wsc .zip",mednafen_wswan,Confirmado por strings
