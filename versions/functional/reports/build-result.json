@@ -1,0 +1,28 @@
+{
+  "Output": "E:\\ESTUDO APK\\TurboRetroEmu-funcoes.apk",
+  "SHA256": "3F14E4FED3C42CB2AFA280EDCB2B2A0E0E51FC8C65F77D4C2069AE1525F67796",
+  "OriginalEntries": 408,
+  "LocalEntries": 409,
+  "ByteIdentical": 404,
+  "Changed": [
+    "AndroidManifest.xml",
+    "classes3.dex",
+    "classes4.dex",
+    "lib/arm64-v8a/libmain.so"
+  ],
+  "Added": "classes6.dex",
+  "AssetsIdentical": 164,
+  "NativeIdentical": 7,
+  "NativePatch": [
+    "0x160D4C..0x160D53: mov w21,wzr; b 0x160DE0",
+    "0x1AA148..0x1AA14B: ret (telemetry IP lookup disabled)"
+  ],
+  "LocalPassword": "turbo123",
+  "ServerLoginImplemented": false,
+  "OldLicenseAndTelemetryPostEnabled": false,
+  "TelemetryPublicIpLookupEnabled": false,
+  "FunctionalGetAndDownloadCodeUnchanged": true,
+  "CatalogAuthorizationBypassed": false,
+  "DeviceRuntimeTested": false,
+  "RunDirectory": "E:\\ESTUDO APK\\TurboRetroEmu-funcional\\runs\\20260925-123625"
+}
