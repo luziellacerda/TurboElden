@@ -1,0 +1,31 @@
+{
+  "Output": "E:\\ESTUDO APK\\TurboRetroEmu-catalogo-local.apk",
+  "SHA256": "21E6045F69457A05ECBFA6495507C14BC00483C4ADCB490FE4C6D7DFCF90B15D",
+  "OriginalEntries": 408,
+  "LocalEntries": 410,
+  "ByteIdentical": 404,
+  "Changed": [
+    "AndroidManifest.xml",
+    "classes3.dex",
+    "classes4.dex",
+    "lib/arm64-v8a/libmain.so"
+  ],
+  "Added": [
+    "classes6.dex",
+    "assets/turboretro/catalog.json"
+  ],
+  "CatalogSha256": "4C09C066C592ACD5481067FF2B9DF0409F01016BF93CD517E298655A899F7792",
+  "CatalogCategories": 46,
+  "LocalCatalogWithoutRemoteRequest": true,
+  "AssetsIdentical": 164,
+  "NativeIdentical": 7,
+  "NativePatch": "GuiLicense only: 0x23B644 b 0x23AAB0 (finish); 0x239790 nop (old login activation)",
+  "OriginalStartupAndStoreCallbackPreserved": true,
+  "HttpBridgePatch": "Local catalogue GET only; original HTTP body and other methods preserved",
+  "TelemetryPreserved": true,
+  "LocalPassword": "turbo123",
+  "ServerLoginImplemented": false,
+  "RemoteAuthorizationUnchanged": true,
+  "DeviceRuntimeTested": false,
+  "RunDirectory": "E:\\ESTUDO APK\\TurboRetroEmu-catalogo-local\\runs\\20260925-141506"
+}
