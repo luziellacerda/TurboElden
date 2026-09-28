@@ -76,27 +76,6 @@
       <margin>0.012 0.018</margin>
       <zIndex>10</zIndex>
     </imagegrid>
-    <gridtile name="default">
-      <padding>0.012 0.018</padding>
-      <selectionMode>image</selectionMode>
-      <imageSizeMode>maxSize</imageSizeMode>
-      <imageColor>FFFFFFD8</imageColor>
-      <backgroundEdgeColor>2879AFC0</backgroundEdgeColor>
-      <backgroundCenterColor>07101DE8</backgroundCenterColor>
-      <backgroundCornerSize>0.012</backgroundCornerSize>
-      <reflexion>0.12 0</reflexion>
-    </gridtile>
-    <gridtile name="selected">
-      <padding>0.012 0.018</padding>
-      <selectionMode>image</selectionMode>
-      <imageSizeMode>maxSize</imageSizeMode>
-      <imageColor>FFFFFFFF</imageColor>
-      <backgroundEdgeColor>69DCEEFF</backgroundEdgeColor>
-      <backgroundCenterColor>211E43F5</backgroundCenterColor>
-      <backgroundCornerSize>0.012</backgroundCornerSize>
-      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
-      <reflexion>0.16 0</reflexion>
-    </gridtile>
     <text name="md_description">
       <pos>0.50 0.815</pos>
       <size>0.74 0.10</size>
@@ -150,27 +129,6 @@
       <margin>0.012 0.018</margin>
       <zIndex>10</zIndex>
     </imagegrid>
-    <gridtile name="default">
-      <padding>0.012 0.018</padding>
-      <selectionMode>image</selectionMode>
-      <imageSizeMode>maxSize</imageSizeMode>
-      <imageColor>FFFFFFD8</imageColor>
-      <backgroundEdgeColor>2879AFC0</backgroundEdgeColor>
-      <backgroundCenterColor>07101DE8</backgroundCenterColor>
-      <backgroundCornerSize>0.012</backgroundCornerSize>
-      <reflexion>0.12 0</reflexion>
-    </gridtile>
-    <gridtile name="selected">
-      <padding>0.012 0.018</padding>
-      <selectionMode>image</selectionMode>
-      <imageSizeMode>maxSize</imageSizeMode>
-      <imageColor>FFFFFFFF</imageColor>
-      <backgroundEdgeColor>69DCEEFF</backgroundEdgeColor>
-      <backgroundCenterColor>211E43F5</backgroundCenterColor>
-      <backgroundCornerSize>0.012</backgroundCornerSize>
-      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
-      <reflexion>0.16 0</reflexion>
-    </gridtile>
     <text name="md_description">
       <pos>0.50 0.815</pos>
       <size>0.74 0.10</size>
@@ -224,27 +182,6 @@
       <margin>0.012 0.018</margin>
       <zIndex>10</zIndex>
     </imagegrid>
-    <gridtile name="default">
-      <padding>0.012 0.018</padding>
-      <selectionMode>image</selectionMode>
-      <imageSizeMode>maxSize</imageSizeMode>
-      <imageColor>FFFFFFD8</imageColor>
-      <backgroundEdgeColor>2879AFC0</backgroundEdgeColor>
-      <backgroundCenterColor>07101DE8</backgroundCenterColor>
-      <backgroundCornerSize>0.012</backgroundCornerSize>
-      <reflexion>0.12 0</reflexion>
-    </gridtile>
-    <gridtile name="selected">
-      <padding>0.012 0.018</padding>
-      <selectionMode>image</selectionMode>
-      <imageSizeMode>maxSize</imageSizeMode>
-      <imageColor>FFFFFFFF</imageColor>
-      <backgroundEdgeColor>69DCEEFF</backgroundEdgeColor>
-      <backgroundCenterColor>211E43F5</backgroundCenterColor>
-      <backgroundCornerSize>0.012</backgroundCornerSize>
-      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
-      <reflexion>0.16 0</reflexion>
-    </gridtile>
     <text name="md_description">
       <pos>0.50 0.815</pos>
       <size>0.74 0.10</size>
