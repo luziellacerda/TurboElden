@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="base" x2="0" y2="1"><stop stop-color="#09091d"/><stop offset=".62" stop-color="#111634"/><stop offset="1" stop-color="#050815"/></linearGradient>
+    <radialGradient id="violet"><stop stop-color="#7250c9" stop-opacity=".42"/><stop offset="1" stop-color="#7250c9" stop-opacity="0"/></radialGradient>
+    <radialGradient id="cyan"><stop stop-color="#21c9e8" stop-opacity=".23"/><stop offset="1" stop-color="#21c9e8" stop-opacity="0"/></radialGradient>
+    <linearGradient id="rail"><stop stop-color="#6c61f2" stop-opacity="0"/><stop offset=".5" stop-color="#6c61f2" stop-opacity=".32"/><stop offset="1" stop-color="#6c61f2" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#base)"/>
+  <ellipse cx="420" cy="240" rx="780" ry="530" fill="url(#violet)"/>
+  <ellipse cx="1510" cy="600" rx="780" ry="520" fill="url(#cyan)"/>
+  <path d="M0 118h1920M0 934h1920" stroke="#a3a9e5" stroke-opacity=".12" stroke-width="2"/>
+  <path d="M0 768h1920" stroke="url(#rail)" stroke-width="4"/>
+  <path d="M0 788h1920" stroke="#7e74dd" stroke-opacity=".1" stroke-width="1"/>
+  <path d="M0 842C380 700 620 830 960 750S1540 680 1920 790" fill="none" stroke="#71dcf1" stroke-opacity=".15" stroke-width="3"/>
+  <path d="M0 888C420 750 690 880 1030 800S1570 770 1920 850" fill="none" stroke="#ae80ff" stroke-opacity=".14" stroke-width="3"/>
+  <text x="1790" y="79" fill="#a8b7db" font-family="Arial, sans-serif" font-size="17" text-anchor="end" letter-spacing="3">SELECIONE UM SISTEMA</text>
+  <text x="76" y="1000" fill="#a8b7db" font-family="Arial, sans-serif" font-size="18" letter-spacing="2">SUA BIBLIOTECA DE JOGOS</text>
+</svg>

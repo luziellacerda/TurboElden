@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <formatVersion>4</formatVersion>
+
+  <view name="system">
+    <image name="background">
+      <path>../_shared/background.svg</path>
+      <pos>0 0</pos>
+      <size>1 1</size>
+    </image>
+    <image name="logo">
+      <path>../_shared/cards/${system.theme}.svg</path>
+      <pos>0.05 0.06</pos>
+      <maxSize>0.16 0.13</maxSize>
+      <origin>0 0</origin>
+    </image>
+    <carousel name="systemcarousel">
+      <type>horizontal</type>
+      <pos>0.5 0.52</pos>
+      <size>0.92 0.44</size>
+      <origin>0.5 0.5</origin>
+      <logoSize>0.16 0.34</logoSize>
+      <logoScale>1.30</logoScale>
+      <logoAlignment>center</logoAlignment>
+      <maxLogoCount>7</maxLogoCount>
+      <color>00000000</color>
+    </carousel>
+    <text name="systemInfo">
+      <pos>0.24 0.08</pos>
+      <size>0.50 0.06</size>
+      <fontSize>0.034</fontSize>
+      <color>F2F4FA</color>
+      <alignment>left</alignment>
+    </text>
+    <helpsystem name="help">
+      <pos>0.03 0.955</pos>
+      <fontSize>0.022</fontSize>
+      <textColor>EEEEEE</textColor>
+      <iconColor>33CCFF</iconColor>
+    </helpsystem>
+  </view>
+
+  <view name="basic">
+    <image name="background">
+      <path>../_shared/background-game.svg</path>
+      <pos>0 0</pos>
+      <size>1 1</size>
+    </image>
+    <image name="logo">
+      <path>../_shared/cards/${system.theme}.svg</path>
+      <pos>0.035 0.035</pos>
+      <maxSize>0.11 0.09</maxSize>
+      <origin>0 0</origin>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_title">
+      <pos>0.50 0.72</pos>
+      <size>0.80 0.07</size>
+      <origin>0.5 0.5</origin>
+      <fontSize>0.041</fontSize>
+      <color>FFFFFF</color>
+      <alignment>center</alignment>
+      <zIndex>20</zIndex>
+    </text>
+    <imagegrid name="gamegrid">
+      <imageSource>image</imageSource>
+      <gameImage>../_shared/game-default.svg</gameImage>
+      <folderImage>../_shared/folder-default.svg</folderImage>
+      <pos>0.035 0.17</pos>
+      <size>0.93 0.48</size>
+      <autoLayout>5 1</autoLayout>
+      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
+      <scrollDirection>horizontal</scrollDirection>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+      <animateSelection>false</animateSelection>
+      <margin>0.012 0.018</margin>
+      <zIndex>10</zIndex>
+    </imagegrid>
+    <gridtile name="default">
+      <padding>5</padding>
+      <selectionMode>image</selectionMode>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFD8</imageColor>
+      <backgroundEdgeColor>2879AFC0</backgroundEdgeColor>
+      <backgroundCenterColor>07101DE8</backgroundCenterColor>
+      <backgroundCornerSize>0.012</backgroundCornerSize>
+      <reflexion>0.12 0</reflexion>
+    </gridtile>
+    <gridtile name="selected">
+      <padding>5</padding>
+      <selectionMode>image</selectionMode>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFFF</imageColor>
+      <backgroundEdgeColor>69DCEEFF</backgroundEdgeColor>
+      <backgroundCenterColor>211E43F5</backgroundCenterColor>
+      <backgroundCornerSize>0.012</backgroundCornerSize>
+      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
+      <reflexion>0.16 0</reflexion>
+    </gridtile>
+    <text name="md_description">
+      <pos>0.50 0.815</pos>
+      <size>0.74 0.10</size>
+      <origin>0.5 0</origin>
+      <fontSize>0.021</fontSize>
+      <color>D4D9E4</color>
+      <alignment>center</alignment>
+      <zIndex>20</zIndex>
+    </text>
+    <helpsystem name="help">
+      <pos>0.03 0.955</pos>
+      <fontSize>0.022</fontSize>
+      <textColor>EEEEEE</textColor>
+      <iconColor>33CCFF</iconColor>
+    </helpsystem>
+  </view>
+
+  <view name="detailed">
+    <image name="background">
+      <path>../_shared/background-game.svg</path>
+      <pos>0 0</pos>
+      <size>1 1</size>
+    </image>
+    <image name="logo">
+      <path>../_shared/cards/${system.theme}.svg</path>
+      <pos>0.035 0.035</pos>
+      <maxSize>0.11 0.09</maxSize>
+      <origin>0 0</origin>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_title">
+      <pos>0.50 0.72</pos>
+      <size>0.80 0.07</size>
+      <origin>0.5 0.5</origin>
+      <fontSize>0.041</fontSize>
+      <color>FFFFFF</color>
+      <alignment>center</alignment>
+      <zIndex>20</zIndex>
+    </text>
+    <imagegrid name="gamegrid">
+      <imageSource>image</imageSource>
+      <gameImage>../_shared/game-default.svg</gameImage>
+      <folderImage>../_shared/folder-default.svg</folderImage>
+      <pos>0.035 0.17</pos>
+      <size>0.93 0.48</size>
+      <autoLayout>5 1</autoLayout>
+      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
+      <scrollDirection>horizontal</scrollDirection>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+      <animateSelection>false</animateSelection>
+      <margin>0.012 0.018</margin>
+      <zIndex>10</zIndex>
+    </imagegrid>
+    <gridtile name="default">
+      <padding>5</padding>
+      <selectionMode>image</selectionMode>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFD8</imageColor>
+      <backgroundEdgeColor>2879AFC0</backgroundEdgeColor>
+      <backgroundCenterColor>07101DE8</backgroundCenterColor>
+      <backgroundCornerSize>0.012</backgroundCornerSize>
+      <reflexion>0.12 0</reflexion>
+    </gridtile>
+    <gridtile name="selected">
+      <padding>5</padding>
+      <selectionMode>image</selectionMode>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFFF</imageColor>
+      <backgroundEdgeColor>69DCEEFF</backgroundEdgeColor>
+      <backgroundCenterColor>211E43F5</backgroundCenterColor>
+      <backgroundCornerSize>0.012</backgroundCornerSize>
+      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
+      <reflexion>0.16 0</reflexion>
+    </gridtile>
+    <text name="md_description">
+      <pos>0.50 0.815</pos>
+      <size>0.74 0.10</size>
+      <origin>0.5 0</origin>
+      <fontSize>0.021</fontSize>
+      <color>D4D9E4</color>
+      <alignment>center</alignment>
+      <zIndex>20</zIndex>
+    </text>
+    <helpsystem name="help">
+      <pos>0.03 0.955</pos>
+      <fontSize>0.022</fontSize>
+      <textColor>EEEEEE</textColor>
+      <iconColor>33CCFF</iconColor>
+    </helpsystem>
+  </view>
+
+  <view name="grid">
+    <image name="background">
+      <path>../_shared/background-game.svg</path>
+      <pos>0 0</pos>
+      <size>1 1</size>
+    </image>
+    <image name="logo">
+      <path>../_shared/cards/${system.theme}.svg</path>
+      <pos>0.035 0.035</pos>
+      <maxSize>0.11 0.09</maxSize>
+      <origin>0 0</origin>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_title">
+      <pos>0.50 0.72</pos>
+      <size>0.80 0.07</size>
+      <origin>0.5 0.5</origin>
+      <fontSize>0.041</fontSize>
+      <color>FFFFFF</color>
+      <alignment>center</alignment>
+      <zIndex>20</zIndex>
+    </text>
+    <imagegrid name="gamegrid">
+      <imageSource>image</imageSource>
+      <gameImage>../_shared/game-default.svg</gameImage>
+      <folderImage>../_shared/folder-default.svg</folderImage>
+      <pos>0.035 0.17</pos>
+      <size>0.93 0.48</size>
+      <autoLayout>5 1</autoLayout>
+      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
+      <scrollDirection>horizontal</scrollDirection>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+      <animateSelection>false</animateSelection>
+      <margin>0.012 0.018</margin>
+      <zIndex>10</zIndex>
+    </imagegrid>
+    <gridtile name="default">
+      <padding>5</padding>
+      <selectionMode>image</selectionMode>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFD8</imageColor>
+      <backgroundEdgeColor>2879AFC0</backgroundEdgeColor>
+      <backgroundCenterColor>07101DE8</backgroundCenterColor>
+      <backgroundCornerSize>0.012</backgroundCornerSize>
+      <reflexion>0.12 0</reflexion>
+    </gridtile>
+    <gridtile name="selected">
+      <padding>5</padding>
+      <selectionMode>image</selectionMode>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFFF</imageColor>
+      <backgroundEdgeColor>69DCEEFF</backgroundEdgeColor>
+      <backgroundCenterColor>211E43F5</backgroundCenterColor>
+      <backgroundCornerSize>0.012</backgroundCornerSize>
+      <autoLayoutSelectedZoom>1.18</autoLayoutSelectedZoom>
+      <reflexion>0.16 0</reflexion>
+    </gridtile>
+    <text name="md_description">
+      <pos>0.50 0.815</pos>
+      <size>0.74 0.10</size>
+      <origin>0.5 0</origin>
+      <fontSize>0.021</fontSize>
+      <color>D4D9E4</color>
+      <alignment>center</alignment>
+      <zIndex>20</zIndex>
+    </text>
+    <helpsystem name="help">
+      <pos>0.03 0.955</pos>
+      <fontSize>0.022</fontSize>
+      <textColor>EEEEEE</textColor>
+      <iconColor>33CCFF</iconColor>
+    </helpsystem>
+  </view>
+</theme>

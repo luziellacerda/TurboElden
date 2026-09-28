@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="600" viewBox="0 0 420 600">
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#102746"/><stop offset="1" stop-color="#03070D"/></linearGradient></defs>
+  <rect x="2" y="2" width="416" height="596" rx="24" fill="url(#bg)" stroke="#28C8FF" stroke-width="4"/>
+  <path d="M65 198h118l28 32h144v172H65z" fill="#0A1525" stroke="#168BCE" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M72 250h276M72 300h276M72 350h276" stroke="#28C8FF" stroke-width="3" opacity=".45"/>
+  <text x="210" y="500" fill="#D5E8F6" font-family="sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="4">PASTA DE JOGOS</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="base" x2="0" y2="1"><stop stop-color="#09091d"/><stop offset=".66" stop-color="#10142c"/><stop offset="1" stop-color="#060914"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#704ccc" stop-opacity=".31"/><stop offset="1" stop-color="#704ccc" stop-opacity="0"/></radialGradient>
+    <linearGradient id="panel"><stop stop-color="#1c2445" stop-opacity=".92"/><stop offset="1" stop-color="#10172d" stop-opacity=".96"/></linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#base)"/>
+  <ellipse cx="1000" cy="340" rx="1010" ry="580" fill="url(#glow)"/>
+  <rect x="36" y="132" width="1848" height="584" rx="27" fill="url(#panel)" stroke="#7682bd" stroke-opacity=".18" stroke-width="2"/>
+  <path d="M36 752h1848" stroke="#69dcee" stroke-opacity=".48" stroke-width="3"/>
+  <path d="M36 774h1848" stroke="#8d6bed" stroke-opacity=".2" stroke-width="1"/>
+  <path d="M0 977h1920" stroke="#a3a9e5" stroke-opacity=".13" stroke-width="2"/>
+  <text x="1790" y="79" fill="#a8b7db" font-family="Arial, sans-serif" font-size="17" text-anchor="end" letter-spacing="3">ESCOLHA SEU JOGO</text>
+</svg>

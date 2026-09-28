@@ -44,3 +44,7 @@ O script lê apenas o arquivo local. Foi conferido com dados sintéticos, sem um
 Este é um estudo de engenharia reversa, não um projeto Android compilável. O código C++ original não foi recuperado, e os pacotes sanitizados não permitem reconstruir integralmente o APK. O JADX deixou marcações de erro ou método não decompilado em 32 arquivos de bibliotecas de terceiros; nenhuma dessas marcações aparece no pacote Java do frontend. Os jogos e os serviços autenticados não foram executados/testados.
 
 Os resultados descrevem o arquivo identificado pelo hash acima e o estado observado em 25/09/2026. O material de terceiros conserva seus direitos e avisos existentes; este repositório não atribui uma nova licença ao código recuperado.
+
+## TurboramaStation + TurboEden em um aplicativo
+
+A pasta [`versions/turboeden-unico/`](versions/turboeden-unico/) documenta a versão 1.0.8 executada em aparelho e publica o tema editável. A navegação do tema é carrossel de sistemas, seguido pelos jogos do sistema selecionado. O APK de teste contém chaves e firmware privados, portanto não foi incluído no Git.

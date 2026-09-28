@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="600" viewBox="0 0 420 600">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#0C1D34"/><stop offset="1" stop-color="#02050B"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#10A9FF" stop-opacity=".1"/><stop offset=".5" stop-color="#39D4FF" stop-opacity=".9"/><stop offset="1" stop-color="#10A9FF" stop-opacity=".1"/></linearGradient>
+  </defs>
+  <rect x="2" y="2" width="416" height="596" rx="24" fill="url(#bg)" stroke="#168BCE" stroke-width="4"/>
+  <path d="M35 420h350M35 450h350M35 480h350M35 510h350" stroke="url(#line)" stroke-width="2" opacity=".65"/>
+  <path d="M45 555L210 370l165 185M85 555l125-140 125 140" fill="none" stroke="#159BFC" stroke-width="3" opacity=".6"/>
+  <circle cx="210" cy="250" r="105" fill="#07101D" stroke="#28C8FF" stroke-width="5"/>
+  <path d="M175 250h70M210 215v70" stroke="#28C8FF" stroke-width="12" stroke-linecap="round"/>
+  <text x="210" y="112" fill="#CDEEFF" font-family="sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="5">TURBORAMA</text>
+  <text x="210" y="570" fill="#89D9FF" font-family="sans-serif" font-size="21" text-anchor="middle" letter-spacing="3">SEM CAPA</text>
+</svg>
