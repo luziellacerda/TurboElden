@@ -1,0 +1,2104 @@
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" package="dev.eden.eden_emulator" platformBuildVersionCode="36" platformBuildVersionName="16">
++<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" package="dev.turboeden.turboeden_emulator" platformBuildVersionCode="36" platformBuildVersionName="16">
+     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+     <uses-feature android:name="android.hardware.gamepad" android:required="false"/>
+     <uses-feature android:name="android.software.leanback" android:required="false"/>
+@@ -18,9 +18,9 @@
+     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+     <uses-permission android:maxSdkVersion="32" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+     <uses-permission android:maxSdkVersion="32" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+-    <permission android:name="dev.eden.eden_emulator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+-    <uses-permission android:name="dev.eden.eden_emulator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+-    <application android:allowBackup="true" android:appCategory="game" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/tv_banner" android:dataExtractionRules="@xml/data_extraction_rules_api_31" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="true" android:fullBackupContent="@xml/data_extraction_rules" android:hasFragileUserData="false" android:icon="@mipmap/ic_launcher" android:isGame="true" android:label="Eden" android:localeConfig="@xml/_generated_res_locale_config" android:name="org.yuzu.yuzu_emu.YuzuApplication" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true">
++    <permission android:name="dev.turboeden.turboeden_emulator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
++    <uses-permission android:name="dev.turboeden.turboeden_emulator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
++    <application android:allowBackup="true" android:appCategory="game" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/tv_banner" android:dataExtractionRules="@xml/data_extraction_rules_api_31" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="true" android:fullBackupContent="@xml/data_extraction_rules" android:hasFragileUserData="false" android:icon="@mipmap/ic_launcher" android:isGame="true" android:label="TurboEden" android:localeConfig="@xml/_generated_res_locale_config" android:name="org.yuzu.yuzu_emu.YuzuApplication" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true">
+         <meta-data android:name="com.samsung.android.gamehub" android:value="true"/>
+         <meta-data android:name="com.xiaomi.gamecenter.sdk.service.enabled" android:value="true"/>
+         <meta-data android:name="com.asus.gamecenter.gamebooster" android:value="true"/>
+@@ -49,7 +49,7 @@
+                 <data android:mimeType="application/octet-stream" android:scheme="content"/>
+             </intent-filter>
+             <intent-filter>
+-                <action android:name="dev.eden.eden_emulator.LAUNCH_WITH_CUSTOM_CONFIG"/>
++                <action android:name="dev.turboeden.turboeden_emulator.LAUNCH_WITH_CUSTOM_CONFIG"/>
+                 <category android:name="android.intent.category.DEFAULT"/>
+             </intent-filter>
+             <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/nfc_tech_filter"/>
+@@ -57,17 +57,17 @@
+         <service android:foregroundServiceType="specialUse" android:name="org.yuzu.yuzu_emu.utils.ForegroundService">
+             <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Keep emulation running in background"/>
+         </service>
+-        <provider android:authorities="dev.eden.eden_emulator.user" android:exported="true" android:grantUriPermissions="true" android:name="org.yuzu.yuzu_emu.features.DocumentProvider" android:permission="android.permission.MANAGE_DOCUMENTS">
++        <provider android:authorities="dev.turboeden.turboeden_emulator.user" android:exported="true" android:grantUriPermissions="true" android:name="org.yuzu.yuzu_emu.features.DocumentProvider" android:permission="android.permission.MANAGE_DOCUMENTS">
+             <intent-filter>
+                 <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+             </intent-filter>
+         </provider>
+-        <provider android:authorities="dev.eden.eden_emulator.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
++        <provider android:authorities="dev.turboeden.turboeden_emulator.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+         </provider>
+         <uses-library android:name="androidx.window.extensions" android:required="false"/>
+         <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+-        <provider android:authorities="dev.eden.eden_emulator.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
++        <provider android:authorities="dev.turboeden.turboeden_emulator.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+             <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+             <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+             <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+--- a/smali/org/yuzu/yuzu_emu/activities/EmulationActivity.smali
++++ b/smali/org/yuzu/yuzu_emu/activities/EmulationActivity.smali
+@@ -462,7 +462,7 @@
+     move-result-object v0
+ 
+     .line 15
+-    const-string v2, "dev.eden.eden_emulator.LAUNCH_WITH_CUSTOM_CONFIG"
++    const-string v2, "dev.turboeden.turboeden_emulator.LAUNCH_WITH_CUSTOM_CONFIG"
+ 
+     .line 16
+     .line 17
+--- a/smali/org/yuzu/yuzu_emu/fragments/EmulationFragment.smali
++++ b/smali/org/yuzu/yuzu_emu/fragments/EmulationFragment.smali
+@@ -5399,7 +5399,7 @@
+     move-result-object v3
+ 
+     .line 39
+-    const-string v4, "dev.eden.eden_emulator.LAUNCH_WITH_CUSTOM_CONFIG"
++    const-string v4, "dev.turboeden.turboeden_emulator.LAUNCH_WITH_CUSTOM_CONFIG"
+ 
+     .line 40
+     .line 41
+--- a/smali/org/yuzu/yuzu_emu/fragments/GamePropertiesFragment$reloadList$properties$1$1.smali
++++ b/smali/org/yuzu/yuzu_emu/fragments/GamePropertiesFragment$reloadList$properties$1$1.smali
+@@ -1111,7 +1111,7 @@
+     move-result-object v3
+ 
+     .line 538
+-    const-string v5, "dev.eden.eden_emulator.user"
++    const-string v5, "dev.turboeden.turboeden_emulator.user"
+ 
+     .line 539
+     .line 540
+--- a/smali/org/yuzu/yuzu_emu/fragments/HomeSettingsFragment$onViewCreated$optionsList$1$1.smali
++++ b/smali/org/yuzu/yuzu_emu/fragments/HomeSettingsFragment$onViewCreated$optionsList$1$1.smali
+@@ -973,7 +973,7 @@
+ 
+     .line 461
+     .line 462
+-    const-string v5, "dev.eden.eden_emulator.user"
++    const-string v5, "dev.turboeden.turboeden_emulator.user"
+ 
+     .line 463
+     .line 464
+@@ -1262,7 +1262,7 @@
+ 
+     .line 604
+     .line 605
+-    const-string v5, "dev.eden.eden_emulator.user"
++    const-string v5, "dev.turboeden.turboeden_emulator.user"
+ 
+     .line 606
+     .line 607
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -102,12 +102,12 @@
+     <string name="app_language_traditional_chinese">繁體中文</string>
+     <string name="app_language_ukrainian">Українська</string>
+     <string name="app_language_vietnamese">Tiếng Việt</string>
+-    <string name="app_name">Eden</string>
+-    <string name="app_name_suffixed">Eden</string>
+-    <string name="app_notification_channel_description">Eden Switch emulator notifications</string>
+-    <string name="app_notification_channel_id">Eden</string>
+-    <string name="app_notification_channel_name">Eden</string>
+-    <string name="app_notification_running">Eden is Running</string>
++    <string name="app_name">TurboEden</string>
++    <string name="app_name_suffixed">TurboEden</string>
++    <string name="app_notification_channel_description">TurboEden Switch emulator notifications</string>
++    <string name="app_notification_channel_id">TurboEden</string>
++    <string name="app_notification_channel_name">TurboEden</string>
++    <string name="app_notification_running">TurboEden is Running</string>
+     <string name="app_settings">App Settings</string>
+     <string name="app_settings_description">Modify the behavior and look of the app</string>
+     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+@@ -213,7 +213,7 @@
+ Install anyway?"</string>
+     <string name="continue_button">Continue</string>
+     <string name="contributors">Contributors</string>
+-    <string name="contributors_description">People who made Eden for Android possible</string>
++    <string name="contributors_description">People who made TurboEden for Android possible</string>
+     <string name="contributors_link">https://git.eden-emu.dev/eden-emu/eden/activity/contributors</string>
+     <string name="control_stick">Control stick</string>
+     <string name="controller_type">Controller type</string>
+@@ -302,12 +302,12 @@
+ Would you like to download and install it now?"</string>
+     <string name="driver_missing_title">GPU Driver Required</string>
+     <string name="driver_not_found">Required driver not installed: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">Eden has automatically cleared all shader caches to maintain Vulkan pipeline validation. This is required when switching GPU drivers to prevent crashes and graphical corruption. You may experience some stuttering as shaders rebuild.</string>
++    <string name="driver_shader_wipe_dialog_message">TurboEden has automatically cleared all shader caches to maintain Vulkan pipeline validation. This is required when switching GPU drivers to prevent crashes and graphical corruption. You may experience some stuttering as shaders rebuild.</string>
+     <string name="driver_shader_wipe_dialog_title">Shaders Cleared</string>
+     <string name="dual_joycons">Dual Joycons</string>
+     <string name="dyna_state">Extended Dynamic State</string>
+     <string name="dyna_state_description">Controls the number of features that can be used in ExtendedDynamicState (EDS). The higher value will allow to reduce the amount of pipeline compilations based on the dynamic state supported by driver.</string>
+-    <string name="eden_theme">Eden</string>
++    <string name="eden_theme">TurboEden</string>
+     <string name="edit">Edit</string>
+     <string name="edit_overlay_layout">Edit Overlay Layout</string>
+     <string name="edit_overlay_layout_description">Adjust the position and scale of on-screen controls</string>
+@@ -565,7 +565,7 @@
+     <string name="invalid_driver_file">Invalid driver file: %s</string>
+     <string name="invalid_profile_name">Invalid profile name</string>
+     <string name="invalid_value">Invalid value</string>
+-    <string name="invalid_yuzu_backup">Invalid Eden backup</string>
++    <string name="invalid_yuzu_backup">Invalid TurboEden backup</string>
+     <string name="invert_axis">Invert axis</string>
+     <string name="invert_button">Invert button</string>
+     <string name="invert_confirm_back_controller_buttons">Invert Confirm/Back Controller Buttons</string>
+@@ -839,7 +839,7 @@
+ 
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."</string>
+     <string name="licenses">Licenses</string>
+-    <string name="licenses_description">Projects that make Eden for Android possible</string>
++    <string name="licenses_description">Projects that make TurboEden for Android possible</string>
+     <string name="load">Load</string>
+     <string name="load_amiibo">Load Amiibo</string>
+     <string name="loader_error_encrypted">Your ROM is encrypted</string>
+@@ -872,7 +872,7 @@
+     <string name="manage_game_folders">Manage game folders</string>
+     <string name="manage_save_data">Manage save data</string>
+     <string name="manage_save_data_description">Save data found. Please select an option below.</string>
+-    <string name="manage_yuzu_data">Manage Eden data</string>
++    <string name="manage_yuzu_data">Manage TurboEden data</string>
+     <string name="manage_yuzu_data_description">Import/export firmware, keys, user data, and more!</string>
+     <string name="map_control">Map to %1$s</string>
+     <string name="map_dpad_direction">Map to D-Pad %1$s</string>
+@@ -1080,7 +1080,7 @@
+     <string name="notice_notification_channel_description">Shows notifications when something goes wrong.</string>
+     <string name="notice_notification_channel_id">noticesAndErrors</string>
+     <string name="notice_notification_channel_name">Notices and errors</string>
+-    <string name="notification_no_directory_link">Could not open Eden directory</string>
++    <string name="notification_no_directory_link">Could not open TurboEden directory</string>
+     <string name="notification_no_directory_link_description">"Please locate the user folder with the file manager's side panel manually."</string>
+     <string name="notification_permission_not_granted">Notification permission not granted!</string>
+     <string name="notifications">Notifications</string>
+@@ -1094,8 +1094,8 @@
+     <string name="off">Off</string>
+     <string name="ok">Ok</string>
+     <string name="on_load">On Load</string>
+-    <string name="open_user_folder">Open Eden folder</string>
+-    <string name="open_user_folder_description">"Manage Eden's internal files"</string>
++    <string name="open_user_folder">Open TurboEden folder</string>
++    <string name="open_user_folder_description">"Manage TurboEden's internal files"</string>
+     <string name="operation_completed_successfully">The operation completed successfully</string>
+     <string name="orange">Orange</string>
+     <string name="overlay_auto_hide">Overlay Auto Hide</string>
+@@ -1318,7 +1318,7 @@
+     <string name="seconds_abbr">s</string>
+     <string name="seconds_must_be_between_0_and_59">Seconds must be between 0 and 59</string>
+     <string name="select_content_type">Content type</string>
+-    <string name="select_games_folder_description">Allows Eden to populate the games list</string>
++    <string name="select_games_folder_description">Allows TurboEden to populate the games list</string>
+     <string name="select_gpu_driver_default">Default</string>
+     <string name="select_gpu_driver_error">Invalid driver selected</string>
+     <string name="select_rtc_date">Select RTC date</string>
+@@ -1333,10 +1333,10 @@
+     <string name="share_config_failed">Failed to share configuration file</string>
+     <string name="share_game_settings">Share Config</string>
+     <string name="share_gpu_log">Share GPU logs</string>
+-    <string name="share_gpu_log_description">"Share Eden's GPU log file to debug graphics issues"</string>
++    <string name="share_gpu_log_description">"Share TurboEden's GPU log file to debug graphics issues"</string>
+     <string name="share_gpu_log_missing">No GPU log file found</string>
+     <string name="share_log">Share debug logs</string>
+-    <string name="share_log_description">"Share Eden's log file to debug issues"</string>
++    <string name="share_log_description">"Share TurboEden's log file to debug issues"</string>
+     <string name="share_log_missing">No log file found</string>
+     <string name="show_app_ram_usage">Show App Memory Usage</string>
+     <string name="show_app_ram_usage_description">Display the amount of RAM the emulator is using</string>
+@@ -1510,7 +1510,7 @@
+     <string name="web_username_description">Username to be shown in multiplayer lobbies. It must be 4–20 characters, containing only alphanumeric characters, dashes, periods, underscores, and spaces.</string>
+     <string name="website_link">https://eden-emu.dev</string>
+     <string name="welcome">Welcome!</string>
+-    <string name="welcome_description">Learn how to setup &lt;b>Eden&lt;/b> and jump into emulation.</string>
++    <string name="welcome_description">Learn how to setup &lt;b>TurboEden&lt;/b> and jump into emulation.</string>
+     <string name="x_link">https://nitter.poast.org/edenemuofficial</string>
+     <string name="yellow">Yellow</string>
+ </resources>
+--- a/res/values-ar/strings.xml
++++ b/res/values-ar/strings.xml
+@@ -71,8 +71,8 @@
+     <string name="app_language">لغة التطبيق</string>
+     <string name="app_language_description">تغيير لغة واجهة التطبيق</string>
+     <string name="app_language_system">اتبع النظام</string>
+-    <string name="app_notification_channel_description">إشعارات محاكي Eden Switch</string>
+-    <string name="app_notification_running">Eden قيد التشغيل</string>
++    <string name="app_notification_channel_description">إشعارات محاكي TurboEden Switch</string>
++    <string name="app_notification_running">TurboEden قيد التشغيل</string>
+     <string name="app_settings">إعدادات التطبيق</string>
+     <string name="app_settings_description">تعديل سلوك ومظهر التطبيق</string>
+     <string name="applet_hle">واجهة مخصصة</string>
+@@ -166,7 +166,7 @@
+  هل ترغب في التثبيت على أي حال؟"</string>
+     <string name="continue_button">متابعة</string>
+     <string name="contributors">المساهمين</string>
+-    <string name="contributors_description">الأشخاص الذين جعلوا تطبيق Eden لنظام Android ممكنًا</string>
++    <string name="contributors_description">الأشخاص الذين جعلوا تطبيق TurboEden لنظام Android ممكنًا</string>
+     <string name="control_stick">عصا التحكم</string>
+     <string name="controller_type">نوع ذراع التحكم</string>
+     <string name="copied_to_clipboard">نسخ إلى الحافظة</string>
+@@ -249,7 +249,7 @@
+ هل ترغب بتنزيله وتثبيته الآن؟"</string>
+     <string name="driver_missing_title">مطلوب برنامج تشغيل وحدة معالجة الرسومات</string>
+     <string name="driver_not_found">برنامج التشغيل المطلوب غير مثبت: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">لقد قام Eden تلقائيًا بمسح جميع ذاكرات التخزين المؤقتة لبرامج التظليل للحفاظ على صحة خط أنابيب Vulkan. وهذا ضروري عند تبديل برامج تشغيل وحدة معالجة الرسومات لمنع حدوث أعطال وتلف الرسومات. قد تواجه بعض التقطعات أثناء إعادة بناء التظليل.</string>
++    <string name="driver_shader_wipe_dialog_message">لقد قام TurboEden تلقائيًا بمسح جميع ذاكرات التخزين المؤقتة لبرامج التظليل للحفاظ على صحة خط أنابيب Vulkan. وهذا ضروري عند تبديل برامج تشغيل وحدة معالجة الرسومات لمنع حدوث أعطال وتلف الرسومات. قد تواجه بعض التقطعات أثناء إعادة بناء التظليل.</string>
+     <string name="driver_shader_wipe_dialog_title">تم مسح التظليلات</string>
+     <string name="dual_joycons">جوي كون ثنائي</string>
+     <string name="dyna_state">الحالة الديناميكية الموسعة</string>
+@@ -508,7 +508,7 @@
+     <string name="invalid_driver_file">ملف برنامج تشغيل غير صالح: %s</string>
+     <string name="invalid_profile_name">اسم ملف التعريف غير صالح</string>
+     <string name="invalid_value">قيمة غير صالحة</string>
+-    <string name="invalid_yuzu_backup">نسخة احتياطية Eden غير صالحة</string>
++    <string name="invalid_yuzu_backup">نسخة احتياطية TurboEden غير صالحة</string>
+     <string name="invert_axis">عكس المحور</string>
+     <string name="invert_button">عكس الزر</string>
+     <string name="invert_confirm_back_controller_buttons">عكس أزرار التأكيد/الرجوع في وحدة التحكم</string>
+@@ -533,7 +533,7 @@
+     <string name="left_stick">العصا اليسرى</string>
+     <string name="license_fidelityfx_fsr_description">تحسين الجودة بدرجة عالية من AMD</string>
+     <string name="licenses">التراخيص</string>
+-    <string name="licenses_description">المشاريع التي تجعل Eden لأجهزة Android ممكنة</string>
++    <string name="licenses_description">المشاريع التي تجعل TurboEden لأجهزة Android ممكنة</string>
+     <string name="load">تحميل</string>
+     <string name="load_amiibo">تحميل أميبو</string>
+     <string name="loader_error_encrypted">ROM الخاص بك مشفر</string>
+@@ -550,7 +550,7 @@
+     <string name="manage_game_folders">إدارة مجلدات اللعبة</string>
+     <string name="manage_save_data">إدارة بيانات الحفظ</string>
+     <string name="manage_save_data_description">تم العثور على بيانات محفوظة. يرجى تحديد أحد الخيارات أدناه.</string>
+-    <string name="manage_yuzu_data">إدارة بيانات Eden</string>
++    <string name="manage_yuzu_data">إدارة بيانات TurboEden</string>
+     <string name="manage_yuzu_data_description">استيراد/تصدير فيرموير والمفاتيح وبيانات المستخدم والمزيد</string>
+     <string name="map_control">تعيين إلى %1$s</string>
+     <string name="map_dpad_direction">تعيين الأسهم %1$s</string>
+@@ -725,7 +725,7 @@
+     <string name="not_set">غير محدد</string>
+     <string name="notice_notification_channel_description">عرض الإشعارات عند حدوث خطأ ما.</string>
+     <string name="notice_notification_channel_name">الإشعارات والأخطاء</string>
+-    <string name="notification_no_directory_link">تعذر فتح مجلد Eden</string>
++    <string name="notification_no_directory_link">تعذر فتح مجلد TurboEden</string>
+     <string name="notification_no_directory_link_description">يرجى تحديد موقع مجلد المستخدم يدويًا باستخدام اللوحة الجانبية لمدير الملفات.</string>
+     <string name="notification_permission_not_granted">لم يتم منح إذن الإشعار!</string>
+     <string name="notifications">الإشعارات</string>
+@@ -736,8 +736,8 @@
+     <string name="off">تعطيل</string>
+     <string name="ok">موافق</string>
+     <string name="on_load">عند التحميل</string>
+-    <string name="open_user_folder">فتح مجلد Eden</string>
+-    <string name="open_user_folder_description">إدارة الملفات الداخلية لـ Eden</string>
++    <string name="open_user_folder">فتح مجلد TurboEden</string>
++    <string name="open_user_folder_description">إدارة الملفات الداخلية لـ TurboEden</string>
+     <string name="operation_completed_successfully">اكتملت العملية بنجاح</string>
+     <string name="orange">برتقالي</string>
+     <string name="overlay_auto_hide">إخفاء الطبقة تلقائيًا</string>
+@@ -928,7 +928,7 @@
+     <string name="seconds_abbr">ث</string>
+     <string name="seconds_must_be_between_0_and_59">يجب أن تكون الثواني بين 0 و 59</string>
+     <string name="select_content_type">نوع المحتوى</string>
+-    <string name="select_games_folder_description">يسمح لـ Eden بملء قائمة الألعاب</string>
++    <string name="select_games_folder_description">يسمح لـ TurboEden بملء قائمة الألعاب</string>
+     <string name="select_gpu_driver_default">افتراضي</string>
+     <string name="select_gpu_driver_error">تم تحديد برنامج تشغيل غير صالح</string>
+     <string name="select_rtc_date">حدد التاريخ و الساعة في الوقت الحقيقي</string>
+@@ -943,10 +943,10 @@
+     <string name="share_config_failed">فشل مشاركة ملف الإعدادات</string>
+     <string name="share_game_settings">مشاركة الإعدادات</string>
+     <string name="share_gpu_log">مشاركة سجلات وحدة معالجة الرسومات</string>
+-    <string name="share_gpu_log_description">شارك ملف سجل وحدة معالجة الرسومات الخاص بـ Eden لتصحيح مشكلات الرسومات</string>
++    <string name="share_gpu_log_description">شارك ملف سجل وحدة معالجة الرسومات الخاص بـ TurboEden لتصحيح مشكلات الرسومات</string>
+     <string name="share_gpu_log_missing">لم يتم العثور على ملف سجل وحدة معالجة الرسومات</string>
+     <string name="share_log">مشاركة سجلات التصحيح</string>
+-    <string name="share_log_description">مشاركة ملف سجل Eden لتصحيح الأخطاء</string>
++    <string name="share_log_description">مشاركة ملف سجل TurboEden لتصحيح الأخطاء</string>
+     <string name="share_log_missing">لم يتم العثور على ملف السجل</string>
+     <string name="show_app_ram_usage">عرض استخدام ذاكرة التطبيق</string>
+     <string name="show_app_ram_usage_description">عرض كمية ذاكرة الوصول العشوائي التي يستخدمها المحاكي</string>
+@@ -1115,6 +1115,6 @@
+     <string name="web_username">اسم مستخدم الويب</string>
+     <string name="web_username_description">اسم المستخدم الذي سيظهر في غرف الانتظار متعددة اللاعبين. يجب أن يتكون من 4 إلى 20 حرفًا، ويحتوي فقط على أحرف أبجدية رقمية وشرطات ونقاط وشرطات سفلية ومسافات.</string>
+     <string name="welcome">مرحبًا!</string>
+-    <string name="welcome_description">تعلم كيفية إعداد <b>Eden</b> والبدء في المحاكاة.</string>
++    <string name="welcome_description">تعلم كيفية إعداد <b>TurboEden</b> والبدء في المحاكاة.</string>
+     <string name="yellow">أصفر</string>
+ </resources>
+--- a/res/values-ckb/strings.xml
++++ b/res/values-ckb/strings.xml
+@@ -533,6 +533,6 @@
+     <string name="web_username">ناوی بەکارهێنەری وێب</string>
+     <string name="web_username_description">ناوی بەکارهێنەر کە لە ژوورەکانی فرە یاریزاندا پیشان دەدرێت. پێویستە ٤-٢٠ پیت بێت (تەنها پیت و ژمارە و خاڵ و خط و خەتەکێشە و بۆشایی).</string>
+     <string name="welcome">بەخێربێیت!</string>
+-    <string name="welcome_description">فێربە چۆن &lt;b>Eden&lt;/b> ڕێکبخەیت و بچییە ناو ئیمولەیشن.</string>
++    <string name="welcome_description">فێربە چۆن &lt;b>TurboEden&lt;/b> ڕێکبخەیت و بچییە ناو ئیمولەیشن.</string>
+     <string name="yellow">زەرد</string>
+ </resources>
+--- a/res/values-cs/strings.xml
++++ b/res/values-cs/strings.xml
+@@ -59,8 +59,8 @@
+     <string name="anisotropic_filtering_description">Zlepšuje kvalitu textur při pohledu pod úhlem</string>
+     <string name="anti_aliasing_none">Žádné</string>
+     <string name="app_disclaimer">Tento software umožňuje spouštět hry pro herní konzoli Nintendo Switch. Neobsahuje žádné herní tituly ani klíče.<br/><br/> Nejdříve prosím vyhledejte soubor &lt;b> prod.keys &lt;/b> v úložišti vašeho zařízení.<br/><br/>&lt;a href=\"https://yuzu-mirror.github.io/help/quickstart\">Další informace&lt;/a></string>
+-    <string name="app_notification_channel_description">Oznámení emulátoru Eden</string>
+-    <string name="app_notification_running">Eden je spuštěn</string>
++    <string name="app_notification_channel_description">Oznámení emulátoru TurboEden</string>
++    <string name="app_notification_running">TurboEden je spuštěn</string>
+     <string name="app_settings_description">Změna chování a vzhledu aplikace</string>
+     <string name="applet_hle">Vlastní frontend</string>
+     <string name="applet_lle">Skutečný aplet</string>
+@@ -323,7 +323,7 @@
+     <string name="invalid_directory_description">Složka musí obsahovat cheats/, romfs/ nebo exefs/.</string>
+     <string name="invalid_driver_file">Neplatný soubor ovladače: %s</string>
+     <string name="invalid_value">Neplatná hodnota</string>
+-    <string name="invalid_yuzu_backup">Neplatná záloha aplikace Eden</string>
++    <string name="invalid_yuzu_backup">Neplatná záloha aplikace TurboEden</string>
+     <string name="item_view_role_description">Karta</string>
+     <string name="keys">Klíče</string>
+     <string name="keys_description">Vyberte svůj soubor <b>prod.keys</b> pomocí tlačítka níže.</string>
+@@ -340,7 +340,7 @@
+     <string name="launching_game">Spouštím %1$s...</string>
+     <string name="learn_more">Zjistit více</string>
+     <string name="licenses">Licence</string>
+-    <string name="licenses_description">Eden pro Android bylo možné zrealizovat díky těmto projektům</string>
++    <string name="licenses_description">TurboEden pro Android bylo možné zrealizovat díky těmto projektům</string>
+     <string name="loader_error_encrypted">ROM je zašifrován</string>
+     <string name="loader_error_encrypted_keys_description">Nainstalujte &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> pro dešifrování.</string>
+     <string name="loader_error_encrypted_roms_description">Postupujte podle průvodců pro opětovné převzetí vašich &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-physical-titles-game-cards\">herních karet&lt;/a> nebo &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-digital-titles-eshop\">digitálních titulů&lt;/a>.</string>
+@@ -355,7 +355,7 @@
+     <string name="manage_game_folders">Spravovat složky s hrami</string>
+     <string name="manage_save_data">Správa uložených pozic</string>
+     <string name="manage_save_data_description">Nalezeny uložené pozice. Prosím vyberte možnost níže.</string>
+-    <string name="manage_yuzu_data">Spravovat data aplikace Eden</string>
++    <string name="manage_yuzu_data">Spravovat data aplikace TurboEden</string>
+     <string name="manage_yuzu_data_description">Import/export firmware, klíčů, uživatelských dat a další!</string>
+     <string name="material_clock_toggle_content_description">Vyberte AM nebo PM</string>
+     <string name="material_hour_24h_suffix">%1$s hodin</string>
+@@ -513,7 +513,7 @@
+     <string name="not_set">Nenastaveno</string>
+     <string name="notice_notification_channel_description">Zobrazí oznámení v případě chyby.</string>
+     <string name="notice_notification_channel_name">Upozornění a chyby</string>
+-    <string name="notification_no_directory_link">Nepovedlo se otevřít složku Edenu</string>
++    <string name="notification_no_directory_link">Nepovedlo se otevřít složku TurboEdenu</string>
+     <string name="notification_no_directory_link_description">Vyhledejte prosím uživatelskou složku ručně v postranním panelu správce souborů.</string>
+     <string name="notification_permission_not_granted">Oprávnění k zobrazení oznámení nebylo uděleno!</string>
+     <string name="notifications">Oznámení</string>
+@@ -523,7 +523,7 @@
+     <string name="nvdec_emulation_none">Žádné</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Při načtení</string>
+-    <string name="open_user_folder">Otevřít složku Edenu</string>
++    <string name="open_user_folder">Otevřít složku TurboEdenu</string>
+     <string name="open_user_folder_description">Správa interních souborů aplikace</string>
+     <string name="orange">Oranžová</string>
+     <string name="overlay_auto_hide">Automatické skrývání</string>
+@@ -624,7 +624,7 @@
+     <string name="searchview_navigation_content_description">Zpět</string>
+     <string name="seconds">Sekundy</string>
+     <string name="select_content_type">Typ obsahu</string>
+-    <string name="select_games_folder_description">Umožní aplikaci Eden načíst seznam her</string>
++    <string name="select_games_folder_description">Umožní aplikaci TurboEden načíst seznam her</string>
+     <string name="select_gpu_driver_default">Výchozí</string>
+     <string name="select_gpu_driver_error">Vybrán neplatný ovladač</string>
+     <string name="select_rtc_date">Vybrat datum RTC</string>
+@@ -773,6 +773,6 @@
+     <string name="web_username">Webové uživatelské jméno</string>
+     <string name="web_username_description">Uživatelské jméno zobrazené v multiplayerových místnostech. Musí mít 4–20 znaků a obsahovat pouze alfanumerické znaky, pomlčky, tečky, podtržítka a mezery.</string>
+     <string name="welcome">Vítejte!</string>
+-    <string name="welcome_description">Přečtěte si, jak nastavit <b>Eden</b> a pusťte se do emulace.</string>
++    <string name="welcome_description">Přečtěte si, jak nastavit <b>TurboEden</b> a pusťte se do emulace.</string>
+     <string name="yellow">Žlutá</string>
+ </resources>
+--- a/res/values-de/strings.xml
++++ b/res/values-de/strings.xml
+@@ -70,8 +70,8 @@
+     <string name="app_language">App-Sprache</string>
+     <string name="app_language_description">Sprache der App-Oberfläche ändern</string>
+     <string name="app_language_system">System folgen</string>
+-    <string name="app_notification_channel_description">Eden Switch Emulator Benachrichtigungen</string>
+-    <string name="app_notification_running">Eden wird ausgeführt</string>
++    <string name="app_notification_channel_description">TurboEden Switch Emulator Benachrichtigungen</string>
++    <string name="app_notification_running">TurboEden wird ausgeführt</string>
+     <string name="app_settings">App-Einstellungen</string>
+     <string name="app_settings_description">Verhalten und Aussehen der App verändern</string>
+     <string name="applet_hle">Benutzerdefinierte Frontend</string>
+@@ -244,7 +244,7 @@
+ Möchten Sie ihn jetzt herunterladen und installieren?"</string>
+     <string name="driver_missing_title">GPU-Treiber erforderlich</string>
+     <string name="driver_not_found">Erforderlicher Treiber nicht installiert: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">Eden hat automatisch alle Shader-Caches geleert, um die Vulkan-Pipeline-Validierung aufrechtzuerhalten. Dies ist beim Wechsel des GPU-Treibers erforderlich, um Abstürze und Grafikfehler zu vermeiden. Während die Shader neu gebaut werden, kann es zu kurzen Rucklern kommen.</string>
++    <string name="driver_shader_wipe_dialog_message">TurboEden hat automatisch alle Shader-Caches geleert, um die Vulkan-Pipeline-Validierung aufrechtzuerhalten. Dies ist beim Wechsel des GPU-Treibers erforderlich, um Abstürze und Grafikfehler zu vermeiden. Während die Shader neu gebaut werden, kann es zu kurzen Rucklern kommen.</string>
+     <string name="driver_shader_wipe_dialog_title">Shader gelöscht</string>
+     <string name="dual_joycons">Zwei Joycons</string>
+     <string name="dyna_state">Erweiterter dynamischer Status</string>
+@@ -455,7 +455,7 @@
+     <string name="invalid_driver_file">Ungültige Treiberdatei: %s</string>
+     <string name="invalid_profile_name">Ungültiger Profilname</string>
+     <string name="invalid_value">Ungültiger Wert</string>
+-    <string name="invalid_yuzu_backup">Ungültiges Eden-Backup</string>
++    <string name="invalid_yuzu_backup">Ungültiges TurboEden-Backup</string>
+     <string name="invert_axis">Achsen umkehren</string>
+     <string name="invert_button">Knopf invertieren</string>
+     <string name="item_view_role_description">Tab</string>
+@@ -478,7 +478,7 @@
+     <string name="left_stick">Linker Stick</string>
+     <string name="license_fidelityfx_fsr_description">Hochwertiges Upscaling von AMD</string>
+     <string name="licenses">Lizenzen</string>
+-    <string name="licenses_description">Projekte, die Eden für Android möglich machen</string>
++    <string name="licenses_description">Projekte, die TurboEden für Android möglich machen</string>
+     <string name="load">Lädt</string>
+     <string name="load_amiibo">Amiibo laden</string>
+     <string name="loader_error_encrypted">Das ROM ist verschlüsselt</string>
+@@ -495,7 +495,7 @@
+     <string name="manage_game_folders">Spiele-Ordner verwalten</string>
+     <string name="manage_save_data">Speicherdaten verwalten</string>
+     <string name="manage_save_data_description">Speicherdaten gefunden. Bitte wähle unten eine Option aus.</string>
+-    <string name="manage_yuzu_data">Eden-Daten verwalten</string>
++    <string name="manage_yuzu_data">TurboEden-Daten verwalten</string>
+     <string name="manage_yuzu_data_description">Importieren/Exportieren Sie Firmware, Schlüssel, Benutzerdaten und mehr!</string>
+     <string name="map_control">Belegen mit %1$s</string>
+     <string name="map_dpad_direction">Mit D-Pad belegen %1$s</string>
+@@ -670,7 +670,7 @@
+     <string name="not_set">Nicht gesetzt</string>
+     <string name="notice_notification_channel_description">Zeigt Benachrichtigungen an, wenn etwas schief läuft.</string>
+     <string name="notice_notification_channel_name">Hinweise und Fehler</string>
+-    <string name="notification_no_directory_link">Eden-Verzeichnis konnte nicht geöffnet werden</string>
++    <string name="notification_no_directory_link">TurboEden-Verzeichnis konnte nicht geöffnet werden</string>
+     <string name="notification_no_directory_link_description">Bitte suche den Benutzerordner manuell über die Seitenleiste des Dateimanagers.</string>
+     <string name="notification_permission_not_granted">Berechtigung für Benachrichtigungen nicht zugelassen!</string>
+     <string name="notifications">Benachrichtigungen</string>
+@@ -681,8 +681,8 @@
+     <string name="off">Aus</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Beim Laden</string>
+-    <string name="open_user_folder">Eden-Ordner öffnen</string>
+-    <string name="open_user_folder_description">"Eden's interne Dateien verwalten"</string>
++    <string name="open_user_folder">TurboEden-Ordner öffnen</string>
++    <string name="open_user_folder_description">"TurboEden's interne Dateien verwalten"</string>
+     <string name="operation_completed_successfully">Der Vorgang wurde erfolgreich abgeschlossen</string>
+     <string name="orange">Orange</string>
+     <string name="overlay_auto_hide">Automatisches Ausblenden des Overlays</string>
+@@ -838,7 +838,7 @@
+     <string name="seconds_abbr">s</string>
+     <string name="seconds_must_be_between_0_and_59">Sekunden müssen zwischen 0 und 59 liegen</string>
+     <string name="select_content_type">Inhaltstyp</string>
+-    <string name="select_games_folder_description">Erlaubt Eden die Spieleliste zu füllen</string>
++    <string name="select_games_folder_description">Erlaubt TurboEden die Spieleliste zu füllen</string>
+     <string name="select_gpu_driver_default">Standard</string>
+     <string name="select_gpu_driver_error">Ungültiger Treiber ausgewählt</string>
+     <string name="select_rtc_date">RTC-Datum auswählen</string>
+@@ -853,7 +853,7 @@
+     <string name="share_config_failed">Konfigurationsdatei konnte nicht geteilt werden</string>
+     <string name="share_game_settings">Konfiguration teilen</string>
+     <string name="share_log">Debug-Logs teilen</string>
+-    <string name="share_log_description">Debug-Logs an Eden zur Untersuchung absenden</string>
++    <string name="share_log_description">Debug-Logs an TurboEden zur Untersuchung absenden</string>
+     <string name="share_log_missing">Keine Log-Datei gefunden</string>
+     <string name="show_app_ram_usage">App-RAM-Nutzung anzeigen</string>
+     <string name="show_app_ram_usage_description">Zeigt den RAM-Verbrauch des Emulators an</string>
+@@ -1014,6 +1014,6 @@
+     <string name="web_username">Web-Benutzername</string>
+     <string name="web_username_description">Benutzername, der in Multiplayer-Räumen angezeigt wird. Muss zwischen 4–20 Zeichen lang sein und nur alphanumerische Zeichen, Bindestriche, Punkte, Unterstriche und Leerzeichen enthalten.</string>
+     <string name="welcome">Willkommen!</string>
+-    <string name="welcome_description">Erfahre wie man &lt;b>Eden&lt;/b> einrichtet und beginne mit der Emulation.</string>
++    <string name="welcome_description">Erfahre wie man &lt;b>TurboEden&lt;/b> einrichtet und beginne mit der Emulation.</string>
+     <string name="yellow">Gelb</string>
+ </resources>
+--- a/res/values-es/strings.xml
++++ b/res/values-es/strings.xml
+@@ -71,8 +71,8 @@
+     <string name="app_language">Idioma de la aplicación</string>
+     <string name="app_language_description">Cambiar el idioma de la interfaz de la aplicación</string>
+     <string name="app_language_system">Igual al del sistema</string>
+-    <string name="app_notification_channel_description">Notificaciones del emulador Eden Switch</string>
+-    <string name="app_notification_running">Eden se está ejecutando</string>
++    <string name="app_notification_channel_description">Notificaciones del emulador TurboEden Switch</string>
++    <string name="app_notification_running">TurboEden se está ejecutando</string>
+     <string name="app_settings">Configuración de la aplicación</string>
+     <string name="app_settings_description">Modificar el comportamiento y la apariencia de la aplicación.</string>
+     <string name="applet_hle">Frontend personalizado</string>
+@@ -166,7 +166,7 @@
+ ¿Instalar aun que?"</string>
+     <string name="continue_button">Continuar</string>
+     <string name="contributors">Colaboradores</string>
+-    <string name="contributors_description">Gente que hizo posible Eden para Android</string>
++    <string name="contributors_description">Gente que hizo posible TurboEden para Android</string>
+     <string name="control_stick">Palanca de control</string>
+     <string name="controller_type">Tipo de mando</string>
+     <string name="copied_to_clipboard">Copiado al portapapeles</string>
+@@ -248,12 +248,12 @@
+ ¿Lo quiere descargar e instalar ahora?"</string>
+     <string name="driver_missing_title">Se requiere un controlador de la GPU</string>
+     <string name="driver_not_found">Controlador requerido no instalado: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">Eden ha limpiado automáticamente todos los sombreadores guardados para mantener la canalización de Vulkan válida. Esto es esencial al cambiar o actualizar los controladores de la GPU para prevenir errores y fallos gráficos. Es posible que experimente algunas interrupciones durante la reconstrucción de los sombreadores.</string>
++    <string name="driver_shader_wipe_dialog_message">TurboEden ha limpiado automáticamente todos los sombreadores guardados para mantener la canalización de Vulkan válida. Esto es esencial al cambiar o actualizar los controladores de la GPU para prevenir errores y fallos gráficos. Es posible que experimente algunas interrupciones durante la reconstrucción de los sombreadores.</string>
+     <string name="driver_shader_wipe_dialog_title">Sombreadores limpiados</string>
+     <string name="dual_joycons">Joycons duales</string>
+     <string name="dyna_state">Estado dinámico extendido</string>
+     <string name="dyna_state_description">Controla la cantidad de características que se pueden usar en ExtendedDynamicState (EDS). Un valor más alto permitirá reducir la cantidad de compilaciones de canalización basadas en el estado dinámico compatible con el controlador.</string>
+-    <string name="eden_theme">Eden</string>
++    <string name="eden_theme">TurboEden</string>
+     <string name="edit">Editar</string>
+     <string name="edit_overlay_layout">Editar el diseño de la superposición</string>
+     <string name="edit_overlay_layout_description">Ajustar la posición y escala de los controles en pantalla</string>
+@@ -507,7 +507,7 @@
+     <string name="invalid_driver_file">Archivo del controlador inválido: %s</string>
+     <string name="invalid_profile_name">Nombre de perfil inválido</string>
+     <string name="invalid_value">Valor inválido</string>
+-    <string name="invalid_yuzu_backup">Copia de seguridad de Eden inválida</string>
++    <string name="invalid_yuzu_backup">Copia de seguridad de TurboEden inválida</string>
+     <string name="invert_axis">Invertir ejes</string>
+     <string name="invert_button">Invertir botón</string>
+     <string name="invert_confirm_back_controller_buttons">Invertir los botones Confirmar/Atrás del mando</string>
+@@ -532,7 +532,7 @@
+     <string name="left_stick">Palanca izquierda</string>
+     <string name="license_fidelityfx_fsr_description">Upscaling de alta calidad de AMD</string>
+     <string name="licenses">Licencias</string>
+-    <string name="licenses_description">Proyectos que hacen que Eden para Android sea posible</string>
++    <string name="licenses_description">Proyectos que hacen que TurboEden para Android sea posible</string>
+     <string name="load">Cargar</string>
+     <string name="load_amiibo">Cargar Amiibo</string>
+     <string name="loader_error_encrypted">Su ROM está encriptada</string>
+@@ -549,7 +549,7 @@
+     <string name="manage_game_folders">Gestionar carpetas de juegos</string>
+     <string name="manage_save_data">Administrar datos de guardado</string>
+     <string name="manage_save_data_description">Guardar los datos encontrados. Por favor, seleccione una opción de abajo.</string>
+-    <string name="manage_yuzu_data">Gestionar datos de Eden</string>
++    <string name="manage_yuzu_data">Gestionar datos de TurboEden</string>
+     <string name="manage_yuzu_data_description">Importar/exportar el firmware, las claves, los datos de usuario, ¡y más!</string>
+     <string name="map_control">Asignar a %1$s</string>
+     <string name="map_dpad_direction">Asignar a cruceta %1$s</string>
+@@ -724,7 +724,7 @@
+     <string name="not_set">No establecido</string>
+     <string name="notice_notification_channel_description">Mostrar notificaciones cuando algo vaya mal.</string>
+     <string name="notice_notification_channel_name">Avisos y errores</string>
+-    <string name="notification_no_directory_link">No se pudo abrir la carpeta Eden</string>
++    <string name="notification_no_directory_link">No se pudo abrir la carpeta TurboEden</string>
+     <string name="notification_no_directory_link_description">Por favor, busque la carpeta user con el panel lateral del explorador de archivos de forma manual.</string>
+     <string name="notification_permission_not_granted">¡Permiso de notificación no concedido!</string>
+     <string name="notifications">Notificaciones</string>
+@@ -735,8 +735,8 @@
+     <string name="off">Desactivado</string>
+     <string name="ok">Aceptar</string>
+     <string name="on_load">En carga</string>
+-    <string name="open_user_folder">Abrir la carpeta de Eden</string>
+-    <string name="open_user_folder_description">Administrar los archivos internos de Eden</string>
++    <string name="open_user_folder">Abrir la carpeta de TurboEden</string>
++    <string name="open_user_folder_description">Administrar los archivos internos de TurboEden</string>
+     <string name="operation_completed_successfully">Operación completada con éxito</string>
+     <string name="orange">Naranja</string>
+     <string name="overlay_auto_hide">Ocultar automáticamente la superposición</string>
+@@ -927,7 +927,7 @@
+     <string name="seconds_abbr">s</string>
+     <string name="seconds_must_be_between_0_and_59">Los segundos deben estar entre 0 y 59</string>
+     <string name="select_content_type">Tipo de contenido</string>
+-    <string name="select_games_folder_description">Permite que Eden complete la lista de juegos.</string>
++    <string name="select_games_folder_description">Permite que TurboEden complete la lista de juegos.</string>
+     <string name="select_gpu_driver_default">Predeterminado</string>
+     <string name="select_gpu_driver_error">Seleccionado controlador inválido</string>
+     <string name="select_rtc_date">Seleccionar fecha RTC</string>
+@@ -942,10 +942,10 @@
+     <string name="share_config_failed">No se pudo compartir el archivo de configuración</string>
+     <string name="share_game_settings">Compartir configuración</string>
+     <string name="share_gpu_log">Compartir registros de la GPU</string>
+-    <string name="share_gpu_log_description">Comparte el archivo de registros de la GPU de Eden para depurar problemas gráficos</string>
++    <string name="share_gpu_log_description">Comparte el archivo de registros de la GPU de TurboEden para depurar problemas gráficos</string>
+     <string name="share_gpu_log_missing">No se encontró ningún archivo de registro de la GPU</string>
+     <string name="share_log">Compartir registros de depuración</string>
+-    <string name="share_log_description">Comparta el archivo de registro de Eden para depurar problemas</string>
++    <string name="share_log_description">Comparta el archivo de registro de TurboEden para depurar problemas</string>
+     <string name="share_log_missing">No se encontró ningún archivo de registro</string>
+     <string name="show_app_ram_usage">Mostrar el uso de la memoria de la aplicación</string>
+     <string name="show_app_ram_usage_description">Muestra la cantidad de RAM que está usando el emulador</string>
+@@ -1116,6 +1116,6 @@
+     <string name="web_username">Nombre de usuario web</string>
+     <string name="web_username_description">Nombre de usuario que se mostrará en las salas multijugador. Debe tener entre 4–20 caracteres y contener solo caracteres alfanuméricos, guiones, puntos, barra bajas y espacios.</string>
+     <string name="welcome">¡Bienvenido!</string>
+-    <string name="welcome_description">Aprende cómo configurar <b>Eden</b> y salta a la emulación.</string>
++    <string name="welcome_description">Aprende cómo configurar <b>TurboEden</b> y salta a la emulación.</string>
+     <string name="yellow">Amarillo</string>
+ </resources>
+--- a/res/values-fa/strings.xml
++++ b/res/values-fa/strings.xml
+@@ -150,7 +150,7 @@
+ به هر حال نصب شود؟"</string>
+     <string name="continue_button">ادامه</string>
+     <string name="contributors">مشارکت کنندگان</string>
+-    <string name="contributors_description">Made with ❤ from the Eden team</string>
++    <string name="contributors_description">Made with ❤ from the TurboEden team</string>
+     <string name="controller_type">نوع کنترلر</string>
+     <string name="copied_to_clipboard">در کلیپ‌بورد کپی شد</string>
+     <string name="copy">کپی</string>
+@@ -351,7 +351,7 @@
+     <string name="invalid_directory">مسیر نامعتبر</string>
+     <string name="invalid_directory_description">لطفاً مطمئن شوید که مسیر انتخابی شما حاوی یک پوشه cheats/ یا romfs/ یا exefs/ می‌باشد و دوباره امتحان کنید.</string>
+     <string name="invalid_driver_file">فایل درایور نامعتبر: %s</string>
+-    <string name="invalid_yuzu_backup">پشتیبان نامعتبر Eden</string>
++    <string name="invalid_yuzu_backup">پشتیبان نامعتبر TurboEden</string>
+     <string name="invert_axis">محور معکوس</string>
+     <string name="item_view_role_description">برگه</string>
+     <string name="keys">کلیدها</string>
+@@ -372,7 +372,7 @@
+     <string name="left_stick">استیک چپ</string>
+     <string name="license_fidelityfx_fsr_description">High-quality upscaling from AMD</string>
+     <string name="licenses">مجوزها</string>
+-    <string name="licenses_description">پروژه‌هایی که Eden را برای اندروید ممکن می‌سازند</string>
++    <string name="licenses_description">پروژه‌هایی که TurboEden را برای اندروید ممکن می‌سازند</string>
+     <string name="loader_error_encrypted">رام شما رمزگذاری شده است</string>
+     <string name="loader_error_encrypted_keys_description">لطفاً مطمئن شوید که فایل prod.keys شما نصب شده است تا بازی‌ها رمزگشایی شوند.</string>
+     <string name="loader_error_encrypted_roms_description">لطفا راهنماهای دامپ مجدد &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-physical-titles-game-cards\">کارت‌های بازی&lt;/a> یا &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-digital-titles-eshop\">عنوان‌های دیجیتال&lt;/a> را دنبال کنید.</string>
+@@ -387,7 +387,7 @@
+     <string name="manage_game_folders">مدیریت پوشه‌های بازی</string>
+     <string name="manage_save_data">مدیریت ذخیره داده‌ها</string>
+     <string name="manage_save_data_description">ذخیره داده یافت شد. لطفاً یکی از گزینه‌های زیر را انتخاب کنید.</string>
+-    <string name="manage_yuzu_data">مدیریت داده‌های Eden</string>
++    <string name="manage_yuzu_data">مدیریت داده‌های TurboEden</string>
+     <string name="manage_yuzu_data_description">وارد کردن/صادر کردن ثابت‌افزار، کلیدها، داده‌های کاربر، و موارد دیگر!</string>
+     <string name="material_clock_toggle_content_description">انتخاب .ق.ظ. یا ب.ظ.</string>
+     <string name="material_hour_24h_suffix">%1$s ساعت</string>
+@@ -558,7 +558,7 @@
+     <string name="not_set">تنظیم نشده</string>
+     <string name="notice_notification_channel_description">وقتی مشکلی پیش می‌آید در اعلان‌ها نشان می‌دهد.</string>
+     <string name="notice_notification_channel_name">اطلاعیه‌ها و خطاها</string>
+-    <string name="notification_no_directory_link">پوشه Eden باز نشد</string>
++    <string name="notification_no_directory_link">پوشه TurboEden باز نشد</string>
+     <string name="notification_no_directory_link_description">لطفاً پوشه کاربری را با استفاده از پنل کناری برنامه مدیریت فایل به صورت دستی پیدا کنید.</string>
+     <string name="notification_permission_not_granted">مجوز اعلان داده نشده!</string>
+     <string name="notifications">اعلان‌ها</string>
+@@ -571,8 +571,8 @@
+     <string name="oboe">oboe</string>
+     <string name="ok">تایید</string>
+     <string name="on_load">در هنگام بارگذاری</string>
+-    <string name="open_user_folder">باز کردن پوشه Eden</string>
+-    <string name="open_user_folder_description">مدیریت فایل‌های داخلی Eden</string>
++    <string name="open_user_folder">باز کردن پوشه TurboEden</string>
++    <string name="open_user_folder_description">مدیریت فایل‌های داخلی TurboEden</string>
+     <string name="operation_completed_successfully">عملیات با موفقیت به پایان رسید</string>
+     <string name="orange">نارنجی</string>
+     <string name="overlay_position">موقعیت اورلی</string>
+@@ -701,7 +701,7 @@
+     <string name="searchview_clear_text_content_description">پاک کردن نوشتار</string>
+     <string name="searchview_navigation_content_description">برگشتن</string>
+     <string name="select_content_type">نوع محتوا</string>
+-    <string name="select_games_folder_description">به Eden اجازه می دهد تا لیست باز‌ی‌ها را پر کند</string>
++    <string name="select_games_folder_description">به TurboEden اجازه می دهد تا لیست باز‌ی‌ها را پر کند</string>
+     <string name="select_gpu_driver_default">پیش‌فرض</string>
+     <string name="select_gpu_driver_error">درایور نامعتبر انتخاب شده است</string>
+     <string name="select_rtc_date">انتخاب تاریخ</string>
+@@ -713,7 +713,7 @@
+     <string name="shaders_prefix">در حال ساخت</string>
+     <string name="shaders_suffix">شیدر(ها)</string>
+     <string name="share_log">اشتراک گزارش اشکال زدایی</string>
+-    <string name="share_log_description">فایل گزارش Eden را برای رفع اشکال به اشتراک بگذارید</string>
++    <string name="share_log_description">فایل گزارش TurboEden را برای رفع اشکال به اشتراک بگذارید</string>
+     <string name="share_log_missing">هیچ فایل گزارشی یافت نشد</string>
+     <string name="show_app_ram_usage">نمایش مصرف رم برنامه</string>
+     <string name="show_app_ram_usage_description">نمایش میزان رم مورد استفاده شبیه‌ساز</string>
+@@ -845,6 +845,6 @@
+     <string name="web_username">نام کاربری وب</string>
+     <string name="web_username_description">نام کاربری نمایش داده شده در اتاق‌های چندنفره. باید بین 4-20 کاراکتر و فقط شامل حروف الفبا، اعداد، خط تیره، نقطه، زیرخط و فاصله باشد.</string>
+     <string name="welcome">خوش آمدید!</string>
+-    <string name="welcome_description">نحوه راه اندازی &lt;b>Eden&lt;/b> و شبیه سازی را بیاموزید.</string>
++    <string name="welcome_description">نحوه راه اندازی &lt;b>TurboEden&lt;/b> و شبیه سازی را بیاموزید.</string>
+     <string name="yellow">زرد</string>
+ </resources>
+--- a/res/values-fr/strings.xml
++++ b/res/values-fr/strings.xml
+@@ -70,8 +70,8 @@
+     <string name="app_language">"Language de l'application"</string>
+     <string name="app_language_description">"Changer la langue de l'interface"</string>
+     <string name="app_language_system">Suivre le système</string>
+-    <string name="app_notification_channel_description">"Notifications de l'émulateur Switch Eden"</string>
+-    <string name="app_notification_running">"Eden est en cours d'exécution"</string>
++    <string name="app_notification_channel_description">"Notifications de l'émulateur Switch TurboEden"</string>
++    <string name="app_notification_running">"TurboEden est en cours d'exécution"</string>
+     <string name="app_settings">Paramètres de l’App</string>
+     <string name="app_settings_description">Modifier le comportement et l’apparence de l’application</string>
+     <string name="applet_hle">Frontend personnalisé</string>
+@@ -163,7 +163,7 @@
+ Installer quand même ?"</string>
+     <string name="continue_button">Continuer</string>
+     <string name="contributors">Contributeurs</string>
+-    <string name="contributors_description">Les gens qui ont rendu possible Eden pour Android</string>
++    <string name="contributors_description">Les gens qui ont rendu possible TurboEden pour Android</string>
+     <string name="control_stick">Stick de contrôle</string>
+     <string name="controller_type">Type de manette</string>
+     <string name="copied_to_clipboard">Copié dans le presse-papier</string>
+@@ -248,7 +248,7 @@
+     <string name="driver_not_found">Pilote requis non installé : %s</string>
+     <string name="dual_joycons">Deux Joycons</string>
+     <string name="dyna_state">État dynamique étendu</string>
+-    <string name="eden_theme">Eden</string>
++    <string name="eden_theme">TurboEden</string>
+     <string name="edit">Éditer</string>
+     <string name="edit_overlay_layout">Modifier la disposition des superpositions</string>
+     <string name="edit_overlay_layout_description">"Ajuster la position et la taille des commandes superposées à l'écran"</string>
+@@ -477,7 +477,7 @@
+     <string name="invalid_driver_file">Fichier de pilote invalide : %s</string>
+     <string name="invalid_profile_name">Nom de profil invalide</string>
+     <string name="invalid_value">Valeur invalide</string>
+-    <string name="invalid_yuzu_backup">Backup Eden invalide</string>
++    <string name="invalid_yuzu_backup">Backup TurboEden invalide</string>
+     <string name="invert_axis">"Inverser l'axe"</string>
+     <string name="invert_button">Inverser les boutons</string>
+     <string name="invert_confirm_back_controller_buttons">Inverser les boutons Confirmer/Retour</string>
+@@ -502,7 +502,7 @@
+     <string name="left_stick">Stick gauche</string>
+     <string name="license_fidelityfx_fsr_description">"Mise à l'échelle de haute qualité par AMD."</string>
+     <string name="licenses">Licences</string>
+-    <string name="licenses_description">Des projets qui rendent possible Eden pour Android</string>
++    <string name="licenses_description">Des projets qui rendent possible TurboEden pour Android</string>
+     <string name="load">Charger</string>
+     <string name="load_amiibo">Charger l’Amiibo</string>
+     <string name="loader_error_encrypted">Votre ROM est cryptée</string>
+@@ -519,7 +519,7 @@
+     <string name="manage_game_folders">Gérer les dossiers de jeux</string>
+     <string name="manage_save_data">Gérer les données de sauvegarde</string>
+     <string name="manage_save_data_description">Données de sauvegarde trouvées. Veuillez sélectionner une option ci-dessous.</string>
+-    <string name="manage_yuzu_data">Gérer les données de Eden</string>
++    <string name="manage_yuzu_data">Gérer les données de TurboEden</string>
+     <string name="manage_yuzu_data_description">Importer/exporter le firmware, les clés, les données utilisateur, et bien plus encore !</string>
+     <string name="map_control">Mapper avec le %1$s</string>
+     <string name="map_dpad_direction">Mapper avec la croix directionnelle %1$s</string>
+@@ -694,7 +694,7 @@
+     <string name="not_set">Non défini</string>
+     <string name="notice_notification_channel_description">Affiche des notifications en cas de problème.</string>
+     <string name="notice_notification_channel_name">Avis et erreurs</string>
+-    <string name="notification_no_directory_link">"Impossible d'ouvrir le répertoire de Eden"</string>
++    <string name="notification_no_directory_link">"Impossible d'ouvrir le répertoire de TurboEden"</string>
+     <string name="notification_no_directory_link_description">Veuillez localiser manuellement le dossier utilisateur avec le panneau latéral du gestionnaire de fichiers.</string>
+     <string name="notification_permission_not_granted">Permission de notification non accordée !</string>
+     <string name="notifications">Notifications</string>
+@@ -705,8 +705,8 @@
+     <string name="off">Désactivé</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Au chargement</string>
+-    <string name="open_user_folder">Ouvrir le dossier de Eden</string>
+-    <string name="open_user_folder_description">Gérer les fichiers internes de Eden</string>
++    <string name="open_user_folder">Ouvrir le dossier de TurboEden</string>
++    <string name="open_user_folder_description">Gérer les fichiers internes de TurboEden</string>
+     <string name="operation_completed_successfully">"L'opération s'est déroulée avec succès"</string>
+     <string name="orange">Orange</string>
+     <string name="overlay_auto_hide">"Masquage automatique de l'overlay"</string>
+@@ -884,7 +884,7 @@
+     <string name="seconds_abbr">s</string>
+     <string name="seconds_must_be_between_0_and_59">Les secondes doivent être comprises entre 0 et 59</string>
+     <string name="select_content_type">Type de contenu</string>
+-    <string name="select_games_folder_description">Permet à Eden de remplir la liste des jeux</string>
++    <string name="select_games_folder_description">Permet à TurboEden de remplir la liste des jeux</string>
+     <string name="select_gpu_driver_default">Par défaut</string>
+     <string name="select_gpu_driver_error">Pilote non valide sélectionné</string>
+     <string name="select_rtc_date">Sélectionner la date RTC</string>
+@@ -899,10 +899,10 @@
+     <string name="share_config_failed">Échec du partage du fichier de configuration</string>
+     <string name="share_game_settings">Partager la Configuration</string>
+     <string name="share_gpu_log">Partager les logs du GPU</string>
+-    <string name="share_gpu_log_description">Partage les logs du GPU générés par Eden afin de déboguer les problèmes graphiques.</string>
++    <string name="share_gpu_log_description">Partage les logs du GPU générés par TurboEden afin de déboguer les problèmes graphiques.</string>
+     <string name="share_gpu_log_missing">Aucun fichier de log du GPU trouvé,</string>
+     <string name="share_log">Partager les logs de débogage</string>
+-    <string name="share_log_description">Partagez le fichier de log de Eden pour déboguer les problèmes.</string>
++    <string name="share_log_description">Partagez le fichier de log de TurboEden pour déboguer les problèmes.</string>
+     <string name="share_log_missing">Aucun fichier de log trouvé</string>
+     <string name="show_app_ram_usage">RAM app</string>
+     <string name="show_app_ram_usage_description">"Afficher la quantité de RAM utilisée par l'émulateur"</string>
+@@ -1069,6 +1069,6 @@
+     <string name="web_username">"Nom d'utilisateur web"</string>
+     <string name="web_username_description">"Nom d'utilisateur affiché dans les salles multijoueur. Doit contenir 4-20 caractères alphanumériques, tirets, points, underscores et espaces uniquement."</string>
+     <string name="welcome">Bienvenue !</string>
+-    <string name="welcome_description">"Apprenez à configurer &lt;b>Eden&lt;/b> et passez à l'émulation."</string>
++    <string name="welcome_description">"Apprenez à configurer &lt;b>TurboEden&lt;/b> et passez à l'émulation."</string>
+     <string name="yellow">Jaune</string>
+ </resources>
+--- a/res/values-he/strings.xml
++++ b/res/values-he/strings.xml
+@@ -216,7 +216,7 @@
+     <string name="invalid">לא חוקי</string>
+     <string name="invalid_driver_file">קובץ מנהל התקן לא חוקי: %s</string>
+     <string name="invalid_value">ערך לא חוקי</string>
+-    <string name="invalid_yuzu_backup">גיבוי Eden לא חוקי</string>
++    <string name="invalid_yuzu_backup">גיבוי TurboEden לא חוקי</string>
+     <string name="keys">מפתחות</string>
+     <string name="keys_description">בחר את קובץ ה &lt;b>prod.keys&lt;/b> שלך עם הכפתור למטה.</string>
+     <string name="keys_failed">התקנת מפתחות נכשלה</string>
+@@ -233,7 +233,7 @@
+     <string name="left_stick">ג׳ויסטיק שמאלי</string>
+     <string name="license_fidelityfx_fsr_description">אפסקיילינג באיכות גבוהה מ AMD</string>
+     <string name="licenses">רישיונות</string>
+-    <string name="licenses_description">פרוייקטים שהופכים את Eden ל Android אפשרי</string>
++    <string name="licenses_description">פרוייקטים שהופכים את TurboEden ל Android אפשרי</string>
+     <string name="loader_error_encrypted">המשחק שלך מוצפן</string>
+     <string name="loader_error_encrypted_keys_description">אנא וודא שקובץ ה-&lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> מותקן כך שניתן יהיה לפענח משחקים.</string>
+     <string name="loader_error_encrypted_roms_description">אנא עקוב אחר המדריכים לשמירת &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-physical-titles-game-cards\">כרטיסי משחק&lt;/a> או &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-digital-titles-eshop\">כותרות דיגיטליות&lt;/a> מחדש.</string>
+@@ -247,7 +247,7 @@
+     <string name="manage_game_folders">נהל את תיקיית המשחקים</string>
+     <string name="manage_save_data">נהל מידע שמור</string>
+     <string name="manage_save_data_description">מידע שמור לא נמצא. בבקשה בחר/י אופציה מלמטה</string>
+-    <string name="manage_yuzu_data">נהל את המידע של Eden</string>
++    <string name="manage_yuzu_data">נהל את המידע של TurboEden</string>
+     <string name="manage_yuzu_data_description">יבא/יצא firmware, keys, מידע של משתמש ועוד!</string>
+     <string name="memory_4gb">4GB (מומלץ)</string>
+     <string name="memory_6gb">6GB (לא בטוח)</string>
+@@ -349,7 +349,7 @@
+     <string name="no_save_data_found">לא נמצאו שמירות</string>
+     <string name="notice_notification_channel_description">מציג התראות כאשר משהו הולך לא כשורה.</string>
+     <string name="notice_notification_channel_name">התראות ותקלות</string>
+-    <string name="notification_no_directory_link">לא יכול לפתוח את ספריית Eden</string>
++    <string name="notification_no_directory_link">לא יכול לפתוח את ספריית TurboEden</string>
+     <string name="notification_no_directory_link_description">בבקשה מקם את תיקיית המשתמש בפנל הצידי של מנהל הקבצים באופן ידני.</string>
+     <string name="notification_permission_not_granted">הרשאות התראות לא ניתנה!</string>
+     <string name="notifications">התראות</string>
+@@ -359,8 +359,8 @@
+     <string name="nvdec_emulation_none">ללא</string>
+     <string name="ok">אישור</string>
+     <string name="on_load">בטעינה</string>
+-    <string name="open_user_folder">פתח את תיקיית Eden</string>
+-    <string name="open_user_folder_description">נה ל את הקבצים הפנימיין של Eden</string>
++    <string name="open_user_folder">פתח את תיקיית TurboEden</string>
++    <string name="open_user_folder_description">נה ל את הקבצים הפנימיין של TurboEden</string>
+     <string name="orange">כתום</string>
+     <string name="overlay_position">מיקום שכבה</string>
+     <string name="overlay_position_bottom_left">פינה תחתונה שמאלית</string>
+@@ -451,7 +451,7 @@
+     <string name="search_settings">חפש בהגדרות</string>
+     <string name="searching_for_game">מחפש משחק...</string>
+     <string name="seconds">שניות</string>
+-    <string name="select_games_folder_description">אפשר ל Eden לאכלס את רשימת המשחקים</string>
++    <string name="select_games_folder_description">אפשר ל TurboEden לאכלס את רשימת המשחקים</string>
+     <string name="select_gpu_driver_default">ברירת מחדל</string>
+     <string name="select_gpu_driver_error">נבחר דרייבר לא חוקי</string>
+     <string name="select_rtc_date">בחר תאריך RTC</string>
+@@ -463,7 +463,7 @@
+     <string name="shaders_prefix">בונה</string>
+     <string name="shaders_suffix">שיידר(ים)</string>
+     <string name="share_log">שתף את יומני הרישום של מיפוי הבאגים</string>
+-    <string name="share_log_description">שתף את קובץ יומני הרישום של Eden בכדי לתקן בעיות</string>
++    <string name="share_log_description">שתף את קובץ יומני הרישום של TurboEden בכדי לתקן בעיות</string>
+     <string name="share_log_missing">לא נמצא קובץ יומן רישום</string>
+     <string name="show_app_ram_usage">הצג שימוש זיכרון</string>
+     <string name="show_app_ram_usage_description">הצג את כמות ה-RAM שהאמולטור משתמש בה</string>
+@@ -568,6 +568,6 @@
+     <string name="web_username">שם משתמש באינטרנט</string>
+     <string name="web_username_description">שם משתמש שיוצג בחדרים מרובי משתתפים. חייב להכיל 4-20 תווים (אותיות, מספרים, מקפים, נקודות, קו תחתון ורווחים בלבד).</string>
+     <string name="welcome">ברוכים הבאים!</string>
+-    <string name="welcome_description">למד איך להפעיל &lt;b>Eden&lt;/b> וקפוץ ישר לאמולציה.</string>
++    <string name="welcome_description">למד איך להפעיל &lt;b>TurboEden&lt;/b> וקפוץ ישר לאמולציה.</string>
+     <string name="yellow">צהוב</string>
+ </resources>
+--- a/res/values-hu/strings.xml
++++ b/res/values-hu/strings.xml
+@@ -307,7 +307,7 @@
+     <string name="invalid_directory_description">Kérjük, győződj meg róla, hogy a kiválasztott könyvtár tartalmazza a cheats/, romfs/ vagy exefs/ mappát, majd próbáld újra.</string>
+     <string name="invalid_driver_file">Érvénytelen illesztőprogramfájl: %s</string>
+     <string name="invalid_profile_name">Érvénytelen profilnév</string>
+-    <string name="invalid_yuzu_backup">Érvénytelen Eden biztonsági másolat</string>
++    <string name="invalid_yuzu_backup">Érvénytelen TurboEden biztonsági másolat</string>
+     <string name="invert_axis">Fordított tengely</string>
+     <string name="invert_button">Fordított gomb</string>
+     <string name="item_view_role_description">Lap</string>
+@@ -329,7 +329,7 @@
+     <string name="left_stick">Bal kar</string>
+     <string name="license_fidelityfx_fsr_description">Magas minőségű felskálázás az AMD-től</string>
+     <string name="licenses">Licenszek</string>
+-    <string name="licenses_description">Projektek, amik nélkül a Eden nem jöhetett volna létre Androidra</string>
++    <string name="licenses_description">Projektek, amik nélkül a TurboEden nem jöhetett volna létre Androidra</string>
+     <string name="load">Betöltés</string>
+     <string name="loader_error_encrypted">ROM titkosítva</string>
+     <string name="loader_error_encrypted_keys_description">Győződj meg róla, hogy a &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> fájl telepítve van, hogy a játékok visszafejthetők legyenek.</string>
+@@ -345,7 +345,7 @@
+     <string name="manage_game_folders">Játékmappák kezelése</string>
+     <string name="manage_save_data">Mentésadatok kezelése</string>
+     <string name="manage_save_data_description">Mentés található. Kérjük, válassz egyet az alábbi opciók közül.</string>
+-    <string name="manage_yuzu_data">Eden adatok kezelése</string>
++    <string name="manage_yuzu_data">TurboEden adatok kezelése</string>
+     <string name="manage_yuzu_data_description">Firmware, kulcsok, felhasználói adatok és egyebek importálása/exportálása</string>
+     <string name="map_control">Hozzárendelés ehhez: %1$s</string>
+     <string name="map_dpad_direction">Hozzárendelés %1$s D-pad-hez</string>
+@@ -513,7 +513,7 @@
+     <string name="not_set">Nincs beállítva</string>
+     <string name="notice_notification_channel_description">Értesítések megjelenítése, ha valami rosszul sül el.</string>
+     <string name="notice_notification_channel_name">Megjegyzések és hibák</string>
+-    <string name="notification_no_directory_link">Nem sikerült megnyitni a Eden könyvtárat</string>
++    <string name="notification_no_directory_link">Nem sikerült megnyitni a TurboEden könyvtárat</string>
+     <string name="notification_no_directory_link_description">Kérjük, manuálisan keresd meg a felhasználói mappát a fájlkezelő oldalsó paneljével.</string>
+     <string name="notification_permission_not_granted">Nincs engedély az értesítés megjelenítéséhez!</string>
+     <string name="notifications">Értesítések</string>
+@@ -523,8 +523,8 @@
+     <string name="nvdec_emulation_none">Nincs</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Betöltéskor</string>
+-    <string name="open_user_folder">Eden mappa megnyitása</string>
+-    <string name="open_user_folder_description">Eden belső fájljainak kezelése</string>
++    <string name="open_user_folder">TurboEden mappa megnyitása</string>
++    <string name="open_user_folder_description">TurboEden belső fájljainak kezelése</string>
+     <string name="operation_completed_successfully">A művelet sikeresen befejeződött</string>
+     <string name="orange">Narancs</string>
+     <string name="overlay_position">Overlay pozíció</string>
+@@ -652,7 +652,7 @@
+     <string name="shaders_prefix">Shader(ek)</string>
+     <string name="shaders_suffix">fordítása</string>
+     <string name="share_log">Hibakereső logok megosztása</string>
+-    <string name="share_log_description">A Eden naplófájl megosztása a problémák elhárításához</string>
++    <string name="share_log_description">A TurboEden naplófájl megosztása a problémák elhárításához</string>
+     <string name="share_log_missing">Nem található log fájl</string>
+     <string name="show_app_ram_usage">Alkalmazás RAM-használat</string>
+     <string name="show_app_ram_usage_description">Az emulátor által használt RAM mennyiségének megjelenítése</string>
+@@ -781,6 +781,6 @@
+     <string name="web_username">Webes felhasználónév</string>
+     <string name="web_username_description">A többjátékos szobákban megjelenítendő felhasználónév. 4-20 karakter hosszú legyen, és csak betűket, számokat, kötőjeleket, pontokat, aláhúzásjeleket és szóközöket tartalmazzon.</string>
+     <string name="welcome">Üdvözöljük!</string>
+-    <string name="welcome_description">Ismerkedj meg a &lt;b>Eden&lt;/b> beállításával és ugorj bele az emulációba.</string>
++    <string name="welcome_description">Ismerkedj meg a &lt;b>TurboEden&lt;/b> beállításával és ugorj bele az emulációba.</string>
+     <string name="yellow">Sárga</string>
+ </resources>
+--- a/res/values-id/strings.xml
++++ b/res/values-id/strings.xml
+@@ -29,8 +29,8 @@
+     <string name="anisotropic_filtering_description">Meningkatkan kualitas tekstur bila dilihat pada sudut miring</string>
+     <string name="anti_aliasing_none">Tak ada</string>
+     <string name="app_disclaimer">Perangkat lunak ini akan menjalankan permainan dari konsol Nintendo Switch. Permainan maupun keys tidak disediakan.<br/><br/>Sebelum memulai, tolong temukan berkas &lt;b> prod.keys &lt;/b> didalam tempat penyimpanan mu.<br/><br/>&lt;a href=\"https://yuzu-mirror.github.io/help/quickstart\">Pelajari lebih lanjut&lt;/a></string>
+-    <string name="app_notification_channel_description">Notifikasi emulator Eden</string>
+-    <string name="app_notification_running">Eden sedang berjalan</string>
++    <string name="app_notification_channel_description">Notifikasi emulator TurboEden</string>
++    <string name="app_notification_running">TurboEden sedang berjalan</string>
+     <string name="applet_hle">Frontend Kustom</string>
+     <string name="applet_lle">Applet Asli</string>
+     <string name="applets">Luncurkan applet</string>
+@@ -295,7 +295,7 @@
+     <string name="invalid_driver_file">File driver tidak valid: %s</string>
+     <string name="invalid_profile_name">Nama profil tidak valid</string>
+     <string name="invalid_value">Nilai invalid</string>
+-    <string name="invalid_yuzu_backup">cadangan Eden tidak valid</string>
++    <string name="invalid_yuzu_backup">cadangan TurboEden tidak valid</string>
+     <string name="invert_axis">Balikkan poros</string>
+     <string name="invert_button">Balikkan tombol</string>
+     <string name="keys">Kunci</string>
+@@ -317,7 +317,7 @@
+     <string name="left_stick">Left Stick</string>
+     <string name="license_fidelityfx_fsr_description">Peningkatan kualitas tinggi dari AMD</string>
+     <string name="licenses">Lisensi</string>
+-    <string name="licenses_description">Proyek yang memungkinkan Eden untuk Android</string>
++    <string name="licenses_description">Proyek yang memungkinkan TurboEden untuk Android</string>
+     <string name="load">Muat</string>
+     <string name="loader_error_encrypted">ROM-mu ter-enkripsi</string>
+     <string name="loader_error_encrypted_keys_description">Harap pastikan bahwa Anda &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> diinstal sehingga game dapat didekripsi.</string>
+@@ -333,7 +333,7 @@
+     <string name="manage_game_folders">Kelola folder game</string>
+     <string name="manage_save_data">Kelola save data</string>
+     <string name="manage_save_data_description">Data simpanan ditemukan. Silakan pilih opsi di bawah.</string>
+-    <string name="manage_yuzu_data">Kelola data Eden.</string>
++    <string name="manage_yuzu_data">Kelola data TurboEden.</string>
+     <string name="manage_yuzu_data_description">Impor/expor firmware, key, data pengguna, dan sebagainya!</string>
+     <string name="map_control">Petakan ke%1$s</string>
+     <string name="map_dpad_direction">Petakan ke D-Pad%1$s</string>
+@@ -441,7 +441,7 @@
+     <string name="not_set">Tidak ditetapkan</string>
+     <string name="notice_notification_channel_description">Menampilkan pemberitahuan ketika terjadi kesalahan.</string>
+     <string name="notice_notification_channel_name">Pemberitahuan dan error</string>
+-    <string name="notification_no_directory_link">Tidak bisa membuka direktori Eden</string>
++    <string name="notification_no_directory_link">Tidak bisa membuka direktori TurboEden</string>
+     <string name="notification_no_directory_link_description">Silakan cari folder pengguna dengan panel samping manajer file secara manual.</string>
+     <string name="notification_permission_not_granted">Izin notifikasi tidak diberikan!</string>
+     <string name="notifications">Notifikasi</string>
+@@ -451,8 +451,8 @@
+     <string name="nvdec_emulation_none">Tidak Ada</string>
+     <string name="ok">Oke</string>
+     <string name="on_load">Saat Memuat</string>
+-    <string name="open_user_folder">Buka folder Eden</string>
+-    <string name="open_user_folder_description">"Kelola file internal Eden's"</string>
++    <string name="open_user_folder">Buka folder TurboEden</string>
++    <string name="open_user_folder_description">"Kelola file internal TurboEden's"</string>
+     <string name="operation_completed_successfully">Operasi selsesai dengan sukses</string>
+     <string name="orange">Oranye</string>
+     <string name="overlay_auto_hide">Sembunyikan otomatis Overlay</string>
+@@ -571,7 +571,7 @@
+     <string name="searching_for_game">Mencari game...</string>
+     <string name="seconds">Detik</string>
+     <string name="select_content_type">Pilih Jenis Konten</string>
+-    <string name="select_games_folder_description">Izinkan Eden mengisi daftar game</string>
++    <string name="select_games_folder_description">Izinkan TurboEden mengisi daftar game</string>
+     <string name="select_gpu_driver_default">Bawaan</string>
+     <string name="select_gpu_driver_error">Driver yang dipilih tidak valid</string>
+     <string name="select_rtc_date">Pilih tanggal RTC</string>
+@@ -584,7 +584,7 @@
+     <string name="shaders_prefix">Membangun</string>
+     <string name="shaders_suffix">Shader</string>
+     <string name="share_log">Bagikan log debug</string>
+-    <string name="share_log_description">Bagikan file log Eden untuk mendebug isu</string>
++    <string name="share_log_description">Bagikan file log TurboEden untuk mendebug isu</string>
+     <string name="share_log_missing">Tidak ada log file yang ditemukan</string>
+     <string name="show_app_ram_usage">Tampilkan Penggunaan RAM Aplikasi</string>
+     <string name="show_app_ram_usage_description">Tampilkan jumlah RAM yang digunakan emulator</string>
+@@ -720,6 +720,6 @@
+     <string name="web_username">Nama Pengguna Web</string>
+     <string name="web_username_description">Nama pengguna yang ditampilkan di ruang multiplayer. Harus 4-20 karakter (hanya alfanumerik, tanda hubung, titik, garis bawah, dan spasi).</string>
+     <string name="welcome">Selamat datang!</string>
+-    <string name="welcome_description">Pelajari cara menyiapkan &lt;b>Eden&lt;/b> dan masuk ke dalam emulasi.</string>
++    <string name="welcome_description">Pelajari cara menyiapkan &lt;b>TurboEden&lt;/b> dan masuk ke dalam emulasi.</string>
+     <string name="yellow">Kuning</string>
+ </resources>
+--- a/res/values-it/strings.xml
++++ b/res/values-it/strings.xml
+@@ -63,8 +63,8 @@
+     <string name="anisotropic_filtering_description">Migliora la qualità delle texture quando vengono visualizzate ad un angolo obliquo.</string>
+     <string name="anti_aliasing_none">Nessuna</string>
+     <string name="app_disclaimer">Questo software esegue giochi per la console Nintendo Switch. Non sono inclusi titoli di giochi o chiavi.<br/><br/> Prima di iniziare, individua il file &lt;b>prod.keys&lt;/b> nella memoria del tuo dispositivo.<br/><br/> &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart\">Ulteriori informazioni&lt;/a></string>
+-    <string name="app_notification_channel_description">"Notifiche dell'emulatore Eden Switch"</string>
+-    <string name="app_notification_running">Eden è in esecuzione</string>
++    <string name="app_notification_channel_description">"Notifiche dell'emulatore TurboEden Switch"</string>
++    <string name="app_notification_running">TurboEden è in esecuzione</string>
+     <string name="app_settings">Impostazioni app</string>
+     <string name="app_settings_description">"Modifica il comportamento e l'aspetto dell'app"</string>
+     <string name="applet_hle">Frontend personalizzato</string>
+@@ -365,7 +365,7 @@
+     <string name="invalid_driver_file">File driver non valido: %s</string>
+     <string name="invalid_profile_name">Nome profilo non valido</string>
+     <string name="invalid_value">Valore non valido</string>
+-    <string name="invalid_yuzu_backup">Backup di Eden Invalido</string>
++    <string name="invalid_yuzu_backup">Backup di TurboEden Invalido</string>
+     <string name="invert_axis">Inverti asse</string>
+     <string name="invert_button">Inverti pulsante</string>
+     <string name="item_view_role_description">Scheda</string>
+@@ -388,7 +388,7 @@
+     <string name="left_stick">Analogico sinistro</string>
+     <string name="license_fidelityfx_fsr_description">Upscaling di alta qualità da parte di AMD</string>
+     <string name="licenses">Licenze</string>
+-    <string name="licenses_description">Progetti che rendono Eden per Android possibile</string>
++    <string name="licenses_description">Progetti che rendono TurboEden per Android possibile</string>
+     <string name="load">Carica</string>
+     <string name="load_amiibo">Carica Amiibo</string>
+     <string name="loader_error_encrypted">La tua ROM è criptata</string>
+@@ -405,7 +405,7 @@
+     <string name="manage_game_folders">Gestisci le cartelle dei giochi</string>
+     <string name="manage_save_data">Gestisci i salvataggi</string>
+     <string name="manage_save_data_description">"Salvataggio non trovato. Seleziona un'opzione di seguito."</string>
+-    <string name="manage_yuzu_data">Gestisci i dati di Eden</string>
++    <string name="manage_yuzu_data">Gestisci i dati di TurboEden</string>
+     <string name="manage_yuzu_data_description">Importa/Esporta il firmware, le keys, i dati utente, e altro!</string>
+     <string name="map_control">Mappa su %1$s</string>
+     <string name="map_dpad_direction">Map sulle frecce %1$s</string>
+@@ -575,7 +575,7 @@
+     <string name="not_set">Non impostato</string>
+     <string name="notice_notification_channel_description">Mostra le notifiche quando qualcosa va storto.</string>
+     <string name="notice_notification_channel_name">Avvisi ed errori</string>
+-    <string name="notification_no_directory_link">Impossibile aprire la cartella di Eden</string>
++    <string name="notification_no_directory_link">Impossibile aprire la cartella di TurboEden</string>
+     <string name="notification_no_directory_link_description">"Per favore individua la cartella dell'utente manualmente con il pannello laterale del file manager."</string>
+     <string name="notification_permission_not_granted">Autorizzazione di notifica non concessa!</string>
+     <string name="notifications">Notifiche</string>
+@@ -585,8 +585,8 @@
+     <string name="nvdec_emulation_none">Nessuna</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Al caricamento</string>
+-    <string name="open_user_folder">Apri la cartella di Eden</string>
+-    <string name="open_user_folder_description">Gestisci i file interni di Eden</string>
++    <string name="open_user_folder">Apri la cartella di TurboEden</string>
++    <string name="open_user_folder_description">Gestisci i file interni di TurboEden</string>
+     <string name="operation_completed_successfully">Operazione completata con successo</string>
+     <string name="orange">Arancione</string>
+     <string name="overlay_auto_hide">Nascondi automaticamente overlay</string>
+@@ -716,7 +716,7 @@
+     <string name="seconds">secondi</string>
+     <string name="seconds_must_be_between_0_and_59">I secondi devono essere compresi tra 0 e 59</string>
+     <string name="select_content_type">Tipo contenuto</string>
+-    <string name="select_games_folder_description">"Consente a Eden di popolare l'elenco dei giochi"</string>
++    <string name="select_games_folder_description">"Consente a TurboEden di popolare l'elenco dei giochi"</string>
+     <string name="select_gpu_driver_default">Predefinito</string>
+     <string name="select_gpu_driver_error">Driver selezionato non valido</string>
+     <string name="select_rtc_date">Imposta la data</string>
+@@ -731,7 +731,7 @@
+     <string name="share_config_failed">Impossibile condividere il file</string>
+     <string name="share_game_settings">Condividi configurazione</string>
+     <string name="share_log">Condividi log di debug</string>
+-    <string name="share_log_description">Condividi i log di Eden per ricevere supporto</string>
++    <string name="share_log_description">Condividi i log di TurboEden per ricevere supporto</string>
+     <string name="share_log_missing">Nessun file di log trovato</string>
+     <string name="show_app_ram_usage">Mostra RAM app</string>
+     <string name="show_app_ram_usage_description">"Mostra la quantità di RAM utilizzata dall'emulatore"</string>
+@@ -877,6 +877,6 @@
+     <string name="web_username">Nome utente web</string>
+     <string name="web_username_description">Nome utente visualizzato nelle stanze multiplayer. Deve essere lungo 4-20 caratteri (solo alfanumerici, trattini, punti, underscore e spazi).</string>
+     <string name="welcome">Benvenuto!</string>
+-    <string name="welcome_description">"Scopri come configurare &lt;b>Eden&lt;/b> e passare all'emulazione."</string>
++    <string name="welcome_description">"Scopri come configurare &lt;b>TurboEden&lt;/b> e passare all'emulazione."</string>
+     <string name="yellow">Giallo</string>
+ </resources>
+--- a/res/values-ja/strings.xml
++++ b/res/values-ja/strings.xml
+@@ -269,7 +269,7 @@
+     <string name="invalid">無効</string>
+     <string name="invalid_directory">無効なディレクトリ</string>
+     <string name="invalid_driver_file">無効なドライバーファイル: %s</string>
+-    <string name="invalid_yuzu_backup">Edenのバックアップは無効</string>
++    <string name="invalid_yuzu_backup">TurboEdenのバックアップは無効</string>
+     <string name="invert_axis">軸を反転</string>
+     <string name="invert_button">ボタンを反転</string>
+     <string name="item_view_role_description">タブ</string>
+@@ -290,7 +290,7 @@
+     <string name="left_stick">Lスティック</string>
+     <string name="license_fidelityfx_fsr_description">AMDの高品質アップスケーリング</string>
+     <string name="licenses">ライセンス</string>
+-    <string name="licenses_description">Eden for Androidの作成を可能にしたプロジェクト</string>
++    <string name="licenses_description">TurboEden for Androidの作成を可能にしたプロジェクト</string>
+     <string name="loader_error_encrypted">ROMが暗号化されています</string>
+     <string name="loader_error_encrypted_keys_description">ゲームの復号化に必要な &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> ファイルがインストールされていることを確認してください。</string>
+     <string name="loader_error_encrypted_roms_description">&lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-physical-titles-game-cards\">ゲームカード&lt;/a>または&lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-digital-titles-eshop\">デジタルタイトル&lt;/a>を再ダンプするにはガイドに従ってください。</string>
+@@ -304,7 +304,7 @@
+     <string name="manage_game_folders">ゲームフォルダの管理</string>
+     <string name="manage_save_data">セーブデータ</string>
+     <string name="manage_save_data_description">セーブデータが見つかりました。操作を選択してください。</string>
+-    <string name="manage_yuzu_data">Eden データを管理</string>
++    <string name="manage_yuzu_data">TurboEden データを管理</string>
+     <string name="manage_yuzu_data_description">ファームウェア、キー、ユーザデータなどのインポート・エクスポート</string>
+     <string name="material_clock_toggle_content_description">午前または午後を選択</string>
+     <string name="material_hour_24h_suffix">%1$s 時間</string>
+@@ -468,7 +468,7 @@
+     <string name="not_set">未設定</string>
+     <string name="notice_notification_channel_description">問題の発生時に通知を表示します。</string>
+     <string name="notice_notification_channel_name">通知とエラー</string>
+-    <string name="notification_no_directory_link">Edenのディレクトリを開けません</string>
++    <string name="notification_no_directory_link">TurboEdenのディレクトリを開けません</string>
+     <string name="notification_no_directory_link_description">ファイルマネージャのサイドパネルでユーザーフォルダを手動で探してください。</string>
+     <string name="notification_permission_not_granted">通知が許可されていません!</string>
+     <string name="notifications">通知</string>
+@@ -478,8 +478,8 @@
+     <string name="nvdec_emulation_none">無効</string>
+     <string name="ok">OK</string>
+     <string name="on_load">ロード時</string>
+-    <string name="open_user_folder">Eden フォルダを開く</string>
+-    <string name="open_user_folder_description">Eden内部のファイルを管理します</string>
++    <string name="open_user_folder">TurboEden フォルダを開く</string>
++    <string name="open_user_folder_description">TurboEden内部のファイルを管理します</string>
+     <string name="orange">オレンジ</string>
+     <string name="overlay_position">オーバーレイ位置</string>
+     <string name="overlay_position_bottom_left">左下</string>
+@@ -572,7 +572,7 @@
+     <string name="searching_for_game">ゲームを検索中...</string>
+     <string name="searchview_clear_text_content_description">テキストを消去</string>
+     <string name="searchview_navigation_content_description">戻る</string>
+-    <string name="select_games_folder_description">ゲームをEdenのゲームリストに追加します</string>
++    <string name="select_games_folder_description">ゲームをTurboEdenのゲームリストに追加します</string>
+     <string name="select_gpu_driver_default">デフォルト</string>
+     <string name="select_rtc_date">RTCの日付を選択</string>
+     <string name="select_rtc_time">RTCの時刻を選択</string>
+@@ -584,7 +584,7 @@
+     <string name="shaders_prefix">シェーダー</string>
+     <string name="shaders_suffix">を構築中</string>
+     <string name="share_log">デバッグログを共有</string>
+-    <string name="share_log_description">Edenのログファイルを共有して問題をデバッグします</string>
++    <string name="share_log_description">TurboEdenのログファイルを共有して問題をデバッグします</string>
+     <string name="share_log_missing">ログが見つかりません</string>
+     <string name="show_app_ram_usage">アプリRAM使用量</string>
+     <string name="show_app_ram_usage_description">エミュレーターが使用しているRAMの量を表示</string>
+@@ -696,6 +696,6 @@
+     <string name="web_username">ウェブユーザー名</string>
+     <string name="web_username_description">マルチプレイヤールームに表示されるユーザー名。4～20文字の英数字、ハイフン、ピリオド、アンダースコア、スペースのみ使用可能。</string>
+     <string name="welcome">ようこそ!</string>
+-    <string name="welcome_description">&lt;b>Eden&lt;/b> のセットアップ方法を学び、エミュレーションに飛び込みましょう。</string>
++    <string name="welcome_description">&lt;b>TurboEden&lt;/b> のセットアップ方法を学び、エミュレーションに飛び込みましょう。</string>
+     <string name="yellow">黄</string>
+ </resources>
+--- a/res/values-ko/strings.xml
++++ b/res/values-ko/strings.xml
+@@ -290,7 +290,7 @@
+     <string name="invalid_directory">잘못된 디렉토리</string>
+     <string name="invalid_directory_description">선택한 디렉토리가 cheats/, romfs/, 또는 exefs/ 폴더를 포함하는지 확인하고 다시 시도하세요.</string>
+     <string name="invalid_driver_file">잘못된 드라이버 파일: %s</string>
+-    <string name="invalid_yuzu_backup">올바르지 않은 Eden 백업 파일</string>
++    <string name="invalid_yuzu_backup">올바르지 않은 TurboEden 백업 파일</string>
+     <string name="invert_axis">축 뒤집기</string>
+     <string name="invert_button">버튼 반전</string>
+     <string name="item_view_role_description">탭</string>
+@@ -312,7 +312,7 @@
+     <string name="left_stick">L 스틱</string>
+     <string name="license_fidelityfx_fsr_description">AMD 고품질 업스케일링</string>
+     <string name="licenses">라이센스</string>
+-    <string name="licenses_description">Android용 Eden를 가능하게 하는 프로젝트</string>
++    <string name="licenses_description">Android용 TurboEden를 가능하게 하는 프로젝트</string>
+     <string name="loader_error_encrypted">롬 파일이 암호화되어있음</string>
+     <string name="loader_error_encrypted_keys_description">게임을 해독할 수 있도록 &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> 파일이 설치되어 있는지 확인하세요.</string>
+     <string name="loader_error_encrypted_roms_description">&lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-physical-titles-game-cards\">게임 카드&lt;/a> 또는 &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-digital-titles-eshop\">디지털 타이틀&lt;/a>을 다시 덤프하려면 가이드를 따르세요.</string>
+@@ -327,7 +327,7 @@
+     <string name="manage_game_folders">게임 폴더 관리</string>
+     <string name="manage_save_data">세이브 데이터 관리</string>
+     <string name="manage_save_data_description">세이브 데이터를 발견했습니다. 아래에서 옵션을 선택하세요.</string>
+-    <string name="manage_yuzu_data">Eden 데이터 관리</string>
++    <string name="manage_yuzu_data">TurboEden 데이터 관리</string>
+     <string name="manage_yuzu_data_description">펌웨어, 키 값, 유저 데이터 등을 가져오기 또는 내보내기</string>
+     <string name="material_clock_toggle_content_description">오전 또는 오후를 선택하세요.</string>
+     <string name="material_hour_24h_suffix">%1$s시간</string>
+@@ -492,7 +492,7 @@
+     <string name="not_set">설정되지 않음</string>
+     <string name="notice_notification_channel_description">문제가 발생하면 알림을 표시합니다.</string>
+     <string name="notice_notification_channel_name">알림 및 오류</string>
+-    <string name="notification_no_directory_link">Eden 디렉터리를 열 수 없음</string>
++    <string name="notification_no_directory_link">TurboEden 디렉터리를 열 수 없음</string>
+     <string name="notification_no_directory_link_description">파일 관리자의 사이드 패널에서 사용자 폴더를 수동으로 찾아주세요.</string>
+     <string name="notification_permission_not_granted">알림 권한이 부여되지 않았습니다!</string>
+     <string name="notifications">알림</string>
+@@ -502,8 +502,8 @@
+     <string name="nvdec_emulation_none">없음</string>
+     <string name="ok">확인</string>
+     <string name="on_load">로드 시</string>
+-    <string name="open_user_folder">Eden 폴더 열기</string>
+-    <string name="open_user_folder_description">Eden의 내부 파일 관리</string>
++    <string name="open_user_folder">TurboEden 폴더 열기</string>
++    <string name="open_user_folder_description">TurboEden의 내부 파일 관리</string>
+     <string name="operation_completed_successfully">작업이 완료되었습니다.</string>
+     <string name="orange">주황색</string>
+     <string name="overlay_position">오버레이 위치</string>
+@@ -613,7 +613,7 @@
+     <string name="searchview_clear_text_content_description">텍스트 삭제</string>
+     <string name="searchview_navigation_content_description">뒤로</string>
+     <string name="select_content_type">콘텐츠 형태</string>
+-    <string name="select_games_folder_description">Eden에 게임 목록 추가하기</string>
++    <string name="select_games_folder_description">TurboEden에 게임 목록 추가하기</string>
+     <string name="select_gpu_driver_default">기본값</string>
+     <string name="select_gpu_driver_error">잘못된 드라이버가 선택되었습니다.</string>
+     <string name="select_rtc_date">RTC 날짜 선택</string>
+@@ -626,7 +626,7 @@
+     <string name="shaders_prefix">구축 중</string>
+     <string name="shaders_suffix">개 셰이더</string>
+     <string name="share_log">디버그 로그 공유</string>
+-    <string name="share_log_description">문제 해결을 위한 Eden 로그 파일 공유</string>
++    <string name="share_log_description">문제 해결을 위한 TurboEden 로그 파일 공유</string>
+     <string name="share_log_missing">로그 파일을 찾을 수 없습니다.</string>
+     <string name="show_app_ram_usage">앱 RAM 사용량 표시</string>
+     <string name="show_app_ram_usage_description">에뮬레이터가 사용 중인 RAM 양 표시</string>
+@@ -749,6 +749,6 @@
+     <string name="web_username">웹 사용자 이름</string>
+     <string name="web_username_description">멀티플레이어 방에 표시되는 사용자 이름. 4~20자의 영숫자, 하이픈, 마침표, 밑줄 및 공백만 포함해야 합니다.</string>
+     <string name="welcome">환영합니다!</string>
+-    <string name="welcome_description">&lt;b>Eden&lt;/b>를 설정하고 에뮬레이션을 시작하세요.</string>
++    <string name="welcome_description">&lt;b>TurboEden&lt;/b>를 설정하고 에뮬레이션을 시작하세요.</string>
+     <string name="yellow">노란색</string>
+ </resources>
+--- a/res/values-nb/strings.xml
++++ b/res/values-nb/strings.xml
+@@ -276,7 +276,7 @@
+     <string name="left_stick">Venstre spak</string>
+     <string name="license_fidelityfx_fsr_description">Oppskalering av høy kvalitet fra AMD</string>
+     <string name="licenses">Lisenser</string>
+-    <string name="licenses_description">Prosjekter som gjør Eden for Android mulig</string>
++    <string name="licenses_description">Prosjekter som gjør TurboEden for Android mulig</string>
+     <string name="loader_error_encrypted">ROM-en din er kryptert</string>
+     <string name="loader_error_encrypted_keys_description">Vennligst sørg for at &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> filen er installert slik at spillene kan dekrypteres.</string>
+     <string name="loader_error_encrypted_roms_description">Følg veiledningene for å dumpe &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-physical-titles-game-cards\">spillkort&lt;/a> eller &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-digital-titles-eshop\">digitale titler&lt;/a> på nytt.</string>
+@@ -446,7 +446,7 @@
+     <string name="not_set">Ikke angitt</string>
+     <string name="notice_notification_channel_description">Viser varsler når noe går galt.</string>
+     <string name="notice_notification_channel_name">Merknader og feil</string>
+-    <string name="notification_no_directory_link">Kunne ikke åpne Eden-katalogen</string>
++    <string name="notification_no_directory_link">Kunne ikke åpne TurboEden-katalogen</string>
+     <string name="notification_no_directory_link_description">Finn brukermappen manuelt med filbehandlingens sidepanel.</string>
+     <string name="notification_permission_not_granted">Varslingstillatelse ikke gitt!</string>
+     <string name="notifications">Varsler</string>
+@@ -456,8 +456,8 @@
+     <string name="nvdec_emulation_none">Ingen</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Ved lasting</string>
+-    <string name="open_user_folder">Åpne Eden-mappen</string>
+-    <string name="open_user_folder_description">Administrere Edens interne filer</string>
++    <string name="open_user_folder">Åpne TurboEden-mappen</string>
++    <string name="open_user_folder_description">Administrere TurboEdens interne filer</string>
+     <string name="orange">Oransje</string>
+     <string name="overlay_position">Overlayposisjon</string>
+     <string name="overlay_position_bottom_left">Nederst til venstre</string>
+@@ -545,7 +545,7 @@
+     <string name="searching_for_game">Søker etter spill...</string>
+     <string name="searchview_clear_text_content_description">Fjern teksten</string>
+     <string name="searchview_navigation_content_description">Tilbake</string>
+-    <string name="select_games_folder_description">Gjør det mulig for Eden å fylle ut spillelisten.</string>
++    <string name="select_games_folder_description">Gjør det mulig for TurboEden å fylle ut spillelisten.</string>
+     <string name="select_gpu_driver_default">Standard</string>
+     <string name="select_rtc_date">Velg RTC-dato</string>
+     <string name="select_rtc_time">Velg RTC-tid</string>
+@@ -557,7 +557,7 @@
+     <string name="shaders_prefix">Bygger</string>
+     <string name="shaders_suffix">shader(e)</string>
+     <string name="share_log">Del feilsøkingslogger</string>
+-    <string name="share_log_description">Del Edens loggfil for å feilsøke problemer</string>
++    <string name="share_log_description">Del TurboEdens loggfil for å feilsøke problemer</string>
+     <string name="share_log_missing">Ingen loggfil funnet</string>
+     <string name="show_app_ram_usage">Vis appminnebruk</string>
+     <string name="show_app_ram_usage_description">Vis hvor mye RAM emulatoren bruker</string>
+@@ -664,6 +664,6 @@
+     <string name="web_username">Webbrukernavn</string>
+     <string name="web_username_description">Brukernavn som vises i flerspillerrom. Må være mellom 4-20 tegn (kun alfanumeriske tegn, bindestreker, punktum, understreker og mellomrom).</string>
+     <string name="welcome">Velkommen!</string>
+-    <string name="welcome_description">Lær å sette opp &lt;b>Eden&lt;/b> og hopp inn i emulering.</string>
++    <string name="welcome_description">Lær å sette opp &lt;b>TurboEden&lt;/b> og hopp inn i emulering.</string>
+     <string name="yellow">Gul</string>
+ </resources>
+--- a/res/values-pl/strings.xml
++++ b/res/values-pl/strings.xml
+@@ -70,8 +70,8 @@
+     <string name="app_language">Język aplikacji</string>
+     <string name="app_language_description">Zmień język interfejsu aplikacji</string>
+     <string name="app_language_system">Zgodnie z systemem</string>
+-    <string name="app_notification_channel_description">Powiadomienia emulatora switcha Eden</string>
+-    <string name="app_notification_running">Eden działa</string>
++    <string name="app_notification_channel_description">Powiadomienia emulatora switcha TurboEden</string>
++    <string name="app_notification_running">TurboEden działa</string>
+     <string name="app_settings">Ustawienia aplikacji</string>
+     <string name="app_settings_description">Dostosuj działanie i wygląd aplikacji</string>
+     <string name="applet_hle">Niestandardowy frontend</string>
+@@ -245,7 +245,7 @@
+ Czy chcesz go teraz pobrać i zainstalować?"</string>
+     <string name="driver_missing_title">Wymagany sterownik GPU</string>
+     <string name="driver_not_found">Wymagany sterownik nie jest zainstalowany: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">Eden automatycznie wyczyścił wszystkie pamięci podręczne shaderów, aby zachować poprawność walidacji potoków Vulkan. Jest to wymagane przy zmianie sterowników GPU, aby zapobiec awariom i błędom graficznym. Podczas ponownego budowania shaderów możesz doświadczyć chwilowych przycięć.</string>
++    <string name="driver_shader_wipe_dialog_message">TurboEden automatycznie wyczyścił wszystkie pamięci podręczne shaderów, aby zachować poprawność walidacji potoków Vulkan. Jest to wymagane przy zmianie sterowników GPU, aby zapobiec awariom i błędom graficznym. Podczas ponownego budowania shaderów możesz doświadczyć chwilowych przycięć.</string>
+     <string name="driver_shader_wipe_dialog_title">Shadery wyczyszczone</string>
+     <string name="dual_joycons">Para Joyconów</string>
+     <string name="dyna_state">Rozszerzony stan dynamiczny</string>
+@@ -421,7 +421,7 @@
+     <string name="invalid_driver_file">Nieprawidłowy plik sterownika: %s</string>
+     <string name="invalid_profile_name">Nieprawidłowa nazwa profilu</string>
+     <string name="invalid_value">Nieprawidłowa wartość</string>
+-    <string name="invalid_yuzu_backup">Nieprawidłowa kopia zapasowa Eden</string>
++    <string name="invalid_yuzu_backup">Nieprawidłowa kopia zapasowa TurboEden</string>
+     <string name="invert_axis">Odwróć oś</string>
+     <string name="invert_button">Odwróć przycisk</string>
+     <string name="item_view_role_description">Karta</string>
+@@ -444,7 +444,7 @@
+     <string name="left_stick">Lewa gałka</string>
+     <string name="license_fidelityfx_fsr_description">Rozciąganie wysokiej jakości od AMD</string>
+     <string name="licenses">Licencje</string>
+-    <string name="licenses_description">Projekty dzięki którym Eden mógł zostać stworzony</string>
++    <string name="licenses_description">Projekty dzięki którym TurboEden mógł zostać stworzony</string>
+     <string name="load">Wczytaj</string>
+     <string name="load_amiibo">Załaduj Amiibo</string>
+     <string name="loader_error_encrypted">Twój ROM jest zakodowany</string>
+@@ -461,7 +461,7 @@
+     <string name="manage_game_folders">Zarządzaj folderami gier</string>
+     <string name="manage_save_data">Zarządzaj plikami zapisów gier</string>
+     <string name="manage_save_data_description">Znaleziono pliki zapisów gier. Wybierz opcję poniżej.</string>
+-    <string name="manage_yuzu_data">Zarządzaj danymi Eden</string>
++    <string name="manage_yuzu_data">Zarządzaj danymi TurboEden</string>
+     <string name="manage_yuzu_data_description">Importuj/eksportuj firmware, klucze i dane.</string>
+     <string name="map_control">Przypisz do %1$s</string>
+     <string name="map_dpad_direction">Przypisz do krzyżaka (D-Pad) %1$s</string>
+@@ -647,7 +647,7 @@
+     <string name="off">Wyłączone</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Podczas ładowania</string>
+-    <string name="open_user_folder">Otwórz folder Eden</string>
++    <string name="open_user_folder">Otwórz folder TurboEden</string>
+     <string name="open_user_folder_description">Zarządzaj plikami emulatora</string>
+     <string name="operation_completed_successfully">Operacja zakończona pomyślnie</string>
+     <string name="orange">Pomarańczowy</string>
+@@ -803,7 +803,7 @@
+     <string name="seconds_abbr">s</string>
+     <string name="seconds_must_be_between_0_and_59">Liczba sekund musi mieścić się w zakresie 0–59</string>
+     <string name="select_content_type">Typ zawartości</string>
+-    <string name="select_games_folder_description">Pozwala Eden wygenerować listę gier</string>
++    <string name="select_games_folder_description">Pozwala TurboEden wygenerować listę gier</string>
+     <string name="select_gpu_driver_default">Domyślne</string>
+     <string name="select_gpu_driver_error">Wybrano nieprawidłowy sterownik</string>
+     <string name="select_rtc_date">Ustaw datę RTC</string>
+@@ -818,7 +818,7 @@
+     <string name="share_config_failed">Nie udało się udostępnić pliku konfiguracji</string>
+     <string name="share_game_settings">Udostępnij konfigurację</string>
+     <string name="share_log">Udostępnij logi debugowania</string>
+-    <string name="share_log_description">Podziel się logami Eden, pomoże to twórcom w poprawie działania emulatora</string>
++    <string name="share_log_description">Podziel się logami TurboEden, pomoże to twórcom w poprawie działania emulatora</string>
+     <string name="share_log_missing">Nie znaleziono plików logów</string>
+     <string name="show_app_ram_usage">Pokaż użycie RAM aplikacji</string>
+     <string name="show_app_ram_usage_description">Wyświetl ilość pamięci RAM używanej przez emulator</string>
+@@ -978,6 +978,6 @@
+     <string name="web_username">Nazwa użytkownika w sieci</string>
+     <string name="web_username_description">Nazwa użytkownika wyświetlana w pokojach multiplayer. Musi zawierać 4-20 znaków (tylko znaki alfanumeryczne, myślniki, kropki, podkreślenia i spacje).</string>
+     <string name="welcome">Witaj!</string>
+-    <string name="welcome_description">Zobacz jak skonfigurować &lt;b>Eden&lt;/b> i wskocz w świat emulacji.</string>
++    <string name="welcome_description">Zobacz jak skonfigurować &lt;b>TurboEden&lt;/b> i wskocz w świat emulacji.</string>
+     <string name="yellow">Żółty</string>
+ </resources>
+--- a/res/values-pt-rBR/strings.xml
++++ b/res/values-pt-rBR/strings.xml
+@@ -69,8 +69,8 @@
+     <string name="app_language">Idioma do Aplicativo</string>
+     <string name="app_language_description">Alterar o idioma da interface do aplicativo</string>
+     <string name="app_language_system">Padrão do Sistema</string>
+-    <string name="app_notification_channel_description">Notificações do Eden Switch Emulator</string>
+-    <string name="app_notification_running">Eden está em execução</string>
++    <string name="app_notification_channel_description">Notificações do TurboEden Switch Emulator</string>
++    <string name="app_notification_running">TurboEden está em execução</string>
+     <string name="app_settings">Configurações do App</string>
+     <string name="app_settings_description">Alterar o comportamento e aparência do aplicativo</string>
+     <string name="applet_hle">Frontend personalizado</string>
+@@ -236,7 +236,7 @@
+ Deseja baixá-lo e instalá-lo agora?"</string>
+     <string name="driver_missing_title">Driver de GPU Necessário</string>
+     <string name="driver_not_found">Driver necessário não instalado: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">O Eden limpou automaticamente todos os caches de shader para manter a validação do pipeline Vulkan. Isso é necessário ao trocar drivers de GPU para evitar travamentos e corrupção gráfica. Você pode notar alguns engasgos enquanto os shaders são reconstruídos.</string>
++    <string name="driver_shader_wipe_dialog_message">O TurboEden limpou automaticamente todos os caches de shader para manter a validação do pipeline Vulkan. Isso é necessário ao trocar drivers de GPU para evitar travamentos e corrupção gráfica. Você pode notar alguns engasgos enquanto os shaders são reconstruídos.</string>
+     <string name="driver_shader_wipe_dialog_title">Cache de Shader Limpo</string>
+     <string name="dual_joycons">Par de Joycons</string>
+     <string name="dyna_state">Extended Dynamic State</string>
+@@ -402,7 +402,7 @@
+     <string name="invalid_driver_file">Arquivo de driver inválido: %s</string>
+     <string name="invalid_profile_name">Nome de perfil inválido</string>
+     <string name="invalid_value">Valor inválido</string>
+-    <string name="invalid_yuzu_backup">Backup do Eden inválido</string>
++    <string name="invalid_yuzu_backup">Backup do TurboEden inválido</string>
+     <string name="invert_axis">Inverter eixo</string>
+     <string name="invert_button">Inverter botão</string>
+     <string name="item_view_role_description">Guia</string>
+@@ -425,7 +425,7 @@
+     <string name="left_stick">Analógico esquerdo</string>
+     <string name="license_fidelityfx_fsr_description">Upscaling de alta qualidade da AMD</string>
+     <string name="licenses">Licenças</string>
+-    <string name="licenses_description">Projetos que tornam o Eden para Android possível</string>
++    <string name="licenses_description">Projetos que tornam o TurboEden para Android possível</string>
+     <string name="load">Carregar</string>
+     <string name="load_amiibo">Carregar Amiibo</string>
+     <string name="loader_error_encrypted">Sua ROM está encriptada</string>
+@@ -442,7 +442,7 @@
+     <string name="manage_game_folders">Gerenciar pastas de jogos</string>
+     <string name="manage_save_data">Gerenciar dados salvos</string>
+     <string name="manage_save_data_description">Dados salvos encontrados. Por favor, escolha uma opção abaixo.</string>
+-    <string name="manage_yuzu_data">Administrar Dados do Eden</string>
++    <string name="manage_yuzu_data">Administrar Dados do TurboEden</string>
+     <string name="manage_yuzu_data_description">Importar/exportar firmware, chaves, dados do usuário e mais!</string>
+     <string name="map_control">Mapear botão %1$s</string>
+     <string name="map_dpad_direction">Mapear Direcional para %1$s</string>
+@@ -615,7 +615,7 @@
+     <string name="not_set">Indefinido</string>
+     <string name="notice_notification_channel_description">Mostra notificações quando acontecer um erro.</string>
+     <string name="notice_notification_channel_name">Notificações e erros</string>
+-    <string name="notification_no_directory_link">Não foi possível abrir a pasta do Eden</string>
++    <string name="notification_no_directory_link">Não foi possível abrir a pasta do TurboEden</string>
+     <string name="notification_no_directory_link_description">Localize manualmente a pasta do usuário usando o gerenciador de arquivos.</string>
+     <string name="notification_permission_not_granted">Acesso às notificações não foi permitido!</string>
+     <string name="notifications">Notificações</string>
+@@ -625,8 +625,8 @@
+     <string name="nvdec_emulation_none">Nenhum</string>
+     <string name="ok">Ok</string>
+     <string name="on_load">Ao Carregar</string>
+-    <string name="open_user_folder">Abrir a pasta do Eden</string>
+-    <string name="open_user_folder_description">Gerencie os arquivos internos do Eden</string>
++    <string name="open_user_folder">Abrir a pasta do TurboEden</string>
++    <string name="open_user_folder_description">Gerencie os arquivos internos do TurboEden</string>
+     <string name="operation_completed_successfully">A operação foi concluída com sucesso</string>
+     <string name="orange">Laranja</string>
+     <string name="overlay_auto_hide">Esconder Sobreposição Automaticamente</string>
+@@ -764,7 +764,7 @@
+     <string name="seconds_abbr">seg</string>
+     <string name="seconds_must_be_between_0_and_59">Segundos devem estar entre 0 e 59</string>
+     <string name="select_content_type">Tipo de conteúdo</string>
+-    <string name="select_games_folder_description">Permite ao Eden preencher a lista de jogos</string>
++    <string name="select_games_folder_description">Permite ao TurboEden preencher a lista de jogos</string>
+     <string name="select_gpu_driver_default">Padrão</string>
+     <string name="select_gpu_driver_error">Driver selecionado inválido</string>
+     <string name="select_rtc_date">Selecione a data do sistema</string>
+@@ -779,7 +779,7 @@
+     <string name="share_config_failed">Falhar ao compartilhar o arquivo de configuração</string>
+     <string name="share_game_settings">Compartilhar Configuração</string>
+     <string name="share_log">Compartilhar registros de depuração</string>
+-    <string name="share_log_description">Compartilhe o arquivo de registro do Eden para depurar problemas</string>
++    <string name="share_log_description">Compartilhe o arquivo de registro do TurboEden para depurar problemas</string>
+     <string name="share_log_missing">Arquivo de registro não encontrado</string>
+     <string name="show_app_ram_usage">Mostrar Uso de Memória Pelo App</string>
+     <string name="show_app_ram_usage_description">Exibir a quantidade de memória que o emulador está usando</string>
+@@ -938,6 +938,6 @@
+     <string name="web_username">Nome de usuário web</string>
+     <string name="web_username_description">Nome de usuário a ser exibido nas Salas Públicas. Deve ter entre 4 e 20 caracteres, contendo apenas letras, números, traços, pontos, sublinhados e espaços.</string>
+     <string name="welcome">Bem-vindo!</string>
+-    <string name="welcome_description">Aprenda como configurar o <b>Eden</b> e mergulhe na emulação.</string>
++    <string name="welcome_description">Aprenda como configurar o <b>TurboEden</b> e mergulhe na emulação.</string>
+     <string name="yellow">Amarelo</string>
+ </resources>
+--- a/res/values-pt-rPT/strings.xml
++++ b/res/values-pt-rPT/strings.xml
+@@ -312,7 +312,7 @@
+     <string name="invalid_directory_description">Por favor verifique se o diretório selecionado contém uma pasta cheats/, romfs ou exefs e tente novamente.</string>
+     <string name="invalid_driver_file">Ficheiro de controlador inválido: %s</string>
+     <string name="invalid_profile_name">Nome de perfil inválido</string>
+-    <string name="invalid_yuzu_backup">Backup Eden inválido</string>
++    <string name="invalid_yuzu_backup">Backup TurboEden inválido</string>
+     <string name="invert_axis">Inverter eixo</string>
+     <string name="invert_button">Inverter botão</string>
+     <string name="item_view_role_description">Separador</string>
+@@ -334,7 +334,7 @@
+     <string name="left_stick">Analógico esquerdo</string>
+     <string name="license_fidelityfx_fsr_description">Upscaling de alta qualidade da AMD</string>
+     <string name="licenses">Licenças</string>
+-    <string name="licenses_description">Projetos que tornam o Eden para Android possível</string>
++    <string name="licenses_description">Projetos que tornam o TurboEden para Android possível</string>
+     <string name="load">Carregar</string>
+     <string name="loader_error_encrypted">A tua ROM está encriptada</string>
+     <string name="loader_error_encrypted_keys_description">Por favor confirma que o teu ficheiro &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> está instalado para que os jogos possam ser desencriptados.</string>
+@@ -350,7 +350,7 @@
+     <string name="manage_game_folders">Gerencie as pastas de jogos</string>
+     <string name="manage_save_data">Gerir dados guardados</string>
+     <string name="manage_save_data_description">Dados não encontrados. Por favor seleciona uma opção abaixo.</string>
+-    <string name="manage_yuzu_data">Administrar dados Eden</string>
++    <string name="manage_yuzu_data">Administrar dados TurboEden</string>
+     <string name="manage_yuzu_data_description">Importa/exporta firmware, chaves, dados do usuário e mais!</string>
+     <string name="map_control">Mapear botão %1$s</string>
+     <string name="map_dpad_direction">Mapear Direcional para %1$s</string>
+@@ -518,7 +518,7 @@
+     <string name="not_set">Indefinido</string>
+     <string name="notice_notification_channel_description">Mostra notificações quendo algo corre mal.</string>
+     <string name="notice_notification_channel_name">Notificações e erros</string>
+-    <string name="notification_no_directory_link">Impossível abrir pasta Eden</string>
++    <string name="notification_no_directory_link">Impossível abrir pasta TurboEden</string>
+     <string name="notification_no_directory_link_description">Localiza a pasta de utilizador manualmente com o painel lateral do gestor de ficheiros.</string>
+     <string name="notification_permission_not_granted">Permissões de notificação não permitidas</string>
+     <string name="notifications">Notificações</string>
+@@ -528,8 +528,8 @@
+     <string name="nvdec_emulation_none">Nenhum</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Ao Carregar</string>
+-    <string name="open_user_folder">Abre a pasta Eden</string>
+-    <string name="open_user_folder_description">Gere os ficheiro internos do Eden</string>
++    <string name="open_user_folder">Abre a pasta TurboEden</string>
++    <string name="open_user_folder_description">Gere os ficheiro internos do TurboEden</string>
+     <string name="operation_completed_successfully">A operação foi concluída com sucesso</string>
+     <string name="orange">Laranja</string>
+     <string name="overlay_position">Posição do Overlay</string>
+@@ -649,7 +649,7 @@
+     <string name="searchview_clear_text_content_description">Limpar texto</string>
+     <string name="searchview_navigation_content_description">Anterior</string>
+     <string name="select_content_type">Tipo de conteúdo</string>
+-    <string name="select_games_folder_description">Permite que o Eden preencha a lista de jogos</string>
++    <string name="select_games_folder_description">Permite que o TurboEden preencha a lista de jogos</string>
+     <string name="select_gpu_driver_default">Padrão</string>
+     <string name="select_gpu_driver_error">Driver selecionado inválido</string>
+     <string name="select_rtc_date">Selecione a data do sistema</string>
+@@ -662,7 +662,7 @@
+     <string name="shaders_prefix">A compilar</string>
+     <string name="shaders_suffix">shader(s)</string>
+     <string name="share_log">Compartilhe registros de debug.</string>
+-    <string name="share_log_description">Compartilhe o arquivo de registro do Eden para obter ajuda com problemas</string>
++    <string name="share_log_description">Compartilhe o arquivo de registro do TurboEden para obter ajuda com problemas</string>
+     <string name="share_log_missing">Arquivo de registro não encontrado</string>
+     <string name="show_app_ram_usage">Mostrar RAM do App</string>
+     <string name="show_app_ram_usage_description">Mostrar a quantidade de RAM que o emulador está a utilizar</string>
+@@ -792,6 +792,6 @@
+     <string name="web_username">Nome de utilizador web</string>
+     <string name="web_username_description">Nome de utilizador exibido em salas multiplayer. Deve ter 4-20 caracteres (apenas alfanuméricos, hífens, pontos, underscores e espaços).</string>
+     <string name="welcome">Benvindo!</string>
+-    <string name="welcome_description">Aprende como configurar &lt;b>Eden&lt;/b> e arranca a emulação.</string>
++    <string name="welcome_description">Aprende como configurar &lt;b>TurboEden&lt;/b> e arranca a emulação.</string>
+     <string name="yellow">Amarelo</string>
+ </resources>
+--- a/res/values-ru/strings.xml
++++ b/res/values-ru/strings.xml
+@@ -71,8 +71,8 @@
+     <string name="app_language">Язык приложения</string>
+     <string name="app_language_description">Поменять язык интерфейса приложения</string>
+     <string name="app_language_system">Следовать системе</string>
+-    <string name="app_notification_channel_description">Уведомления эмулятора switch Eden</string>
+-    <string name="app_notification_running">Eden работает</string>
++    <string name="app_notification_channel_description">Уведомления эмулятора switch TurboEden</string>
++    <string name="app_notification_running">TurboEden работает</string>
+     <string name="app_settings">Настройки приложения</string>
+     <string name="app_settings_description">Изменяет поведение и внешний вид приложения</string>
+     <string name="applet_hle">Пользовательский интерфейс</string>
+@@ -166,7 +166,7 @@
+ Все равно установить?"</string>
+     <string name="continue_button">Продолжить</string>
+     <string name="contributors">Контрибьюторы</string>
+-    <string name="contributors_description">Люди, благодаря которым появился Eden для Android</string>
++    <string name="contributors_description">Люди, благодаря которым появился TurboEden для Android</string>
+     <string name="control_stick">Стик управления</string>
+     <string name="controller_type">Тип контроллера</string>
+     <string name="copied_to_clipboard">Скопировано в буфер обмена</string>
+@@ -249,12 +249,12 @@
+ Хотите скачать и установить его сейчас?"</string>
+     <string name="driver_missing_title">Требуется драйвер ГПУ</string>
+     <string name="driver_not_found">Необходимый драйвер не установлен: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">Eden автоматически очистил все кэши шейдеров для поддержания валидации Vulkan-конвейера. Это необходимо при переключении драйверов графического процессора для предотвращения сбоев и графических артефактов. Вы можете столкнуться с некоторыми подтормаживаниями во время перекомпиляции шейдеров.</string>
++    <string name="driver_shader_wipe_dialog_message">TurboEden автоматически очистил все кэши шейдеров для поддержания валидации Vulkan-конвейера. Это необходимо при переключении драйверов графического процессора для предотвращения сбоев и графических артефактов. Вы можете столкнуться с некоторыми подтормаживаниями во время перекомпиляции шейдеров.</string>
+     <string name="driver_shader_wipe_dialog_title">Шейдеры очищены</string>
+     <string name="dual_joycons">"Двойные Joy-Сon'ы"</string>
+     <string name="dyna_state">Расширенное динамическое состояние</string>
+     <string name="dyna_state_description">Управляет количеством функций, доступных для использования в расширенном динамическом состояние. Более высокое значение позволит сократить количество компиляций конвейеров за счёт поддержки динамического состояния драйвером.</string>
+-    <string name="eden_theme">Eden</string>
++    <string name="eden_theme">TurboEden</string>
+     <string name="edit">Редактировать</string>
+     <string name="edit_overlay_layout">Редактировать макет оверлея</string>
+     <string name="edit_overlay_layout_description">Настроить положение и размер элементов управления на экране</string>
+@@ -508,7 +508,7 @@
+     <string name="invalid_driver_file">Неверный файл драйвера: %s</string>
+     <string name="invalid_profile_name">Неверное имя профиля</string>
+     <string name="invalid_value">Неверная величина</string>
+-    <string name="invalid_yuzu_backup">Неверная резервная копия Eden</string>
++    <string name="invalid_yuzu_backup">Неверная резервная копия TurboEden</string>
+     <string name="invert_axis">Инвертировать оси</string>
+     <string name="invert_button">Инвертировать кнопку</string>
+     <string name="invert_confirm_back_controller_buttons">Инвертировать кнопки контроллера Подтвердить/Обратно</string>
+@@ -533,7 +533,7 @@
+     <string name="left_stick">Левый стик</string>
+     <string name="license_fidelityfx_fsr_description">Высококачественное масштабирование от AMD</string>
+     <string name="licenses">Лицензии</string>
+-    <string name="licenses_description">Проекты, которые сделали Eden для Android возможным</string>
++    <string name="licenses_description">Проекты, которые сделали TurboEden для Android возможным</string>
+     <string name="load">Загрузить</string>
+     <string name="load_amiibo">Загрузить Amiibo</string>
+     <string name="loader_error_encrypted">Ваш ROM зашифрованный</string>
+@@ -550,7 +550,7 @@
+     <string name="manage_game_folders">Управление папками</string>
+     <string name="manage_save_data">Управление данными сохранений</string>
+     <string name="manage_save_data_description">Найдены данные сохранений. Пожалуйста, выберите вариант ниже.</string>
+-    <string name="manage_yuzu_data">Управление данными Eden</string>
++    <string name="manage_yuzu_data">Управление данными TurboEden</string>
+     <string name="manage_yuzu_data_description">Импортируйте/экспортируйте прошивку, ключи, пользовательские данные и многое другое!</string>
+     <string name="map_control">Назначить на %1$s</string>
+     <string name="map_dpad_direction">Назначить на D-Pad %1$s</string>
+@@ -725,7 +725,7 @@
+     <string name="not_set">Не установлено</string>
+     <string name="notice_notification_channel_description">Показывает уведомления, когда что-то пошло не так</string>
+     <string name="notice_notification_channel_name">Уведомления и ошибки</string>
+-    <string name="notification_no_directory_link">Не удалось открыть папку Eden</string>
++    <string name="notification_no_directory_link">Не удалось открыть папку TurboEden</string>
+     <string name="notification_no_directory_link_description">Пожалуйста, найдите папку пользователя с помощью боковой панели файлового менеджера вручную.</string>
+     <string name="notification_permission_not_granted">Вы не предоставили разрешение на уведомления!</string>
+     <string name="notifications">Уведомления</string>
+@@ -736,8 +736,8 @@
+     <string name="off">Выкл.</string>
+     <string name="ok">OK</string>
+     <string name="on_load">При загрузке</string>
+-    <string name="open_user_folder">Открыть папку Eden</string>
+-    <string name="open_user_folder_description">Управление внутренними файлами Eden</string>
++    <string name="open_user_folder">Открыть папку TurboEden</string>
++    <string name="open_user_folder_description">Управление внутренними файлами TurboEden</string>
+     <string name="operation_completed_successfully">Операция выполнена успешно</string>
+     <string name="orange">Оранжевый</string>
+     <string name="overlay_auto_hide">Авто-скрытие оверлея</string>
+@@ -928,7 +928,7 @@
+     <string name="seconds_abbr">с</string>
+     <string name="seconds_must_be_between_0_and_59">Количество секунд должно быть от 0 до 59</string>
+     <string name="select_content_type">Тип контента</string>
+-    <string name="select_games_folder_description">Позволяет Eden заполнить список игр</string>
++    <string name="select_games_folder_description">Позволяет TurboEden заполнить список игр</string>
+     <string name="select_gpu_driver_default">По умолчанию</string>
+     <string name="select_gpu_driver_error">Выбран неподходящий драйвер</string>
+     <string name="select_rtc_date">Выберите дату RTC</string>
+@@ -943,10 +943,10 @@
+     <string name="share_config_failed">Не удалось Поделиться конфигом</string>
+     <string name="share_game_settings">Поделиться конфигом</string>
+     <string name="share_gpu_log">Поделиться журналом ГПУ</string>
+-    <string name="share_gpu_log_description">Поделиться журналом ГПУ Eden для отладки графики</string>
++    <string name="share_gpu_log_description">Поделиться журналом ГПУ TurboEden для отладки графики</string>
+     <string name="share_gpu_log_missing">Журнал ГПУ не найден</string>
+     <string name="share_log">Поделиться журналом отладки</string>
+-    <string name="share_log_description">Поделиться журналом отладки Eden для устранения проблем</string>
++    <string name="share_log_description">Поделиться журналом отладки TurboEden для устранения проблем</string>
+     <string name="share_log_missing">Файл журнала не найден</string>
+     <string name="show_app_ram_usage">Показать RAM эмулятора</string>
+     <string name="show_app_ram_usage_description">Показать объем оперативной памяти, используемой эмулятором</string>
+@@ -1117,6 +1117,6 @@
+     <string name="web_username">Веб-имя пользователя</string>
+     <string name="web_username_description">Имя пользователя, отображаемое в мультиплеерных лобби. Должно быть от 4 до 20 символов и содержать только буквы, цифры, дефисы, точки, подчёркивания и пробелы.</string>
+     <string name="welcome">Добро пожаловать!</string>
+-    <string name="welcome_description">Узнайте, как настроить &lt;b>Eden&lt;/b> и перейти прямиком к эмуляции.</string>
++    <string name="welcome_description">Узнайте, как настроить &lt;b>TurboEden&lt;/b> и перейти прямиком к эмуляции.</string>
+     <string name="yellow">Жёлтый</string>
+ </resources>
+--- a/res/values-uk/strings.xml
++++ b/res/values-uk/strings.xml
+@@ -71,8 +71,8 @@
+     <string name="app_language">Мова застосунку</string>
+     <string name="app_language_description">Змінити мову інтерфейсу застосунку</string>
+     <string name="app_language_system">Як у системі</string>
+-    <string name="app_notification_channel_description">Сповіщення емулятора Switch Eden</string>
+-    <string name="app_notification_running">Eden працює</string>
++    <string name="app_notification_channel_description">Сповіщення емулятора Switch TurboEden</string>
++    <string name="app_notification_running">TurboEden працює</string>
+     <string name="app_settings">Налаштування застосунку</string>
+     <string name="app_settings_description">Змінити зовнішній вигляд і поведінку застосунку</string>
+     <string name="applet_hle">Спеціалізований інтерфейс</string>
+@@ -166,7 +166,7 @@
+ Однаково встановити?"</string>
+     <string name="continue_button">Продовжити</string>
+     <string name="contributors">Автори проєкту</string>
+-    <string name="contributors_description">Люди, які зробили Eden на Android можливим</string>
++    <string name="contributors_description">Люди, які зробили TurboEden на Android можливим</string>
+     <string name="control_stick">Контрольний стік</string>
+     <string name="controller_type">Тип контролера</string>
+     <string name="copied_to_clipboard">Скопійовано в буфер обміну</string>
+@@ -249,12 +249,12 @@
+ Хочете завантажити й встановити його зараз?"</string>
+     <string name="driver_missing_title">Потрібен драйвер GPU</string>
+     <string name="driver_not_found">Необхідний драйвер не встановлено: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">Eden автоматично очистив увесь кеш шейдерів, щоб забезпечити перевірку конвеєра Vulkan. Це необхідно при зміні драйверів ГП, щоб уникнути збоїв і графічних помилок. У вас можуть виникнути мікропідвисання під час повторної компіляції шейдерів.</string>
++    <string name="driver_shader_wipe_dialog_message">TurboEden автоматично очистив увесь кеш шейдерів, щоб забезпечити перевірку конвеєра Vulkan. Це необхідно при зміні драйверів ГП, щоб уникнути збоїв і графічних помилок. У вас можуть виникнути мікропідвисання під час повторної компіляції шейдерів.</string>
+     <string name="driver_shader_wipe_dialog_title">Шейдери очищено</string>
+     <string name="dual_joycons">"Подвійні Joy-Con'и"</string>
+     <string name="dyna_state">Розширений динамічний стан</string>
+     <string name="dyna_state_description">Керує кількістю функцій, які можна використовувати в ExtendedDynamicState (EDS). Вище значення дозволить зменшити кількість компіляцій конвеєра на основі динамічного стану, підтримуваного драйвером.</string>
+-    <string name="eden_theme">Eden</string>
++    <string name="eden_theme">TurboEden</string>
+     <string name="edit">Редагувати</string>
+     <string name="edit_overlay_layout">Редагувати макет оверлея</string>
+     <string name="edit_overlay_layout_description">Коригувати розташування й розміри екранних елементів керування.</string>
+@@ -508,7 +508,7 @@
+     <string name="invalid_driver_file">Недійсний файл драйвера: %s</string>
+     <string name="invalid_profile_name">Неправильна назва профілю</string>
+     <string name="invalid_value">Неправильне значення</string>
+-    <string name="invalid_yuzu_backup">Некоректна резервна копія Eden</string>
++    <string name="invalid_yuzu_backup">Некоректна резервна копія TurboEden</string>
+     <string name="invert_axis">Інвертувати осі</string>
+     <string name="invert_button">Інвертувати кнопку</string>
+     <string name="invert_confirm_back_controller_buttons">Інвертувати кнопки контролера «Підтвердити»/«Назад»</string>
+@@ -533,7 +533,7 @@
+     <string name="left_stick">Лівий стік</string>
+     <string name="license_fidelityfx_fsr_description">Високоякісне масштабування від AMD</string>
+     <string name="licenses">Ліцензії</string>
+-    <string name="licenses_description">Проєкти, які зробили запуск Eden на Android можливим</string>
++    <string name="licenses_description">Проєкти, які зробили запуск TurboEden на Android можливим</string>
+     <string name="load">Завантажити</string>
+     <string name="load_amiibo">Завантажити amiibo</string>
+     <string name="loader_error_encrypted">Ваш ROM зашифрований</string>
+@@ -725,7 +725,7 @@
+     <string name="not_set">Не задано</string>
+     <string name="notice_notification_channel_description">Показує сповіщення у разі виникнення проблем.</string>
+     <string name="notice_notification_channel_name">Сповіщення та помилки</string>
+-    <string name="notification_no_directory_link">Не вдалося відкрити теку Eden</string>
++    <string name="notification_no_directory_link">Не вдалося відкрити теку TurboEden</string>
+     <string name="notification_no_directory_link_description">Будь ласка, знайдіть теку користувача за допомогою бічної панелі файлового менеджера вручну.</string>
+     <string name="notification_permission_not_granted">Дозвіл на сповіщення не надано!</string>
+     <string name="notifications">Сповіщення</string>
+@@ -736,8 +736,8 @@
+     <string name="off">Вимкнено</string>
+     <string name="ok">OK</string>
+     <string name="on_load">При завантаженні</string>
+-    <string name="open_user_folder">Відкрити теку Eden</string>
+-    <string name="open_user_folder_description">Керування внутрішніми файлами Eden</string>
++    <string name="open_user_folder">Відкрити теку TurboEden</string>
++    <string name="open_user_folder_description">Керування внутрішніми файлами TurboEden</string>
+     <string name="operation_completed_successfully">Операція завершилася успішно</string>
+     <string name="orange">Помаранчевий</string>
+     <string name="overlay_auto_hide">Автоматично приховувати оверлей</string>
+@@ -928,7 +928,7 @@
+     <string name="seconds_abbr">с</string>
+     <string name="seconds_must_be_between_0_and_59">Секунди повинні бути в межах від 0 до 59</string>
+     <string name="select_content_type">Тип вмісту</string>
+-    <string name="select_games_folder_description">Дозволяє Eden заповнити список ігор</string>
++    <string name="select_games_folder_description">Дозволяє TurboEden заповнити список ігор</string>
+     <string name="select_gpu_driver_default">За замовчуванням</string>
+     <string name="select_gpu_driver_error">Вибрано неправильний драйвер</string>
+     <string name="select_rtc_date">Вибрати дату</string>
+@@ -943,7 +943,7 @@
+     <string name="share_config_failed">Не вдалося поділитися файлом налаштування</string>
+     <string name="share_game_settings">Поділитися налаштуванням</string>
+     <string name="share_gpu_log">Поділитися журналом ГП</string>
+-    <string name="share_gpu_log_description">Поділитися файлом журналу ГП Eden’а для зневадження графічних помилок</string>
++    <string name="share_gpu_log_description">Поділитися файлом журналу ГП TurboEden’а для зневадження графічних помилок</string>
+     <string name="share_gpu_log_missing">Файл журналу ГП не виявлено</string>
+     <string name="share_log">Поділитися логами</string>
+     <string name="share_log_description">Поділіться лог-файлом для діагностики та допомоги з проблемою.</string>
+@@ -1117,6 +1117,6 @@
+     <string name="web_username">"Веб-ім'я користувача"</string>
+     <string name="web_username_description">"Ім'я користувача, що відображається в мультиплеєрних кімнатах. Повинно містити 4-20 символів (лише літери, цифри, дефіси, крапки, підкреслення та пробіли)."</string>
+     <string name="welcome">Вітаємо!</string>
+-    <string name="welcome_description">Дізнайтеся, як налаштувати &lt;b>Eden&lt;/b> та перейти до емуляції.</string>
++    <string name="welcome_description">Дізнайтеся, як налаштувати &lt;b>TurboEden&lt;/b> та перейти до емуляції.</string>
+     <string name="yellow">Жовтий</string>
+ </resources>
+--- a/res/values-vi/strings.xml
++++ b/res/values-vi/strings.xml
+@@ -275,7 +275,7 @@
+     <string name="left_stick">Cần xoay trái</string>
+     <string name="license_fidelityfx_fsr_description">Upscaling chất lượng cao từ AMD</string>
+     <string name="licenses">Giấy phép</string>
+-    <string name="licenses_description">Các dự án làm cho Eden trên Android trở thành điều có thể</string>
++    <string name="licenses_description">Các dự án làm cho TurboEden trên Android trở thành điều có thể</string>
+     <string name="loader_error_encrypted">ROM của bạn đã bị mã hoá</string>
+     <string name="loader_error_encrypted_keys_description">Vui lòng đảm bảo file &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-prodkeys-and-titlekeys\">prod.keys&lt;/a> đã được cài đặt để game có thể được giải mã.</string>
+     <string name="loader_error_encrypted_roms_description">Vui lòng làm theo hướng dẫn để dump lại &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-physical-titles-game-cards\">băng trò chơi&lt;/a> hoặc &lt;a href=\"https://yuzu-mirror.github.io/help/quickstart/#dumping-digital-titles-eshop\">tựa game kỹ thuật số&lt;/a> của bạn.</string>
+@@ -445,7 +445,7 @@
+     <string name="not_set">Chưa đặt</string>
+     <string name="notice_notification_channel_description">Hiển thị thông báo khi có sự cố xảy ra</string>
+     <string name="notice_notification_channel_name">Thông báo và lỗi</string>
+-    <string name="notification_no_directory_link">Không thể mở thư mục Eden</string>
++    <string name="notification_no_directory_link">Không thể mở thư mục TurboEden</string>
+     <string name="notification_no_directory_link_description">Vui lòng xác định thư mục người dùng với bảng điều khiển bên của trình quản lý tệp thủ công.</string>
+     <string name="notification_permission_not_granted">Ứng dụng không được cấp quyền thông báo!</string>
+     <string name="notifications">Thông báo</string>
+@@ -455,8 +455,8 @@
+     <string name="nvdec_emulation_none">Tắt</string>
+     <string name="ok">OK</string>
+     <string name="on_load">Khi tải</string>
+-    <string name="open_user_folder">Mở thư mục Eden</string>
+-    <string name="open_user_folder_description">Quản lý file nội bộ của Eden</string>
++    <string name="open_user_folder">Mở thư mục TurboEden</string>
++    <string name="open_user_folder_description">Quản lý file nội bộ của TurboEden</string>
+     <string name="orange">Cam</string>
+     <string name="overlay_position">Vị trí overlay</string>
+     <string name="overlay_position_bottom_left">Dưới trái</string>
+@@ -540,7 +540,7 @@
+     <string name="searching_for_game">Đang tìm kiếm trò chơi...</string>
+     <string name="searchview_clear_text_content_description">Xoá văn bản</string>
+     <string name="searchview_navigation_content_description">Quay lại</string>
+-    <string name="select_games_folder_description">Cho phép Eden thêm các trò chơi vào danh sách</string>
++    <string name="select_games_folder_description">Cho phép TurboEden thêm các trò chơi vào danh sách</string>
+     <string name="select_gpu_driver_default">Mặc định</string>
+     <string name="select_rtc_date">Chọn ngày RTC</string>
+     <string name="select_rtc_time">Chọn giờ RTC</string>
+@@ -552,7 +552,7 @@
+     <string name="shaders_prefix">Đang xây dựng</string>
+     <string name="shaders_suffix">shader</string>
+     <string name="share_log">Chia sẽ log gỡ lỗi</string>
+-    <string name="share_log_description">Chia sẻ tệp log của Eden để gỡ lỗi vấn đề</string>
++    <string name="share_log_description">Chia sẻ tệp log của TurboEden để gỡ lỗi vấn đề</string>
+     <string name="share_log_missing">Không tìm thấy tệp log</string>
+     <string name="show_app_ram_usage">Hiển thị RAM ứng dụng</string>
+     <string name="show_app_ram_usage_description">Hiển thị lượng RAM mà trình giả lập đang sử dụng</string>
+@@ -658,6 +658,6 @@
+     <string name="web_username">Tên người dùng web</string>
+     <string name="web_username_description">Tên người dùng hiển thị trong phòng chơi nhiều người. Phải có 4-20 ký tự (chỉ chữ số, dấu gạch ngang, dấu chấm, dấu gạch dưới và khoảng trắng).</string>
+     <string name="welcome">Chào mừng!</string>
+-    <string name="welcome_description">Tìm hiểu cách cài đặt &lt;b>Eden&lt;/b> và bắt đầu giả lập.</string>
++    <string name="welcome_description">Tìm hiểu cách cài đặt &lt;b>TurboEden&lt;/b> và bắt đầu giả lập.</string>
+     <string name="yellow">Vàng</string>
+ </resources>
+--- a/res/values-zh-rCN/strings.xml
++++ b/res/values-zh-rCN/strings.xml
+@@ -71,8 +71,8 @@
+     <string name="app_language">应用使用的语言</string>
+     <string name="app_language_description">更改应用界面语言</string>
+     <string name="app_language_system">跟随系统</string>
+-    <string name="app_notification_channel_description">Eden模拟器通知</string>
+-    <string name="app_notification_running">Eden正在运行</string>
++    <string name="app_notification_channel_description">TurboEden模拟器通知</string>
++    <string name="app_notification_running">TurboEden正在运行</string>
+     <string name="app_settings">应用设置</string>
+     <string name="app_settings_description">更改 app 的外观</string>
+     <string name="applet_hle">自定义前端</string>
+@@ -166,7 +166,7 @@
+ 要继续安装吗？"</string>
+     <string name="continue_button">继续</string>
+     <string name="contributors">贡献者</string>
+-    <string name="contributors_description">Eden Android 版的诞生离不开这些人的支持</string>
++    <string name="contributors_description">TurboEden Android 版的诞生离不开这些人的支持</string>
+     <string name="control_stick">控制摇杆</string>
+     <string name="controller_type">控制器类型</string>
+     <string name="copied_to_clipboard">已复制到剪贴板</string>
+@@ -249,12 +249,12 @@
+ 您要立即下载并安装吗?"</string>
+     <string name="driver_missing_title">需要GPU驱动程序</string>
+     <string name="driver_not_found">未安装所需的驱动程序: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">Eden 已自动清除所有着色器缓存以维护 Vulkan 管线验证。这在切换 GPU 驱动程序时是必需的,以防止崩溃和图形损坏。在着色器重建期间您可能会遇到一些卡顿。</string>
++    <string name="driver_shader_wipe_dialog_message">TurboEden 已自动清除所有着色器缓存以维护 Vulkan 管线验证。这在切换 GPU 驱动程序时是必需的,以防止崩溃和图形损坏。在着色器重建期间您可能会遇到一些卡顿。</string>
+     <string name="driver_shader_wipe_dialog_title">已清理着色器</string>
+     <string name="dual_joycons">双 Joycon 手柄</string>
+     <string name="dyna_state">扩展动态状态</string>
+     <string name="dyna_state_description">控制扩展动态状态 (EDS) 可使用的功能数目。较高的数值将允许根据驱动程序支持的动态状态来减少管线编译的次数。</string>
+-    <string name="eden_theme">Eden</string>
++    <string name="eden_theme">TurboEden</string>
+     <string name="edit">编辑</string>
+     <string name="edit_overlay_layout">编辑触控叠加层布局</string>
+     <string name="edit_overlay_layout_description">调整屏上控件的的位置和大小</string>
+@@ -510,7 +510,7 @@
+     <string name="invalid_driver_file">无效的驱动程序文件: %s</string>
+     <string name="invalid_profile_name">无效的配置文件名称</string>
+     <string name="invalid_value">无效的值</string>
+-    <string name="invalid_yuzu_backup">无效的 Eden 备份</string>
++    <string name="invalid_yuzu_backup">无效的 TurboEden 备份</string>
+     <string name="invert_axis">反转轴向</string>
+     <string name="invert_button">反转按键</string>
+     <string name="invert_confirm_back_controller_buttons">切换“确认/返回”控制器按钮功能</string>
+@@ -535,7 +535,7 @@
+     <string name="left_stick">左摇杆</string>
+     <string name="license_fidelityfx_fsr_description">AMD 的高品质画面增强技术</string>
+     <string name="licenses">许可证</string>
+-    <string name="licenses_description">Android 版 Eden 离不开这些项目的支持</string>
++    <string name="licenses_description">Android 版 TurboEden 离不开这些项目的支持</string>
+     <string name="load">加载</string>
+     <string name="load_amiibo">加载 Amiibo</string>
+     <string name="loader_error_encrypted">您的 ROM 已加密</string>
+@@ -552,7 +552,7 @@
+     <string name="manage_game_folders">管理游戏文件夹</string>
+     <string name="manage_save_data">管理存档数据</string>
+     <string name="manage_save_data_description">已找到存档数据，请选择下方的选项。</string>
+-    <string name="manage_yuzu_data">管理 Eden 数据</string>
++    <string name="manage_yuzu_data">管理 TurboEden 数据</string>
+     <string name="manage_yuzu_data_description">导入/导出固件、密钥、用户数据以及其他</string>
+     <string name="map_control">映射到 %1$s</string>
+     <string name="map_dpad_direction">映射到十字方向键 %1$s</string>
+@@ -727,7 +727,7 @@
+     <string name="not_set">未设置</string>
+     <string name="notice_notification_channel_description">当发生错误时显示通知。</string>
+     <string name="notice_notification_channel_name">错误与注意事项</string>
+-    <string name="notification_no_directory_link">无法打开 Eden 文件夹</string>
++    <string name="notification_no_directory_link">无法打开 TurboEden 文件夹</string>
+     <string name="notification_no_directory_link_description">请使用文件管理器侧边栏中的内部存储手动定位用户文件夹。</string>
+     <string name="notification_permission_not_granted">未授予通知权限！</string>
+     <string name="notifications">通知</string>
+@@ -738,8 +738,8 @@
+     <string name="off">关闭</string>
+     <string name="ok">确定</string>
+     <string name="on_load">加载时</string>
+-    <string name="open_user_folder">打开 Eden 文件夹</string>
+-    <string name="open_user_folder_description">管理 Eden 内部文件</string>
++    <string name="open_user_folder">打开 TurboEden 文件夹</string>
++    <string name="open_user_folder_description">管理 TurboEden 内部文件</string>
+     <string name="operation_completed_successfully">操作已成功完成</string>
+     <string name="orange">橙色</string>
+     <string name="overlay_auto_hide">触控叠加层自动隐藏</string>
+@@ -930,7 +930,7 @@
+     <string name="seconds_abbr">秒</string>
+     <string name="seconds_must_be_between_0_and_59">秒必须为 0 到 59 之间</string>
+     <string name="select_content_type">内容类型</string>
+-    <string name="select_games_folder_description">允许 Eden 更新游戏列表</string>
++    <string name="select_games_folder_description">允许 TurboEden 更新游戏列表</string>
+     <string name="select_gpu_driver_default">系统默认</string>
+     <string name="select_gpu_driver_error">选择的驱动无效</string>
+     <string name="select_rtc_date">选择日期</string>
+@@ -945,10 +945,10 @@
+     <string name="share_config_failed">共享配置文件失败</string>
+     <string name="share_game_settings">共享配置</string>
+     <string name="share_gpu_log">分享 GPU 日志</string>
+-    <string name="share_gpu_log_description">分享 Eden 的 GPU 日志来调试图形问题</string>
++    <string name="share_gpu_log_description">分享 TurboEden 的 GPU 日志来调试图形问题</string>
+     <string name="share_gpu_log_missing">找不到 GPU 日志文件</string>
+     <string name="share_log">分享调试日志</string>
+-    <string name="share_log_description">分享 Eden 日志文件以便调试</string>
++    <string name="share_log_description">分享 TurboEden 日志文件以便调试</string>
+     <string name="share_log_missing">未找到日志文件</string>
+     <string name="show_app_ram_usage">显示应用内存使用情况</string>
+     <string name="show_app_ram_usage_description">显示模拟器内存用量</string>
+@@ -1119,6 +1119,6 @@
+     <string name="web_username">网络用户名</string>
+     <string name="web_username_description">在多人游戏大厅中显示的用户名。用户名必须为4至20个字符，且仅可包含字母、数字、连字符、点号、下划线和空格。</string>
+     <string name="welcome">欢迎！</string>
+-    <string name="welcome_description">了解如何设置 &lt;b>Eden&lt;/b> 并进行模拟。</string>
++    <string name="welcome_description">了解如何设置 &lt;b>TurboEden&lt;/b> 并进行模拟。</string>
+     <string name="yellow">黄色</string>
+ </resources>
+--- a/res/values-zh-rTW/strings.xml
++++ b/res/values-zh-rTW/strings.xml
+@@ -66,12 +66,12 @@
+     <string name="anti_aliasing_none">無</string>
+     <string name="app_disclaimer">本軟體可執行Nintendo Switch主機的遊戲，軟體不提供遊戲和金鑰檔案。&lt;br/> &lt;br/>在開始之前，請先安裝您的 &lt; &amp;lt;b>prod.keys&amp;lt;/b> 檔案，&lt;br />&lt;br />&lt;a href=\"https://yuzu-mirror.github.io/help/quickstart\">了解更多&lt;/a></string>
+     <string name="app_language">語言</string>
+-    <string name="app_language_description">選擇Eden顯示的語言</string>
++    <string name="app_language_description">選擇TurboEden顯示的語言</string>
+     <string name="app_language_system">跟隨系統</string>
+-    <string name="app_notification_channel_description">Eden模擬器通知</string>
+-    <string name="app_notification_running">Eden正在執行</string>
+-    <string name="app_settings">Eden介面設定</string>
+-    <string name="app_settings_description">自訂Eden的主題與介面</string>
++    <string name="app_notification_channel_description">TurboEden模擬器通知</string>
++    <string name="app_notification_running">TurboEden正在執行</string>
++    <string name="app_settings">TurboEden介面設定</string>
++    <string name="app_settings_description">自訂TurboEden的主題與介面</string>
+     <string name="applet_hle">自訂前端</string>
+     <string name="applet_lle">Switch小程式</string>
+     <string name="applets">小程式啟動器</string>
+@@ -234,7 +234,7 @@
+ 要下載並安裝此驅動程式嗎？"</string>
+     <string name="driver_missing_title">需要GPU驅動程式</string>
+     <string name="driver_not_found">未安裝所需的驅動程式: %s</string>
+-    <string name="driver_shader_wipe_dialog_message">為了維持Vulkan管線驗證，Eden已自動清除所有著色器快取。為了預防閃退和圖形錯誤，這是必須的動作。因為著色器需要重新編譯，您在遊戲過程中可能會遇到些微卡頓的情況</string>
++    <string name="driver_shader_wipe_dialog_message">為了維持Vulkan管線驗證，TurboEden已自動清除所有著色器快取。為了預防閃退和圖形錯誤，這是必須的動作。因為著色器需要重新編譯，您在遊戲過程中可能會遇到些微卡頓的情況</string>
+     <string name="driver_shader_wipe_dialog_title">已刪除著色器快取</string>
+     <string name="dual_joycons">雙 Joycon 手把</string>
+     <string name="dyna_state">擴展動態狀態</string>
+@@ -269,7 +269,7 @@
+     <string name="enable_soc_overlay">啟用裝置浮層</string>
+     <string name="enable_stats_overlay_">啟用效能統計疊加層</string>
+     <string name="enable_update_checks">檢查更新</string>
+-    <string name="enable_update_checks_description">在Eden啟動時檢查有無新版本並選擇是否要下載與安裝更新</string>
++    <string name="enable_update_checks_description">在TurboEden啟動時檢查有無新版本並選擇是否要下載與安裝更新</string>
+     <string name="enter_profile_name">輸入設定檔名稱</string>
+     <string name="error_a11y_label">錯誤：無效</string>
+     <string name="error_during_fetch">獲取過程中發生錯誤</string>
+@@ -397,11 +397,11 @@
+     <string name="invalid_driver_file">無效的驅動程式檔案: %s</string>
+     <string name="invalid_profile_name">無效的設定檔名稱</string>
+     <string name="invalid_value">無效的範圍</string>
+-    <string name="invalid_yuzu_backup">無效的 Eden 備份</string>
++    <string name="invalid_yuzu_backup">無效的 TurboEden 備份</string>
+     <string name="invert_axis">方向反轉</string>
+     <string name="invert_button">反轉按鈕</string>
+     <string name="invert_confirm_back_controller_buttons">反轉手把的 確認/返回 按鈕</string>
+-    <string name="invert_confirm_back_controller_buttons_description">使用Eden時將手把的確認及返回鍵反轉以符合Switch與Xbox的操作方式</string>
++    <string name="invert_confirm_back_controller_buttons_description">使用TurboEden時將手把的確認及返回鍵反轉以符合Switch與Xbox的操作方式</string>
+     <string name="item_view_role_description">分頁標籤</string>
+     <string name="keys">金鑰</string>
+     <string name="keys_description">使用下方的按鈕安裝您的 <b>prod.keys</b> 檔案。</string>
+@@ -422,7 +422,7 @@
+     <string name="left_stick">左搖桿</string>
+     <string name="license_fidelityfx_fsr_description">來自 AMD 的升級圖像品質</string>
+     <string name="licenses">授權</string>
+-    <string name="licenses_description">這些專案使 Eden Android 版成為可能</string>
++    <string name="licenses_description">這些專案使 TurboEden Android 版成為可能</string>
+     <string name="load">載入</string>
+     <string name="load_amiibo">導入Amiibo</string>
+     <string name="loader_error_encrypted">您的 ROM 已加密</string>
+@@ -439,7 +439,7 @@
+     <string name="manage_game_folders">管理遊戲資料夾</string>
+     <string name="manage_save_data">管理儲存資料</string>
+     <string name="manage_save_data_description">已找到儲存資料，請選取下方的選項。</string>
+-    <string name="manage_yuzu_data">管理 Eden 資料</string>
++    <string name="manage_yuzu_data">管理 TurboEden 資料</string>
+     <string name="manage_yuzu_data_description">安裝韌體、金鑰，導入/導出使用者資料及安裝其他項目！</string>
+     <string name="map_control">配對到 %1$s</string>
+     <string name="map_dpad_direction">將方向鍵配對到 %1$s</string>
+@@ -613,7 +613,7 @@
+     <string name="not_set">無</string>
+     <string name="notice_notification_channel_description">發生錯誤時顯示通知。</string>
+     <string name="notice_notification_channel_name">通知和錯誤</string>
+-    <string name="notification_no_directory_link">無法開啟 Eden 目錄</string>
++    <string name="notification_no_directory_link">無法開啟 TurboEden 目錄</string>
+     <string name="notification_no_directory_link_description">請使用檔案管理員的側邊面板手動定位到使用者資料夾。</string>
+     <string name="notification_permission_not_granted">未授予通知權限！</string>
+     <string name="notifications">通知</string>
+@@ -623,8 +623,8 @@
+     <string name="nvdec_emulation_none">無</string>
+     <string name="ok">確定</string>
+     <string name="on_load">載入時</string>
+-    <string name="open_user_folder">開啟 Eden 資料夾</string>
+-    <string name="open_user_folder_description">管理 Eden 的內部檔案</string>
++    <string name="open_user_folder">開啟 TurboEden 資料夾</string>
++    <string name="open_user_folder_description">管理 TurboEden 的內部檔案</string>
+     <string name="operation_completed_successfully">操作已成功完成</string>
+     <string name="orange">橘色</string>
+     <string name="overlay_auto_hide">自動隱藏虛擬按鍵</string>
+@@ -765,7 +765,7 @@
+     <string name="seconds_abbr">秒</string>
+     <string name="seconds_must_be_between_0_and_59">必須介於0到59秒之間</string>
+     <string name="select_content_type">內容類型</string>
+-    <string name="select_games_folder_description">允許 Eden 尋找您的遊戲檔案</string>
++    <string name="select_games_folder_description">允許 TurboEden 尋找您的遊戲檔案</string>
+     <string name="select_gpu_driver_default">預設</string>
+     <string name="select_gpu_driver_error">選擇的驅動程式無效</string>
+     <string name="select_rtc_date">選擇 RTC 日期</string>
+@@ -780,12 +780,12 @@
+     <string name="share_config_failed">分享設定失敗</string>
+     <string name="share_game_settings">分享設定</string>
+     <string name="share_log">分享偵錯記錄</string>
+-    <string name="share_log_description">分享 Eden 的記錄檔以便對相關問題進行偵錯</string>
++    <string name="share_log_description">分享 TurboEden 的記錄檔以便對相關問題進行偵錯</string>
+     <string name="share_log_missing">找不到日誌檔案</string>
+     <string name="show_app_ram_usage">顯示應用程式的記憶體用量</string>
+     <string name="show_app_ram_usage_description">顯示模擬器正在使用的記憶體量</string>
+     <string name="show_bat_temperature">顯示電池溫度</string>
+-    <string name="show_build_id">顯示Eden的組建版本</string>
++    <string name="show_build_id">顯示TurboEden的組建版本</string>
+     <string name="show_device_model">顯示裝置型號</string>
+     <string name="show_downloads">顯示下載</string>
+     <string name="show_driver_version">顯示圖形驅動程式的版本</string>
+@@ -942,6 +942,6 @@
+     <string name="web_username">網路使用者名稱</string>
+     <string name="web_username_description">多人遊戲房間中顯示的使用者名稱。必須為4-20個字元，僅能使用英文字母、數字、句點、破折號、底線和空格（標點符號須為英文格式）。</string>
+     <string name="welcome">歡迎！</string>
+-    <string name="welcome_description">瞭解如何設定 <b>Eden</b> 並開始模擬。</string>
++    <string name="welcome_description">瞭解如何設定 <b>TurboEden</b> 並開始模擬。</string>
+     <string name="yellow">黃色</string>
+ </resources>

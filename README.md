@@ -44,3 +44,7 @@ O script lê apenas o arquivo local. Foi conferido com dados sintéticos, sem um
 Este é um estudo de engenharia reversa, não um projeto Android compilável. O código C++ original não foi recuperado, e os pacotes sanitizados não permitem reconstruir integralmente o APK. O JADX deixou marcações de erro ou método não decompilado em 32 arquivos de bibliotecas de terceiros; nenhuma dessas marcações aparece no pacote Java do frontend. Os jogos e os serviços autenticados não foram executados/testados.
 
 Os resultados descrevem o arquivo identificado pelo hash acima e o estado observado em 25/09/2026. O material de terceiros conserva seus direitos e avisos existentes; este repositório não atribui uma nova licença ao código recuperado.
+
+## Experimento separado: TurboEden
+
+A pasta [`experiments/turboeden/`](experiments/turboeden/) contém uma APK experimental de outro aplicativo, baseado em Eden/Yuzu, com nome visível TurboEden. Ela não é a continuação do frontend EmulationStation/Libretro descrito neste README. Consulte o handoff dessa pasta para identificação, alterações e limites.
