@@ -1,0 +1,301 @@
+{
+  "source": "https://github.com/NikolaiVChr/f16",
+  "commit": "0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51",
+  "license": "GPL-2.0-or-later",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/LICENSE",
+      "sha256": "f209c1adbb6e2d9d9b256c8bed21de5cd3e898fd0a63645f227882d6c5106c86",
+      "bytes": 15219
+    },
+    {
+      "path": "copyright.txt",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/copyright.txt",
+      "sha256": "094e31cdd632250a74b1e274e67a670c3a2119c0280956acbf1d069b19ed9ee8",
+      "bytes": 824
+    },
+    {
+      "path": "authors.txt",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/authors.txt",
+      "sha256": "b52e1028935a2e343059b4bbf024a69db3039cea4dfcd53c2064f0319c4f9ca4",
+      "bytes": 4242
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/README.md",
+      "sha256": "bb00e060537e3af9d73a517a8430e9931b1d22220f095c1d96d25b8abbb03d85",
+      "bytes": 2558
+    },
+    {
+      "path": "Models/f16.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/f16.ac",
+      "sha256": "bd0e90c58456f64baef675b66f7b298ae8f7d72d6c3018f9459a64bcd751ff20",
+      "bytes": 1721647
+    },
+    {
+      "path": "Models/F-16.xml",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/F-16.xml",
+      "sha256": "4a6a94732a46e184a63bcd81ac94f7674ccc2658c6b67f054c89e7b9df2d39b5",
+      "bytes": 80587
+    },
+    {
+      "path": "Models/f16.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/f16.png",
+      "sha256": "9d90c92b0237e5941dc615776552843d6963699d2e9eeb9aeca869ae8997032d",
+      "bytes": 1250249
+    },
+    {
+      "path": "Models/f16trans.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/f16trans.png",
+      "sha256": "f8957d9fe4e95a04f0d93f19f3f55d736c35f7caf2a00292d3dc20269c9610cc",
+      "bytes": 37503
+    },
+    {
+      "path": "Models/intake.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/intake.png",
+      "sha256": "7b2d505fc106012fb9a045a2a624f2e2d5baeaee22f7317442094e8089d7efa6",
+      "bytes": 171
+    },
+    {
+      "path": "Models/nozzle-GE.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle-GE.ac",
+      "sha256": "9a61f24aedbbd4935fb77bb545aa1569d4f2705ace7f1b5e834750fb0fc49e95",
+      "bytes": 98266
+    },
+    {
+      "path": "Models/nozzle-GE.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle-GE.png",
+      "sha256": "dec25b792117931c7e99e71cb4146b036e6ad212df2b2668beea2180c035d1eb",
+      "bytes": 37073
+    },
+    {
+      "path": "Models/nozzle-GE.xml",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle-GE.xml",
+      "sha256": "b3c792d646c8d6afb4b12ef6a9be932ed4e31b7067bc00d3d3fcdfb3366cc1ce",
+      "bytes": 10804
+    },
+    {
+      "path": "Models/nozzle-ring.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle-ring.png",
+      "sha256": "1499098db952b4485fe2683227a75759bbb0fbc6ac0931b1c565d833ca48585b",
+      "bytes": 133
+    },
+    {
+      "path": "Models/nozzle-section.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle-section.ac",
+      "sha256": "1940e44e028af0e4ef041f6b7795133a61e69a287a79782f07f36c3063511164",
+      "bytes": 2435
+    },
+    {
+      "path": "Models/nozzle-section.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle-section.png",
+      "sha256": "6cb72476a682465697f803c714dc2ab4239547c4982fbe8c8f3f232d3806fef1",
+      "bytes": 1288306
+    },
+    {
+      "path": "Models/nozzle-section.xml",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle-section.xml",
+      "sha256": "f3a5f021d4bd052854570f00b0d6ab43e2bbbf365012732f62e42eaed60e9549",
+      "bytes": 2502
+    },
+    {
+      "path": "Models/nozzle.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle.ac",
+      "sha256": "2d06f9e4d29adf2e2174fd38aff2cdcb8a95047e6ea00aef21e97d720907caa3",
+      "bytes": 2569
+    },
+    {
+      "path": "Models/nozzle.xml",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/nozzle.xml",
+      "sha256": "3f482e46314dce5f6a016522cb540d46fa4560c86cd7eee739cbb9be9715062f",
+      "bytes": 3394
+    },
+    {
+      "path": "Models/outlet.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/outlet.ac",
+      "sha256": "8bf32b5983f95e44526b8eaf2e5aa7c5718585b70bc2452ac0c353d51091ea91",
+      "bytes": 165748
+    },
+    {
+      "path": "Models/outlet.xml",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/outlet.xml",
+      "sha256": "ca781e47dae388d4136bf7f0682f88e191e4588f3a879c963eb5c47689f42471",
+      "bytes": 429
+    },
+    {
+      "path": "Models/pitot.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/pitot.ac",
+      "sha256": "ca4009efe7681bf1b44b972e664c1455766b2456d6ee0290362fb03bde9ae9fa",
+      "bytes": 12335
+    },
+    {
+      "path": "Models/texture.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/texture.png",
+      "sha256": "933ec7b6c5cbd403ac6496db4cbf634e08ec6099c753ee83e1ee0ce64f7da7af",
+      "bytes": 205373
+    },
+    {
+      "path": "Models/Effects/fuselage/ao.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Effects/fuselage/ao.png",
+      "sha256": "3d947a690c4cfd95d34a035d520f529e56a112079669cb67c146091b194ade54",
+      "bytes": 876476
+    },
+    {
+      "path": "Models/Effects/fuselage/f16-lightmap.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Effects/fuselage/f16-lightmap.png",
+      "sha256": "dbaee49710843162e021810b7303b36ca91cfc67f471cf183f174ae2bd12d43c",
+      "bytes": 99799
+    },
+    {
+      "path": "Models/Effects/glass/canopy.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Effects/glass/canopy.png",
+      "sha256": "5303e1e64af9fc2b3d36456da71d765b9a5ce1f5891baee842bce642aada3f86",
+      "bytes": 61121
+    },
+    {
+      "path": "Models/Effects/glass/canopy2.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Effects/glass/canopy2.png",
+      "sha256": "6eaae73a4471e03d78e26c9cdfcc6df00ccd386630a263cbb53790b4bf00d41e",
+      "bytes": 512251
+    },
+    {
+      "path": "Models/pilot_externalview.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/pilot_externalview.ac",
+      "sha256": "b78bd212b17a76513d0f123d04f31fcc3d9ec02af78dd9293b59407815df446f",
+      "bytes": 3942224
+    },
+    {
+      "path": "Models/pilot_externalview.xml",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/pilot_externalview.xml",
+      "sha256": "470ce52a5b3edb4be0d272f2066cef4103aaca5db7e0526a9980be24955fb15a",
+      "bytes": 7968
+    },
+    {
+      "path": "Models/Cockpit/chair/chair.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/chair/chair.ac",
+      "sha256": "7edacbec8f6718f4f7533ce3fcd9ac5ebce62bc628d7fc6111637f3a1c4266ff",
+      "bytes": 907129
+    },
+    {
+      "path": "Models/Cockpit/chair/chair.xml",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/chair/chair.xml",
+      "sha256": "5da32039841c867fdc4dad9a8598b88e4302fb04fcce2cac15deccaa16dbfcb5",
+      "bytes": 4136
+    },
+    {
+      "path": "Models/Cockpit/Main/cockpit.ac",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/Main/cockpit.ac",
+      "sha256": "736be7c16f903d0d31ab33fc2161d1db5709df58d34f1b2cb2062a0b4005e914",
+      "bytes": 407837
+    },
+    {
+      "path": "Models/Cockpit/Main/cockpit.xml",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/Main/cockpit.xml",
+      "sha256": "2a2ffab9c666d9e75f501aa631d8facc82e703d65db65627c06fb94e7d34f8a2",
+      "bytes": 25775
+    },
+    {
+      "path": "Models/Cockpit/chair/eject-handle.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/chair/eject-handle.png",
+      "sha256": "108bf9c0a43ca9286b96ca875bf7c9678485981019979d6bb78ee7528e9270ec",
+      "bytes": 75456
+    },
+    {
+      "path": "Models/Cockpit/chair/grey-blue-flood.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/chair/grey-blue-flood.png",
+      "sha256": "47c1976f21ea3be98a1414a0874f4deb2fc82f5b2ea661bf132ec3855f6c7592",
+      "bytes": 14907
+    },
+    {
+      "path": "Models/Cockpit/chair/seat-cushion.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/chair/seat-cushion.png",
+      "sha256": "d35b0f287ff2baa22e9a59b3b283b5e181d9ffa92aaf4504f68413827efcf4fa",
+      "bytes": 29116
+    },
+    {
+      "path": "Models/Cockpit/chair/seat-cushion2.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/chair/seat-cushion2.png",
+      "sha256": "8cb8890518a64781584bfedc113cd8bcd51344bb735eee8523d4a42e30ab0c7f",
+      "bytes": 21111
+    },
+    {
+      "path": "Models/Cockpit/chair/texture.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/chair/texture.png",
+      "sha256": "2a219be88640540da84bb242e5179d1814c9b4d08e173c0c20460366a2ab1614",
+      "bytes": 68066
+    },
+    {
+      "path": "Models/Cockpit/pilot/kneeboard.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/pilot/kneeboard.png",
+      "sha256": "979443e74cdbc61035905106063cdbc4c3ec1500f18fe4896ba960221675ce08",
+      "bytes": 10198
+    },
+    {
+      "path": "Models/Cockpit/Textures/airvent.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/Textures/airvent.png",
+      "sha256": "1e88f112d40a74ce0f6cc347ea0e950025aa20dfedd1d700f9a47e6c16b8e55a",
+      "bytes": 2350
+    },
+    {
+      "path": "Models/Cockpit/Textures/floor.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/Textures/floor.png",
+      "sha256": "adc71a0a69ae2ed0455dc49911e66fdfbf2bb2b00f23b509efda7f7183d5effb",
+      "bytes": 36868
+    },
+    {
+      "path": "Models/Cockpit/Textures/instruments.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/Textures/instruments.png",
+      "sha256": "0740f6dd2b5e0fe59c1fefc699a19cf0b67d7ca278688c2f48723049fecba62e",
+      "bytes": 221484
+    },
+    {
+      "path": "Models/Cockpit/Textures/panels.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/Textures/panels.png",
+      "sha256": "99c36bee6f4f4dfe604d8a4137a167d90af57c3529f172249626aa991b7acfe8",
+      "bytes": 11001
+    },
+    {
+      "path": "Models/Cockpit/Textures/panelsMinor.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/Textures/panelsMinor.png",
+      "sha256": "b41d6a0c2d3d7c896493be9cb9e83af2f16d4aae29106f28ce6b8e242f9224fc",
+      "bytes": 2200
+    },
+    {
+      "path": "Models/Cockpit/Textures/pedaladj.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Cockpit/Textures/pedaladj.png",
+      "sha256": "257653a7de873467a2a347847d5871c9380e59261717df1184a3e294f286fa96",
+      "bytes": 202777
+    },
+    {
+      "path": "Models/Liveries/patch.default.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Liveries/patch.default.png",
+      "sha256": "8088f34c0dee5fa67915a2d39d629e1abf0b513531f14f23ff330544678e9e07",
+      "bytes": 108597
+    },
+    {
+      "path": "Models/Pilots/face_a.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Pilots/face_a.png",
+      "sha256": "6eb4a337dc867c47b403ebe40510cb7a3477148456ae0e74ac861217cf763c9c",
+      "bytes": 238942
+    },
+    {
+      "path": "Models/Pilots/Tex_0004_1.jpg",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Pilots/Tex_0004_1.jpg",
+      "sha256": "1a117e56cc0ed7add2d36ee5abd051255757b516ab1ff22875438f75772cb4c0",
+      "bytes": 2918346
+    },
+    {
+      "path": "Models/Pilots/Tex_0008_1.jpg",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Pilots/Tex_0008_1.jpg",
+      "sha256": "da49561486e34de79b7b16fc1a8bab1b6a24e0f7239419688850363dbf1de2ad",
+      "bytes": 3331037
+    },
+    {
+      "path": "Models/Pilots/white-black-gradient-stripes.png",
+      "url": "https://raw.githubusercontent.com/NikolaiVChr/f16/0d0d3d425a9a852b9cd6a764dedee7c9c72cdf51/Models/Pilots/white-black-gradient-stripes.png",
+      "sha256": "186c40b99f206f7efccbf5a969b0a967d2ff84d5036fb60136fe01610582969d",
+      "bytes": 295
+    }
+  ]
+}

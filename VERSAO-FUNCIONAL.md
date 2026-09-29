@@ -1,3 +1,9 @@
+# Referência funcional atual
+
+A versão atual está documentada em [ESTAVEL.md](ESTAVEL.md), tag `estavel-2026-09-29-playlist-retro`. As referências abaixo são HISTÓRICAS e não identificam o APK atual.
+
+## Histórico preservado
+
 # Versão funcional — branch separada
 
 Versão atual: **1.0.2-catalogo-local**, com abertura e jogos confirmados pelo usuário. Essa confirmação não equivale a teste de todos os jogos e plataformas.

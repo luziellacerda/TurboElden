@@ -1,0 +1,1897 @@
+[
+  {
+    "file": "3do.xml",
+    "bytes": 6152,
+    "sha256": "9eda0719ff35154b0cec19f49b7992493e7a89a7222201f613536d99c06c9e1f"
+  },
+  {
+    "file": "3ds.xml",
+    "bytes": 8698,
+    "sha256": "d70bcc4a264c2fe1c76a0e34e71d25bd5e5d13622d859d9ea4e335690f258208"
+  },
+  {
+    "file": "64dd.xml",
+    "bytes": 4489,
+    "sha256": "82db5d1ca71a25ca786031f81816b9b16ede5172faa21741982d32192dd95a1a"
+  },
+  {
+    "file": "acclaim.xml",
+    "bytes": 5335,
+    "sha256": "e3566f39acd13d3f2f2ac50eacca2bca1cf96a94244bf8e5da4a1caf1bb51e51"
+  },
+  {
+    "file": "activision.xml",
+    "bytes": 5088,
+    "sha256": "f4546a8152df3cef9776118cc1db33f2c76ac245195585d3a6ea4dab3f11e332"
+  },
+  {
+    "file": "adam.xml",
+    "bytes": 5220,
+    "sha256": "5403c5c8cca0c60447ebf63c7a4cb8c2527e63bbdafbb16528ac37e4a1089b5e"
+  },
+  {
+    "file": "advision.xml",
+    "bytes": 4007,
+    "sha256": "45ca54f24ca7aac57926f2f3060ea891102a821783b40e381bf4c2e5679be912"
+  },
+  {
+    "file": "ags.xml",
+    "bytes": 7032,
+    "sha256": "e7d75a1e276b8088b9cb5366fc2ac0b096d682791d8a3ea5ef920097fc947f85"
+  },
+  {
+    "file": "alg.xml",
+    "bytes": 600,
+    "sha256": "dab3af209cda98638556d494507044a84fa47398271ad858a1fa3cc07f1bef3d"
+  },
+  {
+    "file": "alphadenshi.xml",
+    "bytes": 3597,
+    "sha256": "e91edaf3bed9e69e3194a1693466fdd702b3fc19853f4f136ef6643ecbd66e10"
+  },
+  {
+    "file": "amcoe.xml",
+    "bytes": 585,
+    "sha256": "7567234978f8e8aadd233cd1511ba09efb422503d0179d355b9b845b91d1f84a"
+  },
+  {
+    "file": "amiga.xml",
+    "bytes": 2338,
+    "sha256": "e973834a01fd64e451a1694eb4a9d7d7e3f9155d560e8fb8c3f302a01c60878d"
+  },
+  {
+    "file": "amiga1200.xml",
+    "bytes": 1361,
+    "sha256": "0803d826cb34e23c6d6f40c421bde4fade230a5e23d0a8f4b8b6adeec9a6a728"
+  },
+  {
+    "file": "amiga500.xml",
+    "bytes": 4986,
+    "sha256": "c80f14f59da30c675f1119fa71432ea9388aa87827d5a9ef8b5ad059a239bc93"
+  },
+  {
+    "file": "amiga600.xml",
+    "bytes": 1107,
+    "sha256": "4d6a0aaec87fd3f189007b75faa0fb248c26dacc1672294c5f8951ce4b4554da"
+  },
+  {
+    "file": "amigacd32.xml",
+    "bytes": 10004,
+    "sha256": "2cb6b97cb1326d078e9471f48f0dacbc87dd909adb0fa077efcf9a8c56545e0a"
+  },
+  {
+    "file": "amigacdtv.xml",
+    "bytes": 1406,
+    "sha256": "d0a41a2ca5a2ae0db9ddc7d2d39d57d96e49086f043e5c2c3f38ffc0bf64ccf2"
+  },
+  {
+    "file": "amstradcpc.xml",
+    "bytes": 5702,
+    "sha256": "c49e681852215cb1d960b221ba1f0c43c825ee2edec08c86e5ae0ad0d9f0d0af"
+  },
+  {
+    "file": "apfm1000.xml",
+    "bytes": 1052,
+    "sha256": "e86004a05ff9bf5d8c12781053fa7708211babe360adcb1fefa30f379f147c01"
+  },
+  {
+    "file": "apple2.xml",
+    "bytes": 1329,
+    "sha256": "f1e7263e69a4ef6d11f8f1ce260f33ea62c422135eec517dc43ae3fa92bf9352"
+  },
+  {
+    "file": "apple2gs.xml",
+    "bytes": 1334,
+    "sha256": "70e40e20fac5df3e129dd6a9597dcfce7d9f65ddfe857b4294d9f25e734aa65c"
+  },
+  {
+    "file": "arcade.xml",
+    "bytes": 5876,
+    "sha256": "29b648d3702671d3ba8f145160820ebefb1d5b55504c915142bc6591e9253d73"
+  },
+  {
+    "file": "arcadia.xml",
+    "bytes": 1626,
+    "sha256": "a1a08ddf165c3ac61b5770e9941b775e665f941c79b9e25808918887f0f44828"
+  },
+  {
+    "file": "archimedes.xml",
+    "bytes": 1165,
+    "sha256": "bf5ddc2d64b364a02df580b5170717b0f82f42f808b76f4cb3b40fedcb04e6a4"
+  },
+  {
+    "file": "arduboy.xml",
+    "bytes": 1556,
+    "sha256": "21e94ac06cbefd84d7471d2a406f79a6885eef8e16a83c5bbffc3bf6e7ee49a4"
+  },
+  {
+    "file": "Arkanoid.xml",
+    "bytes": 3303,
+    "sha256": "b7b2eb06e053673c4ba10813ef0a3295b5320316c691db02b49c1f8b084cb5c7"
+  },
+  {
+    "file": "astrocade.xml",
+    "bytes": 1059,
+    "sha256": "e9d3634b57247b8c381468a7990519631a253cb60b0c18f2c132b476fe4abba2"
+  },
+  {
+    "file": "atari.xml",
+    "bytes": 4168,
+    "sha256": "a5dae28958b842ca267615446fcdc1ec2ad4a2157babb860b3ed301a8d086295"
+  },
+  {
+    "file": "atari2600.xml",
+    "bytes": 6128,
+    "sha256": "ad5ffb5405597e6feb86d4df12d8aefced74270165a1c2d6011208f43a1af38e"
+  },
+  {
+    "file": "atari5200.xml",
+    "bytes": 6251,
+    "sha256": "ed58a99aa3364526db806192e8e7d9cbe6318196f637f9ffb20cc3268e1fbf19"
+  },
+  {
+    "file": "atari7800.xml",
+    "bytes": 4416,
+    "sha256": "863224211bf639ebc725f7355372a2756fa4ce0a63f9591a2c72a506817b1c55"
+  },
+  {
+    "file": "atari800.xml",
+    "bytes": 6209,
+    "sha256": "ff9555dfb4f0d068096b78fac0d31780250179e2b490a0731f591f0daa397c0d"
+  },
+  {
+    "file": "atari8bit.xml",
+    "bytes": 1061,
+    "sha256": "6d2a26ca476ab60a6c9fd4a49bea753726eee99ae831dec519be6c6a28e2c4a5"
+  },
+  {
+    "file": "atarijaguar.xml",
+    "bytes": 6922,
+    "sha256": "fe4ecb5fd839c21c0dcc5b0a6e06568c6ea9b4d65dfd62bc05639b8d2ae498ad"
+  },
+  {
+    "file": "atarijaguarcd.xml",
+    "bytes": 1422,
+    "sha256": "ec6c0e7d333b49525326656b8827c11ae1fdad48206253f711ee854ee9415341"
+  },
+  {
+    "file": "atarilynx.xml",
+    "bytes": 7749,
+    "sha256": "5768578043cfe0f51f00c968d8f4deb8a962d11faadf0a3cb2f94f2fd2bf6407"
+  },
+  {
+    "file": "atarist.xml",
+    "bytes": 9000,
+    "sha256": "fd5de8d0309efd450bb8c64978c5543dd86059cf669aeefba0938d5c09cd8bd4"
+  },
+  {
+    "file": "atlus.xml",
+    "bytes": 5734,
+    "sha256": "ac3da138030f2af702bbcea20ffa96718eea60908071f3b65ff9b3daf901f255"
+  },
+  {
+    "file": "atom.xml",
+    "bytes": 903,
+    "sha256": "3d4e200e29f869e5af360d52175b8c8f6956e51b22c8da051329919ee213a826"
+  },
+  {
+    "file": "atomiswave.xml",
+    "bytes": 1326,
+    "sha256": "23c07343328919906acd73c84a4e3448dbf7faa5dab8f5d353ef8d72b4e7f4dc"
+  },
+  {
+    "file": "auto-action.xml",
+    "bytes": 4080,
+    "sha256": "4eff15a1876c6b766fd52813033b67a8c6ea5888909d47d980650074bd6973dc"
+  },
+  {
+    "file": "auto-adult.xml",
+    "bytes": 1277,
+    "sha256": "8b7c881701fbbea99108c04a049ab617c517a4eb2db0653808c94a6f2ef9dd75"
+  },
+  {
+    "file": "auto-adventure.xml",
+    "bytes": 2883,
+    "sha256": "035a944c6b0545abdd677a94a483d712252ff0685844f78276771b4d1732d28d"
+  },
+  {
+    "file": "auto-allgames.xml",
+    "bytes": 89,
+    "sha256": "40c594f32c953c027bd0b8bb96c765433c025e6d6466d1ecc3c6b1a024732e73"
+  },
+  {
+    "file": "auto-asiaticboard.xml",
+    "bytes": 1881,
+    "sha256": "693041f458cd8efbf1e9dd7b8f3335e75bbec2aec4f06d5a82dc61132e5845f7"
+  },
+  {
+    "file": "auto-at2players.xml",
+    "bytes": 1441,
+    "sha256": "a4a5a058ac9ed3dad3455344b3d51b7edb5db778c09e181f04945e2b98920454"
+  },
+  {
+    "file": "auto-at4players.xml",
+    "bytes": 1488,
+    "sha256": "00b4db65c744fb4cfdad150d89a5d56e0f5d3a58a5666a3a5c6cd7269b26bb1e"
+  },
+  {
+    "file": "auto-beatemup.xml",
+    "bytes": 6068,
+    "sha256": "e8780bc88f1cfda19578841fbafed1637816d9acf954a0fa1f9edadab849c492"
+  },
+  {
+    "file": "auto-board.xml",
+    "bytes": 3387,
+    "sha256": "ed8dda43c189f9d514bbe332eab09d3102603eb456e86cbd354491b6154b1124"
+  },
+  {
+    "file": "auto-casino.xml",
+    "bytes": 1876,
+    "sha256": "a89f23f2c01ee2a02bf24a7eebe78111b312d44dce0cd0a64133df6ec31d462a"
+  },
+  {
+    "file": "auto-casual.xml",
+    "bytes": 4114,
+    "sha256": "0f12946a5a965defc8ef01ed9612965aa893d889c63375af2446b8b6c641b67a"
+  },
+  {
+    "file": "auto-compilation.xml",
+    "bytes": 2403,
+    "sha256": "9172449f6ec1eed575311da32022f9e233fc32f2011b2c4a6c7efb3621dea51c"
+  },
+  {
+    "file": "auto-demo.xml",
+    "bytes": 2891,
+    "sha256": "c704115b30e2eb194daba17b912d7d1501ff1dfa931c083e65f1357dcc46e874"
+  },
+  {
+    "file": "auto-educational.xml",
+    "bytes": 4861,
+    "sha256": "88a3edafac99582f4b83157981a6b4941076ab5d3c12b2500d2fa97fe145076c"
+  },
+  {
+    "file": "auto-favorites.xml",
+    "bytes": 85,
+    "sha256": "277e69d7038ed9030c46d005607880dfc38774268066976fb46763d5084c79ed"
+  },
+  {
+    "file": "auto-fight.xml",
+    "bytes": 6372,
+    "sha256": "07e19feae0968a8b445a9f4bcb61ab2381588c6441a3b2da5f3e7c1db904b669"
+  },
+  {
+    "file": "auto-huntingandfishing.xml",
+    "bytes": 3430,
+    "sha256": "978f0233381aa834e8d721d1a16aba7ddc4feda08ef1293dccb300ec10e474f3"
+  },
+  {
+    "file": "auto-lastplayed.xml",
+    "bytes": 1398,
+    "sha256": "37023f2e499754c3a89902236cbc3c638a051e3ef2575a26165bfe420c756dfb"
+  },
+  {
+    "file": "auto-lightgun.xml",
+    "bytes": 1675,
+    "sha256": "1547e968f48e16366e4faf4dc09580add3e39ff071b78fc452bb24d7e7ba4596"
+  },
+  {
+    "file": "auto-musicanddance.xml",
+    "bytes": 4012,
+    "sha256": "b161ce3341c01152a6aa7c351cc1f61e4da9c6a84316904128430b545010c9ce"
+  },
+  {
+    "file": "auto-neverplayed.xml",
+    "bytes": 306,
+    "sha256": "4781b1c7db230c503a1ab72e483d5ac1758809108aa71b0ffd70de3b0be65dcb"
+  },
+  {
+    "file": "auto-pinball.xml",
+    "bytes": 3207,
+    "sha256": "e0a9750e7cad610ea98cc739e111b36665d0b6f8c19509ba956f9d40cd725935"
+  },
+  {
+    "file": "auto-platform.xml",
+    "bytes": 7059,
+    "sha256": "6c49d65d19059e7375b06520286450c50529781156c6dd5d8e315f466cc2c0b5"
+  },
+  {
+    "file": "auto-playingcards.xml",
+    "bytes": 3894,
+    "sha256": "e832c12d276116dfe2e59b50c3bc43f378633059ae4e0aa59fe56828f0884397"
+  },
+  {
+    "file": "auto-puzzle.xml",
+    "bytes": 5910,
+    "sha256": "5484800b88973c3cdb2de391cce7c1f3ce626bc87b55120ed74f661b3e8af00e"
+  },
+  {
+    "file": "auto-quiz.xml",
+    "bytes": 2692,
+    "sha256": "035b5811199b24deebdc44b56746c440992ef0b97b0e0cdb074346b3be17d766"
+  },
+  {
+    "file": "auto-racedriving.xml",
+    "bytes": 4559,
+    "sha256": "f76c4fdf41838337883aa57407e54ec636cffaf5cd7616eb706875c93b4422c2"
+  },
+  {
+    "file": "auto-reflection.xml",
+    "bytes": 89,
+    "sha256": "40c594f32c953c027bd0b8bb96c765433c025e6d6466d1ecc3c6b1a024732e73"
+  },
+  {
+    "file": "auto-retroachievements.xml",
+    "bytes": 1649,
+    "sha256": "db31a11e4939fd8fe27587c3f97cafe8691c6a5ca82d5449d6b0143532f1f171"
+  },
+  {
+    "file": "auto-roleplayings.xml",
+    "bytes": 6775,
+    "sha256": "4638c6b49466c039d7c29e65a2ebd9ae984bfd40f60b2b501ec1b2cfa0f327c8"
+  },
+  {
+    "file": "auto-shootemup.xml",
+    "bytes": 7864,
+    "sha256": "ce78783a32a1ca2e1757639da9289ee379a1a4dbfb1b7f457de264f02bedf995"
+  },
+  {
+    "file": "auto-shooter.xml",
+    "bytes": 4241,
+    "sha256": "7742b4b04782610018ac748bd4a4a4fa77ca725d3ac6ef5aa611c21a316c19e6"
+  },
+  {
+    "file": "auto-simulation.xml",
+    "bytes": 6055,
+    "sha256": "2da81528a042e9e35b70b61f2b2138a361013e4d20f820dbc853fa072016c8f7"
+  },
+  {
+    "file": "auto-sports.xml",
+    "bytes": 3392,
+    "sha256": "cfa9b733288ec86283431153e7192d7e7bb6c5c34b037d5cec9dc8e12ad33bf4"
+  },
+  {
+    "file": "auto-sportswithanimals.xml",
+    "bytes": 1582,
+    "sha256": "212f2b42bd74cb2d8fdc04ee1a733abb1d0b2fa37affefef6e529b9ec34b3e68"
+  },
+  {
+    "file": "auto-strategy.xml",
+    "bytes": 4942,
+    "sha256": "e758d01116028620e4ccacd3c7964796ca6a645841fd2f8aa02cb55fba78c791"
+  },
+  {
+    "file": "auto-various.xml",
+    "bytes": 253,
+    "sha256": "6c516d6cb16047006d4dd9a828623d26dc0141369142903714645640dc60b0a9"
+  },
+  {
+    "file": "auto-verticalarcade.xml",
+    "bytes": 5777,
+    "sha256": "b329b6349dd4714fb4a4356b7fb15b1b363c3e80ef8b02e41408974ab70824fc"
+  },
+  {
+    "file": "banpresto.xml",
+    "bytes": 210,
+    "sha256": "45264d9580e8e3226e26e3c540717ccfd817a063d6565bb54dc6226d8132e76e"
+  },
+  {
+    "file": "Batman.xml",
+    "bytes": 17505,
+    "sha256": "e771ae0f3847e47f323035b411d6421d9e6bdf7283f2aa17294e0f4b3a96ffe5"
+  },
+  {
+    "file": "Battletoads.xml",
+    "bytes": 3767,
+    "sha256": "2b3178e0a4e2cb2ff70fba8af275ba590b46dce9aa53fa081bcc601b21e4ed66"
+  },
+  {
+    "file": "bbcmicro.xml",
+    "bytes": 852,
+    "sha256": "d11a1615a325e0084446ef8af908a59d7e8ead04231b205446cd92d030c8d6ef"
+  },
+  {
+    "file": "Bomberman.xml",
+    "bytes": 2015,
+    "sha256": "dc129cc9cdbe87cbc0fb44db30276249bd0424c48691873cc803e31ea6ca3ae6"
+  },
+  {
+    "file": "c128.xml",
+    "bytes": 1762,
+    "sha256": "601f2d8ed58a69da6c1e5e853bbe39144566ee7d0611f52b0975da6aa5f87b16"
+  },
+  {
+    "file": "c20.xml",
+    "bytes": 2368,
+    "sha256": "c81ee2a759b3f2a20e0519913c1b503bc773c35c6781b83c4f0d33ec38f19f51"
+  },
+  {
+    "file": "c64.xml",
+    "bytes": 5723,
+    "sha256": "7268a009e1d4e0125ba74255d2ec2d4fdb5f0ae4358f427091f20c7b49c6dcc6"
+  },
+  {
+    "file": "camplynx.xml",
+    "bytes": 969,
+    "sha256": "986c29f5f1288df7ac9843218ff965c87ab855a0d961bb6b3a8675e68ae25dda"
+  },
+  {
+    "file": "cannonball.xml",
+    "bytes": 818,
+    "sha256": "cfb7a06882366abc1f690eb487cbac7bcefb59118c8036f385780d428a720feb"
+  },
+  {
+    "file": "capcom.xml",
+    "bytes": 210,
+    "sha256": "787d6775d896bd27b4c7880f0b224c959c8685fdb10003bf4919619fcab502c6"
+  },
+  {
+    "file": "castlevania.xml",
+    "bytes": 5092,
+    "sha256": "c1508686dee101fff995717570ed46f26073b860f122ba875791fd76ac166a7c"
+  },
+  {
+    "file": "cave.xml",
+    "bytes": 8798,
+    "sha256": "91b3cf505705c51920d50de176f2bebdfb9a174b44be2714779de68f7f4d60ef"
+  },
+  {
+    "file": "cavestory.xml",
+    "bytes": 1131,
+    "sha256": "3c6067b37184a4c10496ccd4170795c15f0910daeb57ac32c4f9cd6c999d4274"
+  },
+  {
+    "file": "cdi.xml",
+    "bytes": 1487,
+    "sha256": "45a006617a78171e5e74eddf0697c2d5a28b47b26fb244342915c1732f6184dc"
+  },
+  {
+    "file": "centurye.xml",
+    "bytes": 219,
+    "sha256": "0c78f747cfdf19aba7e06cc433a8e22a139b1a6252926d5ec353dfee17c21254"
+  },
+  {
+    "file": "cgenius.xml",
+    "bytes": 211,
+    "sha256": "3a53ee9ab1b89b592871732f29dafc2b360d8978e8bd3569d3ccbadec225a090"
+  },
+  {
+    "file": "channelf.xml",
+    "bytes": 6206,
+    "sha256": "8a0b6a7dcd8e869407dffe30ee5e43b00d80e5143fe2bb483971efce1e66c677"
+  },
+  {
+    "file": "chihiro.xml",
+    "bytes": 11515,
+    "sha256": "405cd2afc0b6ae34181a58eccc7a79d3670405328c0a46469238db3cc07f48d9"
+  },
+  {
+    "file": "cinematronics.xml",
+    "bytes": 210,
+    "sha256": "010a892c3ec2133b9f7724bf8fb205f873ee21b6ed39cb55af2d68d4fca9814e"
+  },
+  {
+    "file": "coco.xml",
+    "bytes": 1071,
+    "sha256": "ab2ccf0938fa216f1e7b4bd9a5d938a4ae91696cf6a32fd1a286dfadceaec5a6"
+  },
+  {
+    "file": "coleco.xml",
+    "bytes": 203,
+    "sha256": "d131f443e1fded27360136e4daf69f23116a3c4974dd9cfc0367a7becc12f7e3"
+  },
+  {
+    "file": "colecovision.xml",
+    "bytes": 6725,
+    "sha256": "d8b4ad396d2a323f03a54c60209feb9471029f46431f24f4c2532f3c6c26a738"
+  },
+  {
+    "file": "comad.xml",
+    "bytes": 205,
+    "sha256": "ecd968af6a60e79f5aab39480b56067faa42d462eb79a7460a469f17a9fe0d2e"
+  },
+  {
+    "file": "commanderx16.xml",
+    "bytes": 3516,
+    "sha256": "0e39626ec53a408448592208a7f0b95f928b4c4415b83f062c2b4f84dfa65e3a"
+  },
+  {
+    "file": "corsixth.xml",
+    "bytes": 255,
+    "sha256": "0969c0208dc5912a9324c2b05fea7aeb63fbb84ec7a1b3147c85efc6afb168f6"
+  },
+  {
+    "file": "cplus4.xml",
+    "bytes": 1149,
+    "sha256": "8d799a2fb96b2a285916add23a077eb06ab22cec6984744507990776b73f1dd9"
+  },
+  {
+    "file": "cps1.xml",
+    "bytes": 9888,
+    "sha256": "dc79487ae139728dd0ad5f86943afb56d00f6478a6ca3c12a7957017fcde1979"
+  },
+  {
+    "file": "cps2.xml",
+    "bytes": 8133,
+    "sha256": "0665ed315c8f9a953d8a6999771b4f552d21b6dc4f4e59d1d63c983c851f43b7"
+  },
+  {
+    "file": "cps3.xml",
+    "bytes": 6754,
+    "sha256": "b03b15d1d110944a7be9c2cc31415a5a423c66edd3ddd330f95567d1f99fe6da"
+  },
+  {
+    "file": "creativision.xml",
+    "bytes": 1351,
+    "sha256": "994c77dd2aac06936af80253564aff37f02534cb3396c4777d3bd61f89f71b15"
+  },
+  {
+    "file": "custom-collections.xml",
+    "bytes": 241,
+    "sha256": "943b33fc52af2f3fccd35cda66ff8358860a70fad12d774a4f6b4bc5bf34cc88"
+  },
+  {
+    "file": "daphne.xml",
+    "bytes": 2914,
+    "sha256": "594612e40f8701d7fd22dec99c9e3a83e8dea0fd9a6589fd2ae2e0952dae5420"
+  },
+  {
+    "file": "dataeast.xml",
+    "bytes": 204,
+    "sha256": "3f994b2ad8049a67edf45cb0ca0299434f5fbdc42b786c2eb3363c5ff61b9417"
+  },
+  {
+    "file": "desktop.xml",
+    "bytes": 207,
+    "sha256": "9fee5236bdc4d4588c60770845fb2aa851acc99cbc30a6d57b1ff98961fea126"
+  },
+  {
+    "file": "devilutionx.xml",
+    "bytes": 1429,
+    "sha256": "6ad716f7f820b62b91207730f94128c845c8c1ee019b074eced4ea48b58d0242"
+  },
+  {
+    "file": "dice.xml",
+    "bytes": 3541,
+    "sha256": "cd5a2103bf07082fa4bbda748241a10aacc06130dc809f6194c364d671a28c1d"
+  },
+  {
+    "file": "Digimon.xml",
+    "bytes": 3838,
+    "sha256": "b630af15f153ccc1c555beed6181e1484c6926ed9429d181ecf0713879e4b505"
+  },
+  {
+    "file": "Donkey Kong.xml",
+    "bytes": 1912,
+    "sha256": "09b006fcc5f57a007271cb27c7dc4fc63dac35e3e4a035963753114203cfdbb7"
+  },
+  {
+    "file": "doom.xml",
+    "bytes": 204,
+    "sha256": "bc48eb206c08e0474678e1207ba20012366e9f7a39bffe62697aad43cfa6621d"
+  },
+  {
+    "file": "dos.xml",
+    "bytes": 1241,
+    "sha256": "64f89555fb85a46b045f9f3795806f578769165ec2cc2d9329409076ab5687a7"
+  },
+  {
+    "file": "Double Dragon.xml",
+    "bytes": 3479,
+    "sha256": "2d41f9f432ac5f13df98f9860b1df0b853a2cb37b815b91be1c4c1da30c0a5f4"
+  },
+  {
+    "file": "Dragon Ball.xml",
+    "bytes": 1120,
+    "sha256": "d0387834c9d5d877bbb8291a886931f5bb137d9b501599cca487febdce8ba49a"
+  },
+  {
+    "file": "dragon32.xml",
+    "bytes": 204,
+    "sha256": "fdddbc525609b67dbb9a7bba2afba09a8be9f37a4a240f5e0c7b9632c79ce7ca"
+  },
+  {
+    "file": "dragon64.xml",
+    "bytes": 3261,
+    "sha256": "31eaf325b791e32fd66e3cfffe35c091f0079829c26d51e9adea9b107d096e1b"
+  },
+  {
+    "file": "dreamcast.xml",
+    "bytes": 7219,
+    "sha256": "0859407e42e3e9a969c6f0645fb179c6224f1e9d0268492f7c5a74b5962e0521"
+  },
+  {
+    "file": "dynax.xml",
+    "bytes": 205,
+    "sha256": "e7c3fd88a78258e042b50a17b9d91a11ec8963dda0e88e77def8fe7b3a5c5d76"
+  },
+  {
+    "file": "Earthworm Jim.xml",
+    "bytes": 3316,
+    "sha256": "270c29f8a179c069ae4dbdd9004861a66e40b5f4b24b2ad10d9468a05ed8900d"
+  },
+  {
+    "file": "easyrpg.xml",
+    "bytes": 1151,
+    "sha256": "9fef126d73868d46494babc4fd5e6280054f013b7393bbd014ecc15029e24347"
+  },
+  {
+    "file": "eighting.xml",
+    "bytes": 208,
+    "sha256": "3a983806ee3ece026445e1ba3ca2229a6bd5b1aad828f62ede11870434bf738d"
+  },
+  {
+    "file": "electron.xml",
+    "bytes": 954,
+    "sha256": "5b521cecf871f0ed233758569de0667bfef7753d6974e66d73bd6202b8485c60"
+  },
+  {
+    "file": "exidy.xml",
+    "bytes": 200,
+    "sha256": "5269881eba2a519ad8cbc409549f85d2dd47ea618784fdf9f46c078497706a5a"
+  },
+  {
+    "file": "Fatal Fury.xml",
+    "bytes": 3564,
+    "sha256": "c08b05bfa9470845f18b10035fe614725c4f746b00bbc49ad7192805308ae664"
+  },
+  {
+    "file": "favorites.xml",
+    "bytes": 217,
+    "sha256": "5c9122665714ccd47fdde8807f0ad2d7ea25df0d695fb5bf3549a02cf58347b9"
+  },
+  {
+    "file": "fba.xml",
+    "bytes": 1166,
+    "sha256": "3f2e096b7e25b49154c6c71c76aebef3ad54c46f2ed6eeec1cbefefa8952ad73"
+  },
+  {
+    "file": "fba_libretro.xml",
+    "bytes": 910,
+    "sha256": "7822fba4d7ae8b7d8091f1268fcb69e76c17f7f90e62ff2c70339bfd2a4e7842"
+  },
+  {
+    "file": "fbneo.xml",
+    "bytes": 3414,
+    "sha256": "0f35f7c0efcff393b8d8df0b6b3e80b9ba2981289a1da245f0fb348f425aeabe"
+  },
+  {
+    "file": "fds.xml",
+    "bytes": 1332,
+    "sha256": "c3dc7564625eeb442e2f4d7d09614b3a93e2f76af547f1ed07e61d1c6e2d87f7"
+  },
+  {
+    "file": "Final Fantasy.xml",
+    "bytes": 1967,
+    "sha256": "749103248bc9f42ac2221178a7c7203039036bbb27a2c11951e7385f054b732d"
+  },
+  {
+    "file": "finalfantasy.xml",
+    "bytes": 1801,
+    "sha256": "a7d75ae6722efdcd3223587df60dc985a0c77c84703e031af96519e531ff0230"
+  },
+  {
+    "file": "finished games.xml",
+    "bytes": 3892,
+    "sha256": "c77d0200eb4eea9ff1aeab486a8c574f8210d36f26345d7c393af43121977967"
+  },
+  {
+    "file": "flash.xml",
+    "bytes": 373,
+    "sha256": "50a4fab46553e061773e8e8313bf0ce10688d5162590326cbcc79479142b6a0e"
+  },
+  {
+    "file": "flatpak.xml",
+    "bytes": 368,
+    "sha256": "73d4d7eb354337d090fa4b7e06efedb261671a2755b48e9ecbb30ccfe1e7762f"
+  },
+  {
+    "file": "fm7.xml",
+    "bytes": 997,
+    "sha256": "3334235f2cf058d5dacb6d97fe3b817f85bc6fb13e11b34b419a8756611c282c"
+  },
+  {
+    "file": "fmtowns.xml",
+    "bytes": 920,
+    "sha256": "b1ea9b4a949b8f557204234e5755dba158775bb2e4f6d734d1b9eb828ac8e074"
+  },
+  {
+    "file": "fpinball.xml",
+    "bytes": 209,
+    "sha256": "21fbf0e09ca7500146997dcec81b3279f63610bd9d1bca6149721527e7082359"
+  },
+  {
+    "file": "Frogger.xml",
+    "bytes": 3635,
+    "sha256": "ead6ead4c420c6f4047543b408b2d9e44af16f383746df5c45a0c22faeec13c3"
+  },
+  {
+    "file": "gaelco.xml",
+    "bytes": 201,
+    "sha256": "4f5c1e1645979abdaaf158e15e5582b9361709e79f20c03a8da8585ef96d8ec7"
+  },
+  {
+    "file": "Galaxian.xml",
+    "bytes": 3433,
+    "sha256": "4bd23ce0b2277312b035749b7b7d889ccb786faf66b8fb00f0d3dca7833b2df4"
+  },
+  {
+    "file": "gamate.xml",
+    "bytes": 969,
+    "sha256": "31d88be3032210fa19ed993082c8fba5822b91c67f8eca6fece2e6c325f29e61"
+  },
+  {
+    "file": "gameandwatch.xml",
+    "bytes": 1783,
+    "sha256": "e7e366c6e6633a8cbac0611e9bb96437751a44ef8486d685193663c36d5621d6"
+  },
+  {
+    "file": "gamecom.xml",
+    "bytes": 1347,
+    "sha256": "0810b71bc54aa7444c2dbfcb4fb7b594261f40bea7128987df89f530f532d1ae"
+  },
+  {
+    "file": "gamecube.xml",
+    "bytes": 1951,
+    "sha256": "dcb78271e53755ba3cce81088b3f0b74b0762d467e1cf0efa8327f1af50e0073"
+  },
+  {
+    "file": "gamegear.xml",
+    "bytes": 7540,
+    "sha256": "355ba4e80988e7886f4c17976aec21f8dd19f57e0ee65e9947dddb9c8707ec72"
+  },
+  {
+    "file": "gamepock.xml",
+    "bytes": 1021,
+    "sha256": "9fb3bd765c87ee20f15648bf54da02e45378e4618a579c4b1e26ef0eca64c386"
+  },
+  {
+    "file": "games in progress.xml",
+    "bytes": 3409,
+    "sha256": "8e5eb96ea37346de31c1c0721f089efe28b290340abb54e377081cad379a086f"
+  },
+  {
+    "file": "gb.xml",
+    "bytes": 6544,
+    "sha256": "4301a56f5243cd80103d410ca0c8bf93be59580b8e5fb123f548fffc880afe62"
+  },
+  {
+    "file": "gb2players.xml",
+    "bytes": 7112,
+    "sha256": "731705e51bbd3aa1590d7872ae226a924f30d82b01af4b97f9cfb1b73a1a7b8b"
+  },
+  {
+    "file": "gba.xml",
+    "bytes": 8913,
+    "sha256": "8790c711ac503602c54b382a88019885dcade9584c9b608fec1225235b01cfd7"
+  },
+  {
+    "file": "gba2players.xml",
+    "bytes": 8988,
+    "sha256": "5edd07a7cef3f71398c785829cc519b307b0ca849520026e0996ba5cc334f010"
+  },
+  {
+    "file": "gbc.xml",
+    "bytes": 7139,
+    "sha256": "3c69ca59f2a6b7a45fc0754c29724b87ecd9396cd5aa898f8480b323a4905b86"
+  },
+  {
+    "file": "gbc2players.xml",
+    "bytes": 7216,
+    "sha256": "00b493bdcea405956fedf2942c206bf5d0e764478613ecd3a65718bd5f3673d6"
+  },
+  {
+    "file": "gc.xml",
+    "bytes": 2109,
+    "sha256": "bae68fc25d1854cca0044967a06479a0523907750120438d7d0c161f732d3b83"
+  },
+  {
+    "file": "gmaster.xml",
+    "bytes": 888,
+    "sha256": "68c5f64ed97647afa92a1326196f6293836491b9fd11e83d82b2deea51dd4a15"
+  },
+  {
+    "file": "Golden Axe.xml",
+    "bytes": 3618,
+    "sha256": "dfd33f563ea283077af61fccdfb1bc4800f90a6138933484869e2660daf0115a"
+  },
+  {
+    "file": "gottlieb.xml",
+    "bytes": 203,
+    "sha256": "d210a5da7551199e0d48759e015350b5d9529ce15e17cff9b84b6184d421e72a"
+  },
+  {
+    "file": "gp32.xml",
+    "bytes": 1065,
+    "sha256": "af97aa01d1c032e5401b05eb0815f78e77e9142b182e6bc0835f128cd87ee0af"
+  },
+  {
+    "file": "Grand Theft Auto.xml",
+    "bytes": 2376,
+    "sha256": "fcbcda6ab42516e5387b87a99b41c5070a984e222f1e6f859a8b6d8ffaba2472"
+  },
+  {
+    "file": "gw.xml",
+    "bytes": 1783,
+    "sha256": "e7e366c6e6633a8cbac0611e9bb96437751a44ef8486d685193663c36d5621d6"
+  },
+  {
+    "file": "gx4000.xml",
+    "bytes": 9719,
+    "sha256": "a02cfe7c4a4685be7864d7b23770c99a17095e10994815deeecee1a3f85ddc9f"
+  },
+  {
+    "file": "hbmame.xml",
+    "bytes": 202,
+    "sha256": "56f9b9cee9ea34a477cdad270d69c142265aac6f6bd8865e1aee5824f8b82c10"
+  },
+  {
+    "file": "hikaru.xml",
+    "bytes": 206,
+    "sha256": "f2c56e947d837f1200db921fc085202e9f80a6427018251eef1940a793550a05"
+  },
+  {
+    "file": "igs.xml",
+    "bytes": 200,
+    "sha256": "1d4ada9e8636167fed7f97b06c8ba89061b21e6c34d864c941e7109c7dd808e8"
+  },
+  {
+    "file": "imageviewer.xml",
+    "bytes": 1998,
+    "sha256": "0ad553171db71068548d3ce81b29d990fb048c2ce22d34c9426634a8b6179598"
+  },
+  {
+    "file": "incredibletech.xml",
+    "bytes": 215,
+    "sha256": "87ac8fe3e0d70ca9230bef6790fb7c13e02a48d7afeb298be8bdf9ca07f757ac"
+  },
+  {
+    "file": "intellivision.xml",
+    "bytes": 6521,
+    "sha256": "081535543bdb658146d3514ea6c3c195668883ac6fdb488591bbcefa92f6826c"
+  },
+  {
+    "file": "internet.xml",
+    "bytes": 1691,
+    "sha256": "2f0551a5524bf959fd2519fa2a146a9f332aa855fdd25f0d056b7d4a11abedaa"
+  },
+  {
+    "file": "irem.xml",
+    "bytes": 200,
+    "sha256": "6e7775b1b4d7692967631610f19d678df562ab33e7576ac61852b0da6ceb8f36"
+  },
+  {
+    "file": "j2me.xml",
+    "bytes": 2256,
+    "sha256": "cfa48caafe1116f39b71a3005485769de1fe3c4f72f8e6fef5642ad7bceb5673"
+  },
+  {
+    "file": "jaguar.xml",
+    "bytes": 6922,
+    "sha256": "fe4ecb5fd839c21c0dcc5b0a6e06568c6ea9b4d65dfd62bc05639b8d2ae498ad"
+  },
+  {
+    "file": "jaleco.xml",
+    "bytes": 202,
+    "sha256": "eb77128e0c96e9d095d6d9d033bffa45ae566a438f17989db68f0b73227248e3"
+  },
+  {
+    "file": "kaneko.xml",
+    "bytes": 201,
+    "sha256": "89f0b8543e34c0d65bc0f01f9dcaa338f3484baf0d18b0cb0e577d079d840ce2"
+  },
+  {
+    "file": "King of Fighters.xml",
+    "bytes": 3998,
+    "sha256": "06c1f8ec63e5c1a529cf6d930aa9e9a7b7c35d7f8e162a438eda2cd76b2528b1"
+  },
+  {
+    "file": "Kirby.xml",
+    "bytes": 2197,
+    "sha256": "efac27d15e6679abeda35634d00f1899b47bbb5eb568ccfe7f87c754df19313b"
+  },
+  {
+    "file": "konami.xml",
+    "bytes": 204,
+    "sha256": "81c2cf3c35dc1e89e8a8c0cfe4cb528f34942058ae69f3a50f8594765f56336b"
+  },
+  {
+    "file": "laser310.xml",
+    "bytes": 860,
+    "sha256": "5d113aa98c8ff3e7d4e909ff61ec00a80a53ef3fdfc3a38e3b2bede38ca78f36"
+  },
+  {
+    "file": "lcdgames.xml",
+    "bytes": 1320,
+    "sha256": "75a1cc82f784ff7c95edaaff6e9d65e7a000c23b166393eb1d76e39193af0dd7"
+  },
+  {
+    "file": "LEGO.xml",
+    "bytes": 4220,
+    "sha256": "7285ebe2edb2adebc34927e768a00da991902cc3e99d7dbf2ff2e07272d40df8"
+  },
+  {
+    "file": "library.xml",
+    "bytes": 4094,
+    "sha256": "16d65f012f6ada30f5f723b19d0377997b7167746afc3eced76a0254d4705131"
+  },
+  {
+    "file": "lightgun.xml",
+    "bytes": 784,
+    "sha256": "8533075458cd77601d1a24e5924a7362d5fc307d5a0a3dba8b8a5689c487864b"
+  },
+  {
+    "file": "lindbergh.xml",
+    "bytes": 3922,
+    "sha256": "eb0455af001ad8fb6993d01caa28b815a6aad6758a9b7d5eef67235036047d0c"
+  },
+  {
+    "file": "linux.xml",
+    "bytes": 1231,
+    "sha256": "cce86f07c48203acd421e0912c0c626e5decb02b97849c47f1c0f995146197e8"
+  },
+  {
+    "file": "loopy.xml",
+    "bytes": 3746,
+    "sha256": "1cd9b9ae55b2ceef4cfff768cc4d7bac2018d84df6998f3501108b447238bf22"
+  },
+  {
+    "file": "love.xml",
+    "bytes": 201,
+    "sha256": "b59c9419b310bfcea80d0910e65f96fb55c57b1e79b886f040cbede6c3d03409"
+  },
+  {
+    "file": "lowresnx.xml",
+    "bytes": 792,
+    "sha256": "fd7d36eb5021914e52e4c575aa440a48a3b8a12fcaaaeb0d2dd75dfd3113a0b1"
+  },
+  {
+    "file": "lutro.xml",
+    "bytes": 913,
+    "sha256": "be8e651e1ba35ee962c86c89401c5dc56141be4a9cb5bb183f0dec3d147ab7d0"
+  },
+  {
+    "file": "macintosh.xml",
+    "bytes": 1474,
+    "sha256": "d496a695cf8da66a3282af90785b9abe3e0d117de10e7d262b837c61911fde03"
+  },
+  {
+    "file": "mame.xml",
+    "bytes": 7322,
+    "sha256": "73198c70c8dd48046748c218ebc702869c7500c5a60ab2e558e757247a1bdb69"
+  },
+  {
+    "file": "mario.xml",
+    "bytes": 1916,
+    "sha256": "b51c585ae51b6dabdbd4824a5b689cd2a4c9943ec0888b076dfc5c056da59dac"
+  },
+  {
+    "file": "mastersystem.xml",
+    "bytes": 7639,
+    "sha256": "3ba62538090c6c145779660c8e9d635c37e6c55eb073173c544473e4882345ea"
+  },
+  {
+    "file": "Mega Man.xml",
+    "bytes": 1612,
+    "sha256": "359ee090c04940102a912fb89e0ddb70a18c1022cd25eaa8c431024011e91ed7"
+  },
+  {
+    "file": "megacd.xml",
+    "bytes": 8321,
+    "sha256": "ec5c5506f3037d0c28492e121469f3e028d076fd72634087fe989e19917081ad"
+  },
+  {
+    "file": "megadrive.xml",
+    "bytes": 7539,
+    "sha256": "fcf1f96c7e9a56852dce598d70355b0f6df03e55f21cbd1ffc9af2ac750b401f"
+  },
+  {
+    "file": "megadrivemsu1.xml",
+    "bytes": 2350,
+    "sha256": "d630f8a7a9f703d6c8ebf14d05cd68919f785774cae6400f9fc5fbcb901a4d05"
+  },
+  {
+    "file": "megaduck.xml",
+    "bytes": 928,
+    "sha256": "4527d32de25ff477f86aca91f6eac6160e1a5d651491b534923c2c4f18e7d9f5"
+  },
+  {
+    "file": "megaplay.xml",
+    "bytes": 205,
+    "sha256": "eb209100065b561fe07043e9a29dff331641167fcd95bcdca61513bb178f30c4"
+  },
+  {
+    "file": "megatech.xml",
+    "bytes": 203,
+    "sha256": "dab0493c071bae21e5031dc4dc9977119387294b694f6e9cbb2b6c76eb86dcdc"
+  },
+  {
+    "file": "mess.xml",
+    "bytes": 201,
+    "sha256": "476013d5eb28548782a6557f73593da3e6e3b8256bc37148ea2f6630975ead81"
+  },
+  {
+    "file": "Metal Gear.xml",
+    "bytes": 2010,
+    "sha256": "234476d0c7cebc8b9646169f997c4195ccfc2862a2e031c280a2e9f0b263879f"
+  },
+  {
+    "file": "Metal Slug.xml",
+    "bytes": 1803,
+    "sha256": "34860b11c53c46b247d092e9276c490ee64f45536622eae537124e75aab358b2"
+  },
+  {
+    "file": "metalslug.xml",
+    "bytes": 203,
+    "sha256": "bc4f423901534016f4e9d8cae32073a2440cbabc793aa698c5c0e51d215b4acb"
+  },
+  {
+    "file": "metroid.xml",
+    "bytes": 1836,
+    "sha256": "cfc4b46c4ca06c10779f85be16277d05995405ceb7379cee80da44d2a18c839f"
+  },
+  {
+    "file": "midway.xml",
+    "bytes": 204,
+    "sha256": "d140c6ddb8649557f8c001e24df91e5cb2fff841215fd20a55e2fae9a62ddcb3"
+  },
+  {
+    "file": "mitchell.xml",
+    "bytes": 207,
+    "sha256": "72fcd43304a366a1d1fe0c662df4db40a2f3ba0d8604f357fd9aecbc425f24e4"
+  },
+  {
+    "file": "model2.xml",
+    "bytes": 207,
+    "sha256": "e931115fcf1a9844a441300702f39a3d0e2833b2b025c7a452ff16b2d585639c"
+  },
+  {
+    "file": "model3.xml",
+    "bytes": 213,
+    "sha256": "ff865110e14cc1c949fe50807c7ccd9b0159c75841d8140b312a3eb10cd626d3"
+  },
+  {
+    "file": "moonlight.xml",
+    "bytes": 1182,
+    "sha256": "72b81609a3a87d1af0ef08079541526ab049cc5a8eb90a279d7388f291cd5284"
+  },
+  {
+    "file": "Mortal Kombat.xml",
+    "bytes": 1808,
+    "sha256": "220158020ca3d8ca0a41a7fe112f8cb45cd675350f9cdd4ea5b37a98f3bde5b6"
+  },
+  {
+    "file": "mrboom.xml",
+    "bytes": 204,
+    "sha256": "4f9154f06c9303894addb1614ca0a561764d17a366c88a26f481ab66f5124f55"
+  },
+  {
+    "file": "msx.xml",
+    "bytes": 6744,
+    "sha256": "600f078f2a2116620a261d40b3812cbcb94e2f86497730bea8c8021743a85d5d"
+  },
+  {
+    "file": "msx1.xml",
+    "bytes": 6744,
+    "sha256": "600f078f2a2116620a261d40b3812cbcb94e2f86497730bea8c8021743a85d5d"
+  },
+  {
+    "file": "msx2+.xml",
+    "bytes": 6578,
+    "sha256": "43ab59817cee09f9e3c3e7d5d989b679a98bc5d33c9d7b9867e2d2783b83c914"
+  },
+  {
+    "file": "msx2.xml",
+    "bytes": 6578,
+    "sha256": "43ab59817cee09f9e3c3e7d5d989b679a98bc5d33c9d7b9867e2d2783b83c914"
+  },
+  {
+    "file": "msxturbor.xml",
+    "bytes": 6578,
+    "sha256": "43ab59817cee09f9e3c3e7d5d989b679a98bc5d33c9d7b9867e2d2783b83c914"
+  },
+  {
+    "file": "mugen.xml",
+    "bytes": 2443,
+    "sha256": "145b956fa5710e92913b8e3cccc67a73e663f0badfb9f91d87cc1de974f25c0a"
+  },
+  {
+    "file": "multivision.xml",
+    "bytes": 11629,
+    "sha256": "9762b32e68c5518773d9d5ab9bc5aa684e54b6b676ccb24eefce1734b6bc5169"
+  },
+  {
+    "file": "n64.xml",
+    "bytes": 7434,
+    "sha256": "ec370a4fe862a4c97d50fda6fcb325c03c6a92e6cb1e91ca848a4a01aff0d81e"
+  },
+  {
+    "file": "n64dd.xml",
+    "bytes": 2172,
+    "sha256": "c341ff613cdc2023925293cf4a272caaa30872320c0313da9a13dc6ac03bd580"
+  },
+  {
+    "file": "namco.xml",
+    "bytes": 203,
+    "sha256": "a430d208dad33fcdef5eb1bddf42bcd484de24c3aef6c25e88322c1564aa5bd5"
+  },
+  {
+    "file": "namco22.xml",
+    "bytes": 212,
+    "sha256": "169b6ca438348536a2ed377790b016d1856d94a5c0b23d69da04789c893bc9f0"
+  },
+  {
+    "file": "naomi.xml",
+    "bytes": 1215,
+    "sha256": "cbf9867714fa8ecb223fc49feae91bab96e28ce02783c0a5c9de3a52a581b839"
+  },
+  {
+    "file": "naomi2.xml",
+    "bytes": 1217,
+    "sha256": "cabf5d158e01f738375e4d878a3f76e12ebf371d6388bb45ec826fa993f26c29"
+  },
+  {
+    "file": "nds.xml",
+    "bytes": 11253,
+    "sha256": "ec21685f421ffa6a6303332ce16efa9dff1684dfa87d8dc9303c97ca92d93b8d"
+  },
+  {
+    "file": "neogeo.xml",
+    "bytes": 7867,
+    "sha256": "472fd074489e7e242a2f28f5a834d5c08d48fa548471c36cd1278681d84e5738"
+  },
+  {
+    "file": "neogeocd.xml",
+    "bytes": 9703,
+    "sha256": "b213f8367e88d1eac266bde6aa862641d8f34a7b71966d40f32183cd1f08946c"
+  },
+  {
+    "file": "neogeomini.xml",
+    "bytes": 1542,
+    "sha256": "658b1284381028ee9a78f494c5e5b4c0b8e0d2d128e72d0412073349926c1114"
+  },
+  {
+    "file": "neogeomvs.xml",
+    "bytes": 203,
+    "sha256": "d6e17f0c91e41c60d23947394d8f64b64c5523795f7aa57319cc428dbf20151f"
+  },
+  {
+    "file": "neogeox.xml",
+    "bytes": 1541,
+    "sha256": "68dc46dba3dadf97a0ac4bde9d4299a6c489910ef81837a7221ee6e738ded339"
+  },
+  {
+    "file": "nes.xml",
+    "bytes": 8160,
+    "sha256": "1572482e1936e22df4432fa300a89eee3a80098e8ba83f3bd7816926e6e4fdf8"
+  },
+  {
+    "file": "nesmini.xml",
+    "bytes": 2183,
+    "sha256": "4eae644c456429f87ad36fb4e0e953f76052f42df12f0e7f0f5897202cb15df7"
+  },
+  {
+    "file": "ngage.xml",
+    "bytes": 6229,
+    "sha256": "0bd5c8ae0582927b2e6c9a73382836bbd2641ec4df4c3401be6e8b78c47cf672"
+  },
+  {
+    "file": "ngp.xml",
+    "bytes": 1332,
+    "sha256": "c978bee6e9887b4638742fe2e9c229f3566d06c982bad8c98c30eca9ba15492a"
+  },
+  {
+    "file": "ngpc.xml",
+    "bytes": 7328,
+    "sha256": "2043402fc53a76a92a1bb092e883f1158d2b5c173d0ba49b579aad708d116722"
+  },
+  {
+    "file": "nichibutsu.xml",
+    "bytes": 206,
+    "sha256": "33116782a2b25d59e8cc72459c6ee82a4d966ea2b2aa3b545f50a12c6d6aab68"
+  },
+  {
+    "file": "nintendo.xml",
+    "bytes": 207,
+    "sha256": "ca96582e08d6c306a0a212b55393adf27a175281215bff31f5f0ae3e15fbfdc4"
+  },
+  {
+    "file": "nmk.xml",
+    "bytes": 199,
+    "sha256": "b7613b4343f7b21584894ccd0a4312655aea69d3ed9df0d2660dd16cc9b19115"
+  },
+  {
+    "file": "odcommander.xml",
+    "bytes": 632,
+    "sha256": "1db9182af48bc6537bf732c19f01c033a7b1ba027ec8be688bb3ea2d2f3c93c5"
+  },
+  {
+    "file": "odyssey2.xml",
+    "bytes": 1342,
+    "sha256": "c2b5172854d1807038bac31e16a7e860ec68a6665ddd62afdcaf04394e359be1"
+  },
+  {
+    "file": "openbor.xml",
+    "bytes": 1685,
+    "sha256": "92a1cf168fdd9ff67c71da6554ea0e1e6d0378468ad600cd544cf79243e1a0d0"
+  },
+  {
+    "file": "oric.xml",
+    "bytes": 1230,
+    "sha256": "6a88b7807426577797af94772853347f99a5c124dd9d2d3b271783643ef96bdc"
+  },
+  {
+    "file": "Pac-Man.xml",
+    "bytes": 1734,
+    "sha256": "01e1271001cb6f05c2d4b41084fd89966e68e220650126b62939ceb3f6d4da82"
+  },
+  {
+    "file": "palm.xml",
+    "bytes": 1142,
+    "sha256": "2ddf20e993b7872abe1057265afdea18d8e1f3479623eeb0a68a0e772a0e33be"
+  },
+  {
+    "file": "pc.xml",
+    "bytes": 1383,
+    "sha256": "ac05d8128350b6673258606b5a706d4454b038a2caa303f2dbe1423f255ee32f"
+  },
+  {
+    "file": "pc88.xml",
+    "bytes": 976,
+    "sha256": "167389ad6bdba43e9d0c64c98221dbadbe3d912e2fadba481cebb777ef2109ab"
+  },
+  {
+    "file": "pc98.xml",
+    "bytes": 1209,
+    "sha256": "7c545e40a5f9d7ef40f2c542620fa91afa392abb424954afed1aea5f04f40dcd"
+  },
+  {
+    "file": "pce-cd.xml",
+    "bytes": 7884,
+    "sha256": "9f824ae3278f391e833c3c81ca7917ba0ae201bebd2e7ed1f03b84101d115f16"
+  },
+  {
+    "file": "pcengine.xml",
+    "bytes": 11047,
+    "sha256": "92b8e1f34e701e46f1fdd3cdcfa765ea8e7cea04db77d3e26d14cb4b360ebce4"
+  },
+  {
+    "file": "pcenginecd.xml",
+    "bytes": 7823,
+    "sha256": "97d8a81f7d8d6e5fe00f9b5fef7c6cdde91d57e4731b590f4515bb2242136b12"
+  },
+  {
+    "file": "pcfx.xml",
+    "bytes": 9422,
+    "sha256": "0138b5a215ef8594ef19e6e2eb33cd0a1faad0daed0416c61715e5c01321f764"
+  },
+  {
+    "file": "pdp1.xml",
+    "bytes": 1105,
+    "sha256": "f7a42d583a83787a012805fd886d061305f4fea606f4e3296bf644b51604a684"
+  },
+  {
+    "file": "pet.xml",
+    "bytes": 1296,
+    "sha256": "f0449dcf3b201a0a98fb21ad5236399dc7c318109d66a616247574a993b8c65f"
+  },
+  {
+    "file": "pico.xml",
+    "bytes": 8340,
+    "sha256": "5ff8919a38e20f3cf75bc7c163e26a10794500f0a57de7d28e35ef50428adf9e"
+  },
+  {
+    "file": "pico8.xml",
+    "bytes": 1458,
+    "sha256": "794e4140c62536d648fc916c94470a0f98cd3a9a10ef81ad58cfddef49802681"
+  },
+  {
+    "file": "playchoice.xml",
+    "bytes": 209,
+    "sha256": "cf1ac51bb88041c576f291bb739e0c3100d15e81fbb5f98adeeb2b907ae81298"
+  },
+  {
+    "file": "pokemini.xml",
+    "bytes": 1016,
+    "sha256": "0dc89f7eae96c75a7b2304924e2db3e892b6216d459448937e08740aa13c074d"
+  },
+  {
+    "file": "Pokemon.xml",
+    "bytes": 2538,
+    "sha256": "66d47b067d0cfd3235c0fda1b26d1ae8448e27096898bcd1b0b18ae5c3ea8adc"
+  },
+  {
+    "file": "ports.xml",
+    "bytes": 1150,
+    "sha256": "820ed9f8155baca3787cf5285d0b764ce2e0def2f94eb24c21c6938e3cb71070"
+  },
+  {
+    "file": "pos.xml",
+    "bytes": 1113,
+    "sha256": "621f2b1a166c5e00ff2ef1b4f2bf4d2a198c79688dfa6c444e8bcd25d0cf6ed1"
+  },
+  {
+    "file": "prboom.xml",
+    "bytes": 1208,
+    "sha256": "fa566da903cfe199cf2981904a9d60433548848de68d6e6431d61fd090698244"
+  },
+  {
+    "file": "projectarcade.xml",
+    "bytes": 208,
+    "sha256": "9d3f8e0d66f27f78eaa45d0d6081a8deac576a5aafe65ad9e7692696dd9bac03"
+  },
+  {
+    "file": "ps2.xml",
+    "bytes": 8055,
+    "sha256": "25282d2910ab4cc8163bc1ff0ce0d97c318cb975cb086472b744d67491309068"
+  },
+  {
+    "file": "ps3.xml",
+    "bytes": 8897,
+    "sha256": "524ff06281d310fb4f52e19a7240146d383f1788943ebcf73f8939ceb274aed0"
+  },
+  {
+    "file": "ps4.xml",
+    "bytes": 13701,
+    "sha256": "8367551976fcd17e4ff577d9c059f0eb687197e4b2c05a5544d4f8e7fe7e4c93"
+  },
+  {
+    "file": "psikyo.xml",
+    "bytes": 201,
+    "sha256": "a6e7a247c65183fd552234b74b60f04c64d35cac0ccf8666335b69ccade85ff2"
+  },
+  {
+    "file": "psp.xml",
+    "bytes": 9173,
+    "sha256": "2d0e51906a01065738c9607bf7b00d904ab93b36bcc149c8d27cdfdd1362acc3"
+  },
+  {
+    "file": "pspminis.xml",
+    "bytes": 1392,
+    "sha256": "5bf2bfa0916e6126fa9f154242a9ee77b0b6ac3265a800e46458f05815ba2c21"
+  },
+  {
+    "file": "psvita.xml",
+    "bytes": 10028,
+    "sha256": "de5ec16a14f3f2842eb32fe157ebaf9e728626f6fd751810f4f2828e1d1b0eed"
+  },
+  {
+    "file": "psx.xml",
+    "bytes": 11744,
+    "sha256": "b59be37189d7bba9a6fa5e8496ce835f6c8959a2a3142660585a0f79c013eab4"
+  },
+  {
+    "file": "psxmini.xml",
+    "bytes": 1733,
+    "sha256": "80ba002b0b7758d3bdf6141e31ae79d5d61501e8386439ba5f45917a73d6ecfa"
+  },
+  {
+    "file": "pv1000.xml",
+    "bytes": 1319,
+    "sha256": "7d4ff98ab81b58e3673d55c6c46a30b6c7d0055d22aeb6174cd2be6f93ba5e27"
+  },
+  {
+    "file": "pygame.xml",
+    "bytes": 1276,
+    "sha256": "9e814d0cc1057ec6b43e1003d717629d4833dce948f918594e43985b66290861"
+  },
+  {
+    "file": "Rayman.xml",
+    "bytes": 3718,
+    "sha256": "25c269f90efe35e5b6033e203312b19ebf45e850b7df4deab5e3dcc06a95eb95"
+  },
+  {
+    "file": "residualvm.xml",
+    "bytes": 206,
+    "sha256": "c56471caf7d3c346f3395a24bf65ca12199e59789b391178ceb1f3b4ec34ef70"
+  },
+  {
+    "file": "retrobat.xml",
+    "bytes": 203,
+    "sha256": "0a7afc86e43211399d148799b0ef13b6569bfeb346996b9d208ce90534427c62"
+  },
+  {
+    "file": "samcoupe.xml",
+    "bytes": 8924,
+    "sha256": "01b2a79d6f07497cea1a17a2f125d624c37c6316bdc83c8a53801334e1dcf9c5"
+  },
+  {
+    "file": "sammy.xml",
+    "bytes": 203,
+    "sha256": "533d921a75218425d95e464a901babc0e605ff890235f479724eb68d1bfe7639"
+  },
+  {
+    "file": "Samurai Shodown.xml",
+    "bytes": 3385,
+    "sha256": "5ca851fc944be980b18ebed7d84005d6e8bbd9bb52993683777e86f55a372365"
+  },
+  {
+    "file": "satellaview.xml",
+    "bytes": 2204,
+    "sha256": "3d749c9e7e8aa145f47a87283c76b400e92e320110bae96c24a523686941c318"
+  },
+  {
+    "file": "saturn.xml",
+    "bytes": 8895,
+    "sha256": "d601ecc8f9daa98ba7ce3bd25c95cb79002e522cefa5ecbf7a0d01b11c02a61a"
+  },
+  {
+    "file": "scummvm.xml",
+    "bytes": 1524,
+    "sha256": "0cfdd14becc176392ea6b6acc5f8487d0c8722ca33e9920155f51f94a5ea9e8e"
+  },
+  {
+    "file": "scv.xml",
+    "bytes": 898,
+    "sha256": "78e7dbcc9b2559453acbe2e453935afd5a531f16003ec0fd9ad1ddcfdedc4edd"
+  },
+  {
+    "file": "sdlpop.xml",
+    "bytes": 836,
+    "sha256": "0cc205de55ef1ae3093c2bb8ea8aec5f46597e159ec6b99800ebddb1bbd0ef97"
+  },
+  {
+    "file": "sega.xml",
+    "bytes": 200,
+    "sha256": "64863ab386fb98bf065d2fea294ff8324d4801a0ba36078faa2152376c61706a"
+  },
+  {
+    "file": "sega32x.xml",
+    "bytes": 9095,
+    "sha256": "0c86c120d76fb87d0c76bdda655ba73ccac5bbbd724c096f4c10f07ce5798d25"
+  },
+  {
+    "file": "segacd.xml",
+    "bytes": 8256,
+    "sha256": "239f34eb1307783dcc9aa3fdd0988f37b45478f7106da1e17cee8dd22452eb4a"
+  },
+  {
+    "file": "segastv.xml",
+    "bytes": 208,
+    "sha256": "6c45fed9a1cbfb8d64021360ade4cd43178850b05eab3c4cfe87ff63a462c4e2"
+  },
+  {
+    "file": "seibukaihatsu.xml",
+    "bytes": 209,
+    "sha256": "f9ae06870bac0e617d07c567f8f6a90f64937f361367edc474bb2eb8e61eead1"
+  },
+  {
+    "file": "semicom.xml",
+    "bytes": 202,
+    "sha256": "25176a6b7b739a20a9ce3ba08f1b8ea1011e1b8b05b3e4b7d8a3a36635605317"
+  },
+  {
+    "file": "seta.xml",
+    "bytes": 199,
+    "sha256": "dca2982988f0159b3d4fb6226336236df04b7ca9c8bb4e05c962dc03e378e08d"
+  },
+  {
+    "file": "sg-1000.xml",
+    "bytes": 2125,
+    "sha256": "e45e7dd60a6b47b137d37bed6b95bc5bb30fc5121eb2dae735c4f3982d2281e1"
+  },
+  {
+    "file": "sgb.xml",
+    "bytes": 712,
+    "sha256": "691b3553bdae56f60247fc0d0d3d6a6ff22e8c3830c20f5fe50593d7a18200dd"
+  },
+  {
+    "file": "Simpsons.xml",
+    "bytes": 3503,
+    "sha256": "0ea7f42adf00c011fcdab487e57ed1abf54bc860cddc671d97485e6826d293db"
+  },
+  {
+    "file": "singe.xml",
+    "bytes": 2920,
+    "sha256": "30c582fe28547c934a20b85cec1ccd976813aedfa3a22e52a6d9e2264298d57a"
+  },
+  {
+    "file": "snes-msu.xml",
+    "bytes": 213,
+    "sha256": "7525f7bde19634a769d5ebf4958a1cb9a9d2af56c3bf04a70c9dfcfa8a836090"
+  },
+  {
+    "file": "snes-msu1.xml",
+    "bytes": 1309,
+    "sha256": "96d379195f24f1af0f320497475393e8d778323e86805f0cec58182b98225d7e"
+  },
+  {
+    "file": "snes.xml",
+    "bytes": 8155,
+    "sha256": "946b8252eb1ea655eba2ed505d54ed694ae217e4bb61f0c0ba8eb8f353288f14"
+  },
+  {
+    "file": "snescd.xml",
+    "bytes": 1309,
+    "sha256": "96d379195f24f1af0f320497475393e8d778323e86805f0cec58182b98225d7e"
+  },
+  {
+    "file": "snesmini.xml",
+    "bytes": 1454,
+    "sha256": "fe22b61df7c586513c7c5658358c210756800b5e1a7fa65dbf669f234f531455"
+  },
+  {
+    "file": "snesmsu1.xml",
+    "bytes": 1309,
+    "sha256": "96d379195f24f1af0f320497475393e8d778323e86805f0cec58182b98225d7e"
+  },
+  {
+    "file": "snk.xml",
+    "bytes": 199,
+    "sha256": "7c957a000527e59b532822cc2d3ef196aba4953a0ab55e2950646458d949de5a"
+  },
+  {
+    "file": "socrates.xml",
+    "bytes": 1097,
+    "sha256": "c17d8e58906b191de9d774aa4faa6b983e104a319d19075688c2ffbe2880eea4"
+  },
+  {
+    "file": "solarus.xml",
+    "bytes": 1397,
+    "sha256": "5c67f70a0b6a987c7d1bd73bfc34ae68329d31dd9899d582f81da96e18356a9c"
+  },
+  {
+    "file": "sonic.xml",
+    "bytes": 1878,
+    "sha256": "bc719179ffd82aa574de41518676c2ca80ff75fa0e7dd945b81938451beca848"
+  },
+  {
+    "file": "sonicretro.xml",
+    "bytes": 214,
+    "sha256": "fa88033bcbdc3b2d064a20c05916136a0bb9450f18a52862f7cb81eeca5678de"
+  },
+  {
+    "file": "Space Invaders.xml",
+    "bytes": 1883,
+    "sha256": "431d57290becd242ba67afc46f05f40e953789f850dd99f9f72ddeae403c69b0"
+  },
+  {
+    "file": "spectravideo.xml",
+    "bytes": 9964,
+    "sha256": "6c72a763f90e50a4378507264f4b4d4833b14c7e2e99ba8db14dd42418a6d608"
+  },
+  {
+    "file": "Spider-Man.xml",
+    "bytes": 18757,
+    "sha256": "42db724fb96cb5606af9a329dfd19dff8dc02cc179c77903a864f7dca933ab38"
+  },
+  {
+    "file": "Star Wars.xml",
+    "bytes": 1815,
+    "sha256": "0fc5d95c3b098a489f8e2776f7e2b08faa53b3aad1cc4c604ca73caab177feaf"
+  },
+  {
+    "file": "steam.xml",
+    "bytes": 202,
+    "sha256": "6422f336286c5586103fe8dce17c723e371fd36d91a7868dc9e759711db57e98"
+  },
+  {
+    "file": "stratagus.xml",
+    "bytes": 206,
+    "sha256": "be779bcb1e05c698ecf3c2bca7464d4107ca096ab8d915bdbd93ca55b5b0b803"
+  },
+  {
+    "file": "Street Fighter.xml",
+    "bytes": 1682,
+    "sha256": "dc51d493aa5f4b02b59d7a5263f8690734794394de2b63570eb6b5e20f410af9"
+  },
+  {
+    "file": "streetfighter.xml",
+    "bytes": 1516,
+    "sha256": "88f5fddca98479cc8433e10ad62bd2e04b65bce1e21e7ada3bf18791e9cc8e90"
+  },
+  {
+    "file": "Streets of Rage.xml",
+    "bytes": 3556,
+    "sha256": "109e27bf66d42dc037f840287cecbed7541a2a82bfec7047b2733877ee0fd3eb"
+  },
+  {
+    "file": "sufami.xml",
+    "bytes": 1036,
+    "sha256": "1845361dfbd3cfeea6434b1a1da1a001647a31a123778c102fab36fa32605ad2"
+  },
+  {
+    "file": "supergrafx.xml",
+    "bytes": 8983,
+    "sha256": "3ebeebd0ae352106ac5babdcef89bc1839904504d11e4dca85d481d3f83cc7f1"
+  },
+  {
+    "file": "Superman.xml",
+    "bytes": 3803,
+    "sha256": "270a7c1b02d7ab6be9f0971776bd3cb1892ead130357f28dbb9e65ae33332c83"
+  },
+  {
+    "file": "supervision.xml",
+    "bytes": 1871,
+    "sha256": "6ebc9c63c36c644b5354ae8386c765c3de9e2e8b0b56dca851e5779a91b9cc4a"
+  },
+  {
+    "file": "supracan.xml",
+    "bytes": 856,
+    "sha256": "723018a9f485f90a44ac5342b3c3db29d5f38b90be652792fb73c4f1a4e2fb32"
+  },
+  {
+    "file": "switch.xml",
+    "bytes": 4170,
+    "sha256": "73f1bd40fa66d67d8bdd63a7d350e6eab4c6cbc020a8af4d4325f039f093a690"
+  },
+  {
+    "file": "systemsp.xml",
+    "bytes": 14711,
+    "sha256": "21d22a7e4f4857604efe7d51515f772c37e2ac70c7c9f52f4bfe2c44aae4418b"
+  },
+  {
+    "file": "taito.xml",
+    "bytes": 200,
+    "sha256": "827bf135ba1eb77ab94e64bd9326db0ea71ea850bb13b331692ea524d4fdb22d"
+  },
+  {
+    "file": "tandy1k.xml",
+    "bytes": 209,
+    "sha256": "41e1ab88d41caf8e41262f946529388c28100b9b9c5ccb1cef83bc0ee1bfd7a3"
+  },
+  {
+    "file": "technos.xml",
+    "bytes": 202,
+    "sha256": "f15cbcb41c2b91ea2d856f79f86c1ae45814149a9b3fabe06e63b6714fe20313"
+  },
+  {
+    "file": "tecmo.xml",
+    "bytes": 200,
+    "sha256": "6be0eeb6359525c5731a984a764dd2987f8cc42ae6e5ff846c1f1d2e2b75b8ee"
+  },
+  {
+    "file": "teknoparrot.xml",
+    "bytes": 207,
+    "sha256": "273e8ea6887421c4939af64871b07912f9a95568ca33884d3e9509dcf14b6d53"
+  },
+  {
+    "file": "Tetris.xml",
+    "bytes": 2094,
+    "sha256": "51d8f64cea5fef29ea635328e99ecc50f13dfb43112de345351ff4f9e65c88cd"
+  },
+  {
+    "file": "tg16.xml",
+    "bytes": 1248,
+    "sha256": "4c6f1bc5dd20ea9b6f5bca41e516bd8cc83c5d3c5da1b44a4be6878a87395cca"
+  },
+  {
+    "file": "theodore.xml",
+    "bytes": 1168,
+    "sha256": "9ca89f653e7455d8bcb7c94a7e279778d967c0f33b39d24f00eaf3958b6a71f7"
+  },
+  {
+    "file": "thomson.xml",
+    "bytes": 1731,
+    "sha256": "43fc190c0a43e28ba5c2247aae572fe4c5b2ebe5b3f13fce07d413ace3c4aee9"
+  },
+  {
+    "file": "ti99.xml",
+    "bytes": 961,
+    "sha256": "48982b974f23fdad2cdfbfb53331833800530928c348cb899737d3fa942383dd"
+  },
+  {
+    "file": "tic80.xml",
+    "bytes": 1844,
+    "sha256": "a6275554130dd212a32784cf83ad3e61929b90228d728ec5eda60d360aa1f074"
+  },
+  {
+    "file": "to8.xml",
+    "bytes": 1162,
+    "sha256": "10639eae1061fe015ee3ef77335210c037bf845a2664c38511e78e2995108249"
+  },
+  {
+    "file": "toaplan.xml",
+    "bytes": 202,
+    "sha256": "1a58027a9de134feeabec2cbbb7d55799bd22de23a4f0d570f6ace3f530f27c2"
+  },
+  {
+    "file": "Tomb Raider.xml",
+    "bytes": 2213,
+    "sha256": "e2d873f8469feb9ff19754bedcec3f8f874ed6166e67c310e136af989cea1d5d"
+  },
+  {
+    "file": "triforce.xml",
+    "bytes": 1056,
+    "sha256": "6b7990bbef47591414633e1556a9191e4b70c6e99649ac7a2136ff5cf1688f64"
+  },
+  {
+    "file": "trs-80.xml",
+    "bytes": 205,
+    "sha256": "4cfd6bb740a4123916e28a886576e59b927afd410c17a2c6b23ffee321734afb"
+  },
+  {
+    "file": "tutor.xml",
+    "bytes": 1342,
+    "sha256": "445ba4d1abff0777056aafcb76ac4a15362f61fe53135ca83e6c08e1a0a9b277"
+  },
+  {
+    "file": "tyrquake.xml",
+    "bytes": 208,
+    "sha256": "14e8784d6ee634e9d353bf6744be3b2e449cbbb51f6e6a16bf85cf463cda0708"
+  },
+  {
+    "file": "universal.xml",
+    "bytes": 207,
+    "sha256": "afe786f435d5a681dce319a54c16896b13c8112f2668a7d921ad0113215a65c5"
+  },
+  {
+    "file": "uzebox.xml",
+    "bytes": 918,
+    "sha256": "0a2795a57a8472bf0d95f846bc770f261909fb059c26b4a0ef561a425b11fa89"
+  },
+  {
+    "file": "vc4000.xml",
+    "bytes": 898,
+    "sha256": "11beca7547cdb54f20d11dc927a2a0d57481ad06e04d1e70512737f6a24bb102"
+  },
+  {
+    "file": "vectrex.xml",
+    "bytes": 9431,
+    "sha256": "fd157be9748709af43453710a0eee63a31a050c1bd912a46a147332d8ff47d0b"
+  },
+  {
+    "file": "vic20.xml",
+    "bytes": 213,
+    "sha256": "f61d1474ed004a993aacec357783f97660afa12beaa1fcd69301e3f46aaea3bc"
+  },
+  {
+    "file": "videopac.xml",
+    "bytes": 207,
+    "sha256": "3742b747402ecb0ca2e8e7b1a78650f095f48dbc6ba8586c7d3e74a12aa6e91b"
+  },
+  {
+    "file": "videopacplus.xml",
+    "bytes": 10900,
+    "sha256": "30871a9e56ebd24d9a6ec9a2bd31fe98f64ca7290e622b4b751015b9c49f8cd4"
+  },
+  {
+    "file": "vircon32.xml",
+    "bytes": 3384,
+    "sha256": "1817f4c986e9678716db7e954dac666b0b32e2249bf421c5b7f87e6a93529b9a"
+  },
+  {
+    "file": "virtualboy.xml",
+    "bytes": 10414,
+    "sha256": "cd3385fc869dfe8e95d718c3a16c6f0ded2ab2ca46a734599b92fdf06c968f09"
+  },
+  {
+    "file": "vis.xml",
+    "bytes": 3479,
+    "sha256": "ac96294c204947d9577d3b6f80e1fd9e72c9a231a6fdf73d732843b95155c433"
+  },
+  {
+    "file": "visco.xml",
+    "bytes": 203,
+    "sha256": "f87309850cb98088f5b6b68ac414c6b6450d905b8d15ff275e1f0e5bf2cc749d"
+  },
+  {
+    "file": "vpinball.xml",
+    "bytes": 375,
+    "sha256": "ec4c7548cc8661e10196e8e6c5181b2109ca5f11ca7ad015b0322f172e461b6f"
+  },
+  {
+    "file": "vsc.xml",
+    "bytes": 211,
+    "sha256": "3ab25b52d3bc28c2b6a117135a9890fa76ef60cff58ace8ff53b8c4bdaed9d7b"
+  },
+  {
+    "file": "vsmile.xml",
+    "bytes": 930,
+    "sha256": "f37fd9e0e5995fa1df60a0e74bb74af75bd2fe314bf5fb93de8ffdcc286b5d7a"
+  },
+  {
+    "file": "wii.xml",
+    "bytes": 8458,
+    "sha256": "375764e890b34436c19e5b109b5f4283feafff35b655da502dc965b172753084"
+  },
+  {
+    "file": "wiiu.xml",
+    "bytes": 6632,
+    "sha256": "a7cd8280bddffa8df048223780f289ced6920cecbffc53d64ad625c0f036e315"
+  },
+  {
+    "file": "windows.xml",
+    "bytes": 208,
+    "sha256": "8bdd3b28d9ebf95965e8a53d3b5e153fa51fdc9ff2569f3cedac30aa2fb7ada7"
+  },
+  {
+    "file": "windows_installers.xml",
+    "bytes": 215,
+    "sha256": "fe95627186b52b505967913bf0250eecca9e83c07f7547cd648ff5dc6375751e"
+  },
+  {
+    "file": "wonderswan.xml",
+    "bytes": 1362,
+    "sha256": "b28a79d8250b9ebbf1727939ea99def359c18f5efd13cae6b90f864321eda150"
+  },
+  {
+    "file": "wonderswancolor.xml",
+    "bytes": 1371,
+    "sha256": "232b88c86dac75a527268505a5a8cf73d824a817f579bafe777dd93afba98f36"
+  },
+  {
+    "file": "wswan.xml",
+    "bytes": 1192,
+    "sha256": "9395af4f2b109d509ea11c34042186800814d34e58bbc5766201b20cf34b38a4"
+  },
+  {
+    "file": "wswanc.xml",
+    "bytes": 1220,
+    "sha256": "8c5ae5c5dda6403b8d3697c4feba16f0099c6685efd82d0caeb6162d28d0870a"
+  },
+  {
+    "file": "X-Men.xml",
+    "bytes": 3566,
+    "sha256": "e7063c82837dbbd97f8e3eafde08da117eef1debe3aab533faf7e23a66811dbf"
+  },
+  {
+    "file": "x1.xml",
+    "bytes": 9068,
+    "sha256": "a1db52ea18af5bed7b60d67f0dc619e3b89f57ca00638d40f1629a674df3c74e"
+  },
+  {
+    "file": "x68000.xml",
+    "bytes": 10583,
+    "sha256": "1675aa900668372b24a87eb350a6c9898cf578031877451f229b4ca05b2ff7d4"
+  },
+  {
+    "file": "xash3d_fwgs.xml",
+    "bytes": 1019,
+    "sha256": "33cae10a629cc3cada62d73b46ce33c1d97c25d486a7b623310566984d34beb2"
+  },
+  {
+    "file": "xbox.xml",
+    "bytes": 8748,
+    "sha256": "fb0efd5374b1c6bd448368a4f31453cb6933e470231c3c1e99c6d8e01b68d155"
+  },
+  {
+    "file": "xbox360.xml",
+    "bytes": 10008,
+    "sha256": "e08b6f347d70fa8eff914e27c8b9b9c1d9a30ebe82fe66f7625d9ed7b1056a8e"
+  },
+  {
+    "file": "xegs.xml",
+    "bytes": 9697,
+    "sha256": "7eb40a8be8765a9df86ed024367acbe010363cd074b03a75c888d9274a5e0342"
+  },
+  {
+    "file": "zelda.xml",
+    "bytes": 1795,
+    "sha256": "e56cdd06a0c8066c882848ab6c81c4c413b5632ec49256fd23cf2c392929e1a5"
+  },
+  {
+    "file": "zmachine.xml",
+    "bytes": 447,
+    "sha256": "73efd68d47f68e1b0bb061e9684f25c73e2bd378ad6d5aca2926bf2a9e329722"
+  },
+  {
+    "file": "zx81.xml",
+    "bytes": 9077,
+    "sha256": "a087e334c5690708ef90b1a59b4a1ac2e152f84a4123870e11ebcda41a8ca575"
+  },
+  {
+    "file": "zxspectrum.xml",
+    "bytes": 1584,
+    "sha256": "cd74bd3c3e8db3cf4fa20e865a5c8da67023d8f90efa5b17e6b77582dd37bd46"
+  }
+]

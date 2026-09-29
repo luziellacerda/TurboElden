@@ -1,0 +1,9 @@
+attribute vec3 position;
+attribute vec3 normal;
+attribute vec4 tangent;
+attribute vec2 texcoord;
+varying vec3 worldPosition;
+varying vec3 worldNormal;
+varying vec4 worldTangent;
+varying vec2 uv;
+void main(){mat3 r=shipRotation();worldPosition=r*position+shipOffset();worldNormal=r*normal;worldTangent=vec4(r*tangent.xyz,tangent.w);uv=texcoord;gl_Position=project(worldPosition);}

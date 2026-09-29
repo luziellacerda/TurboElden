@@ -1,0 +1,189 @@
+{
+  "catalogIdentity": "native export",
+  "systems": 36,
+  "total": 7211,
+  "description": 7095,
+  "missing": 116,
+  "platforms": {
+    "3ds": {
+      "total": 32,
+      "description": 32,
+      "missing": 0
+    },
+    "Arcade": {
+      "total": 23,
+      "description": 23,
+      "missing": 0
+    },
+    "Atomiswave": {
+      "total": 26,
+      "description": 26,
+      "missing": 0
+    },
+    "Dreamcast": {
+      "total": 34,
+      "description": 34,
+      "missing": 0
+    },
+    "Gameboy Color": {
+      "total": 410,
+      "description": 410,
+      "missing": 0
+    },
+    "Gba": {
+      "total": 141,
+      "description": 91,
+      "missing": 50
+    },
+    "Master System ": {
+      "total": 282,
+      "description": 278,
+      "missing": 4
+    },
+    "MegaDrive": {
+      "total": 772,
+      "description": 772,
+      "missing": 0
+    },
+    "MegaDrive - BR": {
+      "total": 78,
+      "description": 77,
+      "missing": 1
+    },
+    "Neo Geo": {
+      "total": 140,
+      "description": 140,
+      "missing": 0
+    },
+    "Neo Geo CD": {
+      "total": 21,
+      "description": 21,
+      "missing": 0
+    },
+    "Nintendinho": {
+      "total": 715,
+      "description": 715,
+      "missing": 0
+    },
+    "Nintendo 64": {
+      "total": 156,
+      "description": 156,
+      "missing": 0
+    },
+    "Nintendo 64 - BR": {
+      "total": 19,
+      "description": 19,
+      "missing": 0
+    },
+    "Nintendo DS": {
+      "total": 16,
+      "description": 16,
+      "missing": 0
+    },
+    "PSP": {
+      "total": 54,
+      "description": 53,
+      "missing": 1
+    },
+    "Pc Engine": {
+      "total": 61,
+      "description": 61,
+      "missing": 0
+    },
+    "Pc Engine cd": {
+      "total": 2,
+      "description": 2,
+      "missing": 0
+    },
+    "Playstation 1": {
+      "total": 118,
+      "description": 118,
+      "missing": 0
+    },
+    "Playstation 2": {
+      "total": 65,
+      "description": 64,
+      "missing": 1
+    },
+    "Playstation 2 - BR": {
+      "total": 211,
+      "description": 207,
+      "missing": 4
+    },
+    "Super Nintendo": {
+      "total": 776,
+      "description": 776,
+      "missing": 0
+    },
+    "Super Nintendo - BR": {
+      "total": 180,
+      "description": 180,
+      "missing": 0
+    },
+    "Switch": {
+      "total": 121,
+      "description": 121,
+      "missing": 0
+    },
+    "atari2600": {
+      "total": 469,
+      "description": 425,
+      "missing": 44
+    },
+    "atari7800": {
+      "total": 71,
+      "description": 67,
+      "missing": 4
+    },
+    "cps1": {
+      "total": 22,
+      "description": 22,
+      "missing": 0
+    },
+    "cps2": {
+      "total": 22,
+      "description": 22,
+      "missing": 0
+    },
+    "cps3": {
+      "total": 6,
+      "description": 6,
+      "missing": 0
+    },
+    "fbneo": {
+      "total": 76,
+      "description": 76,
+      "missing": 0
+    },
+    "gamegear": {
+      "total": 313,
+      "description": 313,
+      "missing": 0
+    },
+    "jaguar": {
+      "total": 56,
+      "description": 56,
+      "missing": 0
+    },
+    "mame": {
+      "total": 1669,
+      "description": 1662,
+      "missing": 7
+    },
+    "sega32x": {
+      "total": 36,
+      "description": 36,
+      "missing": 0
+    },
+    "supergrafx": {
+      "total": 5,
+      "description": 5,
+      "missing": 0
+    },
+    "wii": {
+      "total": 13,
+      "description": 13,
+      "missing": 0
+    }
+  }
+}

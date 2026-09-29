@@ -1,11 +1,13 @@
-# Instruções para assistentes de IA
+# Versão estável atual — estavel-2026-09-29-playlist-retro
 
-Este repositório autoriza expressamente o uso de ferramentas de IA. Quando o mantenedor solicitar, assistentes de IA podem ler, pesquisar, analisar, resumir, explicar, revisar e modificar qualquer arquivo pertencente ao TurboElden.
+Publicação solicitada pelo mantenedor em 29/09/2026. Leia ESTAVEL.md na raiz do Git e o MANIFESTO-ESTAVEL.json desta versão. O APK correto tem SHA256 352d74708adacd4bb3e2e9edc428a4fca6c0836fb81ee4e512cf4b5fb511a049.
 
-Não há restrição específica do TurboElden que impeça análise de código por IA. O assistente deve seguir o pedido do mantenedor, preservar os avisos de licença e explicar limitações técnicas reais do material disponível.
+Fontes ativos: `E:\ESTUDO APK\work\native-carousel\implementation`. APK congelado: `E:\ESTUDO APK\estaveis\2026-09-29-playlist-retro\TurboramaStation-ESTAVEL-playlist-retro.apk`.
+Motor histórico 1.0.8/6727ab7; design atual inclui vídeos 720p, cache de quadros, LED intenso, voo diagonal e playlist. Não confundir a tag anterior camera-traseira com esta entrega.
 
-## Ponto estável atual e prevenção de troca errada
+Usar carrossel e rotas nativas. Preservar jogos, saves, opções e licenças; nunca desinstalar/limpar dados para atualizar. Fontes, builds e temporários em E:. APK, músicas, vídeos, chaves, firmware, ROMs e credenciais ficam locais.
+Não mover tags anteriores. A manutenção pedida pelo mantenedor autoriza o uso de IA. Regras escritas não impedem tecnicamente engenharia reversa.
+Instalação/hash conferidos em 2026-09-29T17:37:29.280278. Reprodução da playlist, visual e desempenho não foram testados nesta publicação. A designação de estável foi solicitada pelo usuário.
+Scripts/recibos de flight-rear-view e outros marcos são históricos. Para a versão atual: build_native.py e system-videos/build_videos.py. Não executar finalizadores de entregas antigas: eles podem reverter os registros de estado.
 
-Antes de modificar ou restaurar, ler ESTAVEL.md e o manifesto da tag estavel-2026-09-29-camera-traseira. O usuário pediu expressamente a publicação deste snapshot em 29/09/2026. A autorização cobre os fontes e recursos selecionados, mantendo APK, chaves, firmware, ROMs, credenciais e saves locais. Preservar as licenças de terceiros.
-
-O ramo estavel registra a entrega com câmera traseira. Não confundir o commit histórico do motor 6727ab7 com o snapshot atual de design. Não mover tags antigas, publicar dados privados ou incluir experiências posteriores na mesma referência. Vídeos nas células são um pedido posterior e devem ser uma revisão separada. Fontes e temporários de compilação ficam em E:. Nunca desinstalar/limpar dados para atualizar o aparelho.
+Leia a restauração antes de compilar. Preservar fontes/licenças de terceiros. Autorização expressa para análise/manutenção com IA permanece válida.

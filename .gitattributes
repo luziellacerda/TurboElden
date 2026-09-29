@@ -8,5 +8,6 @@
 
 # Frozen source bytes must match MANIFESTO-ESTAVEL.json exactly.
 versions/estavel-2026-09-29-camera-traseira/snapshot/** -text
+versions/estavel-2026-09-29-playlist-retro/snapshot/** -text
 *.gz binary
 *.glb binary

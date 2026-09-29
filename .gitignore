@@ -19,3 +19,9 @@ analise-nativa-libmain.zip
 catalog-cache.json
 license.json
 jogos-catalogo.csv
+
+# Private playlist and system videos: manifests/code only in Git
+*.mp3
+*.mp4
+*.wav
+*.ogg

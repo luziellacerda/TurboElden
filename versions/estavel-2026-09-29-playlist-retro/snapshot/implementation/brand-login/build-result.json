@@ -1,0 +1,34 @@
+{
+  "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-ESTAVEL-6727ab7-icone-v2.apk",
+  "sha256": "9fa98f2ad3f0747b7872291d959442bb1bc93f6199661acb5ef1a576e26ef21d",
+  "bytes": 562431588,
+  "base": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-ESTAVEL-6727ab7-identidade.apk",
+  "base_sha256": "e40f7c715da6ffa606b71a9aa122b9a9e06ccfe68f2c24fee854d4c0935f1e1c",
+  "stable_commit": "6727ab7",
+  "changed": [
+    "assets/turborama-brand/turborama-icon-master.png",
+    "res/drawable/ic_launcher_foreground.png",
+    "res/mipmap-hdpi/ic_launcher.png",
+    "res/mipmap-mdpi/ic_launcher.png",
+    "res/mipmap-xhdpi/ic_launcher.png",
+    "res/mipmap-xxhdpi/ic_launcher.png",
+    "res/mipmap-xxxhdpi/ic_launcher.png"
+  ],
+  "added": [],
+  "removed": [],
+  "all_native_libraries_identical": true,
+  "manifest_and_resources_table_identical": true,
+  "stable_auth_methods": {
+    "ensureAuthorized(Landroid/app/Activity;)V": "ddf27350cc0c66498bf852d70e74bed6fb6adcfdcc280261476f0881f547bf12",
+    "submit()V": "7aac26067d09d4fd2b663e1a0fdcdb015254a230780bea3084a274b203b2d203",
+    "openFrontend()V": "4d876c69a0d0e6397119f5b67755e2c959ee5f8f8db3a28ccdf9938037d7f857",
+    "onNewIntent(Landroid/content/Intent;)V": "a5dea9a3fa8a82cc2a6426871a1918d3c03a27323368ab29fb11c5335d059de1",
+    "onBackPressed()V": "bffddb9d38193c067436fa44a63a61fc1d06e5ebc20bccfd58a72a38d34a7e28"
+  },
+  "non_login_classes_preserved": true,
+  "emulator_and_catalog_settings_unchanged": true,
+  "installed": true,
+  "all_dex_identical": true,
+  "approved_login_layout_unchanged": true,
+  "icon_revision": 2
+}

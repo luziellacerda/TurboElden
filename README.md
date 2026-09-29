@@ -1,8 +1,8 @@
 # Versão estável atual — TurboramaStation
 
-**Comece por [ESTAVEL.md](ESTAVEL.md): caminhos exatos, APK, hashes e restauração.**
+**Comece por [ESTAVEL.md](ESTAVEL.md): APK exato, pastas, hashes e restauração.**
 
-Ramo `estavel`; tag `estavel-2026-09-29-camera-traseira`. Base histórica 1.0.8/6727ab7 com o design atual, login aprovado, ícone T v2 e câmera traseira da nave. [Fontes e recursos congelados](versions/estavel-2026-09-29-camera-traseira/). APK e dados privados permanecem locais.
+Ramo `estavel`; tag `estavel-2026-09-29-playlist-retro`. Vídeos 720p em loop, cache, LED intenso, F-16 diagonal e playlist retrô; motor 1.0.8/6727ab7 preservado. [Fontes congelados](versions/estavel-2026-09-29-playlist-retro/). APK e mídias privados permanecem locais.
 
 ## Documentação histórica do estudo
 

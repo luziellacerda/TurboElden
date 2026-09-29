@@ -1,0 +1,58 @@
+{
+  "source": "Explicit owner instruction, 2026-09-29",
+  "colors": {
+    "PSP": [
+      "0070FFFF"
+    ],
+    "Switch": [
+      "00BCEFFF",
+      "FF303AFF"
+    ],
+    "wii": [
+      "FFFFFFFF"
+    ],
+    "atari2600": [
+      "965A38FF"
+    ],
+    "atari7800": [
+      "965A38FF"
+    ],
+    "Atomiswave": [
+      "39EF32FF"
+    ],
+    "cps1": [
+      "27E844FF"
+    ],
+    "cps2": [
+      "FFD500FF",
+      "0070FFFF"
+    ],
+    "cps3": [
+      "0070FFFF"
+    ],
+    "Dreamcast": [
+      "FF6A00FF"
+    ],
+    "Gba": [
+      "923BFFFF"
+    ],
+    "mame": [
+      "007BFFFF"
+    ],
+    "Arcade": [
+      "007BFFFF"
+    ],
+    "Master System ": [
+      "FF202AFF"
+    ],
+    "Nintendo 64": [
+      "FFD500FF"
+    ],
+    "Nintendo 64 - BR": [
+      "FFD500FF"
+    ],
+    "Nintendo DS": [
+      "FFFFFFFF"
+    ]
+  }
+}

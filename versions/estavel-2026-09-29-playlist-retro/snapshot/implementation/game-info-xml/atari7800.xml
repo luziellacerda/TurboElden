@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList system="atari7800" source="TurboramaStation metadata merge">
+  <game id="e9b946c1fea55ea17b0eba1c9c91aa12" metadataStatus="missing">
+    <path>./3D Asteroids (1987) (Atari) (Prototype) [a1].a78</path>
+    <name>3D Asteroids (1987) (Atari) (Prototype) [a1]</name>
+    <desc />
+    <source />
+    <matchedName />
+    <genre />
+    <releasedate />
+    <developer />
+    <publisher />
+    <players />
+  </game>
+  <game id="da85ba42a62d555911b391d34185de2e" metadataStatus="missing">
+    <path>./7800 DEV OS BIOS (PD).a78</path>
+    <name>7800 DEV OS BIOS (PD)</name>
+    <desc />
+    <source />
+    <matchedName />
+    <genre />
+    <releasedate />
+    <developer />
+    <publisher />
+    <players />
+  </game>
+  <game id="39493d2f5799071aaa76dc1ff3f64043" metadataStatus="local_xml">
+    <path>./Ace of Aces (USA).a78</path>
+    <name>Ace of Aces (USA)</name>
+    <desc>Es la Segunda Guerra Mundial y la Royal Air Force británica está hasta el cuello con los ataques del Eje. Como uno de los pilotos más agresivos de la RAF, estás volando en las misiones más cruciales para detener al enemigo. Atacan por tierra, aire y mar. Tus únicos aliados son los DeHavilland Mosquitos, tus armas y tu ingenio. Perseguir a los bombarderos nazis, hundir los submarinos antes de que se puedan sumergir, escapar de las bombas V-1 y evitar que los trenes entren en las líneas enemigas. Elige tu munición y aprovéchalas sabiamente: una vez que estás en una misión, no hay marcha atrás. Para ser un As, necesitas cuatro derrotas enemigas. Para ser As de ases, ¡tienes que ser el mejor!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Ace of Aces</matchedName>
+    <genre>Shooter / Avión, 1ª persona</genre>
+    <releasedate>1988</releasedate>
+    <developer>Artech</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="3bc3c5a661e4241d5ab277598fb3c768" metadataStatus="local_xml">
+    <path>./Alien Brigade (Europe).a78</path>
+    <name>Alien Brigade (Europe)</name>
+    <desc>La fuerza Plutoid Alien Zombie se ha infiltrado en el ejército. Parecen soldados, pero en realidad son extraterrestres del espacio exterior. Controla a una fuerza de operaciones especiales para destruir a los alienígenas. A medida que disparas a los enemigos desagradables, puedes ganar poderosas armas, rescatar rehenes y, sobre todo, mantenerte con vida. El desafío está ahí: vencer a los alienígenas o unirse a ellos.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Alien Brigade</matchedName>
+    <genre>Shooter</genre>
+    <releasedate>1990</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="643737be6aba4136d720523a052ec906" metadataStatus="local_xml">
+    <path>./Asteroids (USA).a78</path>
+    <name>Asteroids (USA)</name>
+    <desc>¡Comienza a volar! Es tu única forma de salir de esta nube de cuerpos astrales. Visión periférica. Reflejos de rayos. Y un buen control. Eso es lo que se necesita para salvar tu nave ¡Y tu vida!, 8 ondas de asteroides devastadores, para 1 o 2 jugadores. Las naves del jugador competidor pueden aparecer en la pantalla simultáneamente.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Asteroids</matchedName>
+    <genre>Shooter</genre>
+    <releasedate>1987</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="a9bed151e109d25cd475c330ae84c703" metadataStatus="local_xml">
+    <path>./Ballblazer (Europe).a78</path>
+    <name>Ballblazer (Europe)</name>
+    <desc>Ballblazer es un simple juego de estilo deportivo con similitudes con el baloncesto y el fútbol. Cada lado está representado por una embarcación llamada "rotofoil", que puede ser controlada por un jugador humano o un "droide" controlado por computadora con diez niveles de dificultad. (El juego permite enfrentamientos humanos vs. humanos, humanos contra droides y droides contra droides.) El objetivo básico del juego es ganar puntos al disparar o llevar una pelota flotante al objetivo del oponente. El juego tiene lugar en un campo de juego plano, de tablero de ajedrez, y la mitad de la pantalla de cada jugador se presenta en una perspectiva en primera persona.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Ballblazer</matchedName>
+    <genre>Deportes</genre>
+    <releasedate>1987</releasedate>
+    <developer>Lucasfilm Games</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="8b1f82c22f0fa064222796387f796eda" metadataStatus="local_xml">
+    <path>./Barnyard Blaster (Europe).a78</path>
+    <name>Barnyard Blaster (Europe)</name>
+    <desc>Tú y el abuelo están abajo en la granja. Hay criaturas, botellas y varmints en todas partes, en el establo, en el patio y en el maizal. El abuelo te ha dado una pistola ligera Atari para ayudar a proteger la granja. Los objetivos móviles son un desafío. ¿Puedes golpearlos? Si no, ¡prueba las verduras! Son divertidos para disparar a. En el corral, las botellas y latas en la cerca proporcionan una gran práctica para calentar el viejo hierro de tiro. Pero el objetivo perfecto solo no es suficiente. También necesitarás velocidad. En el campo de maíz, las aves descienden del cielo y los conejos corren entre los tallos, los búhos y otras plagas aparecen dentro de un granero. Cada escena solo puede alcanzarse al golpear lo suficiente en la escena anterior. Una vez que te centras en algunos puntajes de disparos sofisticados, Gramps te ofrece una ronda de bonificación tirando botellas objetivo en el aire.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Barnyard Blaster</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1988</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="0fcacd4cfb9056005bc90f5ac36cfe77" metadataStatus="local_xml">
+    <path>./Basketbrawl (Europe).a78</path>
+    <name>Basketbrawl (Europe)</name>
+    <desc>Vinne y Slash están sangrando por heridas de cuchillo y el árbitro está fuera de combate. No es de extrañar que los miembros de la pandilla apodaran a este juego "Basketbrawl". Para ellos, no es un juego, es una pelea callejera. Esta premisa inicia el juego de deportes de acción de Atari para hasta dos jugadores. El objetivo en Basketbrawl es convertirse en la pandilla más mala del pueblo al ganar el torneo Basketbrawl. Para ganar, debes jugar tres juegos contra cada una de las cinco pandillas en tu ciudad. Cada vez que pasas a la siguiente pandilla, jugarás en un equipo con más jugadores y armas más peligrosas. Cada juego dura seis minutos: puntúa a tu oponente disparando más canastas. Cada canasta vale dos puntos. Si el juego está empatado después de seis minutos, el primer equipo en anotar gana.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Basketbrawl</matchedName>
+    <genre>Deportes</genre>
+    <releasedate>1990</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="a1c53f008a7d5ed6ab5243028e69acd5" metadataStatus="local_xml">
+    <path>./Beef Drop.a78</path>
+    <name>Beef Drop</name>
+    <desc>This game is an attempt to bring a better version of the coin-op game BurgerTime to the Atari 8-bit computer and any version to the Atari 5200 and Atari 7800. The game play is the same as the coin-op game. You, the chef, must make burgers by walking on the parts so they drop down to plates below. You are pursued by Mr. Yolk (a fried egg), Mr. Dill (a pickle slice) and Frank (a hot dog). If you are cornered, you can throw pepper on the food to stop it for a short time. If you can catch them in some burger parts, you get bonus points. Occasionally, a bonus item, like an ice cream cone, will appear and you can collect it for points.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Beef Drop</matchedName>
+    <genre>Action</genre>
+    <releasedate>2004</releasedate>
+    <developer>Ken Siders</developer>
+    <publisher>Public Domain</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="c03acc3742034ecd536376840585661b" metadataStatus="local_xml">
+    <path>./Centipede (Europe).a78</path>
+    <name>Centipede (Europe)</name>
+    <desc>Juega un exterminador para destruir a los invasores. Usando tu arma, debes destruir las ondas de ciempiés (ciempiés) que bajan desde la parte superior de la pantalla. Los hongos se encuentran dispersos en la pantalla, y el Ciempiés desciende una línea cada vez que se encuentra con un hongo. También debes evitar y destruir las arañas, las pulgas y los escorpiones, y prestar atención a los hongos venenosos que podrían caer en espiral por el Ciempiés a tu nivel. Destruye el ciempiés para avanzar a la próxima ola ...</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Centipede</matchedName>
+    <genre>Shooter / Estilo Space Invaders</genre>
+    <releasedate>1987</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="793216ffce9afd9b94292dcec6baa057" metadataStatus="local_xml">
+    <path>./Choplifter! (Europe).a78</path>
+    <name>Choplifter! (Europe)</name>
+    <desc>En Choplifter, el jugador asume el rol de piloto de helicóptero. El jugador intenta salvar a rehenes retenidos en prisión por el malvado Bungeling Empire. El jugador debe recoger a los rehenes y transportarlos de manera segura a la base, mientras lucha contra los tanques hostiles y otros combatientes enemigos.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Choplifter!</matchedName>
+    <genre>Shoot'em Up / Horizontal</genre>
+    <releasedate>1987</releasedate>
+    <developer>Brøderbund Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="10f2d973c80b63a4655c390fb958061a" metadataStatus="local_xml">
+    <path>./Commando (Europe).a78</path>
+    <name>Commando (Europe)</name>
+    <desc>Varios niveles esperan a tu Comando en esta conversión de arcade. Armado con solo un rifle estándar y algunas granadas, debes enfrentarte a hordas de nazis. Algunos están deambulando a la intemperie, mientras que otros han elegido los escondites, a los que debes acercarte desde ciertos ángulos. Los árboles, los ríos y los puentes crean un variado terreno similar a un combate y deben incorporarse a su forma de pensar. Se pueden recoger granadas extra, y definitivamente serán necesarias, ya que te permiten matar la distancia de forma y así evitar algunos tiros enemigos.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Commando</matchedName>
+    <genre>Shooter / Run and Gun</genre>
+    <releasedate>1989</releasedate>
+    <developer>Capcom</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="005b028c0c33b0c58f6ecf356b70c9cc" metadataStatus="local_xml">
+    <path>./Crack'ed (Europe).a78</path>
+    <name>Crack'ed (Europe)</name>
+    <desc>Como ornitólogo profesional, te alegra descubrir que se han encontrado algunos cálaos sudamericanos en tu "árbol de yema vieja". Pero mientras los cálaos se alimentan, un grupo de traviesos azulejos, búhos y serpientes comienzan a saquear sus nidos y robar huevos. Horrorizado, coges tu honda y comienzas a golpear a las criaturas merodeadoras. Pero debes tener cuidado. Si golpeas a un ave que lleva huevos, se le cae el huevo y debes actuar rápido para atraparlo antes de que toque el suelo y devolverlo a un nido. Al mismo tiempo, debes observar a las serpientes que no puedes perderte. Si puede proteger los huevos el tiempo suficiente, puede llevarlos a otro sitio de anidación. ¡Pero cuidado, las criaturas que roban huevos están en todas partes!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Crack'ed</matchedName>
+    <genre>Shooter</genre>
+    <releasedate>1988</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="e0d3d2acb321522004b4193c2c191f3e" metadataStatus="local_xml">
+    <path>./Crossbow (Europe).a78</path>
+    <name>Crossbow (Europe)</name>
+    <desc>Sobre desiertos abrasadores, a través de oscuras cavernas heladas, alrededor de un volcán ardiente, y bajo la frondosa cubierta de una jungla humeante, saliste con tres valientes amigos para recuperar los tesoros robados por el Evil Master. Tu objetivo es su castillo muy, muy lejos. Tus amigos están ligeramente armados, pero llevas tu ballesta de confianza. Al disparar sus flechas rápidas, puedes salvarte a ti mismo y a tus compañeros de los peligrosos ataques de las criaturas de la Maestra Malvada: escorpiones, hormigas, pterodáctilos, plantas voraces, murciélagos, serpientes y otros seres horribles. Cuando llegues al castillo, los arqueros expertos del malvado maestro te esperan listos para probar su puntería con flechas mortales. Dentro del castillo, un dragón feroz también espera, guardando el tesoro con su aliento ardiente. Pocos aventureros se han atrevido a hacer la caminata. Nadie ha vuelto vivo.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Crossbow</matchedName>
+    <genre>Shooter</genre>
+    <releasedate>1987</releasedate>
+    <developer>Exidy</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="94470efb9ab59eb6b04d56ee3bf0879f" metadataStatus="local_xml">
+    <path>./Dark Chambers (Europe).a78</path>
+    <name>Dark Chambers (Europe)</name>
+    <desc>Estás en una peligrosa búsqueda del tesoro, en el profundo mundo subterráneo de Dark Chambers. Espectros, magos y esqueletos enmohecidos te rodean. A medida que te mueves a través de este laberinto serpenteante, eres perseguido por la parca. Las salidas que ves solo te llevan más profundo en el laberinto. Si encuentra las armas estratégicamente colocadas, puede defenderse de sus enemigos mientras busca el tesoro escondido. Las pociones secretas que encuentres en el camino renovarán tu fortaleza. Pero ten cuidado con las trampas ocultas y los venenos mortales. Tu fuerza te ayudará a sobrevivir a los ghouls más débiles, pero ¿eres el mejor para el más fuerte? Entra en el mundo subterráneo de Dark Chambers y descúbrelo.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Dark Chambers</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1988</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="f6ef0ad44794870249ca253718a31840" metadataStatus="local_xml">
+    <path>./Desert Falcon (Europe).a78</path>
+    <name>Desert Falcon (Europe)</name>
+    <desc>Eres el Desert Falcon real que busca gemas preciosas y egipcios heiroglyphs escondidos en el desierto sin fin. Invencibilidad, velocidad warp y disparos rápidos son solo algunos de los muchos poderes mágicos que obtendrá en su búsqueda. Úselos para capturar un tesoro de tesoros. ¡Pero ten cuidado con los malvados! Las míticas bestias voladoras, las llamas ardientes y las aulladoras esfinges protegen las joyas que buscas.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Desert Falcon</matchedName>
+    <genre>Shoot'em Up / Diagonal</genre>
+    <releasedate>1987</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="6c4c41fed25ae34726fdb227f75d3cf4" metadataStatus="local_xml">
+    <path>./Dig Dug (Europe).a78</path>
+    <name>Dig Dug (Europe)</name>
+    <desc>El objetivo de Dig Dug es eliminar a los monstruos que viven en el subsuelo inflándolos con una bomba de aire hasta que exploten, o arrojando piedras sobre ellos. Hay dos tipos de enemigos en el juego: "Pookas" (una raza de monstruos rojos redondos, que se dice que son modelos de tomates, que usan gafas amarillas) y "Fygars" (una raza de dragones verdes que pueden respirar fuego mientras sus alas destello).</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Dig Dug</matchedName>
+    <genre>Acción / Laberinto</genre>
+    <releasedate>1987</releasedate>
+    <developer>Namco</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="62ad0629abd7cfd447266a327305277c" metadataStatus="local_xml">
+    <path>./Donkey Kong (Europe).a78</path>
+    <name>Donkey Kong (Europe)</name>
+    <desc>Eres Mario, el valiente carpintero, y ese gran gorila, Donkey Kong se ha escapado con tu novia. Depende de usted subir por esas escaleras y mantener el equilibrio en esos rayos para rescatar a su dama. Ella está cautiva en la parte superior. Pero Donkey Kong no está listo para renunciar a ella tan fácilmente. Está lanzando barriles y bolas de fuego en cada vuelta. Depende de usted superar a ese simio astuto. Buena suerte, ¡tu señora te espera!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Donkey Kong</matchedName>
+    <genre>Plataforma</genre>
+    <releasedate>1988</releasedate>
+    <developer>Nintendo</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="306893d3b77d33048923a57602c59bc0" metadataStatus="local_xml">
+    <path>./Donkey Kong Junior (Europe).a78</path>
+    <name>Donkey Kong Junior (Europe)</name>
+    <desc>Donkey Kong el simio está de vuelta. Solo que esta vez el vengativo Mario mantiene prisionero al mono. Por suerte, el simio tiene un hijo, Donkey Kong Junior, que intentará rescatar a papá. Para liberar a su padre, Junior debe abrirse camino a través de una jungla oscura y traicionera. Corriendo contra el tiempo, el pequeño se sube y se balancea sobre las vides, mientras evita los terribles Snapjaws. Si llega a las llaves de la jaula de papá, Junior debe empujarlos a la parte superior de las cadenas mientras se mantiene alejado de Snapjaws y una nueva bandada de desagradables recogedores de Nitpickers. Pero incluso entonces su misión no ha terminado. Una vez que alcanza la guarida de Mario, debe pasar una prueba más contra el tiempo. El niño necesita ayuda. No te quedes ahí parado! ¡Ayuda al pobre Junior a salvar a su padre!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Donkey Kong Junior</matchedName>
+    <genre>Plataforma</genre>
+    <releasedate>1988</releasedate>
+    <developer>Nintendo</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="64eff219fda52882afddbcc4d5df74c5" metadataStatus="local_xml">
+    <path>./Double Dragon (Europe).a78</path>
+    <name>Double Dragon (Europe)</name>
+    <desc>Los hermanos gemelos Billy y Jimmy Lee aprendieron a luchar por el camino difícil: por la supervivencia en las implacables calles de la ciudad. Su estilo de combate (maniobras clásicas de artes marciales mezcladas con cualquier cosa) se convierte en armas letales para caminar. Ahora, los Lees deben reunir todas sus habilidades de lucha y astucia para enfrentar el mayor desafío de sus vidas: rescatar a la novia de Billy, Marion. Ha sido secuestrada por los Black Warriors, la pandilla callejera salvaje liderada por el misterioso Shadow Boss. Los gemelos persiguen a los Black Warriors por las calles de la ciudad y sus alrededores. Finalmente se abren camino hacia la Base del enemigo secreto. Allí, Billy y Jimmy se encuentran con el Jefe de la Sombra. ¡Es una batalla hasta el final, con Marion como premio!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Double Dragon</matchedName>
+    <genre>Beat'em Up</genre>
+    <releasedate>1989</releasedate>
+    <developer>Technos Japan</developer>
+    <publisher>Activision</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="b1b80178d417cfa4d50372d1c819bd32" metadataStatus="local_xml">
+    <path>./F-18 Hornet (Europe).a78</path>
+    <name>F-18 Hornet (Europe)</name>
+    <desc>¡Atención todos los aviadores navales! Informe a los líderes de su escuadrón y prepárese para el despliegue. Su período de servicio lo llevará por todo el mundo en algunas de las misiones más desafiantes y peligrosas de su carrera. F-18 Hornet es una aventura basada en transportistas. Los gráficos 3-D rápidos y sólidos y la instrumentación receptiva crean una increíble sensación de vuelo. Vuela misiones a través de una variedad de terreno ejecutando combates aéreos, caídas de suministros de emergencia, ametrallamientos y bombardeos mientras luchas contra aviones, helicópteros y tanques hostiles. El Hornet F-18 presenta toda la acción de los aviones a base de portaaviones, incluidos los emocionantes despegues y aterrizajes de los portaaviones en suave animación tridimensional.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>F-18 Hornet</matchedName>
+    <genre>Simulación / Vehículos</genre>
+    <releasedate>1988</releasedate>
+    <developer>Absolute Entertainment</developer>
+    <publisher>Absolute Entertainment</publisher>
+    <players>1</players>
+  </game>
+  <game id="9339c4f689a655eba7ac3f0e67998682" metadataStatus="local_xml">
+    <path>./Fatal Run (Europe).a78</path>
+    <name>Fatal Run (Europe)</name>
+    <desc>El año es 2089. Una colisión con un cometa ha dejado a la Tierra tambaleante por el envenenamiento por radiación. Hay pocas esperanzas para la supervivencia de la humanidad. Depende de usted ayudar a las pocas personas que quedan. Debe abandonar la fortaleza protectora Albagon y entregar la vacuna contra la radiación recientemente desarrollada a los pocos sobrevivientes. Tu viaje no será fácil. Secuaces infames están esperando golpearte y robar la vacuna para garantizar que sobrevivirán para gobernar el planeta. Cada conductor en el camino está fuera de ti. Tu única esperanza es conseguirlos primero. Debes encontrar el cohete listo para lanzar un satélite que pueda anular los efectos de este accidente cósmico que puso al mundo patas arriba. Si eres lo suficientemente agudo como para aprender y recordar las palabras clave secretas y lo suficientemente fuerte como para vivir para usarlas, ¡puedes lanzar el cohete y salvar el mundo! ¡Buena suerte! La humanidad está en tus manos.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Fatal Run</matchedName>
+    <genre>Carreras, Conducción</genre>
+    <releasedate>1990</releasedate>
+    <developer>Sculptured Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="e838e91ffaa300c301a0e268e7a2b2b8" metadataStatus="local_xml">
+    <path>./Fight Night (Europe).a78</path>
+    <name>Fight Night (Europe)</name>
+    <desc>Ponte tus guantes de boxeo y entra al ring. Esta noche vas a probar tu destreza contra los luchadores más duros del mundo. Para prepararte para este evento, entrenarás en habilidades de puñetazo, juego de pies, sincronización y combate. Luego, ingresarás a tus luchadores en los partidos de campeonato y torneos. A medida que la tensión aumenta en la arena llena de humo, miras a tu contendor con cautela. Ten cuidado y buena suerte. ¡Esta podría ser tu gran noche!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Fight Night</matchedName>
+    <genre>Deportes / Boxeo</genre>
+    <releasedate>1988</releasedate>
+    <developer>Sydney Development</developer>
+    <publisher>Accolade</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="af28c7c45558cd2ae9fad07da42bf706" metadataStatus="local_xml">
+    <path>./Food Fight (Europe).a78</path>
+    <name>Food Fight (Europe)</name>
+    <desc>¡Prisa! ¡Prisa! ¡Un paso al frente! ¡Gana tus postres! Una vez hubo un tipo llamado Charley Chuck. Más que nada, a Charley le encantaba comer. Entonces, cuando fue al carnaval un caluroso día de verano, se dirigió directamente al concurso Food Fight.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Food Fight</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1987</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="5fdd5df86578bdfb166801bd3838147d" metadataStatus="local_xml">
+    <path>./Galaga (Europe).a78</path>
+    <name>Galaga (Europe)</name>
+    <desc>Galaga es un shoot 'em up desarrollado por Namco. El jugador controla una nave espacial que solo puede moverse de izquierda a derecha en la parte inferior de la pantalla y tiene solo una toma. Los barcos enemigos intentan bombardear al jugador.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Galaga</matchedName>
+    <genre>Shooter / Estilo Space Invaders</genre>
+    <releasedate>1987</releasedate>
+    <developer>Namco</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="fc4dd93e9197326306c4ddd628242f04" metadataStatus="local_xml">
+    <path>./Gato (198x) (Atari) (Prototype) [a2].a78</path>
+    <name>Gato (198x) (Atari) (Prototype) [a2]</name>
+    <desc>GATO es un simulador submarino lanzado originalmente para varias computadoras personales, como Apple II, Atari de 8 bits y Commodore 64. Atari tenía planes de llevar GATO al Atari 7800 e incluso armar una demostración simple, pero no lo hace parece que el juego alguna vez superó esa etapa.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>GATO</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1987</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="ae51516d9123570863c1e04c5dbf07d9" metadataStatus="local_xml">
+    <path>./Hat Trick (Europe).a78</path>
+    <name>Hat Trick (Europe)</name>
+    <desc>¡Qué noche para un juego de hockey! Después de semanas de entrenamiento intensivo en el hielo, finalmente estás en el cara a cara, esperando el silbato inicial. A medida que el disco se desliza sobre la superficie lisa y helada, lo tomas en el centro del hielo, logrando romper la línea azul a la derecha de tu oponente. Whoooossh. ¡Qué reflejos! ¡Qué velocidad! El rocío del hielo en tu rostro te ciega momentáneamente, pero continúas patinando furiosamente, avanzando hacia la meta contraria. Puedes sentir el aliento caliente de tu retador en la parte posterior de tu cuello, a medida que la distancia entre tú y tu hermano se hace cada vez más pequeña. Pero antes de que pueda arreglárselas para robar el disco, mueves tu bastón y lo golpeas, ¡es un golpe mortal! ¡El punto es tuyo! Consigue tres goles en un juego, ¡y es un truco!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Hat Trick</matchedName>
+    <genre>Deportes / Hockey</genre>
+    <releasedate>1987</releasedate>
+    <developer>Bally Sente</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="a1fdb36e6288bbe6f04dc79f1ce9240e" metadataStatus="local_xml">
+    <path>./Ikari Warriors (Europe).a78</path>
+    <name>Ikari Warriors (Europe)</name>
+    <desc>Eres miembro de esos especialistas de combate de élite, los Ikari Warriors. Tu amigo y tú están en una misión especial detrás de las líneas enemigas, y has estado durmiendo, comiendo y respirando combates en la jungla durante las últimas dos semanas. Estás cansado, pero eso nunca afecta tu agudo juicio y tu voluntad de sobrevivir. Tus armas principales son ametralladoras, granadas y tu propia astucia frente al peligro. A veces tendrás un tanque a tu disposición, que es útil cuando el fuego enemigo es particularmente brutal. Te mueves velozmente por la jungla, vadeando ríos y descansando de vez en cuando entre las ruinas de edificios bombardeados. Te estás quedando sin municiones y granadas, pero sabes que la batalla no puede durar para siempre. Tarde o temprano, un lado saldrá victorioso. ¡Solo esperamos que sea tuyo!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Ikari Warriors</matchedName>
+    <genre>Shooter / Run and Gun</genre>
+    <releasedate>1989</releasedate>
+    <developer>SNK</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="0c87084c03ff0d7ac6933d212efe7549" metadataStatus="local_xml">
+    <path>./Impossible Mission (Europe).a78</path>
+    <name>Impossible Mission (Europe)</name>
+    <desc>Mensaje de la computadora de la Agencia ..... ".... Su misión. El Agente 4125 es frustrar una horrible trama. Desde un laboratorio subterráneo, Elvin, el científico, está reteniendo al mundo como rehén bajo amenaza de aniquilación nuclear. penetra en su fortaleza, evita sus robots que buscan humanos y encuentra piezas del código de seguridad. Haga una voltereta sobre los robots o use un precioso código de repetición para desactivarlos el tiempo suficiente para buscar en cada habitación. Use la computadora de la Agencia para descifrar las contraseñas de las piezas del código o intente resolverlas usted mismo. Será mejor que tengas cuidado ... ¡Esta misión tiene un sello IMPOSIBLE! "</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Impossible Mission</matchedName>
+    <genre>Plataforma</genre>
+    <releasedate>1988</releasedate>
+    <developer>Man Development</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="7dcb6aa591bdd81c9212e93989d9f6c9" metadataStatus="local_xml">
+    <path>./Jinks (Europe).a78</path>
+    <name>Jinks (Europe)</name>
+    <desc>Estás a punto de embarcarte en una de las misiones más peligrosas de tu carrera. Como famoso piloto de la Flota Estelar, has sido seleccionado para dirigir una fiesta de exploración en un viaje por la galaxia para investigar el misterioso planeta JINKS. Un enigma durante siglos, JINKS es un mundo exuberante y rico en recursos, y podría ser la clave de la desesperada necesidad de la expansión humana en el espacio. Al parecer es capaz de soportar la vida, sin embargo, curiosamente está deshabitada, ¿o no?nnUna misión de investigación de rutina se vuelve loca cuando explorar tu sonda a través de la superficie del planeta te lleva a ti y a tu tripulación a un juego mortal de gato y ratón. ¿Puedes escapar de estas trampas diabólicamente inteligentes antes de que tu sonda y sus ocupantes sean miniaturizados o aniquilados?</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Jinks</matchedName>
+    <genre>Acción / Juegos de Breakout</genre>
+    <releasedate>1989</releasedate>
+    <developer>U.S. Gold</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="6f8f79c540fef57e40ef438302c6b07a" metadataStatus="local_xml">
+    <path>./Joust (Europe).a78</path>
+    <name>Joust (Europe)</name>
+    <desc>Joust es un juego de plataformas donde el jugador controla a un caballero amarillo montado en un avestruz volador desde una perspectiva en tercera persona. El jugador navega al protagonista por el mundo del juego, que consiste en plataformas de roca que flotan sobre una isla plana rodeada de lava.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Joust</matchedName>
+    <genre>Plataforma / Corre y Salta</genre>
+    <releasedate>1987</releasedate>
+    <developer>Williams</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="477ea4518a46b15d352e1e0a002137a3" metadataStatus="local_xml">
+    <path>./Karateka (Europe).a78</path>
+    <name>Karateka (Europe)</name>
+    <desc>Cuando regresas a casa después de años de estudio con un Maestro de Karate, encuentras que tu aldea se quema por completo. Tus amigos y familiares están dispersos, tu prometida fue robada por Akuma, el caudillo cuya sombra opresiva ha oscurecido tu aldea desde antes de que nacieras. Tu dolor y tu ira se convierten en fría determinación. Juras nunca más someterse al malvado Señor de la Guerra. Sabes que debes vengar a tu pueblo y rescatar a tu amada princesa Mariko de la fortaleza de montaña de Akuma. Solo, armado solo con tu conocimiento de Karate, debes derrotar a los guerreros viciosos de Akuma, cada uno más poderoso que el anterior. Sigue luchando, en lo más profundo del corazón del palacio, donde para rescatar a Mariko debes enfrentarte al cruel Akuma en un combate mano a mano.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Karateka</matchedName>
+    <genre>Plataforma / Combate con desplazamiento</genre>
+    <releasedate>1987</releasedate>
+    <developer>Brøderbund Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="4ce5505143692821ef70312da537af25" metadataStatus="local_xml">
+    <path>./Klax (USA) (Proto).a78</path>
+    <name>Klax (USA) (Proto)</name>
+    <desc>Klax fue uno de esos títulos terminados por Atari para el 7800, pero nunca comercialmente lanzado. Lee Krueger de ResQsoft Productions está vendiendo copias de Klax, con una caja, un manual y un suplemento que incluye una entrevista exclusiva al programador, consejos y trucos sobre Klax y sus otras creaciones de Atari.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Klax</matchedName>
+    <genre>Puzzle</genre>
+    <releasedate>1992</releasedate>
+    <developer>Blue Sky Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="9d9ad6a2ca90f33e91520a93718c9f57" metadataStatus="local_xml">
+    <path>./Kung-Fu Master (Europe).a78</path>
+    <name>Kung-Fu Master (Europe)</name>
+    <desc>La hermosa princesa Victoria está aprisionada en el Templo del Mago del Mal. Como Maestro de Kung-Fu, debes liberarla. Desafortunadamente, los cinco tortuosos niveles del Templo están hirviendo de enemigos amenazantes. Ábrete camino a través de un nivel y comienza el siguiente con un medidor de energía renovado y un temporizador. Una vez que liberas a tu princesa, vuelve al principio donde tus enemigos vuelven más rápido y desagradablemente.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Kung-Fu Master</matchedName>
+    <genre>Beat'em Up</genre>
+    <releasedate>1989</releasedate>
+    <developer>Imagineering</developer>
+    <publisher>Absolute Entertainment</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="44b48da956e740e436863a6a5f236759" metadataStatus="local_xml">
+    <path>./Mario Bros. (Europe).a78</path>
+    <name>Mario Bros. (Europe)</name>
+    <desc>Mario, el carpintero y su hermano Luigi, vuelven a hacerlo. ¡Esta vez deben deshacerse de su casa de plagas rastreras! Estas extrañas criaturas tienen nombres como Shellcreeper, Sidestepper y Fighterfly. Pon a prueba tus habilidades al golpear estos bichos molestos de pisos de ladrillo en el agua a continuación. Pero ten cuidado con Slipice the Iceman. ¡Debes detenerlo antes de que cubra los pisos con una traicionera capa de hielo resbaladizo! Recoge todas las monedas que puedas.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Mario Bros.</matchedName>
+    <genre>Plataforma</genre>
+    <releasedate>1988</releasedate>
+    <developer>Nintendo</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="f8176bd703176fd9325999ed24f0be4c" metadataStatus="local_xml">
+    <path>./Mat Mania Challenge (Europe).a78</path>
+    <name>Mat Mania Challenge (Europe)</name>
+    <desc>No lo sabrías, dibujaste a Bruno the Sledge, cinco veces campeón y todo tipo malo, como tu primer oponente en tu búsqueda del elusivo cinturón de campeonato de la Atari Wrestling Federation. Desde que perdió el título de Eric the Flaxen Saxon, Bruno ha estado aterrorizando el circuito de AWF. Bruno el Trineo te mira con su ojo restante. Cuando suena la campana, carga como un loco. Justo antes del impacto de su cuerpo de 386 libras, te haces a un lado y levantas tu codo. Perfecto codo smash! Bruno cae al tapete. Lo atrapaste con la cabeza, pero su cabeza rapada se desliza libremente. Entonces lo ves. El famoso Bruno the Sledge "Ojo del terror", la mirada de la muerte. ¡Estás en problemas ahora! Mat Mania Challenge ofrece todas las emociones y derrames de la lucha libre profesional. ¿Tienes lo que se necesita para sobrevivir a los rompecabezas y a los conductores de pila? ¡Si tienes las habilidades, el cinturón del campeonato será tuyo!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Mat Mania Challenge</matchedName>
+    <genre>Deportes</genre>
+    <releasedate>1990</releasedate>
+    <developer>American Technos</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="76ea45b9edc12787a7d123c0d7bb715e" metadataStatus="local_xml">
+    <path>./Mean 18 Ultimate Golf (Europe).a78</path>
+    <name>Mean 18 Ultimate Golf (Europe)</name>
+    <desc>¡Eso es todo! Un silencio cae sobre el campo de California mientras te paras en el hoyo dieciocho de Pebble Beach. Estás a cinco pies del hoyo y tienes una ventaja de un golpe en el torneo más grande de tu vida. Tu caddie te da tu putter de la suerte. Alineas tu tiro y balanceas. La pelota rueda lentamente hacia el hoyo. Hay un momento tenso ya que casi toca la taza. finalmente, la pelota cae. ¡Conservas tu título!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Mean 18 Ultimate Golf</matchedName>
+    <genre>Deportes / Golf</genre>
+    <releasedate>1989</releasedate>
+    <developer>Accolade</developer>
+    <publisher>Accolade</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="6e3840f161cdc621a3744e7eaf314590" metadataStatus="local_xml">
+    <path>./Meltdown (Europe).a78</path>
+    <name>Meltdown (Europe)</name>
+    <desc>¡No entres en pánico! Una pandilla de terroristas internacionales se ha dedicado sistemáticamente a destruir el mundo. Han saboteado varios reactores nucleares al desatar una cadena mortal de "chispa" que romperá las barras de control de protección y se abrirá paso en el núcleo mismo de cada reactor. Si la chispa llega al núcleo, el resultado final será una temida fusión. Si los terroristas tienen éxito en su horrenda trama, ¡podemos despedirnos de este mundo! Solo te paras entre la vida tal como la conocemos y la aniquilación total. Está armado con una pistola especialmente diseñada para destruir chispas, un diseño de cada reactor, su ingenio y su deseo de salvar el mundo. Muévanse. No hay tiempo que perder!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Meltdown</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1990</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="8da3b0aab41722b21799bdb9fabec99b" metadataStatus="local_xml">
+    <path>./Midnight Mutants (Europe).a78</path>
+    <name>Midnight Mutants (Europe)</name>
+    <desc>¿Puedes salvar al abuelo de la prisión de Plasmic? 7800 Aventura Arcade como nunca antes has visto. Este juego tiene todos los lugares como ríos, bosques profundos y oscuros, cavernas espeluznantes, laboratorios, criaturas como vampiros, zombis mutantes y murciélagos amenazantes. Tu aventura incluye explorar grandes áreas y encontrar armas geniales. Presionar un botón brinda sugerencias y sugerencias instantáneas en pantalla. Todo se suma a una acción increíble con Mega Graphics. La espalda de Grampa, depende de ti eliminar a los Monstruos y limpiarlos.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Midnight Mutants</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1990</releasedate>
+    <developer>Radioactive Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="cff38ffd0f597cd5e4255f7353d8ded2" metadataStatus="local_xml">
+    <path>./Missing In Action (Unknown) (Proto).a78</path>
+    <name>Missing In Action (Unknown) (Proto)</name>
+    <desc>Habiendo sido mostrado hace varios años en eventos de videojuegos clásicos, ¡el prototipo Atari 7800 Missing in Action finalmente ha visto la luz! El usuario de AtariAge, Mitch, recientemente adquirió el único prototipo conocido de este juego que existe y ha compartido graciosamente el binario con la comunidad para que todos puedan disfrutarlo. Missing in Action se basa en la película de 1984 del mismo nombre, con Chuck Norris como protagonista. El juego es un beat 'em up de desplazamiento lateral, que tiene lugar en Vietnam durante el apogeo de la Guerra de Vietnam. Como coronel James Braddock, un prisionero de guerra capturado, su misión es escapar de un campo de internamiento, rescatar prisioneros de guerra capturados, liberar a la embajada estadounidense y matar al malvado zar de la droga. Si se hubiera completado, Missing in Action hubiera sido una adición impresionante a la biblioteca 7800. Tal como está, este prototipo está completo en un 85% y es bastante jugable.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Missing In Action</matchedName>
+    <genre>Shooter</genre>
+    <releasedate>1989</releasedate>
+    <developer>Sculptured Software</developer>
+    <publisher>TNT Games</publisher>
+    <players>1</players>
+  </game>
+  <game id="3bc9a3f5d56d47a46d8b442ac9b166cd" metadataStatus="local_xml">
+    <path>./Motor Psycho (Europe).a78</path>
+    <name>Motor Psycho (Europe)</name>
+    <desc>¡Lo terminaste al fin! Y ahora te estás volviendo loco esperando probar tu elegante, rápida y personalizada bicicleta. Absorbe todos tus momentos de vigilia, sueñas con eso todas las noches. Se ha convertido en una obsesión. Y sabes exactamente el lugar para probarlo. ¡La competencia anual de MotorPsycho (para trastornados, psicópatas y otros tipos inusuales de moteros) es este fin de semana! Su curso cargado de obstáculos es legendario entre los maníacos de la motocicleta. Por supuesto, nadie en su sano juicio intentaría este curso. Los espectadores acérrimos te recuerdan que el fan es corto para los fanáticos. Han apostado sus lugares favoritos para ver las carreras, y están esperando el rugido de los motores acelerados, el chirrido de los neumáticos, el crujido del metal ... Eres tú contra reloj y tu bicicleta está diseñada para la velocidad. ¡Todo lo que necesita hacer es apuntarlo en la dirección correcta e ir por ello!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Motor Psycho</matchedName>
+    <genre>Carreras, Conducción / Carreras de moto, 3ª persona</genre>
+    <releasedate>1990</releasedate>
+    <developer>BlueSky Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="a93f7b5baf82a0956a34d79b78dc1ab2" metadataStatus="local_xml">
+    <path>./Ms. Pac-Man (Europe).a78</path>
+    <name>Ms. Pac-Man (Europe)</name>
+    <desc>Puntos. Pastillas de energía Fruta. Pretzels. Todos son parte de la dieta rápida de la Sra. Pac-Man. Ella incluso devorará fantasmas. Pero solo cuando son azules. De lo contrario, los fantasmas la atraparán. ¡Y tu!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Ms. Pac-Man</matchedName>
+    <genre>Acción / Laberinto</genre>
+    <releasedate>1986</releasedate>
+    <developer>General Computer</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="52bc2587629e5f38232664a5045a141f" metadataStatus="local_xml">
+    <path>./Ninja Golf (Europe).a78</path>
+    <name>Ninja Golf (Europe)</name>
+    <desc>Durante diez años has entrenado para ser un Ninja. Y ahora tu Maestro te dice que es hora de tomar la última y más difícil prueba y convertirte en un Master Ninja. Debes completar el juego de la muerte. Debes jugar nueve hoyos de ... Ninja Golf? ¡Sabías que tu Maestro era un poco raro, pero nada te preparó para esto! Debes intentar colar un pajarito entre patadas de karate mientras luchas contra oponentes ninja. Par para este curso significa dejar el verde lleno de enemigos caídos. Obtienes puntos tanto por tu juego de golf como por derrotar a Ninja atacante. También puede ganar puntos por encontrar tesoros y otros elementos de bonificación a lo largo del curso. Una vez que hayas completado los nueve hoyos con éxito, prepárate para desafiar al Master Ninja disfrazado. Esta batalla final determinará si te conviertes o no en un Maestro Ninja. Y si ganas, mejorará tu puntaje de golf.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Ninja Golf</matchedName>
+    <genre>Deportes / Golf</genre>
+    <releasedate>1989</releasedate>
+    <developer>BlueSky Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="12dabe343577fe0238b6189d81cea995" metadataStatus="local_xml">
+    <path>./One-on-One Basketball (Europe).a78</path>
+    <name>One-on-One Basketball (Europe)</name>
+    <desc>Estás en una cancha de ensueño para un juego caliente de One-on-One. Eres el pájaro. O eres el Dr. J. Y esa es la última decisión que tendrás mucho tiempo para tomar. Puedes jugar contra la computadora de desafiar a un amigo. Tus capacidades, y las de tu oponente, serán como las de los All-Stars Larry Bird y Julius (Dr. J) Erving. La computadora conoce sus porcentajes de disparos (vigilados y desprotegidos) y sus disparos de mascotas. Tu capacidad de puntuación dependerá de tu tiempo, de cuán efectivamente estás siendo protegido y de dónde estás disparando. Al igual que el juego de baloncesto en sí, One-on-One lo recompensa por jugar con la cabeza y las manos. Domina los movimientos del joystick, agudiza el tiempo, perfecciona tus reflejos hasta que puedas manejar el nivel Pro ... y no dejes que el otro tipo salga ... piensa en ti.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>One-on-One Basketball</matchedName>
+    <genre>Deportes / Baloncesto</genre>
+    <releasedate>1987</releasedate>
+    <developer>Computer Magic</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="b4dbb9e7afe52e528aca96f87cd6a688" metadataStatus="local_xml">
+    <path>./Pete Rose Baseball (USA).a78</path>
+    <name>Pete Rose Baseball (USA)</name>
+    <desc>Es el último juego de la Serie Mundial. Estás en la novena entrada. Bases cargadas Uno fuera. Y tu hasta el bate. ¿Qué haces? Swing lejos? Espera un paseo? Ir por las vallas? Todo depende de ti, al igual que en la bola profesional real. Claro, te daremos las opciones. Y algunos consejos. Al igual que en el lanzamiento. Guata. Y Fielding. Pero, es tu llamado. Hay 6 pantallas de acción en vivo a todo color, ¡como las que ves en la televisión! La pantalla de pitcheo / bateo, el cuadro interior izquierdo, el cuadro interior derecho, el jardín izquierdo, el jardín central y el jardín derecho. Entonces, comienza a calentar. Paso al plato. Y aprovecha tu mejor momento para ganarnn¡las series! Originalmente diseñado por Alex DeMeo, la versión 7800 fue programada por Robert Curtiss.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Pete Rose Baseball</matchedName>
+    <genre>Deportes / Béisbol</genre>
+    <releasedate>1989</releasedate>
+    <developer>Robert Curtiss</developer>
+    <publisher>Absolute Entertainment</publisher>
+    <players>2</players>
+  </game>
+  <game id="a578f45234ab3f4bfce2d4ff1f85ad19" metadataStatus="local_xml">
+    <path>./Pit Fighter (Unknown) (Proto).a78</path>
+    <name>Pit Fighter (Unknown) (Proto)</name>
+    <desc>Este prototipo es una versión muy temprana del juego. Hay problemas con la detección de colisiones y los gráficos son bastante simples. Aunque se entiende que es un puerto de Pitfighter, realmente podría ser cualquier cantidad de juegos de combate basados en los gráficos genéricos.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Pit Fighter</matchedName>
+    <genre>Lucha</genre>
+    <releasedate>1992</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="cf41b810f68fc8a14684c5271dd8f547" metadataStatus="local_xml">
+    <path>./Planet Smashers (Europe).a78</path>
+    <name>Planet Smashers (Europe)</name>
+    <desc>Planet Smashers finalmente entregó un Shooter 2D original al sistema Pro al final de su vida. Tu nave espacial, que extrañamente parece un avión, tiene la grave tarea de defender la Tierra de una armada alienígena. Planet Smashers tiene algunas características agradables como códigos de warp de nivel, actualizaciones de láser, dispositivos de camuflaje y jefes interesantes. Incluso tienes la carga de defender el escudo de la Tierra de los asteroides y las naves alienígenas. La parte posterior de la caja cuenta con "impresionantes efectos de sonido", pero el ruido principal del láser es increíblemente irritante. Después de que vence el juego, recibirá un final de texto que le ordena jugar Alien Brigade, lo cual tiene poco sentido ya que acaba de derrotar a la nave nodriza alienígena.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Planet Smashers</matchedName>
+    <genre>Shoot'em Up / Vertical</genre>
+    <releasedate>1989</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="3638cefe0a5e30166eadaf6709693118" metadataStatus="local_xml">
+    <path>./Plutos (Unknown) (Proto).a78</path>
+    <name>Plutos (Unknown) (Proto)</name>
+    <desc>Plutos es un shooter espacial orientado verticalmente que presenta un juego similar al de Raiden. El juego presenta seis niveles diferentes, cada uno con su propio tema y jefe único. Solo tres de estos niveles son únicos gráficamente; los otros tres son solo cambios en la paleta de colores. Plutos ofrece un jugador así como dos modos simultáneos de jugador, seleccionables con el interruptor de dificultad izquierdo. Plutos también cuenta con un sistema de arranque de armas único. Hay tres tipos diferentes de armas, cada una de las cuales se puede actualizar hasta cuatro veces, así como un poder de invencibilidad. Las tres armas diferentes son: ametralladoras duales, pistola de dispersión y pistola de energía.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Plutos</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1990</releasedate>
+    <developer>Tynesoft</developer>
+    <publisher>Tynesoft</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="78ddafa42962c4b6078fe6d616ce8537" metadataStatus="local_xml">
+    <path>./Pole Position II (Europe).a78</path>
+    <name>Pole Position II (Europe)</name>
+    <desc>¿Eres lo suficientemente bueno para competir con los mejores? ¿Tienes el valor y la habilidad para ser un piloto de carreras profesional? ¡Estás a punto de descubrirlo! Al volante de su elegante auto de Fórmula I se enfrentará al reloj y a los mejores corredores del mundo para ganar el Pole Position II, el puesto número uno de salida. Para ingresar al Grand Prix en sí, tendrás que competir a velocidades vertiginosas para completar la vuelta clasificatoria en 73 segundos o menos. A continuación, elija entre cuatro cursos, que van desde el curso de prueba relativamente inocua a la peligrosa pista de Suzuka. Pon a prueba tus habilidades de carrera a medida que te desvías por curvas traicioneras, maniobras para salir de peligrosos derrapes y esquivas obstáculos peligrosos. ¡Vete a toda velocidad para superar el récord y serás el ganador del Gran Premio!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Pole Position II</matchedName>
+    <genre>Carreras, Conducción</genre>
+    <releasedate>1987</releasedate>
+    <developer>Namco</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="422a736497a6a36c066465a671d84513" metadataStatus="local_xml">
+    <path>./Rampage (USA).a78</path>
+    <name>Rampage (USA)</name>
+    <desc>George, Lizzy y Ralph eran simplemente estadounidenses comunes, hasta que un experimento salió mal, convirtiéndolos en un Gorila, lagarto y hombre lobo, respectivamente. Después de esto, los tres planean ir destruyendo edificios, y hasta 3 jugadores humanos pueden unirse. Romper los bordes de los edificios durante el tiempo suficiente los hará colapsar. La policía y el ejército te persiguen y dispararán contra ti, así que trata de destruirlos (si no, puedes evitar las balas). Necesitará comer regularmente, con cosas como plantas, para evitar volver a ser humano</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Rampage</matchedName>
+    <genre>Lucha / 2D</genre>
+    <releasedate>1989</releasedate>
+    <developer>Spectral Dimensions</developer>
+    <publisher>Activision</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="d1d1db10584069c611e855d2a746d5b0" metadataStatus="local_xml">
+    <path>./RealSports Baseball (USA).a78</path>
+    <name>RealSports Baseball (USA)</name>
+    <desc>Hueles la hierba recién cortada al salir del túnel oscuro y frío hacia el cálido sol de la tarde. Oyes el chasquido del cuero en la madera mientras el bateador poderoso del equipo toma la práctica de bateo. Hoy es el día; estás comenzando en las grandes ligas. Después de calentar en el bullpen, estás listo para tomar el montículo. Recibes algunas instrucciones de último momento del entrenador de pitcheo, y entonces es el momento. Lentamente caminas hacia el centro del diamante. ¡Entra el bateador y estás listo para jugar a la pelota!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Baseball</matchedName>
+    <genre>Deportes / Béisbol</genre>
+    <releasedate>1989</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="46626b33cd0e209ef7614e84432304ed" metadataStatus="local_xml">
+    <path>./Rescue on Fractalus (USA) (Proto).a78</path>
+    <name>Rescue on Fractalus (USA) (Proto)</name>
+    <desc>Viaja a través de los cañones cavernosos de Fractalus ? --en realismo panormic. Tus compañeros pilotos te están esperando desesperadamente. Pero también lo son los viciosos alienígenas Jaggi ?. Nunca se sabe lo que va a aparecer, o dónde, hasta que suceda ... En 2004, Curt Vendel de AtariMuseum.com descubrió varios prototipos de Atari 7800, incluido el juego inédito Rescue on Fractalus. Si bien el juego no está completo, está bastante avanzado, se ejecuta sin problemas y se puede jugar con el excelente emulador MESS. Para comenzar el juego después de encenderlo, presione "R" (Restablecer) en MESS. Hay una falla en la emulación en este momento con la representación de su vista fuera de la cabina, pero esperamos que esto se solucione en una próxima versión de MESS.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Rescue on Fractalus</matchedName>
+    <genre>Disparos</genre>
+    <releasedate>1984</releasedate>
+    <developer>Lars Jensen</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="0b528eacfe981285172a1833989598e8" metadataStatus="missing">
+    <path>./Robot Finds Kitten.a78</path>
+    <name>Robot Finds Kitten</name>
+    <desc />
+    <source />
+    <matchedName />
+    <genre />
+    <releasedate />
+    <developer />
+    <publisher />
+    <players />
+  </game>
+  <game id="f1010cd7ce4ce6fd3471f881ec7ca888" metadataStatus="local_xml">
+    <path>./Robotron - 2084 (USA).a78</path>
+    <name>Robotron - 2084 (USA)</name>
+    <desc>¡Eres un humano mutante, que por algún monstruo de la naturaleza tiene la capacidad de disparar pulsos de energía de su cuerpo en ocho direcciones diferentes! Tu trabajo es simple: salvar a la humanidad de su propia creación: los ROBOTRONS. La jugabilidad es bastante única por el momento. Puedes moverte y disparar en cualquiera de las ocho direcciones. Te arrojan a una habitación con varios malvados malvados desperdigados, tienes que matar a todos los robots y al mismo tiempo encontrar la forma de agarrar humanos y evitar la muerte.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Robotron - 2084</matchedName>
+    <genre>Shooter</genre>
+    <releasedate>1987</releasedate>
+    <developer>Williams</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="8e35a56ccde24358ae69e5f7815a896d" metadataStatus="local_xml">
+    <path>./Scrapyard Dog (Europe).a78</path>
+    <name>Scrapyard Dog (Europe)</name>
+    <desc>¿Puede Louie salvar a su perro de convertirse en Dogmeat? Nuestro amigo Louie amaba a su perro. Pero ¿por qué algunos matones Poochnap este pobre cachorro? Los matones quieren la escritura del depósito de chatarra. ¿Lo hará Louie? Depende de usted y Louie para sobrevivir a más de 15 niveles de peligro y encontrar al mejor tipo malo, el Sr. Big. Scrapyard Dog presenta gráficos y sonido que superan todos los límites. Es parte del poder que te trae Atari.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Scrapyard Dog</matchedName>
+    <genre>Plataforma</genre>
+    <releasedate>1990</releasedate>
+    <developer>BlueSky Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="25eeacebcd938684bf9392e43ab28f38" metadataStatus="local_xml">
+    <path>./Sentinel (Europe).a78</path>
+    <name>Sentinel (Europe)</name>
+    <desc>Eres un científico, y tu invento, un orbe pulsante y brillante llamado Sentinel, absorbe y almacena energía de una variedad de fuentes. Ahora la Tierra está amenazada por extraterrestres mortales y debes usar tu creación para salvar el planeta. El Sentinel absorbe la energía de cada cápsula de energía o cápsula de energía que disparas con tu pistola de luz Atari. Cuando se golpea una fuente de energía, un rayo se dispara desde el Centinela, golpea al objetivo con una fuerza silbante y atrae energía hacia tu Centinela. Depende de usted proteger al Centinela mientras se desliza sobre los planetas.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Sentinel</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1990</releasedate>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="98784c81895eeccdea780c02aa108bff" metadataStatus="local_xml">
+    <path>./Sirius (Unknown) (Proto).a78</path>
+    <name>Sirius (Unknown) (Proto)</name>
+    <desc>Sirius es un tirador espacial orientado horizontalmente que se sentirá como en casa para aquellos que estén familiarizados con juegos como Gradius y R-Type. El juego consta de cuatro niveles diferentes, cada uno con su propio tema y jefe único. Sirius demuestra con destreza de qué es capaz el hardware 7800 y se compara favorablemente con los juegos NES y Sega Master System de la época. Desafortunadamente, Sirius es cada vez más difícil y requerirá mucha práctica y paciencia para tener éxito en los cuatro niveles.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Sirius</matchedName>
+    <genre>Shooter</genre>
+    <releasedate>1990</releasedate>
+    <developer>Tynesoft</developer>
+    <publisher>Tynesoft</publisher>
+    <players>1</players>
+  </game>
+  <game id="ce5ec6ca80eb9418cde066a671eb8581" metadataStatus="missing">
+    <path>./Space War.a78</path>
+    <name>Space War</name>
+    <desc />
+    <source />
+    <matchedName />
+    <genre />
+    <releasedate />
+    <developer />
+    <publisher />
+    <players />
+  </game>
+  <game id="f652cfe4094ba8c487fe209f817893b5" metadataStatus="local_xml">
+    <path>./Summer Games (USA).a78</path>
+    <name>Summer Games (USA)</name>
+    <desc>Experimenta el poder, la gloria, la emoción y el desafío de la competencia atlética más grande del mundo: ¡LOS JUEGOS DE VERANO! La impresionante CEREMONIA DE APERTURA se enfoca en 3.000 años de noble tradición mientras mira con orgullo, dispuesto a dar lo mejor de sí para honrar a su país. Este es el momento en el que ha trabajado y entrenado tanto tiempo para lograr, probar su habilidad bajo presión contra los mejores atletas del mundo. Intentarás destacar en todo un espectro de eventos deportivos: atletismo, natación y buceo, gimnasia y tiro al plato. Audacia. Habilidad. Estrategia. Determinación. Las marcas del verdadero campeón. Si sale victorioso, recibirá el premio del campeón, la codiciada MEDALLA DE ORO, ante la multitud entusiasta. ¡Tu triunfo podría incluso pasar a la historia como el mejor rendimiento personal de todos los tiempos! ¡Aprovechar el momento! ¡Prepárate para el desafío final! Pruebe los frutos del trabajo duro. ¡Da lo mejor de ti y VAYA POR EL ORO!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Summer Games</matchedName>
+    <genre>Deportes / Multideporte</genre>
+    <releasedate>1988</releasedate>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1-8</players>
+  </game>
+  <game id="03abb2626e0739ead4b58e0a88e1fc9f" metadataStatus="local_xml">
+    <path>./Super Huey UH-IX (Europe).a78</path>
+    <name>Super Huey UH-IX (Europe)</name>
+    <desc>Un puerto del juego de computadora hogareño Cosmi 1985, Atari lanzó esto para el 7800 en 1988. Este es un juego de combate de helicóptero decente, en el que piloteas un Super Huey UH-IX.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Super Huey UH-IX</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1988</releasedate>
+    <developer>Cosmi</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+  </game>
+  <game id="11aef2ad32e953669a160f2137bd611f" metadataStatus="local_xml">
+    <path>./Super Skateboardin' (Europe).a78</path>
+    <name>Super Skateboardin' (Europe)</name>
+    <desc>Tu papá te consiguió un trabajo después de la escuela en la fábrica donde trabaja. Usted necesita el dinero porque primordialmente radical significa que tiene grandes gastos. El trabajo es el sueño de un skater hecho realidad. Miles de pasillos y tubos para perfeccionar tus movimientos. Simplemente navegue y apague todas las máquinas y luces de la fábrica. ¡Date prisa porque el poder se está escapando rápido! Naturalmente, hay una trampa. Le pagan según la cantidad de energía que ahorra. Y debe salir de la fábrica a más tardar a las 5:15 pm de hoy. Un segundo más y nunca llegarás a la fecha límite para ingresar al Campeonato de Skateboarding.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Super Skateboardin'</matchedName>
+    <genre>Deportes / Skate</genre>
+    <releasedate>1988</releasedate>
+    <developer>Absolute Entertainment</developer>
+    <publisher>Absolute Entertainment</publisher>
+    <players>1</players>
+  </game>
+  <game id="e4a3f89c9cda9499f3f5432f0e2647fe" metadataStatus="local_xml">
+    <path>./Tank Command (USA).a78</path>
+    <name>Tank Command (USA)</name>
+    <desc>Tank Command es un juego de acción de desplazamiento vertical. Usted controla un tanque en una misión para capturar la bandera enemiga y ganar la mayor cantidad de puntos posible. Para hacer esto, necesitarás abrirte camino a través de sus defensas en tres niveles de dificultad creciente. El bloqueo de tu progreso son tanques enemigos, pastilleros, misiles, jeeps, infantería, cabañas y más, todos los cuales te otorgan puntos cuando los destruyes. Su tanque está equipado con una cantidad limitada de combustible y munición, sin embargo, puede reabastecerse ocasionalmente mediante la recopilación de iconos de bonificación cuando aparecen en la pantalla. Si puedes superar todos los obstáculos y capturar la bandera, ¡entonces ganas el juego!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Tank Command</matchedName>
+    <genre>Acción</genre>
+    <releasedate>1988</releasedate>
+    <developer>Froggo Games</developer>
+    <publisher>Froggo Games</publisher>
+    <players>1</players>
+  </game>
+  <game id="93c3925c679167c2b0ac9372ab5fc990" metadataStatus="local_xml">
+    <path>./Title Match Pro Wrestling (Europe).a78</path>
+    <name>Title Match Pro Wrestling (Europe)</name>
+    <desc>DESTACANDO TAG-TEAMnn¡Llamando a todos los maniacos luchadores! ¡Esta noche es la partida por el título! Sube al ring y apuntate tus cosas. Mézclate con algunos de los luchadores más salvajes del mundo mientras compites por el "Absolute Title Belt". Pero prepárate para las inmersiones de cuerda pulverizadoras de Skin Head, los viciosos aeroplanos de Mad Dog, los abrazos de oso aplastantes de Big Chief y los golpes paralizantes del cuerpo de Mr. Mean. La acción chisporroteante nunca se detiene, ya sea que luches uno a uno, o vayas a la guerra por el Tag Team Belt. Y después de todo, si crees que eres realmente bueno, ponte en contacto con la computadora para ver quién es el mejor guerrero del anillo.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Title Match Pro Wrestling</matchedName>
+    <genre>Deportes</genre>
+    <releasedate>1989</releasedate>
+    <developer>Absolute Entertainment</developer>
+    <publisher>Absolute Entertainment</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="a4466a8abd5e3fbc0211dbb6f634fe75" metadataStatus="local_xml">
+    <path>./Tomcat - The F-14 Fighter Simulator (Europe).a78</path>
+    <name>Tomcat - The F-14 Fighter Simulator (Europe)</name>
+    <desc>Conviértete en un Aviador naval F-14 en misiones de búsqueda y destrucción mientras esquivas y disparas a los cabos enemigos en combates sangrientos con tus cañones de 20 mm y misiles aire-aire. Su cabina cuenta con tecnología de punta, cortesía de la Fuerza Aérea de EE. UU .: Pantalla y computadora principal, Indicador de alerta Bogey, Indicador de fuerza G, Medidas de contador electrónicas y un Indicador de sobrecalentamiento de cañón (sí, puede sobrecalentarse). .y si te sientes a la altura, dale un impulso a Mach 1.0!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Tomcat : The F-14 Fighter Simulator</matchedName>
+    <genre>Shooter / Avión</genre>
+    <releasedate>1989</releasedate>
+    <developer>Imagineer</developer>
+    <publisher>Absolute Entertainment</publisher>
+    <players>1</players>
+  </game>
+  <game id="411c17819df6cfac6ddf143682c91714" metadataStatus="local_xml">
+    <path>./Touchdown Football (USA).a78</path>
+    <name>Touchdown Football (USA)</name>
+    <desc>Es cuarto y largo con menos de un minuto restante en el juego. El ganador obtiene un boleto de comodín en los playoffs. Estás abajo por un gol de campo. Tu mariscal de campo hace un pase perfecto, tu receptor está abierto de par en par, y luego ves que los brazos del árbitro vuelan señalando el touchdown. Vas a los playoffs.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Touchdown Football</matchedName>
+    <genre>Deportes / Fútbol americano</genre>
+    <releasedate>1988</releasedate>
+    <developer>Imagic</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="0c40e0d5604348ff67c596ad39412b53" metadataStatus="local_xml">
+    <path>./Tower Toppler (Europe).a78</path>
+    <name>Tower Toppler (Europe)</name>
+    <desc>Un problema grave es el bloqueo de los intentos de colonizar el planeta Nebulus, que de otra forma sería compatible con la vida: ¡el agua es venenosa! La única forma de devolver el agua a su forma inofensiva y natural es destruir las ocho enormes torres que mantienen un control misterioso y letal sobre todas las formas de este valioso recurso. Espoleado a la acción por las necesidades de su planeta hogar peligrosamente superpoblado, debe intentar conquistar estas reliquias abandonadas por los alienígenas de una vez por todas. ¡Pero no será fácil! Tendrás que subir cada torre hasta llegar a la cima para detonar su punto vulnerable. ¡Y las torres sucesivas son más difíciles de derribar! ¡Necesitarás todo tu ingenio para evitar grandes y aplastantes rocas, ojos gigantes y moléculas mutantes indestructibles! Y ten cuidado con esas escaleras resbaladizas y las repisas desintegradas. ¡Un paso en falso y caerás a las profundidades de abajo!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Tower Toppler</matchedName>
+    <genre>Plataforma</genre>
+    <releasedate>1989</releasedate>
+    <developer>Hewson</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+  <game id="7b86079136b40ec9aa4f8456defbd627" metadataStatus="local_xml">
+    <path>./Tubes.a78</path>
+    <name>Tubes</name>
+    <desc>Desarrollado por Bruce Tomlin para atari 7800 tubes es un juego tipo puzzle mezcla de tetris y pipemania.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Tubes</matchedName>
+    <genre>Puzzle</genre>
+    <releasedate />
+    <developer />
+    <publisher />
+    <players />
+  </game>
+  <game id="400e8ac189a500702a05d6f5c9b07f11" metadataStatus="local_xml">
+    <path>./Water Ski (USA).a78</path>
+    <name>Water Ski (USA)</name>
+    <desc>En el esquí acuático se practica el esquí acuático en el río Pharonna. Usted controla el barco y el esquiador en este juego de acción de desplazamiento vertical. Tu objetivo es llegar a la meta antes de que se acabe el tiempo y también ganar la mayor cantidad de puntos posible. El río es bastante peligroso y presenta muchos giros y vueltas junto con rocas, troncos y otros obstáculos. Para los puntos de bonificación, hay numerosas rampas ubicadas a lo largo del río sobre las que el esquiador puede saltar (y si logra esquiar en cada rampa en el nivel, ¡ganará aún más puntos!). Comienzas el juego con cuatro esquiadores, y el juego termina cuando todos los esquiadores se han estrellado.</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Water Ski</matchedName>
+    <genre>Deportes</genre>
+    <releasedate>1988</releasedate>
+    <developer>Froggo Games</developer>
+    <publisher>Froggo Games</publisher>
+    <players>1</players>
+  </game>
+  <game id="7ac34a18b514764e052e34e53b5abb05" metadataStatus="local_xml">
+    <path>./Winter Games (USA).a78</path>
+    <name>Winter Games (USA)</name>
+    <desc>Eres un atleta en los Juegos de Invierno de 1988 en Calgary, Alberta, Canadá. Estás a punto de moverte a través de la nieve y el hielo con tanta velocidad, fuerza, resistencia y gracia como puedas reunir en el frío ventoso. Esta es la parte de invierno de la competencia deportiva amateur más importante del mundo. Combinará sus habilidades con los mejores atletas. Estate orgulloso. Hoy te encuentras entre los pocos de élite cuyo valor y resistencia serán probados por estos Juegos de Invierno. Escucha. Una fanfarria de trompetas suena como miles de palomas blancas son lanzamientos, simbólicamente para volar a los países del mundo con el mensaje de paz, y la noticia de que los Juegos de Invierno han comenzado. ¡Esto es, tu oportunidad de ir por el oro!</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Winter Games</matchedName>
+    <genre>Deportes / Multideporte</genre>
+    <releasedate>1987</releasedate>
+    <developer>Action Graphics</developer>
+    <publisher>Atari</publisher>
+    <players>1-8</players>
+  </game>
+  <game id="3af4d768bfa35d9e7ed2f9cee7457dd6" metadataStatus="database_xml">
+    <path>./Xenophobe (Europe).a78</path>
+    <name>Xenophobe (Europe)</name>
+    <desc>Hostile aliens - Xenophobes - are infesting space stations vital to your planet's security. These aliens threaten to overrun the stations, rendering the space stations useless. You are part of an elite team who is ready to speed to these endangered space stations. Your mission is clear: destroy the aliens, regain control of the space stations, and pick up any valuable hardware you might discover as you sweep the stations for aliens. The aliens are a swarming band of uglies, straight out of your worst nightmare. You'll need to use your talent just to stay alive as you rid each space station of these pests. You don't want to let them catch you. It's them or you. The message has come. It's up to you and your teammates to cleanse each space station of aliens. Your Mother Ship brings you to the vicinity of each overrun space station. You then enter the space station via a transfer disk. Team up with another member of your elite squad, or work on your own to clear the aliens from an infested space station. Just be careful as you enter a space station. The aliens are everywhere!</desc>
+    <source>https://gamesdb.launchbox-app.com/games/details/20609</source>
+    <matchedName>Xenophobe</matchedName>
+    <genre>Shooter</genre>
+    <releasedate>1989</releasedate>
+    <developer>BlueSky Software</developer>
+    <publisher>Atari</publisher>
+    <players>2</players>
+  </game>
+  <game id="9a77d928827c6df4f9ac2a00252560e5" metadataStatus="local_xml">
+    <path>./Xevious (Europe).a78</path>
+    <name>Xevious (Europe)</name>
+    <desc>Es una pesadilla, ¡pero es verdad! La investigación muestra que somos los verdaderos extraterrestres en la Tierra, y los despiadados Xevions son los habitantes originales. Ahora los Xeviones quieren que la Tierra regrese, ¡menos los humanos! Sus fuerzas de invasión son feroces: la tierra está plagada de Domogram Rovers; el cielo está negro con las flotas de patrulla toroide y los escuadrones de la muerte de Zoshi. Nuestras insignificantes armas no ofrecen defensa. La única esperanza de la Tierra es nuestro poderoso nuevo avión de combate Solvalou. Su piloto tendrá una misión única: penetrar en las filas enemigas y destruir el Xevious Mother Ship. La misión es peligrosa. No podemos garantizar el éxito. Pero en este punto, ¡es hacer o morir! Un pequeño problema. Aún necesitamos un piloto. ¿Algun voluntario?</desc>
+    <source>G:\RETROBAT TESTES\Retrobat-V8.1.2-160GB\RetroBat\roms\atari7800\gamelist.xml</source>
+    <matchedName>Xevious</matchedName>
+    <genre>Shoot'em Up / Vertical</genre>
+    <releasedate>1988</releasedate>
+    <developer>Namco</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+  </game>
+</gameList>

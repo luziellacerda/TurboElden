@@ -1,0 +1,160 @@
+{
+  "reference_confirmed_from_original_conversation": true,
+  "git_commit": "6727ab725f1c4ac9afdd0382cc7d4ae5d3ff8eb3",
+  "original_apk_sha256": "5cd234d0ac57aa6f1b260db6278087b7d961c671385ecf47871570bc00e78814",
+  "build": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\build-result.json",
+  "installation_pending": false,
+  "old_33e5_rejected": true,
+  "installed_apk_sha256": "352d74708adacd4bb3e2e9edc428a4fca6c0836fb81ee4e512cf4b5fb511a049",
+  "installed_apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-playlist-retro.apk",
+  "configuration_restore_completed": true,
+  "installation_record": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\installed.json",
+  "active_visual_update": "18-track retro menu playlist; bright LED, retained video frames and diagonal flight preserved",
+  "previous_exact_design_apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-ESTAVEL-6727ab7-design.apk",
+  "configuration_restore_record": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\stable-reference-audit\\installed-exact-stable.json",
+  "icon_revision": 2,
+  "flight_motion_user_approved": false,
+  "rejected_wide_overflight": true,
+  "stable_designation": {
+    "release": "estavel-2026-09-29-playlist-retro",
+    "repository": "https://github.com/luziellacerda/TurboElden",
+    "branch": "estavel",
+    "previous_stable_tag": "estavel-2026-09-29-camera-traseira",
+    "previous_stable_commit": "95d244bcea95647236bea335c41b46afe15674bf",
+    "historical_engine_commit": "6727ab725f1c4ac9afdd0382cc7d4ae5d3ff8eb3",
+    "apk_name": "TurboramaStation-ESTAVEL-playlist-retro.apk",
+    "apk_local_path": "E:\\ESTUDO APK\\estaveis\\2026-09-29-playlist-retro\\TurboramaStation-ESTAVEL-playlist-retro.apk",
+    "apk_build_path": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-playlist-retro.apk",
+    "apk_sha256": "352d74708adacd4bb3e2e9edc428a4fca6c0836fb81ee4e512cf4b5fb511a049",
+    "apk_bytes": 667694649,
+    "native_module_sha256": "59013a884ed7b80d3fa34ecbe262fb6560ab78a6410b646850f100afec6c5dee",
+    "source_root_local": "E:\\ESTUDO APK\\work\\native-carousel\\implementation",
+    "private_baseline_sha256": "5cd234d0ac57aa6f1b260db6278087b7d961c671385ecf47871570bc00e78814",
+    "packaging_base_path": "E:\\ESTUDO APK\\estaveis\\2026-09-29-camera-traseira\\TurboramaStation-ESTAVEL-6727ab7-camera-traseira.apk",
+    "packaging_base_sha256": "54681d24d4ae912c0d081b276064264f95ad5e1d41e4e2851d2daa87169c4257",
+    "original_frontend_cpp_available": false,
+    "apk_published": false,
+    "designation": "Requested by maintainer on 2026-09-29; no new runtime test or benchmark",
+    "installed_at": "2026-09-29T17:37:29.280278",
+    "installation_sha256_verified": true,
+    "audio_playback_verified": false,
+    "visual_check_performed": false,
+    "excludes": [
+      "APK/DEX/SO",
+      "MP3/MP4 and other private audio/video",
+      "keys, firmware, ROMs, BIOS, saves",
+      "credentials, signing key, DPAPI, private backups, raw device captures"
+    ],
+    "snapshot_notes": [
+      "Old immutable snapshot preserved.",
+      "Source allowlist copied from active implementation; generated large headers compressed losslessly.",
+      "Playlist manifest omits original per-track PC paths; hashes/titles/asset names retained.",
+      "AGENTS and active profile are release-specific documentation.",
+      "Older build records/scripts are historical; use system-videos/build_videos.py for this release."
+    ]
+  },
+  "current_revision_promoted_to_stable": true,
+  "requested_video_quality": {
+    "width": 720,
+    "height": 720,
+    "fps": 60,
+    "scope": "visible system cards with a source file in the requested folder",
+    "playback_speed": 1.0,
+    "loop": true,
+    "decoding": "one MediaPlayer per clip; prepare neighbours, retain decoded GPU frame across decoder eviction and resume prior playback position",
+    "source_fps_note": "Converted to 60fps without changing source speed; repeats frames from lower-rate sources"
+  },
+  "missing_platform_videos": [
+    {
+      "key": "atari7800",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\atari7800.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "gamegear",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\gamegear.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "Gameboy Color",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\gbc.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "jaguar",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\jaguar.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "Pc Engine",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\pcengine.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "Pc Engine cd",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\pcenginecd.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "sufami",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\sufami.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "supergrafx",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\supergrafx.mp4",
+      "state": "awaiting owner file; no substitute video"
+    }
+  ],
+  "video_preload": {
+    "previous": 4,
+    "following": 2,
+    "maximum_unique_players": 12,
+    "offscreen": "prepared and paused with player/texture retained; spare slots retain recently visited players",
+    "priority": "visible cells; immediate previous and next; deeper previous neighbours; remaining next; recently visited players",
+    "retained_video_frames": "one decoded 720x720 RGB565 GPU frame per visited unique clip, maximum 40 entries; survives player eviction within carousel; no photo assets, atlas or second video",
+    "release": "players and retained frames released when leaving platforms for games/modal; Android lifecycle releases players; GL context loss invalidates retained frames",
+    "resume": "player teardown remembers playback position; replacement seeks there before starting"
+  },
+  "led": "brighter focused native LED: base rim opacity 0.72, stronger colored halo and hot head, longer fading tail; immediate focus visibility; 3.8s cycle; exact palette; one ring draw",
+  "aircraft": "shared 28.65 degree diagonal rear-view frame and vanishing point with clouds/stars; corrected screen-right yaw sign; reduced camera-depth excursion; coherent constant forward travel, softer advected volume exhaust",
+  "visual_check_performed": false,
+  "music": {
+    "track_count": 18,
+    "bytes": 73575672,
+    "mode": "one streaming player; interleaved sequential repeat; pauses/releases for emulation and Activity pause; respects audio focus",
+    "control": "original StoreMusic toggle; media volume buttons; enabled once on feature installation",
+    "source": "owner-provided local MP3s, unchanged",
+    "track_titles": [
+      "Donkey Kong Country - Title Theme",
+      "Super Mario World - Overworld",
+      "Rock n’ Roll Racing - Bad to the Bone",
+      "Donkey Kong Country 2 - Brambles",
+      "Super Mario World - Athletic",
+      "Rock n’ Roll Racing - Paranoid",
+      "Donkey Kong Country 2 - Enchanted Wood",
+      "Super Mario World - Swimming",
+      "Rock n’ Roll Racing - Highway Star",
+      "Donkey Kong Country 2 - Ship Deck",
+      "Super Mario World - Underground",
+      "Rock n’ Roll Racing - Peter Gunn",
+      "Donkey Kong Country 2 - Mine",
+      "Super Mario World - Special World",
+      "Rock n’ Roll Racing - Born to Be Wild",
+      "Donkey Kong Country 2 - Swamp",
+      "Super Mario World - Title",
+      "Donkey Kong Country 2 - Jungle"
+    ]
+  },
+  "audio_playback_verified": false,
+  "previous_stable_designation": {
+    "requested_by_maintainer": "2026-09-29",
+    "branch": "estavel",
+    "tag": "estavel-2026-09-29-camera-traseira",
+    "repository": "https://github.com/luziellacerda/TurboElden",
+    "apk_sha256": "54681d24d4ae912c0d081b276064264f95ad5e1d41e4e2851d2daa87169c4257",
+    "runtime_benchmark_claimed": false,
+    "git_commit": "95d244bcea95647236bea335c41b46afe15674bf"
+  },
+  "git_commit_role": "git_commit at root identifies historical engine only; current stable commit is resolved by immutable release tag"
+}
