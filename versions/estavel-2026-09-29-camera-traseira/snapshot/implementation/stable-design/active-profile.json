@@ -1,0 +1,26 @@
+{
+  "reference_confirmed_from_original_conversation": true,
+  "git_commit": "6727ab725f1c4ac9afdd0382cc7d4ae5d3ff8eb3",
+  "original_apk_sha256": "5cd234d0ac57aa6f1b260db6278087b7d961c671385ecf47871570bc00e78814",
+  "build": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\flight-rear-view\\build-result.json",
+  "installation_pending": false,
+  "old_33e5_rejected": true,
+  "installed_apk_sha256": "54681d24d4ae912c0d081b276064264f95ad5e1d41e4e2851d2daa87169c4257",
+  "installed_apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-ESTAVEL-6727ab7-camera-traseira.apk",
+  "configuration_restore_completed": true,
+  "installation_record": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\flight-rear-view\\installed.json",
+  "active_visual_update": "Rear camera; tail toward viewer; small left/right lane corrections with bank; constant background travel",
+  "previous_exact_design_apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-ESTAVEL-6727ab7-design.apk",
+  "configuration_restore_record": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\stable-reference-audit\\installed-exact-stable.json",
+  "icon_revision": 2,
+  "flight_motion_user_approved": false,
+  "rejected_wide_overflight": true,
+  "stable_designation": {
+    "requested_by_maintainer": "2026-09-29",
+    "branch": "estavel",
+    "tag": "estavel-2026-09-29-camera-traseira",
+    "repository": "https://github.com/luziellacerda/TurboElden",
+    "apk_sha256": "54681d24d4ae912c0d081b276064264f95ad5e1d41e4e2851d2daa87169c4257",
+    "runtime_benchmark_claimed": false
+  }
+}

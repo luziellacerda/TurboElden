@@ -1,3 +1,11 @@
+# Versão estável atual — TurboramaStation
+
+**Comece por [ESTAVEL.md](ESTAVEL.md): caminhos exatos, APK, hashes e restauração.**
+
+Ramo `estavel`; tag `estavel-2026-09-29-camera-traseira`. Base histórica 1.0.8/6727ab7 com o design atual, login aprovado, ícone T v2 e câmera traseira da nave. [Fontes e recursos congelados](versions/estavel-2026-09-29-camera-traseira/). APK e dados privados permanecem locais.
+
+## Documentação histórica do estudo
+
 # TurboRetroEmu — estudo do TurboramaStation
 
 Análise estática do APK `TurboramaStation-24-09.apk`, realizada em 25/09/2026. O repositório reúne documentação, código Java decompilado, Smali, recursos selecionados e mapas de servidores, sistemas e nomes MAME. A publicação foi sanitizada para omitir BIOS, chaves, bibliotecas nativas e dumps que podem conter credenciais.

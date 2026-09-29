@@ -1,0 +1,722 @@
+[
+  {
+    "key": "3ds",
+    "folder": "3ds",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Playstation 1",
+    "folder": "psx",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\psx.xml",
+    "color": "DF0024FF",
+    "core": "FCE6E9FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Playstation 2",
+    "folder": "ps2",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\ps2.xml",
+    "color": "153FBFFF",
+    "core": "E8ECF9FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Playstation 2 - BR",
+    "folder": "ps2",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\ps2br.xml",
+    "color": "153FBFFF",
+    "core": "E8ECF9FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "PSP",
+    "folder": "psp",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Psvita",
+    "folder": "psvita",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Switch",
+    "folder": "switch",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\switch.xml",
+    "color": "E50914FF",
+    "core": "FCE6E8FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "wii",
+    "folder": "wii",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\wii.xml",
+    "color": "E50914FF",
+    "core": "FCE6E8FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "wiiu",
+    "folder": "wiiu",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\wiiu.xml",
+    "color": "E50914FF",
+    "core": "FCE6E8FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Arcade",
+    "folder": "arcade",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "atari2600",
+    "folder": "atari2600",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "atari7800",
+    "folder": "atari7800",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Atomiswave",
+    "folder": "atomiswave",
+    "theme_file": "general.xml",
+    "color": "186CFFFF",
+    "core": "E6F1FFFF",
+    "source": "general.xml: Sega rule",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "colecovision",
+    "folder": "colecovision",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "cps1",
+    "folder": "cps1",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "cps2",
+    "folder": "cps2",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "cps3",
+    "folder": "cps3",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Dreamcast",
+    "folder": "dreamcast",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\dreamcast.xml",
+    "color": "186CFFFF",
+    "core": "E6F1FFFF",
+    "source": "general.xml: Sega rule",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "fds",
+    "folder": "fds",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "gameandwatch",
+    "folder": "gameandwatch",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "gamegear",
+    "folder": "gamegear",
+    "theme_file": "general.xml",
+    "color": "186CFFFF",
+    "core": "E6F1FFFF",
+    "source": "general.xml: Sega rule",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Gameboy",
+    "folder": "gb",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Gba",
+    "folder": "gba",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Gameboy Color",
+    "folder": "gbc",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "jaguar",
+    "folder": "jaguar",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "mame",
+    "folder": "mame",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Master System ",
+    "folder": "mastersystem",
+    "theme_file": "general.xml",
+    "color": "186CFFFF",
+    "core": "E6F1FFFF",
+    "source": "general.xml: Sega rule",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "MegaDrive",
+    "folder": "megadrive",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\megadrive.xml",
+    "color": "186CFFFF",
+    "core": "E6F1FFFF",
+    "source": "general.xml: Sega rule",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "MegaDrive - BR",
+    "folder": "megadrive",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\megadrivebr.xml",
+    "color": "186CFFFF",
+    "core": "E6F1FFFF",
+    "source": "general.xml: Sega rule",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "model2",
+    "folder": "model2",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Nintendo 64",
+    "folder": "n64",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\n64.xml",
+    "color": "E50914FF",
+    "core": "FCE6E8FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Nintendo 64 - BR",
+    "folder": "n64",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\n64br.xml",
+    "color": "E50914FF",
+    "core": "FCE6E8FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Nintendo DS",
+    "folder": "nds",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Neo Geo",
+    "folder": "neogeo",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\neogeo.xml",
+    "color": "E50914FF",
+    "core": "FCE6E8FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Neo Geo CD",
+    "folder": "neogeocd",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Nintendinho",
+    "folder": "nes",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Odyssey 2",
+    "folder": "odyssey2",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Pc Engine",
+    "folder": "pcengine",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Pc Engine cd",
+    "folder": "pcenginecd",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "sega32x",
+    "folder": "sega32x",
+    "theme_file": "general.xml",
+    "color": "186CFFFF",
+    "core": "E6F1FFFF",
+    "source": "general.xml: Sega rule",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Super Nintendo",
+    "folder": "snes",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\snes.xml",
+    "color": "E50914FF",
+    "core": "FCE6E8FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "Super Nintendo - BR",
+    "folder": "snes",
+    "theme_file": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_views\\gamecarousel-systems\\snesbr.xml",
+    "color": "E50914FF",
+    "core": "FCE6E8FF",
+    "source": "system gc-accent-b",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "sufami",
+    "folder": "sufami",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "supergrafx",
+    "folder": "supergrafx",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  },
+  {
+    "key": "fbneo",
+    "folder": "fbneo",
+    "theme_file": "general.xml",
+    "color": "FF0911FF",
+    "core": "FFE6EBFF",
+    "source": "general.xml: default",
+    "pos": [
+      0.053763441,
+      -0.031617647
+    ],
+    "size": [
+      0.892473118,
+      1.063235294
+    ]
+  }
+]

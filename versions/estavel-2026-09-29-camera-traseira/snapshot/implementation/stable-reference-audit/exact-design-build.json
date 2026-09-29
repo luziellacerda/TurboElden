@@ -1,0 +1,23 @@
+{
+  "base": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\stable-reference-audit\\original-1.0.8-alignment-preserved.apk",
+  "base_sha256": "5cd234d0ac57aa6f1b260db6278087b7d961c671385ecf47871570bc00e78814",
+  "git_commit": "6727ab725f1c4ac9afdd0382cc7d4ae5d3ff8eb3",
+  "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-ESTAVEL-6727ab7-design.apk",
+  "apk_sha256": "545e9b71e24da653f59ca67e2dd5f716a26fec3a64f5eb39860c87f14303f4e6",
+  "bytes": 561776134,
+  "changed_original_entries": [
+    "classes5.dex"
+  ],
+  "new_design_entries": 439,
+  "preserved_original_entries": 1641,
+  "removed": [],
+  "all_original_native_libraries_identical": true,
+  "all_design_assets_identical": true,
+  "runtime_changes": [
+    "ESActivity loads native carousel module",
+    "Android back action reaches native carousel"
+  ],
+  "emulation_experiments_present": false,
+  "installed": true,
+  "installation_record": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\stable-reference-audit\\installed-exact-stable.json"
+}

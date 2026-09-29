@@ -1,0 +1,2276 @@
+{
+  "3do": {
+    "file": "3do.xml",
+    "name": "Panasonic 3DO",
+    "description": "3DO Interactive Multiplayer foi um videogame doméstico com arquitetura de 32 bits. O 3DO consiste em especificações técnicas criadas pela \"3DO Company\", que é uma sociedade entre 7 diferentes empresas.",
+    "language": "pt"
+  },
+  "3ds": {
+    "file": "3ds.xml",
+    "name": "Nintendo 3DS",
+    "description": "A Nintendo 3DS, lançada em 2011, é uma consola portátil conhecida pelo seu ecrã 3D sem óculos. Oferece uma ampla variedade de jogos e funcionalidades interativas, incluindo comunicação sem fios e realidade aumentada, proporcionando uma experiência de jogo única e versátil. Com funcionalidades adicionais como reprodução de música, navegação na Internet e fotografia em 3D, a sua biblioteca oferece uma variedade de jogos incluindo títulos de franquias famosas como Mario, Zelda e Pokémon.",
+    "language": "pt"
+  },
+  "64dd": {
+    "file": "64dd.xml",
+    "name": "Nintendo 64 DD",
+    "description": "Foi um periférico para o Nintendo 64. Era plugado através da EXTension Port e permitia ao N64 usar discos magnéticos proprietários de 64 MB de capacidade para aumentar a capacidade de armazenamento de dados.",
+    "language": "pt"
+  },
+  "acclaim": {
+    "file": "acclaim.xml",
+    "name": "Acclaim",
+    "description": "Acclaim foi uma desenvolvedora e editora de jogos eletrônicos que operou de 1987 a 2004. Eles eram conhecidos por produzir títulos populares como Mortal Kombat, NBA Jam e Turok. Acclaim também desenvolveu e publicou jogos para vários consoles e máquinas arcade. Apesar do sucesso, problemas financeiros levaram eventualmente à falência e ao fechamento da empresa em 2004.",
+    "language": "pt"
+  },
+  "activision": {
+    "file": "activision.xml",
+    "name": "Activision",
+    "description": "Activision é uma editora de jogos eletrônicos americana sediada em Santa Monica, Califórnia. Foi fundada em 1979 por um grupo de ex-desenvolvedores da Atari que queriam criar seus próprios jogos para o console Atari 2600. A Activision é conhecida por publicar franquias populares como Call of Duty, Crash Bandicoot e Spyro the Dragon.",
+    "language": "pt"
+  },
+  "adam": {
+    "file": "adam.xml",
+    "name": "Coleco Adam",
+    "description": "O Coleco Adam foi um computador doméstico lançado pelo fabricante de brinquedos Coleco em 1983. Foi produzido em duas versões, uma como equipamento independente e outra como módulo de expansão para o console ColecoVision. Foi uma tentativa de seguir o sucesso do ColecoVision, mas não conseguiu alcançar o mesmo nível de popularidade.",
+    "language": "pt"
+  },
+  "advision": {
+    "file": "advision.xml",
+    "name": "Adventure Vision",
+    "description": "Adventure Vision é um console de jogos de vídeo autocontido (não requer um monitor externo) lançado no mercado pela empresa Entex em 1982, sendo o sucessor do Entex Select-A-Game. O Adventure Vision era um console de segunda geração.",
+    "language": "pt"
+  },
+  "ags": {
+    "file": "ags.xml",
+    "name": "Adventure Game Studio",
+    "description": "Adventure Game Studio (AGS) é uma ferramenta de desenvolvimento de software para criar jogos de aventura gráfica. Foi lançado pela primeira vez em 1997 e desde então tem sido usado para criar uma ampla gama de jogos, desde pequenos títulos independentes até lançamentos comerciais. O AGS permite aos desenvolvedores criar jogos de aventura point-and-click em uma variedade de estilos e inclui recursos como uma linguagem de script, editores de sprite e de fundo, e suporte para várias plataformas.",
+    "language": "pt"
+  },
+  "alg": {
+    "file": "alg.xml",
+    "name": "American Laser Games",
+    "description": "",
+    "language": "default"
+  },
+  "alphadenshi": {
+    "file": "alphadenshi.xml",
+    "name": "Alpha Denshi",
+    "description": "Começou como desenvolvedora de jogos de arcade e é mais conhecida por sua biblioteca de títulos Neo Geo, produzida em parceria com a SNK. O mais notável entre eles são seus jogos de luta e, em particular, a série World Heroes.",
+    "language": "pt"
+  },
+  "amcoe": {
+    "file": "amcoe.xml",
+    "name": "Amcoe",
+    "description": "",
+    "language": "default"
+  },
+  "amiga": {
+    "file": "amiga.xml",
+    "name": "Commodore Amiga",
+    "description": "Commodore Amiga é uma família de computadores de 16/32 bits fabricados pela empresa canadense Commodore Business Machines nos anos 80 e 90. Ficaram famosos pelos recursos muito a frente dos rivais IBM-PC.",
+    "language": "pt"
+  },
+  "amiga1200": {
+    "file": "amiga1200.xml",
+    "name": "Amiga 1200",
+    "description": "Commodore Amiga é uma família de computadores de 16/32 bits fabricados pela empresa canadense Commodore Business Machines nos anos 80 e 90. Ficaram famosos pelos recursos muito a frente dos rivais IBM-PC.",
+    "language": "pt"
+  },
+  "amiga500": {
+    "file": "amiga500.xml",
+    "name": "Amiga 500 - 600",
+    "description": "O Commodore Amiga 500 foi um computador pessoal lançado em 1987 pela Commodore International. Foi uma máquina popular para jogos e multimídia, apresentando capacidades avançadas de gráficos e som para a época. Possuía um processador Motorola 68000 e vinha com 512 KB de RAM, expansível até 9 MB.",
+    "language": "pt"
+  },
+  "amiga600": {
+    "file": "amiga600.xml",
+    "name": "Amiga 500 / 600",
+    "description": "Commodore Amiga é uma família de computadores de 16/32 bits fabricados pela empresa canadense Commodore Business Machines nos anos 80 e 90. Ficaram famosos pelos recursos muito a frente dos rivais IBM-PC.",
+    "language": "pt"
+  },
+  "amigacd32": {
+    "file": "amigacd32.xml",
+    "name": "Amiga CD32",
+    "description": "A Amiga CD32, desenvolvida pela Commodore International, marcou um marco por ser o primeiro console de jogos de 32 bits a utilizar CD-ROM na Europa Ocidental e na América do Norte. Seu lançamento em setembro de 1993 abrangeu vários mercados, incluindo Europa, Austrália, Canadá e Brasil, gerando uma antecipação significativa entre os entusiastas de jogos e seguidores da tecnologia. Equipada com capacidades avançadas para a época, a CD32 oferecia uma ampla gama de títulos que aproveitavam seu poder e capacidade de armazenamento, estabelecendo um novo padrão na indústria do entretenimento interativo.",
+    "language": "pt"
+  },
+  "amigacdtv": {
+    "file": "amigacdtv.xml",
+    "name": "Commodore CDTV",
+    "description": "O Amiga CDTV (acrônimo para Commodore Dynamic Total Vision) foi um modelo do computador pessoal Commodore Amiga lançado em março de 1991, sendo o primeiro console da história, a ter um leitor de CDs de fábrica.",
+    "language": "pt"
+  },
+  "amstradcpc": {
+    "file": "amstradcpc.xml",
+    "name": "Amstrad CPC",
+    "description": "Amstrad CPC foi uma série computadores pessoais de 8 bits produzidos pela Amstrad durante a década de 1980 e início de 1990. CPC significa Colour Personal Computer (\"Computador Colorido Pessoal\").",
+    "language": "pt"
+  },
+  "apfm1000": {
+    "file": "apfm1000.xml",
+    "name": "APF M1000",
+    "description": "The APF Microcomputer System is a second generation 8-bit cartridge-based home video game console released in October 1978 by APF Electronics Inc. with six cartridges. The console is often referred to M-1000 or MP-1000, which are the two model numbers of the console.",
+    "language": "default"
+  },
+  "apple2": {
+    "file": "apple2.xml",
+    "name": "Apple II",
+    "description": "Foi um modelo de computador fabricado pela Apple Inc. no final da década de 70. O primeiro Apple II era equipado com um processador MOS Technology 6502 com um clock de 1 MHz e 4 kB de memória RAM.",
+    "language": "pt"
+  },
+  "apple2gs": {
+    "file": "apple2gs.xml",
+    "name": "Apple 2 GS",
+    "description": "Foi um modelo de computador fabricado pela Apple Inc. no final da década de 70. O primeiro Apple II era equipado com um processador MOS Technology 6502 com um clock de 1 MHz e 4 kB de memória RAM.",
+    "language": "pt"
+  },
+  "arcade": {
+    "file": "arcade.xml",
+    "name": "Juegos Arcade",
+    "description": "Os jogos de arcade eram máquinas de entretenimento com moedas encontradas normalmente em locais públicos, como arcades, bares e parques de diversão. Essas máquinas apresentavam uma ampla variedade de gêneros de jogos, incluindo jogos clássicos de arcade, jogos de corrida, jogos de luta e muito mais. Os jogadores inseriam moedas ou fichas para jogar e geralmente competiam por pontuações altas ou prêmios.",
+    "language": "pt"
+  },
+  "arcadia": {
+    "file": "arcadia.xml",
+    "name": "Arcadia 2001",
+    "description": "The Arcadia 2001 is a second-generation 8-bit home video game console released by Emerson Radio in May 1982 for a price of US$ 99, several months before the release of ColecoVision. It was discontinued only 18 months later, with a total of 35 games having been released. Emerson licensed the Arcadia 2001 to Bandai, which released it in Japan. Over 30 Arcadia 2001 clones exist.\n\nThe unrelated Arcadia Corporation, manufacturer of the Atari 2600 Supercharger add-on, was sued by Emerson for trademark infringement. Arcadia Corporation then changed its name to Starpath.",
+    "language": "default"
+  },
+  "archimedes": {
+    "file": "archimedes.xml",
+    "name": "Archimedes",
+    "description": "Acorn Archimedes is a family of personal computers designed by Acorn Computers of Cambridge, England. The systems are based on Acorn's own ARM architecture processors and the proprietary operating systems Arthur and RISC OS. The first models were introduced in 1987, and systems in the Archimedes family were sold until the mid-1990s.",
+    "language": "default"
+  },
+  "arduboy": {
+    "file": "arduboy.xml",
+    "name": "Arduboy",
+    "description": "The Arduboy is a handheld game console with open source software, based on the Arduino hardware platform. The original version of the Arduboy was 1.6 millimetres (0.063 in) thick, with the height and width of a credit card, and was initially designed as an electronic business card.\n\nLater consumer versions replaced the first version's touch-sensitive panels by physical buttons, and include a protective plastic case, raising the thickness to 5 millimetres (0.20 in).",
+    "language": "default"
+  },
+  "arkanoid": {
+    "file": "Arkanoid.xml",
+    "name": "Arkanoid",
+    "description": "Arkanoid is a video game franchise created by Taito that began in 1986 as an arcade game. It belongs to the block breaker genre, where the player controls the Vaus, a paddle-like spacecraft, and must bounce a ball to destroy formations of blocks while preventing it from falling off the screen. The series expanded on the ideas of earlier games like Breakout by adding power-ups, enemy obstacles, and a distinctive futuristic style.\n\nArkanoid games are known for their simple but highly addictive gameplay, requiring precision, reflexes, and good control of the ball. Throughout the years, the franchise has appeared on arcade machines, home consoles, computers, and modern platforms, with sequels and updated versions that introduced new mechanics and visual styles while preserving the classic formula that made the series popular.",
+    "language": "default"
+  },
+  "astrocade": {
+    "file": "astrocade.xml",
+    "name": "AstroCade",
+    "description": "The Bally Astrocade is a second-generation home video game console and simple computer system designed by a team at Midway, at that time the videogame division of Bally. It was originally announced as the \"Bally Home Library Computer\" in October 1977 and initially made available for mail order in December 1977.",
+    "language": "default"
+  },
+  "atari": {
+    "file": "atari.xml",
+    "name": "Atari",
+    "description": "Foi pioneira em jogos de arcade, consoles de videogame e computadores domésticos. Os produtos da empresa, como Pong e Atari 2600, ajudaram a definir a indústria de entretenimento eletrônico dos anos 1970 até meados dos anos 1980.",
+    "language": "pt"
+  },
+  "atari2600": {
+    "file": "atari2600.xml",
+    "name": "Atari 2600",
+    "description": "O Atari 2600 é um console de videogame lançado em 1977 pela Atari, Inc. É considerado um dos primeiros consoles de videogame bem-sucedidos e ajudou a popularizar os jogos eletrônicos em todo o mundo. Com uma biblioteca de jogos de mais de 500 títulos, o Atari 2600 foi um dos consoles mais populares da sua época.",
+    "language": "pt"
+  },
+  "atari5200": {
+    "file": "atari5200.xml",
+    "name": "Atari 5200",
+    "description": "O Atari 5200 é um console de jogos de 2ª geração lançado pela Atari em 1982. Foi projetado como sucessor do popular Atari 2600 e apresentava melhores gráficos e jogabilidade. O sistema foi lançado em um momento em que a indústria de videogames estava experimentando um declínio, e apesar de suas inovações, não conseguiu alcançar o mesmo sucesso comercial que seu antecessor.",
+    "language": "pt"
+  },
+  "atari7800": {
+    "file": "atari7800.xml",
+    "name": "Atari 7800",
+    "description": "O Atari 7800 é um console de videogame lançado em 1986 pela Atari. Foi projetado para competir com o Nintendo Entertainment System e o SEGA Master System. Oferece compatibilidade com o Atari 2600 e apresenta melhorias gráficas e sonoras em comparação com seu antecessor.",
+    "language": "pt"
+  },
+  "atari800": {
+    "file": "atari800.xml",
+    "name": "Atari 800",
+    "description": "O Atari 800 é um computador doméstico lançado pela Atari em 1979. Foi um dos primeiros sistemas a oferecer gráficos coloridos e som de alta qualidade para jogos e aplicativos domésticos. Embora tenha sido superado por computadores posteriores em termos de potência e recursos, o Atari 800 continua sendo um ícone da era dos computadores pessoais nos anos 80.",
+    "language": "pt"
+  },
+  "atari8bit": {
+    "file": "atari8bit.xml",
+    "name": "Atari (8 Bits)",
+    "description": "The Atari 8-bit family is a series of 8-bit home computers introduced by Atari, Inc. in 1979 as the Atari 400 and Atari 800 based on the MOS Technology 6502 CPU. Various versions of the same basic design would be released over the next decade, but remained largely identical internally. These included the original Atari 400 and 800, and their successors, the XL and XE series.",
+    "language": "default"
+  },
+  "atarijaguar": {
+    "file": "atarijaguar.xml",
+    "name": "Atari Jaguar",
+    "description": "O Atari Jaguar é um console de videogame lançado em 1993 e é o último console lançado no mercado pela Atari.\n\nAs características da máquina eram impressionantes para a época, operando em 64 bits quando a concorrência ainda estava nos 16 bits. Utilizava cartuchos de jogos, embora posteriormente tenha sido lançada a unidade de CD, a Atari Jaguar CD. O Jaguar foi um fracasso de vendas, estima-se que não foram vendidas mais de duzentas e cinquenta mil unidades.",
+    "language": "pt"
+  },
+  "atarijaguarcd": {
+    "file": "atarijaguarcd.xml",
+    "name": "Atari Jaguar CD",
+    "description": "Jaguar CD foi um periférico que permitia ao console de videogame de video Atari Jaguar utilizar CD-ROM como mídia de armazenamento de jogos, lançado em 1995.",
+    "language": "pt"
+  },
+  "atarilynx": {
+    "file": "atarilynx.xml",
+    "name": "Atari Lynx",
+    "description": "O Atari Lynx é um console de jogos portátil lançado pela Atari Corporation em 1989. Foi o primeiro console portátil colorido e apresentava uma tela iluminada, o que tornava mais fácil jogar em condições de pouca luz. Também era notável pelo seu design exclusivo \"Lynx Look\", que lhe conferia uma aparência distinta. O Lynx competiu com o Game Boy da Nintendo e o Game Gear da SEGA, mas nunca alcançou o mesmo nível de sucesso comercial. Apesar disso, ele permanece popular entre os entusiastas de jogos retrô.",
+    "language": "pt"
+  },
+  "atarist": {
+    "file": "atarist.xml",
+    "name": "Atari ST",
+    "description": "O Atari ST foi uma série de computadores desenvolvidos pela Atari Corporation na década de 1980. Destacou-se por sua arquitetura baseada no microprocessador Motorola 68000 e sua capacidade de executar uma variedade de software, desde aplicativos de produtividade até videogames. Reconhecido por sua qualidade de som e gráficos, especialmente na produção musical, o Atari ST teve um impacto significativo no mercado de computadores domésticos antes de ser descontinuado no início da década de 1990. \"ST\" é a abreviação de \"Sixteen/Thirty-two\" (16/32).",
+    "language": "pt"
+  },
+  "atlus": {
+    "file": "atlus.xml",
+    "name": "Atlus",
+    "description": "Atlus Arcade era uma divisão da Atlus, uma desenvolvedora e publicadora de jogos eletrônicos japonesa. A Atlus Arcade era responsável pelo desenvolvimento de jogos de fliperama que foram principalmente lançados no Japão durante as décadas de 1980 e 1990. Alguns de seus títulos mais notáveis incluem Puzzle Boy e Mahjong Campus Hunting.",
+    "language": "pt"
+  },
+  "atom": {
+    "file": "atom.xml",
+    "name": "Atom",
+    "description": "The Acorn Atom is a home computer made by Acorn Computers Ltd from 1980 to 1982, when it was replaced by the BBC Micro. The Micro began life as an upgrade to the Atom, originally known as the Proton.",
+    "language": "default"
+  },
+  "atomiswave": {
+    "file": "atomiswave.xml",
+    "name": "Atomiswave",
+    "description": "Atomiswave é uma placa de arcade lançada pela Sammy Corporation em 2003, baseado nas especificações técnicas do SEGA Dreamcast (portanto, em termos técnicos, levemente inferior à SEGA NAOMI).",
+    "language": "pt"
+  },
+  "auto-action": {
+    "file": "auto-action.xml",
+    "name": "",
+    "description": "Um jogo de ação é um gênero de videogame que enfatiza desafios físicos, incluindo coordenação mão-olho e tempo de reação. O gênero inclui uma grande variedade de subgêneros, como jogos de luta, beat 'em ups, jogos de tiro e jogos de plataforma.",
+    "language": "pt"
+  },
+  "auto-adult": {
+    "file": "auto-adult.xml",
+    "name": "",
+    "description": "Manter fora do alcance das crianças...",
+    "language": "pt"
+  },
+  "auto-adventure": {
+    "file": "auto-adventure.xml",
+    "name": "",
+    "description": "Esses jogos são caracterizados por exploração, investigação, resolução de quebra-cabeças, interação com personagens e progressão linear centrada na trama do jogo.",
+    "language": "pt"
+  },
+  "auto-allgames": {
+    "file": "auto-allgames.xml",
+    "name": "",
+    "description": "",
+    "language": null
+  },
+  "auto-asiaticboard": {
+    "file": "auto-asiaticboard.xml",
+    "name": "",
+    "description": "Basicamente, são jogos de mahjong e variações deste jogo de tabuleiro clássico de origem chinesa.",
+    "language": "pt"
+  },
+  "auto-at2players": {
+    "file": "auto-at2players.xml",
+    "name": "",
+    "description": "Uma lista de todos os jogos compatíveis para dois jogadores, de qualquer sistema.",
+    "language": "pt"
+  },
+  "auto-at4players": {
+    "file": "auto-at4players.xml",
+    "name": "",
+    "description": "Uma lista de todos os jogos compatíveis para quatro jogadores, de qualquer sistema.",
+    "language": "pt"
+  },
+  "auto-beatemup": {
+    "file": "auto-beatemup.xml",
+    "name": "",
+    "description": "Do inglês \"Beat them up\" (Bata neles). Jogo de luta em que o jogador enfrenta inúmeros inimigos, geralmente em combate corpo a corpo, enquanto se move por um cenário que avança em uma única direção.\n\nÉ comum que pelo menos dois jogadores participem de forma cooperativa, e muitas vezes mais. O jogo geralmente progride por fases, no final das quais há um inimigo final ou chefe mais difícil do que os inimigos comuns.",
+    "language": "pt"
+  },
+  "auto-board": {
+    "file": "auto-board.xml",
+    "name": "",
+    "description": "Jogos que consistem em um tabuleiro, regras específicas e peças de diferentes formas e cores mais ou menos elaboradas, geralmente nesta lista você encontrará jogos de tabuleiro clássicos adaptados à tela e principalmente jogos de xadrez.",
+    "language": "pt"
+  },
+  "auto-casino": {
+    "file": "auto-casino.xml",
+    "name": "",
+    "description": "Máquinas de caça-níqueis, roleta, cartas ou qualquer outro tipo de jogo de cassino adaptado para a tela.",
+    "language": "pt"
+  },
+  "auto-casual": {
+    "file": "auto-casual.xml",
+    "name": "",
+    "description": "Jogos projetados para um público amplo e não especializado em jogos eletrônicos. Esses jogos geralmente são fáceis de jogar, com mecânicas simples e objetivos claros. Alguns exemplos desse tipo de jogos eletrônicos são Candy Crush, Farmville ou Angry Birds, entre outros.",
+    "language": "pt"
+  },
+  "auto-compilation": {
+    "file": "auto-compilation.xml",
+    "name": "",
+    "description": "Pacotes de dois ou mais jogos de vídeo anteriormente lançados (geralmente os mais vendidos) em uma edição posterior e com um preço mais baixo.",
+    "language": "pt"
+  },
+  "auto-demo": {
+    "file": "auto-demo.xml",
+    "name": "",
+    "description": "Fragmento ou versão limitada de um videogame distribuído (geralmente gratuitamente) com o objetivo de apresentar as principais características do jogo e promovê-lo entre os jogadores.",
+    "language": "pt"
+  },
+  "auto-educational": {
+    "file": "auto-educational.xml",
+    "name": "",
+    "description": "Jogos eletrônicos que se concentram em ensinar habilidades, conhecimentos e conceitos. Eles geralmente são projetados para diferentes grupos etários e/ou níveis de habilidade. Além disso, eles podem utilizar diferentes mecânicas de jogo para atingir seus objetivos educacionais, como perguntas e respostas, quebra-cabeças, simulações e muito mais.",
+    "language": "pt"
+  },
+  "auto-favorites": {
+    "file": "auto-favorites.xml",
+    "name": "",
+    "description": "",
+    "language": null
+  },
+  "auto-fight": {
+    "file": "auto-fight.xml",
+    "name": "",
+    "description": "Um subgênero de jogos de ação em que o jogador enfrenta outros personagens, geralmente em um combate um contra um controlado pela máquina ou outro jogador humano. Nesse gênero, cada personagem tem um grande número de movimentos diferentes, que podem ser conectados entre si por meio de combos.\n\nEmbora o termo seja frequentemente intercambiado com Beat'em Up, os jogos de luta geralmente são exclusivamente de combate um contra um, não um contra muitos.",
+    "language": "pt"
+  },
+  "auto-huntingandfishing": {
+    "file": "auto-huntingandfishing.xml",
+    "name": "",
+    "description": "Neste tipo de videogame, o jogador basicamente pesca ou caça. Geralmente, eles assumem a forma de torneios e muitos têm uma ampla variedade de locais para capturar e coletar o maior número de peças.",
+    "language": "pt"
+  },
+  "auto-lastplayed": {
+    "file": "auto-lastplayed.xml",
+    "name": "Jogou pela última vez",
+    "description": "Uma lista dos últimos 50 jogos que você jogou.",
+    "language": "pt"
+  },
+  "auto-lightgun": {
+    "file": "auto-lightgun.xml",
+    "name": "Juegos de pistola (Light Gun)",
+    "description": "Uma lista de todos os jogos compatíveis com pistolas (lightgun) disponíveis no sistema.",
+    "language": "pt"
+  },
+  "auto-musicanddance": {
+    "file": "auto-musicanddance.xml",
+    "name": "",
+    "description": "Gênero que se caracteriza por se concentrar no uso da música para desenvolver a jogabilidade, muitas vezes baseada em interpretações mais ou menos realistas da música. A lista inclui jogos de karaokê, jogos de ritmo, jogos de dança e jogos com instrumentos musicais.",
+    "language": "pt"
+  },
+  "auto-neverplayed": {
+    "file": "auto-neverplayed.xml",
+    "name": "Nunca Joguei",
+    "description": "",
+    "language": null
+  },
+  "auto-pinball": {
+    "file": "auto-pinball.xml",
+    "name": "",
+    "description": "A simulação de máquinas de pinball tem sido um tema popular em videogames desde o início da indústria, com títulos como Gee Bee (1978), Cutie Q (1979) ou Video Pinball (1980).",
+    "language": "pt"
+  },
+  "auto-platform": {
+    "file": "auto-platform.xml",
+    "name": "",
+    "description": "Gênero de jogos de ação e aventura que se caracterizam pelo deslocamento do personagem através de uma série de níveis nos quais deve pular, desviar de obstáculos, lutar contra inimigos e resolver quebra-cabeças para avançar na história. Eles frequentemente incluem inimigos e chefes finais que devem ser derrotados para avançar no jogo. Este gênero tem sido popular desde os primeiros dias da indústria de videogames, com títulos clássicos como Super Mario Bros, Sonic the Hedgehog, Rayman ou Castlevania.",
+    "language": "pt"
+  },
+  "auto-playingcards": {
+    "file": "auto-playingcards.xml",
+    "name": "",
+    "description": "Nesta lista, você encontrará jogos de cartas clássicos, especialmente jogos de pôquer em suas muitas variações. Ele também inclui qualquer tipo de jogo que use cartas para seu desempenho, como jogos de RPG, casuais, colecionáveis, etc...",
+    "language": "pt"
+  },
+  "auto-puzzle": {
+    "file": "auto-puzzle.xml",
+    "name": "",
+    "description": "Gênero que se caracteriza por desafiar o jogador a resolver problemas para avançar no jogo. Esses jogos podem ser em 2D ou 3D e frequentemente apresentam uma mecânica de jogo simples, porém desafiadora, que requer que o jogador pense em soluções criativas para resolver os problemas. Jogos de puzzle podem incluir a resolução de quebra-cabeças, a conexão de peças ou a manipulação de objetos para alcançar o objetivo.",
+    "language": "pt"
+  },
+  "auto-quiz": {
+    "file": "auto-quiz.xml",
+    "name": "Juegos de preguntas",
+    "description": "Este tipo de jogos de vídeo geralmente adota o formato de um concurso multiplayer baseado em turnos. Desafios, perguntas, enigmas... Quem vai ganhar?",
+    "language": "pt"
+  },
+  "auto-racedriving": {
+    "file": "auto-racedriving.xml",
+    "name": "",
+    "description": "Normalmente existem dois tipos de jogos de corrida, arcade e simulação. Jogos de corrida em estilo arcade oferecem diversão e uma experiência acelerada acima de tudo, enquanto jogos de corrida em estilo simulação focam em imitar realisticamente a manipulação de veículos, condições de pista e a própria mecânica física.",
+    "language": "pt"
+  },
+  "auto-reflection": {
+    "file": "auto-reflection.xml",
+    "name": "",
+    "description": "",
+    "language": null
+  },
+  "auto-retroachievements": {
+    "file": "auto-retroachievements.xml",
+    "name": "Retroachievements",
+    "description": "Uma lista automática de todos os jogos compatíveis com Retroachivements disponíveis no sistema.",
+    "language": "pt"
+  },
+  "auto-roleplayings": {
+    "file": "auto-roleplayings.xml",
+    "name": "Juegos de Rol (RPG)",
+    "description": "Os jogos de RPG, também conhecidos pela sigla RPG (role-playing game), pertencem a um gênero onde o jogador controla as ações e a história de um ou vários personagens imersos em um mundo ou mapa detalhado.\n\nEste gênero normalmente envolve alguma forma de desenvolvimento progressivo de seus personagens à medida que a história se desenrola, seja através do registro de várias estatísticas ou da evolução de habilidades, magia, melhores armas, armaduras, etc...",
+    "language": "pt"
+  },
+  "auto-shootemup": {
+    "file": "auto-shootemup.xml",
+    "name": "",
+    "description": "O termo \"Shoot 'em up\" define um tipo de jogo de vídeo em que o jogador controla um personagem, geralmente uma nave espacial, que enfrenta ondas de inimigos que aparecem na tela. O objetivo principal é destruir todos os inimigos possíveis, evitar ser atingido por seus ataques e avançar para o próximo nível depois de eliminar o chefe. Os jogos deste gênero são caracterizados pela jogabilidade frenética e seu foco na ação constante e habilidade do jogador para esquivar e disparar de maneira efetiva. Este gênero tem sido muito popular desde a década de 1980.",
+    "language": "pt"
+  },
+  "auto-shooter": {
+    "file": "auto-shooter.xml",
+    "name": "",
+    "description": "Gênero de ação onde o principal objetivo é atirar e matar inimigos com diferentes tipos de armas. Embora existam muitos subgêneros, é dividido principalmente em dois grupos, dependendo da perspectiva que temos de nosso personagem: em 1ª pessoa (ou FPS) e em 3ª pessoa (ou TPS).",
+    "language": "pt"
+  },
+  "auto-simulation": {
+    "file": "auto-simulation.xml",
+    "name": "",
+    "description": "Jogo ou gênero que busca imitar o mais fielmente possível a realidade, evitando a simplificação de controles ou mecânicas próprias dos jogos e aplicando as leis físicas de maneira realista e muitas vezes sem um objetivo final definido.\n\nExistem infinitos tipos com base em sua temática, como simulação de voo, de condução ou de gestão (negócios, construção, etc.). São a contraposição aos jogos de Arcade.",
+    "language": "pt"
+  },
+  "auto-sports": {
+    "file": "auto-sports.xml",
+    "name": "",
+    "description": "Jogos de vídeo esportivos é um gênero que simula a prática de esportes. A maioria dos esportes foram recriados em um jogo, incluindo esportes de equipe, atletismo, esportes radicais e esportes de combate.",
+    "language": "pt"
+  },
+  "auto-sportswithanimals": {
+    "file": "auto-sportswithanimals.xml",
+    "name": "",
+    "description": "Esta lista inclui basicamente jogos de hipismo ou corridas de cavalos.",
+    "language": "pt"
+  },
+  "auto-strategy": {
+    "file": "auto-strategy.xml",
+    "name": "",
+    "description": "Gênero de videogame que enfatiza o pensamento e o planejamento sobre a ação para alcançar a vitória. Embora muitos tipos de videogames possam conter elementos estratégicos, como gênero, os jogos de estratégia são mais comumente definidos como aqueles que se concentram principalmente em estratégia, logística e gerenciamento de recursos.",
+    "language": "pt"
+  },
+  "auto-various": {
+    "file": "auto-various.xml",
+    "name": "",
+    "description": "",
+    "language": null
+  },
+  "auto-verticalarcade": {
+    "file": "auto-verticalarcade.xml",
+    "name": "",
+    "description": "Os jogos de arcade eram máquinas de entretenimento com moedas encontradas normalmente em locais públicos, como arcades, bares e parques de diversão. Essas máquinas apresentavam uma ampla variedade de gêneros de jogos, incluindo jogos clássicos de arcade, jogos de corrida, jogos de luta e muito mais. Os jogadores inseriam moedas ou fichas para jogar e geralmente competiam por pontuações altas ou prêmios.",
+    "language": "pt"
+  },
+  "banpresto": {
+    "file": "banpresto.xml",
+    "name": "Banpresto",
+    "description": "",
+    "language": null
+  },
+  "batman": {
+    "file": "Batman.xml",
+    "name": "Batman",
+    "description": "Batman fez sua estreia nos videogames nos anos 80, com títulos que buscavam trazer a atmosfera dos quadrinhos e filmes para um formato interativo. Um dos primeiros jogos, Batman (1986) para ZX Spectrum, destacou-se por seu design isométrico e foco em puzzles, estabelecendo um padrão para as primeiras adaptações do personagem. Durante esses anos, o Cavaleiro das Trevas apareceu em várias plataformas da época, incluindo computadores pessoais como Amstrad CPC, MSX e Commodore 64.\n\nNos anos 90, Batman expandiu sua presença para consoles mais avançados, como NES, Sega Genesis, SNES e sistemas de arcade. Jogos como Batman (1989), baseado no filme de Tim Burton, e The Adventures of Batman & Robin (1994) tornaram-se marcos por capturar a ação e a atmosfera sombria do personagem. Esses anos consolidaram Batman como uma figura chave nos videogames, adaptando-se a diversos estilos e plataformas enquanto explorava sua rica narrativa em um meio interativo.",
+    "language": "pt"
+  },
+  "battletoads": {
+    "file": "Battletoads.xml",
+    "name": "Battletoads",
+    "description": "Battletoads is a series of action games created by Rare, first released in 1991. The games follow a group of anthropomorphic toads—Rash, Zitz, and Pimple—who take on various enemies to rescue their friends and defeat the Dark Queen. Known for their exaggerated style and humor, the characters rely on powerful transformations and over-the-top attacks during combat.\n\nThe series mixes beat 'em up gameplay with platforming sections and a variety of unique mechanics, often changing style from level to level. Some stages focus on traditional combat, while others introduce high-speed sequences, obstacle courses, or vehicle-based challenges, making each level feel distinct.\n\nBattletoads became especially famous for its high difficulty and memorable design, gaining a reputation as one of the most challenging experiences of its era. Over time, it has appeared on multiple platforms, including modern reboots, maintaining its identity through fast-paced gameplay, striking visuals, and a strong sense of personality.",
+    "language": "default"
+  },
+  "bbcmicro": {
+    "file": "bbcmicro.xml",
+    "name": "BBC Micro",
+    "description": "The BBC Micro is a series of microcomputers and associated peripherals designed and built by Acorn Computers in 1981 for The British Broadcasting Corporation (BBC).",
+    "language": "default"
+  },
+  "bomberman": {
+    "file": "Bomberman.xml",
+    "name": "Bomberman",
+    "description": "Bomberman was created in 1983 by Hudson Soft as a simple maze game in which the player placed bombs to clear paths and defeat enemies. Its fast and accessible mechanics made it a classic on 8-bit and 16-bit consoles, expanding across multiple platforms during the 80s and 90s, where in Europe it was also known as Dynablaster.\n\nOver time, Bomberman became one of the most iconic titles in video game history, with dozens of installments and variations on consoles, handhelds, and mobile devices. Although its formula has remained almost unchanged, its competitive style and simple gameplay have kept it relevant as a historical benchmark of the multiplayer genre.",
+    "language": "default"
+  },
+  "c128": {
+    "file": "c128.xml",
+    "name": "Commodore 128",
+    "description": "The Commodore 128, also known as the C128, C-128, C= 128,[n 1] is the last 8-bit home computer that was commercially released by Commodore Business Machines (CBM). Introduced in January 1985 at the CES in Las Vegas, it appeared three years after its predecessor, the bestselling Commodore 64.",
+    "language": "default"
+  },
+  "c20": {
+    "file": "c20.xml",
+    "name": "Commodore VIC-20",
+    "description": "O VIC-20 (Alemanha: VC-20; Japão: VIC-1001) é um computador doméstico de 8 bits. Ele foi construído pela Commodore Business Machines, com 5 KB de RAM e uma UCP MOS Technology 6502. O design exterior da máquina foi posteriormente aproveitado no Commodore 64 e C16. O VIC-20 foi lançado no Japão em 1980 e nos Estados Unidos e Europa em 1981, cerca de três anos após o lançamento do primeiro computador pessoal da Commodore, o PET.",
+    "language": "pt"
+  },
+  "c64": {
+    "file": "c64.xml",
+    "name": "Commodore 64",
+    "description": "O Commodore 64 é um computador pessoal lançado em 1982 pela Commodore International. Ele estava disponível por um preço acessível de 595 dólares americanos no lançamento e rapidamente se tornou um grande sucesso. Ele apresentava um processador MOS Technology 6510, 64 KB de memória RAM e uma unidade de disco. O C64 foi um dos computadores mais vendidos da história e era popular para jogos de vídeo, bem como para programação e uso doméstico.",
+    "language": "pt"
+  },
+  "camplynx": {
+    "file": "camplynx.xml",
+    "name": "Camputers Lynx",
+    "description": "The Lynx was an 8-bit British home computer that was first released in early 1983 as a 48 kB model. Several models were available with 48 kB, 96 kB or 128 kB RAM. It was possible to reach 192 kB with RAM expansions on board.",
+    "language": "default"
+  },
+  "cannonball": {
+    "file": "cannonball.xml",
+    "name": "Cannonball",
+    "description": "Cannonball is a program which allows you to play an enhanced version of Yu Suzuki's seminal arcade racer, OutRun, on a variety of systems.\n\nCannonball is not an emulator; it is a complete rewrite of the original game into portable C++",
+    "language": "default"
+  },
+  "capcom": {
+    "file": "capcom.xml",
+    "name": "Capcom Classics",
+    "description": "",
+    "language": null
+  },
+  "castlevania": {
+    "file": "castlevania.xml",
+    "name": "Castlevania",
+    "description": "Castlevania, conhecido no Japão como Akumajō Dracula, é uma série de jogos de ação-aventura de terror gótico sobre Drácula, criada e desenvolvida pela Konami. Castlevania é principalmente situado no castelo do Conde Drácula, o antagonista principal da linhagem dos caçadores de vampiros Belmont.",
+    "language": "pt"
+  },
+  "cave": {
+    "file": "cave.xml",
+    "name": "CAVE",
+    "description": "A CAVE Interactive Co., Ltd. é uma empresa japonesa de videogames fundada em 1994 por ex-funcionários da Toaplan após sua falência. Eles são conhecidos principalmente por seus jogos de tiro \"bullet hell\"; de 1995 a 2013, a CAVE foi um dos desenvolvedores de jogos de tiro mais prolíficos no mercado japonês. Além disso, a CAVE produziu uma variedade de outros tipos de jogos para arcades, consoles domésticos, PCs e smartphones, também a partir de 1995. \"CAVE\" é um acrônimo para \"Computer Art Visual Entertainment\".",
+    "language": "pt"
+  },
+  "cavestory": {
+    "file": "cavestory.xml",
+    "name": "Cave Story",
+    "description": "Cave Story (洞窟物語, Dōkutsu Monogatari?) é um jogo eletrônico freeware de ação-aventura para computador criado e desenvolvido por Daisuke Amaya em 2004.",
+    "language": "pt"
+  },
+  "cdi": {
+    "file": "cdi.xml",
+    "name": "Philips CD-i",
+    "description": "The Compact Disc-Interactive (CD-I, later CD-i) is a digital optical disc data storage format that was mostly developed and marketed by Dutch company Philips.",
+    "language": "default"
+  },
+  "centurye": {
+    "file": "centurye.xml",
+    "name": "Century Electronics",
+    "description": "",
+    "language": null
+  },
+  "cgenius": {
+    "file": "cgenius.xml",
+    "name": "Commander Genius",
+    "description": "",
+    "language": null
+  },
+  "channelf": {
+    "file": "channelf.xml",
+    "name": "Channel F",
+    "description": "Fairchild Channel F é um console de jogos lançado pela Fairchild Semiconductor em agosto de 1976. Foi o primeiro console a usar cartuchos ROM para armazenar jogos, permitindo uma maior variedade de jogos e horas de jogo. O console tinha um design elegante e um controlador único de duas mãos. O Channel F tinha uma biblioteca de cerca de 26 jogos, incluindo clássicos como Space War, Video Whizball e Drag Race. Embora não tenha sido tão bem-sucedido comercialmente como outros consoles posteriores, como o Atari 2600, o Fairchild Channel F é considerado um precursor importante da indústria moderna de jogos.",
+    "language": "pt"
+  },
+  "chihiro": {
+    "file": "chihiro.xml",
+    "name": "SEGA Chihiro",
+    "description": "Chihiro é uma placa arcade desenvolvida no início dos anos 2000 pela Sega em colaboração com a Microsoft. Baseada no hardware do Xbox original, compartilhava componentes como o processador Intel e uma GPU NVIDIA, o que facilitou a adaptação de jogos entre ambas as plataformas. Foi projetada para jogos de arcade com maior capacidade gráfica e desempenho, sendo utilizada em títulos como OutRun 2 e Virtua Cop 3. Embora não tenha alcançado uma adoção massiva nas salas de arcade, foi uma demonstração da aliança temporária entre Sega e Microsoft numa época em que a Sega tinha acabado de parar de fabricar consoles domésticos.",
+    "language": "pt"
+  },
+  "cinematronics": {
+    "file": "cinematronics.xml",
+    "name": "Cinematronics",
+    "description": "",
+    "language": null
+  },
+  "coco": {
+    "file": "coco.xml",
+    "name": "Tandy Color Computer",
+    "description": "The RadioShack TRS-80 Color Computer, later marketed as the Tandy Color Computer and sometimes nicknamed the CoCo, is a line of home computers developed and sold by Tandy Corporation.\n\nThe Tandy Color Computer line started in 1980 with what is now called the Color Computer 1.",
+    "language": "default"
+  },
+  "coleco": {
+    "file": "coleco.xml",
+    "name": "Coleco",
+    "description": "",
+    "language": null
+  },
+  "colecovision": {
+    "file": "colecovision.xml",
+    "name": "ColecoVision",
+    "description": "ColecoVision é um console de videogame lançado em 1982 pela Coleco Industries. Possui um design exclusivo com controladores removíveis que podem ser girados para acomodar jogadores destros ou canhotos. O sistema também possuía um processador gráfico poderoso e um chip de som, o que permitia visuais e efeitos sonoros de alta qualidade. ColecoVision era conhecido por sua biblioteca de portes de arcade, incluindo Donkey Kong, Zaxxon e Ms. Pac-Man.",
+    "language": "pt"
+  },
+  "comad": {
+    "file": "comad.xml",
+    "name": "COMAD",
+    "description": "",
+    "language": null
+  },
+  "commanderx16": {
+    "file": "commanderx16.xml",
+    "name": "Commander X16",
+    "description": "Commander X16 is a modern computer platform inspired by classic 8-bit home systems. It was designed as a retro-style machine for enthusiasts who enjoy programming, gaming, and learning how computers worked during the home computing era, while still benefiting from modern development tools and an active community.\n\nThe project focuses on simplicity, accessibility, and a close connection to the spirit of vintage computers such as the Commodore 64. Its software environment encourages users to create games, experiment with BASIC and assembly language, and explore low-level programming in a way that feels direct and approachable.\n\nMore than just a piece of hardware, Commander X16 represents a celebration of retro computing culture. It appeals to hobbyists, developers, and collectors interested in a system that combines nostalgic design with a fresh platform for new creations.",
+    "language": "default"
+  },
+  "corsixth": {
+    "file": "corsixth.xml",
+    "name": "",
+    "description": "",
+    "language": null
+  },
+  "cplus4": {
+    "file": "cplus4.xml",
+    "name": "Commodore Plus/4",
+    "description": "The Commodore Plus/4 is a home computer released by Commodore International in 1984. The \"Plus/4\" name refers to the four-application ROM resident office suite (word processor, spreadsheet, database, and graphing); it was billed as \"the productivity computer with software built-in.\"",
+    "language": "default"
+  },
+  "cps1": {
+    "file": "cps1.xml",
+    "name": "CAPCOM Play System 1",
+    "description": "O CP System (CPシステム, shīpī shisutemu, conhecido como CPS abreviadamente e retroativamente como CPS-1) é uma placa de sistema de arcade desenvolvida pela Capcom que executava software de jogos armazenado em placas filhas removíveis. Mais de duas dezenas de títulos de arcade foram lançados para o CPS-1, antes da Capcom transferir o desenvolvimento de jogos para o seu sucessor, o CP System II. Entre os 33 títulos lançados para o CP System original estão Street Fighter II: The World Warrior e suas duas primeiras sequências, Street Fighter II: Champion Edition e Street Fighter II: Hyper Fighting.",
+    "language": "pt"
+  },
+  "cps2": {
+    "file": "cps2.xml",
+    "name": "CAPCOM Play System 2",
+    "description": "O CP System II (CPシステムII, shīpī shisutemu tsū) ou CPS-2 é uma placa de sistema de arcade que a Capcom usou pela primeira vez em 1993 para Super Street Fighter II. Foi o sucessor do seu sistema CP System anterior e do hardware de arcade Capcom Power System Changer e foi sucedido pelo hardware CP System III em 1996, do qual o CPS-2 sobreviveria por mais de quatro anos. O sistema de arcade teve novos lançamentos até o final de 2003, terminando com o Hyper Street Fighter II.",
+    "language": "pt"
+  },
+  "cps3": {
+    "file": "cps3.xml",
+    "name": "CAPCOM Play System 3",
+    "description": "O CP System III (CPシステムIII, shīpī shisutemu surī) ou CPS-3 é uma placa de sistema de arcade que foi usada pela primeira vez pela Capcom em 1996 com o jogo arcade Red Earth. Foi o segundo sucessor do hardware de arcade CP System, seguindo o CP System II. Seria a última placa de sistema proprietária que a Capcom produziria antes de passar para a plataforma Naomi baseada em Dreamcast.",
+    "language": "pt"
+  },
+  "creativision": {
+    "file": "creativision.xml",
+    "name": "VTech CreatiVision",
+    "description": "The Video Technology CreatiVision is a hybrid computer and home video game console introduced by VTech in 1981 and released in 1982. The hybrid unit was similar in concept to computers such as the APF Imagination Machine, the older VideoBrain Family Computer, and to a lesser extent the Intellivision game console and Coleco Adam computer, all of which anticipated the trend of video game consoles becoming more like low-end computers.",
+    "language": "default"
+  },
+  "custom-collections": {
+    "file": "custom-collections.xml",
+    "name": "Colecciones Personalizadas",
+    "description": "",
+    "language": null
+  },
+  "daphne": {
+    "file": "daphne.xml",
+    "name": "DAPHNE",
+    "description": "DAPHNE é um emulador de jogos em laserdisc que permite jogar jogos de arcade em laserdisc. Usando Daphne, você poderá jogar vários clássicos dos arcades como Dragon's Lair, Astron Belt e muito mais.",
+    "language": "pt"
+  },
+  "dataeast": {
+    "file": "dataeast.xml",
+    "name": "Data East",
+    "description": "",
+    "language": null
+  },
+  "desktop": {
+    "file": "desktop.xml",
+    "name": "Desktop",
+    "description": "",
+    "language": null
+  },
+  "devilutionx": {
+    "file": "devilutionx.xml",
+    "name": "Devilution X",
+    "description": "DevilutionX é um \"Port\" de Diablo e Hellfire que se caracteriza por simplificar a execução do jogo enquanto fornece melhorias para o motor, correções de bugs e alguns recursos opcionais.",
+    "language": "pt"
+  },
+  "dice": {
+    "file": "dice.xml",
+    "name": "DICE",
+    "description": "DICE is an early arcade-style electronic game released around 1972, during the pioneering years of the video game industry. It belongs to the first wave of coin-operated machines that experimented with simple interactive concepts, often inspired by traditional games such as dice, sports, or basic competitive challenges.\n\nLike many titles from this era, DICE focused on straightforward mechanics and immediate player feedback rather than complex graphics or deep gameplay systems. These early machines typically relied on minimal visual elements and simple controls, offering quick sessions that emphasized accessibility and novelty.\n\nAlthough little detailed documentation survives for many of these early releases, systems like DICE represent an important step in the evolution of arcade gaming. They reflect a time of experimentation and rapid innovation that helped shape the foundations of the modern video game industry.",
+    "language": "default"
+  },
+  "digimon": {
+    "file": "Digimon.xml",
+    "name": "Digimon",
+    "description": "Digimon is a Japanese multimedia franchise that began in 1997 as Digital Monster, a virtual pet line created by Bandai. The series revolves around Digimon, or Digital Monsters, creatures that inhabit the Digital World, a parallel universe connected to human communication networks and digital technology. Over time, the franchise expanded into anime, manga, video games, films, and a trading card game, becoming one of the most recognizable monster-themed series in popular culture.\n\nDigimon is known for combining adventure, action, and themes of friendship, growth, and evolution. One of its most distinctive features is digivolution, the process by which Digimon transform into stronger forms. Throughout the years, the franchise has featured many different stories, characters, and settings, while maintaining the central idea of the bond between humans and their Digimon partners. Its popularity has made it a long-running series with a strong presence across multiple generations of fans.",
+    "language": "default"
+  },
+  "donkey kong": {
+    "file": "Donkey Kong.xml",
+    "name": "Donkey Kong",
+    "description": "The Donkey Kong story traces back to the classic arcade game of the '80s, where a gorilla named Donkey Kong kidnaps Mario's girlfriend, Pauline. Since then, the franchise has evolved, featuring iconic games like the Donkey Kong Country series, where Donkey Kong and his friends embark on platform-filled adventures, facing challenges to reclaim their beloved bananas and protect their home from foes like the Kremlings.\n\nWith its distinctive mix of charismatic characters, clever level designs, and addictive gameplay, the Donkey Kong tale has spanned generations, captivating players with its charm and becoming a cornerstone in the history of video games.",
+    "language": "default"
+  },
+  "doom": {
+    "file": "doom.xml",
+    "name": "Pr Boom",
+    "description": "",
+    "language": null
+  },
+  "dos": {
+    "file": "dos.xml",
+    "name": "DOS",
+    "description": "O DOS, sigla para Disk Operating System ou sistema operacional em disco é um acrónimo para vários sistemas operativos intimamente relacionados que dominaram o mercado para compatíveis IBM PC entre 1981 e 1995.",
+    "language": "pt"
+  },
+  "double dragon": {
+    "file": "Double Dragon.xml",
+    "name": "Double Dragon",
+    "description": "Double Dragon is a classic beat 'em up series developed by Technōs Japan, first released in arcades in 1987. The games follow martial artists Billy and Jimmy Lee as they fight their way through gangs of enemies to rescue kidnapped allies and restore order in crime-filled streets.\n\nThe series is widely regarded as one of the pioneers of the side-scrolling beat 'em up genre, introducing cooperative multiplayer and a strong focus on hand-to-hand combat. Players can punch, kick, grab weapons, and perform various martial arts techniques while progressing through urban environments filled with enemies and bosses.\n\nOver time, Double Dragon expanded with sequels, adaptations, and crossovers, refining its mechanics and adding new moves, characters, and modes. Its influence can be seen in many later titles, and it remains a key reference point in the evolution of action games.",
+    "language": "default"
+  },
+  "dragon ball": {
+    "file": "Dragon Ball.xml",
+    "name": "Dragon Ball",
+    "description": "The Dragon Ball video game saga spans a wide variety of genres, from fighting games to adventures and RPGs. These titles, based on the iconic manga and anime, allow players to control series characters in epic battles, relive key moments from the storyline, and explore the Dragon Ball universe.",
+    "language": "default"
+  },
+  "dragon32": {
+    "file": "dragon32.xml",
+    "name": "Dragon 32",
+    "description": "",
+    "language": null
+  },
+  "dragon64": {
+    "file": "dragon64.xml",
+    "name": "Dragon 64",
+    "description": "Dragon 64 is an 8-bit home computer released in 1984 as an enhanced version of the earlier Dragon 32. Developed in the United Kingdom, it was part of the wave of affordable home computers that became popular during the 1980s, aimed at both gaming and learning programming.\n\nThe system featured improved memory compared to its predecessor, allowing for more complex software and better multitasking capabilities. Like many computers of its time, it supported BASIC programming out of the box, encouraging users to create their own programs and games.\n\nDragon 64 shares many similarities with the Tandy Color Computer, as both systems are based on similar hardware architecture. It was used for gaming, education, and hobbyist programming, and remains a notable example of the European home computing scene of the 1980s.",
+    "language": "default"
+  },
+  "dreamcast": {
+    "file": "dreamcast.xml",
+    "name": "SEGA Dreamcast",
+    "description": "A Dreamcast foi lançada em 1998 pela SEGA como o primeiro console de videogame de sexta geração. Destacou-se por seu desempenho gráfico e sonoro, e por incluir um modem para conexão à internet. Apesar de seu sucesso inicial, a Dreamcast não conseguiu competir com o PlayStation 2 da Sony e o Xbox da Microsoft e foi descontinuada em 2001. No entanto, ainda é apreciada por muitos fãs de videogames como um console inovador e avançado para sua época.",
+    "language": "pt"
+  },
+  "dynax": {
+    "file": "dynax.xml",
+    "name": "Dynax",
+    "description": "",
+    "language": null
+  },
+  "earthworm jim": {
+    "file": "Earthworm Jim.xml",
+    "name": "Earthworm Jim",
+    "description": "Earthworm Jim is a video game series created by Doug TenNapel that debuted in 1994. It follows Jim, an ordinary earthworm who becomes a superhero after discovering a powerful robotic suit that grants him strength, intelligence, and human-like abilities. With these new powers, Jim embarks on bizarre and humorous adventures across surreal worlds filled with strange enemies and absurd situations.\n\nThe games are known for their unique blend of platforming and run-and-gun mechanics, along with a distinctive cartoon style and offbeat humor. Earthworm Jim gained popularity on 16-bit consoles like the Sega Genesis and Super Nintendo, standing out for its fluid animation and creative level design. Over time, it expanded into sequels, a television show, and other media, becoming a cult classic remembered for its originality and comedic tone.",
+    "language": "default"
+  },
+  "easyrpg": {
+    "file": "easyrpg.xml",
+    "name": "EasyRPG",
+    "description": "EasyRPG é um projeto comunitário para criar uma ferramenta de criação de jogos RPG de código aberto, compatível com jogos RPG Maker 2000/2003.",
+    "language": "pt"
+  },
+  "eighting": {
+    "file": "eighting.xml",
+    "name": "Eighting",
+    "description": "",
+    "language": null
+  },
+  "electron": {
+    "file": "electron.xml",
+    "name": "Acorn Electron",
+    "description": "The Acorn Electron was a budget version of the BBC Micro educational/home computer introduced by Acorn Computers Ltd on 25 August 1983. It had 32 kilobytes of RAM, and its ROM includes BBC BASIC v2 along with its operating system.",
+    "language": "default"
+  },
+  "exidy": {
+    "file": "exidy.xml",
+    "name": "Exidy",
+    "description": "",
+    "language": null
+  },
+  "fatal fury": {
+    "file": "Fatal Fury.xml",
+    "name": "Fatal Fury",
+    "description": "Fatal Fury is a fighting game series developed by SNK, first released in 1991. Set in the fictional South Town, the story follows martial artists such as Terry Bogard, Andy Bogard, and Joe Higashi as they face powerful opponents and seek revenge against crime lord Geese Howard.\n\nThe series played a key role in shaping the early fighting game genre, introducing mechanics like multi-plane battles and a strong emphasis on storytelling and character rivalries. Its gameplay combines precise timing, special moves, and strategic spacing, offering both accessibility and depth for competitive play.\n\nOver time, Fatal Fury evolved with new installments that refined its mechanics and expanded its cast, eventually leading to titles like Garou: Mark of the Wolves, which introduced fresh systems and a new generation of fighters. The series remains closely tied to SNK’s legacy and has influenced many later fighting games.",
+    "language": "default"
+  },
+  "favorites": {
+    "file": "favorites.xml",
+    "name": "Favoritos",
+    "description": "",
+    "language": null
+  },
+  "fba": {
+    "file": "fba.xml",
+    "name": "FB Alpha",
+    "description": "O FinalBurn Alpha é um emulador de código aberto das placas Capcom modelos CPS-1, 2 e 3, além de outras placas de arcade como a do SNK Neo-Geo, Toaplan, Cave e várias outras.",
+    "language": "pt"
+  },
+  "fba_libretro": {
+    "file": "fba_libretro.xml",
+    "name": "FBA Neo",
+    "description": "FinalBurn Neo é um fork ativo do emulador FinalBurn Alpha, criado por muitos dos ex-desenvolvedores FBA.",
+    "language": "pt"
+  },
+  "fbneo": {
+    "file": "fbneo.xml",
+    "name": "FB Neo",
+    "description": "O Final Burn Neo foi criado como uma versão melhorada do popular emulador Final Burn Alpha e pode emular jogos de arcade de uma ampla gama de sistemas, como Neo Geo, Capcom CPS-1 e CPS-2, entre outros.",
+    "language": "pt"
+  },
+  "fds": {
+    "file": "fds.xml",
+    "name": "Famicom Disk System",
+    "description": "Este acessório era utilizado no Nintendo Entertainment System. A sua distribuição ocorreu somente no Japão, mas não foi bem sucedida devido aos problemas a que esse tipo de mídia (disquete) está sujeita.",
+    "language": "pt"
+  },
+  "final fantasy": {
+    "file": "Final Fantasy.xml",
+    "name": "Final Fantasy",
+    "description": "Final Fantasy (ファイナルファンタジー Fainaru Fantajī?) is a franchise owned by Square Enix (formerly known as Squaresoft). The series focuses on a fantasy and science fiction setting in the RPG video game genre. It began in 1987 with the eponymous game, developed by Hironobu Sakaguchi as the last attempt in his career; hence the title: Final Fantasy. The game was a complete success and the series continues until the present.\n\nFinal Fantasy primary installments are generally stand-alone anthology series of role-playing games, each with different settings, plots and main characters, but the franchise is linked by several recurring elements, including game mechanics and recurring character names.",
+    "language": "default"
+  },
+  "finalfantasy": {
+    "file": "finalfantasy.xml",
+    "name": "Final Fantasy",
+    "description": "Final Fantasy (ファイナルファンタジー Fainaru Fantajī?) is a franchise owned by Square Enix (formerly known as Squaresoft). The series focuses on a fantasy and science fiction setting in the RPG video game genre. It began in 1987 with the eponymous game, developed by Hironobu Sakaguchi as the last attempt in his career; hence the title: Final Fantasy. The game was a complete success and the series continues until the present.\n\nFinal Fantasy primary installments are generally stand-alone anthology series of role-playing games, each with different settings, plots and main characters, but the franchise is linked by several recurring elements, including game mechanics and recurring character names.",
+    "language": "default"
+  },
+  "finished games": {
+    "file": "finished games.xml",
+    "name": "Jogos concluídos",
+    "description": "Esta coleção foi projetada para armazenar e organizar os jogos que você considera concluídos, atuando como um registro histórico ou referência dos títulos que você terminou.",
+    "language": "pt"
+  },
+  "flash": {
+    "file": "flash.xml",
+    "name": "Flash Player",
+    "description": "",
+    "language": null
+  },
+  "flatpak": {
+    "file": "flatpak.xml",
+    "name": "Flatpak",
+    "description": "",
+    "language": null
+  },
+  "fm7": {
+    "file": "fm7.xml",
+    "name": "Fujitsu FM-7",
+    "description": "The FM-7 (\"Fujitsu Micro 7\") is a home computer created by Fujitsu. It was first released in 1982 and was sold in Japan and Spain. It is a stripped-down version of Fujitsu's earlier FM-8 computer, and during development it was referred to as the \"FM-8 Jr.\".",
+    "language": "default"
+  },
+  "fmtowns": {
+    "file": "fmtowns.xml",
+    "name": "FM Towns Marty",
+    "description": "The FM Towns Marty is a fifth-generation home video game console released in 1993 by Fujitsu, exclusively for the Japanese market. It is often claimed to be the first 32-bit CD-based home video game system.",
+    "language": "default"
+  },
+  "fpinball": {
+    "file": "fpinball.xml",
+    "name": "Future Pinball",
+    "description": "",
+    "language": null
+  },
+  "frogger": {
+    "file": "Frogger.xml",
+    "name": "Frogger",
+    "description": "Frogger is a long-running arcade and video game series that began in 1981, originally created by Konami. The games usually place the player in control of a frog that must cross roads, rivers, and other hazardous environments while avoiding vehicles, water, enemies, and moving obstacles.\n\nThe series became famous for its simple premise, immediate challenge, and highly recognizable gameplay. While the original formula focused on timing, movement, and quick decision-making, later entries expanded the concept with new settings, characters, level structures, and visual styles, adapting the idea to different generations of hardware.\n\nOver the years, Frogger has appeared in arcades, home consoles, handheld systems, and modern digital platforms. Its accessible design and iconic concept have made it one of the most enduring names in classic gaming, remembered both for its arcade roots and its many reinterpretations.",
+    "language": "default"
+  },
+  "gaelco": {
+    "file": "gaelco.xml",
+    "name": "Gaelco",
+    "description": "",
+    "language": null
+  },
+  "galaxian": {
+    "file": "Galaxian.xml",
+    "name": "Galaxian",
+    "description": "Galaxian is a series of classic arcade shoot 'em up games developed by Namco, beginning in 1979. The games place the player in control of a spacecraft that must defend against formations of alien enemies, combining precise shooting with careful movement to survive increasingly difficult waves.\n\nAcross its different entries, the series introduced important innovations to the genre, such as enemies that break formation to launch diving attacks and more dynamic movement patterns. It also evolved visually and mechanically over time, leading to successors like Galaga, which expanded on the original ideas with deeper gameplay and new features.\n\nKnown for its fast-paced action and simple yet challenging design, Galaxian helped shape the foundations of early arcade shooters. Its influence can be seen in many later titles, and it remains an important part of the history of video games.",
+    "language": "default"
+  },
+  "gamate": {
+    "file": "gamate.xml",
+    "name": "Gamate",
+    "description": "The Gamate is a handheld game console manufactured by Bit Corporation in the early 1990s, and released in Australia, some parts of Europe, Asia (Taiwan and China), Argentina, and the United States.",
+    "language": "default"
+  },
+  "gameandwatch": {
+    "file": "gameandwatch.xml",
+    "name": "Game and Watch",
+    "description": "É uma linha de consoles portáteis produzida pela Nintendo entre 1980 e 1991, criado pelo designer Gunpei Yokoi. Foi a segunda linha de aparelhos de jogos eletrônicos da Nintendo (a primeira foi o Color TV Game).",
+    "language": "pt"
+  },
+  "gamecom": {
+    "file": "gamecom.xml",
+    "name": "Tiger Game.com",
+    "description": "The Game.com is a fifth-generation handheld game console released by Tiger Electronics on September 12, 1997. A smaller version, the Game.com Pocket Pro, was released in mid-1999. The first version of the Game.com can be connected to a 14.4 kbit/s modem for Internet connectivity, hence its name referencing the top level domain .com. It was the first video game console to include a touchscreen and the first handheld console to include Internet connectivity. The Game.com sold fewer than 300,000 units and was discontinued in 2000 because of poor sales.",
+    "language": "default"
+  },
+  "gamecube": {
+    "file": "gamecube.xml",
+    "name": "Nintendo GameCube",
+    "description": "O Nintendo GameCube (comumente abreviado como GameCube) é um console de videogame doméstico lançado pela Nintendo no Japão e na América do Norte em 2001 e Europa e Austrália em 2002. Como parte da sexta geração de consoles, é o sucessor do Nintendo 64.",
+    "language": "pt"
+  },
+  "gamegear": {
+    "file": "gamegear.xml",
+    "name": "SEGA Game Gear",
+    "description": "A Game Gear da SEGA foi uma consola portátil lançada em 1990 que competiu diretamente com a Game Boy da Nintendo. Possuía uma tela colorida retroiluminada e tinha mais poder de processamento do que a sua concorrente. Embora a Game Gear não tenha alcançado o sucesso comercial da Game Boy, teve uma sólida biblioteca de jogos, incluindo títulos como Sonic the Hedgehog, Shining Force ou Shinobi. Também teve uma série de acessórios, como uma TV portátil e um adaptador para jogos de Master System.",
+    "language": "pt"
+  },
+  "gamepock": {
+    "file": "gamepock.xml",
+    "name": "Game Pocket Computer",
+    "description": "The Epoch Game Pocket Computer is a second-generation handheld game console released by Epoch Co. in Japan in 1984 for 12,000 Japanese yen. It is also known as Pokekon and was one of the very few truly handheld systems to be released in the early 1980s, preceding the Game Boy by 5 years.",
+    "language": "default"
+  },
+  "games in progress": {
+    "file": "games in progress.xml",
+    "name": "Jogos em andamento",
+    "description": "Esta coleção é projetada para garantir acesso rápido aos jogos que você está jogando atualmente ou pretende concluir no futuro.",
+    "language": "pt"
+  },
+  "gb": {
+    "file": "gb.xml",
+    "name": "Game Boy",
+    "description": "O Nintendo Game Boy é um console de jogos portátil lançado em 1989. Foi o primeiro console portátil com uma tela em escala de cinza e se tornou um sucesso comercial ao oferecer uma ampla variedade de jogos, incluindo clássicos como Super Mario Land e Tetris.\n\nO console teve várias atualizações, incluindo o Game Boy Color e o Game Boy Advance, mas o original continua sendo um dos consoles portáteis mais icônicos de todos os tempos.",
+    "language": "pt"
+  },
+  "gb2players": {
+    "file": "gb2players.xml",
+    "name": "Game Boy (2 Jogadores)",
+    "description": "O Nintendo Game Boy é um console de jogos portátil lançado em 1989. Foi o primeiro console portátil com uma tela em escala de cinza e se tornou um sucesso comercial ao oferecer uma ampla variedade de jogos, incluindo clássicos como Super Mario Land e Tetris.\n\nO console teve várias atualizações, incluindo o Game Boy Color e o Game Boy Advance, mas o original continua sendo um dos consoles portáteis mais icônicos de todos os tempos.",
+    "language": "pt"
+  },
+  "gba": {
+    "file": "gba.xml",
+    "name": "Game Boy Advance",
+    "description": "O Game Boy Advance (GBA) foi lançado em 2001 como sucessor do Game Boy Color. O console apresentava uma tela LCD colorida e maior capacidade de processamento, o que permitia maior qualidade gráfica e sonora nos jogos. Além disso, incluía uma nova opção de conectividade sem fio para jogar com outros jogadores. O console teve uma ampla biblioteca de jogos, incluindo títulos de franquias populares como Super Mario, Pokémon e The Legend of Zelda, e se tornou um dos consoles portáteis mais vendidos de todos os tempos. O GBA também teve uma série de atualizações, como o GBA SP e o Game Boy Micro.",
+    "language": "pt"
+  },
+  "gba2players": {
+    "file": "gba2players.xml",
+    "name": "Game Boy Advance 2 Players",
+    "description": "O Game Boy Advance (GBA) foi lançado em 2001 como sucessor do Game Boy Color. O console apresentava uma tela LCD colorida e maior capacidade de processamento, o que permitia maior qualidade gráfica e sonora nos jogos. Além disso, incluía uma nova opção de conectividade sem fio para jogar com outros jogadores. O console teve uma ampla biblioteca de jogos, incluindo títulos de franquias populares como Super Mario, Pokémon e The Legend of Zelda, e se tornou um dos consoles portáteis mais vendidos de todos os tempos. O GBA também teve uma série de atualizações, como o GBA SP e o Game Boy Micro.",
+    "language": "pt"
+  },
+  "gbc": {
+    "file": "gbc.xml",
+    "name": "Game Boy Color",
+    "description": "A Game Boy Color foi lançada pela Nintendo em 1998 como uma atualização da Game Boy original. O console apresentava uma tela colorida. Também incluía uma maior potência de processamento que permitia uma melhor qualidade sonora nos jogos. Além disso, era compatível com os jogos do Game Boy original, o que a tornava uma opção muito atraente. A Game Boy Color tinha uma ampla biblioteca de jogos, incluindo títulos de franquias populares como Super Mario, Pokémon e The Legend of Zelda.",
+    "language": "pt"
+  },
+  "gbc2players": {
+    "file": "gbc2players.xml",
+    "name": "Game Boy Color (2 Players)",
+    "description": "A Game Boy Color foi lançada pela Nintendo em 1998 como uma atualização da Game Boy original. O console apresentava uma tela colorida. Também incluía uma maior potência de processamento que permitia uma melhor qualidade sonora nos jogos. Além disso, era compatível com os jogos do Game Boy original, o que a tornava uma opção muito atraente. A Game Boy Color tinha uma ampla biblioteca de jogos, incluindo títulos de franquias populares como Super Mario, Pokémon e The Legend of Zelda.",
+    "language": "pt"
+  },
+  "gc": {
+    "file": "gc.xml",
+    "name": "GameCube",
+    "description": "O Nintendo GameCube (comumente abreviado como GameCube) é um console de videogame doméstico lançado pela Nintendo no Japão e na América do Norte em 2001 e Europa e Austrália em 2002. Como parte da sexta geração de consoles, é o sucessor do Nintendo 64.",
+    "language": "pt"
+  },
+  "gmaster": {
+    "file": "gmaster.xml",
+    "name": "Game Master",
+    "description": "The Game Master is a handheld game console manufactured by Hartung, and designed to compete with the Nintendo Game Boy. In Germany, it was marketed by Hartung itself, while in the UK it was released as the Systema 2000 by the already well-established maker of cheap LCD games Systema.",
+    "language": "default"
+  },
+  "golden axe": {
+    "file": "Golden Axe.xml",
+    "name": "Golden Axe",
+    "description": "Golden Axe is a fantasy action game series created by Sega that began in arcades in 1989. The games are set in a world of swords, magic, and mythical creatures, where heroes such as Ax Battler, Tyris Flare, and Gilius Thunderhead fight against evil forces led by Death Adder and other powerful enemies.\n\nThe series is especially known for combining side-scrolling combat with a medieval fantasy setting, offering cooperative play, magic attacks, and the ability to ride creatures that assist during battle. Its mix of action, colorful environments, and memorable characters helped it stand out among classic arcade games of its era.\n\nOver the years, Golden Axe expanded with sequels and adaptations on home consoles, refining its mechanics while keeping its core identity intact. It remains one of Sega’s most recognizable action series and a beloved reference point for fans of arcade-style fantasy adventures.",
+    "language": "default"
+  },
+  "gottlieb": {
+    "file": "gottlieb.xml",
+    "name": "Gottlieb",
+    "description": "",
+    "language": null
+  },
+  "gp32": {
+    "file": "gp32.xml",
+    "name": "Game Park 32",
+    "description": "The GP32 (GamePark 32) is a handheld game console developed by the South Korean company Game Park. It was released on November 23, 2001, in South Korea and distributed in some parts of Europe. Is a free software oriented console, being the first of its kind.",
+    "language": "default"
+  },
+  "grand theft auto": {
+    "file": "Grand Theft Auto.xml",
+    "name": "Grand Theft Auto",
+    "description": "The Grand Theft Auto (GTA) franchise began in 1997 by DMA Design (now Rockstar Games) with a top-down perspective game that already offered the freedom to explore cities, complete criminal missions, and face the police. Over the years, the series evolved into 3D open worlds, gaining major recognition with titles like GTA III (2001), which marked a turning point in video game history for its freedom of exploration and mature storytelling.\n\nIn the following decades, GTA established itself as one of the most influential and successful series in the industry, with releases such as Vice City (2002), San Andreas (2004), GTA IV (2008), and GTA V (2013), the latter becoming one of the best-selling games of all time. Its blend of open-world gameplay, social satire, and constant technological innovation has made the franchise a historical benchmark in video game culture.",
+    "language": "default"
+  },
+  "gw": {
+    "file": "gw.xml",
+    "name": "Game and Watch",
+    "description": "É uma linha de consoles portáteis produzida pela Nintendo entre 1980 e 1991, criado pelo designer Gunpei Yokoi. Foi a segunda linha de aparelhos de jogos eletrônicos da Nintendo (a primeira foi o Color TV Game).",
+    "language": "pt"
+  },
+  "gx4000": {
+    "file": "gx4000.xml",
+    "name": "Amstrad GX4000",
+    "description": "A Amstrad GX4000 é um console de videogame lançado em 1990 como sucessor do popular Amstrad CPC, mas focado exclusivamente em jogos. Apresentava capacidades gráficas e sonoras aprimoradas em comparação com seu antecessor, com a capacidade de exibir até 32 cores na tela simultaneamente e oferecer som melhorado graças ao seu chip de som integrado. Apesar de suas melhorias, não conseguiu alcançar o sucesso esperado devido a vários fatores, incluindo a competição com outros consoles muito populares da época, como o Mega Drive e o Super Nintendo.",
+    "language": "pt"
+  },
+  "hbmame": {
+    "file": "hbmame.xml",
+    "name": "HB MAME",
+    "description": "",
+    "language": null
+  },
+  "hikaru": {
+    "file": "hikaru.xml",
+    "name": "SEGA Hikaru",
+    "description": "",
+    "language": null
+  },
+  "igs": {
+    "file": "igs.xml",
+    "name": "IGS",
+    "description": "",
+    "language": null
+  },
+  "imageviewer": {
+    "file": "imageviewer.xml",
+    "name": "Galería de capturas",
+    "description": "Aqui você encontrará todas as suas capturas de tela salvas com a combinação do controle: Hotkey+L.",
+    "language": "pt"
+  },
+  "incredibletech": {
+    "file": "incredibletech.xml",
+    "name": "Incredible Tech",
+    "description": "",
+    "language": null
+  },
+  "intellivision": {
+    "file": "intellivision.xml",
+    "name": "Intellivision",
+    "description": "A Intellivision é uma consola de videojogos lançada pela Mattel em 1979 a um preço de lançamento de 299 dólares nos Estados Unidos. Foi uma das primeiras consolas da segunda geração e concorreu com a Atari 2600. Possuía um processador General Instrument CP1610 a 894 kHz e tinha 16 KB de memória RAM. Durante a sua vida útil foram lançados mais de 125 títulos e alguns dos mais populares foram Astrosmash, Night Stalker e Major League Baseball.",
+    "language": "pt"
+  },
+  "internet": {
+    "file": "internet.xml",
+    "name": "Internet",
+    "description": "Mozilla Firefox é um navegador livre e multiplataforma desenvolvido pela Mozilla Foundation com ajuda de centenas de colaboradores. A intenção da fundação é desenvolver um navegador leve, seguro, intuitivo e altamente extensível. Baseado no componente de navegação da Mozilla Application Suite, o Firefox tornou-se o objetivo principal da Mozilla Foundation. Cerca de 40% do código do programa foi totalmente escrito por voluntários.",
+    "language": "pt"
+  },
+  "irem": {
+    "file": "irem.xml",
+    "name": "Irem",
+    "description": "",
+    "language": null
+  },
+  "j2me": {
+    "file": "j2me.xml",
+    "name": "J2ME",
+    "description": "J2ME (Java 2 Platform, Micro Edition) é uma tecnologia que permite aos programadores usar a linguagem de programação Java e ferramentas relacionadas para desenvolver programas para dispositivos móveis de informação sem fio, como telefones celulares e assistentes digitais pessoais (PDAs). O J2ME consiste em especificações de programação e uma máquina virtual especial, a K Virtual Machine, que permite que um programa codificado em J2ME seja executado no dispositivo móvel.",
+    "language": "pt"
+  },
+  "jaguar": {
+    "file": "jaguar.xml",
+    "name": "Atari Jaguar",
+    "description": "O Atari Jaguar é um console de videogame lançado em 1993 e é o último console lançado no mercado pela Atari.\n\nAs características da máquina eram impressionantes para a época, operando em 64 bits quando a concorrência ainda estava nos 16 bits. Utilizava cartuchos de jogos, embora posteriormente tenha sido lançada a unidade de CD, a Atari Jaguar CD. O Jaguar foi um fracasso de vendas, estima-se que não foram vendidas mais de duzentas e cinquenta mil unidades.",
+    "language": "pt"
+  },
+  "jaleco": {
+    "file": "jaleco.xml",
+    "name": "Jaleco",
+    "description": "",
+    "language": null
+  },
+  "kaneko": {
+    "file": "kaneko.xml",
+    "name": "Kaneko",
+    "description": "",
+    "language": null
+  },
+  "king of fighters": {
+    "file": "King of Fighters.xml",
+    "name": "The King of Fighters",
+    "description": "The King of Fighters is a fighting game series developed by SNK that began in 1994. It brings together characters from different SNK games and original fighters in team-based tournaments, usually built around three-on-three battles. The series is especially known for its large cast, recurring story arcs, and fast-paced combat system.\n\nUnlike many other fighting games, The King of Fighters places strong emphasis on team composition, movement, and offensive pressure. Its mechanics evolved over time through features such as rolls, evasive movement, power gauges, and advanced combo systems, giving the series a distinctive rhythm and a high skill ceiling for experienced players.\n\nOver the years, The King of Fighters has become one of the most important names in the genre, with numerous main entries, spin-offs, and updated editions. Its mix of competitive depth, memorable characters, and long-running narrative has made it one of SNK’s most iconic and enduring video game sagas.",
+    "language": "default"
+  },
+  "kirby": {
+    "file": "Kirby.xml",
+    "name": "Kirby",
+    "description": "The Kirby franchise is a video game series created by Nintendo and mainly developed by HAL Laboratory. It began in 1992 with Kirby’s Dream Land for the Game Boy. The main character is Kirby, a small and friendly pink creature who lives in Dream Land on Planet Popstar. His most famous ability is inhaling enemies and copying their powers, allowing him to use different skills such as fire, sword, ice, and many more.\n\nKirby games are known for their colorful style, cheerful music, and accessible gameplay suitable for all kinds of players. Although they may seem simple at first, many titles include optional challenges and hidden secrets. The series has appeared on multiple Nintendo consoles, featuring both 2D and 3D platformers, as well as spin-offs and multiplayer modes that expand the classic experience.",
+    "language": "default"
+  },
+  "konami": {
+    "file": "konami.xml",
+    "name": "Konami",
+    "description": "",
+    "language": null
+  },
+  "laser310": {
+    "file": "laser310.xml",
+    "name": "VTech Laser 310",
+    "description": "An improved version of the Laser 200/210. Both computers are compatible with each other, for both software and hardware. Basically, it has an enhanced keyboard and more memory. This model was also sold worldwide, the most popular version being the VZ-300 from Dick Smith Electronics.",
+    "language": "default"
+  },
+  "lcdgames": {
+    "file": "lcdgames.xml",
+    "name": "LCD Games",
+    "description": "These portable consoles housed a single game with an LCD screen and various levels of difficulty, and also used to include a clock and alarm.\n\nNintendo's Game and Watch series was the most popular, with a line of 59 videogame titles among which were some early Donkey Kong, Mario Bros. or The Legend of Zelda ... Today is very hard to get one and are considered historical pieces and collector's items.",
+    "language": "default"
+  },
+  "lego": {
+    "file": "LEGO.xml",
+    "name": "LEGO",
+    "description": "LEGO is a long-running video game series inspired by the popular building toy brand, with titles developed over the years by different studios, especially Traveller’s Tales. These games adapt famous universes such as Star Wars, Batman, Harry Potter, Indiana Jones, Marvel, and many others, reimagining them with LEGO characters, humor, and a family-friendly style.\n\nThe series is especially known for combining action, platforming, puzzle-solving, and cooperative gameplay. Players explore levels, break objects into bricks, build structures, unlock characters, and use the unique abilities of each hero or villain to progress. One of its most recognizable traits is its lighthearted tone, often retelling well-known stories with visual comedy and little or no dialogue in some of its classic entries.\n\nOver time, LEGO games have become one of the most successful and recognizable families of licensed video games. Their accessible design, wide variety of settings, and enjoyable cooperative play have made them popular with both younger players and longtime fans of the franchises they represent.",
+    "language": "default"
+  },
+  "library": {
+    "file": "library.xml",
+    "name": "Biblioteca",
+    "description": "Coloque no diretório \"library\" os elementos que constituirão sua própria biblioteca de mídia; como revistas, catálogos, vídeos, imagens, etc. Extensões aceitas: .jpg, .jpeg, .png, .bmp, .psd, .tga, .gif, .hdr, .pic, .ppm, .pgm, .mkv, .pdf, .mp4, .avi, .cbz.",
+    "language": "pt"
+  },
+  "lightgun": {
+    "file": "lightgun.xml",
+    "name": "Light Gun Games",
+    "description": "Uma lista automática de todos os jogos compatíveis com Light Guns disponíveis no sistema.",
+    "language": "pt"
+  },
+  "lindbergh": {
+    "file": "lindbergh.xml",
+    "name": "SEGA Lindbergh",
+    "description": "Sega Lindbergh is an arcade system board introduced by Sega in the mid-2000s for a new generation of coin-operated games. Built around PC-based architecture, it was designed to deliver more advanced 3D graphics, improved performance, and greater flexibility for developers compared with earlier arcade hardware.\n\nThe platform was used for a wide range of arcade titles, including racing games, shooters, action games, and large-scale cabinet experiences. Its technical capabilities allowed Sega and other developers to create visually more detailed games with smoother animation and more complex effects, helping arcades keep pace with contemporary home systems.\n\nSega Lindbergh became an important part of Sega’s later arcade era and powered several well-known releases in amusement centers. It is remembered as one of the company’s major arcade platforms from the HD generation, bridging traditional arcade design with more modern computer-based technology.",
+    "language": "default"
+  },
+  "linux": {
+    "file": "linux.xml",
+    "name": "Linux",
+    "description": "Linux é um Sistema Operacional, assim como o Windows e o Mac OS, que possibilita a execução de programas em um computador e outros dispositivos. Linux pode ser livremente modificado e distribuído.",
+    "language": "pt"
+  },
+  "loopy": {
+    "file": "loopy.xml",
+    "name": "Casio Loopy",
+    "description": "Casio Loopy is a home video game console released by Casio in 1995 exclusively in Japan. Designed primarily with a young female audience in mind, it stood out from other systems of its era thanks to its distinctive style and its built-in color sticker printer, which allowed players to create and print images directly from compatible games.\n\nThe system featured software focused on creativity, fashion, communication, and light interactive experiences rather than traditional action or arcade-style gameplay. Many of its titles reflected this approach, offering activities such as customizing characters, decorating scenes, and printing personalized stickers.\n\nAlthough Casio Loopy had a short commercial life and a limited library, it remains a unique and memorable part of video game history. Its unusual concept, specialized audience, and integrated printing feature have made it a curious and distinctive console among collectors and retro gaming enthusiasts.",
+    "language": "default"
+  },
+  "love": {
+    "file": "love.xml",
+    "name": "Love",
+    "description": "",
+    "language": null
+  },
+  "lowresnx": {
+    "file": "lowresnx.xml",
+    "name": "LowRes NX",
+    "description": "LowRes NX was inspired by real 8- and 16-bit systems and simulates chips for graphics, sound and I/O, which actually work like classic hardware.",
+    "language": "default"
+  },
+  "lutro": {
+    "file": "lutro.xml",
+    "name": "LUTRO",
+    "description": "Lutro é uma engine lua experimental baseada na arquitetura libretro usando a LÖVE API como referência.",
+    "language": "pt"
+  },
+  "macintosh": {
+    "file": "macintosh.xml",
+    "name": "Macintosh",
+    "description": "The Macintosh (mainly Mac since 1998) is a family of personal computers designed, manufactured, and sold by Apple Inc. (originally as Apple Computer, Inc.) since January 1984.\n\nThe original Macintosh is the first successful mass-market all-in-one desktop personal computer to have featured a graphical user interface, built-in screen, and mouse. Apple sold the Macintosh alongside its popular Apple II, Apple IIGS, Apple III, and Apple Lisa families of computers until the other models were discontinued in the 1990s.",
+    "language": "default"
+  },
+  "mame": {
+    "file": "mame.xml",
+    "name": "Arcade M.A.M.E.",
+    "description": "M.A.M.E. (Multiple Arcade Machine Emulator) é um software emulador de código aberto que permite aos usuários jogar e desfrutar de jogos de arcade clássicos em computadores e outros dispositivos. Ele pode emular uma grande variedade de sistemas de arcade antigos, incluindo jogos da década de 1970 até a de 2000. O software é capaz de emular a funcionalidade das placas originais com o objetivo de preservar décadas de história dos jogos de arcade, que de outra forma seriam perdidas ou esquecidas.",
+    "language": "pt"
+  },
+  "mario": {
+    "file": "mario.xml",
+    "name": "Mario Bros.",
+    "description": "Mario is a media franchise, produced and published by video game company Nintendo, created by Japanese game designer Shigeru Miyamoto and starring the fictional Italian plumber Mario.\n\nThe series' first installment was 1983's Mario Bros., although Mario had made his first appearance in 1981's Donkey Kong, and had already been featured in several games of the Donkey Kong and Game and Watch series. The Mario series is one of gaming's most successful and renowned franchises, with many of its games, in particular within the Super Mario subseries, being considered to be some of the greatest video games ever made. It is the best-selling video game franchise of all time, with more than 776 million copies of games sold, including more than 390 million for the Super Mario games alone.",
+    "language": "default"
+  },
+  "mastersystem": {
+    "file": "mastersystem.xml",
+    "name": "SEGA Master System",
+    "description": "A SEGA Master System (também conhecida como Mark III no Japão) foi um console de videogame lançado pela SEGA em 1985. Foi o sucessor do SG-1000 e concorreu com o NES da Nintendo. Tinha um processador Zilog Z80 de 4 MHz, 8 KB de RAM e uma paleta de 32 cores na tela. O console foi popular na Europa e América do Sul, mas não teve tanto sucesso no Japão ou na América do Norte. Alguns dos títulos mais populares são Alex Kidd in Miracle World, Wonder Boy III: The Dragon's Trap e Phantasy Star.",
+    "language": "pt"
+  },
+  "mega man": {
+    "file": "Mega Man.xml",
+    "name": "Mega Man",
+    "description": "Mega Man's story dates back to its inception in 1987 when Capcom released the first game. This title revolutionized the action-platformer genre by introducing the unique mechanic of defeating bosses to acquire their abilities. Mega Man, an android created by Dr. Light, faces challenges in complex levels filled with varied and strategic enemies. Over the years, the series has maintained its challenging essence and the thrill of overcoming powerful foes to utilize their abilities in an exciting and captivating action-platformer.",
+    "language": "default"
+  },
+  "megacd": {
+    "file": "megacd.xml",
+    "name": "Mega-CD",
+    "description": "O Mega-CD, conhecido como SEGA CD na América do Norte, é um periférico para o console SEGA Mega Drive lançado em 1991. Ele adiciona capacidade de reprodução de CD-ROM ao Mega Drive, permitindo a reprodução de jogos no formato de CD, bem como a reprodução de música e vídeo. Embora inicialmente tenha recebido críticas mistas, o Mega-CD abrigou alguns jogos clássicos e experimentais, marcando uma nova era nos videogames com cinematics e áudio de maior qualidade.",
+    "language": "pt"
+  },
+  "megadrive": {
+    "file": "megadrive.xml",
+    "name": "Mega Drive",
+    "description": "O Mega Drive, conhecido como Genesis em diferentes regiões da América, é o console de quarta geração lançado pela SEGA em 1988 no Japão e em 1989 nos Estados Unidos. É o sucessor do Master System e competiu com o SNES da Nintendo. Foi um dos consoles mais populares de sua época e contava com um processador Motorola 68000 a 7,67 MHz e 64 KB de memória RAM. Ao longo de sua vida, foram lançados mais de 900 títulos, entre os quais se destacam Sonic the Hedgehog, Phantasy Star IV e Streets of Rage 2, entre outros.",
+    "language": "pt"
+  },
+  "megadrivemsu1": {
+    "file": "megadrivemsu1.xml",
+    "name": "Megadrive MSU-1",
+    "description": "O MSU-1 é um coprocessador customizado muito parecido com os chips DSP usados ​​em jogos como Super Mario Kart ou Pilotwings, desenhados por byuu, o autor de bsnes e higan. Este chip permite a reprodução de áudio com qualidade de CD (44,1 kHz, 16 bits), além de endereçar até 4 GB de dados, muito mais do que um cartucho SNES típico poderia suportar. Isso permite que hacks de ROM substituam a música de fundo dos jogos por versões de alta qualidade e até reproduzam vídeos em movimento total.",
+    "language": "pt"
+  },
+  "megaduck": {
+    "file": "megaduck.xml",
+    "name": "Mega Duck",
+    "description": "The Mega Duck WG-108 (also known as Cougar Boy) is a handheld game console that was developed and manufactured by Hong Kong-based Welback Holdings through its Timlex International division, and released in 1993.",
+    "language": "default"
+  },
+  "megaplay": {
+    "file": "megaplay.xml",
+    "name": "Megaplay",
+    "description": "",
+    "language": null
+  },
+  "megatech": {
+    "file": "megatech.xml",
+    "name": "Megatech",
+    "description": "",
+    "language": null
+  },
+  "mess": {
+    "file": "mess.xml",
+    "name": "MESS",
+    "description": "",
+    "language": null
+  },
+  "metal gear": {
+    "file": "Metal Gear.xml",
+    "name": "Metal Gear",
+    "description": "Metal Gear is a video game series created by Hideo Kojima, known for its focus on infiltration, deep narrative, and complex themes. The game follows the missions of various characters, especially Solid Snake, a highly trained soldier. The series is characterized by its emphasis on stealth and strategy, where the player must avoid direct combat and employ tactics of camouflage, distraction, and planning.\n\nThe saga has been praised for its intricate storytelling and its ability to engage players in intriguing plots and memorable characters. It has evolved significantly in terms of gameplay, graphics, and storytelling, maintaining its position as an influential franchise in the history of video games.",
+    "language": "default"
+  },
+  "metal slug": {
+    "file": "Metal Slug.xml",
+    "name": "Metal Slug",
+    "description": "Metal Slug is a classic arcade-style video game series known for its frantic action, vibrant pixel art, and fast-paced gameplay. Players take on the role of highly trained soldiers battling against a variety of enemies using an assortment of weapons and vehicles. The series is celebrated for its intense side-scrolling shooting gameplay, often featuring exaggerated and comical characters, as well as challenging boss battles. The charm of Metal Slug lies in its retro aesthetic, fluid animations, and challenging yet enjoyable gameplay that has captivated players in arcades and on various gaming platforms.",
+    "language": "default"
+  },
+  "metalslug": {
+    "file": "metalslug.xml",
+    "name": "Metal Slug",
+    "description": "",
+    "language": null
+  },
+  "metroid": {
+    "file": "metroid.xml",
+    "name": "Metroid",
+    "description": "Metroid is a video game series recognized for its focus on action and exploration. This franchise stands out for its interconnected worlds, inviting players to immerse themselves in alien mazes while controlling Samus Aran, a brave bounty hunter equipped with powerful weapons and iconic suits.\n\nThe series distinguishes itself by emphasizing unlocking abilities and upgrades to progress through complex environments. Metroid's minimalist narrative creates an immersive and mysterious atmosphere. This blend of innovative gameplay, clever level design, and an iconic heroine has made Metroid an influential series in the industry for decades.",
+    "language": "default"
+  },
+  "midway": {
+    "file": "midway.xml",
+    "name": "Midway",
+    "description": "",
+    "language": null
+  },
+  "mitchell": {
+    "file": "mitchell.xml",
+    "name": "Mitchell",
+    "description": "",
+    "language": null
+  },
+  "model2": {
+    "file": "model2.xml",
+    "name": "SEGA Model 2",
+    "description": "",
+    "language": null
+  },
+  "model3": {
+    "file": "model3.xml",
+    "name": "SEGA Model 3",
+    "description": "",
+    "language": null
+  },
+  "moonlight": {
+    "file": "moonlight.xml",
+    "name": "Moonlight",
+    "description": "Moonlight permite que você faça stream dos jogos da sua coleção da Steam no seu Raspberry Pi. Moonlight é perfeito para jogar 'on the go' sem sacrificar o seu PC.",
+    "language": "pt"
+  },
+  "mortal kombat": {
+    "file": "Mortal Kombat.xml",
+    "name": "Mortal Kombat",
+    "description": "\"Mortal Kombat\" is an iconic fighting video game series known for its one-on-one combat style, offering a wide range of special moves, combos, and brutal finishers known as \"fatalities\". Since its inception in the 1990s, this saga has stood out for its graphic violence, distinctive characters, and intriguing plots that delve into a universe of warriors, mythology, and martial arts.\n\nThe franchise has evolved over time, maintaining its essence of competitive combat and introducing new elements such as gameplay modes, graphic improvements, and an expansive storyline that has spanned across multiple console generations.",
+    "language": "default"
+  },
+  "mrboom": {
+    "file": "mrboom.xml",
+    "name": "Mr Boom",
+    "description": "",
+    "language": null
+  },
+  "msx": {
+    "file": "msx.xml",
+    "name": "MSX",
+    "description": "MSX é um padrão de microcomputador doméstico de 8 bits comercializado durante os anos 1980 e início dos anos 1990. Foi definido por Kazuhiko Nishi e apresentado em 27 de junho de 1983 no Japão. Também teve sucesso na Europa (Espanha, França e Países Baixos), no Brasil, no Chile, na Argentina, em Cuba e na União Soviética, onde milhares de unidades foram compradas pelas autoridades educacionais para equipar escolas. É praticamente desconhecido nos Estados Unidos.",
+    "language": "pt"
+  },
+  "msx1": {
+    "file": "msx1.xml",
+    "name": "MSX",
+    "description": "MSX é um padrão de microcomputador doméstico de 8 bits comercializado durante os anos 1980 e início dos anos 1990. Foi definido por Kazuhiko Nishi e apresentado em 27 de junho de 1983 no Japão. Também teve sucesso na Europa (Espanha, França e Países Baixos), no Brasil, no Chile, na Argentina, em Cuba e na União Soviética, onde milhares de unidades foram compradas pelas autoridades educacionais para equipar escolas. É praticamente desconhecido nos Estados Unidos.",
+    "language": "pt"
+  },
+  "msx2+": {
+    "file": "msx2+.xml",
+    "name": "MSX",
+    "description": "MSX é um padrão de microcomputador doméstico de 8 bits comercializado durante os anos 1980 e início dos anos 1990. Foi definido por Kazuhiko Nishi e apresentado em 27 de junho de 1983 no Japão. Também teve sucesso na Europa (Espanha, França e Países Baixos), no Brasil, no Chile, na Argentina, em Cuba e na União Soviética, onde milhares de unidades foram compradas pelas autoridades educacionais para equipar escolas. É praticamente desconhecido nos Estados Unidos.",
+    "language": "pt"
+  },
+  "msx2": {
+    "file": "msx2.xml",
+    "name": "MSX",
+    "description": "MSX é um padrão de microcomputador doméstico de 8 bits comercializado durante os anos 1980 e início dos anos 1990. Foi definido por Kazuhiko Nishi e apresentado em 27 de junho de 1983 no Japão. Também teve sucesso na Europa (Espanha, França e Países Baixos), no Brasil, no Chile, na Argentina, em Cuba e na União Soviética, onde milhares de unidades foram compradas pelas autoridades educacionais para equipar escolas. É praticamente desconhecido nos Estados Unidos.",
+    "language": "pt"
+  },
+  "msxturbor": {
+    "file": "msxturbor.xml",
+    "name": "MSX",
+    "description": "MSX é um padrão de microcomputador doméstico de 8 bits comercializado durante os anos 1980 e início dos anos 1990. Foi definido por Kazuhiko Nishi e apresentado em 27 de junho de 1983 no Japão. Também teve sucesso na Europa (Espanha, França e Países Baixos), no Brasil, no Chile, na Argentina, em Cuba e na União Soviética, onde milhares de unidades foram compradas pelas autoridades educacionais para equipar escolas. É praticamente desconhecido nos Estados Unidos.",
+    "language": "pt"
+  },
+  "mugen": {
+    "file": "mugen.xml",
+    "name": "MUGEN",
+    "description": "MUGEN é um motor de jogo para jogos de luta 2D, criado pela Elecbyte em 1999 usando a biblioteca de software Allegro para exibição e entradas (teclado, gamepad). O motor permite-lhe criar personagens, cenários e outros componentes do jogo através da compilação de arquivos textos, gráficos e som, também suporta arquivos MP3 para colocar música de fundo durante o jogo. Este motor é suficientemente avançado e flexível para corresponder alguns jogos de luta de luta 2D comerciais. Está mais évoluido que bastante dos motores de jogo equivalentes existentes no software livre.",
+    "language": "pt"
+  },
+  "multivision": {
+    "file": "multivision.xml",
+    "name": "Multivision",
+    "description": "O Othello Multivision, lançado em 1983 pela Tsukuda Original, é um console de videogame baseado no hardware do Sega SG-1000, oferecendo uma experiência de jogo semelhante ao Sega Master System e ao Nintendo Famicom. Embora tivesse um design de caixa distinto e compatibilidade com acessórios exclusivos, não alcançou a mesma popularidade que seus concorrentes. Apesar da concorrência, o Othello Multivision é apreciado pelos entusiastas dos videogames retro e considerado um item de coleção. Representa uma parte interessante da história dos videogames no Japão durante os anos 80, destacando a concorrência e a inovação dessa época.",
+    "language": "pt"
+  },
+  "n64": {
+    "file": "n64.xml",
+    "name": "Nintendo 64",
+    "description": "O Nintendo 64, lançado em 1996, foi um console de videogame de 64 bits que teve um grande impacto na indústria, apesar de competir diretamente com o primeiro PlayStation da Sony. Oferecia gráficos 3D impressionantes para a época e um controle inovador com joystick central e botões laterais.\n\nA Nintendo vendeu mais de 32 milhões de unidades em todo o mundo e apresentou alguns dos jogos mais populares de todos os tempos, como Super Mario 64, The Legend of Zelda: Ocarina of Time e GoldenEye 007.",
+    "language": "pt"
+  },
+  "n64dd": {
+    "file": "n64dd.xml",
+    "name": "Nintendo 64 DD",
+    "description": "O Nintendo 64DD (ニンテンドウ64DD, Nintendō Roku Jū Yon DD) (\"DD\" sendo abreviação de \"Disk drive\", e originalmente \"Dynamic Drive\") foi um periférico para o console Nintendo 64. Era plugado ao N64 através da EXTension Port que ficava do lado inferior do console e permitia ao N64 usar discos magnéticos proprietários de 64 MB de capacidade para aumentar a capacidade de armazenamento de dados.",
+    "language": "pt"
+  },
+  "namco": {
+    "file": "namco.xml",
+    "name": "Namco",
+    "description": "",
+    "language": null
+  },
+  "namco22": {
+    "file": "namco22.xml",
+    "name": "Namco System 22",
+    "description": "",
+    "language": null
+  },
+  "naomi": {
+    "file": "naomi.xml",
+    "name": "SEGA Naomi",
+    "description": "O SEGA NAOMI (sigla para New Arcade Operation Machine Idea, em português Nova ideia em operação de máquina arcade) é uma placa de arcade baseada na tecnologia utilizada no SEGA Dreamcast.",
+    "language": "pt"
+  },
+  "naomi2": {
+    "file": "naomi2.xml",
+    "name": "SEGA Naomi 2",
+    "description": "O SEGA NAOMI (sigla para New Arcade Operation Machine Idea, em português Nova ideia em operação de máquina arcade) é uma placa de arcade baseada na tecnologia utilizada no SEGA Dreamcast.",
+    "language": "pt"
+  },
+  "nds": {
+    "file": "nds.xml",
+    "name": "Nintendo DS",
+    "description": "A Nintendo DS é uma consola portátil lançada pela Nintendo em 2004. É caracterizada pelo seu design dobrável com duas telas que lembra a Game and Watch dos anos 80. Com uma tela superior maior e uma tela inferior sensível ao toque para controlar jogos com uma caneta stylus, permitia que os usuários interagissem com jogos de maneiras diferentes e criativas. Possui uma ampla variedade de jogos, desde títulos clássicos da Nintendo até jogos de terceiros de diferentes gêneros.\n\nAo longo de sua vida útil, a Nintendo DS foi atualizada com diferentes modelos, como o DS Lite e o Nintendo DSi, que introduziram melhorias em termos de design, tela e recursos adicionais. Mais de 154 milhões de unidades foram vendidas em todo o mundo, tornando-a uma das consoles portáteis mais vendidas da história.",
+    "language": "pt"
+  },
+  "neogeo": {
+    "file": "neogeo.xml",
+    "name": "Neo-Geo",
+    "description": "Neo-Geo é o nome de um sistema de 16 bits baseado em cartuchos para arcades e consoles domésticos, lançado em 1990 pela empresa japonesa de jogos eletrônicos SNK. A tecnologia do sistema oferecia gráficos 2D e qualidade de som muito superiores às oferecidas por outros sistemas caseiros da época, mas a um preço muito elevado para a maioria, 700 dólares, e entre 200 e 1000 dólares por cartucho. O console tinha uma biblioteca impressionante de jogos, com títulos notáveis como Metal Slug, Samurai Shodown e The King of Fighters, entre outros.",
+    "language": "pt"
+  },
+  "neogeocd": {
+    "file": "neogeocd.xml",
+    "name": "Neo Geo CD",
+    "description": "O Neo Geo CD é um console lançado pela SNK Corporation em 1994 como uma versão mais acessível de seu console de cartuchos Neo Geo AES. Utilizava CDs em vez de cartuchos, o que tornava os jogos mais acessíveis. Mantinha a mesma potência e qualidade gráfica da versão de cartuchos, o que a tornava uma opção atraente; no entanto, a velocidade de carregamento dos jogos era perceptivelmente mais lenta e às vezes afetava a experiência de jogo. Apesar de sua potência e biblioteca de jogos, não conseguiu alcançar o sucesso comercial de outros consoles de sua época.",
+    "language": "pt"
+  },
+  "neogeomini": {
+    "file": "neogeomini.xml",
+    "name": "Neo-Geo Mini",
+    "description": "Neo Geo é uma família da hardware de videogames desenvolvido pela SNK. A marca originou-se com a liberação de um sistema arcade, o Neo Geo MVS e sua contraparte de console doméstico, o Neo Geo AES.",
+    "language": "pt"
+  },
+  "neogeomvs": {
+    "file": "neogeomvs.xml",
+    "name": "NEO GEO",
+    "description": "",
+    "language": null
+  },
+  "neogeox": {
+    "file": "neogeox.xml",
+    "name": "Neo-Geo X",
+    "description": "Neo Geo é uma família da hardware de videogames desenvolvido pela SNK. A marca originou-se com a liberação de um sistema arcade, o Neo Geo MVS e sua contraparte de console doméstico, o Neo Geo AES.",
+    "language": "pt"
+  },
+  "nes": {
+    "file": "nes.xml",
+    "name": "Nintendo Entertainment System",
+    "description": "O Nintendo Entertainment System (NES), também conhecido como Famicom no Japão, foi um console de videogame lançado pela Nintendo em 1985 na América do Norte e 1986 na Europa, alcançando grande sucesso com mais de 60 milhões de unidades vendidas em todo o mundo. O NES é conhecido por alguns dos jogos mais icônicos de todos os tempos, como Super Mario Bros., The Legend of Zelda e Metroid.\n\nTambém popularizou o controle com o uso do direcional em forma de cruz e botões de ação, que se tornou o design padrão para controles de videogame desde então.",
+    "language": "pt"
+  },
+  "nesmini": {
+    "file": "nesmini.xml",
+    "name": "NES Classic Edition",
+    "description": "NES Classic Edition é um console de videogame doméstico dedicado da Nintendo, que emula o Nintendo Entertainment System (NES). Foi lançado em 10 de novembro de 2016 na Austrália e no Japão e em 11 de novembro de 2016 na América do Norte e Europa. Esteticamente, o console é uma réplica em miniatura do NES e inclui uma biblioteca estática de 30 jogos integrados da biblioteca NES licenciada, suportando estados de salvamento para todos eles",
+    "language": "pt"
+  },
+  "ngage": {
+    "file": "ngage.xml",
+    "name": "Nokia N-Gage",
+    "description": "O N-Gage é um dispositivo móvel que combina características de um telefone celular e um sistema de jogos portátil desenvolvido pela Nokia, lançado em 7 de outubro de 2003. Oficialmente apelidado de console de jogos, o telefone N-Gage opera na rede celular GSM e, em termos de software, é executado na plataforma Série 60 sobre Symbian OS v6.1.",
+    "language": "pt"
+  },
+  "ngp": {
+    "file": "ngp.xml",
+    "name": "Neo Geo Pocket",
+    "description": "É um console de videogame portátil que foi lançado pela SNK no Japão, em 28 de novembro de 1998, para combater o Game Boy da Nintendo, no entanto foi fabricado por pouco tempo (pouco mais de 1 ano).",
+    "language": "pt"
+  },
+  "ngpc": {
+    "file": "ngpc.xml",
+    "name": "Neo Geo Pocket Color",
+    "description": "O Neo Geo Pocket Color é um console de jogos portátil lançado pela SNK em 1998. Possui uma tela colorida e um sistema baseado em cartuchos para reproduzir jogos. O console foi projetado para competir com o Nintendo Game Boy Color, mas tinha uma biblioteca de jogos menor devido ao suporte limitado de terceiros. Apesar de sua curta vida útil, o Neo Geo Pocket Color continua sendo apreciado pelos entusiastas de jogos retrô por sua construção sólida e sua biblioteca única de jogos.",
+    "language": "pt"
+  },
+  "nichibutsu": {
+    "file": "nichibutsu.xml",
+    "name": "Nichibutsu",
+    "description": "",
+    "language": null
+  },
+  "nintendo": {
+    "file": "nintendo.xml",
+    "name": "Nintendo",
+    "description": "",
+    "language": null
+  },
+  "nmk": {
+    "file": "nmk.xml",
+    "name": "NMK",
+    "description": "",
+    "language": null
+  },
+  "odcommander": {
+    "file": "odcommander.xml",
+    "name": "OD-Commander",
+    "description": "A two-pane file manager, similar to Norton/Midnight commander, useful to manage all the /userdata files on your Batocera system.",
+    "language": "default"
+  },
+  "odyssey2": {
+    "file": "odyssey2.xml",
+    "name": "Odyssey²",
+    "description": "Foi um console de vídeo games bastante popular nos anos 70 e 80. O console foi criado em 1978 pela empresa Magnavox / Philips como evolução do console da Magnavox anterior, o Magnavox Odyssey.",
+    "language": "pt"
+  },
+  "openbor": {
+    "file": "openbor.xml",
+    "name": "Open BOR",
+    "description": "OpenBOR (Open Beats of Rage) é uma continuação de código aberto do mecanismo Beats of Rage. Embora o Beats of Rage pretendesse ser um jogo autônomo, o design modular dos elementos e do mecanismo dos jogos significava que os usuários finais podiam substituir assets.",
+    "language": "pt"
+  },
+  "oric": {
+    "file": "oric.xml",
+    "name": "Oric",
+    "description": "Oric foi o nome usado pela Tangerine Computer Systems para uma série de computadores domésticos, incluindo o original Oric-1, seu sucessor, o Oric Atmos e os modelos Oric Stratos / IQ164 e Oric Telestrat.",
+    "language": "pt"
+  },
+  "pac-man": {
+    "file": "Pac-Man.xml",
+    "name": "Pac-Man",
+    "description": "The Pac-Man franchise is a legendary series of video games that began with the classic arcade game released in 1980. The series encompasses a wide range of games, from direct sequels to innovative versions exploring different gameplay mechanics and visual styles.\n\nInitially named Puck-Man in Japan, the change to Pac-Man in the international market stemmed from concerns about altering the 'P' in Puck-Man to an 'F' ('Fuck-Man'). Apart from the games, Pac-Man has inspired a variety of products, from animated series to merchandise, solidifying its status as a lasting icon of pop culture.",
+    "language": "default"
+  },
+  "palm": {
+    "file": "palm.xml",
+    "name": "Palm",
+    "description": "Palm, Inc. é uma empresa de fabricação de hardware e software fundada em 1992. Foi absorvida pela U.S. Robotics Corp. em 1995. Em junho de 1997, a Palm tornou-se uma subsidiária de 3Com.",
+    "language": "pt"
+  },
+  "pc": {
+    "file": "pc.xml",
+    "name": "DOS",
+    "description": "O DOS, sigla para Disk Operating System ou sistema operacional em disco é um acrónimo para vários sistemas operativos intimamente relacionados que dominaram o mercado para compatíveis IBM PC entre 1981 e 1995.",
+    "language": "pt"
+  },
+  "pc88": {
+    "file": "pc88.xml",
+    "name": "NEC PC-8800",
+    "description": "O NEC PC-8801 foi um computador pessoal, fabricado pela Nippon Electric Company e lançado em 1981, era baseado em no processador 8 bits Zilog Z80.",
+    "language": "pt"
+  },
+  "pc98": {
+    "file": "pc98.xml",
+    "name": "NEC PC-9800",
+    "description": "PC-98 (PC98) é um acrônimo referente à série de computadores NEC PC-9801. Foi fabricado em 1982, o primeiro da série de computadores pessoais PC-98 de 16 e 32 bit.",
+    "language": "pt"
+  },
+  "pce-cd": {
+    "file": "pce-cd.xml",
+    "name": "PC Engine CD",
+    "description": "O CD do PC Engine, também conhecido como TurboGrafx-CD, é um acessório para o console do PC Engine que permite jogar em formato de CD-ROM. Foi lançado na década de 1980 e oferecia maior capacidade de armazenamento, cinemática de maior qualidade e música em comparação com jogos em cartões HuCard tradicionais. Embora tivesse sucesso limitado na América do Norte, o CD do PC Engine era popular no Japão e apresentava uma biblioteca diversificada de jogos, incluindo títulos de destaque como \"Ys Book\" e \"Castlevania: Rondo of Blood\".",
+    "language": "pt"
+  },
+  "pcengine": {
+    "file": "pcengine.xml",
+    "name": "PC Engine",
+    "description": "A PC Engine, também conhecida como TurboGrafx-16 na América do Norte, é uma consola lançada pela NEC Corporation e pela Hudson Soft em 1987 no Japão e em 1989 na América do Norte. Conhecida por ser uma das primeiras consolas de 16 bits, destacou-se por oferecer gráficos coloridos e de alta qualidade em comparação com as consolas de 8 bits da sua época. Uma característica distintiva foi o seu uso de cartões HuCard, também conhecidos como TurboChips na América do Norte, em vez de cartuchos maiores. Apesar da sua popularidade no Japão, a TurboGrafx-16 teve um sucesso limitado na América do Norte em comparação com concorrentes como a NES e a SEGA Megadrive",
+    "language": "pt"
+  },
+  "pcenginecd": {
+    "file": "pcenginecd.xml",
+    "name": "PC Engine CD",
+    "description": "O CD do PC Engine, também conhecido como TurboGrafx-CD, é um acessório para o console do PC Engine que permite jogar em formato de CD-ROM. Foi lançado na década de 1980 e oferecia maior capacidade de armazenamento, cinemática de maior qualidade e música em comparação com jogos em cartões HuCard tradicionais. Embora tivesse sucesso limitado na América do Norte, o CD do PC Engine era popular no Japão e apresentava uma biblioteca diversificada de jogos, incluindo títulos de destaque como \"Ys Book\" e \"Castlevania: Rondo of Blood\".",
+    "language": "pt"
+  },
+  "pcfx": {
+    "file": "pcfx.xml",
+    "name": "PC-FX",
+    "description": "O PC-FX é um console de videogame lançado pela NEC Corporation no Japão em 1994. Projetado como sucessor do popular PC Engine (TurboGrafx-16 na América do Norte), focou principalmente em oferecer experiências de jogo baseadas em CD-ROM com gráficos e som aprimorados em comparação com seu antecessor. Apresentava capacidades multimídia avançadas para a época, incluindo sequências de vídeo de alta qualidade e áudio de CD. No entanto, não conseguiu alcançar um sucesso comercial significativo devido ao seu catálogo de jogos limitado e à concorrência de outros consoles como o PlayStation da Sony.",
+    "language": "pt"
+  },
+  "pdp1": {
+    "file": "pdp1.xml",
+    "name": "PDP-1",
+    "description": "The PDP-1 (Programmed Data Processor-1) is the first computer in Digital Equipment Corporation's PDP series and was first produced in 1959. It is famous for being the computer most important in the creation of hacker culture at MIT, BBN and elsewhere. The PDP-1 is the original hardware for playing history's first game on a minicomputer, Steve Russell's Spacewar!",
+    "language": "default"
+  },
+  "pet": {
+    "file": "pet.xml",
+    "name": "Commodore PET",
+    "description": "The Commodore PET is a line of personal computers produced starting in 1977 by Commodore International. A single all-in-one case combines a MOS Technology 6502 microprocessor, Commodore BASIC in read-only memory, keyboard, computer monitor, and, in early models, a cassette deck.",
+    "language": "default"
+  },
+  "pico": {
+    "file": "pico.xml",
+    "name": "SEGA Pico",
+    "description": "SEGA Pico é um console de videogame lançado pela SEGA em 1993. É projetado principalmente para crianças pequenas e concentra-se em jogos educativos e de entretenimento interativos. O console inclui uma caneta óptica que permite que as crianças interajam com jogos e atividades na tela. A SEGA Pico teve algum sucesso em seu lançamento inicial, especialmente no Japão e em alguns outros mercados, mas eventualmente foi descontinuada em favor de consoles mais avançados da SEGA.",
+    "language": "pt"
+  },
+  "pico8": {
+    "file": "pico8.xml",
+    "name": "Pico 8",
+    "description": "PICO-8 é um console de fantasia para fazer, compartilhar e jogar pequenos jogos e outros programas de computador.",
+    "language": "pt"
+  },
+  "playchoice": {
+    "file": "playchoice.xml",
+    "name": "Playchoice",
+    "description": "",
+    "language": null
+  },
+  "pokemini": {
+    "file": "pokemini.xml",
+    "name": "Pokemon Mini",
+    "description": "Pokemon Mini é um console portátil desenhado e fabricado pela Nintendo. É o menor sistema de jogos com cartucho intercambiável produzido pela Nintendo.",
+    "language": "pt"
+  },
+  "pokemon": {
+    "file": "Pokemon.xml",
+    "name": "Pokémon",
+    "description": "Pokémon was born in 1996 with the games Pokémon Red and Pokémon Green in Japan for the Game Boy, created by Game Freak and published by Nintendo. Its concept revolved around capturing, training, and battling creatures called Pokémon, combining exploration with turn-based combat. From the very beginning, the idea quickly expanded worldwide, accompanied not only by the anime and merchandising but also by the Pokémon Trading Card Game, which allowed players to collect and trade cards in a phenomenon that ran parallel to the video games.\n\nOver time, Pokémon became one of the most successful franchises in the entertainment industry, with generations of games introducing new creatures, regions, and mechanics, while the card game remained a competitive and collectible staple. Today, it continues to stand as a historical benchmark in video games and beyond, thanks to its ability to remain relevant across multiple formats and generations of players.",
+    "language": "default"
+  },
+  "ports": {
+    "file": "ports.xml",
+    "name": "Ports",
+    "description": "Vários desenvolvedores lançaram o código-fonte para muitos de seus títulos clássicos, permitindo que eles sejam nativos para muitas plataformas alternativas, incluindo o Linux.",
+    "language": "pt"
+  },
+  "pos": {
+    "file": "pos.xml",
+    "name": "Palm",
+    "description": "Palm, Inc. é uma empresa de fabricação de hardware e software fundada em 1992. Foi absorvida pela U.S. Robotics Corp. em 1995. Em junho de 1997, a Palm tornou-se uma subsidiária de 3Com.",
+    "language": "pt"
+  },
+  "prboom": {
+    "file": "prboom.xml",
+    "name": "PR Boom",
+    "description": "PrBoom é uma versão cross-platform do clássico shooter em primeira pessoa da id Software: Doom. Originalmente feita para o Microsoft Windows, PrBoom já foi portado para inúmeras plataformas.",
+    "language": "pt"
+  },
+  "projectarcade": {
+    "file": "projectarcade.xml",
+    "name": "ProjectArcade",
+    "description": "",
+    "language": null
+  },
+  "ps2": {
+    "file": "ps2.xml",
+    "name": "Sony PlayStation 2",
+    "description": "O PlayStation 2 (PS2) é um console de videogame de sexta geração lançado pela Sony em 2000. Foi o sucessor do PlayStation original e um concorrente direto do Xbox da Microsoft e do GameCube da Nintendo.\n\nO PS2 foi o primeiro console a incorporar um player de DVD como padrão, dando-lhe uma enorme vantagem. Além disso, tinha um grande número de títulos exclusivos, como a série Gran Turismo, God of War, Final Fantasy e Metal Gear. Vendeu mais de 155 milhões de unidades em todo o mundo, tornando-se o console mais vendido da história.",
+    "language": "pt"
+  },
+  "ps3": {
+    "file": "ps3.xml",
+    "name": "Sony PlayStation 3",
+    "description": "O PlayStation 3 (PS3) é um console de videogame de sétima geração lançado pela Sony em 2006. Foi o sucessor do PlayStation 2 e concorrente direto do Xbox 360 da Microsoft e do Wii da Nintendo. O PS3 incorporou uma série de tecnologias avançadas, como um processador de vários núcleos, controladores sem fio Bluetooth e um leitor de discos Blu-ray.\n\nEle também introduziu a capacidade de jogar online e baixar jogos através da PlayStation Network. Alguns dos títulos mais populares no PS3 incluem a série Call of Duty, FIFA, The Last of Us e Gran Turismo. Vendeu mais de 80 milhões de unidades em todo o mundo.",
+    "language": "pt"
+  },
+  "ps4": {
+    "file": "ps4.xml",
+    "name": "Sony PlayStation 4",
+    "description": "A PlayStation 4 (PS4), lançada em 2013 pela Sony, é um console de oitava geração que se destacou por seu poder gráfico e seu extenso catálogo de jogos. Com um design focado na experiência do jogador e uma arquitetura amigável para os desenvolvedores, ofereceu títulos impressionantes como \"The Last of Us Part II\", \"God of War\", \"Horizon Zero Dawn\" e \"Ghost of Tsushima\". Além disso, integrou plataformas de entretenimento e serviços online como PlayStation Network. A PS4 vendeu mais de 117 milhões de unidades em todo o mundo, consolidando-se como um dos consoles mais bem-sucedidos da história. Seu legado baseia-se em experiências de jogo narrativas e gráficas de alto nível, juntamente com um robusto ecossistema multijogador e uma comunidade global de jogadores.",
+    "language": "pt"
+  },
+  "psikyo": {
+    "file": "psikyo.xml",
+    "name": "Psikyo",
+    "description": "",
+    "language": null
+  },
+  "psp": {
+    "file": "psp.xml",
+    "name": "Sony PlayStation Portable",
+    "description": "O PlayStation Portable (PSP) é o primeiro console portátil da Sony e foi lançado em 2004. Com um design elegante e compacto, apresenta uma tela de LCD de alta resolução de 4,3 polegadas. Além disso, inclui uma série de recursos multimídia. Os usuários podem ouvir música ou ver fotos e vídeos armazenados no Memory Stick Duo que é inserido no console.\n\nO PSP também tem conectividade sem fio por meio de Wi-Fi, permitindo que os usuários joguem online com outros jogadores de todo o mundo. Sua extensa biblioteca de jogos inclui sucessos como Crisis Core: Final Fantasy VII ou God of War: Chains of Olympus.",
+    "language": "pt"
+  },
+  "pspminis": {
+    "file": "pspminis.xml",
+    "name": "PlayStation minis",
+    "description": "PS minis para o PSP, são jogos disponíveis para download na PlayStation Store. Muitos deles também são compatíveis com o PlayStation 3 (PS3), PlayStation Vita (PSVita) e PlayStation TV (PSTV), conforme indicado.",
+    "language": "pt"
+  },
+  "psvita": {
+    "file": "psvita.xml",
+    "name": "PLayStation Vita",
+    "description": "A PS Vita é um console portátil lançado pela Sony em 2011. É o sucessor do PSP e apresenta uma tela sensível ao toque OLED de 5 polegadas de alta resolução, controles analógicos duplos, conectividade Wi-Fi e 3G e uma ampla variedade de recursos de entretenimento, como player de música e vídeo, navegador da web e câmeras traseiras e frontais.\n\nA PS Vita também permite que os usuários baixem jogos e aplicativos pela PlayStation Store e joguem online com outros usuários por meio de conectividade Wi-Fi ou 3G. Apesar de ser um console portátil de alta qualidade, não teve tanto sucesso comercial quanto outros consoles da Sony e vendeu apenas cerca de 10 milhões de unidades. Foi descontinuado em 2019.",
+    "language": "pt"
+  },
+  "psx": {
+    "file": "psx.xml",
+    "name": "Sony PlayStation",
+    "description": "O PlayStation é o primeiro console de jogos da Sony. Foi lançado em 3 de dezembro de 1994 no Japão e é considerado o console de videogame mais bem-sucedido da quinta geração em termos de vendas e popularidade. Acabou estabelecendo o CD-ROM como suporte, embora outros consoles já o fizessem há algum tempo. No final dos anos 80, a Nintendo concordou com a Sony em desenvolver um periférico para SNES que suportaria jogos em CD-ROM. Depois de muitas diferenças entre as duas empresas, elas finalmente não chegaram a um acordo e a Sony decidiu desenvolver seu próprio console. Estima-se que tenha vendido 105 milhões de unidades em dez anos, e sua impressionante biblioteca possui mais de 3000 títulos, incluindo jogos populares e queridos como Final Fantasy VII, Metal Gear Solid, Tomb Raider e Gran Turismo, entre muitos outros.",
+    "language": "pt"
+  },
+  "psxmini": {
+    "file": "psxmini.xml",
+    "name": "PlayStation Mini",
+    "description": "Foi o primeiro console de vídeo game fabricado pela Sony, desde o seu lançamento vendeu mais de 100 milhões de unidades. Ocupa a posição de segundo console de mesa mais vendido de todos os tempos.",
+    "language": "pt"
+  },
+  "pv1000": {
+    "file": "pv1000.xml",
+    "name": "Casio PV-1000",
+    "description": "The Casio PV-1000 is a third-generation home video game console manufactured by Casio and released in Japan in 1983. It was discontinued less than a year after release.",
+    "language": "default"
+  },
+  "pygame": {
+    "file": "pygame.xml",
+    "name": "Pygame",
+    "description": "Pygame é uma biblioteca de jogos multiplataforma (independente de sistema operacional) feita para ser utilizada em conjunto com a linguagem de programação Python. O seu nome tem origem da junção de Py, proveniente de Python e Game, que significa Jogo, ou seja, Jogos em Python.",
+    "language": "pt"
+  },
+  "rayman": {
+    "file": "Rayman.xml",
+    "name": "Rayman",
+    "description": "Rayman is a platform game series created by Ubisoft that began in 1995. It follows Rayman, a limbless hero with floating hands and feet, who embarks on adventures across imaginative worlds to restore balance and defeat various villains. The series is known for its colorful environments, whimsical characters, and creative level design.\n\nOver the years, Rayman has evolved through different styles and gameplay approaches. Early entries focused on traditional 2D platforming, while later titles explored 3D environments before returning to a refined 2D style with games like Rayman Origins and Rayman Legends. These modern entries are especially praised for their fluid animation, tight controls, and cooperative multiplayer modes.\n\nWith its distinctive artistic direction, memorable music, and accessible yet challenging gameplay, Rayman has remained one of Ubisoft’s most iconic properties, appealing to both casual players and platforming fans alike.",
+    "language": "default"
+  },
+  "residualvm": {
+    "file": "residualvm.xml",
+    "name": "Residual VM",
+    "description": "",
+    "language": null
+  },
+  "retrobat": {
+    "file": "retrobat.xml",
+    "name": "Retrobat",
+    "description": "",
+    "language": null
+  },
+  "samcoupe": {
+    "file": "samcoupe.xml",
+    "name": "SAM Coupé",
+    "description": "O SAM Coupé é um microcomputador de 8 bits lançado em 1989 pela Miles Gordon Technology (MGT) no Reino Unido. Foi projetado como uma melhoria do Sinclair ZX Spectrum, com o objetivo de oferecer capacidades aprimoradas. Estava equipado com um processador Z80A de 6 MHz e oferecia uma resolução gráfica melhorada e capacidades de som avançadas em comparação com o ZX Spectrum. Embora o SAM Coupé tenha recebido elogios por suas capacidades técnicas, não conseguiu alcançar o sucesso comercial esperado e sua produção foi interrompida em 1992.",
+    "language": "pt"
+  },
+  "sammy": {
+    "file": "sammy.xml",
+    "name": "Sammy",
+    "description": "",
+    "language": null
+  },
+  "samurai shodown": {
+    "file": "Samurai Shodown.xml",
+    "name": "Samurai Shodown",
+    "description": "Samurai Shodown is a weapon-based fighting game series developed by SNK, first released in 1993. Set in a stylized version of feudal Japan, the games feature samurai, ninjas, and other warriors who engage in duels using swords and traditional weapons, with a strong emphasis on timing and precision.\n\nUnlike many other fighting games, the series focuses on slower, more deliberate combat, where a single well-placed strike can deal significant damage. This creates a tense and strategic pace, rewarding patience, spacing, and careful decision-making over rapid combos.\n\nOver the years, Samurai Shodown has evolved with multiple entries that refine its mechanics while maintaining its core identity. Known for its distinctive art style inspired by Japanese ink paintings and its unique approach to combat, the series remains one of SNK’s most respected and recognizable fighting game properties.",
+    "language": "default"
+  },
+  "satellaview": {
+    "file": "satellaview.xml",
+    "name": "Super Famicom Satellaview",
+    "description": "O Satellaview é um periférico que funcionava como um modem via satélite para o sistema Super Famicom da Nintendo que foi lançado em Japão em 1995.",
+    "language": "pt"
+  },
+  "saturn": {
+    "file": "saturn.xml",
+    "name": "SEGA Saturn",
+    "description": "SEGA Saturn é o quinto console de videogame de mesa produzido pela SEGA. Foi desenvolvido para suceder o Mega Drive e competir contra o 3DO Interactive Multiplayer, Atari Jaguar, Neo Geo CD, PlayStation e posteriormente o Nintendo 64, entre outros.\n\nFoi lançado no mercado em novembro de 1994 no Japão e em maio de 1995 na América do Norte. Foram vendidas 170.000 unidades no primeiro dia de vendas no Japão, sendo lançado antecipadamente para tentar superar o PlayStation da Sony. Isso resultou em poucos jogos desenvolvidos para o dia do lançamento e a qualidade desses jogos não refletiu completamente as verdadeiras capacidades da máquina.",
+    "language": "pt"
+  },
+  "scummvm": {
+    "file": "scummvm.xml",
+    "name": "ScummVM",
+    "description": "ScummVM é um software/máquina virtual que visa oferecer suporte para jogos antigos da Lucas Arts. Tais jogos são incompatíveis com os sistemas operacionais de hoje pois fazem exigências exóticas sobre memória.",
+    "language": "pt"
+  },
+  "scv": {
+    "file": "scv.xml",
+    "name": "Super Cassette Vision",
+    "description": "The Super Cassette Vision is a home video game console made by Epoch Co. and released in Japan on July 17, 1984, and in Europe, specifically France, later in 1984. A successor to the Cassette Vision, it competed with Nintendo's Family Computer and SEGA's SG-1000 line in Japan.",
+    "language": "default"
+  },
+  "sdlpop": {
+    "file": "sdlpop.xml",
+    "name": "SDLPoP",
+    "description": "Um porte de código aberto do Prince of Persia, baseado na desmontagem da versão DOS, ampliado com novos recursos.",
+    "language": "pt"
+  },
+  "sega": {
+    "file": "sega.xml",
+    "name": "SEGA",
+    "description": "",
+    "language": null
+  },
+  "sega32x": {
+    "file": "sega32x.xml",
+    "name": "Mega Drive 32X",
+    "description": "O Mega Drive 32X, também conhecido como SEGA 32X (na América) ou Super 32X (no Japão), é um periférico lançado pela SEGA em 1994, que oferecia uma expansão de 32 bits para o console SEGA Mega Drive de 16 bits. Foi uma tentativa de prolongar a vida útil do console SEGA Mega Drive original, adicionando capacidades de processamento e gráficos aprimorados. Embora oferecesse algumas experiências de jogo impressionantes, o 32X não obteve o sucesso comercial esperado e foi descontinuado logo após o lançamento.",
+    "language": "pt"
+  },
+  "segacd": {
+    "file": "segacd.xml",
+    "name": "Mega-CD",
+    "description": "O Mega-CD, conhecido como SEGA CD na América do Norte, é um periférico para o console SEGA Mega Drive lançado em 1991. Ele adiciona capacidade de reprodução de CD-ROM ao Mega Drive, permitindo a reprodução de jogos no formato de CD, bem como a reprodução de música e vídeo. Embora inicialmente tenha recebido críticas mistas, o Mega-CD abrigou alguns jogos clássicos e experimentais, marcando uma nova era nos videogames com cinematics e áudio de maior qualidade.",
+    "language": "pt"
+  },
+  "segastv": {
+    "file": "segastv.xml",
+    "name": "SEGA ST-V",
+    "description": "",
+    "language": null
+  },
+  "seibukaihatsu": {
+    "file": "seibukaihatsu.xml",
+    "name": "Seibu Kaihatsu",
+    "description": "",
+    "language": null
+  },
+  "semicom": {
+    "file": "semicom.xml",
+    "name": "Semicom",
+    "description": "",
+    "language": null
+  },
+  "seta": {
+    "file": "seta.xml",
+    "name": "SETA",
+    "description": "",
+    "language": null
+  },
+  "sg-1000": {
+    "file": "sg-1000.xml",
+    "name": "SEGA SG-1000",
+    "description": "O SG-1000 foi um console de videogame da terceira geração, lançado pela SEGA em 1981 (na sua versão de testes) e em 1983 (para o mercado japonês). Este console não obteve grande representatividade. Porém, seu sucessor (o Master System) alcançou grande sucesso no mercado dos consoles.",
+    "language": "pt"
+  },
+  "sgb": {
+    "file": "sgb.xml",
+    "name": "Super Game Boy",
+    "description": "The Super Game Boy (スーパーゲームボーイ, Sūpā Gēmu Bōi) is a peripheral that allows Game Boy cartridges to be played on a Super Nintendo Entertainment System console. Released in June 1994.",
+    "language": "default"
+  },
+  "simpsons": {
+    "file": "Simpsons.xml",
+    "name": "The Simpsons",
+    "description": "The Simpsons is a long-running video game series based on the popular animated television show. Since the late 1980s, the franchise has appeared in a wide variety of genres, including arcade beat 'em ups, platformers, racing games, and open-world adventures, often featuring the Simpson family and the residents of Springfield.\n\nThe games are known for capturing the humor, style, and tone of the original series, allowing players to control characters like Homer, Bart, Lisa, and Marge. Many titles recreate familiar locations and storylines, while others introduce original plots filled with references and parody elements.\n\nOver time, The Simpsons games have evolved across multiple generations of consoles and platforms. From classic arcade experiences like The Simpsons Arcade Game to more expansive titles such as Hit & Run, the series has remained a recognizable and entertaining part of video game history.",
+    "language": "default"
+  },
+  "singe": {
+    "file": "singe.xml",
+    "name": "DAPHNE Singe",
+    "description": "DAPHNE é um emulador de jogos em laserdisc que permite jogar jogos de arcade em laserdisc. Usando Daphne, você poderá jogar vários clássicos dos arcades como Dragon's Lair, Astron Belt e muito mais.",
+    "language": "pt"
+  },
+  "snes-msu": {
+    "file": "snes-msu.xml",
+    "name": "Super Nintendo MSU",
+    "description": "",
+    "language": null
+  },
+  "snes-msu1": {
+    "file": "snes-msu1.xml",
+    "name": "Super Disc System",
+    "description": "The Super NES CD-ROM Systemv is an unreleased video game peripheral for the Super Nintendo Entertainment System (SNES). The add-on built upon the functionality of the cartridge-based SNES by adding support for a CD-ROM-based format known as Super Disc.\n\nThe SNES-CD platform was developed in a partnership between Nintendo and Sony. The platform was planned to be launched as an add-on for the standard SNES, as well as a hybrid console by Sony called the PlayStation.",
+    "language": "default"
+  },
+  "snes": {
+    "file": "snes.xml",
+    "name": "Super Nintendo",
+    "description": "O Super Nintendo Entertainment System (SNES) foi um console de jogos de vídeo de 16 bits lançado pela Nintendo em 1990. Foi o sucessor do Nintendo Entertainment System (NES) original e foi projetado para competir com outros consoles de 16 bits da época, como o SEGA Mega Drive, com o qual teve uma grande rivalidade.\n\nItaliano: Il Super Nintendo Entertainment System (SNES) è stata una console per videogiochi a 16 bit rilasciata dalla Nintendo nel 1990. Era il successore del Nintendo Entertainment System (NES) originale e fu progettato per competere con altre console a 16 bit dell'epoca, come il SEGA Mega Drive, con cui aveva una grande rivalità.",
+    "language": "pt"
+  },
+  "snescd": {
+    "file": "snescd.xml",
+    "name": "Super Disc System",
+    "description": "The Super NES CD-ROM Systemv is an unreleased video game peripheral for the Super Nintendo Entertainment System (SNES). The add-on built upon the functionality of the cartridge-based SNES by adding support for a CD-ROM-based format known as Super Disc.\n\nThe SNES-CD platform was developed in a partnership between Nintendo and Sony. The platform was planned to be launched as an add-on for the standard SNES, as well as a hybrid console by Sony called the PlayStation.",
+    "language": "default"
+  },
+  "snesmini": {
+    "file": "snesmini.xml",
+    "name": "Super Nintendo Mini",
+    "description": "O SNES é o segundo home console da Nintendo. O console apresentou gráficos avançados e recursos de som em comparação com outros consoles na época. Considerado um dos melhores consoles da história.",
+    "language": "pt"
+  },
+  "snesmsu1": {
+    "file": "snesmsu1.xml",
+    "name": "Super Disc System",
+    "description": "The Super NES CD-ROM Systemv is an unreleased video game peripheral for the Super Nintendo Entertainment System (SNES). The add-on built upon the functionality of the cartridge-based SNES by adding support for a CD-ROM-based format known as Super Disc.\n\nThe SNES-CD platform was developed in a partnership between Nintendo and Sony. The platform was planned to be launched as an add-on for the standard SNES, as well as a hybrid console by Sony called the PlayStation.",
+    "language": "default"
+  },
+  "snk": {
+    "file": "snk.xml",
+    "name": "SNK",
+    "description": "",
+    "language": null
+  },
+  "socrates": {
+    "file": "socrates.xml",
+    "name": "VTech Socrates",
+    "description": "The VTech Socrates is an 8-bit educational home video game console manufactured and released in 1988 by VTech. The console features a robot character Socrates, named after the philosopher. The character is visually similar to Johnny Five from the Short Circuit movies. It was discontinued in the early 1990s.\n\nThe system features standard wireless controllers that communicated via infrared reception.",
+    "language": "default"
+  },
+  "solarus": {
+    "file": "solarus.xml",
+    "name": "Solarus",
+    "description": "Solarus foi projetado especificamente com clássicos cult de RPG de ação em 2D, como The Legend of Zelda: A Link to the Past and Secret of Mana no Super Nintendo, ou Soleil no SEGA Megadrive / Genesis.",
+    "language": "pt"
+  },
+  "sonic": {
+    "file": "sonic.xml",
+    "name": "Sonic the Hedgehog",
+    "description": "Sonic the Hedgehog is a Japanese video game series franchise created by SEGA. The franchise follows Sonic, an anthropomorphic blue hedgehog who battles the evil Doctor Eggman, a mad scientist. The main Sonic the Hedgehog games are platformers mostly developed by Sonic Team; other games, developed by various studios, include spin-offs in the racing, fighting, party and sports genres. SEGA developed the first Sonic game, released in 1991 for the SEGA Genesis, to compete with Nintendo's mascot Mario. Its success helped SEGA become one of the leading video game companies during the fourth generation of video game consoles in the early 1990s.",
+    "language": "default"
+  },
+  "sonicretro": {
+    "file": "sonicretro.xml",
+    "name": "Sonic Retro Engine",
+    "description": "",
+    "language": null
+  },
+  "space invaders": {
+    "file": "Space Invaders.xml",
+    "name": "Space Invaders",
+    "description": "Space Invaders is an iconic video game franchise that began with the classic arcade game released in 1978 by Taito. This series has spawned numerous sequels, adaptations, and versions over the years, including games for consoles, mobile devices, and various platforms.\n\nIt stands out for its simple yet challenging and addictive gameplay mechanics. Players control a spaceship at the bottom of the screen, shooting projectiles at a formation of alien invaders. As the game progresses, the speed and difficulty increase. The franchise has transcended the boundaries of video games, and its iconic image serves as inspiration for retro gaming art.",
+    "language": "default"
+  },
+  "spectravideo": {
+    "file": "spectravideo.xml",
+    "name": "Spectravideo",
+    "description": "O Spectravideo é uma série de computadores pessoais fabricados pela empresa americana Spectravideo International. Lançados no início da década de 1980, esses computadores eram conhecidos por sua acessibilidade financeira e capacidades gráficas para a época. O Spectravideo SV-318 e SV-328 foram modelos emblemáticos da série, baseados no processador Zilog Z80 e compatíveis com uma ampla gama de software disponível na época. Embora o Spectravideo não tenha alcançado a mesma fama que outros computadores da década de 1980, deixou sua marca na história da computação pessoal.",
+    "language": "pt"
+  },
+  "spider-man": {
+    "file": "Spider-Man.xml",
+    "name": "Spider-Man",
+    "description": "Os videojogos de Spider-Man refletiram a evolução dos meios interativos desde os seus primeiros anos na década de 1980. O seu debut ocorreu em 1982 com Spider-Man para o Atari 2600, um jogo simples mas inovador, centrado na escalada de edifícios e na desativação de bombas, marcando o início de uma longa trajetória de adaptações do aracnídeo. Durante os anos 80, apareceu em sistemas como o Commodore 64, DOS e Amstrad CPC, com títulos que, embora limitados tecnicamente, procuravam capturar a essência das histórias em quadrinhos.\n\nNos anos 90, com a chegada de consoles mais avançados como o Sega Genesis, SNES e PlayStation, os jogos de Spider-Man atingiram um novo nível de qualidade. Títulos como Spider-Man vs. The Kingpin (1991) e Spider-Man: The Animated Series (1995) ofereceram gráficos melhores e mecânicas mais complexas, além de se inspirarem nas populares adaptações televisivas e cinematográficas. Ao longo dessas décadas, Spider-Man consolidou a sua posição como um dos super-heróis mais icônicos no mundo dos videojogos, com títulos que exploraram diversos gêneros como plataformas, ação e aventura, estabelecendo um vínculo com uma audiência global.",
+    "language": "pt"
+  },
+  "star wars": {
+    "file": "Star Wars.xml",
+    "name": "Star Wars",
+    "description": "The Star Wars saga has had a vast presence in video games since the 80s, with titles like \"Star Wars: The Empire Strikes Back\" (1982) and \"Star Wars\" (1983), followed by \"Star Wars: X-Wing\" (1993) and \"Star Wars: TIE Fighter\" (1994). Other notable games from the 90s include \"Star Wars: Dark Forces\" (1995) and \"Star Wars: Shadows of the Empire\" (1996).\n\nIn the 2000s, acclaimed games like \"Star Wars: Knights of the Old Republic\" (2003), \"Star Wars: Battlefront\" (2004), and \"Star Wars: Republic Commando\" (2005) were released. The saga continues to be a highly active IP in the realm of video games, with new releases for various platforms.",
+    "language": "default"
+  },
+  "steam": {
+    "file": "steam.xml",
+    "name": "Steam",
+    "description": "",
+    "language": null
+  },
+  "stratagus": {
+    "file": "stratagus.xml",
+    "name": "Stratagus",
+    "description": "",
+    "language": null
+  },
+  "street fighter": {
+    "file": "Street Fighter.xml",
+    "name": "Street Fighter",
+    "description": "Street Fighter is a series of fighting video games created by the Japanese company Capcom. The first title, Street Fighter, appeared in arcades in 1987 and enjoyed some popularity, but it was its sequel, Street Fighter II, that caused a true revolution and led to the boom in fighting games in arcades.\n\nGames in this series are generally one-on-one fighting. Characters can use melee attacks, ranged energy projectiles, or even weapons. Each version of Street Fighter features different characters, techniques, combat systems, and game modes.",
+    "language": "default"
+  },
+  "streetfighter": {
+    "file": "streetfighter.xml",
+    "name": "Street Fighter",
+    "description": "Street Fighter is a series of fighting video games created by the Japanese company Capcom. The first title, Street Fighter, appeared in arcades in 1987 and enjoyed some popularity, but it was its sequel, Street Fighter II, that caused a true revolution and led to the boom in fighting games in arcades.\n\nGames in this series are generally one-on-one fighting. Characters can use melee attacks, ranged energy projectiles, or even weapons. Each version of Street Fighter features different characters, techniques, combat systems, and game modes.",
+    "language": "default"
+  },
+  "streets of rage": {
+    "file": "Streets of Rage.xml",
+    "name": "Streets of Rage",
+    "description": "Streets of Rage is a side-scrolling beat 'em up series developed by Sega that began in 1991. Set in a crime-ridden city, the games follow a group of former police officers and fighters who take the law into their own hands to restore order and dismantle powerful criminal organizations.\n\nThe series is known for its mix of hand-to-hand combat, weapon use, and cooperative gameplay, allowing players to battle through urban environments filled with enemies and bosses. Its mechanics focus on timing, positioning, and crowd control, offering a balance between accessibility and depth.\n\nStreets of Rage gained particular recognition for its atmospheric presentation, combining detailed pixel art with a memorable electronic soundtrack composed by Yuzo Koshiro. Over time, the series has evolved with new entries that update its visuals and gameplay while preserving the core identity that made it a classic of the genre.",
+    "language": "default"
+  },
+  "sufami": {
+    "file": "sufami.xml",
+    "name": "SuFami Turbo",
+    "description": "O SuFami Turbo, muitas vezes comparado ao Aladdin Deck Enhancer, é um acessório lançado pela Bandai para o sistema Super Famicom da Nintendo e foi lançado em 1996.",
+    "language": "pt"
+  },
+  "supergrafx": {
+    "file": "supergrafx.xml",
+    "name": "NEC SuperGrafx",
+    "description": "O SuperGrafx é um console de videogame lançado pela NEC Corporation em 1989 no Japão. Foi uma versão aprimorada do popular console PC Engine, também conhecido como TurboGrafx-16 na América do Norte. O SuperGrafx visava oferecer um desempenho gráfico e sonoro aprimorado em comparação com seu antecessor. No entanto, apesar de suas melhorias técnicas, o console não conseguiu alcançar o sucesso esperado devido à sua curta vida útil no mercado e ao lançamento simultâneo de outros consoles concorrentes.",
+    "language": "pt"
+  },
+  "superman": {
+    "file": "Superman.xml",
+    "name": "Superman",
+    "description": "Superman is a long-running video game presence based on the iconic superhero from DC Comics, first appearing in games in the late 1970s. Across multiple titles, players take control of Clark Kent’s alter ego, using his extraordinary powers such as flight, super strength, heat vision, and invulnerability to protect Metropolis and face famous villains like Lex Luthor, Brainiac, and General Zod.\n\nOver the years, Superman games have taken different forms, ranging from simple action titles to more ambitious attempts at open-world gameplay. Some entries focused on recreating the feeling of freely flying through the city, while others emphasized combat or story-driven missions. Despite mixed results in terms of quality, the character’s abilities have always offered unique gameplay possibilities compared to other superheroes.\n\nThanks to his status as one of the most recognizable comic book heroes, Superman has remained a recurring figure in video games, appearing both in solo titles and as part of crossover games featuring other DC characters.",
+    "language": "default"
+  },
+  "supervision": {
+    "file": "supervision.xml",
+    "name": "Watara Supervision",
+    "description": "O Watara Supervision é um console portátil monocromático, original de Hong Kong, e foi introduzido em 1992 como concorrente do Game Boy.\n\nFoi fabricado por várias empresas com diferentes nomes em vários países do mundo como QuickShot Supervision, Travell Mate, Hartung SV-100, e Electrolab na Argentina.",
+    "language": "pt"
+  },
+  "supracan": {
+    "file": "supracan.xml",
+    "name": "Super A'can",
+    "description": "The Super A'can is a home video game console released exclusively in Taiwan in 1995 by Funtech/Dunhuang Technology. It is based around the Motorola 68000 microchip, which is also used in the SEGA Genesis and Neo Geo. Twelve games have been confirmed to exist for the system.",
+    "language": "default"
+  },
+  "switch": {
+    "file": "switch.xml",
+    "name": "Nintendo Switch",
+    "description": "O Nintendo Switch é um console de videogame híbrido produzido pela empresa Nintendo, tendo sido revelado em 20 de outubro de 2016. Foi lançado oficialmente no dia 3 de março de 2017",
+    "language": "pt"
+  },
+  "systemsp": {
+    "file": "systemsp.xml",
+    "name": "SEGA System SP",
+    "description": "A Sega System SP é uma placa arcade desenvolvida pela Sega, que entrou em serviço em 2004. Era uma versão mais econômica da placa NAOMI, usando um design de system-on-a-chip com um sistema operacional Linux personalizado. Os jogos eram distribuídos em cartões CompactFlash em vez de GD-ROMs ou cartuchos, tornando-o mais acessível e eficiente para certos tipos de jogos. O System SP era usado principalmente para jogos arcade mais simples, voltados para um público mais jovem, como Love and Berry e Dinosaur King, além de títulos experimentais como Brick People e Tetris Giant. Devido ao seu foco em jogos menos exigentes, foi utilizado principalmente no Japão, com seu último jogo lançado em 2014. Ao contrário do NAOMI, o System SP integrava controles diretamente, tornando a instalação mais simples e econômica.",
+    "language": "pt"
+  },
+  "taito": {
+    "file": "taito.xml",
+    "name": "TAITO",
+    "description": "",
+    "language": null
+  },
+  "tandy1k": {
+    "file": "tandy1k.xml",
+    "name": "Tandy 1000",
+    "description": "",
+    "language": null
+  },
+  "technos": {
+    "file": "technos.xml",
+    "name": "Technos",
+    "description": "",
+    "language": null
+  },
+  "tecmo": {
+    "file": "tecmo.xml",
+    "name": "Tecmo",
+    "description": "",
+    "language": null
+  },
+  "teknoparrot": {
+    "file": "teknoparrot.xml",
+    "name": "Tekno Parrot",
+    "description": "",
+    "language": null
+  },
+  "tetris": {
+    "file": "Tetris.xml",
+    "name": "Tetris",
+    "description": "Tetris is an iconic video game saga that began with the release of the original game in 1984, created by Alexey Pajitnov in the Soviet Union. This puzzle game challenges players to fit different geometric shapes, known as tetrominoes, to complete horizontal lines and prevent them from stacking up on the screen.\n\nThe release of Tetris for Nintendo's Game Boy was a pivotal milestone in its success and popularity. Despite patent-related issues concerning the game's rights and the Soviet Union, Nintendo obtained the license to distribute Tetris on its handheld Game Boy console. This strategy proved to be a masterstroke, as the game became a massive phenomenon, boosting Game Boy sales and becoming one of the best-selling video games in history.",
+    "language": "default"
+  },
+  "tg16": {
+    "file": "tg16.xml",
+    "name": "PC Engine",
+    "description": "É um console de videogame lançado em 1987 pela NEC e Hudson Soft. Após seu lançamento no Japão e sua aceitação nesse país, foi lançado em 1988 nos Estados Unidos batizado de Turbo Grafx-16.",
+    "language": "pt"
+  },
+  "theodore": {
+    "file": "theodore.xml",
+    "name": "Thomson TO8",
+    "description": "O Thomson TO8 é um computador caseiro produzido pela empresa francesa Thomson SA em 1986. Substituiu seu antecessor, o Thomson TO7/70 enquanto continuou totalmente compatível.",
+    "language": "pt"
+  },
+  "thomson": {
+    "file": "thomson.xml",
+    "name": "Thomson",
+    "description": "Thomson MO/TO são computadores domésticos criados pela empresa francesa entre 1982 e 1986. Entre os modelos mais populares estavam o Thomson MO5 ou T09. A sigla TO refere-se a \"Télé-Ordinateur\", enquanto a sigla MO refere-se a \"Micro-Ordinateur\".",
+    "language": "pt"
+  },
+  "ti99": {
+    "file": "ti99.xml",
+    "name": "TI-99",
+    "description": "The TI-99/4 and TI-99/4A were home computers released by Texas Instruments in 1979 and 1981, respectively. Based on the Texas Instruments TMS9900 microprocessor originally used in minicomputers, the TI-99/4 was the first 16-bit home computer, and the associated video display controller provided color graphics and sprite support that was among the best of its era.",
+    "language": "default"
+  },
+  "tic80": {
+    "file": "tic80.xml",
+    "name": "Tic 80",
+    "description": "TIC-80 é um computador de fantasia para criar, jogar e compartilhar pequenos jogos.\n\nExistem ferramentas integradas para desenvolvimento: código, sprites, mapas, editores de som e linha de comando, o suficiente para criar um minijogo retrô. Após a conclusão, você receberá um arquivo de cartucho, que pode ser armazenado e reproduzido no site.",
+    "language": "pt"
+  },
+  "to8": {
+    "file": "to8.xml",
+    "name": "Thomson TO8",
+    "description": "O Thomson TO8 é um computador caseiro produzido pela empresa francesa Thomson SA em 1986. Substituiu seu antecessor, o Thomson TO7/70 enquanto continuou totalmente compatível.",
+    "language": "pt"
+  },
+  "toaplan": {
+    "file": "toaplan.xml",
+    "name": "Toaplan",
+    "description": "",
+    "language": null
+  },
+  "tomb raider": {
+    "file": "Tomb Raider.xml",
+    "name": "Tomb Raider",
+    "description": "The Tomb Raider saga is an action-adventure video game series that began in 1996, originally developed by Core Design and published by Eidos Interactive. The story follows the adventures of Lara Croft, a skilled archaeologist and explorer who travels around the world in search of ancient artifacts and lost civilizations. During her journeys, she faces dangerous traps, wild environments, and powerful enemies.\n\nTomb Raider stands out for combining exploration, platforming, puzzle-solving, and combat. Over the years, the series evolved and included a modern reboot that presents a more realistic and deeper version of Lara Croft’s character. With numerous main titles, spin-offs, and adaptations into other media, it has become one of the most influential and recognized sagas in video game history.",
+    "language": "default"
+  },
+  "triforce": {
+    "file": "triforce.xml",
+    "name": "Triforce",
+    "description": "The Triforce is an arcade board developed in a joint venture between SEGA, Nintendo, and Namco. It is based upon the Nintendo GameCube video game console to reduce development costs, and allowed for arcade ports of home console games, and vice versa. It is named after the magical, often sought-after object in Nintendo's popular The Legend of Zelda series.",
+    "language": "default"
+  },
+  "trs-80": {
+    "file": "trs-80.xml",
+    "name": "TRS-80",
+    "description": "",
+    "language": null
+  },
+  "tutor": {
+    "file": "tutor.xml",
+    "name": "Tomy Tutor",
+    "description": "The Tomy Tutor, originally sold in Japan as the Pyūta (ぴゅう太) and in the UK as the Grandstand Tutor, is a home computer produced by the Japanese toymaker Tomy. It was architecturally similar, but not identical, to the Texas Instruments TI-99/4A, and used a similar Texas Instruments 16-bit CPU. The computer was launched in Japan in 1982, and in the UK and the United States in the next year.",
+    "language": "default"
+  },
+  "tyrquake": {
+    "file": "tyrquake.xml",
+    "name": "TyrQuake",
+    "description": "",
+    "language": null
+  },
+  "universal": {
+    "file": "universal.xml",
+    "name": "Universal",
+    "description": "",
+    "language": null
+  },
+  "uzebox": {
+    "file": "uzebox.xml",
+    "name": "Uzebox",
+    "description": "The Uzebox is a retro-minimalist 8-bit open source game console. It is based on an AVR 8-bit general purpose microcontroller made by Atmel.",
+    "language": "default"
+  },
+  "vc4000": {
+    "file": "vc4000.xml",
+    "name": "Interton Video Computer 4000",
+    "description": "The Interton Video Computer 4000 (officially abbreviated as Interton VC 4000) is an early 8-bit ROM cartridge-based second-generation home video game console that was released in Germany, England, France, Spain, Austria, the Netherlands and Australia in 1978.",
+    "language": "default"
+  },
+  "vectrex": {
+    "file": "vectrex.xml",
+    "name": "Vectrex",
+    "description": "O Vectrex é um console de videogame lançado em 1982 pela General Consumer Electronics (GCE), que mais tarde foi adquirida pela Milton Bradley Company. Incluía um display de vetor monocromático integrado e um conjunto de jogos pré-instalados. O que a tornava única era sua capacidade de exibir gráficos em linhas vetoriais, dando-lhe um aspecto distintivo e futurista para a época. Apesar de sua singularidade e qualidade, o Vectrex não obteve grande sucesso comercial e foi descontinuado pouco tempo após seu lançamento.",
+    "language": "pt"
+  },
+  "vic20": {
+    "file": "vic20.xml",
+    "name": "Commodore VIC-20",
+    "description": "",
+    "language": null
+  },
+  "videopac": {
+    "file": "videopac.xml",
+    "name": "Videopac",
+    "description": "",
+    "language": null
+  },
+  "videopacplus": {
+    "file": "videopacplus.xml",
+    "name": "Videopac+ G7400",
+    "description": "O Philips Videopac+ G7400, lançado em 1983, é um console de videogame que melhora em relação ao seu antecessor, o Videopac G7000, também conhecido como Magnavox Odyssey² na América do Norte. O G7400 oferecia gráficos de maior resolução e mais detalhados e mantinha a compatibilidade com toda a biblioteca de jogos do G7000. O console também incluía um teclado integrado, o que facilitava seu uso para uma variedade de aplicações além dos videogames. Embora não tenha alcançado grande popularidade, o G7400 representava um avanço significativo em termos de capacidades gráficas para sua época.",
+    "language": "pt"
+  },
+  "vircon32": {
+    "file": "vircon32.xml",
+    "name": "Vircon32",
+    "description": "Vircon32 is a virtual game console platform designed for modern development with a retro-inspired approach. It was created as a software-based system that emulates the structure and limitations of a traditional console, allowing developers to create games in a controlled and consistent environment.\n\nThe platform focuses on simplicity and accessibility, offering tools and documentation that make it easier to design games while maintaining a classic development feel. By defining clear hardware-like constraints, Vircon32 encourages creativity and efficient use of resources, similar to older console development.\n\nMore than just an emulator, Vircon32 acts as a complete ecosystem for game creation, distribution, and execution. It appeals to hobbyists, programmers, and retro enthusiasts who want to build and share original projects within a defined virtual system.",
+    "language": "default"
+  },
+  "virtualboy": {
+    "file": "virtualboy.xml",
+    "name": "Virtual Boy",
+    "description": "A Virtual Boy é um console de videogame lançado pela Nintendo em 1995. Utilizava uma tecnologia de visualização estereoscópica que criava a ilusão de profundidade nos jogos. Consistia em um visor que o jogador colocava sobre os olhos para ver as imagens em vermelho e preto. Não foi comercialmente bem-sucedida devido a vários fatores, como seu preço, seu catálogo limitado de jogos e as críticas sobre o desconforto de seu design e a fadiga visual que poderia causar. Como resultado, a Virtual Boy foi descontinuada pouco tempo após o seu lançamento e tornou-se um dos produtos menos bem-sucedidos da Nintendo.",
+    "language": "pt"
+  },
+  "vis": {
+    "file": "vis.xml",
+    "name": "Tandy VIS",
+    "description": "Tandy Video Information System, commonly known as Tandy VIS, is a multimedia home entertainment system released in 1992 by Tandy Corporation. It was designed as a CD-ROM-based platform intended for interactive content, combining elements of a game console and a multimedia player.\n\nThe system focused on educational software, interactive movies, and family-oriented applications rather than traditional video games. It used CD-ROM discs to deliver richer audio and visual experiences compared to cartridge-based systems of the time, aiming to introduce users to a new form of digital entertainment.\n\nDespite its ambitious concept, Tandy VIS had a limited commercial impact and a relatively small software library. Today, it is remembered as an experimental system from the early multimedia era, representing a transitional step between traditional consoles and modern digital media platforms.",
+    "language": "default"
+  },
+  "visco": {
+    "file": "visco.xml",
+    "name": "Visco",
+    "description": "",
+    "language": null
+  },
+  "vpinball": {
+    "file": "vpinball.xml",
+    "name": "Visual Pinball",
+    "description": "",
+    "language": null
+  },
+  "vsc": {
+    "file": "vsc.xml",
+    "name": "Video System Co.",
+    "description": "",
+    "language": null
+  },
+  "vsmile": {
+    "file": "vsmile.xml",
+    "name": "V.Smile",
+    "description": "The V.Smile is a sixth-generation educational home video game console manufactured and released by VTech. Titles are available on ROM cartridges called \"Smartridges\" and the graphics are primarily sprite-based.",
+    "language": "default"
+  },
+  "wii": {
+    "file": "wii.xml",
+    "name": "Nintendo Wii",
+    "description": "O Nintendo Wii é um console de videogame revolucionário desenvolvido pela Nintendo em 2006. Ele se destaca por sua abordagem inovadora no controle de movimento, utilizando o Wii Remote para permitir que os jogadores interajam com os jogos movendo o controle no ar.\n\nCom uma ampla variedade de jogos para todas as idades e habilidades, o Wii se tornou um sucesso mundial ao oferecer uma experiência de jogo ativa e participativa. Sua acessibilidade e foco nos jogos sociais também o tornaram popular para encontros e festas, atraindo jogadores de todas as idades e níveis de habilidade.",
+    "language": "pt"
+  },
+  "wiiu": {
+    "file": "wiiu.xml",
+    "name": "Nintendo Wii U",
+    "description": "A Wii U é um console de videogame da Nintendo lançado em 2012. Ela se destaca pelo seu inovador controle com tela sensível ao toque chamado GamePad, que permite jogar de forma portátil e oferece novas formas de interação com os jogos. Embora não tenha alcançado o mesmo nível de sucesso de sua predecessora, a Wii, ela ainda é apreciada por sua biblioteca de jogos, compatibilidade com a Wii e suas características únicas de jogabilidade.",
+    "language": "pt"
+  },
+  "windows": {
+    "file": "windows.xml",
+    "name": "Windows",
+    "description": "",
+    "language": null
+  },
+  "windows_installers": {
+    "file": "windows_installers.xml",
+    "name": "Windows Installers",
+    "description": "",
+    "language": null
+  },
+  "wonderswan": {
+    "file": "wonderswan.xml",
+    "name": "WonderSwan",
+    "description": "É um console portátil lançado pela Bandai em 1999 apenas no Japão, recebeu mais duas versões com melhorias, o WonderSwan Color e o Swan Crystal, juntos todos eles venderam 3,5 milhões de unidades.",
+    "language": "pt"
+  },
+  "wonderswancolor": {
+    "file": "wonderswancolor.xml",
+    "name": "WonderSwan Color",
+    "description": "Além de tela colorida, ele possui uma memória de 512kbit, que permite a criação de jogos mais complexos. A Bandai conseguiu uma parceria com a Square, que lançou títulos como os remakes de Final Fantasy I, II e IV.",
+    "language": "pt"
+  },
+  "wswan": {
+    "file": "wswan.xml",
+    "name": "WonderSwan",
+    "description": "É um console portátil lançado pela Bandai em 1999 apenas no Japão, recebeu mais duas versões com melhorias, o WonderSwan Color e o Swan Crystal, juntos todos eles venderam 3,5 milhões de unidades.",
+    "language": "pt"
+  },
+  "wswanc": {
+    "file": "wswanc.xml",
+    "name": "WonderSwan Color",
+    "description": "Além de tela colorida, ele possui uma memória de 512kbit, que permite a criação de jogos mais complexos. A Bandai conseguiu uma parceria com a Square, que lançou títulos como os remakes de Final Fantasy I, II e IV.",
+    "language": "pt"
+  },
+  "x-men": {
+    "file": "X-Men.xml",
+    "name": "X-Men",
+    "description": "X-Men is a long-running presence in video games based on the Marvel Comics team of mutants. Since the late 1980s, the X-Men have appeared in a wide variety of titles, including arcade beat 'em ups, action games, fighting games, and role-playing adventures, often featuring multiple playable characters with unique abilities.\n\nThe games typically allow players to control well-known members such as Wolverine, Cyclops, Storm, and Nightcrawler, each with distinct powers like regeneration, optic blasts, weather control, or teleportation. This variety encourages different playstyles and cooperative strategies, especially in multiplayer-focused titles.\n\nOver time, X-Men games have evolved across many platforms, from classic arcade experiences to modern adaptations within larger Marvel titles. Their mix of teamwork, superpowers, and iconic characters has made them a recurring and recognizable part of video game history.",
+    "language": "default"
+  },
+  "x1": {
+    "file": "x1.xml",
+    "name": "Sharp X1",
+    "description": "O Sharp X1 é uma série de computadores pessoais fabricados pela empresa japonesa Sharp Corporation entre 1982 e 1988. Estes computadores eram populares no Japão e eram caracterizados por suas capacidades gráficas e sonoras, bem como por sua capacidade de expansão. Eles usavam o microprocessador Zilog Z80 e eram principalmente usados para tarefas de produtividade, jogos e programação. Sua compatibilidade com gráficos de alta resolução e som avançado os tornou uma escolha popular entre os usuários japoneses durante os anos 80.",
+    "language": "pt"
+  },
+  "x68000": {
+    "file": "x68000.xml",
+    "name": "Sharp X68000",
+    "description": "O computador Sharp X68000 é uma série de computadores pessoais lançados pela Sharp Corporation em 1987. Estes computadores eram conhecidos pela sua potência e capacidades gráficas avançadas, tornando-os plataformas populares para jogos e aplicações multimédia no Japão. O Sharp X68000 era baseado em um processador Motorola 68000, daí o seu nome. Embora não tenha alcançado o mesmo nível de sucesso internacional que outras plataformas da época, como o PC IBM compatível ou o Commodore Amiga, ainda é muito apreciado pelo seu hardware avançado e pela sua rica biblioteca de jogos e aplicações.",
+    "language": "pt"
+  },
+  "xash3d_fwgs": {
+    "file": "xash3d_fwgs.xml",
+    "name": "Xash3D FWGS",
+    "description": "O Xash3D FWGS é um fork do Xash3D Engine, compatível com o mecanismo GoldSrc. Permite jogar o Half-Life out-of-the-box e muitas modificações baseadas no Half-Life.",
+    "language": "pt"
+  },
+  "xbox": {
+    "file": "xbox.xml",
+    "name": "XBOX",
+    "description": "O Xbox é um console de videogame de sexta geração lançado em novembro de 2001. Foi o primeiro console de videogame produzido pela Microsoft e projetado para competir com o PlayStation 2 da Sony e o GameCube da Nintendo.\n\nO Xbox foi o primeiro console a incorporar um disco rígido interno como padrão, o que permitiu aos usuários armazenar jogos e conteúdo multimídia. Alguns dos jogos mais populares do Xbox incluem Halo: Combat Evolved, Fable, Forza Motorsport e Project Gotham Racing. Vendeu mais de 24 milhões de unidades durante sua vida útil, tornando-se um sucesso comercial para a Microsoft.",
+    "language": "pt"
+  },
+  "xbox360": {
+    "file": "xbox360.xml",
+    "name": "XBOX 360",
+    "description": "O Xbox 360 é o segundo console de videogame lançado pela Microsoft entre 2005 e 2006. É o sucessor direto do Xbox e competiu com o PlayStation 3 da Sony e o Wii da Nintendo como parte dos consoles de videogame da sétima geração. Destacou-se por sua extensa biblioteca de jogos com títulos memoráveis como \"Halo 3\" ou \"Gears of War\". Além disso, foi o primeiro a adicionar a integração de serviços online \"Xbox Live\", permitindo que os usuários se conectassem e competissem com amigos e jogadores de todo o mundo. Esse aspecto social contribuiu muito para sua popularidade e longevidade na indústria do entretenimento digital.",
+    "language": "pt"
+  },
+  "xegs": {
+    "file": "xegs.xml",
+    "name": "Atari XE Game System",
+    "description": "O Atari XE Video Game System (ou Atari XEGS) é um console de videogame lançado pela Atari Corporation em 1987. Baseado no microcomputador Atari 65XE. Destacou-se por sua capacidade de executar uma ampla gama de jogos clássicos da era Atari de 8 bits, tornando-se uma escolha popular para os entusiastas de jogos retrô. Além disso, o XEGS oferecia recursos únicos, como um teclado removível, unidades de disco ou impressoras, entre outros, o que o transformava em um computador pessoal básico ampliando assim sua funcionalidade além de ser apenas um console de jogos.",
+    "language": "pt"
+  },
+  "zelda": {
+    "file": "zelda.xml",
+    "name": "The Legend of Zelda",
+    "description": "The Legend of Zelda (ゼルダの伝説 Zeruda no Densetsu?) is an action-adventure game franchise created by the Japanese game designers Shigeru Miyamoto and Takashi Tezuka. Since the original Legend of Zelda was released in 1986, the series has expanded to include 19 entries on all of Nintendo's major game consoles, as well as a number of spin-offs.\n\nThe series centers on the various incarnations of Link, a courageous young man of the elf-like Hylian race; and Princess Zelda, a magical princess who is the mortal reincarnation of the goddess Hylia; as they fight to save the magical land of Hyrule from Ganon, an evil warlord turned demon king, who is the principal antagonist of the series.",
+    "language": "default"
+  },
+  "zmachine": {
+    "file": "zmachine.xml",
+    "name": "Z Machine",
+    "description": "La Z-machine est une machine virtuelle développée par Joel Berez et Marc Blank en 1979, et utilisée par Infocom pour ses jeux d'aventure textuels.",
+    "language": "fr"
+  },
+  "zx81": {
+    "file": "zx81.xml",
+    "name": "Sinclair ZX81",
+    "description": "O Sinclair ZX81 foi um computador doméstico lançado pela Sinclair Research em 1981 como uma versão melhorada do Sinclair ZX80. Era o computador mais barato da época e era vendido na versão de kit por £49,95 e montado por £69,95. O ZX81 apresentava um design compacto e era baseado em um microprocessador Zilog Z80 com uma velocidade de 3,25 MHz. Tinha 1 KB de RAM e utilizava fitas cassete para armazenar programas. Embora suas capacidades fossem limitadas, contribuiu para a popularização da computação doméstica na década de 1980 devido ao seu baixo custo e acessibilidade.",
+    "language": "pt"
+  },
+  "zxspectrum": {
+    "file": "zxspectrum.xml",
+    "name": "ZX Spectrum",
+    "description": "Baseado num processador Zilog Z80-A a 3,50 MHz com 16 KBytes de ROM, Sinclair ZX Spectrum foi um dos mais influentes microcomputadores europeus de 8 bits durante a década de 1980. Foi lançado em 1982.",
+    "language": "pt"
+  }
+}
