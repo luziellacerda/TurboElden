@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-30T18:01:01.703910-03:00",
+  "persistent_downloaded_covers_path": "/sdcard/EmulationStation/.emulationstation/store/covers",
+  "files": 1765,
+  "bytes": 245819565,
+  "oldest_file_date": "2026-09-25",
+  "newest_file_date": "2026-09-30",
+  "libmain_sha256": "a1ae357dc29caac52d47386a71a0a9a685ecffb9c01d536f5af50b5ba658cda8",
+  "native_evidence": [
+    "refreshInstalledState 0x194a60 enumerates persistent cover files at 0x194abc-0x194b04",
+    "refreshInstalledState 0x195068-0x19519c matches cover identifier .img and restores CatalogItem local path at offset 0xc8",
+    "queueCoverDownloads 0x195d2c-0x195d40 skips HTTP when local image path is populated"
+  ],
+  "code_change_needed": false,
+  "network_capture_performed": false,
+  "bundled_local_covers": "files/turbo-game-covers; copyIfAbsent; no network"
+}

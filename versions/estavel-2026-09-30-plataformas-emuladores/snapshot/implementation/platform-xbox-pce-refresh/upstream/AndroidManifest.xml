@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+
+  <application
+    android:label="@string/app_name"
+    android:icon="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:allowBackup="true"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.Xemu">
+
+    <activity
+      android:name=".LauncherActivity"
+      android:screenOrientation="fullSensor"
+      android:exported="true">
+
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:scheme="content" />
+        <data android:scheme="file" />
+      </intent-filter>
+
+      <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="*/*" />
+      </intent-filter>
+    </activity>
+
+    <activity
+      android:name=".MainActivity"
+      android:screenOrientation="sensorLandscape"
+      android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+      android:hardwareAccelerated="true"
+      android:process=":xemu"
+      android:exported="false">
+    </activity>
+
+    <activity
+      android:name=".SetupWizardActivity"
+      android:screenOrientation="fullSensor"
+      android:exported="false" />
+
+    <activity
+      android:name=".GameLibraryActivity"
+      android:screenOrientation="fullSensor"
+      android:exported="false" />
+
+    <activity
+      android:name=".SettingsActivity"
+      android:screenOrientation="fullSensor"
+      android:exported="false" />
+
+    <activity
+      android:name=".PerGameSettingsActivity"
+      android:screenOrientation="fullSensor"
+      android:exported="false" />
+
+  </application>
+</manifest>

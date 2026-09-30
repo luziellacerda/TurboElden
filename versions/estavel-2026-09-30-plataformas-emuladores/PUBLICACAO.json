@@ -1,0 +1,12 @@
+{
+  "tag": "estavel-2026-09-30-plataformas-emuladores",
+  "repository": "https://github.com/luziellacerda/TurboElden",
+  "branches": [
+    "estavel",
+    "versao-funcional"
+  ],
+  "apk_sha256": "78accf4c2e0c7b5c786acb0ea7a187754a53253beb2c51a01fc40f5a18c649f2",
+  "approval": "Publicar como estavel, incluindo os videos PSP BR e Game Gear solicitados em seguida",
+  "git_commit_resolution": "git rev-list -n 1 estavel-2026-09-30-plataformas-emuladores",
+  "post_push_receipt_local": "E:\\ESTUDO APK\\estaveis\\2026-09-30-plataformas-emuladores\\PUBLICACAO-GIT.json"
+}

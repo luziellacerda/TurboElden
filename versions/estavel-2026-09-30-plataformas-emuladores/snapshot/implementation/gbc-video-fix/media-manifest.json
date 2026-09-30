@@ -1,0 +1,15 @@
+{
+  "platform_key": "Gameboy Color",
+  "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\gc.mp4",
+  "source_sha256": "9d157a9feeb22bc2e587b5dfde7f1341cb05d86a206d8b051d905443781f158f",
+  "asset": "turbo-system-videos/720-gbc.mp4",
+  "sha256": "6ad41cb565d682bf7b65a61fbab9efd71540862030878e12ff2e416a741a5f65",
+  "width": 720,
+  "height": 720,
+  "fps": 60,
+  "speed": 1.0,
+  "loop": true,
+  "source_visually_confirmed": "GAME BOY COLOR",
+  "gamecube_asset_preserved": "turbo-system-videos/720-gc.mp4",
+  "note": "Current source gc.mp4 is Game Boy Color, as specified by owner; existing GameCube encoded clip is a different video. Do not regenerate GameCube from the current source gc.mp4."
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "key": "naomi",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\naomi.mp4",
+    "source_sha256": "54b2b74d823715288df7ce4261196f9f4fbf1066ac450e667e7081d2e9e86037",
+    "asset": "assets/turbo-system-videos/720-naomi.mp4",
+    "sha256": "188c9174fdbc6f402b68be2ca9ccbd2c546b11fcecff8ab669f12220df55176f",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  },
+  {
+    "key": "naomi2",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\naomi2.mp4",
+    "source_sha256": "4b954a816b2d80b6ed143882c195141cd09bd43b8e349065466306b549ea841b",
+    "asset": "assets/turbo-system-videos/720-naomi2.mp4",
+    "sha256": "f65fb5a7f236cec6db4e75dc785bd509ba1bcd85d3454df0400698394b09185e",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  }
+]

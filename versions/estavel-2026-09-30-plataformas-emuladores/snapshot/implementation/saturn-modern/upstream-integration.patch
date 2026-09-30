@@ -1,0 +1,512 @@
+--- a/src/android/CMakeLists.txt
++++ b/src/android/CMakeLists.txt
+@@ -1,134 +1,10 @@
+-#----------------------------------------------------------------------------------------
+-# Android build.
+-#----------------------------------------------------------------------------------------
+-# How to build on Windows host. 
+-#  Requirements:
+-#    1) android-ndk-r10d or above.
+-#    2) ninja (https://github.com/martine/ninja)
+-#    3) Visual C++ ( for c68k code generation )
+-#  Build step:
+-#    1) edit ANDROID_NDK PATH on "yabause/src/android/CMakeLists.txt"
+-#    2) cmake -GNinja -DCMAKE_TOOLCHAIN_FILE=yabause/src/android/androidtoolchain.cmake
+-#    3) edit settings listed below
+-#         ANDROID_ABI               armeabi-v7a with NEON
+-#         ANDROID_NATIVE_API_LEVEL  21 
+-#         YAB_PORTS                 android
+-#         YAB_WANT_ARM7             checked  
+-#    4) "Configure" and "Generate"
+-#    5) exec command prompt and exec "vcvarsall.bat x86" for building using cl.exe 
+-#    6) exec eclipse and import "yabause/src/android"
+-#----------------------------------------------------------------------------------------
++project(yabause-android)
++yab_port_start()
++include(${CMAKE_SOURCE_DIR}/CMake/Packages/external_libpng.cmake)
++add_subdirectory("E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/deps/oboe/oboe-1.9.3" "${CMAKE_BINARY_DIR}/deps/oboe")
++add_library(turbo_saturn SHARED jni/SndOboe.cpp jni/yui.cpp jni/sndopensl.c jni/jniBackupManager.cpp jni/ChdFileInfo.cpp)
++target_include_directories(turbo_saturn PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../ ${CMAKE_BINARY_DIR}/src ${png_INCLUDE_DIR} "E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/deps/libchdr/libchdr-5a642352731a5abb1322bf0749b0e1822ebb393a/include" "E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/deps/libchdr/libchdr-5a642352731a5abb1322bf0749b0e1822ebb393a/include/libchdr")
++target_link_libraries(turbo_saturn yabause chdr-static png_static oboe log jnigraphics OpenSLES android GLESv3 EGL z)
++target_link_options(turbo_saturn PRIVATE -Wl,-z,max-page-size=16384 -Wl,--exclude-libs,ALL)
+ 
+-set(ENV{ANDROID_NDK} "C:/NVPACK/android-ndk-r10e")
+-
+-project(yabause-android)
+-
+-yab_port_start()
+-
+-#if( YAB_WANT_VULKAN )
+-#	set( LIBRARY_NAME yabause_native_vulkan )
+-#else()
+-	set( LIBRARY_NAME yabause_native )
+-#endif()
+-
+-include( ${CMAKE_SOURCE_DIR}/CMake/Packages/external_libpng.cmake )
+-#include( ${CMAKE_SOURCE_DIR}/CMake/Packages/external_zlib.cmake )
+-
+-# RetroAchievements support
+-option(HAVE_RETROACHIEVEMENTS "Enable RetroAchievements support" ON)
+-if(HAVE_RETROACHIEVEMENTS)
+-    add_subdirectory(../retroachievements retroachievements)
+-endif()
+-
+-
+-
+-set( SOURCES 
+- jni/SndOboe.h
+- jni/SndOboe.cpp
+- jni/yui.cpp
+- #jni/sndaudiotrack.c
+- jni/sndopensl.c
+- jni/jniBackupManager.cpp
+- jni/jniBackupManager.h
+- jni/jsoncpp.cpp
+- jni/ChdFileInfo.cpp
+- jni/ChdFileInfo.h
+-)
+-
+-# Add RetroAchievements JNI sources
+-if(HAVE_RETROACHIEVEMENTS)
+-    set( SOURCES ${SOURCES}
+-        jni/retroachievements_android.cpp
+-        jni/retroachievements_android.h
+-    )
+-endif()
+-
+-set (OBOE_DIR ./oboe)
+-add_subdirectory (${OBOE_DIR} ./oboe)
+-include_directories (${OBOE_DIR}/include)
+-
+-
+-if( YAB_WANT_VULKAN )
+-set( SOURCES ${SOURCES} ../vulkan/Window_android.cpp )
+-endif()
+-
+-set (PORT_LIBRARIES
+- log
+- jnigraphics
+- OpenSLES
+- android
+- GLESv3
+- EGL
+- c++_static
+-)
+-
+-set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DJSONCPP_NO_LOCALE_SUPPORT -fexceptions " )
+-
+-
+-set( LIBRARY_OUTPUT_PATH  ${PROJECT_SOURCE_DIR}/app/src/main/jniLibs/${ANDROID_NDK_ABI_NAME} )
+-#set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
+-#include(AndroidNdkGdb)
+-#android_ndk_gdb_enable()
+-
+-link_directories( ${LIBCHDR_LIB_DIR} ${LIBPNG_LIB_DIR} ${LIBZ_LIB_DIR} ${SHADERC_LIBRARY_DIR} ${link_directories})
+-
+-add_library(${LIBRARY_NAME} SHARED ${SOURCES}  )
+-#android_ndk_gdb_debuggable(${LIBRARY_NAME})
+-
+-include_directories( 
+-	${YABAUSE_INCLUDE_DIR} 
+-	${PROJECT_BINARY_DIR}/../ 
+-	${PROJECT_SOURCE_DIR}/../ 
+-	${png_INCLUDE_DIR}
+-)
+-
+-# Add RetroAchievements include directories
+-if(HAVE_RETROACHIEVEMENTS)
+-    include_directories(${RCHEEVOS_INCLUDE_DIRS})
+-endif()
+-target_link_libraries(${LIBRARY_NAME} yabause ${YABAUSE_LIBRARIES} 
+-	${PORT_LIBRARIES}
+-	${LIBCHDR_LIBRARIES}	
+-	png16
+-	${ZLIB_LIBRARY_RELEASE}
+-	${VULKAN_LIBRARIES}
+-	oboe
+-	#${zlib_STATIC_LIBRARIES}
+-	#    ${PROJECT_SOURCE_DIR}/debuglib/libNvidia_gfx_debugger_stub.a
+-)
+-
+-# Add RetroAchievements libraries
+-if(HAVE_RETROACHIEVEMENTS)
+-    target_link_libraries(${LIBRARY_NAME} ${RCHEEVOS_LIBRARIES})
+-    target_compile_definitions(${LIBRARY_NAME} PRIVATE HAVE_RETROACHIEVEMENTS=1)
+-endif()
+- 
+-add_dependencies(${LIBRARY_NAME} libchdr)
+-add_dependencies(${LIBRARY_NAME} png)
+-
+-# Add RetroAchievements dependencies
+-if(HAVE_RETROACHIEVEMENTS)
+-    add_dependencies(${LIBRARY_NAME} yabause_retroachievements)
+-endif()
+-
+-
++target_sources(turbo_saturn PRIVATE "E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/ra_disabled.c")
+--- a/src/android/jni/yui.cpp
++++ b/src/android/jni/yui.cpp
+@@ -69,6 +69,9 @@
+ #include <pthread.h>
+ #include <map>
+ #include <mutex>
++#include <atomic>
++static std::atomic<int> turboReady{0};
++extern "C" JNIEXPORT jint JNICALL Java_org_uoyabause_android_YabauseRunnable_isReady(JNIEnv*, jclass){return turboReady.load();}
+ 
+ //#include "sndaudiotrack.h"
+ #ifdef HAVE_OPENSL
+@@ -77,7 +80,7 @@
+ 
+ #include "SndOboe.h"
+ 
+-#include "libpng16/png.h"
++#include "png.h"
+ 
+ #include "PlayRecorder.h"
+ 
+@@ -90,7 +93,9 @@
+ #define VIDCORE_VULKAN 0xFF
+ #endif
+ 
++#ifdef HAVE_RETROACHIEVEMENTS
+ #include "yabause_ra_integration.h"
++#endif
+ 
+ // Test function declaration for mastery notification
+ extern "C" void testMasteryNotification();
+@@ -2473,11 +2478,13 @@
+                 }
+                 YabauseExec();
+ 
++#ifdef HAVE_RETROACHIEVEMENTS
+                 YabauseRA::Integration* rai = YabauseRA::Integration::getInstance();
+                 if(rai!=NULL)
+                 {
+                     rai->doFrame();
+                 }
++#endif
+                 
+             }
+         }
+@@ -2511,6 +2518,7 @@
+                 }
+             }
+             initResult = YabauseInit();
++            turboReady.store(initResult == 0 ? 1 : -1);
+             break;
+         case MSG_WINDOW_CHG:
+             YUI_LOG("MSG_WINDOW_CHG");
+@@ -2545,8 +2553,7 @@
+             pause = 0;
+             renderingEnabled = 0;
+             destroy();
+-            pthread_mutex_unlock(&g_mtxGlLock);
+-            break;
++            break; // the common epilogue unlocks g_mtxGlLock once
+ 
+         case MSG_SAVE_STATE:
+         {
+@@ -2655,12 +2662,14 @@
+         {
+             YUI_LOG("MSG_CLOSE_TRAY");
+             Cs2ForceCloseTray(CDCORE_ISO, s_cdpath);
++#ifdef HAVE_RETROACHIEVEMENTS
+             if (!g_skip_ra_change_media) {
+                 YabauseRA::Integration* ra = YabauseRA::Integration::getInstance();
+                 if(ra){
+                     ra->changeMedia(s_cdpath);
+                 }
+             }
++#endif
+             g_skip_ra_change_media = false;
+         }
+             break;
+@@ -2684,10 +2693,12 @@
+         case MSG_RESET:
+         {
+             YabauseReset();
++#ifdef HAVE_RETROACHIEVEMENTS
+             YabauseRA::Integration* ra = YabauseRA::Integration::getInstance();
+             if(ra){
+                 ra->reset();
+             }
++#endif
+         }
+         break;
+         case MSG_RECORD:
+@@ -2726,6 +2737,8 @@
+         }
+         g_msg = MSG_NONE;
+         pthread_mutex_unlock(&g_mtxGlLock);
++        // Paused/loading Android surfaces must not busy-spin a CPU core.
++        if (renderingEnabled && (pause || !g_Display || !g_window)) usleep(10000);
+     }
+ 
+     YUI_LOG("byebye");
+--- a/CMake/Packages/external_libchdr.cmake
++++ b/CMake/Packages/external_libchdr.cmake
+@@ -1,77 +1,7 @@
+-include(ExternalProject)
+-message(STATUS "Could not find libchdr.  This dependency will be downloaded.")
+-
+-#find_package(Git)
+-#message("Git found: ${GIT_EXECUTABLE}")
+-
+-if(ANDROID)
+-get_filename_component(TOOL_CHAIN_ABSOLUTE_PATH "${CMAKE_TOOLCHAIN_FILE}"
+-                       REALPATH BASE_DIR "${CMAKE_BINARY_DIR}")
+-
+-set( ADDITIONAL_CMAKE_ARGS 
+- -DANDROID_ABI=${ANDROID_ABI}
+- -DCMAKE_MAKE_PROGRAM=${CMAKE_MAKE_PROGRAM} 
+- -DANDROID_NATIVE_API_LEVEL=${ANDROID_NATIVE_API_LEVEL}
+- -DCMAKE_TOOLCHAIN_FILE=${TOOL_CHAIN_ABSOLUTE_PATH}
+-)
+-
+-elseif(IOS)
+-
+-  get_filename_component(TOOL_CHAIN_ABSOLUTE_PATH "${CMAKE_TOOLCHAIN_FILE}"
+-                       REALPATH BASE_DIR "${CMAKE_BINARY_DIR}")
+-  set( ADDITIONAL_CMAKE_ARGS 
+-    -DCMAKE_TOOLCHAIN_FILE=${TOOL_CHAIN_ABSOLUTE_PATH}
+-    -DPLATFORM=${PLATFORM}
+-  )
+-
+-else()
+-  set(ADDITIONAL_CMAKE_ARGS "")
+-endif()
+-
+-ExternalProject_Add(
+-  libchdr
+-  GIT_REPOSITORY "https://github.com/devmiyax/libchdr.git"
+-  GIT_TAG "5a642352731a5abb1322bf0749b0e1822ebb393a"
+-  #PATCH_COMMAND  git apply "${CMAKE_SOURCE_DIR}/CMake/Packages/libchdr.patch"
+-  CMAKE_ARGS  -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/libchdr 
+-              -DCMAKE_BUILD_TYPE:STRING=Release 
+-              -DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS}
+-              -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
+-              ${ADDITIONAL_CMAKE_ARGS}
+-)
+-
+-ExternalProject_Get_Property(libchdr SOURCE_DIR)
+-ExternalProject_Get_Property(libchdr BINARY_DIR)
+-set(LIBCHDR_INCLUDE_DIR ${SOURCE_DIR}/include/libchdr ${SOURCE_DIR}/include )
+-
+-if(WIN32)
+-set(LIBCHDR_LIBRARIES  
+- ${BINARY_DIR}/$<CONFIGURATION>/${CMAKE_STATIC_LIBRARY_PREFIX}chdr-static${CMAKE_STATIC_LIBRARY_SUFFIX}
+- #${BINARY_DIR}/$<CONFIGURATION>/${CMAKE_STATIC_LIBRARY_PREFIX}flac-static${CMAKE_STATIC_LIBRARY_SUFFIX}
+- #${BINARY_DIR}/$<CONFIGURATION>/${CMAKE_STATIC_LIBRARY_PREFIX}crypto-static${CMAKE_STATIC_LIBRARY_SUFFIX}
+- ${BINARY_DIR}/deps/lzma-24.05/$<CONFIGURATION>/${CMAKE_STATIC_LIBRARY_PREFIX}lzma${CMAKE_STATIC_LIBRARY_SUFFIX}
+- ${BINARY_DIR}/deps/zstd-1.5.6/build/cmake/lib/$<CONFIGURATION>/${CMAKE_STATIC_LIBRARY_PREFIX}zstd_static${CMAKE_STATIC_LIBRARY_SUFFIX}
+-)
+-set( LIBCHDR_LIB_DIR ${BINARY_DIR} )
+-elseif(ANDROID)
+-set(LIBCHDR_LIBRARIES  
+- ${CMAKE_STATIC_LIBRARY_PREFIX}chdr-static${CMAKE_STATIC_LIBRARY_SUFFIX}
+- ${CMAKE_STATIC_LIBRARY_PREFIX}lzma${CMAKE_STATIC_LIBRARY_SUFFIX}
+- ${CMAKE_STATIC_LIBRARY_PREFIX}zstd${CMAKE_STATIC_LIBRARY_SUFFIX}
+- )
+- set( LIBCHDR_LIB_DIR ${BINARY_DIR} ${BINARY_DIR}/deps/zstd-1.5.6/build/cmake/lib/ ${BINARY_DIR}/deps/lzma-24.05/ )
+-else()
+-set(LIBCHDR_LIBRARIES  
+- ${BINARY_DIR}/${CMAKE_STATIC_LIBRARY_PREFIX}chdr-static${CMAKE_STATIC_LIBRARY_SUFFIX}
+- ${BINARY_DIR}/${CMAKE_STATIC_LIBRARY_PREFIX}flac-static${CMAKE_STATIC_LIBRARY_SUFFIX}
+- ${BINARY_DIR}/${CMAKE_STATIC_LIBRARY_PREFIX}crypto-static${CMAKE_STATIC_LIBRARY_SUFFIX}
+- ${BINARY_DIR}/${CMAKE_STATIC_LIBRARY_PREFIX}lzma-static${CMAKE_STATIC_LIBRARY_SUFFIX}
+- ${BINARY_DIR}/deps/zstd-1.5.6/build/cmake/lib/${CMAKE_STATIC_LIBRARY_PREFIX}zstd${CMAKE_STATIC_LIBRARY_SUFFIX}
+- )
+- set( LIBCHDR_LIB_DIR ${BINARY_DIR} )
+-endif()
+-
+-message(STATUS "LIBCHDR_LIBRARIES is " ${LIBCHDR_LIBRARIES} )
+-message(STATUS "LIBCHDR_INCLUDE_DIR is " ${LIBCHDR_INCLUDE_DIR} )
+-
+-include_directories( ${LIBCHDR_INCLUDE_DIR} )
++include_guard(GLOBAL)
++set(WITH_SYSTEM_ZLIB ON CACHE BOOL "" FORCE)
++set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
++add_subdirectory("E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/deps/libchdr/libchdr-5a642352731a5abb1322bf0749b0e1822ebb393a" "${CMAKE_BINARY_DIR}/deps/chdr")
++add_custom_target(libchdr DEPENDS chdr-static)
++set(LIBCHDR_LIBRARIES chdr-static)
++include_directories("E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/deps/libchdr/libchdr-5a642352731a5abb1322bf0749b0e1822ebb393a/include" "E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/deps/libchdr/libchdr-5a642352731a5abb1322bf0749b0e1822ebb393a/include/libchdr")
+--- a/CMake/Packages/external_libpng.cmake
++++ b/CMake/Packages/external_libpng.cmake
+@@ -1,75 +1,7 @@
+-# Copyright 2017 The TensorFlow Authors. All Rights Reserved.
+-#
+-# Licensed under the Apache License, Version 2.0 (the "License");
+-# you may not use this file except in compliance with the License.
+-# You may obtain a copy of the License at
+-#
+-#     http://www.apache.org/licenses/LICENSE-2.0
+-#
+-# Unless required by applicable law or agreed to in writing, software
+-# distributed under the License is distributed on an "AS IS" BASIS,
+-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-# See the License for the specific language governing permissions and
+-# limitations under the License.
+-# ==============================================================================
+-include (ExternalProject)
+-
+-message(STATUS "libpng not found - will build from source")
+-
+-set(png_URL https://download.sourceforge.net/libpng/libpng-1.6.37.tar.gz)
+-set(png_HASH SHA256=daeb2620d829575513e35fecc83f0d3791a620b9b93d800b763542ece9390fb4)
+-set(png_BUILD ${CMAKE_CURRENT_BINARY_DIR}/png/src/png)
+-set(png_INSTALL ${CMAKE_CURRENT_BINARY_DIR}/png/install)
+-set(png_INCLUDE_DIR ${png_INSTALL}/include) 
+-
+-if(WIN32)
+-  set(png_STATIC_LIBRARIES 
+-    debug ${CMAKE_CURRENT_BINARY_DIR}/png/install/lib/libpng16_staticd.lib
+-    optimized ${CMAKE_CURRENT_BINARY_DIR}/png/install/lib/libpng16_static.lib)
+-else()
+-  set(png_STATIC_LIBRARIES ${CMAKE_CURRENT_BINARY_DIR}/png/install/lib/libpng16.a)
+-endif()
+-
+-set(png_HEADERS
+-    "${png_INSTALL}/include/libpng16/png.h"
+-    "${png_INSTALL}/include/libpng16/pngconf.h"
+-)
+-
+-if(ANDROID)
+-get_filename_component(TOOL_CHAIN_ABSOLUTE_PATH "${CMAKE_TOOLCHAIN_FILE}"
+-                       REALPATH BASE_DIR "${CMAKE_BINARY_DIR}")
+-
+-set( ADDITIONAL_CMAKE_ARGS 
+- -DANDROID_ABI=${ANDROID_ABI}
+- -DCMAKE_MAKE_PROGRAM=${CMAKE_MAKE_PROGRAM} 
+- -DANDROID_NATIVE_API_LEVEL=${ANDROID_NATIVE_API_LEVEL}
+- -DCMAKE_TOOLCHAIN_FILE=${TOOL_CHAIN_ABSOLUTE_PATH}
+-)
+-
+-else()
+-  set(ADDITIONAL_CMAKE_ARGS "")
+-endif()
+-
+-
+-ExternalProject_Add(
+-    png
+-    PREFIX png
+-    DEPENDS zlib
+-    URL ${png_URL}
+-    URL_HASH ${png_HASH}
+-    INSTALL_DIR ${png_INSTALL}
+-    DOWNLOAD_DIR "${DOWNLOAD_LOCATION}"
+-    CMAKE_ARGS
+-    	-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
+-        -DCMAKE_BUILD_TYPE:STRING=Release
+-        -DCMAKE_VERBOSE_MAKEFILE:BOOL=OFF
+-        -DCMAKE_INSTALL_PREFIX:STRING=${png_INSTALL}
+-        -DZLIB_ROOT:STRING=${ZLIB_INSTALL}
+-        -DPNG_NO_STDIO:BOOL=OFF
+-        -DPNG_SHARED:BOOL=OFF
+-        #-DCMAKE_C_FLAGS=-DPNG_SETJMP_SUPPORTED
+-        ${ADDITIONAL_CMAKE_ARGS} 
+-)
+-set( LIBPNG_LIB_DIR ${CMAKE_CURRENT_BINARY_DIR}/png/install/lib/ )
+-
+-
++include_guard(GLOBAL)
++set(PNG_SHARED OFF CACHE BOOL "" FORCE)
++set(PNG_TESTS OFF CACHE BOOL "" FORCE)
++set(PNG_EXECUTABLES OFF CACHE BOOL "" FORCE)
++set(PNG_ARM_NEON off CACHE STRING "" FORCE)
++add_subdirectory("E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/deps/libpng/libpng-1.6.37" "${CMAKE_BINARY_DIR}/deps/png")
++set(png_INCLUDE_DIR "E:/ESTUDO APK/work/native-carousel/implementation/saturn-modern/deps/libpng/libpng-1.6.37" "${CMAKE_BINARY_DIR}/deps/png")
+--- a/CMake/Packages/external_zlib.cmake
++++ b/CMake/Packages/external_zlib.cmake
+@@ -1,90 +1,2 @@
+-# Copyright 2017 The TensorFlow Authors. All Rights Reserved.
+-#
+-# Licensed under the Apache License, Version 2.0 (the "License");
+-# you may not use this file except in compliance with the License.
+-# You may obtain a copy of the License at
+-#
+-#     http://www.apache.org/licenses/LICENSE-2.0
+-#
+-# Unless required by applicable law or agreed to in writing, software
+-# distributed under the License is distributed on an "AS IS" BASIS,
+-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-# See the License for the specific language governing permissions and
+-# limitations under the License.
+-# ==============================================================================
+-include (ExternalProject)
+-
+-set(zlib_INCLUDE_DIR ${CMAKE_CURRENT_BINARY_DIR}/zlib/install/include)
+-set(ZLIB_URL https://github.com/madler/zlib)
+-set(ZLIB_BUILD ${CMAKE_CURRENT_BINARY_DIR}/zlib/src/zlib)
+-set(ZLIB_INSTALL ${CMAKE_CURRENT_BINARY_DIR}/zlib/install)
+-set(ZLIB_TAG 9f0f2d4f9f1f28be7e16d8bf3b4e9d4ada70aa9f)
+-
+-if(WIN32)
+-  set(zlib_STATIC_LIBRARIES
+-      debug ${CMAKE_CURRENT_BINARY_DIR}/zlib/install/lib/zlibstaticd.lib
+-      optimized ${CMAKE_CURRENT_BINARY_DIR}/zlib/install/lib/zlibstatic.lib)
+-else()
+-  set(zlib_STATIC_LIBRARIES
+-      ${CMAKE_CURRENT_BINARY_DIR}/zlib/install/lib/libz.a)
+-endif()
+-
+-if(ANDROID)
+-get_filename_component(TOOL_CHAIN_ABSOLUTE_PATH "${CMAKE_TOOLCHAIN_FILE}"
+-                       REALPATH BASE_DIR "${CMAKE_BINARY_DIR}")
+-
+-set( ADDITIONAL_CMAKE_ARGS 
+- -DANDROID_ABI=${ANDROID_ABI}
+- -DCMAKE_MAKE_PROGRAM=${CMAKE_MAKE_PROGRAM} 
+- -DANDROID_NATIVE_API_LEVEL=${ANDROID_NATIVE_API_LEVEL}
+- -DCMAKE_TOOLCHAIN_FILE=${TOOL_CHAIN_ABSOLUTE_PATH}
+-)
+-
+-elseif(IOS)
+-
+-  get_filename_component(TOOL_CHAIN_ABSOLUTE_PATH "${CMAKE_TOOLCHAIN_FILE}"
+-                       REALPATH BASE_DIR "${CMAKE_BINARY_DIR}")
+-  set( ADDITIONAL_CMAKE_ARGS 
+-    -DCMAKE_TOOLCHAIN_FILE=${TOOL_CHAIN_ABSOLUTE_PATH}
+-    -DPLATFORM=${PLATFORM}
+-  )
+-
+-else()
+-  set(ADDITIONAL_CMAKE_ARGS "")
+-endif()
+-
+-set(ZLIB_HEADERS
+-    "${ZLIB_INSTALL}/include/zconf.h"
+-    "${ZLIB_INSTALL}/include/zlib.h"
+-)
+-
+-ExternalProject_Add(
+-    zlib
+-    PREFIX zlib
+-    GIT_REPOSITORY ${ZLIB_URL}
+-    GIT_TAG ${ZLIB_TAG}
+-    INSTALL_DIR ${ZLIB_INSTALL}
+-    BUILD_IN_SOURCE 1
+-    DOWNLOAD_DIR "${DOWNLOAD_LOCATION}"
+-    CMAKE_ARGS
+-    -DZLIB_BUILD_EXAMPLES=OFF
+-		-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
+-        -DCMAKE_BUILD_TYPE:STRING=Release
+-        -DCMAKE_INSTALL_PREFIX:STRING=${ZLIB_INSTALL}
+-        ${ADDITIONAL_CMAKE_ARGS}        
+-)
+-
+-set( LIBZ_LIB_DIR ${CMAKE_CURRENT_BINARY_DIR}/zlib/install/lib/ )
+-
+-# put zlib includes in the directory where they are expected
+-add_custom_target(zlib_create_destination_dir
+-    COMMAND ${CMAKE_COMMAND} -E make_directory ${zlib_INCLUDE_DIR}
+-    DEPENDS zlib)
+-
+-add_custom_target(zlib_copy_headers_to_destination
+-    DEPENDS zlib_create_destination_dir)
+-
+-foreach(header_file ${ZLIB_HEADERS})
+-    add_custom_command(TARGET zlib_copy_headers_to_destination PRE_BUILD
+-    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${header_file} ${zlib_INCLUDE_DIR})
+-endforeach()+include_guard(GLOBAL)
++find_library(ZLIB_LIBRARY_RELEASE z REQUIRED)

@@ -1,0 +1,36 @@
+[
+  {
+    "key": "Psp - BR",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\PSPBR.mp4",
+    "source_sha256": "2539a6b09019b443c2b2e9a9b0a626841b9cec82d9fdfac7585cb179c14c3a73",
+    "asset": "assets/turbo-system-videos/720-pspbr.mp4",
+    "sha256": "bc5bcbc12a93862d3d35658c661d0b18112b32937bfca4be712aa061d0d5deea",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  },
+  {
+    "key": "gamegear",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\GEMEGEAR.mp4",
+    "source_sha256": "4badd4cd0e077d7c27de7074f3b8c8ec5b290d6269b5ebaf59b259f18d774a95",
+    "asset": "assets/turbo-system-videos/720-gamegear.mp4",
+    "sha256": "f62249c93550a06ae88af047563602e89e9faea9a48bc2599bb6f5ac1f58dd16",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  }
+]

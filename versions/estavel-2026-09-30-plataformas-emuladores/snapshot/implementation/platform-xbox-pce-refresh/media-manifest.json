@@ -1,0 +1,70 @@
+[
+  {
+    "key": "Super Nintendo - BR",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\snesBR.mp4",
+    "source_sha256": "0568fa6496f68ce64bbf2196e33a44a971a11cbb79168d9ac0642b87d4004d83",
+    "asset": "assets/turbo-system-videos/720-snesbr.mp4",
+    "sha256": "3d455261a95d835d1838f3380a476a168d42a98fa0354c83a04d8ab26cb4f8cd",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  },
+  {
+    "key": "MegaDrive - BR",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\megadriveBR.mp4",
+    "source_sha256": "10e76dede18611f1a057c024fa1b038eff2b4278f8509d271aa9d721bd0ed8a2",
+    "asset": "assets/turbo-system-videos/720-megadrivebr.mp4",
+    "sha256": "6e0396b5857dad1eb286d996654b191bf1bea76ea48c658a980982d377969cd2",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  },
+  {
+    "key": "xbox360",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\xbox360.mp4",
+    "source_sha256": "c5809992ab4d0f87449772727bd5fe5314b148253b202487eab73704339fc7e7",
+    "asset": "assets/turbo-system-videos/720-xbox360.mp4",
+    "sha256": "6f5f2387a9af050497892fb5dae10f8dc64d607bf36e7e6457dc31759a1a2fc4",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  },
+  {
+    "key": "xbox",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\xbox.mp4",
+    "source_sha256": "d36f98635c5ed62fb297e517b02b7227c3751f4c94c15998bdfea522bf4bb886",
+    "asset": "assets/turbo-system-videos/720-xbox.mp4",
+    "sha256": "060df183d84141b09fd0f8e730bab3c56044a519168487a2fa4f5f7e7dcd3300",
+    "source_duration": 1.04,
+    "duration": 1.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  }
+]

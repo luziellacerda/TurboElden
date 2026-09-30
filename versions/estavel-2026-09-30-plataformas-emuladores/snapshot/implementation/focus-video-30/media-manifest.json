@@ -1,0 +1,352 @@
+{
+  "scope": "only focused cell loops; side cells retain decoded video frames",
+  "fps": 30,
+  "speed": 1.0,
+  "resolution": [
+    720,
+    720
+  ],
+  "videos": [
+    {
+      "asset": "assets/turbo-system-videos/720-3ds.mp4",
+      "source_sha256": "2c4058939d22920f06d4c717de5a909f6a2ac8ab0431527ec93fc92adf437656",
+      "sha256": "c333cbde9bfe2fbc6831af7aa3c65aeaaef2af3b6a07b95239803ec83d0e3b82",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-psx.mp4",
+      "source_sha256": "cec26f858cdba9583efaa56d87b0c707d23d576d9f07b56c7d5d0e13712ff813",
+      "sha256": "f8610c8c499dec1ffe3dc730d6c0d82962c3e45ef50e625843bac14c0a6691fb",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-ps2.mp4",
+      "source_sha256": "d557f4f5a84b1aea06b3a7c480bf3621db967532457e63bdc59efde108388d01",
+      "sha256": "abb4020a3689a1c7b98831126a9eca6328d417815275671587817075c2017bff",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-psp.mp4",
+      "source_sha256": "dd72917fcafcbb7f2aed28e67fdff1984cc4237ca7cb7c2b0b960895f80ebfba",
+      "sha256": "a9a5b43a24b5d22dd97597f4579ac719f7def03d628ef580eea54f2b771dd73a",
+      "source_duration": 7.97,
+      "duration": 7.97,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-psvita.mp4",
+      "source_sha256": "2c78590e1d44604bcb6231961feac7dc82fdf29600faa9a5374a8ae82b3808c9",
+      "sha256": "c49e07ae7cc136c5742ffdafadae9919f49f79b1d9d643677c04533f00329b8a",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-switch.mp4",
+      "source_sha256": "0882fda8260ed4d804da00b87176e987601c5f4978c6b82e597c6a54b07a09f5",
+      "sha256": "0d1a2984414575723af6192f018554f8d2ecd0a308c3fe860f9a40ee49c127e9",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-wii.mp4",
+      "source_sha256": "fdf20b7da3f1b0fe4fe93d221f4e0b9815df664f3e6bb871ff24c225c3fc44ee",
+      "sha256": "403afe86a4778281651ed7db43106e1d1acc9444b1cf4b5c8a0ecc937bf86705",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-wiiu.mp4",
+      "source_sha256": "e818f8b761a4c11eece0fcce40609500b6947249f2898d0aaf97f72e0ffc5daf",
+      "sha256": "3656b0bef4a6da6fbe835d6ce0de4717e2b06259e4c11b8b36adea3c8fe996e3",
+      "source_duration": 7.97,
+      "duration": 7.97,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-mame.mp4",
+      "source_sha256": "0da31d47abaad61e3a265fdbc87a55b47a959e5129efc078ad3cacbaf43bd59c",
+      "sha256": "d47ea04470801775b56637f74094eadfaa484d5c31c63dacdd27131e778362ea",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-atari2600.mp4",
+      "source_sha256": "41c71748607d8e3e3919265a45770fb359ffb560998357be3e1ad0bb1db806eb",
+      "sha256": "e4c790290f30c4276bc34966d5e401425baf1337b10f7d43a258d2310a2eb1dc",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-atomiswave.mp4",
+      "source_sha256": "c24f100e3f448fca1c99b8caa8c144d0d06ea7a1cc238cbc8576b57116dc1675",
+      "sha256": "8a4d669324841b909642a57c5df488dc039d0c7bc4c8a9e78641a03f6a1b6bab",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-cps1.mp4",
+      "source_sha256": "8a5338b960ee2a12a059129b623080736ca7b94c180853392cbef8c6c1b309e0",
+      "sha256": "4319c880f245f716dfee4ac7adf4baba59102046e205aeae52d65b2d1257a999",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-cps2.mp4",
+      "source_sha256": "403f062e1b24b0ddab285c1b5f0ce19239d953ee2af7c4ad351ae06d227768e5",
+      "sha256": "7a34dcd02ef9a617fd929e4b142b0a6ea63d60806a92d6eabfbd26007dc07e80",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-cps3.mp4",
+      "source_sha256": "1f29b1c87ca85810a7b86269b242a12789840607072452d5513a5e848581c83f",
+      "sha256": "0758878fb8285ad956d2a2049c4a5ee68d5df5d9fdfa53814225df701a46ee03",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-dreamcast.mp4",
+      "source_sha256": "5395c9fd2fa72427ca0c75cfe379129bca16063b90fc51adc73550eb4b0502c6",
+      "sha256": "b7b0c20a07e45212b413aee7e3b05601267759dd9709cf157ecc6b09053294e9",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-gba.mp4",
+      "source_sha256": "fd58be318f35d0e94aa8392aa25aef16e9e1aafc61130a6cb4896a04e7d3dc3d",
+      "sha256": "dc641ebd5e29d8a7a4c586bdb383a6486d280324706a21ec0c1599fbeba742f6",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-mastersystem.mp4",
+      "source_sha256": "f9d0a87a0bcf3e624ff96846ee988a815e4275017fb5e476ceacabd535f93e8b",
+      "sha256": "f92ce7c9010a8bc7516c298d7b32fe2be3ab3b5c9f9d89f20d82e058966341e1",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-megadrive.mp4",
+      "source_sha256": "ce46ebe1c86b76010a5f2820eb77d7075dc26d027bf916e4154b4a9aec40000f",
+      "sha256": "4edbe37e9dabb9a6a1a50bdb6e546a3fa118b8c7884ae3e23c7c6365b8350a50",
+      "source_duration": 3.0,
+      "duration": 3.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-model2.mp4",
+      "source_sha256": "657dd23def40f84057c31b1ebe1e8ffd489e60c85c89e90624c9d01cd33b5581",
+      "sha256": "7476957403040357b54a171c3685d82f50a6c12dc621b607e2cb2c0530245db7",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-n64.mp4",
+      "source_sha256": "df409c64db44884bb9f9e0844b33cfee171d3794f01c09c695cd3d8b65a8a219",
+      "sha256": "a2f904e4688bf078f93b07a09b45acf4b29a1c6280533b761cbe9de62fa2e9cd",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-nds.mp4",
+      "source_sha256": "ff30ac9508bae9655a65c3d9d04b573499dbaca007b4ffcc1d8bcfef4a680ab4",
+      "sha256": "48e3e41ce9ab1a2fb1e307903ae20a53dc3ca05315f45410c8cf273ba05d649a",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-neogeo.mp4",
+      "source_sha256": "eaf0f101bd4804289d409fc81d0cc5d61510b8605d489b522fd25a8fa1f99235",
+      "sha256": "a1ce617a0ef50dc15d24bcb24b09a710d0a4b37f4b59fb48c8e5d4f1f65c1278",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-neogeocd.mp4",
+      "source_sha256": "66063567d5b437f0c4225dc06b494361f5a63033181e333ec924de5bfed214b0",
+      "sha256": "e525f54c5b0b34cde5cedc8aa87dc2ccf9c239e54fee2694635ea10c79be6aac",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-nes.mp4",
+      "source_sha256": "2609d84c0a3ca208ab427f0352f5a74b1e44da754c573df88abfcd5d39f9d8ff",
+      "sha256": "6af3f66027677870d6478431d7e3f0f05d748e7dbaa7e5efd5f861a7b06c5ceb",
+      "source_duration": 7.97,
+      "duration": 7.97,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-sega32x.mp4",
+      "source_sha256": "01834b0d84a345f2fb20547682b355a20f39f8ecd680598190734b8eb84702fc",
+      "sha256": "799dcf849665b6b41ae68ad526abb66194d8cfd1bb912d309142d58492eca796",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-snes.mp4",
+      "source_sha256": "5300c6a98fb57cdb0c6089736fd09b605e1984d79bc836c1137f8ef1b4b34e59",
+      "sha256": "3e220ad375892cd1a3c0f4ac428f876a56e22c300da79c0b507652b40c150f37",
+      "source_duration": 7.97,
+      "duration": 7.97,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-fbneo.mp4",
+      "source_sha256": "8761d3f7fd6d37d87ed552cec763d85ec625050840b919133b055a645ab5f549",
+      "sha256": "5595ad58e7c3f1b44d7f676bc1801bb6ab42b9aa6d9eca1e187f6ec82e67e687",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-gc.mp4",
+      "source_sha256": "1cb785e99c9af45715fac4f07d5d7d7032b01882ce24d154c0e136cc277a0882",
+      "sha256": "1cde373ffc27a3873f5d530b14c9bfb7cff2852a0cf1e4a5969178faa30a4301",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-xbox360.mp4",
+      "source_sha256": "1f173874d0c03b1a75f0bc51700265760207ccf385be823e74e6ea12be0bd6a0",
+      "sha256": "6b077838e65b9abe885a9419f81c470004a09a06be70bb14115b7b311341909b",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-jaguar.mp4",
+      "source_sha256": "0aff99d642dfa96eee140d8e17c8dcb6caf6d0daf06ef537fcf7b452ac762ffe",
+      "sha256": "563d9630efbe1dcec0b48adaca2f1707bc6a8349d4587c5f13b062c8606281c4",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-gbc.mp4",
+      "source_sha256": "6ad41cb565d682bf7b65a61fbab9efd71540862030878e12ff2e416a741a5f65",
+      "sha256": "86ed588f5f28be2bfa710f52d099209bd56ac3fdadbd735d3a9dea9e2a7258bc",
+      "source_duration": 6.0,
+      "duration": 6.0,
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    }
+  ]
+}

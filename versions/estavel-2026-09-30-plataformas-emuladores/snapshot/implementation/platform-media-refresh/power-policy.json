@@ -1,0 +1,24 @@
+{
+  "scope": "native GuiStore only, emulator loops and speed settings unchanged",
+  "idle_platform_with_video_fps": 30,
+  "idle_other_menu_fps": 15,
+  "interaction_and_transition_fps": 60,
+  "interaction_boost_ms": 650,
+  "clouds_fps": 15,
+  "paused_video_poll_interval_ms": 1000,
+  "focus_video": {
+    "resolution": [
+      720,
+      720
+    ],
+    "fps": 30,
+    "speed": 1,
+    "loop": true
+  },
+  "sources": [
+    "https://developer.android.com/games/optimize/power",
+    "https://wiki.libsdl.org/SDL2/SDL_Delay",
+    "https://wiki.libsdl.org/SDL2/SDL_GetPerformanceCounter"
+  ],
+  "verified_on_device": false
+}

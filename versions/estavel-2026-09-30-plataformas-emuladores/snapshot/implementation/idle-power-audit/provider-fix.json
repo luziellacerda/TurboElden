@@ -1,0 +1,21 @@
+{
+  "time": "2026-09-30T12:54:30.934281",
+  "cause": "DocumentsProvider.attachInfo: Provider must be exported",
+  "changes": [
+    {
+      "manifest": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\wiiu-integration\\merged\\AndroidManifest.xml",
+      "provider": "info.cemu.cemu.provider.DocumentsProvider",
+      "exported": true
+    },
+    {
+      "manifest": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\xbox360-integration\\merged\\AndroidManifest.xml",
+      "provider": "info.cemu.cemu.provider.DocumentsProvider",
+      "exported": true
+    },
+    {
+      "manifest": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\xbox360-integration\\merged\\AndroidManifest.xml",
+      "provider": "xendroid.compose.DocumentsProvider",
+      "exported": true
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "removed_platforms": [
+    "atari7800",
+    "supergrafx"
+  ],
+  "focus_only": true,
+  "loop": true,
+  "videos": [
+    {
+      "key": "xbox360",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\xbox360.mp4",
+      "source_sha256": "d0f750cb68b0907cf2cf60126de0526dbf610523f3e530e5d913784a85255072",
+      "source_size": [
+        960,
+        960
+      ],
+      "source_fps": 24.0,
+      "source_duration": 6.04,
+      "duration": 6.0,
+      "asset": "assets/turbo-system-videos/720-xbox360.mp4",
+      "sha256": "f77c2c9f1b5ad04e157c0d9292dfa92456665f01db1a4173d78ab22a4bbf03f2",
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "key": "Pc Engine",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\pc egine.mp4",
+      "source_sha256": "b0395c91fd13f42a87210cac332d3d31f56b0e3381f68cd3bef3d7fae7bd4c8f",
+      "source_size": [
+        960,
+        960
+      ],
+      "source_fps": 24.0,
+      "source_duration": 6.04,
+      "duration": 6.0,
+      "asset": "assets/turbo-system-videos/720-pcengine.mp4",
+      "sha256": "707026436bc588df3381256f78cab0228b66bc64866fbd564d296a3c16955996",
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    },
+    {
+      "key": "Pc Engine cd",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\pc egine cd.mp4",
+      "source_sha256": "9497b8a4afea3de6d18a29a9c9b108d86359af25e7cb51dcdf7ed08fd761f732",
+      "source_size": [
+        960,
+        960
+      ],
+      "source_fps": 24.0,
+      "source_duration": 6.04,
+      "duration": 6.0,
+      "asset": "assets/turbo-system-videos/720-pcenginecd.mp4",
+      "sha256": "2d133f116d013f6fe2cbcbf939fe33da8998c7d84884ed0d4c38fbcd8dfc0e5b",
+      "width": 720,
+      "height": 720,
+      "fps": 30,
+      "speed": 1.0
+    }
+  ]
+}

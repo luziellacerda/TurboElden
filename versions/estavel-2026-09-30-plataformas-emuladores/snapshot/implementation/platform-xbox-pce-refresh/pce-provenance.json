@@ -1,0 +1,22 @@
+{
+  "url": "https://buildbot.libretro.com/nightly/android/latest/arm64-v8a/mednafen_pce_libretro_android.so.zip",
+  "headers": {
+    "Date": "Wed, 30 Sep 2026 20:31:51 GMT",
+    "Content-Type": "application/zip",
+    "Content-Length": "485517",
+    "Connection": "close",
+    "Accept-Ranges": "bytes",
+    "ETag": "\"2729075435\"",
+    "Last-Modified": "Wed, 30 Sep 2026 18:05:09 GMT",
+    "Server": "cloudflare",
+    "Cache-Control": "max-age=10800",
+    "cf-cache-status": "EXPIRED",
+    "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "Server-Timing": "cfCacheStatus;desc=\"EXPIRED\"",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=B4QSkZEtKogAx49VP7SVYALb8OTEB0b4RC8sXGN1fSKr6TI%2BpeWU7Vx4QbetgvyEk2rp7UcObGV%2F3p58U3YJORxJbVu%2Bi7VbbftR3%2FWLJST7Kgkm9uiT1SN5%2BxvQoSfP30gdZtM%2FTEY4o2ydVE9ooE0xxK0%3D\"}]}",
+    "CF-RAY": "a435fe559a7e02e6-GRU",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "sha256_zip": "f749836bcb41e8fd6f5a051e2494eb104099debfbfa94b1c7e5e0941c75b51a7",
+  "sha256_core": "58f773d7c3d9cd4bc678151fd91718381699832958a16e77eb0412f2a5d68e18"
+}
