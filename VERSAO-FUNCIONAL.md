@@ -1,6 +1,6 @@
 # Referência funcional atual
 
-A versão atual está documentada em [ESTAVEL.md](ESTAVEL.md), tag `estavel-2026-09-29-playlist-retro`. As referências abaixo são HISTÓRICAS e não identificam o APK atual.
+A versão atual está documentada em [ESTAVEL.md](ESTAVEL.md), tag `estavel-2026-09-30-dolphin-flycast`. As referências abaixo são HISTÓRICAS e não identificam o APK atual.
 
 ## Histórico preservado
 

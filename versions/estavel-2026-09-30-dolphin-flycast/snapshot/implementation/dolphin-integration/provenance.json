@@ -1,0 +1,8 @@
+{
+  "official_version": "2609-7",
+  "commit": "5102a0339c2177575378107b76541e47cc52122d",
+  "official_apk": "https://dl.dolphin-emu.org/builds/3a/73/dolphin-master-2609-7.apk",
+  "source": "https://github.com/dolphin-emu/dolphin",
+  "source_rebuilt": false,
+  "integration": "Official Android engine and UI embedded; dependencies and resources relocated; JNI class names preserved; isolated process inside TurboramaStation"
+}

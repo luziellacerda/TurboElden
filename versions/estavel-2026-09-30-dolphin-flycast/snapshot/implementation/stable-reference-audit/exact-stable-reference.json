@@ -1,0 +1,13 @@
+{
+  "exact_reference_commit": "6727ab725f1c4ac9afdd0382cc7d4ae5d3ff8eb3",
+  "documented_version": "1.0.8-turboeden-unico",
+  "documented_sha256": "5cd234d0ac57aa6f1b260db6278087b7d961c671385ecf47871570bc00e78814",
+  "recovered_apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\stable-reference-audit\\original-1.0.8-alignment-preserved.apk",
+  "recovered_sha256": "5cd234d0ac57aa6f1b260db6278087b7d961c671385ecf47871570bc00e78814",
+  "bytes": 440660722,
+  "exact_match": true,
+  "signer_options": [
+    "--alignment-preserved",
+    "true"
+  ]
+}

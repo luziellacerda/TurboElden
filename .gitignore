@@ -25,3 +25,8 @@ jogos-catalogo.csv
 *.mp4
 *.wav
 *.ogg
+
+# Materiais locais das integrações de motores
+**/bios-assets/
+**/experimental/
+**/bios-sources-private.json

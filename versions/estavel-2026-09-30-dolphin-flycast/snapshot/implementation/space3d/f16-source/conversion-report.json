@@ -1,0 +1,4449 @@
+{
+  "source": "FlightGear NikolaiVChr/f16",
+  "license": "GPL-2.0-or-later",
+  "coordinate_system": "+Y up; +Z forward; +X right; source meters scaled 1/7.5; original origin retained",
+  "modifications": [
+    "Static exterior only",
+    "Landing gear removed and front gear door closed",
+    "Original static flame planes removed",
+    "Optional original painted logos removed",
+    "USAF tail base retained; RNLAF/parachute geometry removed",
+    "Single Pratt & Whitney exhaust nozzle assembled from 16 petal sections",
+    "AC3D surface crease normals rebuilt",
+    "Visible upper pilot, seat, and cockpit shell included",
+    "Scale 1/7.5 with original longitudinal origin retained",
+    "No flight/armament code imported"
+  ],
+  "excluded_objects": [
+    "FanRHighSpeed",
+    "FanRHighSpeed.001",
+    "Chute",
+    "FanSpinning",
+    "RNLAF_Tailroot",
+    "LandingGear",
+    "ExternalFlame",
+    "InternalFlame",
+    "CanopyBackInside",
+    "CanopyForwardInside",
+    "FuselageLogoLeft",
+    "FuselageLogoRight",
+    "LogoPilotRight",
+    "Rect",
+    "VstabBandLeftAft",
+    "VstabBandLeftFront",
+    "VstabBandRightAft",
+    "VstabBandRightFront",
+    "VstabLogoLeftBottom",
+    "VstabLogoLeftTop",
+    "VstabLogoRightBottom",
+    "VstabLogoRightTop",
+    "WinglogoLeftTop",
+    "WinglogoRightBottom",
+    "WinglogoRightTop"
+  ],
+  "mesh_count": 200,
+  "vertex_count": 29937,
+  "triangle_count": 39802,
+  "objects": [
+    {
+      "name": "CanopyFrameInner",
+      "source": "Models/f16.ac",
+      "vertices": 72,
+      "triangles": 60,
+      "material": 0,
+      "texture": "Models/f16.png",
+      "material_name": "canopyInner",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05474400147795677,
+          0.05464533343911171,
+          0.46846532821655273
+        ],
+        [
+          0.05418666824698448,
+          0.08277466893196106,
+          0.7271026372909546
+        ]
+      ]
+    },
+    {
+      "name": "FanR",
+      "source": "Models/f16.ac",
+      "vertices": 954,
+      "triangles": 733,
+      "material": 1,
+      "texture": "Models/f16.png",
+      "material_name": "Common.005",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05594133213162422,
+          -0.05396133288741112,
+          -0.07718266546726227
+        ],
+        [
+          0.05753599852323532,
+          0.059514667838811874,
+          -0.04649600014090538
+        ]
+      ]
+    },
+    {
+      "name": "FanR.001",
+      "source": "Models/f16.ac",
+      "vertices": 46,
+      "triangles": 22,
+      "material": 2,
+      "texture": "Models/f16.png",
+      "material_name": "Common.005",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05777466669678688,
+          -0.05394666641950607,
+          -0.07661333680152893
+        ],
+        [
+          0.05827333405613899,
+          0.058161333203315735,
+          -0.07661333680152893
+        ]
+      ]
+    },
+    {
+      "name": "FanRCentre",
+      "source": "Models/f16.ac",
+      "vertices": 193,
+      "triangles": 288,
+      "material": 2,
+      "texture": "Models/f16.png",
+      "material_name": "Common.005",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0128733329474926,
+          -0.010849333368241787,
+          -0.07532666623592377
+        ],
+        [
+          0.014790666289627552,
+          0.016814665868878365,
+          -0.04185866564512253
+        ]
+      ]
+    },
+    {
+      "name": "AftPosLight1",
+      "source": "Models/f16.ac",
+      "vertices": 11,
+      "triangles": 5,
+      "material": 3,
+      "texture": null,
+      "material_name": "emissiveMat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.005070666782557964,
+          0.10970266908407211,
+          -0.6751506924629211
+        ],
+        [
+          0.004262666683644056,
+          0.1190359964966774,
+          -0.6698826551437378
+        ]
+      ]
+    },
+    {
+      "name": "AirIntake",
+      "source": "Models/f16.ac",
+      "vertices": 134,
+      "triangles": 135,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.10047066956758499,
+          -0.10751333087682724,
+          -0.0794893354177475
+        ],
+        [
+          0.10072000324726105,
+          0.0610346682369709,
+          0.4805706739425659
+        ]
+      ]
+    },
+    {
+      "name": "ArresterHook",
+      "source": "Models/f16.ac",
+      "vertices": 50,
+      "triangles": 36,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.007393333129584789,
+          -0.09908533096313477,
+          -0.5276066660881042
+        ],
+        [
+          0.007502666674554348,
+          -0.07691733539104462,
+          -0.3429279923439026
+        ]
+      ]
+    },
+    {
+      "name": "Box",
+      "source": "Models/f16.ac",
+      "vertices": 33,
+      "triangles": 17,
+      "material": 5,
+      "texture": "Models/f16.png",
+      "material_name": "gearwellMat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.039051998406648636,
+          -0.1167600005865097,
+          0.23805199563503265
+        ],
+        [
+          0.03900933265686035,
+          -0.09041466563940048,
+          0.4174186587333679
+        ]
+      ]
+    },
+    {
+      "name": "BoxLeft",
+      "source": "Models/f16.ac",
+      "vertices": 31,
+      "triangles": 15,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.015545333735644817,
+          -0.11050000041723251,
+          -0.09089066833257675
+        ],
+        [
+          0.10172399878501892,
+          -0.0378279983997345,
+          0.11085866391658783
+        ]
+      ]
+    },
+    {
+      "name": "BoxRight",
+      "source": "Models/f16.ac",
+      "vertices": 30,
+      "triangles": 15,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.10187466442584991,
+          -0.11050666868686676,
+          -0.09087999910116196
+        ],
+        [
+          -0.017346667125821114,
+          -0.037885334342718124,
+          0.11086933314800262
+        ]
+      ]
+    },
+    {
+      "name": "CanopyFrame",
+      "source": "Models/f16.ac",
+      "vertices": 127,
+      "triangles": 122,
+      "material": 6,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.054740000516176224,
+          0.05528933182358742,
+          0.43292132019996643
+        ],
+        [
+          0.05418666824698448,
+          0.15052533149719238,
+          0.7271026372909546
+        ]
+      ]
+    },
+    {
+      "name": "ExternalFrontGearDoor",
+      "source": "Models/f16.ac",
+      "vertices": 7,
+      "triangles": 5,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.04007749259471893,
+          -0.11647094786167145,
+          0.23726266622543335
+        ],
+        [
+          0.04170459881424904,
+          -0.10635479539632797,
+          0.41739705204963684
+        ]
+      ]
+    },
+    {
+      "name": "ExternalLeftMainDoor",
+      "source": "Models/f16.ac",
+      "vertices": 28,
+      "triangles": 20,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.028065333142876625,
+          -0.11063333600759506,
+          -0.0908813327550888
+        ],
+        [
+          0.10173466801643372,
+          -0.0546640008687973,
+          0.11087333410978317
+        ]
+      ]
+    },
+    {
+      "name": "ExternalRightMainDoor",
+      "source": "Models/f16.ac",
+      "vertices": 28,
+      "triangles": 20,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.10186400264501572,
+          -0.11063866317272186,
+          -0.09087199717760086
+        ],
+        [
+          -0.028682665899395943,
+          -0.0546640008687973,
+          0.11088400334119797
+        ]
+      ]
+    },
+    {
+      "name": "Fan",
+      "source": "Models/f16.ac",
+      "vertices": 17,
+      "triangles": 16,
+      "material": 7,
+      "texture": "Models/f16.png",
+      "material_name": "engineMat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.06007999926805496,
+          -0.05751600116491318,
+          -0.07937599718570709
+        ],
+        [
+          0.0597066655755043,
+          0.06246666610240936,
+          -0.0770866647362709
+        ]
+      ]
+    },
+    {
+      "name": "FlashLightProtector",
+      "source": "Models/f16.ac",
+      "vertices": 15,
+      "triangles": 10,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.012189333327114582,
+          0.422678679227829,
+          -0.7193306684494019
+        ],
+        [
+          0.011788000352680683,
+          0.4255119860172272,
+          -0.6765813231468201
+        ]
+      ]
+    },
+    {
+      "name": "FwdFormationLight",
+      "source": "Models/f16.ac",
+      "vertices": 11,
+      "triangles": 5,
+      "material": 3,
+      "texture": null,
+      "material_name": "emissiveMat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.006805333308875561,
+          0.10573866963386536,
+          0.2697640061378479
+        ],
+        [
+          0.006527999881654978,
+          0.11205066740512848,
+          0.2814359962940216
+        ]
+      ]
+    },
+    {
+      "name": "InternalFrontGearDoor",
+      "source": "Models/f16.ac",
+      "vertices": 9,
+      "triangles": 5,
+      "material": 8,
+      "texture": null,
+      "material_name": "fuselage2Mat.002",
+      "glass": false,
+      "bbox": [
+        [
+          -0.040006961673498154,
+          -0.11646860092878342,
+          0.2372528314590454
+        ],
+        [
+          0.04168587923049927,
+          -0.10635069012641907,
+          0.4173959493637085
+        ]
+      ]
+    },
+    {
+      "name": "LeftLowerAileron",
+      "source": "Models/f16.ac",
+      "vertices": 60,
+      "triangles": 72,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.4760279953479767,
+          0.0017466666176915169,
+          -0.28526800870895386
+        ],
+        [
+          0.6159133315086365,
+          0.011973333545029163,
+          -0.22935466468334198
+        ]
+      ]
+    },
+    {
+      "name": "LeftLowerFlap",
+      "source": "Models/f16.ac",
+      "vertices": 315,
+      "triangles": 512,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.14202666282653809,
+          0.0065933335572481155,
+          -0.2905946671962738
+        ],
+        [
+          0.4776826798915863,
+          0.026946667581796646,
+          -0.1769160032272339
+        ]
+      ]
+    },
+    {
+      "name": "LeftLowerHorizonTail",
+      "source": "Models/f16.ac",
+      "vertices": 9,
+      "triangles": 5,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.14405333995819092,
+          -0.035280000418424606,
+          -0.7263360023498535
+        ],
+        [
+          0.3782159984111786,
+          0.008799999952316284,
+          -0.42316532135009766
+        ]
+      ]
+    },
+    {
+      "name": "LeftLowerLef",
+      "source": "Models/f16.ac",
+      "vertices": 1322,
+      "triangles": 2420,
+      "material": 9,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat",
+      "glass": false,
+      "bbox": [
+        [
+          0.5673253536224365,
+          -0.007348000071942806,
+          -0.11354666948318481
+        ],
+        [
+          0.5725746750831604,
+          -0.0021453334484249353,
+          -0.09556800127029419
+        ]
+      ]
+    },
+    {
+      "name": "LeftLowerLef",
+      "source": "Models/f16.ac",
+      "vertices": 848,
+      "triangles": 1452,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.18657200038433075,
+          -0.003971999976783991,
+          -0.17256532609462738
+        ],
+        [
+          0.6128720045089722,
+          0.012986666522920132,
+          0.18704800307750702
+        ]
+      ]
+    },
+    {
+      "name": "LeftLowerSpeedbrake",
+      "source": "Models/f16.ac",
+      "vertices": 10,
+      "triangles": 4,
+      "material": 10,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.0863799974322319,
+          0.0035546666476875544,
+          -0.6996586918830872
+        ],
+        [
+          0.14405333995819092,
+          0.01908399909734726,
+          -0.6074066758155823
+        ]
+      ]
+    },
+    {
+      "name": "LeftUpperAileron",
+      "source": "Models/f16.ac",
+      "vertices": 105,
+      "triangles": 135,
+      "material": 9,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat",
+      "glass": false,
+      "bbox": [
+        [
+          0.48752665519714355,
+          0.004693333525210619,
+          -0.3160666525363922
+        ],
+        [
+          0.568722665309906,
+          0.008581333793699741,
+          -0.2801373302936554
+        ]
+      ]
+    },
+    {
+      "name": "LeftUpperAileron",
+      "source": "Models/f16.ac",
+      "vertices": 28,
+      "triangles": 36,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.4760253429412842,
+          0.0018866666359826922,
+          -0.2852693200111389
+        ],
+        [
+          0.6159133315086365,
+          0.011973333545029163,
+          -0.22935466468334198
+        ]
+      ]
+    },
+    {
+      "name": "LeftUpperFlap",
+      "source": "Models/f16.ac",
+      "vertices": 162,
+      "triangles": 256,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.14202666282653809,
+          0.006614666897803545,
+          -0.2905600070953369
+        ],
+        [
+          0.4776960015296936,
+          0.027009332552552223,
+          -0.17688000202178955
+        ]
+      ]
+    },
+    {
+      "name": "LeftUpperHorizonTail",
+      "source": "Models/f16.ac",
+      "vertices": 20,
+      "triangles": 10,
+      "material": 9,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat",
+      "glass": false,
+      "bbox": [
+        [
+          0.2888186573982239,
+          -0.031204000115394592,
+          -0.753058671951294
+        ],
+        [
+          0.348224014043808,
+          -0.016922665759921074,
+          -0.7186986804008484
+        ]
+      ]
+    },
+    {
+      "name": "LeftUpperHorizonTail",
+      "source": "Models/f16.ac",
+      "vertices": 11,
+      "triangles": 7,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.14405333995819092,
+          -0.035280000418424606,
+          -0.7263360023498535
+        ],
+        [
+          0.37821465730667114,
+          0.013573333621025085,
+          -0.42316532135009766
+        ]
+      ]
+    },
+    {
+      "name": "LeftUpperLef",
+      "source": "Models/f16.ac",
+      "vertices": 289,
+      "triangles": 484,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.1865706592798233,
+          -0.003971999976783991,
+          -0.17256666719913483
+        ],
+        [
+          0.6148373484611511,
+          0.012986666522920132,
+          0.18704666197299957
+        ]
+      ]
+    },
+    {
+      "name": "LeftUpperSpeedbrake",
+      "source": "Models/f16.ac",
+      "vertices": 9,
+      "triangles": 4,
+      "material": 10,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.0863799974322319,
+          0.007546666543930769,
+          -0.6996586918830872
+        ],
+        [
+          0.14405333995819092,
+          0.031805332750082016,
+          -0.6074066758155823
+        ]
+      ]
+    },
+    {
+      "name": "LWStation1",
+      "source": "Models/f16.ac",
+      "vertices": 32,
+      "triangles": 18,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.20612399280071259,
+          -0.04663733392953873,
+          -0.1712920069694519
+        ],
+        [
+          0.22824667394161224,
+          0.008749333210289478,
+          0.1503213346004486
+        ]
+      ]
+    },
+    {
+      "name": "LWStation2",
+      "source": "Models/f16.ac",
+      "vertices": 32,
+      "triangles": 18,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.37298399209976196,
+          -0.04689199849963188,
+          -0.24661733210086823
+        ],
+        [
+          0.39510801434516907,
+          0.008201333694159985,
+          0.07437333464622498
+        ]
+      ]
+    },
+    {
+      "name": "LWStation3",
+      "source": "Models/f16.ac",
+      "vertices": 32,
+      "triangles": 18,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          0.4822213351726532,
+          -0.03929600119590759,
+          -0.24250799417495728
+        ],
+        [
+          0.5043453574180603,
+          0.008201333694159985,
+          -0.08034933358430862
+        ]
+      ]
+    },
+    {
+      "name": "Poly.001",
+      "source": "Models/f16.ac",
+      "vertices": 64,
+      "triangles": 32,
+      "material": 7,
+      "texture": "Models/f16.png",
+      "material_name": "engineMat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.060305334627628326,
+          -0.05971866846084595,
+          -0.6150479912757874
+        ],
+        [
+          0.05969466641545296,
+          0.060281332582235336,
+          -0.3982306718826294
+        ]
+      ]
+    },
+    {
+      "name": "RadarDomeTop",
+      "source": "Models/f16.ac",
+      "vertices": 1615,
+      "triangles": 2421,
+      "material": 10,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.6183266639709473,
+          -0.11684933304786682,
+          -0.6310746669769287
+        ],
+        [
+          0.6149346828460693,
+          0.15004132688045502,
+          1.019386649131775
+        ]
+      ]
+    },
+    {
+      "name": "RadarDomeTop",
+      "source": "Models/f16.ac",
+      "vertices": 17,
+      "triangles": 13,
+      "material": 11,
+      "texture": "Models/f16.png",
+      "material_name": "engineMat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.006398666650056839,
+          -0.026903999969363213,
+          1.0193146467208862
+        ],
+        [
+          0.006145333405584097,
+          -0.01608533412218094,
+          1.0215026140213013
+        ]
+      ]
+    },
+    {
+      "name": "RadarDomeTop",
+      "source": "Models/f16.ac",
+      "vertices": 11,
+      "triangles": 8,
+      "material": 12,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage3Mat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.041388001292943954,
+          0.08529466390609741,
+          0.330569326877594
+        ],
+        [
+          0.0412679985165596,
+          0.12577466666698456,
+          0.46180400252342224
+        ]
+      ]
+    },
+    {
+      "name": "RadarDomeTop",
+      "source": "Models/f16.ac",
+      "vertices": 44,
+      "triangles": 40,
+      "material": 13,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.07918666303157806,
+          -0.009737333282828331,
+          0.8019000291824341
+        ],
+        [
+          0.07804132997989655,
+          -0.005607999861240387,
+          0.8060866594314575
+        ]
+      ]
+    },
+    {
+      "name": "RightLowerAileron",
+      "source": "Models/f16.ac",
+      "vertices": 60,
+      "triangles": 72,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.6173480153083801,
+          0.001542666694149375,
+          -0.2853826582431793
+        ],
+        [
+          -0.47510001063346863,
+          0.011845333501696587,
+          -0.22946800291538239
+        ]
+      ]
+    },
+    {
+      "name": "RightLowerFlap",
+      "source": "Models/f16.ac",
+      "vertices": 315,
+      "triangles": 512,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.4811199903488159,
+          0.0063599999994039536,
+          -0.2907533347606659
+        ],
+        [
+          -0.14320266246795654,
+          0.026713334023952484,
+          -0.17707467079162598
+        ]
+      ]
+    },
+    {
+      "name": "RightLowerHorizonTail",
+      "source": "Models/f16.ac",
+      "vertices": 9,
+      "triangles": 5,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.37982532382011414,
+          -0.035280000418424606,
+          -0.7273773550987244
+        ],
+        [
+          -0.14445599913597107,
+          0.008799999952316284,
+          -0.4242066740989685
+        ]
+      ]
+    },
+    {
+      "name": "RightLowerLef",
+      "source": "Models/f16.ac",
+      "vertices": 1322,
+      "triangles": 2420,
+      "material": 9,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.5752773284912109,
+          -0.007304000202566385,
+          -0.11352666467428207
+        ],
+        [
+          -0.5700026750564575,
+          -0.0021013333462178707,
+          -0.09554799646139145
+        ]
+      ]
+    },
+    {
+      "name": "RightLowerLef",
+      "source": "Models/f16.ac",
+      "vertices": 456,
+      "triangles": 726,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.6132306456565857,
+          -0.0034666666761040688,
+          -0.1721400022506714
+        ],
+        [
+          -0.18691200017929077,
+          0.013010666705667973,
+          0.1872093379497528
+        ]
+      ]
+    },
+    {
+      "name": "RightLowerSpeedbrake",
+      "source": "Models/f16.ac",
+      "vertices": 10,
+      "triangles": 4,
+      "material": 10,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.14445599913597107,
+          0.00355600006878376,
+          -0.6996586918830872
+        ],
+        [
+          -0.08769333362579346,
+          0.01908399909734726,
+          -0.6074066758155823
+        ]
+      ]
+    },
+    {
+      "name": "RightUpperAileron",
+      "source": "Models/f16.ac",
+      "vertices": 138,
+      "triangles": 135,
+      "material": 9,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.5751173496246338,
+          0.004683999810367823,
+          -0.31603068113327026
+        ],
+        [
+          -0.4939199984073639,
+          0.008572000078856945,
+          -0.28010132908821106
+        ]
+      ]
+    },
+    {
+      "name": "RightUpperAileron",
+      "source": "Models/f16.ac",
+      "vertices": 28,
+      "triangles": 36,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.6173480153083801,
+          0.0017573332879692316,
+          -0.2853826582431793
+        ],
+        [
+          -0.47510001063346863,
+          0.011845333501696587,
+          -0.22946800291538239
+        ]
+      ]
+    },
+    {
+      "name": "RightUpperFlap",
+      "source": "Models/f16.ac",
+      "vertices": 153,
+      "triangles": 256,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.48111599683761597,
+          0.006463999859988689,
+          -0.29070934653282166
+        ],
+        [
+          -0.14312399923801422,
+          0.02685866691172123,
+          -0.1770293265581131
+        ]
+      ]
+    },
+    {
+      "name": "RightUpperHorizonTail",
+      "source": "Models/f16.ac",
+      "vertices": 20,
+      "triangles": 10,
+      "material": 9,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.34976932406425476,
+          -0.031204000115394592,
+          -0.7530440092086792
+        ],
+        [
+          -0.29036399722099304,
+          -0.016922665759921074,
+          -0.7186853289604187
+        ]
+      ]
+    },
+    {
+      "name": "RightUpperHorizonTail",
+      "source": "Models/f16.ac",
+      "vertices": 11,
+      "triangles": 7,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.3798266649246216,
+          -0.035280000418424606,
+          -0.7273773550987244
+        ],
+        [
+          -0.14445599913597107,
+          0.013573333621025085,
+          -0.4242066740989685
+        ]
+      ]
+    },
+    {
+      "name": "RightUpperLef",
+      "source": "Models/f16.ac",
+      "vertices": 289,
+      "triangles": 484,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.6132306456565857,
+          -0.0034666666761040688,
+          -0.17214132845401764
+        ],
+        [
+          -0.18691067397594452,
+          0.013010666705667973,
+          0.18720799684524536
+        ]
+      ]
+    },
+    {
+      "name": "RightUpperSpeedbrake",
+      "source": "Models/f16.ac",
+      "vertices": 9,
+      "triangles": 4,
+      "material": 10,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.14445599913597107,
+          0.007546666543930769,
+          -0.6996586918830872
+        ],
+        [
+          -0.08769333362579346,
+          0.031805332750082016,
+          -0.6074066758155823
+        ]
+      ]
+    },
+    {
+      "name": "Rudder.001",
+      "source": "Models/f16.ac",
+      "vertices": 3,
+      "triangles": 1,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.006265333388000727,
+          0.15357466042041779,
+          -0.7360706925392151
+        ],
+        [
+          0.0011533333454281092,
+          0.40399599075317383,
+          -0.5752213597297668
+        ]
+      ]
+    },
+    {
+      "name": "Rudder.002",
+      "source": "Models/f16.ac",
+      "vertices": 3,
+      "triangles": 1,
+      "material": 8,
+      "texture": null,
+      "material_name": "fuselage2Mat.002",
+      "glass": false,
+      "bbox": [
+        [
+          -0.006265333388000727,
+          0.15357466042041779,
+          -0.6713026762008667
+        ],
+        [
+          0.005749333184212446,
+          0.15357466042041779,
+          -0.5752213597297668
+        ]
+      ]
+    },
+    {
+      "name": "Rudder.003",
+      "source": "Models/f16.ac",
+      "vertices": 6,
+      "triangles": 2,
+      "material": 14,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.006265333388000727,
+          0.15357466042041779,
+          -0.7803239822387695
+        ],
+        [
+          0.005749333184212446,
+          0.40399599075317383,
+          -0.5752213597297668
+        ]
+      ]
+    },
+    {
+      "name": "Rudder.003",
+      "source": "Models/f16.ac",
+      "vertices": 30,
+      "triangles": 15,
+      "material": 15,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.002360000042244792,
+          0.29179999232292175,
+          -0.7859306931495667
+        ],
+        [
+          0.0014133333461359143,
+          0.36982399225234985,
+          -0.7288960218429565
+        ]
+      ]
+    },
+    {
+      "name": "Rudder.004",
+      "source": "Models/f16.ac",
+      "vertices": 3,
+      "triangles": 1,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0022319999989122152,
+          0.40399599075317383,
+          -0.7803239822387695
+        ],
+        [
+          0.0011533333454281092,
+          0.40399599075317383,
+          -0.7360706925392151
+        ]
+      ]
+    },
+    {
+      "name": "Rudder.005",
+      "source": "Models/f16.ac",
+      "vertices": 3,
+      "triangles": 1,
+      "material": 14,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.006265333388000727,
+          0.15357466042041779,
+          -0.7803239822387695
+        ],
+        [
+          -0.000442666671006009,
+          0.40399599075317383,
+          -0.5752213597297668
+        ]
+      ]
+    },
+    {
+      "name": "Rudder.006",
+      "source": "Models/f16.ac",
+      "vertices": 3,
+      "triangles": 1,
+      "material": 14,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.000442666671006009,
+          0.15357466042041779,
+          -0.7803239822387695
+        ],
+        [
+          0.005749333184212446,
+          0.40399599075317383,
+          -0.5752973556518555
+        ]
+      ]
+    },
+    {
+      "name": "RWStation1",
+      "source": "Models/f16.ac",
+      "vertices": 32,
+      "triangles": 18,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.2287680059671402,
+          -0.04665866494178772,
+          -0.17100933194160461
+        ],
+        [
+          -0.20664533972740173,
+          0.008750666864216328,
+          0.1506039947271347
+        ]
+      ]
+    },
+    {
+      "name": "RWStation2",
+      "source": "Models/f16.ac",
+      "vertices": 32,
+      "triangles": 18,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.39507734775543213,
+          -0.04688933491706848,
+          -0.2466440051794052
+        ],
+        [
+          -0.3728906810283661,
+          0.008201333694159985,
+          0.07434666901826859
+        ]
+      ]
+    },
+    {
+      "name": "RWStation3",
+      "source": "Models/f16.ac",
+      "vertices": 32,
+      "triangles": 18,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.5044453144073486,
+          -0.03929600119590759,
+          -0.24250799417495728
+        ],
+        [
+          -0.4823213219642639,
+          0.008201333694159985,
+          -0.08034933358430862
+        ]
+      ]
+    },
+    {
+      "name": "Tail",
+      "source": "Models/f16.ac",
+      "vertices": 22,
+      "triangles": 20,
+      "material": 15,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage1Mat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0029973334167152643,
+          0.34603333473205566,
+          -0.596668004989624
+        ],
+        [
+          0.002277333289384842,
+          0.3512359857559204,
+          -0.5446306467056274
+        ]
+      ]
+    },
+    {
+      "name": "Tail",
+      "source": "Models/f16.ac",
+      "vertices": 43,
+      "triangles": 31,
+      "material": 14,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.007025333121418953,
+          0.15357600152492523,
+          -0.7858773469924927
+        ],
+        [
+          0.006254666484892368,
+          0.4254666566848755,
+          -0.3747439980506897
+        ]
+      ]
+    },
+    {
+      "name": "Tail-antenna",
+      "source": "Models/f16.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 16,
+      "texture": "Models/f16.png",
+      "material_name": "liveries",
+      "glass": false,
+      "bbox": [
+        [
+          -1.3333333299669903e-05,
+          0.09855466336011887,
+          -0.19641466438770294
+        ],
+        [
+          -1.3333333299669903e-05,
+          0.1305706650018692,
+          -0.16580399870872498
+        ]
+      ]
+    },
+    {
+      "name": "Turbine",
+      "source": "Models/f16.ac",
+      "vertices": 17,
+      "triangles": 16,
+      "material": 7,
+      "texture": "Models/f16.png",
+      "material_name": "engineMat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.059195999056100845,
+          -0.05910266563296318,
+          -0.3982999920845032
+        ],
+        [
+          0.05846933275461197,
+          0.05876666679978371,
+          -0.3982306718826294
+        ]
+      ]
+    },
+    {
+      "name": "USAF_Tailroot",
+      "source": "Models/f16.ac",
+      "vertices": 48,
+      "triangles": 27,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.016634667292237282,
+          0.06578933447599411,
+          -0.6859386563301086
+        ],
+        [
+          0.015828000381588936,
+          0.15357466042041779,
+          -0.0952666699886322
+        ]
+      ]
+    },
+    {
+      "name": "VentralFins",
+      "source": "Models/f16.ac",
+      "vertices": 20,
+      "triangles": 10,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.08615333586931229,
+          -0.16780933737754822,
+          -0.43056532740592957
+        ],
+        [
+          0.08304533362388611,
+          -0.0601106658577919,
+          -0.23820799589157104
+        ]
+      ]
+    },
+    {
+      "name": "WingTips",
+      "source": "Models/f16.ac",
+      "vertices": 113,
+      "triangles": 81,
+      "material": 4,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.6393399834632874,
+          -0.018247999250888824,
+          -0.33157333731651306
+        ],
+        [
+          0.6392160058021545,
+          0.017081333324313164,
+          -0.014722666703164577
+        ]
+      ]
+    },
+    {
+      "name": "Link16Antennas",
+      "source": "Models/f16.ac",
+      "vertices": 143,
+      "triangles": 152,
+      "material": 5,
+      "texture": "Models/f16.png",
+      "material_name": "gearwellMat.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.02170933410525322,
+          0.0453893318772316,
+          0.7390440106391907
+        ],
+        [
+          0.02019466646015644,
+          0.05873066559433937,
+          0.7803773283958435
+        ]
+      ]
+    },
+    {
+      "name": "NozzleRing",
+      "source": "Models/f16.ac",
+      "vertices": 86,
+      "triangles": 64,
+      "material": 17,
+      "texture": "Models/nozzle-ring.png",
+      "material_name": "unknownMat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.07308133691549301,
+          -0.07248400151729584,
+          -0.6162493228912354
+        ],
+        [
+          0.07213599979877472,
+          0.07311200350522995,
+          -0.5785293579101562
+        ]
+      ]
+    },
+    {
+      "name": "PitotTube",
+      "source": "Models/f16.ac",
+      "vertices": 178,
+      "triangles": 188,
+      "material": 18,
+      "texture": "Models/f16.png",
+      "material_name": "fuselage2Mat.003",
+      "glass": false,
+      "bbox": [
+        [
+          -0.004798666574060917,
+          -0.028277333825826645,
+          1.0182346105575562
+        ],
+        [
+          0.004798666574060917,
+          -0.017318665981292725,
+          1.121618628501892
+        ]
+      ]
+    },
+    {
+      "name": "CanopyBackOutside",
+      "source": "Models/f16.ac",
+      "vertices": 26,
+      "triangles": 36,
+      "material": 19,
+      "texture": null,
+      "material_name": "glassOutsideMat",
+      "glass": true,
+      "bbox": [
+        [
+          -0.042633332312107086,
+          0.08529333025217056,
+          0.3305720090866089
+        ],
+        [
+          0.04243199899792671,
+          0.14879199862480164,
+          0.4618053436279297
+        ]
+      ]
+    },
+    {
+      "name": "CanopyForwardOutside",
+      "source": "Models/f16.ac",
+      "vertices": 218,
+      "triangles": 392,
+      "material": 19,
+      "texture": null,
+      "material_name": "glassOutsideMat",
+      "glass": true,
+      "bbox": [
+        [
+          -0.04530666768550873,
+          0.06442800164222717,
+          0.45658934116363525
+        ],
+        [
+          0.0451173335313797,
+          0.15052400529384613,
+          0.7178053259849548
+        ]
+      ]
+    },
+    {
+      "name": "AftPosLight2",
+      "source": "Models/f16.ac",
+      "vertices": 11,
+      "triangles": 5,
+      "material": 3,
+      "texture": null,
+      "material_name": "emissiveMat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0049760001711547375,
+          0.14747999608516693,
+          -0.7342759966850281
+        ],
+        [
+          0.004357333295047283,
+          0.15681466460227966,
+          -0.7300026416778564
+        ]
+      ]
+    },
+    {
+      "name": "AntiCollisionStrobe",
+      "source": "Models/f16.ac",
+      "vertices": 26,
+      "triangles": 30,
+      "material": 20,
+      "texture": null,
+      "material_name": "strut1Mat.000",
+      "glass": false,
+      "bbox": [
+        [
+          -0.006410666741430759,
+          0.42537733912467957,
+          -0.7161546945571899
+        ],
+        [
+          0.0064119999296963215,
+          0.4333026707172394,
+          -0.7009680271148682
+        ]
+      ]
+    },
+    {
+      "name": "GreenPosLight1",
+      "source": "Models/f16.ac",
+      "vertices": 8,
+      "triangles": 4,
+      "material": 21,
+      "texture": null,
+      "material_name": "lightGreen2Mat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.10221733152866364,
+          -0.07836666703224182,
+          0.4415346682071686
+        ],
+        [
+          -0.09300266951322556,
+          -0.06761733442544937,
+          0.4561919867992401
+        ]
+      ]
+    },
+    {
+      "name": "GreenPosLight2",
+      "source": "Models/f16.ac",
+      "vertices": 8,
+      "triangles": 4,
+      "material": 21,
+      "texture": null,
+      "material_name": "lightGreen2Mat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.10220266878604889,
+          -0.07835599780082703,
+          0.44153866171836853
+        ],
+        [
+          -0.09298799932003021,
+          -0.06760799884796143,
+          0.45619601011276245
+        ]
+      ]
+    },
+    {
+      "name": "LowFormationLlight",
+      "source": "Models/f16.ac",
+      "vertices": 14,
+      "triangles": 5,
+      "material": 22,
+      "texture": null,
+      "material_name": "hookMat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.008817333728075027,
+          -0.11696799844503403,
+          0.19272799789905548
+        ],
+        [
+          0.004515999928116798,
+          -0.11169999837875366,
+          0.20206134021282196
+        ]
+      ]
+    },
+    {
+      "name": "RedPosLight1",
+      "source": "Models/f16.ac",
+      "vertices": 8,
+      "triangles": 4,
+      "material": 23,
+      "texture": null,
+      "material_name": "lightRed2Mat",
+      "glass": false,
+      "bbox": [
+        [
+          0.0908999964594841,
+          -0.07826799899339676,
+          0.44155067205429077
+        ],
+        [
+          0.10031333565711975,
+          -0.06751866638660431,
+          0.45622000098228455
+        ]
+      ]
+    },
+    {
+      "name": "RedPosLight2",
+      "source": "Models/f16.ac",
+      "vertices": 8,
+      "triangles": 4,
+      "material": 23,
+      "texture": null,
+      "material_name": "lightRed2Mat",
+      "glass": false,
+      "bbox": [
+        [
+          0.0908999964594841,
+          -0.07826799899339676,
+          0.44155067205429077
+        ],
+        [
+          0.10031333565711975,
+          -0.06751866638660431,
+          0.45622000098228455
+        ]
+      ]
+    },
+    {
+      "name": "WingGreenPosLight",
+      "source": "Models/f16.ac",
+      "vertices": 28,
+      "triangles": 10,
+      "material": 21,
+      "texture": null,
+      "material_name": "lightGreen2Mat",
+      "glass": false,
+      "bbox": [
+        [
+          -0.6135773062705994,
+          -0.005933333188295364,
+          -0.22563999891281128
+        ],
+        [
+          -0.6001986861228943,
+          0.009294666349887848,
+          -0.2071239948272705
+        ]
+      ]
+    },
+    {
+      "name": "WingRedPosLight",
+      "source": "Models/f16.ac",
+      "vertices": 28,
+      "triangles": 10,
+      "material": 23,
+      "texture": null,
+      "material_name": "lightRed2Mat",
+      "glass": false,
+      "bbox": [
+        [
+          0.5991880297660828,
+          -0.005833333358168602,
+          -0.22560666501522064
+        ],
+        [
+          0.6125666499137878,
+          0.009403999894857407,
+          -0.20709200203418732
+        ]
+      ]
+    },
+    {
+      "name": "ls1-00",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.004273333121091127,
+          0.04325199872255325,
+          -0.7184866666793823
+        ],
+        [
+          0.01020533312112093,
+          0.05955199897289276,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-00",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.004590666852891445,
+          0.04018933326005936,
+          -0.7184866666793823
+        ],
+        [
+          0.022943999618291855,
+          0.05986800044775009,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-00",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.013256000354886055,
+          0.044151999056339264,
+          -0.7184866666793823
+        ],
+        [
+          0.012702666223049164,
+          0.06496133655309677,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-00",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.00741733331233263,
+          0.03734533488750458,
+          -0.7218106389045715
+        ],
+        [
+          0.02091333270072937,
+          0.06433066725730896,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-01",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.012603778392076492,
+          0.03605422377586365,
+          -0.7184866666793823
+        ],
+        [
+          0.03221806138753891,
+          0.05665420740842819,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-01",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.02081958018243313,
+          0.030042804777622223,
+          -0.7184866666793823
+        ],
+        [
+          0.04266705363988876,
+          0.05186360701918602,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-01",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.00876318383961916,
+          0.038472577929496765,
+          -0.7184866666793823
+        ],
+        [
+          0.036595359444618225,
+          0.0645066350698471,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-01",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.009700631722807884,
+          0.026499401777982712,
+          -0.7218106389045715
+        ],
+        [
+          0.03621481731534004,
+          0.0546303428709507,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-02",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.027562079951167107,
+          0.023367522284388542,
+          -0.7184866666793823
+        ],
+        [
+          0.04932588338851929,
+          0.04513132572174072,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-02",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.03387890011072159,
+          0.015322531573474407,
+          -0.7184866666793823
+        ],
+        [
+          0.055894434452056885,
+          0.035963449627161026,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-02",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.026073383167386055,
+          0.026936054229736328,
+          -0.7184866666793823
+        ],
+        [
+          0.05491674318909645,
+          0.05486205965280533,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-02",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.025341764092445374,
+          0.01161917857825756,
+          -0.7218106389045715
+        ],
+        [
+          0.05436425283551216,
+          0.03661304712295532,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-03",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.038324303925037384,
+          0.007123325485736132,
+          -0.7184866666793823
+        ],
+        [
+          0.05892428383231163,
+          0.02673760987818241,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-03",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.041780464351177216,
+          -0.0017304572975263,
+          -0.7184866666793823
+        ],
+        [
+          0.06061239540576935,
+          0.014588185586035252,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-03",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.03800570219755173,
+          0.00917709432542324,
+          -0.7184866666793823
+        ],
+        [
+          0.06487754732370377,
+          0.0368652269244194,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-03",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.037124842405319214,
+          -0.005029960069805384,
+          -0.7218106389045715
+        ],
+        [
+          0.06423722952604294,
+          0.023406077176332474,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-04",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.04325199872255325,
+          -0.01020533312112093,
+          -0.7184866666793823
+        ],
+        [
+          0.05955199897289276,
+          0.004273333121091127,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-04",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.04018933326005936,
+          -0.022943999618291855,
+          -0.7184866666793823
+        ],
+        [
+          0.05986800044775009,
+          -0.004590666852891445,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-04",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.044151999056339264,
+          -0.012702666223049164,
+          -0.7184866666793823
+        ],
+        [
+          0.06496133655309677,
+          0.013256000354886055,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-04",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.03734533488750458,
+          -0.02091333270072937,
+          -0.7218106389045715
+        ],
+        [
+          0.06433066725730896,
+          0.00741733331233263,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-05",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.03605422377586365,
+          -0.03221806138753891,
+          -0.7184866666793823
+        ],
+        [
+          0.05665420740842819,
+          -0.012603778392076492,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-05",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.030042804777622223,
+          -0.04266705363988876,
+          -0.7184866666793823
+        ],
+        [
+          0.05186360701918602,
+          -0.02081958018243313,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-05",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.038472577929496765,
+          -0.036595359444618225,
+          -0.7184866666793823
+        ],
+        [
+          0.0645066350698471,
+          -0.00876318383961916,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-05",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.026499401777982712,
+          -0.03621481731534004,
+          -0.7218106389045715
+        ],
+        [
+          0.0546303428709507,
+          -0.009700631722807884,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-06",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.023367522284388542,
+          -0.04932588338851929,
+          -0.7184866666793823
+        ],
+        [
+          0.04513132572174072,
+          -0.027562079951167107,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-06",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.015322531573474407,
+          -0.055894434452056885,
+          -0.7184866666793823
+        ],
+        [
+          0.035963449627161026,
+          -0.03387890011072159,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-06",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.026936054229736328,
+          -0.05491674318909645,
+          -0.7184866666793823
+        ],
+        [
+          0.05486205965280533,
+          -0.026073383167386055,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-06",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.01161917857825756,
+          -0.05436425283551216,
+          -0.7218106389045715
+        ],
+        [
+          0.03661304712295532,
+          -0.025341764092445374,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-07",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.007123325485736132,
+          -0.05892428383231163,
+          -0.7184866666793823
+        ],
+        [
+          0.02673760987818241,
+          -0.038324303925037384,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-07",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0017304572975263,
+          -0.06061239540576935,
+          -0.7184866666793823
+        ],
+        [
+          0.014588185586035252,
+          -0.041780464351177216,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-07",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          0.00917709432542324,
+          -0.06487754732370377,
+          -0.7184866666793823
+        ],
+        [
+          0.0368652269244194,
+          -0.03800570219755173,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-07",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.005029960069805384,
+          -0.06423722952604294,
+          -0.7218106389045715
+        ],
+        [
+          0.023406077176332474,
+          -0.037124842405319214,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-08",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.01020533312112093,
+          -0.05955199897289276,
+          -0.7184866666793823
+        ],
+        [
+          0.004273333121091127,
+          -0.04325199872255325,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-08",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.022943999618291855,
+          -0.05986800044775009,
+          -0.7184866666793823
+        ],
+        [
+          -0.004590666852891445,
+          -0.04018933326005936,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-08",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.012702666223049164,
+          -0.06496133655309677,
+          -0.7184866666793823
+        ],
+        [
+          0.013256000354886055,
+          -0.044151999056339264,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-08",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.02091333270072937,
+          -0.06433066725730896,
+          -0.7218106389045715
+        ],
+        [
+          0.00741733331233263,
+          -0.03734533488750458,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-09",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03221806138753891,
+          -0.05665420740842819,
+          -0.7184866666793823
+        ],
+        [
+          -0.012603778392076492,
+          -0.03605422377586365,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-09",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.04266705363988876,
+          -0.05186360701918602,
+          -0.7184866666793823
+        ],
+        [
+          -0.02081958018243313,
+          -0.030042804777622223,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-09",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.036595359444618225,
+          -0.0645066350698471,
+          -0.7184866666793823
+        ],
+        [
+          -0.00876318383961916,
+          -0.038472577929496765,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-09",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03621481731534004,
+          -0.0546303428709507,
+          -0.7218106389045715
+        ],
+        [
+          -0.009700631722807884,
+          -0.026499401777982712,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-10",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.04932588338851929,
+          -0.04513132572174072,
+          -0.7184866666793823
+        ],
+        [
+          -0.027562079951167107,
+          -0.023367522284388542,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-10",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.055894434452056885,
+          -0.035963449627161026,
+          -0.7184866666793823
+        ],
+        [
+          -0.03387890011072159,
+          -0.015322531573474407,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-10",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05491674318909645,
+          -0.05486205965280533,
+          -0.7184866666793823
+        ],
+        [
+          -0.026073383167386055,
+          -0.026936054229736328,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-10",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05436425283551216,
+          -0.03661304712295532,
+          -0.7218106389045715
+        ],
+        [
+          -0.025341764092445374,
+          -0.01161917857825756,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-11",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05892428383231163,
+          -0.02673760987818241,
+          -0.7184866666793823
+        ],
+        [
+          -0.038324303925037384,
+          -0.007123325485736132,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-11",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.06061239540576935,
+          -0.014588185586035252,
+          -0.7184866666793823
+        ],
+        [
+          -0.041780464351177216,
+          0.0017304572975263,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-11",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.06487754732370377,
+          -0.0368652269244194,
+          -0.7184866666793823
+        ],
+        [
+          -0.03800570219755173,
+          -0.00917709432542324,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-11",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.06423722952604294,
+          -0.023406077176332474,
+          -0.7218106389045715
+        ],
+        [
+          -0.037124842405319214,
+          0.005029960069805384,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-12",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05955199897289276,
+          -0.004273333121091127,
+          -0.7184866666793823
+        ],
+        [
+          -0.04325199872255325,
+          0.01020533312112093,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-12",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05986800044775009,
+          0.004590666852891445,
+          -0.7184866666793823
+        ],
+        [
+          -0.04018933326005936,
+          0.022943999618291855,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-12",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.06496133655309677,
+          -0.013256000354886055,
+          -0.7184866666793823
+        ],
+        [
+          -0.044151999056339264,
+          0.012702666223049164,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-12",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.06433066725730896,
+          -0.00741733331233263,
+          -0.7218106389045715
+        ],
+        [
+          -0.03734533488750458,
+          0.02091333270072937,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-13",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05665420740842819,
+          0.012603778392076492,
+          -0.7184866666793823
+        ],
+        [
+          -0.03605422377586365,
+          0.03221806138753891,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-13",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05186360701918602,
+          0.02081958018243313,
+          -0.7184866666793823
+        ],
+        [
+          -0.030042804777622223,
+          0.04266705363988876,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-13",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0645066350698471,
+          0.00876318383961916,
+          -0.7184866666793823
+        ],
+        [
+          -0.038472577929496765,
+          0.036595359444618225,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-13",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0546303428709507,
+          0.009700631722807884,
+          -0.7218106389045715
+        ],
+        [
+          -0.026499401777982712,
+          0.03621481731534004,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-14",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.04513132572174072,
+          0.027562079951167107,
+          -0.7184866666793823
+        ],
+        [
+          -0.023367522284388542,
+          0.04932588338851929,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-14",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.035963449627161026,
+          0.03387890011072159,
+          -0.7184866666793823
+        ],
+        [
+          -0.015322531573474407,
+          0.055894434452056885,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-14",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05486205965280533,
+          0.026073383167386055,
+          -0.7184866666793823
+        ],
+        [
+          -0.026936054229736328,
+          0.05491674318909645,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-14",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03661304712295532,
+          0.025341764092445374,
+          -0.7218106389045715
+        ],
+        [
+          -0.01161917857825756,
+          0.05436425283551216,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls1-15",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.02673760987818241,
+          0.038324303925037384,
+          -0.7184866666793823
+        ],
+        [
+          -0.007123325485736132,
+          0.05892428383231163,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "ls2-15",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 24,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "innerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.014588185586035252,
+          0.041780464351177216,
+          -0.7184866666793823
+        ],
+        [
+          0.0017304572975263,
+          0.06061239540576935,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-15",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 9,
+      "triangles": 7,
+      "material": 25,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "outerPlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0368652269244194,
+          0.03800570219755173,
+          -0.7184866666793823
+        ],
+        [
+          -0.00917709432542324,
+          0.06487754732370377,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "us1-15",
+      "source": "Models/nozzle-section.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 26,
+      "texture": "Models/nozzle-section.png",
+      "material_name": "middlePlates",
+      "glass": false,
+      "bbox": [
+        [
+          -0.023406077176332474,
+          0.037124842405319214,
+          -0.7218106389045715
+        ],
+        [
+          0.005029960069805384,
+          0.06423722952604294,
+          -0.6157186627388
+        ]
+      ]
+    },
+    {
+      "name": "exhaustFan",
+      "source": "Models/outlet.ac",
+      "vertices": 580,
+      "triangles": 720,
+      "material": 27,
+      "texture": "Models/texture.png",
+      "material_name": "exterior",
+      "glass": false,
+      "bbox": [
+        [
+          -0.06077594682574272,
+          -0.06075778603553772,
+          -0.39719465374946594
+        ],
+        [
+          0.06078232079744339,
+          0.06078647822141647,
+          -0.3957226574420929
+        ]
+      ]
+    },
+    {
+      "name": "exhaustGrid",
+      "source": "Models/outlet.ac",
+      "vertices": 1011,
+      "triangles": 1462,
+      "material": 28,
+      "texture": "Models/texture.png",
+      "material_name": "Material",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05797866731882095,
+          -0.05797866731882095,
+          -0.4257733225822449
+        ],
+        [
+          0.05797866731882095,
+          0.05797866731882095,
+          -0.390859991312027
+        ]
+      ]
+    },
+    {
+      "name": "hand.001",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 1049,
+      "triangles": 1824,
+      "material": 29,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          0.03607271984219551,
+          0.0407010056078434,
+          0.5495437383651733
+        ],
+        [
+          0.04885418713092804,
+          0.052708178758621216,
+          0.5721374750137329
+        ]
+      ]
+    },
+    {
+      "name": "thumb.001",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 340,
+      "triangles": 606,
+      "material": 29,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          0.03432311862707138,
+          0.045004021376371384,
+          0.5539670586585999
+        ],
+        [
+          0.040470052510499954,
+          0.05066979303956032,
+          0.5641503930091858
+        ]
+      ]
+    },
+    {
+      "name": "LL-arm1",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 412,
+      "triangles": 760,
+      "material": 30,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          0.019368333742022514,
+          0.03623019903898239,
+          0.5064172148704529
+        ],
+        [
+          0.04513619840145111,
+          0.08652500063180923,
+          0.5432063937187195
+        ]
+      ]
+    },
+    {
+      "name": "LL-arm2",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 329,
+      "triangles": 620,
+      "material": 30,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          0.03324420005083084,
+          0.03382711857557297,
+          0.506666898727417
+        ],
+        [
+          0.04690646752715111,
+          0.0495225191116333,
+          0.5503079295158386
+        ]
+      ]
+    },
+    {
+      "name": "LL-wrist",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 192,
+      "triangles": 192,
+      "material": 30,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          0.03756140172481537,
+          0.04225105419754982,
+          0.5387585759162903
+        ],
+        [
+          0.046013932675123215,
+          0.048322051763534546,
+          0.5541083812713623
+        ]
+      ]
+    },
+    {
+      "name": "hand",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 1202,
+      "triangles": 1884,
+      "material": 29,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.04183809459209442,
+          0.03497813269495964,
+          0.592736005783081
+        ],
+        [
+          -0.03221676126122475,
+          0.04614244028925896,
+          0.6096919775009155
+        ]
+      ]
+    },
+    {
+      "name": "thumb",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 335,
+      "triangles": 606,
+      "material": 29,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.037662360817193985,
+          0.042325668036937714,
+          0.5960693359375
+        ],
+        [
+          -0.03128315880894661,
+          0.04910004138946533,
+          0.606337308883667
+        ]
+      ]
+    },
+    {
+      "name": "LR-wrist",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 186,
+      "triangles": 192,
+      "material": 30,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.040634360164403915,
+          0.03643777221441269,
+          0.585640013217926
+        ],
+        [
+          -0.03355595842003822,
+          0.0430506132543087,
+          0.596776008605957
+        ]
+      ]
+    },
+    {
+      "name": "LR-arm2",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 369,
+      "triangles": 620,
+      "material": 30,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.04214676097035408,
+          0.031015053391456604,
+          0.5491146445274353
+        ],
+        [
+          -0.02914435975253582,
+          0.04563847929239273,
+          0.5929453372955322
+        ]
+      ]
+    },
+    {
+      "name": "LR-arm1",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 408,
+      "triangles": 760,
+      "material": 30,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.041706494987010956,
+          0.03817330300807953,
+          0.5228760242462158
+        ],
+        [
+          -0.01704329252243042,
+          0.08755078911781311,
+          0.5604493618011475
+        ]
+      ]
+    },
+    {
+      "name": "L-chest",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 764,
+      "triangles": 1392,
+      "material": 29,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03105841390788555,
+          0.01559106633067131,
+          0.5178213119506836
+        ],
+        [
+          0.030966786667704582,
+          0.094596266746521,
+          0.5744720101356506
+        ]
+      ]
+    },
+    {
+      "name": "L-collar",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 365,
+      "triangles": 504,
+      "material": 29,
+      "texture": "Models/Pilots/Tex_0008_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.00894451979547739,
+          0.09012306481599808,
+          0.5239426493644714
+        ],
+        [
+          0.008563320152461529,
+          0.09665533155202866,
+          0.5434373617172241
+        ]
+      ]
+    },
+    {
+      "name": "L-harness",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 1006,
+      "triangles": 1632,
+      "material": 31,
+      "texture": "Models/Pilots/Tex_0004_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.02772199921309948,
+          0.015241733752191067,
+          0.5139840245246887
+        ],
+        [
+          0.02507946640253067,
+          0.09429240226745605,
+          0.5731386542320251
+        ]
+      ]
+    },
+    {
+      "name": "helmet",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 251,
+      "triangles": 248,
+      "material": 32,
+      "texture": "Models/Liveries/patch.default.png",
+      "material_name": "helmet",
+      "glass": false,
+      "bbox": [
+        [
+          -0.017912093549966812,
+          0.09663160145282745,
+          0.518103837966919
+        ],
+        [
+          0.018109239637851715,
+          0.13251906633377075,
+          0.5546881556510925
+        ]
+      ]
+    },
+    {
+      "name": "L-mask-tube",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 237,
+      "triangles": 268,
+      "material": 33,
+      "texture": "Models/Pilots/Tex_0004_1.jpg",
+      "material_name": "ac3dmat1",
+      "glass": false,
+      "bbox": [
+        [
+          -0.014216266572475433,
+          0.09981853514909744,
+          0.5433693528175354
+        ],
+        [
+          0.014255199581384659,
+          0.1065732017159462,
+          0.5564266443252563
+        ]
+      ]
+    },
+    {
+      "name": "L-visor",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 201,
+      "triangles": 360,
+      "material": 34,
+      "texture": null,
+      "material_name": "visor",
+      "glass": false,
+      "bbox": [
+        [
+          -0.015817079693078995,
+          0.10452346503734589,
+          0.545910656452179
+        ],
+        [
+          0.016072653234004974,
+          0.12133066356182098,
+          0.5548666715621948
+        ]
+      ]
+    },
+    {
+      "name": "patchL",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 52,
+      "triangles": 82,
+      "material": 35,
+      "texture": "Models/Liveries/patch.default.png",
+      "material_name": "skin",
+      "glass": false,
+      "bbox": [
+        [
+          0.03509478643536568,
+          0.06655419617891312,
+          0.5242034792900085
+        ],
+        [
+          0.03896865248680115,
+          0.07904206961393356,
+          0.5368078947067261
+        ]
+      ]
+    },
+    {
+      "name": "patchR",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 52,
+      "triangles": 82,
+      "material": 35,
+      "texture": "Models/Liveries/patch.default.png",
+      "material_name": "skin",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03624574840068817,
+          0.06628402322530746,
+          0.5305396318435669
+        ],
+        [
+          -0.032578013837337494,
+          0.07883799821138382,
+          0.543183445930481
+        ]
+      ]
+    },
+    {
+      "name": "patchC",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 52,
+      "triangles": 82,
+      "material": 35,
+      "texture": "Models/Liveries/patch.default.png",
+      "material_name": "skin",
+      "glass": false,
+      "bbox": [
+        [
+          -0.023579614236950874,
+          0.07100546360015869,
+          0.546098530292511
+        ],
+        [
+          -0.012434680014848709,
+          0.08241040259599686,
+          0.5551614761352539
+        ]
+      ]
+    },
+    {
+      "name": "L-head",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 680,
+      "triangles": 835,
+      "material": 36,
+      "texture": "Models/Pilots/face_a.png",
+      "material_name": "skin",
+      "glass": false,
+      "bbox": [
+        [
+          -0.011483919806778431,
+          0.09149439632892609,
+          0.5238058567047119
+        ],
+        [
+          0.011106959544122219,
+          0.12838906049728394,
+          0.5519622564315796
+        ]
+      ]
+    },
+    {
+      "name": "L-head",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 22,
+      "triangles": 14,
+      "material": 37,
+      "texture": "Models/Pilots/face_a.png",
+      "material_name": "L-head",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0025402000173926353,
+          0.10530927777290344,
+          0.5486311316490173
+        ],
+        [
+          0.0021779867820441723,
+          0.10735525190830231,
+          0.5502610802650452
+        ]
+      ]
+    },
+    {
+      "name": "life-jacket",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 156,
+      "triangles": 172,
+      "material": 38,
+      "texture": "Models/Pilots/Tex_0004_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.015598692931234837,
+          0.06900246441364288,
+          0.5252360105514526
+        ],
+        [
+          0.015332640148699284,
+          0.09458133578300476,
+          0.5593618750572205
+        ]
+      ]
+    },
+    {
+      "name": "L-face-mask",
+      "source": "Models/pilot_externalview.ac",
+      "vertices": 121,
+      "triangles": 200,
+      "material": 38,
+      "texture": "Models/Pilots/Tex_0004_1.jpg",
+      "material_name": "cloth",
+      "glass": false,
+      "bbox": [
+        [
+          -0.007471893448382616,
+          0.09787440299987793,
+          0.5465293526649475
+        ],
+        [
+          0.007210906594991684,
+          0.11225440353155136,
+          0.5555786490440369
+        ]
+      ]
+    },
+    {
+      "name": "back-cushion",
+      "source": "Models/Cockpit/chair/chair.ac",
+      "vertices": 1096,
+      "triangles": 1486,
+      "material": 39,
+      "texture": "Models/Cockpit/chair/seat-cushion.png",
+      "material_name": "ac3dmat7",
+      "glass": false,
+      "bbox": [
+        [
+          -0.025309866294264793,
+          0.004506133496761322,
+          0.5169093608856201
+        ],
+        [
+          0.025309866294264793,
+          0.0841253325343132,
+          0.5593706369400024
+        ]
+      ]
+    },
+    {
+      "name": "back-cushion",
+      "source": "Models/Cockpit/chair/chair.ac",
+      "vertices": 75,
+      "triangles": 72,
+      "material": 40,
+      "texture": "Models/Cockpit/chair/seat-cushion.png",
+      "material_name": "ac3dmat7.002",
+      "glass": false,
+      "bbox": [
+        [
+          -0.025280799716711044,
+          0.004506133496761322,
+          0.5169093608856201
+        ],
+        [
+          0.025280799716711044,
+          0.0841253325343132,
+          0.5593346953392029
+        ]
+      ]
+    },
+    {
+      "name": "back-structure",
+      "source": "Models/Cockpit/chair/chair.ac",
+      "vertices": 1440,
+      "triangles": 1442,
+      "material": 41,
+      "texture": "Models/Cockpit/chair/texture.png",
+      "material_name": "ac3dmat13",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03233093395829201,
+          -0.03175840154290199,
+          0.4674093425273895
+        ],
+        [
+          0.03330213204026222,
+          0.12375413626432419,
+          0.5679426789283752
+        ]
+      ]
+    },
+    {
+      "name": "back-structure",
+      "source": "Models/Cockpit/chair/chair.ac",
+      "vertices": 79,
+      "triangles": 77,
+      "material": 42,
+      "texture": "Models/Cockpit/chair/texture.png",
+      "material_name": "ac3dmat1.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03017466701567173,
+          0.011645999737083912,
+          0.4935239851474762
+        ],
+        [
+          0.03330213204026222,
+          0.08445533365011215,
+          0.5450493097305298
+        ]
+      ]
+    },
+    {
+      "name": "back-structure",
+      "source": "Models/Cockpit/chair/chair.ac",
+      "vertices": 20,
+      "triangles": 14,
+      "material": 43,
+      "texture": "Models/Cockpit/chair/texture.png",
+      "material_name": "ac3dmat1",
+      "glass": false,
+      "bbox": [
+        [
+          0.02824239991605282,
+          0.011645999737083912,
+          0.4935426712036133
+        ],
+        [
+          0.03330213204026222,
+          0.08445053547620773,
+          0.544925332069397
+        ]
+      ]
+    },
+    {
+      "name": "main-chute-container",
+      "source": "Models/Cockpit/chair/chair.ac",
+      "vertices": 522,
+      "triangles": 566,
+      "material": 44,
+      "texture": "Models/Cockpit/chair/texture.png",
+      "material_name": "ac3dmat13",
+      "glass": false,
+      "bbox": [
+        [
+          -0.025569599121809006,
+          0.06997786462306976,
+          0.474425345659256
+        ],
+        [
+          0.025569599121809006,
+          0.1182941347360611,
+          0.5163879990577698
+        ]
+      ]
+    },
+    {
+      "name": "head-rest",
+      "source": "Models/Cockpit/chair/chair.ac",
+      "vertices": 176,
+      "triangles": 132,
+      "material": 45,
+      "texture": "Models/Cockpit/chair/texture.png",
+      "material_name": "ac3dmat14.001",
+      "glass": false,
+      "bbox": [
+        [
+          -0.015236400067806244,
+          0.09393879771232605,
+          0.4967919886112213
+        ],
+        [
+          0.015236933715641499,
+          0.11818653345108032,
+          0.5138453245162964
+        ]
+      ]
+    },
+    {
+      "name": "ar_nws",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 46,
+      "texture": "Models/Cockpit/Main/../Textures/instruments.png",
+      "material_name": "indexerLight",
+      "glass": false,
+      "bbox": [
+        [
+          -0.019049333408474922,
+          0.08985066413879395,
+          0.6371973156929016
+        ],
+        [
+          -0.017554666846990585,
+          0.09236133098602295,
+          0.6380933523178101
+        ]
+      ]
+    },
+    {
+      "name": "box_left",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 52,
+      "triangles": 28,
+      "material": 47,
+      "texture": "Models/Cockpit/Main/../Textures/panelsMinor.png",
+      "material_name": "minorPanels",
+      "glass": false,
+      "bbox": [
+        [
+          0.014551999978721142,
+          0.08622799813747406,
+          0.6211199760437012
+        ],
+        [
+          0.01905866712331772,
+          0.09906800091266632,
+          0.638969361782074
+        ]
+      ]
+    },
+    {
+      "name": "box_right",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 52,
+      "triangles": 28,
+      "material": 47,
+      "texture": "Models/Cockpit/Main/../Textures/panelsMinor.png",
+      "material_name": "minorPanels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.019249333068728447,
+          0.08676133304834366,
+          0.6211826801300049
+        ],
+        [
+          -0.014742666855454445,
+          0.0990080013871193,
+          0.6390213370323181
+        ]
+      ]
+    },
+    {
+      "name": "center-console",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 295,
+      "triangles": 123,
+      "material": 48,
+      "texture": "Models/Cockpit/Main/../Textures/panels.png",
+      "material_name": "panels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.011233333498239517,
+          0.0006466666818596423,
+          0.6115413308143616
+        ],
+        [
+          0.011233333498239517,
+          0.06544533371925354,
+          0.6445773243904114
+        ]
+      ]
+    },
+    {
+      "name": "center_console",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 64,
+      "triangles": 28,
+      "material": 47,
+      "texture": "Models/Cockpit/Main/../Textures/panelsMinor.png",
+      "material_name": "minorPanels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.011117333546280861,
+          0.058557331562042236,
+          0.6074146628379822
+        ],
+        [
+          0.011164000257849693,
+          0.0956680029630661,
+          0.6853466629981995
+        ]
+      ]
+    },
+    {
+      "name": "Centre",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 593,
+      "triangles": 990,
+      "material": 49,
+      "texture": "Models/Cockpit/Main/../Textures/airvent.png",
+      "material_name": "Airvent",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0021866667084395885,
+          0.031889334321022034,
+          0.609009325504303
+        ],
+        [
+          0.0028866666834801435,
+          0.03494666516780853,
+          0.6131240129470825
+        ]
+      ]
+    },
+    {
+      "name": "COCKPIT",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 297,
+      "triangles": 141,
+      "material": 48,
+      "texture": "Models/Cockpit/Main/../Textures/panels.png",
+      "material_name": "panels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.08272399753332138,
+          -0.031858667731285095,
+          0.44720399379730225
+        ],
+        [
+          0.08283333480358124,
+          0.08483066409826279,
+          0.7367933392524719
+        ]
+      ]
+    },
+    {
+      "name": "cockpit_border",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 23,
+      "triangles": 8,
+      "material": 50,
+      "texture": null,
+      "material_name": "canopyBorder",
+      "glass": false,
+      "bbox": [
+        [
+          -0.05625733360648155,
+          0.04528133198618889,
+          0.4550760090351105
+        ],
+        [
+          0.05565066635608673,
+          0.07292533665895462,
+          0.6450013518333435
+        ]
+      ]
+    },
+    {
+      "name": "cylinder.005",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 79,
+      "triangles": 29,
+      "material": 48,
+      "texture": "Models/Cockpit/Main/../Textures/panels.png",
+      "material_name": "panels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.04188933223485947,
+          0.048151999711990356,
+          0.624068021774292
+        ],
+        [
+          -0.0309213325381279,
+          0.07263600081205368,
+          0.6381840109825134
+        ]
+      ]
+    },
+    {
+      "name": "cylinder.006",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 106,
+      "triangles": 40,
+      "material": 48,
+      "texture": "Models/Cockpit/Main/../Textures/panels.png",
+      "material_name": "panels",
+      "glass": false,
+      "bbox": [
+        [
+          0.030329333618283272,
+          0.047543998807668686,
+          0.6305506825447083
+        ],
+        [
+          0.04774666577577591,
+          0.07336000353097916,
+          0.6375826597213745
+        ]
+      ]
+    },
+    {
+      "name": "disc",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 4,
+      "triangles": 2,
+      "material": 46,
+      "texture": "Models/Cockpit/Main/../Textures/instruments.png",
+      "material_name": "indexerLight",
+      "glass": false,
+      "bbox": [
+        [
+          -0.019022665917873383,
+          0.08738133311271667,
+          0.6366426944732666
+        ],
+        [
+          -0.0175186675041914,
+          0.08989333361387253,
+          0.6375213265419006
+        ]
+      ]
+    },
+    {
+      "name": "frontpart",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 214,
+      "triangles": 98,
+      "material": 51,
+      "texture": "Models/Cockpit/Main/../Textures/instruments.png",
+      "material_name": "camera",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0026920000091195107,
+          0.0826840028166771,
+          0.6412559747695923
+        ],
+        [
+          0.0027093333192169666,
+          0.0878426656126976,
+          0.6548720002174377
+        ]
+      ]
+    },
+    {
+      "name": "Housing",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 1652,
+      "triangles": 1813,
+      "material": 49,
+      "texture": "Models/Cockpit/Main/../Textures/airvent.png",
+      "material_name": "Airvent",
+      "glass": false,
+      "bbox": [
+        [
+          -0.0028026667423546314,
+          0.028614666312932968,
+          0.6086106896400452
+        ],
+        [
+          0.0035013332962989807,
+          0.035150665789842606,
+          0.6157799959182739
+        ]
+      ]
+    },
+    {
+      "name": "object.002",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 258,
+      "triangles": 292,
+      "material": 47,
+      "texture": "Models/Cockpit/Main/../Textures/panelsMinor.png",
+      "material_name": "minorPanels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.01153066661208868,
+          0.04636799916625023,
+          0.6065466403961182
+        ],
+        [
+          0.01152000017464161,
+          0.07952933013439178,
+          0.6358533501625061
+        ]
+      ]
+    },
+    {
+      "name": "object.003",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 43,
+      "triangles": 45,
+      "material": 48,
+      "texture": "Models/Cockpit/Main/../Textures/panels.png",
+      "material_name": "panels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03863200172781944,
+          0.04927333444356918,
+          0.6324626803398132
+        ],
+        [
+          0.03606266528367996,
+          0.08423866331577301,
+          0.6406986713409424
+        ]
+      ]
+    },
+    {
+      "name": "object.005",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 316,
+      "triangles": 136,
+      "material": 52,
+      "texture": null,
+      "material_name": "smallLight1",
+      "glass": false,
+      "bbox": [
+        [
+          -0.02491866610944271,
+          0.0862639993429184,
+          0.6210306882858276
+        ],
+        [
+          -0.023318666964769363,
+          0.08846266567707062,
+          0.6223293542861938
+        ]
+      ]
+    },
+    {
+      "name": "object.005",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 57,
+      "triangles": 24,
+      "material": 53,
+      "texture": null,
+      "material_name": "smallLight2",
+      "glass": false,
+      "bbox": [
+        [
+          -0.02491999976336956,
+          0.08474266529083252,
+          0.6221813559532166
+        ],
+        [
+          -0.023320000618696213,
+          0.08753733336925507,
+          0.6279346942901611
+        ]
+      ]
+    },
+    {
+      "name": "object.006",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 316,
+      "triangles": 136,
+      "material": 52,
+      "texture": null,
+      "material_name": "smallLight1",
+      "glass": false,
+      "bbox": [
+        [
+          0.022325333207845688,
+          0.08750533312559128,
+          0.620684027671814
+        ],
+        [
+          0.023925334215164185,
+          0.08965999633073807,
+          0.6220453381538391
+        ]
+      ]
+    },
+    {
+      "name": "object.006",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 57,
+      "triangles": 24,
+      "material": 53,
+      "texture": null,
+      "material_name": "smallLight2",
+      "glass": false,
+      "bbox": [
+        [
+          0.02232399955391884,
+          0.08529199659824371,
+          0.6217039823532104
+        ],
+        [
+          0.023925334215164185,
+          0.08865466713905334,
+          0.6274880170822144
+        ]
+      ]
+    },
+    {
+      "name": "object.007",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 116,
+      "triangles": 56,
+      "material": 47,
+      "texture": "Models/Cockpit/Main/../Textures/panelsMinor.png",
+      "material_name": "minorPanels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.03767866641283035,
+          0.06478399783372879,
+          0.6186293363571167
+        ],
+        [
+          -0.010145333595573902,
+          0.09155066311359406,
+          0.6252639889717102
+        ]
+      ]
+    },
+    {
+      "name": "poly",
+      "source": "Models/Cockpit/Main/cockpit.ac",
+      "vertices": 368,
+      "triangles": 309,
+      "material": 47,
+      "texture": "Models/Cockpit/Main/../Textures/panelsMinor.png",
+      "material_name": "minorPanels",
+      "glass": false,
+      "bbox": [
+        [
+          -0.04760533198714256,
+          0.052537333220243454,
+          0.6185346841812134
+        ],
+        [
+          0.04668933153152466,
+          0.09176933020353317,
+          0.7264573574066162
+        ]
+      ]
+    }
+  ]
+}

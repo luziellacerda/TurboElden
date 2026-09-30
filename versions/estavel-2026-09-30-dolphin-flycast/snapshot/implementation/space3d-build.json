@@ -1,0 +1,233 @@
+{
+  "date": "2026-09-29T09:57:08.255627-03:00",
+  "model": "F-16 TURBORAMA",
+  "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-carrossel-nativo-completo.apk",
+  "bytes": 561776134,
+  "sha256": "33e5da3e4ae8b7c28c3dff13e21a3ad08b8554d0d27ed47ceb2ae641c0032c4b",
+  "certificate_sha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "native_module_sha256": "b11a6649b85c57d2992be965fb339dd0960896b19b2b94fba0cd3f2030ee4387",
+  "native_module_matches_apk": true,
+  "license_assets_match": true,
+  "license_asset_sha256": {
+    "LICENSE-SpacePirates.md": "e7d2c59650ea3ae10b4de33a6d8896f744be18fe1565954d5fa5b03c12d1ce75",
+    "LICENSE-F16.md": "f209c1adbb6e2d9d9b256c8bed21de5cd3e898fd0a63645f227882d6c5106c86",
+    "AUTHORS-F16.txt": "a65f99914b58a81356f27e538499ca2c35969445b321a6f9322dc47054b4609e",
+    "NOTICE.md": "a481a983a8503bdaef3d95cd37cdf28987d75d05bd59571952fa08874048fd82",
+    "model-manifest.json": "fd6b702c931ed006c5f6365099611b184f88c447081f4bbe2a9e66043485d03c",
+    "f16-model-source.zip": "49a1f2fb3576bb6b9ee47f478e6d0b445fbf86248dcd77c5049b834c3181925a"
+  },
+  "android_installed": true,
+  "installed_at": "2026-09-29 09:49:27",
+  "installed_device": "[aparelho omitido]",
+  "installation_method": "adb install -r",
+  "installed_apk_hash_verified": true,
+  "android_tested": true,
+  "android_validation_scope": [
+    "hash do APK instalado igual ao local",
+    "inicialização do F-16 no aparelho",
+    "captura de tela e vídeo no aparelho",
+    "trecho de log sem erro fatal",
+    "tamanho e data da ROM de referência conferidos",
+    "entrada e retorno nativo dos catálogos vinculados ao mesmo hash"
+  ],
+  "android_validation_report": "space3d/f16-device-validation.json",
+  "android_validation_report_sha256": "5845d5cf72280a6dad41eb60aab7100a74fd512f68cfa30d7b6168306d6144b7",
+  "desktop_reports": {
+    "space3d/native-harness-report.json": {
+      "sha256": "c3875ce7cffa53cfd940877bf9e1fff86f458619bfc3ee416532ede44cb6f7f5",
+      "result": {
+        "native_renderer": "PASS",
+        "state_path": "ES3 VAO",
+        "shared_GLES100_shader_compile": "PASS",
+        "tracked_GL_state_restored": [
+          "program",
+          "fbo",
+          "rbo",
+          "array_buffer",
+          "element_buffer",
+          "active_texture",
+          "viewport",
+          "vao",
+          "depth_mask",
+          "depth_function",
+          "color_mask",
+          "blend_src_rgb",
+          "blend_dst_rgb",
+          "blend_src_alpha",
+          "blend_dst_alpha",
+          "blend_equation_rgb",
+          "blend_equation_alpha",
+          "scissor",
+          "clear_color",
+          "clear_depth",
+          "blend_color",
+          "enabled",
+          "textures_2d",
+          "attributes"
+        ],
+        "material_texture_units_checked": 4,
+        "packed_depth_pass": "RGB8 with nearest filtering and disabled dithering",
+        "same_frame_cache": "PASS",
+        "gl_errors": 0,
+        "desktop_renderer": "NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2",
+        "desktop_frame_ms": [
+          248.83510000654496,
+          1.6778999997768551,
+          1.4258999872254208,
+          1.4653999969596043,
+          3.3699999912641943
+        ],
+        "android_tested": false,
+        "note": "Desktop driver; times do not predict Android performance or validate libmain ABI.",
+        "clouds": {
+          "resolution": [
+            320,
+            180
+          ],
+          "volume_steps": 64,
+          "animated_frames": 5,
+          "different_frames": 5,
+          "visibility": "PASS"
+        },
+        "flight_choreography": "PASS; always visible; constant-speed background; clouds share star-field origin and travel"
+      }
+    },
+    "space3d/native-harness-es2-report.json": {
+      "sha256": "3f6cddf2b30ac0f7b6649deb6119548921f619d9a418b3bdfe0b4c3db183d796",
+      "result": {
+        "native_renderer": "PASS",
+        "state_path": "ES2 attributes",
+        "shared_GLES100_shader_compile": "PASS",
+        "tracked_GL_state_restored": [
+          "program",
+          "fbo",
+          "rbo",
+          "array_buffer",
+          "element_buffer",
+          "active_texture",
+          "viewport",
+          "vao",
+          "depth_mask",
+          "depth_function",
+          "color_mask",
+          "blend_src_rgb",
+          "blend_dst_rgb",
+          "blend_src_alpha",
+          "blend_dst_alpha",
+          "blend_equation_rgb",
+          "blend_equation_alpha",
+          "scissor",
+          "clear_color",
+          "clear_depth",
+          "blend_color",
+          "enabled",
+          "textures_2d",
+          "attributes"
+        ],
+        "material_texture_units_checked": 4,
+        "packed_depth_pass": "RGB8 with nearest filtering and disabled dithering",
+        "same_frame_cache": "PASS",
+        "gl_errors": 0,
+        "desktop_renderer": "NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2",
+        "desktop_frame_ms": [
+          153.0778000014834,
+          1.52009999146685,
+          1.4183999883243814,
+          1.5577000012854114,
+          1.4123000000836328
+        ],
+        "android_tested": false,
+        "note": "Desktop driver; times do not predict Android performance or validate libmain ABI.",
+        "clouds": {
+          "resolution": [
+            320,
+            180
+          ],
+          "volume_steps": 64,
+          "animated_frames": 5,
+          "different_frames": 5,
+          "visibility": "PASS"
+        },
+        "flight_choreography": "PASS; always visible; constant-speed background; clouds share star-field origin and travel"
+      }
+    },
+    "space3d/preview-report.json": {
+      "sha256": "ac2be3278c8e620216f66524206c1b370100f47ec9f8b17be04d5c294eafdf40",
+      "result": {
+        "renderer": "NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2",
+        "desktop_gl": 330,
+        "shader_compilation": "PASS",
+        "frames": 8,
+        "clouds": "64-step volume; radial parallax from shared stellar origin (0.65,0.32); constant travel speed",
+        "flight": "continuous visible cruise, banking and small height changes",
+        "elapsed_seconds": 0.36626730000716634,
+        "android_device_tested": false
+      }
+    }
+  },
+  "integrity_report": "package-integrity.json",
+  "integrity_report_sha256": "4d267310fcf435297f025b69b7da8f28d0bff771e9159d8c43124ea56221180e",
+  "navigation": {
+    "status": "PASS",
+    "platforms": 36,
+    "catalog_games": 7211,
+    "report": "space3d/f16-device-navigation.json",
+    "report_sha256": "a7d8b584be738872a8f0829f8fc12ab1354e456d05df84f9dc7a76345b05dd26",
+    "apk_sha256": "33e5da3e4ae8b7c28c3dff13e21a3ad08b8554d0d27ed47ceb2ae641c0032c4b",
+    "scope": "Entrada no catálogo e retorno nativo; não executa os jogos."
+  },
+  "geometry": {
+    "vertices": 30508,
+    "triangles": 40210,
+    "maps": 4,
+    "texture_size": [
+      2048,
+      2048
+    ],
+    "nozzles": [
+      {
+        "position": [
+          0,
+          0,
+          -0.70681
+        ],
+        "exit_position": [
+          0,
+          0,
+          -0.72181064
+        ],
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "radius": 0.043
+      }
+    ]
+  },
+  "visual_changes": {
+    "body_wordmarks": 2,
+    "wordmark_aspect_ratio": 8.21,
+    "motion": "Voo contínuo sempre visível; nuvens e estrelas com o mesmo ponto de fuga e velocidade constante.",
+    "clouds": "64-step procedural volume; radial parallax; 320x180; shared stellar origin (0.65,0.32) and native travel clock",
+    "flight_sequence_renderer": "continuous cruise; always visible; constant-speed background"
+  },
+  "performance": {
+    "presentations": 127,
+    "intervals": 126,
+    "average_fps": 59.96677957489548,
+    "median_ms": 16.675488,
+    "p95_ms": 16.75082,
+    "frames_over_25ms": 0,
+    "layer": "85e9f75 SurfaceView[org.emulationstation.frontend/org.emulationstation.frontend.ESActivity]@0(BLAST)#15478",
+    "scope": "Short SurfaceFlinger presentation sample; scene update remains 30Hz. Not thermal/battery stress."
+  },
+  "rom_reference": "7132794634|2026-09-28 21:48:50.061750359 -0300",
+  "stay_on": "0",
+  "remaining": [
+    "game execution/download/save actions",
+    "long thermal/battery stress",
+    "Avaliação visual final pelo usuário",
+    "Não houve verificação individual de todos os jogos e saves."
+  ]
+}

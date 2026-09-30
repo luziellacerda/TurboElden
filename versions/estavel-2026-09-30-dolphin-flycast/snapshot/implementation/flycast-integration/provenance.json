@@ -1,0 +1,9 @@
+{
+  "official_version": "v2.7-44-ge36e9df2d",
+  "commit": "e36e9df2dcc1487acdb1dc7725766f1f5ba029b5",
+  "official_apk": "https://flycast-builds.s3.fr-par.scw.cloud/android/heads/master-e36e9df2dcc1487acdb1dc7725766f1f5ba029b5/flycast-release.apk",
+  "official_apk_sha256": "d590819a7282a6487b0411356dfec0af839ca598c3b3dc57d57d0930bda1d5aa",
+  "source": "https://github.com/flyinghead/flycast",
+  "source_rebuilt": false,
+  "integration": "Official Android engine and UI embedded, isolated dependencies/resources and process; JNI namespace preserved."
+}

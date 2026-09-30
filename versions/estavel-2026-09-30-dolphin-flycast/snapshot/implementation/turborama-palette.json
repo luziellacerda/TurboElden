@@ -1,0 +1,20 @@
+{
+  "reference": "Correção explícita do usuário: verde e preto; vermelho somente em detalhes",
+  "colors": {
+    "primary": "#147D32",
+    "focus": "#37FF64",
+    "header": "#080C09",
+    "surface": "#151D17",
+    "disabled": "#101512",
+    "text": "#F3FFF6",
+    "secondaryText": "#AFC3B4",
+    "deleteDetail": "#FF837A",
+    "deleteConfirmation": "#8F2424"
+  },
+  "headerHeight": "10.5% of display; previously 14.7%",
+  "systemName": "below synopsis, aligned with Open button",
+  "mainCardHeight": "66.5% of display; previously 61.5%",
+  "settings": "top left corner",
+  "systemsLabel": "PLATAFORMAS",
+  "laser": "2600ms cycle; brighter core; 7px outward glow, platform colors"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "project": "TurboramaStation",
+  "kind": "advisory_access_policy",
+  "technical_ai_read_block": false,
+  "scope": "own private materials only; no change to third-party licenses",
+  "maintainer_authorized_maintenance": true,
+  "authorization_required_for": [
+    "access_to_private_materials",
+    "extraction_of_private_materials",
+    "recompilation_of_private_materials",
+    "redistribution_of_private_materials",
+    "ai_training_on_private_materials"
+  ],
+  "exceptions": [
+    "rights granted by applicable licenses",
+    "applicable law"
+  ],
+  "policy": "USO-E-ACESSO.md"
+}

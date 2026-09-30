@@ -1,0 +1,47 @@
+[
+  {
+    "name": "dc_boot.bin",
+    "bytes": 2097152,
+    "sha256": "88d6a666495ad14ab5988d8cb730533cfc94ec2cfd53a7eeda14642ab0d4abf9"
+  },
+  {
+    "name": "dc_flash.bin",
+    "bytes": 131072,
+    "sha256": "dd8b365521a9c08bb4c170da3592212580f7251f35a45d6083774d1c030bc3e3"
+  },
+  {
+    "name": "naomi.zip",
+    "bytes": 9308440,
+    "sha256": "a062f1242e1dc08a2a9faf07a073cdd7e2d836823f9d01aff5cd0a36482032db"
+  },
+  {
+    "name": "naomi2.zip",
+    "bytes": 7038226,
+    "sha256": "5efc11a37e0b8fe97e0007bb707d8a4f047dd0b8b7ba59293e81cca0443f7993"
+  },
+  {
+    "name": "awbios.zip",
+    "bytes": 42296,
+    "sha256": "dc44e2fa5f3184f6502e2544b1590223437c366cdfc9e3983ccb32d83c350772"
+  },
+  {
+    "name": "hod2bios.zip",
+    "bytes": 1874145,
+    "sha256": "c23fe56ce9aee115272c82c5de63ad43a952a4404dab0c33747bca9d0603b4ee"
+  },
+  {
+    "name": "f355bios.zip",
+    "bytes": 1381185,
+    "sha256": "0f50f12d38f9e4a893a787bef31dcb98f689e7d9f68ef9675cdf05f11b4df75f"
+  },
+  {
+    "name": "airlbios.zip",
+    "bytes": 702637,
+    "sha256": "983487f67861b4ec2b7f20cc49b25de0cb6f2160ec741283312deabb199e465e"
+  },
+  {
+    "name": "f355dlx.zip",
+    "bytes": 2315343,
+    "sha256": "e7c0369a22ee0a42ac55b634ed1c6282aea91a6af07ba1402627b8fbe7c2afd5"
+  }
+]

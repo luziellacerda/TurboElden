@@ -1,0 +1,716 @@
+{
+  "mapping": [
+    {
+      "key": "3ds",
+      "slug": "3ds"
+    },
+    {
+      "key": "Playstation 1",
+      "slug": "psx"
+    },
+    {
+      "key": "Playstation 2",
+      "slug": "ps2"
+    },
+    {
+      "key": "Playstation 2 - BR",
+      "slug": "ps2"
+    },
+    {
+      "key": "PSP",
+      "slug": "psp"
+    },
+    {
+      "key": "Psvita",
+      "slug": "psvita"
+    },
+    {
+      "key": "Switch",
+      "slug": "switch"
+    },
+    {
+      "key": "wii",
+      "slug": "wii"
+    },
+    {
+      "key": "wiiu",
+      "slug": "wiiu"
+    },
+    {
+      "key": "Arcade",
+      "slug": "mame"
+    },
+    {
+      "key": "atari2600",
+      "slug": "atari2600"
+    },
+    {
+      "key": "Atomiswave",
+      "slug": "atomiswave"
+    },
+    {
+      "key": "cps1",
+      "slug": "cps1"
+    },
+    {
+      "key": "cps2",
+      "slug": "cps2"
+    },
+    {
+      "key": "cps3",
+      "slug": "cps3"
+    },
+    {
+      "key": "Dreamcast",
+      "slug": "dreamcast"
+    },
+    {
+      "key": "Gba",
+      "slug": "gba"
+    },
+    {
+      "key": "mame",
+      "slug": "mame"
+    },
+    {
+      "key": "Master System ",
+      "slug": "mastersystem"
+    },
+    {
+      "key": "MegaDrive",
+      "slug": "megadrive"
+    },
+    {
+      "key": "MegaDrive - BR",
+      "slug": "megadrive"
+    },
+    {
+      "key": "model2",
+      "slug": "model2"
+    },
+    {
+      "key": "Nintendo 64",
+      "slug": "n64"
+    },
+    {
+      "key": "Nintendo 64 - BR",
+      "slug": "n64"
+    },
+    {
+      "key": "Nintendo DS",
+      "slug": "nds"
+    },
+    {
+      "key": "Neo Geo",
+      "slug": "neogeo"
+    },
+    {
+      "key": "Neo Geo CD",
+      "slug": "neogeocd"
+    },
+    {
+      "key": "Nintendinho",
+      "slug": "nes"
+    },
+    {
+      "key": "sega32x",
+      "slug": "sega32x"
+    },
+    {
+      "key": "Super Nintendo",
+      "slug": "snes"
+    },
+    {
+      "key": "Super Nintendo - BR",
+      "slug": "snes"
+    },
+    {
+      "key": "fbneo",
+      "slug": "fbneo"
+    }
+  ],
+  "clips": [
+    {
+      "slug": "3ds",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\3ds.mp4",
+      "source_sha256": "9896dee39bf246f371f2f3e04f0ef29e46f107e842c3d364a421ceaacea9ece5",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-3ds.mp4"
+    },
+    {
+      "slug": "psx",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\psx.mp4",
+      "source_sha256": "f1af8e000743529a5d8a5bd902b94b679532edaa1fdc7922a73d62e2f0fa7db5",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-psx.mp4"
+    },
+    {
+      "slug": "ps2",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\ps2.mp4",
+      "source_sha256": "ab47ec759fc38634a7da33138bab5b54076bd828d556537e0b5d2cd1b1c8d71e",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-ps2.mp4"
+    },
+    {
+      "slug": "psp",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\psp.mp4",
+      "source_sha256": "22b3c031dc1f7fb23772a222c0d6d9bc83d85de83ca3e7c155a38d613601a26f",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-psp.mp4"
+    },
+    {
+      "slug": "psvita",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\psvita.mp4",
+      "source_sha256": "8b9af602158869fb1e4583f2f63051e93239c755308d075e266d99d45667cd02",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-psvita.mp4"
+    },
+    {
+      "slug": "switch",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\switch.mp4",
+      "source_sha256": "046ce0cc6ebdf47c6819c57e7642c8b89eb6a25d33bf2e4077fde134b0f504a4",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-switch.mp4"
+    },
+    {
+      "slug": "wii",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\wii.mp4",
+      "source_sha256": "8cff156694078270d4f4bc349138ffd21ab8919f3c97548057979b8ae5b58fc0",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-wii.mp4"
+    },
+    {
+      "slug": "wiiu",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\wiiu.mp4",
+      "source_sha256": "cc12f78f11aaeb0de051a6638f616e39713aefb5dbc72d1c2f9fa172725ea549",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-wiiu.mp4"
+    },
+    {
+      "slug": "mame",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\mame.mp4",
+      "source_sha256": "e11f2e29b8cac76794ce3fd65c1f895765c0ef40c23b36e262587236a7ca8f9d",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-mame.mp4"
+    },
+    {
+      "slug": "atari2600",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\atari2600.mp4",
+      "source_sha256": "f94e56a082d81cbbb036ac6cd6f54fa0d04dba8630d4c43d6512790ce4dd7eec",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-atari2600.mp4"
+    },
+    {
+      "slug": "atomiswave",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\atomiswave.mp4",
+      "source_sha256": "c0a32a41b33fc26f88c36d01c8dbb63777fa7570accabcdb9048f488c45dbed2",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-atomiswave.mp4"
+    },
+    {
+      "slug": "cps1",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\cps1.mp4",
+      "source_sha256": "4b796e892867c9f9829bf8ce40315c48cee9dd52934bfdc51722092dd3666eb3",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-cps1.mp4"
+    },
+    {
+      "slug": "cps2",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\cps2.mp4",
+      "source_sha256": "b162554c2a8eb149a0ed5de72c4f0120eef79247a2d0374e1aa028129f39fbf7",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-cps2.mp4"
+    },
+    {
+      "slug": "cps3",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\cps3.mp4",
+      "source_sha256": "c82c96eda2f1f0c55315a87399f905c91641e3b28cb33229217086585d137a66",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-cps3.mp4"
+    },
+    {
+      "slug": "dreamcast",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\dreamcast.mp4",
+      "source_sha256": "17eda58570ed130f326e4c341f93ad76c2393e15c7f730e68cc42441b952682c",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-dreamcast.mp4"
+    },
+    {
+      "slug": "gba",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\gba.mp4",
+      "source_sha256": "9dbb0eff74f7e09b6d1ab92964a58d7c8a329cf2af6ca6ed4afdcc594d70a04a",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-gba.mp4"
+    },
+    {
+      "slug": "mastersystem",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\mastersystem.mp4",
+      "source_sha256": "5a7bfbcea5cdc45e2f26e68bbf40fdae5e43aa11da4897dad51303304738edd9",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-mastersystem.mp4"
+    },
+    {
+      "slug": "megadrive",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\megadrive.mp4",
+      "source_sha256": "23aa0dd24ff486e66be8802e603e7e9a40c9d2953ee353dd7dafde1e6f9c450f",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-megadrive.mp4"
+    },
+    {
+      "slug": "model2",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\model2.mp4",
+      "source_sha256": "4f6d624d5ac0e82ff84e1fda54b671fe0455645c7bdd90e3c40a7c4e78115566",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-model2.mp4"
+    },
+    {
+      "slug": "n64",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\n64.mp4",
+      "source_sha256": "b675adbf394caf8de0d68bbde92ded902a3fe5e798ab6c55dbed5f17669e237f",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-n64.mp4"
+    },
+    {
+      "slug": "nds",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\nds.mp4",
+      "source_sha256": "791aa8112b25032ab9da0d55966b7a41a66c4b20d1d82ee4a0437df188cc63ba",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-nds.mp4"
+    },
+    {
+      "slug": "neogeo",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\neogeo.mp4",
+      "source_sha256": "e4dbff3794be5b54effa4e014ecf06dfbae2e8bf1ec1570303250e838bc256a1",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-neogeo.mp4"
+    },
+    {
+      "slug": "neogeocd",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\neogeocd.mp4",
+      "source_sha256": "149ba45d5d9c4c91243cd6a92d1ba90efe138c396f5888132c59384d3c56be66",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-neogeocd.mp4"
+    },
+    {
+      "slug": "nes",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\nes.mp4",
+      "source_sha256": "e10855b896c384b0e033b705b48dd5aa59db3f1829659de0fb5d2e7c7fef8191",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-nes.mp4"
+    },
+    {
+      "slug": "sega32x",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\sega32x.mp4",
+      "source_sha256": "9b521bac5569dc63802c16a475e860de97cf096405c91358d261cfc828552073",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-sega32x.mp4"
+    },
+    {
+      "slug": "snes",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\snes.mp4",
+      "source_sha256": "99a3963b766b4f8f43a1609b87907f6e73b5aae1e23f73063ca2a91b0faec91e",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-snes.mp4"
+    },
+    {
+      "slug": "fbneo",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\fbneo.mp4",
+      "source_sha256": "0b921508d3e256ffbce949631788b319b1838790625ea306290839cfd8f4c2c1",
+      "generated_from_art": false,
+      "clip": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\system-videos\\assets\\720-fbneo.mp4"
+    }
+  ],
+  "assets": [
+    {
+      "slug": "720-3ds",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "2c4058939d22920f06d4c717de5a909f6a2ac8ab0431527ec93fc92adf437656",
+      "bytes": 576921,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\3ds.mp4",
+      "source_sha256": "9896dee39bf246f371f2f3e04f0ef29e46f107e842c3d364a421ceaacea9ece5",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-psx",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "cec26f858cdba9583efaa56d87b0c707d23d576d9f07b56c7d5d0e13712ff813",
+      "bytes": 1108432,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\psx.mp4",
+      "source_sha256": "f1af8e000743529a5d8a5bd902b94b679532edaa1fdc7922a73d62e2f0fa7db5",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-ps2",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "d557f4f5a84b1aea06b3a7c480bf3621db967532457e63bdc59efde108388d01",
+      "bytes": 650320,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\ps2.mp4",
+      "source_sha256": "ab47ec759fc38634a7da33138bab5b54076bd828d556537e0b5d2cd1b1c8d71e",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-psp",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "dd72917fcafcbb7f2aed28e67fdff1984cc4237ca7cb7c2b0b960895f80ebfba",
+      "bytes": 1625560,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\psp.mp4",
+      "source_sha256": "22b3c031dc1f7fb23772a222c0d6d9bc83d85de83ca3e7c155a38d613601a26f",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-psvita",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "2c78590e1d44604bcb6231961feac7dc82fdf29600faa9a5374a8ae82b3808c9",
+      "bytes": 629289,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\psvita.mp4",
+      "source_sha256": "8b9af602158869fb1e4583f2f63051e93239c755308d075e266d99d45667cd02",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-switch",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "0882fda8260ed4d804da00b87176e987601c5f4978c6b82e597c6a54b07a09f5",
+      "bytes": 776965,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\switch.mp4",
+      "source_sha256": "046ce0cc6ebdf47c6819c57e7642c8b89eb6a25d33bf2e4077fde134b0f504a4",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-wii",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "fdf20b7da3f1b0fe4fe93d221f4e0b9815df664f3e6bb871ff24c225c3fc44ee",
+      "bytes": 584315,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\wii.mp4",
+      "source_sha256": "8cff156694078270d4f4bc349138ffd21ab8919f3c97548057979b8ae5b58fc0",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-wiiu",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "e818f8b761a4c11eece0fcce40609500b6947249f2898d0aaf97f72e0ffc5daf",
+      "bytes": 986261,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\wiiu.mp4",
+      "source_sha256": "cc12f78f11aaeb0de051a6638f616e39713aefb5dbc72d1c2f9fa172725ea549",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-mame",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "0da31d47abaad61e3a265fdbc87a55b47a959e5129efc078ad3cacbaf43bd59c",
+      "bytes": 1464396,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\mame.mp4",
+      "source_sha256": "e11f2e29b8cac76794ce3fd65c1f895765c0ef40c23b36e262587236a7ca8f9d",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-atari2600",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "41c71748607d8e3e3919265a45770fb359ffb560998357be3e1ad0bb1db806eb",
+      "bytes": 792132,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\atari2600.mp4",
+      "source_sha256": "f94e56a082d81cbbb036ac6cd6f54fa0d04dba8630d4c43d6512790ce4dd7eec",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-atomiswave",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "c24f100e3f448fca1c99b8caa8c144d0d06ea7a1cc238cbc8576b57116dc1675",
+      "bytes": 2306592,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\atomiswave.mp4",
+      "source_sha256": "c0a32a41b33fc26f88c36d01c8dbb63777fa7570accabcdb9048f488c45dbed2",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-cps1",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "8a5338b960ee2a12a059129b623080736ca7b94c180853392cbef8c6c1b309e0",
+      "bytes": 1709655,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\cps1.mp4",
+      "source_sha256": "4b796e892867c9f9829bf8ce40315c48cee9dd52934bfdc51722092dd3666eb3",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-cps2",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "403f062e1b24b0ddab285c1b5f0ce19239d953ee2af7c4ad351ae06d227768e5",
+      "bytes": 1439310,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\cps2.mp4",
+      "source_sha256": "b162554c2a8eb149a0ed5de72c4f0120eef79247a2d0374e1aa028129f39fbf7",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-cps3",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "1f29b1c87ca85810a7b86269b242a12789840607072452d5513a5e848581c83f",
+      "bytes": 1552910,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\cps3.mp4",
+      "source_sha256": "c82c96eda2f1f0c55315a87399f905c91641e3b28cb33229217086585d137a66",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-dreamcast",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "5395c9fd2fa72427ca0c75cfe379129bca16063b90fc51adc73550eb4b0502c6",
+      "bytes": 1217568,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\dreamcast.mp4",
+      "source_sha256": "17eda58570ed130f326e4c341f93ad76c2393e15c7f730e68cc42441b952682c",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-gba",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "fd58be318f35d0e94aa8392aa25aef16e9e1aafc61130a6cb4896a04e7d3dc3d",
+      "bytes": 1005096,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\gba.mp4",
+      "source_sha256": "9dbb0eff74f7e09b6d1ab92964a58d7c8a329cf2af6ca6ed4afdcc594d70a04a",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-mastersystem",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "f9d0a87a0bcf3e624ff96846ee988a815e4275017fb5e476ceacabd535f93e8b",
+      "bytes": 802785,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\mastersystem.mp4",
+      "source_sha256": "5a7bfbcea5cdc45e2f26e68bbf40fdae5e43aa11da4897dad51303304738edd9",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-megadrive",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "ce46ebe1c86b76010a5f2820eb77d7075dc26d027bf916e4154b4a9aec40000f",
+      "bytes": 317028,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\megadrive.mp4",
+      "source_sha256": "23aa0dd24ff486e66be8802e603e7e9a40c9d2953ee353dd7dafde1e6f9c450f",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-model2",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "657dd23def40f84057c31b1ebe1e8ffd489e60c85c89e90624c9d01cd33b5581",
+      "bytes": 2274644,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\model2.mp4",
+      "source_sha256": "4f6d624d5ac0e82ff84e1fda54b671fe0455645c7bdd90e3c40a7c4e78115566",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-n64",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "df409c64db44884bb9f9e0844b33cfee171d3794f01c09c695cd3d8b65a8a219",
+      "bytes": 938726,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\n64.mp4",
+      "source_sha256": "b675adbf394caf8de0d68bbde92ded902a3fe5e798ab6c55dbed5f17669e237f",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-nds",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "ff30ac9508bae9655a65c3d9d04b573499dbaca007b4ffcc1d8bcfef4a680ab4",
+      "bytes": 955225,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\nds.mp4",
+      "source_sha256": "791aa8112b25032ab9da0d55966b7a41a66c4b20d1d82ee4a0437df188cc63ba",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-neogeo",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "eaf0f101bd4804289d409fc81d0cc5d61510b8605d489b522fd25a8fa1f99235",
+      "bytes": 1037675,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\neogeo.mp4",
+      "source_sha256": "e4dbff3794be5b54effa4e014ecf06dfbae2e8bf1ec1570303250e838bc256a1",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-neogeocd",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "66063567d5b437f0c4225dc06b494361f5a63033181e333ec924de5bfed214b0",
+      "bytes": 1143080,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\neogeocd.mp4",
+      "source_sha256": "149ba45d5d9c4c91243cd6a92d1ba90efe138c396f5888132c59384d3c56be66",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-nes",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "2609d84c0a3ca208ab427f0352f5a74b1e44da754c573df88abfcd5d39f9d8ff",
+      "bytes": 1428359,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\nes.mp4",
+      "source_sha256": "e10855b896c384b0e033b705b48dd5aa59db3f1829659de0fb5d2e7c7fef8191",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-sega32x",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "01834b0d84a345f2fb20547682b355a20f39f8ecd680598190734b8eb84702fc",
+      "bytes": 1215089,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\sega32x.mp4",
+      "source_sha256": "9b521bac5569dc63802c16a475e860de97cf096405c91358d261cfc828552073",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-snes",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "5300c6a98fb57cdb0c6089736fd09b605e1984d79bc836c1137f8ef1b4b34e59",
+      "bytes": 1442197,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\snes.mp4",
+      "source_sha256": "99a3963b766b4f8f43a1609b87907f6e73b5aae1e23f73063ca2a91b0faec91e",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    },
+    {
+      "slug": "720-fbneo",
+      "width": 720,
+      "height": 720,
+      "fps": 60,
+      "sha256": "8761d3f7fd6d37d87ed552cec763d85ec625050840b919133b055a645ab5f549",
+      "bytes": 1605403,
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\fbneo.mp4",
+      "source_sha256": "0b921508d3e256ffbce949631788b319b1838790625ea306290839cfd8f4c2c1",
+      "generated_from_art": false,
+      "frame_conversion": "source timestamps retained, 60fps output repeats frames when original fps is lower; speed 1.0"
+    }
+  ],
+  "source_directory": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas",
+  "source_policy": "Only MP4 files in the exact owner-specified folder",
+  "playback": "one 720p60 video per visible mapped card; speed 1.0; native continuous looping; no atlas or alternate source",
+  "atlas_removed": true,
+  "generated_platforms": [],
+  "missing": [
+    {
+      "key": "atari7800",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\atari7800.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "gamegear",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\gamegear.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "Gameboy Color",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\gbc.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "jaguar",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\jaguar.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "Pc Engine",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\pcengine.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "Pc Engine cd",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\pcenginecd.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "sufami",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\sufami.mp4",
+      "state": "awaiting owner file; no substitute video"
+    },
+    {
+      "key": "supergrafx",
+      "expected": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\supergrafx.mp4",
+      "state": "awaiting owner file; no substitute video"
+    }
+  ],
+  "requested_quality": {
+    "width": 720,
+    "height": 720,
+    "fps": 60,
+    "scope": "visible system cards with a source file in the requested folder",
+    "playback_speed": 1.0,
+    "loop": true,
+    "decoding": "one MediaPlayer per clip; prepare neighbours, retain decoded GPU frame across decoder eviction and resume prior playback position",
+    "source_fps_note": "Converted to 60fps without changing source speed; repeats frames from lower-rate sources"
+  },
+  "preload": {
+    "previous": 4,
+    "following": 2,
+    "maximum_unique_players": 12,
+    "offscreen": "prepared and paused with player/texture retained; spare slots retain recently visited players",
+    "priority": "visible cells; immediate previous and next; deeper previous neighbours; remaining next; recently visited players",
+    "retained_video_frames": "one decoded 720x720 RGB565 GPU frame per visited unique clip, maximum 40 entries; survives player eviction within carousel; no photo assets, atlas or second video",
+    "release": "players and retained frames released when leaving platforms for games/modal; Android lifecycle releases players; GL context loss invalidates retained frames",
+    "resume": "player teardown remembers playback position; replacement seeks there before starting"
+  }
+}

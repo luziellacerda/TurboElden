@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "source_root": "C:\\Users\\Admin\\Music\\LinkSom\\SNES",
+  "order": "sequential interleaved, repeat playlist",
+  "normal_speed": 1.0,
+  "tracks": [
+    {
+      "asset": "turbo-retro-music/track-01.mp3",
+      "game": "Donkey Kong Country",
+      "title": "Title Theme",
+      "bytes": 1949099,
+      "sha256": "3bd102559780f60551eb62087091fcce896b2d31d9c44a3aeb24770de541c0a8"
+    },
+    {
+      "asset": "turbo-retro-music/track-02.mp3",
+      "game": "Super Mario World",
+      "title": "Overworld",
+      "bytes": 2067556,
+      "sha256": "72afa8b1cca10d6b38436a0cdf2647ff47640e2d57007f3723a325535c3b42c1"
+    },
+    {
+      "asset": "turbo-retro-music/track-03.mp3",
+      "game": "Rock n’ Roll Racing",
+      "title": "Bad to the Bone",
+      "bytes": 4168443,
+      "sha256": "b8b8ba48ae34e6da1663bd1cc337b609765051df5a597025b6b01f1908d16f75"
+    },
+    {
+      "asset": "turbo-retro-music/track-04.mp3",
+      "game": "Donkey Kong Country 2",
+      "title": "Brambles",
+      "bytes": 4324129,
+      "sha256": "017f8e18125efbf2617ba9f0748b3a2eb3d3c900cd546d285cf467acd222625e"
+    },
+    {
+      "asset": "turbo-retro-music/track-05.mp3",
+      "game": "Super Mario World",
+      "title": "Athletic",
+      "bytes": 1899361,
+      "sha256": "89012c654671cc97e732b0a569c171feee366ade7be46b68c8fefd2116b61d9d"
+    },
+    {
+      "asset": "turbo-retro-music/track-06.mp3",
+      "game": "Rock n’ Roll Racing",
+      "title": "Paranoid",
+      "bytes": 5571385,
+      "sha256": "dda38b9b6a9076c8841894ce61f945a6b32e9f754dab97cbd46b958ea426e2d5"
+    },
+    {
+      "asset": "turbo-retro-music/track-07.mp3",
+      "game": "Donkey Kong Country 2",
+      "title": "Enchanted Wood",
+      "bytes": 4324138,
+      "sha256": "f26e3dbed9d19e0f73e95bdf13c0ec3d98fcfb1adbe817ddc8ced8d05a26d25e"
+    },
+    {
+      "asset": "turbo-retro-music/track-08.mp3",
+      "game": "Super Mario World",
+      "title": "Swimming",
+      "bytes": 2427555,
+      "sha256": "26d1cee5c6e6b52469f4d22f39968660bc1280551f5c5402844ea32f7135d712"
+    },
+    {
+      "asset": "turbo-retro-music/track-09.mp3",
+      "game": "Rock n’ Roll Racing",
+      "title": "Highway Star",
+      "bytes": 9664800,
+      "sha256": "14136ad72f66bfdbdeed2f2bb7c1336400ac9a360e22fd1bc03838d52029e514"
+    },
+    {
+      "asset": "turbo-retro-music/track-10.mp3",
+      "game": "Donkey Kong Country 2",
+      "title": "Ship Deck",
+      "bytes": 3604128,
+      "sha256": "c096811423f1c81edeba77b1069deabd734295f403becc7b46d4c6e9753bd7ec"
+    },
+    {
+      "asset": "turbo-retro-music/track-11.mp3",
+      "game": "Super Mario World",
+      "title": "Underground",
+      "bytes": 2091180,
+      "sha256": "b866ae0576a79e56c1abaede1d35ad6ee2d7388f8d4ddf2765f1bfaa08dd5acc"
+    },
+    {
+      "asset": "turbo-retro-music/track-12.mp3",
+      "game": "Rock n’ Roll Racing",
+      "title": "Peter Gunn",
+      "bytes": 5285548,
+      "sha256": "f51dd92dd5f6ca20ac94cb9968c81f1a47fb02fcdd05b0806da739cc9df56e7c"
+    },
+    {
+      "asset": "turbo-retro-music/track-13.mp3",
+      "game": "Donkey Kong Country 2",
+      "title": "Mine",
+      "bytes": 5764124,
+      "sha256": "53fe7c60c1013f558b9e4b4703b0774fef03eaf16345babb16c68bc41ecca3a5"
+    },
+    {
+      "asset": "turbo-retro-music/track-14.mp3",
+      "game": "Super Mario World",
+      "title": "Special World",
+      "bytes": 3003571,
+      "sha256": "d231932fcb0d2f42676cbdd4eced0aa2bc87527fa36f97a72fafe9b6407bb92a"
+    },
+    {
+      "asset": "turbo-retro-music/track-15.mp3",
+      "game": "Rock n’ Roll Racing",
+      "title": "Born to Be Wild",
+      "bytes": 7434837,
+      "sha256": "d79c9363d91c2d53db80ee1ef08506df954cd1ba379285febf3972bf9e3c40b9"
+    },
+    {
+      "asset": "turbo-retro-music/track-16.mp3",
+      "game": "Donkey Kong Country 2",
+      "title": "Swamp",
+      "bytes": 4324126,
+      "sha256": "43cdf2b24f51cf3df92dae19cf988cce2408ad7d43bd53a0424d863a883cff09"
+    },
+    {
+      "asset": "turbo-retro-music/track-17.mp3",
+      "game": "Super Mario World",
+      "title": "Title",
+      "bytes": 2067561,
+      "sha256": "a73768be8a59816cb2b1c57dbb255c40320e4089ae9cbe38c3c8221299994439"
+    },
+    {
+      "asset": "turbo-retro-music/track-18.mp3",
+      "game": "Donkey Kong Country 2",
+      "title": "Jungle",
+      "bytes": 3604131,
+      "sha256": "0855b01bc066b679a12d44150cf2766428eeb1d9d534b95996978310e5764713"
+    }
+  ]
+}

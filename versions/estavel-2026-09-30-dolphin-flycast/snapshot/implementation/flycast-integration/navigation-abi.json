@@ -1,0 +1,19 @@
+{
+  "official_commit": "e36e9df2dcc1487acdb1dc7725766f1f5ba029b5",
+  "official_engine_sha256": "09448b77ccc5b824491fcc614c6d68a8791f6eff2cfd0c432b8320b210fbf9f6",
+  "integrated_engine_sha256": "31b628b3a53f08a4c489417ee7def9cd064c086431c0a7e94189198eff6504e0",
+  "text_got": "0x1190e18",
+  "games_text_return": "0xafad84",
+  "gui_state": "0x11c5cd8",
+  "mode": "native ImGui header button; exit via original dc_exit",
+  "library_begin_child_got": "0x1190558",
+  "library_begin_child_return": "0xafb0d4",
+  "background": "Static native ImGui primitives within Main library child, behind games; no per-game rendering.",
+  "menu_mouse_button_got": "0x118fc10",
+  "menu_mouse_button_return": "0xafaadc",
+  "touch_coordinates_upstream": [
+    "0x3896798",
+    "0x389679c"
+  ],
+  "touch_bridge": "RegisterNatives touchMouseEvent (III)V, original JNI forwarded; main menu transition queue to original ImGuiIO; gameplay unchanged"
+}

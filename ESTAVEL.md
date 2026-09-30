@@ -1,39 +1,26 @@
-# ESTÁVEL — TurboramaStation com vídeos e playlist retrô
+# TurboramaStation — versão estável atual
 
-**Versão designada estável pelo mantenedor em 29/09/2026.**
+**Tag: `estavel-2026-09-30-dolphin-flycast`** — publicada a pedido do mantenedor em 30/09/2026, após aprovação do APK instalado. Ramos de referência: `estavel` e `versao-funcional`. Tags anteriores permanecem preservadas.
 
-- Ramo: `estavel` (também publicado em `versao-funcional`).
-- Tag fixa: `estavel-2026-09-29-playlist-retro`.
-- [Snapshot e manifesto](versions/estavel-2026-09-29-playlist-retro/); [restauração completa](versions/estavel-2026-09-29-playlist-retro/RESTAURACAO.md).
-- APK: `TurboramaStation-ESTAVEL-playlist-retro.apk`; SHA256 `352d74708adacd4bb3e2e9edc428a4fca6c0836fb81ee4e512cf4b5fb511a049`; 667694649 bytes.
-- Motor histórico: 1.0.8, commit `6727ab725f1c4ac9afdd0382cc7d4ae5d3ff8eb3`. Esse commit identifica o motor; a nova tag identifica a entrega atual.
+## Identificação obrigatória
 
-## O que foi congelado
+- APK: `TurboramaStation-ESTAVEL-dolphin-flycast.apk`
+- SHA256: `55cd54a35b68a69a7a3b7c29a71c36ff191b87f73857a87ff23b9e9801008e85`
+- Tamanho: **738.069.339 bytes**.
+- APK congelado: `E:\ESTUDO APK\estaveis\2026-09-30-dolphin-flycast\TurboramaStation-ESTAVEL-dolphin-flycast.apk`.
+- Fontes ativos: `E:\ESTUDO APK\work\native-carousel\implementation`.
+- Snapshot Git: [`versions/estavel-2026-09-30-dolphin-flycast`](versions/estavel-2026-09-30-dolphin-flycast/).
 
-Carrossel nativo e rotas existentes, vídeos únicos 720p em loop/velocidade normal, pré-carga e quadro retido para retorno, LED intenso nas cores de cada plataforma, F-16 com câmera traseira/voo diagonal e nuvens/estrelas alinhadas, login/ícone/menus atuais. Playlist de 18 músicas locais de Donkey Kong, Super Mario World e Rock n’ Roll Racing, com um player e controle nativo Música de fundo. Código prevê pausa/liberação ao entrar na emulação.
+## O que está nesta versão
 
-36 plataformas ativas; 27 vídeos cobrem 29 delas. Sete ainda sem vídeo: Atari 7800, Game Gear, Game Boy Color, Jaguar, PC Engine, PC Engine CD e SuperGrafx. Motor e DEX originais preservados; não contém os experimentos anteriores de emulação/FPS/shaders.
+Dolphin 2609-7 e Flycast v2.7-44 integrados no mesmo APK, menus oficiais, migração preservando saves, retorno mantendo o login, BIOS locais provisionadas sem sobrescrever arquivos existentes, fundo Turborama e correção do botão Voltar que exigia vários toques. Inclui melhorias do botão Abrir, pesquisa, avisos de download, carregamento e saída do PS2. Carrossel, vídeos 720p, LED por plataforma, F-16 e playlist preservados.
 
-## Pastas exatas
+- [Descrição completa das alterações e verificações](versions/estavel-2026-09-30-dolphin-flycast/ALTERACOES.md).
+- [Pastas, dependências e ordem para restaurar/compilar](versions/estavel-2026-09-30-dolphin-flycast/RESTAURACAO.md).
+- [Inventário verificável dos fontes e identificação dos motores](versions/estavel-2026-09-30-dolphin-flycast/MANIFESTO-ESTAVEL.json).
 
-| Uso | Caminho |
-|---|---|
-| Fontes ativos e compilação | `E:\ESTUDO APK\work\native-carousel\implementation` |
-| APK congelado de retorno | `E:\ESTUDO APK\estaveis\2026-09-29-playlist-retro\TurboramaStation-ESTAVEL-playlist-retro.apk` |
-| APK instalado, saída original | `E:\ESTUDO APK\work\native-carousel\implementation\TurboramaStation-playlist-retro.apk` |
-| Perfil ativo | `E:\ESTUDO APK\work\native-carousel\implementation\stable-design\active-profile.json` |
-| Handoff local | `E:\ESTUDO APK\work\native-carousel\HANDOFF-IMPLEMENTACAO-CARROSSEL-NATIVO.md` |
-| Fonte nativa e shaders | `implementation/native_carousel.cpp`, `implementation/native_*.h`, `implementation/space3d/` |
-| Vídeos/player/montagem | `E:\ESTUDO APK\work\native-carousel\implementation\system-videos` |
-| Playlist e MP3 privados | `E:\ESTUDO APK\work\native-carousel\implementation\retro-playlist` |
-| LED atual | `E:\ESTUDO APK\work\native-carousel\implementation\premium-selection-laser-android.glsl` e `native_laser.h` |
-| Snapshot no Git | `versions/estavel-2026-09-29-playlist-retro/snapshot/implementation/` |
-| Checkout usado | `C:\Users\Admin\Documents\Codex\2026-09-28\turboramaemutestes-apk-e-estudo-apk-work\work\TurboElden-git` |
+## Limites da referência
 
-## Recuperação e evidências
+O pacote instalado foi identificado e aprovado; o candidato posterior `3085d9fc` está excluído. Wii e Sonic foram confirmados pelo usuário, assim como retorno sem login; isso não certifica todos os jogos ou desempenho em todos os aparelhos.
 
-600 arquivos de fontes, recursos e documentação preservados, com SHA256 no manifesto. Cabeçalhos grandes em gzip recuperável. APK/MP3/MP4, chaves, firmware, ROMs, saves e credenciais ficam locais. As licenças/fontes de terceiros foram mantidos. Clone sozinho não recompila o frontend original completo: dependências privadas e ferramentas estão descritas na restauração.
-
-Instalado em 2026-09-29T17:37:29.280278, com Success e hash conferido. Publicação a pedido do usuário; não houve novo teste visual, reprodução de áudio ou medição de FPS. 60fps refere-se à codificação dos vídeos, não a desempenho garantido.
-
-A referência anterior `estavel-2026-09-29-camera-traseira`, commit `95d244bcea95647236bea335c41b46afe15674bf`, e seu APK congelado foram preservados. Não mover tags antigas nem restaurar outro APK apenas porque o nome contém “estável”. Atualizar sem desinstalar/limpar dados.
+APK, BIOS, ROMs, saves, assinatura, credenciais e mídias privadas ficam locais. O Git contém fontes da integração e recursos revisados; depende das bases binárias identificadas, pois o C++ integral do frontend original não está disponível. Os motores oficiais não foram recompilados integralmente do C++; a integração foi compilada. Restaurar com atualização preservando dados, nunca desinstalar/limpar dados.

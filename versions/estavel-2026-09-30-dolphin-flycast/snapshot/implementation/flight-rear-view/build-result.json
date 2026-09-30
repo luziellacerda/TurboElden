@@ -1,0 +1,20 @@
+{
+  "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-ESTAVEL-6727ab7-camera-traseira.apk",
+  "sha256": "54681d24d4ae912c0d081b276064264f95ad5e1d41e4e2851d2daa87169c4257",
+  "bytes": 562427492,
+  "base": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-ESTAVEL-6727ab7-sobrevoo.apk",
+  "base_sha256": "e00b0e941907bbe646f1829806c266cada3e53394fd3636da52a473b5cf39174",
+  "stable_commit": "6727ab7",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [],
+  "removed": [],
+  "all_emulator_engines_identical": true,
+  "all_dex_identical": true,
+  "icon_and_approved_login_identical": true,
+  "catalog_and_download_code_unchanged": true,
+  "installed": true,
+  "native_module_sha256": "3b3c417be48fe84d6f29555e52443af56406f1f667a02d4f6288aea718fb5a6d",
+  "visual_check_performed": false
+}

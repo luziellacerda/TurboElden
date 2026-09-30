@@ -1,0 +1,15 @@
+{
+  "time": "2026-09-29T17:37:29.280278",
+  "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-playlist-retro.apk",
+  "sha256": "352d74708adacd4bb3e2e9edc428a4fca6c0836fb81ee4e512cf4b5fb511a049",
+  "result": "Performing Incremental Install\r\nPerforming Streamed Install\r\nSuccess",
+  "startup_command": "Starting: Intent { cmp=org.emulationstation.frontend/.auth.LoginActivity }",
+  "data_cleared": false,
+  "uninstalled": false,
+  "games_and_saves_preserved": true,
+  "visual_check_performed": false,
+  "settings_changed_by_installer": false,
+  "feature_settings_change": "On first native-menu execution, enable StoreMusic and persist RetroPlaylistReady; subsequent user toggles respected",
+  "feature_settings_change_verified": false,
+  "audio_playback_verified": false
+}

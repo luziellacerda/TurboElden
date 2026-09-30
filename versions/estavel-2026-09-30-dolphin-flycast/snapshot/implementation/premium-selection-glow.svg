@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" preserveAspectRatio="none" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff0b0"/><stop offset=".44" stop-color="#e6b94d"/><stop offset="1" stop-color="#d59a32"/>
+    </linearGradient>
+  </defs>
+  <!-- Layered vector strokes: transparent center, no filter or full-screen bitmap. -->
+  <g fill="none" stroke="#efbf57">
+    <rect x="14" y="14" width="372" height="272" rx="8" stroke-width="26" stroke-opacity=".025"/>
+    <rect x="14" y="14" width="372" height="272" rx="8" stroke-width="19" stroke-opacity=".04"/>
+    <rect x="14" y="14" width="372" height="272" rx="8" stroke-width="12" stroke-opacity=".07"/>
+    <rect x="14" y="14" width="372" height="272" rx="8" stroke-width="7" stroke-opacity=".13"/>
+    <rect x="14" y="14" width="372" height="272" rx="8" stroke-width="3.5" stroke-opacity=".27"/>
+    <rect x="14" y="14" width="372" height="272" rx="8" stroke="url(#gold)" stroke-width="2.2"/>
+    <path d="M27 14 H134 M266 14 H373" stroke="#fff8d6" stroke-opacity=".8" stroke-width="1"/>
+  </g>
+</svg>

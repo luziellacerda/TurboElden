@@ -1,0 +1,35 @@
+{
+  "coordinate_system": "+X right, +Y up, +Z forward; normalized scale1/7.5",
+  "nozzle_count": 1,
+  "axis": [
+    0,
+    0,
+    -1
+  ],
+  "petal_bbox": [
+    [
+      -0.06496133655309677,
+      -0.06496133655309677,
+      -0.7218106389045715
+    ],
+    [
+      0.06496133655309677,
+      0.06496133655309677,
+      -0.6157186627388
+    ]
+  ],
+  "back_exit_plane_z": -0.7218106389045715,
+  "rim_center_xy": [
+    0.0,
+    0.0
+  ],
+  "rim_min_radius": 0.04280235156190015,
+  "rim_max_radius": 0.043887338172025545,
+  "recommended_volume_origin": [
+    0,
+    0,
+    -0.7068106389045715
+  ],
+  "recommended_exit_radius": 0.043,
+  "note": "Start volume inside actual exhaust ring, clip to packed hull depth; do not draw plume under entire hull. Original petal centerline is (0,0), radial repetition16x22.5 degrees."
+}
