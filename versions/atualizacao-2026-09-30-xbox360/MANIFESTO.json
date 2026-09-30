@@ -1,0 +1,141 @@
+{
+  "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-Xbox360-XenDroid-0b11201.apk",
+  "sha256": "929339aeb74a3460cc44f2ec4cc0aa461dca581c2c75dd30b8ace4a52ff9c7a1",
+  "bytes": 983124339,
+  "base_sha256": "b11f0acce6bb553c2f13e2a6846bc1e4f0189050a2a3ab69d962fe7972e2d7d5",
+  "native_module_sha256": "577c907f62d612af37dea5f8d78e0ea2e5d8a47fca975411171602c78840ca17",
+  "official_version": "XenDroid 0b11201 (experimental)",
+  "upstream_engine_rebuilt": false,
+  "integration_compiled": true,
+  "installed": false,
+  "runtime_verified": false,
+  "promoted_to_stable": false,
+  "built_at": "2026-09-30T12:13:54.051391",
+  "removed": [],
+  "preserved_classes": "classes2.dex through classes20.dex except catalog classes8.dex",
+  "other_engines_byte_identical": true,
+  "files": [
+    {
+      "path": "native_carousel.cpp",
+      "sha256": "3492fee1f8ca49f0d5d00fade359c1da89db38e1d026a6fcfeeda599cfccdaa7"
+    },
+    {
+      "path": "native_xbox360.h",
+      "sha256": "9b9beaae014c73291c99e39282d91e4354a711d28636f79350b34e8f43e551c6"
+    },
+    {
+      "path": "system_infos.h",
+      "sha256": "38abbb35af8eddfebcb673a0b69516f3de3ab9ce991ce16b65fa5d215d6b350c"
+    },
+    {
+      "path": "system_video720_assets.h",
+      "sha256": "f478dd54b9cb834600adea3f216fa674f947dce56c2d447eab77a78005114dd0"
+    },
+    {
+      "path": "theme-infos-mapping.json",
+      "sha256": "bc2fa2afb104e3ecdef6538d26c5c2a6c7054df1f139af5937515c31002bc02a"
+    },
+    {
+      "path": "build_native.py",
+      "sha256": "098583b018604e2f1310877f46ca0a4959fa1d34032602ef30a071fa86ca8915"
+    },
+    {
+      "path": "xbox360-integration/prepare.py",
+      "sha256": "8ab713cb88584c4b2632fc30b3160fc4925d5708ec3e923335d1dbc6240c8c14"
+    },
+    {
+      "path": "xbox360-integration/integrate.py",
+      "sha256": "d6806c30c07d1156ad004db2d05832953d04e44bc95720fa741963da31247cae"
+    },
+    {
+      "path": "xbox360-integration/package.py",
+      "sha256": "6aedcd965e86aa8695af06fd50d4e5eb5e4c8a0df7f17d945721168d58cb4204"
+    },
+    {
+      "path": "xbox360-integration/base-classes.json",
+      "sha256": "8569519d7706303f92404f97ee3df3fdfe526135c85012c461f7aafbb139b7bd"
+    },
+    {
+      "path": "xbox360-integration/HANDOFF.md",
+      "sha256": "76fc70cbfd8d0bce5022cdb0e331280a3ff0b98a02efeaae51aa49fb7e244111"
+    },
+    {
+      "path": "xbox360-integration/source-provenance.json",
+      "sha256": "6caeb573a3842252335b1abc79c81a35c0ae2ce2bf4c46a65b375463dc9d3706"
+    },
+    {
+      "path": "xbox360-integration/java/org/emulationstation/frontend/Xbox360Bootstrap.java",
+      "sha256": "9bbb7646b8cfb0f055a07232abe48d7553b2a2084c50e991476e90cca3839347"
+    },
+    {
+      "path": "xbox360-integration/java/org/emulationstation/frontend/Xbox360EntryActivity.java",
+      "sha256": "dadd7c0eb0bddd2becdbe85fc256e2af1f3bb85c32e0ac938d22fb1fc3be9a46"
+    },
+    {
+      "path": "xbox360-integration/java/org/emulationstation/frontend/Xbox360GameEntryActivity.java",
+      "sha256": "2ba8e8b1e74dd2da608fb6f0d4b1b9bf47c21dddbe494dc282b45d38b4560ec1"
+    },
+    {
+      "path": "xbox360-integration/upstream/AndroidManifest.xml",
+      "sha256": "9a9fff1f0897355d2e9758ce8d1e2fbae3ff80ea675dd061d94d04047a60f215"
+    },
+    {
+      "path": "xbox360-integration/upstream/Application.java",
+      "sha256": "180fd686964f7d37af352b8124b052d5ffd1ccb47e8b29f3da78bde167ae7cd1"
+    },
+    {
+      "path": "xbox360-integration/upstream/build.gradle",
+      "sha256": "63f24bbca42ba0dd92caf9d777c98f5e62b2a014b6e933ce989085bfc6cfc102"
+    },
+    {
+      "path": "xbox360-integration/upstream/ContentPaths.kt",
+      "sha256": "43f740e93d44633f218a383d2e2ef9e4f5738a3b05c9f8ad311d657192da8f32"
+    },
+    {
+      "path": "xbox360-integration/upstream/EmulatorHostActivity.kt",
+      "sha256": "efda0e3a027434751211d361778abd3f6ca5a9c766a38893afa373e10701d079"
+    },
+    {
+      "path": "xbox360-integration/upstream/EmulatorRuntime.kt",
+      "sha256": "005b4d780198d67d7b1641201e66fca48a8712d2e492298be9c574a6026b0e66"
+    },
+    {
+      "path": "xbox360-integration/upstream/EmulatorSession.kt",
+      "sha256": "08c3227193fade7bdb3f09e3b35fa62e47655c3a9178d3d4d0171e80afd6b612"
+    },
+    {
+      "path": "xbox360-integration/upstream/EmuProcessLink.kt",
+      "sha256": "bc8ae6efc418765962947320b64acbf747d382085c2f3f99669be0946f71fda1"
+    },
+    {
+      "path": "xbox360-integration/upstream/FrontendLaunch.kt",
+      "sha256": "54fb5ca6ffcc0bd5c6099010e4413a573e501ed0ae7ac3f0072defbca08fa100"
+    },
+    {
+      "path": "xbox360-integration/upstream/LICENSE",
+      "sha256": "369ea6b0f7ba57544067e9d470ca82a927da787fb0a749b11cb55f1fd0ba47ae"
+    },
+    {
+      "path": "xbox360-integration/upstream/MainActivity.kt",
+      "sha256": "4facf5b1049939f9d1df3755704c5f90ac6809644a474e9db63128be834d826c"
+    },
+    {
+      "path": "xbox360-integration/upstream/MainAliveService.kt",
+      "sha256": "7268d915636fa315d86ed825e5e69849a0c23f8037fb2724d8edf85d30a4aeda"
+    },
+    {
+      "path": "xbox360-integration/upstream/ProfilePaths.kt",
+      "sha256": "2a2ea1879069d3e9ba7964e27ea4b34a164466b9efe2079134edc9928121df5f"
+    },
+    {
+      "path": "xbox360-integration/upstream/README.md",
+      "sha256": "2afec15b6b0e9f88b15957c40894b134d520f9071a375dfd84278a7d0c84e93b"
+    }
+  ],
+  "source_root": "E:\\ESTUDO APK\\work\\native-carousel\\implementation",
+  "integration_root": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\xbox360-integration",
+  "git_parent": "67b23340aebb03adbc5c604cbb8a10b7cc739788",
+  "games": 24,
+  "covers": 24,
+  "stable_unchanged": "3573db1203cee541f2e590d4ed6574e2a23e781c"
+}
