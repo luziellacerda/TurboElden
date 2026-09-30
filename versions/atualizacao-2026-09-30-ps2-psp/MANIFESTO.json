@@ -1,0 +1,287 @@
+{
+  "release": "atualizacao-2026-09-30-ps2-psp",
+  "status": "em avaliacao pelo mantenedor",
+  "published_at": "2026-09-30T11:13:21.018022-03:00",
+  "stable_base_commit": "3573db1203cee541f2e590d4ed6574e2a23e781c",
+  "stable_base_tag": "estavel-2026-09-30-dolphin-flycast",
+  "source_root": "E:\\ESTUDO APK\\work\\native-carousel\\implementation",
+  "upstream_engines_rebuilt": false,
+  "integration_compiled": true,
+  "installed": true,
+  "installed_hash_verified": true,
+  "frontend_login_observed": true,
+  "ps2_game_rendering_observed": true,
+  "ps2_return_to_platforms_observed": true,
+  "psp_runtime_verified": false,
+  "performance_benchmark": false,
+  "promoted_to_stable": false,
+  "publication_modified_scripts": [
+    "snapshot\\implementation\\ps2-integration\\package.py",
+    "snapshot\\implementation\\psp-integration\\package.py"
+  ],
+  "engines": {
+    "ps2": {
+      "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-PS2-ARMSX2-2.7.2.apk",
+      "sha256": "6e76035e9943896bc7ff0044047749f5c4781821210e2953d697221bdd769911",
+      "bytes": 853494486,
+      "base_sha256": "55cd54a35b68a69a7a3b7c29a71c36ff191b87f73857a87ff23b9e9801008e85",
+      "native_module_sha256": "737e23e0a696b696fda54a0cd9a4d829239246e37b5d2146e3e3ab238dc9c985",
+      "official_version": "ARMSX2 2.7.2",
+      "preserved_classes": "classes2.dex through classes14.dex",
+      "other_engines_byte_identical": true,
+      "provenance": {
+        "official_version": "2.7.2",
+        "source": "https://github.com/ARMSX2/ARMSX2/tree/2.7.2",
+        "official_apk": "https://github.com/ARMSX2/ARMSX2/releases/download/2.7.2/ARMSX2-2.7.2-legacy-armv8.0-sdk26.apk",
+        "official_apk_sha256": "42651b1930e3037b29b98e1536eb9e1bc9f740a66944533b2df4bdd8fe21a652",
+        "source_rebuilt": false,
+        "integration": "Official Android engine and menus inside TurboramaStation, process :ps2; no external app required."
+      }
+    },
+    "psp": {
+      "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-PSP-PPSSPP-1.20.4.apk",
+      "sha256": "3631c668ad127e523b50163867f4ea6feb67dd835dd80639658eeddaac9bf897",
+      "bytes": 899779425,
+      "base_sha256": "6e76035e9943896bc7ff0044047749f5c4781821210e2953d697221bdd769911",
+      "native_module_sha256": "1a0fd68e549e737f50c6a8a2bd53716c7ad4178c8fc9e9498b7285d673fd9339",
+      "official_version": "PPSSPP 1.20.4",
+      "preserved_classes": "classes2.dex through classes16.dex",
+      "other_engines_byte_identical": true,
+      "provenance": {
+        "official_version": "1.20.4",
+        "source": "https://github.com/hrydgard/ppsspp/tree/v1.20.4",
+        "official_apk": "https://www.ppsspp.org/files/1_20_4/ppsspp.apk",
+        "official_apk_sha256": "dd702a31270ecd68db37afee311d6efe08b1d4da9601d2750ce1a73bbd316c3f",
+        "source_rebuilt": false,
+        "integration": "Official engine and menus embedded in process :psp; own storage, native launch arguments."
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "ALTERACOES.md",
+      "bytes": 2406,
+      "sha256": "e0c10fdbb48f2445c5f581bf78392700614ad050dee62ff7dce5bf7b8d7d2fbb"
+    },
+    {
+      "path": "intermediate-ps2/native_carousel.cpp",
+      "bytes": 19659,
+      "sha256": "6f28c1868e02fbf0d6c51c6e56586c33f80f92513ded6a6812b797e16a997531"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1516,
+      "sha256": "1f1684c5a8e42bbb0ae74696d9a219d12af61164a253f45ceee2ae0bbdbadb5d"
+    },
+    {
+      "path": "RESTAURACAO.md",
+      "bytes": 4235,
+      "sha256": "19038025234c8e1e580f70cf5fd99ed25c77a452820e892e0c0eb4777de2293e"
+    },
+    {
+      "path": "snapshot/implementation/build_native.py",
+      "bytes": 1844,
+      "sha256": "4c56b25977224cc2189d42132b84408ed8c73727dfb968222b2629c7fb220854"
+    },
+    {
+      "path": "snapshot/implementation/native_carousel.cpp",
+      "bytes": 19684,
+      "sha256": "562d603ee7109b919ecaa9330a44972cec30e9399514edd94c487b9ffef55176"
+    },
+    {
+      "path": "snapshot/implementation/native_ps2.h",
+      "bytes": 3379,
+      "sha256": "53b7b2adc2290c7630da247c2069df620b521ac9b17715451efadda9a0185955"
+    },
+    {
+      "path": "snapshot/implementation/native_psp.h",
+      "bytes": 3321,
+      "sha256": "32076ba395b9c8e4e0e16583055f174f635a22da0cb5d620016c9836718fccc4"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/base-classes.json",
+      "bytes": 1150729,
+      "sha256": "ba48ee838fe3996e92a8f545758c6bb4c3d4450ff92bace5825584f805f83cb8"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/build-result.json",
+      "bytes": 47023,
+      "sha256": "95b5b7bd833bee667d28f27fec77acf497fb2eab202b1a6469a4f11437e8fe2a"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/class-map.json",
+      "bytes": 219216,
+      "sha256": "22c81daa0a513bd7873cfe4cf91774a3df28cc67e228e0a66cc556dc5e10ffef"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/integrate.py",
+      "bytes": 4413,
+      "sha256": "60d1d75718a14fa673495c4dd2f66911096058cce714168179e44f16f0633b58"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/java/org/emulationstation/frontend/Ps2Bootstrap.java",
+      "bytes": 5794,
+      "sha256": "212c013a00a3bd074eb1a24ea125909112987675fabe68608fc70e4030559fbb"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/native-classes.json",
+      "bytes": 2185,
+      "sha256": "ed6c0907eca61c020fc2ad7dd50e88c75fe521afd9806d447451d63947670c0b"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/navigation-source-map.json",
+      "bytes": 136,
+      "sha256": "2fdcfe24828d2f5f93e665e0a4f708920bc25687efdbdccbe6480828d7169244"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/package.py",
+      "bytes": 4011,
+      "sha256": "de8090ea0971e143027b159af00ad40d92fa3055d94a2b46479362bf9b3e2289"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/prepare.py",
+      "bytes": 10222,
+      "sha256": "9594fe8174789a0315658319722b3b4fb8236c87520c066fb7907bda9cd9f159"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/provenance.json",
+      "bytes": 454,
+      "sha256": "2e1aecf11c3efb0b0f510b5b438ce2297ff0c028b32372041775bc26ca1fddf5"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/resource-map.json",
+      "bytes": 73640,
+      "sha256": "009c5b759328695a58ad8bd6e8f8a6e8db55a69ef4eed9e4f861bdc6c09c95eb"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/AppNavigation.kt",
+      "bytes": 5674,
+      "sha256": "ef1688ac1b44b8f88c550c1fe6eebffa88504688249bb7e9563872e701c558a9"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/AppRoute.kt",
+      "bytes": 2466,
+      "sha256": "c311af80360635acc41fa9efce837544221a26f8e4b995e73e5a407d19ddb962"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/BootSplashActivity.kt",
+      "bytes": 7779,
+      "sha256": "dca753f2573fc96cd3394f2cbeb18081172d90af7e4fd853d6b01ce8d1c2b4a9"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/ConfigStore.kt",
+      "bytes": 29644,
+      "sha256": "7178048a38581839df96740e7455f6efd48e150c3505dc750deb529e4ce53676"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/COPYING.GPLv3",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/Main.kt",
+      "bytes": 102,
+      "sha256": "6520daea296d881470888ff9b572be46b47166d5dd4a5c48d3c61963d499387e"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/MainActivityRuntime.kt",
+      "bytes": 340236,
+      "sha256": "d2f717df6cb2557ed3cdf1a5ba6d5bdcf4c403cb61c8002b63cdf34db3286ded"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/NativeApp.java",
+      "bytes": 56893,
+      "sha256": "e01f102948d65a4f7b85128cd3ff2b6999f637a785356b17f47f7461c75786a5"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/NavigationDrawer.kt",
+      "bytes": 17935,
+      "sha256": "f44b3ec0f9455cd9d79adb95f4c74aa63dae414d49f5a724cfbae0a2d6219b8d"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/Pasx2Application.kt",
+      "bytes": 5652,
+      "sha256": "da31b6ca3e7ca45e7f684f2b501eb2fa1177d6ff924f13abeef1d7f90731e1a1"
+    },
+    {
+      "path": "snapshot/implementation/ps2-integration/upstream/Settings.kt",
+      "bytes": 250589,
+      "sha256": "768470e3b389b8b9acda46d139b0f4c9850109f43090f2649c76b0c7fc9919a1"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/base-classes.json",
+      "bytes": 1306342,
+      "sha256": "53549a55c7741e26fe1f7b9df2c7afdc34a7d7f4d2dd5f41e30548a77b83ffe9"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/build-result.json",
+      "bytes": 45093,
+      "sha256": "b13504e63d07b1a68455cf13dadabed27804ae60789cb2b57d83cf2a756f078c"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/class-map.json",
+      "bytes": 580726,
+      "sha256": "0cb1429a3785084e06f288d34a0a08c5579b43f1492ce986e22d03216800fb5f"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/integrate.py",
+      "bytes": 2860,
+      "sha256": "f2e6cab77fe4b9270bc7719d1335007559bf7ae3a366f821421ad71ac84ce24a"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/java/org/emulationstation/frontend/PspBootstrap.java",
+      "bytes": 4402,
+      "sha256": "8e900e9ff3589cfbe0fa0409cee4d530845f8f6331a911020998d3c3436209ab"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/native-classes.json",
+      "bytes": 141,
+      "sha256": "2c5e2908fc819a9e9fea6735962faf63e1ade4bc83c9bc758450bf7020932f21"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/package.py",
+      "bytes": 3910,
+      "sha256": "00480ec17f8fddfd8166505a241dbb92380c48d9a1f6efc6b35dd2c8dbbd1298"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/prepare.py",
+      "bytes": 10019,
+      "sha256": "fc132e56608942afa1cc90572a47df86a45dde834426da641f9722752ad3b435"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/provenance.json",
+      "bytes": 402,
+      "sha256": "44623d0448ca6f7a8f7c702aef26b23b7aa02fe884c1f0fd3e04fe70cd769e42"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/resource-map.json",
+      "bytes": 35560,
+      "sha256": "9dee7dc4383bc93b043a68184300e26bf436d6fb9def1382a2526bdd36614be7"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/upstream/app-android.cpp",
+      "bytes": 61519,
+      "sha256": "811844187825b94f918b09ba5959f67e4343b607779aff30016cd720b48e6b5f"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/upstream/LICENSE.TXT",
+      "bytes": 19740,
+      "sha256": "ff265754cbb2e0d3b674f90a79ef5bbaa1f7f1075aec9f5e241524520e5049fa"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/upstream/NativeApp.cpp",
+      "bytes": 53018,
+      "sha256": "ae89e5049ded104ba0f4b3da53389aa76dabb3c27f28d8c289e8decbf2110d2d"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/upstream/NativeApp.java",
+      "bytes": 7388,
+      "sha256": "ef21e94ddee1745fe81bee9eb32b09716d7d3f0440bfafd6947d65fb0befd380"
+    },
+    {
+      "path": "snapshot/implementation/psp-integration/upstream/PpssppActivity.java",
+      "bytes": 70413,
+      "sha256": "67c857669e32ab4b4f0695f5f6f4c792cbccaf6b1a07d8b01539633f2f4d1b5b"
+    }
+  ]
+}

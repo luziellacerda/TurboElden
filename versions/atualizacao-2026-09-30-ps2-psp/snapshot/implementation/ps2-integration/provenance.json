@@ -1,0 +1,8 @@
+{
+  "official_version": "2.7.2",
+  "source": "https://github.com/ARMSX2/ARMSX2/tree/2.7.2",
+  "official_apk": "https://github.com/ARMSX2/ARMSX2/releases/download/2.7.2/ARMSX2-2.7.2-legacy-armv8.0-sdk26.apk",
+  "official_apk_sha256": "42651b1930e3037b29b98e1536eb9e1bc9f740a66944533b2df4bdd8fe21a652",
+  "source_rebuilt": false,
+  "integration": "Official Android engine and menus inside TurboramaStation, process :ps2; no external app required."
+}

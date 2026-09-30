@@ -1,3 +1,11 @@
+# Atualização PS2/PSP em avaliação — 30/09/2026
+
+Leia [a atualização](versions/atualizacao-2026-09-30-ps2-psp/README.md) e seu manifesto: ARMSX2 2.7.2 e PPSSPP 1.20.4 incorporados no mesmo APK, instalado com hash conferido. PS2 abriu GTA e retornou às plataformas; PSP em teste pelo mantenedor. Design e sessão preservados. Não promovida a estável.
+
+Ramo `versao-funcional` contém esta atualização. Ramo `estavel` e tag `estavel-2026-09-30-dolphin-flycast` permanecem no commit `3573db1`, com o APK aprovado `55cd54a3`. Consulte [ESTAVEL.md](ESTAVEL.md) para restauração.
+
+## Referência anterior preservada
+
 # Versão estável atual — TurboramaStation
 
 **Comece por [ESTAVEL.md](ESTAVEL.md): APK exato, pastas, hashes e restauração.**
