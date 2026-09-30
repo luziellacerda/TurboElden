@@ -1,0 +1,9 @@
+{
+  "version": "Cemu Android 0.5",
+  "source": "https://github.com/SSimco/Cemu/tree/0.5",
+  "apk": "https://github.com/SSimco/Cemu/releases/download/0.5/Cemu-0.5.apk",
+  "donor_sha256": "6df65a744d9a9b0a97978f7a98765db9be27aab22ef940e77e2eb6a15154d543",
+  "upstream_engine_rebuilt": false,
+  "experimental": true,
+  "integration": "Embedded engine and upstream menus in dedicated :wiiu process"
+}

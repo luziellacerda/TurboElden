@@ -1,0 +1,168 @@
+{
+  "status": "em avaliacao; Wii U ainda nao instalado",
+  "stable_commit": "3573db1203cee541f2e590d4ed6574e2a23e781c",
+  "previous_update": "f5b3afa091057abeb1f44288d20c8783da53ce48",
+  "psp_user_confirmed_working": true,
+  "gamecube": {
+    "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-GameCube-Dolphin.apk",
+    "sha256": "cd1a8a555692278badd3d5e456e30f70c8dfee735c7f0251b0bbe31a749e1076",
+    "bytes": 900758841,
+    "base_sha256": "3631c668ad127e523b50163867f4ea6feb67dd835dd80639658eeddaac9bf897",
+    "installed": true,
+    "game_runtime_verified": false,
+    "catalog_games": 37,
+    "catalog_loaded_on_device": true
+  },
+  "wiiu": {
+    "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-WiiU-Cemu-0.5.apk",
+    "sha256": "b11f0acce6bb553c2f13e2a6846bc1e4f0189050a2a3ab69d962fe7972e2d7d5",
+    "bytes": 949354412,
+    "base_sha256": "cd1a8a555692278badd3d5e456e30f70c8dfee735c7f0251b0bbe31a749e1076",
+    "installed": false,
+    "game_runtime_verified": false,
+    "catalog_games": 9,
+    "catalog_covers": 9,
+    "experimental": true,
+    "minimum_android": 11
+  },
+  "source_root": "E:\\ESTUDO APK\\work\\native-carousel\\implementation",
+  "promoted_to_stable": false,
+  "upstream_engines_rebuilt": false,
+  "files": [
+    {
+      "path": "intermediate-gamecube/native_carousel.cpp",
+      "bytes": 20223,
+      "sha256": "864c23a4262ca632b92cbf803c910c1fefa1cf8460d4279eeb8c973b8e40b7e8"
+    },
+    {
+      "path": "intermediate-gamecube/system_infos.h",
+      "bytes": 22733,
+      "sha256": "dc9719ce01c9eed073fdf2233e76d3536becf6d53e3d3f4ff46d056d6ead6b9b"
+    },
+    {
+      "path": "intermediate-gamecube/system_video720_assets.h",
+      "bytes": 1904,
+      "sha256": "94c3c88dfbc3bc1001164a3b93c5ffb9fd142d557e429cdf42c5634a193bff13"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1278,
+      "sha256": "322aa5884dc8fa90e708982db235a73b82dd84ec052a362fdf157947e2bbea3b"
+    },
+    {
+      "path": "RESTAURACAO.md",
+      "bytes": 3695,
+      "sha256": "6cd09f5f25a8ea219d0564c6f34be3b9f8e1ee3758a01c03f8046d9ccde28cb2"
+    },
+    {
+      "path": "snapshot/implementation/build_native.py",
+      "bytes": 1844,
+      "sha256": "4c56b25977224cc2189d42132b84408ed8c73727dfb968222b2629c7fb220854"
+    },
+    {
+      "path": "snapshot/implementation/gamecube-integration/package.py",
+      "bytes": 4824,
+      "sha256": "595747e39307b2cf7b9ccdbd2b949b2e350a0e87bfb61d2e1abb4976deaa133f"
+    },
+    {
+      "path": "snapshot/implementation/gamecube-integration/provenance.json",
+      "bytes": 935,
+      "sha256": "37def8c0ec8ea7a72ec5b27dde29a371410c3345c676c1d404391b0f0bb1cdbe"
+    },
+    {
+      "path": "snapshot/implementation/gamecube-integration/rebuild_catalog_module.py",
+      "bytes": 1156,
+      "sha256": "467d139346b926500a9501236fb818fe2260136c214eeedd3a0f2b3637c8f15c"
+    },
+    {
+      "path": "snapshot/implementation/native_carousel.cpp",
+      "bytes": 20436,
+      "sha256": "ca8349a02ae867d0cdaa0f94b9f9485eebf02e3189a12653dea9515f175ef5a5"
+    },
+    {
+      "path": "snapshot/implementation/native_wiiu.h",
+      "bytes": 3976,
+      "sha256": "7110acafef0dd02343b6f71906a2fcdf0f0c791ccd171db86c4662c67e809c12"
+    },
+    {
+      "path": "snapshot/implementation/system_infos.h",
+      "bytes": 22733,
+      "sha256": "dc9719ce01c9eed073fdf2233e76d3536becf6d53e3d3f4ff46d056d6ead6b9b"
+    },
+    {
+      "path": "snapshot/implementation/system_video720_assets.h",
+      "bytes": 1904,
+      "sha256": "94c3c88dfbc3bc1001164a3b93c5ffb9fd142d557e429cdf42c5634a193bff13"
+    },
+    {
+      "path": "snapshot/implementation/theme-infos-mapping.json",
+      "bytes": 6414,
+      "sha256": "fa5d0956a666f11945e16c2dc54e7668bba0e5fb9f3d64cab4f6cef6f4986e5f"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/base-classes.json",
+      "bytes": 1617367,
+      "sha256": "7e6f9fe07842dd54a8a37c04cf72fc3184e76f6ba2fd40a866847ec9b0863657"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/integrate.py",
+      "bytes": 3946,
+      "sha256": "27c26633f2271583fe0f0eab4b9a2aaa23b0b4b0f6cefded305cd15e956a5376"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/java/org/emulationstation/frontend/WiiUBootstrap.java",
+      "bytes": 3557,
+      "sha256": "8d05c80f4e6f3a255c985d47ff1836dc4e0303b6dd8f130be29e7a2c66bd5c13"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/java/org/emulationstation/frontend/WiiUEntryActivity.java",
+      "bytes": 1654,
+      "sha256": "6801277c1ab9d735cc4d83d31100ffea516019f38ec278a5a8680924d2df737e"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/package.py",
+      "bytes": 4520,
+      "sha256": "6d9492e734fac3c81196d343da590b323cd0144fc6ec690102c250967cbdadf5"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/prepare.py",
+      "bytes": 10109,
+      "sha256": "d91b1de730cfdbde886ba4c275e31b485847d9681a3fdf3a2c514fd555f48673"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/provenance.json",
+      "bytes": 404,
+      "sha256": "b4b74f7cda6283e39933231e1a8cf8aaafc3624940e44c0c188cfe3d50c4a957"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/upstream/AndroidManifest.xml",
+      "bytes": 2820,
+      "sha256": "0431e23687a93bda8abd725b42cc8a5f31517731022620af31c0563157fed10b"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/upstream/build.gradle.kts",
+      "bytes": 7264,
+      "sha256": "aeb04b8f719dc306ee505bb5ae5fca120a72d1684d090b9278a24a82c5d39dbc"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/upstream/CemuApplication.kt",
+      "bytes": 5193,
+      "sha256": "c788e7d861673458fe1b9624c8719a8d5b8407b0e35773db018dcd4f353934e2"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/upstream/EmulationActivity.kt",
+      "bytes": 5722,
+      "sha256": "3f9f05994a119a652715f78f47019e8064a1b69f9280c1d67cb55355b7e3b5cd"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/upstream/LICENSE.txt",
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    {
+      "path": "snapshot/implementation/wiiu-integration/upstream/MainActivity.kt",
+      "bytes": 5261,
+      "sha256": "4790ae0384c34186aaa73b7b5d16ad870603eb215231cae12e4b2f011e42b552"
+    }
+  ]
+}

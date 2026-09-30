@@ -1,0 +1,23 @@
+{
+  "platform": "GameCube",
+  "games": 37,
+  "covers": 37,
+  "source": "User-provided local catalog cache 2026-09-30",
+  "source_sha256": "6c6a2e199fb31bc4423c8db924dddb0626d0d5efe0455dd781ae2c35f564cdc6",
+  "core": "Dolphin 2609-7 already integrated",
+  "rom_folder": "gamecube",
+  "native_command": "libretro: core=dolphin_libretro_android.so",
+  "video_asset": "turbo-system-videos/720-gc.mp4",
+  "video_source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\gc.mp4",
+  "visibility_mapping": {
+    "Android": true,
+    "R2Pasta": "gamecube",
+    "CatalogLabel": "roms",
+    "AndroidPackage": "same as original RequiredPackage",
+    "AndroidDemo": "same as original Demo",
+    "AndroidMensal": "same as original Mensal"
+  },
+  "source_access_metadata_preserved": true,
+  "remote_availability_checked": false,
+  "game_runtime_verified": false
+}
