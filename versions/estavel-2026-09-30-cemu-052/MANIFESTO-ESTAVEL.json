@@ -1,0 +1,31 @@
+{
+  "release": "estavel-2026-09-30-cemu-052",
+  "date": "2026-09-30",
+  "status": "approved_by_maintainer",
+  "repository": "https://github.com/luziellacerda/TurboElden",
+  "apk_path": "E:\\ESTUDO APK\\estaveis\\2026-09-30-cemu-052\\TurboramaStation-ESTAVEL-Cemu-0.5.2.apk",
+  "apk_sha256": "7ce3fab3d2d09c3bddfd002d0b9734e42aa5e27b102f36bb56e77b484e36562b",
+  "apk_bytes": 1063390870,
+  "base_sha256": "1189899e780cd372e8e0efdbea7dad2926ecccf896542c3349d1b79caa8ac2c7",
+  "cemu": {
+    "version": "0.5.2",
+    "donor_url": "https://github.com/SapphireRhodonite/Cemu/releases/tag/0.5.2",
+    "donor_sha256": "e1630fc51a4bbb18ef8499829fad011601d575726f019090abada6c9dd258387"
+  },
+  "source_handoff": "versions/wiiu-cemu-052-20260930/README.md",
+  "archive_handoff": "versions/wiiu-rar5-fix-20260930/README.md",
+  "device_check": {
+    "model": "SM-A566E",
+    "installed_hash_matches": true,
+    "application_resumed_without_login": true,
+    "mario_kart_8_opened": true,
+    "touch_controls_visible": true,
+    "touch_controls_responded": "confirmed_by_maintainer",
+    "exit_returned_to_platforms_without_login": "confirmed_by_maintainer"
+  },
+  "limits": [
+    "Cemu Android is experimental; one game and one phone do not certify every Wii U title.",
+    "Commercial licensing server connection is pending.",
+    "Do not publish APK, games, BIOS, firmware, keys, saves, or private media in Git."
+  ]
+}

@@ -1,0 +1,11 @@
+--- smali/info/cemu/cemu/common/settings/InputOverlaySettings.smali
++++ smali/info/cemu/cemu/common/settings/InputOverlaySettings.smali
+@@ -152,7 +152,7 @@
+ 
+     const/4 v1, 0x0
+ 
+-    const/4 v2, 0x0
++    const/4 v2, 0x1
+ 
+     .line 71
+     sget-object v5, Ltwiiucor/shaded/kotlin/collections/EmptyMap;->INSTANCE:Ltwiiucor/shaded/kotlin/collections/EmptyMap;

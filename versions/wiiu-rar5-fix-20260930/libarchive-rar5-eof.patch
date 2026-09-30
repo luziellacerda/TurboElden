@@ -1,0 +1,15 @@
+--- libarchive-3.8.9/archive_read_support_format_rar5.c
++++ libarchive-3.8.9/archive_read_support_format_rar5.c
+@@ -4311,6 +4311,12 @@
+ 	}
+ 
+ 	ret = do_unpack(a, rar5, buff, size, offset);
++	/* RAR5 may finish with an output-empty block. Persist EOF and verify
++	 * checksums only when the declared input and output are complete.
++	 * Based on libarchive PR 3361 revision 317730a. */
++	if(ret == ARCHIVE_EOF && rar5->file.bytes_remaining == 0 &&
++	    rar5->cstate.last_write_ptr == rar5->file.unpacked_size)
++		ret = ARCHIVE_OK;
+ 	if(ret != ARCHIVE_OK) {
+ 		return ret;
+ 	}
