@@ -1,0 +1,67 @@
+{
+  "built_at": "2026-09-30T18:31:19.218032-03:00",
+  "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\TurboramaStation-Plataformas-Organizadas.apk",
+  "sha256": "1189899e780cd372e8e0efdbea7dad2926ecccf896542c3349d1b79caa8ac2c7",
+  "bytes": 1063308950,
+  "base_sha256": "544fdecbc512a128827b392dcc96461573db9a16c09dc343bc3d958749980b81",
+  "base_apk": "F:\\Turborama-build-archive\\TurboramaStation-videos-br-544fdecb.apk",
+  "media": [
+    {
+      "key": "Arcade",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\ARCADE.mp4",
+      "source_sha256": "604a2a1392726fc58b4b6db8970e6e8a4f07a266f7e1ec70c9ec3b81f1ead353",
+      "asset": "assets/turbo-system-videos/720-arcade.mp4",
+      "sha256": "3e984084c7cf7784073ee52012a93e279c32b2d7f48f2cd9f8fbc97c7a8be9ae",
+      "source_duration": 6.04,
+      "duration": 6.0,
+      "fps": 30,
+      "size": [
+        720,
+        720
+      ],
+      "speed": 1,
+      "loop": true,
+      "focus_only": true
+    },
+    {
+      "key": "fbneo",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\fbneo.mp4",
+      "source_sha256": "0b921508d3e256ffbce949631788b319b1838790625ea306290839cfd8f4c2c1",
+      "asset": "assets/turbo-system-videos/720-fbneo.mp4",
+      "sha256": "f1b4a22b0f106c2e9493b4da841db96640936d2ec5ecefaa1a752d94962c38ab",
+      "source_duration": 6.04,
+      "duration": 6.0,
+      "fps": 30,
+      "size": [
+        720,
+        720
+      ],
+      "speed": 1,
+      "loop": true,
+      "focus_only": true
+    },
+    {
+      "key": "mame",
+      "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\mame.mp4",
+      "source_sha256": "e11f2e29b8cac76794ce3fd65c1f895765c0ef40c23b36e262587236a7ca8f9d",
+      "asset": "assets/turbo-system-videos/720-mame.mp4",
+      "sha256": "97f9d7ceb609c8e0f27adbc56e4712e2b57ad9bb1b5138a8345b2fe291392811",
+      "source_duration": 6.04,
+      "duration": 6.0,
+      "fps": 30,
+      "size": [
+        720,
+        720
+      ],
+      "speed": 1,
+      "loop": true,
+      "focus_only": true
+    }
+  ],
+  "all_non_video_logic_preserved": true,
+  "preview_capacity": "derived from platform video definitions; no new active players",
+  "unchanged_entries_verified": true,
+  "native_module_sha256": "a302bddda323b92c292d010e7ee5b614e5969c76f0e2c70cd0a9394802ab258f",
+  "installed": true,
+  "git_published": false
+}
