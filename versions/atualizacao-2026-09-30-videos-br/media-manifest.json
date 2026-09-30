@@ -1,0 +1,70 @@
+[
+  {
+    "key": "Playstation 2 - BR",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\ps2BR.mp4",
+    "source_sha256": "a66e2f50c1de7734d1175bb0447494ef6708e1da56f8179323c55a0e6dd7c8a4",
+    "asset": "assets/turbo-system-videos/720-ps2br.mp4",
+    "sha256": "eee10e1e0ff20330990b818360044690521556eecddd6a0a3bb87609273430e8",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  },
+  {
+    "key": "Nintendo 64 - BR",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\n64BR.mp4",
+    "source_sha256": "98f4358a2258e1426114d1cdb9a7e616ecf333f8a38458d8b7cd23fa21bdd087",
+    "asset": "assets/turbo-system-videos/720-n64br.mp4",
+    "sha256": "d8d511967a5331f66b8a54db3bf136d42ffc1db6f7f755e172b31f718de0b15d",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  },
+  {
+    "key": "Nintendo DS",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\nds.mp4",
+    "source_sha256": "5180a3ed033be9adcbbfdbca678279581471b2fc77dee9057b9b6a7a07ce9751",
+    "asset": "assets/turbo-system-videos/720-nds.mp4",
+    "sha256": "6cd21c0fd582f2147d629ff83c26c106bd9c751cfe038d31d8deba2cde266e49",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  },
+  {
+    "key": "gamegear",
+    "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\GEMEGEAR.mp4",
+    "source_sha256": "4badd4cd0e077d7c27de7074f3b8c8ec5b290d6269b5ebaf59b259f18d774a95",
+    "asset": "assets/turbo-system-videos/720-gamegear.mp4",
+    "sha256": "f62249c93550a06ae88af047563602e89e9faea9a48bc2599bb6f5ac1f58dd16",
+    "source_duration": 6.04,
+    "duration": 6.0,
+    "fps": 30,
+    "size": [
+      720,
+      720
+    ],
+    "speed": 1,
+    "loop": true,
+    "focus_only": true
+  }
+]
