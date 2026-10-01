@@ -1,51 +1,93 @@
-# Estável atual — Cemu Android 0.5.2 (30/09/2026)
+# TurboramaStation — TurboElden
 
-APK aprovado e instalado: `E:\ESTUDO APK\estaveis\2026-09-30-cemu-052\TurboramaStation-ESTAVEL-Cemu-0.5.2.apk`. SHA-256 `7ce3fab3d2d09c3bddfd002d0b9734e42aa5e27b102f36bb56e77b484e36562b`. [Manifesto](versions/estavel-2026-09-30-cemu-052/MANIFESTO-ESTAVEL.json) · [Restauração](versions/estavel-2026-09-30-cemu-052/RESTAURACAO.md) · [Código e handoff](versions/wiiu-cemu-052-20260930/README.md).
+Frontend Android da TurboramaStation (pacote de estudo `org.emulationstation.frontend`; TESTE lado a lado `org.turboramastation.frontend`). Um único APK reúne o carrossel nativo e os motores oficiais, cada um em processo próprio.
 
-Cemu 0.5.2 integrado no mesmo APK; Mario Kart 8 abriu e o mantenedor confirmou controles ativos e retorno às plataformas sem novo login. A preparação RAR5 foi corrigida. Jogos e saves foram preservados. O sistema comercial de licenças ainda aguarda a conexão com o servidor. Este teste cobre um jogo e um aparelho; o port Android do Cemu continua experimental.
+Ramo padrão deste Git: `versao-funcional`.  
+Estável Cemu 0.5.2: tag [`estavel-2026-09-30-cemu-052`](https://github.com/luziellacerda/TurboElden/tree/estavel-2026-09-30-cemu-052), commit `f6d7c04`, APK SHA-256 `7ce3fab3d2d09c3bddfd002d0b9734e42aa5e27b102f36bb56e77b484e36562b`. Detalhes em [ESTAVEL.md](ESTAVEL.md).
 
-## Histórico anterior
-## Vídeos Arcade/Final Burn Neo/MAME instalados
+O Git publica receitas, pontes, diffs e handoffs. APK, `.so`, BIOS, firmware, ROMs, chaves, saves e vídeos permanecem locais.
 
-[Atualização atual](versions/atualizacao-2026-09-30-videos-arcade/HANDOFF.md): APK1189899e, instalação e hash conferidos, base544fdecb preservada. Mapa Arcade corrigido e capacidade de prévias ajustada. Demais motores, vídeos BR e login preservados.
+---
 
-## Atualização posterior à estável — vídeos e handoff servidor
+## Emuladores — o que mudou
 
-[Vídeos BR/NDS instalados](versions/atualizacao-2026-09-30-videos-br/README.md), APK544fdecb. [Handoff completo do servidor Android](docs/server/HANDOFF-TURBORAMASTATION-ANDROID-20260930.md), incluindo saudação com nome do comprador. Login remoto ainda não implementado. A referência ESTAVEL.md/tag05dd34b mantém o APK78accf4c de recuperação.
+Todos os motores abaixo foram incorporados ou atualizados **dentro do mesmo aplicativo**. A ponte Java/nativa da TurboramaStation é compilada aqui; o C++ de cada emulador vem do APK ou do lançamento oficial identificado no manifesto da revisão. Opções de desempenho continuam nos menus de cada motor.
 
-# Estável atual — estavel-2026-09-30-plataformas-emuladores
+| Sistema | Motor | Processo | O que mudou | Estado |
+|---|---|---|---|---|
+| GameCube / Wii | **Dolphin 2609-7** (`5102a033`) | `:dolphin` | Motor e menus oficiais Android no APK. Core Libretro antigo removido da base. Saves copiados só se ausentes. Configurações oficiais isoladas. Jogo Wii e retorno sem novo login confirmados. | Estável (tag dolphin-flycast) |
+| Dreamcast / Atomiswave / Naomi / Naomi 2 | **Flycast v2.7-44** (`e36e9df2`) | `:flycast` | Motor e menus oficiais. Rotas nativas passam ao Flycast. Botão **VOLTAR AO MENU** no cabeçalho. Toque rápido no retorno corrigido. Fundo Turborama no menu. Naomi e Naomi 2 com célula, vídeo, sinopse e rota; categorias vazias de propósito. | Estável; Naomi preparado para jogos |
+| PS2 | **ARMSX2 2.7.2** | `:ps2` | Motor e menus oficiais no APK. GTA San Andreas abriu e voltou às plataformas. Menu de saída com identidade Turborama. | Parado por ordem expressa; permanece 2.7.2 |
+| PSP / PSP BR | **PPSSPP 1.20.4** | `:psp` | Motor e menus oficiais. PSP BR (`pspbr`) na mesma rota, 59 jogos da categoria original. Mantenedor confirmou PSP. | Integrado |
+| Wii U | **Cemu Android 0.5.2** | processo Cemu isolado | Atualização do Cemu 0.5 (SSimco) para **0.5.2** (SapphireRhodonite). GamePad do jogador 1 habilitado na primeira abertura. Correção RAR5 (Mario Kart 8 deixou de ser tratado como corrompido). Ponte JNI do DataStore reconstruída no namespace isolado. Mario Kart 8 abriu, controles responderam, Sair voltou às plataformas sem login. | Estável atual (`7ce3fab3`) |
+| Xbox clássico | **X1 BOX 1.2.8** (xemu) | `:xbox` menus, `:xboxemu` jogo | Classes, SDL3, libxemu e conversor XISO do APK oficial. Tabela de controles própria. JOGAR entrega o ISO ao launcher. Retorno à TurboramaStation. BIOS/MCPX/HDD só copiados se ausentes. 54 jogos da chave `xbox`. | Integrado na estável de plataformas |
+| Xbox 360 | **XenDroid 0b11201** | processo próprio | Motor oficial, 24 jogos/24 capas, vídeo 720, configurações isoladas. | Experimental; candidato publicado, instalação adiada na época |
+| PS Vita | **Vita3K** | processo próprio | Firmware oficial preparado. Correção RAR5. | Integrado; jogos completos ainda com pendências |
+| Saturn | **YabaSanshiro Android 1.20.46** | `:saturn` | Core Libretro antigo substituído pela integração Android oficial (GLES/Oboe). Christmas NiGHTS abriu e voltou mantendo login. Vulkan e RetroAchievements fora desta integração. | Integrado |
+| PC Engine CD | **Beetle PCE preciso** (`mednafen_pce`) | Libretro ARM64 | Rota nova no núcleo preciso. Fast permanece nos sistemas que já o usavam. `syscard3` local só se ausente. Dois CHDs válidos. | Integrado |
+| Jaguar | núcleo já da base | — | 56 jogos válidos; 68 entradas que eram imagem/vídeo/metadado saíram da lista. 58 capas Jaguar/PCE CD locais. | Catálogo corrigido |
+| Arcade / FBNeo / MAME | cores já da base + Flycast onde cabe | — | Mapa Arcade passou a `ARCADE.mp4`. Vídeos FBNeo e MAME recompostos 720×720 / 30 fps. Capacidade de prévias acompanha o mapa (44 entradas). | Vídeos atualizados |
 
-Versão instalada e promovida a pedido do mantenedor. **Comece por [ESTAVEL.md](ESTAVEL.md)** para identificar APK, fontes e limites. [Alterações completas](versions/estavel-2026-09-30-plataformas-emuladores/ALTERACOES.md) · [Pastas e restauração](versions/estavel-2026-09-30-plataformas-emuladores/RESTAURACAO.md) · [Manifesto](versions/estavel-2026-09-30-plataformas-emuladores/MANIFESTO-ESTAVEL.json).
+### Detalhe por motor
 
-43 plataformas; PSP BR; Xbox clássico integrado; PC Engine CD preciso/BIOS local; capas Jaguar/PCE CD; Naomi/Naomi2 preparados para receber jogos; vídeos PSP BR/Game Gear/SNES BR/MegaDrive BR/Xbox/Naomi atualizados. Capas baixadas persistentes. Economia de vídeos e remoção de nave/estrelas preservadas. PS2 permanece ARMSX2 e está parado por ordem expressa. Hash do APK **78accf4c2e0c7b5c786acb0ea7a187754a53253beb2c51a01fc40f5a18c649f2**. Nem todos os jogos/motores novos têm execução individual comprovada; consulte os limites antes de diagnosticar.
+**Dolphin 2609-7** — [alterações](versions/estavel-2026-09-30-dolphin-flycast/ALTERACOES.md) · [GameCube](versions/atualizacao-2026-09-30-gamecube-wiiu/README.md)  
+Motor oficial Android, commit `5102a0339c2177575378107b76541e47cc52122d`. GameCube usa esta rota (37 jogos na atualização de 30/09). Dependências isoladas. `libdolphin_libretro_android.so` saiu da base. O Dolphin instalado à parte no telefone continua independente.
 
-## Documentação histórica — não identifica a versão atual
+**Flycast v2.7-44** — mesmo manifesto dolphin-flycast  
+Motor oficial `v2.7-44-ge36e9df2d`. Dreamcast e Atomiswave usam identificadores já existentes. Ajuste de toque: o clique único entre dois quadros deixava de registrar; a ponte conserva a transição no menu principal. Dois retornos observados em 30/09 às 10:23. Candidato posterior de arraste `3085d9fc` ficou de fora.
 
-# Xbox 360 — candidato experimental de30/09/2026
+**ARMSX2 2.7.2** — [PS2/PSP](versions/atualizacao-2026-09-30-ps2-psp/README.md)  
+Pedido de subir enquanto testa. GTA renderizou e a saída para plataformas foi confirmada. Tentativa NetherSX2 cancelada e nunca instalada. God of War segue com o defeito gráfico conhecido.
 
-[Atualização Xbox 360](versions/atualizacao-2026-09-30-xbox360/README.md): XenDroid0b11201,24 jogos/24 capas, vídeo720, configurações próprias e processo separado no mesmo APK. Candidato929339ae compilado/assinado, ainda não instalado. GameCube/WiiU incluídos; estável3573db1 preservada. Telefone descarregou, instalação adiada. Consulte manifesto e handoff para pastas e reprodução.
+**PPSSPP 1.20.4** — mesma atualização PS2/PSP  
+PSP BR permanece na rota PPSSPP, pasta `pspbr`, acesso ESPECIAL original.
 
-## Histórico
+**Cemu 0.5.2** — [handoff](versions/wiiu-cemu-052-20260930/README.md) · [RAR5](versions/wiiu-rar5-fix-20260930/README.md)  
+Doador `Cemu.DualScreen.0.5.2.apk` SHA-256 `e1630fc51a4bbb18ef8499829fad011601d575726f019090abada6c9dd258387`, MPL-2.0. `WiiUBootstrap` liga o GamePad 1 se estiver desligado. `libarchive` RAR5 ignora entradas de diretório. DataStore JNI no namespace `twiiucor`. Teste em Mario Kart 8, um aparelho; o port Android continua experimental.
 
-# GameCube / Wii U — 30/09/2026
+**X1 BOX 1.2.8** — [plataformas](versions/estavel-2026-09-30-plataformas-emuladores/ALTERACOES.md)  
+Android mínimo efetivo API 29. Ponte apresenta aviso em versões anteriores. TESTE posterior (pacote `org.turboramastation.frontend`) ajustou xemu: OpenGL, 30 FPS, frame skip, OpenSL, DSP desligado, volume 0,7, e atualizou o vídeo 720 da célula Xbox. Esses ajustes de TESTE ficam no APK local; o Git desta pasta descreve a integração 1.2.8.
 
-[Atualização atual](versions/atualizacao-2026-09-30-gamecube-wiiu/README.md): GameCube integrado/instalado com 37 jogos carregados; Cemu Android 0.5 incorporado para Wii U, 9 jogos/9 capas, APK pronto e instalação adiada pelo mantenedor (telefone descarregou). PSP confirmado pelo mantenedor. Wii U e GameCube ainda sem conferência de jogo/retorno. Não promovida a estável. APK candidato b11f0acc, instalado cd1a8a55. Consulte manifesto e restauração para pastas e hashes.
+**XenDroid 0b11201** — [Xbox 360](versions/atualizacao-2026-09-30-xbox360/README.md)  
+Lançamento [XenDroid-0b11201](https://github.com/rfandango/XenDroid/releases/tag/XenDroid-0b11201). Compilado e assinado; instalação adiada quando o telefone descarregou.
 
-## Histórico
+**YabaSanshiro 1.20.46** — Saturn Android oficial, GLES/Oboe, processo `:saturn`.
 
-# Atualização PS2/PSP em avaliação — 30/09/2026
+**Vita3K** — firmware preparado; correção RAR5 compartilhada com a linha Wii U.
 
-Leia [a atualização](versions/atualizacao-2026-09-30-ps2-psp/README.md) e seu manifesto: ARMSX2 2.7.2 e PPSSPP 1.20.4 incorporados no mesmo APK, instalado com hash conferido. PS2 abriu GTA e retornou às plataformas; PSP em teste pelo mantenedor. Design e sessão preservados. Não promovida a estável.
+**Beetle PCE preciso** — PC Engine CD; Fast permanece onde já era usado.
 
-Ramo `versao-funcional` contém esta atualização. Ramo `estavel` e tag `estavel-2026-09-30-dolphin-flycast` permanecem no commit `3573db1`, com o APK aprovado `55cd54a3`. Consulte [ESTAVEL.md](ESTAVEL.md) para restauração.
+---
 
-## Referência anterior preservada
+## TESTE 01/10/2026 — carrossel de sistemas
 
-# Versão estável atual — TurboramaStation
+Código nativo em [`versions/carousel-led-overlay-20261001`](versions/carousel-led-overlay-20261001/README.md), commit `ebc4821`.
 
-**Comece por [ESTAVEL.md](ESTAVEL.md): APK exato, pastas, hashes e restauração.**
+- LED colorido continua no aro das células (cabeça e cauda andando no perímetro).
+- Overlay cinza transparente que passava na frente da arte das células do **carrossel principal de sistemas** foi removido.
+- Paleta em dois tons: Naomi 2 e Model 2 vermelho+azul; PS Vita branco+azul; Nintendo DS branco+vermelho; N64 e N64 BR amarelo+branco.
+- Botão ABRIR estático nesse carrossel.
+- Cemu 0.5.2, ARMSX2, FBNeo e o APK estável `7ce3fab3` intactos.
 
-Ramos `estavel` e `versao-funcional`; tag `estavel-2026-09-30-dolphin-flycast`. Dolphin e Flycast atualizados dentro do APK; design preservado, retorno corrigido e login mantido. [Alterações completas](versions/estavel-2026-09-30-dolphin-flycast/ALTERACOES.md) · [Fontes congelados](versions/estavel-2026-09-30-dolphin-flycast/). APK e ativos privados permanecem locais.
+Pacote TESTE: `org.turboramastation.frontend`. SHA-256 do APK local `a03ea6b108637d82f09105765beb0ed9aa28a7571813935ab651f241ffe4f2c8`.
+
+---
+
+## Linha do tempo das revisões de motor
+
+1. **29/09** — carrossel 720p, LED, playlist retrô ([tag](versions/estavel-2026-09-29-playlist-retro/)).
+2. **30/09 manhã** — Dolphin 2609-7 + Flycast v2.7-44, retorno corrigido ([tag](versions/estavel-2026-09-30-dolphin-flycast/)).
+3. **30/09** — ARMSX2 2.7.2 + PPSSPP 1.20.4 ([PS2/PSP](versions/atualizacao-2026-09-30-ps2-psp/)).
+4. **30/09** — GameCube na rota Dolphin; Cemu 0.5 no APK ([GameCube/Wii U](versions/atualizacao-2026-09-30-gamecube-wiiu/)).
+5. **30/09** — XenDroid Xbox 360 experimental ([Xbox 360](versions/atualizacao-2026-09-30-xbox360/)).
+6. **30/09** — 43 plataformas, Xbox clássico 1.2.8, PCE CD preciso, PSP BR, Naomi preparado, vídeos BR ([tag plataformas](versions/estavel-2026-09-30-plataformas-emuladores/)).
+7. **30/09** — vídeos BR/NDS e Arcade/FBNeo/MAME ([BR](versions/atualizacao-2026-09-30-videos-br/), [arcade](versions/atualizacao-2026-09-30-videos-arcade/)).
+8. **30/09 noite** — Cemu 0.5.2 + RAR5 + GamePad ([tag cemu-052](versions/estavel-2026-09-30-cemu-052/), [código](versions/wiiu-cemu-052-20260930/)).
+9. **01/10** — carrossel: LED mantido, overlay cinza removido ([código](versions/carousel-led-overlay-20261001/)).
+
+Cliente de licença comercial Android: [station-android-client-20260930](versions/station-android-client-20260930/). Login comercial desligado até URL, chave pública e rotas do servidor.
+
+---
 
 ## Documentação histórica do estudo
 
@@ -78,7 +120,7 @@ O aplicativo analisado é um frontend Android derivado do EmulationStation, com 
 | [Exclusões da publicação](data/exclusoes-publicacao.csv) | Registro dos arquivos que não foram publicados |
 | [Checksums da publicação](CHECKSUMS.csv) | Integridade dos arquivos publicados |
 
-Os 38.353 nomes MAME são uma base auxiliar de reconhecimento de nomes. Não representam jogos disponíveis no catálogo comercial, ROMs incluídas ou compatibilidade testada. A lista real da loja é fornecida por um servidor após validação de licença e não foi obtida nesta análise.
+Os 38.353 nomes MAME são uma base auxiliar de reconhecimento de nomes. A lista real da loja é fornecida por um servidor após validação de licença e não foi obtida nesta análise.
 
 ## Ler um catálogo local autorizado
 
@@ -92,7 +134,7 @@ O script lê apenas o arquivo local. Foi conferido com dados sintéticos, sem um
 
 ## Limites do material
 
-Este é um estudo de engenharia reversa, não um projeto Android compilável. O código C++ original não foi recuperado, e os pacotes sanitizados não permitem reconstruir integralmente o APK. O JADX deixou marcações de erro ou método não decompilado em 32 arquivos de bibliotecas de terceiros; nenhuma dessas marcações aparece no pacote Java do frontend. Os jogos e os serviços autenticados não foram executados/testados.
+Este é um estudo de engenharia reversa. O código C++ original do frontend não foi recuperado, e os pacotes sanitizados não permitem reconstruir integralmente o APK. O JADX deixou marcações de erro ou método não decompilado em 32 arquivos de bibliotecas de terceiros; nenhuma dessas marcações aparece no pacote Java do frontend.
 
 Os resultados descrevem o arquivo identificado pelo hash acima e o estado observado em 25/09/2026. O material de terceiros conserva seus direitos e avisos existentes; este repositório não atribui uma nova licença ao código recuperado.
 
