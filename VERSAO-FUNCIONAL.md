@@ -1,3 +1,8 @@
+# Carrossel — LED colorido e overlay cinza (01/10/2026)
+
+Código nativo no ramo `versao-funcional`. O LED colorido permanece no aro das células do carrossel principal de sistemas; o overlay cinza transparente da arte foi removido. [Código e handoff](versions/carousel-led-overlay-20261001/README.md). Cemu 0.5.2 estável `7ce3fab3` / tag `estavel-2026-09-30-cemu-052` permanece. APK, `.so` e mídias ficam fora do Git.
+
+## Histórico anterior
 # Estável atual — Cemu Android 0.5.2 (30/09/2026)
 
 APK aprovado e instalado: `E:\ESTUDO APK\estaveis\2026-09-30-cemu-052\TurboramaStation-ESTAVEL-Cemu-0.5.2.apk`. SHA-256 `7ce3fab3d2d09c3bddfd002d0b9734e42aa5e27b102f36bb56e77b484e36562b`. [Manifesto](versions/estavel-2026-09-30-cemu-052/MANIFESTO-ESTAVEL.json) · [Restauração](versions/estavel-2026-09-30-cemu-052/RESTAURACAO.md) · [Código e handoff](versions/wiiu-cemu-052-20260930/README.md).

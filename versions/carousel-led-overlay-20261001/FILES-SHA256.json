@@ -1,0 +1,60 @@
+{
+  "release": "carousel-led-overlay-20261001",
+  "files": [
+    {
+      "path": "native_formation.h",
+      "bytes": 8832,
+      "sha256": "24fb5d0a2fc32261891894ad7a8b191d6f32e47152298e6fd18d7f0a21a00934"
+    },
+    {
+      "path": "native_skin.h",
+      "bytes": 12213,
+      "sha256": "59358e49abcfa33e5990129f2d2dc90171dd3904bd2b2d85a9daf3815cb7274c"
+    },
+    {
+      "path": "native_laser.h",
+      "bytes": 7674,
+      "sha256": "e0ea78036a5963812801d7f441b87029b52e58d98d46749c0bc1747b32ba496b"
+    },
+    {
+      "path": "native_action_motion.h",
+      "bytes": 3469,
+      "sha256": "adae15489bccc50bb1990f179abba4b578f64a734d0359a1ccee152f9f65127f"
+    },
+    {
+      "path": "premium-selection-laser-android.glsl",
+      "bytes": 4541,
+      "sha256": "a3c80f7ff5868d5afd2ee71fa518094e7fa0cdb3d2456dd64627dbefa29cd868"
+    },
+    {
+      "path": "prepare_laser.py",
+      "bytes": 3196,
+      "sha256": "9dc8a607788d553712248532707a229440266432632e40abcc2cdab6a6bda365"
+    },
+    {
+      "path": "rebuild_laser_colors.py",
+      "bytes": 5074,
+      "sha256": "1af797b983da702646d5352d4034bdc51ce0bc5db998faeecfc454b95c54d1ee"
+    },
+    {
+      "path": "build_native.py",
+      "bytes": 1844,
+      "sha256": "4c56b25977224cc2189d42132b84408ed8c73727dfb968222b2629c7fb220854"
+    },
+    {
+      "path": "laser_assets.h",
+      "bytes": 7227,
+      "sha256": "cde37d33e88fcfbe4b8f210c35c83aa45605e572f895f317acdbba2ae5a88017"
+    },
+    {
+      "path": "laser-user-overrides.json",
+      "bytes": 1704,
+      "sha256": "5bd53bfed431916cdb058f98ea6bcf126e7f72c8514321ec46ac7d8a39763015"
+    },
+    {
+      "path": "native_carousel.cpp",
+      "bytes": 28308,
+      "sha256": "e9cf8e4e5bfbec36b2ed40970c03353a9b9d8472a7460f232b65dc3671a030c7"
+    }
+  ]
+}
