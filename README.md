@@ -72,6 +72,8 @@ Código nativo em [`versions/carousel-led-overlay-20261001`](versions/carousel-l
 
 Pacote TESTE: `org.turboramastation.frontend`. SHA-256 local após Vita3K 4115 (02/10): `0e7974e1a324c4aabfb475d1fa9081f4307efd52ca099323bcafdd852694478b`. Base 01/10 (T + 3.74, motor 4103): `5090cb83e0d69957e22227b748848ce112c8aa302361cc71b5f336937fbfc7f5`.
 
+Cliente Station deste ponto (02/10, lista no aparelho, sem Miami): [`versions/station-catalogo-20261002`](versions/station-catalogo-20261002/README.md). APK local SHA-256 `c11b98bf0df770ed78a285a38fb897317a5b6ee496ba6b121e2d52304a400a9a`.
+
 ---
 
 ## TESTE 01/10/2026 — PS Vita e Wii U prontos
