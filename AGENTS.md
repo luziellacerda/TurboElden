@@ -1,3 +1,7 @@
+# Reconstrução Station em andamento
+
+Leia [a integração do cliente e login](versions/station-reconstruction-20261002/README.md) e o handoff correspondente. São 142 verificações locais e módulo Android compilado; catálogo nativo e APK completo ainda pendentes. Não instalar somente o DEX e não promover como estável. A referência estável abaixo continua preservada.
+
 # Estável atual — Cemu Android 0.5.2 (30/09/2026)
 
 APK aprovado e instalado: `E:\ESTUDO APK\estaveis\2026-09-30-cemu-052\TurboramaStation-ESTAVEL-Cemu-0.5.2.apk`. SHA-256 `7ce3fab3d2d09c3bddfd002d0b9734e42aa5e27b102f36bb56e77b484e36562b`. [Manifesto](versions/estavel-2026-09-30-cemu-052/MANIFESTO-ESTAVEL.json) · [Restauração](versions/estavel-2026-09-30-cemu-052/RESTAURACAO.md) · [Código e handoff](versions/wiiu-cemu-052-20260930/README.md).

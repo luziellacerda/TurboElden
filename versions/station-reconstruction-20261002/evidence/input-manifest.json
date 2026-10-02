@@ -1,0 +1,37 @@
+{
+  "apk": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\side-by-side-turborama-20261001\\TurboramaStation-TESTE-lado-a-lado.apk",
+  "size": 1898675776,
+  "sha256": "d810434352f7ad2e7d1d08efe44f31eb76d132ffc43ba3b81b9ffc9e64efae1b",
+  "entries": [
+    {
+      "entry": "lib/arm64-v8a/libmain.so",
+      "size": 3936200,
+      "sha256": "a1ae357dc29caac52d47386a71a0a9a685ecffb9c01d536f5af50b5ba658cda8"
+    },
+    {
+      "entry": "lib/arm64-v8a/libturbo_carousel.so",
+      "size": 31242984,
+      "sha256": "523eb3b3c87c53834ea172091aa2c9826874e7a3956077b1269069901283da24"
+    },
+    {
+      "entry": "lib/arm64-v8a/libSDL2.so",
+      "size": 1239896,
+      "sha256": "a282b35554eb006773349430e117bfeeff32a84e246a058c8fb7c7027c2e4dee"
+    },
+    {
+      "entry": "classes5.dex",
+      "size": 75712,
+      "sha256": "962a0d5b776b1772b1b7b0fb03bdd03511f05a3feba4f470b7515de1337b45a3"
+    },
+    {
+      "entry": "classes8.dex",
+      "size": 71776,
+      "sha256": "c5e42e1c48b7481e5dce8d139625d0ed6d0a893625c686eb0a6debbfd148ac1b"
+    },
+    {
+      "entry": "classes28.dex",
+      "size": 14680,
+      "sha256": "cca9b217da2ccd1d8d9e6175947737ba263794598b7e842b8467c5949fa6df59"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "ghidra_12.1.4_PUBLIC_20260921.zip",
+    "url": "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_12.1.4_build/ghidra_12.1.4_PUBLIC_20260921.zip",
+    "sha256": "ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db",
+    "size": 569649598,
+    "directory": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002\\tools\\ghidra_12.1.4_PUBLIC"
+  },
+  {
+    "name": "OpenJDK25U-jdk_x64_windows_hotspot_25.0.4.1_1.zip",
+    "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/OpenJDK25U-jdk_x64_windows_hotspot_25.0.4.1_1.zip",
+    "sha256": "00c847d804f4a78e9f04f2683faf14fed898535b177b7fc704486cb0284e9283",
+    "size": 141167264,
+    "directory": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002\\tools\\jdk-25.0.4.1+1"
+  }
+]
