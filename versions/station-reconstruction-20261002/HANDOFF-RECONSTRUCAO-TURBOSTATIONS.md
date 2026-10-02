@@ -114,4 +114,10 @@ Não promover esta etapa como versão estável. O resultado entregue aqui é um 
 
 ## Publicação do handoff no servidor
 
-A pedido do mantenedor, o handoff foi publicado no Servidor-pix no commit `6a8fb3663ba40a53e4179f799e756b71a7398a8e`, ramo `docs/cliente-reconstruido-station-20261002`, arquivo `docs/station-android/HANDOFF-CLIENTE-RECONSTRUIDO-STATION-20261002.md`. Nenhum serviço do Linux foi alterado. A publicação contém o estado anterior à integração do login, com 123 verificações; este documento registra a etapa posterior com 142.
+O pedido específico para a equipe do servidor está no Servidor-pix, commit 7ac4fad9e0132db378f6e78e6494fedb08f614c3, branch docs/cliente-reconstruido-station-20261002, arquivo docs/station-android/HANDOFF-CLIENTE-RECONSTRUIDO-STATION-20261002.md.
+
+[Handoff do servidor com tarefas, responsáveis e formato de retorno](https://github.com/luziellacerda/Servidor-pix/blob/7ac4fad9e0132db378f6e78e6494fedb08f614c3/docs/station-android/HANDOFF-CLIENTE-RECONSTRUIDO-STATION-20261002.md).
+
+A revisão separa o que existe do que é proposta, identifica exatamente produto/aplicação/pacote/rotas e solicita o retorno em docs/station-android/RETORNO-SERVIDOR-PARA-CLIENTE-RECONSTRUIDO-STATION-20261002.md. Nenhum serviço Linux ou APK foi alterado nesta revisão documental.
+
+Foi identificada uma pendência adicional no código do cliente 0840028: StationApi.activate exige Base64URL de 32 bytes para o código do comprador, enquanto o handoff humano descreve o formato STA-. A equipe Android deve corrigir essa validação de acordo com a emissão e o contrato reais confirmados pelo servidor. Os 142 checks anteriores não comprovam a aceitação desse formato comercial. A revisão documental não mudou fontes Java nem executou novamente os testes.
