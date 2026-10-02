@@ -22,7 +22,7 @@ Todos os motores abaixo foram incorporados ou atualizados **dentro do mesmo apli
 | Wii U | **Cemu Android 0.5.2** | processo Cemu isolado | Atualização do Cemu 0.5 (SSimco) para **0.5.2** (SapphireRhodonite). GamePad do jogador 1 habilitado na primeira abertura. Correção RAR5 (Mario Kart 8 deixou de ser tratado como corrompido). Ponte JNI do DataStore reconstruída no namespace isolado. Mario Kart 8 abriu, controles responderam, Sair voltou às plataformas sem login. TESTE 01/10: `keys.txt` do dono já na pasta `Cemu/`; a abertura copia o arquivo se a pasta estiver vazia. Chaves fora do Git. | Estável atual (`7ce3fab3`); TESTE com keys no aparelho |
 | Xbox clássico | **X1 BOX 1.2.8** (xemu) | `:xbox` menus, `:xboxemu` jogo | Classes, SDL3, libxemu e conversor XISO do APK oficial. Tabela de controles própria. JOGAR entrega o ISO ao launcher. Retorno à TurboramaStation. BIOS/MCPX/HDD só copiados se ausentes. 54 jogos da chave `xbox`. | Integrado na estável de plataformas |
 | Xbox 360 | **XenDroid 0b11201** | processo próprio | Motor oficial, 24 jogos/24 capas, vídeo 720, configurações isoladas. | Experimental; candidato publicado, instalação adiada na época |
-| PS Vita | **Vita3K** | `:psvita` | Firmware oficial 3.74 vai no APK TESTE (`assets/psvita-firmware/`) e a abertura copia para `files/psvita/setup/`, aplica no Vita3K, cria o usuário **Jogador** e grava `vita3k_app` / `initial_setup_completed`. A tela Install Firmware não aparece. Correção RAR5. PUPs fora do Git. | TESTE 01/10 com 3.74 no APK |
+| PS Vita | **Vita3K 4115** (`a366df69`) | `:psvita` | Firmware oficial 3.74 no APK TESTE (`assets/psvita-firmware/`); a abertura copia para `files/psvita/setup/`, aplica, cria o usuário **Jogador** e grava `vita3k_app` / `initial_setup_completed`. Motor nativo atualizado 4103 → **4115** (Java idêntico ao 4103; só `libVita3K.so`). PUPs e keys fora do Git. | TESTE 02/10 com 4115 + 3.74 |
 | Saturn | **YabaSanshiro Android 1.20.46** | `:saturn` | Core Libretro antigo substituído pela integração Android oficial (GLES/Oboe). Christmas NiGHTS abriu e voltou mantendo login. Vulkan e RetroAchievements fora desta integração. | Integrado |
 | PC Engine CD | **Beetle PCE preciso** (`mednafen_pce`) | Libretro ARM64 | Rota nova no núcleo preciso. Fast permanece nos sistemas que já o usavam. `syscard3` local só se ausente. Dois CHDs válidos. | Integrado |
 | Jaguar | núcleo já da base | — | 56 jogos válidos; 68 entradas que eram imagem/vídeo/metadado saíram da lista. 58 capas Jaguar/PCE CD locais. | Catálogo corrigido |
@@ -53,8 +53,8 @@ Lançamento [XenDroid-0b11201](https://github.com/rfandango/XenDroid/releases/ta
 
 **YabaSanshiro 1.20.46** — Saturn Android oficial, GLES/Oboe, processo `:saturn`.
 
-**Vita3K** — [pronto na abertura](versions/vita-wiiu-pronto-20261001/README.md) · [3.74 no APK TESTE](versions/vita-t-firmware-20261001/README.md)  
-`VitaEntryActivity` copia os três PUPs oficiais 3.74 de `assets/psvita-firmware/` para `files/psvita/setup/`, aplica no Vita3K, cria o usuário Jogador e marca `initial_setup_completed`. A tela Install Firmware deixa de aparecer. Pacotes PUP fora do Git. Correção RAR5 compartilhada com a linha Wii U.
+**Vita3K 4115** — [pronto na abertura](versions/vita-wiiu-pronto-20261001/README.md) · [3.74 no APK TESTE](versions/vita-t-firmware-20261001/README.md) · [motor 4115](versions/vita-engine-4115-20261002/README.md)  
+`VitaEntryActivity` copia os três PUPs oficiais 3.74 de `assets/psvita-firmware/` para `files/psvita/setup/`, aplica no Vita3K, cria o usuário Jogador e marca `initial_setup_completed`. Em 02/10 o `libVita3K.so` passou do build 4103 para o contínuo oficial **4115** (`a366df69`); o Java do doador é o mesmo do 4103. Pacotes PUP e `keys.txt` fora do Git. Correção RAR5 compartilhada com a linha Wii U.
 
 **Beetle PCE preciso** — PC Engine CD; Fast permanece onde já era usado.
 
@@ -70,7 +70,7 @@ Código nativo em [`versions/carousel-led-overlay-20261001`](versions/carousel-l
 - Botão ABRIR estático nesse carrossel.
 - Cemu 0.5.2, ARMSX2, FBNeo e o APK estável `7ce3fab3` intactos.
 
-Pacote TESTE: `org.turboramastation.frontend`. SHA-256 local após firmware 3.74 no APK: `5090cb83e0d69957e22227b748848ce112c8aa302361cc71b5f336937fbfc7f5`.
+Pacote TESTE: `org.turboramastation.frontend`. SHA-256 local após Vita3K 4115 (02/10): `0e7974e1a324c4aabfb475d1fa9081f4307efd52ca099323bcafdd852694478b`. Base 01/10 (T + 3.74, motor 4103): `5090cb83e0d69957e22227b748848ce112c8aa302361cc71b5f336937fbfc7f5`.
 
 ---
 
@@ -94,6 +94,19 @@ Código em [`versions/vita-t-firmware-20261001`](versions/vita-t-firmware-202610
 
 ---
 
+## TESTE 02/10/2026 — Vita3K 4115
+
+Código em [`versions/vita-engine-4115-20261002`](versions/vita-engine-4115-20261002/README.md).
+
+- **Motor:** contínuo oficial Android build **4115** (`a366df69`). Java do doador igual ao 4103; só `libVita3K.so` muda.
+- **Firmware 3.74** continua no APK TESTE. Keys do Wii U continuam no aparelho, fora do APK e deste Git.
+- **Wii U no POCO (Mali-G720):** tela preta com Vulkan sem BCn (`VK_FORMAT_BC1`…`BC5`). No A56 (Xclipse) a imagem aparece.
+- **PS Vita lista vazia após instalar:** o RAR pode entregar o patch antes do jogo base (`Install app before patch`); `ux0/app` fica vazia. O 4115 não altera esse instalador.
+- Backup local `G:\BAKUP SISTEMA APP 02-10-2026` (fora do Git).
+- Cemu 0.5.2 estável, ARMSX2, FBNeo e o APK `7ce3fab3` intactos.
+
+---
+
 ## Linha do tempo das revisões de motor
 
 1. **29/09** — carrossel 720p, LED, playlist retrô ([tag](versions/estavel-2026-09-29-playlist-retro/)).
@@ -107,6 +120,7 @@ Código em [`versions/vita-t-firmware-20261001`](versions/vita-t-firmware-202610
 9. **01/10** — carrossel: LED mantido, overlay cinza removido ([código](versions/carousel-led-overlay-20261001/)).
 10. **01/10 noite** — PS Vita sem assistente de firmware; Wii U com `keys.txt` na pasta do Cemu ([código](versions/vita-wiiu-pronto-20261001/)).
 11. **01/10 noite** — avatar T no lugar do S; firmware Vita 3.74 dentro do APK TESTE ([código](versions/vita-t-firmware-20261001/)).
+12. **02/10** — Vita3K nativo 4103 → 4115; 3.74 e keys como no GitHub ([código](versions/vita-engine-4115-20261002/)).
 
 Cliente de licença comercial Android: [station-android-client-20260930](versions/station-android-client-20260930/). Login comercial desligado até URL, chave pública e rotas do servidor.
 

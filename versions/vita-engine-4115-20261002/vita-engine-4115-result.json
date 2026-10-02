@@ -1,0 +1,19 @@
+{
+  "stable_sha256_unchanged": true,
+  "old_1_0_untouched": true,
+  "ps2_fbneo_untouched": true,
+  "vita_engine": "4115",
+  "vita_commit": "a366df69",
+  "donor_sha256": "b9c7cf96dcc2d5bb0286dbf29676ea6ce4b556bc030b0d7c90ef27db8d8963dc",
+  "libVita3K_sha256": "a133ff7e5397ae09d863e9583c37a5070024f0bc226630ae4a1fc40e77fed8db",
+  "previous_libVita3K_sha256": "d5214575d905a3950d506873a906bf3053e721493dbd496062abdd4b2fc072ed",
+  "classes23_unchanged": "cb9726a822e76e742d211cc8b3867a1117389c5a83641572c2e5533d90f5bc36",
+  "classes24_unchanged": "972ae20692a0297a735cc7a24d957396950a20b9ff00d6fadb63f03949d142af",
+  "java_dex_identical_to_4103": true,
+  "firmware_bundled": true,
+  "output": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\side-by-side-turborama-20261001\\TurboramaStation-TESTE-lado-a-lado.apk",
+  "sha256": "0e7974e1a324c4aabfb475d1fa9081f4307efd52ca099323bcafdd852694478b",
+  "bytes": 1898657898,
+  "keys_bundled": false,
+  "note": "TESTE Vita3K native engine updated 4103 -> 4115; Java/firmware/entry unchanged; keys stay off APK"
+}
