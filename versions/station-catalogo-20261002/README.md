@@ -1,3 +1,14 @@
+## Atualização das conexões Station — 02/10/2026
+
+Fonte de contrato: `Servidor-pix` `ac86942` (estado da 5192) e `832f840` (handoff do APK). O cliente usa o mesmo host `/v1/station/` para ativação, sessão, perfil, catálogo, capa, autorização de download e artefato. A lista e as capas só são requisitadas após sessão; o jogo só é autorizado quando solicitado. O carrossel nativo permanece intacto e `StationTransfer` responde seus endereços locais `station.invalid`.
+
+Esta revisão mantém o nome salvo quando `/me` está indisponível, recusa redirecionamento e tipo de capa fora do contrato, verifica o tamanho recebido e troca os arquivos temporários sem apagar o arquivo anterior quando ocorre falha. O catálogo salvo é mantido se faltar `items` ou `revision` válida. A origem `station.invalid` só é reconhecida pelo endereço HTTPS exato.
+
+APK candidato compilado e assinado: `E:\ESTUDO APK\work\native-carousel\implementation\side-by-side-turborama-20261001\TurboramaStation-TESTE-lado-a-lado.apk`; SHA-256 `d810434352f7ad2e7d1d08efe44f31eb76d132ffc43ba3b81b9ffc9e64efae1b`; 1.898.675.776 bytes. Mudaram apenas `classes5.dex` e `classes8.dex`. O APK estável Cemu 0.5.2 permaneceu com seu hash. Este candidato **não foi instalado nem testado no telefone** nesta rodada.
+
+Limite externo: o retorno anterior do servidor foi 404 `STATION_COVER_NOT_FOUND` para uma capa do catálogo. O APK não pode criar o `coverPath` ausente na 5192. O handoff `CRUZAMENTO-HANDOFF-SERVIDOR-PIX.md` define a conferência de um `coverId` no Linux antes de atribuir novo 404 ao cliente. O fluxo de artefato foi compilado, mas não foi exercitado nesta rodada.
+
+---
 # Cliente Station no TESTE — 02/10/2026
 
 Pedido do mantenedor: deixar o aplicativo neste ponto, no ramo `versao-funcional`. A pasta que gera o APK continua local. Este Git guarda o cliente Java e a receita. APK, `.so`, `.PUP`, BIOS, ROMs, `keys.txt` e catálogo não entram.

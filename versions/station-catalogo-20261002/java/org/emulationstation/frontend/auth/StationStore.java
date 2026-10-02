@@ -30,7 +30,7 @@ public final class StationStore {
     private StationStore() {}
 
     public static boolean owned(String url) {
-        return url != null && url.toLowerCase().contains(HOST);
+        return url != null && url.toLowerCase(java.util.Locale.ROOT).startsWith("https://" + HOST + "/");
     }
 
     public static String coverId(String url) {

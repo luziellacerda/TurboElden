@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import org.emulationstation.frontend.auth.StationClient;
 import org.emulationstation.frontend.auth.StationLibrary;
 import org.emulationstation.frontend.auth.StationProtocol;
@@ -236,14 +238,7 @@ public final class StationTransfer {
             int read;
             while ((read = input.read(buffer)) >= 0) output.write(buffer, 0, read);
         }
-        if (destination.exists() && !destination.delete()) {
-            partial.delete();
-            throw new IllegalStateException("destination");
-        }
-        if (!partial.renameTo(destination)) {
-            partial.delete();
-            throw new IllegalStateException("destination");
-        }
+        Files.move(partial.toPath(), destination.toPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
     }
 
     private static byte[] read(File file) throws Exception {

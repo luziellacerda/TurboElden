@@ -31,6 +31,8 @@ public final class StationLibrary {
                 return;
             }
             JSONArray source = catalog.optJSONArray("items");
+            if (source == null || catalog.optLong("revision", 0) < 1)
+                throw new SecurityException("Station catalog was rejected.");
             JSONArray clean = new JSONArray();
             StringBuilder table = new StringBuilder();
             if (source != null) {

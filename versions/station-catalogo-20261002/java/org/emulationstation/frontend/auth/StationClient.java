@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.PublicKey;
@@ -172,6 +174,8 @@ public final class StationClient {
             try (OutputStream output = connection.getOutputStream()) { output.write(body); }
         }
         int status = connection.getResponseCode();
+        if (status / 100 == 3 || connection.getHeaderField("Location") != null)
+            throw new SecurityException("Station redirect was rejected.");
         InputStream stream = status >= 400 ? connection.getErrorStream() : connection.getInputStream();
         byte[] response = readLimited(stream);
         if (status == 503 && StationProtocolPath.profile().equals(path)) return null;
@@ -246,6 +250,7 @@ public final class StationClient {
     }
 
     private static String saveBody(String path, String bearer, File destination, long maximum, int readTimeout, boolean image) throws Exception {
+        if (bearer == null || bearer.isEmpty()) throw new SecurityException("Station session is missing.");
         HttpURLConnection connection = open(path, "GET", bearer, readTimeout);
         File partial = new File(destination.getParentFile(), destination.getName() + ".part");
         try {
@@ -261,6 +266,7 @@ public final class StationClient {
             }
             String type = connection.getContentType() == null ? "" : connection.getContentType().toLowerCase();
             String extension = image ? imageExtension(type) : "";
+            if (image && extension.isEmpty()) throw new SecurityException("Station cover type was rejected.");
             if (!image && !type.startsWith("application/octet-stream")) {
                 throw new SecurityException("Station file type was rejected.");
             }
@@ -270,10 +276,6 @@ public final class StationClient {
                 byte[] buffer = new byte[8192];
                 int read;
                 while ((read = stream.read(buffer)) >= 0) {
-                    if (image && extension.length() == 0 && total == 0) {
-                        extension = sniffedExtension(buffer, read);
-                        if (extension.length() == 0) throw new SecurityException("Station cover type was rejected.");
-                    }
                     total += read;
                     if (total > maximum || (!image && announced > 0 && total > announced)) {
                         throw new SecurityException("Station file length was rejected.");
@@ -281,15 +283,13 @@ public final class StationClient {
                     output.write(buffer, 0, read);
                 }
             }
-            if (total < 1 || (!image && total != announced)) {
+            if (total < 1 || (announced >= 0 && total != announced)) {
                 throw new SecurityException("Station file length was rejected.");
             }
-            if (destination.exists() && !destination.delete()) throw new SecurityException("Station file was not replaced.");
-            if (!partial.renameTo(destination)) throw new SecurityException("Station file was not stored.");
+            Files.move(partial.toPath(), destination.toPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
             return extension;
         } catch (Exception failure) {
             partial.delete();
-            destination.delete();
             throw failure;
         } finally {
             connection.disconnect();

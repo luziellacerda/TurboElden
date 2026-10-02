@@ -37,7 +37,6 @@ public final class StationAuth {
         }
         EXECUTOR.execute(() -> {
             try {
-                StationStore.publish(context);
                 File licenseFile = new File(context.getNoBackupFilesDir(), "station-license-id.txt");
                 String trimmed = field == null ? "" : field.trim();
                 String licenseId;
@@ -58,6 +57,7 @@ public final class StationAuth {
                     return;
                 }
                 accessToken = StationClient.openSession(context, licenseId);
+                StationStore.publish(context);
                 String name;
                 try {
                     name = StationClient.profile(accessToken);
@@ -66,7 +66,7 @@ public final class StationAuth {
                 } catch (Exception failure) {
                     name = "";
                 }
-                if (name == null) name = "";
+                if (name == null || name.isEmpty()) name = savedName(context);
                 if (!name.isEmpty()) writeName(context, name);
                 try { StationLibrary.refresh(context, accessToken); } catch (Exception ignored) { }
                 callback.ok(name);
@@ -89,7 +89,6 @@ public final class StationAuth {
         }
         EXECUTOR.execute(() -> {
             try {
-                StationStore.publish(context);
                 File licenseFile = new File(context.getNoBackupFilesDir(), "station-license-id.txt");
                 String licenseId = readLicense(licenseFile);
                 if (!StationProtocol.licenseId(licenseId)) {
@@ -97,6 +96,7 @@ public final class StationAuth {
                     return;
                 }
                 accessToken = StationClient.openSession(context, licenseId);
+                StationStore.publish(context);
                 String name = "";
                 try {
                     name = StationClient.profile(accessToken);
@@ -105,7 +105,7 @@ public final class StationAuth {
                 } catch (Exception failure) {
                     name = "";
                 }
-                if (name == null) name = "";
+                if (name == null || name.isEmpty()) name = savedName(context);
                 if (!name.isEmpty()) writeName(context, name);
                 try { StationLibrary.refresh(context, accessToken); } catch (Exception ignored) { }
                 callback.ok(name);
