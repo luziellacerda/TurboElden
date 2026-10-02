@@ -19,10 +19,10 @@ Todos os motores abaixo foram incorporados ou atualizados **dentro do mesmo apli
 | Dreamcast / Atomiswave / Naomi / Naomi 2 | **Flycast v2.7-44** (`e36e9df2`) | `:flycast` | Motor e menus oficiais. Rotas nativas passam ao Flycast. Botão **VOLTAR AO MENU** no cabeçalho. Toque rápido no retorno corrigido. Fundo Turborama no menu. Naomi e Naomi 2 com célula, vídeo, sinopse e rota; categorias vazias de propósito. | Estável; Naomi preparado para jogos |
 | PS2 | **ARMSX2 2.7.2** | `:ps2` | Motor e menus oficiais no APK. GTA San Andreas abriu e voltou às plataformas. Menu de saída com identidade Turborama. | Parado por ordem expressa; permanece 2.7.2 |
 | PSP / PSP BR | **PPSSPP 1.20.4** | `:psp` | Motor e menus oficiais. PSP BR (`pspbr`) na mesma rota, 59 jogos da categoria original. Mantenedor confirmou PSP. | Integrado |
-| Wii U | **Cemu Android 0.5.2** | processo Cemu isolado | Atualização do Cemu 0.5 (SSimco) para **0.5.2** (SapphireRhodonite). GamePad do jogador 1 habilitado na primeira abertura. Correção RAR5 (Mario Kart 8 deixou de ser tratado como corrompido). Ponte JNI do DataStore reconstruída no namespace isolado. Mario Kart 8 abriu, controles responderam, Sair voltou às plataformas sem login. | Estável atual (`7ce3fab3`) |
+| Wii U | **Cemu Android 0.5.2** | processo Cemu isolado | Atualização do Cemu 0.5 (SSimco) para **0.5.2** (SapphireRhodonite). GamePad do jogador 1 habilitado na primeira abertura. Correção RAR5 (Mario Kart 8 deixou de ser tratado como corrompido). Ponte JNI do DataStore reconstruída no namespace isolado. Mario Kart 8 abriu, controles responderam, Sair voltou às plataformas sem login. TESTE 01/10: `keys.txt` do dono já na pasta `Cemu/`; a abertura copia o arquivo se a pasta estiver vazia. Chaves fora do Git. | Estável atual (`7ce3fab3`); TESTE com keys no aparelho |
 | Xbox clássico | **X1 BOX 1.2.8** (xemu) | `:xbox` menus, `:xboxemu` jogo | Classes, SDL3, libxemu e conversor XISO do APK oficial. Tabela de controles própria. JOGAR entrega o ISO ao launcher. Retorno à TurboramaStation. BIOS/MCPX/HDD só copiados se ausentes. 54 jogos da chave `xbox`. | Integrado na estável de plataformas |
 | Xbox 360 | **XenDroid 0b11201** | processo próprio | Motor oficial, 24 jogos/24 capas, vídeo 720, configurações isoladas. | Experimental; candidato publicado, instalação adiada na época |
-| PS Vita | **Vita3K** | processo próprio | Firmware oficial preparado. Correção RAR5. | Integrado; jogos completos ainda com pendências |
+| PS Vita | **Vita3K** | `:psvita` | Firmware oficial 3.74 aplicado na abertura a partir dos PUPs já no aparelho. Usuário **Jogador** criado. Preferência `vita3k_app` / `initial_setup_completed` grava o setup como concluído, então o Vita3K abre a biblioteca e não a tela Install Firmware. Correção RAR5. PUPs fora do Git e do APK. | TESTE 01/10 pronto na abertura |
 | Saturn | **YabaSanshiro Android 1.20.46** | `:saturn` | Core Libretro antigo substituído pela integração Android oficial (GLES/Oboe). Christmas NiGHTS abriu e voltou mantendo login. Vulkan e RetroAchievements fora desta integração. | Integrado |
 | PC Engine CD | **Beetle PCE preciso** (`mednafen_pce`) | Libretro ARM64 | Rota nova no núcleo preciso. Fast permanece nos sistemas que já o usavam. `syscard3` local só se ausente. Dois CHDs válidos. | Integrado |
 | Jaguar | núcleo já da base | — | 56 jogos válidos; 68 entradas que eram imagem/vídeo/metadado saíram da lista. 58 capas Jaguar/PCE CD locais. | Catálogo corrigido |
@@ -42,8 +42,8 @@ Pedido de subir enquanto testa. GTA renderizou e a saída para plataformas foi c
 **PPSSPP 1.20.4** — mesma atualização PS2/PSP  
 PSP BR permanece na rota PPSSPP, pasta `pspbr`, acesso ESPECIAL original.
 
-**Cemu 0.5.2** — [handoff](versions/wiiu-cemu-052-20260930/README.md) · [RAR5](versions/wiiu-rar5-fix-20260930/README.md)  
-Doador `Cemu.DualScreen.0.5.2.apk` SHA-256 `e1630fc51a4bbb18ef8499829fad011601d575726f019090abada6c9dd258387`, MPL-2.0. `WiiUBootstrap` liga o GamePad 1 se estiver desligado. `libarchive` RAR5 ignora entradas de diretório. DataStore JNI no namespace `twiiucor`. Teste em Mario Kart 8, um aparelho; o port Android continua experimental.
+**Cemu 0.5.2** — [handoff](versions/wiiu-cemu-052-20260930/README.md) · [RAR5](versions/wiiu-rar5-fix-20260930/README.md) · [keys na abertura](versions/vita-wiiu-pronto-20261001/README.md)  
+Doador `Cemu.DualScreen.0.5.2.apk` SHA-256 `e1630fc51a4bbb18ef8499829fad011601d575726f019090abada6c9dd258387`, MPL-2.0. `WiiUBootstrap` liga o GamePad 1 se estiver desligado. `libarchive` RAR5 ignora entradas de diretório. DataStore JNI no namespace `twiiucor`. Teste em Mario Kart 8, um aparelho; o port Android continua experimental. No TESTE, `WiiUEntryActivity.ensureKeys()` deixa `Cemu/keys.txt` pronto copiando o arquivo já existente no aparelho (`EmulationStation/bios/wiiu` ou a própria pasta Cemu). O `keys.txt` permanece local.
 
 **X1 BOX 1.2.8** — [plataformas](versions/estavel-2026-09-30-plataformas-emuladores/ALTERACOES.md)  
 Android mínimo efetivo API 29. Ponte apresenta aviso em versões anteriores. TESTE posterior (pacote `org.turboramastation.frontend`) ajustou xemu: OpenGL, 30 FPS, frame skip, OpenSL, DSP desligado, volume 0,7, e atualizou o vídeo 720 da célula Xbox. Esses ajustes de TESTE ficam no APK local; o Git desta pasta descreve a integração 1.2.8.
@@ -53,7 +53,8 @@ Lançamento [XenDroid-0b11201](https://github.com/rfandango/XenDroid/releases/ta
 
 **YabaSanshiro 1.20.46** — Saturn Android oficial, GLES/Oboe, processo `:saturn`.
 
-**Vita3K** — firmware preparado; correção RAR5 compartilhada com a linha Wii U.
+**Vita3K** — [pronto na abertura](versions/vita-wiiu-pronto-20261001/README.md)  
+`VitaEntryActivity.ensureReady()` aplica os PUPs oficiais 3.74 que já estão no aparelho, cria o usuário Jogador e marca `initial_setup_completed`. A tela Install Firmware do Vita3K deixa de aparecer. Firmware fora do Git. Correção RAR5 compartilhada com a linha Wii U.
 
 **Beetle PCE preciso** — PC Engine CD; Fast permanece onde já era usado.
 
@@ -69,7 +70,17 @@ Código nativo em [`versions/carousel-led-overlay-20261001`](versions/carousel-l
 - Botão ABRIR estático nesse carrossel.
 - Cemu 0.5.2, ARMSX2, FBNeo e o APK estável `7ce3fab3` intactos.
 
-Pacote TESTE: `org.turboramastation.frontend`. SHA-256 do APK local `a03ea6b108637d82f09105765beb0ed9aa28a7571813935ab651f241ffe4f2c8`.
+Pacote TESTE: `org.turboramastation.frontend`. SHA-256 do APK local após Vita+Wii U: `f53fa49ad4a10f3c75b5fb5636138987f877282d21a29d6da81c6bc058ab6fe6`.
+
+---
+
+## TESTE 01/10/2026 — PS Vita e Wii U prontos
+
+Código em [`versions/vita-wiiu-pronto-20261001`](versions/vita-wiiu-pronto-20261001/README.md).
+
+- **PS Vita:** a abertura aplica o firmware oficial 3.74 que já está no aparelho, cria o usuário Jogador e grava `initial_setup_completed`. O Vita3K abre a biblioteca; a tela Install Firmware não aparece. PUPs só no storage do app.
+- **Wii U:** `keys.txt` do dono na pasta `Cemu/` (e cópia em `EmulationStation/bios/wiiu/`). A abertura copia o arquivo se a pasta do Cemu estiver vazia. Chaves fora do Git e do APK.
+- Cemu 0.5.2 estável, ARMSX2, FBNeo e o APK `7ce3fab3` intactos.
 
 ---
 
@@ -84,6 +95,7 @@ Pacote TESTE: `org.turboramastation.frontend`. SHA-256 do APK local `a03ea6b1086
 7. **30/09** — vídeos BR/NDS e Arcade/FBNeo/MAME ([BR](versions/atualizacao-2026-09-30-videos-br/), [arcade](versions/atualizacao-2026-09-30-videos-arcade/)).
 8. **30/09 noite** — Cemu 0.5.2 + RAR5 + GamePad ([tag cemu-052](versions/estavel-2026-09-30-cemu-052/), [código](versions/wiiu-cemu-052-20260930/)).
 9. **01/10** — carrossel: LED mantido, overlay cinza removido ([código](versions/carousel-led-overlay-20261001/)).
+10. **01/10 noite** — PS Vita sem assistente de firmware; Wii U com `keys.txt` na pasta do Cemu ([código](versions/vita-wiiu-pronto-20261001/)).
 
 Cliente de licença comercial Android: [station-android-client-20260930](versions/station-android-client-20260930/). Login comercial desligado até URL, chave pública e rotas do servidor.
 

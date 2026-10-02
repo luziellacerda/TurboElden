@@ -2,6 +2,9 @@
 *.dex
 *.so
 *.keys
+keys.txt
+*.PUP
+*.pup
 *.keystore
 *.jks
 .env
