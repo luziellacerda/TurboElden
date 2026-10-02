@@ -22,7 +22,7 @@ Todos os motores abaixo foram incorporados ou atualizados **dentro do mesmo apli
 | Wii U | **Cemu Android 0.5.2** | processo Cemu isolado | Atualização do Cemu 0.5 (SSimco) para **0.5.2** (SapphireRhodonite). GamePad do jogador 1 habilitado na primeira abertura. Correção RAR5 (Mario Kart 8 deixou de ser tratado como corrompido). Ponte JNI do DataStore reconstruída no namespace isolado. Mario Kart 8 abriu, controles responderam, Sair voltou às plataformas sem login. TESTE 01/10: `keys.txt` do dono já na pasta `Cemu/`; a abertura copia o arquivo se a pasta estiver vazia. Chaves fora do Git. | Estável atual (`7ce3fab3`); TESTE com keys no aparelho |
 | Xbox clássico | **X1 BOX 1.2.8** (xemu) | `:xbox` menus, `:xboxemu` jogo | Classes, SDL3, libxemu e conversor XISO do APK oficial. Tabela de controles própria. JOGAR entrega o ISO ao launcher. Retorno à TurboramaStation. BIOS/MCPX/HDD só copiados se ausentes. 54 jogos da chave `xbox`. | Integrado na estável de plataformas |
 | Xbox 360 | **XenDroid 0b11201** | processo próprio | Motor oficial, 24 jogos/24 capas, vídeo 720, configurações isoladas. | Experimental; candidato publicado, instalação adiada na época |
-| PS Vita | **Vita3K** | `:psvita` | Firmware oficial 3.74 aplicado na abertura a partir dos PUPs já no aparelho. Usuário **Jogador** criado. Preferência `vita3k_app` / `initial_setup_completed` grava o setup como concluído, então o Vita3K abre a biblioteca e não a tela Install Firmware. Correção RAR5. PUPs fora do Git e do APK. | TESTE 01/10 pronto na abertura |
+| PS Vita | **Vita3K** | `:psvita` | Firmware oficial 3.74 vai no APK TESTE (`assets/psvita-firmware/`) e a abertura copia para `files/psvita/setup/`, aplica no Vita3K, cria o usuário **Jogador** e grava `vita3k_app` / `initial_setup_completed`. A tela Install Firmware não aparece. Correção RAR5. PUPs fora do Git. | TESTE 01/10 com 3.74 no APK |
 | Saturn | **YabaSanshiro Android 1.20.46** | `:saturn` | Core Libretro antigo substituído pela integração Android oficial (GLES/Oboe). Christmas NiGHTS abriu e voltou mantendo login. Vulkan e RetroAchievements fora desta integração. | Integrado |
 | PC Engine CD | **Beetle PCE preciso** (`mednafen_pce`) | Libretro ARM64 | Rota nova no núcleo preciso. Fast permanece nos sistemas que já o usavam. `syscard3` local só se ausente. Dois CHDs válidos. | Integrado |
 | Jaguar | núcleo já da base | — | 56 jogos válidos; 68 entradas que eram imagem/vídeo/metadado saíram da lista. 58 capas Jaguar/PCE CD locais. | Catálogo corrigido |
@@ -53,8 +53,8 @@ Lançamento [XenDroid-0b11201](https://github.com/rfandango/XenDroid/releases/ta
 
 **YabaSanshiro 1.20.46** — Saturn Android oficial, GLES/Oboe, processo `:saturn`.
 
-**Vita3K** — [pronto na abertura](versions/vita-wiiu-pronto-20261001/README.md)  
-`VitaEntryActivity.ensureReady()` aplica os PUPs oficiais 3.74 que já estão no aparelho, cria o usuário Jogador e marca `initial_setup_completed`. A tela Install Firmware do Vita3K deixa de aparecer. Firmware fora do Git. Correção RAR5 compartilhada com a linha Wii U.
+**Vita3K** — [pronto na abertura](versions/vita-wiiu-pronto-20261001/README.md) · [3.74 no APK TESTE](versions/vita-t-firmware-20261001/README.md)  
+`VitaEntryActivity` copia os três PUPs oficiais 3.74 de `assets/psvita-firmware/` para `files/psvita/setup/`, aplica no Vita3K, cria o usuário Jogador e marca `initial_setup_completed`. A tela Install Firmware deixa de aparecer. Pacotes PUP fora do Git. Correção RAR5 compartilhada com a linha Wii U.
 
 **Beetle PCE preciso** — PC Engine CD; Fast permanece onde já era usado.
 
@@ -70,7 +70,7 @@ Código nativo em [`versions/carousel-led-overlay-20261001`](versions/carousel-l
 - Botão ABRIR estático nesse carrossel.
 - Cemu 0.5.2, ARMSX2, FBNeo e o APK estável `7ce3fab3` intactos.
 
-Pacote TESTE: `org.turboramastation.frontend`. SHA-256 do APK local após Vita+Wii U: `f53fa49ad4a10f3c75b5fb5636138987f877282d21a29d6da81c6bc058ab6fe6`.
+Pacote TESTE: `org.turboramastation.frontend`. SHA-256 local após firmware 3.74 no APK: `5090cb83e0d69957e22227b748848ce112c8aa302361cc71b5f336937fbfc7f5`.
 
 ---
 
@@ -78,8 +78,18 @@ Pacote TESTE: `org.turboramastation.frontend`. SHA-256 do APK local após Vita+W
 
 Código em [`versions/vita-wiiu-pronto-20261001`](versions/vita-wiiu-pronto-20261001/README.md).
 
-- **PS Vita:** a abertura aplica o firmware oficial 3.74 que já está no aparelho, cria o usuário Jogador e grava `initial_setup_completed`. O Vita3K abre a biblioteca; a tela Install Firmware não aparece. PUPs só no storage do app.
+- **PS Vita:** a abertura aplica o firmware oficial 3.74, cria o usuário Jogador e grava `initial_setup_completed`. O Vita3K abre a biblioteca; a tela Install Firmware não aparece.
 - **Wii U:** `keys.txt` do dono na pasta `Cemu/` (e cópia em `EmulationStation/bios/wiiu/`). A abertura copia o arquivo se a pasta do Cemu estiver vazia. Chaves fora do Git e do APK.
+- Cemu 0.5.2 estável, ARMSX2, FBNeo e o APK `7ce3fab3` intactos.
+
+---
+
+## TESTE 01/10/2026 — ícone T e firmware Vita no APK
+
+Código em [`versions/vita-t-firmware-20261001`](versions/vita-t-firmware-20261001/README.md).
+
+- **Avatar:** o S roxo ao lado de JOGADOR saiu. Sem foto, o cabeçalho mostra o T verde da Turborama (`profile_mockup.png`).
+- **PS Vita:** os três componentes oficiais 3.74 (componentes, firmware, fontes) vão no APK TESTE em `assets/psvita-firmware/`. Na primeira abertura a Turborama copia para `files/psvita/setup/` e o Vita3K instala. Pacotes PUP fora do Git.
 - Cemu 0.5.2 estável, ARMSX2, FBNeo e o APK `7ce3fab3` intactos.
 
 ---
@@ -96,6 +106,7 @@ Código em [`versions/vita-wiiu-pronto-20261001`](versions/vita-wiiu-pronto-2026
 8. **30/09 noite** — Cemu 0.5.2 + RAR5 + GamePad ([tag cemu-052](versions/estavel-2026-09-30-cemu-052/), [código](versions/wiiu-cemu-052-20260930/)).
 9. **01/10** — carrossel: LED mantido, overlay cinza removido ([código](versions/carousel-led-overlay-20261001/)).
 10. **01/10 noite** — PS Vita sem assistente de firmware; Wii U com `keys.txt` na pasta do Cemu ([código](versions/vita-wiiu-pronto-20261001/)).
+11. **01/10 noite** — avatar T no lugar do S; firmware Vita 3.74 dentro do APK TESTE ([código](versions/vita-t-firmware-20261001/)).
 
 Cliente de licença comercial Android: [station-android-client-20260930](versions/station-android-client-20260930/). Login comercial desligado até URL, chave pública e rotas do servidor.
 

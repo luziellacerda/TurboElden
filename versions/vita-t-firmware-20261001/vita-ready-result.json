@@ -1,0 +1,24 @@
+{
+  "stable_sha256_unchanged": true,
+  "old_1_0_untouched": true,
+  "firmware_bundled": true,
+  "output": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\side-by-side-turborama-20261001\\TurboramaStation-TESTE-lado-a-lado.apk",
+  "sha256": "5090cb83e0d69957e22227b748848ce112c8aa302361cc71b5f336937fbfc7f5",
+  "bytes": 1898651065,
+  "classes24_sha256": "972ae20692a0297a735cc7a24d957396950a20b9ff00d6fadb63f03949d142af",
+  "firmware": {
+    "PSVita-3.74-preinstalled.PUP": {
+      "bytes": 128798720,
+      "sha256": "339d1439eb329cfbd1a936f0a1563458e0555ef52975486b2844e24b6049e33e"
+    },
+    "PSVita-3.74-main.PUP": {
+      "bytes": 133834240,
+      "sha256": "6ef6dc8da6db026f28647713e473486d770087a605c52a8d751bfca7478386cf"
+    },
+    "PSVita-3.74-fonts.PUP": {
+      "bytes": 56778752,
+      "sha256": "c3c03fc7363dd573d90e5157629bf11551f434b283cc898d9ffc71dd716b791c"
+    }
+  },
+  "note": "TESTE APK includes official 3.74 PUPs; VitaEntry copies them to setup and installs on first open"
+}
