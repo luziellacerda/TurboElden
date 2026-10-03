@@ -1,3 +1,17 @@
+# Estado atual — estável Station SNES / Mega Drive, 03/10/2026
+
+Referência: branch/tag `estavel-station-snes-megadrive-20261003`. Ler primeiro `docs/server/HANDOFF-TECNICO-COMPLETO-STATION-SNES-MEGADRIVE-20261003.md` na raiz do Git (cópia na raiz canônica E:). Manifesto e inventários em `versions/estavel-station-snes-megadrive-20261003/`.
+
+APK SHA256 `3b355b02e4efab1801ccf899f77a5bc0d4d95e1c622d8cb9c3a3e1f35c192d17`, 1902768022 bytes; congelado em `E:\ESTUDO APK\estaveis\2026-10-03-station-snes-megadrive\TurboStations-ESTAVEL-SNES-MegaDrive-20261003.apk`. Fontes em `E:\ESTUDO APK\work\turbostations-reconstruction-20261002`, mirror `versions/station-reconstruction-20261002`. Cliente `1.0.8-station-storage-20261003.3`.
+
+Sessão/perfil/catálogo1816/capas e dois downloads/instalações/aberturas comprovados; SNES e Mega Drive retornaram sem login, conforme confirmação do mantenedor. Instalados persistiram ao reiniciar.327 verificações locais e10 de armazenamento no Android passaram. Raiz/permissão/recursos e consulta de espaço Android corrigidos no APK; nenhum reparo manual da árvore real do telefone. Assinatura, jogos, saves e licença preservados.
+
+Escopo estável é o fluxo SNES/Mega observado, não todos os jogos/motores ou checkout comercial completo. Servidor: retorno fa7a10cccd93a8d97de16e28fbc81b8da4c6fa61, API fd13c0d relatada em produção. Meta seguinte autorizada: preparar40mil jogos em revisão separada APÓS congelar esta tag. Nesta estável permanecem4096 itens/12MiB; não alegar40mil implementados. Não alterar a tag congelada. Limites, metadado Battletoads USA/ESP e legado nativo residual constam no handoff.
+
+**Todos os estados abaixo são históricos. Este bloco e o handoff completo prevalecem.**
+
+---
+
 # Revisão integral Station — 03/10/2026 — entrada atual
 
 Leia primeiro [HANDOFF-REVISAO-INTEGRAL-APP-STATION-20261003.md](../../docs/server/HANDOFF-REVISAO-INTEGRAL-APP-STATION-20261003.md) e [mapa/integridade](../../docs/server/revisao-app-20261003/APPENDICE-MAPA-E-INTEGRIDADE.md).

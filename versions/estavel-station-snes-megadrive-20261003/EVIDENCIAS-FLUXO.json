@@ -1,0 +1,124 @@
+{
+  "apkSha256": "3b355b02e4efab1801ccf899f77a5bc0d4d95e1c622d8cb9c3a3e1f35c192d17",
+  "sourceBaseRevision": "2834e3b101ce4e957414bccd13154c8a70af2f01",
+  "clientVersion": "1.0.8-station-storage-20261003.3",
+  "previousApkSha256": "fa3bc84425120803d7e90069be3c296a91dbe04146455063f12d9a6205bbf795",
+  "changedFromPreviousApk": [
+    "classes5.dex",
+    "classes28.dex"
+  ],
+  "hostChecks": 327,
+  "androidRootChecks": 10,
+  "realRomsDirectoryAbsentBeforeInstall": true,
+  "manuallyCreatedRealAppDirectory": false,
+  "manuallyCopiedRuntimeResources": false,
+  "manifestAndSigningIdentityPreserved": true,
+  "deviceInstalled": true,
+  "productionCatalogCountObservedBeforeFix": 1816,
+  "failureBeforeFix": "NoSuchFileException during native-supplied ROM root toRealPath",
+  "resourceFailuresBeforeFix": [
+    "Theme and emulator setup attempted before storage access was granted",
+    "Retired packs/Dolphin.zip referenced but absent in APK"
+  ],
+  "authenticatedFlowVerified": true,
+  "installedApkHashVerified": true,
+  "lastUpdateTime": "2026-10-03 17:20:39 -03:00",
+  "authenticatedSessionVerified": true,
+  "profileHttpStatus": 200,
+  "catalogHttpStatus": 200,
+  "catalogNetworkCount": 1816,
+  "catalogPublishedCount": 1816,
+  "unsupportedPlatformCount": 0,
+  "coverHttpStatus": 200,
+  "coverRevision": 3,
+  "coverCorrelation": "32d5985f366c4db097917ebae9f21000",
+  "resourcesRestored": 199,
+  "biosRestored": 0,
+  "storageCreatedByApp": true,
+  "downloadVerified": true,
+  "gameLaunchVerified": true,
+  "returnVerified": true,
+  "deviceConnection": "connected; validation completed",
+  "userObservation": "User confirmed normal emulator-menu return without login for SNES and Mega Drive.",
+  "pendingDeviceCleanup": [],
+  "gameLaunchPlatform": "snes",
+  "persistenceAfterProcessRestartVerified": true,
+  "installedCountAfterRestart": 2,
+  "screenStayOnRestored": 0,
+  "ownTemporaryDeviceFilesRemoved": true,
+  "fullEmulatorMatrixVerified": false,
+  "permissionUiDenyAllowVerified": false,
+  "downloadFailureBeforeFix": {
+    "authorizeStatus": 200,
+    "authorizeCorrelation": "a56c46dbb0184320b47193f623ac2e45",
+    "artifactGetObserved": false,
+    "isolatedAndroidReproduction": "SecurityException:getFileStore",
+    "replacement": "StationStorage.usableBytes -> File.getUsableSpace",
+    "usableBytesInProbe": 16409522176
+  },
+  "observedInstalledGames": [
+    {
+      "itemId": "826da6daebe9edbebffb3721f83abf12",
+      "platform": "snes",
+      "revision": 3,
+      "artifact": {
+        "fileName": "Battletoads in Battlemaniacs (USA).zip",
+        "sizeBytes": 670452,
+        "sha256": "cd3a1292fdb5953ca414dd6a74ac0aa1886b2d132fce4c804e79d5e25ea029f6",
+        "format": "zip",
+        "launchPath": "Battletoads in Battlemaniacs (ESP) (NTSC).smc",
+        "expandedSizeBytes": 1048576,
+        "fileCount": 1
+      }
+    },
+    {
+      "itemId": "ce3f245960b94e064f027ffd8aefe466",
+      "platform": "megadrive",
+      "revision": 3,
+      "artifact": {
+        "fileName": "Cutthroat Island (USA, Europe).zip",
+        "sizeBytes": 885336,
+        "sha256": "5c18e99d2ec819ea207e0d5cef1513c1845c8417121022c047d216d4ef140124",
+        "format": "zip",
+        "launchPath": "Cutthroat Island (USA, Europe).md",
+        "expandedSizeBytes": 2097152,
+        "fileCount": 1
+      }
+    }
+  ],
+  "transferCorrelations": [
+    {
+      "platform": "snes",
+      "authorize": "d55b3d11a91c440cb16d82a3dc2f9040",
+      "artifact": "96068ccaac1f42b2b6401b3090722491",
+      "status": 200
+    },
+    {
+      "platform": "megadrive",
+      "authorize": "e88520d765cf40548390a7d26e55c912",
+      "artifact": "facb2b4f378a414292c8910845b689d3",
+      "status": 200
+    }
+  ],
+  "changedFromIntermediate22b2": [
+    "META-INF/ANDROIDD.SF",
+    "classes28.dex",
+    "META-INF/MANIFEST.MF",
+    "META-INF/ANDROIDD.RSA"
+  ],
+  "stableScope": [
+    "snes",
+    "megadrive"
+  ],
+  "gameLaunchPlatforms": [
+    "snes",
+    "megadrive"
+  ],
+  "megaDriveExecution": {
+    "observedAt": "2026-10-03 17:28:33 -03:00",
+    "game": "Cutthroat Island (USA, Europe)",
+    "romBytes": 2097152,
+    "segaLogoAndIntroVisible": true,
+    "normalReturnWithoutLoginConfirmedByUser": true
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "inputLibmainSha256": "a1ae357dc29caac52d47386a71a0a9a685ecffb9c01d536f5af50b5ba658cda8",
+  "bindings": [
+    {
+      "entry": "0x18e4c4",
+      "function": "StationCore_request"
+    },
+    {
+      "entry": "0x18eafc",
+      "function": "StationCore_request"
+    },
+    {
+      "entry": "0x18f790",
+      "function": "StationCatalog_refresh"
+    },
+    {
+      "entry": "0x192b48",
+      "function": "StationCatalog_update"
+    },
+    {
+      "entry": "0x192b7c",
+      "function": "StationCatalog_update"
+    },
+    {
+      "entry": "0x192f10",
+      "function": "StationCatalog_update"
+    },
+    {
+      "entry": "0x193cfc",
+      "function": "StationCatalog_update"
+    },
+    {
+      "entry": "0x194924",
+      "function": "StationCatalog_applyPending"
+    },
+    {
+      "entry": "0x194a60",
+      "function": "StationCatalog_refreshInstalled"
+    },
+    {
+      "entry": "0x195c28",
+      "function": "StationCatalog_update"
+    },
+    {
+      "entry": "0x196020",
+      "function": "StationCatalog_prioritize"
+    },
+    {
+      "entry": "0x1961ec",
+      "function": "StationCatalog_start"
+    },
+    {
+      "entry": "0x196a2c",
+      "function": "StationCatalog_cancel"
+    },
+    {
+      "entry": "0x196ac0",
+      "function": "StationCatalog_active"
+    },
+    {
+      "entry": "0x196c40",
+      "function": "StationCatalog_progress"
+    },
+    {
+      "entry": "0x196cd4",
+      "function": "StationCatalog_uninstall"
+    },
+    {
+      "entry": "0x1a2524",
+      "function": "StationLicense_sync"
+    },
+    {
+      "entry": "0x1a2b44",
+      "function": "StationLicense_enter"
+    },
+    {
+      "entry": "0x1a2b50",
+      "function": "StationLicense_enter"
+    },
+    {
+      "entry": "0x1a3148",
+      "function": "StationLicense_enter"
+    },
+    {
+      "entry": "0x1a3150",
+      "function": "StationLicense_enter"
+    },
+    {
+      "entry": "0x1a34b8",
+      "function": "StationLicense_sync"
+    },
+    {
+      "entry": "0x1a4674",
+      "function": "StationLicense_sync"
+    },
+    {
+      "entry": "0x1a4ef0",
+      "function": "StationLicense_sync"
+    },
+    {
+      "entry": "0x1a7f4c",
+      "function": "StationStats_init"
+    },
+    {
+      "entry": "0x1aa850",
+      "function": "StationStats_shutdown"
+    },
+    {
+      "entry": "0x1aad58",
+      "function": "StationStats_end"
+    },
+    {
+      "entry": "0x1ab4f0",
+      "function": "StationStats_event"
+    },
+    {
+      "entry": "0x1ab780",
+      "function": "StationStats_background"
+    },
+    {
+      "entry": "0x1aeb50",
+      "function": "StationStats_start"
+    },
+    {
+      "entry": "0x1af374",
+      "function": "StationStats_update"
+    },
+    {
+      "entry": "0x2292e0",
+      "function": "StationLoading_draw"
+    }
+  ]
+}

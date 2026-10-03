@@ -1,0 +1,346 @@
+{
+  "source": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+  "sourceSha256": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757",
+  "mappings": {
+    "3ds": {
+      "label": "3ds",
+      "folder": "3ds"
+    },
+    "Arcade": {
+      "label": "Arcade",
+      "folder": "arcade"
+    },
+    "Atomiswave": {
+      "label": "Atomiswave",
+      "folder": "atomiswave"
+    },
+    "Dreamcast": {
+      "label": "Dreamcast",
+      "folder": "dreamcast"
+    },
+    "GameCube": {
+      "label": "GameCube",
+      "folder": "gamecube"
+    },
+    "Gameboy": {
+      "label": "Gameboy",
+      "folder": "gameboy"
+    },
+    "Gameboy Color": {
+      "label": "Gameboy Color",
+      "folder": "gameboy-color"
+    },
+    "Gba": {
+      "label": "Gba",
+      "folder": "gba"
+    },
+    "Master System ": {
+      "label": "Master System ",
+      "folder": "master-system"
+    },
+    "MegaDrive": {
+      "label": "MegaDrive",
+      "folder": "megadrive"
+    },
+    "MegaDrive - BR": {
+      "label": "MegaDrive - BR",
+      "folder": "megadrive--br"
+    },
+    "Neo Geo": {
+      "label": "Neo Geo",
+      "folder": "neo-geo"
+    },
+    "Neo Geo CD": {
+      "label": "Neo Geo CD",
+      "folder": "neo-geo-cd"
+    },
+    "Nintendinho": {
+      "label": "Nintendinho",
+      "folder": "nintendinho"
+    },
+    "Nintendo 64": {
+      "label": "Nintendo 64",
+      "folder": "nintendo-64"
+    },
+    "Nintendo 64 - BR": {
+      "label": "Nintendo 64 - BR",
+      "folder": "nintendo-64--br"
+    },
+    "Nintendo DS": {
+      "label": "Nintendo DS",
+      "folder": "nintendo-ds"
+    },
+    "Odyssey 2": {
+      "label": "Odyssey 2",
+      "folder": "odyssey-2"
+    },
+    "PSP": {
+      "label": "PSP",
+      "folder": "psp"
+    },
+    "Pc Engine": {
+      "label": "Pc Engine",
+      "folder": "pc-engine"
+    },
+    "Pc Engine cd": {
+      "label": "Pc Engine cd",
+      "folder": "pc-engine-cd"
+    },
+    "Playstation 1": {
+      "label": "Playstation 1",
+      "folder": "psx"
+    },
+    "Playstation 2": {
+      "label": "Playstation 2",
+      "folder": "ps2"
+    },
+    "Playstation 2 - BR": {
+      "label": "Playstation 2 - BR",
+      "folder": "ps2br"
+    },
+    "Psp - BR": {
+      "label": "Psp - BR",
+      "folder": "psp"
+    },
+    "Psvita": {
+      "label": "Psvita",
+      "folder": "psvita"
+    },
+    "Super Nintendo": {
+      "label": "Super Nintendo",
+      "folder": "super-nintendo"
+    },
+    "Super Nintendo - BR": {
+      "label": "Super Nintendo - BR",
+      "folder": "super-nintendo--br"
+    },
+    "Switch": {
+      "label": "Switch",
+      "folder": "switch"
+    },
+    "atari2600": {
+      "label": "atari2600",
+      "folder": "atari2600"
+    },
+    "atari7800": {
+      "label": "atari7800",
+      "folder": "atari7800"
+    },
+    "colecovision": {
+      "label": "colecovision",
+      "folder": "colecovision"
+    },
+    "cps1": {
+      "label": "cps1",
+      "folder": "cps1"
+    },
+    "cps2": {
+      "label": "cps2",
+      "folder": "cps2"
+    },
+    "cps3": {
+      "label": "cps3",
+      "folder": "cps3"
+    },
+    "fbneo": {
+      "label": "fbneo",
+      "folder": "fbneo"
+    },
+    "fds": {
+      "label": "fds",
+      "folder": "fds"
+    },
+    "gameandwatch": {
+      "label": "gameandwatch",
+      "folder": "gameandwatch"
+    },
+    "gamegear": {
+      "label": "gamegear",
+      "folder": "gamegear"
+    },
+    "jaguar": {
+      "label": "jaguar",
+      "folder": "jaguar"
+    },
+    "mame": {
+      "label": "mame",
+      "folder": "mame"
+    },
+    "naomi": {
+      "label": "naomi",
+      "folder": "naomi"
+    },
+    "naomi2": {
+      "label": "naomi2",
+      "folder": "naomi2"
+    },
+    "saturn": {
+      "label": "saturn",
+      "folder": "saturn"
+    },
+    "sega32x": {
+      "label": "sega32x",
+      "folder": "sega32x"
+    },
+    "supergrafx": {
+      "label": "supergrafx",
+      "folder": "supergrafx"
+    },
+    "wii": {
+      "label": "wii",
+      "folder": "wii"
+    },
+    "wiiu": {
+      "label": "wiiu",
+      "folder": "wiiu"
+    },
+    "xbox": {
+      "label": "xbox",
+      "folder": "xbox"
+    },
+    "xbox360": {
+      "label": "xbox360",
+      "folder": "xbox360"
+    },
+    "megadrive": {
+      "label": "MegaDrive",
+      "folder": "megadrive",
+      "aliasOf": "MegaDrive"
+    },
+    "snes": {
+      "label": "Super Nintendo",
+      "folder": "super-nintendo",
+      "aliasOf": "Super Nintendo"
+    },
+    "snesbr": {
+      "label": "Super Nintendo - BR",
+      "folder": "super-nintendo--br",
+      "aliasOf": "Super Nintendo - BR"
+    },
+    "gb": {
+      "label": "Gameboy",
+      "folder": "gameboy",
+      "aliasOf": "Gameboy"
+    },
+    "gbc": {
+      "label": "Gameboy Color",
+      "folder": "gameboy-color",
+      "aliasOf": "Gameboy Color"
+    },
+    "gba": {
+      "label": "Gba",
+      "folder": "gba",
+      "aliasOf": "Gba"
+    },
+    "megadrivebr": {
+      "label": "MegaDrive - BR",
+      "folder": "megadrive--br",
+      "aliasOf": "MegaDrive - BR"
+    },
+    "arcade": {
+      "label": "Arcade",
+      "folder": "arcade",
+      "aliasOf": "Arcade"
+    },
+    "atomiswave": {
+      "label": "Atomiswave",
+      "folder": "atomiswave",
+      "aliasOf": "Atomiswave"
+    },
+    "dreamcast": {
+      "label": "Dreamcast",
+      "folder": "dreamcast",
+      "aliasOf": "Dreamcast"
+    },
+    "mastersystem": {
+      "label": "Master System ",
+      "folder": "master-system",
+      "aliasOf": "Master System "
+    },
+    "n64": {
+      "label": "Nintendo 64",
+      "folder": "nintendo-64",
+      "aliasOf": "Nintendo 64"
+    },
+    "n64br": {
+      "label": "Nintendo 64 - BR",
+      "folder": "nintendo-64--br",
+      "aliasOf": "Nintendo 64 - BR"
+    },
+    "nds": {
+      "label": "Nintendo DS",
+      "folder": "nintendo-ds",
+      "aliasOf": "Nintendo DS"
+    },
+    "neogeo": {
+      "label": "Neo Geo",
+      "folder": "neo-geo",
+      "aliasOf": "Neo Geo"
+    },
+    "neogeocd": {
+      "label": "Neo Geo CD",
+      "folder": "neo-geo-cd",
+      "aliasOf": "Neo Geo CD"
+    },
+    "nes": {
+      "label": "Nintendinho",
+      "folder": "nintendinho",
+      "aliasOf": "Nintendinho"
+    },
+    "o2em": {
+      "label": "Odyssey 2",
+      "folder": "odyssey-2",
+      "aliasOf": "Odyssey 2"
+    },
+    "pcengine": {
+      "label": "Pc Engine",
+      "folder": "pc-engine",
+      "aliasOf": "Pc Engine"
+    },
+    "pcenginecd": {
+      "label": "Pc Engine cd",
+      "folder": "pc-engine-cd",
+      "aliasOf": "Pc Engine cd"
+    },
+    "psx": {
+      "label": "Playstation 1",
+      "folder": "psx",
+      "aliasOf": "Playstation 1"
+    },
+    "switch": {
+      "label": "Switch",
+      "folder": "switch",
+      "aliasOf": "Switch"
+    },
+    "gamecube": {
+      "label": "GameCube",
+      "folder": "gamecube",
+      "aliasOf": "GameCube"
+    },
+    "psp": {
+      "label": "PSP",
+      "folder": "psp",
+      "aliasOf": "PSP"
+    },
+    "pspbr": {
+      "label": "Psp - BR",
+      "folder": "psp",
+      "aliasOf": "Psp - BR"
+    },
+    "ps2": {
+      "label": "Playstation 2",
+      "folder": "ps2",
+      "aliasOf": "Playstation 2"
+    },
+    "ps2br": {
+      "label": "Playstation 2 - BR",
+      "folder": "ps2br",
+      "aliasOf": "Playstation 2 - BR"
+    },
+    "psvita": {
+      "label": "Psvita",
+      "folder": "psvita",
+      "aliasOf": "Psvita"
+    }
+  }
+}

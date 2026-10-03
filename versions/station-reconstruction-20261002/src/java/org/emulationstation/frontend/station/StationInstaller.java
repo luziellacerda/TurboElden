@@ -45,7 +45,7 @@ public final class StationInstaller {
         String folder=StationPlatforms.resolve(item.platform).folder;
         StationArtifact.relativePath(folder,120);if(folder.contains("/"))throw new IOException("Invalid platform folder");
         Path owner=directory(roms.resolve(".station-v2").resolve(folder).resolve(item.itemId));
-        if(Files.getFileStore(owner).getUsableSpace()<spec.expandedSizeBytes+RESERVE)throw new IOException("Espaço insuficiente para preparar o jogo");
+        if(StationStorage.usableBytes(owner)<spec.expandedSizeBytes+RESERVE)throw new IOException("Espaço insuficiente para preparar o jogo");
         Path generation=Files.createTempDirectory(owner,"install-");
         boolean committed=false;
         try {

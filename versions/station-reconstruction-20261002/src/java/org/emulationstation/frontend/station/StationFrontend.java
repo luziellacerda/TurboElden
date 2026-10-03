@@ -12,6 +12,7 @@ public final class StationFrontend {
  private static final ThreadPoolExecutor commands=pool("Station-catalog",8),images=pool("Station-covers",32);
  private static final ConcurrentHashMap<String,StationApi.Cancellation> requests=new ConcurrentHashMap<>();
  private static volatile StationDownloads downloads;private static volatile boolean foreground=true,configured;
+ private static volatile String requestedStorageRoot;
  private static String platformWarning="";
  private static ThreadPoolExecutor pool(String name,int capacity){return new ThreadPoolExecutor(0,1,10,TimeUnit.SECONDS,new ArrayBlockingQueue<Runnable>(capacity),r->{Thread t=new Thread(r,name);t.setDaemon(true);return t;});}
  private StationFrontend(){}
@@ -21,15 +22,22 @@ public final class StationFrontend {
   intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK|android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP);app.context.startActivity(intent);
  }}
  public static void configure(String romsRoot) {
+  requestedStorageRoot=romsRoot;
   synchronized(StationFrontend.class){if(configured)return;configured=true;}
   if(!execute(()->{
    try {
     android.util.Log.i("StationFrontend","Configuring catalog");
     StationAndroid app=StationAndroid.current();if(app==null)throw new IOException("Entre no aplicativo para carregar o catálogo.");
+    prepareStorage(app,romsRoot);
+    publishCurrent(app);
+   }catch(Exception e){android.util.Log.e("StationFrontend","configure: "+e.getClass().getSimpleName()+": "+safeReason(e));configured=false;publishError(utf8(catalogError(e,"Não foi possível preparar o catálogo Station.")));}
+  }))configured=false;
+ }
+ private static void prepareStorage(StationAndroid app,String romsRoot)throws Exception {
+    if(downloads!=null)return;
     // This root comes from the native application, never a catalog/archive entry.
-    Path supplied=Paths.get(romsRoot);
-    Path roms=supplied.toRealPath();
-    android.util.Log.i("StationFrontend","Storage root resolved="+!supplied.equals(roms));
+    Path roms=StationStorage.prepareRoot(Paths.get(romsRoot));
+    android.util.Log.i("StationFrontend","Storage root prepared");
     StationInstaller installer=new StationInstaller(roms,app.privateFiles.resolve("station-v2/installs"),new StationArchive());
     downloads=new StationDownloads(app.api,app.coordinator,installer,roms.resolve(".station-v2/staging"),
       (id,active,received,total,message,path,result)->{
@@ -38,12 +46,11 @@ public final class StationFrontend {
        org.emulationstation.frontend.DownloadService.changed(app.context,id,item==null?"Jogo":item.name,active,received,total,message,result);
        if(result==3&&library==null)requestLogin();
       });
-    publishCurrent(app);
-   }catch(Exception e){android.util.Log.e("StationFrontend","configure: "+e.getClass().getSimpleName()+": "+safeReason(e));configured=false;publishError(utf8(catalogError(e,"Não foi possível preparar o catálogo Station.")));}
-  }))configured=false;
  }
  public static void refresh(){execute(()->{
-  try{StationAndroid app=StationAndroid.current();if(app==null)throw new IOException();app.coordinator.refresh(new StationApi.Cancellation());publishCurrent(app);}
+  try{StationAndroid app=StationAndroid.current();if(app==null)throw new IOException();
+   if(downloads==null){if(requestedStorageRoot==null)throw new IOException("Storage root not supplied");prepareStorage(app,requestedStorageRoot);configured=true;}
+   app.coordinator.refresh(new StationApi.Cancellation());publishCurrent(app);}
   catch(Exception e){publishError(utf8(catalogError(e,"Não foi possível atualizar. Confira a conexão e tente novamente.")));}
  });}
  private static void publishCurrent(StationAndroid app)throws Exception {
@@ -83,16 +90,17 @@ public final class StationFrontend {
    finally{requests.remove(itemId,cancel);}
   });}catch(RejectedExecutionException busy){requests.remove(itemId,cancel);publishCover(itemId,new byte[0]);}
  }
- public static void setForeground(boolean visible){boolean resumed=visible&&!foreground;foreground=visible;if(!visible){for(StationApi.Cancellation cancel:requests.values())cancel.cancel();}else if(resumed&&configured)reconcile();}
+ public static void setForeground(boolean visible){boolean resumed=visible&&!foreground;foreground=visible;if(!visible){for(StationApi.Cancellation cancel:requests.values())cancel.cancel();}else if(resumed){if(!configured&&requestedStorageRoot!=null)configure(requestedStorageRoot);else if(configured)reconcile();}}
  public static void reconcile(){execute(()->{try{StationAndroid app=StationAndroid.current();if(app!=null&&downloads!=null)publishCurrent(app);}catch(Exception e){publishError(utf8("Não foi possível conferir os jogos instalados."));}});}
  private static boolean execute(Runnable operation){try{commands.execute(operation);return true;}catch(RejectedExecutionException busy){publishError(utf8("Aguarde a consulta em andamento."));return false;}}
  private static String catalogError(Exception e,String fallback){
+  if(e instanceof StationStorage.Failure)return ((StationStorage.Failure)e).userMessage;
   if(e instanceof StationPlatforms.UnsupportedPlatform){
    StationDiagnostics.record(StationDiagnostics.Event.UNSUPPORTED_PLATFORM,0,1);
    return "Plataforma ainda sem integração: "+((StationPlatforms.UnsupportedPlatform)e).platform+". Atualize o aplicativo.";
   }return fallback;
  }
- private static String safeReason(Exception e){String m=e.getMessage();if(m!=null&&(m.equals("Symbolic path refused")||m.equals("Invalid catalog identity")))return m;return "operation failed";}
+ private static String safeReason(Exception e){if(e instanceof StationStorage.Failure)return ((StationStorage.Failure)e).reason;String m=e.getMessage();if(m!=null&&(m.equals("Symbolic path refused")||m.equals("Invalid catalog identity")))return m;return "operation failed";}
  private static byte[] utf8(String text){return text.getBytes(StandardCharsets.UTF_8);}
  private static native void publishPreparation(int done,int total,long bytes);
  private static native void publishCatalog(byte[][] rows,byte[] displayName);

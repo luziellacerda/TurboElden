@@ -46,7 +46,7 @@ public final class StationDownloads implements AutoCloseable {
    if(existing!=null){
     artifact=existing;StationDiagnostics.record(StationDiagnostics.Event.LOCAL_REUSE,0,grant.artifact.sizeBytes);
    }else{
-    if(Files.getFileStore(staging).getUsableSpace()<grant.artifact.sizeBytes+grant.artifact.expandedSizeBytes+256L*1024*1024)throw new InsufficientSpace();
+    if(StationStorage.usableBytes(staging)<grant.artifact.sizeBytes+grant.artifact.expandedSizeBytes+256L*1024*1024)throw new InsufficientSpace();
     transaction=Files.createTempDirectory(staging,"transfer-");artifact=transaction.resolve("artifact");
     try(StationDiagnostics.Scope trace=StationDiagnostics.selection(item.itemId,item.coverId,item.revision)){
      transfer=api.openArtifact(grant,grant.artifact.sizeBytes,cancel);

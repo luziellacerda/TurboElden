@@ -44,21 +44,15 @@ public final class LoginActivity extends Activity {
     private boolean authenticating;
     private TextView greeting;
     private boolean opening;
+    private boolean storagePermissionPending;
+    private static final int STORAGE_REQUEST = 8251;
     private EditText password;
     private CheckBox rememberAccess;
     private TextView status;
     private TextView welcome;
 
     private void openCommercial() {
-        if (this.opening) {
-            return;
-        }
-        this.opening = true;
-        Intent intent = new Intent();
-        intent.setClassName(this, "org.emulationstation.frontend.ESActivity");
-        intent.addFlags(268566528);
-        startActivity(intent);
-        finish();
+        openFrontend();
     }
 
     void commercialFail(String str) {
@@ -110,7 +104,7 @@ public final class LoginActivity extends Activity {
         getWindow().setStatusBarColor(BLACK);
         getWindow().setNavigationBarColor(BLACK);
         getWindow().setSoftInputMode(19);
-        if (StationLogin.ready()) {
+        if (StationLogin.ready() && storageAllowed()) {
             openFrontend();
             return;
         }
@@ -136,7 +130,8 @@ public final class LoginActivity extends Activity {
         } catch (IOException e) {
         }
         buildScreen();
-        if(StationLogin.hasLicense(this)&&StationLogin.rememberAccess(this))submit();
+        if(StationLogin.ready())openFrontend();
+        else if(StationLogin.hasLicense(this)&&StationLogin.rememberAccess(this))submit();
     }
 
     @Override // android.app.Activity, android.content.ComponentCallbacks
@@ -338,6 +333,7 @@ public final class LoginActivity extends Activity {
     /* JADX INFO: Access modifiers changed from: private */
     public void submit() {
         if (opening || authenticating) return;
+        if(StationLogin.ready()){openFrontend();return;}
         String code=password.getText().toString().trim();
         if(code.isEmpty() && !StationLogin.hasLicense(this)) {
             status.setText("Informe o código recebido após a compra.");return;
@@ -354,12 +350,47 @@ public final class LoginActivity extends Activity {
         if (this.opening || !StationLogin.ready()) {
             return;
         }
+        if(!storageAllowed()){
+            if(status!=null)status.setText("Permita o acesso aos arquivos para preparar suas pastas e abrir a biblioteca.");
+            if(password!=null)password.setEnabled(true);
+            if(storagePermissionPending)return;
+            storagePermissionPending=true;
+            try{
+                if(android.os.Build.VERSION.SDK_INT>=30){
+                    Intent settings=new Intent(android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION,
+                        android.net.Uri.parse("package:"+getPackageName()));
+                    startActivityForResult(settings,STORAGE_REQUEST);
+                }else requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE},STORAGE_REQUEST);
+            }catch(android.content.ActivityNotFoundException absent){
+                storagePermissionPending=false;
+                if(status!=null)status.setText("Abra as configurações do Android e permita o acesso aos arquivos deste aplicativo. Depois toque em Entrar.");
+            }
+            return;
+        }
         this.opening = true;
         Intent intent = new Intent();
         intent.setClassName(this, "org.emulationstation.frontend.ESActivity");
         intent.addFlags(268566528);
         startActivity(intent);
         finish();
+    }
+
+    private boolean storageAllowed(){
+        return android.os.Build.VERSION.SDK_INT>=30?android.os.Environment.isExternalStorageManager():
+            checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)==android.content.pm.PackageManager.PERMISSION_GRANTED;
+    }
+    private void storageReturned(){
+        storagePermissionPending=false;
+        if(storageAllowed()){
+            if(StationLogin.ready())openFrontend();
+            else if(StationLogin.hasLicense(this))submit();
+        }else if(status!=null)status.setText("O acesso aos arquivos ainda não foi permitido. Toque em Entrar para tentar novamente.");
+    }
+    @Override protected void onActivityResult(int request,int result,Intent data){
+        super.onActivityResult(request,result,data);if(request==STORAGE_REQUEST)storageReturned();
+    }
+    @Override public void onRequestPermissionsResult(int request,String[] permissions,int[] results){
+        super.onRequestPermissionsResult(request,permissions,results);if(request==STORAGE_REQUEST)storageReturned();
     }
 
     @Override // android.app.Activity

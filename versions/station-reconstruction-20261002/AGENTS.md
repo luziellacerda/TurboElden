@@ -1,3 +1,21 @@
+# Estado atual — estável Station SNES / Mega Drive, 03/10/2026
+
+Referência: branch/tag `estavel-station-snes-megadrive-20261003`. Ler primeiro `docs/server/HANDOFF-TECNICO-COMPLETO-STATION-SNES-MEGADRIVE-20261003.md` na raiz do Git (cópia na raiz canônica E:). Manifesto e inventários em `versions/estavel-station-snes-megadrive-20261003/`.
+
+APK SHA256 `3b355b02e4efab1801ccf899f77a5bc0d4d95e1c622d8cb9c3a3e1f35c192d17`, 1902768022 bytes; congelado em `E:\ESTUDO APK\estaveis\2026-10-03-station-snes-megadrive\TurboStations-ESTAVEL-SNES-MegaDrive-20261003.apk`. Fontes em `E:\ESTUDO APK\work\turbostations-reconstruction-20261002`, mirror `versions/station-reconstruction-20261002`. Cliente `1.0.8-station-storage-20261003.3`.
+
+Sessão/perfil/catálogo1816/capas e dois downloads/instalações/aberturas comprovados; SNES e Mega Drive retornaram sem login, conforme confirmação do mantenedor. Instalados persistiram ao reiniciar.327 verificações locais e10 de armazenamento no Android passaram. Raiz/permissão/recursos e consulta de espaço Android corrigidos no APK; nenhum reparo manual da árvore real do telefone. Assinatura, jogos, saves e licença preservados.
+
+Escopo estável é o fluxo SNES/Mega observado, não todos os jogos/motores ou checkout comercial completo. Servidor: retorno fa7a10cccd93a8d97de16e28fbc81b8da4c6fa61, API fd13c0d relatada em produção. Meta seguinte autorizada: preparar40mil jogos em revisão separada APÓS congelar esta tag. Nesta estável permanecem4096 itens/12MiB; não alegar40mil implementados. Não alterar a tag congelada. Limites, metadado Battletoads USA/ESP e legado nativo residual constam no handoff.
+
+**Todos os estados abaixo são históricos. Este bloco e o handoff completo prevalecem.**
+
+---
+
+## Regra permanente — instalação nova e reinstalação
+
+Toda correção de pasta, recurso ou configuração necessária ao funcionamento deve entrar no fonte e no APK, com preparação automática repetível que preserve arquivos existentes. Não depender de criação manual de pastas, cópias por ADB ou ajustes exclusivos do telefone de teste. Conferir a primeira inicialização com pastas ausentes e a retomada após permissão, além da atualização. Usar fixtures isoladas; não desinstalar/limpar o aplicativo principal para simular uma instalação nova, pois isso apaga a identidade Keystore/licença. Registrar qualquer recurso ainda não verificado sem alegar preparação completa dos emuladores.
+
 # Integração Station instalada — 03/10/2026 16:17 — estado atual
 
 As correções de runtime `02c09dd36fcfa6c69ceb481f0934e84eef01e5ae` foram integradas e compiladas no Windows/E:. Branch de entrega `integracao-station-producao-20261003`. APK `fa3bc84425120803d7e90069be3c296a91dbe04146455063f12d9a6205bbf795`, 1.902.751.638 bytes, instalado e hash no aparelho conferido. Fonte canônico `E:\ESTUDO APK\work\turbostations-reconstruction-20261002`; APK `build/apk/TurboStations-Station-CANDIDATO-20261003.apk`.

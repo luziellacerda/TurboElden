@@ -1,0 +1,1893 @@
+JAR SHA256: 2efa65fc47028c6f711c2d894b0acaa494a15897534d88ae14bb0243e8dca0ca
+Classes: 88
+Command: javap -p -s -classpath station-client.jar <all project classes>
+
+Compiled from "AssetInstaller.java"
+public final class org.emulationstation.frontend.AssetInstaller {
+  private static final java.lang.String TAG;
+    descriptor: Ljava/lang/String;
+  private org.emulationstation.frontend.AssetInstaller();
+    descriptor: ()V
+
+  public static synchronized void installIfNeeded(android.content.Context, java.io.File);
+    descriptor: (Landroid/content/Context;Ljava/io/File;)V
+}
+Compiled from "AssetInstaller.java"
+class org.emulationstation.frontend.AssetInstaller$1 implements org.emulationstation.frontend.station.StationBundledFiles$Source {
+  final android.content.res.AssetManager val$assets;
+    descriptor: Landroid/content/res/AssetManager;
+  org.emulationstation.frontend.AssetInstaller$1();
+    descriptor: (Landroid/content/res/AssetManager;)V
+
+  public java.lang.String[] list(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)[Ljava/lang/String;
+
+  public java.io.InputStream open(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Ljava/io/InputStream;
+}
+Compiled from "DownloadService.java"
+public final class org.emulationstation.frontend.DownloadService extends android.app.Service {
+  private static final java.lang.String CHANNEL;
+    descriptor: Ljava/lang/String;
+  private static final int NOTICE;
+    descriptor: I
+  private static final android.os.Handler MAIN;
+    descriptor: Landroid/os/Handler;
+  private static final java.util.Map<java.lang.String, org.emulationstation.frontend.DownloadService$Job> ACTIVE;
+    descriptor: Ljava/util/Map;
+  private static org.emulationstation.frontend.DownloadService instance;
+    descriptor: Lorg/emulationstation/frontend/DownloadService;
+  private static boolean requested;
+    descriptor: Z
+  private android.os.PowerManager$WakeLock wake;
+    descriptor: Landroid/os/PowerManager$WakeLock;
+  private long lastUpdate;
+    descriptor: J
+  public org.emulationstation.frontend.DownloadService();
+    descriptor: ()V
+
+  public static void changed(android.content.Context, java.lang.String, java.lang.String, boolean, long, long, java.lang.String, int);
+    descriptor: (Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZJJLjava/lang/String;I)V
+
+  public void onCreate();
+    descriptor: ()V
+
+  public int onStartCommand(android.content.Intent, int, int);
+    descriptor: (Landroid/content/Intent;II)I
+
+  private void update(boolean);
+    descriptor: (Z)V
+
+  private android.app.Notification notification();
+    descriptor: ()Landroid/app/Notification;
+
+  public void onDestroy();
+    descriptor: ()V
+
+  public android.os.IBinder onBind(android.content.Intent);
+    descriptor: (Landroid/content/Intent;)Landroid/os/IBinder;
+
+  private static void lambda$changed$0(boolean, java.lang.String, java.lang.String, long, long, java.lang.String, android.content.Context);
+    descriptor: (ZLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;Landroid/content/Context;)V
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "DownloadService.java"
+final class org.emulationstation.frontend.DownloadService$Job {
+  java.lang.String name;
+    descriptor: Ljava/lang/String;
+  java.lang.String message;
+    descriptor: Ljava/lang/String;
+  long done;
+    descriptor: J
+  long total;
+    descriptor: J
+  org.emulationstation.frontend.DownloadService$Job(java.lang.String, long, long, java.lang.String);
+    descriptor: (Ljava/lang/String;JJLjava/lang/String;)V
+}
+Compiled from "LoginActivity.java"
+public final class org.emulationstation.frontend.auth.LoginActivity extends android.app.Activity {
+  private static final int BLACK;
+    descriptor: I
+  private static final int GREEN;
+    descriptor: I
+  private static final int MUTED;
+    descriptor: I
+  private static final int RED;
+    descriptor: I
+  private static final int WHITE;
+    descriptor: I
+  private android.graphics.Bitmap emblem;
+    descriptor: Landroid/graphics/Bitmap;
+  private org.emulationstation.frontend.station.StationApi$Cancellation loginAttempt;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Cancellation;
+  private boolean authenticating;
+    descriptor: Z
+  private android.widget.TextView greeting;
+    descriptor: Landroid/widget/TextView;
+  private boolean opening;
+    descriptor: Z
+  private boolean storagePermissionPending;
+    descriptor: Z
+  private static final int STORAGE_REQUEST;
+    descriptor: I
+  private android.widget.EditText password;
+    descriptor: Landroid/widget/EditText;
+  private android.widget.CheckBox rememberAccess;
+    descriptor: Landroid/widget/CheckBox;
+  private android.widget.TextView status;
+    descriptor: Landroid/widget/TextView;
+  private android.widget.TextView welcome;
+    descriptor: Landroid/widget/TextView;
+  public org.emulationstation.frontend.auth.LoginActivity();
+    descriptor: ()V
+
+  private void openCommercial();
+    descriptor: ()V
+
+  void commercialFail(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  void commercialOk(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  void welcomeName(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public static void ensureAuthorized(android.app.Activity);
+    descriptor: (Landroid/app/Activity;)V
+
+  protected void onCreate(android.os.Bundle);
+    descriptor: (Landroid/os/Bundle;)V
+
+  public void onConfigurationChanged(android.content.res.Configuration);
+    descriptor: (Landroid/content/res/Configuration;)V
+
+  private void buildScreen();
+    descriptor: ()V
+
+  public void submit();
+    descriptor: ()V
+
+  private void openFrontend();
+    descriptor: ()V
+
+  private boolean storageAllowed();
+    descriptor: ()Z
+
+  private void storageReturned();
+    descriptor: ()V
+
+  protected void onActivityResult(int, int, android.content.Intent);
+    descriptor: (IILandroid/content/Intent;)V
+
+  public void onRequestPermissionsResult(int, java.lang.String[], int[]);
+    descriptor: (I[Ljava/lang/String;[I)V
+
+  protected void onNewIntent(android.content.Intent);
+    descriptor: (Landroid/content/Intent;)V
+
+  public void onBackPressed();
+    descriptor: ()V
+
+  private android.widget.ImageView mark();
+    descriptor: ()Landroid/widget/ImageView;
+
+  private android.widget.LinearLayout column();
+    descriptor: ()Landroid/widget/LinearLayout;
+
+  private android.widget.TextView text(java.lang.String, int, int);
+    descriptor: (Ljava/lang/String;II)Landroid/widget/TextView;
+
+  private android.graphics.drawable.GradientDrawable shape(int, int, int);
+    descriptor: (III)Landroid/graphics/drawable/GradientDrawable;
+
+  private void add(android.widget.LinearLayout, android.view.View, int);
+    descriptor: (Landroid/widget/LinearLayout;Landroid/view/View;I)V
+
+  private int dp(int);
+    descriptor: (I)I
+
+  protected void onStop();
+    descriptor: ()V
+
+  protected void onDestroy();
+    descriptor: ()V
+
+  private void lambda$buildScreen$0(android.widget.CompoundButton, boolean);
+    descriptor: (Landroid/widget/CompoundButton;Z)V
+}
+Compiled from "LoginActivity.java"
+class org.emulationstation.frontend.auth.LoginActivity$1 implements android.view.View$OnClickListener {
+  final org.emulationstation.frontend.auth.LoginActivity this$0;
+    descriptor: Lorg/emulationstation/frontend/auth/LoginActivity;
+  org.emulationstation.frontend.auth.LoginActivity$1(org.emulationstation.frontend.auth.LoginActivity);
+    descriptor: (Lorg/emulationstation/frontend/auth/LoginActivity;)V
+
+  public void onClick(android.view.View);
+    descriptor: (Landroid/view/View;)V
+}
+Compiled from "LoginActivity.java"
+class org.emulationstation.frontend.auth.LoginActivity$2 implements android.widget.TextView$OnEditorActionListener {
+  final org.emulationstation.frontend.auth.LoginActivity this$0;
+    descriptor: Lorg/emulationstation/frontend/auth/LoginActivity;
+  org.emulationstation.frontend.auth.LoginActivity$2(org.emulationstation.frontend.auth.LoginActivity);
+    descriptor: (Lorg/emulationstation/frontend/auth/LoginActivity;)V
+
+  public boolean onEditorAction(android.widget.TextView, int, android.view.KeyEvent);
+    descriptor: (Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+}
+Compiled from "LoginActivity.java"
+class org.emulationstation.frontend.auth.LoginActivity$3 implements org.emulationstation.frontend.auth.StationLogin$Callback {
+  final org.emulationstation.frontend.auth.LoginActivity this$0;
+    descriptor: Lorg/emulationstation/frontend/auth/LoginActivity;
+  org.emulationstation.frontend.auth.LoginActivity$3(org.emulationstation.frontend.auth.LoginActivity);
+    descriptor: (Lorg/emulationstation/frontend/auth/LoginActivity;)V
+
+  public void ok(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public void fail(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+}
+Compiled from "LoginActivity.java"
+final class org.emulationstation.frontend.auth.LoginActivity$HangarBackdrop extends android.view.View {
+  private android.graphics.Shader glow;
+    descriptor: Landroid/graphics/Shader;
+  private final android.graphics.Paint paint;
+    descriptor: Landroid/graphics/Paint;
+  org.emulationstation.frontend.auth.LoginActivity$HangarBackdrop(android.content.Context);
+    descriptor: (Landroid/content/Context;)V
+
+  protected void onSizeChanged(int, int, int, int);
+    descriptor: (IIII)V
+
+  protected void onDraw(android.graphics.Canvas);
+    descriptor: (Landroid/graphics/Canvas;)V
+}
+Compiled from "StationLogin.java"
+public final class org.emulationstation.frontend.auth.StationLogin {
+  private static volatile org.emulationstation.frontend.station.StationCoordinator coordinator;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoordinator;
+  private static final android.os.Handler MAIN;
+    descriptor: Landroid/os/Handler;
+  private static final java.util.concurrent.ThreadPoolExecutor WORK;
+    descriptor: Ljava/util/concurrent/ThreadPoolExecutor;
+  private static final java.util.WeakHashMap<android.app.Activity, org.emulationstation.frontend.station.StationApi$Cancellation> renewing;
+    descriptor: Ljava/util/WeakHashMap;
+  private org.emulationstation.frontend.auth.StationLogin();
+    descriptor: ()V
+
+  public static java.lang.String displayName();
+    descriptor: ()Ljava/lang/String;
+
+  public static boolean ready();
+    descriptor: ()Z
+
+  public static boolean hasLicense(android.content.Context);
+    descriptor: (Landroid/content/Context;)Z
+
+  public static boolean rememberAccess(android.content.Context);
+    descriptor: (Landroid/content/Context;)Z
+
+  public static void rememberAccess(android.content.Context, boolean);
+    descriptor: (Landroid/content/Context;Z)V
+
+  public static void ensureAuthorized(android.app.Activity);
+    descriptor: (Landroid/app/Activity;)V
+
+  private static void showLogin(android.app.Activity);
+    descriptor: (Landroid/app/Activity;)V
+
+  public static org.emulationstation.frontend.station.StationApi$Cancellation begin(android.app.Activity, java.lang.String, org.emulationstation.frontend.auth.StationLogin$Callback);
+    descriptor: (Landroid/app/Activity;Ljava/lang/String;Lorg/emulationstation/frontend/auth/StationLogin$Callback;)Lorg/emulationstation/frontend/station/StationApi$Cancellation;
+
+  private static java.lang.String message(java.lang.Exception);
+    descriptor: (Ljava/lang/Exception;)Ljava/lang/String;
+
+  private static void lambda$begin$4(org.emulationstation.frontend.station.StationApi$Cancellation, android.app.Activity, org.emulationstation.frontend.auth.StationLogin$Callback);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Cancellation;Landroid/app/Activity;Lorg/emulationstation/frontend/auth/StationLogin$Callback;)V
+
+  private static void lambda$begin$3(org.emulationstation.frontend.station.StationApi$Cancellation, android.content.Context, java.lang.String, android.app.Activity, org.emulationstation.frontend.auth.StationLogin$Callback);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Cancellation;Landroid/content/Context;Ljava/lang/String;Landroid/app/Activity;Lorg/emulationstation/frontend/auth/StationLogin$Callback;)V
+
+  private static void lambda$begin$2(org.emulationstation.frontend.station.StationApi$Cancellation, android.app.Activity, org.emulationstation.frontend.auth.StationLogin$Callback, java.lang.String);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Cancellation;Landroid/app/Activity;Lorg/emulationstation/frontend/auth/StationLogin$Callback;Ljava/lang/String;)V
+
+  private static void lambda$begin$1(org.emulationstation.frontend.station.StationApi$Cancellation, android.app.Activity, org.emulationstation.frontend.auth.StationLogin$Callback, org.emulationstation.frontend.station.StationCoordinator$Library);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Cancellation;Landroid/app/Activity;Lorg/emulationstation/frontend/auth/StationLogin$Callback;Lorg/emulationstation/frontend/station/StationCoordinator$Library;)V
+
+  private static java.lang.Thread lambda$static$0(java.lang.Runnable);
+    descriptor: (Ljava/lang/Runnable;)Ljava/lang/Thread;
+
+  static java.util.WeakHashMap access$000();
+    descriptor: ()Ljava/util/WeakHashMap;
+
+  static void access$100(android.app.Activity);
+    descriptor: (Landroid/app/Activity;)V
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationLogin.java"
+class org.emulationstation.frontend.auth.StationLogin$1 implements org.emulationstation.frontend.auth.StationLogin$Callback {
+  final android.app.Activity val$activity;
+    descriptor: Landroid/app/Activity;
+  org.emulationstation.frontend.auth.StationLogin$1();
+    descriptor: (Landroid/app/Activity;)V
+
+  public void ok(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public void fail(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+}
+Compiled from "StationLogin.java"
+public interface org.emulationstation.frontend.auth.StationLogin$Callback {
+  public abstract void ok(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public abstract void fail(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+}
+Compiled from "ExistingCoverCache.java"
+public final class org.emulationstation.frontend.station.ExistingCoverCache implements org.emulationstation.frontend.station.StationCoverStore$PreviousCovers {
+  private final java.nio.file.Path directory;
+    descriptor: Ljava/nio/file/Path;
+  private final java.util.Map<java.lang.String, java.lang.Long> revisions;
+    descriptor: Ljava/util/Map;
+  public org.emulationstation.frontend.station.ExistingCoverCache(java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;)V
+
+  public byte[] find(java.lang.String, long) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;J)[B
+}
+Compiled from "StationAndroid.java"
+public final class org.emulationstation.frontend.station.StationAndroid {
+  private static volatile org.emulationstation.frontend.station.StationAndroid instance;
+    descriptor: Lorg/emulationstation/frontend/station/StationAndroid;
+  public final java.nio.file.Path privateFiles;
+    descriptor: Ljava/nio/file/Path;
+  public final android.content.Context context;
+    descriptor: Landroid/content/Context;
+  public final org.emulationstation.frontend.station.StationApi api;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi;
+  public final org.emulationstation.frontend.station.StationSessions sessions;
+    descriptor: Lorg/emulationstation/frontend/station/StationSessions;
+  public final org.emulationstation.frontend.station.StationCatalogStore catalogs;
+    descriptor: Lorg/emulationstation/frontend/station/StationCatalogStore;
+  public final org.emulationstation.frontend.station.StationCoverStore covers;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoverStore;
+  public final org.emulationstation.frontend.station.StationCoordinator coordinator;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoordinator;
+  public static synchronized org.emulationstation.frontend.station.StationAndroid get(android.content.Context) throws java.lang.Exception;
+    descriptor: (Landroid/content/Context;)Lorg/emulationstation/frontend/station/StationAndroid;
+
+  static org.emulationstation.frontend.station.StationAndroid current();
+    descriptor: ()Lorg/emulationstation/frontend/station/StationAndroid;
+
+  private org.emulationstation.frontend.station.StationAndroid(android.content.Context) throws java.lang.Exception;
+    descriptor: (Landroid/content/Context;)V
+
+  private static java.lang.String deviceText(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+
+  private static void validateImage(byte[]) throws java.io.IOException;
+    descriptor: ([B)V
+
+  private static void lambda$new$1(org.emulationstation.frontend.station.StationDiagnostics$Event, int, java.lang.String, java.lang.String, java.lang.String, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+
+  private static void lambda$new$0(org.emulationstation.frontend.station.StationDiagnostics$Event, int, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;IJ)V
+
+  static java.lang.String access$000(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+}
+Compiled from "StationAndroid.java"
+class org.emulationstation.frontend.station.StationAndroid$1 implements org.emulationstation.frontend.station.StationApi$Device {
+  final org.emulationstation.frontend.station.StationAndroid this$0;
+    descriptor: Lorg/emulationstation/frontend/station/StationAndroid;
+  org.emulationstation.frontend.station.StationAndroid$1(org.emulationstation.frontend.station.StationAndroid);
+    descriptor: (Lorg/emulationstation/frontend/station/StationAndroid;)V
+
+  public java.security.PublicKey publicKey() throws java.lang.Exception;
+    descriptor: ()Ljava/security/PublicKey;
+
+  public byte[] sign(byte[]) throws java.lang.Exception;
+    descriptor: ([B)[B
+
+  public java.lang.String manufacturer();
+    descriptor: ()Ljava/lang/String;
+
+  public java.lang.String model();
+    descriptor: ()Ljava/lang/String;
+
+  public int sdk();
+    descriptor: ()I
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi {
+  private static final java.lang.String ROOT;
+    descriptor: Ljava/lang/String;
+  private static final java.security.spec.PSSParameterSpec PSS;
+    descriptor: Ljava/security/spec/PSSParameterSpec;
+  private final org.emulationstation.frontend.station.StationApi$Transport transport;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Transport;
+  private final org.emulationstation.frontend.station.StationApi$Device device;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Device;
+  private final org.emulationstation.frontend.station.StationApi$Clock clock;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Clock;
+  private final java.security.PublicKey authority;
+    descriptor: Ljava/security/PublicKey;
+  private final java.lang.String authorityId;
+    descriptor: Ljava/lang/String;
+  private final java.lang.String deviceId;
+    descriptor: Ljava/lang/String;
+  public org.emulationstation.frontend.station.StationApi(org.emulationstation.frontend.station.StationApi$Transport, org.emulationstation.frontend.station.StationApi$Device, org.emulationstation.frontend.station.StationApi$Clock, java.security.PublicKey, java.lang.String) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Transport;Lorg/emulationstation/frontend/station/StationApi$Device;Lorg/emulationstation/frontend/station/StationApi$Clock;Ljava/security/PublicKey;Ljava/lang/String;)V
+
+  public java.lang.String activate(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/lang/String;
+
+  public org.emulationstation.frontend.station.StationApi$Session openSession(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$Session;
+
+  public java.lang.String profile(org.emulationstation.frontend.station.StationApi$Session, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/lang/String;
+
+  public org.emulationstation.frontend.station.StationCatalog catalog(org.emulationstation.frontend.station.StationApi$Session, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationCatalog;
+
+  public org.emulationstation.frontend.station.StationApi$CatalogSnapshot catalogSnapshot(org.emulationstation.frontend.station.StationApi$Session, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$CatalogSnapshot;
+
+  public org.emulationstation.frontend.station.StationApi$CatalogSnapshot restoreCatalog(byte[], org.emulationstation.frontend.station.StationApi$Session) throws java.lang.Exception;
+    descriptor: ([BLorg/emulationstation/frontend/station/StationApi$Session;)Lorg/emulationstation/frontend/station/StationApi$CatalogSnapshot;
+
+  public byte[] cover(org.emulationstation.frontend.station.StationApi$Session, java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)[B
+
+  public org.emulationstation.frontend.station.StationApi$Grant authorize(org.emulationstation.frontend.station.StationApi$Session, java.lang.String, long, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Ljava/lang/String;JLorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$Grant;
+
+  public org.emulationstation.frontend.station.StationFiles$Receipt downloadToStaging(org.emulationstation.frontend.station.StationApi$Grant, java.nio.file.Path, long, org.emulationstation.frontend.station.StationApi$Cancellation, org.emulationstation.frontend.station.StationFiles$Progress) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Grant;Ljava/nio/file/Path;JLorg/emulationstation/frontend/station/StationApi$Cancellation;Lorg/emulationstation/frontend/station/StationFiles$Progress;)Lorg/emulationstation/frontend/station/StationFiles$Receipt;
+
+  public org.emulationstation.frontend.station.StationApi$ArtifactTransfer openArtifact(org.emulationstation.frontend.station.StationApi$Grant, long, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Grant;JLorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$ArtifactTransfer;
+
+  private org.json.JSONObject signed(java.lang.String, java.lang.String, byte[], org.emulationstation.frontend.station.StationApi$Session, java.lang.String, int, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Ljava/lang/String;[BLorg/emulationstation/frontend/station/StationApi$Session;Ljava/lang/String;ILorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/json/JSONObject;
+
+  private org.emulationstation.frontend.station.StationApi$SignedReply signedReply(java.lang.String, java.lang.String, byte[], org.emulationstation.frontend.station.StationApi$Session, java.lang.String, int, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Ljava/lang/String;[BLorg/emulationstation/frontend/station/StationApi$Session;Ljava/lang/String;ILorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$SignedReply;
+
+  private org.json.JSONObject verify(byte[], java.lang.String, org.emulationstation.frontend.station.StationApi$Session, boolean) throws java.lang.Exception;
+    descriptor: ([BLjava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Session;Z)Lorg/json/JSONObject;
+
+  private byte[] identity(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)[B
+
+  private byte[] envelope(byte[]) throws java.lang.Exception;
+    descriptor: ([B)[B
+
+  private void valid(org.emulationstation.frontend.station.StationApi$Session) throws java.io.IOException;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)V
+
+  private void notExpired(long) throws java.io.IOException;
+    descriptor: (J)V
+
+  private static java.lang.String hexId(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+
+  private static java.lang.String token(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+
+  private static void lifetime(org.json.JSONObject, int) throws java.lang.Exception;
+    descriptor: (Lorg/json/JSONObject;I)V
+
+  static java.lang.String string(org.json.JSONObject, java.lang.String) throws org.json.JSONException, java.io.IOException;
+    descriptor: (Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+
+  private static void equal(org.json.JSONObject, java.lang.String, java.lang.String) throws org.json.JSONException, java.io.IOException;
+    descriptor: (Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
+
+  private static java.lang.String field(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+  private static java.lang.String mime(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+
+  private static java.lang.String utf8(byte[]) throws java.nio.charset.CharacterCodingException;
+    descriptor: ([B)Ljava/lang/String;
+
+  private static void success(org.emulationstation.frontend.station.StationApi$Response, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Response;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V
+
+  private static byte[] read(org.emulationstation.frontend.station.StationApi$Response, int, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.io.IOException;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Response;ILorg/emulationstation/frontend/station/StationApi$Cancellation;)[B
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationApi.java"
+class org.emulationstation.frontend.station.StationApi$1 {
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi$ArtifactTransfer implements java.lang.AutoCloseable {
+  private final org.emulationstation.frontend.station.StationApi$Response response;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Response;
+  private final org.emulationstation.frontend.station.StationArtifact artifact;
+    descriptor: Lorg/emulationstation/frontend/station/StationArtifact;
+  private final long maximum;
+    descriptor: J
+  private final java.util.concurrent.atomic.AtomicBoolean copied;
+    descriptor: Ljava/util/concurrent/atomic/AtomicBoolean;
+  private final java.util.concurrent.atomic.AtomicBoolean closed;
+    descriptor: Ljava/util/concurrent/atomic/AtomicBoolean;
+  private org.emulationstation.frontend.station.StationApi$ArtifactTransfer(org.emulationstation.frontend.station.StationApi$Response, org.emulationstation.frontend.station.StationArtifact, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Response;Lorg/emulationstation/frontend/station/StationArtifact;J)V
+
+  public org.emulationstation.frontend.station.StationFiles$Receipt copyToStaging(java.nio.file.Path, org.emulationstation.frontend.station.StationApi$Cancellation, org.emulationstation.frontend.station.StationFiles$Progress) throws java.lang.Exception;
+    descriptor: (Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationApi$Cancellation;Lorg/emulationstation/frontend/station/StationFiles$Progress;)Lorg/emulationstation/frontend/station/StationFiles$Receipt;
+
+  public void close() throws java.io.IOException;
+    descriptor: ()V
+
+  org.emulationstation.frontend.station.StationApi$ArtifactTransfer(org.emulationstation.frontend.station.StationApi$Response, org.emulationstation.frontend.station.StationArtifact, long, org.emulationstation.frontend.station.StationApi$1);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Response;Lorg/emulationstation/frontend/station/StationArtifact;JLorg/emulationstation/frontend/station/StationApi$1;)V
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi$ArtifactUnavailable extends java.io.IOException {
+  org.emulationstation.frontend.station.StationApi$ArtifactUnavailable();
+    descriptor: ()V
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi$Cancellation implements org.emulationstation.frontend.station.StationFiles$Cancellation {
+  private volatile boolean cancelled;
+    descriptor: Z
+  private java.lang.Runnable abort;
+    descriptor: Ljava/lang/Runnable;
+  public org.emulationstation.frontend.station.StationApi$Cancellation();
+    descriptor: ()V
+
+  public synchronized void cancel();
+    descriptor: ()V
+
+  public boolean cancelled();
+    descriptor: ()Z
+
+  public void check() throws java.io.InterruptedIOException;
+    descriptor: ()V
+
+  synchronized void attach(java.lang.Runnable) throws java.io.InterruptedIOException;
+    descriptor: (Ljava/lang/Runnable;)V
+
+  synchronized void detach(java.lang.Runnable);
+    descriptor: (Ljava/lang/Runnable;)V
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi$CatalogSnapshot {
+  public final org.emulationstation.frontend.station.StationCatalog catalog;
+    descriptor: Lorg/emulationstation/frontend/station/StationCatalog;
+  private final byte[] signedEnvelope;
+    descriptor: [B
+  private org.emulationstation.frontend.station.StationApi$CatalogSnapshot(org.emulationstation.frontend.station.StationCatalog, byte[]);
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog;[B)V
+
+  public byte[] encoded();
+    descriptor: ()[B
+
+  org.emulationstation.frontend.station.StationApi$CatalogSnapshot(org.emulationstation.frontend.station.StationCatalog, byte[], org.emulationstation.frontend.station.StationApi$1);
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog;[BLorg/emulationstation/frontend/station/StationApi$1;)V
+}
+Compiled from "StationApi.java"
+public interface org.emulationstation.frontend.station.StationApi$Clock {
+  public abstract long millis();
+    descriptor: ()J
+}
+Compiled from "StationApi.java"
+public interface org.emulationstation.frontend.station.StationApi$Device {
+  public abstract java.security.PublicKey publicKey() throws java.lang.Exception;
+    descriptor: ()Ljava/security/PublicKey;
+
+  public abstract byte[] sign(byte[]) throws java.lang.Exception;
+    descriptor: ([B)[B
+
+  public abstract java.lang.String manufacturer();
+    descriptor: ()Ljava/lang/String;
+
+  public abstract java.lang.String model();
+    descriptor: ()Ljava/lang/String;
+
+  public abstract int sdk();
+    descriptor: ()I
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi$Failure extends java.io.IOException {
+  public final int status;
+    descriptor: I
+  public final java.lang.String code;
+    descriptor: Ljava/lang/String;
+  org.emulationstation.frontend.station.StationApi$Failure(int, java.lang.String);
+    descriptor: (ILjava/lang/String;)V
+
+  public boolean sessionDenied();
+    descriptor: ()Z
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi$Grant {
+  public final java.lang.String itemId;
+    descriptor: Ljava/lang/String;
+  public final long itemRevision;
+    descriptor: J
+  public final org.emulationstation.frontend.station.StationArtifact artifact;
+    descriptor: Lorg/emulationstation/frontend/station/StationArtifact;
+  private final java.lang.String grantId;
+    descriptor: Ljava/lang/String;
+  private final long expires;
+    descriptor: J
+  private final org.emulationstation.frontend.station.StationApi$Session session;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Session;
+  private final java.util.concurrent.atomic.AtomicBoolean consumed;
+    descriptor: Ljava/util/concurrent/atomic/AtomicBoolean;
+  private org.emulationstation.frontend.station.StationApi$Grant(java.lang.String, long, org.emulationstation.frontend.station.StationArtifact, java.lang.String, long, org.emulationstation.frontend.station.StationApi$Session);
+    descriptor: (Ljava/lang/String;JLorg/emulationstation/frontend/station/StationArtifact;Ljava/lang/String;JLorg/emulationstation/frontend/station/StationApi$Session;)V
+
+  org.emulationstation.frontend.station.StationApi$Grant(java.lang.String, long, org.emulationstation.frontend.station.StationArtifact, java.lang.String, long, org.emulationstation.frontend.station.StationApi$Session, org.emulationstation.frontend.station.StationApi$1);
+    descriptor: (Ljava/lang/String;JLorg/emulationstation/frontend/station/StationArtifact;Ljava/lang/String;JLorg/emulationstation/frontend/station/StationApi$Session;Lorg/emulationstation/frontend/station/StationApi$1;)V
+
+  static org.emulationstation.frontend.station.StationApi$Session access$400(org.emulationstation.frontend.station.StationApi$Grant);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Grant;)Lorg/emulationstation/frontend/station/StationApi$Session;
+
+  static long access$500(org.emulationstation.frontend.station.StationApi$Grant);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Grant;)J
+
+  static java.util.concurrent.atomic.AtomicBoolean access$600(org.emulationstation.frontend.station.StationApi$Grant);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Grant;)Ljava/util/concurrent/atomic/AtomicBoolean;
+
+  static java.lang.String access$700(org.emulationstation.frontend.station.StationApi$Grant);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Grant;)Ljava/lang/String;
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi$Response implements java.lang.AutoCloseable {
+  final int status;
+    descriptor: I
+  final java.lang.String type;
+    descriptor: Ljava/lang/String;
+  final long length;
+    descriptor: J
+  final java.io.InputStream body;
+    descriptor: Ljava/io/InputStream;
+  private final java.io.Closeable owner;
+    descriptor: Ljava/io/Closeable;
+  public org.emulationstation.frontend.station.StationApi$Response(int, java.lang.String, long, java.io.InputStream, java.io.Closeable);
+    descriptor: (ILjava/lang/String;JLjava/io/InputStream;Ljava/io/Closeable;)V
+
+  public void close() throws java.io.IOException;
+    descriptor: ()V
+}
+Compiled from "StationApi.java"
+public final class org.emulationstation.frontend.station.StationApi$Session {
+  public final java.lang.String licenseId;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String deviceId;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String sessionId;
+    descriptor: Ljava/lang/String;
+  private final java.lang.String token;
+    descriptor: Ljava/lang/String;
+  private final long expires;
+    descriptor: J
+  private final org.emulationstation.frontend.station.StationApi owner;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi;
+  private org.emulationstation.frontend.station.StationApi$Session(org.emulationstation.frontend.station.StationApi, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+
+  public boolean needsRenewal(long);
+    descriptor: (J)Z
+
+  org.emulationstation.frontend.station.StationApi$Session(org.emulationstation.frontend.station.StationApi, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long, org.emulationstation.frontend.station.StationApi$1);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLorg/emulationstation/frontend/station/StationApi$1;)V
+
+  static java.lang.String access$200(org.emulationstation.frontend.station.StationApi$Session);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)Ljava/lang/String;
+
+  static org.emulationstation.frontend.station.StationApi access$900(org.emulationstation.frontend.station.StationApi$Session);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)Lorg/emulationstation/frontend/station/StationApi;
+
+  static long access$1000(org.emulationstation.frontend.station.StationApi$Session);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)J
+}
+Compiled from "StationApi.java"
+final class org.emulationstation.frontend.station.StationApi$SignedReply {
+  final org.json.JSONObject payload;
+    descriptor: Lorg/json/JSONObject;
+  final byte[] envelope;
+    descriptor: [B
+  org.emulationstation.frontend.station.StationApi$SignedReply(org.json.JSONObject, byte[]);
+    descriptor: (Lorg/json/JSONObject;[B)V
+}
+Compiled from "StationApi.java"
+public interface org.emulationstation.frontend.station.StationApi$Transport {
+  public abstract org.emulationstation.frontend.station.StationApi$Response exchange(java.lang.String, java.lang.String, byte[], java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;Ljava/lang/String;[BLjava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$Response;
+}
+Compiled from "StationArchive.java"
+public final class org.emulationstation.frontend.station.StationArchive implements org.emulationstation.frontend.station.StationInstaller$Reader {
+  public org.emulationstation.frontend.station.StationArchive();
+    descriptor: ()V
+
+  public void read(java.nio.file.Path, org.emulationstation.frontend.station.StationInstaller$Sink, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationInstaller$Sink;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V
+
+  private static native void readArchive(java.lang.String, org.emulationstation.frontend.station.StationInstaller$Sink, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationInstaller$Sink;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V
+}
+Compiled from "StationArchive.java"
+final class org.emulationstation.frontend.station.StationArchive$Library {
+  private org.emulationstation.frontend.station.StationArchive$Library();
+    descriptor: ()V
+
+  static void ready();
+    descriptor: ()V
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationArtifact.java"
+public final class org.emulationstation.frontend.station.StationArtifact {
+  public static final long MAX_BYTES;
+    descriptor: J
+  public static final long MAX_EXPANDED_BYTES;
+    descriptor: J
+  public static final int MAX_FILES;
+    descriptor: I
+  public final java.lang.String fileName;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String sha256;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String format;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String launchPath;
+    descriptor: Ljava/lang/String;
+  public final long sizeBytes;
+    descriptor: J
+  public final long expandedSizeBytes;
+    descriptor: J
+  public final int fileCount;
+    descriptor: I
+  private org.emulationstation.frontend.station.StationArtifact(java.lang.String, long, java.lang.String, java.lang.String, java.lang.String, long, int);
+    descriptor: (Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JI)V
+
+  static org.emulationstation.frontend.station.StationArtifact parse(org.json.JSONObject) throws java.lang.Exception;
+    descriptor: (Lorg/json/JSONObject;)Lorg/emulationstation/frontend/station/StationArtifact;
+
+  static long bounded(org.json.JSONObject, java.lang.String, long) throws java.lang.Exception;
+    descriptor: (Lorg/json/JSONObject;Ljava/lang/String;J)J
+
+  public static java.lang.String relativePath(java.lang.String, int) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;I)Ljava/lang/String;
+
+  org.json.JSONObject json() throws java.lang.Exception;
+    descriptor: ()Lorg/json/JSONObject;
+}
+Compiled from "StationBundledFiles.java"
+public final class org.emulationstation.frontend.station.StationBundledFiles {
+  private org.emulationstation.frontend.station.StationBundledFiles();
+    descriptor: ()V
+
+  public static int install(org.emulationstation.frontend.station.StationBundledFiles$Source, java.lang.String, java.nio.file.Path, boolean) throws java.io.IOException;
+    descriptor: (Lorg/emulationstation/frontend/station/StationBundledFiles$Source;Ljava/lang/String;Ljava/nio/file/Path;Z)I
+
+  private static int install(org.emulationstation.frontend.station.StationBundledFiles$Source, java.lang.String, java.nio.file.Path, boolean, int) throws java.io.IOException;
+    descriptor: (Lorg/emulationstation/frontend/station/StationBundledFiles$Source;Ljava/lang/String;Ljava/nio/file/Path;ZI)I
+}
+Compiled from "StationBundledFiles.java"
+public interface org.emulationstation.frontend.station.StationBundledFiles$Source {
+  public abstract java.lang.String[] list(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)[Ljava/lang/String;
+
+  public abstract java.io.InputStream open(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Ljava/io/InputStream;
+}
+Compiled from "StationCatalog.java"
+public final class org.emulationstation.frontend.station.StationCatalog {
+  public static final int MAX_ITEMS;
+    descriptor: I
+  public final long revision;
+    descriptor: J
+  public final java.util.List<org.emulationstation.frontend.station.StationCatalog$Item> items;
+    descriptor: Ljava/util/List;
+  private final java.util.Map<java.lang.String, org.emulationstation.frontend.station.StationCatalog$Item> byId;
+    descriptor: Ljava/util/Map;
+  private org.emulationstation.frontend.station.StationCatalog(long, java.util.List<org.emulationstation.frontend.station.StationCatalog$Item>, java.util.Map<java.lang.String, org.emulationstation.frontend.station.StationCatalog$Item>);
+    descriptor: (JLjava/util/List;Ljava/util/Map;)V
+
+  public org.emulationstation.frontend.station.StationCatalog$Item find(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lorg/emulationstation/frontend/station/StationCatalog$Item;
+
+  public static org.emulationstation.frontend.station.StationCatalog fromVerifiedPayload(org.json.JSONObject) throws java.io.IOException;
+    descriptor: (Lorg/json/JSONObject;)Lorg/emulationstation/frontend/station/StationCatalog;
+
+  public byte[] localPayload() throws java.io.IOException;
+    descriptor: ()[B
+
+  public static java.lang.String libraryId(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+
+  public static java.lang.String plainText(java.lang.String, int) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;I)Ljava/lang/String;
+
+  static long integer(org.json.JSONObject, java.lang.String) throws org.json.JSONException, java.io.IOException;
+    descriptor: (Lorg/json/JSONObject;Ljava/lang/String;)J
+}
+Compiled from "StationCatalog.java"
+class org.emulationstation.frontend.station.StationCatalog$1 {
+}
+Compiled from "StationCatalog.java"
+public final class org.emulationstation.frontend.station.StationCatalog$Item {
+  public final java.lang.String itemId;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String name;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String platform;
+    descriptor: Ljava/lang/String;
+  public final long revision;
+    descriptor: J
+  public final java.lang.String coverId;
+    descriptor: Ljava/lang/String;
+  private org.emulationstation.frontend.station.StationCatalog$Item(java.lang.String, java.lang.String, java.lang.String, long, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
+
+  org.emulationstation.frontend.station.StationCatalog$Item(java.lang.String, java.lang.String, java.lang.String, long, java.lang.String, org.emulationstation.frontend.station.StationCatalog$1);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Lorg/emulationstation/frontend/station/StationCatalog$1;)V
+}
+Compiled from "StationCatalogStore.java"
+public final class org.emulationstation.frontend.station.StationCatalogStore {
+  private final java.nio.file.Path directory;
+    descriptor: Ljava/nio/file/Path;
+  public org.emulationstation.frontend.station.StationCatalogStore(java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;)V
+
+  public synchronized org.emulationstation.frontend.station.StationApi$CatalogSnapshot read(org.emulationstation.frontend.station.StationApi, org.emulationstation.frontend.station.StationApi$Session) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi;Lorg/emulationstation/frontend/station/StationApi$Session;)Lorg/emulationstation/frontend/station/StationApi$CatalogSnapshot;
+
+  public synchronized org.emulationstation.frontend.station.StationApi$CatalogSnapshot refresh(org.emulationstation.frontend.station.StationApi, org.emulationstation.frontend.station.StationApi$Session, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi;Lorg/emulationstation/frontend/station/StationApi$Session;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$CatalogSnapshot;
+
+  private java.nio.file.Path file(org.emulationstation.frontend.station.StationApi$Session) throws java.io.IOException;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)Ljava/nio/file/Path;
+}
+Compiled from "StationConfig.java"
+public final class org.emulationstation.frontend.station.StationConfig {
+  public static final boolean ENABLED;
+    descriptor: Z
+  public static final java.lang.String BASE_URL;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String TLS_SPKI_SHA256;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String STATION_ASSERTION_KEY_ID;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String STATION_ASSERTION_SPKI_BASE64URL;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String PRODUCT;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String APPLICATION;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String CLIENT_VERSION;
+    descriptor: Ljava/lang/String;
+  private org.emulationstation.frontend.station.StationConfig();
+    descriptor: ()V
+
+  public static boolean ready();
+    descriptor: ()Z
+}
+Compiled from "StationCoordinator.java"
+public final class org.emulationstation.frontend.station.StationCoordinator {
+  private final org.emulationstation.frontend.station.StationApi api;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi;
+  private final org.emulationstation.frontend.station.StationSessions sessions;
+    descriptor: Lorg/emulationstation/frontend/station/StationSessions;
+  private final org.emulationstation.frontend.station.StationCatalogStore catalogs;
+    descriptor: Lorg/emulationstation/frontend/station/StationCatalogStore;
+  private final org.emulationstation.frontend.station.StationCoverStore covers;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoverStore;
+  private final java.nio.file.Path privateFiles;
+    descriptor: Ljava/nio/file/Path;
+  private final org.emulationstation.frontend.station.StationApi$Clock clock;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Clock;
+  private volatile org.emulationstation.frontend.station.StationApi$Session authorized;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Session;
+  private volatile org.emulationstation.frontend.station.StationCoordinator$Library library;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoordinator$Library;
+  public org.emulationstation.frontend.station.StationCoordinator(org.emulationstation.frontend.station.StationApi, org.emulationstation.frontend.station.StationSessions, org.emulationstation.frontend.station.StationCatalogStore, org.emulationstation.frontend.station.StationCoverStore, java.nio.file.Path, org.emulationstation.frontend.station.StationApi$Clock);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi;Lorg/emulationstation/frontend/station/StationSessions;Lorg/emulationstation/frontend/station/StationCatalogStore;Lorg/emulationstation/frontend/station/StationCoverStore;Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationApi$Clock;)V
+
+  public synchronized org.emulationstation.frontend.station.StationCoordinator$Library login(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationCoordinator$Library;
+
+  public synchronized org.emulationstation.frontend.station.StationCoordinator$Library refresh(org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationCoordinator$Library;
+
+  public synchronized java.nio.file.Path cover(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/nio/file/Path;
+
+  public synchronized org.emulationstation.frontend.station.StationApi$Grant authorize(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$Grant;
+
+  public boolean ready();
+    descriptor: ()Z
+
+  public org.emulationstation.frontend.station.StationCoordinator$Library current();
+    descriptor: ()Lorg/emulationstation/frontend/station/StationCoordinator$Library;
+
+  public synchronized void logout();
+    descriptor: ()V
+
+  private synchronized void invalidate(org.emulationstation.frontend.station.StationApi$Session);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)V
+
+  private org.emulationstation.frontend.station.StationCoordinator$Library loadCatalog(org.emulationstation.frontend.station.StationApi$Session, java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationCoordinator$Library;
+
+  private java.lang.String loadName(org.emulationstation.frontend.station.StationApi$Session, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/lang/String;
+
+  private java.nio.file.Path nameFile(org.emulationstation.frontend.station.StationApi$Session);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)Ljava/nio/file/Path;
+
+  private java.lang.String readName(org.emulationstation.frontend.station.StationApi$Session);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)Ljava/lang/String;
+
+  private void saveName(org.emulationstation.frontend.station.StationApi$Session, java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V
+}
+Compiled from "StationCoordinator.java"
+class org.emulationstation.frontend.station.StationCoordinator$1 {
+}
+Compiled from "StationCoordinator.java"
+public final class org.emulationstation.frontend.station.StationCoordinator$Library {
+  public final java.lang.String displayName;
+    descriptor: Ljava/lang/String;
+  public final org.emulationstation.frontend.station.StationCatalog catalog;
+    descriptor: Lorg/emulationstation/frontend/station/StationCatalog;
+  public final boolean cached;
+    descriptor: Z
+  private org.emulationstation.frontend.station.StationCoordinator$Library(java.lang.String, org.emulationstation.frontend.station.StationCatalog, boolean);
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationCatalog;Z)V
+
+  org.emulationstation.frontend.station.StationCoordinator$Library(java.lang.String, org.emulationstation.frontend.station.StationCatalog, boolean, org.emulationstation.frontend.station.StationCoordinator$1);
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationCatalog;ZLorg/emulationstation/frontend/station/StationCoordinator$1;)V
+}
+Compiled from "StationCoverStore.java"
+public final class org.emulationstation.frontend.station.StationCoverStore {
+  private final java.nio.file.Path directory;
+    descriptor: Ljava/nio/file/Path;
+  private final org.emulationstation.frontend.station.StationApi api;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi;
+  private final org.emulationstation.frontend.station.StationSessions sessions;
+    descriptor: Lorg/emulationstation/frontend/station/StationSessions;
+  private final org.emulationstation.frontend.station.StationApi$Clock clock;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Clock;
+  private final org.emulationstation.frontend.station.StationCoverStore$Waiter waiter;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoverStore$Waiter;
+  private final org.emulationstation.frontend.station.StationCoverStore$ImageValidator validator;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoverStore$ImageValidator;
+  private final org.emulationstation.frontend.station.StationCoverStore$PreviousCovers previousCovers;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoverStore$PreviousCovers;
+  private long nextRequest;
+    descriptor: J
+  private final java.util.Map<java.lang.String, org.emulationstation.frontend.station.StationCoverStore$Checked> checked;
+    descriptor: Ljava/util/Map;
+  private final java.util.Map<java.lang.String, java.lang.Long> unavailable;
+    descriptor: Ljava/util/Map;
+  public org.emulationstation.frontend.station.StationCoverStore(java.nio.file.Path, org.emulationstation.frontend.station.StationApi, org.emulationstation.frontend.station.StationSessions, org.emulationstation.frontend.station.StationApi$Clock, org.emulationstation.frontend.station.StationCoverStore$Waiter, org.emulationstation.frontend.station.StationCoverStore$ImageValidator) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationApi;Lorg/emulationstation/frontend/station/StationSessions;Lorg/emulationstation/frontend/station/StationApi$Clock;Lorg/emulationstation/frontend/station/StationCoverStore$Waiter;Lorg/emulationstation/frontend/station/StationCoverStore$ImageValidator;)V
+
+  public org.emulationstation.frontend.station.StationCoverStore(java.nio.file.Path, org.emulationstation.frontend.station.StationApi, org.emulationstation.frontend.station.StationSessions, org.emulationstation.frontend.station.StationApi$Clock, org.emulationstation.frontend.station.StationCoverStore$Waiter, org.emulationstation.frontend.station.StationCoverStore$ImageValidator, org.emulationstation.frontend.station.StationCoverStore$PreviousCovers) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationApi;Lorg/emulationstation/frontend/station/StationSessions;Lorg/emulationstation/frontend/station/StationApi$Clock;Lorg/emulationstation/frontend/station/StationCoverStore$Waiter;Lorg/emulationstation/frontend/station/StationCoverStore$ImageValidator;Lorg/emulationstation/frontend/station/StationCoverStore$PreviousCovers;)V
+
+  public synchronized java.nio.file.Path get(java.lang.String, long, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;JLorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/nio/file/Path;
+
+  public synchronized java.nio.file.Path get(org.emulationstation.frontend.station.StationApi$Session, java.lang.String, long, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;Ljava/lang/String;JLorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/nio/file/Path;
+}
+Compiled from "StationCoverStore.java"
+class org.emulationstation.frontend.station.StationCoverStore$1 extends java.util.LinkedHashMap<java.lang.String, org.emulationstation.frontend.station.StationCoverStore$Checked> {
+  final org.emulationstation.frontend.station.StationCoverStore this$0;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoverStore;
+  org.emulationstation.frontend.station.StationCoverStore$1(org.emulationstation.frontend.station.StationCoverStore, int, float, boolean);
+    descriptor: (Lorg/emulationstation/frontend/station/StationCoverStore;IFZ)V
+
+  protected boolean removeEldestEntry(java.util.Map$Entry<java.lang.String, org.emulationstation.frontend.station.StationCoverStore$Checked>);
+    descriptor: (Ljava/util/Map$Entry;)Z
+}
+Compiled from "StationCoverStore.java"
+class org.emulationstation.frontend.station.StationCoverStore$2 extends java.util.LinkedHashMap<java.lang.String, java.lang.Long> {
+  final org.emulationstation.frontend.station.StationCoverStore this$0;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoverStore;
+  org.emulationstation.frontend.station.StationCoverStore$2(org.emulationstation.frontend.station.StationCoverStore, int, float, boolean);
+    descriptor: (Lorg/emulationstation/frontend/station/StationCoverStore;IFZ)V
+
+  protected boolean removeEldestEntry(java.util.Map$Entry<java.lang.String, java.lang.Long>);
+    descriptor: (Ljava/util/Map$Entry;)Z
+}
+Compiled from "StationCoverStore.java"
+final class org.emulationstation.frontend.station.StationCoverStore$Checked {
+  final long size;
+    descriptor: J
+  final long modified;
+    descriptor: J
+  org.emulationstation.frontend.station.StationCoverStore$Checked(java.nio.file.attribute.BasicFileAttributes);
+    descriptor: (Ljava/nio/file/attribute/BasicFileAttributes;)V
+
+  boolean matches(java.nio.file.attribute.BasicFileAttributes);
+    descriptor: (Ljava/nio/file/attribute/BasicFileAttributes;)Z
+}
+Compiled from "StationCoverStore.java"
+public interface org.emulationstation.frontend.station.StationCoverStore$ImageValidator {
+  public abstract void validate(byte[]) throws java.io.IOException;
+    descriptor: ([B)V
+}
+Compiled from "StationCoverStore.java"
+public interface org.emulationstation.frontend.station.StationCoverStore$PreviousCovers {
+  public abstract byte[] find(java.lang.String, long) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;J)[B
+}
+Compiled from "StationCoverStore.java"
+public interface org.emulationstation.frontend.station.StationCoverStore$Waiter {
+  public abstract void waitMillis(long) throws java.lang.InterruptedException;
+    descriptor: (J)V
+}
+Compiled from "StationCrypto.java"
+public final class org.emulationstation.frontend.station.StationCrypto {
+  public static final java.lang.String ALIAS;
+    descriptor: Ljava/lang/String;
+  private static final java.security.spec.PSSParameterSpec PSS;
+    descriptor: Ljava/security/spec/PSSParameterSpec;
+  private org.emulationstation.frontend.station.StationCrypto();
+    descriptor: ()V
+
+  public static synchronized java.security.PublicKey publicKey() throws java.lang.Exception;
+    descriptor: ()Ljava/security/PublicKey;
+
+  public static byte[] sign(byte[]) throws java.lang.Exception;
+    descriptor: ([B)[B
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationDiagnostics.java"
+public final class org.emulationstation.frontend.station.StationDiagnostics {
+  private static volatile org.emulationstation.frontend.station.StationDiagnostics$TraceObserver traceObserver;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$TraceObserver;
+  private static final java.lang.ThreadLocal<org.emulationstation.frontend.station.StationDiagnostics$Selection> selected;
+    descriptor: Ljava/lang/ThreadLocal;
+  private static volatile org.emulationstation.frontend.station.StationDiagnostics$Observer observer;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Observer;
+  private org.emulationstation.frontend.station.StationDiagnostics();
+    descriptor: ()V
+
+  public static void observe(org.emulationstation.frontend.station.StationDiagnostics$Observer);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Observer;)V
+
+  public static void observeTrace(org.emulationstation.frontend.station.StationDiagnostics$TraceObserver);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$TraceObserver;)V
+
+  public static org.emulationstation.frontend.station.StationDiagnostics$Scope selection(java.lang.String, java.lang.String, long);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;J)Lorg/emulationstation/frontend/station/StationDiagnostics$Scope;
+
+  static java.lang.String tag(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+
+  static void trace(org.emulationstation.frontend.station.StationDiagnostics$Event, int, java.lang.String);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;ILjava/lang/String;)V
+
+  public static void record(org.emulationstation.frontend.station.StationDiagnostics$Event, int, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;IJ)V
+
+  static org.emulationstation.frontend.station.StationDiagnostics$Event route(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+
+  static void serverFailure(int, java.lang.String);
+    descriptor: (ILjava/lang/String;)V
+
+  static int status(java.lang.Exception);
+    descriptor: (Ljava/lang/Exception;)I
+
+  private static void lambda$observeTrace$3(org.emulationstation.frontend.station.StationDiagnostics$Event, int, java.lang.String, java.lang.String, java.lang.String, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+
+  private static void lambda$observe$2(org.emulationstation.frontend.station.StationDiagnostics$Event, int, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;IJ)V
+
+  private static void lambda$static$1(org.emulationstation.frontend.station.StationDiagnostics$Event, int, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;IJ)V
+
+  private static void lambda$static$0(org.emulationstation.frontend.station.StationDiagnostics$Event, int, java.lang.String, java.lang.String, java.lang.String, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+
+  static java.lang.ThreadLocal access$000();
+    descriptor: ()Ljava/lang/ThreadLocal;
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationDiagnostics.java"
+class org.emulationstation.frontend.station.StationDiagnostics$1 {
+}
+Compiled from "StationDiagnostics.java"
+public final class org.emulationstation.frontend.station.StationDiagnostics$Event extends java.lang.Enum<org.emulationstation.frontend.station.StationDiagnostics$Event> {
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event ACTIVATION;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event SESSION;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event PROFILE;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event CATALOG;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event COVER;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event ARTIFACT;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event AUTHORIZE;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event SERVER_ITEM_NOT_FOUND;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event SERVER_COVER_NOT_FOUND;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event SERVER_GRANT_NOT_FOUND;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event SERVER_ARTIFACT_NOT_READY;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event SERVER_OTHER_FAILURE;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event REQUEST_FAILED;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event CATALOG_NETWORK;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event CATALOG_CACHE;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event CATALOG_PUBLISHED;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event COVER_CACHE;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event COVER_FAILED;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event INSTALL_FINISHED;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event INSTALL_FAILED;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event RECEIPT_INVALID;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event LOCAL_REUSE;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static final org.emulationstation.frontend.station.StationDiagnostics$Event UNSUPPORTED_PLATFORM;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  private static final org.emulationstation.frontend.station.StationDiagnostics$Event[] $VALUES;
+    descriptor: [Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+  public static org.emulationstation.frontend.station.StationDiagnostics$Event[] values();
+    descriptor: ()[Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+
+  public static org.emulationstation.frontend.station.StationDiagnostics$Event valueOf(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+
+  private org.emulationstation.frontend.station.StationDiagnostics$Event();
+    descriptor: (Ljava/lang/String;I)V
+
+  private static org.emulationstation.frontend.station.StationDiagnostics$Event[] $values();
+    descriptor: ()[Lorg/emulationstation/frontend/station/StationDiagnostics$Event;
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationDiagnostics.java"
+public interface org.emulationstation.frontend.station.StationDiagnostics$Observer {
+  public abstract void event(org.emulationstation.frontend.station.StationDiagnostics$Event, int, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;IJ)V
+}
+Compiled from "StationDiagnostics.java"
+public final class org.emulationstation.frontend.station.StationDiagnostics$Scope implements java.lang.AutoCloseable {
+  private final org.emulationstation.frontend.station.StationDiagnostics$Selection previous;
+    descriptor: Lorg/emulationstation/frontend/station/StationDiagnostics$Selection;
+  private org.emulationstation.frontend.station.StationDiagnostics$Scope(org.emulationstation.frontend.station.StationDiagnostics$Selection);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Selection;)V
+
+  public void close();
+    descriptor: ()V
+
+  org.emulationstation.frontend.station.StationDiagnostics$Scope(org.emulationstation.frontend.station.StationDiagnostics$Selection, org.emulationstation.frontend.station.StationDiagnostics$1);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Selection;Lorg/emulationstation/frontend/station/StationDiagnostics$1;)V
+}
+Compiled from "StationDiagnostics.java"
+final class org.emulationstation.frontend.station.StationDiagnostics$Selection {
+  final java.lang.String item;
+    descriptor: Ljava/lang/String;
+  final java.lang.String cover;
+    descriptor: Ljava/lang/String;
+  final long revision;
+    descriptor: J
+  org.emulationstation.frontend.station.StationDiagnostics$Selection(java.lang.String, java.lang.String, long);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;J)V
+}
+Compiled from "StationDiagnostics.java"
+public interface org.emulationstation.frontend.station.StationDiagnostics$TraceObserver {
+  public abstract void event(org.emulationstation.frontend.station.StationDiagnostics$Event, int, java.lang.String, java.lang.String, java.lang.String, long);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDiagnostics$Event;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+}
+Compiled from "StationDownloads.java"
+public final class org.emulationstation.frontend.station.StationDownloads implements java.lang.AutoCloseable {
+  private final org.emulationstation.frontend.station.StationApi api;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi;
+  private final org.emulationstation.frontend.station.StationCoordinator owner;
+    descriptor: Lorg/emulationstation/frontend/station/StationCoordinator;
+  private final org.emulationstation.frontend.station.StationInstaller installer;
+    descriptor: Lorg/emulationstation/frontend/station/StationInstaller;
+  private final java.nio.file.Path staging;
+    descriptor: Ljava/nio/file/Path;
+  private final org.emulationstation.frontend.station.StationDownloads$Listener listener;
+    descriptor: Lorg/emulationstation/frontend/station/StationDownloads$Listener;
+  private final java.util.concurrent.ConcurrentHashMap<java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation> jobs;
+    descriptor: Ljava/util/concurrent/ConcurrentHashMap;
+  private final java.util.concurrent.ThreadPoolExecutor worker;
+    descriptor: Ljava/util/concurrent/ThreadPoolExecutor;
+  public org.emulationstation.frontend.station.StationDownloads(org.emulationstation.frontend.station.StationApi, org.emulationstation.frontend.station.StationCoordinator, org.emulationstation.frontend.station.StationInstaller, java.nio.file.Path, org.emulationstation.frontend.station.StationDownloads$Listener) throws java.io.IOException;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi;Lorg/emulationstation/frontend/station/StationCoordinator;Lorg/emulationstation/frontend/station/StationInstaller;Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationDownloads$Listener;)V
+
+  public boolean start(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+
+  private void run(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation);
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V
+
+  public void cancel(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public int activeCount();
+    descriptor: ()I
+
+  public void uninstall(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public org.emulationstation.frontend.station.StationInstaller$Installed find(org.emulationstation.frontend.station.StationCatalog$Item) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog$Item;)Lorg/emulationstation/frontend/station/StationInstaller$Installed;
+
+  public void close();
+    descriptor: ()V
+
+  static java.lang.String message(java.lang.Exception, org.emulationstation.frontend.station.StationApi$Cancellation);
+    descriptor: (Ljava/lang/Exception;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/lang/String;
+
+  private void lambda$uninstall$4(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  private void lambda$run$3(long[], java.lang.String, org.emulationstation.frontend.station.StationApi$Grant, long, long, long);
+    descriptor: ([JLjava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Grant;JJJ)V
+
+  private void lambda$run$2(long[], java.lang.String, long, long, long);
+    descriptor: ([JLjava/lang/String;JJJ)V
+
+  private void lambda$start$1(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation);
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V
+
+  private static java.lang.Thread lambda$new$0(java.lang.Runnable);
+    descriptor: (Ljava/lang/Runnable;)Ljava/lang/Thread;
+}
+Compiled from "StationDownloads.java"
+class org.emulationstation.frontend.station.StationDownloads$1 {
+}
+Compiled from "StationDownloads.java"
+final class org.emulationstation.frontend.station.StationDownloads$InsufficientSpace extends java.io.IOException {
+  private org.emulationstation.frontend.station.StationDownloads$InsufficientSpace();
+    descriptor: ()V
+
+  org.emulationstation.frontend.station.StationDownloads$InsufficientSpace(org.emulationstation.frontend.station.StationDownloads$1);
+    descriptor: (Lorg/emulationstation/frontend/station/StationDownloads$1;)V
+}
+Compiled from "StationDownloads.java"
+public interface org.emulationstation.frontend.station.StationDownloads$Listener {
+  public abstract void changed(java.lang.String, boolean, long, long, java.lang.String, java.lang.String, int);
+    descriptor: (Ljava/lang/String;ZJJLjava/lang/String;Ljava/lang/String;I)V
+}
+Compiled from "StationExistingArtifact.java"
+public final class org.emulationstation.frontend.station.StationExistingArtifact {
+  private org.emulationstation.frontend.station.StationExistingArtifact();
+    descriptor: ()V
+
+  static java.nio.file.Path find(java.nio.file.Path, org.emulationstation.frontend.station.StationArtifact, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationArtifact;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/nio/file/Path;
+}
+Compiled from "StationExistingArtifact.java"
+class org.emulationstation.frontend.station.StationExistingArtifact$1 extends java.nio.file.SimpleFileVisitor<java.nio.file.Path> {
+  final org.emulationstation.frontend.station.StationApi$Cancellation val$cancel;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Cancellation;
+  final int[] val$visited;
+    descriptor: [I
+  final java.util.List val$candidates;
+    descriptor: Ljava/util/List;
+  final org.emulationstation.frontend.station.StationArtifact val$spec;
+    descriptor: Lorg/emulationstation/frontend/station/StationArtifact;
+  final java.nio.file.Path val$exact;
+    descriptor: Ljava/nio/file/Path;
+  org.emulationstation.frontend.station.StationExistingArtifact$1(org.emulationstation.frontend.station.StationApi$Cancellation, int[], java.util.List, org.emulationstation.frontend.station.StationArtifact, java.nio.file.Path);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Cancellation;[ILjava/util/List;Lorg/emulationstation/frontend/station/StationArtifact;Ljava/nio/file/Path;)V
+
+  public java.nio.file.FileVisitResult preVisitDirectory(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;
+
+  public java.nio.file.FileVisitResult visitFile(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;
+
+  public java.nio.file.FileVisitResult visitFileFailed(java.nio.file.Path, java.io.IOException) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/io/IOException;)Ljava/nio/file/FileVisitResult;
+
+  public java.nio.file.FileVisitResult visitFileFailed(java.lang.Object, java.io.IOException) throws java.io.IOException;
+    descriptor: (Ljava/lang/Object;Ljava/io/IOException;)Ljava/nio/file/FileVisitResult;
+
+  public java.nio.file.FileVisitResult visitFile(java.lang.Object, java.nio.file.attribute.BasicFileAttributes) throws java.io.IOException;
+    descriptor: (Ljava/lang/Object;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;
+
+  public java.nio.file.FileVisitResult preVisitDirectory(java.lang.Object, java.nio.file.attribute.BasicFileAttributes) throws java.io.IOException;
+    descriptor: (Ljava/lang/Object;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;
+}
+Compiled from "StationFiles.java"
+public final class org.emulationstation.frontend.station.StationFiles {
+  public static final org.emulationstation.frontend.station.StationFiles$Cancellation NEVER_CANCELLED;
+    descriptor: Lorg/emulationstation/frontend/station/StationFiles$Cancellation;
+  public static final org.emulationstation.frontend.station.StationFiles$Progress NO_PROGRESS;
+    descriptor: Lorg/emulationstation/frontend/station/StationFiles$Progress;
+  private org.emulationstation.frontend.station.StationFiles();
+    descriptor: ()V
+
+  public static org.emulationstation.frontend.station.StationFiles$Receipt replace(java.io.InputStream, java.nio.file.Path, long, long, org.emulationstation.frontend.station.StationFiles$Cancellation, org.emulationstation.frontend.station.StationFiles$Progress) throws java.io.IOException;
+    descriptor: (Ljava/io/InputStream;Ljava/nio/file/Path;JJLorg/emulationstation/frontend/station/StationFiles$Cancellation;Lorg/emulationstation/frontend/station/StationFiles$Progress;)Lorg/emulationstation/frontend/station/StationFiles$Receipt;
+
+  public static org.emulationstation.frontend.station.StationFiles$Receipt replace(java.io.InputStream, java.nio.file.Path, long, long, org.emulationstation.frontend.station.StationFiles$Cancellation, org.emulationstation.frontend.station.StationFiles$Progress, java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/io/InputStream;Ljava/nio/file/Path;JJLorg/emulationstation/frontend/station/StationFiles$Cancellation;Lorg/emulationstation/frontend/station/StationFiles$Progress;Ljava/lang/String;)Lorg/emulationstation/frontend/station/StationFiles$Receipt;
+
+  public static byte[] readBounded(java.nio.file.Path, int) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;I)[B
+
+  public static java.lang.String imageExtension(byte[]) throws java.io.IOException;
+    descriptor: ([B)Ljava/lang/String;
+
+  public static java.lang.String archiveType(byte[]);
+    descriptor: ([B)Ljava/lang/String;
+
+  private static boolean ascii(byte[], int, java.lang.String);
+    descriptor: ([BILjava/lang/String;)Z
+
+  private static boolean matches(byte[], int, int[]);
+    descriptor: ([BI[I)Z
+
+  private static void checkCancelled(org.emulationstation.frontend.station.StationFiles$Cancellation) throws java.io.InterruptedIOException;
+    descriptor: (Lorg/emulationstation/frontend/station/StationFiles$Cancellation;)V
+
+  private static java.lang.String hex(byte[]);
+    descriptor: ([B)Ljava/lang/String;
+
+  private static void lambda$static$1(long, long);
+    descriptor: (JJ)V
+
+  private static boolean lambda$static$0();
+    descriptor: ()Z
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationFiles.java"
+public interface org.emulationstation.frontend.station.StationFiles$Cancellation {
+  public abstract boolean cancelled();
+    descriptor: ()Z
+}
+Compiled from "StationFiles.java"
+public interface org.emulationstation.frontend.station.StationFiles$Progress {
+  public abstract void changed(long, long);
+    descriptor: (JJ)V
+}
+Compiled from "StationFiles.java"
+public final class org.emulationstation.frontend.station.StationFiles$Receipt {
+  public final long size;
+    descriptor: J
+  public final java.lang.String sha256;
+    descriptor: Ljava/lang/String;
+  org.emulationstation.frontend.station.StationFiles$Receipt(long, java.lang.String);
+    descriptor: (JLjava/lang/String;)V
+}
+Compiled from "StationFrontend.java"
+public final class org.emulationstation.frontend.station.StationFrontend {
+  private static final java.util.concurrent.ThreadPoolExecutor commands;
+    descriptor: Ljava/util/concurrent/ThreadPoolExecutor;
+  private static final java.util.concurrent.ThreadPoolExecutor images;
+    descriptor: Ljava/util/concurrent/ThreadPoolExecutor;
+  private static final java.util.concurrent.ConcurrentHashMap<java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation> requests;
+    descriptor: Ljava/util/concurrent/ConcurrentHashMap;
+  private static volatile org.emulationstation.frontend.station.StationDownloads downloads;
+    descriptor: Lorg/emulationstation/frontend/station/StationDownloads;
+  private static volatile boolean foreground;
+    descriptor: Z
+  private static volatile boolean configured;
+    descriptor: Z
+  private static volatile java.lang.String requestedStorageRoot;
+    descriptor: Ljava/lang/String;
+  private static java.lang.String platformWarning;
+    descriptor: Ljava/lang/String;
+  private static java.util.concurrent.ThreadPoolExecutor pool(java.lang.String, int);
+    descriptor: (Ljava/lang/String;I)Ljava/util/concurrent/ThreadPoolExecutor;
+
+  private org.emulationstation.frontend.station.StationFrontend();
+    descriptor: ()V
+
+  public static boolean authorized();
+    descriptor: ()Z
+
+  public static void requestLogin();
+    descriptor: ()V
+
+  public static void configure(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  private static void prepareStorage(org.emulationstation.frontend.station.StationAndroid, java.lang.String) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationAndroid;Ljava/lang/String;)V
+
+  public static void refresh();
+    descriptor: ()V
+
+  private static void publishCurrent(org.emulationstation.frontend.station.StationAndroid) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationAndroid;)V
+
+  public static boolean start(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+
+  public static void cancel(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public static boolean remove(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+
+  public static int activeCount();
+    descriptor: ()I
+
+  public static void cover(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public static void setForeground(boolean);
+    descriptor: (Z)V
+
+  public static void reconcile();
+    descriptor: ()V
+
+  private static boolean execute(java.lang.Runnable);
+    descriptor: (Ljava/lang/Runnable;)Z
+
+  private static java.lang.String catalogError(java.lang.Exception, java.lang.String);
+    descriptor: (Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/String;
+
+  private static java.lang.String safeReason(java.lang.Exception);
+    descriptor: (Ljava/lang/Exception;)Ljava/lang/String;
+
+  private static byte[] utf8(java.lang.String);
+    descriptor: (Ljava/lang/String;)[B
+
+  private static native void publishPreparation(int, int, long);
+    descriptor: (IIJ)V
+
+  private static native void publishCatalog(byte[][], byte[]);
+    descriptor: ([[B[B)V
+
+  private static native void publishCover(java.lang.String, byte[]);
+    descriptor: (Ljava/lang/String;[B)V
+
+  private static native void publishJob(java.lang.String, boolean, long, long, byte[], byte[], int);
+    descriptor: (Ljava/lang/String;ZJJ[B[BI)V
+
+  private static native void publishError(byte[]);
+    descriptor: ([B)V
+
+  private static void lambda$reconcile$6();
+    descriptor: ()V
+
+  private static void lambda$cover$5(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation);
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V
+
+  private static void lambda$publishCurrent$4(org.emulationstation.frontend.station.StationAndroid, java.lang.String);
+    descriptor: (Lorg/emulationstation/frontend/station/StationAndroid;Ljava/lang/String;)V
+
+  private static void lambda$refresh$3();
+    descriptor: ()V
+
+  private static void lambda$prepareStorage$2(org.emulationstation.frontend.station.StationAndroid, java.lang.String, boolean, long, long, java.lang.String, java.lang.String, int);
+    descriptor: (Lorg/emulationstation/frontend/station/StationAndroid;Ljava/lang/String;ZJJLjava/lang/String;Ljava/lang/String;I)V
+
+  private static void lambda$configure$1(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  private static java.lang.Thread lambda$pool$0(java.lang.String, java.lang.Runnable);
+    descriptor: (Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationHttp.java"
+public final class org.emulationstation.frontend.station.StationHttp implements org.emulationstation.frontend.station.StationApi$Transport {
+  private final javax.net.ssl.SSLSocketFactory sockets;
+    descriptor: Ljavax/net/ssl/SSLSocketFactory;
+  private final java.net.URL origin;
+    descriptor: Ljava/net/URL;
+  public org.emulationstation.frontend.station.StationHttp() throws java.lang.Exception;
+    descriptor: ()V
+
+  public org.emulationstation.frontend.station.StationApi$Response exchange(java.lang.String, java.lang.String, byte[], java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;Ljava/lang/String;[BLjava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$Response;
+
+  static boolean allowed(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Z
+
+  private static byte[] decodeHex(java.lang.String) throws java.security.GeneralSecurityException;
+    descriptor: (Ljava/lang/String;)[B
+
+  private static void lambda$exchange$0(java.io.InputStream, org.emulationstation.frontend.station.StationApi$Cancellation, java.lang.Runnable, javax.net.ssl.HttpsURLConnection) throws java.io.IOException;
+    descriptor: (Ljava/io/InputStream;Lorg/emulationstation/frontend/station/StationApi$Cancellation;Ljava/lang/Runnable;Ljavax/net/ssl/HttpsURLConnection;)V
+}
+Compiled from "StationHttp.java"
+class org.emulationstation.frontend.station.StationHttp$1 implements javax.net.ssl.X509TrustManager {
+  final javax.net.ssl.X509TrustManager val$trust;
+    descriptor: Ljavax/net/ssl/X509TrustManager;
+  final byte[] val$pin;
+    descriptor: [B
+  final org.emulationstation.frontend.station.StationHttp this$0;
+    descriptor: Lorg/emulationstation/frontend/station/StationHttp;
+  org.emulationstation.frontend.station.StationHttp$1();
+    descriptor: (Lorg/emulationstation/frontend/station/StationHttp;Ljavax/net/ssl/X509TrustManager;[B)V
+
+  public java.security.cert.X509Certificate[] getAcceptedIssuers();
+    descriptor: ()[Ljava/security/cert/X509Certificate;
+
+  public void checkClientTrusted(java.security.cert.X509Certificate[], java.lang.String) throws java.security.cert.CertificateException;
+    descriptor: ([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+
+  public void checkServerTrusted(java.security.cert.X509Certificate[], java.lang.String) throws java.security.cert.CertificateException;
+    descriptor: ([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+}
+Compiled from "StationInstaller.java"
+public final class org.emulationstation.frontend.station.StationInstaller {
+  private final java.nio.file.Path roms;
+    descriptor: Ljava/nio/file/Path;
+  private final java.nio.file.Path records;
+    descriptor: Ljava/nio/file/Path;
+  private final org.emulationstation.frontend.station.StationInstaller$Reader reader;
+    descriptor: Lorg/emulationstation/frontend/station/StationInstaller$Reader;
+  private static final long RESERVE;
+    descriptor: J
+  private static final int MANIFEST_MAX;
+    descriptor: I
+  public org.emulationstation.frontend.station.StationInstaller(java.nio.file.Path, java.nio.file.Path, org.emulationstation.frontend.station.StationInstaller$Reader) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationInstaller$Reader;)V
+
+  public synchronized org.emulationstation.frontend.station.StationInstaller$Installed install(org.emulationstation.frontend.station.StationCatalog$Item, org.emulationstation.frontend.station.StationApi$Grant, java.nio.file.Path, org.emulationstation.frontend.station.StationApi$Cancellation, org.emulationstation.frontend.station.StationFiles$Progress) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog$Item;Lorg/emulationstation/frontend/station/StationApi$Grant;Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationApi$Cancellation;Lorg/emulationstation/frontend/station/StationFiles$Progress;)Lorg/emulationstation/frontend/station/StationInstaller$Installed;
+
+  public java.nio.file.Path existingArtifact(org.emulationstation.frontend.station.StationCatalog$Item, org.emulationstation.frontend.station.StationArtifact, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog$Item;Lorg/emulationstation/frontend/station/StationArtifact;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/nio/file/Path;
+
+  public synchronized org.emulationstation.frontend.station.StationInstaller$Installed find(org.emulationstation.frontend.station.StationCatalog$Item) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog$Item;)Lorg/emulationstation/frontend/station/StationInstaller$Installed;
+
+  public synchronized void uninstall(java.lang.String) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;)V
+
+  private java.nio.file.Path record(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Ljava/nio/file/Path;
+
+  private org.json.JSONObject readRecord(java.lang.String) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;)Lorg/json/JSONObject;
+
+  private java.nio.file.Path content(org.json.JSONObject, java.lang.String) throws java.lang.Exception;
+    descriptor: (Lorg/json/JSONObject;Ljava/lang/String;)Ljava/nio/file/Path;
+
+  static java.nio.file.Path directory(java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;)Ljava/nio/file/Path;
+
+  static void checkParents(java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;)V
+
+  static java.lang.String digest(java.nio.file.Path, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Ljava/lang/String;
+
+  private static void removeEmptyParents(java.nio.file.Path, java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/nio/file/Path;)V
+
+  private static void deleteOwnTree(java.nio.file.Path, java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/nio/file/Path;)V
+
+  private static void checkReferences(java.nio.file.Path, java.nio.file.Path, java.util.Set<java.lang.String>) throws java.lang.Exception;
+    descriptor: (Ljava/nio/file/Path;Ljava/nio/file/Path;Ljava/util/Set;)V
+}
+Compiled from "StationInstaller.java"
+class org.emulationstation.frontend.station.StationInstaller$1 extends java.nio.file.SimpleFileVisitor<java.nio.file.Path> {
+  org.emulationstation.frontend.station.StationInstaller$1();
+    descriptor: ()V
+
+  public java.nio.file.FileVisitResult visitFile(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;
+
+  public java.nio.file.FileVisitResult postVisitDirectory(java.nio.file.Path, java.io.IOException) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;Ljava/io/IOException;)Ljava/nio/file/FileVisitResult;
+
+  public java.nio.file.FileVisitResult postVisitDirectory(java.lang.Object, java.io.IOException) throws java.io.IOException;
+    descriptor: (Ljava/lang/Object;Ljava/io/IOException;)Ljava/nio/file/FileVisitResult;
+
+  public java.nio.file.FileVisitResult visitFile(java.lang.Object, java.nio.file.attribute.BasicFileAttributes) throws java.io.IOException;
+    descriptor: (Ljava/lang/Object;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;
+}
+Compiled from "StationInstaller.java"
+public final class org.emulationstation.frontend.station.StationInstaller$Installed {
+  public final java.lang.String itemId;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String platform;
+    descriptor: Ljava/lang/String;
+  public final long revision;
+    descriptor: J
+  public final java.nio.file.Path launchPath;
+    descriptor: Ljava/nio/file/Path;
+  private org.emulationstation.frontend.station.StationInstaller$Installed(java.lang.String, java.lang.String, long, java.nio.file.Path);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;JLjava/nio/file/Path;)V
+
+  org.emulationstation.frontend.station.StationInstaller$Installed(java.lang.String, java.lang.String, long, java.nio.file.Path, org.emulationstation.frontend.station.StationInstaller$1);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;JLjava/nio/file/Path;Lorg/emulationstation/frontend/station/StationInstaller$1;)V
+}
+Compiled from "StationInstaller.java"
+final class org.emulationstation.frontend.station.StationInstaller$ManifestSink implements org.emulationstation.frontend.station.StationInstaller$Sink,java.lang.AutoCloseable {
+  final java.nio.file.Path root;
+    descriptor: Ljava/nio/file/Path;
+  final org.emulationstation.frontend.station.StationArtifact spec;
+    descriptor: Lorg/emulationstation/frontend/station/StationArtifact;
+  final org.emulationstation.frontend.station.StationApi$Cancellation cancel;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Cancellation;
+  final org.emulationstation.frontend.station.StationFiles$Progress progress;
+    descriptor: Lorg/emulationstation/frontend/station/StationFiles$Progress;
+  final java.util.LinkedHashMap<java.lang.String, java.lang.Long> files;
+    descriptor: Ljava/util/LinkedHashMap;
+  final java.util.Set<java.lang.String> all;
+    descriptor: Ljava/util/Set;
+  java.io.FileOutputStream output;
+    descriptor: Ljava/io/FileOutputStream;
+  long total;
+    descriptor: J
+  long written;
+    descriptor: J
+  long expected;
+    descriptor: J
+  java.lang.String current;
+    descriptor: Ljava/lang/String;
+  boolean open;
+    descriptor: Z
+  boolean directory;
+    descriptor: Z
+  org.emulationstation.frontend.station.StationInstaller$ManifestSink(java.nio.file.Path, org.emulationstation.frontend.station.StationArtifact, org.emulationstation.frontend.station.StationApi$Cancellation, org.emulationstation.frontend.station.StationFiles$Progress);
+    descriptor: (Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationArtifact;Lorg/emulationstation/frontend/station/StationApi$Cancellation;Lorg/emulationstation/frontend/station/StationFiles$Progress;)V
+
+  public void begin(byte[], long, boolean) throws java.lang.Exception;
+    descriptor: ([BJZ)V
+
+  public void data(byte[], int) throws java.lang.Exception;
+    descriptor: ([BI)V
+
+  public void end() throws java.lang.Exception;
+    descriptor: ()V
+
+  void finish() throws java.io.IOException;
+    descriptor: ()V
+
+  public void close() throws java.io.IOException;
+    descriptor: ()V
+}
+Compiled from "StationInstaller.java"
+public interface org.emulationstation.frontend.station.StationInstaller$Reader {
+  public abstract void read(java.nio.file.Path, org.emulationstation.frontend.station.StationInstaller$Sink, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/nio/file/Path;Lorg/emulationstation/frontend/station/StationInstaller$Sink;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V
+}
+Compiled from "StationInstaller.java"
+public interface org.emulationstation.frontend.station.StationInstaller$Sink {
+  public abstract void begin(byte[], long, boolean) throws java.lang.Exception;
+    descriptor: ([BJZ)V
+
+  public abstract void data(byte[], int) throws java.lang.Exception;
+    descriptor: ([BI)V
+
+  public abstract void end() throws java.lang.Exception;
+    descriptor: ()V
+}
+Compiled from "StationPlatforms.java"
+public final class org.emulationstation.frontend.station.StationPlatforms {
+  private static final java.util.Map<java.lang.String, org.emulationstation.frontend.station.StationPlatforms$Platform> BY_NAME;
+    descriptor: Ljava/util/Map;
+  private org.emulationstation.frontend.station.StationPlatforms();
+    descriptor: ()V
+
+  public static org.emulationstation.frontend.station.StationPlatforms$Platform resolve(java.lang.String) throws java.io.IOException;
+    descriptor: (Ljava/lang/String;)Lorg/emulationstation/frontend/station/StationPlatforms$Platform;
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "StationPlatforms.java"
+class org.emulationstation.frontend.station.StationPlatforms$1 {
+}
+Compiled from "StationPlatforms.java"
+public final class org.emulationstation.frontend.station.StationPlatforms$Platform {
+  public final java.lang.String label;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String folder;
+    descriptor: Ljava/lang/String;
+  private org.emulationstation.frontend.station.StationPlatforms$Platform(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)V
+
+  org.emulationstation.frontend.station.StationPlatforms$Platform(java.lang.String, java.lang.String, org.emulationstation.frontend.station.StationPlatforms$1);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Lorg/emulationstation/frontend/station/StationPlatforms$1;)V
+}
+Compiled from "StationPlatforms.java"
+public final class org.emulationstation.frontend.station.StationPlatforms$UnsupportedPlatform extends java.io.IOException {
+  public final java.lang.String platform;
+    descriptor: Ljava/lang/String;
+  private org.emulationstation.frontend.station.StationPlatforms$UnsupportedPlatform(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  org.emulationstation.frontend.station.StationPlatforms$UnsupportedPlatform(java.lang.String, org.emulationstation.frontend.station.StationPlatforms$1);
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationPlatforms$1;)V
+}
+Compiled from "StationProtocol.java"
+public final class org.emulationstation.frontend.station.StationProtocol {
+  public static final java.lang.String REQUEST_ACTIVATION;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String ACTIVATION_CHALLENGE;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String ACTIVATE;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String ACTIVATED;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String REQUEST_SESSION;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String SESSION_CHALLENGE;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String OPEN_SESSION;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String SESSION;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String PROFILE;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String CATALOG;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String REQUEST_DOWNLOAD;
+    descriptor: Ljava/lang/String;
+  public static final java.lang.String DOWNLOAD_GRANT;
+    descriptor: Ljava/lang/String;
+  public static final int MAXIMUM_BODY_BYTES;
+    descriptor: I
+  public static final int CATALOG_BODY_BYTES;
+    descriptor: I
+  public static final int COVER_BODY_BYTES;
+    descriptor: I
+  private org.emulationstation.frontend.station.StationProtocol();
+    descriptor: ()V
+
+  public static java.lang.String deviceId(byte[]);
+    descriptor: ([B)Ljava/lang/String;
+
+  public static boolean libraryId(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+
+  public static boolean licenseId(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+
+  public static boolean activationCode(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+
+  public static java.lang.String base64Url(byte[]);
+    descriptor: ([B)Ljava/lang/String;
+
+  public static byte[] decode(java.lang.String);
+    descriptor: (Ljava/lang/String;)[B
+
+  public static byte[] sha256(byte[]);
+    descriptor: ([B)[B
+
+  public static byte[] identity(java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)[B
+
+  public static java.lang.String field(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+  public static java.lang.String field(java.lang.String, int);
+    descriptor: (Ljava/lang/String;I)Ljava/lang/String;
+
+  public static java.lang.String quote(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+}
+Compiled from "StationPublication.java"
+public final class org.emulationstation.frontend.station.StationPublication {
+  public final java.util.List<org.emulationstation.frontend.station.StationPublication$Row> rows;
+    descriptor: Ljava/util/List;
+  public final java.util.Map<java.lang.String, java.lang.Integer> unsupported;
+    descriptor: Ljava/util/Map;
+  public final int unsupportedCount;
+    descriptor: I
+  public org.emulationstation.frontend.station.StationPublication(org.emulationstation.frontend.station.StationCatalog) throws java.io.IOException;
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog;)V
+
+  public java.lang.String warning();
+    descriptor: ()Ljava/lang/String;
+}
+Compiled from "StationPublication.java"
+class org.emulationstation.frontend.station.StationPublication$1 {
+}
+Compiled from "StationPublication.java"
+public final class org.emulationstation.frontend.station.StationPublication$Row {
+  public final org.emulationstation.frontend.station.StationCatalog$Item item;
+    descriptor: Lorg/emulationstation/frontend/station/StationCatalog$Item;
+  public final org.emulationstation.frontend.station.StationPlatforms$Platform platform;
+    descriptor: Lorg/emulationstation/frontend/station/StationPlatforms$Platform;
+  private org.emulationstation.frontend.station.StationPublication$Row(org.emulationstation.frontend.station.StationCatalog$Item, org.emulationstation.frontend.station.StationPlatforms$Platform);
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog$Item;Lorg/emulationstation/frontend/station/StationPlatforms$Platform;)V
+
+  org.emulationstation.frontend.station.StationPublication$Row(org.emulationstation.frontend.station.StationCatalog$Item, org.emulationstation.frontend.station.StationPlatforms$Platform, org.emulationstation.frontend.station.StationPublication$1);
+    descriptor: (Lorg/emulationstation/frontend/station/StationCatalog$Item;Lorg/emulationstation/frontend/station/StationPlatforms$Platform;Lorg/emulationstation/frontend/station/StationPublication$1;)V
+}
+Compiled from "StationSessions.java"
+public final class org.emulationstation.frontend.station.StationSessions {
+  private final org.emulationstation.frontend.station.StationApi api;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi;
+  private final org.emulationstation.frontend.station.StationApi$Clock clock;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Clock;
+  private final java.nio.file.Path licenseFile;
+    descriptor: Ljava/nio/file/Path;
+  private volatile org.emulationstation.frontend.station.StationApi$Session current;
+    descriptor: Lorg/emulationstation/frontend/station/StationApi$Session;
+  public org.emulationstation.frontend.station.StationSessions(org.emulationstation.frontend.station.StationApi, org.emulationstation.frontend.station.StationApi$Clock, java.nio.file.Path);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi;Lorg/emulationstation/frontend/station/StationApi$Clock;Ljava/nio/file/Path;)V
+
+  public synchronized org.emulationstation.frontend.station.StationApi$Session activate(java.lang.String, org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Ljava/lang/String;Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$Session;
+
+  public synchronized org.emulationstation.frontend.station.StationApi$Session get(org.emulationstation.frontend.station.StationApi$Cancellation) throws java.lang.Exception;
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Cancellation;)Lorg/emulationstation/frontend/station/StationApi$Session;
+
+  public synchronized void denied(org.emulationstation.frontend.station.StationApi$Session);
+    descriptor: (Lorg/emulationstation/frontend/station/StationApi$Session;)V
+
+  public org.emulationstation.frontend.station.StationApi$Session peek();
+    descriptor: ()Lorg/emulationstation/frontend/station/StationApi$Session;
+
+  public synchronized void forgetSession();
+    descriptor: ()V
+}
+Compiled from "StationStorage.java"
+public final class org.emulationstation.frontend.station.StationStorage {
+  private org.emulationstation.frontend.station.StationStorage();
+    descriptor: ()V
+
+  public static long usableBytes(java.nio.file.Path) throws java.io.IOException;
+    descriptor: (Ljava/nio/file/Path;)J
+
+  public static java.nio.file.Path prepareRoot(java.nio.file.Path) throws org.emulationstation.frontend.station.StationStorage$Failure;
+    descriptor: (Ljava/nio/file/Path;)Ljava/nio/file/Path;
+}
+Compiled from "StationStorage.java"
+class org.emulationstation.frontend.station.StationStorage$1 {
+}
+Compiled from "StationStorage.java"
+public final class org.emulationstation.frontend.station.StationStorage$Failure extends java.io.IOException {
+  public final java.lang.String reason;
+    descriptor: Ljava/lang/String;
+  public final java.lang.String userMessage;
+    descriptor: Ljava/lang/String;
+  private org.emulationstation.frontend.station.StationStorage$Failure(java.lang.String, java.lang.String, java.lang.Exception);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+  org.emulationstation.frontend.station.StationStorage$Failure(java.lang.String, java.lang.String, java.lang.Exception, org.emulationstation.frontend.station.StationStorage$1);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;Lorg/emulationstation/frontend/station/StationStorage$1;)V
+}

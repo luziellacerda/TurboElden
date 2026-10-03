@@ -1,0 +1,40 @@
+{
+  "name": "Station estável — SNES e Mega Drive",
+  "tag": "estavel-station-snes-megadrive-20261003",
+  "sourceParentCommit": "2834e3b101ce4e957414bccd13154c8a70af2f01",
+  "sourceRevision": "The commit resolved by the immutable tag contains this complete source snapshot.",
+  "package": "org.turboramastation.frontend",
+  "versionName": "1.0.8-turboeden-unico",
+  "versionCode": 11,
+  "clientVersion": "1.0.8-station-storage-20261003.3",
+  "apkPath": "E:\\ESTUDO APK\\estaveis\\2026-10-03-station-snes-megadrive\\TurboStations-ESTAVEL-SNES-MegaDrive-20261003.apk",
+  "apkSha256": "3b355b02e4efab1801ccf899f77a5bc0d4d95e1c622d8cb9c3a3e1f35c192d17",
+  "apkSizeBytes": 1902768022,
+  "signerSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "basePath": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\side-by-side-turborama-20261001\\TurboramaStation-TESTE-lado-a-lado.apk",
+  "baseSha256": "d810434352f7ad2e7d1d08efe44f31eb76d132ffc43ba3b81b9ffc9e64efae1b",
+  "canonicalSource": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002",
+  "gitSource": "versions/station-reconstruction-20261002",
+  "serverHandoffCommit": "fa7a10cccd93a8d97de16e28fbc81b8da4c6fa61",
+  "serverApiReleaseReported": "fd13c0d27eaab6a4dcf931a9cd64c3dcd7dd50c4",
+  "catalogRevision": 3,
+  "catalogPublicCount": 1816,
+  "catalogPrivateCountReported": 2071,
+  "stableScope": [
+    "SNES content download/install/launch/normal return",
+    "Mega Drive content download/install/launch/normal return"
+  ],
+  "futureCapacityTarget": 40000,
+  "capacity40000Implemented": false,
+  "fullEmulatorMatrixVerified": false,
+  "commerceEndToEndVerified": false,
+  "hostChecks": 327,
+  "androidRootChecks": 10,
+  "privateDependenciesRequired": [
+    "Exact base APK",
+    "Existing signing identity",
+    "Android SDK/NDK and build tools specified in scripts"
+  ],
+  "handoff": "docs/server/HANDOFF-TECNICO-COMPLETO-STATION-SNES-MEGADRIVE-20261003.md",
+  "apkNotCommitted": true
+}

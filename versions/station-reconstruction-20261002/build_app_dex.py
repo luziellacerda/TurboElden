@@ -9,7 +9,7 @@ for dex in ['classes5.dex','classes6.dex','classes8.dex']:
  smali=dest/'smali'
  if dex=='classes5.dex':
   for p in smali.rglob('*.smali'):
-   if p.name.startswith(('HttpBridge','StationTransfer','DownloadService')):
+   if p.name.startswith(('HttpBridge','StationTransfer','DownloadService','AssetInstaller')):
     if not p.resolve().is_relative_to(prepared.resolve()):raise RuntimeError('Unsafe prepared file')
     removed.append(str(p.relative_to(smali)));p.unlink()
   activity=smali/'org/emulationstation/frontend/ESActivity.smali';text=activity.read_text()

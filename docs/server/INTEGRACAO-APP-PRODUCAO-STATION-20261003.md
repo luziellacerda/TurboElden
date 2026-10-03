@@ -1,3 +1,5 @@
+> Atualização posterior: [correção da instalação nova e do download, com evidências de 17:20](CORRECAO-INSTALACAO-NOVA-STATION-20261003.md). Login, catálogo, capas, dois downloads/instalações e execução/retorno de SNES foram confirmados. O bloqueio de ativação descrito abaixo é histórico.
+
 # Integração do aplicativo com a produção Station — 03/10/2026
 
 ## Estado deste registro

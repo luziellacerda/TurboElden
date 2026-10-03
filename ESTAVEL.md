@@ -1,3 +1,11 @@
+# Estável Station — SNES e Mega Drive
+
+[Handoff técnico completo](docs/server/HANDOFF-TECNICO-COMPLETO-STATION-SNES-MEGADRIVE-20261003.md) · [Manifesto](versions/estavel-station-snes-megadrive-20261003/MANIFESTO-ESTAVEL.json) · [Recuperação](versions/estavel-station-snes-megadrive-20261003/RESTAURACAO.md)
+
+Branch/tag `estavel-station-snes-megadrive-20261003`. APK `3b355b02e4efab1801ccf899f77a5bc0d4d95e1c622d8cb9c3a3e1f35c192d17`. Catálogo1816/revisão3; acesso, capas, download, instalação, abertura e retorno SNES/Mega conferidos. Demais motores preservados, sem homologação global. A próxima ampliação para40mil será separada desta tag.
+
+## Referências anteriores preservadas — não são o cliente Station atual
+
 # Estável atual — Cemu Android 0.5.2 (30/09/2026)
 
 APK aprovado e instalado: `E:\ESTUDO APK\estaveis\2026-09-30-cemu-052\TurboramaStation-ESTAVEL-Cemu-0.5.2.apk`. SHA-256 `7ce3fab3d2d09c3bddfd002d0b9734e42aa5e27b102f36bb56e77b484e36562b`. [Manifesto](versions/estavel-2026-09-30-cemu-052/MANIFESTO-ESTAVEL.json) · [Restauração](versions/estavel-2026-09-30-cemu-052/RESTAURACAO.md) · [Código e handoff](versions/wiiu-cemu-052-20260930/README.md).
