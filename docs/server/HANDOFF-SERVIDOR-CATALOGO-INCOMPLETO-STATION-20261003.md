@@ -1,5 +1,7 @@
 # PARA O SERVIDOR: catalogo Station incompleto - 03/10/2026
 
+Pedido posterior de fechamento completo: [implementar as pendencias do servidor Station](HANDOFF-PEDIDO-FECHAMENTO-SERVIDOR-STATION-20261003.md). Este registro permanece como evidencia da contagem inicial.
+
 ## Destinatario e escopo exatos
 
 Equipe/IA do backend **Station Android** no repositorio **luziellacerda/Servidor-pix**. Produto e applicationId: `TURBORAMA_STATION_ANDROID`. Este documento pertence ao cliente Android TESTE `org.turboramastation.frontend`, no repositorio TurboElden, ramo `station-reconstrucao-20261002`. Nao executar tarefas da Suite Windows, Sambox Manager ou PIX por causa deste pedido. Nao e ordem de reiniciar servicos; qualquer implantacao segue a autorizacao do mantenedor do servidor.
