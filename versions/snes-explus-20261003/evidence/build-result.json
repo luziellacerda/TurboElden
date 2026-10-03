@@ -1,0 +1,50 @@
+{
+  "apk": "E:\\ESTUDO APK\\work\\station-snes-explus-20261003\\TurboStations-SNES-EXPlus-20261003.apk",
+  "sha256": "62377e8d55617a9d0aefaed42d0b1a17948f9c5997b7be713dc760c4420f8c25",
+  "bytes": 1903595552,
+  "base_sha256": "3b355b02e4efab1801ccf899f77a5bc0d4d95e1c622d8cb9c3a3e1f35c192d17",
+  "source_commit": "1c12fac5ce49badaadff2e2f210dcc30b89f4943",
+  "version": "Snes9x EX+ 1.5.85 official prerelease",
+  "changed": [
+    "AndroidManifest.xml",
+    "classes.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [
+    "assets/Bio Worm.7z",
+    "assets/gpOverlay.png",
+    "assets/shaders/direct-f.txt",
+    "assets/shaders/direct-v.txt",
+    "assets/shaders/fallback-hq2x-f.txt",
+    "assets/shaders/fallback-hq2x-v.txt",
+    "assets/shaders/fallback-scale2x-f.txt",
+    "assets/shaders/fallback-scale2x-v.txt",
+    "assets/shaders/hq2x-f.txt",
+    "assets/shaders/hq2x-v.txt",
+    "assets/shaders/scale2x-f.txt",
+    "assets/shaders/scale2x-v.txt",
+    "assets/snes-explus/licenses/COPYING",
+    "assets/snes-explus/licenses/COPYING.GPL",
+    "assets/snes-explus/source/SnesBootstrap.java",
+    "assets/snes-explus/source/native_snes.h",
+    "assets/snes-explus/upstream-provenance.json",
+    "assets/ui.png",
+    "classes31.dex",
+    "classes32.dex",
+    "lib/arm64-v8a/libsnes9x_explus.so"
+  ],
+  "removed": [
+    "lib/arm64-v8a/libsnes9x_libretro_android.so"
+  ],
+  "preserved_entries": 10809,
+  "dex_definitions": 46499,
+  "duplicate_definitions": 0,
+  "upstream_native_sha256": "2f39f4ea597c054d7696f04ac679b1a3d97d63fcf6df345fa0877ca0f0ffa293",
+  "restored_native_baseline_exact": true,
+  "station_login_catalog_download_dex_preserved": true,
+  "all_other_engines_preserved": true,
+  "resources_and_design_assets_preserved": true,
+  "installed": false,
+  "runtime_verified": false,
+  "promoted_to_stable": false
+}

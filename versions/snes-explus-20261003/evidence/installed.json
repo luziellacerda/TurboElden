@@ -1,0 +1,16 @@
+{
+  "serial": "RQCY30751WY",
+  "package": "org.turboramastation.frontend",
+  "install_mode": "adb install --no-incremental -r --user 0",
+  "result": "Success",
+  "lastUpdateTime": "2026-10-03 18:29:43 -03:00",
+  "installed_apk_sha256": "62377e8d55617a9d0aefaed42d0b1a17948f9c5997b7be713dc760c4420f8c25",
+  "hash_matches_candidate": true,
+  "uninstalled": false,
+  "cleared_data": false,
+  "frontend_activity_after_update": "org.emulationstation.frontend.ESActivity",
+  "frontend_pid_after_update": 25521,
+  "native_verified_relocations": 54,
+  "settings_runtime": "pending user opens Super Nintendo",
+  "game_controls_return": "not yet verified"
+}

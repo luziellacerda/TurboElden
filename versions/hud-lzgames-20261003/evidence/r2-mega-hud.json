@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-03T19:35:33.732254-03:00",
+  "label": "r2-installed-games",
+  "activity": [
+    "topResumedActivity=ActivityRecord{52150282 u0 org.turboramastation.frontend/com.mdimagn.BaseActivity t33166}"
+  ],
+  "processes": [
+    "u0_a425      25811   896  293474724 273168 0                   0 S org.turboramastation.frontend",
+    "u0_a425      27275   896   20260336 167624 0                   0 S org.turboramastation.frontend:megadrive"
+  ],
+  "screenshot": "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\r2-installed-games.png"
+}

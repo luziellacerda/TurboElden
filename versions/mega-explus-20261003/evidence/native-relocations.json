@@ -1,0 +1,61 @@
+{
+  "official_sha256": "79a4b7409044d34318255df35132b313617cb0aa485928e259cace945c909906",
+  "integrated_sha256": "636a50b0901afd3ebd5586883cc49277307cb7525ca1cc23744139168b8ff171",
+  "changes": [
+    {
+      "offset": 1730757,
+      "old": "com/imagine",
+      "new": "com/mdimagn",
+      "section": ".rodata"
+    },
+    {
+      "offset": 1731029,
+      "old": "com/imagine",
+      "new": "com/mdimagn",
+      "section": ".rodata"
+    },
+    {
+      "offset": 1731081,
+      "old": "com/imagine",
+      "new": "com/mdimagn",
+      "section": ".rodata"
+    },
+    {
+      "offset": 1731120,
+      "old": "com/imagine",
+      "new": "com/mdimagn",
+      "section": ".rodata"
+    },
+    {
+      "offset": 1731163,
+      "old": "com/imagine",
+      "new": "com/mdimagn",
+      "section": ".rodata"
+    },
+    {
+      "offset": 1731199,
+      "old": "com/imagine",
+      "new": "com/mdimagn",
+      "section": ".rodata"
+    },
+    {
+      "offset": 1731259,
+      "old": "com/imagine",
+      "new": "com/mdimagn",
+      "section": ".rodata"
+    },
+    {
+      "offset": 1731295,
+      "old": "com/imagine",
+      "new": "com/mdimagn",
+      "section": ".rodata"
+    },
+    {
+      "offset": 1719026,
+      "old": "gpOverlay.png",
+      "new": "mdOverlay.png",
+      "section": ".rodata"
+    }
+  ],
+  "executable_code_identical": true
+}

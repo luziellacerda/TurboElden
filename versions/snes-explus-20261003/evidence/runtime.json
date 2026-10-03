@@ -1,0 +1,25 @@
+{
+  "apk_sha256": "62377e8d55617a9d0aefaed42d0b1a17948f9c5997b7be713dc760c4420f8c25",
+  "activity": "org.turboramastation.frontend/com.imagine.BaseActivity",
+  "frontend_pid": 25521,
+  "snes_pid": 26409,
+  "upstream_process_initialized": true,
+  "native_game_launch_confirmed": true,
+  "game": "Battletoads in Battlemaniacs",
+  "official_controls_visible": true,
+  "screenshot": "snes-screen.png",
+  "settings_open_from_frontend_verified": false,
+  "input_response_save_and_return_verified": false,
+  "other_emulator_processes_observed": [],
+  "settings_launch_from_frontend_confirmed": true,
+  "settings_process_pid": 26145,
+  "return_to_same_frontend_confirmed": true,
+  "return_process_pids_observed": [
+    26145,
+    26409,
+    27011,
+    27210,
+    28610
+  ],
+  "settings_screen_visual_review": false
+}

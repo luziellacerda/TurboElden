@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-03T19:37:05.482761-03:00",
+  "label": "r2-mega-running",
+  "activity": [
+    "topResumedActivity=ActivityRecord{215067657 u0 org.turboramastation.frontend/com.mdimagn.BaseActivity t33167}"
+  ],
+  "processes": [
+    "u0_a425      25811   896  293474724 300984 0                   0 S org.turboramastation.frontend",
+    "u0_a425      28000   896   20281860 157212 0                   0 S org.turboramastation.frontend:megadrive"
+  ],
+  "screenshot": "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\r2-mega-running.png"
+}

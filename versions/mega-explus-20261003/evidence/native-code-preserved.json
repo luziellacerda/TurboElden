@@ -1,0 +1,20 @@
+{
+  "upstream_executable_sections_identical": [
+    {
+      "name": ".text",
+      "bytes": 2366732,
+      "sha256": "797607f48dce2e37108626bdff0e7715949d625208fd56724253df47e33d24c2"
+    },
+    {
+      "name": "__lcxx_override",
+      "bytes": 68,
+      "sha256": "b709c8e010cbdd80a1ca31e6af363252752813f897c022c7585c457af943c45a"
+    },
+    {
+      "name": ".plt",
+      "bytes": 4464,
+      "sha256": "052ae3f9009fb85108228f984d67fdf27f61cc6f0e67f54afb2b486526cdd4e1"
+    }
+  ],
+  "entry_exports_unchanged": true
+}

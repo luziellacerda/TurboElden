@@ -1,0 +1,13 @@
+{
+  "only_modified_host_class": [
+    "org/yuzu/yuzu_emu/YuzuApplication.smali"
+  ],
+  "base_native_reproduced_byte_for_byte": true,
+  "duplicate_dex_definitions": 0,
+  "new_process": ":snes",
+  "files": "files/snes-explus",
+  "cache": "cache/snes-explus",
+  "old_snes_core_removed_from_apk": true,
+  "save_state_conversion_implemented": false,
+  "phone_data_cleared": false
+}

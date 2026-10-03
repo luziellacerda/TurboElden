@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-03T19:38:41.195817-03:00",
+  "label": "r2-mega-down-selection",
+  "activity": [
+    "topResumedActivity=ActivityRecord{215067657 u0 org.turboramastation.frontend/com.mdimagn.BaseActivity t33167}"
+  ],
+  "processes": [
+    "u0_a425      25811   896  293454244 175644 0                   0 S org.turboramastation.frontend",
+    "u0_a425      28000   896   20254636 174440 0                   0 S org.turboramastation.frontend:megadrive"
+  ],
+  "screenshot": "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\r2-mega-down-selection.png"
+}

@@ -1,0 +1,15 @@
+{
+  "serial": "RQCY30751WY",
+  "package": "org.turboramastation.frontend",
+  "result": "Success",
+  "lastUpdateTime": "2026-10-03 18:42:35 -03:00",
+  "installed_apk_sha256": "e87a352bc61ce6b2f120d4657451471313a1e4e7671e37c572d9904fcc1ef7be",
+  "hash_matches_candidate": true,
+  "install_mode": "adb install --no-incremental -r --user 0",
+  "uninstalled": false,
+  "cleared_data": false,
+  "frontend_activity_after_update": "org.emulationstation.frontend.ESActivity",
+  "native_routing_checks": 30,
+  "native_routing_result": "PASS",
+  "md_settings_and_game_runtime": "pending"
+}

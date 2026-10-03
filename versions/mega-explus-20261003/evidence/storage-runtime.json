@@ -1,0 +1,28 @@
+{
+  "apk_sha256": "8f494041ca4ae37fbd8becb50a1a7156ea2141e717af41452e5a1a923e0799b0",
+  "recorded_at": "2026-10-03T18:51:38.899174",
+  "frontend_pid": 6540,
+  "mega_pid": 7498,
+  "activity": "com.mdimagn.BaseActivity",
+  "upstream_process_initialized": true,
+  "native_game_path_consumed": true,
+  "game": "Cutthroat Island",
+  "game_image_observed": "in-game scene",
+  "own_controller_layout_observed": true,
+  "buttons_observed": [
+    "D-Pad",
+    "A",
+    "B",
+    "C",
+    "Start"
+  ],
+  "snes_positions_and_blank_buttons_gone": true,
+  "screenshot_local": "mega-controls-fixed.png",
+  "storage_fixture_checks_passed": 16,
+  "routing_checks_passed": 30,
+  "all_buttons_individually_tested": false,
+  "save_load_tested": false,
+  "post_correction_exit_tested": false,
+  "performance_benchmark": false,
+  "stable": false
+}

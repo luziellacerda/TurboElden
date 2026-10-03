@@ -1,0 +1,47 @@
+{
+  "recorded_local": "2026-10-03T19:40:00-03:00",
+  "package": "org.turboramastation.frontend",
+  "device_model": "Samsung SM_A566E",
+  "revision": "HUD R2",
+  "apk_sha256": "6b83ed083f825222970b8993ea3c7fc2a1021893da4e4129b73727e433d9ba9b",
+  "installed_by_update": true,
+  "install_result": "Success",
+  "installed_base_apk_sha256_verified": true,
+  "uninstalled_or_data_cleared": false,
+  "native_load_probe": {
+    "snes": "passed",
+    "mega": "passed",
+    "scope": "RTLD_NOW and ANativeActivity_onCreate; not gameplay"
+  },
+  "runtime": {
+    "snes_hud_visual": "passed: all five actions and descriptions visible in landscape",
+    "mega_hud_visual": "passed: all five actions and descriptions visible in landscape",
+    "mega_own_controls_and_game": "observed Cutthroat Island with D-pad, A/B/C/Start",
+    "mega_save_state": "new .00.gp observed after user interactions, 36760 bytes; file absent in baseline",
+    "mega_save_position_10": "not confirmed: user reported position 10, but .09.gp was not observed before USB disconnected",
+    "save_load_cancel_overwrite": "pending controlled validation; no existing manual slot intentionally overwritten",
+    "load_state": "pending controlled validation",
+    "own_engine_settings": "pending controlled HUD validation; source routes to original menu",
+    "return_to_frontend": "observed after SNES and Mega closed; ESActivity, catalog logged in, emulator processes gone",
+    "continue": "gameplay observed after HUD; exact touch route not conclusively isolated",
+    "portrait_gamepad_all_slots": "not completely tested"
+  },
+  "touch_investigation": {
+    "status": "inconclusive",
+    "observed": "Screen/selection changed between snapshots; a tap intended for Save was followed by gameplay.",
+    "static_audit": "Table drawing and native hit-test use inverse formulas; no proven fixed statusbar offset or slot9-to-slot0 conversion.",
+    "do_not_apply_unproven_offset": true
+  },
+  "phone_disconnect": "USB disappeared before final controlled save/load checks.",
+  "temporary_device_setting": {
+    "name": "stay_on_while_plugged_in",
+    "before": "0",
+    "during": "3",
+    "restore_attempt": "failed: device absent; restore 0 on next connection"
+  },
+  "promoted_to_stable": false,
+  "prior_revision": {
+    "sha256": "3d3afc380b109affe5615961b6930ffe7b88f1c96255e8cf39e6e688da66e0f7",
+    "status": "rejected for overlapping text; APK discarded after hash validation, evidence retained"
+  }
+}

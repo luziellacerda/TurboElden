@@ -1,0 +1,26 @@
+{
+  "recorded_local": "2026-10-03T19:22:11-03:00",
+  "package": "org.turboramastation.frontend",
+  "device_model": "Samsung SM_A566E",
+  "apk_sha256": "3d3afc380b109affe5615961b6930ffe7b88f1c96255e8cf39e6e688da66e0f7",
+  "installed_by_update": true,
+  "install_result": "Performing Streamed Install / Success",
+  "installed_base_apk_sha256_verified": true,
+  "uninstalled_or_data_cleared": false,
+  "native_load_probe": {
+    "scope": "RTLD_NOW and ANativeActivity_onCreate symbol resolution only; no emulator initialized",
+    "snes": "passed",
+    "mega": "passed"
+  },
+  "runtime": {
+    "hud_visual": "pending",
+    "continue": "pending",
+    "save_state": "pending",
+    "load_state": "pending",
+    "own_engine_settings": "pending",
+    "exit_to_platforms": "pending",
+    "session_preserved": "pending"
+  },
+  "pending_reason": "Phone locked after installation; asked maintainer to unlock and open a Mega Drive game/menu.",
+  "promoted_to_stable": false
+}

@@ -1,0 +1,14 @@
+{
+  "apk_sha256": "8f494041ca4ae37fbd8becb50a1a7156ea2141e717af41452e5a1a923e0799b0",
+  "install_result": "Success",
+  "phone_sha256_matches": true,
+  "recorded_at": "2026-10-03T18:50:48.678385",
+  "package": "org.turboramastation.frontend",
+  "serial": "RQCY30751WY",
+  "install_mode": "--no-incremental -r --user 0",
+  "data_cleared": false,
+  "storage_isolation_regression_checks": 16,
+  "regression_result": "PASS",
+  "regression_fixture": "unique temporary directory under /data/local/tmp; cleaned",
+  "actual_game_controls_visual": "pending"
+}

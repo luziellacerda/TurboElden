@@ -1,4 +1,22 @@
-# Estado atual — estável Station SNES / Mega Drive, 03/10/2026
+# HUD LZ Games R2 instalado — SNES/Mega, 03/10/2026
+
+APK `6b83ed083f825222970b8993ea3c7fc2a1021893da4e4129b73727e433d9ba9b`, instalado por atualização e hash no telefone conferido. Ler `versions/hud-lzgames-20261003/README.md` e `evidence/device-runtime.json`. Visual do HUD nativo conferido nos dois motores; cinco ações: Continuar, Salvar/Carregar estado (dez posições), Configurações próprias e Sair. Novo save manual Mega `.00.gp` observado, mas posição10/carregar/cancelar/substituir e configurações pelo HUD ainda pendentes de teste controlado. R1 `3d3afc38` rejeitada por sobreposição de texto; R2 corrige Text::drawScaled e mostra cinco ações. Somente duas bibliotecas mudaram sobre base8f494041; 10.840 entradas preservadas. Fontes/build em E:\ESTUDO APK\work\station-hud-lzgames-20261003. Não misturar candidato40mil, não mover tag estável. USB desconectou; restaurar `stay_on_while_plugged_in` de3 para0 na próxima conexão (tentativa falhou por ausência do aparelho). Novos pedidos posteriores: efeitos do temaPC, sinopses por nome/IDStation, foto console, capas4concorrentes e investigação netplay; não fazem parte deste APK.
+
+## Base anterior — controles SNES/Mega, 03/10/2026
+
+APK8f494041ca4ae37fbd8becb50a1a7156ea2141e717af41452e5a1a923e0799b0 instalado por atualização e hash no telefone conferido. Ler `versions/mega-explus-20261003/README.md`, `evidence/storage-installed.json` e `storage-runtime.json` se existir. Revisãoe87a352b REJEITADA: MD.emu leu config compartilhado do SNES porque o helperfilesDir não é usado pelo nativo em API>=11. Correção nos overrides reais NativeActivity.getFilesDir/getExternalFilesDir/getCacheDir, raízes resolvidas pelo Application para não recursar.16 testes Android em fixture isolada passaram; Cutthroat Island observado em execução com controle próprio do Mega (direcional/A/B/C/Start), sem mistura com SNES. Evidência storage-runtime.json. Não testados individualmente todos os botões, salvar/carregar e saída nesta última revisão. Todos motores nativos e recursos permanecem iguais ao e87; somente4DEX+fontes atualizados. Não editar pastas do telefone manualmente, não importar config compartilhado, não chamar estável antes da conferência. Compilação E:\ESTUDO APK\work\station-mega-explus-20261003; APK terminadoCONTROLES-CORRIGIDOS-20261003.apk.
+
+## Histórico da primeira instalação Mega
+
+# Candidato atual instalado — SNES e Mega Drive completos, 03/10/2026
+
+APK atual `e87a352bc61ce6b2f120d4657451471313a1e4e7671e37c572d9904fcc1ef7be`, instalado por atualização às18:42:35; hash no aparelho confirmado. Ler `versions/mega-explus-20261003/README.md` e recibo. MD.emu1.5.85 completo, processo:megadrive, controles/menus próprios; SNES completo preservado.30 testes de seleção executados no Android passaram. Host chegou às plataformas sem pedir login; painel/jogo Mega ainda aguardam conferência. GenPlusGX continua necessário para Master System/Game Gear; não apagar. Fonte/build E:\ESTUDO APK\work\station-mega-explus-20261003. Não promover a estável nem misturar com40mil. Nenhuma mudança de servidor. Branch de trabalho continua `snes-explus-completo-20261003`.
+
+## Candidato anterior instalado — SNES completo
+
+Branch `snes-explus-completo-20261003`, derivada da estável9793840. Ler `versions/snes-explus-20261003/README.md` e `evidence/installed.json`. Snes9x EX+1.5.85 oficial prerelease integrado com interface/controles próprios e painel próprio, processo:snes. APK62377e8d55617a9d0aefaed42d0b1a17948f9c5997b7be713dc760c4420f8c25 instalado por atualização, hash do aparelho conferido, host abriu nas plataformas. Ainda pendentes abertura do painel SNES e jogo/controles/saída; não declarar estável nem desempenho validado. Fonte/build isolados em E:\ESTUDO APK\work\station-snes-explus-20261003. Outros motores, Station/auth/catalog/download e recursos visuais preservados. Não misturar com candidato40mil; tag estável abaixo intacta. Licenças do upstream e limites de distribuição documentados no handoff.
+
+# Estável de recuperação — Station SNES / Mega Drive, 03/10/2026
 
 Referência: branch/tag `estavel-station-snes-megadrive-20261003`. Ler primeiro `docs/server/HANDOFF-TECNICO-COMPLETO-STATION-SNES-MEGADRIVE-20261003.md` na raiz do Git (cópia na raiz canônica E:). Manifesto e inventários em `versions/estavel-station-snes-megadrive-20261003/`.
 

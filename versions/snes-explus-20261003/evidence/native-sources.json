@@ -1,0 +1,252 @@
+[
+  {
+    "file": "game_infos.h",
+    "bytes": 5621270,
+    "sha256": "e48f3d25d08a09797825b89992f693400a2d02219c86ae54bffa4552078858e5"
+  },
+  {
+    "file": "laser_assets.h",
+    "bytes": 7227,
+    "sha256": "cde37d33e88fcfbe4b8f210c35c83aa45605e572f895f317acdbba2ae5a88017"
+  },
+  {
+    "file": "local_game_covers.h",
+    "bytes": 8493,
+    "sha256": "a600c8a0ca8901f409050048b95fdab43fcea531d1cf103966f6bc63f9843641"
+  },
+  {
+    "file": "native_action_motion.h",
+    "bytes": 3469,
+    "sha256": "adae15489bccc50bb1990f179abba4b578f64a734d0359a1ccee152f9f65127f"
+  },
+  {
+    "file": "native_carousel.cpp",
+    "bytes": 28347,
+    "sha256": "548eb0b14dc148d83cc216bdacfb49bc5397c7580ac338909d034fee258238a0"
+  },
+  {
+    "file": "native_carousel.recovered-stable.cpp",
+    "bytes": 28330,
+    "sha256": "3e608cc9dfd12cd8780c2874b1195942ee5d497ada611a186dcb59d08a4a564c"
+  },
+  {
+    "file": "native_classic.h",
+    "bytes": 7488,
+    "sha256": "2fc3cfcffe53b29a405dc82040e5ab0b08a0c53bed95a7e165aedaa8cdfd64c8"
+  },
+  {
+    "file": "native_dolphin.h",
+    "bytes": 3696,
+    "sha256": "82d85a24e5f7190f8dd16d59dd87f6eb47df9d2fcf770a83095fc82360bc7628"
+  },
+  {
+    "file": "native_flight.h",
+    "bytes": 4886,
+    "sha256": "59637b5bbc68454272d6cddd8563415d9a52b0d096c586d33895e8860bff8216"
+  },
+  {
+    "file": "native_flycast.h",
+    "bytes": 4290,
+    "sha256": "569f61003ccf242d25e2bfa8af23fde594e440af888ea6c3307ec29a2903b095"
+  },
+  {
+    "file": "native_formation.before-rounded.h",
+    "bytes": 5008,
+    "sha256": "bc0cfe5079e4f9de485e66ba5cbdca76825c69bb1a1c6db1eaa5e28b1617b4ec"
+  },
+  {
+    "file": "native_formation.before-square-games.h",
+    "bytes": 7854,
+    "sha256": "82ee66e78a652ca1fa76ba2864b16c6e7c201af69504562f3ec2c354f32dc049"
+  },
+  {
+    "file": "native_formation.h",
+    "bytes": 8832,
+    "sha256": "24fb5d0a2fc32261891894ad7a8b191d6f32e47152298e6fd18d7f0a21a00934"
+  },
+  {
+    "file": "native_info.h",
+    "bytes": 4553,
+    "sha256": "bbbce786ee1714e06500113a716f74365c986b4cbb3d2ab922e11569632b974e"
+  },
+  {
+    "file": "native_laser.h",
+    "bytes": 7674,
+    "sha256": "e0ea78036a5963812801d7f441b87029b52e58d98d46749c0bc1747b32ba496b"
+  },
+  {
+    "file": "native_loading_progress.h",
+    "bytes": 3094,
+    "sha256": "b3533a13563e0c8ebb9f075060e943475390c2ec5f1e3013cce1bfc47bb7b9b2"
+  },
+  {
+    "file": "native_mame.h",
+    "bytes": 6636,
+    "sha256": "4742d0e56916d423015336bc9a5aabc82c7a962e1264783da38ca8d3465da5d5"
+  },
+  {
+    "file": "native_menu_power.h",
+    "bytes": 1701,
+    "sha256": "2c459623c48215c8a78a17b9aadaad5d83a9b7770651f8997f1b14c9e61e0d3d"
+  },
+  {
+    "file": "native_pause_menu.h",
+    "bytes": 4695,
+    "sha256": "7c4af4aee2b55539d02deb39580333fc717bc1d5b6abda5631a673125823af0f"
+  },
+  {
+    "file": "native_pcecd.h",
+    "bytes": 2968,
+    "sha256": "0118d6a75101f096b3ef7f80b7b8d219b895b6e3632f2d72a063344dd95ecb43"
+  },
+  {
+    "file": "native_policy.h",
+    "bytes": 770,
+    "sha256": "8b38c67d1aa8cbdd95d52608b1d38c7b67a56ecd42d5848d92c58524caa743b2"
+  },
+  {
+    "file": "native_ps2.h",
+    "bytes": 3379,
+    "sha256": "53b7b2adc2290c7630da247c2069df620b521ac9b17715451efadda9a0185955"
+  },
+  {
+    "file": "native_psp.h",
+    "bytes": 3413,
+    "sha256": "4ca41843178043b4f5270810f76c702c2a7bd253a7aa2af76fc88e75918c0180"
+  },
+  {
+    "file": "native_psvita.h",
+    "bytes": 4030,
+    "sha256": "e4c1b1536f20cae05a3cab35c5b3c96a32011c706bab96ceae72ce38d85ca4fc"
+  },
+  {
+    "file": "native_retro_music.h",
+    "bytes": 3417,
+    "sha256": "26b6ab36f60b9dbc2971e01f066f4c92abc3b97fe759f84a07eeb2d9594281a9"
+  },
+  {
+    "file": "native_saturn.h",
+    "bytes": 4174,
+    "sha256": "b4e59d7b686f5fe4307a82e39e29da749c59a0061524a2b9c1943da9cad83110"
+  },
+  {
+    "file": "native_saturn_probe.h",
+    "bytes": 2278,
+    "sha256": "5a5ee36faa6e538a28f191f4943905d13ae4ac46b32fd201ade4bc2e9bc429e8"
+  },
+  {
+    "file": "native_search_download.h",
+    "bytes": 11608,
+    "sha256": "5e9931ae6fa2d6038cd8b53460124de9eaddc6287a6d2a9ccf47f97210a1feb9"
+  },
+  {
+    "file": "native_settings.h",
+    "bytes": 6131,
+    "sha256": "d4660f0cd59354cf26e583aed431bdf75a3a21c77ab37c721116c334977d5a14"
+  },
+  {
+    "file": "native_skin.before-hyperspace.h",
+    "bytes": 7375,
+    "sha256": "f3f43faad50eab4bd225b9cfbb33929d5b592b788b4036b1e25a2e00cd8ff69b"
+  },
+  {
+    "file": "native_skin.before-rounded.h",
+    "bytes": 6733,
+    "sha256": "70b816840be31d0ca58e32b050285b477565d1184a9c422b7993cf4302a9288c"
+  },
+  {
+    "file": "native_skin.h",
+    "bytes": 12213,
+    "sha256": "59358e49abcfa33e5990129f2d2dc90171dd3904bd2b2d85a9daf3815cb7274c"
+  },
+  {
+    "file": "native_snes.h",
+    "bytes": 3235,
+    "sha256": "676bba7465610a8a31a2d11c939f6dd7011712dc2848ec6cd4e993ce2586e63a"
+  },
+  {
+    "file": "native_space.h",
+    "bytes": 570,
+    "sha256": "22851b7c5f18ca186636274346cfe93e9dc634ba49d3768acfd9245a97904941"
+  },
+  {
+    "file": "native_space3d.h",
+    "bytes": 13107,
+    "sha256": "cba201b0a0a5f2820f22a1e51ba57eaa5db538cb8fc57a7c143d208f28d0ea17"
+  },
+  {
+    "file": "native_system_video.h",
+    "bytes": 2746,
+    "sha256": "e41c3f52c30ef8833db89816bd59a7838c200036ffd7de6c6ccf8de4ca6f79c0"
+  },
+  {
+    "file": "native_system_video720.h",
+    "bytes": 14801,
+    "sha256": "c25f7b7d31ff8f70e237bb0ac5840f4f1104983ee0a0570fc8c5629c0b0d455c"
+  },
+  {
+    "file": "native_thrusters.h",
+    "bytes": 5070,
+    "sha256": "da84e32d57a2b6d662c9d411cdcf29fb163543f405350b7f88febf15ad73f94a"
+  },
+  {
+    "file": "native_wiiu.h",
+    "bytes": 3935,
+    "sha256": "8f29bb65d6d7b819515198701b562a2e74e2ed45f0d2fdb846ad91dab7b879b6"
+  },
+  {
+    "file": "native_xbox360.h",
+    "bytes": 4087,
+    "sha256": "86c616b15d93d1b1dd21646f232e401f0ca3bb5c7106c60f707806d8cb80a707"
+  },
+  {
+    "file": "native_xboxclassic.h",
+    "bytes": 4281,
+    "sha256": "b399595be7665b0d2c479a22416210de9c18babd4566a144a2d47e100f97d3b8"
+  },
+  {
+    "file": "relocations.h",
+    "bytes": 214402,
+    "sha256": "60f13ed591beeaf1ade34ddf5b6331af7855ea99cc23a43950d18dd7c530e08e"
+  },
+  {
+    "file": "space3d_assets.h",
+    "bytes": 233707486,
+    "sha256": "ad0e1948636b46b17dfffee3770ae7430612a4d992b11f0ce39372ed3c324bbc"
+  },
+  {
+    "file": "space3d_brand.h",
+    "bytes": 573550,
+    "sha256": "5106e74a3c695ba8afe35f7f561f07b4e84423b75381db58db85719ebbc6f5fd"
+  },
+  {
+    "file": "space3d_shaders.h",
+    "bytes": 25392,
+    "sha256": "10441f4afd3b188a1fd439c1c6e7604cbabbc002ecb837c367e7de501f232681"
+  },
+  {
+    "file": "space_assets.h",
+    "bytes": 5981079,
+    "sha256": "931edbe46e90b18afb1d463582042f9e544eb4a81910e120da0f7b1dfa57dc46"
+  },
+  {
+    "file": "system_infos.h",
+    "bytes": 25842,
+    "sha256": "5edc22fa413579634266ea71e7e919c5d6f33d461583ac3118e8baba1e7ac538"
+  },
+  {
+    "file": "system_video720_assets.h",
+    "bytes": 2484,
+    "sha256": "2d0e351bed93dd3f26548f6b92157f232b81a3df9586cd65c0900f1ce1df3cf5"
+  },
+  {
+    "file": "system_videos.h",
+    "bytes": 978,
+    "sha256": "3175eee781b1d6599e52cf231ac72b4f445f27a70f532706c42d95a339c75b94"
+  },
+  {
+    "file": "systems.h",
+    "bytes": 89083169,
+    "sha256": "8093bc915dce80d445a5cff868226e5db9f67207935f22cf9cd39bc7ada0c31f"
+  }
+]

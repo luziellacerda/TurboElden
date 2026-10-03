@@ -1,0 +1,60 @@
+{
+  "archive_sha256": "c9a32657937db672919697236586afaefa31acefb02b221b62144aa9b165c8da",
+  "target": "aarch64-none-linux-android26",
+  "libcxx_version": "22.1.0",
+  "abi_namespace": "__2",
+  "sdk": "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\sdk\\android-arm64",
+  "libraries": {
+    "libc++.a": "b1c84d1d415719a8620dd5ab8022227955d120f09905147709014476425f248f",
+    "libc++abi.a": "b98c7e62c4008dbe3197e3c30ef5afa2fd9a0c6084ec26ea119b0e20d0da02eb",
+    "libc++experimental.a": "83610d72c04432623114a443c6e39e826a47b3004cbeb077e531dc53558073f0"
+  },
+  "runtime_c_flags": [
+    "--target=aarch64-none-linux-android26",
+    "--sysroot=E:/TurboEdenEngine/android-ndk-r28c/toolchains/llvm/prebuilt/windows-x86_64/sysroot",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-O3"
+  ],
+  "runtime_cxx_flags": [
+    "--target=aarch64-none-linux-android26",
+    "--sysroot=E:/TurboEdenEngine/android-ndk-r28c/toolchains/llvm/prebuilt/windows-x86_64/sysroot",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-O3",
+    "-nostdinc++",
+    "-IE:/ESTUDO APK/work/station-hud-lzgames-20261003/deps/libcxx-source/llvm-project-22.1.0.src/libcxxabi/include",
+    "-IE:/ESTUDO APK/work/station-hud-lzgames-20261003/deps/libcxx-source/llvm-project-22.1.0.src/libc",
+    "-Wno-user-defined-literals",
+    "-U_LIBCPP_LINK_PTHREAD_LIB",
+    "-U_LIBCPP_LINK_RT_LIB"
+  ],
+  "abi_cxx_flags": [
+    "--target=aarch64-none-linux-android26",
+    "--sysroot=E:/TurboEdenEngine/android-ndk-r28c/toolchains/llvm/prebuilt/windows-x86_64/sysroot",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-O3",
+    "-nostdinc++",
+    "-IE:/ESTUDO APK/work/station-hud-lzgames-20261003/deps/libcxx-source/llvm-project-22.1.0.src/libcxxabi/include",
+    "-IE:/ESTUDO APK/work/station-hud-lzgames-20261003/deps/libcxx-source/llvm-project-22.1.0.src/libc",
+    "-Wno-user-defined-literals",
+    "-U_LIBCPP_LINK_PTHREAD_LIB",
+    "-U_LIBCPP_LINK_RT_LIB",
+    "-std=gnu++26",
+    "-DHAVE___CXA_THREAD_ATEXIT_IMPL",
+    "-D_LIBCPP_DISABLE_EXTERN_TEMPLATE",
+    "-D_LIBCPP_BUILDING_LIBRARY",
+    "-D_LIBCXXABI_BUILDING_LIBRARY",
+    "-IE:/ESTUDO APK/work/station-hud-lzgames-20261003/deps/libcxx-source/llvm-project-22.1.0.src/libcxx/src",
+    "-IE:/ESTUDO APK/work/station-hud-lzgames-20261003/deps/libcxx-build/include/c++/v1"
+  ],
+  "runtime_codegen_note": "O3 PIC, hidden symbols and per-function/data sections. No fast-math, LTO, or upstream optional removal of stack/unwind/thread-static safeguards in the C++ runtime. Engine/framework codegen is configured separately.",
+  "cmake_configuration_cache": "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\deps\\libcxx-build\\CMakeCache.txt"
+}

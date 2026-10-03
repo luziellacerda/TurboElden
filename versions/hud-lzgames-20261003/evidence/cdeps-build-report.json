@@ -1,0 +1,59 @@
+{
+  "toolchain": "clang 22.1.8 headers/compiler, NDK r28c sysroot + linker builtins, aarch64-linux-android26",
+  "source_commit": "1c12fac5ce49badaadff2e2f210dcc30b89f4943",
+  "source_archives": {
+    "libogg-1.3.6.tar.xz": "5c8253428e181840cd20d41f3ca16557a9cc04bad4a3d04cce84808677fa1061",
+    "libvorbis-1.3.7.tar.xz": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b",
+    "flac-1.5.0.tar.xz": "f2c1c76592a82ffff8413ba3c4a1299b6c7ab06c734dee03fd88630485c2b920",
+    "xz-5.8.3.tar.xz": "fff1ffcf2b0da84d308a14de513a1aa23d4e9aa3464d17e64b9714bfdd0bbfb6",
+    "libarchive-3.8.6.tar.xz": "8ac57c1f5e99550948d1fe755c806d26026e71827da228f36bef24527e372e6f"
+  },
+  "patches": {
+    "libarchive-3.2.0-entry-crc32.patch": "cdccde287be1f056ec16564efc870576ace8fcf7c11dbf6f5425fcaa4ec775fb",
+    "libarchive-3.2.1-force-utf8-charset.patch": "8ffaaefd9cd5673991ce5a50279901766b60280c6d54ee47f8afdf975a12d027"
+  },
+  "features": {
+    "common": "static, PIC, Release, no programs/tests/docs",
+    "vorbis": "Clang-incompatible -mno-ieee-fp is not used by CMake; original patch only changes autotools configure scripts",
+    "flac": "native ARM64 NEON detection enabled; Ogg ON; no C++; upstream fseeko=fseek and ftello=ftell Android definitions",
+    "xz": "LZMA1/LZMA2 encoders/decoders only, matching upstream configure selection",
+    "libarchive": "upstream CRC32-entry and UTF-8 patches; ZLIB and LZMA; no xattr/ACL/BZip2/iconv/lz4/zstd/lzo/nettle/openssl/xml2/expat; upstream Android set_statfs_transfer_size definition"
+  },
+  "libraries": {
+    "libogg.a": {
+      "size": 32850,
+      "sha256": "bc76e49fca6ae9063c8f1d563bc0d5e4010ba6377392688a92104eb72ed77c49",
+      "elf64_aarch64_objects": 2
+    },
+    "libvorbis.a": {
+      "size": 256926,
+      "sha256": "b85d30efbd1bac462e5e70c95ce452003b47ab01020ab6c1406436b5c854d815",
+      "elf64_aarch64_objects": 20
+    },
+    "libvorbisfile.a": {
+      "size": 34748,
+      "sha256": "4738838e033f0c0d84b1bbcc6261d0485ae0c527fee16381afb0aaa1c55a1844",
+      "elf64_aarch64_objects": 1
+    },
+    "libvorbisenc.a": {
+      "size": 760022,
+      "sha256": "f7fb611c33ea2db2457eca49a6ff60b9e7419df9f2c56dcc3fa343ec08142569",
+      "elf64_aarch64_objects": 1
+    },
+    "libFLAC.a": {
+      "size": 478290,
+      "sha256": "f66fa9678b698740553472e752b4db44a7ce95537d9e400275ed8a0d10053c00",
+      "elf64_aarch64_objects": 33
+    },
+    "liblzma.a": {
+      "size": 303566,
+      "sha256": "176d0e252d76c23e4d140c9db2f0e93e7378b425cd5d6a6c92fab53ef337df47",
+      "elf64_aarch64_objects": 65
+    },
+    "libarchive.a": {
+      "size": 1751376,
+      "sha256": "c414608c7b86e69a83cc043519392000d4404ed65b83309696d1f486acf805f6",
+      "elf64_aarch64_objects": 123
+    }
+  }
+}

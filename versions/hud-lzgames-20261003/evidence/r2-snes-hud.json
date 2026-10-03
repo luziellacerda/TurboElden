@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-03T19:34:34.908496-03:00",
+  "label": "r2-snes-game",
+  "activity": [
+    "topResumedActivity=ActivityRecord{13010026 u0 org.turboramastation.frontend/com.imagine.BaseActivity t33165}"
+  ],
+  "processes": [
+    "u0_a425      25811   896  293420308 291724 0                   0 S org.turboramastation.frontend",
+    "u0_a425      26635   896   20235028 172264 0                   0 S org.turboramastation.frontend:snes"
+  ],
+  "screenshot": "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\r2-snes-game.png"
+}

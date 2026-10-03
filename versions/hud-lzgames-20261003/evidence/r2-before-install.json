@@ -1,0 +1,26 @@
+{
+  "time": "2026-10-03T19:31:41.180994-03:00",
+  "label": "r2-before-install",
+  "activity": [
+    "topResumedActivity=ActivityRecord{229850179 u0 org.turboramastation.frontend/com.imagine.BaseActivity t33160}"
+  ],
+  "processes": [
+    "u0_a425      18270   896  293588908 132232 0                   0 S org.turboramastation.frontend",
+    "u0_a425      23164   896   20244740 153016 0                   0 S org.turboramastation.frontend:snes"
+  ],
+  "screenshot": "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\r2-before-install.png",
+  "states": [
+    {
+      "path": "/storage/emulated/0/EmulationStation/roms/.station-v2/super-nintendo/826da6daebe9edbebffb3721f83abf12/install-6929401782376713143/content/Battletoads in Battlemaniacs (ESP) (NTSC).0A.frz",
+      "sha256": "04684041b365ea36a4600f27e8ed4e9b27f8d9b47a9d09892170dc027ab2407e",
+      "bytes": 90735,
+      "mtime": 1791066497
+    },
+    {
+      "path": "/storage/emulated/0/EmulationStation/roms/.station-v2/megadrive/ce3f245960b94e064f027ffd8aefe466/install-3312893446515571496/content/Cutthroat Island (USA, Europe).0a.gp",
+      "sha256": "e0b066274b71575219a8c798ef618022072f1110688becf0ce2ff1b42020d41d",
+      "bytes": 36752,
+      "mtime": 1791065048
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "apk": "E:\\ESTUDO APK\\work\\station-mega-explus-20261003\\TurboStations-SNES-Mega-EXPlus-20261003.apk",
+  "sha256": "e87a352bc61ce6b2f120d4657451471313a1e4e7671e37c572d9904fcc1ef7be",
+  "bytes": 1910248068,
+  "base_sha256": "62377e8d55617a9d0aefaed42d0b1a17948f9c5997b7be713dc760c4420f8c25",
+  "source_commit": "1c12fac5ce49badaadff2e2f210dcc30b89f4943",
+  "version": "MD.emu 1.5.85 official prerelease; SNES EX+ retained",
+  "changed": [
+    "AndroidManifest.xml",
+    "classes.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [
+    "assets/mdOverlay.png",
+    "assets/mega-explus/licenses/COPYING.GPL",
+    "assets/mega-explus/source/MegaBootstrap.java",
+    "assets/mega-explus/source/native_mega.h",
+    "assets/mega-explus/upstream-provenance.json",
+    "classes33.dex",
+    "classes34.dex",
+    "lib/arm64-v8a/libmdemu_station.so"
+  ],
+  "removed": [],
+  "preserved_entries": 10830,
+  "dex_definitions": 46566,
+  "duplicate_definitions": 0,
+  "integrated_native_sha256": "636a50b0901afd3ebd5586883cc49277307cb7525ca1cc23744139168b8ff171",
+  "native_adaptations": {
+    "official_sha256": "79a4b7409044d34318255df35132b313617cb0aa485928e259cace945c909906",
+    "integrated_sha256": "636a50b0901afd3ebd5586883cc49277307cb7525ca1cc23744139168b8ff171",
+    "changes": [
+      {
+        "offset": 1730757,
+        "old": "com/imagine",
+        "new": "com/mdimagn",
+        "section": ".rodata"
+      },
+      {
+        "offset": 1731029,
+        "old": "com/imagine",
+        "new": "com/mdimagn",
+        "section": ".rodata"
+      },
+      {
+        "offset": 1731081,
+        "old": "com/imagine",
+        "new": "com/mdimagn",
+        "section": ".rodata"
+      },
+      {
+        "offset": 1731120,
+        "old": "com/imagine",
+        "new": "com/mdimagn",
+        "section": ".rodata"
+      },
+      {
+        "offset": 1731163,
+        "old": "com/imagine",
+        "new": "com/mdimagn",
+        "section": ".rodata"
+      },
+      {
+        "offset": 1731199,
+        "old": "com/imagine",
+        "new": "com/mdimagn",
+        "section": ".rodata"
+      },
+      {
+        "offset": 1731259,
+        "old": "com/imagine",
+        "new": "com/mdimagn",
+        "section": ".rodata"
+      },
+      {
+        "offset": 1731295,
+        "old": "com/imagine",
+        "new": "com/mdimagn",
+        "section": ".rodata"
+      },
+      {
+        "offset": 1719026,
+        "old": "gpOverlay.png",
+        "new": "mdOverlay.png",
+        "section": ".rodata"
+      }
+    ],
+    "executable_code_identical": true
+  },
+  "preserved_snes_complete": true,
+  "station_login_catalog_download_dex_preserved": true,
+  "all_other_engines_preserved": true,
+  "resources_and_design_assets_preserved": true,
+  "installed": false,
+  "runtime_verified": false,
+  "promoted_to_stable": false
+}
