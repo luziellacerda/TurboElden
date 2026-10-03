@@ -18,13 +18,13 @@ API jint Java_org_emulationstation_frontend_station_StationFrontendDeviceTest_ru
  try{
   check(sizeof(catalog)==0x138,"catalog ABI");check(sizeof(Item)==0xe8,"item ABI");check(sizeof(Progress)==48,"progress ABI");
   publish({"item0001","item0002"});check(!env->ExceptionCheck(),"catalog JNI");
-  StationCatalog_update(&catalog);check(catalog.state==2&&catalog.items.size()==2,"initial catalog");check(catalog.revision==1,"initial revision");
+  StationCatalog_update(&catalog);check(catalog.state==2&&catalog.items.size()==2,"initial catalog");check(catalog.revision==1,"initial revision");check(preparationCommitted.load(),"100 percent only after native commit");
   check(catalog.items[0].unusedGameUrl.empty(),"no invented game URL");check(catalog.items[0].coverId=="cover001","opaque cover identity");
   jstring id=env->NewStringUTF("item0001");jbyteArray cover=byteArray("/private/covers/cover001-r1.png");
   Java_org_emulationstation_frontend_station_StationFrontend_publishCover(env,nullptr,id,cover);env->DeleteLocalRef(id);env->DeleteLocalRef(cover);
   StationCatalog_update(&catalog);check(catalog.items[0].coverReady&&!catalog.items[0].coverFailed,"cover ready");check(catalog.items[0].coverPath=="/private/covers/cover001-r1.png","cover path");
   job(true,0,"");StationCatalog_update(&catalog);check(StationCatalog_active(&catalog)==std::vector<size_t>{0},"active download");check(StationCatalog_progress(&catalog,0).received==50,"download progress");
-  publish({"item0002","item0001"});StationCatalog_update(&catalog);check(!StationCatalog_applyPending(&catalog),"do not reorder active downloads");
+  publish({"item0002","item0001"});StationCatalog_update(&catalog);check(catalog.unusedPending.size()==2,"renderer sees pending publication");check(!StationCatalog_applyPending(&catalog),"do not reorder active downloads");
   job(false,1,"/roms/install/content/game.bin");StationCatalog_update(&catalog);check(catalog.items[0].installed,"commit installation");check(catalog.installedCount==1,"installed count");
   check(StationCatalog_applyPending(&catalog),"apply idle catalog");check(catalog.items[1].id=="item0001"&&catalog.items[1].installed,"preserve committed installation on refresh");
   job(false,3,"");StationCatalog_update(&catalog);check(catalog.items[1].installed,"failed update preserves installed item");check(StationCatalog_progress(&catalog,1).error=="Error","failure reported");

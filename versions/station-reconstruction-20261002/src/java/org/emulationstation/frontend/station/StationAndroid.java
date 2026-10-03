@@ -28,7 +28,8 @@ public final class StationAndroid {
     public final StationCoordinator coordinator;
     private StationAndroid(Context context) throws Exception {
         this.context=context;
-        privateFiles=context.getApplicationContext().getNoBackupFilesDir().toPath();
+        // Resolve only the OS-owned root; installer descendants still reject every symbolic link.
+        privateFiles=context.getApplicationContext().getNoBackupFilesDir().toPath().toRealPath();
         StationApi.Clock clock=SystemClock::elapsedRealtime;
         StationApi.Device identity=new StationApi.Device() {
             public PublicKey publicKey() throws Exception {return StationCrypto.publicKey();}

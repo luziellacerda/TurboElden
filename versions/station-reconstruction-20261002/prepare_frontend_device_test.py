@@ -4,7 +4,7 @@ r=Path(__file__).resolve().parent;out=r/'build/device-frontend';out.mkdir(parent
 os.environ['TEMP']=os.environ['TMP']=str(r/'temp')
 cc=r'E:\TurboEdenEngine\android-ndk-r28c\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe'
 lib=out/'libstation_frontend.so'
-subprocess.run([cc,'--target=aarch64-linux-android26','-std=c++17','-shared','-fPIC','-O2','-fvisibility=hidden','-Wall','-Wextra','-Werror','-Wno-return-type-c-linkage','-static-libstdc++','-Wl,--exclude-libs,ALL','-Wl,--no-undefined','-Wl,-z,max-page-size=16384',str(r/'tests/station_frontend_test.cpp'),'-ldl','-o',str(lib)],check=True)
+subprocess.run([cc,'--target=aarch64-linux-android26','-std=c++17','-shared','-fPIC','-O2','-fvisibility=hidden','-Wall','-Wextra','-Werror','-Wno-return-type-c-linkage','-static-libstdc++','-Wl,--exclude-libs,ALL','-Wl,--no-undefined','-Wl,-z,max-page-size=16384',str(r/'tests/station_frontend_test.cpp'),'-ldl','-llog','-o',str(lib)],check=True)
 jdk=Path(r'C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot\bin');android=r'G:\Android\Sdk\platforms\android-34\android.jar'
 classes=out/'classes';classes.mkdir(exist_ok=True)
 subprocess.run([str(jdk/'javac.exe'),'-encoding','UTF-8','--release','8','-cp',android+os.pathsep+str(r/'build/android-classes'),'-d',str(classes),str(r/'tests/StationFrontendDeviceTest.java')],check=True)

@@ -1,0 +1,19 @@
+{
+  "apkSha256": "43670211fe6de01438c0352b44875c43336c052d431582032680fa2c9265517f",
+  "devicePackage": "org.turboramastation.frontend",
+  "loadingFailureObserved": "StationFrontend.configure IOException: Symbolic path refused",
+  "fix": "Canonicalize existing OS-owned private root and native application ROM root before strict descendant checks",
+  "nativeRomRootChangedByCanonicalization": false,
+  "hostChecks": 204,
+  "androidRootChecks": 4,
+  "nativeAppliedItems": 996,
+  "savedLicenseReused": true,
+  "loading100Observed": true,
+  "loadingLabelsHiddenAfterCompletion": true,
+  "installedHashVerified": true,
+  "screenStayOnRestoredTo": 0,
+  "realCover200Verified": false,
+  "realArtifactDownloadVerified": false,
+  "fullMigrationComplete": false,
+  "nativeFrontendChecksFinalSource": 28
+}

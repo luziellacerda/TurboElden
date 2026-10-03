@@ -1,4 +1,28 @@
+## Verificacao no aparelho em 03/10/2026, 10:07 - carregamento corrigido
+
+APK atual `build/apk/TurboStations-Station-CANDIDATO-20261003.apk`, SHA256 `43670211fe6de01438c0352b44875c43336c052d431582032680fa2c9265517f`, 1.902.702.486 bytes. Instalado com atualizacao -r, hash do base.apk identico, lastUpdateTime 10:07:58. Licenca salva reutilizada sem redigitar o codigo. Nao promovido a estavel.
+
+Causa observada do loading: `StationFrontend.configure` recusava `Symbolic path refused`. Raizes confiaveis do contexto Android e do diretorio nativo agora passam por `toRealPath` antes dos controles de descendentes. O root nativo nao mudou na canonicalizacao; a raiz privada do Android deixou de provocar a recusa. Links simbolicos dentro da instalacao continuam rejeitados. Quatro testes Android isolados confirmaram raiz canonica, criacao normal, recusa de redirecionamento e ausencia de escrita fora da pasta; 204 testes locais passaram.
+
+O aparelho publicou e aplicou 996 itens, chegou a 100% e abriu as plataformas. A barra apresenta itens e bytes UTF-8 preparados para a interface, nao bytes transferidos pela rede. Corrigida a visibilidade dos TextComponents para o texto nao ficar sobre o carrossel depois da conclusao. Captura final conferida. Tela ligada durante a carga restaurada ao valor anterior 0.
+
+Contagem divergente relatada pelo mantenedor: espera mais de 800 SNES, mas existem 176 SNES e 28 SNES BR no catalogo recebido. As oito contagens no telefone coincidem exatamente com o handoff servidor ac869429 (996 total). Isso nao e corte do filtro SNES no cliente. Pedir catalogo completo ao servidor pelo novo handoff `docs/server/HANDOFF-SERVIDOR-CATALOGO-INCOMPLETO-STATION-20261003.md`. Nao preencher a lista com catalogo/CDN antigo nem inventar itemId/coverId.
+
+Continuam pendentes: capa autenticada 200, descritor implantado e transferencia real, importacao verificavel dos jogos anteriores e eliminacao fisica do legado nativo residual. Inventario de dominios e evidencia estatica, nao captura de trafego. Fonte novo usa app.lzgames.com.br/v1/station; strings antigas ainda existem nas bibliotecas preservadas. Nao alegar migracao integral concluida.
+
+Os registros abaixo sao historicos e nao substituem esta verificacao.
+
 # TurboStations - cliente Station integrado em APK candidato
+
+## Atualizacao posterior em 03/10/2026 - ativacao e carregamento
+
+Codigo localizado no retorno privado `docs/senha-station-48h-20261002`, commit `01c391bea72dc27de8597e0c6d908caa96b18021`, arquivo `RETORNO-SENHA-STATION-48H-20261002.md`. O valor nao foi copiado para este handoff nem para logs. A pedido do mantenedor, foi inserido pela UI do telefone; o controlador concluiu o login e abriu ESActivity. O catalogo nativo permaneceu no indicador giratorio: ativacao aceita NAO significa frontend pronto.
+
+Foi corrigida a publicacao pendente para usar o vetor que o GuiStore realmente observa. Foi adicionada barra desenhada no renderer nativo, com contagem de itens preparados e bytes UTF-8 preparados para a interface. A animacao e limitada ao trabalho concluido, e 100% depende do commit do modelo. Nao e percentual por tempo nem contagem de bytes baixados de jogos. Falhas mostram estado interrompido e diagnostico de etapa. Ainda falta confirmar visualmente o resultado no aparelho desbloqueado e fechar a causa do bloqueio inicial; nao declarar corrigido so pela compilacao.
+
+Candidato instalado: `ae78dab6ab0eebda5ab872c6be4d2e293237010a65f02c4c3cbc1eaa064cc13e`, mesmo caminho de saida, 1.902.702.486 bytes, lastUpdateTime Android `2026-10-03 09:36:34`. Instalador retornou Success; hash no telefone desta revisao ainda precisa ser conferido. O candidato anterior 38e78fde saiu do login mas ficou no loading. Sao agora 32 entradas nativas substituidas. Testes: 204 locais, 28 nativos do frontend; carga ELF com consulta do simbolo da pasta passou. Codigo e licenca do telefone foram preservados.
+
+Novo retorno do servidor lido: `43bb54847e55750be451b614bcf827fb32ad7de4`, mesmo ramo `feat/station-artifact-descriptor-20261002` e mesmo handoff tecnico unico. Acrescenta homologacao HTTP isolada e correcao `de08858eac95084c116f146b642acd8748b43c35` na ordem de consumo do grant. Continua declarando descriptor NAO implantado e capas reais pendentes. Nao alterar a 5192 como consequencia desta leitura.
 
 APK TESTE gerado, assinado e instalado em 03/10/2026. SHA256 instalado: `38e78fde7dce574969aadeab2cd709b32df12b94bcd819fe595bd079af8204d2`. Login aberto; ativacao autenticada, catalogo/capas e download de producao ainda aguardam validacao. **Nao e versao estavel nem entrega aprovada ao consumidor.**
 

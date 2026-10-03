@@ -10,10 +10,13 @@
 #include <utility>
 #include <ctime>
 #include <cmath>
+#include <android/log.h>
+#include <cstdio>
 #include <sys/stat.h>
 #define API extern "C" __attribute__((visibility("default")))
 namespace {
 using station::Catalog;using station::Item;using station::Progress;
+std::atomic<int> preparedItems{0},preparationTotal{0};std::atomic<int64_t> preparationBytes{0};std::atomic<bool> preparationCommitted{false};
 JavaVM* vm=nullptr;jclass frontend=nullptr;
 jmethodID configureMethod=nullptr,refreshMethod=nullptr,startMethod=nullptr,cancelMethod=nullptr;
 jmethodID removeMethod=nullptr,coverMethod=nullptr,reconcileMethod=nullptr,authorizedMethod=nullptr,loginMethod=nullptr;
@@ -56,7 +59,7 @@ bool command(jmethodID method,const std::string* id=nullptr,bool result=false){
  else if(id)env->CallStaticVoidMethod(frontend,method,arg);
  else env->CallStaticVoidMethod(frontend,method);
  if(arg)env->DeleteLocalRef(arg);
- if(env->ExceptionCheck()){env->ExceptionClear();accepted=false;}
+ if(env->ExceptionCheck()){__android_log_print(6,"StationNative","Java command failed");env->ExceptionDescribe();env->ExceptionClear();accepted=false;}
  return accepted;
 }
 void changed(Catalog* catalog){++catalog->revision;catalog->installedCount=std::count_if(catalog->items.begin(),catalog->items.end(),[](const Item& item){return item.installed;});}
@@ -80,7 +83,7 @@ void drain(Catalog* catalog){
   hasCatalog=inbox.hasCatalog;inbox.hasCatalog=false;if(hasCatalog)next.swap(inbox.catalog);
   covers.swap(inbox.covers);jobs.swap(inbox.jobs);failure.swap(inbox.error);inbox.changed.store(false,std::memory_order_release);
  }
- if(hasCatalog){state.catalog=std::move(next);state.pending=true;catalog->error.clear();}
+ if(hasCatalog){catalog->unusedPending=std::move(next);state.pending=true;catalog->error.clear();__android_log_print(4,"StationNative","Catalog received items=%zu",catalog->unusedPending.size());}
  bool modified=false;
  for(auto& pair:covers){state.covers.erase(pair.first);Item* item=find(catalog,pair.first);if(!item)continue;
   item->coverPending=false;item->coverFailed=pair.second.empty();item->coverReady=!pair.second.empty();item->coverPath=std::move(pair.second);modified=true;
@@ -90,19 +93,19 @@ void drain(Catalog* catalog){
   else if(job.result==2){item->localPath.clear();item->fileName.clear();item->installed=false;modified=true;}
   state.jobs[pair.first]=std::move(job);
  }
- if(!failure.empty()){catalog->error=std::move(failure);if(catalog->items.empty())catalog->state=3;}
+ if(!failure.empty()){__android_log_print(6,"StationNative","Frontend error received");catalog->error=std::move(failure);if(catalog->items.empty())catalog->state=3;}
  if(modified)changed(catalog);
 }
 bool apply(Catalog* catalog){
  if(!owned(catalog)||!state.pending||active()||(catalog->engineState[0]&1))return false;
- for(auto& item:state.catalog){auto found=state.jobs.find(item.id);if(found==state.jobs.end())continue;
+ for(auto& item:catalog->unusedPending){auto found=state.jobs.find(item.id);if(found==state.jobs.end())continue;
   const Job& job=found->second;
   if(job.result==1&&!job.launch.empty()){item.localPath=job.launch;item.fileName=job.launch.substr(job.launch.find_last_of('/')+1);item.installed=true;}
   else if(job.result==2){item.localPath.clear();item.fileName.clear();item.installed=false;}
  }
- catalog->items.swap(state.catalog);state.catalog.clear();state.pending=false;
+ catalog->items.swap(catalog->unusedPending);catalog->unusedPending.clear();state.pending=false;__android_log_print(4,"StationNative","Catalog applied items=%zu",catalog->items.size());
  catalog->priorities.clear();state.covers.clear();state.jobs.clear();
- catalog->state=2;catalog->error.clear();changed(catalog);return true;
+ catalog->state=2;catalog->error.clear();preparationCommitted=true;changed(catalog);return true;
 }
 }
 API jint JNI_OnLoad(JavaVM* machine,void*){
@@ -119,6 +122,10 @@ API jint JNI_OnLoad(JavaVM* machine,void*){
  authorizedMethod=env->GetStaticMethodID(frontend,"authorized","()Z");
  loginMethod=env->GetStaticMethodID(frontend,"requestLogin","()V");
  return env->ExceptionCheck()?JNI_ERR:JNI_VERSION_1_6;
+}
+API void Java_org_emulationstation_frontend_station_StationFrontend_publishPreparation(JNIEnv* env,jclass,jint done,jint total,jlong count){
+ if(done<0||total<0||done>total||total>4096||count<0){error(env,"Invalid preparation counters");return;}
+ if(done==0)preparationCommitted=false;preparationTotal=total;preparedItems=done;preparationBytes=count;
 }
 API void Java_org_emulationstation_frontend_station_StationFrontend_publishCatalog(JNIEnv* env,jclass,jobjectArray rows,jbyteArray name){
  try{
@@ -157,11 +164,11 @@ API void Java_org_emulationstation_frontend_station_StationFrontend_publishError
 }
 // Service entry points called by the retained native renderer. No HTTP, URLs or filesystem heuristics.
 API void StationCatalog_refresh(Catalog* catalog,const std::string&){
- if(!catalog)return;if(state.owner&&state.owner!=catalog)return;bool initial=state.owner==nullptr;state.owner=catalog;
+ if(!catalog)return;if(state.owner&&state.owner!=catalog)return;__android_log_print(4,"StationNative","Catalog refresh entered");bool initial=state.owner==nullptr;state.owner=catalog;
  if(catalog->items.empty())catalog->state=1;
  using Root=std::string(*)();void* mainLibrary=dlopen("libmain.so",RTLD_NOW|RTLD_NOLOAD);auto root=mainLibrary?reinterpret_cast<Root>(dlsym(mainLibrary,"_ZN14CatalogService11getRomsRootEv")):nullptr;
- if(!root){catalog->state=3;catalog->error="Pasta de jogos indisponivel.";return;}
- std::string folder=root();dlclose(mainLibrary);
+ if(!root){__android_log_print(6,"StationNative","Roms root export missing");catalog->state=3;catalog->error="Pasta de jogos indisponivel.";return;}
+ std::string folder=root();dlclose(mainLibrary);__android_log_print(4,"StationNative","Configure root bytes=%zu",folder.size());
  if(!command(configureMethod,&folder)||(!initial&&!command(refreshMethod))){catalog->state=3;catalog->error="Nao foi possivel iniciar o catalogo Station.";}
 }
 API void StationCatalog_update(Catalog* catalog){drain(catalog);if(owned(catalog)&&catalog->items.empty())apply(catalog);queueCovers(catalog);}
@@ -230,4 +237,59 @@ API bool StationCore_request(Catalog* catalog){
  *reinterpret_cast<int32_t*>(catalog->engineState+8)=0;
  *reinterpret_cast<std::string*>(catalog->engineState+0x38)="Este motor precisa ser incluido na atualizacao do aplicativo.";
  return false;
+}
+
+namespace {
+template<class T>T renderer(uintptr_t offset){
+ static uintptr_t base=[](){auto symbol=mainSymbol<void*>("_ZN14CatalogServiceC1Ev");Dl_info info{};return symbol&&dladdr(symbol,&info)?reinterpret_cast<uintptr_t>(info.dli_fbase):uintptr_t(0);}();
+ return reinterpret_cast<T>(base+offset);
+}
+template<class T>T& field(void* p,size_t offset){return *reinterpret_cast<T*>(static_cast<uint8_t*>(p)+offset);}
+struct V2{float x,y;};struct V3{float x,y,z;};
+void* loadingOwner=nullptr;void* loadingLabels[4]{};std::string loadingTexts[4];float shownPercent=0,lastDrawTime=0;
+void loadingText(void* owner,int slot,const std::string& value,const void* matrix,float x,float y,float w,float h,float scale,unsigned color){
+ if(loadingOwner!=owner){loadingOwner=owner;for(int i=0;i<4;++i){loadingLabels[i]=nullptr;loadingTexts[i].clear();}shownPercent=0;lastDrawTime=0;}
+ void*& label=loadingLabels[slot];
+ if(!label){
+  label=renderer<void*(*)(size_t)>(0x39d9c0)(0x130);std::string empty;
+  renderer<void(*)(void*,void*,const std::string&,const void*,unsigned,int,V3,V2,unsigned)>(0x2d2a04)(label,field<void*>(owner,0x10),empty,static_cast<uint8_t*>(owner)+0x928+0xe8,color,0,V3{0,0,0},V2{0,0},0);
+  renderer<void(*)(void*,void*)>(0x2772c8)(owner,label);
+ }
+ if(loadingTexts[slot]!=value){renderer<void(*)(void*,const std::string&)>(0x2d2c70)(label,value);loadingTexts[slot]=value;}
+ if(field<float>(label,0x38)!=x||field<float>(label,0x3c)!=y||field<float>(label,0x54)!=w/scale||field<float>(label,0x58)!=h/scale){
+  renderer<void(*)(void*,float,float)>(0x2771b0)(label,0,0);
+  renderer<void(*)(void*,float)>(0x277200)(label,scale);
+  renderer<void(*)(void*,float,float,float)>(0x277194)(label,x,y,0);
+  renderer<void(*)(void*,float,float)>(0x2771d8)(label,w/scale,h/scale);
+  renderer<void(*)(void*,int)>(0x2d38d8)(label,1);renderer<void(*)(void*,int)>(0x2d38e8)(label,1);
+ }
+ // Owned by GuiStore for destruction, visible only during this explicit loading draw.
+ renderer<void(*)(void*,bool)>(0x277228)(label,true);
+ renderer<void(*)(void*,const void*)>(0x2d2dc4)(label,matrix);
+ renderer<void(*)(void*,bool)>(0x277228)(label,false);
+ renderer<void(*)(const void*)>(0x2e5640)(matrix);
+}
+}
+API void StationLoading_draw(void* gui,const void* matrix){
+ if(!gui||!matrix)return;
+ const float w=field<float>(gui,0x54),h=field<float>(gui,0x58),time=field<float>(gui,0x374);
+ const int done=preparedItems.load(),total=preparationTotal.load();const bool committed=preparationCommitted.load();
+ const float target=committed?100.0f:(total?100.0f*done/(total+1):0.0f);
+ // Visual interpolation is always bounded by completed work, never estimated elapsed progress.
+ float elapsed=std::max(0.0f,std::min(100.0f,time-lastDrawTime));lastDrawTime=time;
+ shownPercent=std::min(target,shownPercent+elapsed*.16f);
+ bool failed=state.owner&&state.owner->state==3;
+ auto rect=renderer<void(*)(float,float,float,float,unsigned,unsigned,bool,int,int)>(0x2e2c38);
+ renderer<void(*)(const void*)>(0x2e5640)(matrix);
+ rect(w*.19f,h*.35f,w*.62f,h*.30f,0x07110de8,0x07110de8,false,4,5);
+ rect(w*.23f,h*.50f,w*.54f,h*.018f,0x21392bff,0x21392bff,false,4,5);
+ if(shownPercent>0)rect(w*.23f,h*.50f,w*.54f*shownPercent/100.0f,h*.018f,0x35ee75ff,0x8aff99ff,true,4,5);
+ const std::string title=failed?"CARREGAMENTO INTERROMPIDO":committed?"BIBLIOTECA PREPARADA":"PREPARANDO SUA BIBLIOTECA";
+ char percent[32];std::snprintf(percent,sizeof(percent),"%d%%",static_cast<int>(shownPercent));
+ char count[160];std::snprintf(count,sizeof(count),"%d / %d jogos preparados   |   %.1f KiB de dados",done,total,preparationBytes.load()/1024.0);
+ std::string detail=failed?state.owner->error:(total?count:"Aguardando catalogo autenticado...");
+ loadingText(gui,0,title,matrix,w*.23f,h*.385f,w*.54f,h*.06f,.9f,0xf1fff5ff);
+ loadingText(gui,1,percent,matrix,w*.23f,h*.442f,w*.54f,h*.05f,.85f,0x6cf696ff);
+ loadingText(gui,2,detail,matrix,w*.23f,h*.537f,w*.54f,h*.055f,.68f,failed?0xff8e86ff:0xb4d4bfff);
+ loadingText(gui,3,"TURBORAMA STATION",matrix,w*.23f,h*.592f,w*.54f,h*.035f,.5f,0x789c84ff);
 }

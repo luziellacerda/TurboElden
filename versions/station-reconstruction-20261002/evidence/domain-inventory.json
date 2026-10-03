@@ -1,0 +1,35 @@
+{
+  "classes5.dex": [],
+  "classes6.dex": [],
+  "classes8.dex": [],
+  "classes28.dex": [
+    "app.lzgames.com.br"
+  ],
+  "lib/arm64-v8a/libmain.so": [
+    "android.googlesource.com",
+    "api.ipify.org",
+    "api.thegamesdb.net",
+    "buildbot.libretro.com",
+    "keyauth.win",
+    "retropie.org.uk",
+    "samboxmanager.squareweb.app",
+    "www.screenscraper.fr"
+  ],
+  "lib/arm64-v8a/libturbo_carousel.so": [
+    "blog.playstation.com",
+    "ca.trufo.ai",
+    "crt-c2pa.ssl.com",
+    "cv.iptc.org",
+    "gamesdb.launchbox-app.com",
+    "github.com",
+    "miami.sambox.buzz",
+    "ocsp-c2pa.ssl.com0",
+    "ocsp-c2pa.ssl.com0b",
+    "ocsp.trufo.ai0",
+    "trufo.ai",
+    "www.mariowiki.com",
+    "www.nintendo.com",
+    "www.w3.org"
+  ],
+  "legacyCatalogAssetPresent": false
+}

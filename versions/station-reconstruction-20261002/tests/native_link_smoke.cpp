@@ -16,6 +16,9 @@ int main(int argc,char** argv){
  alignas(station::Catalog) unsigned char storage[sizeof(station::Catalog)]{};
  auto catalog=reinterpret_cast<station::Catalog*>(storage);ctor(catalog);
  auto state=progress(catalog,0);
+ void* same=dlopen("libmain.so",RTLD_NOW|RTLD_NOLOAD);
+ if(!same||!dlsym(same,"_ZN14CatalogService11getRomsRootEv")){std::fprintf(stderr,"Root lookup failed: %s\n",dlerror());return 8;}
+ dlclose(same);
  if(state.active||state.received!=0||state.total!=-1||!state.error.empty())return 7;
  catalog->~Catalog();
  std::puts("PASS native ELF load, renderer addresses and rebuilt progress ABI");

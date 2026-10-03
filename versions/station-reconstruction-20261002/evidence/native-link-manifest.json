@@ -1,6 +1,6 @@
 {
   "sourceSha256": "a1ae357dc29caac52d47386a71a0a9a685ecffb9c01d536f5af50b5ba658cda8",
-  "outputSha256": "f483645a84df358b28e3047a6a2a0c56b4a68abb1e083414cd0dcef1cd312f37",
+  "outputSha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
   "originalSymbolsPreserved": 4409,
   "replacements": [
     {
@@ -188,6 +188,12 @@
       "bytesRemoved": 676,
       "oldSha256": "3888c4139e139630a70c7e037f46b2bd8c5f79944c2dc531f77824cbcf458f8d",
       "replacement": "StationCore_request"
+    },
+    {
+      "entry": "0x2292e0",
+      "bytesRemoved": 336,
+      "oldSha256": "091b88fd4f21e63bf8dbfe6e7cec3790706852aeca3f5a138b131a2065ffbeaf",
+      "replacement": "StationLoading_draw"
     }
   ],
   "apkIntegrated": false,

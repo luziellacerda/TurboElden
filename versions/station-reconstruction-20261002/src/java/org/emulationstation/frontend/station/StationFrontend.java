@@ -23,8 +23,12 @@ public final class StationFrontend {
   synchronized(StationFrontend.class){if(configured)return;configured=true;}
   if(!execute(()->{
    try {
+    android.util.Log.i("StationFrontend","Configuring catalog");
     StationAndroid app=StationAndroid.current();if(app==null)throw new IOException("Entre no aplicativo para carregar o catálogo.");
-    Path roms=Paths.get(romsRoot);
+    // This root comes from the native application, never a catalog/archive entry.
+    Path supplied=Paths.get(romsRoot);
+    Path roms=supplied.toRealPath();
+    android.util.Log.i("StationFrontend","Storage root resolved="+!supplied.equals(roms));
     StationInstaller installer=new StationInstaller(roms,app.privateFiles.resolve("station-v2/installs"),new StationArchive());
     downloads=new StationDownloads(app.api,app.coordinator,installer,roms.resolve(".station-v2/staging"),
       (id,active,received,total,message,path,result)->{
@@ -34,7 +38,7 @@ public final class StationFrontend {
        if(result==3&&library==null)requestLogin();
       });
     publishCurrent(app);
-   }catch(Exception e){configured=false;publishError(utf8("Não foi possível preparar o catálogo Station."));}
+   }catch(Exception e){android.util.Log.e("StationFrontend","configure: "+e.getClass().getSimpleName()+": "+safeReason(e));configured=false;publishError(utf8("Não foi possível preparar o catálogo Station."));}
   }))configured=false;
  }
  public static void refresh(){execute(()->{
@@ -44,11 +48,14 @@ public final class StationFrontend {
  private static void publishCurrent(StationAndroid app)throws Exception {
   StationCoordinator.Library library=app.coordinator.current();if(library==null)throw new IOException("Catálogo não carregado");
   ArrayList<byte[]> rows=new ArrayList<>();
+  long preparedBytes=0;int preparedItems=0;publishPreparation(0,library.catalog.items.size(),0);
   for(StationCatalog.Item item:library.catalog.items){
    StationPlatforms.Platform platform=StationPlatforms.resolve(item.platform);
    StationInstaller.Installed installed=downloads.find(item);
-   rows.add(utf8(item.itemId+"\0"+item.name+"\0"+platform.label+"\0"+platform.folder+"\0"+item.coverId+"\0"+(installed==null?"":installed.launchPath.toString())+"\0"));
+   byte[] row=utf8(item.itemId+"\0"+item.name+"\0"+platform.label+"\0"+platform.folder+"\0"+item.coverId+"\0"+(installed==null?"":installed.launchPath.toString())+"\0");
+   rows.add(row);preparedBytes+=row.length;publishPreparation(++preparedItems,library.catalog.items.size(),preparedBytes);
   }
+  android.util.Log.i("StationFrontend","Publishing catalog items="+rows.size());
   publishCatalog(rows.toArray(new byte[0][]),utf8(library.displayName));
  }
  public static boolean start(String itemId){StationDownloads current=downloads;return current!=null&&current.start(itemId);}
@@ -66,7 +73,9 @@ public final class StationFrontend {
  public static void setForeground(boolean visible){boolean resumed=visible&&!foreground;foreground=visible;if(!visible){for(StationApi.Cancellation cancel:requests.values())cancel.cancel();}else if(resumed&&configured)reconcile();}
  public static void reconcile(){execute(()->{try{StationAndroid app=StationAndroid.current();if(app!=null&&downloads!=null)publishCurrent(app);}catch(Exception e){publishError(utf8("Não foi possível conferir os jogos instalados."));}});}
  private static boolean execute(Runnable operation){try{commands.execute(operation);return true;}catch(RejectedExecutionException busy){publishError(utf8("Aguarde a consulta em andamento."));return false;}}
+ private static String safeReason(Exception e){String m=e.getMessage();if(m!=null&&(m.equals("Symbolic path refused")||m.equals("Invalid catalog identity")))return m;return "operation failed";}
  private static byte[] utf8(String text){return text.getBytes(StandardCharsets.UTF_8);}
+ private static native void publishPreparation(int done,int total,long bytes);
  private static native void publishCatalog(byte[][] rows,byte[] displayName);
  private static native void publishCover(String itemId,byte[] path);
  private static native void publishJob(String itemId,boolean active,long received,long total,byte[] message,byte[] launch,int result);

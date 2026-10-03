@@ -1,0 +1,17 @@
+{
+  "activationCodeSource": {
+    "repository": "Servidor-pix",
+    "commit": "01c391bea72dc27de8597e0c6d908caa96b18021",
+    "branch": "docs/senha-station-48h-20261002",
+    "path": "docs/station-android/RETORNO-SENHA-STATION-48H-20261002.md"
+  },
+  "secretStoredInReport": false,
+  "activationSubmittedThroughPhoneUI": true,
+  "loginControllerCompleted": true,
+  "ESActivityOpened": true,
+  "nativeCatalogInitiallyStalled": true,
+  "productionDownloadVerified": false,
+  "latestServerReturn": "43bb54847e55750be451b614bcf827fb32ad7de4",
+  "serverDescriptorDeployed": false,
+  "note": "Login gate completed, but HTTP response statuses were not captured. Native catalog loading is under correction; do not claim full production acceptance."
+}
