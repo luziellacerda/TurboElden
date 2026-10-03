@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-03T12:31:28.502621",
+  "apkSha256": "f5b35419fcff4188b8e86690045371892c77933e7f8edfc07bce1d5bd25d418a",
+  "sourceOrigin": "https://app.lzgames.com.br",
+  "catalogPath": "/v1/station/catalog",
+  "expectedOriginFromServerReturn": "https://app.lzgames.com.br/v1/station/",
+  "serverReturnCommit": "64912e1f2294b99967fc638d842f505cff7f629c",
+  "freshNetworkCatalogCount": 996,
+  "nativeAppliedCounts": {
+    "Gameboy": 22,
+    "Gameboy Color": 7,
+    "Gba": 5,
+    "MegaDrive": 693,
+    "Super Nintendo": 176,
+    "Super Nintendo - BR": 28,
+    "gamegear": 58,
+    "sega32x": 7
+  },
+  "nativeExportModified": "2026-10-03 12:29:42.459253777 -0300",
+  "catalogCandidateNotDeployedPerServerReturn": true,
+  "liveReverseProxyTargetVerified": false
+}
