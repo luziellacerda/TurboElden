@@ -74,8 +74,8 @@ public final class StationHttp implements StationApi.Transport {
             cancellation.check();
             int status = connection.getResponseCode();
             StationDiagnostics.record(StationDiagnostics.route(path),status,0);
-            String returnedCorrelation=connection.getHeaderField("X-Correlation-ID");
-            StationDiagnostics.trace(StationDiagnostics.route(path),status,returnedCorrelation==null?correlation:returnedCorrelation);
+            // Log our generated UUID, never arbitrary text supplied in a response header.
+            StationDiagnostics.trace(StationDiagnostics.route(path),status,correlation);
             if (status / 100 == 3 || connection.getHeaderField("Location") != null)
                 throw new IOException("Station redirect refused");
             String encoding = connection.getHeaderField("Content-Encoding");

@@ -36,7 +36,7 @@
     "src/java/org/emulationstation/frontend/station/StationApi.java": "90138412f71b3ec3224217f239b315a413bf95d5df27566cc261d321ed56a784",
     "src/java/org/emulationstation/frontend/station/StationProtocol.java": "e9298f033dff87bdca458e73d1ec7e084688acb5b750db2dfbf98b1fd7243114",
     "src/java/org/emulationstation/frontend/station/StationCatalog.java": "827faed485e12b16583d3d2cc243a43318674b72b9a8c449000eef61f9106cff",
-    "src/java/org/emulationstation/frontend/station/StationHttp.java": "f5af0b2a6c4765e4c4ff7a97dded8de00dc25906a44a12c467b6eaa4f1b14b1a",
+    "src/java/org/emulationstation/frontend/station/StationHttp.java": "e4033ab955447da19c9833019a3648acd808060dccb875c79ea41722fc0e587a",
     "src/java/org/emulationstation/frontend/station/StationDownloads.java": "deae9670bdc63642054110f95540acf81b02921f4d8ce9cd41a4dc3ad3b5e06f",
     "src/java/org/emulationstation/frontend/station/StationConfig.java": "bbde71b5710dd9024c9865ecd0e355612f5d15708cadd22aa0e06c2940bdac97",
     "src/java/org/emulationstation/frontend/station/StationArtifact.java": "fe6eee3c4dfaaf66ac68eb0096b6ff0dc7792fa377dadf5898b5ea06e803bac9",
@@ -58,7 +58,7 @@
     "src/java/org/emulationstation/frontend/auth/StationLogin.java": "191549ba86fed13573b27258c867ece3a536f99573330d9f75889522774ae4ce",
     "src/java/org/emulationstation/frontend/auth/LoginActivity.java": "f515a3bd3846bce66aacb14a0c34a2a90251a292ec3b7701f6cdcbda33ab7557"
   },
-  "timestamp": "2026-10-03T13:41:21.302165-03:00",
+  "timestamp": "2026-10-03T14:04:13.395678-03:00",
   "baseReviewCommit": "db68b613cda008052afef8152400b9c595dfcffa",
   "installedRuntimeCommit": "629a55a8cf48722460007944cf0bb737e9f8fb75",
   "installedApkSha256": "f5b35419fcff4188b8e86690045371892c77933e7f8edfc07bce1d5bd25d418a",
