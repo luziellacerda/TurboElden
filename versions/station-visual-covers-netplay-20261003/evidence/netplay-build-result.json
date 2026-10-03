@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "newDexOnly": true,
+  "package": "org.emulationstation.frontend.netplay",
+  "sources": {
+    "src\\org\\emulationstation\\frontend\\netplay\\NetplayPaths.java": "e1cfc916a17eaaabadbcd821c2483469b99e0057944e2f2118fad064187e6a67",
+    "src\\org\\emulationstation\\frontend\\netplay\\NetplayUi.java": "f205101af034b89aa257c61347af9f942fce1603478c6fabb24597c91d6037cd",
+    "src\\org\\emulationstation\\frontend\\netplay\\StationDolphinNetplayActivity.java": "f947b5f72a35184c3eafb2ad551f39ce5ded40a1949a3a536d685b2660461b8e",
+    "src\\org\\emulationstation\\frontend\\netplay\\StationNetplayActivity.java": "564a159d40f93d401de6c90ef99042b3bdfd6768ad46b1c902c006bdc319f80d"
+  },
+  "dexPath": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\netplay\\build\\dex\\classes.dex",
+  "dexSha256": "25952f2de2682e639cc565a0fdc8451fad60b9c49a4704cd41b393899e0c56ba",
+  "dexBytes": 23316,
+  "runtimeValidation": "pending; no device used",
+  "serverChanged": false
+}

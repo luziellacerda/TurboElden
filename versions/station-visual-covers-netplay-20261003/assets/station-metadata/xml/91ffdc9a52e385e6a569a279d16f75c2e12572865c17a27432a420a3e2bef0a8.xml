@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList sourceSha256="91ffdc9a52e385e6a569a279d16f75c2e12572865c17a27432a420a3e2bef0a8" metadataOnly="true">
+  <game sourceOrdinal="1">
+    <name>2048</name>
+    <desc>2048 clone.</desc>
+  </game>
+  <game sourceOrdinal="2">
+    <name>craft</name>
+    <desc>Minecraft clone.</desc>
+  </game>
+  <game sourceOrdinal="3">
+    <name>Gong</name>
+    <desc>Pong clone.</desc>
+  </game>
+  <game sourceOrdinal="4">
+    <name>Mr Boom</name>
+    <desc>Bomberman clone.</desc>
+  </game>
+  <game sourceOrdinal="5">
+    <name>XRick</name>
+    <desc>Rick Dangerous clone.</desc>
+  </game>
+  <game sourceOrdinal="6">
+    <name>Anarch</name>
+    <desc>Extremely small, completely public domain, no-dependency, no-file, portable suckless anarcho-pacifist from-scratch 90s-style Doom clone that runs everywhere, made for the benefit of all living beings.</desc>
+  </game>
+</gameList>

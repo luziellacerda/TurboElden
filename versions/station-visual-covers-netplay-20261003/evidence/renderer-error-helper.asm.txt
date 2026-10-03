@@ -1,0 +1,35 @@
+
+E:\ESTUDO APK\work\turbostations-reconstruction-20261002\input\libmain.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000002e4a28 <_ZN8Renderer13createTextureENS_7Texture4TypeEbbjjPKv>:
+  2e4de0: d10583ff     	sub	sp, sp, #0x160
+  2e4de4: a9127bfd     	stp	x29, x30, [sp, #0x120]
+  2e4de8: f9009bfc     	str	x28, [sp, #0x130]
+  2e4dec: a91457f6     	stp	x22, x21, [sp, #0x140]
+  2e4df0: a9154ff4     	stp	x20, x19, [sp, #0x150]
+  2e4df4: 910483fd     	add	x29, sp, #0x120
+  2e4df8: d53bd056     	mrs	x22, TPIDR_EL0
+  2e4dfc: aa0003f4     	mov	x20, x0
+  2e4e00: f94016c8     	ldr	x8, [x22, #0x28]
+  2e4e04: f81f83a8     	stur	x8, [x29, #-0x8]
+  2e4e08: 9402ff16     	bl	0x3a4a60 <glGetError@plt>
+  2e4e0c: 340004c0     	cbz	w0, 0x2e4ea4 <_ZN8Renderer13createTextureENS_7Texture4TypeEbbjjPKv+0x47c>
+  2e4e10: 2a0003f3     	mov	w19, w0
+  2e4e14: 9402e35b     	bl	0x39db80 <_ZN3Log17getReportingLevelEv@plt>
+  2e4e18: 37f80460     	tbnz	w0, #0x1f, 0x2e4ea4 <_ZN8Renderer13createTextureENS_7Texture4TypeEbbjjPKv+0x47c>
+  2e4e1c: 6f00e400     	movi	v0.2d, #0000000000000000
+  2e4e20: 910003e0     	mov	x0, sp
+  2e4e24: ad0083e0     	stp	q0, q0, [sp, #0x10]
+  2e4e28: ad0183e0     	stp	q0, q0, [sp, #0x30]
+  2e4e2c: ad0283e0     	stp	q0, q0, [sp, #0x50]
+  2e4e30: ad0383e0     	stp	q0, q0, [sp, #0x70]
+  2e4e34: ad0483e0     	stp	q0, q0, [sp, #0x90]
+  2e4e38: ad0583e0     	stp	q0, q0, [sp, #0xb0]
+  2e4e3c: ad0683e0     	stp	q0, q0, [sp, #0xd0]
+  2e4e40: ad0783e0     	stp	q0, q0, [sp, #0xf0]
+  2e4e44: 3d8003e0     	str	q0, [sp]
+  2e4e48: 97f9d2e8     	bl	0x1599e8 <_ZN8FileData15refreshMetadataEv+0x64>
+  2e4e4c: 910003e0     	mov	x0, sp
+  2e4e50: 2a1f03e1     	mov	w1, wzr

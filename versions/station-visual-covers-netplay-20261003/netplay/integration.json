@@ -1,0 +1,33 @@
+{
+  "feature": "Jogar em rede usando interfaces reais dos motores integrados",
+  "entrypoint": "static bool openStationNetplay()",
+  "nativeHeader": "native_netplay.h",
+  "includeAfter": "native_mega.h, depois dos helpers videoEnv/videoActivity",
+  "forwardDeclarationBeforeSettings": "static bool openStationNetplay();",
+  "nativeAction": "Se openStationNetplay() retornar true, requestSettingsClose(p). A ponte já pausa vídeo/música após startActivity aceito.",
+  "dex": "build/dex/classes.dex: adicionar com próximo índice livre, sem substituir DEX existentes",
+  "manifestFragment": "manifest-additions.xml",
+  "activities": [
+    {"name": "org.emulationstation.frontend.netplay.StationNetplayActivity", "process": "principal", "exported": false},
+    {"name": "org.emulationstation.frontend.netplay.StationDolphinNetplayActivity", "process": ":dolphin", "exported": false}
+  ],
+  "requiredNewClientMethod": "org.emulationstation.frontend.station.StationFrontend.installedPathsFor(String platform): String[]; chamada em worker, gamecube e wii",
+  "originalRoutes": {
+    "psp": "PspBootstrap.launch(Activity, emptyString, true) abre configurações originais; instruções da tela apontam Rede/WLAN/ad hoc/relay",
+    "flycast": "FlycastBootstrap.launch(Activity, emptyString, true) abre configurações originais; instruções apontam Rede/GGPO/Native/DCNet",
+    "dolphin": "Processo :dolphin original; DirectoryInitialization.areDolphinDirectoriesReady; GameFileCache.getIsoPaths/setIsoPaths preservando existentes; NativeConfig.save(1); GameFileCacheManager.startLoad/startRescan/isLoadingOrRescanning; NetplaySetupActivity"
+  },
+  "installedPaths": "Snapshot privado limitado a 40000 paths, sem extras grandes de Binder; somente pais de arquivos retornados por recibos verificados Station. Preserva pastas Dolphin existentes. Sem pastas de ROM presumidas, varredura global, downloads ou HTTP novos.",
+  "snapshotLifecycle": "Arquivo files/station-netplay/dolphin-*.paths permanece para recriação da Activity e é apagado ao finalizar o preparo/voltar; nunca altera jogos/saves.",
+  "lifecycle": "Polling do preparo somente enquanto Activity visível; callbacks removidos onStop/onDestroy. Não cria timer/serviço na tela principal. Mantém Application bootstrap existente e sua seleção de processo.",
+  "notImplemented": ["lobby de usuários Station", "servidor de partidas Station", "Netplay SNES EX+", "Netplay MD.emu", "teste de partida entre dois dispositivos"],
+  "validation": "build/build-result.json e build/test-result.json; sem APK/ADB/servidor nesta subtarefa",
+  "sources": [
+    "https://www.ppsspp.org/docs/multiplayer/quickstart/",
+    "https://www.ppsspp.org/docs/multiplayer/how-to-play/",
+    "https://dolphin-emu.org/blog/2026/09/24/dolphin-progress-report-release-2609/",
+    "https://github.com/dolphin-emu/dolphin/pull/14647",
+    "https://github.com/flyinghead/flycast/blob/master/core/cfg/option.cpp",
+    "https://github.com/Rakashazi/emu-ex-plus-alpha/issues/330"
+  ]
+}

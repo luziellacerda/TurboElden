@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-03T23:17:08.246046+00:00",
+  "scope": [
+    "StationHttp.ResponseBody/closeResponse",
+    "StationExistingArtifact.find"
+  ],
+  "reviewer": "audit_theme_effects_synopsis",
+  "result": "No newly proven defect",
+  "findings": [
+    "TLS pooling allowed only after EOF and compatible announced length; partial/truncated/cancelled/read or close error disconnects",
+    "Exact filename only accepted after no-follow/parents/size/SHA validation; fallback retains eight candidates and original hash/entry/depth budgets"
+  ],
+  "reviewOnly": true,
+  "networkOrPhoneTest": false
+}

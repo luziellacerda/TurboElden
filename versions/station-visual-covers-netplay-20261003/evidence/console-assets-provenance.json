@@ -1,0 +1,40 @@
+[
+  {
+    "key": "snes",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0e819-6ced-7b82-a2bb-94e74409891a\\exec-ca81b7c9-14d3-468e-b1c7-31651497d7da.png",
+    "sourceSha256": "0ddc0959a6e1e7380de2745b774a2d2c7de67c12ee9bbe69e53279308d42fe1d",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "origin": "Generated with built-in image generation for this requested console illustration; not an archival photograph",
+    "asset": "turbo-console/snes.png",
+    "assetSha256": "c58b85b9ac513031fa3c89957d92f73e6913af7c779bbb3523b852f7e0668649",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "rgbaSha256": "8d0cb2454784cdbec919b42f83000a21ea8b492c6630a7a891a42b64c5df447b",
+    "transform": "RGBA conversion and maximum512px thumbnail; original aspect and alpha retained"
+  },
+  {
+    "key": "megadrive",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0e819-6ced-7b82-a2bb-94e74409891a\\exec-376a276c-4acc-4333-bd3e-1a5190509f47.png",
+    "sourceSha256": "88b6c71ded0669473d2124fafbd2f51da0dd2bbd57ad9973473931b6862ffe61",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "origin": "Generated with built-in image generation for this requested console illustration; not an archival photograph",
+    "asset": "turbo-console/megadrive.png",
+    "assetSha256": "1dd2bae9a9a676db13accd8d407542ef9e9310c4ea52f996bfbd4120ee69cbab",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "rgbaSha256": "4bc4e6045327d78dfa68abd3fd5c2579c903de9ef2379e7e409e78304504175e",
+    "transform": "RGBA conversion and maximum512px thumbnail; original aspect and alpha retained"
+  }
+]

@@ -1,0 +1,8 @@
+<!-- Within application: two internal Activities, no launcher or new permission. -->
+<activity android:name="org.emulationstation.frontend.netplay.StationNetplayActivity"
+    android:exported="false" android:theme="@android:style/Theme.Material.NoActionBar"
+    android:screenOrientation="sensorLandscape" />
+<activity android:name="org.emulationstation.frontend.netplay.StationDolphinNetplayActivity"
+    android:exported="false" android:process=":dolphin"
+    android:theme="@android:style/Theme.Material.NoActionBar"
+    android:screenOrientation="sensorLandscape" />

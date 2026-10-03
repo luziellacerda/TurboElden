@@ -1,0 +1,844 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList sourceSha256="55d5b88ac793d1a3f3b58a6f71031803d755e9bd9f45b51a898c85d86c240914" metadataOnly="true">
+  <game sourceOrdinal="1">
+    <name>Centipede</name>
+    <desc>Cientos, miles de ellos. Espeluznantes. Escurridizos. Resonadores. Voladores. Y todos están deseando atraparte si no los atrapas tú antes a ellos.</desc>
+    <genre>Shoot'em Up / Vertical</genre>
+    <developer>Shadowsoft</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19870101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="2">
+    <name>Lexis</name>
+    <desc>Esto es muy parecido al juego Tetris, pero en lugar de bloques que caen, tienes que hacer palabras con las letras que caen. Algunas palabras te darán trucos o desbloquearán un juego extra. Sigue hasta que las letras lleguen a la parte superior de la pantalla, en cuyo momento el juego habrá terminado. Las palabras pueden formarse horizontalmente, verticalmente, hacia adelante o hacia atrás.</desc>
+    <genre>Puzzle</genre>
+    <developer>Shadowsoft</developer>
+    <publisher>Songbird Productions</publisher>
+    <players>1</players>
+    <releasedate>19990101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="3">
+    <name>Lynx Casino</name>
+    <desc>Este juego es una colección de juegos de casino a los que se accede moviendo al jugador por el casino y seleccionando la mesa o máquina de juego preferida para jugar a ese juego. Comienza con $ 1,000 para apostar, aunque puede obtener dos préstamos de $ 500 si los necesitas. Una vez que pierdas todo tu dinero, se acabó el juego. Los 5 juegos disponibles son: 1. Blackjack 2. Craps 3. Roulette 4. Slot Machines (Fruit Machines) 5. Video Poker</desc>
+    <genre>Juegos de mesa</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19920601T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+  <game sourceOrdinal="4">
+    <name>Shanghai</name>
+    <desc>Shangai es una versión computarizada del solitario de mahjong. Después de ganar un juego, las fichas revelan el ojo parpadeante tridimensional de un dragón detrás de la pantalla del juego. La versión para Macintosh y Sega Master System muestra un dragón animado escupiendo fuego.</desc>
+    <genre>Juegos de mesa asiático / Mahjong</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.85</rating>
+  </game>
+  <game sourceOrdinal="5">
+    <name>Batman Returns</name>
+    <desc>Gotham City está en un problema desesperado otra vez. ¡Catwoman y el Pingüino se han unido para aterrorizar a toda la metrópolis! Sólo tú puedes ayudar a Batman a frustrar sus planes mortales y salvar a la ciudad de sus diabólicas garras.</desc>
+    <genre>Beat'em Up</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.55</rating>
+  </game>
+  <game sourceOrdinal="6">
+    <name>Battlezone 2000</name>
+    <desc>2005 D.C. Un virus mortal ha infectado los sistemas informáticos ultra sofisticados del Supertanque, volviendo estas poderosas armas de destrucción contra sus creadores. La humanidad está al borde de la extinción. ¡Libera las zonas de batalla de esta plaga robótica!</desc>
+    <genre>Shooter</genre>
+    <developer>Hand Made Software</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19940101T000000</releasedate>
+    <rating>0.6</rating>
+  </game>
+  <game sourceOrdinal="7">
+    <name>Bill &amp; Ted's Excellent Adventure</name>
+    <desc>Bill y Ted están a punto de embarcarse en su más excelente aventura a través del tiempo y el espacio. Esas dos hermosas nenas de la Inglaterra medieval, Joanna y Elizabeth, han sido secuestradas por la más atroz Parca. Bill y Ted deben usar los circuitos del tiempo para encontrar a las princesas. ¿Serán los más triunfantes? ¡Sólo tú puedes ayudar!</desc>
+    <genre>Aventura</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="8">
+    <name>Block Out</name>
+    <desc>Block Out es una variante del Tetris con un giro añadido: está en 3D. El jugador puede rotar los bloques en 3D para que encajen en el pozo en el que están siendo guiados. Los usuarios avanzados pueden jugar este juego con piezas tridimensionales extrañas, o cambiar el tamaño del pozo, para una profundidad de entre 6 y 18 montones, y un ancho y largo de entre 3 y 7.</desc>
+    <genre>Puzzle</genre>
+    <developer>P.Z.Karen</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="9">
+    <name>Checkered Flag</name>
+    <desc>Checkered Flag te pone en el asiento del conductor de un coche de carreras de Fórmula 1! Elige entre 18 circuitos de alta velocidad, tres transmisiones diferentes y carreras de un solo calor o de torneos. Si quieres conducir a toda velocidad, desafía a cinco de tus amigos y entra en una gran competición.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-6</players>
+    <releasedate>19910101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="10">
+    <name>Crystal Mines II</name>
+    <desc>El gran tesoro aún yace en lo profundo de las minas de cristal abandonadas. Pero a lo largo de los años, los demonios subterráneos las han hecho mortales. Guía a tu robot a través de las minas, destruyendo demonios y reuniendo grandes riquezas. O fallar, y convertirse en historia.</desc>
+    <genre>Puzzle</genre>
+    <developer>Color Dreams</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.85</rating>
+  </game>
+  <game sourceOrdinal="11">
+    <name>Dirty Larry : Renegade Cop</name>
+    <desc>Es el más malo de los buenos. Es Larry el Sucio - Policía Renegado. La pandilla del Sr. Big está decidida a terminar su carrera para siempre... ¡si su propio Capitán no lo hace primero! Así que salgan a las calles a toda prisa. ¡Es hora de hacer un poco de limpieza de la casa!</desc>
+    <genre>Beat'em Up</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="12">
+    <name>Dracula The Undead</name>
+    <desc>Debes escapar del siniestro castillo de Drácula, encontrar al oscuro y clavarle una estaca en el corazón. Para escapar, debes explorar el castillo y aprender sus secretos. Si fallas, te unirás a las novias de Drácula para cenar, y adivina quién es el plato principal.</desc>
+    <genre>Aventura</genre>
+    <developer>Hand Made Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="13">
+    <name>Gauntlet : The Third Encounter</name>
+    <desc>Hace generaciones una Gema Estelar encantada se estrelló contra la Tierra en la base de un antiguo castillo. Criaturas repugnantes salieron del castillo y llevaron la Gema a las profundidades de la fortaleza. Todos los intentos de recuperar la Gema Estelar fracasaron. Los aventureros fueron destruidos. Las criaturas del castillo obtuvieron una fuerza mágica de la Gema Estelar. A menos que les quiten la Gema, los malvados pronto tendrán la fuerza para aventurarse y destruir a la humanidad. Tú y tus amigos deben emprender la búsqueda para rescatar la Gema Estelar... ¡y tu mundo!</desc>
+    <genre>Acción</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.9</rating>
+  </game>
+  <game sourceOrdinal="14">
+    <name>Ishido : The Way of Stones</name>
+    <desc>Presentamos Ishido, el antiguo e intrincado Juego de las Piedras. Debes colocar las piedras en el tablero de juego, emparejando los colores y patrones de acuerdo a reglas centenarias. Requiere gran habilidad y concentración, pero si puedes desentrañar el secreto del Oráculo, ¡su sabiduría te ayudará!</desc>
+    <genre>Puzzle</genre>
+    <developer>California Dreams</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="15">
+    <name>Krazy Ace Miniature Golf</name>
+    <desc>Krazy Ace Miniature Golf es un juego de minigolf para uno o cuatro jugadores. Debes golpear la pelota de golf en el hoyo en los menos golpes posibles, evitando los obstáculos y las trampas. Intenta conseguir una mejor puntuación que tu(s) oponente(s) o por lo menos estar dentro del número de golpes por hoyo (par).</desc>
+    <genre>Deportes / Golf</genre>
+    <developer>Telegames</developer>
+    <publisher>Telegames</publisher>
+    <players>1-4</players>
+    <releasedate>19930101T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+  <game sourceOrdinal="16">
+    <name>Kung Food</name>
+    <desc>¡La última lucha por la comida! Los alimentos mutantes de tu congelador invaden tu cocina, tu vida y tu mundo. ¡La velocidad y tus habilidades en las artes marciales son necesarias para superar a los viciosos vegetales!</desc>
+    <genre>Beat'em Up</genre>
+    <developer>Lore Games</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.9</rating>
+  </game>
+  <game sourceOrdinal="17">
+    <name>Marlboro Go!</name>
+    <desc>Este juego formaba parte de una promoción de los cigarrillos Marlboro en la que se podían canjear los puntos de los paquetes de cigarrillos por artículos de la marca Marlboro. El juego venía con una Atari Lynx roja rotulada con el nombre de "Marlboro Abenteuer Team" escrita en la parte superior. El juego no parece estar completo en su totalidad ya que sólo incluye una pista. Se lanzó en un cartucho grabado a mano y numerado individualmente. A veces aparece como "Marlboro Man" y en un cartucho verde; estas versiones son reproducciones falsas, no los originales producidos para el concurso de Marlboro.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Digital Image</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19930101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="18">
+    <name>Ms. Pac-man</name>
+    <desc>Con estilo clásico y tradición, la Sra. Pac-Man se abre camino a través de laberinto tras laberinto. Ella consumirá todos los puntos de un nivel antes de que pueda progresar al siguiente nivel. Eso puede ser bastante difícil, porque al mismo tiempo debe esquivar a esos tortuosos fantasmas devoradores.</desc>
+    <genre>Acción / Laberinto</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="19">
+    <name>Ninja Gaiden III : The Ancient Ship of Doom</name>
+    <desc>Sumérgete en una aventura ninja llena de acción mientras ayudas a Ryu en su mayor desafío. Lucha contra las horribles fuerzas de la oscuridad para salvar a la humanidad, con la épica aventura que se desarrolla a medida que completas cada nivel.</desc>
+    <genre>Beat'em Up</genre>
+    <developer>Midnite Entertainment Group</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19930101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="20">
+    <name>Ninja Gaiden</name>
+    <desc>Ninja Gaiden comienza con una animación cinematográfica en la que 2 ninjas se enfrentan en duelo a muerte; uno cae y Se revela que el ninja condenado es el padre de Ryu Hayabusa. Cuando Ryu se entera de esto, se embarca en una búsqueda para descubrir quién mató a su padre y por qué. Esta búsqueda lo lleva a América para encontrar un arqueólogo con quien el padre de Ryu estaba trabajando. A partir de ahí, Ryu se ve envuelto en una conspiración malvada y sobrenatural que involucra a un villano llamado Jaquio que tiene planes de usar un antiguo castillo y algunas reliquias para desatar un mal aterrador sobre el mundo.</desc>
+    <genre>Beat'em Up</genre>
+    <developer>BlueSky Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="21">
+    <name>Pinball Jam</name>
+    <desc>Pinball Jam es una conversión Lynx de dos mesas de pinball: "Elvira y los monstruos del partido" (Midway, 1989), y "La fuerza policial" (Williams, 1989). Ambas presentan diseños de mesas auténticas, objetivos y bonos; la conversión de Elvira y los Party Monsters también presenta efectos de sonido digitalizados, incluyendo la voz de Cassandra Peterson (Elvira). Cada mesa se desplaza hacia arriba y hacia abajo durante el juego (en lugar de simplemente "saltar" a una nueva área cuando la bola llega a ella).</desc>
+    <genre>Pinball</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.9</rating>
+  </game>
+  <game sourceOrdinal="22">
+    <name>Pit-fighter</name>
+    <desc>Pit-Fighter es un juego de lucha en 3ª persona con gráficos digitalizados de luchadores reales y efectos de zoom. Los jugadores seleccionan uno de los tres luchadores (Buzz, Ty o Kato) para enfrentarse a cualquiera que se atreva. Al final de un combate, los jugadores reciben individualmente un Knockout Bonus, un Brutality Bonus y un Fight Purse. Cada tercer combate es un "Grudge Match" en el que los jugadores ponen a prueba las habilidades de los demás. El último hombre que quede en pie será el ganador de este combate de tres knockdowns. Los jugadores luchan hasta llegar al combate de eliminación para decidir quién gana la oportunidad de destronar al campeón, el Guerrero Enmascarado.</desc>
+    <genre>Lucha</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.2</rating>
+  </game>
+  <game sourceOrdinal="23">
+    <name>Rampart</name>
+    <desc>En Rampart, el jugador tiene el control de un conjunto de castillos, que debe defender, disparando alternativamente a los barcos atacantes (o a otros jugadores), y reparando cualquier daño que se les haga dentro de un límite de tiempo. Alrededor de este castillo hay una muralla, formada por pequeños bloques, que rodea completamente una región del tablero. Esta zona se considera el territorio del jugador, y puede contener uno o más castillos, y cualquier número de cañones. El mantenimiento de este territorio es el foco principal del juego. Una vez que el jugador derrota al oponente, el jugador puede ejecutar al comandante, caminando por el tablón o decapitando.</desc>
+    <genre>Estrategia</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.75</rating>
+  </game>
+  <game sourceOrdinal="24">
+    <name>Robotron : 2084</name>
+    <desc>Robotron: 2084 (también conocido como Robotron) es un videojuego arcade desarrollado por Vid Kidz y lanzado por Williams Electronics (parte de WMS Industries) en 1982. Es un shoot 'em up con gráficos bidimensionales. El juego está ambientado en el año 2084 en un mundo ficticio donde los robots se han vuelto contra los humanos en una revuelta cibernética. El objetivo es derrotar a oleadas interminables de robots, rescatar a los humanos supervivientes y ganar el mayor número de puntos posible. Robotron popularizó el esquema de control con joysticks gemelos, uno que había sido usado previamente en el Calabozo Espacial de Taito.</desc>
+    <genre>Shooter</genre>
+    <developer>Shadowsoft</developer>
+    <publisher>Shadowsoft</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.85</rating>
+  </game>
+  <game sourceOrdinal="25">
+    <name>Rygar</name>
+    <desc>El juego arcade comienza con la siguiente introducción: Han pasado 4.500 millones de años desde la creación de la Tierra. Muchos dominadores han gobernado en toda su gloria, pero el tiempo fue su mayor enemigo y derrotó su reinado. Y ahora comienza el reinado de un nuevo dominador... La información recogida en los manuales de las consolas revela que el malvado Ligar se ha apoderado de la tierra de Argool, y Rygar, un guerrero muerto que ha resucitado de su tumba, debe usar su Diskarmor, junto con una variedad de otras armas, para detenerlo. En las versiones de consola, las pistas y los diálogos limitados se dan en forma de grandes hombres como sabios que se encuentran en templos de color verde piedra durante todo el juego.</desc>
+    <genre>Plataforma</genre>
+    <developer>NuFX</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+  <game sourceOrdinal="26">
+    <name>Shadow Of The Beast</name>
+    <desc>Shadow of the Beast es un videojuego de plataforma de desplazamiento lateral producido por Reflections y publicado por Psygnosis en 1989. La versión original fue lanzada para el Comodoro Amiga, y más tarde fue portada a muchos otros sistemas. Shadow of the Beast se considera revolucionario en su momento, debido a que sus gráficos, con muchos más colores en pantalla y hasta doce niveles de fondos de desplazamiento lateral de paralaje, eran de un nivel raramente visto antes en los juegos de acción. También era notable por su partitura atmosférica compuesta por David Whittaker que utilizaba muestras de instrumentos de alta calidad. A Shadow of the Beast le siguieron dos secuelas, Shadow of the Beast II en 1990 y Shadow of the Beast III en 1992. Se está desarrollando un remake para la PlayStation 4.</desc>
+    <genre>Beat'em Up</genre>
+    <developer>Digital Developments</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.3</rating>
+  </game>
+  <game sourceOrdinal="27">
+    <name>SwitchBlade II</name>
+    <desc>Eres Hiro, debes derrotar una vez más al señor ninja Havok. Utilizando shurikens y otras armas (cuchillo, misiles guiados, rayo láser, lanzallamas...), deberás derrotar a los secuaces de Havok para llegar hasta él. Switchblade II es un juego de plataformas de desplazamiento lateral y cuenta con seis niveles infestados de enemigos mecanoides vestidos de metal. Un aspecto clave del juego es obtener monedas de los enemigos derrotados, que pueden canjearse en tiendas por vidas extra, energía y armas. Los gráficos tienen un estilo manga muy japonés.</desc>
+    <genre>Plataforma</genre>
+    <developer>Gremlin Interactive</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.6</rating>
+  </game>
+  <game sourceOrdinal="28">
+    <name>Toki</name>
+    <desc>Toki, conocido en Japón como JuJu Densetsu es un juego arcade de plataformas shoot 'em up de 1989, o un "run and gun" desarrollado y publicado en Japón por TAD Corporation y publicado en Norteamérica por Fabtek. Fue diseñado por Akira Sakuma y presenta elementos de humor humorístico combinado con la acción. El jugador toma el control de un simio encantado que debe luchar contra hordas de monstruos de la selva con bolas de energía de su boca. El objetivo final es destruir al malvado mago que hechizó al protagonista del título, transformándolo así de mono a humano y rescatando a la princesa secuestrada. El juego fue portado a varias consolas de videojuegos y ordenadores domésticos.</desc>
+    <genre>Plataforma</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="29">
+    <name>Tournament Cyberball 2072</name>
+    <desc>¡Acción de fútbol robótico! Viaja al futuro del fútbol con este clásico de culto de los recreativos. Disfruta de la acción robótica contra el ordenador o el ComLynx de hasta cuatro jugadores y juega cara a cara con tus amigos. Gana dinero por las jugadas completadas que puedes usar para potenciar tu equipo, reemplazar a los jugadores rotos y mejorar a jugadores más grandes y avanzados. Increíble acción de fútbol!</desc>
+    <genre>Deportes / Fútbol americano</genre>
+    <developer>BlueSky Software</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.6</rating>
+  </game>
+  <game sourceOrdinal="30">
+    <name>Warbirds</name>
+    <desc>Es la Primera Guerra Mundial y la conquista del cielo es su misión. Lucha hasta el objetivo con WarBirds, el juego totalmente tridimensional, vuela por el asiento de tus pantalones, juego de lucha de perros. Elige una de las seis misiones de Milk Run a The Swarm para pelear con perros uno a uno o llenar el cielo con aviones de guerra. Pelea contra un escuadrón controlado por computadora o conéctate con hasta cuatro amigos Lynx para determinar quién es el mejor as volador de la Primera Guerra Mundial.</desc>
+    <genre>Simulación</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.6</rating>
+  </game>
+  <game sourceOrdinal="31">
+    <name>A.P.B.</name>
+    <desc>En este juego de arcade real, usted y el oficial Bob deben buscar y atrapar a los perpetradores que se han involucrado en actividades criminales tan atroces como tirar basura, exceso de velocidad y otras formas de mala conducta demasiado despreciables para mencionarlas. Pero mientras estés ahí fuera, patrullando las calles en el coche de policía del oficial Bob, ¡no te olvides de repostar! Pasa por tu amistosa tienda de donuts del vecindario y gana tiempo extra. Hay transeúntes y vehículos inocentes en la A.P.B. Si golpeas uno, recibes deméritos.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Quicksilver Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+  <game sourceOrdinal="32">
+    <name>Awesome Golf</name>
+    <desc>Estás en el tee 18, un golpe detrás del campeón defensor. ¿Aceptas el consejo de tu caddie y juegas seguro, o te arriesgas con el agua? Awesome Golf proporciona un gran realismo y un desafío para uno a cuatro jugadores.</desc>
+    <genre>Deportes / Golf</genre>
+    <developer>Hand Made Software</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="33">
+    <name>Baseball Heroes</name>
+    <desc>Golpea, corre, bucea, salta, atrapa y lanza. ¡Lanzar para el récord de strikeout y balancearse para las vallas! Juega al béisbol contra el lince o enfréntate a un amigo. ¡Cuatro juegos diferentes con súper gráficos!</desc>
+    <genre>Deportes / Béisbol</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="34">
+    <name>Basketbrawl</name>
+    <desc>¡Vinnie y Slash están sangrando por las heridas de cuchillo y el árbitro está fuera de combate! No es de extrañar que los miembros de la banda apodaran a este juego "Basketbrawl". Para ellos no es un juego... ¡es una pelea callejera!</desc>
+    <genre>Deportes / Baloncesto</genre>
+    <developer>Hamilton and Associates</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="35">
+    <name>BattleWheel</name>
+    <desc>En el año 2019, la humanidad se volvió hacia juegos cada vez más peligrosos para su entretenimiento. Lucha en coches de alta tecnología armados con misiles, ametralladoras, lanzallamas, y más a través de ciudades muertas y terrenos baldíos del desierto; ¡una batalla de dieciséis arenas reales! Lucha en equipo o en solitario! Construye tu coche desde cero o cómprate uno en el taller. Incluso puedes ir a pie! Acción rápida en 3-D para seis jugadores como nunca antes has visto!</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Beyond Games</developer>
+    <publisher>Atari</publisher>
+    <players>1-6</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="36">
+    <name>Blue Lightning</name>
+    <desc>El Comando de Vuelo te eligió para volar el avión de combate de alto secreto Blue Lightning en su primer vuelo. Terminaste último en la escuela de vuelo, así que no tienen nada que perder. Los rastros de humo advierten de los misiles enemigos que se acercan. Unas cuantas vueltas rápidas de barril y evitarás los misiles. ¡Ahora aquí vienen los jets! Con los cañones ardiendo, vuelan hacia el grueso de la formación enemiga. Si logras completar nueve misiones cruciales que combinan la acción explosiva del combate con el sigilo del vuelo nocturno, serás un héroe. Si fallas, nadie recordará tu nombre.</desc>
+    <genre>Shooter / Avión, 3ª persona</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19890101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="37">
+    <name>Bubble Trouble</name>
+    <desc>Eres Travis, un científico que hace experimentos con materia densa para la creación de agujeros negros artificiales para viajes interestelares. Mientras se prueba un equipo, eres transportado a un mundo de burbujas. Afortunadamente, un amistoso habitante decide ayudarte. Debes localizar el tipo correcto de partículas radiactivas para moverte de un mundo a otro y finalmente a casa, antes de que los habitantes hostiles de estos mundos revienten tu burbuja.</desc>
+    <genre>Shooter</genre>
+    <developer>Telegames</developer>
+    <publisher>Telegames</publisher>
+    <players>1</players>
+    <releasedate>19940101T000000</releasedate>
+    <rating>0.75</rating>
+  </game>
+  <game sourceOrdinal="38">
+    <name>California Games</name>
+    <desc>Prepárate para lo último en video radial! Sega's California Games te lleva a las soleadas playas y desiertos de la costa de California para una competición deportiva. Patéalo en una patineta. Monta las olas hasta el paraíso del surf. Cruza el hormigón en patines o la pista rugosa en una BMX. Poner a prueba los dedos de los pies con una bolsa de pie o la concentración con un disco volador. En una palabra: impresionante. Pero hay más. Puedes jugar con hasta 8 de tus amigos. Eventos de práctica. ¡Competid en una, algunas o todas para convertiros en el campeón total de California! Y puedes jugar para algunos de los equipos más calientes de alrededor representando a los nombres más pesados del circuito. Entonces, ¿qué estás esperando? Coge tu tabla y prepárate para conseguir un nuevo estado de Atari cool.</desc>
+    <genre>Deportes / Multideporte</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19890101T000000</releasedate>
+    <rating>0.75</rating>
+  </game>
+  <game sourceOrdinal="39">
+    <name>Chip's Challenge</name>
+    <desc>Antes de que Chip pueda unirse al club de informática Bit Busters y pasar el rato con la chica de sus sueños, Melinda la Maravilla Mental, debe resolver los 144 desafiantes puzles. Tu vista de pájaro puede ayudar a Chip a correr a través de los rompecabezas y laberintos antes de ser eliminado por los monstruos, las trampas y el paso del tiempo. Muéstrale a Chip cómo usar bloques de tierra para superar las trampas de agua y las bombas de cereza, encontrar las llaves y recoger los chips de ordenador que Chip necesita para resolver algunos puzles. ¿Puedes ayudar a Chip a ganarse el frío corazón de su único y verdadero amor y convertirse en un Bit Buster oficial? Si tú no puedes, nadie puede!</desc>
+    <genre>Estrategia</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19890101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="40">
+    <name>ZZZ(notgame):Conquest Of Zow</name>
+    <desc>Conquest of Zow started as a collection of sound and graphics demos. This project was cancelled when the ROM for the game was leaked online and Harry stopped all Lynx development. There has been a Blue PCB cart version with the ROM created, this was made without permission or knowledge of from the developer.</desc>
+    <genre>Demo</genre>
+    <developer>Harry Dodgson</developer>
+  </game>
+  <game sourceOrdinal="41">
+    <name>Desert Strike</name>
+    <desc>Debes aniquilar el arsenal militar de un tirano despiadado. Destruye su fuerza aérea y ahuyenta su yate privado mientras luchas por tierra, aire y mar en más de 20 ardientes misiones usando toda la fuerza que puedas para establecer tu superioridad. El Presidente te ha elegido para volar en una serie de peligrosas campañas preventivas en el desierto para poner a este tirano a la vanguardia.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>Teque</developer>
+    <publisher>Telegames</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="42">
+    <name>Dinolympics</name>
+    <desc>Vuelve a los albores de la historia en esta combinación de problemas desconcertantes, aventuras increíbles y laberintos alucinantes. ¡La supervivencia de tu raza está en juego!</desc>
+    <genre>Estrategia</genre>
+    <developer>Imagitec Design</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+  <game sourceOrdinal="43">
+    <name>Double Dragon</name>
+    <desc>Los hermanos gemelos utilizan los conocimientos de los expertos en artes marciales, varias armas y la inteligencia callejera para rescatar a su amiga Marian de los Guerreros Negros, la salvaje banda callejera del misterioso Jefe de la Sombra! Acción sin parar en uno de los juegos clásicos del mundo ahora en tus manos.</desc>
+    <genre>Beat'em Up</genre>
+    <developer>Tecmo</developer>
+    <publisher>Telegames</publisher>
+    <players>1-2</players>
+    <releasedate>19930101T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+  <game sourceOrdinal="44">
+    <name>ZZZ(notgame):Dragnet</name>
+    <desc>Dragnet was a cancelled game for Atari Lynx based on the TV Series with the same name. The only version in existence is of a music demo featuring samples from the TV show.</desc>
+    <genre>Demo</genre>
+  </game>
+  <game sourceOrdinal="45">
+    <name>Electrocop</name>
+    <desc>El Cerebro Criminal ha secuestrado a la hija del Presidente y amenaza con matarla si no consigue el control del mundo. Sólo tú, Electrocop, puedes invadir el Complejo de Acero donde robots malvados y trampas peligrosas protegen al Cerebro Criminal. Las probabilidades están en tu contra. Tu única esperanza es encontrar las armas y las terminales de ordenador escondidas en los laberintos de la fortaleza del Cerebro Criminal. ¿Podrás salvar a la hija del Presidente y servir a la justicia al criminal más malvado del mundo? Es tu deber como oficial de la ley.</desc>
+    <genre>Aventura</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19890101T000000</releasedate>
+    <rating>0.4</rating>
+  </game>
+  <game sourceOrdinal="46">
+    <name>European Soccer Challenge</name>
+    <desc>European Soccer Challenge te ofrece toda la emoción y la tensión de la European Challenge Cup en esta versión llena de acción del juego más popular del mundo con más de 170 equipos de 32 países. ¿Tu equipo tiene lo que hay que tener?</desc>
+    <genre>Deportes / Fútbol</genre>
+    <developer>Krisalis Software</developer>
+    <publisher>Telegames</publisher>
+    <players>1-2</players>
+    <releasedate>19930101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="47">
+    <name>Eye Of The Beholder</name>
+    <desc>Lidera y guía a tus mejores luchadores a través de las mazmorras. Los esqueletos con hachas de guerra son de los primeros horrores que encontrarás en 13 niveles laberínticos. ¿Serán los últimos? Estos bichos no son tus amigos y les gusta cazar en manada. ¿Te has encontrado alguna vez con un Kuo-Toa? Es una experiencia aterradora! Y aún más impactante es el propio Beholder, si sobrevives lo suficiente como para conocerlo. Un último consejo: no te olvides mirar detrás de ti... a las arañas gigantes les gusta verte pasar y luego atacarte por la espalda.</desc>
+    <genre>Juegos de rol / Juego de Rol de Calabozo</genre>
+    <developer>NuFX</developer>
+    <publisher>NuFX</publisher>
+    <players>1</players>
+    <releasedate>19930101T000000</releasedate>
+    <rating>0.45</rating>
+  </game>
+  <game sourceOrdinal="48">
+    <name>Fat Bobby</name>
+    <desc>El gordo Bobby, el guitarrista principal, ha hecho que su grupo musical sea secuestrado por el malvado Dr. Mephisto. Guiarás a Bobby a través de una multitud de niveles en este clásico salto de plataforma. Recoge notas y pistas, mientras te encuentras con los secuaces del Dr. Mephisto. ¡Esa guitarra puede "rasguear" algo más que notas!</desc>
+    <genre>Plataforma</genre>
+    <developer>Telegames</developer>
+    <publisher>Telegames</publisher>
+    <players>1</players>
+    <releasedate>19970101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="49">
+    <name>The Fidelity Ultimate Chess Challenge</name>
+    <desc>Ya sea solo contra el Fidelity Ultimate Chess Challenge - el juego de ajedrez portátil más poderoso del mundo - o contra un amigo, los impresionantes gráficos en 3D y la avanzada tecnología de este último juego de Telegames tienen que ser jugados para ser creídos. Fidelity Ultimate Chess Challenge utiliza la tecnología de juego de ajedrez más potente de los laboratorios de Fidelity - los principales fabricantes de ordenadores de ajedrez dedicados son desarrolladores del único programa de ajedrez del mundo certificado por la USCF con la calificación de Maestro (2325).</desc>
+    <genre>Juegos de mesa</genre>
+    <developer>Telegames</developer>
+    <publisher>Telegames</publisher>
+    <players>1-2</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="50">
+    <name>Gordo 106</name>
+    <desc>Gordo, el mono de laboratorio, está libre de la jaula 106, pero su aventura de escape y venganza apenas comienza. Incluso con la inteligencia de un súper mono, necesita tu ayuda para explorar los seis niveles del laboratorio, liberando a sus amigos cautivos y destruyendo a los científicos malvados en su lucha por la libertad.</desc>
+    <genre>Aventura</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19930801T000000</releasedate>
+    <rating>0.75</rating>
+  </game>
+  <game sourceOrdinal="51">
+    <name>Hard Drivin'</name>
+    <desc>Asegúrate de estar bien atado... ¡porque "Hard Drivin" significa justamente eso! ¿Puedes batir el reloj en la pista más caliente? ¿Puedes manejar saltos, bucles y otras acrobacias y aún así sobrevivir? ¿Puedes mantener tu velocidad al máximo sin estrellarte? ¿Sí? ¿Puedes quitarle el título al Fotón Fantasma, el campeón mundial de conducción dura?</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>NuFX</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="52">
+    <name>Hockey</name>
+    <desc>Este juego, como su nombre lo indica, es una simulación de hockey muy similar al Hockey de Mario Lemieux. Hay 22 equipos para elegir que se basan en la alineación de la NHL 91, aunque se pueden cambiar si el jugador lo desea. Controlas un jugador a la vez y la CPU controla el resto del equipo, aunque puedes cambiar a otro jugador en cualquier momento si es necesario. También hay un sistema de penalización de la lucha en el que tienes que golpear continuamente al oponente para poder proceder. El juego se ve desde una perspectiva isométrica como si estuvieras sentado en uno de los asientos del público.</desc>
+    <genre>Deportes / Hockey</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="53">
+    <name>Hydra</name>
+    <desc>Alguien tiene que ser un héroe, y bien podrías ser tú. En tu súper avanzada lancha, debes entregar equipo militar de alto secreto a varias partes del mundo. La fama y la riqueza te esperan... ¡pero también las trampas y el peligro!</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>NuFX</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.6</rating>
+  </game>
+  <game sourceOrdinal="54">
+    <name>Jimmy Connors' Tennis</name>
+    <desc>Jimmy Connors' Tennis es un juego de deportes, publicado por Atari, que fue lanzado en 1993.</desc>
+    <genre>Deportes / Tenis</genre>
+    <developer>Hand Made Software</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19930801T000000</releasedate>
+    <rating>0.45</rating>
+  </game>
+  <game sourceOrdinal="55">
+    <name>Joust</name>
+    <desc>Te pones una armadura, eliges tu arma, una lanza gastada pero robusta. Te subes a un avestruz ciborg, tomas las riendas de tu fiel montura y vuelas para luchar contra el enemigo. A lo lejos ves aparecer un buitre enemigo en una plataforma de creación. Preparas tu lanza y te preparas para la batalla. Mientras te acercas al enemigo Bounder, te elevas por encima de él y te preparas para derrotarlo con un rápido ataque en picado. Bajas del cielo y desmontas al jinete enemigo con un poderoso golpe. Has derrotado al enemigo... esta vez.</desc>
+    <genre>Plataforma / Corre y Salta</genre>
+    <developer>Williams</developer>
+    <publisher>Shadowsoft</publisher>
+    <players>1-2</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.9</rating>
+  </game>
+  <game sourceOrdinal="56">
+    <name>Klax</name>
+    <desc>Prepárate para la acción de Arcade en colores vivos. En Klax, captura los azulejos de color y dales la vuelta en una pila. Crea un Klax emparejando 3 o más azulejos de color. El ritmo se acelera... tienes que moverte rápido pero ten cuidado, una vez que empieces, no querrás parar.</desc>
+    <genre>Estrategia</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="57">
+    <name>Lemmings</name>
+    <desc>Trepan, cavan, exploran... ¡pero no pueden volar! Como único miembro de la Fundación Save The Lemmings, es tu trabajo guiar a estos munchkins a la seguridad antes de que se den cuenta de que no tienen tren de aterrizaje.</desc>
+    <genre>Estrategia</genre>
+    <developer>DMA Design</developer>
+    <publisher>Psygnosis</publisher>
+    <players>1</players>
+    <releasedate>19930101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="58">
+    <name>Lode Runner</name>
+    <desc>Eres un comandante galáctico altamente entrenado, infiltrado en lo más profundo del territorio enemigo. Los líderes ansiosos de poder del represivo Imperio Bungeling han robado una fortuna en oro al pueblo, y acabas de descubrir su tesoro subterráneo secreto. ¿Tu objetivo? Recuperar hasta el último lingote del botín Bungeling. Tendrás que correr, saltar y trepar, resolver un sinfín de rompecabezas y abrir nuevos pasadizos a través de suelos de piedra y barreras con tu pistola perforadora láser. Necesitarás algo más que pies rápidos y agilidad para salir con vida de esta misión. Necesitarás tu ingenio y tu cerebro.</desc>
+    <genre>Plataforma</genre>
+    <developer>Kurt Olsen</developer>
+    <publisher>Prototype</publisher>
+    <players>1</players>
+  </game>
+  <game sourceOrdinal="59">
+    <name>Loopz</name>
+    <desc>No puede parecer más sencillo. Tienes piezas de diferentes tamaños y formas. Las colocas una a una en el tablero y pronto habrás hecho tu primer bucle. ¡Ya está! La siguiente parte ya no es tan fácil. Esta vez no has conseguido las piezas que querías. De repente, el tablero está demasiado lleno. Ahora luchas por encontrar un lugar donde dejar caer las piezas (qué más da dónde vayan, no puedes permitirte que se agote el tiempo o perderás una vida). Ahora se está volviendo realmente difícil. ¿De verdad creías que este juego era sencillo? Muy pronto estarás soñando con Loopz. Preguntándote si la próxima vez serás capaz de hacer un bucle más largo que nunca, o más bucles que tu récord. ¿Conseguirá Loopz que tu cabeza de vueltas? Seguro que sí.</desc>
+    <genre>Puzzle</genre>
+    <developer>Audiogenic Software</developer>
+    <publisher>Songbird Productions</publisher>
+    <players>1-2</players>
+    <releasedate>20040801T000000</releasedate>
+  </game>
+  <game sourceOrdinal="60">
+    <name>Malibu Bikini Volleyball</name>
+    <desc>Bienvenido a Malibu: Capital del mundo del voleibol. Aquí es donde los mejores vienen a jugar - y mostrar su bronceado. Si quieres, regístrate. Pero mantener los ojos en la bola ... habrá mucho tiempo para ver bikinis después del partido!</desc>
+    <genre>Deportes / Voleibol</genre>
+    <developer>Hand Made Software</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19930601T000000</releasedate>
+    <rating>0.6</rating>
+  </game>
+  <game sourceOrdinal="61">
+    <name>Nfl Football</name>
+    <desc>La NFL Football es un juego de fútbol americano con licencia oficial de la NFL. Se juega sosteniendo el Lynx verticalmente y con características gráficas de zoom y escalado, con una vista aérea, de arriba hacia abajo. Los juegos duran cuatro cuartos de hora y contiene alrededor de 25 jugadas ofensivas. El pase se hace manteniendo el botón B presionado y luego moviendo una cruz a un receptor abierto, y luego soltando el botón para lanzar. Las estrategias pueden ser cambiadas en tiempo real. Dos jugadores pueden competir cara a cara con el cable de ComLynx.</desc>
+    <genre>Deportes / Fútbol americano</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.4</rating>
+  </game>
+  <game sourceOrdinal="62">
+    <name>Pac-Land</name>
+    <desc>Pac-Man, el personaje de juego más famoso del mundo ha vuelto! Ayuda a Pac-Man a guiar al Hada de vuelta a su hogar en el País de las Hadas, pero ten cuidado, ¡esos traviesos fantasmas quieren detenerte una vez más! Usa los zapatos mágicos para ayudar a Pac-Man a volver a su casa en 16 rondas diferentes con múltiples viajes en cada ronda, comiendo Power Pellets y fruta extra en el camino. Rápida, frenética y adictiva acción de Pac-Man de principio a fin!</desc>
+    <genre>Plataforma</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.55</rating>
+  </game>
+  <game sourceOrdinal="63">
+    <name>Paperboy</name>
+    <desc>El objetivo de Paperboy es entregar papeles a sus clientes, infligiendo el mayor daño posible a las casas de sus no clientes. Para hacer las cosas más difíciles, numerosos obstáculos se interponen en su camino, incluyendo trabajadores de la construcción, llantas pícaras, patinadores, perros y gatos, coches, e incluso el ocasional tornado.</desc>
+    <genre>Deportes / Ciclismo</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.75</rating>
+  </game>
+  <game sourceOrdinal="64">
+    <name>Power Factor</name>
+    <desc>Los intrusos transdimensionales de la dimensión Ceeg han invadido nuestro espacio. Sólo Redd Ace, con su Arma Multi-Ordenanza TRANSMAT, puede entrar en el reactor de nuestra dimensión y encontrar los seis componentes de la bomba necesarios para destruir a los Ceegarianos.</desc>
+    <genre>Plataforma</genre>
+    <developer>Hand Made Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="65">
+    <name>Qix</name>
+    <desc>El objetivo de Qix es vallar, o "reclamar", una supermayoría del campo de juego. Al comienzo de cada nivel, el campo de juego es un gran rectángulo vacío, que contiene la Qix - una entidad parecida a un palo que realiza movimientos elegantes pero impredecibles dentro de los límites del rectángulo. El jugador controla un Stix que puede moverse por los bordes del rectángulo. Manteniendo pulsado uno de los botones de dibujo permite que el marcador se mueva en territorio no reclamado en un intento de crear una forma cerrada. Si se completa, el área capturada (definida como el lado opuesto a donde está el Qix) se rellena con un color sólido y se otorgan puntos. Para completar un nivel, el jugador debe reclamar el 75% del campo de juego (ajustable por el operador de la arcada para que esté entre el 50% y el 90%).</desc>
+    <genre>Puzzle</genre>
+    <developer>Knight Technologies</developer>
+    <publisher>Telegames</publisher>
+    <players>1-2</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+  <game sourceOrdinal="66">
+    <name>Raiden</name>
+    <desc>En el año 2090, la Tierra se ha convertido repentinamente en el blanco de los alienígenas trastornados conocidos como los Cranasianos. Después de la invasión, la Alianza Militar Mundial construye una nueva arma de vanguardia, el Raiden Supersonic Attack Fighter. Basado en una nave alienígena capturada, es la única esperanza de supervivencia de la humanidad.</desc>
+    <genre>Shoot'em Up / Vertical</genre>
+    <developer>BlueSky Software</developer>
+    <publisher>Telegames</publisher>
+    <players>1</players>
+    <releasedate>19970101T000000</releasedate>
+    <rating>0.45</rating>
+  </game>
+  <game sourceOrdinal="67">
+    <name>Rampage</name>
+    <desc>Hasta tres jugadores simultáneos controlan a los monstruos George (un gorila parecido a King Kong), Lizzie (un dinosaurio/ lagarto parecido a Godzilla) o Ralph (un hombre lobo gigante), creado a partir de humanos mutantes. Cuando eran humanos, George era un hombre normal de mediana edad, Lizzie era una mujer joven, y Ralph era un hombre mayor. Se experimentó con ellos en Scumlabs. Como monstruos, necesitan arrasar todos los edificios de una ciudad de gran altura para avanzar al siguiente nivel, comiéndose a la gente y destruyendo helicópteros, tanques, taxis, coches de policía, barcos y carros a lo largo del camino.</desc>
+    <genre>Lucha / 2D</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="68">
+    <name>Road Riot 4WD</name>
+    <desc>Juego de conducción en el que controlas un buggy equipado con armas. Tras ganar la primera carrera puedes elegir entre 11 circuitos adicionales para ganar el campeonato. Hay tres vehículos rivales a los que hay que eliminar para ganar la carrera. Se dispone de una cantidad ilimitada de misiles para echar a los oponentes de la pista. El juego fue cancelado antes de su publicación final.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Images Software</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19940101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="69">
+    <name>Roadblasters</name>
+    <desc>El objetivo del juego es completar los 50 rallies sin quedarse sin combustible. No hay límite en cuanto a la cantidad de vehículos que un jugador puede recibir para completar un rally, siempre y cuando tengan combustible. Sin embargo, la destrucción del vehículo restará una pequeña cantidad del depósito de combustible del jugador. En las versiones arcade, Sega y Atari Lynx, los jugadores pueden comenzar el juego en un rally más alto, con oportunidades adicionales para saltar varios niveles de vez en cuando. Los jugadores pueden continuar su juego desde donde lo dejaron; sin embargo, el jugador sólo tiene una oportunidad de completar el 50º y último rally. Por completar el rally final el jugador obtiene un millón de puntos como bonus.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.9</rating>
+  </game>
+  <game sourceOrdinal="70">
+    <name>Robo-Squash</name>
+    <desc>Experimenta el máximo futuro de Zero-G. Acepta el desafío de la competencia multidimensional. Controla y apunta tu raqueta para desviar la pelota cuando venga hacia ti. Golpea los ladrillos que explotan y los objetos especiales para los potenciadores. Si fallas la pelota, te salpicará! Tú y un amigo podéis "levantar a Lynx" para un impresionante desafío de dos jugadores.</desc>
+    <genre>Deportes</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.3</rating>
+  </game>
+  <game sourceOrdinal="71">
+    <name>S.T.U.N. Runner</name>
+    <desc>S.T.U.N. Runner (Spread Tunnel Underground Network Runner) es un juego arcade de carreras y disparos de ritmo rápido lanzado por Atari Games en 1989. El jugador pilota una futurista "moto de velocidad" a velocidades de hasta e incluso más de 900 mph a través de varios túneles y pistas, con entornos, peligros y enemigos cambiantes. El objetivo final es llegar al "Ultimate Challenge", una carrera interminable llena de sorpresas, donde el jugador simplemente debe llegar lo más lejos posible en el tiempo asignado. Los marcadores del recorrido de "Ultimate Challenge" muestran los nombres de los cinco jugadores que han viajado más lejos, que son seguidos independientemente de la tradicional tabla de puntuaciones del juego.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="72">
+    <name>Scrapyard Dog</name>
+    <desc>Nuestro amigo Louis amaba a su perro. ¿Pero por qué unos matones secuestrarían a este pobre cachorro? Los matones quieren la escritura del desguace, por eso. ¿Louie tolerará esto? Depende de ti y de Louie sobrevivir a más de 15 niveles de peligro y encontrar al malo definitivo, el Sr. Grande.</desc>
+    <genre>Aventura</genre>
+    <developer>CSD</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.55</rating>
+  </game>
+  <game sourceOrdinal="73">
+    <name>Steel Talons</name>
+    <desc>Steel Talons es un juego arcade en 3D lanzado por Atari Games en 1991. El jugador asume el papel de piloto de un "helicóptero de combate AT1196 Steel Talons". El helicóptero está equipado con una ametralladora, cohetes y un número limitado de misiles guiados aire-tierra. El juego se presentó como un gabinete de cabina para dos jugadores y contó con modos de juego cooperativos y competitivos.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>NuFX</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="74">
+    <name>Super Asteroids &amp; Missile Command</name>
+    <desc>Super Asteroids &amp; Missile Command (también conocido como Super Asteroids y Super Missile Command como se ve en la pantalla de título) es un videojuego de Atari Lynx que combina los videojuegos clásicos Asteroids y Missile Command en un solo cartucho de juego. Lanzado en 1995 según Moby Games, los gráficos y el sonido han sido mejorados con respecto a sus encarnaciones originales. Este juego sólo fue lanzado en América del Norte y Europa. Siendo el último juego lanzado por Atari para el Atari Lynx, este juego iniciaría en última instancia una era en la que Atari produciría juegos para otras consolas en lugar de las suyas propias.</desc>
+    <genre>Compilación</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="75">
+    <name>Super Off Road</name>
+    <desc>Ivan "Ironman" Stewart's Super Off Road es un videojuego arcade lanzado en 1989 por la Corporación Leland. El juego fue aprobado por el corredor profesional de off road Ivan Stewart. Virgin Games produjo varias versiones caseras en 1990. En 1991, la filial de Leland Tradewest lanzó una versión para NES, seguida de versiones para la mayoría de los principales formatos domésticos, como NES, Sega Genesis, SNES, Amiga y MS-DOS. Algunos de los puertos eliminaron el nombre de Ivan Stewart del título debido a problemas de licencia y se conocen simplemente como Super Off Road.</desc>
+    <genre>Carreras, Conducción / Carreras 3ª persona</genre>
+    <developer>Telegames</developer>
+    <publisher>Telegames</publisher>
+    <players>1-4</players>
+    <releasedate>19930101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="76">
+    <name>Super Skweek</name>
+    <desc>El jugador interpreta al Super Skweek, una criatura de piel naranja de origen desconocido. Bajo el mando del Rey, el jugador tiene que moverse sobre las fichas azules para repintarlas de rosa, luchando contra la invasión de los monstruos al hacerlo. Hay cinco islas, cada una de las cuales consta de 50 niveles. Algunos niveles contienen varios monstruos que deambulan por ellas, y ciertas fichas especiales como las resbaladizas, explosivas, flotantes y las que mueven al jugador en una determinada dirección. También hay monedas que se pueden recoger para comprar premios en la tienda, como bombas u otros poderes mejorados.</desc>
+    <genre>Puzzle</genre>
+    <developer>Loriciel</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.85</rating>
+  </game>
+  <game sourceOrdinal="77">
+    <name>T-Tris</name>
+    <desc>T-TRIS es la conversión del conocido y alucinante juego de puzzle ruso para Atari Lynx. El objetivo del juego es tan fácil como emocionante, girar las piezas que caen desde la parte superior para formar filas con ellas y hacerlas desaparecer.</desc>
+    <genre>Puzzle</genre>
+    <developer>Bastian Schick</developer>
+    <publisher>Bastian Schick</publisher>
+    <players>1-8</players>
+    <releasedate>19930101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="78">
+    <name>Gates Of Zendocon</name>
+    <desc>La araña malvada Zendocon te ha atrapado en su red de universos. Tu misión es derrotar a los androides de Zendocon y atravesar los 51 universos para luchar contra Zendocon ¡a muerte! Gates of Zendocon es un shooter de desplazamiento lateral muy similar al arcade original de este tipo, Scramble. A diferencia de Scramble, hay 51 áreas de juego en total, pero el jugador lucha a través de un subconjunto de ellos, podiendo elegir la siguiente área para visitar. Algunos alienígenas se unirán a ti cuando les dispares (power-ups). Las bases alienígenas en cada área te permitiran reparar las armas y el escudo, pero aterrizar en el momento equivocado hará que tu nave explote y pierdas todos los power-ups.</desc>
+    <genre>Shoot'em Up / Horizontal</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19890101T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="79">
+    <name>Todd's Adventures In Slime World</name>
+    <desc>Eres Todd, el explorador de nuevos mundos. Es tu aventura viajar a las profundidades del Mundo del Barro, el lugar más pegajoso y goteante de los alrededores. Hay manchas espantosas que disparar y muchos objetos y armas que encontrar. "Conéctate con hasta siete de tus compañeros de Slime World para una impresionante aventura multijugador.</desc>
+    <genre>Plataforma</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1-8</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.75</rating>
+  </game>
+  <game sourceOrdinal="80">
+    <name>Turbo Sub</name>
+    <desc>Turbo Sub lanzado en 1985 como un juego de disparos arcade por Entertainment Sciences. Más tarde, en 1991, para el Atari Lynx. La versión arcade era un juego para un solo jugador ambientado en el futuro en el que controlas una nave sumergible contra una horda de alienígenas. La versión de Atari Lynx es la misma, pero puede ser jugada con dos jugadores y nos cuenta que la historia está ambientada en el siglo XXVIII en la Tierra. El planeta ha sido invadido y el objetivo del juego es que el jugador debe destruir a todos los alienígenas.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>NuFX</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="81">
+    <name>Viking Child</name>
+    <desc>Principalmente titulado Profecía I - El niño vikingo es un juego creado por Imagitec Design Limited en Amiga, Atari ST, Atari Lynx, Game Boy, Game Gear y el PC. Este videojuego se basó en un niño vikingo llamado Brian que debe entrar en las Salas de Valhalla y luchar contra el malvado dios Loki y sus secuaces. El juego se parecía mucho a Sega's Wonder Boy en Monster Land, ya que ciertos elementos como la recogida de oro escondido, la mejora de las armas del personaje y la visita a tiendas eran prácticamente idénticos, a pesar de la diferencia en los tiempos de lanzamiento.</desc>
+    <genre>Aventura</genre>
+    <developer>Imagitec Design</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.6</rating>
+  </game>
+  <game sourceOrdinal="82">
+    <name>World Class Fussball/Soccer</name>
+    <desc>"World Class Soccer" es un videojuego de fútbol desarrollado por Tiertex en 1990. Computer Gaming World criticó el juego por mostrar sólo alrededor del 10% del campo a la vez sin una pantalla de "radar" para mostrar el resto, pero le gustó la animación. La revista concluyó que "El fútbol de clase mundial debería ser una forma informativa y razonablemente entretenida de prepararse para el evento".</desc>
+    <genre>Deportes / Fútbol</genre>
+    <developer>Atari</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19920101T000000</releasedate>
+    <rating>0.5</rating>
+  </game>
+  <game sourceOrdinal="83">
+    <name>Xenophobe</name>
+    <desc>¿Puede esta abigarrada tripulación de exterminadores de Xeno acabar con los tesoros de criaturas alienígenas a bordo de las estaciones espaciales infestadas? ¡Apúrate y dispara o tu misión puede terminar en una ventisca de rezumo! Tú y hasta tres de tus amigos podéis "linchar" para un frenesí multijugador. Escoge tu personaje, encuentra las armas y elimina a los Xenos!</desc>
+    <genre>Plataforma / Tirador con deslizamiento</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="84">
+    <name>Xybots</name>
+    <desc>¡El destino de la humanidad está en tus manos! Debes explorar los rincones y pasadizos del último puesto de avanzada de la Tierra en el espacio y derrotar a los Xybots invasores. Si fallas, la vida humana como la conocemos terminará. Comlynx con un amigo, o enfréntate a los temidos guerreros Xybot solo.</desc>
+    <genre>Shooter / 3ª persona</genre>
+    <developer>NuFX</developer>
+    <publisher>Atari</publisher>
+    <players>1-2</players>
+    <releasedate>19910101T000000</releasedate>
+    <rating>0.7</rating>
+  </game>
+  <game sourceOrdinal="85">
+    <name>Alien vs Predator</name>
+    <desc>¡Elige tu arma y lucha con los célebres protagonistas de la película! Ponte en la piel de los marines y usa tus armas y tu ingenio para destruir la base... y sobrevivir. Sé un Alien y usa tus voraces instintos para defender la colmena y rescatar a tu Reina. O juega a ser un Depredador y utiliza tu espeluznante arsenal para hacerte con el trofeo definitivo... el cráneo de la Reina Alien.</desc>
+    <genre>Shooter / 1ª persona</genre>
+    <developer>Rebellion</developer>
+    <publisher>Atari</publisher>
+    <players>1</players>
+    <releasedate>19940101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="86">
+    <name>Zarlor Mercenary</name>
+    <desc>Se busca un arma caliente para alquilar. Viaje a varios lugares exóticos y peligrosos. Descubrir varios extraterrestres exóticos y peligrosos y matarlos. Matar a muchos. Por dinero en efectivo. Comprar más armas y matar de nuevo. Trae hasta 3 amigos y mata aún más.</desc>
+    <genre>Shoot'em Up / Vertical</genre>
+    <developer>Epyx</developer>
+    <publisher>Atari</publisher>
+    <players>1-4</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.9</rating>
+  </game>
+</gameList>

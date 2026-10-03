@@ -1,0 +1,85 @@
+
+E:\ESTUDO APK\work\turbostations-reconstruction-20261002\input\libmain.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000002e5470 <_ZN8Renderer18drawTriangleStripsEPKNS_6VertexEjNS_5Blend6FactorES4_>:
+  2e5470: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  2e5474: f9000bf7     	str	x23, [sp, #0x10]
+  2e5478: a90257f6     	stp	x22, x21, [sp, #0x20]
+  2e547c: a9034ff4     	stp	x20, x19, [sp, #0x30]
+  2e5480: 910003fd     	mov	x29, sp
+  2e5484: d0000748     	adrp	x8, 0x3cf000 <_ZN9ThemeData11sElementMapE+0x5020>
+  2e5488: 2a0303f4     	mov	w20, w3
+  2e548c: 2a0203f5     	mov	w21, w2
+  2e5490: b944bd08     	ldr	w8, [x8, #0x4bc]
+  2e5494: 2a0103f3     	mov	w19, w1
+  2e5498: aa0003f6     	mov	x22, x0
+  2e549c: 52800041     	mov	w1, #0x2                // =2
+  2e54a0: 528280c2     	mov	w2, #0x1406             // =5126
+  2e54a4: 2a1f03e3     	mov	w3, wzr
+  2e54a8: 2a0803e0     	mov	w0, w8
+  2e54ac: 52800284     	mov	w4, #0x14               // =20
+  2e54b0: aa1f03e5     	mov	x5, xzr
+  2e54b4: 52800297     	mov	w23, #0x14              // =20
+  2e54b8: 94030092     	bl	0x3a5700 <glVertexAttribPointer@plt>
+  2e54bc: d0ffef00     	adrp	x0, 0xc7000
+  2e54c0: 910c4c00     	add	x0, x0, #0x313
+  2e54c4: 97fffe47     	bl	0x2e4de0 <_ZN8Renderer13createTextureENS_7Texture4TypeEbbjjPKv+0x3b8>
+  2e54c8: d0000748     	adrp	x8, 0x3cf000 <_ZN9ThemeData11sElementMapE+0x5020>
+  2e54cc: 52800041     	mov	w1, #0x2                // =2
+  2e54d0: 528280c2     	mov	w2, #0x1406             // =5126
+  2e54d4: b944c100     	ldr	w0, [x8, #0x4c0]
+  2e54d8: 2a1f03e3     	mov	w3, wzr
+  2e54dc: 52800284     	mov	w4, #0x14               // =20
+  2e54e0: 52800105     	mov	w5, #0x8                // =8
+  2e54e4: 94030087     	bl	0x3a5700 <glVertexAttribPointer@plt>
+  2e54e8: d0ffef20     	adrp	x0, 0xcb000
+  2e54ec: 912f8c00     	add	x0, x0, #0xbe3
+  2e54f0: 97fffe3c     	bl	0x2e4de0 <_ZN8Renderer13createTextureENS_7Texture4TypeEbbjjPKv+0x3b8>
+  2e54f4: d0000748     	adrp	x8, 0x3cf000 <_ZN9ThemeData11sElementMapE+0x5020>
+  2e54f8: 52800081     	mov	w1, #0x4                // =4
+  2e54fc: 52828022     	mov	w2, #0x1401             // =5121
+  2e5500: b944c500     	ldr	w0, [x8, #0x4c4]
+  2e5504: 52800023     	mov	w3, #0x1                // =1
+  2e5508: 52800284     	mov	w4, #0x14               // =20
+  2e550c: 52800205     	mov	w5, #0x10               // =16
+  2e5510: 9403007c     	bl	0x3a5700 <glVertexAttribPointer@plt>
+  2e5514: 90ffef80     	adrp	x0, 0xd5000
+  2e5518: 91030c00     	add	x0, x0, #0xc3
+  2e551c: 97fffe31     	bl	0x2e4de0 <_ZN8Renderer13createTextureENS_7Texture4TypeEbbjjPKv+0x3b8>
+  2e5520: 9bb77e61     	umull	x1, w19, w23
+  2e5524: 52911240     	mov	w0, #0x8892             // =34962
+  2e5528: aa1603e2     	mov	x2, x22
+  2e552c: 52911d03     	mov	w3, #0x88e8             // =35048
+  2e5530: 94030078     	bl	0x3a5710 <glBufferData@plt>
+  2e5534: d0ffef00     	adrp	x0, 0xc7000
+  2e5538: 910dfc00     	add	x0, x0, #0x37f
+  2e553c: 97fffe29     	bl	0x2e4de0 <_ZN8Renderer13createTextureENS_7Texture4TypeEbbjjPKv+0x3b8>
+  2e5540: 510006a9     	sub	w9, w21, #0x1
+  2e5544: 2a1f03e0     	mov	w0, wzr
+  2e5548: b0fff008     	adrp	x8, 0xe6000 <_ZTS17GridTileComponent+0x1cc>
+  2e554c: 912df108     	add	x8, x8, #0xb7c
+  2e5550: 7100213f     	cmp	w9, #0x8
+  2e5554: 54000048     	b.hi	0x2e555c <_ZN8Renderer18drawTriangleStripsEPKNS_6VertexEjNS_5Blend6FactorES4_+0xec>
+  2e5558: b8695900     	ldr	w0, [x8, w9, uxtw #2]
+  2e555c: 51000689     	sub	w9, w20, #0x1
+  2e5560: 7100213f     	cmp	w9, #0x8
+  2e5564: 54000068     	b.hi	0x2e5570 <_ZN8Renderer18drawTriangleStripsEPKNS_6VertexEjNS_5Blend6FactorES4_+0x100>
+  2e5568: b8695901     	ldr	w1, [x8, w9, uxtw #2]
+  2e556c: 14000002     	b	0x2e5574 <_ZN8Renderer18drawTriangleStripsEPKNS_6VertexEjNS_5Blend6FactorES4_+0x104>
+  2e5570: 2a1f03e1     	mov	w1, wzr
+  2e5574: 9402fbeb     	bl	0x3a4520 <glBlendFunc@plt>
+  2e5578: 90ffef80     	adrp	x0, 0xd5000
+  2e557c: 9126f800     	add	x0, x0, #0x9be
+  2e5580: 97fffe18     	bl	0x2e4de0 <_ZN8Renderer13createTextureENS_7Texture4TypeEbbjjPKv+0x3b8>
+  2e5584: 528000a0     	mov	w0, #0x5                // =5
+  2e5588: 2a1f03e1     	mov	w1, wzr
+  2e558c: 2a1303e2     	mov	w2, w19
+  2e5590: 94030064     	bl	0x3a5720 <glDrawArrays@plt>
+  2e5594: 90ffef40     	adrp	x0, 0xcd000
+  2e5598: 91076000     	add	x0, x0, #0x1d8
+  2e559c: a9434ff4     	ldp	x20, x19, [sp, #0x30]
+  2e55a0: f9400bf7     	ldr	x23, [sp, #0x10]
+  2e55a4: a94257f6     	ldp	x22, x21, [sp, #0x20]
+  2e55a8: a8c47bfd     	ldp	x29, x30, [sp], #0x40

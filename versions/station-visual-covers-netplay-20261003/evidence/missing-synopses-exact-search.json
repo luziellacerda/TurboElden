@@ -1,0 +1,1817 @@
+{
+  "policy": "Same platform plus exact full name OR exact ROM stem. No normalization or fuzzy match. Historical merged XML excluded as authority. Different descriptions remain ambiguous.",
+  "searchedFiles": [
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\3ds.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\arcade.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\atari2600.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\atari7800.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\atomiswave.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\cps1.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\cps2.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\cps3.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\dreamcast.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\fbneo.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\gameboy-color.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\gamegear.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\gba.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\jaguar.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\mame.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\master-system.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\megadrive-br.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\megadrive.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\neo-geo-cd.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\neo-geo.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\nintendinho.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\nintendo-64-br.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\nintendo-64.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\nintendo-ds.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\pc-engine-cd.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\pc-engine.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\playstation-1.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\playstation-2-br.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\playstation-2.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\psp.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\sega32x.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\super-nintendo-br.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\super-nintendo.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\supergrafx.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\switch.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\game-info-xml\\wii.xml",
+      "searched": false,
+      "reason": "derived historical merge cannot prove identity"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\00-3ds.xml",
+      "searched": false,
+      "platform": "3ds"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\01-psx.xml",
+      "searched": false,
+      "platform": "psx"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\02-switch.xml",
+      "searched": false,
+      "platform": "switch"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\03-arcade.xml",
+      "searched": false,
+      "platform": "arcade"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\06-atomiswave.xml",
+      "searched": false,
+      "platform": "atomiswave"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\07-colecovision.xml",
+      "searched": false,
+      "platform": "colecovision"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\08-cps1.xml",
+      "searched": false,
+      "platform": "cps1"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\09-cps2.xml",
+      "searched": false,
+      "platform": "cps2"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\10-cps3.xml",
+      "searched": false,
+      "platform": "cps3"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\11-dreamcast.xml",
+      "searched": false,
+      "platform": "dreamcast"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\12-fds.xml",
+      "searched": false,
+      "platform": "fds"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\13-gameandwatch.xml",
+      "searched": false,
+      "platform": "gameandwatch"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\14-gamegear.xml",
+      "searched": false,
+      "platform": "gamegear"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\15-gb.xml",
+      "searched": false,
+      "platform": "gb"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\16-gba.xml",
+      "searched": false,
+      "platform": "gba"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\17-gbc.xml",
+      "searched": false,
+      "platform": "gbc"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\18-jaguar.xml",
+      "searched": false,
+      "platform": "jaguar"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\19-mame.xml",
+      "searched": false,
+      "platform": "mame"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\20-mastersystem.xml",
+      "searched": false,
+      "platform": "mastersystem"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+      "searched": true,
+      "platform": "megadrive"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\22-megadrive.xml",
+      "searched": true,
+      "platform": "megadrive"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\23-model2.xml",
+      "searched": false,
+      "platform": "model2"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\24-n64.xml",
+      "searched": false,
+      "platform": "n64"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\25-n64.xml",
+      "searched": false,
+      "platform": "n64"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\26-nds.xml",
+      "searched": false,
+      "platform": "nds"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\27-neogeo.xml",
+      "searched": false,
+      "platform": "neogeo"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\28-neogeocd.xml",
+      "searched": false,
+      "platform": "neogeocd"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\29-nes.xml",
+      "searched": false,
+      "platform": "nes"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\30-odyssey2.xml",
+      "searched": false,
+      "platform": "odyssey2"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\31-pcengine.xml",
+      "searched": false,
+      "platform": "pcengine"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\32-pcenginecd.xml",
+      "searched": false,
+      "platform": "pcenginecd"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\33-sega32x.xml",
+      "searched": false,
+      "platform": "sega32x"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\35-snes.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\36-sufami.xml",
+      "searched": false,
+      "platform": "sufami"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\37-supergrafx.xml",
+      "searched": false,
+      "platform": "supergrafx"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\3do\\gamelist.xml",
+      "searched": false,
+      "platform": "3do"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\amiga500\\gamelist.xml",
+      "searched": false,
+      "platform": "amiga500"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\amigacd32\\gamelist.xml",
+      "searched": false,
+      "platform": "amigacd32"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\atari2600\\gamelist.xml",
+      "searched": false,
+      "platform": "atari2600"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\atari5200\\gamelist.xml",
+      "searched": false,
+      "platform": "atari5200"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\atari7800\\gamelist.xml",
+      "searched": false,
+      "platform": "atari7800"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\atomiswave\\gamelist.xml",
+      "searched": false,
+      "platform": "atomiswave"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\cave\\gamelist.xml",
+      "searched": false,
+      "platform": "cave"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\colecovision\\gamelist.xml",
+      "searched": false,
+      "platform": "colecovision"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\cps1\\gamelist.xml",
+      "searched": false,
+      "platform": "cps1"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\cps2\\gamelist.xml",
+      "searched": false,
+      "platform": "cps2"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\cps3\\gamelist.xml",
+      "searched": false,
+      "platform": "cps3"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\dreamcast\\gamelist.xml",
+      "searched": false,
+      "platform": "dreamcast"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\fbneo\\gamelist.xml",
+      "searched": false,
+      "platform": "fbneo"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\fds\\gamelist.xml",
+      "searched": false,
+      "platform": "fds"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\gamate\\gamelist.xml",
+      "searched": false,
+      "platform": "gamate"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\gamegear\\gamelist.xml",
+      "searched": false,
+      "platform": "gamegear"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\gba\\gamelist.xml",
+      "searched": false,
+      "platform": "gba"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\gbc\\gamelist.xml",
+      "searched": false,
+      "platform": "gbc"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\gp32\\gamelist.xml",
+      "searched": false,
+      "platform": "gp32"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\jaguar\\gamelist.xml",
+      "searched": false,
+      "platform": "jaguar"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\lynx\\gamelist.xml",
+      "searched": false,
+      "platform": "lynx"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\mame\\gamelist.xml",
+      "searched": false,
+      "platform": "mame"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\megacd\\gamelist.xml",
+      "searched": false,
+      "platform": "megacd"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\megadrive\\gamelist.xml",
+      "searched": true,
+      "platform": "megadrive"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\model2\\gamelist.xml",
+      "searched": false,
+      "platform": "model2"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\model3\\gamelist.xml",
+      "searched": false,
+      "platform": "model3"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\n64\\gamelist.xml",
+      "searched": false,
+      "platform": "n64"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\naomi2\\gamelist.xml",
+      "searched": false,
+      "platform": "naomi2"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\naomi\\gamelist.xml",
+      "searched": false,
+      "platform": "naomi"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\neogeo64\\gamelist.xml",
+      "searched": false,
+      "platform": "neogeo64"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\neogeo\\gamelist.xml",
+      "searched": false,
+      "platform": "neogeo"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\neogeocd\\gamelist.xml",
+      "searched": false,
+      "platform": "neogeocd"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\nes3d_launchers\\gamelist.xml",
+      "searched": false,
+      "platform": "nes3d_launchers"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\nes\\gamelist.xml",
+      "searched": false,
+      "platform": "nes"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\ngp\\gamelist.xml",
+      "searched": false,
+      "platform": "ngp"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\ngpc\\gamelist.xml",
+      "searched": false,
+      "platform": "ngpc"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\openbor\\gamelist.xml",
+      "searched": false,
+      "platform": "openbor"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\pcengine\\gamelist.xml",
+      "searched": false,
+      "platform": "pcengine"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\pcenginecd\\gamelist.xml",
+      "searched": false,
+      "platform": "pcenginecd"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\pcfx\\gamelist.xml",
+      "searched": false,
+      "platform": "pcfx"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\pico8\\gamelist.xml",
+      "searched": false,
+      "platform": "pico8"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\pokemini\\gamelist.xml",
+      "searched": false,
+      "platform": "pokemini"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\ports\\gamelist.xml",
+      "searched": false,
+      "platform": "ports"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\ps2\\gamelist.xml",
+      "searched": false,
+      "platform": "ps2"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\ps4\\gamelist.xml",
+      "searched": false,
+      "platform": "ps4"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\ps5\\gamelist.xml",
+      "searched": false,
+      "platform": "ps5"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\psx\\gamelist.xml",
+      "searched": false,
+      "platform": "psx"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\saturn\\gamelist.xml",
+      "searched": false,
+      "platform": "saturn"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\sega32x\\gamelist.xml",
+      "searched": false,
+      "platform": "sega32x"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\segastv\\gamelist.xml",
+      "searched": false,
+      "platform": "segastv"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\sg1000\\gamelist.xml",
+      "searched": false,
+      "platform": "sg1000"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\snes\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\solarus\\gamelist.xml",
+      "searched": false,
+      "platform": "solarus"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\sufami\\gamelist.xml",
+      "searched": false,
+      "platform": "sufami"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\supergrafx\\gamelist.xml",
+      "searched": false,
+      "platform": "supergrafx"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\supervision\\gamelist.xml",
+      "searched": false,
+      "platform": "supervision"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\tic80\\gamelist.xml",
+      "searched": false,
+      "platform": "tic80"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\triforce\\gamelist.xml",
+      "searched": false,
+      "platform": "triforce"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\vectrex\\gamelist.xml",
+      "searched": false,
+      "platform": "vectrex"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\virtualboy\\gamelist.xml",
+      "searched": false,
+      "platform": "virtualboy"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\wasm4\\gamelist.xml",
+      "searched": false,
+      "platform": "wasm4"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\windows\\gamelist.xml",
+      "searched": false,
+      "platform": "windows"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\wswan\\gamelist.xml",
+      "searched": false,
+      "platform": "wswan"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\wswanc\\gamelist.xml",
+      "searched": false,
+      "platform": "wswanc"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\xboxone\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxone"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\xboxseriesx\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxseriesx"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\zinc\\gamelist.xml",
+      "searched": false,
+      "platform": "zinc"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-v8.1.2-Modificado-Sin-Juegos\\RetroBat\\roms\\dusklight\\gamelist.xml",
+      "searched": false,
+      "platform": "dusklight"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-v8.1.2-Modificado-Sin-Juegos\\RetroBat\\roms\\megadrive\\gamelist.xml",
+      "searched": true,
+      "platform": "megadrive"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-v8.1.2-Modificado-Sin-Juegos\\RetroBat\\roms\\nes3d_launchers\\gamelist.xml",
+      "searched": false,
+      "platform": "nes3d_launchers"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-v8.1.2-Modificado-Sin-Juegos\\RetroBat\\roms\\ports\\gamelist.xml",
+      "searched": false,
+      "platform": "ports"
+    },
+    {
+      "source": "G:\\RETROBAT TESTES\\Retrobat-v8.1.2-Modificado-Sin-Juegos\\RetroBat\\roms\\snes\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\cps1\\gamelist.xml",
+      "searched": false,
+      "platform": "cps1"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\cps2\\gamelist.xml",
+      "searched": false,
+      "platform": "cps2"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\cps3\\gamelist.xml",
+      "searched": false,
+      "platform": "cps3"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\megadrive\\gamelist.xml",
+      "searched": true,
+      "platform": "megadrive"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\n64\\gamelist.xml",
+      "searched": false,
+      "platform": "n64"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\neogeo\\gamelist.xml",
+      "searched": false,
+      "platform": "neogeo"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ports\\gamelist.xml",
+      "searched": false,
+      "platform": "ports"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps2\\gamelist.xml",
+      "searched": false,
+      "platform": "ps2"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps4\\_arquivo_codex\\antes_capas_ps4_20260928-151337\\gamelist.xml",
+      "searched": false,
+      "platform": "ps4"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps4\\_arquivo_codex\\antes_sincronizar_capas_20260928-170921\\gamelist.xml",
+      "searched": false,
+      "platform": "ps4"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps4\\_arquivo_codex\\antes_sincronizar_capas_20260928-171851\\gamelist.xml",
+      "searched": false,
+      "platform": "ps4"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps4\\_arquivo_codex\\antes_sincronizar_capas_20260928-211402\\gamelist.xml",
+      "searched": false,
+      "platform": "ps4"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps4\\_arquivo_codex\\antes_sincronizar_capas_20260929-114057\\gamelist.xml",
+      "searched": false,
+      "platform": "ps4"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps4\\gamelist.xml",
+      "searched": false,
+      "platform": "ps4"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps5\\_arquivo_codex\\antes_sincronizar_capas_20260928-170921\\gamelist.xml",
+      "searched": false,
+      "platform": "ps5"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps5\\_arquivo_codex\\antes_sincronizar_capas_20260929-114329\\gamelist.xml",
+      "searched": false,
+      "platform": "ps5"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps5\\E_gamelist.xml",
+      "searched": false,
+      "platform": "ps5"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps5\\gamelist - Copia.xml",
+      "searched": false,
+      "platform": "ps5"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\ps5\\gamelist.xml",
+      "searched": false,
+      "platform": "ps5"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## 1 -PT-BR ##\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## BOMBER MAN ##\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## DONKEY KONG ##\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## FINAL FIGHT ##\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## MEGA MAN ##\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## SUPER MARIO ##\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## TOP GEAR ##\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\gamelist.xml",
+      "searched": true,
+      "platform": "snes"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\xboxone\\_arquivo_codex\\antes_sincronizar_capas_20260928-170921\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxone"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\xboxone\\_arquivo_codex\\antes_sincronizar_capas_20260928-171851\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxone"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\xboxone\\_arquivo_codex\\antes_sincronizar_capas_20260928-183548\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxone"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\xboxone\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxone"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\xboxseriesx\\_arquivo_codex\\antes_sincronizar_capas_20260928-170921\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxseriesx"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\xboxseriesx\\_arquivo_codex\\antes_sincronizar_capas_20260928-171851\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxseriesx"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\xboxseriesx\\_arquivo_codex\\antes_sincronizar_capas_20260928-192531\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxseriesx"
+    },
+    {
+      "source": "G:\\TURBORAMA\\RetroBat\\roms\\xboxseriesx\\gamelist.xml",
+      "searched": false,
+      "platform": "xboxseriesx"
+    }
+  ],
+  "counts": {
+    "unique-description": 29,
+    "missing": 6,
+    "ambiguous": 6
+  },
+  "items": [
+    {
+      "itemId": "station_532221963a6b329794c1ec5766b37a43",
+      "platform": "megadrive",
+      "name": "Arnold Palmer Tournament Golf (USA, Europe)",
+      "originalStem": "Arnold Palmer Tournament Golf (USA, Europe)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 138,
+          "platform": "megadrive",
+          "name": "Arnold Palmer Tournament Golf",
+          "stem": "Arnold Palmer Tournament Golf (USA, Europe)",
+          "description": "Selecione seu nível de jogo e, em seguida, dirija-se à loja profissional para escolher entre tacos Black Carbon, Glass Fiber e Ceramic. Jogue sozinho ou com um amigo em 18 buracos. Além dos modos de um e dois jogadores, há também um modo de prática, disputa (mano a mano) e um completo torneio internacional, onde você vai enfrentar 15 competidores. Torneios duram 12 rodadas, 18 buracos de golfe cada. A maioria das rodadas são partidas de \"stroke\" padrão, mas as sétima e oitava rodadas são partidas \"match\". As coisas realmente ficam sérias quando a partida termina em empate, e os jogadores mudam para um desempate de morte súbita. Durante o torneio, os jogadores ganham níveis mais altos de habilidade, equipamentos melhores e mais poder. Você receberá uma senha (password) no final de cada rodada do torneio. O jogo permite que você jogue em três cursos diferentes: Japão, Estados Unidos e Grã-Bretanha.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_7a95e83b68b446b1213426498f51b51e",
+      "platform": "megadrive",
+      "name": "Battletoads-Double Dragon (USA)",
+      "originalStem": "Battletoads-Double Dragon (USA)",
+      "status": "missing",
+      "matches": []
+    },
+    {
+      "itemId": "station_9cd0e9867e6e375da6fcee76bea72b95",
+      "platform": "megadrive",
+      "name": "Blockout (World)",
+      "originalStem": "Blockout (World)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 186,
+          "platform": "megadrive",
+          "name": "Blockout",
+          "stem": "Blockout (World)",
+          "description": "Bem-vindo ao Blockout, este incomparável jogo de estratégia, cuja ação se desenvolve em três dimensões! São várias figuras tridimensionais que aparecem no alto de um poço e vão caindo lentamente. Você precisa articulá-las para que se encaixem perfeitamente no fundo do poço, preenchendo um dos níveis. Cada nível completo desaparece, dando mais espaço para as manobras das próximas figuras. Não permita que seu poço chegue ao limite! Crie novos desafios mudando a configuração. Chame um amigo para participar da disputa entre dois jogadores! Blockout é para aqueles que apreciam grandes desafios. Não perca tempo e mostre o grande estrategista que você é!",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_18d5c103cae9d7a2499fe2a6e15f2657",
+      "platform": "megadrive",
+      "name": "Columns III (USA)",
+      "originalStem": "Columns III (USA)",
+      "status": "missing",
+      "matches": []
+    },
+    {
+      "itemId": "station_25289690acd9c4cfcbb0428b5f787405",
+      "platform": "megadrive",
+      "name": "Doom Troopers (USA)",
+      "originalStem": "Doom Troopers (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 282,
+          "platform": "megadrive",
+          "name": "Doom Troopers",
+          "stem": "Doom Troopers (USA)",
+          "description": "Baseado no popular RPG de mesa e jogo de cartas, Doom Troopers: Mutant Chronicles lança você como um destemido comando que foi contratado para salvar o mundo de uma força invasora de mutantes. Jogue como Mitch Hunter ou Max Steiner ao embarcar na missão mais importante da sua vida - a completa aniquilação da Legião Negra. Vá fundo através de oito fases detalhadas cheias de todos os tipos de mutantes malignos e perigosos, enquanto você descarrega com uma barragem de armas de alta potência que estão prontamente disponíveis. Se a pressão for um pouco demais para você aguentar sozinho, recrute um amigo e tente eliminar a Legião Negra. O mundo está em grave perigo e somente os Doom Troopers podem consertar as coisas.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_3eb97d4a527f81910514d473417798d4",
+      "platform": "megadrive",
+      "name": "Golden Axe II (World)",
+      "originalStem": "Golden Axe II (World)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 366,
+          "platform": "megadrive",
+          "name": "Golden Axe II",
+          "stem": "Golden Axe II (World)",
+          "description": "O diabólico Dark Guld recuperou-se de sua última derrota e voltou ainda mais determinado a fazer da Terra o palco de sua destruição. Ele veio acompanhado de um clã de perversas criaturas e roubou o Golden Axe, machado de ouro símbolo da paz e prosperidade. De novo, nossos bravos guerreiros vão se colocar no caminho dos malfeitores. Eles são: Ax-Battler, o bárbaro; Tyris-Flare, a feroz amazona; e Gilius Thunderhead, o destemido anão. Por mais dura que seja a batalha, por mais longa que seja a jornada, nada vai impedi-los. O Golden Axe deve voltar para seu devido lugar. E estes terríveis inimigos da humanidade também! Ajude-os nesta árdua missão!",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_13cfd4570309970e2f93c6263e698c72",
+      "platform": "megadrive",
+      "name": "Lethal-wedding",
+      "originalStem": "Lethal-wedding",
+      "status": "missing",
+      "matches": []
+    },
+    {
+      "itemId": "station_83dc84f0dce0c229aa9231ce59dd998b",
+      "platform": "megadrive",
+      "name": "NHL '94 (USA, Europe)",
+      "originalStem": "NHL '94 (USA, Europe)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 101,
+          "platform": "megadrive",
+          "name": "NHL Hockey '94",
+          "stem": "NHL '94 (USA, Europe)",
+          "description": "Para os amantes do esporte de tacos no gelo, essa versão manteve o modo de câmera vertical, facilitando o controle e a visualização da ação na partida. É possível salvar seus avanços durante a temporada, trazendo ao jogador a possibilidade de disputar quatro modos de jogo: a temporada regular, os playoffs, um melhor de sete e o shootout, ou as famosas penalidades máximas, como as conhecemos no futebol. Arme sua estratégia e encare os jogadores mais feras nesse esporte em que a atenção precisa estar redobrada o tempo todo.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_c76970f8fa3c0b2c0c0a848c0e6292c9",
+      "platform": "megadrive",
+      "name": "Sonic The Hedgehog 3 (USA)",
+      "originalStem": "Sonic The Hedgehog 3 (USA)",
+      "status": "missing",
+      "matches": []
+    },
+    {
+      "itemId": "station_79ad81b885f85b3f3948eeef9531c054",
+      "platform": "megadrive",
+      "name": "Tetris",
+      "originalStem": "Tetris",
+      "status": "missing",
+      "matches": []
+    },
+    {
+      "itemId": "station_7550d3a8eea148ffea100c7af8bb5d21",
+      "platform": "megadrive",
+      "name": "Ultimate Mortal Kombat 3 (USA)",
+      "originalStem": "Ultimate Mortal Kombat 3 (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 801,
+          "platform": "megadrive",
+          "name": "Mortal Kombat III",
+          "stem": "Ultimate Mortal Kombat 3 (USA)",
+          "description": "Neste terceiro episódio os maiores lutadores dos arcades estão de volta para conter, de uma vez por todas, a última investida de Shao Kahn sobre a Terra. Chutes, socos, cotoveladas, cabeçadas, voadoras e muito, muito sangue. A pancadaria vai rolar solta deixando você com o coração na mão... de preferência o do seu adversário!! Seja bem vindo ao mundo de Mortal Kombat 3!!! Mais um combate mortal com 14 Lutadores, incluindo 7 novos personagens, 2 novos chefões e 7 lutador escondido. Seis novos \"Códigos Secretos\" que aumentam a força e habilidade dos lutadores contra seus inimigos. E, uma coisa é certa, eles vão precisar!! Mais Fatalities, Animalities, Friendships, Babalities e Movimentos Secretos que nas duas primeiras versões.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_0d1f63df5faa6eb66b66acc3094c5aad",
+      "platform": "megadrivebr",
+      "name": "Robocop vs Terminator (BR)",
+      "originalStem": "Robocop vs Terminator (BR)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 58,
+          "platform": "megadrive",
+          "name": "RoboCop Versus The Terminator",
+          "stem": "Robocop vs Terminator (BR)",
+          "description": "O futuro está ruindo e cabe a você encarnar o destemido policial RoboCop em uma batalha contra a Skynet e seus Exterminadores. RoboCop terá que ultrapassar dez fases com quatro perigosos mundos para encontrar o líder da Skynet. A ação acontece em fases progressivas nas quais você precisa subir em prédios para resgatar reféns e mandar balas nos inimigos. O jogo oferece uma grande variedade de armas que podem auxiliar nas batalhas contra os chefes. RoboCop pode atirar nas diagonais, pra cima e agachado em um duelo particular entre robôs.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_d4401dcd2599530ca4e155413d6548fe",
+      "platform": "megadrivebr",
+      "name": "Sonic Hedgehog 3D Blast (BR)",
+      "originalStem": "Sonic Hedgehog 3D Blast (BR)",
+      "status": "missing",
+      "matches": []
+    },
+    {
+      "itemId": "station_5b83991974b65a875adb4ebf9f985cf3",
+      "platform": "megadrivebr",
+      "name": "Super Street Fighter 2 - The New Challengers (BR)",
+      "originalStem": "Super Street Fighter 2 - The New Challengers (BR)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 1,
+          "platform": "megadrive",
+          "name": "Super Street Fighter II",
+          "stem": "Super Street Fighter 2 - The New Challengers (BR)",
+          "description": "Durante anos os doze maiores lutadores do mundo se enfrentaram. E tornaram-se os grandes mestres. Mas chegou a hora do novo desafio. Quatro lutadores surgiram com muitas promessas, habilidades e uma certeza: podem destruir Bison! Mas será que eles são capazes de enfrentar os famosos Street Fighters e seus novos golpes?nnnn4 personagens inéditos: Cammy, Dee Jay, T. Hawk e Fei Long. Golpes ainda melhores para os fantásticos Street Fighters originais. Mais opções de modos de batalha: Group Battle, Tournament Battle e o desafio contra o relógio no Time Challenge. Cenários com gráficos incríveis!",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_d520a057145807513be2c49717591e10",
+      "platform": "megadrivebr",
+      "name": "X-Men 2 - Clone Wars (BR)",
+      "originalStem": "X-Men 2 - Clone Wars (BR)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\21-megadrive.xml",
+          "sha256": "d0bed36d5fba2d3567f5a146d50bf4d303e655e0ab639d5346fe145e2a43c76f",
+          "ordinal": 39,
+          "platform": "megadrive",
+          "name": "X-Men 2: Clone Wars",
+          "stem": "X-Men 2 - Clone Wars (BR)",
+          "description": "O mal veio do espaço. Um vírus tecnológico alienígena - o Phalanx - invadiu a Terra e pretende dominá-la. Mas antes de tudo, precisa eliminar os X-Men, os únicos capazes de detê-lo. Phalanx é tão perigoso e perverso que criou clones dos X-Men a partir de amostras genéticas do DNA desses heróis. Desta vez, os X-Men terão que enfrentar seus piores inimigos: eles mesmos! Escolha entre: Ciclope e seus raios ópticos; Wolverine e seu incrível esqueleto e garras de adamantium; Fera e sua agilidade e força descomunal; Gambit e suas cartas explosivas e muitos outros. E pela primeira vez, você poderá jogar como o Magneto que juntou-se aos X-Men para destruir Phalanx. Mostre que você também pode fazer parte dos X-Men.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_8c41d948b4222e9452258778abd749d0",
+      "platform": "snes",
+      "name": "Battletoads in Battlemaniacs (USA)",
+      "originalStem": "Battletoads in Battlemaniacs (USA)",
+      "status": "ambiguous",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 78,
+          "platform": "snes",
+          "name": "Battletoads in Battlemaniacs",
+          "stem": "Battletoads in Battlemaniacs (USA)",
+          "description": "When Michiko Tashoku, the daughter of the Psicone Corporation's head honcho, is abducted by the Pigs of the Apocalypse and forced indignantly into the Gamescape, Zitz leaps into the action fists-a' flailin'! But even for a Battletoad there's too much pork to pummel - and after a beastly bashing, he joins Michiko as the Porkers' prisoner! Rash and Pimple are soon to soar on the scene - an' with Rash lookin' lean an' green and Pimple actin' mean, it's obvious that a rescue's about to begin! Only it ain't gonna be easy, 'cuz the pigs have taken them to the dingy Dark Tower, home of the sinister Silas Volkmire and his equally evil partner, the deadly Dark Queen! Their malevolent minds have found a way to leak their computerized world into ours, with the fiendish intention of creating a worldwide Gamescape over which they would rule! So, join the Battletoads as they turn BATTLEMANIACS in a do-or-die epic to rescue the righteous and batter the bad guys! Pull on that Big Bad Boot, 'toad, prime that Jawbuster and prepare to Take Out the Trash! Get ready to gatecrash the Gamescape and sizzle some beastin' bacon! Let's get mad, bad an' crazy once again! Let's eat, 'toad, let's EAT!",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        },
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\35-snes.xml",
+          "sha256": "5aab69c0f2fcc9a9eafa398748c75125cbb13b365aad3f7172909cf0572fba8b",
+          "ordinal": 21,
+          "platform": "snes",
+          "name": "Battletoads in Battlemaniacs",
+          "stem": "Battletoads in Battlemaniacs (USA)",
+          "description": "Pimple e Rash foram convidados para a apresentação de um novo Video game do professor T-Bird, o Gamescape, capaz de criar um mundo artificial de tão poderoso que é. Tudo corria bem até que a vilã do jogo, a abominavel Dark Queen entrou em cena, mandando seu súdito Porco do Apocalipse sequestrar todos os presentes no evento a fim de torná-los seus serviçais. Agora, sendo os únicos que escaparam do sequestro, Pimple e Rash terão que resgatar as outras pessoas e acabar com a graça da Dark Queen. Mas a missão não é tão simples quanto parece, já que uma infinidade de discípulos de Dark Queen estão praparados para atacar e impedir os sapos de qualquer maneira.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        },
+        {
+          "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## 1 -PT-BR ##\\gamelist.xml",
+          "sha256": "545423dfdd2ae57a8f8b000a111e9cf3ac12564682cd7b44ad1dd635b4b435d8",
+          "ordinal": 18,
+          "platform": "snes",
+          "name": "Battletoads in Battlemaniacs",
+          "stem": "Battletoads in Battlemaniacs (USA)",
+          "description": "Pimple e Rash foram convidados para a apresentação de um novo Video game do professor T-Bird, o Gamescape, capaz de criar um mundo artificial de tão poderoso que é. Tudo corria bem até que a vilã do jogo, a abominavel Dark Queen entrou em cena, mandando seu súdito Porco do Apocalipse sequestrar todos os presentes no evento a fim de torná-los seus serviçais. Agora, sendo os únicos que escaparam do sequestro, Pimple e Rash terão que resgatar as outras pessoas e acabar com a graça da Dark Queen. Mas a missão não é tão simples quanto parece, já que uma infinidade de discípulos de Dark Queen estão praparados para atacar e impedir os sapos de qualquer maneira.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        },
+        {
+          "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\gamelist.xml",
+          "sha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+          "ordinal": 42,
+          "platform": "snes",
+          "name": "Battletoads in Battlemaniacs",
+          "stem": "Battletoads in Battlemaniacs (USA)",
+          "description": "Pimple e Rash foram convidados para a apresentação de um novo Video game do professor T-Bird, o Gamescape, capaz de criar um mundo artificial de tão poderoso que é. Tudo corria bem até que a vilã do jogo, a abominavel Dark Queen entrou em cena, mandando seu súdito Porco do Apocalipse sequestrar todos os presentes no evento a fim de torná-los seus serviçais. Agora, sendo os únicos que escaparam do sequestro, Pimple e Rash terão que resgatar as outras pessoas e acabar com a graça da Dark Queen. Mas a missão não é tão simples quanto parece, já que uma infinidade de discípulos de Dark Queen estão praparados para atacar e impedir os sapos de qualquer maneira.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_5d246e11687a48caff7dd9c10288ed8a",
+      "platform": "snes",
+      "name": "Boogerman - A Pick and Flick Adventure",
+      "originalStem": "Boogerman - A Pick and Flick Adventure (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 95,
+          "platform": "snes",
+          "name": "Boogerman: A Pick and Flick Adventure",
+          "stem": "Boogerman - A Pick and Flick Adventure (USA)",
+          "description": "You will have an adventure in an unknown world as a caped hero who slings his own boogers to vanquish his foes. The hero of the game is a booger-tossing, noisily burping, fart-spewing man named Snotty Ragsdale. While he lives his normal life as an eccentric millionaire, his natural \"in-stinks\" come in handy when he dons the mask of the smelly hero Boogerman.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_35dcaf567bf302de584bc64d910d438d",
+      "platform": "snes",
+      "name": "Clay Fighter",
+      "originalStem": "Clay Fighter (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 140,
+          "platform": "snes",
+          "name": "ClayFighter",
+          "stem": "Clay Fighter (USA)",
+          "description": "Clay Fighter is a 2D fighting game released in which the characters, as the name suggests, are made completely out of clay. This allows for interesting moves and stylized graphics. The zany roster includes: Bad Mr. Frosty, a snowman; Taffy, a piece of stretchable candy; Blob, a character who can morph into different shapes; Blue Suede Goo, an Elvis knock-off; Ickybod Clay, a pumpkin-headed ghost; Helga, an opera singer; and Bonker, the crazed clown. Each character also has their own level and individual taunts.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_a0959e63a5b321cd9db1c2b902d1de47",
+      "platform": "snes",
+      "name": "Clay Fighter - Tournament Edition",
+      "originalStem": "Clay Fighter - Tournament Edition (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 141,
+          "platform": "snes",
+          "name": "ClayFighter: Tournament Edition",
+          "stem": "Clay Fighter - Tournament Edition (USA)",
+          "description": "The Tournament Edition of Clay Fighter fixes some glitches and adds new features to the original 2D fighting game. Most scenarios were changed or redone, the graphics are brighter and the gameplay is faster. The characters can now perform three and four-hit combos. More voice-overs and a new introduction cut-scene were added.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_d9d9b6c89dd74e826546f93719391070",
+      "platform": "snes",
+      "name": "Clay Fighter 2 - Judgment Clay",
+      "originalStem": "Clay Fighter 2 - Judgment Clay (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 142,
+          "platform": "snes",
+          "name": "C2 - Clay Fighter 2: Judgment Clay",
+          "stem": "Clay Fighter 2 - Judgment Clay (USA)",
+          "description": "Bad Mister Frosty is buffed up and faster than greased lightning. This surly snowman has mayhem on his mind... but there's some bunny new in town with a hare-trigger temper. You can bet the fur will fly as this wild hare unleashes a barrage of blistering rabbit punches on Bad Mister Frosty. Could there be a new top bunny in town, or will he get his cottontail kicked?",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_757d429cba2f0ceaa5b038b5a2a6b39f",
+      "platform": "snes",
+      "name": "Double Dragon V - The Shadow Falls",
+      "originalStem": "Double Dragon V - The Shadow Falls (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 174,
+          "platform": "snes",
+          "name": "Double Dragon V: The Shadow Falls",
+          "stem": "Double Dragon V - The Shadow Falls (USA)",
+          "description": "Double Dragon V: The Shadow Falls! Featuring 12 big lightning-fast characters! Four to six special moves for each fighter! Set your own strength, defense and more. Three different fighting modes. Secret moves and codes! Customizable controls. Unique final moves. Hot rock music tracks and 130+ sound effects!",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_5743ae8bffbcc813aae9328190c4d08e",
+      "platform": "snes",
+      "name": "Exertainment Mountain Bike Rally",
+      "originalStem": "Exertainment Mountain Bike Rally (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 119,
+          "platform": "snes",
+          "name": "Exertainment Mountain Bike Rally",
+          "stem": "Cannondale Cup (USA)",
+          "description": "The player starts in qualifying, and as he/she plays the game more frequently, he/she can qualify for the regionals, nationals, the championship, and the grueling final race where he/she must get first place in order to beat the game. Players will spend literally hours in the easier modes and this game is like exercise for his/her thumbs.",
+          "match": [
+            "exact-name"
+          ]
+        },
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 195,
+          "platform": "snes",
+          "name": "Exertainment Mountain Bike Rally",
+          "stem": "Exertainment Mountain Bike Rally (USA)",
+          "description": "The player starts in qualifying, and as he/she plays the game more frequently, he/she can qualify for the regionals, nationals, the championship, and the grueling final race where he/she must get first place in order to beat the game. Players will spend literally hours in the easier modes and this game is like exercise for his/her thumbs.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_e4dfe4a2f10ac991aa7a69d8a633c7e7",
+      "platform": "snes",
+      "name": "Fatal Fury 2",
+      "originalStem": "Fatal Fury 2 (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 208,
+          "platform": "snes",
+          "name": "Garō Densetsu 2: Aratanaru Tatakai",
+          "stem": "Fatal Fury 2 (USA)",
+          "description": "ARE YOU READY FOR THE TOUGHEST CHALLENGE OF YOUR LIFE? It’s time for 20 megs of non-stop action, with another super-hot arcade game for your Super Nintendo. Rejoin the brothers Andy and Terry Bogard, with their friend Joe Higashi as they discover that FATAL FURY was just a warm up! Now they must face the meanest, most dangerous fighters ever assembled! Choose from among 8 fierce opponents; from Big Bear - the savage unmasked wrestler to Mai Shiranui-the female beauty with mystical arts of the Ninja. Battle through Thailand, Spain, Australia and many other locations. Feature packed, and filled with all the hard-hitting action you’d expect from Takara’s Fighting Series. Unique 30 movements enable you to move and tight both in foreground and background - in ways No other street fighting game can. This game rocks with huge, blazing arcade style graphics and faster animation than ever before! The question is - are you up to a new challenge? *HUGE GRAPHICS AND INCREDIBLY FAST ANIMATION *POWERFUL NEW MOVES TO LEARN AND MASTER *UNlQUE 3-D ACTION - FIGHT IN BOTH FOREGROUND AND BACKGROUND *1P VS COMPUTER (SELECTABLE), 1P VS 2P, AND NEW TEAM ELIMINATION FIGHTING *PLAY AGAINST THE COMPUTER OR TAKE ON ANOTHER PLAYER IN HEAD-TO-HEAD COMBAT *FOR 1 OR 2 PLAYERS",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_57afa3a99c24ff3335cbc18815bfad3d",
+      "platform": "snes",
+      "name": "Fatal Fury Special",
+      "originalStem": "Fatal Fury Special (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 209,
+          "platform": "snes",
+          "name": "Fatal Fury Special",
+          "stem": "Fatal Fury Special (USA)",
+          "description": "Fatal Fury Special é uma versão melhorada do lutador um-a-um da SNK, Fatal Fury 2. É uma conversão do jogo de arcade de 1993 com o mesmo nome. O objetivo ainda é vencer o torneio derrotando todos os outros lutadores, incluindo o chefe final Wolfgang Krauser. Fatal Fury Special apresenta uma seleção bastante grande de lutadores que inclui: 1. Os oito lutadores regulares de Fatal Fury 2: Terry Bogard, Andy Bogard, Joe Higashi, Kim Kaphwan, Jubei Yamada, Cheng Sinzan, Mai Shiranui e Big Bear. Os quatro chefes de Fatal Fury 2: Billy Kane, Axel Hawk, Lawrence Blood and Wolfgang Krauser (desta vez, eles são todos imediatamente jogáveis). Três personagens retornando do primeiro Fatal Fury: Duck King, Tung Fu Rue e Geese Howard (o chefe final de Fatal Fury).",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_12fdaa1086aae589acbc7d47ada93804",
+      "platform": "snes",
+      "name": "Fighter's History",
+      "originalStem": "Fighter's History (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 214,
+          "platform": "snes",
+          "name": "Fighter's History",
+          "stem": "Fighter's History (USA)",
+          "description": "There are three different gameplay modes are available. CPU Battle is the traditional arcade mode, where the player select a character and try to complete the game by beating all of the other fighters. In survival mode, the player select a team of five characters to go up against another team. And finally versus mode, where the player can go up against his friends.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_04c696fbf7de5235b4f6f58b1addaeb2",
+      "platform": "snes",
+      "name": "Frank Thomas Big Hurt Baseball",
+      "originalStem": "Frank Thomas Big Hurt Baseball (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 228,
+          "platform": "snes",
+          "name": "Frank Thomas' Big Hurt Baseball",
+          "stem": "Frank Thomas Big Hurt Baseball (USA)",
+          "description": "Baseball player Frank Thomas licensed one of the first baseball games to use motion-captured 3D graphics and multiple camera angles. 28 stadia have been rendered in 3D, and each has its own visible and significant differences. There are 6 distinct game modes, allowing for single exhibition matches as well as full seasons on the playoffs. There is also a Home Run Derby mode, allowing the player to pelt the ball out of the ground for points. You can choose pitchers and batters, based on their statistics and form. Bowling options are set to define the delivery, with fastballs and curveballs as well as more precise setting of pace and height. Fielding is optional - it's best to leave this to the computer at first You can always alter the infield and outfield depth and shift.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_92e574cf159e463d1c4bdd5f57cef8f6",
+      "platform": "snes",
+      "name": "Kyle Petty's No Fear Racing",
+      "originalStem": "Kyle Petty's No Fear Racing (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 321,
+          "platform": "snes",
+          "name": "Kyle Petty's No Fear Racing",
+          "stem": "Kyle Petty's No Fear Racing (USA)",
+          "description": "Kyle Petty's No Fear Racing is a stock car racing video game for the Super NES that was released in 1995. Kyle Petty's No Fear Racing lets the player race on 28 different stock car tracks and choose from a bevy of customizable cars, each with their own appearances, strengths and weaknesses. There are three different modes to play. A Single Race where the player can choose a car and a track and race one time against a slew of computer opponents. Season lets the player compete in an entire season on all the tracks, earning prize money to buy parts to upgrade their car. They can change parts to maximize performance or even tweak the car such as change gear ratios, spoiler height, tire pressure, etc. Kyle Petty's No Fear Racing was released in Japan as Circuit USA (サーキットＵＳＡ) by Virgin Interactive on June 30, 1995. The tracks are stripped of their realism. Furthermore, its graphics are much cruder than the American version: in track crossings, there are no visible bridges or elevation effects. This version does not feature Petty nor any No Fear branding.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_40fb82f6eec9bbed71032e6c3c97a59c",
+      "platform": "snes",
+      "name": "Lufia II - Rise of the Sinistrals",
+      "originalStem": "Lufia II - Rise of the Sinistrals (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 341,
+          "platform": "snes",
+          "name": "Estpolis Denki II",
+          "stem": "Lufia II - Rise of the Sinistrals (USA)",
+          "description": "The Japanese Super Famicom version of Lufia II: Rise of the Sinistrals. The game is a prequel to Lufia & the Fortress of Doom. It follows the story of the first main character's ancestor, Maxim, and explains the origins of the war between mankind and a group of gods called the Sinistrals. Lufia II made a number of changes from the first game. Dungeons no longer have random encounters and there are hundreds of puzzles throughout the game, ranging from simple to extremely challenging. It also introduced new skills, such as a variety of weapons that could be used to stun monsters or solve puzzles, and IP attacks.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_3afe843d2f4173e684f95386d80fa4b8",
+      "platform": "snes",
+      "name": "Mario Paint",
+      "originalStem": "Mario Paint (Japan, USA)",
+      "status": "ambiguous",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 352,
+          "platform": "snes",
+          "name": "Mario Paint",
+          "stem": "Mario Paint (Japan, USA)",
+          "description": "Mario Paint lets you draw, paint, animate and compose music! Creation! Imagination is your only limit with an amazing variety of drawing tools. Animation! Add exciting dimension by creating moving animation with up to 9 frame sequences. Orchestration! Compose your own songs by selecting from over 15 different musical sounds and the entire scale of notes. Coordination! Increase your Super NES Mouse dexterity by playing Gnat Attack, the clever fly swatter game included inside.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        },
+        {
+          "source": "G:\\TURBORAMA\\RetroBat\\roms\\snes\\## SUPER MARIO ##\\gamelist.xml",
+          "sha256": "df54134e6099667b7289b52855f13035c5dc01cad3a23c33bacdd23220be1ed4",
+          "ordinal": 3,
+          "platform": "snes",
+          "name": "Mario Paint",
+          "stem": "Mario Paint (Japan, USA)",
+          "description": "O Mario Paint é uma ferramenta educacional que permite a qualquer pessoa criar imagens simples, pintar sobre fotos em preto e branco ou desenhar livremente, usando o SNES Mouse especialmente desenvolvido para isso. Você também pode criar sua própria música usando uma seleção de notas e temas, criar cartões de felicitações e animações ou jogar um jogo de \"Gnat Attack\", no qual você usa o mouse para controlar uma mata-moscas e matar muitas moscas.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_72764e63d33ebdc07f369699f8c57ce0",
+      "platform": "snes",
+      "name": "NBA Jam - Tournament Edition",
+      "originalStem": "NBA Jam - Tournament Edition (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 403,
+          "platform": "snes",
+          "name": "NBA Jam Tournament Edition",
+          "stem": "NBA Jam - Tournament Edition (USA)",
+          "description": "NBA JAM Tournament Edition brings you more senses-shattering slam dunking excitement than ever! More than twice as many NBA superstars, more than double the secret characters, Hot Spots, Super Jam Power-Ups, battery back-up and - OH MY - nine all-new rim-rattling slam dunks plus all the original jams! NBA JAM Tournament Edition... it's on FIRE!",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_1522ac4a1c63617ad6324876d2acc263",
+      "platform": "snes",
+      "name": "NFL Quarterback Club 96",
+      "originalStem": "NFL Quarterback Club 96 (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 416,
+          "platform": "snes",
+          "name": "NFL Quarterback Club 96",
+          "stem": "NFL Quarterback Club 96 (USA)",
+          "description": "This game is the next-gen update of NFL Quarterback Club. Every team from the 1996 NFL season is shown here, with real player numbers and stats. 32 offensive plays and 16 defensive plays are available as you play. Options include setting quarter lengths, from one to 15 minutes, and selecting your mode of play: Preseason, Playoffs, or a full Season, in which you play 18 games towards the goal of the Super Bowl.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_0fd03c13fd40f5d531ea317c30b9db8c",
+      "platform": "snes",
+      "name": "Primal Rage",
+      "originalStem": "Primal Rage (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 482,
+          "platform": "snes",
+          "name": "Primal Rage",
+          "stem": "Primal Rage (USA)",
+          "description": "A meteor struck the Earth, and caused great chaos. Seven gods from ancient times awoke, and are now attempting to take control of the post-apocalyptic world. Primal Rage is a one-on-one fighting game featuring dinosaurs and giant apes as the fighters. The graphics are done with digitized stop-motion animation. Gameplay is similar to Mortal Kombat in that it is viewed from a side perspective, and features deadly finishing moves at the end of the match.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_6430b2dc9eb966fd8e714897bcab1f75",
+      "platform": "snes",
+      "name": "Rise of the Robots",
+      "originalStem": "Rise of the Robots (USA)",
+      "status": "ambiguous",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 509,
+          "platform": "snes",
+          "name": "Rise of the Robots",
+          "stem": "Rise of the Robots (USA)",
+          "description": "You are a cyborg handyman in the far away future sent to a huge megacorporation where an evil AI has taken control of the companies robots. You are charged with facing these robots in combat and eliminating them one by one to reach the core and deactivate the AI. Gameplay wise this is a standard beat-em-up with gorgeous graphics. It has some annoying limitations like not being able to jump over your enemy and only one fire button.crusher",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        },
+        {
+          "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\snes\\gamelist.xml",
+          "sha256": "e2739b60219cd6fd573382feaa0d5fdb5cee394b755c5219fbfe4d08965e14ea",
+          "ordinal": 316,
+          "platform": "snes",
+          "name": "Rise of the Robots",
+          "stem": "Rise of the Robots (ESP) (NTSC)",
+          "description": "Se trata de un juego de lucha 1 vs. 1 de corte bastante tradicional, aunque con la salvedad de que en lugar de llevar personajes más o menos humanos, en esta ocasión son peleas entre robots. El juego cuenta con dos modos de juego, el modo historia y el modo versus. En el modo historia solo podemos manejar a un robot que debe derrotar al resto de personajes disponibles a base de ataques bastante inútiles que solo consisten en puñetazos y patadas, sin ningún tipo de combo ni de ataque especial, mientras que el resto de personajes disponen de más fuerza, más alcance de sus ataques e incluso ataques especiales. El otro modo de juego es para dos jugadores, pero alguien tuvo la genial idea de que el primer jugador solo pueda manejar al robot protagonista del modo historia mientras que el segundo puede manejar a cualquiera de los robots, dando una clara ventaja al segundo jugador.",
+          "match": [
+            "exact-name"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_dac605f6827fab54696d68078503bcc2",
+      "platform": "snes",
+      "name": "Samurai Shodown",
+      "originalStem": "Samurai Shodown (USA)",
+      "status": "ambiguous",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 525,
+          "platform": "snes",
+          "name": "Samurai Shodown",
+          "stem": "Samurai Shodown (USA)",
+          "description": "In early Japan, a man named Shiro Tokisada Amakusa preaches a heretic religion. Little does anyone know that Amakusa is really a servant of the evil Ambrosia, who took over Amakusa's body. Ambrosia wishes to shroud the world in darkness. Now, choose between 12 warriors (and 3 bonus characters) to fight for the honor of destroying Amakusa, and fulfilling a mission.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        },
+        {
+          "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\snes\\gamelist.xml",
+          "sha256": "e2739b60219cd6fd573382feaa0d5fdb5cee394b755c5219fbfe4d08965e14ea",
+          "ordinal": 331,
+          "platform": "snes",
+          "name": "Samurai Shodown",
+          "stem": "Samurai Shodown (ESP) (NTSC)",
+          "description": "Un samurai no teme a nada. Lucha para triunfar sobre el mal. Y vive para un propósito: ¡Destruir a todos sus enemigos!. 12 guerreros combaten en un torneo cuyo objetivo es probar quién es el más fuerte del mundo. Pero el objetivo inicial toma un nuevo giro cuando un poderoso demonio conocido como Amakusa es despertado: ahora, quien resulte ser el más fuerte de todos ellos tendrá la responsabilidad de eliminarlo, y neutralizar su amenaza.",
+          "match": [
+            "exact-name"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_01c9e9a4658f728d35ffdeb595019abf",
+      "platform": "snes",
+      "name": "Street Fighter Alpha 2",
+      "originalStem": "Street Fighter Alpha 2 (USA)",
+      "status": "ambiguous",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 581,
+          "platform": "snes",
+          "name": "Street Fighter Alpha 2",
+          "stem": "Street Fighter Alpha 2 (USA)",
+          "description": "DO YOU HAVE WHAT IT TAKES? The bad boys from the Street Fighter series are back for more fisticuffs of fury! Eighteen different combatants, some old and some new, are here to lay claim to the title \"World's Best\". Screamin' moves like Ken's Dragon Punch, Adon's Jaguar Tooth and M. Bison's Somersault Skull Driver will blow you away! Play alone or pummel a friend in two-player simultaneous action. This ain't no cakewalk. This ain't no cakewalk. This is Street Fighter Alpha 2 and it's blazing on your Super NES!",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        },
+        {
+          "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\snes\\gamelist.xml",
+          "sha256": "e2739b60219cd6fd573382feaa0d5fdb5cee394b755c5219fbfe4d08965e14ea",
+          "ordinal": 372,
+          "platform": "snes",
+          "name": "Street Fighter Alpha 2",
+          "stem": "Street Fighter Alpha 2 (ESP)(CHIP) (NTSC)",
+          "description": "Otra secuela de Street Fighter que agrega aún más poderío a este clásico de lucha. Los nuevos personajes de esta versión incluyen a Gen (un sabio maestro de kung-fu), Rolento (que recordará a otro personaje de un clásico de Capcom, Final Fight) y Sakura, una joven colegiala que sigue a su héroe Ryu tan de cerca que ha aprendido el mismo tipo de movimientos. Dhalsim y Zangief también regresan a escena con algunos movimientos nuevos y mejorados. La otra gran diferencia es la pérdida de los combos en cadena en detrimento de un sistema de combos personalizados. Una vez que alcances el nivel requerido (nivel 1 por lo menos) puedes ejecutar un combo personalizado combinando cualquiera de los botones (que son 6 en total) o cualquiera de los ataques especiales (bolas de fuego, patadas acrobáticas, etc.)",
+          "match": [
+            "exact-name"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_2fc9c93cc56da7d860479436d649f593",
+      "platform": "snes",
+      "name": "Street Hockey '95",
+      "originalStem": "Street Hockey '95 (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 584,
+          "platform": "snes",
+          "name": "Street Hockey '95",
+          "stem": "Street Hockey '95 (USA)",
+          "description": "Street Hockey '95 is like ice hockey without ice and in urban environments with no-holds barred rules. Instead of ice skates, roller blades are used as players can pick from nine different skaters and assemble their squad in a series of game modes. There are five modes in all: Fat Point, Rush, Whack, Crammit and Hot Puck, each with their own rules, time-limit and scoring system (ex. Fat Point awards players different points by what kind of shot they scored the goal with). There are six different environments to choose from ranging from empty swimming pools to construction sites filled with various obstacles that can stop the player dead in their tracks, but also has ramps so players can avoid the obstacles. It also features multiplayer capabilities using an adapter to allow four friends to compete head-to-head.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_bb1ccbd6e34761fdf96a24a388ca5447",
+      "platform": "snes",
+      "name": "WeaponLord",
+      "originalStem": "WeaponLord (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 735,
+          "platform": "snes",
+          "name": "WeaponLord",
+          "stem": "WeaponLord (USA)",
+          "description": "A barbarian battleground. Seven different warriors, eached armed with a unique weapon set forth on a fighting game quest where they will clash and conflict with one another in this fighting game from Namco. Their ultimate foe is the mysterious Demonlord. An early relative of the popular Soul Calibur series, the main claim to fame of this game is the weapon play. Blocking and combos are present along with special \"frenzies\" of increased attack and death combos. The backgrounds are all hand drawn and meticulously detailed. Each character carries their own storyline with them between arenas, jungles and firey mountains on a quest to oppose the Demonlord. Note: Laid the groundwork for Soul Edge (1995)--the first of the Souls games. Visual Concepts (developers of WeaponLord) would send builds of the game to Namco (the publisher of WeaponLord) to playtest. Inturn, Mace: The Dark Age (1997 arcade)--developed by Atari--heavily \"borrowed\" from Soul Edge.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_1dfdd7d8a1834d3a82e606832796865d",
+      "platform": "snes",
+      "name": "Wizardry V - Heart of the Maelstrom",
+      "originalStem": "Wizardry V - Heart of the Maelstrom (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 750,
+          "platform": "snes",
+          "name": "Wizardry V: Heart of the Maelstrom",
+          "stem": "Wizardry V - Heart of the Maelstrom (USA)",
+          "description": "Despite the defeat of Trebor, Werdna, and L'kbreth, dark times once again threaten the kingdom of Llylgamyn. So once again a party of adventurers must venture forth to vanquish the evil. Wizardry V represents a complete revision of the gaming system used in the first four installments, with larger mazes, new spells and character classes, and an expanded system for combatting and interacting with creatures. It is also the first game in the series that allows, but does not require characters imported from a previous scenario.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_db05405bb88c9762260322f743626454",
+      "platform": "snes",
+      "name": "World Heroes 2",
+      "originalStem": "World Heroes 2 (USA)",
+      "status": "ambiguous",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 758,
+          "platform": "snes",
+          "name": "World Heroes 2",
+          "stem": "World Heroes 2 (USA)",
+          "description": "The time traveling tournament fighters are back! The original eight characters from the popular arcade hit return, along with six new characters hand-picked from several different eras and locations all through time. But a new boss awaits the victor... who or what is behind this new tournament? You'll have to get to him to find out! This sequel features all-new stages and music, and improved animation and graphics. You can now reflect projectile moves at your opponent, and reverse normal throws if your timing is right! The original game's Death Match mode is also back, but with a new feature - the life bar will increase or decrease as you inflict or receive damage. Get your side's life bar to 100% and your enemy will lose.",
+          "match": [
+            "exact-name",
+            "exact-ROM-stem"
+          ]
+        },
+        {
+          "source": "G:\\RETROBAT TESTES\\Retrobat-V8.1.2-160GB\\RetroBat\\roms\\snes\\gamelist.xml",
+          "sha256": "e2739b60219cd6fd573382feaa0d5fdb5cee394b755c5219fbfe4d08965e14ea",
+          "ordinal": 497,
+          "platform": "snes",
+          "name": "World Heroes 2",
+          "stem": "World Heroes 2 (ESP) (NTSC)",
+          "description": "Un nuevo torneo de World Heroes ha comenzado; los peleadores del anterior evento han regresado y con seis nuevos competidores: Captain Kidd, Ryoko Izumo, Mudman, Erick ,Shura, Johnny Maximum. Esta vez, aparece un nuevo villano llamado Dio, el jefe de Geegus.",
+          "match": [
+            "exact-name"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_2f8c511515543b55ffe29794b8bfd69e",
+      "platform": "snes",
+      "name": "WWF WrestleMania - The Arcade Game",
+      "originalStem": "WWF WrestleMania - The Arcade Game (USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 766,
+          "platform": "snes",
+          "name": "WWF WrestleMania: The Arcade Game",
+          "stem": "WWF WrestleMania - The Arcade Game (USA)",
+          "description": "WWF Wrestlemania: The Arcade Game merges the personalities and action of the popular WWF TV show characters with a Mortal Kombat-style fighting game. This title features digitized graphics of 8 WWF superstars: Doink, Razor Ramon, Bret \"Hit Man\" Hart, Shawn Michaels, The Undertaker, Yokozuna, Bam Bam Bigelow, and Lex Luger. Although it is a wrestling title, this game is structured a lot like a one-on-one fighter. It is very fast-paced, and features crazy special moves. Also, each match is divided into a series of rounds, much like a fighting game. Instead of each round ending in a KO, each round simply ends when you force the other wrestler(s) to fall by reducing their energy meter. Game modes include single player arcade mode, tournament mode, and vs mode for 1-on-1 multiplayer.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": "station_d0a974bcf5214078cf38644e6b017f86",
+      "platform": "snes",
+      "name": "X Zone",
+      "originalStem": "X Zone (Japan, USA)",
+      "status": "unique-description",
+      "matches": [
+        {
+          "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\metadata-sources\\catalog-xml\\34-snes.xml",
+          "sha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+          "ordinal": 767,
+          "platform": "snes",
+          "name": "X-Zone",
+          "stem": "X Zone (Japan, USA)",
+          "description": "Compond X's powerful bio-computer has begun to malfunction and \"X-Tra\", aka the external threat recognition assault system, is firing on anything that moves. In fact, the computer has accessed the nation's nuclear weapon countdown systems for a retaliatory strike. Since nuclear war might X-tinguish life on the planet, the player must enter the X-Termination zone of the compound and fight on through defenses to the central computer. X-Zone is a first-person light gun game. The player must shoot the robotic enemies on the screen and the projectiles that they launch at the player. Most levels are ended with a battle against a boss, which follows specific patterns and whose systems/weapons must be shot at and destroyed individually.",
+          "match": [
+            "exact-ROM-stem"
+          ]
+        }
+      ]
+    }
+  ]
+}

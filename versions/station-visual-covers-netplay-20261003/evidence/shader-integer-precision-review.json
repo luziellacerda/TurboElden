@@ -1,0 +1,36 @@
+{
+  "change": "Add precision highp int inside GL_ES fragment precision block. No equations, time calculation, N64 pattern or periodicity changed.",
+  "classification": "Portability risk addressed, not an observed device failure.",
+  "shaderPreSha256": "9d23dd0f323521fd2154e0ab901f6dd85bd6a2fd004a6c0e1fb6a53fb62c4cf4",
+  "shaderPostSha256": "e27757987e92488763ab1ed4bfc73e3e2770af66f75901da4f26faa854e7bd32",
+  "headerPostSha256": "cbe7a4196cf33e423a2d946d1ca3b82470deab6ca4a28c2e6e25fc97ad2ded18",
+  "evidence": {
+    "specification": "https://www.khronos.org/files/opengles_shading_language.pdf",
+    "sections": [
+      "4.5.2 Precision Qualifiers",
+      "4.5.3 Default Precision Qualifiers",
+      "4.5.4 Available Precision Qualifiers"
+    ],
+    "facts": [
+      "GLSL ES100 fragment integer default is mediump. This shader previously specified only highp float.",
+      "ES100 minimum mediump int range is (-2^10,2^10); highp is optional in fragments and guarantees at least (-2^16,2^16). The existing shader already requires fragment highp float.",
+      "A universal failure after32767frames cannot be inferred from these declarations. Actual ranges can be greater and queried at runtime.",
+      "ANGLE queried mediump and highp integer ranges are equal [31,30]; no reduced-precision failure reproduced in this local environment."
+    ]
+  },
+  "tests": {
+    "environment": "Local Windows ANGLE NVIDIA D3D11 pbuffer; not Android",
+    "actualShaderAndConsoleCompileLink": "passed",
+    "isolatedClockArithmeticFrames": [
+      0,
+      32767,
+      65535,
+      1000000
+    ],
+    "isolatedClockArithmeticResult": "RGBA readback exactly matched expected four channels for every sample; glGetError=0",
+    "report": "shader-angle-validation.json",
+    "metadataRegressionTests": 13,
+    "metadataRegressionPassed": 13
+  },
+  "limits": "Highp selection does not claim unlimited duration or support for every minimum-spec ES2 implementation. No runtime modulo/wrap change introduced."
+}

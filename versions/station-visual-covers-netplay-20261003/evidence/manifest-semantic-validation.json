@@ -1,0 +1,32 @@
+{
+  "existingDeclarationsIdentical": true,
+  "addedInternalActivities": [
+    {
+      "element": "activity",
+      "attributes": [
+        "http://schemas.android.com/apk/res/android:theme(0x01010000)=@0x0103022e",
+        "http://schemas.android.com/apk/res/android:name(0x01010003)=\"org.emulationstation.frontend.netplay.StationNetplayActivity\" (Raw: \"org.emulationstation.frontend.netplay.StationNetplayActivity\")",
+        "http://schemas.android.com/apk/res/android:exported(0x01010010)=false",
+        "http://schemas.android.com/apk/res/android:screenOrientation(0x0101001e)=11",
+        "http://schemas.android.com/apk/res/android:configChanges(0x0101001f)=0x000004a0",
+        "http://schemas.android.com/apk/res/android:enableOnBackInvokedCallback(0x0101066c)=false"
+      ],
+      "children": []
+    },
+    {
+      "element": "activity",
+      "attributes": [
+        "http://schemas.android.com/apk/res/android:theme(0x01010000)=@0x0103022e",
+        "http://schemas.android.com/apk/res/android:name(0x01010003)=\"org.emulationstation.frontend.netplay.StationDolphinNetplayActivity\" (Raw: \"org.emulationstation.frontend.netplay.StationDolphinNetplayActivity\")",
+        "http://schemas.android.com/apk/res/android:exported(0x01010010)=false",
+        "http://schemas.android.com/apk/res/android:process(0x01010011)=\":dolphin\" (Raw: \":dolphin\")",
+        "http://schemas.android.com/apk/res/android:screenOrientation(0x0101001e)=11",
+        "http://schemas.android.com/apk/res/android:configChanges(0x0101001f)=0x000004a0",
+        "http://schemas.android.com/apk/res/android:enableOnBackInvokedCallback(0x0101066c)=false"
+      ],
+      "children": []
+    }
+  ],
+  "newPermissions": 0,
+  "engineDeclarationsPreserved": true
+}

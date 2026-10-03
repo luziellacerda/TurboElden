@@ -1,0 +1,738 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList sourceSha256="e4c7dbefe389a5a7ca0de7df031dab6820e1cfe9a891979cd42f89ee1103af23" metadataOnly="true">
+  <game sourceOrdinal="1">
+    <name>Home Mahjong</name>
+    <desc>Home Mahjong es un juego de mahjong para SG-1000. El juego se vendió con una pantalla de plástico que se pega al televisor para ocultar las fichas de los otros jugadores en el modo de juego de 2 jugadores.</desc>
+    <genre>Juego de mesa asiático / Mahjong</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="2">
+    <name>Mahjong</name>
+    <desc>Este es el primer juego de mahjong lanzado para el SG-1000, desarrollado y publicado por Sega en 1983. A diferencia de los juegos posteriores de mahjong lanzados para el sistema, este juego es solo para un jugador.</desc>
+    <genre>Puzzle / Mahjong</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="3">
+    <name>Othello</name>
+    <desc>Othello (? ? ?) es un videojuego SG-1000 basado en el juego de mesa Othello. Existen dos versiones de Othello para el SG-1000. La primera versión, lanzada en 1983, fue incorporada en Othello Multivision (que es de donde toma su nombre el sistema). Más tarde, Sega volvería a lanzar este juego en forma de cartucho en 1985, ofreciendo importantes mejoras gráficas y de IA sobre la versión de Tsukuda Original.</desc>
+    <genre>Juego de mesa asiático</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="4">
+    <name>Pachinko 2</name>
+    <desc>Pachinko II es la secuela de Pachinko, y fue lanzado para el SG-1000 en 1984.</desc>
+    <genre>Casino</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="5">
+    <name>Pachinko</name>
+    <desc>Pachinko es un juego SG-1000 desarrollado y publicado por Sega en 1983. Es, como su nombre indica, una versión de videojuego de Pachinko, un popular juego en Japón. El juego no vio un lanzamiento internacional. Pachinko es un juego extremadamente raro para el SG-1000. Poco después de su lanzamiento, fue retirado de la venta debido a un error que rompe el juego (necesidad de verificar) y muy pocas copias quedan en manos de los coleccionistas. Esta es probablemente la primera instancia de un retiro en la historia de Sega (?). A partir de 2013, una subasta reciente del juego en Yahoo Japón se ganó por ¥ 113,500, pero se sabe que se vende al alza desde ¥ 200,000. El error fue corregido y el juego fue relanzado unas semanas más tarde como una "secuela", Pachinko II, que es mucho más común.</desc>
+    <genre>Puzzle</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="6">
+    <name>Serizawa Hachidan No Tsumeshogi</name>
+    <desc>Serizawa Hachidan no Tsumeshogi es un juego de arcade de 1982 de Sega. Posteriormente fue portado al SG-1000. La versión arcade es extremadamente rara y está mal documentada.</desc>
+    <genre>Puzzle</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="7">
+    <name>Shinnyuushain Tooru-kun</name>
+    <desc>ÉL UTILIZÓ TODO EL ODIO, PERO SU CEREAL ... Pero ahora Mikie tiene novia. Y a él le gusta tanto, que hará cualquier cosa para enviarle un mensaje. El problema es que mucha gente realmente no quiere que él llegue. Mucha gente GRANDE. Maestros Todo el personal de cocina. Y el conserje más malo que hayas conocido. Lo están persiguiendo por toda la escuela. Desde su salón de clases, hasta el vestuario, la cafetería, el gimnasio, el patio de recreo. ¿Por qué? Él es solo un niño pequeño. Él realmente necesita un poco de ayuda.</desc>
+    <genre>Acción / Laberinto</genre>
+    <developer>Konami</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="8">
+    <name>Space Mountain</name>
+    <desc>Pilota tu caza tipo X-Wing contra enemigos TIE Fighter Fighter en este original juego SG-1000 de Tsukuda Original.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>Tsukuda Original</developer>
+    <publisher>Tsukuda Original</publisher>
+    <players>1-2</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="9">
+    <name>Wonder Boy</name>
+    <desc>Como Tom-Tom, el Wonder Boy, depende de ti rescatar a tu novia Tanya de las viles garras del monstruo que la ha secuestrado. Para hacerlo, debes navegar una serie de mundos en una carrera contra el tiempo para alcanzar tu objetivo. En el camino, lucharás contra enemigos y recogerás fruta que aumentará la cantidad de tiempo que tienes para completar tu misión.</desc>
+    <genre>Plataformas</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19860101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="10">
+    <name>Yamato</name>
+    <desc>Evite el ataque del enemigo con torpedos y misiles. Dispara a los misiles. Ten cuidado, YAMATO explotará si es golpeado de costado. Apunta al enemigo y dispara las armas. Ataca los aviones enemigos usando tus guuns de ataque rápido. ¿Puede YAMATO sobrevivir a través de esta batalla feroz?</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="11">
+    <name>Twinbee</name>
+    <desc>Los jugadores controlarán a los luchadores que se llaman 'TwinBee' y 'WinBee', que el Dr. Cinnamon desarrolló, y desafiarán la lucha al ejército. Hay dos versiones, 'Bubble system' y 'ROM', en este trabajo. Por favor, disfrute las diferencias de cada tablero.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>Konami</developer>
+    <publisher>Jumbo Team</publisher>
+    <players>1-2</players>
+  </game>
+  <game sourceOrdinal="12">
+    <name>007 James Bond</name>
+    <desc>Cuando se trata de acción e intriga rápidas, nadie lo hace mejor que Bond. James Bond. Pero puedes intentarlo cuando representas escenas de cuatro grandes clásicos de películas de James Bond. El vehículo especialmente diseñado de 007 lo llevará en el viaje de su vida, ¡por tierra, aire y bajo el mar! A través de todo, debes evitar los obstáculos, evitar a los enemigos y cumplir cuatro misiones diferentes.</desc>
+    <genre>Disparos</genre>
+    <developer>Tsukuda Original</developer>
+    <publisher>Tsukuda Original</publisher>
+    <players>1</players>
+    <releasedate>19830630T000000</releasedate>
+  </game>
+  <game sourceOrdinal="13">
+    <name>Bank Panic</name>
+    <desc>Asume el papel de un sheriff en los Estados Unidos del siglo XIX, protegiendo a un banco de ladrones armados. Hay doce puertas dispuestas en círculo, con el jugador en el centro, que se puede ver de tres en tres. Los ladrones que aparecen desde las puertas deben ser fusilados (después de sacar sus armas, para obtener una puntuación más alta) y los clientes deben ser ignorados mientras hacen un depósito. Una vez que se han hecho los depósitos de las doce puertas, el nivel está completo.</desc>
+    <genre>Disparos</genre>
+    <developer>Sanritsu Denki</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+    <rating>0.9</rating>
+  </game>
+  <game sourceOrdinal="14">
+    <name>Borderline</name>
+    <desc>Entra violentamente en la zona de energía maniobrando libremente el jeep rojo. A lo largo de las escenas primera a cuarta, continúe avanzando en un esfuerzo por destruir las fortalezas y las sedes enemigas evitando los ataques de los tanques enemigos, automóviles blindados, aviones y misiles. Comience su invasión a la siguiente escena después de destruir todas las fortalezas de la escena actual en la que está inmerso. Cuando destruye por completo la sede central en la cuarta escena final, la operación estratégica de jeep que lanzó arroja una victoria aplastante para usted !</desc>
+    <genre>Disparos</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="15">
+    <name>Cabbage Patch Kids</name>
+    <desc>It's exercise time! Anna Lee, one of the Cabbage Patch Kids, is warming up for a day of athletic adventures in the park--and she's taking you along! So stretch your muscles and get ready for a workout. This adventure is no picnic! As you stroll through the park, you'll encounter obstacles they never told you about in the Cabbage Patch. You'll leap onto floating lily pads, jump over cabbages and bouncing balls, and hop over puddles so deep they could float a ship. And that's the easy part! By the time you get back to the Park entrance, you'll know just what kind of physical shape you're really in. Are you ready for the workout?</desc>
+    <genre>Plataformas</genre>
+    <publisher>Aaronix</publisher>
+    <players>1-2</players>
+  </game>
+  <game sourceOrdinal="16">
+    <name>Chack'n Pop</name>
+    <desc>Un primer juego de acción Arcade de Taito y en muchos sentidos un precursor de su mayor éxito Bubble Bobble. El jugador controla el Chack'n pop del mismo nombre mientras intenta evitar que los monstruos destruyan sus huevos.</desc>
+    <genre>Acción / Laberinto</genre>
+    <developer>SEGA AM2</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="17">
+    <name>Champion Baseball</name>
+    <desc>Este es un juego de béisbol totalmente atractivo y emocionante en el que puedes disfrutar de todos los tipos imaginables de patrones de béisbol uno tras otro como en un juego real. Este juego te permite competir contra el equipo de la computadora (el equipo P contra el equipo C). Además, este juego ahora permite que 2 jugadores compitan entre sí y asegura que tu disfrute se verá incrementado al doble.</desc>
+    <genre>Deportes / Béisbol</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="18">
+    <name>Champion Billiards</name>
+    <desc>Champion Billiards es el primer juego en la serie "Pool Lunar" de Compile y fue lanzado sólo en Japón. A diferencia de los otros juegos de Champion Sports, no es una representación exacta ya que el objetivo es usar la bola roja para hundir las otras bolas.</desc>
+    <genre>Deportes / Billar</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19860101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="19">
+    <name>Champion Boxing</name>
+    <desc>La emoción se acumula gradualmente a medida que lucha en cada una de las rondas de 90 segundos en esta ronda de 8 asaltos. Tu oponente es un duro luchador rubio joven. Lanza DIRECTO, JAB y UPPERCUT golpea directamente a la cara del oponente o su cuerpo. Mantén la ráfaga de golpes rápidos y furiosos aprovechando tu trabajo de pies superior. Cálmate en el Nivel 1 y luego mejora tus habilidades limpiando consecutivamente los niveles más altos. Si, en el Nivel 5, ganas con un KO de 10, ¡te convertirás en el campeón del mundo!</desc>
+    <genre>Deportes / Boxeo</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="20">
+    <name>Champion Golf</name>
+    <desc>Si llueve el domingo ... es día CHAMPION GOLF. Puedes disfrutar de golpear la pelota con el palo apropiado para que coincida con el tiro, caminando por el campo con el caddie sobre sus extensos fairways, roughs, greens, estanques y áreas de bunker. Obtener un "Birdie", "Eagle" o un asombroso "Hole in One", o el aún más milagroso "Albatros" te harán sentir como si estuvieras en la cima del mundo.</desc>
+    <genre>Deportes / Golf</genre>
+    <developer>Logitec</developer>
+    <publisher>SEGA</publisher>
+    <players>2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="21">
+    <name>Champion Ice Hockey</name>
+    <desc>Champion Ice Hockey es un juego muy simple en el que juega el equipo Red contra el Blue. Un botón dispara y el otro pasa. Con las direcciones arriba y abajo controlas tanto al portero como la dirección del disparo.</desc>
+    <genre>Deportes / Hockey</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="22">
+    <name>Champion Kendou</name>
+    <desc>Champion Kendou es un juego de Kendo creado para SG-1000 y MSX que sólo salió en Japón.</desc>
+    <genre>Deportes</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19860101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="23">
+    <name>Champion Pro Wrestling</name>
+    <desc>Champion Pro Wrestling es un juego de lucha libre desarrollado para SG-1000 y después para MSX. Hay que ganar tres enfrentamiento para alzarte con la victoria.</desc>
+    <genre>Deportes / Lucha libre</genre>
+    <developer>SEGA AM2</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850201T000000</releasedate>
+  </game>
+  <game sourceOrdinal="24">
+    <name>Champion Soccer</name>
+    <desc>Champion Soccer es un juego de fútbol creado para SG-1000 y trasladado por Pony Canyon a MSX.</desc>
+    <genre>Deportes / Fútbol</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="25">
+    <name>Champion Tennis</name>
+    <desc>Servir, recibir y aplastar la pelota. Ataca el punto débil de tu rival. ¡Usa todos los rincones de la cancha para tu ventaja y obtén una victoria gloriosa sobre tu oponente! Este es un juego deportivo altamente intelectual y competitivo que requiere nervios y concentración agudos.</desc>
+    <genre>Deportes / Tenis</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="26">
+    <name>Championship Lode Runner</name>
+    <desc>Ábrete camino a través del laberinto para encontrar las cámaras secretas llenas de oro. Escalando y saltando a través de un laberinto de escaleras y plataformas, e incluso perforando ladrillos, tu Comando Intergaláctico debe atrapar o matar a los torpes guardias del Imperio que protegen la cámara. Pon a prueba tu estrategia en más de 75 niveles diferentes.</desc>
+    <genre>Plataformas / Corre y Salta</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="27">
+    <name>Choplifter</name>
+    <desc>Maneja un helicóptero en la mejor aventura de acción de la nación. Bolsillos de rehenes internacionales están atrapados. En todo el mundo En Oriente Medio. En los mares del sur Y en una base secreta en algún lugar de una caverna. Tú mandas un equipo de rescate de helicópteros. Y su trabajo es derribar su helicóptero, rescatar a los rehenes y devolverlos a un lugar seguro. Todo el tiempo esquivando y destruyendo el peligroso fuego enemigo. ¡Un juego de helicóptero lleno de acción en su mejor momento!</desc>
+    <genre>Shoot'em Up / Horizontal</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="28">
+    <name>Congo Bongo</name>
+    <desc>Bongo es un mono travieso que incendia la tienda de safari. El cazador de safaris perdió su tienda y sus posesiones, y busca venganza del simio por su broma práctica. El cazador de safaris persigue a Bongo y atraviesa el peligroso Congo para vengarse</desc>
+    <genre>Plataformas</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="29">
+    <name>C_so!</name>
+    <desc>C_So! es un juego 1985 SG-1000 desarrollado por Compile y publicado por Sega. Es un puerto de un juego de MSX del mismo año, que fue publicado por Pony Canyon. El juego hace que el jugador recoja varios objetos y derrote a los monstruos mediante el uso de sierras. Para progresar, todos los elementos deben ser recolectados y todos los monstruos deben ser destruidos. También hay un modo de edición, que permite al jugador crear sus propios niveles.</desc>
+    <genre>Plataformas / Corre y Salta</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="30">
+    <name>Doki Doki Penguin Land</name>
+    <desc>El objetivo básico de Doki Doki Penguin Land es guiar un huevo desde la parte superior de la pantalla hasta la parte inferior. Hacerlo significa cavar hacia abajo, asegurándose de que no se rompa en el proceso. Como rompecabezas de plataformas, todo se ve afectado por la gravedad, y si el huevo cae desde una gran altura, se romperá. El éxito se logra bajando cuidadosamente por el campo de juego.</desc>
+    <genre>Puzzle</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="31">
+    <name>Dragon Wang</name>
+    <desc>El juego fue inspirado por el clásico arcade Kung-Fu Master. Más tarde recibió una secuela llamada Kung Fu Kid. El protagonista es Wang (inspirado en Jackie Chan y / o su personaje Thomas), de ahí el desafortunado título Dragon Wang. Wang es chino para King.</desc>
+    <genre>Plataformas / Luchador con desplazamiento</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="32">
+    <name>Drol</name>
+    <desc>Entra en el mundo de los sueños divertido, desafiante y lleno de suspenso de Drol, donde una pequeña niña pelirroja y su hermanito de hélice esperan tu rescate. Han sido atraídos por la maldición de un hechicero a las ruinas de una civilización perdida en varios niveles. Hipnotizados, deambulan sin rumbo por los pasillos subterráneos, ignorando los peligros que los rodean. Es su tarea - como un héroe equipado con una mochila cohete y alcance de radar de pantalla completa - esquivar saltos de escorpiones, monstruos y serpientes, pavos voladores, espadas, dagas, flechas, imanes, hechiceros y aspiradoras (!) en sus intentos de reunir a los niños con su madre. ¡El sentido del humor irónico de Drol y las imágenes de dibujos animados increíblemente detalladas hacen de este juego un encanto!</desc>
+    <genre>Plataformas / Corre y Salta</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="33">
+    <name>Elevator Action</name>
+    <desc>Eres el Agente 17 (nombre en clave: " Otto") . Tu misión es la de asegurar todos los documentos secretos superiores de un edificio de seguridad y escapar en el coche, que se encuentra en el sótano del edificio. Enemigos espías están dispersos por todo el edificio de 30 pisos y tienen una sola misión: ejecutar el Agente 17 a toda costa. Hay varias formas en las que el Agente 17 puede matarlos: Disparar con su arma. Patadas saltando sobre ellos. Disparar una luz en el techo, mientras que están en un ascensor, dejando caer la luz sobre uno de ellos. Aplastarles con un ascensor.</desc>
+    <genre>Plataformas / Tirador con desplazamiento</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="34">
+    <name>Exerion</name>
+    <desc>El FIGHTER EX se apresuró a atacar a los monstruosos grupos enemigos en los 6 misteriosos mundos DIMENSIONALES diferentes. El enemigo está constantemente persiguiendo al FIGTHER EX. El misil del figther ataca al enemigo y cae como lluvia de granizo. ¡Estén alerta! El "Dual Beam" te permite disparar contra el enemigo y el "Single Beam" para atacarlo de forma rápida y continua. ¡Mira qué éxito tienes en luchar contra el enemigo a través de los 6 peligrosos mundos!</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="35">
+    <name>Girl's Garden</name>
+    <desc>Para evitar que su novio Minto vaya con otra niña pequeña llamada Cocco, Papri debe recoger diez flores diferentes y devolverlas a la casa de su novio. Las flores deben atraparse en plena floración para que la cantidad de flores en su posesión aumente; atrapar flores demasiado temprano considerará que las flores se desperdiciarán y las flores atrapadas demasiado tarde se marchitarán. Las flores marchitas arruinarán el ramo, causando que el jugador pierda la mitad de las flores. Los osos tienen gusto por la miel y hacen que el jugador pierda uno de dos corazones si uno de ellos ataca al jugador. Sin embargo, la miel puede soltarse para hacer que el oso sea temporalmente inofensivo para el jugador. Las abejas aparecen como aliadas del jugador, dándole elementos de bonificación de vez en cuando y miel adicional si el jugador lo atrapa en una flor.</desc>
+    <genre>Aventura</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19841201T000000</releasedate>
+  </game>
+  <game sourceOrdinal="36">
+    <name>Golgo 13</name>
+    <desc>El juego te hace disparar a las ventanas de un tren que pasa. Golpear objetos que se interpongan hará que la bala rebote y potencialmente te mate.</desc>
+    <genre>Disparos</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="37">
+    <name>Gp World</name>
+    <desc>La mecánica de juego en esta versión de "8 bits" de GP World es similar en concepto al GP World de arcade pero dado el hardware tremendamente diferente, diferente en ejecución. Lo más notable es que todos los gráficos en el juego son generados en tiempo real por el SG-1000 en lugar de ser transmitidos desde un LaserDisc, lo que a su vez conduce a una física del automóvil más predecible. El concepto de carreras en cuatro tipos diferentes de GP se descarta, en su lugar se reemplaza con un GP que abarca el mundo y tres dificultades seleccionables. Al igual que el original, el juego utiliza una perspectiva en tercera persona similar a la de Turbo (aunque la cámara está situada detrás del volante), y ve al jugador competir en un coche de fórmula uno, navegando por el recorrido y evitando a otros conductores. Esta versión también es notable por tener un editor de pistas simplista. Es probable que el controlador SH-400 haya sido diseñado teniendo en cuenta este juego.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="38">
+    <name>Gulkave</name>
+    <desc>Gulkave es un juego de disparos SG-1000 desarrollado por Compile y publicado por Sega en 1986. Es un tirador horizontal, en el cual el jugador controla una nave espacial que debe destruir las 8 fortalezas del Imperio Gulbas y varios enemigos diferentes. A pesar de las limitaciones de la consola, hay 30 "actos", y cada "acto" tiene un fondo diferente y hay numerosos potenciadores disponibles, que lo diferencian de la mayoría de los otros shooters SG-1000 en el momento.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19860101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="39">
+    <name>H.e.r.o.</name>
+    <desc>Desesperados mineros atrapados! ¿Serán estos túneles sus tumbas? Rod Hero es su última esperanza! Su paquete de Propulsión lo impulsa hacia los pozos de la mina, ¡y al peligro!</desc>
+    <genre>Plataformas</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="40">
+    <name>Hang-on 2</name>
+    <desc>Hang-On II es una secuela SG-1000 del Hang-On aclamado por la crítica. A pesar del nombre, el juego es una secuela directa de la versión Mark III de Hang-On, y es prácticamente idéntica a ese juego. La única diferencia son los gráficos degradados y la adición de música de la versión arcade. Mientras tanto, Super Hang-On es la continuación directa del juego de arcade. Es compatible con el controlador de asa de bicicleta BH-400 y sería el único juego SG-1000 diseñado para ello (aunque el periférico es compatible con Sega Master System y Sega Mega Drive).</desc>
+    <genre>Carreras, Conducción / Motos 3ª persona</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="41">
+    <name>Hustle Chumy</name>
+    <desc>En Hustle Chumy, los jugadores controlan a un ratón llamado Chumy que necesita recolectar manzanas (y otros alimentos) en una alcantarilla, evitando otras criaturas a medida que avanza. A medida que Chumy come más comida, su velocidad disminuye, pero sus bolas de fuego reciben un rango más largo. Los niveles tienen diferentes diseños. Hay varios tipos de enemigos en el juego, la mayoría de los cuales pueden ser derrotados con bolas de fuego. Murciélagos: los murciélagos vuelan sobre Chumy. Mecha-Dinos: los Mecha-Dinos son indestructibles, aunque Chumy puede ralentizarlos con bolas de fuego. Gators: los cocodrilos generalmente duermen en un lugar, pero a veces se mueven lentamente. Gatos: los gatos pueden saltar como Chumy. Ninjas: los ninjas deben ser golpeados con tres bolas de fuego para ser derrotados.</desc>
+    <genre>Plataformas / Corre y Salta</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="42">
+    <name>Hyper Sports</name>
+    <desc>Hyper Sports es un juego deportivo competitivo que presenta siete eventos comúnmente vistos en los Juegos Olímpicos. Fue un juego de conexión para los Juegos Olímpicos de verano de 1984 en Los Ángeles, y una secuela de Track &amp; Field anterior de Konami. Al igual que con Track &amp; Field, el jugador tiene que pasar cada uno de los eventos del juego para pasar al siguiente. El jugador, como varios atletas, participa en los siguientes siete eventos. Para progresar de uno a otro, el jugador debe aprobar un puntaje mínimo de "calificación" para cada evento. Por lo general, los eventos implican presionar los botones lo más rápido posible, o algún tiempo muy específico.</desc>
+    <genre>Deportes / Multideporte</genre>
+    <developer>Konami</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="43">
+    <name>Knightmare</name>
+    <desc>La Diosa Afrodita ha sido capturada por el Rey del Inframundo y se lleva a cabo en su Castillo de la Pesadilla. Profundamente enamorada de ella, la guerrera Popolon se embarca en una misión para rescatarla. Sin embargo, el Castillo está oculto, y Popolon está plagado de pesadillas de miles de monstruos que atormentan su amor mientras lo buscan ciegamente. Entonces, una noche, la Diosa Hera le habla, le muestra un camino hacia su objetivo más allá de las laderas del Monte Atos, y le revela el poder de las joyas y cristales mágicos. Con un espíritu renovado, Popolon se dirige hacia el Castillo, para enfrentar los horrores internos.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>Konami</developer>
+    <publisher>Jumbo Team</publisher>
+    <players>1</players>
+  </game>
+  <game sourceOrdinal="44">
+    <name>Lode Runner</name>
+    <desc>En este juego, se requiere que el jugador "piense" y "actúe" repetidamente para atravesar y borrar las escenas del laberinto resolviendo sus misteriosos acertijos mientras evita a los guardias enemigos que lo persiguen implacablemente. Después de recolectar todos los cofres de oro, debes inventar nuevas ideas para desafiar con éxito la escena del siguiente nivel. Aunque la experiencia adquirida con la acción de juego anterior te ayudará a superar algunas de las futuras escenas de laberintos, todavía tienes que estar constantemente alerta. También puedes disfrutar creando tus propios juegos usando el teclado. Este es un juego intrigante que requiere profundidad intelectual para maniobrar hábilmente las estructuras de laberinto desconocidas que se desarrollan consecutivamente una tras otra.</desc>
+    <genre>Plataformas / Corre y Salta</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="45">
+    <name>Magical Kid Wiz</name>
+    <desc>Encarnas a un pequeño mago dotado de un bastón mágico con el que podrás arrojar pequeñas bolas de fuego para ir al rescate de una hermosa princesa.</desc>
+    <genre>Aventura</genre>
+    <publisher>Aaronix</publisher>
+    <players>1</players>
+    <releasedate>19691231T210000</releasedate>
+    <rating>0.6</rating>
+  </game>
+  <game sourceOrdinal="46">
+    <name>Magical Tree</name>
+    <desc>Magical Tree is a vertically scrolling platform game developed by Konami for the MSX home computer, and published in 1984. The player character is an 'Indian brave' stereotype who wears a tanned vest and trousers, and a headband with a feather. The player ascends a magical tree by hopping from branch to branch and climbing vines and ladders—while also dodging larvae, owls, and lightning bolts. The player can jump and dangle from branches. He earns points by gathering apples, arrows, daggers, and coronets.</desc>
+    <genre>Plataformas</genre>
+    <developer>Konami</developer>
+    <publisher>Aaronix</publisher>
+    <players>1-2</players>
+    <releasedate>19691231T210000</releasedate>
+    <rating>0.55</rating>
+  </game>
+  <game sourceOrdinal="47">
+    <name>N-sub</name>
+    <desc>Una gran batalla se desarrolla en un mar azul cobalto. Dispara un torpedo cuando encuentres las naves enemigas. Evite el ataque del destructor mediante el uso de misiles, torpedos y bombas de profundidad. Contraatacar y hundir las naves del enemigo. ¡El ataque enemigo se vuelve más intenso con cada nueva ronda!</desc>
+    <genre>Disparos / Tipo Space Invaders</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="48">
+    <name>Ninja Princess</name>
+    <desc>Ninja Princess conocida como Sega Ninja en el oeste, es un juego de arcade Sega System 1 de Sega. Es un juego de disparos / acción de arriba hacia abajo, en el que juegas como una princesa disfrazada de ninja que intenta detener al malvado tirano Gyokuro.</desc>
+    <genre>Disparos</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19860101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="49">
+    <name>Orguss</name>
+    <desc>En el juego, el jugador toma el control de un robot que puede transformarse en una nave estelar. Está basado en la serie de anime de ciencia ficción Super Dimension Century Orguss.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="50">
+    <name>Pacar</name>
+    <desc>PACAR, un coche travieso, recorre las rutas 3D avanzando y retrocediendo libremente a velocidades rápidas y lentas. Intenta eliminar todos los puntos en la pantalla mientras evitas los 2 tipos de coches enemigos. Cuando pasas por los puntos especiales, PACAR se vuelve cada vez más invencible a medida que aumenta su poder y quedará libre de daños incluso cuando se estrelle contra el vehículo enemigo. ¡Mantén el ritmo tórrido y destruye la mayor cantidad de autos enemigos posible!</desc>
+    <genre>Acción / Laberinto</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="51">
+    <name>Pop Flamer</name>
+    <desc>"POP FLAMER" es un ratón que maneja un lanzallamas. Tú, como jugador, intenta romper globos y suministrar combustible para el lanzallamas mientras elimina los 3 tipos de MONSTRUOS y el obstáculo RANA que está obstruyendo las rutas. Sin embargo, sea cuidadoso con el haz tranquilizador del "HARADON". Cuando estés expuesto a este rayo, ¡no podrás mover la temporalidad! Cuando el POP FLAMER toma una "bebida de encendido", se transforma en un "SUPER MOUSE" y usted puede obtener puntos altos tragando los MONSTRUOS cercanos de un trago !!</desc>
+    <genre>Acción / Laberinto</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="52">
+    <name>Road Fighter</name>
+    <desc>Road Fighter es un juego de carreras desarrollado por Konami. Jumbo llevó la versión MSX del juego al SG-1000 en Taiwán. Se desconoce si tenían una licencia para hacerlo. Más tarde se lanzó en Corea del Sur como una tarjeta para el Sistema Maestro de Sega.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Konami</developer>
+    <publisher>Jumbo Team</publisher>
+    <players>1</players>
+  </game>
+  <game sourceOrdinal="53">
+    <name>Rock N' Bolt</name>
+    <desc>Antes de que esperes la confusión más complicada y confusa del mundo de la construcción de planos, pernos, vigas y vigas alucinantes. Tú y solo tú tendrás que resolverlo todo y ponerlo todo junto. Y no tienes todo el día. Es un reto de gran altura deslumbrante, vertiginoso e increíblemente emocionante. Todos los 100 pisos de ella. Tú girarás, saltarás y bailarás de haz en haz, de rompecabezas en rompecabezas. Gana sueldos extra y contrata trabajadores adicionales. Entonces, coge tu sombrero y ponte las botas. Estás a punto de descubrir cómo la música caliente y la alta energía pueden ayudar a llenar un orden muy, muy alto.</desc>
+    <genre>Puzzle</genre>
+    <developer>SEGA AM2</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="54">
+    <name>Safari Hunting</name>
+    <desc>Sumérgete en la jungla y caza animales feroces. Tu arma es una poderosa arma tranquilizadora. Capture las serpientes dormidas, los gorilas, los leones y los elefantes colocándolos en una jaula. Capture tantos animales como sea posible, mientras considera el tiempo efectivo del tranquilizante y la cantidad de combustible disponible.</desc>
+    <genre>Disparos</genre>
+    <developer>Compile</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="55">
+    <name>Safari Race</name>
+    <desc>En la vasta llanura de sabana, la SAFARI RACE acaba de ponerse en marcha. Sigue corriendo a toda velocidad, pasando por otros vehículos mientras evitas varios animales salvajes que cruzan la calle. Conduzca rápido, siempre hacia adelante, teniendo en cuenta el tiempo limitado, el consumo de combustible y las curvas peligrosas. Pase por los puntos de control. Haga funcionar su automóvil a máxima aceleración hacia la meta con el motor funcionando a su capacidad máxima.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="56">
+    <name>Sega Flipper</name>
+    <desc>Un sonido de aleta rítmica pegadizo acompaña este videojuego de pinball de la computadora. Con un D.T. (drop target) que te permite ganar puntos de bonificación y un K.H. (kicker hole) que le da derecho a ganar puntos de bonificación X una tasa de multiplicación! Apunta bien, ¡y dispara! Aquí te deseo éxitos mientras giras alegremente por el campo de juego en busca de la proverbial "puntuación más alta".</desc>
+    <genre>Pinball</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="57">
+    <name>Sindbad Mystery</name>
+    <desc>SINDBAD, un chico aventurero, viene a TREASURE ISLAND. Él quiere encontrar el tesoro exitosamente a través de las pistas en el MAPA DEL TESORO abriendo el? paneles. Para desafiarlo, los MONSTRUOS están aquí y allá, holgazaneando en las rutas laberínticas de la isla. Junta tu coraje, tira la PIEDRA hacia adelante y destruye los MONSTRUOS. ¡Después de encontrar con éxito el TESORO, sigamos con la próxima aventura en otra ISLA TESORO más maravillosa!</desc>
+    <genre>Puzzle</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="58">
+    <name>Sokoban</name>
+    <desc>¡Sokoban es la base de Shove It! ... The Warehouse Game, lanzado para la Mega Drive de Sega.</desc>
+    <genre>Puzzle</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="59">
+    <name>Space Invaders</name>
+    <desc>¡Atención todos los terrícolas! Se han identificado infinidad de hordas alienígenas cerca de ti. Evita que los peligrosos Space Invaders aterricen en tu territorio. Usa tu cañón para defenderte de las oleadas de invasores alienígenas descendentes. ¡No dejes que caigan al suelo o todo habrá terminado para ti y la Tierra! ¡Destrúyelos y gana puntos!</desc>
+    <genre>Disparos / Tipo Space Invaders</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="60">
+    <name>Space Slalom</name>
+    <desc>Aunque en la superficie parece ser un shoot-em-up vertical con temática espacial, en realidad no hay tiroteos. El jugador controla un transbordador y debe navegarlo a través de un recorrido definido por estrellas de colores, similar al esquí de slalom. El jugador también debe evitar obstáculos, y se le otorgarán puntos extra según su velocidad en el recorrido.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="61">
+    <name>Star Force</name>
+    <desc>Moverse en la oscuridad del cosmos es un planeta malvado y misterioso llamado GORDESS. Todos dejaron de luchar contra GORDESS debido a su increíble poder, hasta que un día un soldado que montaba un patrullero espacial desafió a GORDESS a luchar. ¡Únete a STAR FORCE y viaja a través de la galaxia para vencer a GORDESS!</desc>
+    <genre>Shoot'em Up / Vertical</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="62">
+    <name>Star Jacker</name>
+    <desc>Un juego espacial de "nueva sensación". Gloriosas tropas espaciales luchan contra el ejército invasor "Dester". Evite los ataques continuos de OVNIS que se entrelazan a izquierda y derecha, arriba y abajo. Contraataque usando su botón de fuego. Dirige las tropas espaciales al Portador que pasa por las diversas zonas misteriosas.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="63">
+    <name>Super Tank</name>
+    <desc>Super Tank es un juego de shoot-em-up para el SG-1000. El jugador maneja un tanque y tiene la tarea de disparar y destruir unidades y estructuras enemigas.</desc>
+    <genre>Disparos</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19860101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="64">
+    <name>Black Onyx, The</name>
+    <desc>El juego tiene lugar en la ciudad de fantasía de Utsuro como una fiesta de hasta cinco héroes valientes (y personalizables) que se adentran en un laberinto subterráneo para encontrar el legendario Black Onyx y romper la maldición de la ciudad.</desc>
+    <genre>Juego de Rol</genre>
+    <developer>Bullet Proof Software</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19870101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="65">
+    <name>Castle, The</name>
+    <desc>El juego tiene una trama bastante estándar, rescatar a una princesa de un castillo, aunque el juego en sí se consideró muy grande para la época. También contiene un sistema de mapas similar al de los juegos posteriores de Metroid y Castlevania.</desc>
+    <genre>Plataformas</genre>
+    <developer>ASCII</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19860101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="66">
+    <name>Yie Ar Kung-fu 2</name>
+    <desc>Veinte años después de la derrota de Chop Suey Gang por Lee, uno de sus miembros resurge con otros siete señores de la guerra y se proclama el Emperador Yie Gah. Formado en el arte de Kung Fu por su padre, el hijo de Lee, Lee Young, se propone derrotar a esta nueva amenaza y salvar a China de su mala influencia.</desc>
+    <genre>Lucha / Versus</genre>
+    <developer>Konami</developer>
+    <publisher>DahJee</publisher>
+    <players>1-2</players>
+  </game>
+  <game sourceOrdinal="67">
+    <name>Yie Ar Kung-Fu</name>
+    <desc>Yie Ar Kung-Fu (イー・アル・カンフー) is an early arcade versus fighting game developed by Konami. It was set to appear on the SG-1000, but was cancelled for unknown reasons, most likely due to the system's declining popularity at that time. Despite this, an SG-1000 port of the game was released in Taiwan by Aaronix, under the localised name of Gōngfu (功夫). It is based on the MSX version, and therefore only uses one button. It is not known whether Aaronix had the rights to bring the game to the system - it is likely an unlicensed version of the game of which Aaronix ported to the system themselves, but it may be a continuation of the scrapped official port.</desc>
+    <genre>Fighting, Unofficial</genre>
+    <players>1</players>
+    <releasedate>19700101T000000</releasedate>
+    <rating>0</rating>
+  </game>
+  <game sourceOrdinal="68">
+    <name>Zaxxon</name>
+    <desc>ZAXXON te empuja hacia las profundidades del espacio exterior. Pon a prueba tus habilidades como piloto en la posición de comando. Prepárese para un desafío lleno de acción de supervivencia espacial. Sume puntos mientras bucea, asciende y desciende para destruir la fortaleza flotante del enemigo. ¡Esquiva las barreras láser mortales, los misiles enemigos y los disparos rápidos! Destruye los tanques de combustible enemigos y tu propio suministro se repone. Sobrevive al ataque de la flota de combate del enemigo y enfrenta el último desafío ... el poderoso robot blindado ZAXXON.</desc>
+    <genre>Shoot'em Up / Diagonal</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="69">
+    <name>Zippy Race</name>
+    <desc>El objetivo del juego es llegar al final de cada etapa de la carrera de motos de costa a costa del personaje del jugador desde Los Ángeles hasta Nueva York antes de que se agote el suministro de combustible. En el camino, el corredor debe evitar el tráfico vehicular y tener en cuenta las bifurcaciones en el camino, recolectando combustible extra y obteniendo bonificaciones cuando aparecen.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="70">
+    <name>Zoom 909</name>
+    <desc>Es el siglo 25. Eres Buck Rogers peleando la batalla de Planet Zoom. Con habilidad se desliza a través de mensajes de electrones de zapping. Esquiva y destruye tolvas espaciales y platillos alienígenas. ¡Tu carrera contra la muerte acaba de comenzar! Prepárate para la batalla con tu enemigo más poderoso ... ¡el barco madre! Nunca es fácil cuando es hacer o morir. Debes golpear el centro muerto de la Nave Madre. Cualquier cosa menos solo desperdiciará el combustible precioso. Apúntate, pero date prisa ... ¡tu combustible está peligrosamente bajo!</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="71">
+    <name>Bomb Jack</name>
+    <desc>Toma el control de Jack y recoge todas las bombas para pasar a la siguiente ronda. Esto no es tan fácil como suena con numerosos enemigos como pájaros, tortugas y momias que se interponen en el camino. Los fondos para los Niveles consisten en ubicaciones reales como; Miami Beach, Sphynx o Sastle Neuschwanstein. Tiene 99 niveles pero una vez que alcanzas 99 el juego salta de vuelta a la ronda 0. Los niveles individuales realmente se repiten mucho antes.</desc>
+    <genre>Plataformas</genre>
+    <developer>Tehkan</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+    <rating>0.45</rating>
+  </game>
+  <game sourceOrdinal="72">
+    <name>Circus Charlie</name>
+    <desc>¿Eres el payaso capaz de enfrentarse a actos circenses extremos? ¡Acércate! ¡Sube! Observa cómo el increíble payaso Charlie realiza acrobacias mortales para tu diversión. Saltar a través de aros en llamas a lomos de un león, esquivar monos salvajes en la cuerda floja, caminar sobre globos, montar en un campo de camas elásticas suspendidas, balancearse de cuerda en cuerda por encima del suelo... ¡no hay reto lo suficientemente loco para Charlie! Guía a Charlie y ayúdale a llegar al final de cada etapa, ¡y acumula puntos por el camino! ¡Un movimiento en falso y adiós Charlie! Si te equivocas demasiadas veces, Charlie será despedido.</desc>
+    <genre>Plataformas / Corre y Salta</genre>
+    <publisher>Aaronix</publisher>
+    <players>1-2</players>
+  </game>
+  <game sourceOrdinal="73">
+    <name>Flicky</name>
+    <desc>El pequeño bebé, PIOPIO, se ve tomando el sol en la terraza soleada brillante. Ahora es el momento para que los pequeños PIOPIOS tomen su bocadillo a media tarde, FLCKY, tu madre, viene a llevarte a todos a casa. Volvamos saltando alegremente tomados de la mano con mamá FLICKY. ¡Oh, oh, tenemos un gran problema! El gato callejero malhumorado (NYANNYAN) está por llegar. Escápese saltando sobre él y golpeando martillos y tazas en un esfuerzo por golpear y destruir al gran gato malo. FLICKY, realmente te sentirás aliviado cuando hayas llevado a todos tus PIOPIO de tu bebé a casa, ¿no es así?</desc>
+    <genre>Plataformas / Corre y Salta</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19840101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="74">
+    <name>King's Valley</name>
+    <desc>Antiguo Egipto en la época de los faraones, cuando la realeza solía enterrar incontables joyas misteriosas con ellos en sus tumbas. ¡Un viaje de aventura arqueológica al Valle del Rey (Valle de los Faraones) en busca de misteriosas joyas ocultas en las Tumbas Reales!</desc>
+    <developer>Aaronix</developer>
+    <publisher>DahJee</publisher>
+    <players>1</players>
+    <releasedate>19691231T210000</releasedate>
+    <rating>0</rating>
+  </game>
+  <game sourceOrdinal="75">
+    <name>Monaco Gp</name>
+    <desc>Un fórmula rojo que viaja a alta velocidad por las calles, se acelera, salta, maniobra a la derecha e izquierda para evitar que los autos obstruyan el camino y los autos imprudentes que se acercan a su máquina ........ Esté en el busque una ambulancia que pase de repente ......... ¡Y esté atento a las señales! También se presentan retos emocionantes como las zonas de deslizamiento, los sitios de construcción peligrosos, así como las curvas pronunciadas y los puentes estrechos de la bahía. Cuando está en el túnel, los faros de su automóvil son lo único en lo que puede confiar. Después de mejorar tu habilidad pasando por el nivel 1 de principiante, puedes pasar a los niveles altos más difíciles 2 y 3.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="76">
+    <name>Ping Pong</name>
+    <desc>Ping-Pong is an arcade ping-pong game by Konami. Aaronix ported from the MSX version of the game to the SG-1000 in Taiwan without a license as Pīngpāng qiú (乒乓球) .</desc>
+    <genre>Sports, Unofficial</genre>
+    <players>1</players>
+    <releasedate>19700101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="77">
+    <name>Pippols</name>
+    <desc>Pippols es un juego de acción de Konami. La versión MSX del juego fue llevada al SG-1000 en Taiwán. Requiere que se ejecute el adaptador de 8kB RAM.</desc>
+    <developer>Konami</developer>
+    <publisher>Jumbo Team</publisher>
+    <players>1</players>
+  </game>
+  <game sourceOrdinal="78">
+    <name>Pitfall 2 - The Lost Caverns</name>
+    <desc>Aquí estoy, Pitfall Harry, cayendo en picado hacia el oscuro trueno del agua corriendo debajo ... y pensando en la noche en que llamó David Crane. "Espero que estés bien descansado", había dicho. Demasiado descansado, dije. Estaba listo para la acción. Me preguntó si había escuchado historias sobre las legendarias cavernas perdidas de Machu Picchu en Perú. O de un rugiente, afluente subterráneo inexplorado del río Urubamba repleto de cascadas y anguilas eléctricas mortales. "Sí, he dicho. Me preguntó si conocía al infame y maldito Raj Diamond. O del robo reciente de lingotes de oro del depósito de lingotes de oro de EE. UU. En Fort Knox. ¿Y si hubiera oído hablar de murciélagos vampiros? ¿Ranas venenosas? Escorpiones Albino? ¿El temido cóndor andino? "Sí, he dicho. ¿Y aún podría correr? ¿Escalada? ¿Saltar? ¿Podría ... nadar? "Si si SI SI." "Bien", dijo Crane. "¿Entonces lo harás?" "Por supuesto", dije. Si tan solo hubiera sabido ..</desc>
+    <genre>Plataformas</genre>
+    <developer>SEGA AM2</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19850101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="79">
+    <name>Rally-x</name>
+    <desc>Rally-X es un juego de arcade de 1980 de Namco que fue llevado al MSX en 1984. Posteriormente fue trasladado al SG-1000 en Taiwán.</desc>
+    <genre>Carreras, Conducción</genre>
+    <publisher>DahJee</publisher>
+    <players>1</players>
+    <rating>0.55</rating>
+  </game>
+  <game sourceOrdinal="80">
+    <name>Sega-galaga</name>
+    <desc>Toma el control de una nave espacial de combate y derriba a los alienígenas invasores. Ten cuidado con las naves nodrizas, que intentarán robarte a tu luchador. Rescata guerreros capturados para duplicar tu potencia de fuego. Obtén bonos perfectos mientras te abres camino a través de ola tras ola en diferentes etapas desafiantes.</desc>
+    <genre>Shoot'em Up / Vertical</genre>
+    <developer>SEGA</developer>
+    <publisher>SEGA</publisher>
+    <players>1-2</players>
+    <releasedate>19830101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="81">
+    <name>Tank Battalion</name>
+    <desc>En Tank Battalion, controlas un tanque en un laberinto. Uno tras otro, los tanques enemigos entran al laberinto, y debes dispararles a todos antes de que alcancen y destruyan tu base. Las paredes del laberinto se pueden disparar y destruir. Después de que se destruyan todos los tanques blancos, se pasa al siguiente nivel. Cada diseño de nivel requiere diferentes tácticas, dependiendo de las formaciones de las paredes. Algunos puntos en ciertos niveles hacen que las tácticas de emboscada sean perfectas, en otros niveles debes avanzar y retroceder para erradicar los tanques enemigos. De vez en cuando aparece un tanque rojo, dispara para obtener puntos de bonificación.</desc>
+    <genre>Acción / Laberinto</genre>
+    <developer>Namco</developer>
+    <publisher>DahJee</publisher>
+    <players>1</players>
+  </game>
+  <game sourceOrdinal="82">
+    <name>Legend Of Kage, The</name>
+    <desc>Este clásico juego de acción ninja apareció por primera vez en salas recreativas en 1985 y se hizo popular instantáneamente. Como el ninja de Iga llamado "Kage", los jugadores se embarcan en una aventura llena de acción a medida que avanzan hacia un castillo mágico donde la princesa "Kiri" es mantenida cautiva por "Yohshirou Yukikusa". Para mantenerse con vida, los jugadores se mueven vertical y horizontalmente a través de los entornos de bosques y castillos y ejecutan saltos masivos, todo mientras usan cuchillos de estrella arrojadiza y una espada para derrotar hordas de enemigos.</desc>
+    <genre>Plataformas / Tirador con desplazamiento</genre>
+    <developer>Taito</developer>
+    <publisher>DahJee</publisher>
+    <players>1-2</players>
+    <rating>0.45</rating>
+  </game>
+  <game sourceOrdinal="83">
+    <name>Bomberman Special</name>
+    <desc>Bomberman Special es una versión lanzada para MSX de la serie de juegos Bomberman. La versión de SG-1000 salió en Taiwan sin licencia.</desc>
+    <genre>Acción / Laberinto</genre>
+    <developer>Hudson</developer>
+    <publisher>DahJee</publisher>
+    <players>1</players>
+    <rating>0.85</rating>
+  </game>
+</gameList>

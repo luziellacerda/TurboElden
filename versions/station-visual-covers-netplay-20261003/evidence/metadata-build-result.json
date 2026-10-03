@@ -1,0 +1,25 @@
+{
+  "serverMap": "E:\\ESTUDO APK\\work\\server-auth-handoff\\Servidor-pix-implementar-faltas-20261002\\docs\\station-android\\catalogo-candidato-cruzado-20261003.tsv",
+  "serverMapSha256": "d030cbecc3a9e406cde24bba9583ec2f8e0920df6b65acb623e8d91c3350de46",
+  "items": 1816,
+  "descriptions": 1804,
+  "missing": 12,
+  "platforms": {
+    "megadrive": 887,
+    "megadrivebr": 94,
+    "snes": 644,
+    "snesbr": 191
+  },
+  "descriptionsRestoredByExactLocalIdentity": 29,
+  "supplementalSearchCounts": {
+    "unique-description": 29,
+    "missing": 6,
+    "ambiguous": 6
+  },
+  "sourceFilesImported": 180,
+  "uniqueXmlAssets": 167,
+  "sourceFilesMissing": 20,
+  "sourceFilesInvalid": 0,
+  "legacyGameXmlPreserved": 36,
+  "identityPolicy": "exact server itemId + source ordinal + exact source name; missing desc only from same platform and exact full name or ROM stem with a unique description; no fuzzy fallback"
+}

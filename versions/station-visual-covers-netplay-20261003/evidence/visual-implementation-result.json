@@ -1,0 +1,130 @@
+{
+  "nativeFullCompile": {
+    "status": "passed during parent R2 integration",
+    "sha256": "5edea19f156568d8801a80104b36fc4f7e060e81d55badc473e874a437546b30",
+    "log": "native-build.log"
+  },
+  "androidRuntime": "not executed by this subtask",
+  "pythonTests": {
+    "count": 13,
+    "passed": 13
+  },
+  "nativeLayout": {
+    "kind": "clang++ -std=c++17 -fsyntax-only; static_assert calls actual helper",
+    "cases": 98,
+    "passed": true
+  },
+  "requiredIncludes": [
+    {
+      "after": "native_laser.h",
+      "include": "native_magazine.h"
+    },
+    {
+      "after": "native_system_video720.h",
+      "include": "native_console.h"
+    }
+  ],
+  "apkAssetsRoot": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\assets",
+  "preserveLegacyAssets": "all36 assets/turbo-game-info/*.xml remain byte-identical in base APK",
+  "files": [
+    {
+      "path": "native/native_info.h",
+      "sha256": "78da422b51bc73042975f01b19525c62c9a4c53e032889a9edcb09ac141d3aff",
+      "bytes": 5978
+    },
+    {
+      "path": "native/native_formation.h",
+      "sha256": "115f2f0d5e8a713da104c84d798da9e1b26a2913f9131ba132284609a9c7aed9",
+      "bytes": 9377
+    },
+    {
+      "path": "native/native_magazine.h",
+      "sha256": "d6ae268df5ca433cad62513c692ab750161961920ea8815e2d78493808e39523",
+      "bytes": 4411
+    },
+    {
+      "path": "native/native_console.h",
+      "sha256": "ee14817d4157582e09b63d5af99210f76e81277bfa5d13870f76adcefe34a28f",
+      "bytes": 4872
+    },
+    {
+      "path": "native/magazine_shader.h",
+      "sha256": "cbe7a4196cf33e423a2d946d1ca3b82470deab6ca4a28c2e6e25fc97ad2ded18",
+      "bytes": 14647
+    },
+    {
+      "path": "native/premium-magazine-led-android.glsl",
+      "sha256": "e27757987e92488763ab1ed4bfc73e3e2770af66f75901da4f26faa854e7bd32",
+      "bytes": 14566
+    },
+    {
+      "path": "native/console_assets.h",
+      "sha256": "1c733c7a8e6370a27978fd1c53546bf2f0e692a3a1cf225b755e931aa970bc81",
+      "bytes": 5523803
+    },
+    {
+      "path": "native/station_game_infos.h",
+      "sha256": "a015f1017f2f11c91b64a55213ce6b0033cff5d6ab156c94b28f6d5806d68c6e",
+      "bytes": 1574120
+    },
+    {
+      "path": "native/station_info_layout.h",
+      "sha256": "d93c3c14843f96e969a5dc2c1c148d7fef3385dcd83b9e8a2391661cb7ab8858",
+      "bytes": 741
+    },
+    {
+      "path": "prepare_visual_metadata.py",
+      "sha256": "63436970a2ca704187cabb7e39bdfff56b91cd571cf3beed7d0420eaba5f209b",
+      "bytes": 8924
+    },
+    {
+      "path": "prepare_console_assets.py",
+      "sha256": "1611494ae5f4731d983ac2a61b9a9f02062cc23257190a9469571e037aa16025",
+      "bytes": 2405
+    },
+    {
+      "path": "test_visual_metadata.py",
+      "sha256": "88df767e2c3af3f8cb3717262bd8dfec334c5a664209cb11ef6ade2d6aba6247",
+      "bytes": 5285
+    },
+    {
+      "path": "test_station_info_layout.cpp",
+      "sha256": "f70fbadf3eaedc807ff5af5086a881a1f526ce0f1dbbb703a36d31757aa4df46",
+      "bytes": 1058
+    },
+    {
+      "path": "test_shader_angle.py",
+      "sha256": "8f0e86ebd7467b81b2fb88349817c86cc82dbd156dea1934b49ad57e6d338e0b",
+      "bytes": 6937
+    },
+    {
+      "path": "audit_missing_synopses.py",
+      "sha256": "50faa2731495827b87a8cb24051533bb3fbac78b3fc60f9e850f546b5c150444",
+      "bytes": 3439
+    }
+  ],
+  "pending": [
+    "Android shader compile/runtime and actual UI visual check",
+    "12 Station items remain without a uniquely proven local synopsis: 6 no exact match and 6 conflicting descriptions",
+    "Console illustration provided only for current SNES and Mega families; regional lists share each texture",
+    "Netplay separate capability study; no new netplay implementation in these files"
+  ],
+  "utf8Review": "Fallback synopsis contained historical double-encoded UTF8. Corrected and verified by Unicode codepoints/UTF8 bytes.",
+  "shaderCompile": {
+    "environment": "local Windows ANGLE offscreen, GLSL100 actual sources",
+    "passed": true,
+    "programs": 3,
+    "evidence": "shader-angle-validation.json",
+    "warning": "ANGLE HLSL translator warns f_region potentially uninitialized; GLSL region returns an initialized value on every branch and activeMagazineModel is assigned before emitter/region calls. No source equation altered.",
+    "frameProbe": [
+      0,
+      32767,
+      65535,
+      1000000
+    ]
+  },
+  "restoredSynopses": 1804,
+  "rendererAudit": "renderer-program-audit.json",
+  "synopsisPaging": "The 9.5-second page timer resets only when the selected GameInfo changes; successive cover/catalog revisions preserve the current page time.",
+  "shaderIntegerPrecision": "shader-integer-precision-review.json"
+}

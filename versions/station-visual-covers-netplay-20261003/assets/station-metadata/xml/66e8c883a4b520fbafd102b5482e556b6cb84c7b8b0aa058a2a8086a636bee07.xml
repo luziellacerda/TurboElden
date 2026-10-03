@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList sourceSha256="66e8c883a4b520fbafd102b5482e556b6cb84c7b8b0aa058a2a8086a636bee07" metadataOnly="true">
+  <game sourceOrdinal="1">
+    <name>Shadow Fighter</name>
+    <desc>Shadow Fighter fue uno de los pocos Beat 'em ups influenciados por Mortal Kombat que se lanzaron para Amiga. Hay 16 luchadores, cada uno con su propio país y arena, además de Pupazz, un títere al que podrías atacar repetidamente para practicar movimientos. Se ofrece la secuencia habitual de las mejores peleas de 3, con dificultad variable y sangre opcional. El sistema de control está diseñado alrededor de un controlador de un solo botón, pero aún así ofrece 25 movimientos para cada jugador, con movimientos especiales ejecutados girando el joystick alrededor de 180 grados. Cada arena cuenta con paralaje de múltiples capas, con hasta 80 colores.</desc>
+    <genre>Lucha / Versus</genre>
+    <developer>NAPS Team</developer>
+    <publisher>Gremlin Interactive</publisher>
+    <players>1-2</players>
+    <releasedate>19950101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="2">
+    <name>Top Gear 2</name>
+    <desc>Top Gear 2 es un juego de carreras de coches. El jugador debe ganar en 16 campeonatos diferentes, cada uno con 4 circuitos, algunos de los cuales están fuera de la realidad como el circuito de Monza de Ayers Rock. Estar entre los primeros en estos campeonatos es sinónimo de dinero entregado para poder mejorar y reparar sus vehículos.</desc>
+    <genre>Carreras, Conducción</genre>
+    <developer>Gremlin Interactive</developer>
+    <publisher>Gremlin Interactive</publisher>
+    <players>1-2</players>
+    <releasedate>19940101T000000</releasedate>
+  </game>
+  <game sourceOrdinal="3">
+    <name>Metro Siege</name>
+    <releasedate>19691231T210000</releasedate>
+    <rating>0</rating>
+  </game>
+</gameList>

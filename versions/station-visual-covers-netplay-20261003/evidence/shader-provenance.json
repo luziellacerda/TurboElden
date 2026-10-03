@@ -1,0 +1,10 @@
+{
+  "source": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\premium-magazine-led.glsl",
+  "sourceSha256": "0c6637dc33a83bf38cf1f92691bbbf0a4963f75113c9f0199d63805365634d43",
+  "sourceNormalizedTextSha256": "0c6637dc33a83bf38cf1f92691bbbf0a4963f75113c9f0199d63805365634d43",
+  "androidSha256": "15725a9ccb3e540c302399006607ed0cbb496189c170873dae74d6c362a296a1",
+  "adaptation": "one mathematically equivalent early return when emitter region mask is zero; explicit highp integer default within GL_ES, preserving all PC light/color equations and FrameCount periodicity",
+  "clock": "SDL monotonic milliseconds converted to the PC 60Hz frame units; independent of menu FPS",
+  "scope": "selected game cover only",
+  "idleFpsUnchanged": 15
+}

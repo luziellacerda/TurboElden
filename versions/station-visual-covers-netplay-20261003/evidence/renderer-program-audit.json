@@ -1,0 +1,19 @@
+{
+  "library": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002\\input\\libmain.so",
+  "sha256": "a1ae357dc29caac52d47386a71a0a9a685ecffb9c01d536f5af50b5ba658cda8",
+  "stripsRange": "0x2e5470..0x2e55ac",
+  "stripsProgramMutation": false,
+  "helperRange": "0x2e4de0..0x2e4e54",
+  "helperPurpose": "glGetError followed by logger only",
+  "attributes": {
+    "VertexCoordGlobal": "0x3cf4bc",
+    "TexCoordGlobal": "0x3cf4c0",
+    "ColorGlobal": "0x3cf4c4",
+    "strideBytes": 20,
+    "positionOffset": 0,
+    "textureOffset": 8,
+    "colorOffset": 16
+  },
+  "consoleBinding": "compileSpaceProgram(...,true) binds TexCoord from 0x3cf4c0 matching the original strips renderer",
+  "result": "Custom programs remain active through the original drawTriangleStrips; magazine/console restore the original program after drawing."
+}

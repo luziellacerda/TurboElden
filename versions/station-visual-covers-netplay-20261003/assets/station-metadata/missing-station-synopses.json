@@ -1,0 +1,134 @@
+[
+  {
+    "itemId": "station_7a95e83b68b446b1213426498f51b51e",
+    "platform": "megadrive",
+    "label": "MegaDrive",
+    "name": "Battletoads-Double Dragon (USA)",
+    "description": "",
+    "sourceSha256": "7e3a7dcedb814114d465b6e9c3f0b0e2119b7de8656def37857afa4969e817c9",
+    "sourceOrdinal": 981,
+    "sourcePlatform": "megadrive",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_18d5c103cae9d7a2499fe2a6e15f2657",
+    "platform": "megadrive",
+    "label": "MegaDrive",
+    "name": "Columns III (USA)",
+    "description": "",
+    "sourceSha256": "7e3a7dcedb814114d465b6e9c3f0b0e2119b7de8656def37857afa4969e817c9",
+    "sourceOrdinal": 979,
+    "sourcePlatform": "megadrive",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_13cfd4570309970e2f93c6263e698c72",
+    "platform": "megadrive",
+    "label": "MegaDrive",
+    "name": "Lethal-wedding",
+    "description": "",
+    "sourceSha256": "7e3a7dcedb814114d465b6e9c3f0b0e2119b7de8656def37857afa4969e817c9",
+    "sourceOrdinal": 389,
+    "sourcePlatform": "megadrive",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_c76970f8fa3c0b2c0c0a848c0e6292c9",
+    "platform": "megadrive",
+    "label": "MegaDrive",
+    "name": "Sonic The Hedgehog 3 (USA)",
+    "description": "",
+    "sourceSha256": "7e3a7dcedb814114d465b6e9c3f0b0e2119b7de8656def37857afa4969e817c9",
+    "sourceOrdinal": 977,
+    "sourcePlatform": "megadrive",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_79ad81b885f85b3f3948eeef9531c054",
+    "platform": "megadrive",
+    "label": "MegaDrive",
+    "name": "Tetris",
+    "description": "",
+    "sourceSha256": "7e3a7dcedb814114d465b6e9c3f0b0e2119b7de8656def37857afa4969e817c9",
+    "sourceOrdinal": 984,
+    "sourcePlatform": "megadrive",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_d4401dcd2599530ca4e155413d6548fe",
+    "platform": "megadrivebr",
+    "label": "MegaDrive - BR",
+    "name": "Sonic Hedgehog 3D Blast (BR)",
+    "description": "",
+    "sourceSha256": "7e3a7dcedb814114d465b6e9c3f0b0e2119b7de8656def37857afa4969e817c9",
+    "sourceOrdinal": 670,
+    "sourcePlatform": "megadrive",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_8c41d948b4222e9452258778abd749d0",
+    "platform": "snes",
+    "label": "Super Nintendo",
+    "name": "Battletoads in Battlemaniacs (USA)",
+    "description": "",
+    "sourceSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+    "sourceOrdinal": 835,
+    "sourcePlatform": "snes",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_3afe843d2f4173e684f95386d80fa4b8",
+    "platform": "snes",
+    "label": "Super Nintendo",
+    "name": "Mario Paint",
+    "description": "",
+    "sourceSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+    "sourceOrdinal": 796,
+    "sourcePlatform": "snes",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_6430b2dc9eb966fd8e714897bcab1f75",
+    "platform": "snes",
+    "label": "Super Nintendo",
+    "name": "Rise of the Robots",
+    "description": "",
+    "sourceSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+    "sourceOrdinal": 800,
+    "sourcePlatform": "snes",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_dac605f6827fab54696d68078503bcc2",
+    "platform": "snes",
+    "label": "Super Nintendo",
+    "name": "Samurai Shodown",
+    "description": "",
+    "sourceSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+    "sourceOrdinal": 801,
+    "sourcePlatform": "snes",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_01c9e9a4658f728d35ffdeb595019abf",
+    "platform": "snes",
+    "label": "Super Nintendo",
+    "name": "Street Fighter Alpha 2",
+    "description": "",
+    "sourceSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+    "sourceOrdinal": 802,
+    "sourcePlatform": "snes",
+    "match": "server-source-ordinal-and-exact-name"
+  },
+  {
+    "itemId": "station_db05405bb88c9762260322f743626454",
+    "platform": "snes",
+    "label": "Super Nintendo",
+    "name": "World Heroes 2",
+    "description": "",
+    "sourceSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+    "sourceOrdinal": 806,
+    "sourcePlatform": "snes",
+    "match": "server-source-ordinal-and-exact-name"
+  }
+]

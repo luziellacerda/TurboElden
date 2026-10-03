@@ -1,0 +1,76 @@
+{
+  "reviewer": "audit_theme_effects_synopsis independent read-only review",
+  "scope": "Concurrency, lock order, generation changes, Retry-After, cache and transfer/session lease",
+  "blockingFindingsRemaining": [],
+  "resolvedFindings": [
+    {
+      "issue": "Old cover result could apply after a catalog replacement",
+      "resolution": "StationCoverQueue generation, serialized callback publication and invalidate before publishCatalog; stale completion returns CANCELLED without path."
+    },
+    {
+      "issue": "429 could churn through all offscreen entries while the Java store was globally blocked",
+      "resolution": "CoverBackoff pauses speculative plan until Retry-After; only bounded visible priorities may request locally cached images."
+    }
+  ],
+  "verifiedProperties": [
+    "Four IO workers; same item deduplicated and same cache key serialized; different cover keys can download in parallel.",
+    "Coordinator cover closes session lease before invalidate takes the Coordinator monitor, avoiding the detected potential lock inversion.",
+    "Artifact authorization, local scan and GET headers hold one session lease; streaming body does not rotate the session before consuming the grant.",
+    "Native State changes stay on SDL thread; JNI events use Inbox mutex and atomic publication.",
+    "Persistent cache image reads are validated and network is skipped for valid same-revision cached files.",
+    "Cancellation is not classified as permanent missing cover; resume can retry.",
+    "Retry map4096 matches this branch actual Java/JNI maximum4096; apply clears it. The proposed4097th overflow is not reachable in this branch."
+  ],
+  "futureCapacityRequirement": "If max catalog is raised to40000, enlarge/test CoverRetry and JNI inbox bounds with Java catalog limit in the same change. This review does not assert40000 support.",
+  "runtime": "No phone use or network traffic by this independent review; parent remains responsible for installed-device checks.",
+  "files": [
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "sha256": "03873dc02cbb99f440872e25988552bf9d09bad1b8d5b4cc199e24878db4dce4"
+    },
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+      "sha256": "085e6a7418d3f79f6ff446683aa92e8a6b1a0c800d15b70d4c51517368f7f7d5"
+    },
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationSessions.java",
+      "sha256": "e8f380e9f161dadc3eaa5fb30c469c009a131feba99b8472757ea4dd1bde488f"
+    },
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+      "sha256": "79800215a85fbb6225e3e10e75fea13030a0d178b409de32795840b8171cd1cf"
+    },
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+      "sha256": "4447723f71d8a69950dfa165d5695bbe74db73572aeb44030b842181291a0a52"
+    },
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "sha256": "0dafad01f4bb47fd3b4311a185ddf8737e088d81fdb91fa0b26299f8b28100da"
+    },
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationRetryAfter.java",
+      "sha256": "7ea5fb4e3267249ac5b6cc1165ede174c152286f7aceb7632a35510fa5f1be57"
+    },
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationHttp.java",
+      "sha256": "79d20b052eedad121e9f30da9bbae3186ae6d796d42e891f18f326c66614d7a0"
+    },
+    {
+      "path": "station/src/java/org/emulationstation/frontend/station/StationCatalog.java",
+      "sha256": "827faed485e12b16583d3d2cc243a43318674b72b9a8c449000eef61f9106cff"
+    },
+    {
+      "path": "station/src/native/station_frontend.cpp",
+      "sha256": "1b741d1f87e532bcf42651c4151152d925a5f565c62b1e036ccdbcc00201d810"
+    },
+    {
+      "path": "station/src/native/station_cover_retry.hpp",
+      "sha256": "c8384ba7c61e3fa091d099e1a2c3148f509fdc5927a11976530c9f50eebaf2cf"
+    },
+    {
+      "path": "station/src/native/station_cover_plan.hpp",
+      "sha256": "2e82d8c3b9a7b4d914e598c717c52d5e58175b0e2f5cfb23d6736c2936d9e1a2"
+    }
+  ]
+}

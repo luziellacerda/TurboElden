@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList sourceSha256="6a75f6fe69314523aad18c62b06ca4502096011484080411ea3b65aa373584ce" metadataOnly="true">
+  <game sourceOrdinal="1">
+    <name>Mr Boom</name>
+    <desc>Bomberman clone.</desc>
+  </game>
+  <game sourceOrdinal="2">
+    <name>XRick</name>
+    <desc>Rick Dangerous clone.</desc>
+  </game>
+  <game sourceOrdinal="3">
+    <name>2048</name>
+    <desc>2048 clone.</desc>
+  </game>
+  <game sourceOrdinal="4">
+    <name>craft</name>
+    <desc>Minecraft clone.</desc>
+  </game>
+  <game sourceOrdinal="5">
+    <name>Gong</name>
+    <desc>Pong clone.</desc>
+  </game>
+</gameList>

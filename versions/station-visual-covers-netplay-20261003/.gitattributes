@@ -1,0 +1,2 @@
+# Preserve the exact local bytes referenced by this delivery's SHA-256 receipts.
+* -text whitespace=trailing-space,space-before-tab,cr-at-eol

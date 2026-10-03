@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList sourceSha256="0c4b45d6c0373f12121c568b120c04cc49c015613055a75561ee217ecd6e6c28" metadataOnly="true">
+  <game sourceOrdinal="1">
+    <name>Darius Alpha</name>
+    <desc>Darius Alpha se basa en la misma base de código que Darius Plus, pero se ha convertido en un juego llamado "lucha de jefe". Un juego en el que luchas solo contra los jefes de un juego o una serie de juegos. Comienzan con una nave no equipada y deben derrotar al jefe de primer nivel, el Rey Fósil. Si derrotaste al Rey Fósil, obtendrás algunas mejoras leves y pasarás directamente al jefe del siguiente nivel.</desc>
+    <genre>Shoot'em Up / Horizontal</genre>
+    <developer>Bits Laboratory</developer>
+    <publisher>Nec Avenue</publisher>
+    <players>1</players>
+    <releasedate>19900101T000000</releasedate>
+    <rating>0.75</rating>
+  </game>
+  <game sourceOrdinal="2">
+    <name>Darius Plus</name>
+    <desc>Darius Plus es un juego de disparos horizontal. La principal originalidad de la sala de juegos Darius estaba en su gran pantalla (¡que era aproximadamente tres veces el tamaño de una pantalla normal!); aquí, por supuesto, ya no es el caso. Entonces, Darius Plus solo se puede distinguir por su vida útil, ya que la aventura se extiende por veintiséis niveles. Sin embargo, digamos un pequeño inconveniente: no tendrás que cruzar todas estas etapas para ver el final del juego. En verdad, en cada final de nivel, puedes decidir volar hacia arriba o hacia abajo, esto que te llevará a dos niveles diferentes. Concretamente, las pasantías llevan una letra de la A a la Z. Una vez que haya terminado el nivel A, podrá ir a la zona B si toma la dirección alta, o en C si toma el bajo. Y así sucesivamente hasta que sobreviene la muerte. Y la muerte, créeme, puede suceder en el más mínimo giro.</desc>
+    <genre>Shoot'em Up / Horizontal</genre>
+    <developer>Bits Laboratory</developer>
+    <publisher>Nec Avenue</publisher>
+    <players>1</players>
+    <releasedate>19900921T000000</releasedate>
+    <rating>0.8</rating>
+  </game>
+  <game sourceOrdinal="3">
+    <name>Madou King Granzort</name>
+    <desc>¨Madou King Granzort¨ está basado en el anime del mismo nombre. La historia tiene lugar en un contexto de ciencia-ficción en el que a unos niños se les da poderes especiales para salvar al mundo del malvado clan Jadou. Para ser más exactos, pueden convocar a tres criaturas de gran poder: Los reyes Madou de la tierra, el agua y el viento. El jugador toma el papel de estos reyes, para derrotar al clan Jadou. El jugador tiene que encontrar el camino a través de los niveles, mientras que resuelve los desafíos de plataformas básicos y una gran cantidad de combates, ya sea con una espada o disparando. El jugador puede cambiar entre los reyes Madou que tienen capacidades diferentes. Es importante vigilar la barra de energía y el límite de tiempo: el resultado de que se acabe cualquiera de estos es la pérdida de una vida.</desc>
+    <genre>Plataformas</genre>
+    <developer>Sunrise Software</developer>
+    <publisher>Hudson Soft</publisher>
+    <players>1</players>
+    <releasedate>19900406T000000</releasedate>
+    <rating>0.85</rating>
+  </game>
+  <game sourceOrdinal="4">
+    <name>Battle Ace</name>
+    <desc>Battle Ace es un juego de vuelo orientado a la acción en una perspectiva en primera persona. El jugador pilota una nave espacial, incluyendo un radar que muestra enemigos, y el objetivo es llegar al final de cada nivel donde espera un jefe final. Como de costumbre, la misión principal es aniquilar a una gran cantidad de enemigos que se acercan al jugador. Las armas disponibles son las bombas y una ametralladora, ambas ilimitadas. Ser golpeado es una mala idea porque resulta en la muerte. El jugador tiene tres vidas que pueden ser a,aliadas al anotar 20000 puntos.</desc>
+    <genre>Shoot'em Up</genre>
+    <developer>Hudson Soft</developer>
+    <publisher>Hudson Soft</publisher>
+    <players>1</players>
+    <releasedate>19891130T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+  <game sourceOrdinal="5">
+    <name>Aldynes - The Mission Code For Rage Crisis</name>
+    <desc>La galaxia es invadida por malvados extraterrestres y tú y tu dispositivo, los Aldynes, representáis la única esperanza de la humanidad. Por lo tanto, será necesario abrirse camino a través de varios niveles enemigos que te disparan rápidamente. Tendrás la oportunidad de usar varias armas (lamentablemente pocas) para llevar a cabo tu misión. También tendrás pods (hasta 4) para aumentar tu poder. Pueden permanecer cerca de ti, protegiéndote parcialmente contra ataques enemigos, o moverse libremente por la pantalla, en cuyo caso atacarán a cualquier oponente que se encuentre cerca de ellos.</desc>
+    <genre>Shoot'em Up / Horizontal</genre>
+    <developer>Produce</developer>
+    <publisher>Hudson Soft</publisher>
+    <players>1-2</players>
+    <releasedate>19910222T000000</releasedate>
+    <rating>0.65</rating>
+  </game>
+</gameList>
