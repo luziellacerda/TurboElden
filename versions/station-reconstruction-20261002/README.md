@@ -1,4 +1,18 @@
-# Revisão integral Station — 03/10/2026 — entrada atual
+# Entrega rápida: quatro capas em trânsito — 03/10/2026
+
+**Nova compilação solicitada:** fonte **[`1dc8c381e49e60ccbe0f84c97dcfe5be3e1d85f3`](https://github.com/luziellacerda/TurboElden/commit/1dc8c381e49e60ccbe0f84c97dcfe5be3e1d85f3)**, branch `feat/station-transfer-speed-20261003`, clientVersion `1.0.8-station-speed-20261003.2`. A integração2834e3b tem a mesma base de runtime e pode aplicar esse commit. Seguir o [handoff único do servidor](https://github.com/luziellacerda/Servidor-pix/blob/54bba11c52f35695fd47eabc7145f42af9990426/docs/station-android/RETORNO-SERVIDOR-PARA-CLIENTE-RECONSTRUIDO-STATION-20261002.md), publicado com instruções e dados completos.
+
+Quatro capas simultâneas, nas prioridades visíveis, sem intervalo normal de2,1s; vagas reabastecidas conforme cada pedido termina. Cache coverId/revisão e deduplicação impedem downloads repetidos. Transferência de capa não segura o coordenador do jogo; mesmo Bearer continua protegido entre autorização e GET até os cabeçalhos. Reuso de TLS para corpos completos, cancelamento/publicação por geração e liberação das vagas JNI antigas durante download. O arquivo local exato é conferido antes da varredura. Hash/tamanho/recibo, pin/TLS e imagens originais480×720 preservados.
+
+**API4bb77ed2 já publicada**, catálogo4/1.816 e limites4.096capas/minuto por licença/aparelho e16.384/minuto por origem.48capas/6,46MB em4,55s no HTTPS a partir deste Linux; nove jogos íntegros. Download streaming sem espera/teto de bytes/s, sujeito à rede e ao aparelho. Prova de fonte:329 checks Java host +7 de política C++, classes Java8/API36 e frontend/fixture arm64 API26/NDK27.1 compilados. [Resultado](evidence/transfer-speed-validation-20261003.json). A velocidade/renderização do telefone ainda deve ser registrada.
+
+**Recompilar Java/DEX e a nova `libstation_frontend.so`** pelo fluxo existente na seção Reprodução local abaixo, com base APK/Keystore originais no ambiente E: e SDK34/NDKr28c. Atualizar sem desinstalar ou limpar dados. O APK anteriorfa3bc844/fonte02c09dd está identificado no retorno2834e3b; **nenhum APK novo foi assinado/instalado neste Linux**. Conferir primeira carga com quatro pedidos, scroll/cache/reabertura, refresh durante download, cancelamento/instalação/hash, abrir jogo e voltar. Preservar assinatura, licença, saves, jogos e motores.
+
+As seções abaixo registram revisões anteriores;996 itens, catálogo3/API fd13c0d não identificam o servidor atual.
+
+---
+
+# Revisão integral Station — 03/10/2026 — histórico
 
 Leia primeiro [HANDOFF-REVISAO-INTEGRAL-APP-STATION-20261003.md](../../docs/server/HANDOFF-REVISAO-INTEGRAL-APP-STATION-20261003.md) e [mapa/integridade](../../docs/server/revisao-app-20261003/APPENDICE-MAPA-E-INTEGRIDADE.md).
 
