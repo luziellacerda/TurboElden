@@ -25,7 +25,7 @@ public final class StationApiTest {
         final KeyPair authority,device;
         final String deviceId,license="license_test_123",sessionId="2".repeat(64),challengeId="1".repeat(64);
         long time=1000;int requests,closed,artifactCalls;String tamper="",failedRoute="",errorCode="";int status=200;
-        org.json.JSONObject descriptorOverride;boolean omitDescriptor;long itemRevision=1;
+        org.json.JSONObject descriptorOverride;org.json.JSONArray catalogItems;boolean omitDescriptor;long itemRevision=1;
         boolean badSignature,truncatedArtifact;byte[] artifact={1,2,3};long lengthOverride=-2;
         Fake()throws Exception {
             KeyPairGenerator gen=KeyPairGenerator.getInstance("RSA");gen.initialize(2048);
@@ -65,7 +65,7 @@ public final class StationApiTest {
                 }else {
                     ok(bearer.equals(token(3)),"Authenticated request");
                     response.put("licenseId",license).put("sessionId",sessionId);
-                    if(operation.equals("catalog")){domain=StationProtocol.CATALOG;response.put("revision",1).put("items",new JSONArray().put(item()));}
+                    if(operation.equals("catalog")){domain=StationProtocol.CATALOG;response.put("revision",1).put("items",catalogItems==null?new JSONArray().put(item()):catalogItems);}
                     else if(operation.equals("me")){domain=StationProtocol.PROFILE;response.put("displayName","Comprador").put("profileVersion",1);}
                     else if(operation.equals("downloads/authorize")){
                         domain=StationProtocol.DOWNLOAD_GRANT;

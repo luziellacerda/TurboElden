@@ -1,3 +1,15 @@
+## Atualizacao de integracao e login - 03/10/2026
+
+Candidato atual `build/apk/TurboStations-Station-CANDIDATO-20261003.apk`, SHA256 `f5b35419fcff4188b8e86690045371892c77933e7f8edfc07bce1d5bd25d418a`, 1.902.718.870 bytes. Inclui **Manter conectado**, preferencia privada que controla a entrada automatica; usa licenca + Keystore, nao guarda codigo de ativacao nem Bearer. Desmarcar exige toque em Entrar nas proximas aberturas, mantendo a ativacao existente. Servidor continua autorizando cada sessao. Estado de instalacao e conferencias no aparelho: `build/closure-validation.json` (Git: `evidence/closure-validation.json`).
+
+Instalado em 03/10 12:27:01, hash conferido, acesso salvo retomado. Sessao/perfil/catalogo 200 (996 itens da rede); capas 404 STATION_COVER_NOT_FOUND e autorizacao 404 STATION_ITEM_NOT_FOUND. Tela durante carga restaurada a 0. Checkbox compilado/instalado; alternancia individual na UI ainda nao conferida.
+
+255 verificacoes locais aprovadas e 28 da ponte nativa no Android. Aliases do servidor integrados, inclusive Mega Drive BR; 1816 itens sinteticos assinados conferidos sem corte. Reuso por hash/tamanho assinados de arquivos anteriores, isolamento de recibos invalidos e diagnostico numerico sem dados pessoais adicionados. Os testes sinteticos nao comprovam conteudo publicado.
+
+A revisao intermediaria eaebf48b foi instalada e confirmou sessao/perfil/catalogo 200, **996 itens frescos da rede**, capas 404 e autorizacao de download 404. Nenhum jogo chegou a transferencia. Ler `RETORNO-APP-FECHAMENTO-STATION-20261003.md` (Git: `docs/server/RETORNO-APP-FECHAMENTO-STATION-20261003.md`) para tarefas EXATAS do servidor e limites do cliente. Retorno do servidor 64912e1f continua declarando candidata NAO implantada. Ainda faltam capa 200, download/instalacao/jogo/retorno reais, acervo conciliado e eliminacao fisica integral do legado nativo. Nao promover a estavel nem declarar implementacao total concluida.
+
+Registros anteriores abaixo sao historicos; seus hashes nao identificam o candidato atual.
+
 # Handoff técnico da reconstrução TurboStations
 
 ## Verificacao no aparelho em 03/10/2026, 10:07 - carregamento corrigido

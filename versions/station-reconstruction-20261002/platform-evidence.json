@@ -213,6 +213,27 @@
     "gb": "Gameboy",
     "sega32x": "sega32x",
     "gbc": "Gameboy Color",
-    "gba": "Gba"
+    "gba": "Gba",
+    "megadrivebr": "MegaDrive - BR",
+    "arcade": "Arcade",
+    "atomiswave": "Atomiswave",
+    "dreamcast": "Dreamcast",
+    "mastersystem": "Master System ",
+    "n64": "Nintendo 64",
+    "n64br": "Nintendo 64 - BR",
+    "nds": "Nintendo DS",
+    "neogeo": "Neo Geo",
+    "neogeocd": "Neo Geo CD",
+    "nes": "Nintendinho",
+    "o2em": "Odyssey 2",
+    "pcengine": "Pc Engine",
+    "pcenginecd": "Pc Engine cd",
+    "psx": "Playstation 1",
+    "switch": "Switch"
+  },
+  "aliasReview": {
+    "serverCommit": "64912e1f2294b99967fc638d842f505cff7f629c",
+    "androidMegadriveBrFix": "59883435e9f65a3960d7a616a1cf647694407b48",
+    "note": "Explicit historical server platform labels paired with observed native platform folders. Not a list of content currently published. model2 and sufami remain unsupported; no guessed route."
   }
 }

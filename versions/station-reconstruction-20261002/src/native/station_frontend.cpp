@@ -59,7 +59,7 @@ bool command(jmethodID method,const std::string* id=nullptr,bool result=false){
  else if(id)env->CallStaticVoidMethod(frontend,method,arg);
  else env->CallStaticVoidMethod(frontend,method);
  if(arg)env->DeleteLocalRef(arg);
- if(env->ExceptionCheck()){__android_log_print(6,"StationNative","Java command failed");env->ExceptionDescribe();env->ExceptionClear();accepted=false;}
+ if(env->ExceptionCheck()){__android_log_print(6,"StationNative","Java command failed");env->ExceptionClear();accepted=false;}
  return accepted;
 }
 void changed(Catalog* catalog){++catalog->revision;catalog->installedCount=std::count_if(catalog->items.begin(),catalog->items.end(),[](const Item& item){return item.installed;});}

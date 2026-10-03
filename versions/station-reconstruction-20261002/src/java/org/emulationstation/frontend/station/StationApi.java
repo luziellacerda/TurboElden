@@ -167,6 +167,9 @@ public final class StationApi {
         }
     }
 
+    public static final class ArtifactUnavailable extends IOException {
+        ArtifactUnavailable(){super("Signed artifact descriptor unavailable");}
+    }
     public Grant authorize(Session session,String itemId,long expectedRevision,Cancellation cancel) throws Exception {
         StationCatalog.libraryId(itemId);
         if(expectedRevision<1)throw new IOException("Missing catalog item revision");
@@ -174,6 +177,7 @@ public final class StationApi {
         JSONObject result=signed("POST","downloads/authorize",identity(StationProtocol.REQUEST_DOWNLOAD,field("itemId",itemId)),
             session,StationProtocol.DOWNLOAD_GRANT,StationProtocol.MAXIMUM_BODY_BYTES,cancel);
         equal(result,"itemId",itemId);lifetime(result,60);notExpired(started+60000);
+        if(!result.has("itemRevision")||!(result.opt("artifact") instanceof JSONObject))throw new ArtifactUnavailable();
         long revision=StationCatalog.integer(result,"itemRevision");
         if(revision!=expectedRevision)throw new IOException("Authorized item revision changed; refresh catalog");
         StationArtifact artifact=StationArtifact.parse(result.getJSONObject("artifact"));
@@ -272,6 +276,7 @@ public final class StationApi {
             String candidate=string(error,"code");
             if (candidate.matches("STATION_[A-Z0-9_]{1,80}")) code=candidate;
         } catch (InterruptedIOException e) {throw e;} catch (Exception ignored) { /* Never expose response bodies. */ }
+        StationDiagnostics.serverFailure(response.status,code);
         throw new Failure(response.status,code);
     }
     private static byte[] read(Response response,int maximum,Cancellation cancel) throws IOException {

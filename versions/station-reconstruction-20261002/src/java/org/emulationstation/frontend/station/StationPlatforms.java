@@ -68,12 +68,33 @@ public final class StationPlatforms {
         names.put("gb",names.get("Gameboy"));
         names.put("gbc",names.get("Gameboy Color"));
         names.put("gba",names.get("Gba"));
+        // Explicit server aliases; targets retain the observed native folders.
+        names.put("megadrivebr",names.get("MegaDrive - BR"));
+        names.put("arcade",names.get("Arcade"));
+        names.put("atomiswave",names.get("Atomiswave"));
+        names.put("dreamcast",names.get("Dreamcast"));
+        names.put("mastersystem",names.get("Master System "));
+        names.put("n64",names.get("Nintendo 64"));
+        names.put("n64br",names.get("Nintendo 64 - BR"));
+        names.put("nds",names.get("Nintendo DS"));
+        names.put("neogeo",names.get("Neo Geo"));
+        names.put("neogeocd",names.get("Neo Geo CD"));
+        names.put("nes",names.get("Nintendinho"));
+        names.put("o2em",names.get("Odyssey 2"));
+        names.put("pcengine",names.get("Pc Engine"));
+        names.put("pcenginecd",names.get("Pc Engine cd"));
+        names.put("psx",names.get("Playstation 1"));
+        names.put("switch",names.get("Switch"));
         BY_NAME=Collections.unmodifiableMap(names);
+    }
+    public static final class UnsupportedPlatform extends IOException {
+        public final String platform;
+        private UnsupportedPlatform(String platform){super("Platform has no verified local mapping");this.platform=platform;}
     }
     private StationPlatforms() {}
     public static Platform resolve(String platform) throws IOException {
         Platform result=BY_NAME.get(platform);
-        if(result==null)throw new IOException("Platform has no verified local mapping: "+platform);
+        if(result==null)throw new UnsupportedPlatform(platform);
         return result;
     }
 }

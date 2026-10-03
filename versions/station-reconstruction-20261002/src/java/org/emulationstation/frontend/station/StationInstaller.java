@@ -78,9 +78,12 @@ public final class StationInstaller {
             return new Installed(item.itemId,item.platform,item.revision,launch);
         }finally{if(!committed)deleteOwnTree(generation,owner);}
     }
+    public Path existingArtifact(StationCatalog.Item item,StationArtifact spec,StationApi.Cancellation cancel)throws Exception {
+        return StationExistingArtifact.find(roms.resolve(StationPlatforms.resolve(item.platform).folder),spec,cancel);
+    }
     public synchronized Installed find(StationCatalog.Item item)throws Exception {
         JSONObject saved=readRecord(item.itemId);if(saved==null||saved.optBoolean("removing",false))return null;
-        if(!StationApi.string(saved,"platform").equals(item.platform))throw new IOException("Stored platform changed");
+        if(!StationPlatforms.resolve(StationApi.string(saved,"platform")).folder.equals(StationPlatforms.resolve(item.platform).folder))throw new IOException("Stored platform changed");
         Path content=content(saved,item.itemId);
         JSONObject spec=saved.getJSONObject("artifact");StationArtifact descriptor=StationArtifact.parse(spec);
         JSONArray files=saved.getJSONArray("files");

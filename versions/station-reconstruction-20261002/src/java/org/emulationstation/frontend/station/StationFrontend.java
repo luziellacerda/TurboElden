@@ -38,12 +38,12 @@ public final class StationFrontend {
        if(result==3&&library==null)requestLogin();
       });
     publishCurrent(app);
-   }catch(Exception e){android.util.Log.e("StationFrontend","configure: "+e.getClass().getSimpleName()+": "+safeReason(e));configured=false;publishError(utf8("Não foi possível preparar o catálogo Station."));}
+   }catch(Exception e){android.util.Log.e("StationFrontend","configure: "+e.getClass().getSimpleName()+": "+safeReason(e));configured=false;publishError(utf8(catalogError(e,"Não foi possível preparar o catálogo Station.")));}
   }))configured=false;
  }
  public static void refresh(){execute(()->{
   try{StationAndroid app=StationAndroid.current();if(app==null)throw new IOException();app.coordinator.refresh(new StationApi.Cancellation());publishCurrent(app);}
-  catch(Exception e){publishError(utf8("Não foi possível atualizar. Confira a conexão e tente novamente."));}
+  catch(Exception e){publishError(utf8(catalogError(e,"Não foi possível atualizar. Confira a conexão e tente novamente.")));}
  });}
  private static void publishCurrent(StationAndroid app)throws Exception {
   StationCoordinator.Library library=app.coordinator.current();if(library==null)throw new IOException("Catálogo não carregado");
@@ -51,10 +51,15 @@ public final class StationFrontend {
   long preparedBytes=0;int preparedItems=0;publishPreparation(0,library.catalog.items.size(),0);
   for(StationCatalog.Item item:library.catalog.items){
    StationPlatforms.Platform platform=StationPlatforms.resolve(item.platform);
-   StationInstaller.Installed installed=downloads.find(item);
+   StationInstaller.Installed installed=null;
+   try{installed=downloads.find(item);}catch(Exception invalidReceipt){
+    // One invalid receipt cannot hide the rest of an authenticated catalog.
+    StationDiagnostics.record(StationDiagnostics.Event.RECEIPT_INVALID,0,1);
+   }
    byte[] row=utf8(item.itemId+"\0"+item.name+"\0"+platform.label+"\0"+platform.folder+"\0"+item.coverId+"\0"+(installed==null?"":installed.launchPath.toString())+"\0");
    rows.add(row);preparedBytes+=row.length;publishPreparation(++preparedItems,library.catalog.items.size(),preparedBytes);
   }
+  StationDiagnostics.record(StationDiagnostics.Event.CATALOG_PUBLISHED,library.cached?503:200,rows.size());
   android.util.Log.i("StationFrontend","Publishing catalog items="+rows.size());
   publishCatalog(rows.toArray(new byte[0][]),utf8(library.displayName));
  }
@@ -66,13 +71,19 @@ public final class StationFrontend {
   if(!foreground)return;StationApi.Cancellation cancel=new StationApi.Cancellation();if(requests.putIfAbsent(itemId,cancel)!=null)return;
   try{images.execute(()->{
    try{StationAndroid app=StationAndroid.current();if(app!=null){Path path=app.coordinator.cover(itemId,cancel);cancel.check();publishCover(itemId,utf8(path.toString()));}}
-   catch(Exception failed){publishCover(itemId,new byte[0]);}
+   catch(Exception failed){if(!cancel.cancelled())StationDiagnostics.record(StationDiagnostics.Event.COVER_FAILED,StationDiagnostics.status(failed),1);publishCover(itemId,new byte[0]);}
    finally{requests.remove(itemId,cancel);}
   });}catch(RejectedExecutionException busy){requests.remove(itemId,cancel);publishCover(itemId,new byte[0]);}
  }
  public static void setForeground(boolean visible){boolean resumed=visible&&!foreground;foreground=visible;if(!visible){for(StationApi.Cancellation cancel:requests.values())cancel.cancel();}else if(resumed&&configured)reconcile();}
  public static void reconcile(){execute(()->{try{StationAndroid app=StationAndroid.current();if(app!=null&&downloads!=null)publishCurrent(app);}catch(Exception e){publishError(utf8("Não foi possível conferir os jogos instalados."));}});}
  private static boolean execute(Runnable operation){try{commands.execute(operation);return true;}catch(RejectedExecutionException busy){publishError(utf8("Aguarde a consulta em andamento."));return false;}}
+ private static String catalogError(Exception e,String fallback){
+  if(e instanceof StationPlatforms.UnsupportedPlatform){
+   StationDiagnostics.record(StationDiagnostics.Event.UNSUPPORTED_PLATFORM,0,1);
+   return "Plataforma ainda sem integração: "+((StationPlatforms.UnsupportedPlatform)e).platform+". Atualize o aplicativo.";
+  }return fallback;
+ }
  private static String safeReason(Exception e){String m=e.getMessage();if(m!=null&&(m.equals("Symbolic path refused")||m.equals("Invalid catalog identity")))return m;return "operation failed";}
  private static byte[] utf8(String text){return text.getBytes(StandardCharsets.UTF_8);}
  private static native void publishPreparation(int done,int total,long bytes);

@@ -19,6 +19,12 @@ public final class StationLogin {
     public static String displayName(){StationCoordinator owner=coordinator;StationCoordinator.Library current=owner==null?null:owner.current();return current==null?"":current.displayName;}
     public static boolean ready(){StationCoordinator current=coordinator;return current!=null&&current.ready();}
     public static boolean hasLicense(Context context){return new java.io.File(context.getNoBackupFilesDir(),"station-license-id.txt").isFile();}
+    public static boolean rememberAccess(Context context){
+        return context.getSharedPreferences("station-login-ui",Context.MODE_PRIVATE).getBoolean("rememberAccess",true);
+    }
+    public static void rememberAccess(Context context,boolean enabled){
+        context.getSharedPreferences("station-login-ui",Context.MODE_PRIVATE).edit().putBoolean("rememberAccess",enabled).apply();
+    }
     private static final java.util.WeakHashMap<Activity,StationApi.Cancellation> renewing=new java.util.WeakHashMap<>();
     public static void ensureAuthorized(Activity activity) {
         if(ready())return;

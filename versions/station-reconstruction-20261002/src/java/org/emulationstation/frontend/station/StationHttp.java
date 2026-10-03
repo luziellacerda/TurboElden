@@ -71,6 +71,7 @@ public final class StationHttp implements StationApi.Transport {
             }
             cancellation.check();
             int status = connection.getResponseCode();
+            StationDiagnostics.record(StationDiagnostics.route(path),status,0);
             if (status / 100 == 3 || connection.getHeaderField("Location") != null)
                 throw new IOException("Station redirect refused");
             String encoding = connection.getHeaderField("Content-Encoding");
@@ -85,6 +86,8 @@ public final class StationHttp implements StationApi.Transport {
                 });
             handedOff = true;
             return response;
+        } catch(IOException failure) {
+            StationDiagnostics.record(StationDiagnostics.Event.REQUEST_FAILED,0,0);throw failure;
         } finally {
             if (!handedOff) { cancellation.detach(abort); connection.disconnect(); }
         }

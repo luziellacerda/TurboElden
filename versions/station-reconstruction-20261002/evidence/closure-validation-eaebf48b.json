@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-10-03T12:16:47.802829",
+  "apkSha256": "eaebf48b9bf1902c151ea54b5d2cb0c0fe89c111ff1e91a2c68b671eed504680",
+  "installedSha256": "eaebf48b9bf1902c151ea54b5d2cb0c0fe89c111ff1e91a2c68b671eed504680",
+  "lastUpdateTime": "2026-10-03 12:15:37",
+  "hostChecks": 251,
+  "nativeAndroidChecks": 28,
+  "sessionHttp": 200,
+  "profileHttp": 200,
+  "catalogHttp": 200,
+  "catalogSource": "fresh-network",
+  "catalogItems": 996,
+  "authentication": "saved-license",
+  "cover200": false,
+  "downloadInstallLaunchVerified": false,
+  "serverDeployment": false,
+  "serverReturnCommit": "64912e1f2294b99967fc638d842f505cff7f629c",
+  "legacyNativeRemovalComplete": false,
+  "observedCoverHttp": 404,
+  "observedAuthorizeHttp": 404,
+  "artifactTransferStarted": false
+}

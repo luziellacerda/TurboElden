@@ -25,19 +25,33 @@ public final class StationDownloads implements AutoCloseable {
  private void run(String id,StationApi.Cancellation cancel) {
   Path transaction=null;
   try {
-   cancel.check();StationApi.Grant grant=owner.authorize(id,cancel);
+   cancel.check();StationApi.Grant authorized=owner.authorize(id,cancel);
    StationCoordinator.Library library=owner.current();StationCatalog.Item item=library==null?null:library.catalog.find(id);
+   if(item==null||item.revision!=authorized.itemRevision)throw new IOException("O catálogo mudou. Atualize a lista.");
+   listener.changed(id,true,0,-1,"Conferindo arquivo já baixado","",0);
+   long searchStarted=System.nanoTime();
+   Path existing=installer.existingArtifact(item,authorized.artifact,cancel);
+   // Scanning a large local file must not spend the 60-second network grant.
+   if(System.nanoTime()-searchStarted>5000000000L)authorized=owner.authorize(id,cancel);
+   final StationApi.Grant grant=authorized;
+   library=owner.current();item=library==null?null:library.catalog.find(id);
    if(item==null||item.revision!=grant.itemRevision)throw new IOException("O catálogo mudou. Atualize a lista.");
-   if(Files.getFileStore(staging).getUsableSpace()<grant.artifact.sizeBytes+256L*1024*1024)throw new IOException("Espaço insuficiente para baixar o jogo.");
-   transaction=Files.createTempDirectory(staging,"transfer-");Path artifact=transaction.resolve("artifact");
+   Path artifact;
    long total=grant.artifact.sizeBytes+grant.artifact.expandedSizeBytes;
    final long[] last={0};
    StationFiles.Progress download=(n,t)->{long now=System.nanoTime();if(n==t||now-last[0]>=100000000){last[0]=now;listener.changed(id,true,n,total,"Baixando","",0);}};
-   api.downloadToStaging(grant,artifact,grant.artifact.sizeBytes,cancel,download);
+   if(existing!=null){
+    artifact=existing;StationDiagnostics.record(StationDiagnostics.Event.LOCAL_REUSE,0,grant.artifact.sizeBytes);
+   }else{
+    if(Files.getFileStore(staging).getUsableSpace()<grant.artifact.sizeBytes+grant.artifact.expandedSizeBytes+256L*1024*1024)throw new InsufficientSpace();
+    transaction=Files.createTempDirectory(staging,"transfer-");artifact=transaction.resolve("artifact");
+    api.downloadToStaging(grant,artifact,grant.artifact.sizeBytes,cancel,download);
+   }
    StationFiles.Progress extract=(n,t)->{long now=System.nanoTime();if(n==t||now-last[0]>=100000000){last[0]=now;listener.changed(id,true,grant.artifact.sizeBytes+n,total,"Preparando","",0);}};
    StationInstaller.Installed installed=installer.install(item,grant,artifact,cancel,extract);
+   StationDiagnostics.record(StationDiagnostics.Event.INSTALL_FINISHED,0,total);
    listener.changed(id,false,total,total,"Instalado",installed.launchPath.toString(),1);
-  }catch(Exception failure){listener.changed(id,false,0,-1,message(failure,cancel),"",3);}
+  }catch(Exception failure){StationDiagnostics.record(StationDiagnostics.Event.INSTALL_FAILED,StationDiagnostics.status(failure),0);listener.changed(id,false,0,-1,message(failure,cancel),"",3);}
   finally {
    if(transaction!=null)try{Files.deleteIfExists(transaction.resolve("artifact"));Files.deleteIfExists(transaction);}catch(IOException retained){/* Unique partial remains uninstalled; never erase another transaction. */}
    jobs.remove(id,cancel);
@@ -53,12 +67,16 @@ public final class StationDownloads implements AutoCloseable {
  }
  public StationInstaller.Installed find(StationCatalog.Item item)throws Exception{return installer.find(item);}
  public void close(){for(StationApi.Cancellation cancel:jobs.values())cancel.cancel();worker.shutdown();}
- private static String message(Exception error,StationApi.Cancellation cancel) {
+ private static final class InsufficientSpace extends IOException {}
+ static String message(Exception error,StationApi.Cancellation cancel) {
   if(cancel.cancelled()||error instanceof InterruptedIOException)return "Cancelado";
+  if(error instanceof StationApi.ArtifactUnavailable)return "O servidor ainda não publicou os dados de instalação deste jogo.";
+  if(error instanceof InsufficientSpace)return "Espaço insuficiente para baixar e preparar o jogo.";
   if(error instanceof StationApi.Failure){StationApi.Failure f=(StationApi.Failure)error;
    if(f.status==503)return "Jogo ainda não preparado pelo servidor.";
    if(f.status==429)return "Limite de consultas. Aguarde um minuto.";
    if(f.status==401||f.status==403)return "Acesso não autorizado. Entre novamente.";
+   if(f.status==404&&f.code.equals("STATION_ITEM_NOT_FOUND"))return "O servidor não disponibilizou o arquivo deste jogo. A equipe precisa corrigir o catálogo.";
    if(f.status==404)return "Autorização indisponível. Tente baixar novamente.";
   }
   return "Falha ao preparar o jogo. Os arquivos anteriores foram preservados.";

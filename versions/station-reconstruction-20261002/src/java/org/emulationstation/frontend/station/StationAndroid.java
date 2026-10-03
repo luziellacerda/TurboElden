@@ -28,6 +28,7 @@ public final class StationAndroid {
     public final StationCoordinator coordinator;
     private StationAndroid(Context context) throws Exception {
         this.context=context;
+        StationDiagnostics.observe((event,status,count)->android.util.Log.i("StationService",event.name()+" status="+status+" count="+count));
         // Resolve only the OS-owned root; installer descendants still reject every symbolic link.
         privateFiles=context.getApplicationContext().getNoBackupFilesDir().toPath().toRealPath();
         StationApi.Clock clock=SystemClock::elapsedRealtime;

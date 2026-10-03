@@ -80,11 +80,16 @@ public final class StationCoordinator {
         authorized=null;library=null;sessions.denied(session);
     }
     private Library loadCatalog(StationApi.Session session,String name,StationApi.Cancellation cancel) throws Exception {
-        try{return new Library(name,catalogs.refresh(api,session,cancel).catalog,false);}
+        try{
+            StationCatalog catalog=catalogs.refresh(api,session,cancel).catalog;
+            StationDiagnostics.record(StationDiagnostics.Event.CATALOG_NETWORK,200,catalog.items.size());
+            return new Library(name,catalog,false);
+        }
         catch(StationApi.Failure unavailable) {
             if(unavailable.status!=503 || !unavailable.code.equals("STATION_CATALOG_NOT_READY"))throw unavailable;
             StationApi.CatalogSnapshot cached=catalogs.read(api,session);
             if(cached==null)throw unavailable;
+            StationDiagnostics.record(StationDiagnostics.Event.CATALOG_CACHE,503,cached.catalog.items.size());
             return new Library(name,cached.catalog,true);
         }
     }

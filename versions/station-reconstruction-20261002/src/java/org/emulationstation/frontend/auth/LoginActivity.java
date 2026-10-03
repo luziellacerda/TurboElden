@@ -21,6 +21,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.content.res.ColorStateList;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -43,6 +45,7 @@ public final class LoginActivity extends Activity {
     private TextView greeting;
     private boolean opening;
     private EditText password;
+    private CheckBox rememberAccess;
     private TextView status;
     private TextView welcome;
 
@@ -133,7 +136,7 @@ public final class LoginActivity extends Activity {
         } catch (IOException e) {
         }
         buildScreen();
-        if(StationLogin.hasLicense(this))submit();
+        if(StationLogin.hasLicense(this)&&StationLogin.rememberAccess(this))submit();
     }
 
     @Override // android.app.Activity, android.content.ComponentCallbacks
@@ -250,7 +253,7 @@ public final class LoginActivity extends Activity {
         this.password = new EditText(this);
         this.password.setId(View.generateViewId());
         textViewText8.setLabelFor(this.password.getId());
-        this.password.setHint("Digite sua senha");
+        this.password.setHint(StationLogin.hasLicense(this)?"Acesso salvo. Toque em Entrar":"Digite sua senha");
         this.password.setContentDescription("Senha de acesso");
         this.password.setTextColor(WHITE);
         this.password.setHintTextColor(-9468553);
@@ -268,6 +271,17 @@ public final class LoginActivity extends Activity {
         stateListDrawable.addState(new int[0], shape(-16314870, -13613257, 12));
         this.password.setBackground(stateListDrawable);
         add(linearLayoutColumn3, this.password, 8);
+        this.rememberAccess = new CheckBox(this);
+        this.rememberAccess.setId(View.generateViewId());
+        this.rememberAccess.setText("Manter conectado");
+        this.rememberAccess.setContentDescription("Salvar acesso neste aparelho e entrar automaticamente");
+        this.rememberAccess.setTextColor(WHITE);
+        this.rememberAccess.setTextSize(13);
+        this.rememberAccess.setButtonTintList(ColorStateList.valueOf(GREEN));
+        this.rememberAccess.setMinHeight(dp(40));
+        this.rememberAccess.setChecked(StationLogin.rememberAccess(this));
+        this.rememberAccess.setOnCheckedChangeListener((checkbox,checked)->StationLogin.rememberAccess(this,checked));
+        add(linearLayoutColumn3, this.rememberAccess, 4);
         Button button = new Button(this);
         button.setId(View.generateViewId());
         button.setText("ENTRAR  →");
@@ -287,8 +301,10 @@ public final class LoginActivity extends Activity {
         stateListDrawable2.addState(new int[0], gradientDrawable);
         button.setBackground(stateListDrawable2);
         add(linearLayoutColumn3, button, 14);
-        this.password.setNextFocusDownId(button.getId());
-        button.setNextFocusUpId(this.password.getId());
+        this.password.setNextFocusDownId(this.rememberAccess.getId());
+        this.rememberAccess.setNextFocusUpId(this.password.getId());
+        this.rememberAccess.setNextFocusDownId(button.getId());
+        button.setNextFocusUpId(this.rememberAccess.getId());
         this.status = text("", 12, -29293);
         this.status.setMinHeight(dp(18));
         this.status.setAccessibilityLiveRegion(1);

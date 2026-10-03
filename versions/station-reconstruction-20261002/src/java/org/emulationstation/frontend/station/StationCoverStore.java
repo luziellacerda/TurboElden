@@ -48,11 +48,11 @@ public final class StationCoverStore {
             if(!Files.isRegularFile(file,LinkOption.NOFOLLOW_LINKS))throw new IOException("Invalid cover cache path");
             BasicFileAttributes attributes=Files.readAttributes(file,BasicFileAttributes.class,LinkOption.NOFOLLOW_LINKS);
             Checked previous=checked.get(key);
-            if(previous != null && previous.matches(attributes))return file;
+            if(previous != null && previous.matches(attributes)){StationDiagnostics.record(StationDiagnostics.Event.COVER_CACHE,0,1);return file;}
             try {
                 byte[] bytes=StationFiles.readBounded(file,StationProtocol.COVER_BODY_BYTES);
                 StationFiles.imageExtension(bytes);validator.validate(bytes);
-                checked.put(key,new Checked(attributes));return file;
+                checked.put(key,new Checked(attributes));StationDiagnostics.record(StationDiagnostics.Event.COVER_CACHE,0,1);return file;
             } catch(IOException corrupt) {checked.remove(key);}
         }
         if(previousCovers!=null) {
