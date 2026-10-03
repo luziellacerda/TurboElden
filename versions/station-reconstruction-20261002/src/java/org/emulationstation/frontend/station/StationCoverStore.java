@@ -4,6 +4,9 @@ import java.io.*;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 
 /** Persistent cover cache. Call on an IO worker only for requested visible items. */
 public final class StationCoverStore {
@@ -19,10 +22,14 @@ public final class StationCoverStore {
     private final StationApi api;
     private final StationSessions sessions;
     private final StationApi.Clock clock;
-    private final Waiter waiter;
     private final ImageValidator validator;
     private final PreviousCovers previousCovers;
-    private long nextRequest;
+    private final Object state=new Object();
+    private long retryAfter;
+    private static final class Flight {
+        final ReentrantLock lock=new ReentrantLock();int users;
+    }
+    private final ConcurrentHashMap<String,Flight> flights=new ConcurrentHashMap<>();
     private final Map<String,Checked> checked=new LinkedHashMap<String,Checked>(256,0.75f,true) {
         protected boolean removeEldestEntry(Map.Entry<String,Checked> e) {return size()>256;}
     };
@@ -37,27 +44,41 @@ public final class StationCoverStore {
             StationApi.Clock clock,Waiter waiter,ImageValidator validator,PreviousCovers previousCovers) throws IOException {
         this.previousCovers=previousCovers;
         Files.createDirectories(directory);this.directory=directory.toRealPath();
-        this.api=api;this.sessions=sessions;this.clock=clock;this.waiter=waiter;this.validator=validator;
+        this.api=api;this.sessions=sessions;this.clock=clock;this.validator=validator;
     }
-    public synchronized Path get(String coverId,long revision,StationApi.Cancellation cancel) throws Exception {
+    public Path get(String coverId,long revision,StationApi.Cancellation cancel) throws Exception {
         return get(sessions.get(cancel),coverId,revision,cancel);
     }
     /** Uses the coordinator's session without renewing it while an artifact grant is in flight. */
-    public synchronized Path get(StationApi.Session session,String coverId,long revision,StationApi.Cancellation cancel) throws Exception {
+    public Path get(StationApi.Session session,String coverId,long revision,StationApi.Cancellation cancel) throws Exception {
         StationCatalog.libraryId(coverId);
         if(revision<1)throw new IOException("Invalid cover revision");
         cancel.check();
-        String key=coverId+"-"+revision;Path file=directory.resolve(key+".img");
+        String key=coverId+"-"+revision;
+        Flight flight=flights.compute(key,(k,value)->{if(value==null)value=new Flight();value.users++;return value;});
+        boolean locked=false;
+        try {
+            while(!locked){cancel.check();locked=flight.lock.tryLock(100,TimeUnit.MILLISECONDS);}
+            cancel.check();return load(session,coverId,revision,key,cancel);
+        }catch(InterruptedException interrupted){Thread.currentThread().interrupt();throw new InterruptedIOException("Cover cancelled");}
+        finally {
+            if(locked)flight.lock.unlock();
+            flights.compute(key,(k,value)->{if(--value.users==0)return null;return value;});
+        }
+    }
+    private Path load(StationApi.Session session,String coverId,long revision,String key,StationApi.Cancellation cancel) throws Exception {
+        Path file=directory.resolve(key+".img");
         if(Files.exists(file,LinkOption.NOFOLLOW_LINKS)) {
             if(!Files.isRegularFile(file,LinkOption.NOFOLLOW_LINKS))throw new IOException("Invalid cover cache path");
             BasicFileAttributes attributes=Files.readAttributes(file,BasicFileAttributes.class,LinkOption.NOFOLLOW_LINKS);
-            Checked previous=checked.get(key);
+            Checked previous; synchronized(state){previous=checked.get(key);}
             if(previous != null && previous.matches(attributes)){StationDiagnostics.record(StationDiagnostics.Event.COVER_CACHE,0,1);return file;}
             try {
                 byte[] bytes=StationFiles.readBounded(file,StationProtocol.COVER_BODY_BYTES);
                 StationFiles.imageExtension(bytes);validator.validate(bytes);
-                checked.put(key,new Checked(attributes));StationDiagnostics.record(StationDiagnostics.Event.COVER_CACHE,0,1);return file;
-            } catch(IOException corrupt) {checked.remove(key);}
+                synchronized(state){checked.put(key,new Checked(attributes));}
+                StationDiagnostics.record(StationDiagnostics.Event.COVER_CACHE,0,1);return file;
+            } catch(IOException corrupt) {synchronized(state){checked.remove(key);}}
         }
         if(previousCovers!=null) {
             byte[] imported=null;
@@ -68,32 +89,34 @@ public final class StationCoverStore {
             if(imported!=null) {
                 StationFiles.replace(new ByteArrayInputStream(imported),file,imported.length,StationProtocol.COVER_BODY_BYTES,
                     cancel,StationFiles.NO_PROGRESS);
-                checked.put(key,new Checked(Files.readAttributes(file,BasicFileAttributes.class,LinkOption.NOFOLLOW_LINKS)));
+                remember(key,file);
                 return file;
             }
         }
-        Long retryAt=unavailable.get(key);
-        if(retryAt != null && clock.millis()<retryAt)throw new IOException("Cover temporarily unavailable");
-        // A server rate limit must not occupy the session lock for a whole minute.
-        if(nextRequest-clock.millis()>2100)throw new IOException("Cover temporarily unavailable");
-        while(clock.millis()<nextRequest) {
-            cancel.check();
-            try {waiter.waitMillis(Math.min(100,nextRequest-clock.millis()));}
-            catch(InterruptedException e){Thread.currentThread().interrupt();cancel.check();}
+        synchronized(state) {
+            Long retryAt=unavailable.get(key);
+            if(clock.millis()<retryAfter || retryAt!=null && clock.millis()<retryAt)
+                throw new IOException("Cover temporarily unavailable");
         }
-        cancel.check();nextRequest=clock.millis()+2100;
+        cancel.check();
         byte[] bytes;
         try {bytes=api.cover(session,coverId,cancel);}
         catch(StationApi.Failure denied) {
             if(denied.sessionDenied())sessions.denied(session);
-            if(denied.status==429)nextRequest=clock.millis()+60000;
-            if(denied.status==404 || denied.status==429)unavailable.put(key,clock.millis()+60000);
+            synchronized(state){
+                if(denied.status==429)retryAfter=clock.millis()+60000;
+                if(denied.status==404 || denied.status==429)unavailable.put(key,clock.millis()+60000);
+            }
             throw denied;
         }
         validator.validate(bytes);
         StationFiles.replace(new ByteArrayInputStream(bytes),file,bytes.length,StationProtocol.COVER_BODY_BYTES,
             cancel,StationFiles.NO_PROGRESS);
-        checked.put(key,new Checked(Files.readAttributes(file,BasicFileAttributes.class,LinkOption.NOFOLLOW_LINKS)));
-        unavailable.remove(key);return file;
+        remember(key,file);
+        synchronized(state){unavailable.remove(key);}return file;
+    }
+    private void remember(String key,Path file) throws IOException {
+        Checked value=new Checked(Files.readAttributes(file,BasicFileAttributes.class,LinkOption.NOFOLLOW_LINKS));
+        synchronized(state){checked.put(key,value);}
     }
 }

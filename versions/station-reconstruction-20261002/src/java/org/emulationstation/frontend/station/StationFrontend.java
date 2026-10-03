@@ -9,11 +9,15 @@ import java.util.concurrent.*;
 /** JNI entry points are commands, not URL interceptors. Network work stays off the SDL thread. */
 public final class StationFrontend {
  static {System.loadLibrary("station_frontend");}
- private static final ThreadPoolExecutor commands=pool("Station-catalog",8),images=pool("Station-covers",32);
+ private static final ThreadPoolExecutor commands=pool("Station-catalog",8,1),images=pool("Station-covers",32,4);
  private static final ConcurrentHashMap<String,StationApi.Cancellation> requests=new ConcurrentHashMap<>();
  private static volatile StationDownloads downloads;private static volatile boolean foreground=true,configured;
  private static String platformWarning="";
- private static ThreadPoolExecutor pool(String name,int capacity){return new ThreadPoolExecutor(0,1,10,TimeUnit.SECONDS,new ArrayBlockingQueue<Runnable>(capacity),r->{Thread t=new Thread(r,name);t.setDaemon(true);return t;});}
+ private static long coverGeneration;
+ private static ThreadPoolExecutor pool(String name,int capacity,int concurrency){
+  ThreadPoolExecutor pool=new ThreadPoolExecutor(concurrency,concurrency,10,TimeUnit.SECONDS,new ArrayBlockingQueue<Runnable>(capacity),r->{Thread t=new Thread(r,name);t.setDaemon(true);return t;});
+  pool.allowCoreThreadTimeOut(true);return pool;
+ }
  private StationFrontend(){}
  public static boolean authorized(){StationAndroid app=StationAndroid.current();return app!=null&&app.coordinator.ready();}
  public static void requestLogin(){StationAndroid app=StationAndroid.current();if(app!=null){
@@ -64,7 +68,10 @@ public final class StationFrontend {
   StationDiagnostics.record(StationDiagnostics.Event.UNSUPPORTED_PLATFORM,0,publication.unsupportedCount);
   StationDiagnostics.record(StationDiagnostics.Event.CATALOG_PUBLISHED,library.cached?503:200,rows.size());
   android.util.Log.i("StationFrontend","Publishing catalog items="+rows.size());
-  publishCatalog(rows.toArray(new byte[0][]),utf8(library.displayName));
+  synchronized(StationFrontend.class){
+   ++coverGeneration;for(StationApi.Cancellation pending:requests.values())pending.cancel();requests.clear();
+   publishCatalog(rows.toArray(new byte[0][]),utf8(library.displayName));
+  }
   String warning=publication.warning();
   if(!warning.equals(platformWarning)){
    platformWarning=warning;
@@ -76,14 +83,26 @@ public final class StationFrontend {
  public static boolean remove(String itemId){StationDownloads current=downloads;if(current==null)return false;current.uninstall(itemId);return true;}
  public static int activeCount(){StationDownloads current=downloads;return current==null?0:current.activeCount();}
  public static void cover(String itemId){
-  if(!foreground){publishCover(itemId,new byte[0]);return;}StationApi.Cancellation cancel=new StationApi.Cancellation();if(requests.putIfAbsent(itemId,cancel)!=null)return;
+  final long generation;StationApi.Cancellation cancel=new StationApi.Cancellation();
+  synchronized(StationFrontend.class){
+   if(!foreground){publishCover(itemId,new byte[0]);return;}
+   if(requests.putIfAbsent(itemId,cancel)!=null)return;generation=coverGeneration;
+  }
   try{images.execute(()->{
-   try{StationAndroid app=StationAndroid.current();if(app!=null){Path path=app.coordinator.cover(itemId,cancel);cancel.check();publishCover(itemId,utf8(path.toString()));}}
-   catch(Exception failed){if(!cancel.cancelled())StationDiagnostics.record(StationDiagnostics.Event.COVER_FAILED,StationDiagnostics.status(failed),1);publishCover(itemId,new byte[0]);}
+   try{StationAndroid app=StationAndroid.current();if(app!=null){Path path=app.coordinator.cover(itemId,cancel);publishRequestedCover(itemId,cancel,generation,utf8(path.toString()));}
+    else publishRequestedCover(itemId,cancel,generation,new byte[0]);}
+   catch(Exception failed){if(!cancel.cancelled())StationDiagnostics.record(StationDiagnostics.Event.COVER_FAILED,StationDiagnostics.status(failed),1);publishRequestedCover(itemId,cancel,generation,new byte[0]);}
    finally{requests.remove(itemId,cancel);}
-  });}catch(RejectedExecutionException busy){requests.remove(itemId,cancel);publishCover(itemId,new byte[0]);}
+  });}catch(RejectedExecutionException busy){publishRequestedCover(itemId,cancel,generation,new byte[0]);requests.remove(itemId,cancel);}
  }
- public static void setForeground(boolean visible){boolean resumed=visible&&!foreground;foreground=visible;if(!visible){for(StationApi.Cancellation cancel:requests.values())cancel.cancel();}else if(resumed&&configured)reconcile();}
+ private static void publishRequestedCover(String id,StationApi.Cancellation cancel,long generation,byte[] path){
+  synchronized(StationFrontend.class){if(foreground&&generation==coverGeneration&&requests.get(id)==cancel&&!cancel.cancelled())publishCover(id,path);}
+ }
+ public static void setForeground(boolean visible){
+  boolean resumed;
+  synchronized(StationFrontend.class){resumed=visible&&!foreground;foreground=visible;if(!visible)for(StationApi.Cancellation cancel:requests.values())cancel.cancel();}
+  if(resumed&&configured)reconcile();
+ }
  public static void reconcile(){execute(()->{try{StationAndroid app=StationAndroid.current();if(app!=null&&downloads!=null)publishCurrent(app);}catch(Exception e){publishError(utf8("Não foi possível conferir os jogos instalados."));}});}
  private static boolean execute(Runnable operation){try{commands.execute(operation);return true;}catch(RejectedExecutionException busy){publishError(utf8("Aguarde a consulta em andamento."));return false;}}
  private static String catalogError(Exception e,String fallback){

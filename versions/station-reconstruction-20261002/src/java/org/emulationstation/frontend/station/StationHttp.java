@@ -83,10 +83,15 @@ public final class StationHttp implements StationApi.Transport {
                 throw new IOException("Unexpected Station content encoding");
             InputStream stream = status >= 400 ? connection.getErrorStream() : connection.getInputStream();
             if (stream == null) stream = new ByteArrayInputStream(new byte[0]);
-            final InputStream owned = stream;
+            final ResponseBody owned = new ResponseBody(stream);
             StationApi.Response response = new StationApi.Response(status, connection.getContentType(),
                 connection.getContentLengthLong(), owned, () -> {
-                    try { owned.close(); } finally { cancellation.detach(abort); connection.disconnect(); }
+                    // A fully consumed body may return its TLS socket to the platform pool.
+                    // Partial/failed/cancelled bodies must be disconnected without draining them.
+                    if (!owned.finished || cancellation.cancelled()) connection.disconnect();
+                    try { owned.close(); }
+                    catch(IOException failed){connection.disconnect();throw failed;}
+                    finally { cancellation.detach(abort); }
                 });
             handedOff = true;
             return response;
@@ -94,6 +99,15 @@ public final class StationHttp implements StationApi.Transport {
             StationDiagnostics.record(StationDiagnostics.Event.REQUEST_FAILED,0,0);throw failure;
         } finally {
             if (!handedOff) { cancellation.detach(abort); connection.disconnect(); }
+        }
+    }
+
+    static final class ResponseBody extends FilterInputStream {
+        boolean finished;
+        ResponseBody(InputStream source){super(source);}
+        @Override public int read() throws IOException {int n=in.read();if(n<0)finished=true;return n;}
+        @Override public int read(byte[] bytes,int offset,int length) throws IOException {
+            int n=in.read(bytes,offset,length);if(n<0)finished=true;return n;
         }
     }
 

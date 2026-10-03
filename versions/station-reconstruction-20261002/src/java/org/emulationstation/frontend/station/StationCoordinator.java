@@ -44,20 +44,31 @@ public final class StationCoordinator {
             authorized=session;library=result;return result;
         }catch(StationApi.Failure e){if(e.sessionDenied())invalidate(session);throw e;}
     }
-    public synchronized Path cover(String itemId,StationApi.Cancellation cancel) throws Exception {
+    public Path cover(String itemId,StationApi.Cancellation cancel) throws Exception {
+        final StationApi.Session session;
+        final StationCatalog.Item item;
+        synchronized(this) {
         Library current=library;
         if(current==null)throw new IOException("Catálogo Station ainda não carregado");
         if(current.catalog.find(itemId)==null)throw new IOException("Jogo ausente do catálogo autorizado");
-        StationApi.Session session=sessions.get(cancel);
+        session=sessions.get(cancel);
         try{
             if(session!=authorized){current=loadCatalog(session,current.displayName,cancel);library=current;authorized=session;}
-            StationCatalog.Item item=current.catalog.find(itemId);
+            item=current.catalog.find(itemId);
             if(item==null)throw new IOException("Jogo ausente após renovar catálogo");
-            try(StationDiagnostics.Scope trace=StationDiagnostics.selection(item.itemId,item.coverId,item.revision)){
-                return covers.get(session,item.coverId,item.revision,cancel);
-            }
         }
         catch(StationApi.Failure e){if(e.sessionDenied())invalidate(session);throw e;}
+        }
+        // A cover body must not serialize the other covers or delay a download grant.
+        try(StationDiagnostics.Scope trace=StationDiagnostics.selection(item.itemId,item.coverId,item.revision)){
+            Path path=covers.get(session,item.coverId,item.revision,cancel);
+            synchronized(this){
+                StationCatalog.Item live=library==null?null:library.catalog.find(itemId);
+                if(authorized!=session || live==null || live.revision!=item.revision || !live.coverId.equals(item.coverId))
+                    throw new IOException("O catálogo mudou. Atualize a lista.");
+            }
+            cancel.check();return path;
+        }catch(StationApi.Failure e){if(e.sessionDenied())invalidate(session);throw e;}
     }
     public synchronized StationApi.Grant authorize(String itemId,StationApi.Cancellation cancel) throws Exception {
         Library current=library;
@@ -81,7 +92,8 @@ public final class StationCoordinator {
     public Library current() {return library;}
     public synchronized void logout() {authorized=null;library=null;sessions.forgetSession();}
     private synchronized void invalidate(StationApi.Session session) {
-        authorized=null;library=null;sessions.denied(session);
+        if(authorized==session){authorized=null;library=null;}
+        sessions.denied(session);
     }
     private Library loadCatalog(StationApi.Session session,String name,StationApi.Cancellation cancel) throws Exception {
         try{
