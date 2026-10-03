@@ -63,6 +63,7 @@ public final class StationPlatforms {
         names.put("xbox",new Platform("xbox","xbox"));
         names.put("xbox360",new Platform("xbox360","xbox360"));
         names.put("megadrive",names.get("MegaDrive"));
+        names.put("megadrivebr",names.get("MegaDrive - BR"));
         names.put("snes",names.get("Super Nintendo"));
         names.put("snesbr",names.get("Super Nintendo - BR"));
         names.put("gb",names.get("Gameboy"));
