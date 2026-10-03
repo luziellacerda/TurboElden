@@ -24,7 +24,12 @@ public final class StationApiTest {
     static final class Fake implements StationApi.Transport, StationApi.Device, StationApi.Clock {
         final KeyPair authority,device;
         final String deviceId,license="license_test_123",sessionId="2".repeat(64),challengeId="1".repeat(64);
-        long time=1000;int requests,closed,artifactCalls;String tamper="",failedRoute="",errorCode="";int status=200;
+        volatile long time=1000;int requests,closed,artifactCalls;String tamper="",failedRoute="",errorCode="";int status=200;
+        boolean rotateSessions;volatile int sessionCalls;
+        volatile String activeToken=token(3),activeSession=sessionId;
+        String displayName="Comprador";
+        java.util.concurrent.CountDownLatch artifactEntered,artifactRelease;
+        java.util.concurrent.CountDownLatch artifactBodyEntered,artifactBodyRelease;
         org.json.JSONObject descriptorOverride;org.json.JSONArray catalogItems;boolean omitDescriptor;long itemRevision=1;
         boolean badSignature,truncatedArtifact;byte[] artifact={1,2,3};long lengthOverride=-2;
         Fake()throws Exception {
@@ -42,7 +47,20 @@ public final class StationApiTest {
                 cancel.check();
                 if (path.equals(failedRoute))return reply(status,"application/json",new JSONObject().put("code",errorCode).toString().getBytes(StandardCharsets.UTF_8),-2);
                 if(path.contains("/artifacts/")) {
-                    artifactCalls++;ok(bearer.equals(token(3)),"Artifact bearer");
+                    artifactCalls++;
+                    if(artifactEntered!=null){artifactEntered.countDown();if(!artifactRelease.await(10,java.util.concurrent.TimeUnit.SECONDS))throw new IOException("Fixture transfer barrier timed out");}
+                    if(rotateSessions&&!bearer.equals(activeToken))return reply(401,"application/json",new JSONObject().put("code","STATION_SESSION_DENIED").toString().getBytes(StandardCharsets.UTF_8),-2);
+                    ok(bearer.equals(activeToken),"Artifact bearer");
+                    if(artifactBodyEntered!=null){
+                        InputStream input=new FilterInputStream(new ByteArrayInputStream(artifact)){
+                            boolean started;
+                            @Override public int read(byte[] buffer,int offset,int length)throws IOException{
+                                if(!started){started=true;artifactBodyEntered.countDown();try{if(!artifactBodyRelease.await(10,java.util.concurrent.TimeUnit.SECONDS))throw new IOException("Fixture body barrier timed out");}catch(InterruptedException e){Thread.currentThread().interrupt();throw new InterruptedIOException();}}
+                                return super.read(buffer,offset,length);
+                            }
+                        };
+                        return new StationApi.Response(200,"application/octet-stream",artifact.length,input,()->{input.close();closed++;});
+                    }
                     return reply(200,"application/octet-stream",artifact,truncatedArtifact?10:artifact.length);
                 }
                 if(path.contains("/covers/"))return reply(200,"image/png",new byte[]{(byte)137,80,78,71,13,10,26,10},-2);
@@ -60,13 +78,15 @@ public final class StationApiTest {
                     domain=StationProtocol.SESSION_CHALLENGE;response.put("licenseId",license).put("challengeId",challengeId).put("nonce",token(2)).put("expiresInSeconds",60);
                 }else if(operation.equals("sessions")){
                     verifyDevice(request);domain=StationProtocol.SESSION;
+                    sessionCalls++;
+                    if(rotateSessions){activeToken=token(2+sessionCalls);activeSession=String.format("%064x",1+sessionCalls);}
                     response.put("licenseId",license).put("challengeId",challengeId).put("nonce",token(2))
-                        .put("sessionId",sessionId).put("accessToken",token(3)).put("expiresInSeconds",180);
+                        .put("sessionId",activeSession).put("accessToken",activeToken).put("expiresInSeconds",180);
                 }else {
-                    ok(bearer.equals(token(3)),"Authenticated request");
-                    response.put("licenseId",license).put("sessionId",sessionId);
+                    ok(bearer.equals(activeToken),"Authenticated request");
+                    response.put("licenseId",license).put("sessionId",activeSession);
                     if(operation.equals("catalog")){domain=StationProtocol.CATALOG;response.put("revision",1).put("items",catalogItems==null?new JSONArray().put(item()):catalogItems);}
-                    else if(operation.equals("me")){domain=StationProtocol.PROFILE;response.put("displayName","Comprador").put("profileVersion",1);}
+                    else if(operation.equals("me")){domain=StationProtocol.PROFILE;response.put("displayName",displayName).put("profileVersion",1);}
                     else if(operation.equals("downloads/authorize")){
                         domain=StationProtocol.DOWNLOAD_GRANT;
                         JSONObject body=new JSONObject(new String(request,StandardCharsets.UTF_8));ok(body.getString("itemId").equals("item_12345"),"Authorize by ID");
@@ -131,6 +151,11 @@ public final class StationApiTest {
         before=fake.artifactCalls;fails(()->api.downloadToStaging(grant,target,100,cancel,(n,t)->{}));ok(fake.artifactCalls==before,"Never reuse grant");
         fake.truncatedArtifact=false;StationApi.Grant secondGrant=api.authorize(session,"item_12345",1,cancel);
         ok(api.downloadToStaging(secondGrant,target,100,cancel,(n,t)->{}).size==3,"Artifact complete");
+        StationApi.Grant abandonedGrant=api.authorize(session,"item_12345",1,cancel);
+        StationApi.ArtifactTransfer abandoned=api.openArtifact(abandonedGrant,100,cancel);int closedBefore=fake.closed;
+        abandoned.close();abandoned.close();ok(fake.closed==closedBefore+1,"Abandoned transfer closes connection exactly once");
+        fails(()->abandoned.copyToStaging(target,cancel,(n,t)->{}));
+        before=fake.artifactCalls;fails(()->api.openArtifact(abandonedGrant,100,cancel));ok(fake.artifactCalls==before,"Abandoned transfer cannot reuse grant");
         final StationApi.Grant expired=api.authorize(session,"item_12345",1,cancel);fake.time+=60000;
         fails(()->api.downloadToStaging(expired,target,100,cancel,(n,t)->{}));
         fake.time+=120000;before=fake.requests;fails(()->api.catalog(session,cancel));ok(before==fake.requests,"Expired session not sent");

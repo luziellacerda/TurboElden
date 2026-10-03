@@ -32,12 +32,7 @@ public final class StationCoordinator {
         authorized=null;library=null;
         StationApi.Session session=(code==null||code.isEmpty())?sessions.get(cancel):sessions.activate(code,cancel);
         try {
-            String name;
-            try {name=api.profile(session,cancel);saveName(session,name,cancel);}
-            catch(StationApi.Failure e) {
-                if(e.status!=503 || !e.code.equals("STATION_PROFILE_NOT_READY"))throw e;
-                name=readName(session);
-            }
+            String name=loadName(session,cancel);
             Library result=loadCatalog(session,name,cancel);
             cancel.check();authorized=session;library=result;return result;
         }catch(Exception failure){sessions.denied(session);throw failure;}
@@ -45,17 +40,24 @@ public final class StationCoordinator {
     public synchronized Library refresh(StationApi.Cancellation cancel) throws Exception {
         StationApi.Session session=sessions.get(cancel);
         try {
-            Library result=loadCatalog(session,library==null?readName(session):library.displayName,cancel);
+            Library result=loadCatalog(session,loadName(session,cancel),cancel);
             authorized=session;library=result;return result;
         }catch(StationApi.Failure e){if(e.sessionDenied())invalidate(session);throw e;}
     }
-    public Path cover(String itemId,StationApi.Cancellation cancel) throws Exception {
+    public synchronized Path cover(String itemId,StationApi.Cancellation cancel) throws Exception {
         Library current=library;
         if(current==null)throw new IOException("Catálogo Station ainda não carregado");
-        StationCatalog.Item item=current.catalog.find(itemId);
-        if(item==null)throw new IOException("Jogo ausente do catálogo autorizado");
-        try{return covers.get(item.coverId,item.revision,cancel);}
-        catch(StationApi.Failure e){if(e.sessionDenied())invalidate(authorized);throw e;}
+        if(current.catalog.find(itemId)==null)throw new IOException("Jogo ausente do catálogo autorizado");
+        StationApi.Session session=sessions.get(cancel);
+        try{
+            if(session!=authorized){current=loadCatalog(session,current.displayName,cancel);library=current;authorized=session;}
+            StationCatalog.Item item=current.catalog.find(itemId);
+            if(item==null)throw new IOException("Jogo ausente após renovar catálogo");
+            try(StationDiagnostics.Scope trace=StationDiagnostics.selection(item.itemId,item.coverId,item.revision)){
+                return covers.get(session,item.coverId,item.revision,cancel);
+            }
+        }
+        catch(StationApi.Failure e){if(e.sessionDenied())invalidate(session);throw e;}
     }
     public synchronized StationApi.Grant authorize(String itemId,StationApi.Cancellation cancel) throws Exception {
         Library current=library;
@@ -65,14 +67,16 @@ public final class StationCoordinator {
             if(session!=authorized){current=loadCatalog(session,current.displayName,cancel);library=current;authorized=session;}
             StationCatalog.Item item=current.catalog.find(itemId);
             if(item==null)throw new IOException("Jogo ausente após renovar catálogo");
-            return api.authorize(session,itemId,item.revision,cancel);
+            try(StationDiagnostics.Scope trace=StationDiagnostics.selection(item.itemId,item.coverId,item.revision)){
+                return api.authorize(session,itemId,item.revision,cancel);
+            }
         }
         catch(StationApi.Failure e){if(e.sessionDenied())invalidate(session);throw e;}
     }
     public boolean ready() {
         StationApi.Session session=authorized;
         StationApi.Session live=sessions.peek();
-        return library!=null && session!=null && live!=null && !live.needsRenewal(clock.millis());
+        return library!=null && session!=null && live==session && !live.needsRenewal(clock.millis());
     }
     public Library current() {return library;}
     public synchronized void logout() {authorized=null;library=null;sessions.forgetSession();}
@@ -91,6 +95,13 @@ public final class StationCoordinator {
             if(cached==null)throw unavailable;
             StationDiagnostics.record(StationDiagnostics.Event.CATALOG_CACHE,503,cached.catalog.items.size());
             return new Library(name,cached.catalog,true);
+        }
+    }
+    private String loadName(StationApi.Session session,StationApi.Cancellation cancel) throws Exception {
+        try {String name=api.profile(session,cancel);saveName(session,name,cancel);return name;}
+        catch(StationApi.Failure unavailable) {
+            if(unavailable.status!=503 || !unavailable.code.equals("STATION_PROFILE_NOT_READY"))throw unavailable;
+            return readName(session);
         }
     }
     private Path nameFile(StationApi.Session session) {

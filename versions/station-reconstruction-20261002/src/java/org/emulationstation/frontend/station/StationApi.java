@@ -187,16 +187,35 @@ public final class StationApi {
     /** Publishes staging only after size and signed digest match. Installation is a separate transaction. */
     public StationFiles.Receipt downloadToStaging(Grant grant,Path stagingFile,long maximumBytes,
             Cancellation cancel,StationFiles.Progress progress) throws Exception {
+        try(ArtifactTransfer transfer=openArtifact(grant,maximumBytes,cancel)) {
+            return transfer.copyToStaging(stagingFile,cancel,progress);
+        }
+    }
+
+    /** The server consumes the grant before returning these validated transfer headers. */
+    public ArtifactTransfer openArtifact(Grant grant,long maximumBytes,Cancellation cancel) throws Exception {
         valid(grant.session);notExpired(grant.expires);cancel.check();
         if(maximumBytes<grant.artifact.sizeBytes)throw new IOException("Artifact exceeds local transfer limit");
         if (!grant.consumed.compareAndSet(false,true)) throw new IOException("Grant has already been used");
         // Never retry this GET: the server consumes the grant even if the connection later fails.
-        try (Response response=transport.exchange("GET",ROOT+"artifacts/"+grant.grantId,null,grant.session.token,cancel)) {
+        Response response=transport.exchange("GET",ROOT+"artifacts/"+grant.grantId,null,grant.session.token,cancel);
+        boolean accepted=false;
+        try {
             success(response,cancel);
             if (!mime(response.type).equals("application/octet-stream") || response.length != grant.artifact.sizeBytes)
                 throw new IOException("Artifact headers invalid");
-            return StationFiles.replace(response.body,stagingFile,grant.artifact.sizeBytes,maximumBytes,cancel,progress,grant.artifact.sha256);
+            ArtifactTransfer transfer=new ArtifactTransfer(response,grant.artifact,maximumBytes);accepted=true;return transfer;
+        }finally{if(!accepted)response.close();}
+    }
+    public static final class ArtifactTransfer implements AutoCloseable {
+        private final Response response;private final StationArtifact artifact;private final long maximum;
+        private final AtomicBoolean copied=new AtomicBoolean(),closed=new AtomicBoolean();
+        private ArtifactTransfer(Response response,StationArtifact artifact,long maximum){this.response=response;this.artifact=artifact;this.maximum=maximum;}
+        public StationFiles.Receipt copyToStaging(Path file,Cancellation cancel,StationFiles.Progress progress)throws Exception {
+            if(closed.get()||!copied.compareAndSet(false,true))throw new IOException("Transfer has already been used");
+            return StationFiles.replace(response.body,file,artifact.sizeBytes,maximum,cancel,progress,artifact.sha256);
         }
+        public void close()throws IOException{if(closed.compareAndSet(false,true))response.close();}
     }
 
     private JSONObject signed(String method,String path,byte[] request,Session session,String domain,int maximum,

@@ -85,6 +85,12 @@ public final class StationPlatforms {
         names.put("pcenginecd",names.get("Pc Engine cd"));
         names.put("psx",names.get("Playstation 1"));
         names.put("switch",names.get("Switch"));
+        names.put("gamecube",names.get("GameCube"));
+        names.put("psp",names.get("PSP"));
+        names.put("pspbr",names.get("Psp - BR"));
+        names.put("ps2",names.get("Playstation 2"));
+        names.put("ps2br",names.get("Playstation 2 - BR"));
+        names.put("psvita",names.get("Psvita"));
         BY_NAME=Collections.unmodifiableMap(names);
     }
     public static final class UnsupportedPlatform extends IOException {

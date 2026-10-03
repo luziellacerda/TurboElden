@@ -1,4 +1,5 @@
 #include "station_catalog_abi.hpp"
+#include "station_cover_retry.hpp"
 #include <jni.h>
 #include <dlfcn.h>
 #include <algorithm>
@@ -10,6 +11,7 @@
 #include <utility>
 #include <ctime>
 #include <cmath>
+#include <chrono>
 #include <android/log.h>
 #include <cstdio>
 #include <sys/stat.h>
@@ -37,7 +39,9 @@ struct State {
  std::vector<Item> catalog;
  std::map<std::string,Job> jobs;
  std::set<std::string> covers;
+ station::CoverRetry coverRetry;
 } state; // Only the SDL thread reads/writes this state.
+int64_t coverTime(){return std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now().time_since_epoch()).count();}
 bool idValid(const std::string& id){return id.size()>=8&&id.size()<=64&&std::all_of(id.begin(),id.end(),[](unsigned char c){return(c>='A'&&c<='Z')||(c>='a'&&c<='z')||(c>='0'&&c<='9')||c=='_'||c=='-';});}
 void error(JNIEnv* env,const char* text){if(!env->ExceptionCheck()){jclass cls=env->FindClass("java/io/IOException");if(cls){env->ThrowNew(cls,text);env->DeleteLocalRef(cls);}}}
 std::string bytes(JNIEnv* env,jbyteArray input,size_t limit){
@@ -70,9 +74,10 @@ void queueCovers(Catalog* catalog){
  if(!owned(catalog)||catalog->state!=2)return;
  for(size_t index:catalog->priorities){
   if(state.covers.size()>=4)break;if(index>=catalog->items.size())continue;Item& item=catalog->items[index];
-  if(item.coverId.empty()||!item.coverPath.empty()||item.coverFailed||item.coverPending)continue;
+  if(item.coverId.empty()||!item.coverPath.empty()||item.coverPending||!state.coverRetry.ready(item.id,coverTime()))continue;
+  item.coverFailed=false;
   item.coverPending=true;state.covers.insert(item.id);
-  if(!command(coverMethod,&item.id)){item.coverPending=false;item.coverFailed=true;state.covers.erase(item.id);}
+  if(!command(coverMethod,&item.id)){item.coverPending=false;item.coverFailed=true;state.coverRetry.failed(item.id,coverTime(),5);state.covers.erase(item.id);}
  }
 }
 void drain(Catalog* catalog){
@@ -87,6 +92,7 @@ void drain(Catalog* catalog){
  bool modified=false;
  for(auto& pair:covers){state.covers.erase(pair.first);Item* item=find(catalog,pair.first);if(!item)continue;
   item->coverPending=false;item->coverFailed=pair.second.empty();item->coverReady=!pair.second.empty();item->coverPath=std::move(pair.second);modified=true;
+  if(item->coverFailed)state.coverRetry.failed(item->id,coverTime(),60);else state.coverRetry.succeeded(item->id);
  }
  for(auto& pair:jobs){Item* item=find(catalog,pair.first);if(!item)continue;Job& job=pair.second;
   if(job.result==1&&!job.launch.empty()){item->localPath=job.launch;item->fileName=job.launch.substr(job.launch.find_last_of('/')+1);item->installed=true;modified=true;}
@@ -104,7 +110,7 @@ bool apply(Catalog* catalog){
   else if(job.result==2){item.localPath.clear();item.fileName.clear();item.installed=false;}
  }
  catalog->items.swap(catalog->unusedPending);catalog->unusedPending.clear();state.pending=false;__android_log_print(4,"StationNative","Catalog applied items=%zu",catalog->items.size());
- catalog->priorities.clear();state.covers.clear();state.jobs.clear();
+ catalog->priorities.clear();state.covers.clear();state.coverRetry.clear();state.jobs.clear();
  catalog->state=2;catalog->error.clear();preparationCommitted=true;changed(catalog);return true;
 }
 }

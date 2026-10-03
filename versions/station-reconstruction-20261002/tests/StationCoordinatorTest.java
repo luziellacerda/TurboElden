@@ -35,6 +35,14 @@ public final class StationCoordinatorTest {
         server.failedRoute="";owner.login(null,cancel);
         ok(owner.ready(),"Resume with saved license does not require code again");
         server.time+=165000;ok(!owner.ready(),"Expired ready state not accepted");
+        sessions.get(cancel);ok(!owner.ready(),"Independently renewed session is not yet catalog-authorized");
+        owner.cover("item_12345",cancel);ok(owner.ready(),"Cover renewal reconciles catalog and live authorization");
+        server.displayName="Nome atualizado";
+        ok(owner.refresh(cancel).displayName.equals("Nome atualizado"),"Refresh reloads authenticated profile");
+        ok(Files.readString(dir.resolve("station-display-name.txt")).equals("Nome atualizado"),"Native name updated with profile");
+        server.failedRoute="/v1/station/me";server.status=503;server.errorCode="STATION_PROFILE_NOT_READY";
+        ok(owner.refresh(cancel).displayName.equals("Nome atualizado"),"Refresh profile unavailable uses this owner's cached name");
+        server.failedRoute="";
         owner.refresh(cancel);ok(owner.ready(),"Refresh renews session");
         server.failedRoute="/v1/station/downloads/authorize";server.status=403;server.errorCode="STATION_LICENSE_DENIED";
         fails(()->owner.authorize("item_12345",cancel));ok(!owner.ready(),"Download denial invalidates session");

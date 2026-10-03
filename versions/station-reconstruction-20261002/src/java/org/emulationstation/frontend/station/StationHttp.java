@@ -61,6 +61,8 @@ public final class StationHttp implements StationApi.Transport {
             connection.setReadTimeout(30000);
             connection.setUseCaches(false);
             connection.setRequestMethod(method);
+            String correlation=java.util.UUID.randomUUID().toString().replace("-","");
+            connection.setRequestProperty("X-Correlation-ID",correlation);
             connection.setRequestProperty("Accept-Encoding", "identity");
             if (token != null) connection.setRequestProperty("Authorization", "Bearer " + token);
             if (body != null) {
@@ -72,6 +74,8 @@ public final class StationHttp implements StationApi.Transport {
             cancellation.check();
             int status = connection.getResponseCode();
             StationDiagnostics.record(StationDiagnostics.route(path),status,0);
+            String returnedCorrelation=connection.getHeaderField("X-Correlation-ID");
+            StationDiagnostics.trace(StationDiagnostics.route(path),status,returnedCorrelation==null?correlation:returnedCorrelation);
             if (status / 100 == 3 || connection.getHeaderField("Location") != null)
                 throw new IOException("Station redirect refused");
             String encoding = connection.getHeaderField("Content-Encoding");

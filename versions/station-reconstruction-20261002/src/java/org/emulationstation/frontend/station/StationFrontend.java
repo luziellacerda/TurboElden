@@ -12,6 +12,7 @@ public final class StationFrontend {
  private static final ThreadPoolExecutor commands=pool("Station-catalog",8),images=pool("Station-covers",32);
  private static final ConcurrentHashMap<String,StationApi.Cancellation> requests=new ConcurrentHashMap<>();
  private static volatile StationDownloads downloads;private static volatile boolean foreground=true,configured;
+ private static String platformWarning="";
  private static ThreadPoolExecutor pool(String name,int capacity){return new ThreadPoolExecutor(0,1,10,TimeUnit.SECONDS,new ArrayBlockingQueue<Runnable>(capacity),r->{Thread t=new Thread(r,name);t.setDaemon(true);return t;});}
  private StationFrontend(){}
  public static boolean authorized(){StationAndroid app=StationAndroid.current();return app!=null&&app.coordinator.ready();}
@@ -47,28 +48,35 @@ public final class StationFrontend {
  });}
  private static void publishCurrent(StationAndroid app)throws Exception {
   StationCoordinator.Library library=app.coordinator.current();if(library==null)throw new IOException("Catálogo não carregado");
+  StationPublication publication=new StationPublication(library.catalog);
   ArrayList<byte[]> rows=new ArrayList<>();
-  long preparedBytes=0;int preparedItems=0;publishPreparation(0,library.catalog.items.size(),0);
-  for(StationCatalog.Item item:library.catalog.items){
-   StationPlatforms.Platform platform=StationPlatforms.resolve(item.platform);
+  long preparedBytes=0;int preparedItems=0;publishPreparation(0,publication.rows.size(),0);
+  for(StationPublication.Row entry:publication.rows){
+   StationCatalog.Item item=entry.item;StationPlatforms.Platform platform=entry.platform;
    StationInstaller.Installed installed=null;
    try{installed=downloads.find(item);}catch(Exception invalidReceipt){
     // One invalid receipt cannot hide the rest of an authenticated catalog.
     StationDiagnostics.record(StationDiagnostics.Event.RECEIPT_INVALID,0,1);
    }
    byte[] row=utf8(item.itemId+"\0"+item.name+"\0"+platform.label+"\0"+platform.folder+"\0"+item.coverId+"\0"+(installed==null?"":installed.launchPath.toString())+"\0");
-   rows.add(row);preparedBytes+=row.length;publishPreparation(++preparedItems,library.catalog.items.size(),preparedBytes);
+   rows.add(row);preparedBytes+=row.length;publishPreparation(++preparedItems,publication.rows.size(),preparedBytes);
   }
+  StationDiagnostics.record(StationDiagnostics.Event.UNSUPPORTED_PLATFORM,0,publication.unsupportedCount);
   StationDiagnostics.record(StationDiagnostics.Event.CATALOG_PUBLISHED,library.cached?503:200,rows.size());
   android.util.Log.i("StationFrontend","Publishing catalog items="+rows.size());
   publishCatalog(rows.toArray(new byte[0][]),utf8(library.displayName));
+  String warning=publication.warning();
+  if(!warning.equals(platformWarning)){
+   platformWarning=warning;
+   if(!warning.isEmpty())new android.os.Handler(android.os.Looper.getMainLooper()).post(()->android.widget.Toast.makeText(app.context,warning,android.widget.Toast.LENGTH_LONG).show());
+  }
  }
  public static boolean start(String itemId){StationDownloads current=downloads;return current!=null&&current.start(itemId);}
  public static void cancel(String itemId){StationDownloads current=downloads;if(current!=null)current.cancel(itemId);}
  public static boolean remove(String itemId){StationDownloads current=downloads;if(current==null)return false;current.uninstall(itemId);return true;}
  public static int activeCount(){StationDownloads current=downloads;return current==null?0:current.activeCount();}
  public static void cover(String itemId){
-  if(!foreground)return;StationApi.Cancellation cancel=new StationApi.Cancellation();if(requests.putIfAbsent(itemId,cancel)!=null)return;
+  if(!foreground){publishCover(itemId,new byte[0]);return;}StationApi.Cancellation cancel=new StationApi.Cancellation();if(requests.putIfAbsent(itemId,cancel)!=null)return;
   try{images.execute(()->{
    try{StationAndroid app=StationAndroid.current();if(app!=null){Path path=app.coordinator.cover(itemId,cancel);cancel.check();publishCover(itemId,utf8(path.toString()));}}
    catch(Exception failed){if(!cancel.cancelled())StationDiagnostics.record(StationDiagnostics.Event.COVER_FAILED,StationDiagnostics.status(failed),1);publishCover(itemId,new byte[0]);}

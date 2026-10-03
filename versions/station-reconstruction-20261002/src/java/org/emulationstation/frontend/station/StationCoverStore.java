@@ -40,9 +40,13 @@ public final class StationCoverStore {
         this.api=api;this.sessions=sessions;this.clock=clock;this.waiter=waiter;this.validator=validator;
     }
     public synchronized Path get(String coverId,long revision,StationApi.Cancellation cancel) throws Exception {
+        return get(sessions.get(cancel),coverId,revision,cancel);
+    }
+    /** Uses the coordinator's session without renewing it while an artifact grant is in flight. */
+    public synchronized Path get(StationApi.Session session,String coverId,long revision,StationApi.Cancellation cancel) throws Exception {
         StationCatalog.libraryId(coverId);
         if(revision<1)throw new IOException("Invalid cover revision");
-        cancel.check();StationApi.Session session=sessions.get(cancel);
+        cancel.check();
         String key=coverId+"-"+revision;Path file=directory.resolve(key+".img");
         if(Files.exists(file,LinkOption.NOFOLLOW_LINKS)) {
             if(!Files.isRegularFile(file,LinkOption.NOFOLLOW_LINKS))throw new IOException("Invalid cover cache path");
@@ -70,6 +74,8 @@ public final class StationCoverStore {
         }
         Long retryAt=unavailable.get(key);
         if(retryAt != null && clock.millis()<retryAt)throw new IOException("Cover temporarily unavailable");
+        // A server rate limit must not occupy the session lock for a whole minute.
+        if(nextRequest-clock.millis()>2100)throw new IOException("Cover temporarily unavailable");
         while(clock.millis()<nextRequest) {
             cancel.check();
             try {waiter.waitMillis(Math.min(100,nextRequest-clock.millis()));}
@@ -77,7 +83,6 @@ public final class StationCoverStore {
         }
         cancel.check();nextRequest=clock.millis()+2100;
         byte[] bytes;
-        session=sessions.get(cancel);
         try {bytes=api.cover(session,coverId,cancel);}
         catch(StationApi.Failure denied) {
             if(denied.sessionDenied())sessions.denied(session);
