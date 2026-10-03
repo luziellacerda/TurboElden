@@ -1,6 +1,6 @@
-# Reconstrução Station em andamento
+# Reconstrucao Station - APK candidato integrado
 
-Leia [a integração do cliente e login](versions/station-reconstruction-20261002/README.md) e o handoff correspondente. São 142 verificações locais e módulo Android compilado; catálogo nativo e APK completo ainda pendentes. Não instalar somente o DEX e não promover como estável. A referência estável abaixo continua preservada.
+Leia versions/station-reconstruction-20261002/README.md e os handoffs. Candidato 38e78fde instalado em 03/10/2026, hash conferido; 204 testes locais e verificacoes nativas. Login real ainda aguarda validacao. Nao promover a estavel. Legado nativo residual e importacao de jogos antigos estao documentados como pendentes.
 
 # Estável atual — Cemu Android 0.5.2 (30/09/2026)
 

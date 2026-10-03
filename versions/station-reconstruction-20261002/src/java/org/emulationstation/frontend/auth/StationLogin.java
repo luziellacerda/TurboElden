@@ -19,8 +19,21 @@ public final class StationLogin {
     public static String displayName(){StationCoordinator owner=coordinator;StationCoordinator.Library current=owner==null?null:owner.current();return current==null?"":current.displayName;}
     public static boolean ready(){StationCoordinator current=coordinator;return current!=null&&current.ready();}
     public static boolean hasLicense(Context context){return new java.io.File(context.getNoBackupFilesDir(),"station-license-id.txt").isFile();}
+    private static final java.util.WeakHashMap<Activity,StationApi.Cancellation> renewing=new java.util.WeakHashMap<>();
     public static void ensureAuthorized(Activity activity) {
         if(ready())return;
+        if(coordinator!=null&&coordinator.current()!=null&&hasLicense(activity)) {
+            synchronized(renewing){if(renewing.containsKey(activity))return;renewing.put(activity,new StationApi.Cancellation());}
+            StationApi.Cancellation pending=begin(activity,null,new Callback(){
+                public void ok(String name){synchronized(renewing){renewing.remove(activity);}activity.onWindowFocusChanged(activity.hasWindowFocus());}
+                public void fail(String message){synchronized(renewing){renewing.remove(activity);}showLogin(activity);}
+            });
+            synchronized(renewing){renewing.put(activity,pending);}return;
+        }
+        showLogin(activity);
+    }
+    private static void showLogin(Activity activity) {
+        if(activity.isFinishing()||activity.isDestroyed())return;
         Intent login=new Intent(activity,LoginActivity.class);
         login.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
         activity.startActivity(login);

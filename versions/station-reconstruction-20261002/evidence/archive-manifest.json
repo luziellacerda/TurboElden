@@ -1,0 +1,19 @@
+{
+  "packages": [
+    {
+      "name": "xz",
+      "version": "5.8.3",
+      "url": "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz",
+      "sha256": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0"
+    },
+    {
+      "name": "libarchive",
+      "version": "3.8.9",
+      "url": "https://github.com/libarchive/libarchive/releases/download/v3.8.9/libarchive-3.8.9.tar.gz",
+      "sha256": "f5a6539059cf5e597dbeda37bfa4874b1e8dea063c8d93bf85a2b44af90a5bd4"
+    }
+  ],
+  "library": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002\\build\\native\\arm64-v8a\\libstation_archive.so",
+  "sha256": "9b6576b07b3e44dc48e5ec478cfb8db16852aa1aca0a7895cb567e7b57ff8c7a",
+  "size": 1732864
+}

@@ -1,0 +1,10 @@
+{
+  "hostChecks": 204,
+  "nativeFrontendChecks": 26,
+  "nativeArchiveChecks": 8,
+  "nativeElfLoad": "PASS native ELF load, renderer addresses and rebuilt progress ABI",
+  "testedFrontendLibrarySha256": "27587ba157dc7c9320be7eabca12350f52e12b162920066c72d8f1e09898aed0",
+  "testedMainLibrarySha256": "f483645a84df358b28e3047a6a2a0c56b4a68abb1e083414cd0dcef1cd312f37",
+  "authenticatedProductionFlowVerified": false,
+  "notes": "Synthetic isolated device fixtures, not proof of login/catalog/download in production."
+}

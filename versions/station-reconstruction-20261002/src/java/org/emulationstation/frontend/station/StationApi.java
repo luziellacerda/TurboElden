@@ -10,7 +10,7 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.json.*;
 
-/** Direct, typed implementation of Servidor-pix StationService at b1159c9. */
+/** Direct, typed implementation of Servidor-pix StationService at 1bfb619. */
 public final class StationApi {
     public interface Device {
         PublicKey publicKey() throws Exception;
@@ -60,12 +60,14 @@ public final class StationApi {
     }
     public static final class Grant {
         public final String itemId;
+        public final long itemRevision;
+        public final StationArtifact artifact;
         private final String grantId;
         private final long expires;
         private final Session session;
         private final AtomicBoolean consumed = new AtomicBoolean();
-        private Grant(String itemId,String grantId,long expires,Session session) {
-            this.itemId=itemId;this.grantId=grantId;this.expires=expires;this.session=session;
+        private Grant(String itemId,long revision,StationArtifact artifact,String grantId,long expires,Session session) {
+            this.itemId=itemId;this.itemRevision=revision;this.artifact=artifact;this.grantId=grantId;this.expires=expires;this.session=session;
         }
     }
     public static final class CatalogSnapshot {
@@ -165,25 +167,31 @@ public final class StationApi {
         }
     }
 
-    public Grant authorize(Session session,String itemId,Cancellation cancel) throws Exception {
-        StationCatalog.libraryId(itemId);long started=clock.millis();
+    public Grant authorize(Session session,String itemId,long expectedRevision,Cancellation cancel) throws Exception {
+        StationCatalog.libraryId(itemId);
+        if(expectedRevision<1)throw new IOException("Missing catalog item revision");
+        long started=clock.millis();
         JSONObject result=signed("POST","downloads/authorize",identity(StationProtocol.REQUEST_DOWNLOAD,field("itemId",itemId)),
             session,StationProtocol.DOWNLOAD_GRANT,StationProtocol.MAXIMUM_BODY_BYTES,cancel);
         equal(result,"itemId",itemId);lifetime(result,60);notExpired(started+60000);
-        return new Grant(itemId,token(string(result,"grantId")),started+60000,session);
+        long revision=StationCatalog.integer(result,"itemRevision");
+        if(revision!=expectedRevision)throw new IOException("Authorized item revision changed; refresh catalog");
+        StationArtifact artifact=StationArtifact.parse(result.getJSONObject("artifact"));
+        return new Grant(itemId,revision,artifact,token(string(result,"grantId")),started+60000,session);
     }
 
-    /** Writes opaque staging bytes. This does NOT claim that a game is installed or launchable. */
+    /** Publishes staging only after size and signed digest match. Installation is a separate transaction. */
     public StationFiles.Receipt downloadToStaging(Grant grant,Path stagingFile,long maximumBytes,
             Cancellation cancel,StationFiles.Progress progress) throws Exception {
         valid(grant.session);notExpired(grant.expires);cancel.check();
+        if(maximumBytes<grant.artifact.sizeBytes)throw new IOException("Artifact exceeds local transfer limit");
         if (!grant.consumed.compareAndSet(false,true)) throw new IOException("Grant has already been used");
         // Never retry this GET: the server consumes the grant even if the connection later fails.
         try (Response response=transport.exchange("GET",ROOT+"artifacts/"+grant.grantId,null,grant.session.token,cancel)) {
             success(response,cancel);
-            if (!mime(response.type).equals("application/octet-stream") || response.length < 1)
+            if (!mime(response.type).equals("application/octet-stream") || response.length != grant.artifact.sizeBytes)
                 throw new IOException("Artifact headers invalid");
-            return StationFiles.replace(response.body,stagingFile,response.length,maximumBytes,cancel,progress);
+            return StationFiles.replace(response.body,stagingFile,grant.artifact.sizeBytes,maximumBytes,cancel,progress,grant.artifact.sha256);
         }
     }
 

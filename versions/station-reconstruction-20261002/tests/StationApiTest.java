@@ -25,6 +25,7 @@ public final class StationApiTest {
         final KeyPair authority,device;
         final String deviceId,license="license_test_123",sessionId="2".repeat(64),challengeId="1".repeat(64);
         long time=1000;int requests,closed,artifactCalls;String tamper="",failedRoute="",errorCode="";int status=200;
+        org.json.JSONObject descriptorOverride;boolean omitDescriptor;long itemRevision=1;
         boolean badSignature,truncatedArtifact;byte[] artifact={1,2,3};long lengthOverride=-2;
         Fake()throws Exception {
             KeyPairGenerator gen=KeyPairGenerator.getInstance("RSA");gen.initialize(2048);
@@ -69,7 +70,8 @@ public final class StationApiTest {
                     else if(operation.equals("downloads/authorize")){
                         domain=StationProtocol.DOWNLOAD_GRANT;
                         JSONObject body=new JSONObject(new String(request,StandardCharsets.UTF_8));ok(body.getString("itemId").equals("item_12345"),"Authorize by ID");
-                        response.put("itemId","item_12345").put("grantId",token(4)).put("expiresInSeconds",60);
+                        response.put("itemId","item_12345").put("grantId",token(4)).put("expiresInSeconds",60).put("itemRevision",itemRevision);
+                        if(!omitDescriptor)response.put("artifact",descriptorOverride==null?descriptor(artifact):descriptorOverride);
                     }else throw new AssertionError("Unexpected path "+path);
                 }
                 response.put("domain",domain);
@@ -89,6 +91,11 @@ public final class StationApiTest {
         StationApi.Response reply(int status,String type,byte[] data,long length){
             return new StationApi.Response(status,type,length == -2?data.length:length,new ByteArrayInputStream(data),()->closed++);
         }
+    }
+    static JSONObject descriptor(byte[] bytes)throws Exception {
+        StringBuilder hash=new StringBuilder();for(byte b:StationProtocol.sha256(bytes))hash.append(String.format("%02x",b&255));
+        return new JSONObject().put("fileName","game.bin").put("sizeBytes",bytes.length).put("sha256",hash.toString())
+            .put("format","raw").put("launchPath","game.bin").put("expandedSizeBytes",bytes.length).put("fileCount",1);
     }
     static JSONObject item()throws Exception {return new JSONObject().put("itemId","item_12345").put("name","Game")
         .put("platform","Master System ").put("revision",1).put("coverId","cover_12345");}
@@ -116,15 +123,15 @@ public final class StationApiTest {
         fails(()->api.catalog(session,stopped));ok(fake.requests==before,"No request after cancellation");
         fails(()->api.catalog(fake.api().openSession(fake.license,cancel),cancel));
         fake.tamper="nonce";fails(()->api.openSession(fake.license,cancel));fake.tamper="";
-        fake.tamper="itemId";fails(()->api.authorize(session,"item_12345",cancel));fake.tamper="";
+        fake.tamper="itemId";fails(()->api.authorize(session,"item_12345",1,cancel));fake.tamper="";
         Path target=Paths.get(args[0]).resolve("staged.artifact");Files.createDirectories(target.getParent());Files.write(target,new byte[]{9});
-        StationApi.Grant grant=api.authorize(session,"item_12345",cancel);fake.truncatedArtifact=true;
+        StationApi.Grant grant=api.authorize(session,"item_12345",1,cancel);fake.truncatedArtifact=true;
         fails(()->api.downloadToStaging(grant,target,100,cancel,(n,t)->{}));
         ok(Arrays.equals(Files.readAllBytes(target),new byte[]{9}),"Preserve previous artifact");
         before=fake.artifactCalls;fails(()->api.downloadToStaging(grant,target,100,cancel,(n,t)->{}));ok(fake.artifactCalls==before,"Never reuse grant");
-        fake.truncatedArtifact=false;StationApi.Grant secondGrant=api.authorize(session,"item_12345",cancel);
+        fake.truncatedArtifact=false;StationApi.Grant secondGrant=api.authorize(session,"item_12345",1,cancel);
         ok(api.downloadToStaging(secondGrant,target,100,cancel,(n,t)->{}).size==3,"Artifact complete");
-        final StationApi.Grant expired=api.authorize(session,"item_12345",cancel);fake.time+=60000;
+        final StationApi.Grant expired=api.authorize(session,"item_12345",1,cancel);fake.time+=60000;
         fails(()->api.downloadToStaging(expired,target,100,cancel,(n,t)->{}));
         fake.time+=120000;before=fake.requests;fails(()->api.catalog(session,cancel));ok(before==fake.requests,"Expired session not sent");
         fails(()->StationCatalog.fromVerifiedPayload(catalog(item(),item())));

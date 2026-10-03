@@ -1,0 +1,195 @@
+{
+  "sourceSha256": "a1ae357dc29caac52d47386a71a0a9a685ecffb9c01d536f5af50b5ba658cda8",
+  "outputSha256": "f483645a84df358b28e3047a6a2a0c56b4a68abb1e083414cd0dcef1cd312f37",
+  "originalSymbolsPreserved": 4409,
+  "replacements": [
+    {
+      "entry": "0x18f790",
+      "bytesRemoved": 3316,
+      "oldSha256": "02767e365b72a502db3c335d13a9574e2d44c3422fb3b5263a72260130cbe284",
+      "replacement": "StationCatalog_refresh"
+    },
+    {
+      "entry": "0x192b48",
+      "bytesRemoved": 52,
+      "oldSha256": "c2f6955c7e6d70a2a755cbbc617afc3e88f19ae186e3d833aa00f2c60f813786",
+      "replacement": "StationCatalog_update"
+    },
+    {
+      "entry": "0x192b7c",
+      "bytesRemoved": 916,
+      "oldSha256": "5506c54b914d2ca5152fd0d7070c70103d2f6fad4c986e853edc215429eb6156",
+      "replacement": "StationCatalog_update"
+    },
+    {
+      "entry": "0x192f10",
+      "bytesRemoved": 3564,
+      "oldSha256": "ac64c4bab79ef3b48a6a24e070c505fbbd5bdb9be9a99a80c5dc3e74d6028a1d",
+      "replacement": "StationCatalog_update"
+    },
+    {
+      "entry": "0x193cfc",
+      "bytesRemoved": 932,
+      "oldSha256": "83852408cac45c2deb4dc7e62136159b3bb563fad5d1b0589d218a7a00a91f87",
+      "replacement": "StationCatalog_update"
+    },
+    {
+      "entry": "0x194924",
+      "bytesRemoved": 316,
+      "oldSha256": "647845a4f6579907b5eb000694434ea07595d4f76849bce2855e565523e5aafa",
+      "replacement": "StationCatalog_applyPending"
+    },
+    {
+      "entry": "0x194a60",
+      "bytesRemoved": 2588,
+      "oldSha256": "9c2e58e6d5c5138807f99e654887526e65cf214a3bea5b487d1e014e997141eb",
+      "replacement": "StationCatalog_refreshInstalled"
+    },
+    {
+      "entry": "0x195c28",
+      "bytesRemoved": 760,
+      "oldSha256": "ac0d0e940b40553edc7bcc508e7f69c1637bd7e1ee816396f9c19cd87405b607",
+      "replacement": "StationCatalog_update"
+    },
+    {
+      "entry": "0x196020",
+      "bytesRemoved": 400,
+      "oldSha256": "f1e136276b5432220a55a7a8be91265bf40e8abc81a4a89e8e257609a323c64b",
+      "replacement": "StationCatalog_prioritize"
+    },
+    {
+      "entry": "0x1961ec",
+      "bytesRemoved": 1672,
+      "oldSha256": "c502bf9e603570cb3120e3a1e6416142aea5138ec62f4742e90a6a3f32a68b33",
+      "replacement": "StationCatalog_start"
+    },
+    {
+      "entry": "0x196a2c",
+      "bytesRemoved": 148,
+      "oldSha256": "3bf0e8231f70ac6be6c9848216888b26b403ee39be0709a89c394fc39b8fbb4a",
+      "replacement": "StationCatalog_cancel"
+    },
+    {
+      "entry": "0x196ac0",
+      "bytesRemoved": 160,
+      "oldSha256": "7089dff844d39b49a539688f00fee38db27f47963c19334fe40696063931798c",
+      "replacement": "StationCatalog_active"
+    },
+    {
+      "entry": "0x196c40",
+      "bytesRemoved": 148,
+      "oldSha256": "17772ffef79c2b8704b15198e7a31c8b0ebc7faf59e9043bdb5d95a7bdcb743d",
+      "replacement": "StationCatalog_progress"
+    },
+    {
+      "entry": "0x196cd4",
+      "bytesRemoved": 1928,
+      "oldSha256": "77a2cf6603f8d756e3d0792086ab1eae8dd0f9c59b005556dddafd61faff1d4f",
+      "replacement": "StationCatalog_uninstall"
+    },
+    {
+      "entry": "0x1a2524",
+      "bytesRemoved": 1568,
+      "oldSha256": "2ab525b515bcd2d12e58e14dc9e8496668102ab97a23800b3d732d0f2bb34880",
+      "replacement": "StationLicense_sync"
+    },
+    {
+      "entry": "0x1a2b44",
+      "bytesRemoved": 12,
+      "oldSha256": "8dcc2d4a7273e5478b28691e40a9780d554c6716b8637f9139bbb2e68029019f",
+      "replacement": "StationLicense_enter"
+    },
+    {
+      "entry": "0x1a2b50",
+      "bytesRemoved": 1528,
+      "oldSha256": "19c32527923c8067d3660fc56b054c5bb935beb4eb53a385ce0f40be50f21343",
+      "replacement": "StationLicense_enter"
+    },
+    {
+      "entry": "0x1a3148",
+      "bytesRemoved": 8,
+      "oldSha256": "279c8662900db67fe95a2283396e38463a24a230285879fc36600774605a4ac2",
+      "replacement": "StationLicense_enter"
+    },
+    {
+      "entry": "0x1a3150",
+      "bytesRemoved": 256,
+      "oldSha256": "831ca7dfbaf34ea5afcb1ddf1a960e7714dce5ff6c93972dc596e571ece04b76",
+      "replacement": "StationLicense_enter"
+    },
+    {
+      "entry": "0x1a34b8",
+      "bytesRemoved": 4540,
+      "oldSha256": "81c0830bb7d9da76c80be60e67f3be9c577a6f5623ce9d2acd5daf908acdc27a",
+      "replacement": "StationLicense_sync"
+    },
+    {
+      "entry": "0x1a4674",
+      "bytesRemoved": 740,
+      "oldSha256": "e384e354b10d4605e6376c4c9045857e2ffb67b1e316119827aac08a7ad4b2dc",
+      "replacement": "StationLicense_sync"
+    },
+    {
+      "entry": "0x1a4ef0",
+      "bytesRemoved": 820,
+      "oldSha256": "455e6626d29d2957e478aba2e215e813a39bbe12d69c231bfe70935bb102c236",
+      "replacement": "StationLicense_sync"
+    },
+    {
+      "entry": "0x1a7f4c",
+      "bytesRemoved": 456,
+      "oldSha256": "bd2162cd3d21c8b3ba57ed6bf3accc3d9c4405297fde9fb115ab52a1ba325aa4",
+      "replacement": "StationStats_init"
+    },
+    {
+      "entry": "0x1af374",
+      "bytesRemoved": 1852,
+      "oldSha256": "848731e2ae34d4f41287faf673eedfc41fd7455e278736a4426b267ef501ac18",
+      "replacement": "StationStats_update"
+    },
+    {
+      "entry": "0x1ab780",
+      "bytesRemoved": 88,
+      "oldSha256": "ebc392010b3495c667b16a53e3fb741c2f5f1ce836f7c8e260dc303997adc815",
+      "replacement": "StationStats_background"
+    },
+    {
+      "entry": "0x1aeb50",
+      "bytesRemoved": 828,
+      "oldSha256": "751cc15ed32624250d06e5851cce04c5c2bf17e5cb63acebbfc2a6fc8d1b8e55",
+      "replacement": "StationStats_start"
+    },
+    {
+      "entry": "0x1aad58",
+      "bytesRemoved": 1944,
+      "oldSha256": "eb0812994699bc9d55c054b8e1133b098a1de4bfc1d1d3a43c8d238d676e0216",
+      "replacement": "StationStats_end"
+    },
+    {
+      "entry": "0x1aa850",
+      "bytesRemoved": 1288,
+      "oldSha256": "69dc31695bca3bf493fcf876884c5b72a2cd1adb92935d5d705c7b9fa7102a71",
+      "replacement": "StationStats_shutdown"
+    },
+    {
+      "entry": "0x1ab4f0",
+      "bytesRemoved": 196,
+      "oldSha256": "3b02ab22debca84881809e0d3234a6552ed8e0e6ca00fc6c9da2a49ade8bf58f",
+      "replacement": "StationStats_event"
+    },
+    {
+      "entry": "0x18e4c4",
+      "bytesRemoved": 1592,
+      "oldSha256": "3e8aee835ade39b46c79a795f2333ea44a005c4a6869f889301e333f7304fd3f",
+      "replacement": "StationCore_request"
+    },
+    {
+      "entry": "0x18eafc",
+      "bytesRemoved": 676,
+      "oldSha256": "3888c4139e139630a70c7e037f46b2bd8c5f79944c2dc531f77824cbcf458f8d",
+      "replacement": "StationCore_request"
+    }
+  ],
+  "apkIntegrated": false,
+  "legacyRemovalComplete": false
+}

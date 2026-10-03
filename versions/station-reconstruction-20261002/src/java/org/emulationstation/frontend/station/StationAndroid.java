@@ -13,18 +13,22 @@ import java.security.spec.X509EncodedKeySpec;
 
 /** Android composition root; all calls performing IO must run outside the UI thread. */
 public final class StationAndroid {
-    private static StationAndroid instance;
+    private static volatile StationAndroid instance;
     public static synchronized StationAndroid get(Context context) throws Exception {
         if (instance == null) instance = new StationAndroid(context.getApplicationContext());
         return instance;
     }
+    static StationAndroid current(){return instance;}
+    public final Path privateFiles;
+    public final Context context;
     public final StationApi api;
     public final StationSessions sessions;
     public final StationCatalogStore catalogs;
     public final StationCoverStore covers;
     public final StationCoordinator coordinator;
     private StationAndroid(Context context) throws Exception {
-        Path privateFiles=context.getApplicationContext().getNoBackupFilesDir().toPath();
+        this.context=context;
+        privateFiles=context.getApplicationContext().getNoBackupFilesDir().toPath();
         StationApi.Clock clock=SystemClock::elapsedRealtime;
         StationApi.Device identity=new StationApi.Device() {
             public PublicKey publicKey() throws Exception {return StationCrypto.publicKey();}

@@ -1,24 +1,33 @@
-# Cliente Station e integração de login
+# TurboStations - cliente Station integrado em APK candidato
 
-Esta revisão conecta o layout atual de login ao cliente Station reconstruído. O controlador consulta sessão, perfil, catálogo e capas diretamente nas rotas do Servidor-pix. A senha local foi retirada destes fontes.
+APK TESTE gerado, assinado e instalado em 03/10/2026. SHA256 instalado: `38e78fde7dce574969aadeab2cd709b32df12b94bcd819fe595bd079af8204d2`. Login aberto; ativacao autenticada, catalogo/capas e download de producao ainda aguardam validacao. **Nao e versao estavel nem entrega aprovada ao consumidor.**
 
-**A integração do catálogo nativo e o APK completo ainda não estão concluídos. Esta revisão não é uma versão estável e não foi instalada no aparelho.**
+## O que foi integrado
 
-## Documentação
+Quatro DEX substituem login local e clientes antigos; o cliente Station recebe sessao/perfil/catalogo/capas e descritor assinado do jogo. Servico nativo liga as acoes do carrossel aos IDs reais. Instalador verifica tamanho/hash, extrai ZIP/RAR/7z, publica recibo atomico e remove somente seus arquivos. Cancelamento/falha preservam a instalacao anterior. Servico de download opera somente durante trabalhos ativos.
 
-- [Continuação do aplicativo](HANDOFF-RECONSTRUCAO-TURBOSTATIONS.md).
-- [Contrato necessário no servidor](HANDOFF-SERVIDOR-CONEXAO-E-INSTALACAO.md).
-- [Handoff publicado no Servidor-pix](https://github.com/luziellacerda/Servidor-pix/blob/6a8fb3663ba40a53e4179f799e756b71a7398a8e/docs/station-android/HANDOFF-CLIENTE-RECONSTRUIDO-STATION-20261002.md).
-- [Resultados das 142 verificações locais](evidence/test-results.json).
+31 entradas de servicos de libmain foram substituidas. Renderer e carrossel continuam binarios originais; os enderecos exigidos pelo layout foram preservados. Rotinas nativas historicas sem uso no frontend atual ainda existem. **Nao alegar fonte C++ integral recuperado nem eliminacao fisica completa do legado.**
 
-## Compilação
+## Documentacao e evidencias
 
-Execute com Python 3: `prepare_test_dependency.py`, `run_tests.py` e `build_module.py`. O build usa por padrão `E:\ESTUDO APK\work\turbostations-reconstruction-20261002\build`; a dependência de testes fica na pasta `tools` da mesma raiz em E:. As variáveis `STATION_BUILD_DIR` e `STATION_TOOLS_DIR` permitem outros destinos explícitos. Mantenha ambas em E: neste computador.
+- [Handoff do aplicativo, pastas e limites](HANDOFF-RECONSTRUCAO-TURBOSTATIONS.md).
+- [Contrato e responsabilidades do servidor](HANDOFF-SERVIDOR-CONEXAO-E-INSTALACAO.md).
+- [Manifesto do APK](evidence/apk-report.json): 10.803 entradas preservadas por hash, mesma assinatura, manifesto inalterado.
+- [204 verificacoes locais](evidence/test-results.json).
+- [26 verificacoes nativas de frontend, oito de arquivos e carga ELF](evidence/device-integration-results.json).
+- [Retorno do servidor](https://github.com/luziellacerda/Servidor-pix/blob/9c0d9d5dab83ad1037009e5150fb4174fcddcbd6/docs/station-android/RETORNO-SERVIDOR-PARA-CLIENTE-RECONSTRUIDO-STATION-20261002.md).
 
-Requer JDK 17, Android SDK API 34 e D8 nos caminhos registrados nos scripts. A compilação gera AAR, DEX independente e pacote de fontes. Os binários não estão no Git. O módulo não deve ser simplesmente acrescentado ao APK existente: faltam a ligação nativa e a retirada das classes substituídas.
+## Reproducao local
 
-`StationAndroid.get(context)` mantém uma instância por processo. `StationCoordinator` é o ponto de entrada para login e biblioteca. `auth/LoginActivity` preserva o layout observado e usa `auth/StationLogin` para consultar o controlador fora da thread visual. Operações de rede e arquivo devem ocorrer em uma thread de trabalho.
+Trabalhar na raiz `E:\ESTUDO APK\work\turbostations-reconstruction-20261002`. Python3, JDK17, AndroidSDK34, NDKr28c, CMake/Ninja, apktool3.0.3, build-tools35.0.0 e LIEF (metadados ELF). Caminhos exatos nos scripts. APK privado de entrada e Keystore original obrigatorios; o Git nao contem binarios privados.
 
-## Preservação
+1. `prepare_test_dependency.py`, `run_tests.py`, `build_module.py`.
+2. `build_archive.py`, `build_frontend.py`.
+3. `prepare_dex_input.py`, `link_native_services.py`, `build_app_dex.py`, `package_apk.py`.
+4. Fixtures Android em `prepare_archive_device_test.py` e `prepare_frontend_device_test.py`; teste de carga em `tests/native_link_smoke.cpp`.
 
-APK de entrada, versão estável, emuladores, vídeos, ROMs e saves permaneceram intactos. Os testes utilizam respostas e chaves sintéticas; não comprovam o fluxo completo contra produção ou a execução no Android.
+Saida: `build/apk/TurboStations-Station-CANDIDATO-20261003.apk`. Nao executar finalizadores historicos. Nao anexar apenas o DEX ao APK antigo. Nao alterar referencias estaveis.
+
+## Pendencias reais
+
+Comprovar producao do descriptor e das capas no servidor. Validar ativacao no telefone. Resolver importacao verificavel dos jogos antigos para IDs/recibos Station (os arquivos foram preservados, mas nao sao reconhecidos por adivinhacao). Encerrar retirada do legado nativo residual e limpeza segura de geracoes substituidas antes de declarar migracao integral concluida. Nenhum servico Linux foi alterado.

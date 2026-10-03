@@ -1,5 +1,58 @@
 # Handoff do servidor para concluir a conexão do TurboStations Android
 
+## Integracao do APK em 03/10/2026 - estado mais recente
+
+Candidato completo gerado: `build/apk/TurboStations-Station-CANDIDATO-20261003.apk`, 1.902.702.486 bytes, SHA256 `38e78fde7dce574969aadeab2cd709b32df12b94bcd819fe595bd079af8204d2`. Nao e versao estavel. Instalacao e validacao autenticada devem ser confirmadas pelo registro de aparelho mais recente; a geracao do pacote nao comprova login real.
+
+Instalacao Android concluida em 03/10/2026, lastUpdateTime 09:18:57. SHA256 do base.apk instalado conferido: 38e78fde7dce574969aadeab2cd709b32df12b94bcd819fe595bd079af8204d2. LoginActivity abriu sem falha no buffer de crashes consultado. Usuario foi solicitado a digitar o codigo diretamente no aparelho. Ativacao real ainda aguarda resultado.
+
+### Aplicativo efetivamente integrado
+
+- Quatro DEX substituidos: classes5 (ciclo de vida/servico), classes6 (autorizacao SDL), classes8 (retirada do auth/catalog antigo), classes28 (cliente Station novo no lugar de GameDownload). LocalPassword, AuthSession, LocalCatalog, HttpBridge, StationTransfer e GameDownload antigos foram removidos, incluindo referencias de tipos nos DEX. Nenhuma classe nova duplicada.
+- `libstation_frontend.so` conecta o CatalogService nativo aos comandos por itemId do cliente Station. Nao fabrica URL e nao intercepta cliques. `libstation_archive.so` instala ZIP/RAR/7z usando libarchive. Sessao, perfil, catalogo, capas e grants usam exclusivamente as rotas Station no cliente reconstruido.
+- `libmain.so` teve 31 implementacoes de entrada de servicos substituidas por ligacoes ao fonte novo. Os 4.409 enderecos dos simbolos originais foram mantidos porque o renderer/carrossel depende desse layout. Isto e integracao binaria verificavel; NAO significa que o C++ completo original foi recuperado ou recompilado.
+- Restam rotinas antigas sem uso demonstrado no frontend atual dentro do binario nativo (incluindo scrapers historicos e ponte HTTP). As entradas ativas de catalogo/licenca/telemetria foram substituidas, mas a eliminacao fisica integral de todo o legado nativo ainda nao foi concluida. Nao apresentar essa entrega como reescrita integral limpa.
+- Removido `assets/turboretro/catalog.json`. Nao existe retorno automatico ao catalogo antigo se o servidor falhar. Recursos de design, motores, demais DEX e manifesto foram preservados; 10.803 entradas comparadas por SHA256. Assinatura igual a base, alinhamento 16 KiB verificado.
+- Historico de uso local preservado; sem consulta de IP ou telemetria remota antiga. Downloads usam servico em primeiro plano apenas enquanto ativos, fila limitada e eventos. Capas persistem por ID/revisao; trabalho de capas e suspenso quando a interface fica oculta.
+
+### Evidencias e limites
+
+204 verificacoes locais (19 arquivos, 68 protocolo, 36 cache/sessao, 20 coordenacao, 61 instalacao). No Android: 26 verificacoes sinteticas da ponte nativa; oito de leitura segura de arquivos; carregamento ELF e compatibilidade ABI aprovados. `build/apk/apk-report.json`, `build/device-integration-results.json` e `build/test-results.json` registram as evidencias. Isso nao substitui ativacao, capa 200, download real e retorno de um jogo.
+
+Jogos e saves anteriores nao sao apagados. Jogos antigos fora de `.station-v2` ainda nao sao importados para os novos recibos: falta correspondencia verificavel entre IDs do servidor e arquivos existentes. Nao associar por aproximacao de nome nem indicar tudo como instalado. Geracoes antigas de uma atualizacao bem-sucedida sao preservadas; limpeza controlada de versoes substituidas ainda e pendente. Remocao interrompida agora usa recibo com `removing=true`, permitindo repetir a operacao sem declarar instalacao valida.
+
+### Responsabilidades do servidor (Servidor-pix, somente canal Station)
+
+Ultimo retorno lido: `feat/station-artifact-descriptor-20261002`, `9c0d9d5dab83ad1037009e5150fb4174fcddcbd6`, arquivo `docs/station-android/RETORNO-SERVIDOR-PARA-CLIENTE-RECONSTRUIDO-STATION-20261002.md`. Contrato implementado em `96326aa0aeb164820cec26f8b5911fcdb47fc8ee` e `1bfb619c21becffe40aaa597e100fcb3719c2e72`. Nao assumir implantacao porque o servidor foi religado. Comprovar descriptor assinado em producao e arquivos do indice, capa autenticada 200 e transferencia integral. O cliente recusa grant sem artifact/itemRevision e nunca volta ao CDN antigo.
+
+`STA-` e prefixo de licenseId. O codigo de ativacao e Base64URL canonico de 32 bytes (43 caracteres). O usuario possui o codigo e o digitara no telefone; nao solicitar segredo pelo chat. Nome vem de /me. Nenhum servico Linux foi alterado.
+
+### Receita exata, executada na raiz E:
+
+1. `prepare_test_dependency.py`, `run_tests.py`, `build_module.py`.
+2. `build_archive.py`, `build_frontend.py` (JDK17, SDK34, NDK r28c nos caminhos dos scripts; bibliotecas oficiais verificadas por hash).
+3. `prepare_dex_input.py`: extrai/descompila DEX da base d8104343, nunca da arvore Java realocada obsoleta.
+4. `link_native_services.py` (requer LIEF apenas para leitura/metadados), `build_app_dex.py`, `package_apk.py`.
+5. Rodar fixtures nativas no Android; instalar apenas o candidato com assinatura igual usando atualizacao -r. Nao desinstalar, limpar dados ou sobrescrever o APK de entrada/estavel.
+
+Raiz canonica: `E:\ESTUDO APK\work\turbostations-reconstruction-20261002`. Base: `E:\ESTUDO APK\work\native-carousel\implementation\side-by-side-turborama-20261001\TurboramaStation-TESTE-lado-a-lado.apk` (d810434352f7ad2e7d1d08efe44f31eb76d132ffc43ba3b81b9ffc9e64efae1b). Git: TurboElden, ramo `station-reconstrucao-20261002`, pasta `versions/station-reconstruction-20261002`. Nao mover referencias estaveis nem publicar APK, ROM, BIOS, firmware ou credenciais no Git.
+
+As secoes abaixo sao historicas. Onde disserem modulo isolado, 142/202 testes ou APK ainda nao gerado, prevalece este registro.
+
+## Atualização confirmada em 03/10/2026 — prevalece sobre o estado histórico abaixo
+
+Retorno lido: Servidor-pix `feat/station-artifact-descriptor-20261002`, commit `9c0d9d5dab83ad1037009e5150fb4174fcddcbd6`. Código do contrato: `96326aa0aeb164820cec26f8b5911fcdb47fc8ee` e `1bfb619c21becffe40aaa597e100fcb3719c2e72`.
+
+- Correção da interpretação anterior: `STA-` identifica **licenseId**. O código digitado pelo comprador é Base64URL canônico de 32 bytes (43 caracteres). `StationApi.token(code)` já estava correto; não flexibilizar a validação por causa do texto antigo.
+- `itemRevision` e `artifact` são agora contrato confirmado no código do servidor, com fileName, sizeBytes, sha256, format, launchPath, expandedSizeBytes e fileCount. A implantação e o índice de produção continuam pendentes no último retorno.
+- Fontes locais consomem o descritor assinado, validam SHA256 antes de extrair e publicam um manifesto somente após instalação completa. ZIP, RAR e 7z usam libarchive nativa. O catálogo nativo e o APK integrado ainda não estão concluídos.
+- Última execução local: 202 verificações passaram e os fontes compilaram para Android API 34. Leitor nativo Android: oito verificações sintéticas passaram (ZIP, 7z, RAR5 e recusas de arquivos inseguros/cancelamento). Isso não comprova download autenticado de produção.
+- Consulta pública após o usuário informar reinício: `/v1/station/catalog` retornou 401 JSON `STATION_SESSION_INVALID`, sem credenciais. `/ready/station` no domínio público retornou HTML do portal; não usar esse 200 como prontidão da API. O handoff usa essa sonda apenas localmente no servidor.
+- Nenhum APK instalado nem serviço Linux alterado nesta implementação. Ainda é necessário retirar os fluxos antigos, integrar a interface e testar com sessão real antes de liberar.
+
+O restante é o registro histórico de 02/10/2026; propostas e pendências antigas devem ser confrontadas com esta atualização.
+
+
 ## Destinatário e identificação exata
 
 Este pedido é para a equipe ou IA responsável pelo **backend Station no repositório Servidor-pix**. Implementar e comprovar as pendências do servidor descritas abaixo e devolver o contrato final para a equipe do aplicativo.

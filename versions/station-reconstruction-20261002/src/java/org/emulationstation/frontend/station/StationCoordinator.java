@@ -30,7 +30,7 @@ public final class StationCoordinator {
     }
     public synchronized Library login(String code,StationApi.Cancellation cancel) throws Exception {
         authorized=null;library=null;
-        StationApi.Session session=code.isEmpty()?sessions.get(cancel):sessions.activate(code,cancel);
+        StationApi.Session session=(code==null||code.isEmpty())?sessions.get(cancel):sessions.activate(code,cancel);
         try {
             String name;
             try {name=api.profile(session,cancel);saveName(session,name,cancel);}
@@ -57,11 +57,16 @@ public final class StationCoordinator {
         try{return covers.get(item.coverId,item.revision,cancel);}
         catch(StationApi.Failure e){if(e.sessionDenied())invalidate(authorized);throw e;}
     }
-    public StationApi.Grant authorize(String itemId,StationApi.Cancellation cancel) throws Exception {
+    public synchronized StationApi.Grant authorize(String itemId,StationApi.Cancellation cancel) throws Exception {
         Library current=library;
         if(current==null || current.catalog.find(itemId)==null)throw new IOException("Jogo ausente do catálogo autorizado");
         StationApi.Session session=sessions.get(cancel);
-        try{return api.authorize(session,itemId,cancel);}
+        try{
+            if(session!=authorized){current=loadCatalog(session,current.displayName,cancel);library=current;authorized=session;}
+            StationCatalog.Item item=current.catalog.find(itemId);
+            if(item==null)throw new IOException("Jogo ausente após renovar catálogo");
+            return api.authorize(session,itemId,item.revision,cancel);
+        }
         catch(StationApi.Failure e){if(e.sessionDenied())invalidate(session);throw e;}
     }
     public boolean ready() {

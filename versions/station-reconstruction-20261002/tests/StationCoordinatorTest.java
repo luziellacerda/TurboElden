@@ -32,7 +32,8 @@ public final class StationCoordinatorTest {
         library=owner.refresh(cancel);ok(library.cached&&library.catalog.items.size()==1,"503 shows verified cache");
         server.status=403;server.errorCode="STATION_LICENSE_DENIED";
         fails(()->owner.refresh(cancel));ok(!owner.ready()&&owner.current()==null,"Revoked license closes frontend authorization");
-        server.failedRoute="";owner.login("",cancel);
+        server.failedRoute="";owner.login(null,cancel);
+        ok(owner.ready(),"Resume with saved license does not require code again");
         server.time+=165000;ok(!owner.ready(),"Expired ready state not accepted");
         owner.refresh(cancel);ok(owner.ready(),"Refresh renews session");
         server.failedRoute="/v1/station/downloads/authorize";server.status=403;server.errorCode="STATION_LICENSE_DENIED";
