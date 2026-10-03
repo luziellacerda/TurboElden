@@ -1,0 +1,203 @@
+{
+  "created": "2026-10-03T23:24:22.994530+00:00",
+  "root": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\pc-validation-20261003-202338",
+  "apk": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\TurboStations-Capas4-Sinopses-LED-Netplay-R2-20261003.apk",
+  "apkSha256": "31ab80ef2c77e9c5dff294d6f63807ab1e6d6cded81c2beec7aee171067f46d8",
+  "results": [
+    {
+      "name": "netplay-contracts",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.903,
+      "log": "netplay-contracts.log"
+    },
+    {
+      "name": "station_cover_plan_test-compile",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.309,
+      "log": "station_cover_plan_test-compile.log"
+    },
+    {
+      "name": "station_cover_plan_test",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.147,
+      "log": "station_cover_plan_test.log"
+    },
+    {
+      "name": "station_cover_retry_test-compile",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.214,
+      "log": "station_cover_retry_test-compile.log"
+    },
+    {
+      "name": "station_cover_retry_test",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.11,
+      "log": "station_cover_retry_test.log"
+    },
+    {
+      "name": "layout-98-cases",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.036,
+      "log": "layout-98-cases.log"
+    },
+    {
+      "name": "netplay-dex-rebuild",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 2.556,
+      "log": "netplay-dex-rebuild.log"
+    },
+    {
+      "name": "metadata-13-tests",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 2.487,
+      "log": "metadata-13-tests.log"
+    },
+    {
+      "name": "apk-signature",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 3.441,
+      "log": "apk-signature.log"
+    },
+    {
+      "name": "apk-alignment",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.086,
+      "log": "apk-alignment.log"
+    },
+    {
+      "name": "station-suite",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 10.621,
+      "log": "station-suite.log"
+    },
+    {
+      "name": "station-dex-rebuild",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.792,
+      "log": "station-dex-rebuild.log"
+    },
+    {
+      "name": "station-arm64-rebuild",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 2.022,
+      "log": "station-arm64-rebuild.log"
+    },
+    {
+      "name": "gles100-angle",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 12.983,
+      "log": "gles100-angle.log"
+    },
+    {
+      "name": "cover-load-4096",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 10.936,
+      "log": "cover-load-4096.log"
+    },
+    {
+      "name": "cover-race-repeat-1",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.694,
+      "log": "cover-race-repeat-1.log"
+    },
+    {
+      "name": "cover-race-repeat-2",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.701,
+      "log": "cover-race-repeat-2.log"
+    },
+    {
+      "name": "cover-race-repeat-3",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.64,
+      "log": "cover-race-repeat-3.log"
+    },
+    {
+      "name": "cover-race-repeat-4",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.592,
+      "log": "cover-race-repeat-4.log"
+    },
+    {
+      "name": "cover-race-repeat-5",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.649,
+      "log": "cover-race-repeat-5.log"
+    },
+    {
+      "name": "cover-race-repeat-6",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.601,
+      "log": "cover-race-repeat-6.log"
+    },
+    {
+      "name": "cover-race-repeat-7",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.432,
+      "log": "cover-race-repeat-7.log"
+    },
+    {
+      "name": "cover-race-repeat-8",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.632,
+      "log": "cover-race-repeat-8.log"
+    },
+    {
+      "name": "cover-race-repeat-9",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 2.033,
+      "log": "cover-race-repeat-9.log"
+    },
+    {
+      "name": "cover-race-repeat-10",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.751,
+      "log": "cover-race-repeat-10.log"
+    }
+  ],
+  "failures": [],
+  "passed": true,
+  "releasedArtifactsUnchanged": true,
+  "phoneUsed": false,
+  "productionServerUsed": false,
+  "androidRuntimeTested": false,
+  "twoDeviceNetplayTested": false,
+  "syntheticCoverLoad": {
+    "androidPerformanceClaim": false,
+    "warmCacheItems": 4096,
+    "coldCompleted": 4096,
+    "peakConcurrent": 4,
+    "warmMilliseconds": 1988.3201,
+    "warmExtraHttp": 0,
+    "workersAfterClose": 0,
+    "transport": "synthetic local signed fixture, eight-byte image headers; no real network or image decode",
+    "coldMilliseconds": 8206.5933,
+    "items": 4096,
+    "errors": 0
+  }
+}

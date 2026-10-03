@@ -1,0 +1,73 @@
+{
+  "tests": [
+    {
+      "test": "StationFilesTest",
+      "output": "PASS 19 file safety checks"
+    },
+    {
+      "test": "StationApiTest",
+      "output": "PASS 75 protocol and catalog checks"
+    },
+    {
+      "test": "StationStorageTest",
+      "output": "PASS 36 cache and session checks"
+    },
+    {
+      "test": "StationCoordinatorTest",
+      "output": "PASS 25 frontend integration checks"
+    },
+    {
+      "test": "StationInstallerTest",
+      "output": "PASS 61 descriptor and installation checks"
+    },
+    {
+      "test": "StationClosureTest",
+      "output": "PASS 86 server-closure checks (synthetic signed data, no production claim)"
+    },
+    {
+      "test": "StationBootstrapTest",
+      "output": "PASS 25 fresh-install storage bootstrap checks"
+    },
+    {
+      "test": "StationCoverConcurrencyTest",
+      "output": "PASS 41 cover concurrency, cache, session, lifecycle and backoff checks"
+    },
+    {
+      "test": "StationTransferReuseTest",
+      "output": "PASS 16 TLS response reuse and exact-artifact-first checks"
+    }
+  ],
+  "androidCompile": "API34 Java8",
+  "sources": {
+    "src\\java\\org\\emulationstation\\frontend\\AssetInstaller.java": "d3539b66cbc434e819b59d1fa614f3eb47c8b7c3d8b51c92284bc6dacbe0ccee",
+    "src\\java\\org\\emulationstation\\frontend\\DownloadService.java": "49b2994e4a213e861cfcef5ce0e353789f7f88928fec5f8b7e3b8ceb6f594c5f",
+    "src\\java\\org\\emulationstation\\frontend\\auth\\LoginActivity.java": "2e08bdf0f5a8475dd6d0d32fdd6764d55da75559f8a90c532cc6c849d26c87cd",
+    "src\\java\\org\\emulationstation\\frontend\\auth\\StationLogin.java": "191549ba86fed13573b27258c867ece3a536f99573330d9f75889522774ae4ce",
+    "src\\java\\org\\emulationstation\\frontend\\station\\ExistingCoverCache.java": "41796c41b27efc4e9a53d20b7ed606e37d7b4d168cb7638059cf368e8d533d28",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationAndroid.java": "9eec1a46dd1453c508b3f9aa8c18ffeea9557c30d3a21dc1747286626138cfce",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationApi.java": "4cad592a1e277fa6595bbd34f92bf19c5708f98623c57b4ca332f1628b252f29",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationArchive.java": "107669c6885725d99b430e7340c550466eed24a2842d43b51526c673a9d51b86",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationArtifact.java": "fe6eee3c4dfaaf66ac68eb0096b6ff0dc7792fa377dadf5898b5ea06e803bac9",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationBundledFiles.java": "74292e8dcfe8318d8697a2c81446ab23cd66ff2c815bf98632849b34cc39e67e",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationCatalog.java": "827faed485e12b16583d3d2cc243a43318674b72b9a8c449000eef61f9106cff",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationCatalogStore.java": "9d4d119f54fe28be65f90efc65f2f7d81062089eaa5e5cebf6f186c10e3c8de6",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationConfig.java": "e662d4544b15f8042db34c2a2b6ec1d4ec4fdff8eb13461cacad636707157c83",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationCoordinator.java": "79800215a85fbb6225e3e10e75fea13030a0d178b409de32795840b8171cd1cf",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationCoverQueue.java": "03873dc02cbb99f440872e25988552bf9d09bad1b8d5b4cc199e24878db4dce4",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationCoverStore.java": "085e6a7418d3f79f6ff446683aa92e8a6b1a0c800d15b70d4c51517368f7f7d5",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationCrypto.java": "8a60e9fd96dbfa3d8098b9e913e2ea8141ef13b76bf6cae264b47f841dd302d7",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationDiagnostics.java": "f3cd90ead7d57962d0c069e73bc952920805b310fc271bbca7276002433d2789",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationDownloads.java": "4447723f71d8a69950dfa165d5695bbe74db73572aeb44030b842181291a0a52",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationExistingArtifact.java": "8c424c906a38be23a4d4630cc47c67952ab49f4ce650b841031e468ad8e353fb",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationFiles.java": "c0da9cf2e54702d8c4f0c8f6ef09300ce35194a0d182f6b5cf2175e1bbd54f7b",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationFrontend.java": "0dafad01f4bb47fd3b4311a185ddf8737e088d81fdb91fa0b26299f8b28100da",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationHttp.java": "fe5e4bd7f52847676507d93b21973693449ce4d178c6ebf4a63958f058770963",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationInstaller.java": "f6445a851cf6089335e1efff78f1b20e4e45774d259ce90397f5a0f1472aa45e",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationPlatforms.java": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationProtocol.java": "e9298f033dff87bdca458e73d1ec7e084688acb5b750db2dfbf98b1fd7243114",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationPublication.java": "d6972d792c18e377cfda161d156b3e3cb279f36a3f420e5b53a72cb86316799e",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationRetryAfter.java": "7ea5fb4e3267249ac5b6cc1165ede174c152286f7aceb7632a35510fa5f1be57",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationSessions.java": "e8f380e9f161dadc3eaa5fb30c469c009a131feba99b8472757ea4dd1bde488f",
+    "src\\java\\org\\emulationstation\\frontend\\station\\StationStorage.java": "3979ac629fe3778c609fd7bca20c3d72c9b89df920d1454a637ec24f575cfc9d"
+  }
+}

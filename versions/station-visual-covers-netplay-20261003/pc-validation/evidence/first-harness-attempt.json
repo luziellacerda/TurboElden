@@ -1,0 +1,125 @@
+{
+  "created": "2026-10-03T23:23:24.871843+00:00",
+  "root": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\pc-validation-20261003-202304",
+  "apk": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\TurboStations-Capas4-Sinopses-LED-Netplay-R2-20261003.apk",
+  "apkSha256": "31ab80ef2c77e9c5dff294d6f63807ab1e6d6cded81c2beec7aee171067f46d8",
+  "results": [
+    {
+      "name": "netplay-contracts",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.935,
+      "log": "netplay-contracts.log"
+    },
+    {
+      "name": "station_cover_plan_test-compile",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.369,
+      "log": "station_cover_plan_test-compile.log"
+    },
+    {
+      "name": "station_cover_plan_test",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.161,
+      "log": "station_cover_plan_test.log"
+    },
+    {
+      "name": "station_cover_retry_test-compile",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.26,
+      "log": "station_cover_retry_test-compile.log"
+    },
+    {
+      "name": "station_cover_retry_test",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.111,
+      "log": "station_cover_retry_test.log"
+    },
+    {
+      "name": "layout-98-cases",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.035,
+      "log": "layout-98-cases.log"
+    },
+    {
+      "name": "netplay-dex-rebuild",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 2.612,
+      "log": "netplay-dex-rebuild.log"
+    },
+    {
+      "name": "metadata-13-tests",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 2.501,
+      "log": "metadata-13-tests.log"
+    },
+    {
+      "name": "apk-signature",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 3.427,
+      "log": "apk-signature.log"
+    },
+    {
+      "name": "apk-alignment",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.083,
+      "log": "apk-alignment.log"
+    },
+    {
+      "name": "station-suite",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 10.607,
+      "log": "station-suite.log"
+    },
+    {
+      "name": "station-dex-rebuild",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1.789,
+      "log": "station-dex-rebuild.log"
+    },
+    {
+      "name": "station-arm64-rebuild",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 2.019,
+      "log": "station-arm64-rebuild.log"
+    },
+    {
+      "name": "cover-load-4096",
+      "passed": false,
+      "exitCode": 1,
+      "seconds": 0.066,
+      "log": "cover-load-4096.log"
+    },
+    {
+      "name": "gles100-angle",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 10.452,
+      "log": "gles100-angle.log"
+    }
+  ],
+  "failures": [
+    {
+      "stage": "station",
+      "error": "cover-load-4096: Exception in thread \"main\" java.lang.NoClassDefFoundError: org/json/JSONException\n\tat org.emulationstation.frontend.station.StationApiTest$Fake.<init>(StationApiTest.java:29)\n\tat org.emulationstation.frontend.station.StationCoverConcurrencyTest$Server.<init>(StationCoverConcurrencyTest.java:16)\n\tat org.emulationstation.frontend.station.StationCoverLoadTest.main(StationCoverLoadTest.java:13)\nCaused by: java.lang.ClassNotFoundException: org.json.JSONException\n\tat java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)\n\tat java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)\n\tat java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)\n\t... 3 more\n"
+    }
+  ],
+  "passed": false,
+  "releasedArtifactsUnchanged": true,
+  "phoneUsed": false,
+  "productionServerUsed": false,
+  "androidRuntimeTested": false,
+  "twoDeviceNetplayTested": false
+}

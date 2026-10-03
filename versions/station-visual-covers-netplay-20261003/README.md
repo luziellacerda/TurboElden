@@ -2,6 +2,10 @@
 
 Handoff técnico da entrega de 03/10/2026. Este documento descreve o aplicativo Android TurboStations e sua ligação com o canal Station. O serviço Turborama/Suite Windows não foi alterado.
 
+## Conferência posterior no PC
+
+Bateria completa repetida e ensaio de 4.096 pedidos de capa simulados aprovados, sem acessar telefone ou sessão de produção. [Relatório detalhado](pc-validation/README.md) e [recibo](pc-validation/PC-TEST-RESULT.json). APK R2 e seus componentes permanecem com os mesmos hashes.
+
 ## 1. Estado e referências obrigatórias
 
 | Referência | Identificação |

@@ -27,7 +27,7 @@ for p in (ROOT/'native').iterdir():
 tree(ROOT/'netplay/src',OUT/'netplay/src')
 tree(ROOT/'netplay/tests',OUT/'netplay/tests')
 for p in (ROOT/'netplay').iterdir():
-    if p.is_file() and p.suffix in ('.py','.h','.xml','.json','.md'):copy(p,OUT/'netplay'/p.name)
+    if p.is_file() and p.suffix in ('.py','.h','.xml','.json','.md','.java'):copy(p,OUT/'netplay'/p.name)
 for p in (ROOT/'netplay/build').glob('*.json'):copy(p,OUT/'evidence'/('netplay-'+p.name))
 tree(ROOT/'evidence',OUT/'evidence')
 for name in ['prepare_visual_metadata.py','audit_missing_synopses.py','prepare_console_assets.py','test_visual_metadata.py','test_station_info_layout.cpp','native-base-hashes.json','archived-apks.json','archived-visual-r1.json','build-result.json','BUILD-NOTICE.json','test_shader_angle.py']:
