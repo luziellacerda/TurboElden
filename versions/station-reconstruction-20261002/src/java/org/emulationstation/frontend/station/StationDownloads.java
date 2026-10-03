@@ -77,6 +77,7 @@ public final class StationDownloads implements AutoCloseable {
   catch(RejectedExecutionException full){listener.changed(id,false,0,-1,"Aguarde a instalação em andamento.","",3);}
  }
  public StationInstaller.Installed find(StationCatalog.Item item)throws Exception{return installer.find(item);}
+ public Set<String> recordedIds()throws IOException{return installer.recordedIds();}
  public void close(){for(StationApi.Cancellation cancel:jobs.values())cancel.cancel();worker.shutdown();}
  private static final class InsufficientSpace extends IOException {}
  static String message(Exception error,StationApi.Cancellation cancel) {

@@ -31,7 +31,7 @@ public final class StationApiTest {
         java.util.concurrent.CountDownLatch artifactEntered,artifactRelease;
         java.util.concurrent.CountDownLatch artifactBodyEntered,artifactBodyRelease;
         org.json.JSONObject descriptorOverride;org.json.JSONArray catalogItems;boolean omitDescriptor;long itemRevision=1;
-        boolean badSignature,truncatedArtifact;byte[] artifact={1,2,3};long lengthOverride=-2;
+        boolean badSignature,truncatedArtifact,escapeCatalogUnicode;byte[] artifact={1,2,3};long lengthOverride=-2;
         Fake()throws Exception {
             KeyPairGenerator gen=KeyPairGenerator.getInstance("RSA");gen.initialize(2048);
             authority=gen.generateKeyPair();device=gen.generateKeyPair();deviceId=StationProtocol.deviceId(device.getPublic().getEncoded());
@@ -96,7 +96,14 @@ public final class StationApiTest {
                 }
                 response.put("domain",domain);
                 if(!tamper.isEmpty())response.put(tamper,tamper.equals("schemaVersion")?2:"wrong_value");
-                byte[] data=response.toString().getBytes(StandardCharsets.UTF_8),signature=StationApiTest.sign(authority,data);
+                String serialized=response.toString();
+                if(escapeCatalogUnicode&&operation.equals("catalog")){
+                    StringBuilder escaped=new StringBuilder();
+                    String hex="0123456789abcdef";
+                    for(int i=0;i<serialized.length();i++){char c=serialized.charAt(i);if(c>127){escaped.append("\\u");for(int shift=12;shift>=0;shift-=4)escaped.append(hex.charAt((c>>shift)&15));}else escaped.append(c);}
+                    serialized=escaped.toString();
+                }
+                byte[] data=serialized.getBytes(StandardCharsets.UTF_8),signature=StationApiTest.sign(authority,data);
                 if(badSignature)signature[0]^=1;
                 byte[] bytes=new JSONObject().put("keyId","test-key").put("payload",StationProtocol.base64Url(data))
                     .put("signature",StationProtocol.base64Url(signature)).toString().getBytes(StandardCharsets.UTF_8);

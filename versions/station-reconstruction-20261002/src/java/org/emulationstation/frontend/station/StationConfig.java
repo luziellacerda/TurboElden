@@ -9,7 +9,7 @@ public final class StationConfig {
     public static final String STATION_ASSERTION_SPKI_BASE64URL = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo6sEDAwUywSCV0Yh9HY6PssYu8JH5ghGtIag-lIHqVVLNU7tZoRvc3_y0uPojGMpLAk3EtY8JmYLzC1klwQw2dujbTZop8k9nHnqVj6QwjHntUFIeNzDoDdF0XdxO2nBU8op0OqVp0xPg31Zcik69Lt-2YJcfkQrINjR3Ss6d4mRm3u9RcUfksv6A9fzt-KAin4dhreICH6qn892W_Xq0X5jFFzI9w135rY3ijgYB5cyhd19i0-Y1vXFNyNVpoyk01UCbWxrL11PYBHEjbqs78eS7hZmWjyqNQLcy9n7wlwlsesq7QsK3SchzaQSCAJpXDLHHh8xz1pP_EzjUscItwIDAQAB";
     public static final String PRODUCT = "TURBORAMA_STATION_ANDROID";
     public static final String APPLICATION = "TURBORAMA_STATION_ANDROID";
-    public static final String CLIENT_VERSION = "1.0.8-station-storage-20261003.3";
+    public static final String CLIENT_VERSION = "1.0.8-station-capacity40000-20261003.1";
 
     private StationConfig() {}
 

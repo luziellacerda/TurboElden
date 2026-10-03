@@ -1,5 +1,6 @@
 #include "station_catalog_abi.hpp"
 #include "station_cover_retry.hpp"
+#include "station_capacity.hpp"
 #include <jni.h>
 #include <dlfcn.h>
 #include <algorithm>
@@ -7,6 +8,7 @@
 #include <map>
 #include <mutex>
 #include <set>
+#include <unordered_map>
 #include <stdexcept>
 #include <utility>
 #include <ctime>
@@ -37,6 +39,7 @@ struct Inbox {
 struct State {
  Catalog* owner=nullptr;bool pending=false;
  std::vector<Item> catalog;
+ std::unordered_map<std::string,size_t> indices;
  std::map<std::string,Job> jobs;
  std::set<std::string> covers;
  station::CoverRetry coverRetry;
@@ -68,7 +71,7 @@ bool command(jmethodID method,const std::string* id=nullptr,bool result=false){
 }
 void changed(Catalog* catalog){++catalog->revision;catalog->installedCount=std::count_if(catalog->items.begin(),catalog->items.end(),[](const Item& item){return item.installed;});}
 bool owned(Catalog* catalog){return catalog&&catalog==state.owner;}
-Item* find(Catalog* catalog,const std::string& id){auto item=std::find_if(catalog->items.begin(),catalog->items.end(),[&](const Item& i){return i.id==id;});return item==catalog->items.end()?nullptr:&*item;}
+Item* find(Catalog* catalog,const std::string& id){auto it=state.indices.find(id);return it==state.indices.end()||it->second>=catalog->items.size()?nullptr:&catalog->items[it->second];}
 bool active(){return std::any_of(state.jobs.begin(),state.jobs.end(),[](const auto& pair){return pair.second.progress.active;});}
 void queueCovers(Catalog* catalog){
  if(!owned(catalog)||catalog->state!=2)return;
@@ -110,6 +113,8 @@ bool apply(Catalog* catalog){
   else if(job.result==2){item.localPath.clear();item.fileName.clear();item.installed=false;}
  }
  catalog->items.swap(catalog->unusedPending);catalog->unusedPending.clear();state.pending=false;__android_log_print(4,"StationNative","Catalog applied items=%zu",catalog->items.size());
+ state.indices.clear();state.indices.reserve(catalog->items.size());
+ for(size_t i=0;i<catalog->items.size();++i)state.indices.emplace(catalog->items[i].id,i);
  catalog->priorities.clear();state.covers.clear();state.coverRetry.clear();state.jobs.clear();
  catalog->state=2;catalog->error.clear();preparationCommitted=true;changed(catalog);return true;
 }
@@ -130,13 +135,14 @@ API jint JNI_OnLoad(JavaVM* machine,void*){
  return env->ExceptionCheck()?JNI_ERR:JNI_VERSION_1_6;
 }
 API void Java_org_emulationstation_frontend_station_StationFrontend_publishPreparation(JNIEnv* env,jclass,jint done,jint total,jlong count){
- if(done<0||total<0||done>total||total>4096||count<0){error(env,"Invalid preparation counters");return;}
+ if(done<0||total<0||done>total||static_cast<size_t>(total)>station::MaximumCatalogItems||count<0){error(env,"Invalid preparation counters");return;}
  if(done==0)preparationCommitted=false;preparationTotal=total;preparedItems=done;preparationBytes=count;
 }
 API void Java_org_emulationstation_frontend_station_StationFrontend_publishCatalog(JNIEnv* env,jclass,jobjectArray rows,jbyteArray name){
  try{
-  if(!rows||env->GetArrayLength(rows)>4096)throw std::runtime_error("Catalog limit");
+  if(!rows||static_cast<size_t>(env->GetArrayLength(rows))>station::MaximumCatalogItems)throw std::runtime_error("Catalog limit");
   std::vector<Item> items;std::set<std::string> seen;
+  items.reserve(static_cast<size_t>(env->GetArrayLength(rows)));
   for(jsize i=0;i<env->GetArrayLength(rows);++i){
    auto input=static_cast<jbyteArray>(env->GetObjectArrayElement(rows,i));std::string row;
    try{row=bytes(env,input,16384);}catch(...){if(input)env->DeleteLocalRef(input);throw;}env->DeleteLocalRef(input);
@@ -190,7 +196,7 @@ API bool StationCatalog_start(Catalog* catalog,size_t index){
 }
 API void StationCatalog_cancel(Catalog* catalog,size_t index){if(owned(catalog)&&index<catalog->items.size())command(cancelMethod,&catalog->items[index].id);}
 API bool StationCatalog_uninstall(Catalog* catalog,size_t index){return owned(catalog)&&index<catalog->items.size()&&command(removeMethod,&catalog->items[index].id,true);}
-API std::vector<size_t> StationCatalog_active(Catalog* catalog){std::vector<size_t> result;if(owned(catalog))for(size_t i=0;i<catalog->items.size();++i){auto job=state.jobs.find(catalog->items[i].id);if(job!=state.jobs.end()&&job->second.progress.active)result.push_back(i);}return result;}
+API std::vector<size_t> StationCatalog_active(Catalog* catalog){std::vector<size_t> result;if(owned(catalog))for(const auto& pair:state.jobs){if(!pair.second.progress.active)continue;auto index=state.indices.find(pair.first);if(index!=state.indices.end())result.push_back(index->second);}std::sort(result.begin(),result.end());return result;}
 API Progress StationCatalog_progress(Catalog* catalog,size_t index){if(owned(catalog)&&index<catalog->items.size()){auto job=state.jobs.find(catalog->items[index].id);if(job!=state.jobs.end())return job->second.progress;}return {};}
 
 namespace {

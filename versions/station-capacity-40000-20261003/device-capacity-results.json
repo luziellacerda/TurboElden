@@ -1,0 +1,35 @@
+{
+  "native": {
+    "checks": 35,
+    "items": 40000,
+    "rejects40001": true,
+    "lastItemIndexChecked": true,
+    "librarySource": "src/native/station_frontend.cpp + tests/station_frontend_test.cpp",
+    "passedOnAndroid": true
+  },
+  "javaEarlierFixture": {
+    "items": 40000,
+    "envelopeBytes": 24560842,
+    "signatureParseMillis": 1207,
+    "heapLimit": 268435456,
+    "processHighWaterKiB": 497740,
+    "synthetic": true,
+    "productionNetworkRequests": 0,
+    "note": "Measured before final ASCII decoding/copy optimizations; not evidence of final APK full UI or the larger escaped fixture."
+  },
+  "finalEscapedFixture": {
+    "items": 40000,
+    "envelopeBytes": 43760842,
+    "deviceVerified": true,
+    "signatureParseMillis": 1997,
+    "heapLimit": 268435456,
+    "processHighWaterKiB": 437748,
+    "sourceMatchesFinalCandidate": true,
+    "productionNetworkRequests": 0
+  },
+  "fullApplicationUi40000Verified": false,
+  "candidateInstalled": false,
+  "cleanupPending": false,
+  "ownTemporaryFilesRemoved": true,
+  "ownTemporaryDirectory": "/data/local/tmp/station-capacity-40000-20261003"
+}

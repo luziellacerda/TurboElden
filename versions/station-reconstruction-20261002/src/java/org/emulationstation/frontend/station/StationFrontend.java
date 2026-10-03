@@ -56,17 +56,19 @@ public final class StationFrontend {
  private static void publishCurrent(StationAndroid app)throws Exception {
   StationCoordinator.Library library=app.coordinator.current();if(library==null)throw new IOException("Catálogo não carregado");
   StationPublication publication=new StationPublication(library.catalog);
-  ArrayList<byte[]> rows=new ArrayList<>();
+  ArrayList<byte[]> rows=new ArrayList<>(publication.rows.size());
+  Set<String> recorded=downloads.recordedIds();
   long preparedBytes=0;int preparedItems=0;publishPreparation(0,publication.rows.size(),0);
   for(StationPublication.Row entry:publication.rows){
    StationCatalog.Item item=entry.item;StationPlatforms.Platform platform=entry.platform;
    StationInstaller.Installed installed=null;
-   try{installed=downloads.find(item);}catch(Exception invalidReceipt){
+   try{if(recorded.contains(item.itemId))installed=downloads.find(item);}catch(Exception invalidReceipt){
     // One invalid receipt cannot hide the rest of an authenticated catalog.
     StationDiagnostics.record(StationDiagnostics.Event.RECEIPT_INVALID,0,1);
    }
    byte[] row=utf8(item.itemId+"\0"+item.name+"\0"+platform.label+"\0"+platform.folder+"\0"+item.coverId+"\0"+(installed==null?"":installed.launchPath.toString())+"\0");
-   rows.add(row);preparedBytes+=row.length;publishPreparation(++preparedItems,publication.rows.size(),preparedBytes);
+   rows.add(row);preparedBytes+=row.length;++preparedItems;
+   if(preparedItems%64==0||preparedItems==publication.rows.size())publishPreparation(preparedItems,publication.rows.size(),preparedBytes);
   }
   StationDiagnostics.record(StationDiagnostics.Event.UNSUPPORTED_PLATFORM,0,publication.unsupportedCount);
   StationDiagnostics.record(StationDiagnostics.Event.CATALOG_PUBLISHED,library.cached?503:200,rows.size());

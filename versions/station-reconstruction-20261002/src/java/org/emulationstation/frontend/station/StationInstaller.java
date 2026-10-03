@@ -81,6 +81,19 @@ public final class StationInstaller {
     public Path existingArtifact(StationCatalog.Item item,StationArtifact spec,StationApi.Cancellation cancel)throws Exception {
         return StationExistingArtifact.find(roms.resolve(StationPlatforms.resolve(item.platform).folder),spec,cancel);
     }
+    /** Enumerate the small private receipt directory once, instead of probing disk for every catalog item. */
+    public synchronized Set<String> recordedIds()throws IOException {
+        checkParents(records);Set<String> result=new HashSet<>();
+        try(DirectoryStream<Path> entries=Files.newDirectoryStream(records,"*.json")){
+            for(Path entry:entries){
+                String name=entry.getFileName().toString(),id=name.substring(0,name.length()-5);
+                try{StationCatalog.libraryId(id);}catch(IOException invalid){continue;}
+                // find() still performs the complete link/receipt/content checks for candidates.
+                result.add(id);
+            }
+        }
+        return result;
+    }
     public synchronized Installed find(StationCatalog.Item item)throws Exception {
         JSONObject saved=readRecord(item.itemId);if(saved==null||saved.optBoolean("removing",false))return null;
         if(!StationPlatforms.resolve(StationApi.string(saved,"platform")).folder.equals(StationPlatforms.resolve(item.platform).folder))throw new IOException("Stored platform changed");

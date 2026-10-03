@@ -1,0 +1,40 @@
+--- a/src/TurboRamaSuiteOnlineServer/StationLibrary.cs
++++ b/src/TurboRamaSuiteOnlineServer/StationLibrary.cs
+@@ -27,7 +27,10 @@
+ 
+ public sealed class StationLibrary
+ {
+-    public const int MaximumItems = 4096;
++    // Private entries include hidden compatibility IDs; public catalog is limited separately.
++    public const int MaximumItems = 65_536;
++    public const int MaximumCatalogItems = 40_000;
++    public const long MaximumIndexBytes = 128L * 1024 * 1024;
+     public const int MaximumCoverBytes = 5 * 1024 * 1024;
+     public const long MaximumArtifactBytes = 1L << 40;
+     public const long MaximumExpandedBytes = 4L << 40;
+@@ -52,6 +55,8 @@
+     {
+         if (string.IsNullOrWhiteSpace(path) || !File.Exists(path))
+             return null;
++        if (new FileInfo(path).Length > MaximumIndexBytes)
++            throw new InvalidOperationException("Station library index is too large.");
+         var json = File.ReadAllText(path);
+         using var document = JsonDocument.Parse(json, new JsonDocumentOptions
+         {
+@@ -72,6 +77,7 @@
+             throw new InvalidOperationException("Station library index is invalid.");
+         var items = new Dictionary<string, Resolved>(StringComparer.Ordinal);
+         var covers = new Dictionary<string, (string Path, long Revision)>(StringComparer.Ordinal);
++        var visibleCount = 0;
+         foreach (var row in itemsElement.EnumerateArray())
+         {
+             var itemId = RequireId(row, "itemId");
+@@ -90,6 +96,8 @@
+                     throw new InvalidOperationException("Station catalog visibility is invalid.");
+                 catalogVisible = visibility.GetBoolean();
+             }
++            if (catalogVisible && ++visibleCount > MaximumCatalogItems)
++                throw new InvalidOperationException("Station public catalog exceeds supported item count.");
+             StationArtifactDescriptor? artifact = null;
+             long lastWriteUtcTicks = 0;
+             if (row.TryGetProperty("artifact", out var artifactElement))

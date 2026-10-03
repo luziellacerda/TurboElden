@@ -1,0 +1,11 @@
+{
+  "heapLimit": 536870912,
+  "synthetic": true,
+  "envelopeBytes": 43760842,
+  "note": "Heap value is an end sample, not peak; duration is this isolated process, not full UI performance.",
+  "checks": 26,
+  "parseAndSignatureMillis": 1418,
+  "perPlatform": 10000,
+  "usedHeapAtEnd": 146013400,
+  "items": 40000
+}

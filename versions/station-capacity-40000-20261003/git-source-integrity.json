@@ -1,0 +1,446 @@
+{
+  "scope": "Indexed bytes for the 63 build/source/test files, before delivery commit. Local build bytes remain in source-manifest.json and the private backup. Git normalizes line endings per .gitattributes.",
+  "files": [
+    {
+      "path": "versions/station-reconstruction-20261002/build_app_dex.py",
+      "localBuildSha256": "f84bb4de84eaba90186c7da9d65bfb3a4d58b835faa8c3af59076999ea1de9a9",
+      "gitBlobSha256": "eebc0cafac4d30bfef932ba243a1f9526433920cb5c2e0e5110639f78f5b0232",
+      "gitBlobBytes": 4822,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/build_archive.py",
+      "localBuildSha256": "bb5bb58d24e01f2a85f8b24757f602d4d64064d8a31f7dbe31b23d36722b5c13",
+      "gitBlobSha256": "bb5bb58d24e01f2a85f8b24757f602d4d64064d8a31f7dbe31b23d36722b5c13",
+      "gitBlobBytes": 3661,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/build_frontend.py",
+      "localBuildSha256": "b4d562a6b87ee4d82136711b4efce93936a0714555497774003d5718479dba86",
+      "gitBlobSha256": "cde087b4a1eb9e5fa7f1c01cedd41387b4190a30f14302ea2c45bd032de4b213",
+      "gitBlobBytes": 1000,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/build_module.py",
+      "localBuildSha256": "9529f01604231917ec897b330bb34e15463989f44b87b53576921ac9ebd0dbd9",
+      "gitBlobSha256": "c58a49bbafdaf9d5923d24b1d69c9c6c6863ac207c080d7719b0189a729441e8",
+      "gitBlobBytes": 2099,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/export_stable_handoff.py",
+      "localBuildSha256": "c71c6c5b79236273eec09ed79814021f6e4fdcc4c261e9685398743acdf918aa",
+      "gitBlobSha256": "c71c6c5b79236273eec09ed79814021f6e4fdcc4c261e9685398743acdf918aa",
+      "gitBlobBytes": 10167,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/link_native_services.py",
+      "localBuildSha256": "f2ca871beedb8cdf9c89bd9602fa856e4081626e8c82e031f923e6215e174413",
+      "gitBlobSha256": "87917e4535467a12326e02c705e79af0b0a96a298ab94ac165cd17a84a741425",
+      "gitBlobBytes": 8488,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/package_apk.py",
+      "localBuildSha256": "e010642b6fccca841e97d4d5f7f6930cd2b5965eb0bf3b6ba92f014af7f000cb",
+      "gitBlobSha256": "e171fa3f4f691b1560235a6cc4349b96ef88fd2b9180252a9321204889994a1b",
+      "gitBlobBytes": 6355,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/prepare_archive_device_test.py",
+      "localBuildSha256": "c8481737bf6ac412e2e7af0a89ff12ef45b3fe322aaa47ff92f22c1e49b1ef99",
+      "gitBlobSha256": "c8481737bf6ac412e2e7af0a89ff12ef45b3fe322aaa47ff92f22c1e49b1ef99",
+      "gitBlobBytes": 2371,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/prepare_capacity_device_test.py",
+      "localBuildSha256": "65fe815a33e61f72529dab721b17e57a1a1a7272763f4bde925b50c015074789",
+      "gitBlobSha256": "65fe815a33e61f72529dab721b17e57a1a1a7272763f4bde925b50c015074789",
+      "gitBlobBytes": 1887,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/prepare_dex_input.py",
+      "localBuildSha256": "75a1c3ea4481bcda20d368839c88e65296d56450b7e819d0756f6b50d7b04b47",
+      "gitBlobSha256": "27c79501f82acba8b9912d8152f73d91e79fa66a1ebb0dc6b2278cd21dff8f2f",
+      "gitBlobBytes": 1370,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/prepare_frontend_device_test.py",
+      "localBuildSha256": "647535bbebe8215105e4f7a55dbcccf9dbd6c684e8d7a508bc0b5735ed950ddc",
+      "gitBlobSha256": "7324a52789671a80e1845e7b87e156cefc79833de26dd9cc705cf6ad00fc9bc4",
+      "gitBlobBytes": 1712,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/prepare_root_device_test.py",
+      "localBuildSha256": "4cceff7ed9eaf0d696b75ef73fe5044c9684ea38de0c76d7127bd7dc9b5c654e",
+      "gitBlobSha256": "0bb67e31df302cd998861a8f3c54aea39a2d8f654bcc251133c271a6360181a8",
+      "gitBlobBytes": 1051,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/prepare_test_dependency.py",
+      "localBuildSha256": "44fec1cfb60d87943fcad9aa9a14bd653b8b980e4250547369460705082fe9eb",
+      "gitBlobSha256": "35059aa8766d8a2837f78f40a670ef797487a11d2dc8aec2acb0ae06203c004f",
+      "gitBlobBytes": 839,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/run_tests.py",
+      "localBuildSha256": "bd41d147bed618400a31129ac3642e0cf504433d2429971d57aca2b7b04fbb56",
+      "gitBlobSha256": "d1403b84836f854319a4e7d71b9831e896e2ce9e410381a3142331e16e476e72",
+      "gitBlobBytes": 2310,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/AssetInstaller.java",
+      "localBuildSha256": "d3539b66cbc434e819b59d1fa614f3eb47c8b7c3d8b51c92284bc6dacbe0ccee",
+      "gitBlobSha256": "d3539b66cbc434e819b59d1fa614f3eb47c8b7c3d8b51c92284bc6dacbe0ccee",
+      "gitBlobBytes": 2434,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/auth/LoginActivity.java",
+      "localBuildSha256": "2e08bdf0f5a8475dd6d0d32fdd6764d55da75559f8a90c532cc6c849d26c87cd",
+      "gitBlobSha256": "2e08bdf0f5a8475dd6d0d32fdd6764d55da75559f8a90c532cc6c849d26c87cd",
+      "gitBlobBytes": 23169,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/auth/StationLogin.java",
+      "localBuildSha256": "191549ba86fed13573b27258c867ece3a536f99573330d9f75889522774ae4ce",
+      "gitBlobSha256": "191549ba86fed13573b27258c867ece3a536f99573330d9f75889522774ae4ce",
+      "gitBlobBytes": 4738,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/DownloadService.java",
+      "localBuildSha256": "49b2994e4a213e861cfcef5ce0e353789f7f88928fec5f8b7e3b8ceb6f594c5f",
+      "gitBlobSha256": "49b2994e4a213e861cfcef5ce0e353789f7f88928fec5f8b7e3b8ceb6f594c5f",
+      "gitBlobBytes": 3678,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/ExistingCoverCache.java",
+      "localBuildSha256": "41796c41b27efc4e9a53d20b7ed606e37d7b4d168cb7638059cf368e8d533d28",
+      "gitBlobSha256": "41796c41b27efc4e9a53d20b7ed606e37d7b4d168cb7638059cf368e8d533d28",
+      "gitBlobBytes": 2239,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationAndroid.java",
+      "localBuildSha256": "9eec1a46dd1453c508b3f9aa8c18ffeea9557c30d3a21dc1747286626138cfce",
+      "gitBlobSha256": "9eec1a46dd1453c508b3f9aa8c18ffeea9557c30d3a21dc1747286626138cfce",
+      "gitBlobBytes": 4233,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationApi.java",
+      "localBuildSha256": "96654f8952f6ce0815d9cd6321f1c65232b0d0f9999015653783f2b4afdb3214",
+      "gitBlobSha256": "96654f8952f6ce0815d9cd6321f1c65232b0d0f9999015653783f2b4afdb3214",
+      "gitBlobBytes": 20934,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationArchive.java",
+      "localBuildSha256": "107669c6885725d99b430e7340c550466eed24a2842d43b51526c673a9d51b86",
+      "gitBlobSha256": "107669c6885725d99b430e7340c550466eed24a2842d43b51526c673a9d51b86",
+      "gitBlobBytes": 683,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationArtifact.java",
+      "localBuildSha256": "fe6eee3c4dfaaf66ac68eb0096b6ff0dc7792fa377dadf5898b5ea06e803bac9",
+      "gitBlobSha256": "fe6eee3c4dfaaf66ac68eb0096b6ff0dc7792fa377dadf5898b5ea06e803bac9",
+      "gitBlobBytes": 3253,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationBundledFiles.java",
+      "localBuildSha256": "74292e8dcfe8318d8697a2c81446ab23cd66ff2c815bf98632849b34cc39e67e",
+      "gitBlobSha256": "74292e8dcfe8318d8697a2c81446ab23cd66ff2c815bf98632849b34cc39e67e",
+      "gitBlobBytes": 2442,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationCatalog.java",
+      "localBuildSha256": "593e67e4e95047b64f7689977f0716f810d8e39e4b376c69d419c5eb143e65f5",
+      "gitBlobSha256": "593e67e4e95047b64f7689977f0716f810d8e39e4b376c69d419c5eb143e65f5",
+      "gitBlobBytes": 7564,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationCatalogStore.java",
+      "localBuildSha256": "9d4d119f54fe28be65f90efc65f2f7d81062089eaa5e5cebf6f186c10e3c8de6",
+      "gitBlobSha256": "9d4d119f54fe28be65f90efc65f2f7d81062089eaa5e5cebf6f186c10e3c8de6",
+      "gitBlobBytes": 2175,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationConfig.java",
+      "localBuildSha256": "4dbfccf64ee49e9e68a209c2da90c279ec2b3e39f2818c77fa6a3a9d5ee65be0",
+      "gitBlobSha256": "4dbfccf64ee49e9e68a209c2da90c279ec2b3e39f2818c77fa6a3a9d5ee65be0",
+      "gitBlobBytes": 1854,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+      "localBuildSha256": "eeac829d4e878aa57dbd09c65401ddf3e34ce950c9fe38f2422f16d337d59a3a",
+      "gitBlobSha256": "eeac829d4e878aa57dbd09c65401ddf3e34ce950c9fe38f2422f16d337d59a3a",
+      "gitBlobBytes": 7410,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+      "localBuildSha256": "4b73afde8cbb15e5b4c91b7be5a9718cd4b27cd46fc3e8048d673280bec619d9",
+      "gitBlobSha256": "4b73afde8cbb15e5b4c91b7be5a9718cd4b27cd46fc3e8048d673280bec619d9",
+      "gitBlobBytes": 5911,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationCrypto.java",
+      "localBuildSha256": "8a60e9fd96dbfa3d8098b9e913e2ea8141ef13b76bf6cae264b47f841dd302d7",
+      "gitBlobSha256": "8a60e9fd96dbfa3d8098b9e913e2ea8141ef13b76bf6cae264b47f841dd302d7",
+      "gitBlobBytes": 1942,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationDiagnostics.java",
+      "localBuildSha256": "f3cd90ead7d57962d0c069e73bc952920805b310fc271bbca7276002433d2789",
+      "gitBlobSha256": "f3cd90ead7d57962d0c069e73bc952920805b310fc271bbca7276002433d2789",
+      "gitBlobBytes": 3870,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+      "localBuildSha256": "fb337542e2c3b6c6c9c2c34a79dfa1b370d74f2239d6d73be0fa7625dd1691d9",
+      "gitBlobSha256": "fb337542e2c3b6c6c9c2c34a79dfa1b370d74f2239d6d73be0fa7625dd1691d9",
+      "gitBlobBytes": 7398,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationExistingArtifact.java",
+      "localBuildSha256": "13cf0fd8b08fd83ddfa813c86d792b60034c48a9b405efc4f593b03199c6016c",
+      "gitBlobSha256": "13cf0fd8b08fd83ddfa813c86d792b60034c48a9b405efc4f593b03199c6016c",
+      "gitBlobBytes": 2153,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationFiles.java",
+      "localBuildSha256": "c0da9cf2e54702d8c4f0c8f6ef09300ce35194a0d182f6b5cf2175e1bbd54f7b",
+      "gitBlobSha256": "c0da9cf2e54702d8c4f0c8f6ef09300ce35194a0d182f6b5cf2175e1bbd54f7b",
+      "gitBlobBytes": 7148,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "localBuildSha256": "6bef2400991803a9516f168552314f13015c8dfd941382c881f1b00e6aff08a6",
+      "gitBlobSha256": "6bef2400991803a9516f168552314f13015c8dfd941382c881f1b00e6aff08a6",
+      "gitBlobBytes": 9079,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationHttp.java",
+      "localBuildSha256": "e4033ab955447da19c9833019a3648acd808060dccb875c79ea41722fc0e587a",
+      "gitBlobSha256": "e4033ab955447da19c9833019a3648acd808060dccb875c79ea41722fc0e587a",
+      "gitBlobBytes": 7024,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+      "localBuildSha256": "e49b41f5187d2b0c447a48a4d42d43b8090042144f68f8c4f8fb21e19cc30eba",
+      "gitBlobSha256": "e49b41f5187d2b0c447a48a4d42d43b8090042144f68f8c4f8fb21e19cc30eba",
+      "gitBlobBytes": 17180,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+      "localBuildSha256": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757",
+      "gitBlobSha256": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757",
+      "gitBlobBytes": 6038,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationProtocol.java",
+      "localBuildSha256": "43bdf2b6f948eab1fd386741d88b2b57e65c37b63eb608eca9e156b128052c51",
+      "gitBlobSha256": "43bdf2b6f948eab1fd386741d88b2b57e65c37b63eb608eca9e156b128052c51",
+      "gitBlobBytes": 6018,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationPublication.java",
+      "localBuildSha256": "d6972d792c18e377cfda161d156b3e3cb279f36a3f420e5b53a72cb86316799e",
+      "gitBlobSha256": "d6972d792c18e377cfda161d156b3e3cb279f36a3f420e5b53a72cb86316799e",
+      "gitBlobBytes": 1695,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationSessions.java",
+      "localBuildSha256": "ca26978f91e992a20ec69f31c489c2a50d8a892ceec857902c201a78400ead5a",
+      "gitBlobSha256": "ca26978f91e992a20ec69f31c489c2a50d8a892ceec857902c201a78400ead5a",
+      "gitBlobBytes": 1999,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/java/org/emulationstation/frontend/station/StationStorage.java",
+      "localBuildSha256": "3979ac629fe3778c609fd7bca20c3d72c9b89df920d1454a637ec24f575cfc9d",
+      "gitBlobSha256": "3979ac629fe3778c609fd7bca20c3d72c9b89df920d1454a637ec24f575cfc9d",
+      "gitBlobBytes": 3660,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/native/service-bindings.json",
+      "localBuildSha256": "cf81aa4e4b358ca08eeaa3863fa4f646fb34e29117bf458c2021b64027cd9cd4",
+      "gitBlobSha256": "1584efb0a524fa07cc1a12ea58c8f8e2d5460f575f3d628bc3125af78dec471e",
+      "gitBlobBytes": 671,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/native/station_archive.c",
+      "localBuildSha256": "cf09c44a8ee03a6f1dccf479953f7b2b6b8a9771b8953c5f841fa75163ef8e1c",
+      "gitBlobSha256": "cf09c44a8ee03a6f1dccf479953f7b2b6b8a9771b8953c5f841fa75163ef8e1c",
+      "gitBlobBytes": 4009,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/native/station_capacity.hpp",
+      "localBuildSha256": "0e979117364bd643b2e6175a25296bd10011d976bd21a2850f7af8b3273ad442",
+      "gitBlobSha256": "0e979117364bd643b2e6175a25296bd10011d976bd21a2850f7af8b3273ad442",
+      "gitBlobBytes": 103,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/native/station_catalog_abi.hpp",
+      "localBuildSha256": "16c65f6c7bba9eecec4c914490bd552978735be3d2da3c732d5f5c8486639824",
+      "gitBlobSha256": "9f990c41f65bab83672df01fceb18051c9f57abbb965630d6f35bd53558b7f21",
+      "gitBlobBytes": 1556,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/native/station_cover_retry.hpp",
+      "localBuildSha256": "82d00f3270b99b743439a490887f0ce6989420b56877c52ff076fd4ba189cb7b",
+      "gitBlobSha256": "82d00f3270b99b743439a490887f0ce6989420b56877c52ff076fd4ba189cb7b",
+      "gitBlobBytes": 673,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/src/native/station_frontend.cpp",
+      "localBuildSha256": "73d13347ab7e400771e68d10c216318c52a0aee9d78d521aaa66ae199f3b3983",
+      "gitBlobSha256": "73d13347ab7e400771e68d10c216318c52a0aee9d78d521aaa66ae199f3b3983",
+      "gitBlobBytes": 23685,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/device/StationCapacityAndroidTest.java",
+      "localBuildSha256": "6bb6419d0056ca9a16e924363c7db81c6cd41004e6f120e1bdecc004783f1e98",
+      "gitBlobSha256": "6bb6419d0056ca9a16e924363c7db81c6cd41004e6f120e1bdecc004783f1e98",
+      "gitBlobBytes": 2894,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/device/StationRootDeviceTest.java",
+      "localBuildSha256": "696ce6eb8637b83c94452b0c68e61bce9f5d4b7d5066f7ddb8df893088adcd98",
+      "gitBlobSha256": "685fffb07da565f3319d2494b3e7912a93f9f8655172f93bdfa4e574c9494c6c",
+      "gitBlobBytes": 2722,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/native_link_smoke.cpp",
+      "localBuildSha256": "004870eb333372110ec647862fcb67a713f7ca134dd093c2bb3f91da643a7311",
+      "gitBlobSha256": "61dff6851c176a3bb11d3517e53a75a0c7bb21b51010fcc75e74025841508cc2",
+      "gitBlobBytes": 1446,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/station_cover_retry_test.cpp",
+      "localBuildSha256": "0b882fd82584cb784187224ce72039d64b3d5a7469deedb7ea0c38b4b7a6a740",
+      "gitBlobSha256": "0b882fd82584cb784187224ce72039d64b3d5a7469deedb7ea0c38b4b7a6a740",
+      "gitBlobBytes": 1077,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/station_frontend_test.cpp",
+      "localBuildSha256": "ac94865c64beb212b66cb520375c4ca4d41b7dae468cabcd301f999ba807f0f6",
+      "gitBlobSha256": "0f6c631ab93fcf4f24186de5a8d7e095a9ed6bbf91f7fbb3a3f0943e855226f8",
+      "gitBlobBytes": 5410,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationApiTest.java",
+      "localBuildSha256": "7d1f1b920369d81e418c36d0d544e5bf2fed6c017755fb6822d2b28d2253e880",
+      "gitBlobSha256": "7d1f1b920369d81e418c36d0d544e5bf2fed6c017755fb6822d2b28d2253e880",
+      "gitBlobBytes": 15683,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationArchiveDeviceTest.java",
+      "localBuildSha256": "ac5ba7a08f14dade9aebb7039ee8c4b46c75314b187e21551a40d1a484aa9e5d",
+      "gitBlobSha256": "ac5ba7a08f14dade9aebb7039ee8c4b46c75314b187e21551a40d1a484aa9e5d",
+      "gitBlobBytes": 2114,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationBootstrapTest.java",
+      "localBuildSha256": "e875955745378bee7d1664db40fae386c9fb60e3b9e3fda01824738b3e85507b",
+      "gitBlobSha256": "e875955745378bee7d1664db40fae386c9fb60e3b9e3fda01824738b3e85507b",
+      "gitBlobBytes": 6001,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationCapacityTest.java",
+      "localBuildSha256": "65c06f09651886f7338f1159a0f76b3fd01b9ae4748696c145b89c07ff797c72",
+      "gitBlobSha256": "65c06f09651886f7338f1159a0f76b3fd01b9ae4748696c145b89c07ff797c72",
+      "gitBlobBytes": 5526,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationClosureTest.java",
+      "localBuildSha256": "5d3ee74f049a2212f6748a1875f9e623865d68f8730c5069e7514d40db4bfefd",
+      "gitBlobSha256": "5d3ee74f049a2212f6748a1875f9e623865d68f8730c5069e7514d40db4bfefd",
+      "gitBlobBytes": 13839,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationCoordinatorTest.java",
+      "localBuildSha256": "df300074d2c98c2f8545e3fc5da6def534c9df7fbc01cdc79a2e8a1861a7f42d",
+      "gitBlobSha256": "df300074d2c98c2f8545e3fc5da6def534c9df7fbc01cdc79a2e8a1861a7f42d",
+      "gitBlobBytes": 4516,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationFilesTest.java",
+      "localBuildSha256": "1765450d3747511a6904a20581993ce2615179398817d15262f458a80d1f6e57",
+      "gitBlobSha256": "1765450d3747511a6904a20581993ce2615179398817d15262f458a80d1f6e57",
+      "gitBlobBytes": 2793,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationFrontendDeviceTest.java",
+      "localBuildSha256": "9fe2f9beb35f2e642e66099ac9a028dc3276eff8fbfb6a888cef3d080b52a123",
+      "gitBlobSha256": "9fe2f9beb35f2e642e66099ac9a028dc3276eff8fbfb6a888cef3d080b52a123",
+      "gitBlobBytes": 363,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationInstallerTest.java",
+      "localBuildSha256": "52470dd28859a1d4667ea1a3d82cb3b6dbc3f93f863ca90977ed2fbecb9bea36",
+      "gitBlobSha256": "52470dd28859a1d4667ea1a3d82cb3b6dbc3f93f863ca90977ed2fbecb9bea36",
+      "gitBlobBytes": 9020,
+      "sameContentAfterLfNormalization": true
+    },
+    {
+      "path": "versions/station-reconstruction-20261002/tests/StationStorageTest.java",
+      "localBuildSha256": "32fe61fcee830ef3d4a5174393ce27669891c0e7ef85792353b7c1092107aa8b",
+      "gitBlobSha256": "32fe61fcee830ef3d4a5174393ce27669891c0e7ef85792353b7c1092107aa8b",
+      "gitBlobBytes": 6715,
+      "sameContentAfterLfNormalization": true
+    }
+  ]
+}

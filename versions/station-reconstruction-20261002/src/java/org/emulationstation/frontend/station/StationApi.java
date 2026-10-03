@@ -142,16 +142,27 @@ public final class StationApi {
         return catalogSnapshot(session,cancel).catalog;
     }
     public CatalogSnapshot catalogSnapshot(Session session,Cancellation cancel) throws Exception {
-        SignedReply reply=signedReply("GET","catalog",null,session,StationProtocol.CATALOG,
-            StationProtocol.CATALOG_BODY_BYTES,cancel);
-        return new CatalogSnapshot(StationCatalog.fromVerifiedPayload(reply.payload),reply.envelope);
+        valid(session);cancel.check();
+        try(Response response=transport.exchange("GET",ROOT+"catalog",null,session.token,cancel)){
+            success(response,cancel);
+            if(!mime(response.type).equals("application/json"))throw new IOException("Unexpected JSON MIME");
+            byte[] envelope=read(response,StationProtocol.CATALOG_BODY_BYTES,cancel);
+            CatalogSnapshot result=parseCatalog(envelope,session,false);cancel.check();return result;
+        }
     }
     /** Cached catalog is display data only; caller must already hold a valid session. */
     public CatalogSnapshot restoreCatalog(byte[] envelope,Session session) throws Exception {
         valid(session);
         if (envelope.length > StationProtocol.CATALOG_BODY_BYTES) throw new IOException("Catalog cache too large");
-        JSONObject payload=verify(envelope,StationProtocol.CATALOG,session,true);
-        return new CatalogSnapshot(StationCatalog.fromVerifiedPayload(payload),envelope.clone());
+        CatalogSnapshot restored=parseCatalog(envelope,session,true);
+        // Copy only after the large decoding/parser temporaries are no longer live.
+        return new CatalogSnapshot(restored.catalog,envelope.clone());
+    }
+    private CatalogSnapshot parseCatalog(byte[] envelope,Session session,boolean previousSession)throws Exception {
+        byte[] verified=verifiedPayload(envelope);
+        StationCatalog.Parsed parsed=StationCatalog.fromVerifiedText(utf8(verified));
+        verifyIdentity(parsed.identity,StationProtocol.CATALOG,session,previousSession);
+        return new CatalogSnapshot(parsed.catalog,envelope);
     }
 
     public byte[] cover(Session session,String coverId,Cancellation cancel) throws Exception {
@@ -234,6 +245,10 @@ public final class StationApi {
         }
     }
     private JSONObject verify(byte[] encoded,String domain,Session session,boolean previousSession) throws Exception {
+        JSONObject body=new JSONObject(utf8(verifiedPayload(encoded)));
+        verifyIdentity(body,domain,session,previousSession);return body;
+    }
+    private byte[] verifiedPayload(byte[] encoded)throws Exception {
         JSONObject envelope=new JSONObject(utf8(encoded));
         equal(envelope,"keyId",authorityId);
         byte[] payload=StationProtocol.decode(string(envelope,"payload"));
@@ -243,7 +258,9 @@ public final class StationApi {
         catch (NoSuchAlgorithmException android) { verifier=Signature.getInstance("SHA256withRSA/PSS"); }
         verifier.setParameter(PSS);verifier.initVerify(authority);verifier.update(payload);
         if (!verifier.verify(signature)) throw new GeneralSecurityException("Station signature rejected");
-        JSONObject body=new JSONObject(utf8(payload));
+        return payload;
+    }
+    private void verifyIdentity(JSONObject body,String domain,Session session,boolean previousSession)throws Exception {
         if (StationCatalog.integer(body,"schemaVersion") != 1) throw new IOException("Unsupported Station schema");
         equal(body,"domain",domain);equal(body,"productId",StationConfig.PRODUCT);
         equal(body,"applicationId",StationConfig.APPLICATION);equal(body,"deviceId",deviceId);
@@ -252,7 +269,6 @@ public final class StationApi {
             if (previousSession) hexId(string(body,"sessionId"));
             else equal(body,"sessionId",session.sessionId);
         }
-        return body;
     }
 
     private byte[] identity(String domain,String extra) {
@@ -284,6 +300,10 @@ public final class StationApi {
     private static String field(String key,String value) {return StationProtocol.field(key,value);}
     private static String mime(String type) {return type == null?"":type.split(";",2)[0].trim().toLowerCase(Locale.ROOT);}
     private static String utf8(byte[] bytes) throws CharacterCodingException {
+        // Signed envelopes/Base64 and escaped .NET JSON are ASCII. Avoid a second
+        // full-size UTF-16 decoder buffer there; non-ASCII retains strict validation.
+        boolean ascii=true;for(byte value:bytes)if(value<0){ascii=false;break;}
+        if(ascii)return new String(bytes,StandardCharsets.US_ASCII);
         return StandardCharsets.UTF_8.newDecoder().onMalformedInput(CodingErrorAction.REPORT)
             .onUnmappableCharacter(CodingErrorAction.REPORT).decode(ByteBuffer.wrap(bytes)).toString();
     }

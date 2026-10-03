@@ -1,3 +1,15 @@
+# Revisão atual — candidato de capacidade40mil, 03/10/2026
+
+A estável SNES/Mega foi congelada e publicada ANTES desta ampliação: branch/tag `estavel-station-snes-megadrive-20261003`, commit `97938400d3fa82d5d1564445c36fc70328add1c4`, APK3b355b02. **Não mover essa tag nem sobrescrever seu APK/inventários.** Ela continua instalada.
+
+Fonte canônico E: e este checkout agora contêm a revisão `capacidade-station-40000-20261003`, cliente `1.0.8-station-capacity40000-20261003.1`. APK candidato SHA256 `bced63f9b670b9098ffb983cf7e45335678b725d2944ee7133f77128724b9b7b`, em `E:\ESTUDO APK\candidatos\2026-10-03-station-40000\TurboStations-CANDIDATO-40000-20261003.apk`, não instalado.
+
+Ler `docs/server/HANDOFF-SERVIDOR-CAPACIDADE-40000-STATION-20261003.md` e `versions/station-capacity-40000-20261003/` na raiz do Git.353 checks locais,35 JNI Android,9 do índice C# isolado; leitor Android40000/43,76MB passou em1997ms. ABI/rotas/assinaturas preservadas; parser por registro, consulta de recibos existentes e índice nativo porID. Limites40000/64MiB no cliente, sem paginação. Patch de backend preparado para40000 públicos/65536 privados; NÃO aplicado em produção. Servidor continua1816. UI completa40mil não homologada.
+
+As referências abaixo descrevem a estável ou história anterior. O handoff completo da estável continua como manual de funcionamento; este bloco identifica o fonte candidato atual. Builds/temporários somente E:, reparos no fonte/APK e preservação dos dados/licença continuam obrigatórios.
+
+---
+
 # Estado atual — estável Station SNES / Mega Drive, 03/10/2026
 
 Referência: branch/tag `estavel-station-snes-megadrive-20261003`. Ler primeiro `docs/server/HANDOFF-TECNICO-COMPLETO-STATION-SNES-MEGADRIVE-20261003.md` na raiz do Git (cópia na raiz canônica E:). Manifesto e inventários em `versions/estavel-station-snes-megadrive-20261003/`.

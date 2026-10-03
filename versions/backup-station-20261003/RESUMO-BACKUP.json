@@ -1,0 +1,88 @@
+{
+  "status": "complete-copy-readback-verified",
+  "root": "G:\\BAKUP SISTEMA APP 03-10-2026",
+  "files": 50632,
+  "bytes": 24568435524,
+  "elapsedSeconds": 184.5,
+  "scope": "Full current Station build directory, exact APK base, stable and candidate releases, active external toolchains and signing identity. Private local backup, not Git upload.",
+  "privateManifestSha256": "a04c670423a8c9172969b692f0ef20cf7b355b8fe0f14b2b526f8f9d67e23706",
+  "sourceMapping": [
+    {
+      "source": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002",
+      "backupRelativePath": "compilacao/station-reconstruction-20261002",
+      "type": "directory"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\side-by-side-turborama-20261001\\TurboramaStation-TESTE-lado-a-lado.apk",
+      "backupRelativePath": "inputs/TurboramaStation-TESTE-lado-a-lado.apk",
+      "type": "file"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\estaveis\\2026-10-03-station-snes-megadrive",
+      "backupRelativePath": "releases/estavel-station-snes-megadrive-20261003",
+      "type": "directory"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\candidatos\\2026-10-03-station-40000",
+      "backupRelativePath": "releases/candidato-station-40000-20261003",
+      "type": "directory"
+    },
+    {
+      "source": "E:\\TurboEdenEngine\\android-ndk-r28c",
+      "backupRelativePath": "ferramentas/android-ndk-r28c",
+      "type": "directory"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\TurboRetroEmu-build\\android-build-tools\\35.0.0\\android-15",
+      "backupRelativePath": "ferramentas/android-build-tools-35-android-15",
+      "type": "directory"
+    },
+    {
+      "source": "E:\\ESTUDO APK\\TurboRetroEmu-build\\tools\\apktool_3.0.3.jar",
+      "backupRelativePath": "ferramentas/apktool_3.0.3.jar",
+      "type": "file"
+    },
+    {
+      "source": "G:\\Android\\Sdk\\platforms\\android-34",
+      "backupRelativePath": "ferramentas/sdk/platforms/android-34",
+      "type": "directory"
+    },
+    {
+      "source": "G:\\Android\\Sdk\\platform-tools",
+      "backupRelativePath": "ferramentas/sdk/platform-tools",
+      "type": "directory"
+    },
+    {
+      "source": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot",
+      "backupRelativePath": "ferramentas/jdk-17.0.20.101-hotspot",
+      "type": "directory"
+    },
+    {
+      "source": "C:\\Python314",
+      "backupRelativePath": "ferramentas/Python314",
+      "type": "directory"
+    },
+    {
+      "source": "C:\\Program Files\\CMake",
+      "backupRelativePath": "ferramentas/CMake",
+      "type": "directory"
+    },
+    {
+      "source": "C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe",
+      "backupRelativePath": "ferramentas/Ninja-build",
+      "type": "directory"
+    },
+    {
+      "source": "C:\\Program Files\\dotnet",
+      "backupRelativePath": "ferramentas/dotnet",
+      "type": "directory"
+    },
+    {
+      "source": "C:\\Users\\Admin\\.android\\debug.keystore",
+      "backupRelativePath": "assinatura-privada/debug.keystore",
+      "type": "file"
+    }
+  ],
+  "stableApkSha256": "3b355b02e4efab1801ccf899f77a5bc0d4d95e1c622d8cb9c3a3e1f35c192d17",
+  "candidateApkSha256": "bced63f9b670b9098ffb983cf7e45335678b725d2944ee7133f77128724b9b7b"
+}

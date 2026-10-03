@@ -1,0 +1,32 @@
+{
+  "fromStableSha256": "3b355b02e4efab1801ccf899f77a5bc0d4d95e1c622d8cb9c3a3e1f35c192d17",
+  "candidateSha256": "bced63f9b670b9098ffb983cf7e45335678b725d2944ee7133f77128724b9b7b",
+  "changedOrAdded": [
+    {
+      "path": "classes28.dex",
+      "sizeBytes": 134520,
+      "sha256": "a44f692da23b6aba9ed4f340babb0d7b5dff175698a884e28f7b36e9b079b794"
+    },
+    {
+      "path": "lib/arm64-v8a/libstation_frontend.so",
+      "sizeBytes": 3702424,
+      "sha256": "7c6a88b2271b3f0b7f3ee24f0d8ee38b66c263302788239923baf82800a3ba1b"
+    },
+    {
+      "path": "META-INF/ANDROIDD.SF",
+      "sizeBytes": 1267576,
+      "sha256": "7c7be300f65c5a71dd3bad86d8e573b7f6b40d37dd5755d7a3c88c67ec92d76d"
+    },
+    {
+      "path": "META-INF/ANDROIDD.RSA",
+      "sizeBytes": 1167,
+      "sha256": "a5ad8b77157430280db7bd1d34d8d0eed09e747bbba24661a36988dd0b3413b9"
+    },
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "sizeBytes": 1267449,
+      "sha256": "729f4e635560243821651f62d6bb5e4bdf42e3d1472bf9410ff18c70ede3fb50"
+    }
+  ],
+  "removed": []
+}

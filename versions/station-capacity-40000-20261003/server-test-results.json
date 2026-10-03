@@ -1,0 +1,11 @@
+{
+  "checks": 9,
+  "publicItems": 40000,
+  "hiddenItems": 255,
+  "descriptorHashesChecked": 40255,
+  "parseMillis": 10264,
+  "synthetic": true,
+  "fullApiTest": false,
+  "productionApplied": false,
+  "source": "StationLibrary.cs at exact server base plus supplied patch; real IsSafeLibraryId copied in isolated adapter"
+}

@@ -10,10 +10,11 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 
 /** The signed Station catalog. Remote addresses are never part of this model. */
 public final class StationCatalog {
-    public static final int MAX_ITEMS = 4096;
+    public static final int MAX_ITEMS = 40000;
     public static final class Item {
         public final String itemId;
         public final String name;
@@ -39,6 +40,53 @@ public final class StationCatalog {
 
     public Item find(String itemId) { return byId.get(itemId); }
 
+    /** Only called after signature verification; retain typed rows, not a 40,000-object JSON tree. */
+    static final class Parsed {
+        final JSONObject identity; final StationCatalog catalog;
+        Parsed(JSONObject identity,StationCatalog catalog){this.identity=identity;this.catalog=catalog;}
+    }
+    static Parsed fromVerifiedText(String text) throws IOException {
+        try {
+            JSONTokener input=new JSONTokener(text);
+            if(input.nextClean()!='{')throw new IOException("Catalog object required");
+            JSONObject identity=new JSONObject();java.util.Set<String> keys=new java.util.HashSet<>();
+            List<Item> items=new ArrayList<>();Map<String,Item> byId=new LinkedHashMap<>();boolean hasItems=false;
+            if(input.nextClean()=='}')throw new IOException("Incomplete catalog");input.back();
+            while(true){
+                Object key=input.nextValue();if(!(key instanceof String)||!keys.add((String)key))throw new IOException("Invalid catalog field");
+                if(input.nextClean()!=':')throw new IOException("Catalog separator required");
+                if(key.equals("items")){
+                    hasItems=true;if(input.nextClean()!='[')throw new IOException("Catalog items required");
+                    char next=input.nextClean();
+                    if(next!=']'){
+                        input.back();
+                        while(true){
+                            if(items.size()>=MAX_ITEMS)throw new IOException("Catalog exceeds supported item count");
+                            Object value=input.nextValue();if(!(value instanceof JSONObject))throw new IOException("Invalid catalog row");
+                            addRow((JSONObject)value,items,byId);
+                            next=input.nextClean();if(next==']')break;
+                            if(next!=',')throw new IOException("Catalog row separator required");
+                        }
+                    }
+                }else{
+                    Object value=input.nextValue();
+                    if(value instanceof JSONObject||value instanceof JSONArray)throw new IOException("Unexpected catalog metadata object");
+                    identity.put((String)key,value);
+                }
+                char next=input.nextClean();if(next=='}')break;
+                if(next!=',')throw new IOException("Catalog field separator required");
+            }
+            if(!hasItems||input.nextClean()!=0)throw new IOException("Incomplete catalog or trailing data");
+            return new Parsed(identity,new StationCatalog(integer(identity,"revision"),items,byId));
+        }catch(JSONException invalid){throw new IOException("Incomplete Station catalog",invalid);}
+    }
+    private static void addRow(JSONObject row,List<Item> items,Map<String,Item> byId)throws IOException,JSONException {
+        String itemId=libraryId(StationApi.string(row,"itemId")),coverId=libraryId(StationApi.string(row,"coverId"));
+        Item item=new Item(itemId,plainText(StationApi.string(row,"name"),120),plainText(StationApi.string(row,"platform"),120),integer(row,"revision"),coverId);
+        if(byId.put(itemId,item)!=null)throw new IOException("Duplicate catalog item");
+        items.add(item);
+    }
+
     /** Call only after StationClient has verified the envelope signature and domain. */
     public static StationCatalog fromVerifiedPayload(JSONObject payload) throws IOException {
         try {
@@ -48,14 +96,7 @@ public final class StationCatalog {
             List<Item> items = new ArrayList<>();
             Map<String, Item> byId = new LinkedHashMap<>();
             for (int i = 0; i < rows.length(); i++) {
-                JSONObject row = rows.getJSONObject(i);
-                String itemId = libraryId(StationApi.string(row, "itemId"));
-                String coverId = libraryId(StationApi.string(row, "coverId"));
-                String name = plainText(StationApi.string(row, "name"), 120);
-                String platform = plainText(StationApi.string(row, "platform"), 120);
-                Item item = new Item(itemId, name, platform, integer(row, "revision"), coverId);
-                if (byId.put(itemId, item) != null) throw new IOException("Duplicate catalog item");
-                items.add(item);
+                addRow(rows.getJSONObject(i),items,byId);
             }
             return new StationCatalog(revision, items, byId);
         } catch (JSONException invalid) {

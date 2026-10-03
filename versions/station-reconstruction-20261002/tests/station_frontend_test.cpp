@@ -34,6 +34,16 @@ API jint Java_org_emulationstation_frontend_station_StationFrontendDeviceTest_ru
   publish({});StationCatalog_update(&catalog);check(StationCatalog_applyPending(&catalog),"empty catalog published");check(catalog.items.empty()&&catalog.state==2,"empty catalog ready");
   check(!StationCatalog_start(&catalog,0),"invalid index rejected");
   check(StationCatalog_active(&catalog).empty(),"no active job after catalog replacement");
+  std::vector<std::string> many;many.reserve(station::MaximumCatalogItems);
+  for(size_t i=0;i<station::MaximumCatalogItems;++i)many.push_back("capacity_"+std::to_string(100000+i));
+  publish(many);check(!env->ExceptionCheck(),"40000 rows JNI accepted");StationCatalog_update(&catalog);
+  check(catalog.items.size()==40000&&state.indices.size()==40000,"40000 rows applied and indexed");
+  check(find(&catalog,"capacity_139999")==&catalog.items.back(),"Last row lookup exact");
+  check(StationCatalog_active(&catalog).empty(),"Idle large catalog has no active work");
+  Java_org_emulationstation_frontend_station_StationFrontend_publishPreparation(env,nullptr,40000,40000,5000000);
+  check(!env->ExceptionCheck()&&preparedItems.load()==40000,"Large preparation count accepted");
+  many.push_back("capacity_140000");publish(many);check(env->ExceptionCheck(),"40001 rows JNI rejected");env->ExceptionClear();
+  check(catalog.items.size()==40000,"Oversized publication preserves current catalog");
  }catch(const std::exception& failure){error(env,failure.what());count=0;}
  state=State{};return count;
 }
