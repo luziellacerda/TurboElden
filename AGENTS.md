@@ -1,3 +1,17 @@
+# Integração Station instalada — 03/10/2026 16:17 — estado atual
+
+As correções de runtime `02c09dd36fcfa6c69ceb481f0934e84eef01e5ae` foram integradas e compiladas no Windows/E:. Branch de entrega `integracao-station-producao-20261003`. APK `fa3bc84425120803d7e90069be3c296a91dbe04146455063f12d9a6205bbf795`, 1.902.751.638 bytes, instalado e hash no aparelho conferido. Fonte canônico `E:\ESTUDO APK\work\turbostations-reconstruction-20261002`; APK `build/apk/TurboStations-Station-CANDIDATO-20261003.apk`.
+
+302 verificações Java/API34, 28 da ponte JNI Android e 7 de retry C++ compilado pelo NDK e executado no Android passaram nesta rodada. Em relação ao APK anterior f5b35419, só `classes28.dex` e `libstation_frontend.so` mudaram. Assinatura, manifesto, design e motores preservados. APK anterior guardado em `build/previous-f5b35419-20261003/TurboStations-Station-ANTERIOR-f5b35419.apk`.
+
+**Impedimento atual comprovado:** o mantenedor confirmou ter desinstalado o TESTE antes desta instalação. Uma tentativa autorizada com o código do handoff privado retornou ACTIVATION HTTP403 às16:19:13, correlação `1354b75f239f4fd7be8761df5efd7f8e`. Não repetir o código nem retirar a autenticação. O operador deve conferir essa requisição e liberar/reemitir a ativação para a nova chave da instalação conforme as regras comerciais. Não atribuir a recusa a consumo/expiração/bloqueio sem a conferência no servidor. Código/licença não foram publicados.
+
+Servidor b1511b9 relata APIfd13c0d implantada, catálogo revisão3/1816 e provas HTTPS. Esse catálogo ainda NÃO foi validado neste APK por causa da recusa de ativação. Capas, download, instalação de jogo e retorno continuam pendentes no aparelho. Limite4096/12MiB permanece; suporte a mais15mil não foi implementado. Não promover a estável. Nenhum serviço Linux foi alterado.
+
+Ler `docs/server/INTEGRACAO-APP-PRODUCAO-STATION-20261003.md` na raiz do Git e `versions/station-reconstruction-20261002/evidence/integration-production-20261003.json`. Na pasta canônica E:, a cópia do handoff está na raiz. Os blocos abaixo são históricos; este estado tem precedência.
+
+---
+
 # Retorno confirmado do servidor — 03/10/2026, 15h21
 
 **Ler primeiro o [handoff único atualizado](https://github.com/luziellacerda/Servidor-pix/blob/b1511b9f75815aceb78dea801bb7ccc29f1036ab/docs/station-android/RETORNO-SERVIDOR-PARA-CLIENTE-RECONSTRUIDO-STATION-20261002.md).** A API Station foi implantada em `fd13c0d27eaab6a4dcf931a9cd64c3dcd7dd50c4`, DLL SHA256 `f305ae3763cb77a53a27b2c168c8de290191b3a7e88e612850856b6f7be7e639`. HTTPS autenticado confirmou **catálogo revisão 3 / 1.816 jogos**, `snes=644`, `snesbr=191`, `megadrive=887`, `megadrivebr=94`; cinco pares capa/download 200 (2 raw/3 ZIP) com assinatura, MIME, tamanho e SHA256. Um ID anterior oculto também foi autorizado e transferido; reuso dos cinco grants foi negado. O eco de `X-Correlation-ID` passou após corrigir duas linhas nas rotas Station do proxy.

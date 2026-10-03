@@ -1,0 +1,36 @@
+{
+  "status": "installed-activation-refused-403",
+  "package": "org.turboramastation.frontend",
+  "versionCode": 11,
+  "versionName": "1.0.8-turboeden-unico",
+  "base": "E:\\ESTUDO APK\\work\\native-carousel\\implementation\\side-by-side-turborama-20261001\\TurboramaStation-TESTE-lado-a-lado.apk",
+  "baseSha256": "d810434352f7ad2e7d1d08efe44f31eb76d132ffc43ba3b81b9ffc9e64efae1b",
+  "apk": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002\\build\\apk\\TurboStations-Station-CANDIDATO-20261003.apk",
+  "sha256": "fa3bc84425120803d7e90069be3c296a91dbe04146455063f12d9a6205bbf795",
+  "sizeBytes": 1902751638,
+  "signerSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "preservedEntryCount": 10803,
+  "changedOrAddedEntries": [
+    "classes5.dex",
+    "classes6.dex",
+    "lib/arm64-v8a/libmain.so",
+    "classes8.dex",
+    "classes28.dex",
+    "lib/arm64-v8a/libstation_frontend.so",
+    "lib/arm64-v8a/libstation_archive.so",
+    "assets/station-notices/libarchive-COPYING.txt",
+    "assets/station-notices/xz-COPYING.txt",
+    "assets/station-notices/xz-COPYING.0BSD.txt"
+  ],
+  "removedEntries": [
+    "assets/turboretro/catalog.json"
+  ],
+  "manifestUnchanged": true,
+  "newDuplicateClasses": false,
+  "legacyJavaClientTypesRemoved": true,
+  "nativeUnusedLegacyRoutinesStillPresent": true,
+  "deviceInstalled": true,
+  "authenticatedFlowVerified": false,
+  "installedApkSha256": "fa3bc84425120803d7e90069be3c296a91dbe04146455063f12d9a6205bbf795",
+  "installationTimeLocal": "2026-10-03T16:17:03-03:00"
+}

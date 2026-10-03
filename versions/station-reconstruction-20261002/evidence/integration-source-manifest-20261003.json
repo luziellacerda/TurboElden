@@ -1,0 +1,83 @@
+{
+  "baseRevision": "db68b613cda008052afef8152400b9c595dfcffa",
+  "sourceRevision": "02c09dd36fcfa6c69ceb481f0934e84eef01e5ae",
+  "handoffRevision": "e1cf0657a3af2560e227883b444e618748ac4660",
+  "changed": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "1e1a8b5fa49068b93fe83d91b75679173be06c99b72a19ab5654fd50fc0e0880"
+    },
+    {
+      "path": "evidence/review-fixes-validation-20261003.json",
+      "sha256": "40eadbea2f41cfd30c5706c37f54e3090a69d6275496b9c28a02c26543e7dd00"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationAndroid.java",
+      "sha256": "9eec1a46dd1453c508b3f9aa8c18ffeea9557c30d3a21dc1747286626138cfce"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationApi.java",
+      "sha256": "90138412f71b3ec3224217f239b315a413bf95d5df27566cc261d321ed56a784"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationConfig.java",
+      "sha256": "bbde71b5710dd9024c9865ecd0e355612f5d15708cadd22aa0e06c2940bdac97"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+      "sha256": "eeac829d4e878aa57dbd09c65401ddf3e34ce950c9fe38f2422f16d337d59a3a"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+      "sha256": "4b73afde8cbb15e5b4c91b7be5a9718cd4b27cd46fc3e8048d673280bec619d9"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationDiagnostics.java",
+      "sha256": "f3cd90ead7d57962d0c069e73bc952920805b310fc271bbca7276002433d2789"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationDownloads.java",
+      "sha256": "deae9670bdc63642054110f95540acf81b02921f4d8ce9cd41a4dc3ad3b5e06f"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "sha256": "4af44d3d90a8db17c45040f3e442830c068dff0d632b030430c9a96b12493221"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationHttp.java",
+      "sha256": "e4033ab955447da19c9833019a3648acd808060dccb875c79ea41722fc0e587a"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+      "sha256": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757"
+    },
+    {
+      "path": "src/java/org/emulationstation/frontend/station/StationPublication.java",
+      "sha256": "d6972d792c18e377cfda161d156b3e3cb279f36a3f420e5b53a72cb86316799e"
+    },
+    {
+      "path": "src/native/station_cover_retry.hpp",
+      "sha256": "82d00f3270b99b743439a490887f0ce6989420b56877c52ff076fd4ba189cb7b"
+    },
+    {
+      "path": "src/native/station_frontend.cpp",
+      "sha256": "fe274ffae0107afb96bafacf8fe3392036a598bda05204e7ab1d3f12e6ce64e4"
+    },
+    {
+      "path": "tests/StationApiTest.java",
+      "sha256": "a3ab2e71fd95925fd5e098bb80e3e36bbb4fa41c8b13baeda52cf56ab042be6e"
+    },
+    {
+      "path": "tests/StationClosureTest.java",
+      "sha256": "5d3ee74f049a2212f6748a1875f9e623865d68f8730c5069e7514d40db4bfefd"
+    },
+    {
+      "path": "tests/StationCoordinatorTest.java",
+      "sha256": "df300074d2c98c2f8545e3fc5da6def534c9df7fbc01cdc79a2e8a1861a7f42d"
+    },
+    {
+      "path": "tests/station_cover_retry_test.cpp",
+      "sha256": "0b882fd82584cb784187224ce72039d64b3d5a7469deedb7ea0c38b4b7a6a740"
+    }
+  ]
+}

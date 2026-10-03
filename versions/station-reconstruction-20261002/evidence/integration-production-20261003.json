@@ -1,0 +1,50 @@
+{
+  "sourceRevision": "02c09dd36fcfa6c69ceb481f0934e84eef01e5ae",
+  "sourceAndHandoffRevision": "e1cf0657a3af2560e227883b444e618748ac4660",
+  "serverHandoffRevision": "b1511b9f75815aceb78dea801bb7ccc29f1036ab",
+  "serverApiRevision": "fd13c0d27eaab6a4dcf931a9cd64c3dcd7dd50c4",
+  "expectedCatalogRevision": 3,
+  "expectedCatalogCount": 1816,
+  "expectedPlatforms": {
+    "snes": 644,
+    "snesbr": 191,
+    "megadrive": 887,
+    "megadrivebr": 94
+  },
+  "apk": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002\\build\\apk\\TurboStations-Station-CANDIDATO-20261003.apk",
+  "apkSha256": "fa3bc84425120803d7e90069be3c296a91dbe04146455063f12d9a6205bbf795",
+  "changedComparedToPreviousApk": [
+    "classes28.dex",
+    "lib/arm64-v8a/libstation_frontend.so"
+  ],
+  "canonicalSourcesMatchGitIgnoringLineEndings": true,
+  "javaHostChecks": 302,
+  "androidApiCompile": "API34 Java8",
+  "nativeFrontendChecksOnAndroid": 28,
+  "nativeCoverRetryChecksOnAndroid": 7,
+  "nativeCoverRetryNote": "NDK AArch64 executable run by ADB; fixture stdout has historical host-policy wording.",
+  "deviceInstalled": true,
+  "previousInstallationRemovedByUser": true,
+  "activationRequired": true,
+  "authenticatedFlowVerified": false,
+  "supportsMoreThan15000Games": false,
+  "catalogLimit": 4096,
+  "serverModified": false,
+  "installationTimeLocal": "2026-10-03T16:17:03-03:00",
+  "installedApkHashVerified": true,
+  "installedApkSha256": "fa3bc84425120803d7e90069be3c296a91dbe04146455063f12d9a6205bbf795",
+  "activationAttempt": {
+    "timeLocal": "2026-10-03T16:19:13-03:00",
+    "status": 403,
+    "correlation": "1354b75f239f4fd7be8761df5efd7f8e",
+    "credentialSourceRevision": "01c391bea72dc27de8597e0c6d908caa96b18021",
+    "serverReasonNotExposedByClientDiagnostics": true,
+    "uiMessage": "Acesso não autorizado. Confira seu código ou fale com o suporte."
+  },
+  "productionCatalogVerifiedOnThisApk": false,
+  "productionCoverVerifiedOnThisApk": false,
+  "productionDownloadVerifiedOnThisApk": false,
+  "deviceTestFilesRemoved": true,
+  "stayOnWhileChargingRestored": 0,
+  "credentialsIncluded": false
+}
