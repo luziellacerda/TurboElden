@@ -31,7 +31,7 @@ public final class StationFrontend {
     android.util.Log.i("StationFrontend","Configuring catalog");
     StationAndroid app=StationAndroid.current();if(app==null)throw new IOException("Entre no aplicativo para carregar o catálogo.");
     prepareStorage(app,romsRoot);
-    publishCurrent(app);
+    publishCurrent(app);startCatalogPoll();
    }catch(Exception e){android.util.Log.e("StationFrontend","configure: "+e.getClass().getSimpleName()+": "+safeReason(e));configured=false;publishError(utf8(catalogError(e,"Não foi possível preparar o catálogo Station.")));}
   }))configured=false;
  }
@@ -49,6 +49,24 @@ public final class StationFrontend {
        if(result==3&&library==null)requestLogin();
       });
  }
+ private static final ScheduledExecutorService catalogPoll=Executors.newSingleThreadScheduledExecutor(r->{Thread t=new Thread(r,"Station-catalog-poll");t.setDaemon(true);return t;});
+ private static ScheduledFuture<?> catalogPollTask;
+ private static final java.util.concurrent.atomic.AtomicBoolean automaticRefresh=new java.util.concurrent.atomic.AtomicBoolean();
+ private static synchronized void startCatalogPoll(){
+  if(catalogPollTask!=null)return;
+  catalogPollTask=catalogPoll.scheduleWithFixedDelay(()->{
+   if(!foreground||!configured||!authorized()||activeCount()>0||!automaticRefresh.compareAndSet(false,true))return;
+   try{commands.execute(()->{
+    try{if(!foreground)return;StationAndroid app=StationAndroid.current();if(app==null)return;
+     StationCoordinator.Library old=app.coordinator.current();
+     StationCoordinator.Library next=app.coordinator.refresh(new StationApi.Cancellation());
+     if(foreground&&(old==null||old.catalog.revision!=next.catalog.revision||!old.displayName.equals(next.displayName)))publishCurrent(app);
+    }catch(Exception failure){if(failure instanceof StationApi.Failure&&((StationApi.Failure)failure).sessionDenied())publishError(utf8("Entre novamente para atualizar o catálogo."));}
+    finally{automaticRefresh.set(false);}
+   });}catch(RejectedExecutionException busy){automaticRefresh.set(false);}
+  },5,60,TimeUnit.SECONDS);
+ }
+ private static synchronized void stopCatalogPoll(){if(catalogPollTask!=null){catalogPollTask.cancel(false);catalogPollTask=null;}}
  public static void refresh(){execute(()->{
   try{StationAndroid app=StationAndroid.current();if(app==null)throw new IOException();
    if(downloads==null){if(requestedStorageRoot==null)throw new IOException("Storage root not supplied");prepareStorage(app,requestedStorageRoot);configured=true;}
@@ -67,7 +85,7 @@ public final class StationFrontend {
     // One invalid receipt cannot hide the rest of an authenticated catalog.
     StationDiagnostics.record(StationDiagnostics.Event.RECEIPT_INVALID,0,1);
    }
-   byte[] row=utf8(item.itemId+"\0"+item.name+"\0"+platform.label+"\0"+platform.folder+"\0"+item.coverId+"\0"+(installed==null?"":installed.launchPath.toString())+"\0");
+   byte[] row=utf8(item.itemId+"\0"+item.name+"\0"+platform.label+"\0"+platform.folder+"\0"+item.coverId+"\0"+(installed==null?"":installed.launchPath.toString())+"\0"+item.description+"\0");
    rows.add(row);preparedBytes+=row.length;publishPreparation(++preparedItems,publication.rows.size(),preparedBytes);
   }
   StationDiagnostics.record(StationDiagnostics.Event.UNSUPPORTED_PLATFORM,0,publication.unsupportedCount);
@@ -114,7 +132,7 @@ public final class StationFrontend {
  }
  public static int activeCount(){StationDownloads current=downloads;return current==null?0:current.activeCount();}
  public static void cover(String itemId){images.request(itemId);}
- public static void setForeground(boolean visible){boolean resumed=visible&&!foreground;foreground=visible;images.setForeground(visible);publishForeground(visible);
+ public static void setForeground(boolean visible){boolean resumed=visible&&!foreground;foreground=visible;images.setForeground(visible);publishForeground(visible);if(visible)startCatalogPoll();else stopCatalogPoll();
   StationAndroid onlineApp=StationAndroid.current();if(onlineApp!=null)try{Class.forName("org.emulationstation.frontend.netplay.StationPresence").getMethod("foreground",Context.class,boolean.class).invoke(null,onlineApp.context,visible);}catch(ReflectiveOperationException optional){android.util.Log.w("StationOnline","Presence lifecycle unavailable");}
   if(resumed){if(!configured&&requestedStorageRoot!=null)configure(requestedStorageRoot);else if(configured)reconcile();}}
  public static void reconcile(){execute(()->{try{StationAndroid app=StationAndroid.current();if(app!=null&&downloads!=null)publishCurrent(app);}catch(Exception e){publishError(utf8("Não foi possível conferir os jogos instalados."));}});}

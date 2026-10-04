@@ -43,6 +43,7 @@ public final class StationApiTest {
         StationApi api()throws Exception{return new StationApi(this,this,this,authority.getPublic(),"test-key");}
         @Override public StationApi.Response exchange(String method,String path,byte[] request,String bearer,StationApi.Cancellation cancel)throws IOException {
             requests++;
+            if(path.equals("/v1/station/catalog?metadata=1"))path="/v1/station/catalog";
             try {
                 cancel.check();
                 if (path.equals(failedRoute))return reply(status,"application/json",new JSONObject().put("code",errorCode).toString().getBytes(StandardCharsets.UTF_8),-2);

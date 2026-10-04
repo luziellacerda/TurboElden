@@ -14,7 +14,7 @@ subprocess.run(args,check=True)
 from datetime import datetime
 run_id=datetime.now().strftime('%Y%m%d-%H%M%S-%f')
 results=[]
-for name,folder in [('StationFilesTest','file-test'),('StationApiTest','api-test'),('StationOnlineApiTest','online-api-test'),('StationStorageTest','storage-test'),('StationCoordinatorTest','coordinator-test'),('StationInstallerTest','installer-test'),('StationClosureTest','closure-test'),('StationBootstrapTest','bootstrap-test'),('StationCoverConcurrencyTest','cover-concurrency-test'),('StationTransferReuseTest','transfer-reuse-test'),('StationCoverPublicationTest','cover-publication-test')]:
+for name,folder in [('StationAutomaticCatalogTest','automatic-catalog-test'),('StationFilesTest','file-test'),('StationApiTest','api-test'),('StationOnlineApiTest','online-api-test'),('StationStorageTest','storage-test'),('StationCoordinatorTest','coordinator-test'),('StationInstallerTest','installer-test'),('StationClosureTest','closure-test'),('StationBootstrapTest','bootstrap-test'),('StationCoverConcurrencyTest','cover-concurrency-test'),('StationTransferReuseTest','transfer-reuse-test'),('StationCoverPublicationTest','cover-publication-test')]:
     cmd=[str(jdk/'java.exe'),'-cp',str(output)+';'+str(jsonjar),'org.emulationstation.frontend.station.'+name,str(build/folder/run_id)]
     run=subprocess.run(cmd,check=True,capture_output=True,text=True); print(run.stdout.strip());results.append({'test':name,'output':run.stdout.strip()})
 android=build/'android-classes';android.mkdir(exist_ok=True)

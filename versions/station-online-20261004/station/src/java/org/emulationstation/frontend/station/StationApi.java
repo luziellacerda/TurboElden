@@ -162,7 +162,7 @@ public final class StationApi {
         return catalogSnapshot(session,cancel).catalog;
     }
     public CatalogSnapshot catalogSnapshot(Session session,Cancellation cancel) throws Exception {
-        SignedReply reply=signedReply("GET","catalog",null,session,StationProtocol.CATALOG,
+        SignedReply reply=signedReply("GET","catalog?metadata=1",null,session,StationProtocol.CATALOG,
             StationProtocol.CATALOG_BODY_BYTES,cancel);
         return new CatalogSnapshot(StationCatalog.fromVerifiedPayload(reply.payload),reply.envelope);
     }

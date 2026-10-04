@@ -119,7 +119,7 @@ public final class StationHttp implements StationApi.Transport {
             || path.equals("/v1/station/sessions") || path.equals("/v1/station/downloads/authorize")
             || path.equals("/v1/station/online/command") || path.equals("/v1/station/online/events");
         if (!"GET".equals(method)) return false;
-        if (path.equals("/v1/station/me") || path.equals("/v1/station/catalog")) return true;
+        if (path.equals("/v1/station/me") || path.equals("/v1/station/catalog") || path.equals("/v1/station/catalog?metadata=1")) return true;
         String covers = "/v1/station/covers/", artifacts = "/v1/station/artifacts/";
         return path.startsWith(covers) && StationProtocol.libraryId(path.substring(covers.length()))
             || path.startsWith(artifacts) && StationProtocol.activationCode(path.substring(artifacts.length()));

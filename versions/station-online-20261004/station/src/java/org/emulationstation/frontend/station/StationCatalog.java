@@ -20,10 +20,13 @@ public final class StationCatalog {
         public final String platform;
         public final long revision;
         public final String coverId;
+        public final String description, developer, publisher, genre, players, releaseDate;
 
-        private Item(String itemId, String name, String platform, long revision, String coverId) {
+        private Item(String itemId, String name, String platform, long revision, String coverId, String description, JSONObject row) throws IOException, JSONException {
             this.itemId = itemId; this.name = name; this.platform = platform;
-            this.revision = revision; this.coverId = coverId;
+            this.revision = revision; this.coverId = coverId; this.description = description;
+            developer=metadataText(row,"developer",80);publisher=metadataText(row,"publisher",80);
+            genre=metadataText(row,"genre",80);players=metadataText(row,"players",40);releaseDate=metadataText(row,"releaseDate",40);
         }
     }
 
@@ -53,7 +56,7 @@ public final class StationCatalog {
                 String coverId = libraryId(StationApi.string(row, "coverId"));
                 String name = plainText(StationApi.string(row, "name"), 120);
                 String platform = plainText(StationApi.string(row, "platform"), 120);
-                Item item = new Item(itemId, name, platform, integer(row, "revision"), coverId);
+                Item item = new Item(itemId, name, platform, integer(row, "revision"), coverId, description(row), row);
                 if (byId.put(itemId, item) != null) throw new IOException("Duplicate catalog item");
                 items.add(item);
             }
@@ -73,6 +76,7 @@ public final class StationCatalog {
                 row.put("itemId", item.itemId); row.put("name", item.name);
                 row.put("platform", item.platform); row.put("revision", item.revision);
                 row.put("coverId", item.coverId);
+                row.put("metadata", new JSONObject().put("description", item.description).put("developer",item.developer).put("publisher",item.publisher).put("genre",item.genre).put("players",item.players).put("releaseDate",item.releaseDate));
                 rows.put(row);
             }
             root.put("items", rows);
@@ -80,6 +84,26 @@ public final class StationCatalog {
         } catch (JSONException impossible) {
             throw new IOException("Unable to store Station catalog", impossible);
         }
+    }
+
+    private static String metadataText(JSONObject row,String key,int limit)throws IOException,JSONException {
+        JSONObject metadata=row.optJSONObject("metadata");
+        if(metadata==null||!metadata.has(key))return "";
+        String value=StationApi.string(metadata,key);return value.isEmpty()?"":plainText(value,limit);
+    }
+    private static String description(JSONObject row) throws IOException, JSONException {
+        JSONObject metadata = row.optJSONObject("metadata");
+        if (metadata == null || !metadata.has("description")) return "";
+        String value = StationApi.string(metadata, "description");
+        if (value.length() > 2000) throw new IOException("Catalog description too long");
+        for (int i=0; i<value.length(); i++) {
+            char c=value.charAt(i);
+            if (c == 0 || Character.isISOControl(c) && c != '\n' && c != '\t')
+                throw new IOException("Invalid catalog description");
+            if (Character.isSurrogate(c) && (i+1>=value.length() ||
+                !Character.isSurrogatePair(c,value.charAt(++i)))) throw new IOException("Invalid catalog description");
+        }
+        return value;
     }
 
     public static String libraryId(String value) throws IOException {

@@ -19,7 +19,7 @@ public final class StationProtocol {
     public static final String REQUEST_DOWNLOAD = "TurboRamaStationAndroid/request-download/v1";
     public static final String DOWNLOAD_GRANT = "TurboRamaStationAndroid/download-grant/v1";
     public static final int MAXIMUM_BODY_BYTES = 8192;
-    public static final int CATALOG_BODY_BYTES = 12 * 1024 * 1024;
+    public static final int CATALOG_BODY_BYTES = 64 * 1024 * 1024;
     public static final int COVER_BODY_BYTES = 5 * 1024 * 1024;
 
     private StationProtocol() {}

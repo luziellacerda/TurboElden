@@ -2,6 +2,7 @@
 #include "station_cover_retry.hpp"
 #include "station_cover_plan.hpp"
 #include "station_cover_publication.hpp"
+#include "station_synopsis_pages.hpp"
 #include <jni.h>
 #include <dlfcn.h>
 #include <algorithm>
@@ -154,8 +155,10 @@ API void Java_org_emulationstation_frontend_station_StationFrontend_publishCatal
    try{row=bytes(env,input,16384);}catch(...){if(input)env->DeleteLocalRef(input);throw;}env->DeleteLocalRef(input);
    std::string fields[6];size_t offset=0;
    for(auto& field:fields){size_t end=row.find('\0',offset);if(end==std::string::npos)throw std::runtime_error("Incomplete native catalog row");field=row.substr(offset,end-offset);offset=end+1;}
+   std::string description;
+   if(offset<row.size()){size_t end=row.find('\0',offset);if(end==std::string::npos||end-offset>8000)throw std::runtime_error("Invalid description");description=row.substr(offset,end-offset);offset=end+1;}
    if(offset!=row.size()||!idValid(fields[0])||!idValid(fields[4])||!seen.insert(fields[0]).second)throw std::runtime_error("Invalid catalog identity");
-   Item item;item.id=fields[0];item.name=fields[1];item.platform=fields[2];item.folder=fields[3];item.coverId=fields[4];item.localPath=fields[5];
+   Item item;item.id=fields[0];item.name=fields[1];item.platform=fields[2];item.folder=fields[3];item.coverId=fields[4];item.localPath=fields[5];item.unusedGameUrl=station::synopsisPages(description);
    item.installed=!item.localPath.empty();if(item.installed)item.fileName=item.localPath.substr(item.localPath.find_last_of('/')+1);items.push_back(std::move(item));
   }
   std::string display=bytes(env,name,1024);std::lock_guard<std::mutex> lock(inbox.mutex);
