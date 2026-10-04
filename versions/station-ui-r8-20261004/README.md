@@ -1,3 +1,7 @@
+## Atualização posterior — R8 instalado, R9 candidato
+
+R8 `8e76d832…` foi instalado e teve hash do APK no aparelho conferido. Seis botões verdes e salas foram observados; serviço apareceu indisponível. USB caiu antes de conferir Voltar. R8B, somente no PC, corrigiu a métrica da fonte online. A melhoria posterior está em `../station-ui-folders-r9-20261004/README.md`; R9 ainda não instalado. Restaurar ajuste temporário de tela para 0 na próxima USB. Textos abaixo registram a preparação anterior e não prevalecem sobre este estado.
+
 # TurboStations R8 — barra de ações e salas
 
 ## Estado real em 04/10/2026
