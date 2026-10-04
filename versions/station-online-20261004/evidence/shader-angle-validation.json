@@ -1,0 +1,207 @@
+{
+  "environment": "Windows local ANGLE offscreen pbuffer, not Android hardware",
+  "dllDirectory": "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\07f806f999",
+  "eglVersion": [
+    1,
+    5
+  ],
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 SUPER (0x00001F06) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.16.1074)",
+  "version": "OpenGL ES 3.0 (ANGLE 2.1 git hash: unknown hash)",
+  "integerPrecision": {
+    "vertex/mediump-int": {
+      "rangeExponents": [
+        31,
+        30
+      ],
+      "precision": 0
+    },
+    "vertex/highp-int": {
+      "rangeExponents": [
+        31,
+        30
+      ],
+      "precision": 0
+    },
+    "fragment/mediump-int": {
+      "rangeExponents": [
+        31,
+        30
+      ],
+      "precision": 0
+    },
+    "fragment/highp-int": {
+      "rangeExponents": [
+        31,
+        30
+      ],
+      "precision": 0
+    }
+  },
+  "tests": [
+    {
+      "name": "premium-magazine-led actual GLES100",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "b76c20c6b5f1ed25f8eb1f22619b42eb604d65ec048b34a85e27d1fdc2cfce90",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "e8af7c1bfa8c94e6f75f86b9f41ed66ea89cd444946194318c073621544496d2",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "linkLog": "(151,1): warning X4000: use of potentially uninitialized variable (f_region)\n\n\n"
+    },
+    {
+      "name": "console actual GLES100",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "82f5f7bf79bde21f9452c0d7c58386cfd0883ce5d505be6d6bd1204d0cf797fe",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "linkLog": ""
+    },
+    {
+      "name": "video retained preview actual GLES100 and real RGB565 pixel",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "7132157f6297f4fad90c8246e9cb7ca55737ea5af7a08d29ace3812f78e276f7",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "linkLog": "",
+      "frameSamples": [
+        {
+          "rgba": [
+            156,
+            154,
+            173,
+            255
+          ],
+          "expected": [
+            156,
+            154,
+            173,
+            255
+          ],
+          "glError": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "isolated highp FrameCount arithmetic probe",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "374104333194ea64f560051bd2bbdfa410bd65d626d5df4136cb5e1859adae14",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "6ca52af6c7cb30d107f3adfe186cc94b08cc7ad4ae072388645f34acd3eca291",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "linkLog": "",
+      "frameSamples": [
+        {
+          "frame": 0,
+          "rgba": [
+            0,
+            0,
+            0,
+            255
+          ],
+          "expected": [
+            0,
+            0,
+            0,
+            255
+          ],
+          "glError": 0,
+          "passed": true
+        },
+        {
+          "frame": 32767,
+          "rgba": [
+            109,
+            5,
+            53,
+            255
+          ],
+          "expected": [
+            109,
+            5,
+            53,
+            255
+          ],
+          "glError": 0,
+          "passed": true
+        },
+        {
+          "frame": 65535,
+          "rgba": [
+            219,
+            11,
+            106,
+            255
+          ],
+          "expected": [
+            219,
+            11,
+            106,
+            255
+          ],
+          "glError": 0,
+          "passed": true
+        },
+        {
+          "frame": 1000000,
+          "rgba": [
+            0,
+            199,
+            96,
+            255
+          ],
+          "expected": [
+            0,
+            199,
+            96,
+            255
+          ],
+          "glError": 0,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

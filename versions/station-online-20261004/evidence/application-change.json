@@ -1,0 +1,8 @@
+{
+  "baseDexSha256": "216d1fd132111eb12a7ff77419944d6662511b3a1fefe59cd68ff3f07f1ee87f",
+  "cachedDexMatchedApk": true,
+  "changedSmali": [
+    "org/yuzu/yuzu_emu/YuzuApplication.smali"
+  ],
+  "purpose": "Skip unrelated offline engine/application initialization only in :station_netplay process"
+}

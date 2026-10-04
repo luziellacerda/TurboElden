@@ -1,0 +1,146 @@
+--- a/retroarch_types.h
++++ b/retroarch_types.h
+@@ -246,6 +246,11 @@
+    const char *state_path;
+    const char *config_path;
+    const char *libretro_path;
++#ifdef ANDROID
++   int station_netplay_role; /* 1 host, 2 client; explicit internal Activity only */
++   const char *station_netplay_address;
++   const char *station_netplay_port;
++#endif
+    int argc;
+    uint8_t flags;
+ };
+--- a/tasks/task_content.c
++++ b/tasks/task_content.c
+@@ -1417,6 +1417,11 @@
+    wrap_args->libretro_path  = NULL;
+    wrap_args->flags          = 0;
+    wrap_args->argc           = 0;
++#ifdef ANDROID
++   wrap_args->station_netplay_role = 0;
++   wrap_args->station_netplay_address = NULL;
++   wrap_args->station_netplay_port = NULL;
++#endif
+ 
+    /* The following snippet breaks command-line arguments on Haiku which in turn
+       prevents from using RA without a menu or to start it from a front-end like ES-DE.
+--- a/tasks/task_content.c
++++ b/tasks/task_content.c
+@@ -1379,6 +1379,21 @@
+    }
+ #endif
+ 
++#ifdef ANDROID
++   /* Pass typed Android fields through the upstream CLI path. Netcode is unchanged. */
++   if (args->station_netplay_role == 1)
++      argv[(*argc)++] = strdup("--host");
++   else if (args->station_netplay_role == 2 && args->station_netplay_address)
++   {
++      argv[(*argc)++] = strdup("--connect");
++      argv[(*argc)++] = strdup(args->station_netplay_address);
++   }
++   if (args->station_netplay_role && args->station_netplay_port)
++   {
++      argv[(*argc)++] = strdup("--port");
++      argv[(*argc)++] = strdup(args->station_netplay_port);
++   }
++#endif
+    if (args->flags & RARCH_MAIN_WRAP_FLAG_VERBOSE)
+       argv[(*argc)++] = strldup("-v", sizeof("-v"));
+ }
+--- a/frontend/drivers/platform_unix.c
++++ b/frontend/drivers/platform_unix.c
+@@ -1442,6 +1442,45 @@
+          "RetroArch", "[ENV] Config file: \"%s\".\n", config_path);
+       if (args && *config_path)
+          args->config_path = config_path;
++   }
++
++   /* Station-only typed transport selection. No URL, command line or password logging. */
++   if (args)
++   {
++      static char station_address[64], station_port[6];
++      args->station_netplay_role = 0;
++      station_address[0] = station_port[0] = 0;
++      CALL_OBJ_METHOD_PARAM(env, jstr, obj, android_app->getStringExtra,
++            (*env)->NewStringUTF(env, "STATION_NETPLAY_ROLE"));
++      if (jstr)
++      {
++         const char *value = (*env)->GetStringUTFChars(env, jstr, 0);
++         if (value) args->station_netplay_role = !strcmp(value,"host") ? 1 : (!strcmp(value,"client") ? 2 : 0);
++         if (value) (*env)->ReleaseStringUTFChars(env,jstr,value);
++      }
++      CALL_OBJ_METHOD_PARAM(env, jstr, obj, android_app->getStringExtra,
++            (*env)->NewStringUTF(env, "STATION_NETPLAY_ADDRESS"));
++      if (jstr)
++      {
++         const char *value = (*env)->GetStringUTFChars(env, jstr, 0);
++         if (value && strlen(value) < sizeof(station_address) &&
++               strspn(value,"0123456789abcdefABCDEF:.") == strlen(value))
++            strlcpy(station_address,value,sizeof(station_address));
++         if (value) (*env)->ReleaseStringUTFChars(env,jstr,value);
++      }
++      CALL_OBJ_METHOD_PARAM(env, jstr, obj, android_app->getStringExtra,
++            (*env)->NewStringUTF(env, "STATION_NETPLAY_PORT"));
++      if (jstr)
++      {
++         const char *value = (*env)->GetStringUTFChars(env, jstr, 0);
++         if (value && strlen(value) < sizeof(station_port) && strspn(value,"0123456789") == strlen(value) && atoi(value)>=1024 && atoi(value)<=65535)
++            strlcpy(station_port,value,sizeof(station_port));
++         if (value) (*env)->ReleaseStringUTFChars(env,jstr,value);
++      }
++      if (!station_port[0] || (args->station_netplay_role==2 && !station_address[0]))
++         args->station_netplay_role = 0;
++      args->station_netplay_address = station_address;
++      args->station_netplay_port = station_port;
+    }
+ 
+    /* Current IME. */
+--- a/pkg/android/phoenix-common/jni/Android.mk
++++ b/pkg/android/phoenix-common/jni/Android.mk
+@@ -106,13 +106,9 @@
+ 	   -DHAVE_THREADS \
+ 	   -D__LIBRETRO__ \
+ 	   -DHAVE_RSOUND \
+-	   -DHAVE_NETWORKGAMEPAD \
+-	   -DHAVE_NETWORKING \
+-	   -DHAVE_NETWORK_CMD \
+-	   -DHAVE_CLOUDSYNC \
+-	   -DHAVE_IFINFO \
+-	   -DHAVE_NETPLAYDISCOVERY \
+-	   -DRARCH_INTERNAL \
++	   	   -DHAVE_NETWORKING \
++	   	   	   -DHAVE_IFINFO \
++	   	   -DRARCH_INTERNAL \
+ 	   -DHAVE_FILTERS_BUILTIN \
+ 	   -DHAVE_RGUI \
+ 	   -DHAVE_MATERIALUI \
+@@ -122,14 +118,9 @@
+ 	   -DHAVE_LIBRETRODB \
+ 	   -DHAVE_STB_FONT \
+ 	   -DHAVE_IMAGEVIEWER \
+-	   -DHAVE_ONLINE_UPDATER \
+-	   -DHAVE_UPDATE_ASSETS \
+-	   -DHAVE_UPDATE_CORES \
+-	   -DHAVE_UPDATE_CORE_INFO \
+-	   -DHAVE_CC_RESAMPLER \
++	   	   	   	   	   -DHAVE_CC_RESAMPLER \
+ 	   -DHAVE_KEYMAPPER \
+-	   -DHAVE_NETWORKGAMEPAD \
+-	   -DHAVE_FLAC \
++	   	   -DHAVE_FLAC \
+ 	   -DHAVE_DR_FLAC \
+ 	   -DHAVE_DR_MP3 \
+ 	   -DHAVE_CHD \
+@@ -139,8 +130,7 @@
+ 	   -DHAVE_AUDIOMIXER \
+ 	   -DHAVE_RWAV \
+ 	   -DHAVE_ACCESSIBILITY \
+-	   -DHAVE_TRANSLATE \
+-	   -DWANT_IFADDRS \
++	   	   -DWANT_IFADDRS \
+ 	   -DHAVE_XDELTA \
+ 	   -DHAVE_CORE_INFO_CACHE \
+ 	   -DHAVE_BUILTINMBEDTLS -DHAVE_SSL

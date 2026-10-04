@@ -1,0 +1,14 @@
+Note: E:\ESTUDO APK\work\station-netplay-20261004\station\src\java\org\emulationstation\frontend\auth\LoginActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+PASS 19 file safety checks
+PASS 75 protocol and catalog checks
+PASS 27 online transport checks: signatures, owner, request ID, limits and disabled service
+PASS 36 cache and session checks
+PASS 25 frontend integration checks
+PASS 61 descriptor and installation checks
+PASS 86 server-closure checks (synthetic signed data, no production claim)
+PASS 25 fresh-install storage bootstrap checks
+PASS 41 cover concurrency, cache, session, lifecycle and backoff checks
+PASS 16 TLS response reuse and exact-artifact-first checks
+PASS 180 atomic catalog publication checks (20 races)
+PASS Android API 34 source compilation (Java 8 bytecode)

@@ -1,0 +1,14 @@
+--- a/smali/org/yuzu/yuzu_emu/YuzuApplication.smali
++++ b/smali/org/yuzu/yuzu_emu/YuzuApplication.smali
+@@ -179,6 +179,11 @@
+ 
+     .line 3
+     invoke-super {p0}, Landroid/app/Application;->onCreate()V
++    invoke-static {}, Lorg/emulationstation/frontend/netplay/StationProcess;->isNetplay()Z
++    move-result v7
++    if-eqz v7, :station_not_direct_netplay
++    return-void
++    :station_not_direct_netplay
+     invoke-static {p0}, Lorg/emulationstation/frontend/MegaBootstrap;->initProcess(Landroid/app/Application;)Z
+     move-result v7
+     if-eqz v7, :station_not_mega

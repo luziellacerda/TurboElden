@@ -1,0 +1,167 @@
+{
+  "repository": "https://github.com/libretro/common-overlays",
+  "commit": "42c21b99889468a8e77fd7f002229ec16e2f9fa2",
+  "license": "CC-BY-4.0; COPYING included unchanged",
+  "files": {
+    "COPYING": {
+      "bytes": 18659,
+      "sha256": "e439379c13ec41a45266fffbe5232861b38becbd1d53fa9c8b8c4f7985e950fa"
+    },
+    "gamepads/flat/snes.cfg": {
+      "bytes": 9240,
+      "sha256": "a3a1535575b1bae36fc6fc3407ab191b2dea1ce9ec38d65de06c40dee712d513"
+    },
+    "gamepads/flat/genesis.cfg": {
+      "bytes": 10543,
+      "sha256": "dd6e7105bb4156ea5b66f6b29f3c8078e7758f8e644074e7fd5dd3afa24c737e"
+    },
+    "gamepads/flat/neogeo.cfg": {
+      "bytes": 20562,
+      "sha256": "baec3f203bb61023df0a8b414eefceb665813e422f3b473d57396ea7816d03ed"
+    },
+    "gamepads/flat/img/dpad-left.png": {
+      "bytes": 1414,
+      "sha256": "35397f74e010e11977774afa24d0d0eb86afe4933705ba9a6b0d9fa053b2c433"
+    },
+    "gamepads/flat/img/dpad-right.png": {
+      "bytes": 1398,
+      "sha256": "2b1fd36ebaaff6b5d2c27a08c30d587f650a3b236294fdf8beefdfd508810529"
+    },
+    "gamepads/flat/img/dpad-up.png": {
+      "bytes": 1471,
+      "sha256": "36bc4fbf68a0b3390c39e8625cf226873e56b539d3c7d41a9e64a94f5fc85309"
+    },
+    "gamepads/flat/img/dpad-down.png": {
+      "bytes": 1530,
+      "sha256": "877b0f95ee6757916d069fa16971226770a6090e93ae63f947ba52e893947e2d"
+    },
+    "gamepads/flat/img/A.png": {
+      "bytes": 4549,
+      "sha256": "0ad0dd6d68528001bc7412611c2af67eba39d58972a24999cb1e1d56355c8665"
+    },
+    "gamepads/flat/img/B.png": {
+      "bytes": 4267,
+      "sha256": "c114a2745e9e68751a9d5057b9d58212f2e7dc1485583c87131c2f209a1677f2"
+    },
+    "gamepads/flat/img/X.png": {
+      "bytes": 4281,
+      "sha256": "4b074243b23a2fdb51a2930f3d40ccc34b634b883b19218375e4c686ba6c8188"
+    },
+    "gamepads/flat/img/Y.png": {
+      "bytes": 3988,
+      "sha256": "ac70b156db53eed255bc7be88d83e2537e5d6582d65da7bba093d4b7fa9330fc"
+    },
+    "gamepads/flat/img/start.png": {
+      "bytes": 4278,
+      "sha256": "f7101201a1ef4a06144295498cc9790c97068ef28810b877e61bb67889390434"
+    },
+    "gamepads/flat/img/L.png": {
+      "bytes": 2629,
+      "sha256": "7305f938e89d84185904622d313bf5d31297ef4e83a6c32d19b991502fea472a"
+    },
+    "gamepads/flat/img/L_down.png": {
+      "bytes": 2628,
+      "sha256": "4167525da6d70757f11e480f7633f1ca0f48d815ead307fd34e4540aeabd2c2a"
+    },
+    "gamepads/flat/img/R.png": {
+      "bytes": 3618,
+      "sha256": "365482c6c3d53d4d8c1bff64c570cca8b66b69199ca334c50430fe31c5d279dd"
+    },
+    "gamepads/flat/img/L_and_R_down.png": {
+      "bytes": 4137,
+      "sha256": "07d9b3f1b1ad5043bcf61e3a676bf7cb97394b150302e811f6861dfe403e8bf7"
+    },
+    "gamepads/flat/img/rgui.png": {
+      "bytes": 2195,
+      "sha256": "64a76fc571539287b8daa659557c93ec8619422471fabe144165b1e2add2e66f"
+    },
+    "gamepads/flat/img/rotate.png": {
+      "bytes": 2105,
+      "sha256": "da7743f16bca33574ddc9aee55a0f6b4cba4fdf1241b0be73e8c7b2872dc7a99"
+    },
+    "gamepads/flat/img/overlay-A.png": {
+      "bytes": 2265,
+      "sha256": "63beffe2d7ac4d0d786a9b105dec8f99030c10b1fcd88bc7847e621dd5eb6042"
+    },
+    "gamepads/flat/img/hide.png": {
+      "bytes": 1652,
+      "sha256": "c44d40da0d78be5faf93146955a006d8cf1c95bc92ae48cfa117724500b6e9ed"
+    },
+    "gamepads/flat/img/L_smaller.png": {
+      "bytes": 2314,
+      "sha256": "58dd13c3105d009b8bdd3ce668ea31dd60a102946ba26805e41c6ad912ef6ee1"
+    },
+    "gamepads/flat/img/L_down_smaller_gba.png": {
+      "bytes": 2313,
+      "sha256": "90d4af9d709c89de05dcfcb3cf250efae84ef97985d8cfde906e4856d365fb10"
+    },
+    "gamepads/flat/img/R_smaller.png": {
+      "bytes": 3281,
+      "sha256": "47650822c8a8aba6bc413efcdc9ba0fd9182e270072304aa916ab67857f663e1"
+    },
+    "gamepads/flat/img/overlay-B.png": {
+      "bytes": 2239,
+      "sha256": "0ca3c71068c1e339ddf68bfdc4f44c89407c82229703e24c99429b58256087f8"
+    },
+    "gamepads/flat/img/show.png": {
+      "bytes": 1616,
+      "sha256": "75fc8748d9c6c2e89b8d1cbc0800cd6b21847b65811c286f10f1cac78946de7c"
+    },
+    "gamepads/flat/img/C.png": {
+      "bytes": 3954,
+      "sha256": "4cd2c7b37cce66c93ef4cfa185c25a3234ee7a052fff6676251c0d82ad3699fc"
+    },
+    "gamepads/flat/img/start_genesis.png": {
+      "bytes": 2189,
+      "sha256": "d64a09f7ec14f199a18cb494db2d15c75ad4db68fed0910690d0de71105d4056"
+    },
+    "gamepads/flat/img/6-button_genesis.png": {
+      "bytes": 1805,
+      "sha256": "d99043de7791d01a188b528730bb58fe2db53ffc2419df400cbfcc432d581076"
+    },
+    "gamepads/flat/img/Z.png": {
+      "bytes": 4283,
+      "sha256": "223dd8f0b6325238f113849e6abe55c105d9206619ff69c1ee5b749c592e84a0"
+    },
+    "gamepads/flat/img/test.png": {
+      "bytes": 1042,
+      "sha256": "32b55d6ccf895e5ac90f4b16d7a6e334aaac402f2db31d3d128a1ab77b601825"
+    },
+    "gamepads/flat/img/genesis_mode.png": {
+      "bytes": 5171,
+      "sha256": "bcf7e81696f6c2125176263abd9c5e5b74d98198653e4a2c45f19a07a905c4a2"
+    },
+    "gamepads/flat/img/3-button.png": {
+      "bytes": 1661,
+      "sha256": "ee87a918837dc407b5804a1c6fed6daf4b6dbb520c25121c3e4daf7dc47eaa96"
+    },
+    "gamepads/flat/img/thumbstick-background.png": {
+      "bytes": 4334,
+      "sha256": "0ed02d81e0b9328153ff16174c0fcaaddffb34bf54cf21ba693fbe275cc9abbe"
+    },
+    "gamepads/flat/img/thumbstick-pad_arcade.png": {
+      "bytes": 21022,
+      "sha256": "f24e9423bbc33fb5364c7173a271626cc85b3c805eb0c2db32ef5a680322d951"
+    },
+    "gamepads/flat/img/D.png": {
+      "bytes": 3748,
+      "sha256": "f1582ffdf0d5f9a90babe3d0023cead30d4704ddace076772b20c47b2abfbca8"
+    },
+    "gamepads/flat/img/start_rounded.png": {
+      "bytes": 4620,
+      "sha256": "6a8962117dbac5f1c4a557d465e9185dc218e5fb91aa58f24a94f9d4d48c1dfb"
+    },
+    "gamepads/flat/img/coin.png": {
+      "bytes": 5261,
+      "sha256": "300754b2df70ffd3b3339d1d5857936c636e8a61477060a414c4df607329bb56"
+    },
+    "gamepads/flat/img/overlay-C.png": {
+      "bytes": 1979,
+      "sha256": "0f6a38f1f3601a1b07d6f940eee01b3b2c9bbaa8ec0445c2dcb3b01222978b6b"
+    },
+    "gamepads/flat/img/overlay-D.png": {
+      "bytes": 2001,
+      "sha256": "56355e9e9394c4a7b60aad42c163e3ad3653dfd2971b67c41a28ae74f97aab2a"
+    }
+  }
+}

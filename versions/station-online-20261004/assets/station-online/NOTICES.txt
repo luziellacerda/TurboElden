@@ -1,0 +1,6 @@
+Motores online compilados de fontes oficiais fixadas em commit.
+RetroArch: GPL-3.0-or-later. bsnes-mercury: GPL-3.0-or-later. ClownMDEmu: AGPL-3.0-or-later. Geolith: BSD-3-Clause.
+Controles Flat: libretro/common-overlays, CC-BY-4.0. Atribuição e licença em overlays/.
+As licenças completas estão nesta pasta em licenses/. Corresponding source, alterações e receitas de compilação são publicadas no repositório TurboElden, versions/station-online-20261004/.
+Neo Geo requer preparação adicional de BIOS e formato .neo, ainda não ativada. Não há redistribuição nova de BIOS ou jogos neste módulo.
+Estas licenças dos motores novos não comprovam a conformidade de todos os motores anteriores do aplicativo.

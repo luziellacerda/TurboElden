@@ -1,0 +1,931 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "all emitted config keys exist upstream",
+      "passed": true
+    },
+    {
+      "name": "no public relay or announcement default",
+      "passed": true
+    },
+    {
+      "name": "compiled without HAVE_ONLINE_UPDATER",
+      "passed": true
+    },
+    {
+      "name": "compiled without HAVE_NETWORK_CMD",
+      "passed": true
+    },
+    {
+      "name": "compiled without HAVE_NETWORKGAMEPAD",
+      "passed": true
+    },
+    {
+      "name": "compiled without HAVE_NETPLAYDISCOVERY",
+      "passed": true
+    },
+    {
+      "name": "compiled without HAVE_CLOUDSYNC",
+      "passed": true
+    },
+    {
+      "name": "upstream CLI netplay path used",
+      "passed": true
+    },
+    {
+      "name": "offline saves not imported",
+      "passed": true
+    },
+    {
+      "name": "native selected item ID forwarded",
+      "passed": true
+    },
+    {
+      "name": "no expanded original action vector",
+      "passed": true
+    },
+    {
+      "name": "new text child excluded from original render",
+      "passed": true
+    },
+    {
+      "name": "six nonoverlapping actions 640x360",
+      "passed": true
+    },
+    {
+      "name": "six nonoverlapping actions 854x480",
+      "passed": true
+    },
+    {
+      "name": "six nonoverlapping actions 1280x720",
+      "passed": true
+    },
+    {
+      "name": "six nonoverlapping actions 1920x1080",
+      "passed": true
+    },
+    {
+      "name": "six nonoverlapping actions 2400x1080",
+      "passed": true
+    },
+    {
+      "name": "six nonoverlapping actions 2560x1600",
+      "passed": true
+    },
+    {
+      "name": "six nonoverlapping actions 3840x2160",
+      "passed": true
+    },
+    {
+      "name": "StationRoomsActivity not exported",
+      "passed": true
+    },
+    {
+      "name": "StationRetroActivity not exported",
+      "passed": true
+    },
+    {
+      "name": "native engine isolated",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-left.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-right.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-up.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/start_genesis.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/6-button_genesis.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/hide.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-left.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-right.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-up.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/X.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/Y.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/Z.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/test.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/test.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/test.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/start_genesis.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/genesis_mode.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/3-button.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/hide.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-left.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-right.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-up.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/start_genesis.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/6-button_genesis.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-left.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-right.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-up.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/dpad-down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/X.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/Y.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/Z.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/test.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/test.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/test.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/start_genesis.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/genesis_mode.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/3-button.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/show.png",
+      "passed": true
+    },
+    {
+      "name": "overlay genesis.cfg img/show.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-background.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-pad_arcade.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/start_rounded.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/coin.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/hide.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/overlay-A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/show.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-background.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-pad_arcade.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/start_rounded.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/coin.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/hide.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/overlay-B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/show.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-background.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-pad_arcade.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/start_rounded.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/coin.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/overlay-B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-background.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-pad_arcade.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/start_rounded.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/coin.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/hide.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/overlay-C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/show.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-background.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-pad_arcade.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/start_rounded.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/coin.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/overlay-C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-background.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-pad_arcade.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/start_rounded.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/coin.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/hide.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/overlay-D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/show.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-background.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/thumbstick-pad_arcade.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/C.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/start_rounded.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/coin.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay neogeo.cfg img/overlay-D.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-left.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-right.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-up.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/X.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/Y.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/start.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/start.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/L.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/L_down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/R.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/L_and_R_down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/overlay-A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/hide.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-left.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-right.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-up.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/X.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/Y.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/start.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/start.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/L_smaller.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/L_down_smaller_gba.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/R_smaller.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/L_and_R_down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/overlay-B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/hide.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-left.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-right.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-up.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/dpad-down.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/A.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/B.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/X.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/Y.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/start.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/start.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/L_smaller.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/L_down_smaller_gba.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/R_smaller.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/rgui.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/rotate.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/show.png",
+      "passed": true
+    },
+    {
+      "name": "overlay snes.cfg img/show.png",
+      "passed": true
+    },
+    {
+      "name": "incomplete Neo Geo rejected before creating room",
+      "passed": true
+    },
+    {
+      "name": "hidden gameplay cancels presence timer",
+      "passed": true
+    },
+    {
+      "name": "stale UI replies rejected",
+      "passed": true
+    },
+    {
+      "name": "separate native process never renews Station session",
+      "passed": true
+    },
+    {
+      "name": "main process owns gameplay presence",
+      "passed": true
+    },
+    {
+      "name": "native callback reports successful listen",
+      "passed": true
+    },
+    {
+      "name": "native lifecycle crosses private Binder",
+      "passed": true
+    },
+    {
+      "name": "guest waits for host socket",
+      "passed": true
+    },
+    {
+      "name": "executable state reducer passed",
+      "passed": true
+    }
+  ],
+  "stateReducer": "PASS 6 executable revision and restart checks\n",
+  "scope": "PC policy, resources, source and executable Java reducer; no Android game run"
+}

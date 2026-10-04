@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" package="org.turboramastation.frontend" platformBuildVersionCode="36" platformBuildVersionName="16">
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.gamepad" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-feature android:name="android.hardware.vulkan.version" android:required="false" android:version="0x401000"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:maxSdkVersion="32" android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:maxSdkVersion="32" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <permission android:name="org.turboramastation.frontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="org.turboramastation.frontend.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="content"/>
+        </intent>
+    </queries>
+    <application android:allowBackup="true" android:allowNativeHeapPointerTagging="false" android:appCategory="game" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/tv_banner" android:dataExtractionRules="@xml/data_extraction_rules_api_31" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="true" android:fullBackupContent="@xml/data_extraction_rules" android:hardwareAccelerated="true" android:hasFragileUserData="false" android:icon="@mipmap/ic_launcher" android:isGame="true" android:label="TurboramaStation" android:largeHeap="true" android:localeConfig="@xml/_generated_res_locale_config" android:name="org.yuzu.yuzu_emu.YuzuApplication" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true">
+        <meta-data android:name="com.samsung.android.gamehub" android:value="true"/>
+        <meta-data android:name="com.xiaomi.gamecenter.sdk.service.enabled" android:value="true"/>
+        <meta-data android:name="com.asus.gamecenter.gamebooster" android:value="true"/>
+        <meta-data android:name="com.oneplus.gamespace.gamebooster" android:value="true"/>
+        <meta-data android:name="android.game_mode_config" android:resource="@xml/game_mode_config"/>
+        <activity android:exported="false" android:name="org.yuzu.yuzu_emu.ui.main.MainActivity" android:theme="@style/Theme.Yuzu.Splash.Main"/>
+        <activity android:label="@string/preferences_settings" android:name="org.yuzu.yuzu_emu.features.settings.ui.SettingsActivity" android:theme="@style/Theme.Yuzu.Main"/>
+        <activity android:label="@string/preferences_settings" android:name="org.yuzu.yuzu_emu.features.settings.ui.SettingsSubscreenActivity" android:theme="@style/Theme.Yuzu.Main"/>
+        <activity android:configChanges="orientation|screenLayout|uiMode|screenSize" android:exported="true" android:name="org.yuzu.yuzu_emu.bootstrap.BootstrapActivity" android:screenOrientation="sensorLandscape" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:configChanges="orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTop" android:name="org.yuzu.yuzu_emu.activities.EmulationActivity" android:supportsPictureInPicture="true" android:theme="@style/Theme.Yuzu.Main">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/octet-stream"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/octet-stream" android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="dev.turboeden.turboeden_emulator.LAUNCH_WITH_CUSTOM_CONFIG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/nfc_tech_filter"/>
+        </activity>
+        <service android:foregroundServiceType="specialUse" android:name="org.yuzu.yuzu_emu.utils.ForegroundService">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Keep emulation running in background"/>
+        </service>
+        <provider android:authorities="org.turboramastation.frontend.turboeden.user" android:exported="true" android:grantUriPermissions="true" android:name="org.yuzu.yuzu_emu.features.DocumentProvider" android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="org.turboramastation.frontend.turboeden.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <provider android:authorities="org.turboramastation.frontend.turboeden.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:exported="true" android:launchMode="singleTask" android:name="org.emulationstation.frontend.auth.LoginActivity" android:screenOrientation="sensorLandscape" android:taskAffinity="org.turboramastation.frontend.login" android:theme="@android:style/Theme.Material.NoActionBar" android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:exported="false" android:launchMode="singleInstance" android:name="org.emulationstation.frontend.ESActivity" android:preferMinimalPostProcessing="true" android:screenOrientation="sensorLandscape" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="org.emulationstation.frontend.RestartActivity" android:process=":restart" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="false" android:foregroundServiceType="dataSync" android:name="org.emulationstation.frontend.DownloadService"/>
+        <activity android:configChanges="orientation|screenSize" android:enableOnBackInvokedCallback="false" android:exported="false" android:label="@string/td_settings" android:name="org.dolphinemu.dolphinemu.features.settings.ui.SettingsActivity" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:label="@string/td_cheats" android:name="org.dolphinemu.dolphinemu.features.cheats.ui.CheatsActivity" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:name="org.dolphinemu.dolphinemu.activities.EmulationActivity" android:preferMinimalPostProcessing="true" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:label="@string/td_app_name_suffixed" android:name="org.dolphinemu.dolphinemu.activities.CustomFilePickerActivity" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.FilePicker">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:name="org.dolphinemu.dolphinemu.activities.ConvertActivity" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:label="@string/td_user_data_submenu" android:name="org.dolphinemu.dolphinemu.activities.UserDataActivity" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:name="org.dolphinemu.dolphinemu.features.netplay.ui.NetplaySetupActivity" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:name="org.dolphinemu.dolphinemu.features.netplay.ui.NetplayActivity" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:name="org.dolphinemu.dolphinemu.features.riivolution.ui.RiivolutionBootActivity" android:process=":dolphin" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <provider android:authorities="org.turboramastation.frontend.dolphin.filesprovider" android:exported="false" android:grantUriPermissions="true" android:name="tdolphin.core.content.FileProvider" android:process=":dolphin">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/td_nnf_provider_paths"/>
+        </provider>
+        <provider android:authorities="org.turboramastation.frontend.dolphin.user" android:enabled="@bool/td_enableDocumentProvider" android:exported="true" android:grantUriPermissions="true" android:name="org.dolphinemu.dolphinemu.features.DocumentProvider" android:permission="android.permission.MANAGE_DOCUMENTS" android:process=":dolphin">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="org.turboramastation.frontend.dolphin.androidx-startup" android:exported="false" android:name="tdolphin.startup.InitializationProvider" android:process=":dolphin">
+            <meta-data android:name="tdolphin.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tdolphin.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tdolphin.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:name="org.emulationstation.frontend.DolphinEntryActivity" android:process=":dolphin" android:screenOrientation="sensorLandscape" android:theme="@style/td_Theme.Dolphin.Main"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize" android:enableOnBackInvokedCallback="false" android:exported="false" android:name="com.flycast.emulator.NativeGLActivity" android:process=":flycast" android:screenOrientation="sensorLandscape" android:taskAffinity="org.turboramastation.frontend.flycast" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <provider android:authorities="org.turboramastation.frontend.flycast.provider" android:exported="false" android:grantUriPermissions="true" android:name="tflycast.core.content.FileProvider" android:process=":flycast">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/tf_provider_paths"/>
+        </provider>
+        <provider android:authorities="org.turboramastation.frontend.flycast.androidx-startup" android:exported="false" android:name="tflycast.startup.InitializationProvider" android:process=":flycast">
+            <meta-data android:name="tflycast.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tflycast.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <provider android:authorities="org.turboramastation.frontend.ps2.updateprovider" android:exported="false" android:grantUriPermissions="true" android:name="tps2core.core.content.FileProvider" android:process=":ps2">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/tp_update_paths"/>
+        </provider>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:enableOnBackInvokedCallback="false" android:exported="false" android:hardwareAccelerated="true" android:name="com.armsx2.BootSplashActivity" android:process=":ps2" android:resizeableActivity="true" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/tp_Theme.ARMSX2.Boot"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density" android:enableOnBackInvokedCallback="false" android:exported="false" android:hardwareAccelerated="true" android:launchMode="singleTop" android:name="com.armsx2.Main" android:process=":ps2" android:resizeableActivity="true" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/tp_Theme.ARMSX2"/>
+        <provider android:authorities="org.turboramastation.frontend.ps2.romlibrary" android:exported="false" android:name="com.armsx2.data.library.RecentGamesContentProvider" android:process=":ps2"/>
+        <activity android:enableOnBackInvokedCallback="false" android:excludeFromRecents="true" android:exported="false" android:name="com.armsx2.data.library.RecentGamesAccessActivity" android:noHistory="true" android:process=":ps2" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="singleTask" android:name="com.discord.socialsdk.AuthenticationActivity" android:process=":ps2" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="false" android:name="com.armsx2.discord.DiscordService" android:process=":ps2"/>
+        <activity android:enableOnBackInvokedCallback="false" android:excludeFromRecents="true" android:exported="false" android:name="com.armsx2.discord.DiscordAuthActivity" android:process=":ps2" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <provider android:authorities="org.turboramastation.frontend.ps2.androidx-startup" android:exported="false" android:name="tps2core.startup.InitializationProvider" android:process=":ps2">
+            <meta-data android:name="tps2core.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tps2core.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tps2core.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|uiMode" android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="org.ppsspp.ppsspp.PpssppActivity" android:process=":psp" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/ts_ppsspp_style">
+            <property android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY" android:value="true"/>
+        </activity>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="org.ppsspp.ppsspp.ImageResultProxyActivity" android:process=":psp" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/ts_Theme.ProxyTransparent"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="org.ppsspp.ppsspp.DocumentResultProxyActivity" android:process=":psp" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/ts_Theme.ProxyTransparent"/>
+        <provider android:authorities="org.turboramastation.frontend.psp.androidx-startup" android:exported="false" android:name="tpspcore.startup.InitializationProvider" android:process=":psp">
+            <meta-data android:name="tpspcore.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tpspcore.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tpspcore.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:configChanges="orientation|screenSize" android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="info.cemu.cemu.emulation.EmulationActivity" android:process=":wiiu" android:screenOrientation="userLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/tw_Theme.Cemu"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="info.cemu.cemu.MainActivity" android:process=":wiiu" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/tw_Theme.Cemu"/>
+        <provider android:authorities="org.turboramastation.frontend.wiiu.provider" android:exported="true" android:grantUriPermissions="true" android:name="info.cemu.cemu.provider.DocumentsProvider" android:permission="android.permission.MANAGE_DOCUMENTS" android:process=":wiiu">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="org.turboramastation.frontend.wiiu.androidx-startup" android:exported="false" android:name="twiiucor.startup.InitializationProvider" android:process=":wiiu">
+            <meta-data android:name="twiiucor.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="twiiucor.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="twiiucor.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="twiiucor.shaded.okhttp3.internal.platform.PlatformInitializer" android:value="androidx.startup"/>
+        </provider>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <activity android:exported="false" android:name="org.emulationstation.frontend.WiiUEntryActivity" android:process=":wiiu" android:screenOrientation="userLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection" android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="xendroid.compose.MainActivity" android:process=":xbox360" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/tx_Theme.xendroidCompose"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection" android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="xendroid.compose.EmulatorHostActivity" android:process=":xbox360emu" android:screenOrientation="sensorLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/tx_Theme.xendroidEmu" android:windowSoftInputMode="adjustNothing"/>
+        <service android:exported="false" android:name="xendroid.compose.core.MainAliveService"/>
+        <provider android:authorities="org.turboramastation.frontend.xbox360.DocumentsProvider" android:exported="true" android:grantUriPermissions="true" android:name="xendroid.compose.DocumentsProvider" android:permission="android.permission.MANAGE_DOCUMENTS" android:process=":xbox360">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="org.turboramastation.frontend.xbox360.androidx-startup" android:exported="false" android:name="tx360cor.startup.InitializationProvider" android:process=":xbox360">
+            <meta-data android:name="tx360cor.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tx360cor.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tx360cor.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:exported="false" android:name="org.emulationstation.frontend.Xbox360EntryActivity" android:process=":xbox360" android:screenOrientation="userLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:exported="false" android:name="org.emulationstation.frontend.Xbox360GameEntryActivity" android:process=":xbox360emu" android:screenOrientation="userLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection" android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="org.vita3k.emulator.MainActivity" android:process=":psvita" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/tv_Theme.Vita3K.Starting"/>
+        <activity android:alwaysRetainTaskState="true" android:configChanges="locale|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection" android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="org.vita3k.emulator.Emulator" android:preferMinimalPostProcessing="true" android:process=":psvita" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/tv_Theme.Design.NoActionBar"/>
+        <service android:exported="false" android:foregroundServiceType="dataSync" android:name="org.vita3k.emulator.InstallForegroundService" android:process=":psvita"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="tvita3kc.shaded.com.google.android.gms.common.api.GoogleApiActivity" android:process=":psvita" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="org.turboramastation.frontend.psvita.androidx-startup" android:exported="false" android:name="tvita3kc.startup.InitializationProvider" android:process=":psvita">
+            <meta-data android:name="tvita3kc.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tvita3kc.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="tvita3kc.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:name="org.emulationstation.frontend.VitaEntryActivity" android:process=":psvita" android:screenOrientation="userLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize" android:enableOnBackInvokedCallback="false" android:exported="false" android:name="org.emulationstation.frontend.SaturnActivity" android:process=":saturn" android:screenOrientation="userLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="com.izzy2lost.x1box.LauncherActivity" android:process=":xbox" android:screenOrientation="fullSensor" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/xc_Theme.Xemu"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:enableOnBackInvokedCallback="false" android:exported="false" android:hardwareAccelerated="true" android:launchMode="standard" android:name="com.izzy2lost.x1box.MainActivity" android:process=":xboxemu" android:screenOrientation="sensorLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/xc_Theme.Xemu"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="com.izzy2lost.x1box.SetupWizardActivity" android:process=":xbox" android:screenOrientation="fullSensor" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/xc_Theme.Xemu"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="com.izzy2lost.x1box.GameLibraryActivity" android:process=":xbox" android:screenOrientation="fullSensor" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/xc_Theme.Xemu"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="com.izzy2lost.x1box.SettingsActivity" android:process=":xbox" android:screenOrientation="fullSensor" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/xc_Theme.Xemu"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="com.izzy2lost.x1box.PerGameSettingsActivity" android:process=":xbox" android:screenOrientation="fullSensor" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/xc_Theme.Xemu"/>
+        <provider android:authorities="org.turboramastation.frontend.xbox.androidx-startup" android:exported="false" android:name="txbocore.startup.InitializationProvider" android:process=":xbox">
+            <meta-data android:name="txbocore.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="txbocore.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="txbocore.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:exported="false" android:name="org.emulationstation.frontend.XboxEntryActivity" android:process=":xbox" android:screenOrientation="userLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:enableOnBackInvokedCallback="false" android:exported="false" android:launchMode="standard" android:name="com.seleuco.mame4droid.MAME4droid" android:process=":mame" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/m4_Theme.MAME4droid" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:label="MAME4droid Settings" android:launchMode="standard" android:name="com.seleuco.mame4droid.prefs.UserPreferences" android:process=":mame" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/m4_Theme.MAME4droid.TitleBar"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:label="MAME4droid Help" android:launchMode="standard" android:name="com.seleuco.mame4droid.WebHelpActivity" android:process=":mame" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/m4_Theme.MAME4droid.TitleBar"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:label="MAME4droid Define Buttons" android:launchMode="standard" android:name="com.seleuco.mame4droid.prefs.DefineKeys" android:process=":mame" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/m4_Theme.MAME4droid.TitleBar"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:label="MAME4droid Controller Buttons" android:launchMode="standard" android:name="com.seleuco.mame4droid.prefs.ListKeys" android:process=":mame" android:taskAffinity="org.turboramastation.frontend" android:theme="@style/m4_Theme.MAME4droid.TitleBar"/>
+        <activity android:enableOnBackInvokedCallback="false" android:exported="false" android:label="Select Key" android:launchMode="standard" android:name="com.seleuco.mame4droid.prefs.KeySelect" android:process=":mame" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:exported="false" android:name="org.emulationstation.frontend.MameEntryActivity" android:process=":mame" android:screenOrientation="userLandscape" android:taskAffinity="org.turboramastation.frontend" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:name="com.imagine.BaseActivity"
+            android:label="Snes9x EX+" android:exported="false" android:process=":snes"
+            android:launchMode="singleInstance" android:excludeFromRecents="true"
+            android:enableOnBackInvokedCallback="false" android:screenOrientation="sensorLandscape"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="android.app.lib_name" android:value="snes9x_explus"/>
+        </activity>
+        <activity android:name="com.mdimagn.BaseActivity" android:label="MD.emu"
+            android:exported="false" android:process=":megadrive" android:launchMode="singleInstance"
+            android:excludeFromRecents="true" android:enableOnBackInvokedCallback="false" android:screenOrientation="sensorLandscape"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <meta-data android:name="android.app.lib_name" android:value="mdemu_station"/>
+        </activity>
+        <activity android:name="org.emulationstation.frontend.netplay.StationNetplayActivity" android:exported="false"
+            android:enableOnBackInvokedCallback="false" android:screenOrientation="userLandscape"
+            android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:name="org.emulationstation.frontend.netplay.StationDolphinNetplayActivity" android:exported="false" android:process=":dolphin"
+            android:enableOnBackInvokedCallback="false" android:screenOrientation="userLandscape"
+            android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:name="org.emulationstation.frontend.netplay.StationRoomsActivity" android:exported="false"
+            android:enableOnBackInvokedCallback="false" android:screenOrientation="userLandscape"
+            android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Material.NoActionBar"/>
+        <activity android:name="org.emulationstation.frontend.netplay.StationRetroActivity" android:exported="false" android:process=":station_netplay"
+            android:enableOnBackInvokedCallback="false" android:screenOrientation="userLandscape"
+            android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen">
+            <meta-data android:name="android.app.lib_name" android:value="station_retroarch"/>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="archos.permission.FULLSCREEN.FULL"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK"/>
+</manifest>

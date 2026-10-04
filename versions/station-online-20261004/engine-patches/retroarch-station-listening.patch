@@ -1,0 +1,52 @@
+--- a/frontend/drivers/platform_unix.c
++++ b/frontend/drivers/platform_unix.c
+@@ -603,6 +603,22 @@
+       rmdir(buf);
+ 
+    return ret;
++}
++
++/* Report a real listening socket to the internal Station Activity. */
++void station_android_netplay_listening(void)
++{
++   JNIEnv *env = jni_thread_getenv();
++   jclass cls;
++   jmethodID callback;
++   if (!env || !g_android || !g_android->activity) return;
++   cls = (*env)->GetObjectClass(env, g_android->activity->clazz);
++   if (!cls) return;
++   callback = (*env)->GetMethodID(env, cls, "onNetplayListening", "()V");
++   if (callback && !(*env)->ExceptionCheck(env))
++      (*env)->CallVoidMethod(env,g_android->activity->clazz,callback);
++   if ((*env)->ExceptionCheck(env)) (*env)->ExceptionClear(env);
++   (*env)->DeleteLocalRef(env,cls);
+ }
+ 
+ static void frontend_android_shutdown(bool unused)
+--- a/network/netplay/netplay_frontend.c
++++ b/network/netplay/netplay_frontend.c
+@@ -6772,6 +6772,9 @@
+    task_push_netplay_nat_close(&net_st->nat_traversal_request);
+ }
+ 
++#ifdef ANDROID
++extern void station_android_netplay_listening(void);
++#endif
+ static int init_tcp_connection(netplay_t *netplay, const struct addrinfo *addr,
+       bool is_server, bool is_mitm)
+ {
+--- a/network/netplay/netplay_frontend.c
++++ b/network/netplay/netplay_frontend.c
+@@ -6888,7 +6888,12 @@
+       if (socket_bind(fd, (void*)addr))
+       {
+          if (!listen(fd, 64) && socket_nonblock(fd))
++         {
++#ifdef ANDROID
++            station_android_netplay_listening();
++#endif
+             return fd;
++         }
+       }
+       else
+       {

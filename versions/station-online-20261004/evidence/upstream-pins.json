@@ -1,0 +1,37 @@
+{
+  "time": "2026-10-04T12:07:37.508120+00:00",
+  "sources": [
+    {
+      "repository": "libretro/RetroArch",
+      "requestedRef": "v1.22.2",
+      "commit": "69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576",
+      "directory": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\upstream\\libretro--RetroArch-69a4f0ea1e8a",
+      "archiveSha256": "cecf1e3f5446724f748124d097bb9c5169c6f599404d33a8447d88fd197d17fe",
+      "url": "https://github.com/libretro/RetroArch/tree/69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576"
+    },
+    {
+      "repository": "libretro/bsnes-mercury",
+      "requestedRef": "master",
+      "commit": "79d7f9de218b6ffa65a80bbdc5828532bc239232",
+      "directory": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\upstream\\libretro--bsnes-mercury-79d7f9de218b",
+      "archiveSha256": "c7392855556c20c164d1a9793a23664fddfaee369939cd24bb21e59d861ec428",
+      "url": "https://github.com/libretro/bsnes-mercury/tree/79d7f9de218b6ffa65a80bbdc5828532bc239232"
+    },
+    {
+      "repository": "Clownacy/clownmdemu-libretro",
+      "requestedRef": "master",
+      "commit": "d43c2708b0a31c285ce16724b6c4a2e92af07346",
+      "directory": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\upstream\\Clownacy--clownmdemu-libretro-d43c2708b0a3",
+      "archiveSha256": "3725fd48e30209b83ee6fd03eaf0073fe43f88d4ae2d5472a527e6abaa2e2b85",
+      "url": "https://github.com/Clownacy/clownmdemu-libretro/tree/d43c2708b0a31c285ce16724b6c4a2e92af07346"
+    },
+    {
+      "repository": "libretro/geolith-libretro",
+      "requestedRef": "master",
+      "commit": "194024931935eff2092e36fc4f8e53e62ed11097",
+      "directory": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\upstream\\libretro--geolith-libretro-194024931935",
+      "archiveSha256": "9db7d1afb19feff177d59cf844c4ee34c49cc2f9cdbe764ae32fa3c7c861f021",
+      "url": "https://github.com/libretro/geolith-libretro/tree/194024931935eff2092e36fc4f8e53e62ed11097"
+    }
+  ]
+}

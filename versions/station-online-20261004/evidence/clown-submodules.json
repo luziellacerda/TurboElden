@@ -1,0 +1,74 @@
+[
+  {
+    "repo": "Clownacy/clownmdemu-frontend-common",
+    "commit": "347ea31f9971eeaaa28c607e75f7156dd17db7bd",
+    "path": "common",
+    "archiveSha256": null
+  },
+  {
+    "repo": "Clownacy/clownmdemu",
+    "commit": "88ef45a6585556e2247dd26b6c937d6b9fb4a12d",
+    "path": "common\\core",
+    "archiveSha256": "3d7ab6e27d28f295f55d6c34c399f3ffd31c45e678b96cd82a9a90cdfe7143da"
+  },
+  {
+    "repo": "Clownacy/clowncommon",
+    "commit": "ecee31fc78ee1eed901431d070239c9c6430607c",
+    "path": "common\\core\\libraries\\clowncommon",
+    "archiveSha256": "bfb224babb6cc2545e14fd3c5a66ca38457b709f405b66d82a9f0aba8bc538b7"
+  },
+  {
+    "repo": "Clownacy/clown68000",
+    "commit": "bb198386ae3ee0cd6d246ff917f9941b02b5be6a",
+    "path": "common\\core\\libraries\\clown68000",
+    "archiveSha256": "a31e19c06f5703f5d1884b94e1ea16bba63223a672409b4e01ab4b794d570fcc"
+  },
+  {
+    "repo": "Clownacy/clowncommon",
+    "commit": "ddeff174c2121b40284883e0e1e3520f39d99227",
+    "path": "common\\core\\libraries\\clown68000\\libraries\\clowncommon",
+    "archiveSha256": "f83cc61cecb535a709d79a43204816fd1228fea8e2984de3e108fdbc5f891c46"
+  },
+  {
+    "repo": "Clownacy/clownz80",
+    "commit": "aa4cae3127a5893ba7066bcc2d9e9ba8e88e1c3b",
+    "path": "common\\core\\libraries\\clownz80",
+    "archiveSha256": "d0a4f9a69049e9528f92a2006cfcc8f0c4f5f18afa2a5aca75105c6e994b68e9"
+  },
+  {
+    "repo": "Clownacy/clowncommon",
+    "commit": "ddeff174c2121b40284883e0e1e3520f39d99227",
+    "path": "common\\core\\libraries\\clownz80\\libraries\\clowncommon",
+    "archiveSha256": "f83cc61cecb535a709d79a43204816fd1228fea8e2984de3e108fdbc5f891c46"
+  },
+  {
+    "repo": "Clownacy/clowncd",
+    "commit": "6ac52d0f3e8c55e591de6c445c034b0f12e95033",
+    "path": "common\\clowncd",
+    "archiveSha256": "36e719ae71a02c33c92437db7100ef62c50dedee1eb9ce367ff74eed2dbc6af8"
+  },
+  {
+    "repo": "Clownacy/clowncommon",
+    "commit": "8edd476301737a61870fadf43a2dd634ce40cf09",
+    "path": "common\\clowncd\\libraries\\clowncommon",
+    "archiveSha256": "543af81d26dbabf212712ef950e16a81bf082d0d909d3edef53f40d776fb626c"
+  },
+  {
+    "repo": "Clownacy/clownresampler",
+    "commit": "916b7a7f8d9cf77d2910d9b36988bec07f25d4d3",
+    "path": "common\\clowncd\\libraries\\clownresampler",
+    "archiveSha256": "39e589469caeacefbf6effdd55f7734f634b835b3d170672ddaf2c288f94a717"
+  },
+  {
+    "repo": "Clownacy/libchdr",
+    "commit": "7d039c34cd1b887bc5e87ae14af62f1db3db9e96",
+    "path": "common\\clowncd\\libraries\\chd\\libchdr",
+    "archiveSha256": "68a196b58648f9d86442b3adab1742eb15a787c0c3c9dfad64059d8d13e5afc4"
+  },
+  {
+    "repo": "libretro/libretro-common",
+    "commit": "e9a4ccc4a6b05f136ef5358218a5a94ebeccb7cb",
+    "path": "libretro-common",
+    "archiveSha256": "b5776853bacf183e31588c026e260e280ffe7c75b01855b9ead321752e48e136"
+  }
+]

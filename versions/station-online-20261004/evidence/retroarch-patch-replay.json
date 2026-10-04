@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "files": [
+    "frontend/drivers/platform_unix.c",
+    "input/drivers/android_input.c",
+    "network/netplay/netplay_frontend.c",
+    "pkg/android/phoenix-common/jni/Android.mk",
+    "retroarch_types.h",
+    "tasks/task_content.c"
+  ],
+  "patch": "retroarch-station-all.patch",
+  "scope": "Replay from pinned official archive with CRLF normalized to LF; exact final normalized source equality; old incremental patches are historical, not replayable"
+}

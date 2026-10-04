@@ -1,0 +1,443 @@
+{
+  "checks": [
+    {
+      "name": "fixed 80ms start delay removed",
+      "passed": true
+    },
+    {
+      "name": "list pause retains frames",
+      "passed": true
+    },
+    {
+      "name": "emulation stop frees previews",
+      "passed": true
+    },
+    {
+      "name": "preview shader independent of removed scene",
+      "passed": true
+    },
+    {
+      "name": "retained shader initialized explicitly",
+      "passed": true
+    },
+    {
+      "name": "GPU texture budget enforced",
+      "passed": true
+    },
+    {
+      "name": "visible previews protected from eviction",
+      "passed": true
+    },
+    {
+      "name": "context change clears stale textures",
+      "passed": true
+    },
+    {
+      "name": "no loop acceleration",
+      "passed": true
+    },
+    {
+      "name": "speed remains 1x, native loop",
+      "passed": true
+    },
+    {
+      "name": "only focus plays after first frame",
+      "passed": true
+    },
+    {
+      "name": "background activity releases all players",
+      "passed": true
+    },
+    {
+      "name": "real decode deadlines retained",
+      "passed": true
+    },
+    {
+      "name": "both attached settings labels excluded from child renderer",
+      "passed": true
+    },
+    {
+      "name": "settings renderer does not draw while closed",
+      "passed": true
+    },
+    {
+      "name": "list entry pauses, does not flush",
+      "passed": true
+    },
+    {
+      "name": "idle frame pacing unchanged",
+      "passed": true
+    },
+    {
+      "name": "Super Nintendo purple LED",
+      "passed": true
+    },
+    {
+      "name": "Super Nintendo - BR purple LED",
+      "passed": true
+    },
+    {
+      "name": "44 unique video frames",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-3ds.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-3ds.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-psx.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-psx.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-ps2.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-ps2.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-ps2br.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-ps2br.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-psp.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-psp.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-psvita.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-psvita.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-switch.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-switch.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-wii.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-wii.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-wiiu.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-wiiu.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-arcade.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-arcade.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-atari2600.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-atari2600.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-atomiswave.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-atomiswave.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-cps1.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-cps1.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-cps2.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-cps2.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-cps3.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-cps3.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-dreamcast.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-dreamcast.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-gba.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-gba.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-mame.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-mame.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-mastersystem.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-mastersystem.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-megadrive.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-megadrive.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-megadrivebr.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-megadrivebr.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-model2.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-model2.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-n64.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-n64.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-n64br.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-n64br.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-nds.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-nds.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-neogeo.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-neogeo.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-neogeocd.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-neogeocd.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-nes.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-nes.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-sega32x.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-sega32x.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-snes.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-snes.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-snesbr.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-snesbr.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-fbneo.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-fbneo.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-gc.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-gc.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-xbox360.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-xbox360.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-jaguar.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-jaguar.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-gbc.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-gbc.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-pcengine.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-pcengine.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-pcenginecd.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-pcenginecd.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-saturn.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-saturn.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-xbox.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-xbox.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-pspbr.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-pspbr.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-naomi.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-naomi.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-naomi2.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-naomi2.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-gamegear.mp4 exact frame integrity",
+      "passed": true
+    },
+    {
+      "name": "turbo-system-videos/720-gamegear.mp4 frame contains image",
+      "passed": true
+    },
+    {
+      "name": "compiled cache policy wrap-around tests",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "source regressions, frame payloads and host cache arithmetic; not Android timing",
+  "policyTest": "5 unsigned age ordering checks, GPU budget assertion passed\n"
+}

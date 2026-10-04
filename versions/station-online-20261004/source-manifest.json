@@ -1,0 +1,1057 @@
+{
+  "HANDOFF-APP-PARA-SERVIDOR-ONLINE-20261004.md": {
+    "normalization": "text-lf",
+    "bytes": 13984,
+    "sha256": "6559dc0318c858e42957abc9fc43959482e5924e9e9dcf11be2fb87362905b60"
+  },
+  "PUBLICACAO.md": {
+    "normalization": "text-lf",
+    "bytes": 792,
+    "sha256": "5962a0204edab151f926f0a624ed460feb5451f26e13087a369418602117e661"
+  },
+  "README.md": {
+    "normalization": "text-lf",
+    "bytes": 9004,
+    "sha256": "43e1922ff9ed427d121426cfbe1734b590e1ddad6d039647059696112d562a9a"
+  },
+  "REPRODUCAO-ONLINE.md": {
+    "normalization": "text-lf",
+    "bytes": 6009,
+    "sha256": "b6999e4288f37a24d9e52ea085e9cf6549de8e982997907cf959a23fa497631f"
+  },
+  "engine-patches/application-process-guard.patch": {
+    "normalization": "text-lf",
+    "bytes": 575,
+    "sha256": "37f6b389f1c26df40a252076457370c467897989b0bbad28c3c7ade811fd1a0c"
+  },
+  "engine-patches/README.md": {
+    "normalization": "text-lf",
+    "bytes": 660,
+    "sha256": "612363c23402b48786401aaa48a168312c61a480594163d3db48bfecd180c847"
+  },
+  "engine-patches/retroarch-ndk-r28-looper.patch": {
+    "normalization": "text-lf",
+    "bytes": 374,
+    "sha256": "efea59f73b55c1d0c98d50808455e4338fd76eb49bf1900f966c20830e28f01b"
+  },
+  "engine-patches/retroarch-station-all.patch": {
+    "normalization": "text-lf",
+    "bytes": 6887,
+    "sha256": "45a5da0970b3a150b2652b3a7ee38ce798617d5778e94f26a9dd81c3826864ec"
+  },
+  "engine-patches/retroarch-station-direct.patch": {
+    "normalization": "text-lf",
+    "bytes": 5146,
+    "sha256": "fa16b7c3852eb3934a25535d36600c41ab286f3de6b434ee794292b4788dc9b6"
+  },
+  "engine-patches/retroarch-station-listening.patch": {
+    "normalization": "text-lf",
+    "bytes": 1581,
+    "sha256": "902328f639af2d532ff7297c114373430cc7668e6c32fa3a3ca0665e7fc48c8f"
+  },
+  "evidence/application-change.json": {
+    "normalization": "text-lf",
+    "bytes": 297,
+    "sha256": "a6ebcb3aa7cc47c65c14746b5e93a700577db51226dddb29410f5e3e445268bf"
+  },
+  "evidence/clown-submodules.json": {
+    "normalization": "text-lf",
+    "bytes": 2823,
+    "sha256": "a72e6e35cbc33015c00df8ab0122a36c3fb9edacb22244b725b88c254d8323f9"
+  },
+  "evidence/engine-build-validation.json": {
+    "normalization": "text-lf",
+    "bytes": 1145,
+    "sha256": "5dc865ff6a559a720e6ae69787564fa3e32e5820b725afc90dfc59017a58c08f"
+  },
+  "evidence/online-alignment-check.log": {
+    "normalization": "text-lf",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence/online-build-result.json": {
+    "normalization": "text-lf",
+    "bytes": 4522,
+    "sha256": "da4cb69b788777013189eeead5b8ea457c1de28fe449f835e017dee4fb57c095"
+  },
+  "evidence/online-domain-tests.log": {
+    "normalization": "text-lf",
+    "bytes": 123,
+    "sha256": "2f18ed159bc20811cd4408bd107f64ebea0c7e2e95de75f9bb4c98c12158db2c"
+  },
+  "evidence/online-http-tests.log": {
+    "normalization": "text-lf",
+    "bytes": 8242,
+    "sha256": "efc7730af8c4eafc440e0f5802de20ef1b9281d13c22ed4e1bccccddabb5a289"
+  },
+  "evidence/online-policy-tests.json": {
+    "normalization": "text-lf",
+    "bytes": 19939,
+    "sha256": "8f3b07e47850dc51ea7c1de04f1139c8f18d56ec81fb61b4923c376c4c21e316"
+  },
+  "evidence/online-signature.log": {
+    "normalization": "text-lf",
+    "bytes": 307,
+    "sha256": "86488100b4aa2cc18888de8b90a43bbe9e2c06f51eebc88946861351d4b1da5a"
+  },
+  "evidence/overlay-sources.json": {
+    "normalization": "text-lf",
+    "bytes": 6175,
+    "sha256": "fcc0f76239d3fd897f8f4f2c05e5f2fa7f7a7575e99ca0a022aafebef3ae6103"
+  },
+  "evidence/r4-r5-archives.json": {
+    "normalization": "text-lf",
+    "bytes": 684,
+    "sha256": "2799d19ea71483253217bb6adff5ab24ced639e54c12c673d879fcebf2f37e9c"
+  },
+  "evidence/r5-regressions.json": {
+    "normalization": "text-lf",
+    "bytes": 11432,
+    "sha256": "36add3c0333aaa94658b6e55f1a27b1bf229a9b152a0a91de3fdfac5fac38aef"
+  },
+  "evidence/r6-archive.json": {
+    "normalization": "text-lf",
+    "bytes": 311,
+    "sha256": "23d0f63077fb6599460a205a82c08b01ea750a704cd21927aef7d84fad9491d8"
+  },
+  "evidence/retroarch-patch-replay.json": {
+    "normalization": "text-lf",
+    "bytes": 473,
+    "sha256": "bd702a7cf79ed92b6f50ea527d0763dc7f037f37ebd60c267f00bce67fe1091b"
+  },
+  "evidence/shader-angle-validation.json": {
+    "normalization": "text-lf",
+    "bytes": 4545,
+    "sha256": "87590e42078829c367b9a438f1f7826e118e9f20cb6c20262c6698b50281f5ea"
+  },
+  "evidence/station-online-regressions.log": {
+    "normalization": "text-lf",
+    "bytes": 841,
+    "sha256": "903052571d9392bcbe8417a5727fb455e5206e397512f846dea2096e7797eb2a"
+  },
+  "evidence/upstream-pins.json": {
+    "normalization": "text-lf",
+    "bytes": 1932,
+    "sha256": "306096920ae69495bff18daad975f51237b92cd0b1f20de8d549f32cb17bc444"
+  },
+  "manifest-project/AndroidManifest.xml": {
+    "normalization": "text-lf",
+    "bytes": 36852,
+    "sha256": "619892c818a0339d89a84cfbdb836460a6b5b578038fac2db4965361f69b3beb"
+  },
+  "native/laser_assets.h": {
+    "normalization": "text-lf",
+    "bytes": 7069,
+    "sha256": "a103c7f497262eefef97dab56021393050ba19ee7e4b3edb5f1a4002ffd404c9"
+  },
+  "native/local_game_covers.h": {
+    "normalization": "text-lf",
+    "bytes": 8431,
+    "sha256": "471a3d28749fcc19418e0ca6879489dafcc37d18925c6fa59ed7b4527e1fa8df"
+  },
+  "native/magazine_shader.h": {
+    "normalization": "text-lf",
+    "bytes": 14353,
+    "sha256": "cdfd38730ec74a58f5e7ecaa0d7053708c6b9c3335dd4ba4f05c936da3286070"
+  },
+  "native/native_action_motion.h": {
+    "normalization": "text-lf",
+    "bytes": 3401,
+    "sha256": "ddedda117d29e605ef9fcdb1d81466c3b0bc38c1365194b33a94de921b0cf0c3"
+  },
+  "native/native_carousel.cpp": {
+    "normalization": "text-lf",
+    "bytes": 28435,
+    "sha256": "c55276d4b2ccd6036c8e434c24799db11ba7ead6852e12d3331e37ecd6e4f29e"
+  },
+  "native/native_catalog_identity.h": {
+    "normalization": "text-lf",
+    "bytes": 481,
+    "sha256": "a4ff53cf4472f689449d05bba26ee8f753f8d16e93aedf320691820be2988fa9"
+  },
+  "native/native_classic.h": {
+    "normalization": "text-lf",
+    "bytes": 7488,
+    "sha256": "2fc3cfcffe53b29a405dc82040e5ab0b08a0c53bed95a7e165aedaa8cdfd64c8"
+  },
+  "native/native_console.h": {
+    "normalization": "text-lf",
+    "bytes": 4872,
+    "sha256": "ee14817d4157582e09b63d5af99210f76e81277bfa5d13870f76adcefe34a28f"
+  },
+  "native/native_dolphin.h": {
+    "normalization": "text-lf",
+    "bytes": 3696,
+    "sha256": "82d85a24e5f7190f8dd16d59dd87f6eb47df9d2fcf770a83095fc82360bc7628"
+  },
+  "native/native_flight.h": {
+    "normalization": "text-lf",
+    "bytes": 4808,
+    "sha256": "2882f4521f696077497ffe96b18f19139b982830680b504767551f3fa4c329b5"
+  },
+  "native/native_flycast.h": {
+    "normalization": "text-lf",
+    "bytes": 4214,
+    "sha256": "c09449045835259b2e7872bb9d3fef4d4cf8809ac37065f47f64e07cfb9f2c8e"
+  },
+  "native/native_formation.h": {
+    "normalization": "text-lf",
+    "bytes": 9233,
+    "sha256": "11d65bf792c603756f2cda15626cb20a6e7d3ac72fbaeaca60fcbffe908b0e56"
+  },
+  "native/native_info.h": {
+    "normalization": "text-lf",
+    "bytes": 5500,
+    "sha256": "feae4f8468f3aa99907077b63bc3cd04674ebfac7f60f3d21d67771b54d5546a"
+  },
+  "native/native_laser.h": {
+    "normalization": "text-lf",
+    "bytes": 7579,
+    "sha256": "6fca9205917d3e5558d360123c142edd97f3555363797d403ae329545dbea428"
+  },
+  "native/native_loading_progress.h": {
+    "normalization": "text-lf",
+    "bytes": 3094,
+    "sha256": "b3533a13563e0c8ebb9f075060e943475390c2ec5f1e3013cce1bfc47bb7b9b2"
+  },
+  "native/native_magazine.h": {
+    "normalization": "text-lf",
+    "bytes": 4411,
+    "sha256": "d6ae268df5ca433cad62513c692ab750161961920ea8815e2d78493808e39523"
+  },
+  "native/native_mame.h": {
+    "normalization": "text-lf",
+    "bytes": 6636,
+    "sha256": "4742d0e56916d423015336bc9a5aabc82c7a962e1264783da38ca8d3465da5d5"
+  },
+  "native/native_mega.h": {
+    "normalization": "text-lf",
+    "bytes": 4237,
+    "sha256": "24f1acef8b375c3c6b736908ef7e2112debd75342bb4be1a9e28a2cbff01cbe2"
+  },
+  "native/native_menu_power.h": {
+    "normalization": "text-lf",
+    "bytes": 1701,
+    "sha256": "2c459623c48215c8a78a17b9aadaad5d83a9b7770651f8997f1b14c9e61e0d3d"
+  },
+  "native/native_netplay.h": {
+    "normalization": "text-lf",
+    "bytes": 3495,
+    "sha256": "775050b1791e1cbf502f5e2c5fccb53dacbfa7009289901fd0760ab033c49b68"
+  },
+  "native/native_pause_menu.h": {
+    "normalization": "text-lf",
+    "bytes": 4606,
+    "sha256": "a3d2c8e24cb4d070f0769ab4386fdba01e82d3e3dd8dbb8dcaae473c0706e35a"
+  },
+  "native/native_pcecd.h": {
+    "normalization": "text-lf",
+    "bytes": 2968,
+    "sha256": "0118d6a75101f096b3ef7f80b7b8d219b895b6e3632f2d72a063344dd95ecb43"
+  },
+  "native/native_policy.h": {
+    "normalization": "text-lf",
+    "bytes": 767,
+    "sha256": "de1848ae5bcaf0d058add98b32b50f3dcf03d08c56919f7bc394b8894ac642b6"
+  },
+  "native/native_ps2.h": {
+    "normalization": "text-lf",
+    "bytes": 3317,
+    "sha256": "a2465d179916db9e4efe83b512c08df2b6137c58f87dfb4e3a697406081c5c7e"
+  },
+  "native/native_psp.h": {
+    "normalization": "text-lf",
+    "bytes": 3347,
+    "sha256": "9e2afa1bcb3e6df141c404158b691aac117373273e30ae3a7c299a4a205fcd08"
+  },
+  "native/native_psvita.h": {
+    "normalization": "text-lf",
+    "bytes": 3956,
+    "sha256": "658d4e0e89ee59dd9ade6d523637937f1b2641b904031ba354922a6705fe18e9"
+  },
+  "native/native_retro_music.h": {
+    "normalization": "text-lf",
+    "bytes": 3364,
+    "sha256": "d518a90f5e6a18d6b6a5ea53dd64b2649fb0eccc9a93c1856eb66163b0ce4ede"
+  },
+  "native/native_saturn.h": {
+    "normalization": "text-lf",
+    "bytes": 4100,
+    "sha256": "6dc5bc58b31a61286ee0203694a360105dfe6f4e2b0c5e5630b48ebcc01efd63"
+  },
+  "native/native_saturn_probe.h": {
+    "normalization": "text-lf",
+    "bytes": 2278,
+    "sha256": "5a5ee36faa6e538a28f191f4943905d13ae4ac46b32fd201ade4bc2e9bc429e8"
+  },
+  "native/native_search_download.h": {
+    "normalization": "text-lf",
+    "bytes": 11412,
+    "sha256": "1f13d213d3199e36ff4bee1bd180a5c1ebc8113422ced47f9c7886290caab19b"
+  },
+  "native/native_settings.h": {
+    "normalization": "text-lf",
+    "bytes": 6617,
+    "sha256": "119bb37c2428a42e6cee2ef1def5a7fdaeec9603e56ec3c962c7f76c58dff369"
+  },
+  "native/native_skin.h": {
+    "normalization": "text-lf",
+    "bytes": 12057,
+    "sha256": "7b55392f76d184e886c79728cba57556293d8afcd21ecb115b2ca852aa2c86f6"
+  },
+  "native/native_snes.h": {
+    "normalization": "text-lf",
+    "bytes": 3170,
+    "sha256": "8652b31cb7b58b7dd0b43ca79665b5617762c83c7eebb772ad33a7c255360cb9"
+  },
+  "native/native_space.h": {
+    "normalization": "text-lf",
+    "bytes": 570,
+    "sha256": "22851b7c5f18ca186636274346cfe93e9dc634ba49d3768acfd9245a97904941"
+  },
+  "native/native_space3d.h": {
+    "normalization": "text-lf",
+    "bytes": 12985,
+    "sha256": "985de58bc05d9af7019dd589a01988d1a31c941edeee507928eaf9aa33a6676a"
+  },
+  "native/native_system_video.h": {
+    "normalization": "text-lf",
+    "bytes": 2698,
+    "sha256": "79b0642d992e9c1f720acb9542fa714394d2ae9e9770ad535e91bac43fb555c5"
+  },
+  "native/native_system_video720.h": {
+    "normalization": "text-lf",
+    "bytes": 17078,
+    "sha256": "41f6c1a4b2c062598b60d8e272bf2394d9d8407d4de809790f35ffd7c89238f7"
+  },
+  "native/native_thrusters.h": {
+    "normalization": "text-lf",
+    "bytes": 4988,
+    "sha256": "60b42be434588c79cf98ddc9453689beadc4feb869da64c07c2f19db9389d205"
+  },
+  "native/native_wiiu.h": {
+    "normalization": "text-lf",
+    "bytes": 3861,
+    "sha256": "b33c04bf278fc81bb3348835f9364d1c3d306996be767cea5932e19444ddd664"
+  },
+  "native/native_xbox360.h": {
+    "normalization": "text-lf",
+    "bytes": 4013,
+    "sha256": "21c286c31ca092fd01bb347acf385a5cd6d7a2fd86365a9279784d1436fb23e3"
+  },
+  "native/native_xboxclassic.h": {
+    "normalization": "text-lf",
+    "bytes": 4207,
+    "sha256": "a314147b9444e96649c3558ec9dd5b876cc5c7c7df1f2c4263f0a2b78b4591b6"
+  },
+  "native/premium-magazine-led-android.glsl": {
+    "normalization": "text-lf",
+    "bytes": 14273,
+    "sha256": "15725a9ccb3e540c302399006607ed0cbb496189c170873dae74d6c362a296a1"
+  },
+  "native/relocations.h": {
+    "normalization": "text-lf",
+    "bytes": 204550,
+    "sha256": "d8811989373127e2d738fec004f8c16c3788f4a0b55f66bf8d25d6b1c3f0349a"
+  },
+  "native/space3d_shaders.h": {
+    "normalization": "text-lf",
+    "bytes": 24992,
+    "sha256": "704090221dcc60f1a57382bd3e0d1f046f208f4cb1237b8010db7d23e1dd75e0"
+  },
+  "native/station_game_lookup.h": {
+    "normalization": "text-lf",
+    "bytes": 499,
+    "sha256": "d531b6078f168146c2cf90ff32bcbcd664a004beda9463d22c5d763c4fb1f0f8"
+  },
+  "native/station_info_layout.h": {
+    "normalization": "text-lf",
+    "bytes": 741,
+    "sha256": "d93c3c14843f96e969a5dc2c1c148d7fef3385dcd83b9e8a2391661cb7ab8858"
+  },
+  "native/system_infos.h": {
+    "normalization": "text-lf",
+    "bytes": 25787,
+    "sha256": "96698ec6599826d7d2bced9315583e20cce0b0adb216ab6e4e8b56d226ecf989"
+  },
+  "native/system_video720_assets.h": {
+    "normalization": "text-lf",
+    "bytes": 2436,
+    "sha256": "610480691c989b380add800eb7beef34505f251208e34bd1cdc68a8c850e2420"
+  },
+  "native/system_videos.h": {
+    "normalization": "text-lf",
+    "bytes": 933,
+    "sha256": "0ed392e7db7ac9bef1a27ed87fb89455feabf5b94ed3d42f6777ba64fba14bd7"
+  },
+  "native/video720_policy.h": {
+    "normalization": "text-lf",
+    "bytes": 395,
+    "sha256": "3ef94aa130af934f4d08102bd5df11c1e63522b7cd91eb6b847db8bf785279d8"
+  },
+  "native/video720_posters.h": {
+    "normalization": "text-lf",
+    "bytes": 5289,
+    "sha256": "f6d34281a49c9e4fb09a34001e608c71d95f6bdbe68210423448d0cafe2ac8a4"
+  },
+  "netplay/build_netplay.py": {
+    "normalization": "text-lf",
+    "bytes": 2024,
+    "sha256": "8c494520f18b1694faf15ace14428bd22a01b672ac536dafc859aec3e81784a1"
+  },
+  "scripts/fetch_clown_dependencies.py": {
+    "normalization": "text-lf",
+    "bytes": 2415,
+    "sha256": "9ea9ec1b2e0277250cd31f707cad0bf32d52e7010cc79d102c947eb10e093c1c"
+  },
+  "scripts/fetch_station_overlays.py": {
+    "normalization": "text-lf",
+    "bytes": 1709,
+    "sha256": "99b31bb6a84a055674dcf8e1faba0ec200d91109d336f4b4436d488650b286d7"
+  },
+  "scripts/finish_station_online_sources.py": {
+    "normalization": "text-lf",
+    "bytes": 2956,
+    "sha256": "4668cac058acd014e3e5125d00189cab59faaca3e7dd1e5eeff2cbd0ed79a7ce"
+  },
+  "scripts/integrate_station_online.py": {
+    "normalization": "text-lf",
+    "bytes": 8057,
+    "sha256": "27114b73ce7b8cc15ad57a0e53c9f5c662dfebd44ee4eaa7a3deb09bb9d53794"
+  },
+  "scripts/package_station_online.py": {
+    "normalization": "text-lf",
+    "bytes": 5931,
+    "sha256": "63a334e986d9e26deb89519ff4996e343e499994974c15654df1a7bd2178940d"
+  },
+  "scripts/patch_station_listen_ready.py": {
+    "normalization": "text-lf",
+    "bytes": 1914,
+    "sha256": "7f8c18963c25e885a56d94740a0e671f5a09c934ea1ba241a116a32c1a62f36f"
+  },
+  "scripts/patch_station_retroarch.py": {
+    "normalization": "text-lf",
+    "bytes": 4546,
+    "sha256": "1f9fa938a3d674e3fa70c7259a0123cf58b94c0a8e9872ec00a161c7a08fc258"
+  },
+  "scripts/prepare_station_online.py": {
+    "normalization": "text-lf",
+    "bytes": 3187,
+    "sha256": "7938475e2846ed97372aff6687c399e4eb0e17016e12376e036a623753e1eb2c"
+  },
+  "scripts/prepare_station_online_engines.py": {
+    "normalization": "text-lf",
+    "bytes": 4740,
+    "sha256": "21a52181be6f666f3cc311915c2574b9fe45b511fd1579b34462cba59ec7596d"
+  },
+  "scripts/test_online_policy.py": {
+    "normalization": "text-lf",
+    "bytes": 5845,
+    "sha256": "0dc0aad68fe32a3de4d0a0277eeebaf14d66dc019c4deedd5bebccc7f2618c3f"
+  },
+  "scripts/test_station_online_api.py": {
+    "normalization": "text-lf",
+    "bytes": 3198,
+    "sha256": "2dd1d18e6f2d387271b70d3c5be21e3f3be72bd9e88ab3d4e381cdc5378a24d4"
+  },
+  "server-contract/engine-registry-candidate.json": {
+    "normalization": "text-lf",
+    "bytes": 502,
+    "sha256": "901c8f52eaadfc8d3ad41ed5cc2c30bcaeb5ea893550d0feab5729bbb4055a6a"
+  },
+  "station/build_module.py": {
+    "normalization": "text-lf",
+    "bytes": 2111,
+    "sha256": "21e20e8e089d8d97630811a6dd4e88c0bdc7dd3b1d674a51f4e8d1d6be4cd801"
+  },
+  "station/run_tests.py": {
+    "normalization": "text-lf",
+    "bytes": 2416,
+    "sha256": "c55dc3de0682467b3b9c8bcfbed01d7ea471cd809288e799607c228e6553018f"
+  },
+  "tests/StationRoomStateTest.java": {
+    "normalization": "text-lf",
+    "bytes": 844,
+    "sha256": "d7b81eeee5d139ae3d5de630b8b72f22676f8e5251c1a172761554aff1b9b981"
+  },
+  "station/tests/native_link_smoke.cpp": {
+    "normalization": "text-lf",
+    "bytes": 1446,
+    "sha256": "61dff6851c176a3bb11d3517e53a75a0c7bb21b51010fcc75e74025841508cc2"
+  },
+  "station/tests/StationApiTest.java": {
+    "normalization": "text-lf",
+    "bytes": 15589,
+    "sha256": "6ad564d36078b87d42ca4c3c5b13ab9df97109c0d094ff841bcc44386e5e8d76"
+  },
+  "station/tests/StationArchiveDeviceTest.java": {
+    "normalization": "text-lf",
+    "bytes": 2114,
+    "sha256": "ac5ba7a08f14dade9aebb7039ee8c4b46c75314b187e21551a40d1a484aa9e5d"
+  },
+  "station/tests/StationBootstrapTest.java": {
+    "normalization": "text-lf",
+    "bytes": 6001,
+    "sha256": "e875955745378bee7d1664db40fae386c9fb60e3b9e3fda01824738b3e85507b"
+  },
+  "station/tests/StationClosureTest.java": {
+    "normalization": "text-lf",
+    "bytes": 13839,
+    "sha256": "5d3ee74f049a2212f6748a1875f9e623865d68f8730c5069e7514d40db4bfefd"
+  },
+  "station/tests/StationCoordinatorTest.java": {
+    "normalization": "text-lf",
+    "bytes": 4516,
+    "sha256": "df300074d2c98c2f8545e3fc5da6def534c9df7fbc01cdc79a2e8a1861a7f42d"
+  },
+  "station/tests/StationCoverConcurrencyTest.java": {
+    "normalization": "text-lf",
+    "bytes": 12278,
+    "sha256": "d9f3dda5ffdcce351f193491574eb192266490ee8cc99362bafc5d2093c71d08"
+  },
+  "station/tests/StationCoverPublicationTest.java": {
+    "normalization": "text-lf",
+    "bytes": 3092,
+    "sha256": "ec376c53526606fb88b3d3a601aca52d4e62a80264dca4da2a37b45934fd3f76"
+  },
+  "station/tests/StationFilesTest.java": {
+    "normalization": "text-lf",
+    "bytes": 2793,
+    "sha256": "1765450d3747511a6904a20581993ce2615179398817d15262f458a80d1f6e57"
+  },
+  "station/tests/StationFrontendDeviceTest.java": {
+    "normalization": "text-lf",
+    "bytes": 363,
+    "sha256": "9fe2f9beb35f2e642e66099ac9a028dc3276eff8fbfb6a888cef3d080b52a123"
+  },
+  "station/tests/StationInstallerTest.java": {
+    "normalization": "text-lf",
+    "bytes": 9020,
+    "sha256": "52470dd28859a1d4667ea1a3d82cb3b6dbc3f93f863ca90977ed2fbecb9bea36"
+  },
+  "station/tests/StationOnlineApiTest.java": {
+    "normalization": "text-lf",
+    "bytes": 1838,
+    "sha256": "e5ba0327c5796f43b4bba42b019c6b835a6cdb5bc58d8227544a7eb5f62c3e1c"
+  },
+  "station/tests/StationStorageTest.java": {
+    "normalization": "text-lf",
+    "bytes": 6715,
+    "sha256": "32fe61fcee830ef3d4a5174393ce27669891c0e7ef85792353b7c1092107aa8b"
+  },
+  "station/tests/StationTransferReuseTest.java": {
+    "normalization": "text-lf",
+    "bytes": 5854,
+    "sha256": "81d48723570edd6ed4f21170a0f1cd2f8df654460229cbdae8878538eeeae260"
+  },
+  "station/tests/station_cover_plan_test.cpp": {
+    "normalization": "text-lf",
+    "bytes": 1993,
+    "sha256": "1a50d9f185c18c5af4b7db24bce2f6aa95253569aa9fe09bfcc38072b3ed204b"
+  },
+  "station/tests/station_cover_publication_test.cpp": {
+    "normalization": "text-lf",
+    "bytes": 1249,
+    "sha256": "f6345d18a9c9d9a613d8de55c765d55f8afca27cfb3b7ebb3cd2a4d719004728"
+  },
+  "station/tests/station_cover_retry_test.cpp": {
+    "normalization": "text-lf",
+    "bytes": 1077,
+    "sha256": "0b882fd82584cb784187224ce72039d64b3d5a7469deedb7ea0c38b4b7a6a740"
+  },
+  "station/tests/station_frontend_test.cpp": {
+    "normalization": "text-lf",
+    "bytes": 4956,
+    "sha256": "5b739a6541639bd26e967f84b027348974388422742fcd9f9edd1582e24bdf80"
+  },
+  "station/tests/device/StationRootDeviceTest.java": {
+    "normalization": "text-lf",
+    "bytes": 2722,
+    "sha256": "685fffb07da565f3319d2494b3e7912a93f9f8655172f93bdfa4e574c9494c6c"
+  },
+  "station/src/native/service-bindings.json": {
+    "normalization": "text-lf",
+    "bytes": 671,
+    "sha256": "1584efb0a524fa07cc1a12ea58c8f8e2d5460f575f3d628bc3125af78dec471e"
+  },
+  "station/src/native/station_archive.c": {
+    "normalization": "text-lf",
+    "bytes": 4009,
+    "sha256": "cf09c44a8ee03a6f1dccf479953f7b2b6b8a9771b8953c5f841fa75163ef8e1c"
+  },
+  "station/src/native/station_catalog_abi.hpp": {
+    "normalization": "text-lf",
+    "bytes": 1556,
+    "sha256": "9f990c41f65bab83672df01fceb18051c9f57abbb965630d6f35bd53558b7f21"
+  },
+  "station/src/native/station_cover_plan.hpp": {
+    "normalization": "text-lf",
+    "bytes": 915,
+    "sha256": "f4af70c64300b872b8852e151bfd64d86f9ab035561c7b252a02d646e78e55d7"
+  },
+  "station/src/native/station_cover_publication.hpp": {
+    "normalization": "text-lf",
+    "bytes": 531,
+    "sha256": "d66c5f01807521fd1f204c97540eee6fb4114702de8a3de25960a8f33cb0c7b7"
+  },
+  "station/src/native/station_cover_retry.hpp": {
+    "normalization": "text-lf",
+    "bytes": 1008,
+    "sha256": "628250c997a8c8f093bb48090bc9bcbdd009e071b654f70e322d5b29a20904da"
+  },
+  "station/src/native/station_frontend.cpp": {
+    "normalization": "text-lf",
+    "bytes": 25350,
+    "sha256": "5c451a4bb18eeee274050123f42816f53bc0e58845ff6dab510c3032035acc3b"
+  },
+  "station/src/java/org/emulationstation/frontend/AssetInstaller.java": {
+    "normalization": "text-lf",
+    "bytes": 2434,
+    "sha256": "d3539b66cbc434e819b59d1fa614f3eb47c8b7c3d8b51c92284bc6dacbe0ccee"
+  },
+  "station/src/java/org/emulationstation/frontend/DownloadService.java": {
+    "normalization": "text-lf",
+    "bytes": 3678,
+    "sha256": "49b2994e4a213e861cfcef5ce0e353789f7f88928fec5f8b7e3b8ceb6f594c5f"
+  },
+  "station/src/java/org/emulationstation/frontend/auth/LoginActivity.java": {
+    "normalization": "text-lf",
+    "bytes": 23169,
+    "sha256": "2e08bdf0f5a8475dd6d0d32fdd6764d55da75559f8a90c532cc6c849d26c87cd"
+  },
+  "station/src/java/org/emulationstation/frontend/auth/StationLogin.java": {
+    "normalization": "text-lf",
+    "bytes": 4738,
+    "sha256": "191549ba86fed13573b27258c867ece3a536f99573330d9f75889522774ae4ce"
+  },
+  "station/src/java/org/emulationstation/frontend/station/ExistingCoverCache.java": {
+    "normalization": "text-lf",
+    "bytes": 2239,
+    "sha256": "41796c41b27efc4e9a53d20b7ed606e37d7b4d168cb7638059cf368e8d533d28"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationAndroid.java": {
+    "normalization": "text-lf",
+    "bytes": 4495,
+    "sha256": "82da254f315283f4cced97fa5ca77ac590138eb179aac5f55c80354c62ae6410"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationApi.java": {
+    "normalization": "text-lf",
+    "bytes": 21046,
+    "sha256": "6de917112f1da7376846590fc3db858ded56c5befd28c5400fd4b9ef9c2a4c97"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationArchive.java": {
+    "normalization": "text-lf",
+    "bytes": 683,
+    "sha256": "107669c6885725d99b430e7340c550466eed24a2842d43b51526c673a9d51b86"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationArtifact.java": {
+    "normalization": "text-lf",
+    "bytes": 3253,
+    "sha256": "fe6eee3c4dfaaf66ac68eb0096b6ff0dc7792fa377dadf5898b5ea06e803bac9"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationBundledFiles.java": {
+    "normalization": "text-lf",
+    "bytes": 2442,
+    "sha256": "74292e8dcfe8318d8697a2c81446ab23cd66ff2c815bf98632849b34cc39e67e"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationCatalog.java": {
+    "normalization": "text-lf",
+    "bytes": 4832,
+    "sha256": "827faed485e12b16583d3d2cc243a43318674b72b9a8c449000eef61f9106cff"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationCatalogStore.java": {
+    "normalization": "text-lf",
+    "bytes": 2175,
+    "sha256": "9d4d119f54fe28be65f90efc65f2f7d81062089eaa5e5cebf6f186c10e3c8de6"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationConfig.java": {
+    "normalization": "text-lf",
+    "bytes": 1847,
+    "sha256": "5d01df6e6f7f5a6e68dd3e4edeed1d53d1186a80084df3681ca9e9a440df104b"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationCoordinator.java": {
+    "normalization": "text-lf",
+    "bytes": 8558,
+    "sha256": "79800215a85fbb6225e3e10e75fea13030a0d178b409de32795840b8171cd1cf"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationCoverQueue.java": {
+    "normalization": "text-lf",
+    "bytes": 4208,
+    "sha256": "1696e03d4afa310d5a80eaf728728ab0d71cc55879bf07ada82939f69c0fee48"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationCoverStore.java": {
+    "normalization": "text-lf",
+    "bytes": 7324,
+    "sha256": "085e6a7418d3f79f6ff446683aa92e8a6b1a0c800d15b70d4c51517368f7f7d5"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationCrypto.java": {
+    "normalization": "text-lf",
+    "bytes": 1942,
+    "sha256": "8a60e9fd96dbfa3d8098b9e913e2ea8141ef13b76bf6cae264b47f841dd302d7"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationDiagnostics.java": {
+    "normalization": "text-lf",
+    "bytes": 3870,
+    "sha256": "f3cd90ead7d57962d0c069e73bc952920805b310fc271bbca7276002433d2789"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationDownloads.java": {
+    "normalization": "text-lf",
+    "bytes": 7389,
+    "sha256": "4447723f71d8a69950dfa165d5695bbe74db73572aeb44030b842181291a0a52"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationExistingArtifact.java": {
+    "normalization": "text-lf",
+    "bytes": 2794,
+    "sha256": "8c424c906a38be23a4d4630cc47c67952ab49f4ce650b841031e468ad8e353fb"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationFiles.java": {
+    "normalization": "text-lf",
+    "bytes": 7148,
+    "sha256": "c0da9cf2e54702d8c4f0c8f6ef09300ce35194a0d182f6b5cf2175e1bbd54f7b"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationFrontend.java": {
+    "normalization": "text-lf",
+    "bytes": 11060,
+    "sha256": "f0cd4f529f47761c79918eade4b64e168bf6f3c05b05f2ead23623ca74b85434"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationHttp.java": {
+    "normalization": "text-lf",
+    "bytes": 8400,
+    "sha256": "6170ed7a9118ffd0c3cd394c50f4f8d4025d08bafd2d656ca79b438b1e04d9a7"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationInstaller.java": {
+    "normalization": "text-lf",
+    "bytes": 16441,
+    "sha256": "f6445a851cf6089335e1efff78f1b20e4e45774d259ce90397f5a0f1472aa45e"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationPlatforms.java": {
+    "normalization": "text-lf",
+    "bytes": 6038,
+    "sha256": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationProtocol.java": {
+    "normalization": "text-lf",
+    "bytes": 6018,
+    "sha256": "e9298f033dff87bdca458e73d1ec7e084688acb5b750db2dfbf98b1fd7243114"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationPublication.java": {
+    "normalization": "text-lf",
+    "bytes": 1695,
+    "sha256": "d6972d792c18e377cfda161d156b3e3cb279f36a3f420e5b53a72cb86316799e"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationRetryAfter.java": {
+    "normalization": "text-lf",
+    "bytes": 918,
+    "sha256": "7ea5fb4e3267249ac5b6cc1165ede174c152286f7aceb7632a35510fa5f1be57"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationSessions.java": {
+    "normalization": "text-lf",
+    "bytes": 3084,
+    "sha256": "e8f380e9f161dadc3eaa5fb30c469c009a131feba99b8472757ea4dd1bde488f"
+  },
+  "station/src/java/org/emulationstation/frontend/station/StationStorage.java": {
+    "normalization": "text-lf",
+    "bytes": 3660,
+    "sha256": "3979ac629fe3778c609fd7bca20c3d72c9b89df920d1454a637ec24f575cfc9d"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/NetplayPaths.java": {
+    "normalization": "text-lf",
+    "bytes": 4817,
+    "sha256": "e1cfc916a17eaaabadbcd821c2483469b99e0057944e2f2118fad064187e6a67"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/NetplayUi.java": {
+    "normalization": "text-lf",
+    "bytes": 2264,
+    "sha256": "f205101af034b89aa257c61347af9f942fce1603478c6fabb24597c91d6037cd"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationDolphinNetplayActivity.java": {
+    "normalization": "text-lf",
+    "bytes": 5007,
+    "sha256": "f947b5f72a35184c3eafb2ad551f39ce5ded40a1949a3a536d685b2660461b8e"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationGameSession.java": {
+    "normalization": "text-lf",
+    "bytes": 3298,
+    "sha256": "fa3933cbd4046efc8e83a0d03a071b454b0591e0a170db2a7e7fb353b5b11ef1"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationNetplayActivity.java": {
+    "normalization": "text-lf",
+    "bytes": 7319,
+    "sha256": "12e65a4c3eb43130d5142bab08b4cd1fb57f8659f7a74d464896b45d9d3a8dd0"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationOnlineClient.java": {
+    "normalization": "text-lf",
+    "bytes": 3592,
+    "sha256": "20d33e08e50536801f6bd3d0ee2015191365cf49cbab23842b3ca2368ac5a28f"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationOnlineGame.java": {
+    "normalization": "text-lf",
+    "bytes": 5986,
+    "sha256": "76833fab7c1af2a8f646ba0140cfb9fd3195bcc84e3574b447b1c8283b8275bc"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationPresence.java": {
+    "normalization": "text-lf",
+    "bytes": 4222,
+    "sha256": "978dd6280cac0cda5c08500d38c5dfd85e2f4cb39fc072e9d955bd97dc2cff37"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationProcess.java": {
+    "normalization": "text-lf",
+    "bytes": 670,
+    "sha256": "d024190147ae5cb66abc0932c7bcaf282586bbbe060093c7d72722103b83fa73"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationRetroActivity.java": {
+    "normalization": "text-lf",
+    "bytes": 6242,
+    "sha256": "5e133d7524670cfcfb671e0b32eb2222480de09003c8707f984a701855c57c61"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationRetroLaunch.java": {
+    "normalization": "text-lf",
+    "bytes": 7140,
+    "sha256": "c22ddd814d27186df5135ba9eabea2b2e8711a1a30c3a7abdd16d0c0da030aa6"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": {
+    "normalization": "text-lf",
+    "bytes": 19202,
+    "sha256": "1d9a921cb98b70d60a2aa9f234fd73f54f00cb291c7aa7aee30704e717aad7b6"
+  },
+  "netplay/src/org/emulationstation/frontend/netplay/StationRoomState.java": {
+    "normalization": "text-lf",
+    "bytes": 936,
+    "sha256": "3569a17e3b3134b0388d5a3231dad9f269461fa5b35566fd5195be21018ac5f9"
+  },
+  "assets/station-online/engines.json": {
+    "normalization": "text-lf",
+    "bytes": 1996,
+    "sha256": "3a723193ff5e0be7404b6be917ae422fd1325674d42026e00241f9cf2695cf72"
+  },
+  "assets/station-online/NOTICES.txt": {
+    "normalization": "text-lf",
+    "bytes": 723,
+    "sha256": "fc602777aa87a3ef5f69bd08d6313db0d24223c612ec17aae9651f2bf2f1d21f"
+  },
+  "assets/station-online/licenses/bsnes-mercury-performance-79d7f9de-LICENSE": {
+    "normalization": "text-lf",
+    "bytes": 35120,
+    "sha256": "fe3eea6c599e23a00c08c5f5cb2320c30adc8f8687db5fcec9b79a662c53ff6b"
+  },
+  "assets/station-online/licenses/clownmdemu-d43c2708-LICENCE.txt": {
+    "normalization": "text-lf",
+    "bytes": 34523,
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+  },
+  "assets/station-online/licenses/geolith-19402493-LICENSE": {
+    "normalization": "text-lf",
+    "bytes": 1507,
+    "sha256": "d79339da8447fceddac0193718aa3f7596dd5273684418f3f820591c14d67035"
+  },
+  "assets/station-online/licenses/RetroArch-COPYING": {
+    "normalization": "text-lf",
+    "bytes": 35147,
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "assets/station-online/overlays/ATTRIBUTION.txt": {
+    "normalization": "text-lf",
+    "bytes": 236,
+    "sha256": "f677a941fa4629117b4c8d976172f749edfad466997b41418503fb2775e1b089"
+  },
+  "assets/station-online/overlays/COPYING": {
+    "normalization": "text-lf",
+    "bytes": 18659,
+    "sha256": "e439379c13ec41a45266fffbe5232861b38becbd1d53fa9c8b8c4f7985e950fa"
+  },
+  "assets/station-online/overlays/gamepads/flat/genesis.cfg": {
+    "normalization": "text-lf",
+    "bytes": 10543,
+    "sha256": "dd6e7105bb4156ea5b66f6b29f3c8078e7758f8e644074e7fd5dd3afa24c737e"
+  },
+  "assets/station-online/overlays/gamepads/flat/neogeo.cfg": {
+    "normalization": "text-lf",
+    "bytes": 20562,
+    "sha256": "baec3f203bb61023df0a8b414eefceb665813e422f3b473d57396ea7816d03ed"
+  },
+  "assets/station-online/overlays/gamepads/flat/snes.cfg": {
+    "normalization": "text-lf",
+    "bytes": 9240,
+    "sha256": "a3a1535575b1bae36fc6fc3407ab191b2dea1ce9ec38d65de06c40dee712d513"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/3-button.png": {
+    "normalization": "binary",
+    "bytes": 1661,
+    "sha256": "ee87a918837dc407b5804a1c6fed6daf4b6dbb520c25121c3e4daf7dc47eaa96"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/6-button_genesis.png": {
+    "normalization": "binary",
+    "bytes": 1805,
+    "sha256": "d99043de7791d01a188b528730bb58fe2db53ffc2419df400cbfcc432d581076"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/A.png": {
+    "normalization": "binary",
+    "bytes": 4549,
+    "sha256": "0ad0dd6d68528001bc7412611c2af67eba39d58972a24999cb1e1d56355c8665"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/B.png": {
+    "normalization": "binary",
+    "bytes": 4267,
+    "sha256": "c114a2745e9e68751a9d5057b9d58212f2e7dc1485583c87131c2f209a1677f2"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/C.png": {
+    "normalization": "binary",
+    "bytes": 3954,
+    "sha256": "4cd2c7b37cce66c93ef4cfa185c25a3234ee7a052fff6676251c0d82ad3699fc"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/coin.png": {
+    "normalization": "binary",
+    "bytes": 5261,
+    "sha256": "300754b2df70ffd3b3339d1d5857936c636e8a61477060a414c4df607329bb56"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/D.png": {
+    "normalization": "binary",
+    "bytes": 3748,
+    "sha256": "f1582ffdf0d5f9a90babe3d0023cead30d4704ddace076772b20c47b2abfbca8"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/dpad-down.png": {
+    "normalization": "binary",
+    "bytes": 1530,
+    "sha256": "877b0f95ee6757916d069fa16971226770a6090e93ae63f947ba52e893947e2d"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/dpad-left.png": {
+    "normalization": "binary",
+    "bytes": 1414,
+    "sha256": "35397f74e010e11977774afa24d0d0eb86afe4933705ba9a6b0d9fa053b2c433"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/dpad-right.png": {
+    "normalization": "binary",
+    "bytes": 1398,
+    "sha256": "2b1fd36ebaaff6b5d2c27a08c30d587f650a3b236294fdf8beefdfd508810529"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/dpad-up.png": {
+    "normalization": "binary",
+    "bytes": 1471,
+    "sha256": "36bc4fbf68a0b3390c39e8625cf226873e56b539d3c7d41a9e64a94f5fc85309"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/genesis_mode.png": {
+    "normalization": "binary",
+    "bytes": 5171,
+    "sha256": "bcf7e81696f6c2125176263abd9c5e5b74d98198653e4a2c45f19a07a905c4a2"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/hide.png": {
+    "normalization": "binary",
+    "bytes": 1652,
+    "sha256": "c44d40da0d78be5faf93146955a006d8cf1c95bc92ae48cfa117724500b6e9ed"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/L.png": {
+    "normalization": "binary",
+    "bytes": 2629,
+    "sha256": "7305f938e89d84185904622d313bf5d31297ef4e83a6c32d19b991502fea472a"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/L_and_R_down.png": {
+    "normalization": "binary",
+    "bytes": 4137,
+    "sha256": "07d9b3f1b1ad5043bcf61e3a676bf7cb97394b150302e811f6861dfe403e8bf7"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/L_down.png": {
+    "normalization": "binary",
+    "bytes": 2628,
+    "sha256": "4167525da6d70757f11e480f7633f1ca0f48d815ead307fd34e4540aeabd2c2a"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/L_down_smaller_gba.png": {
+    "normalization": "binary",
+    "bytes": 2313,
+    "sha256": "90d4af9d709c89de05dcfcb3cf250efae84ef97985d8cfde906e4856d365fb10"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/L_smaller.png": {
+    "normalization": "binary",
+    "bytes": 2314,
+    "sha256": "58dd13c3105d009b8bdd3ce668ea31dd60a102946ba26805e41c6ad912ef6ee1"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/overlay-A.png": {
+    "normalization": "binary",
+    "bytes": 2265,
+    "sha256": "63beffe2d7ac4d0d786a9b105dec8f99030c10b1fcd88bc7847e621dd5eb6042"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/overlay-B.png": {
+    "normalization": "binary",
+    "bytes": 2239,
+    "sha256": "0ca3c71068c1e339ddf68bfdc4f44c89407c82229703e24c99429b58256087f8"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/overlay-C.png": {
+    "normalization": "binary",
+    "bytes": 1979,
+    "sha256": "0f6a38f1f3601a1b07d6f940eee01b3b2c9bbaa8ec0445c2dcb3b01222978b6b"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/overlay-D.png": {
+    "normalization": "binary",
+    "bytes": 2001,
+    "sha256": "56355e9e9394c4a7b60aad42c163e3ad3653dfd2971b67c41a28ae74f97aab2a"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/R.png": {
+    "normalization": "binary",
+    "bytes": 3618,
+    "sha256": "365482c6c3d53d4d8c1bff64c570cca8b66b69199ca334c50430fe31c5d279dd"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/rgui.png": {
+    "normalization": "binary",
+    "bytes": 2195,
+    "sha256": "64a76fc571539287b8daa659557c93ec8619422471fabe144165b1e2add2e66f"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/rotate.png": {
+    "normalization": "binary",
+    "bytes": 2105,
+    "sha256": "da7743f16bca33574ddc9aee55a0f6b4cba4fdf1241b0be73e8c7b2872dc7a99"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/R_smaller.png": {
+    "normalization": "binary",
+    "bytes": 3281,
+    "sha256": "47650822c8a8aba6bc413efcdc9ba0fd9182e270072304aa916ab67857f663e1"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/show.png": {
+    "normalization": "binary",
+    "bytes": 1616,
+    "sha256": "75fc8748d9c6c2e89b8d1cbc0800cd6b21847b65811c286f10f1cac78946de7c"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/start.png": {
+    "normalization": "binary",
+    "bytes": 4278,
+    "sha256": "f7101201a1ef4a06144295498cc9790c97068ef28810b877e61bb67889390434"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/start_genesis.png": {
+    "normalization": "binary",
+    "bytes": 2189,
+    "sha256": "d64a09f7ec14f199a18cb494db2d15c75ad4db68fed0910690d0de71105d4056"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/start_rounded.png": {
+    "normalization": "binary",
+    "bytes": 4620,
+    "sha256": "6a8962117dbac5f1c4a557d465e9185dc218e5fb91aa58f24a94f9d4d48c1dfb"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/test.png": {
+    "normalization": "binary",
+    "bytes": 1042,
+    "sha256": "32b55d6ccf895e5ac90f4b16d7a6e334aaac402f2db31d3d128a1ab77b601825"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/thumbstick-background.png": {
+    "normalization": "binary",
+    "bytes": 4334,
+    "sha256": "0ed02d81e0b9328153ff16174c0fcaaddffb34bf54cf21ba693fbe275cc9abbe"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/thumbstick-pad_arcade.png": {
+    "normalization": "binary",
+    "bytes": 21022,
+    "sha256": "f24e9423bbc33fb5364c7173a271626cc85b3c805eb0c2db32ef5a680322d951"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/X.png": {
+    "normalization": "binary",
+    "bytes": 4281,
+    "sha256": "4b074243b23a2fdb51a2930f3d40ccc34b634b883b19218375e4c686ba6c8188"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/Y.png": {
+    "normalization": "binary",
+    "bytes": 3988,
+    "sha256": "ac70b156db53eed255bc7be88d83e2537e5d6582d65da7bba093d4b7fa9330fc"
+  },
+  "assets/station-online/overlays/gamepads/flat/img/Z.png": {
+    "normalization": "binary",
+    "bytes": 4283,
+    "sha256": "223dd8f0b6325238f113849e6abe55c105d9206619ff69c1ee5b749c592e84a0"
+  }
+}
