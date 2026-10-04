@@ -1,0 +1,34 @@
+{
+  "builtAt": "2026-10-04T14:16:04.161784+00:00",
+  "baseApk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Online-Candidato-R7-20261004.apk",
+  "baseSha256": "827723436ac618d3b1745a873813c7781ff10e043abc6033de416c01d774703d",
+  "scope": [
+    "uniform native game action buttons",
+    "animated green sheen",
+    "room UI presentation and state feedback"
+  ],
+  "nativeGameButtonVertices": 286,
+  "nativeExtraThreads": 0,
+  "nativeExtraTextures": 0,
+  "roomContinuousAnimationsMax": 1,
+  "roomAnimationOnlyVisibleEnabledFocused": true,
+  "routesChanged": false,
+  "authChanged": false,
+  "offlineEnginesChanged": false,
+  "serverDeployed": false,
+  "installed": false,
+  "deviceVisualVerified": false,
+  "stable": false,
+  "apk": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\TurboStations-Salas-Botoes-R8-20261004.apk",
+  "sha256": "8e76d8328d140a6f423b9317a77bc4f154cb5de882d8e24db16df8b71f0ea783",
+  "bytes": 1982738120,
+  "changed": [
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [
+    "assets/station-ui-r8/BUILD-NOTICE.json"
+  ],
+  "preservedEntries": 11100,
+  "fullPayloadIntegrityPassed": true
+}
