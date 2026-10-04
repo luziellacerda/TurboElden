@@ -1,0 +1,42 @@
+[
+  {
+    "path": "station/src/java/org/emulationstation/frontend/station/StationApi.java",
+    "previousSha256": "6de917112f1da7376846590fc3db858ded56c5befd28c5400fd4b9ef9c2a4c97",
+    "newSha256": "623eb3043e34002fe92c7df108b89ac4ed3cac7e74239bb93c8fe8588b91feb5"
+  },
+  {
+    "path": "station/src/java/org/emulationstation/frontend/station/StationCatalog.java",
+    "previousSha256": "827faed485e12b16583d3d2cc243a43318674b72b9a8c449000eef61f9106cff",
+    "newSha256": "d297397c1d05b012da9def8ca34ab836bf28a45724d6a859f8c5ce026fd0ac05"
+  },
+  {
+    "path": "station/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "previousSha256": "f0cd4f529f47761c79918eade4b64e168bf6f3c05b05f2ead23623ca74b85434",
+    "newSha256": "bb3a3d0302433c19bf790cb813dc088b9bab5e7e64ee064dcdc2f228e2ace85e"
+  },
+  {
+    "path": "station/src/java/org/emulationstation/frontend/station/StationHttp.java",
+    "previousSha256": "6170ed7a9118ffd0c3cd394c50f4f8d4025d08bafd2d656ca79b438b1e04d9a7",
+    "newSha256": "26f328be67ce6aa91744a4d87c34aacc0d94d941befdb99c1077f3da9c4375c1"
+  },
+  {
+    "path": "station/src/java/org/emulationstation/frontend/station/StationProtocol.java",
+    "previousSha256": "e9298f033dff87bdca458e73d1ec7e084688acb5b750db2dfbf98b1fd7243114",
+    "newSha256": "43bdf2b6f948eab1fd386741d88b2b57e65c37b63eb608eca9e156b128052c51"
+  },
+  {
+    "path": "station/src/native/station_frontend.cpp",
+    "previousSha256": "5c451a4bb18eeee274050123f42816f53bc0e58845ff6dab510c3032035acc3b",
+    "newSha256": "e416f1a7f5431d242e653af36f6ce5ff40166bef39700b104046965b4853064e"
+  },
+  {
+    "path": "station/src/native/station_synopsis_pages.hpp",
+    "previousSha256": null,
+    "newSha256": "db770934587c73a627d0c333249d7e6cd93c11b4e98abda8cf524dc77b7194e0"
+  },
+  {
+    "path": "native/native_info.h",
+    "previousSha256": "feae4f8468f3aa99907077b63bc3cd04674ebfac7f60f3d21d67771b54d5546a",
+    "newSha256": "b9b8a448d4364b371e4df9c22664ae5aaaaac4500bf0fb461b2c9f4933886afa"
+  }
+]
