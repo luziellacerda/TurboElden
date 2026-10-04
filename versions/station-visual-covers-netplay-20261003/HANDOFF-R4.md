@@ -1,6 +1,16 @@
 # R4 — Mega com sinopses corrigidas, revisão de Netplay e publicação segura de capas
 
-## 1. Estado atual
+## Conferencia Android em 04/10/2026
+
+R4 instalado por atualizacao, hash do base.apk conferido: `17e9b87bf268c2349874d1767d5ab315862eb09fb2705f9b79a7e307c0c63c77`. Data original de instalacao preservada (03/10 16:17:03); atualizacao 04/10 08:48:25. Sessao restaurada sem pedir login, catalogo1816 e8instalados visiveis. Nenhuma limpeza de dados.
+
+Sinopses observadas na tela e com `found=1`: Clay Fighter/SNES, Cutthroat Island/Mega e The Addams Family/MegaBR. Capas e foto do console observadas. Quatro workers reutilizando cache; esta rodada nao mede velocidade HTTP de capas novas. Botao Jogar em rede visivel nas configuracoes; nao houve partida entre dois aparelhos nem validacao visual da Activity de rede. A fixture JNI continua pendente.
+
+Pendencia visual observada: as celulas das plataformas ficaram azuis sem arte nas capturas; a causa ainda nao foi determinada. As capas de jogos carregaram. Nao declarar toda a interface aprovada nem promover R4 a estavel. Proximo trabalho solicitado: Netplay com motores de licenca compativel com uso comercial, conexao direta entre apps, servidor proprio para presenca/salas/convites/chat, botao Jogar online e LED SNES roxo. Ainda nao implementado no R4.
+
+Restaurado `stay_on_while_plugged_in=0` e removidos somente os tres probes HUD listados no recibo anterior. Evidencias sem dados pessoais: `device-evidence/r4-installed.json` e `device-evidence/r4-runtime.json`. Capturas brutas permanecem apenas no disco local.
+
+## 1. Estado da montagem (historico anterior a instalacao)
 
 Este é o estado mais recente da branch `feat/station-capas-visuais-netplay-20261003`. R2/R3 são históricos. Pacote `org.turboramastation.frontend`, cliente Station `1.0.8-station-covers-20261003.5`.
 

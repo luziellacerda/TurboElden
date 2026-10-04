@@ -1,3 +1,7 @@
+# R4 instalado em 04/10/2026
+
+Leia a conferencia Android no [HANDOFF-R4.md](HANDOFF-R4.md). Sinopses SNES/Mega/MegaBR e capas observadas; oito instalados visiveis e sessao preservada. Celulas de plataformas sem arte ainda precisam de diagnostico. Nao promovido a estavel.
+
 # Estado atualizado: R4
 
 Leia primeiro [HANDOFF-R4.md](HANDOFF-R4.md). Mega: 975/981 sinopses confirmadas; descarte nativo de capas antigas corrigido; Netplay revisado com limites explícitos. APK17e9b87b pronto e testado no PC, ainda não instalado por ausência de USB. Estados abaixo históricos.

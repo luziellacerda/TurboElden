@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-04T11:57:29.176853+00:00",
+  "apkSha256": "17e9b87bf268c2349874d1767d5ab315862eb09fb2705f9b79a7e307c0c63c77",
+  "installed": true,
+  "installedByUpdate": true,
+  "sessionRestoredWithoutNewLogin": true,
+  "catalogItems": 1816,
+  "installedItemsVisible": 8,
+  "synopsesObserved": [
+    {
+      "platform": "Super Nintendo",
+      "itemId": "bba0ae28b358b6581357f6dff15799af",
+      "name": "Clay Fighter",
+      "nativeFound": true
+    },
+    {
+      "platform": "MegaDrive",
+      "itemId": "ce3f245960b94e064f027ffd8aefe466",
+      "name": "Cutthroat Island",
+      "nativeFound": true
+    },
+    {
+      "platform": "MegaDrive - BR",
+      "itemId": "aa80098f341aba5ed29a56be5caaaacf",
+      "name": "The Addams Family",
+      "nativeFound": true
+    }
+  ],
+  "gameCoversVisible": true,
+  "consoleImagesVisible": [
+    "snes",
+    "megadrive"
+  ],
+  "persistentCoverCacheObserved": true,
+  "cacheWorkersObserved": 4,
+  "noFreshNetworkCoverSpeedBenchmark": true,
+  "nativeCatalogExportObservedOnceAtStartup": true,
+  "netplayEntryVisibleInSettings": true,
+  "netplayActivityVisualVerified": false,
+  "twoDeviceNetplayVerified": false,
+  "nativeJniFixtureExecuted": false,
+  "platformArtworkBlankObserved": true,
+  "platformArtworkNote": "As celulas das plataformas apareceram azuis sem arte nas capturas; origem ainda nao determinada. Capas de jogos carregaram.",
+  "appDataCleared": false,
+  "serverChanged": false,
+  "promotedToStable": false,
+  "cleanup": {
+    "stayOnWhilePluggedInRestoredTo": 0,
+    "ownHudProbeFilesRemoved": true
+  }
+}
