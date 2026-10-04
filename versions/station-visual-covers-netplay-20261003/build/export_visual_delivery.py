@@ -30,12 +30,13 @@ for p in (ROOT/'netplay').iterdir():
     if p.is_file() and p.suffix in ('.py','.h','.xml','.json','.md','.java'):copy(p,OUT/'netplay'/p.name)
 for p in (ROOT/'netplay/build').glob('*.json'):copy(p,OUT/'evidence'/('netplay-'+p.name))
 tree(ROOT/'evidence',OUT/'evidence')
-for name in ['prepare_visual_metadata.py','audit_missing_synopses.py','prepare_console_assets.py','test_visual_metadata.py','test_station_info_layout.cpp','native-base-hashes.json','archived-apks.json','archived-visual-r1.json','build-result.json','BUILD-NOTICE.json','test_shader_angle.py']:
+for name in ['prepare_visual_metadata.py','audit_missing_synopses.py','prepare_console_assets.py','test_visual_metadata.py','test_station_info_layout.cpp','test_catalog_identity.cpp','native-base-hashes.json','archived-apks.json','archived-visual-r1.json','archived-controls-apk.json','build-result.json','BUILD-NOTICE.json','test_shader_angle.py']:
     if (ROOT/name).is_file():copy(ROOT/name,OUT/name)
 for name in ['prepare_visual_delivery.py','finalize_netplay_manifest.py','build_visual_delivery.py','export_visual_delivery.py','verify_visual_manifest.py']:
     copy(Path(__file__).resolve().parent/name,OUT/'build'/name)
 tree(ROOT/'assets/turbo-console',OUT/'assets/turbo-console')
 tree(ROOT/'assets/station-metadata',OUT/'assets/station-metadata')
+tree(ROOT/'server-inputs',OUT/'server-inputs',{'.tsv'})
 private=[]
 for name in sorted(EXCLUDED):
     p=ROOT/'native'/name

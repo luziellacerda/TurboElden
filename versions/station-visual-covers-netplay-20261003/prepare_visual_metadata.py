@@ -10,7 +10,9 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parent
 OLD = Path(r'E:\ESTUDO APK\work\native-carousel\implementation')
 THEME = Path(r'G:\TURBORAMA\RetroBat\emulationstation\.emulationstation\themes\TURBORAMAx')
-SERVER_MAP = Path(r'E:\ESTUDO APK\work\server-auth-handoff\Servidor-pix-implementar-faltas-20261002\docs\station-android\catalogo-candidato-cruzado-20261003.tsv')
+SERVER_MAP = ROOT/'server-inputs/catalogo-conciliado-jogos-capas-downloads-20261003.tsv'
+SERVER_COMMIT = '54bba11c52f35695fd47eabc7145f42af9990426'
+SERVER_MAP_SHA256 = '3542803f0887a3595bfcae6f2c1bd5e860b5ab81df32f308c2f3ac1fbd071f12'
 ROMS = Path(r'G:\TURBORAMA\RetroBat\roms')
 LABELS = {'snes':'Super Nintendo','snesbr':'Super Nintendo - BR','megadrive':'MegaDrive','megadrivebr':'MegaDrive - BR'}
 FIELDS = ('name','desc','genre','developer','publisher','players','releasedate','rating')
@@ -49,11 +51,12 @@ def main():
                 if text:ET.SubElement(target,field).text=text
         name=digest+'.xml';write_xml(xmlout/name,archive)
         inventory.append({'source':str(path),'status':'imported','sha256':digest,'asset':'station-metadata/xml/'+name,'games':len(games),'descriptions':sum(bool(clean(g.findtext('desc',''))) for g in games)})
-    rows=list(csv.DictReader(SERVER_MAP.open(encoding='utf-8'),delimiter='\t'))
+    assert sha(SERVER_MAP.read_bytes()) == SERVER_MAP_SHA256, 'Unreviewed production map'
+    rows=[r for r in csv.DictReader(SERVER_MAP.read_text('utf-8-sig').splitlines(),delimiter='\t') if r['catalogVisible']=='yes']
     seen=set(); exact=[]; missing=[]; byplatform=collections.Counter()
     for row in rows:
         identity=row['itemId'];platform=row['platform']; sourceplatform=row['sourcePlatform']
-        assert identity not in seen and identity.startswith('station_'),identity
+        assert identity not in seen and re.fullmatch(r'[A-Za-z0-9_-]{8,64}',identity),identity
         seen.add(identity)
         path=ROMS/sourceplatform/'gamelist.xml'
         games=parsed[str(path)]
@@ -95,7 +98,7 @@ def main():
     public=[{k:v for k,v in r.items() if k!='source'} for r in inventory if r['status']=='imported']
     write_json(assets/'xml-manifest.json',public)
     write_json(ROOT/'evidence/xml-source-inventory.json',inventory)
-    report={'serverMap':str(SERVER_MAP),'serverMapSha256':sha(SERVER_MAP.read_bytes()),'items':len(exact),
+    report={'serverCommit':SERVER_COMMIT,'serverMap':str(SERVER_MAP),'serverMapSha256':sha(SERVER_MAP.read_bytes()),'items':len(exact),
         'descriptions':len(exact)-len(missing),'missing':len(missing),'platforms':dict(byplatform),
         'descriptionsRestoredByExactLocalIdentity':restored,'supplementalSearchCounts':supplemental['counts'],
         'sourceFilesImported':len(public),'uniqueXmlAssets':len({r['sha256'] for r in public}),

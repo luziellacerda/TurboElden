@@ -1,0 +1,28 @@
+{
+  "r2InstalledAndHashVerified": true,
+  "r2Sha256": "31ab80ef2c77e9c5dff294d6f63807ab1e6d6cded81c2beec7aee171067f46d8",
+  "r3Installed": false,
+  "r3AwaitingUsb": true,
+  "sessionRestored": true,
+  "catalogNetworkItems": 1816,
+  "coversVisible": true,
+  "magazineShaderLinkedOnPhone": true,
+  "snesConsoleImageVisible": true,
+  "missingSynopsesIdentifiedInR2": true,
+  "phoneUsbLostBeforeR3": true,
+  "cleanupPending": {
+    "stayOnWhilePluggedIn": {
+      "temporary": 3,
+      "restore": 0
+    },
+    "ownedProbeDirectory": "/data/local/tmp/station-hud-lzgames-20261003",
+    "ownedProbeFiles": [
+      "station_native_load_probe",
+      "libsnes9x_explus.so",
+      "libmdemu_station.so"
+    ]
+  },
+  "gamesSavesLicensePreserved": true,
+  "phoneSpeedBenchmark": false,
+  "twoDeviceNetplayTested": false
+}

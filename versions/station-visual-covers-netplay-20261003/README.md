@@ -1,3 +1,7 @@
+# Estado atualizado: R3
+
+Leia primeiro [HANDOFF-R3.md](HANDOFF-R3.md). R2 foi instalado e a conferência detectou IDs incorretos de sinopses; R3 corrigido e testado no PC aguarda a reconexão USB. Os estados abaixo descrevem a montagem R2 histórica.
+
 # TurboStations — capas contínuas, sinopses, efeitos e Netplay
 
 Handoff técnico da entrega de 03/10/2026. Este documento descreve o aplicativo Android TurboStations e sua ligação com o canal Station. O serviço Turborama/Suite Windows não foi alterado.

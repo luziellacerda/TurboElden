@@ -1,3 +1,7 @@
+# Revisão R3 — sinopses conciliadas; instalação pendente USB
+
+Ler `versions/station-visual-covers-netplay-20261003/HANDOFF-R3.md`. R2 `31ab80ef` instalado/hash confirmado, sessão/capas/shader Android e foto SNES observados. Encontrado erro do app: mapa preliminar trocava741IDs preservados; R3 `8ece6384b83f565ec54615186a5940c6e5c47f79d4f03027332181799c4fb807` usa catálogo conciliado54bba11, todos1816casados exatamente;1804sinopses,12ausentes. Exportação TSV deixa de repetir por capa. Testes PC completos passaram; R3 NÃO instalado por USB desconectada. Não promover à estável. Reconectar, instalar por atualização, verificar sinopse/retorno e restaurar stay_on_while_plugged_in=0; probes próprios listados no recibo. Preservar dados, licença, jogos, saves e tag congelada. Estados R2 abaixo históricos.
+
 # Candidato R2 — capas contínuas, sinopses, LED e Netplay, 03/10/2026
 
 **Conferência posterior no PC concluída:** ler `versions/station-visual-covers-netplay-20261003/pc-validation/README.md`. 384 testes Java, 10 repetições de41 corridas, carga4096/cache4096 (4 simultâneos,0 erros,0 requisições extras no cache,0 workers após fechar),18 C++,13 metadados,98 layout,26 netplay,GLSL ANGLE e integridade integral APK passaram. DEX reconstruídos idênticos; APK31ab80ef inalterado. Nenhum ADB/produção usado neste turno. Teste no telefone adiado por pedido do mantenedor; não chamar estável. Correção apenas no lançador de teste e exportação do teste Netplay, documentadas no recibo.

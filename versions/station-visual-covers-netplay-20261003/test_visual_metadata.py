@@ -11,12 +11,30 @@ class MetadataTests(unittest.TestCase):
  def test_identity_binary_search_order(self):
   ids=[r['itemId'] for r in self.rows]
   self.assertEqual(ids,sorted(ids));self.assertEqual(len(set(ids)),len(ids))
-  self.assertTrue(all(i.startswith('station_') for i in ids))
+  self.assertTrue(all(re.fullmatch(r'[A-Za-z0-9_-]{8,64}',i) for i in ids))
  def test_source_exact_name_and_ordinal(self):
   roots={k:ET.parse(Path(r'G:\TURBORAMA\RetroBat\roms')/k/'gamelist.xml').getroot().findall('game') for k in ['snes','megadrive']}
   for r in self.rows:
    g=roots[r['sourcePlatform']][r['sourceOrdinal']-1]
    self.assertEqual(g.findtext('name'),r['name'])
+ def test_published_production_identity(self):
+  path=ROOT/'server-inputs/catalogo-conciliado-jogos-capas-downloads-20261003.tsv'
+  self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),'3542803f0887a3595bfcae6f2c1bd5e860b5ab81df32f308c2f3ac1fbd071f12')
+  rows=[r for r in csv.DictReader(path.read_text('utf-8-sig').splitlines(),delimiter='\t') if r['catalogVisible']=='yes']
+  expected={(r['itemId'],r['platform'],r['name'],r['sourcePlatform'],int(r['sourceXmlEntry'])) for r in rows}
+  actual={(r['itemId'],r['platform'],r['name'],r['sourcePlatform'],r['sourceOrdinal']) for r in self.rows}
+  self.assertEqual(actual,expected)
+ def test_preserved_id_from_phone(self):
+  byid={r['itemId']:r for r in self.rows}
+  row=byid['bba0ae28b358b6581357f6dff15799af']
+  self.assertEqual(row['name'],'Clay Fighter');self.assertTrue(row['description'])
+  row=byid['826da6daebe9edbebffb3721f83abf12']
+  self.assertEqual(row['name'],'Battletoads in Battlemaniacs (USA)')
+  self.assertFalse(row['description'])
+ def test_diagnostic_export_only_when_identity_changes(self):
+  s=(ROOT/'native/native_carousel.cpp').read_text('utf8')
+  self.assertIn('if(identityChanged)exportCatalog(real);',s)
+  self.assertLess(s.index('bool identityChanged='),s.index('syncedRevision=rev;'))
  def test_missing_explicit(self):
   missing=json.loads((ROOT/'assets/station-metadata/missing-station-synopses.json').read_text('utf8'))
   self.assertEqual(len(missing),12);self.assertTrue(all(not r['description'] for r in missing))

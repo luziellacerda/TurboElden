@@ -1,0 +1,12 @@
+{
+  "baseline": "31ab80ef2c77e9c5dff294d6f63807ab1e6d6cded81c2beec7aee171067f46d8",
+  "candidate": "8ece6384b83f565ec54615186a5940c6e5c47f79d4f03027332181799c4fb807",
+  "changedEntries": [
+    "assets/station-metadata/missing-station-synopses.json",
+    "assets/station-metadata/station-synopses.json",
+    "assets/station-visual-covers/BUILD-NOTICE.json",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "allOtherEntriesIdentical": true,
+  "addedOrRemoved": 0
+}

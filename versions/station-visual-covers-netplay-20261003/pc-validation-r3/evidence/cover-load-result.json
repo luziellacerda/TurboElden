@@ -1,0 +1,13 @@
+{
+  "androidPerformanceClaim": false,
+  "warmCacheItems": 4096,
+  "coldCompleted": 4096,
+  "peakConcurrent": 4,
+  "warmMilliseconds": 1993.6403,
+  "warmExtraHttp": 0,
+  "workersAfterClose": 0,
+  "transport": "synthetic local signed fixture, eight-byte image headers; no real network or image decode",
+  "coldMilliseconds": 8263.0747,
+  "items": 4096,
+  "errors": 0
+}

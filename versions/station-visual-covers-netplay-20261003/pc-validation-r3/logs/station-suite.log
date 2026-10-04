@@ -1,0 +1,12 @@
+PASS 19 file safety checks
+PASS 75 protocol and catalog checks
+PASS 36 cache and session checks
+PASS 25 frontend integration checks
+PASS 61 descriptor and installation checks
+PASS 86 server-closure checks (synthetic signed data, no production claim)
+PASS 25 fresh-install storage bootstrap checks
+PASS 41 cover concurrency, cache, session, lifecycle and backoff checks
+PASS 16 TLS response reuse and exact-artifact-first checks
+PASS Android API 34 source compilation (Java 8 bytecode)
+Note: E:\ESTUDO APK\work\station-visual-covers-20261003\pc-validation-20261003-221922\station\src\java\org\emulationstation\frontend\auth\LoginActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.

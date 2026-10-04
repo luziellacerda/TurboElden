@@ -11,6 +11,7 @@ void* memcpy(void*,const void*,U); void* memset(void*,int,U); U strlen(const cha
 int mkdir(const char*,unsigned); void* fopen(const char*,const char*); U fwrite(const void*,U,U,void*); int fclose(void*); U fread(void*,U,U,void*);
 }
 #include "native_policy.h"
+#include "native_catalog_identity.h"
 #include "systems.h"
 #include "relocations.h"
 #include "local_game_covers.h"
@@ -115,6 +116,7 @@ static void syncModel(void*p){
  if(at<int>(real,0x50)!=2)return;
  int rev=at<int>(real,0xa8);U begin=at<U>(real,0x88),size=at<U>(real,0x90)-begin;
  if(rev==syncedRevision&&begin==syncedItems&&size==syncedSize)return;
+ bool identityChanged=catalogIdentityChanged(syncedRevision,syncedItems,syncedSize,begin,size);
  syncedRevision=rev;syncedItems=begin;syncedSize=size;
  // Local covers exist before catalog startup. Never change IDs, download paths, or saves.
  for(B*it=at<B*>(real,0x88);it<at<B*>(real,0x90);it+=0xe8){
@@ -125,7 +127,7 @@ static void syncModel(void*p){
   }
  }
 
- exportCatalog(real);
+ if(identityChanged)exportCatalog(real);
  // Only entries with no artwork URL receive system artwork. Real game cover URLs/cache are preserved.
  int defaults=0;
  for(B*it=at<B*>(real,0x88);it<at<B*>(real,0x90);it+=0xe8){
