@@ -11,8 +11,8 @@
   },
   "README.md": {
     "normalization": "text-lf",
-    "bytes": 9004,
-    "sha256": "43e1922ff9ed427d121426cfbe1734b590e1ddad6d039647059696112d562a9a"
+    "bytes": 10207,
+    "sha256": "39eecdeda13df2b18700de39b19d7a7495d88dba36908be04e273dc0cae2f1d3"
   },
   "REPRODUCAO-ONLINE.md": {
     "normalization": "text-lf",
@@ -89,6 +89,11 @@
     "bytes": 19939,
     "sha256": "8f3b07e47850dc51ea7c1de04f1139c8f18d56ec81fb61b4923c376c4c21e316"
   },
+  "evidence/online-public-routes-20261004.json": {
+    "normalization": "text-lf",
+    "bytes": 514,
+    "sha256": "bdde8fa69963aeaf9e1603724f010dbeb376ecd8bc26075a14e919720bdec893"
+  },
   "evidence/online-signature.log": {
     "normalization": "text-lf",
     "bytes": 307,
@@ -114,10 +119,25 @@
     "bytes": 311,
     "sha256": "23d0f63077fb6599460a205a82c08b01ea750a704cd21927aef7d84fad9491d8"
   },
+  "evidence/r7-installed.json": {
+    "normalization": "text-lf",
+    "bytes": 389,
+    "sha256": "04353b4961e10515a5f02b2991522b12069d3855d225a93385a9da44cd5dd72d"
+  },
+  "evidence/r7-rooms-runtime.json": {
+    "normalization": "text-lf",
+    "bytes": 1206,
+    "sha256": "708838dc323c5e15d3caa4c3bf76ceeaaaa54742abe6722523d7bfe85680bb52"
+  },
   "evidence/retroarch-patch-replay.json": {
     "normalization": "text-lf",
     "bytes": 473,
     "sha256": "bd702a7cf79ed92b6f50ea527d0763dc7f037f37ebd60c267f00bce67fe1091b"
+  },
+  "evidence/server-publish-receipt.json": {
+    "normalization": "text-lf",
+    "bytes": 2406,
+    "sha256": "e496af955e4ce051337cd0864e2e2639a34cfc98a605b99fab3c9134f6c7d8d8"
   },
   "evidence/shader-angle-validation.json": {
     "normalization": "text-lf",

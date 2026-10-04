@@ -1,6 +1,14 @@
 # TurboStations — candidato R7, vídeo e salas online, 04/10/2026
 
-## Estado comprovado
+## Atualização: instalado e tela das salas conferida
+
+R7 foi instalado por atualização em 04/10/2026, SHA256 do APK no aparelho conferido. Botão nativo **Jogar online** abriu StationRoomsActivity; apelido, jogadores, salas e chat apareceram. **Voltar** retornou ao catálogo sem login. Ajuste temporário de tela restaurado para 0, XML de inspeção removido. Evidências: `evidence/r7-installed.json` e `evidence/r7-rooms-runtime.json`.
+
+A chamada real do telefone recebeu **404**, correlação `060358fe191f4bd0af58b6ada9d45d75`. As duas rotas públicas também responderam404 sem autenticação. O operador do servidor aplicará o handoff do Git, conforme resposta do mantenedor. **Criar sala, convites, entrega de chat e partida ainda não foram verificados no serviço vivo.** Não chamar o candidato de estável.
+
+A observação das plataformas confirmou que as células ainda ficam azuis; o candidato R5/R7 não deve ser descrito como correção visual comprovada. As capas dos jogos e o botão novo apareceram na lista SNES. A contagem de instalados apareceu0 nessa lista; não foi auditada a origem nesta conferência e nenhum jogo foi apagado.
+
+## Estado registrado na compilação (anterior à instalação)
 
 APK: `E:\ESTUDO APK\work\station-netplay-20261004\TurboStations-Online-Candidato-R7-20261004.apk`.
 SHA256: `827723436ac618d3b1745a873813c7781ff10e043abc6033de416c01d774703d`.
