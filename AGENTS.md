@@ -1,3 +1,7 @@
+# R5 preparado — vídeos e SNES roxo, 04/10/2026
+
+Ler `versions/station-video-navigation-20261004/README.md`. APK `afa300d23dc57bb5b1973530dc83371fc892d6c37cf11ecc1750aed8ff22415b` compilado/assinado, não instalado: USB ausente. R4 segue instalado. R5 remove espera80ms, conserva prévias nas listas, usa quadro inicial real44vídeos e cacheGPU8texturas/8.294.400bytes, compositor próprio, SNESroxo e corrige texto solto da rede.109 verificações PC e shader/pixel ANGLE; Android/consumo pendentes. Não chamar estável. Netplay completo e servidor social ainda em implementação separada; não estão nesse APK. Fontes/temporários E:\ESTUDO APK\work\station-netplay-20261004. Preservar saves, sessão, assinatura, motores locais, tags estáveis e produção. Estados abaixo históricos.
+
 # Estado atual em 04/10/2026 — R4 instalado
 
 Ler a conferencia Android no HANDOFF-R4.md e device-evidence/r4-runtime.json. APK17e9b87b instalado/hash conferido; sessao1816/8instalados e sinopses Clay Fighter/Cutthroat/AddamsBR observadas. Limite real: arte das celulas de plataformas azul sem imagem, origem pendente. Netplay menu original ainda sem partida comprovada. Ajuste tela restaurado0 e tres probes HUD removidos. Proxima solicitacao Netplay com alternativas comerciais, partidas diretas, servidor proprio para salas/presenca/chat/convites; LED SNES roxo e botao Jogar online. Nao afirmar isso implementado no R4. Manter dados, assinatura, jogos, saves, branch/tag estavel e servidor produtivo. Blocos seguintes historicos.

@@ -1,0 +1,359 @@
+{
+  "sourceApk": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\TurboStations-Capas4-Sinopses-LED-Netplay-R4-20261003.apk",
+  "previews": [
+    {
+      "asset": "turbo-system-videos/720-3ds.mp4",
+      "videoSha256": "c333cbde9bfe2fbc6831af7aa3c65aeaaef2af3b6a07b95239803ec83d0e3b82",
+      "previewSha256": "74cb5fc097e8f42ab83a246ba5590e87b3439b6f58b2a9b2b25b54defd80b89a",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-psx.mp4",
+      "videoSha256": "f8610c8c499dec1ffe3dc730d6c0d82962c3e45ef50e625843bac14c0a6691fb",
+      "previewSha256": "4ee12ef103a259f1feabbabcc6bc89cc5f87fc3b9385c072c934b6ac0a9dd801",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-ps2.mp4",
+      "videoSha256": "abb4020a3689a1c7b98831126a9eca6328d417815275671587817075c2017bff",
+      "previewSha256": "2ed6211fc8a7cc3f51a0475cce5ff8f9fec1591d5f44e72b2447d3c800032107",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-ps2br.mp4",
+      "videoSha256": "eee10e1e0ff20330990b818360044690521556eecddd6a0a3bb87609273430e8",
+      "previewSha256": "a0943bdf93c6075e4d4e3aa8d5893817584bab0f6901472fb41507410bf32bea",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-psp.mp4",
+      "videoSha256": "a9a5b43a24b5d22dd97597f4579ac719f7def03d628ef580eea54f2b771dd73a",
+      "previewSha256": "1a5729aa232cab160b3a2b55b3ff663fa9de2ea2f78a5571360089d391bfb700",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-psvita.mp4",
+      "videoSha256": "c49e07ae7cc136c5742ffdafadae9919f49f79b1d9d643677c04533f00329b8a",
+      "previewSha256": "d04a75bd3d55d2d7fd0e0854c239c934ceaf475aff97d57c75b8c56b99684ef0",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-switch.mp4",
+      "videoSha256": "0d1a2984414575723af6192f018554f8d2ecd0a308c3fe860f9a40ee49c127e9",
+      "previewSha256": "1f159ae52a0da6cba044f5f73d3cd4d1820fbb0f2410ae10017767230639ac34",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-wii.mp4",
+      "videoSha256": "403afe86a4778281651ed7db43106e1d1acc9444b1cf4b5c8a0ecc937bf86705",
+      "previewSha256": "ffe68ec7079bffac09592374b4906d6772107d7bb0289def7deab5392e73eed4",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-wiiu.mp4",
+      "videoSha256": "3656b0bef4a6da6fbe835d6ce0de4717e2b06259e4c11b8b36adea3c8fe996e3",
+      "previewSha256": "201ac88b21e3644b5eaa52b3a0062a2026484e4f6b37f2dc3d6a4c32adf8d1ad",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-arcade.mp4",
+      "videoSha256": "3e984084c7cf7784073ee52012a93e279c32b2d7f48f2cd9f8fbc97c7a8be9ae",
+      "previewSha256": "288b874361b1e70ab46772911ac4c2b4f5acb96f65b1340865cdc2ddd4bac774",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-atari2600.mp4",
+      "videoSha256": "e4c790290f30c4276bc34966d5e401425baf1337b10f7d43a258d2310a2eb1dc",
+      "previewSha256": "dd06819df5a514bf958fc3a8b55ca443c631b2a30b0f4ec84cb0d9e9d91dd29c",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-atomiswave.mp4",
+      "videoSha256": "8a4d669324841b909642a57c5df488dc039d0c7bc4c8a9e78641a03f6a1b6bab",
+      "previewSha256": "49ba8273c765c70a9afca411c42eb77a8beed48f8b5a149f2496d203574c80de",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-cps1.mp4",
+      "videoSha256": "4319c880f245f716dfee4ac7adf4baba59102046e205aeae52d65b2d1257a999",
+      "previewSha256": "07a56ab68b15cd32d0111b3cb5df678bb5106b33f0048bb34ca8656c2838d272",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-cps2.mp4",
+      "videoSha256": "7a34dcd02ef9a617fd929e4b142b0a6ea63d60806a92d6eabfbd26007dc07e80",
+      "previewSha256": "b80c682a0d7a89ed3f3249bb2f27e7e45f8d75580ab7cd382b61043650db6540",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-cps3.mp4",
+      "videoSha256": "0758878fb8285ad956d2a2049c4a5ee68d5df5d9fdfa53814225df701a46ee03",
+      "previewSha256": "abc4624aa9e0974c767cc3e0eb193dd5cfe17f1da51073ca75a422baa91b538b",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-dreamcast.mp4",
+      "videoSha256": "b7b0c20a07e45212b413aee7e3b05601267759dd9709cf157ecc6b09053294e9",
+      "previewSha256": "b24e33653263d1a63c8aeaa62877e032c7f832d8f5a756a7eff92dd10b129f13",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-gba.mp4",
+      "videoSha256": "dc641ebd5e29d8a7a4c586bdb383a6486d280324706a21ec0c1599fbeba742f6",
+      "previewSha256": "b685de8d4f44b245f4e52af5c76e7de25de626b3e6925cc7daab472f751b1369",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-mame.mp4",
+      "videoSha256": "97f9d7ceb609c8e0f27adbc56e4712e2b57ad9bb1b5138a8345b2fe291392811",
+      "previewSha256": "94039041ada85cdc5c481cfc77ad70faf047fb7fd907c02d9eedcb35c24c7d93",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-mastersystem.mp4",
+      "videoSha256": "f92ce7c9010a8bc7516c298d7b32fe2be3ab3b5c9f9d89f20d82e058966341e1",
+      "previewSha256": "82680f3ffdbf2e8698b4feaf63fb7d4b9428ef080553d6f93213952e7d0e1567",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-megadrive.mp4",
+      "videoSha256": "4edbe37e9dabb9a6a1a50bdb6e546a3fa118b8c7884ae3e23c7c6365b8350a50",
+      "previewSha256": "c1cf0ee28ef7e4d91217331091aceb156f113ad303443b5bc3f8ef45c38dc62e",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-megadrivebr.mp4",
+      "videoSha256": "6e0396b5857dad1eb286d996654b191bf1bea76ea48c658a980982d377969cd2",
+      "previewSha256": "7bf124457f7b99b4e10248fe8500de9f3392be0c1713b5f39a9d826124bd6e41",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-model2.mp4",
+      "videoSha256": "7476957403040357b54a171c3685d82f50a6c12dc621b607e2cb2c0530245db7",
+      "previewSha256": "9a406ec51a49158c6aa6cb1bdcf1039dbdf35db211e81b88022274a38e662fde",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-n64.mp4",
+      "videoSha256": "c2bcb04fa32c506dc8b9a65e19cd94ba27405d5e9cf3ff5be2fd9139b37baff4",
+      "previewSha256": "e8a2602d21ea99db2c1b32b86ca9d153bb4ea71d7f3b1b3683560320c7c83c46",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-n64br.mp4",
+      "videoSha256": "d8d511967a5331f66b8a54db3bf136d42ffc1db6f7f755e172b31f718de0b15d",
+      "previewSha256": "63f55028ce15ff4dce42aa38d04ed904b65227c5da3b26ce4a70975f1517312d",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-nds.mp4",
+      "videoSha256": "6cd21c0fd582f2147d629ff83c26c106bd9c751cfe038d31d8deba2cde266e49",
+      "previewSha256": "fea871029289b1d7d26983dfd9a8bdcb9a10122c668bfb189530a1d6c8d4eed1",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-neogeo.mp4",
+      "videoSha256": "a1ce617a0ef50dc15d24bcb24b09a710d0a4b37f4b59fb48c8e5d4f1f65c1278",
+      "previewSha256": "cab2aebe0db609073a0c1f57a6e61cd5fb84df825a25a80b1fd9fbabb9590e5c",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-neogeocd.mp4",
+      "videoSha256": "e525f54c5b0b34cde5cedc8aa87dc2ccf9c239e54fee2694635ea10c79be6aac",
+      "previewSha256": "605a68d47ff0208dac267d7ad58bf0530d05353bedddbc29431176a03f97d6d0",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-nes.mp4",
+      "videoSha256": "6af3f66027677870d6478431d7e3f0f05d748e7dbaa7e5efd5f861a7b06c5ceb",
+      "previewSha256": "8858014d1d7d87085f2f8c390c78069a201182c9abee37ea11f5725fda2a01d0",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-sega32x.mp4",
+      "videoSha256": "799dcf849665b6b41ae68ad526abb66194d8cfd1bb912d309142d58492eca796",
+      "previewSha256": "5c26931fa31c0b537c051a0f05b8361a63c94af06bc37f09a37a05826ddb35a3",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-snes.mp4",
+      "videoSha256": "3e220ad375892cd1a3c0f4ac428f876a56e22c300da79c0b507652b40c150f37",
+      "previewSha256": "b44112e9b5f3e4827b5c0297281b7ddcac0bafbb661182728538ccc7464e8406",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-snesbr.mp4",
+      "videoSha256": "3d455261a95d835d1838f3380a476a168d42a98fa0354c83a04d8ab26cb4f8cd",
+      "previewSha256": "3c7e94da59729c12ce43c418c011fc21b1dd09b397a41e517ec64e20df0dcff0",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-fbneo.mp4",
+      "videoSha256": "f1b4a22b0f106c2e9493b4da841db96640936d2ec5ecefaa1a752d94962c38ab",
+      "previewSha256": "4ef5cfdc071812295ba5c3fb4569fbc67a01cd04912d4fdab05f0f746b907796",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-gc.mp4",
+      "videoSha256": "1cde373ffc27a3873f5d530b14c9bfb7cff2852a0cf1e4a5969178faa30a4301",
+      "previewSha256": "58cd08f8d86b1eb0280214f495eccdbceedc90341bca46b68973cf2d0586d57b",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-xbox360.mp4",
+      "videoSha256": "6f5f2387a9af050497892fb5dae10f8dc64d607bf36e7e6457dc31759a1a2fc4",
+      "previewSha256": "d551815796a06f0c210f14dc88bd5c5f47ddf70407d7dbbb3f5ff23f098a02e0",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-jaguar.mp4",
+      "videoSha256": "563d9630efbe1dcec0b48adaca2f1707bc6a8349d4587c5f13b062c8606281c4",
+      "previewSha256": "bf79714f8678cb35d47f5739095707a99680e8b72895586fbd99e26b29d4acab",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-gbc.mp4",
+      "videoSha256": "86ed588f5f28be2bfa710f52d099209bd56ac3fdadbd735d3a9dea9e2a7258bc",
+      "previewSha256": "d03b9bea72f9523c39d5f51d510d9af4f3f35c784a9aedbec674aca8332de9c3",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-pcengine.mp4",
+      "videoSha256": "707026436bc588df3381256f78cab0228b66bc64866fbd564d296a3c16955996",
+      "previewSha256": "7e9ccec06cc3084daabd98cb2d92269e0cca46783d60269b09f2464654cadd46",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-pcenginecd.mp4",
+      "videoSha256": "2d133f116d013f6fe2cbcbf939fe33da8998c7d84884ed0d4c38fbcd8dfc0e5b",
+      "previewSha256": "8ac199a71a447df588b55594d843db3343318518e30cc02c692593b8367f46ca",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-saturn.mp4",
+      "videoSha256": "cc4284cee1be1bd5c44bcd29df2950207c47dab3009c5c71da96a076ac0646ea",
+      "previewSha256": "48fd5f01727fe30e8591ce488ce28a167c1e5f5d4ac3d998822b27942213fa01",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-xbox.mp4",
+      "videoSha256": "dd05f01c66e09d9a31318d8176256f738147d008847315d382026362393d3a2d",
+      "previewSha256": "e7e24ffcddf5ea55c762fc9f5719f0d03bcdb3a464442c7f88d544e03e0711bf",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-pspbr.mp4",
+      "videoSha256": "bc5bcbc12a93862d3d35658c661d0b18112b32937bfca4be712aa061d0d5deea",
+      "previewSha256": "2024f14d67a409fc8ac95c483fa58369d0d46c0121bd81c59cf4f096a81af0c9",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-naomi.mp4",
+      "videoSha256": "188c9174fdbc6f402b68be2ca9ccbd2c546b11fcecff8ab669f12220df55176f",
+      "previewSha256": "57786cc618000ef72a66245d0069426dd51013c8041d6c4a29dab54edb4f5b2a",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-naomi2.mp4",
+      "videoSha256": "f65fb5a7f236cec6db4e75dc785bd509ba1bcd85d3454df0400698394b09185e",
+      "previewSha256": "a50327319f72162069cf6d07b043de1dcad0a6724a2b70c5e964d55ac694c0d4",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    },
+    {
+      "asset": "turbo-system-videos/720-gamegear.mp4",
+      "videoSha256": "f62249c93550a06ae88af047563602e89e9faea9a48bc2599bb6f5ac1f58dd16",
+      "previewSha256": "7f19ebfda3430e4b3311d186c4e25972c5e5f9956bb1e79cebc9b4b0a91fea94",
+      "width": 720,
+      "height": 720,
+      "bytes": 1036800
+    }
+  ],
+  "maximumGpuPreviewBytes": 8294400,
+  "allVideoPayloadsUnchanged": true
+}

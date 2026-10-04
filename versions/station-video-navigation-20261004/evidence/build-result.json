@@ -1,0 +1,24 @@
+{
+  "base": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\TurboStations-Capas4-Sinopses-LED-Netplay-R4-20261003.apk",
+  "baseSha256": "17e9b87bf268c2349874d1767d5ab315862eb09fb2705f9b79a7e307c0c63c77",
+  "utc": "2026-10-04T12:11:49.260568+00:00",
+  "videoStartDelayMs": 0,
+  "previewTexturesMax": 8,
+  "previewGpuBytesMax": 8294400,
+  "videoFrameSources": 44,
+  "snesLed": "A855F7FF",
+  "engineChanges": false,
+  "serverChanges": false,
+  "installed": false,
+  "phonePerformanceVerified": false,
+  "netplayNewEnginesIntegrated": false,
+  "stable": false,
+  "apk": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\TurboStations-Videos-Sem-Espera-SNES-Roxo-R5-20261004.apk",
+  "sha256": "afa300d23dc57bb5b1973530dc83371fc892d6c37cf11ecc1750aed8ff22415b",
+  "bytes": 1968122300,
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 11048,
+  "fullPayloadIntegrityPassed": true
+}
