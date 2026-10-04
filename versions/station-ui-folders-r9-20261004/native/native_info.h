@@ -20,7 +20,7 @@ static void*infoTitle;static void*infoDescription;
 static const char*infoConsoleKey;static StationInfoLayout infoGameLayout;
 static void updateSystemInfo(void*p){
  static void*owner;void*&title=infoTitle;void*&description=infoDescription;static int oldIndex=-2;static bool wasSystems,wasFolder;
- static int oldRevision;static U oldMappedIndex=~(U)0;static float oldW,oldH;static const GameInfo*gameInfo;static unsigned pageStarted;static int oldPage=-1;
+ static int oldRevision;static U oldMappedIndex=~(U)0;static float oldW,oldH;static const GameInfo*gameInfo;static unsigned pageStarted;static int oldPage=-1;static char serverPages[8032]={};static int serverPageCount;
  float w=at<float>(p,0x54),h=at<float>(p,0x58);unsigned tick=fn<unsigned(*)()>(0x39e240)();
  if(owner!=p){owner=p;title=createInfoText(p,0xF3FFF6ff);description=createInfoText(p,0xD1DED5ff);oldIndex=-2;}
  int cursor=at<int>(p,0xf0),rev=at<int>(systemsMode?(folderMode?(void*)folderFacade:(void*)facade):fn<void*(*)()>(0x1887dc)(),0xa8);
@@ -30,21 +30,22 @@ static void updateSystemInfo(void*p){
  // Filtering may keep cursor=0 while selecting a completely different game.
  bool changed=oldIndex!=cursor||oldMappedIndex!=index||wasSystems!=systemsMode||wasFolder!=folderMode||oldRevision!=rev||oldW!=w||oldH!=h;
  if(!changed){
-  if(systemsMode||!gameInfo||gameInfo->pageCount<2)return;
-  int page=((tick-pageStarted)/9500)%gameInfo->pageCount;if(page==oldPage)return;
+  int count=serverPageCount?serverPageCount:(gameInfo?gameInfo->pageCount:0);
+  if(folderMode||systemsMode||count<2)return;
+  int page=((tick-pageStarted)/9500)%count;if(page==oldPage)return;
  }else{oldPage=-1;}
  oldIndex=cursor;oldMappedIndex=index;wasSystems=systemsMode;wasFolder=folderMode;oldRevision=rev;oldW=w;oldH=h;
  fn<void(*)(void*,bool)>(0x277228)(title,valid);fn<void(*)(void*,bool)>(0x277228)(description,valid);
  if(!valid){infoConsoleKey=nullptr;return;}
  const char*heading="";const char*body="";char pageText[2048]={};
  if(folderMode){
-  gameInfo=nullptr;infoConsoleKey=nullptr;if(index>=(U)folderCount)return;
+  gameInfo=nullptr;serverPageCount=0;serverPages[0]=0;infoConsoleKey=nullptr;if(index>=(U)folderCount)return;
   heading=strData(folderItems+index*0xe8+0x18);
   char amount[24];folderNumber(amount,folderMeta[index].count);
   U n=0;const char*parts[]={folderPlatform,"\n",*folderPath?folderPath:"Todas as subpastas","\n\n",amount," jogos\nAbra para ver os jogos desta seleção."};
   for(int i=0;i<7;i++)for(const char*t=parts[i];*t&&n<sizeof(pageText)-1;t++)pageText[n++]=*t;body=pageText;
  }else if(systemsMode){
-  gameInfo=nullptr;
+  gameInfo=nullptr;serverPageCount=0;serverPages[0]=0;
   infoConsoleKey=nullptr;
   if(index>=(U)systemCount)return;
   const char*key=strData(items+index*0xe8+0x60);const SystemInfo*info=nullptr;
@@ -55,8 +56,14 @@ static void updateSystemInfo(void*p){
   void*catalog=fn<void*(*)()>(0x1887dc)();B*item=at<B*>(catalog,0x88)+index*0xe8;
   if(item>=at<B*>(catalog,0x90))return;
   const char*key=strData(item+0x60),*id=strData(item);heading=strData(item+0x18);
+  const char*serverDescription=strData(item+0x30);
   infoConsoleKey=key;
   if(changed){
+   if(strcmp(serverPages,serverDescription)!=0){
+    unsigned n=0;while(serverDescription[n]&&n<sizeof(serverPages)-1){serverPages[n]=serverDescription[n];n++;}serverPages[n]=0;
+    serverPageCount=n?1:0;for(unsigned i=0;i<n;i++)if(serverPages[i]=='\f')serverPageCount++;
+    pageStarted=tick;oldPage=-1;
+   }
    const GameInfo*nextInfo=findStationGameInfo(key,id);
    if(!nextInfo&&!starts(id,"station_"))for(int i=0;i<NGAMEINFOS;i++)if(strcmp(gameInfos[i].system,key)==0&&strcmp(gameInfos[i].id,id)==0){nextInfo=&gameInfos[i];break;}
    // Cover batches change the catalog revision while this game stays selected.
@@ -65,7 +72,11 @@ static void updateSystemInfo(void*p){
    __android_log_print(4,"TurboCarousel","GAMEINFO filter=%s; id=%s; name=%s; found=%d",key,id,heading,gameInfo!=nullptr);
   }
   body="Sinopse ainda não localizada para esta edição.";
-  if(gameInfo){
+  if(serverPageCount){
+   oldPage=((tick-pageStarted)/9500)%serverPageCount;const char*text=serverPages;
+   for(int page=0;page<oldPage;page++){while(*text&&*text!='\f')text++;if(*text)text++;}
+   int n=0;while(*text&&*text!='\f'&&n<(int)sizeof(pageText)-1)pageText[n++]=*text++;body=pageText;
+  }else if(gameInfo){
    oldPage=((tick-pageStarted)/9500)%gameInfo->pageCount;const char*text=gameInfo->pages;
    for(int page=0;page<oldPage;page++){while(*text&&*text!='\f')text++;if(*text)text++;}
    int n=0;while(*text&&*text!='\f'&&n<(int)sizeof(pageText)-1)pageText[n++]=*text++;body=pageText;

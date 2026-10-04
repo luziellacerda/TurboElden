@@ -1,7 +1,7 @@
 {
   "androidSourceCompile": "API36 Java8",
   "nativeFrontend": "arm64 Android26, static libc++, 16KiB ELF pages, no undefined symbols",
-  "rendererSyntax": "Android26 R8 overlays plus changed native_info; fixture image headers only; no APK binary",
+  "rendererSyntax": "R9 renderer plus server synopsis, Android26; fixture image headers only",
   "tests": {
     "protocol": 75,
     "coordinator": 25,
@@ -9,11 +9,15 @@
     "coverConcurrency": 41,
     "TLSAndArtifactReuse": 16,
     "atomicCoverPublication": 180,
-    "automaticCatalog": 6
+    "automaticCatalog": 6,
+    "folderMetadata": 29
   },
   "nativePaging": "UTF8 and word boundaries passed",
   "overlay": "SHA guards, backup and preservation passed",
   "apkSigned": false,
   "installed": false,
-  "realN64GameplayVerified": false
+  "realN64GameplayVerified": false,
+  "nativeFolderCollections": 36,
+  "nativeFolderNavigation": 429,
+  "base": "a325e69"
 }

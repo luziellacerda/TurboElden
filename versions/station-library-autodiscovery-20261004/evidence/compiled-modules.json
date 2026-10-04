@@ -4,16 +4,16 @@
   "androidGameplayVerified": false,
   "files": {
     "station-client.jar": {
-      "bytes": 150010,
-      "sha256": "93f1ff6846d8c4ef243a1a9740bfe22964ebadca5481297a3bb00ec147d106b3"
+      "bytes": 150668,
+      "sha256": "f0e6b6a08a9a49c17e1222c1a9f898db1514d8ea15a6615994d60c866f03d58a"
     },
     "dex/classes.dex": {
-      "bytes": 148480,
-      "sha256": "d7eda0008fc8925b4079be9a15de13d9882d2cfaba7928e8f193c2c36d32786f"
+      "bytes": 149424,
+      "sha256": "b401d13ddb0532b45c8853dba803531cc19126a359094ab869d28e881e20666a"
     },
     "libstation_frontend.so": {
-      "bytes": 646584,
-      "sha256": "83e4f7fc2b065d0a98a2b039e392c931e6c84e1c0d89105fcafdcbe8fc5e881a"
+      "bytes": 658248,
+      "sha256": "6c8564b4e614813b0373cebbc0f91be44ada3eaab362624b7c7d09794bda88ca"
     }
   }
 }

@@ -1,6 +1,12 @@
-# N64 e biblioteca automática — fontes entregues em04/10/2026
+# Estado vigente — N64, subpastas e biblioteca automática, 04/10/2026
 
-Ler `versions/station-library-autodiscovery-20261004/README.md`. Servidor77d8d54 publicado, catálogo7 com1.973visíveis/157N64; capas157conferidasHTTPS4workers. Cliente agora lê metadata assinada, consulta novas revisões emforeground sem republicar revisão igual, mantém cache/leases, JNI ABI0xe8 e dá prioridade à sinopse do servidor. Fonte baseada emebd1199 preservando R8; overlay8arquivos comguardasSHA/backup, builder portátil e404checksJava mais paginaçãoC++/JNI compilados. **Não há APK novo assinado/instalado; R8 segue último instalado e R9 candidato.** Não alegar gameplayN64/P2P no Android; não substituir assinatura/motores/saves. PróximobuildcanônicoE deve incorporar fontes no work root R8 existente, substituir classes28/libstation_frontend/libturbo_carousel, preservar classes35salasR8/entradasrestantes e publicarrecibo. Histórico abaixo.
+Leia primeiro `versions/station-library-autodiscovery-20261004/README.md`. Servidor publicado: fonte `931030bba25ca8a783f096b72dcecd26a7b49387`, catálogo **8 / 1.973 jogos visíveis / 157 N64**, 255 IDs ocultos e 1.957 sinopses; 16 edições sem fonte. `folderPath` está publicado nos dois contratos do catálogo, com 313 jogos em subpastas. Timer de importação por minuto e reload da API a cada 10 segundos ativos. Capas N64 exatas da revista, compiladas em 480×720, conferidas por HTTPS com quatro workers.
+
+A fonte R9 `a325e69` foi conciliada com a leitura de metadata assinada e consulta automática em primeiro plano, mantendo cache, leases, navegação por pastas, salas e ABI nativa. O overlay tem oito arquivos com guardas SHA e backup. Java, DEX e JNI compilados; **433 verificações Java, 36 C++ de coleções, 429 C++ de navegação e paginação UTF-8 passaram**. O renderer R9 teve sintaxe conferida com imagens sintéticas somente no teste.
+
+**R8 é o último APK instalado comprovado. R9 é candidato assinado no Windows, ainda sem instalação; as mudanças desta biblioteca ainda precisam ser incorporadas ao próximo APK.** Fonte canônica: `E:\ESTUDO APK\work\station-netplay-20261004`. Aplicar overlay à fonte R9, reempacotar a base R9 alterando somente classes28/libstation_frontend/libturbo_carousel e preservar classes35 das salas R9 e todas as outras entradas. Assinar com o certificado original e instalar por atualização. Não alegar gameplay N64 ou partida entre dois aparelhos sem prova. Restaurar `stay_on_while_plugged_in=0` quando a USB retornar; a desconexão deixou o valor temporário 3.
+
+Os blocos abaixo registram estados anteriores. A pendência de publicação de `folderPath` do retorno R9 foi atendida pelo servidor; não usar essa pendência antiga como estado vigente.
 
 # R9 — salas e subpastas compiladas; USB pendente — 04/10/2026
 

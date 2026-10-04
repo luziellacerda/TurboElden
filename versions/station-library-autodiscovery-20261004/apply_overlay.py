@@ -1,4 +1,4 @@
-"""Apply only the reviewed Station library changes to the existing R7/R8 Windows work root."""
+"""Apply only the reviewed Station library changes to the existing R9 Windows work root."""
 import argparse
 import hashlib
 import json
@@ -18,14 +18,14 @@ def main():
     args=parser.parse_args();manifest=json.loads((ROOT/'overlay-manifest.json').read_text())
     planned=[]
     for row in manifest:
-        source=ROOT.parent/'station-online-20261004'/row['path']
+        source=ROOT.parent/row['sourceVersion']/row['path']
         target=args.work_root/row['path']
         if sha(normalized(source))!=row['newSha256']:raise ValueError('Published overlay source changed: '+row['path'])
         if target.exists():
             actual=sha(normalized(target))
             if actual==row['newSha256']:continue
             if actual!=row['previousSha256']:raise ValueError('Current source differs; preserve and reconcile: '+row['path'])
-        elif row['previousSha256'] is not None:raise ValueError('Existing R7/R8 source missing: '+row['path'])
+        elif row['previousSha256'] is not None:raise ValueError('Existing R9 source missing: '+row['path'])
         planned.append((row,source,target))
     if args.apply:
         if not args.backup_directory:parser.error('--backup-directory required with --apply')

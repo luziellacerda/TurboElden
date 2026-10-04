@@ -1,5 +1,13 @@
 # TurboStations R9 — salas e subpastas
 
+## Atualização posterior do servidor e das fontes — 04/10/2026
+
+Servidor fonte `931030b` em produção, catálogo **8 / 1.973 jogos / 157 N64**. O campo `folderPath` foi publicado, com 313 jogos em subpastas. A importação automática e as capas exatas da revista estão ativas. As fontes desta pasta receberam leitura de metadata, cache de sinopses e consulta automática, conciliadas com a entrega R9 original.
+
+**O APK R9 de hash b5c98ea4 abaixo identifica a compilação anterior a esta integração.** Para incorporar estas fontes ao próximo APK, siga `../station-library-autodiscovery-20261004/README.md` e o overlay com guardas, compilando Java/JNI/carrossel juntos. Os módulos Linux novos estão conferidos, mas não foram assinados nem instalados. R8 continua o último instalado comprovado.
+
+O restante deste README e os recibos R9 registram a compilação original `a325e69`; suas referências à publicação pendente de pastas foram atendidas pelo servidor. A prova no aparelho e a partida entre dois aparelhos continuam pendentes.
+
 ## Estado desta entrega — 04/10/2026
 
 **APK compilado, assinado e conferido no PC. Ainda não instalado: telefone ausente na USB.** R8 `8e76d832…` é o último APK instalado e observado; R8B `0a333155…` ficou somente no computador. Esta entrega é candidata, não uma nova versão estável.
