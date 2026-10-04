@@ -1,0 +1,15 @@
+{
+  "apkSha256": "17e9b87bf268c2349874d1767d5ab315862eb09fb2705f9b79a7e307c0c63c77",
+  "installed": false,
+  "usbAvailableAtLastCheck": false,
+  "currentlyInstalledApkSha256": "31ab80ef2c77e9c5dff294d6f63807ab1e6d6cded81c2beec7aee171067f46d8",
+  "noPhoneOrServerMutationThisRevision": true,
+  "cleanupPending": {
+    "stayOnWhilePluggedInRestore": 0,
+    "ownProbeFiles": [
+      "/data/local/tmp/station-hud-lzgames-20261003/station_native_load_probe",
+      "/data/local/tmp/station-hud-lzgames-20261003/libsnes9x_explus.so",
+      "/data/local/tmp/station-hud-lzgames-20261003/libmdemu_station.so"
+    ]
+  }
+}

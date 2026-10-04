@@ -1,6 +1,7 @@
 #include "station_catalog_abi.hpp"
 #include "station_cover_retry.hpp"
 #include "station_cover_plan.hpp"
+#include "station_cover_publication.hpp"
 #include <jni.h>
 #include <dlfcn.h>
 #include <algorithm>
@@ -95,7 +96,7 @@ void drain(Catalog* catalog){
   hasCatalog=inbox.hasCatalog;inbox.hasCatalog=false;if(hasCatalog)next.swap(inbox.catalog);
   covers.swap(inbox.covers);jobs.swap(inbox.jobs);failure.swap(inbox.error);inbox.changed.store(false,std::memory_order_release);
  }
- if(hasCatalog){catalog->unusedPending=std::move(next);state.pending=true;catalog->error.clear();__android_log_print(4,"StationNative","Catalog received items=%zu",catalog->unusedPending.size());}
+ if(hasCatalog){station::resetCoverPublication(state.covers,state.coverRetry,catalog->items,state.nextCoverSweep);catalog->unusedPending=std::move(next);state.pending=true;catalog->error.clear();__android_log_print(4,"StationNative","Catalog received items=%zu",catalog->unusedPending.size());}
  bool modified=false;
  for(auto& pair:covers){state.covers.erase(pair.first);Item* item=find(catalog,pair.first);if(!item)continue;
   CoverResult& result=pair.second;item->coverPending=false;modified=true;
@@ -158,6 +159,7 @@ API void Java_org_emulationstation_frontend_station_StationFrontend_publishCatal
    item.installed=!item.localPath.empty();if(item.installed)item.fileName=item.localPath.substr(item.localPath.find_last_of('/')+1);items.push_back(std::move(item));
   }
   std::string display=bytes(env,name,1024);std::lock_guard<std::mutex> lock(inbox.mutex);
+  station::discardPreviousCoverResults(inbox.covers);
   inbox.catalog=std::move(items);inbox.name=std::move(display);inbox.hasCatalog=true;inbox.changed.store(true,std::memory_order_release);
  }catch(const std::exception& failure){error(env,failure.what());}
 }

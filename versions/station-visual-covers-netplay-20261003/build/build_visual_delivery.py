@@ -4,7 +4,7 @@ import argparse,copy,datetime,hashlib,json,os,shutil,struct,subprocess,zipfile
 ROOT=Path(r'E:\ESTUDO APK\work\station-visual-covers-20261003')
 BASE=Path(r'E:\ESTUDO APK\work\station-hud-lzgames-20261003\TurboStations-SNES-Mega-HUD-LZGames-R2-20261003.apk')
 BASE_SHA='6b83ed083f825222970b8993ea3c7fc2a1021893da4e4129b73727e433d9ba9b'
-OUT=ROOT/'TurboStations-Capas4-Sinopses-LED-Netplay-R3-20261003.apk'
+OUT=ROOT/'TurboStations-Capas4-Sinopses-LED-Netplay-R4-20261003.apk'
 JDK=Path(r'C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot\bin')
 BT=Path(r'E:\ESTUDO APK\TurboRetroEmu-build\android-build-tools\35.0.0\android-15')
 SIGNER='7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825'
@@ -79,6 +79,7 @@ def package():
        'nativeHudAndEnginesPreserved':True,'fixedInterCoverDelayMs':0,'coverWorkers':4,
        'installed':False,'deviceVisualVerified':False,'twoDeviceNetplayVerified':False,'promotedToStable':False,
        'supersedesInstalledApkSha256':'31ab80ef2c77e9c5dff294d6f63807ab1e6d6cded81c2beec7aee171067f46d8',
+       'supersedesUninstalledApkSha256':'8ece6384b83f565ec54615186a5940c6e5c47f79d4f03027332181799c4fb807',
        'serverHandoffCommit':'54bba11c52f35695fd47eabc7145f42af9990426'}
     (ROOT/'BUILD-NOTICE.json').write_text(json.dumps(notice,indent=2)+'\n')
     additions['assets/station-visual-covers/BUILD-NOTICE.json']=ROOT/'BUILD-NOTICE.json'

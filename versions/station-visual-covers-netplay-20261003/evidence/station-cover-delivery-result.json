@@ -1,6 +1,6 @@
 {
   "scope": "Station cover delivery from frozen 97938400d3fa82d5d1564445c36fc70328add1c4; catalog capacity remains 4096",
-  "clientVersion": "1.0.8-station-covers-20261003.4",
+  "clientVersion": "1.0.8-station-covers-20261003.5",
   "workers": 4,
   "successPacingMillis": 0,
   "pendingNative": 4,
@@ -14,9 +14,9 @@
     "missing404Millis": 60000,
     "http429": "Retry-After seconds or HTTP date; 60000ms fallback only after real 429; bounded at 24h"
   },
-  "catalogRace": "queue generation invalidated before JNI publication; stale completions become cancellation without image path",
-  "hostChecks": 384,
-  "nativePolicyChecks": 18,
+  "catalogRace": "replaceCatalog publishes under queue completion monitor, finishes all old tasks exactly once, clears native inbox under mutex, resets old native slots before delayed catalog application",
+  "hostChecks": 564,
+  "nativePolicyChecks": 28,
   "androidCompile": "API34 Java8 D8 min26; C++17 NDK r28c arm64 Android26 16KiB alignment",
   "installedOrNetworkTested": false,
   "serverChanged": false,
@@ -32,29 +32,25 @@
   },
   "netplayHelper": "public static String[] StationFrontend.installedPathsFor(String platform) throws Exception; background only, ready required, verified receipts only; gamecube/wii existing aliases; IllegalStateException if not ready, [] only no installed results",
   "artifacts": {
-    "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\station\\build\\classes28.dex": {
-      "sha256": "4ebf1507b278779aa8cb4cdea16e20697827968643d7172de5c49a852371855f",
-      "bytes": 142428
+    "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\station\\build\\dex\\classes.dex": {
+      "sha256": "08bd34cd0de65d5f02a25d710f015ff4ef8772b9890e79ac0c91776697ca2b1c",
+      "bytes": 143188
     },
     "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\station\\build\\native\\arm64-v8a\\libstation_frontend.so": {
-      "sha256": "4da25d5bc91d74628944b6a8ec1d8b5fdc31c7dff8314852b05164a164676ed2",
-      "bytes": 2995960
+      "sha256": "81758511902c6447233fda6affd2782e9bc42299a7ef5d6394ef128141c06dc7",
+      "bytes": 2996168
     },
     "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\station\\build\\test-results.json": {
-      "sha256": "43abc957d6409bf25ca5b419bde8fef3555cdccc28652bf927a26617c017c7c8",
-      "bytes": 5650
+      "sha256": "c18de056b8d40d539416a4b401e820e05656b79276dd9049dd657b2a1c577c09",
+      "bytes": 5784
     },
     "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\station\\build\\station-client-sources.zip": {
-      "sha256": "3b47f561beb2294ce51438a873e87b4d6b41e42693cefb140c0b9361d6018b4b",
-      "bytes": 108683
+      "sha256": "361af0ceea8ff7b2eaf7233d5f74d9db7b30b9aceac8ab1a2c750bcbd2957242",
+      "bytes": 111750
     },
     "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\station\\build\\module-manifest.json": {
-      "sha256": "2b108285025ece72182b9c5d4b294bc1584203c7651a4f778f0b95f40aa79357",
+      "sha256": "4e84bf5722e21dd312476e356a998cd5d2ea986efc70457bfccd6e464c8f08d5",
       "bytes": 576
-    },
-    "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\station\\HANDOFF-CAPAS-20261003.md": {
-      "sha256": "5e924687793156367bb8aea95d1dd0983071fa3e621b418316c8c9e95637ba17",
-      "bytes": 8515
     }
   },
   "rateLimitedPrefetch": "Offscreen plan paused until Retry-After; bounded visible requests may still resolve persistent cache; unrelated successful completion does not clear server pressure",
@@ -62,14 +58,16 @@
   "upstreamComparison": {
     "commit": "1dc8c381e49e60ccbe0f84c97dcfe5be3e1d85f3",
     "ported": [
-      "StationHttp completed response TLS reuse with EOF and length guard",
-      "StationExistingArtifact exact signed hash before bounded traversal"
+      "TLS response reuse with EOF and length guard",
+      "exact signed file hash before bounded traversal",
+      "native old-result discard and pending-slot reset"
     ],
     "retained": [
-      "borrow-count leases preventing renewal during cover/authorize-GET header use",
-      "generation guards and explicit native CANCELLED completion instead of upstream nine-line pending reset"
+      "session borrow leases",
+      "Retry-After support",
+      "visible-first platform/folder prefetch"
     ],
-    "newChecks": 16,
+    "additionalR4": "atomic Java queue completion/catalog publication and 180 new regression checks",
     "networkPerformanceVerified": false
   },
   "versionMetadataNote": "All 384 Java checks and full Android source compilation ran after the final .4 identifier and upstream-compatible Java changes."

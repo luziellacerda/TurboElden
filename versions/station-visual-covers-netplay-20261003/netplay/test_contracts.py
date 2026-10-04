@@ -25,7 +25,9 @@ def main():
     source='\n'.join(p.read_text(encoding='utf-8') for p in (ROOT/'src').rglob('*.java'))
     assert 'http://' not in source and 'https://' not in source # no invented lobby/API or secrets
     assert 'force-stop' not in source and 'pm clear' not in source
-    count+=4
+    assert source.index('Mega Drive e Super Nintendo • jogo local') < source.index('psp=ui.action(')
+    assert 'MdEmuBootstrap' not in source and 'Snes9xBootstrap' not in source
+    count+=6
     output=ROOT/'build/tests';output.mkdir(parents=True,exist_ok=True)
     subprocess.run([str(JDK/'javac.exe'),'-encoding','UTF-8','--release','8','-d',str(output),str(ROOT/'src/org/emulationstation/frontend/netplay/NetplayPaths.java'),str(ROOT/'NetplayPathsTest.java')],check=True)
     run=subprocess.run([str(JDK/'java.exe'),'-cp',str(output),'NetplayPathsTest',str(output)],check=True,capture_output=True,text=True)

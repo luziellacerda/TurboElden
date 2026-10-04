@@ -73,7 +73,7 @@ public final class StationFrontend {
   StationDiagnostics.record(StationDiagnostics.Event.UNSUPPORTED_PLATFORM,0,publication.unsupportedCount);
   StationDiagnostics.record(StationDiagnostics.Event.CATALOG_PUBLISHED,library.cached?503:200,rows.size());
   android.util.Log.i("StationFrontend","Publishing catalog items="+rows.size());
-  images.invalidate();publishCatalog(rows.toArray(new byte[0][]),utf8(library.displayName));
+  images.replaceCatalog(()->publishCatalog(rows.toArray(new byte[0][]),utf8(library.displayName)));
   String warning=publication.warning();
   if(!warning.equals(platformWarning)){
    platformWarning=warning;

@@ -35,13 +35,15 @@ public final class StationNetplayActivity extends Activity {
     @Override public void onCreate(Bundle state){
         super.onCreate(state);NetplayUi ui=new NetplayUi(this,"Jogar em rede");
         ui.text("Use um jogo instalado e compatível. Cada participante precisa do mesmo jogo e de uma versão compatível do emulador.",15,0xffc5dacf);
+        ui.text("Mega Drive e Super Nintendo • jogo local",17,0xff7ef2a0);
+        ui.text("Os motores atuais dessas plataformas ainda não oferecem partidas pela internet. Seus jogos, controles e saves continuam disponíveis no modo local.",14,0xffdec7b8);
+        ui.text("Plataformas com opções de rede",17,0xffedf8f0);
         psp=ui.action("PSP • configurar multiplayer",v->openEngine("PspBootstrap"),true);
         ui.text("Em Configurações → Rede, ative WLAN. Pela internet, os participantes escolhem o mesmo servidor relay; na mesma rede Wi-Fi, use o servidor ad hoc. A sala é aberta dentro do jogo.",14,0xffb9cfc1);
         dolphin=ui.action("GameCube / Wii • criar ou entrar em sala",v->openDolphin(),true);
         ui.text("Abre o NetPlay original do Dolphin e inclui os jogos instalados pela Station. Use Wi-Fi e a mesma versão do jogo. Alguns títulos e aparelhos podem perder sincronização.",14,0xffb9cfc1);
         flycast=ui.action("Dreamcast / Naomi • configurar rede",v->openEngine("FlycastBootstrap"),true);
         ui.text("Em Configurações → Rede, escolha GGPO para títulos compatíveis e informe o outro jogador. Native/DCNet usa as funções online próprias dos jogos Dreamcast; Naomi e Battle Cable têm opções específicas.",14,0xffb9cfc1);
-        ui.text("SNES e Mega Drive: os motores atuais não oferecem jogo pela internet. Seus controles, configurações e jogos locais continuam disponíveis.",14,0xffdec7b8);
         status=ui.text("Conexões e salas são gerenciadas pelo emulador selecionado.",14,0xff7ef2a0);ui.action("Voltar às plataformas",v->finish(),false);
     }
     private void setBusy(boolean value,String message){busy=value;psp.setEnabled(!value);dolphin.setEnabled(!value);flycast.setEnabled(!value);status.setText(message);}

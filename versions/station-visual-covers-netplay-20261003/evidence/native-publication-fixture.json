@@ -1,0 +1,11 @@
+{
+  "compiled": true,
+  "target": "arm64 Android26 NDKr28c 16KiB",
+  "sha256": "231252b39982199d364fe7a975c88c309b31052fdbf3b447c921554dfc8d9c72",
+  "androidExecuted": false,
+  "source": "station/tests/station_frontend_test.cpp",
+  "newCases": [
+    "old completed image not attached after catalog publication during active download",
+    "old cover slots released while catalog apply is deferred"
+  ]
+}

@@ -35,6 +35,13 @@ class MetadataTests(unittest.TestCase):
   s=(ROOT/'native/native_carousel.cpp').read_text('utf8')
   self.assertIn('if(identityChanged)exportCatalog(real);',s)
   self.assertLess(s.index('bool identityChanged='),s.index('syncedRevision=rev;'))
+ def test_mega_synopsis_coverage(self):
+  for platform,label,total,described in [('megadrive','MegaDrive',887,882),('megadrivebr','MegaDrive - BR',94,93)]:
+   rows=[r for r in self.rows if r['platform']==platform]
+   self.assertEqual(len(rows),total);self.assertEqual(sum(bool(r['description']) for r in rows),described)
+   self.assertTrue(all(r['label']==label for r in rows))
+  cut=next(r for r in self.rows if r['itemId']=='ce3f245960b94e064f027ffd8aefe466')
+  self.assertEqual(cut['name'],'Cutthroat Island');self.assertGreater(len(cut['description']),100)
  def test_missing_explicit(self):
   missing=json.loads((ROOT/'assets/station-metadata/missing-station-synopses.json').read_text('utf8'))
   self.assertEqual(len(missing),12);self.assertTrue(all(not r['description'] for r in missing))

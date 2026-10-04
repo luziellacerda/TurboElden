@@ -1,0 +1,23 @@
+{
+  "installedMegaEngine": "MD.emu",
+  "upstreamCommit": "1c12fac5ce49badaadff2e2f210dcc30b89f4943",
+  "megaOnlineImplemented": false,
+  "snesOnlineImplemented": false,
+  "stationLobbyImplemented": false,
+  "twoDeviceGameTested": false,
+  "uiChange": "Unsupported Mega/SNES notice moved before online platform actions",
+  "platformRoutes": {
+    "psp": "PspBootstrap.launch(Activity, empty, true): --gamesettings",
+    "flycast": "FlycastBootstrap.launch(Activity, empty, true): turborama_settings",
+    "dolphin": "existing :dolphin bootstrap, private installed-path snapshot, NetplaySetupActivity"
+  },
+  "sources": [
+    "https://github.com/Rakashazi/emu-ex-plus-alpha/issues/330",
+    "https://www.explusalpha.com/contents/md-emu",
+    "https://www.ppsspp.org/docs/multiplayer/quickstart/",
+    "https://github.com/dolphin-emu/dolphin/pull/14647",
+    "https://github.com/flyinghead/flycast/blob/master/core/cfg/option.cpp"
+  ],
+  "sourceReviewedDate": "2026-10-03",
+  "contractsPassed": 28
+}

@@ -1,0 +1,6 @@
+Exception in thread "main" java.lang.AssertionError: Every old request must finish before JNI publishes a catalog
+	at org.emulationstation.frontend.station.StationCoverPublicationTest.ok(StationCoverPublicationTest.java:10)
+	at org.emulationstation.frontend.station.StationCoverPublicationTest.lambda$round$2(StationCoverPublicationTest.java:32)
+	at org.emulationstation.frontend.station.StationCoverPublicationTest.replace(StationCoverPublicationTest.java:13)
+	at org.emulationstation.frontend.station.StationCoverPublicationTest.round(StationCoverPublicationTest.java:31)
+	at org.emulationstation.frontend.station.StationCoverPublicationTest.main(StationCoverPublicationTest.java:46)

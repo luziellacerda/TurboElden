@@ -1,0 +1,12 @@
+{
+  "zipCrcValid": true,
+  "preservedEntries": 10871,
+  "changedEntries": [
+    "AndroidManifest.xml",
+    "classes28.dex",
+    "lib/arm64-v8a/libstation_frontend.so",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "additions": 174,
+  "sha256": "17e9b87bf268c2349874d1767d5ab315862eb09fb2705f9b79a7e307c0c63c77"
+}

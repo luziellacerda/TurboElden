@@ -5,14 +5,7 @@
 #include "station_info_layout.h"
 static bool stationConsoleAvailable(const char*);
 static void drawStationConsole(void*,const char*,const StationInfoRect&);
-static const GameInfo*findStationGameInfo(const char*key,const char*id){
- int first=0,last=NSTATIONGAMEINFOS;
- while(first<last){int middle=first+(last-first)/2,order=strcmp(id,stationGameInfos[middle].id);
-  if(order>0)first=middle+1;else last=middle;}
- if(first<NSTATIONGAMEINFOS&&strcmp(stationGameInfos[first].id,id)==0&&strcmp(stationGameInfos[first].system,key)==0)
-  return &stationGameInfos[first];
- return nullptr;
-}
+#include "station_game_lookup.h"
 struct Vec3{float x,y,z;};struct Vec2{float x,y;};
 static void setLongText(void*t,const char*value){
  alignas(8) B s[24]={};strAssign(s,value);fn<void(*)(void*,const void*)>(0x2d2c70)(t,s);

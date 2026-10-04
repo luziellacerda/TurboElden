@@ -1,0 +1,22 @@
+{
+  "base": "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\TurboStations-SNES-Mega-HUD-LZGames-R2-20261003.apk",
+  "baseSha256": "6b83ed083f825222970b8993ea3c7fc2a1021893da4e4129b73727e433d9ba9b",
+  "time": "2026-10-04T01:18:28.677649+00:00",
+  "expectedChanged": [
+    "classes28.dex",
+    "lib/arm64-v8a/libstation_frontend.so",
+    "lib/arm64-v8a/libturbo_carousel.so",
+    "AndroidManifest.xml"
+  ],
+  "netplayDex": "classes35.dex",
+  "serverDeploymentModified": false,
+  "nativeHudAndEnginesPreserved": true,
+  "fixedInterCoverDelayMs": 0,
+  "coverWorkers": 4,
+  "installed": false,
+  "deviceVisualVerified": false,
+  "twoDeviceNetplayVerified": false,
+  "promotedToStable": false,
+  "supersedesInstalledApkSha256": "31ab80ef2c77e9c5dff294d6f63807ab1e6d6cded81c2beec7aee171067f46d8",
+  "serverHandoffCommit": "54bba11c52f35695fd47eabc7145f42af9990426"
+}

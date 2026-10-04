@@ -1,0 +1,42 @@
+{
+  "megadrive": {
+    "games": 887,
+    "descriptions": 882,
+    "missing": [
+      {
+        "itemId": "station_13cfd4570309970e2f93c6263e698c72",
+        "name": "Lethal-wedding"
+      },
+      {
+        "itemId": "station_18d5c103cae9d7a2499fe2a6e15f2657",
+        "name": "Columns III (USA)"
+      },
+      {
+        "itemId": "station_79ad81b885f85b3f3948eeef9531c054",
+        "name": "Tetris"
+      },
+      {
+        "itemId": "station_7a95e83b68b446b1213426498f51b51e",
+        "name": "Battletoads-Double Dragon (USA)"
+      },
+      {
+        "itemId": "station_c76970f8fa3c0b2c0c0a848c0e6292c9",
+        "name": "Sonic The Hedgehog 3 (USA)"
+      }
+    ],
+    "idsCorrectedFromR2": 617
+  },
+  "megadrivebr": {
+    "games": 94,
+    "descriptions": 93,
+    "missing": [
+      {
+        "itemId": "station_d4401dcd2599530ca4e155413d6548fe",
+        "name": "Sonic Hedgehog 3D Blast (BR)"
+      }
+    ],
+    "idsCorrectedFromR2": 89
+  },
+  "nativeLookupChecks": 3636,
+  "sameLookupHeaderAsProduction": true
+}

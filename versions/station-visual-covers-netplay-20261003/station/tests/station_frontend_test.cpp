@@ -24,7 +24,12 @@ API jint Java_org_emulationstation_frontend_station_StationFrontendDeviceTest_ru
   Java_org_emulationstation_frontend_station_StationFrontend_publishCover(env,nullptr,id,cover);env->DeleteLocalRef(id);env->DeleteLocalRef(cover);
   StationCatalog_update(&catalog);check(catalog.items[0].coverReady&&!catalog.items[0].coverFailed,"cover ready");check(catalog.items[0].coverPath=="/private/covers/cover001-r1.png","cover path");
   job(true,0,"");StationCatalog_update(&catalog);check(StationCatalog_active(&catalog)==std::vector<size_t>{0},"active download");check(StationCatalog_progress(&catalog,0).received==50,"download progress");
-  publish({"item0002","item0001"});StationCatalog_update(&catalog);check(catalog.unusedPending.size()==2,"renderer sees pending publication");check(!StationCatalog_applyPending(&catalog),"do not reorder active downloads");
+  state.covers.insert("item0002");catalog.items[1].coverPending=true;
+  id=env->NewStringUTF("item0002");cover=byteArray("/private/covers/stale.png");
+  Java_org_emulationstation_frontend_station_StationFrontend_publishCover(env,nullptr,id,cover);env->DeleteLocalRef(id);env->DeleteLocalRef(cover);
+  publish({"item0002","item0001"});StationCatalog_update(&catalog);
+  check(state.covers.empty()&&!catalog.items[1].coverPending,"refresh frees cancelled cover slots during download");
+  check(!catalog.items[1].coverReady&&catalog.items[1].coverPath.empty(),"previous publication cannot attach stale cover");check(catalog.unusedPending.size()==2,"renderer sees pending publication");check(!StationCatalog_applyPending(&catalog),"do not reorder active downloads");
   job(false,1,"/roms/install/content/game.bin");StationCatalog_update(&catalog);check(catalog.items[0].installed,"commit installation");check(catalog.installedCount==1,"installed count");
   check(StationCatalog_applyPending(&catalog),"apply idle catalog");check(catalog.items[1].id=="item0001"&&catalog.items[1].installed,"preserve committed installation on refresh");
   job(false,3,"");StationCatalog_update(&catalog);check(catalog.items[1].installed,"failed update preserves installed item");check(StationCatalog_progress(&catalog,1).error=="Error","failure reported");

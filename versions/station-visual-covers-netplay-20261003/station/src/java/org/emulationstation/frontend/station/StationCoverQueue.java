@@ -17,7 +17,7 @@ public final class StationCoverQueue implements AutoCloseable {
   final String id;final StationApi.Cancellation cancel=new StationApi.Cancellation();final AtomicBoolean completed=new AtomicBoolean();
   final long startedGeneration;
   Task(String id){this.id=id;this.startedGeneration=generation;}
-  void finish(Path path,int result,long delay){if(completed.compareAndSet(false,true)){synchronized(publication){
+  void finish(Path path,int result,long delay){synchronized(publication){if(completed.compareAndSet(false,true)){
    requests.remove(id,this);boolean stale=startedGeneration!=generation;listener.complete(id,stale?null:path,stale?CANCELLED:result,stale?0:delay);
   }}}
   @Override public void run(){
@@ -45,8 +45,16 @@ public final class StationCoverQueue implements AutoCloseable {
   task.cancel.cancel();if(workers.remove(task))task.finish(null,CANCELLED,0);
  }}
  /** Cancel results from a previous catalog before publishing its replacement. */
- public void invalidate(){synchronized(publication){generation++;}for(Task task:requests.values()){
-  task.cancel.cancel();if(workers.remove(task))task.finish(null,CANCELLED,0);
+ public void invalidate(){replaceCatalog(()->{});}
+ /** Finish every old request before the JNI publication clears its inbox.
+  * Active IO can unwind later, but its atomic completion is already consumed.
+  * A snapshot allows listeners to enqueue a new generation without cancelling it.
+  */
+ public void replaceCatalog(Runnable publish){synchronized(publication){
+  generation++;
+  Task[] previous=requests.values().toArray(new Task[0]);
+  for(Task task:previous){task.cancel.cancel();workers.remove(task);task.finish(null,CANCELLED,0);}
+  publish.run();
  }}
  public int activeCount(){return requests.size();}
  @Override public void close(){setForeground(false);workers.shutdown();}
