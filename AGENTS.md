@@ -1,3 +1,11 @@
+# R9 — salas e subpastas compiladas; USB pendente — 04/10/2026
+
+Ler `versions/station-ui-folders-r9-20261004/README.md`. APK `b5c98ea40b915f738e29ef2b2e7168fcdf2d327aa64c862596dff15b5620fdf1` pronto, **NÃO instalado**. Último instalado/observado: R8 `8e76d832…`. R8B somente PC, arquivado em G:. R9 inclui banner/capa real, efeitos leves, colunas adaptáveis/chat e subpastas no carrossel nativo. Campo opcional `folderPath` é novo e precisa de publicação pelo operador; catálogo anterior continua plano. Não há varredura de pastas arbitrárias do telefone. A pergunta sobre origem local/servidor ainda está pendente.
+
+Novo retorno Servidor-pix `a4814d453a1f193fcbe40a92c8690c4eb5d41fc9` relata **salas online publicadas às 11h29**, com provas HTTPS. Foi lido e o contrato do app permanece compatível. Não usar o404 antigo como estado atual. Partida entre dois aparelhos e R9 visual/consumo Android seguem pendentes. Esta rodada não implantou Linux; implantação das subpastas também não ocorreu.
+
+Testes: 591 Java existentes, 29 de pastas Java, 20 C#, 36 C++ de agrupamento, 429 de navegação, 34 regressões UI e 1.440 malhas. Quatro entradas do APK alteradas; 11.098 preservadas. Dados, assinatura, motores e tag estável preservados. **Restaurar `stay_on_while_plugged_in=0` quando a USB voltar**: desconectou com valor temporário3 após conferir R8. Fontes e compilação em `E:\ESTUDO APK\work\station-netplay-20261004`. Estados abaixo são históricos.
+
 # R8 visual compilado — instalação pendente, 04/10/2026
 
 Ler `versions/station-ui-r8-20261004/README.md` e evidence/build-result.json. APK `8e76d8328d140a6f423b9317a77bc4f154cb5de882d8e24db16df8b71f0ea783` pronto em E:, ainda não instalado por USB ausente; R7 continua último instalado comprovado. R8 uniformiza seis ações dos jogos com brilho verde animado e redesenha salas em três áreas (jogadores, salas/convites, chat). Duas entradas mudaram, 11.100 preservadas; 34 verificações e 1.440 geometrias C++ passaram. Sem mudança de API, auth, motores, vídeos ou implantação. Compilação reproduzida com hashes iguais. R7 arquivado em G: com hash, cópia duplicada de E: removida; não procurar R7 apenas no antigo caminho. Tag estável preservada. Não alegar visual Android, desempenho ou partidas validados. Operador publicará servidor; pendências de R7 continuam. Histórico abaixo.

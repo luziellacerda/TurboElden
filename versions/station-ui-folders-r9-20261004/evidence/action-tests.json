@@ -1,0 +1,144 @@
+{
+  "checks": [
+    {
+      "name": "unchanged business logic private void action(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void createRoom(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void join(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void command(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void sendChat(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void launch(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void exitRooms(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void page(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void deliver(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic private void cancelAll(",
+      "passed": true
+    },
+    {
+      "name": "unchanged business logic protected void onStop(",
+      "passed": true
+    },
+    {
+      "name": "source unchanged StationOnlineClient.java",
+      "passed": true
+    },
+    {
+      "name": "source unchanged StationOnlineGame.java",
+      "passed": true
+    },
+    {
+      "name": "source unchanged StationRoomState.java",
+      "passed": true
+    },
+    {
+      "name": "source unchanged StationPresence.java",
+      "passed": true
+    },
+    {
+      "name": "source unchanged StationRetroLaunch.java",
+      "passed": true
+    },
+    {
+      "name": "source unchanged StationRetroActivity.java",
+      "passed": true
+    },
+    {
+      "name": "source unchanged StationGameSession.java",
+      "passed": true
+    },
+    {
+      "name": "unchanged native route static bool touchOnlineAction(",
+      "passed": true
+    },
+    {
+      "name": "unchanged native route static bool dispatchStationNetplay(",
+      "passed": true
+    },
+    {
+      "name": "chat separate from room controls",
+      "passed": true
+    },
+    {
+      "name": "compose gated by membership",
+      "passed": true
+    },
+    {
+      "name": "loading and offline states explicit",
+      "passed": true
+    },
+    {
+      "name": "no fake players",
+      "passed": true
+    },
+    {
+      "name": "exactly one continuous animated CTA",
+      "passed": true
+    },
+    {
+      "name": "animation visibility guard",
+      "passed": true
+    },
+    {
+      "name": "animation cancelled on detach",
+      "passed": true
+    },
+    {
+      "name": "disabled button has distinct state",
+      "passed": true
+    },
+    {
+      "name": "game actions share renderer",
+      "passed": true
+    },
+    {
+      "name": "game actions share label scale",
+      "passed": true
+    },
+    {
+      "name": "online shares original action font",
+      "passed": true
+    },
+    {
+      "name": "confirmation rim preserved",
+      "passed": true
+    },
+    {
+      "name": "platform open renderer untouched",
+      "passed": true
+    },
+    {
+      "name": "executed native geometry",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "native": "PASS 1440 native meshes; clipping, animation, disabled state and zero dimensions\n",
+  "deviceVisualVerified": false,
+  "note": "Native host geometry and source regressions; Android visual and performance checks require device."
+}
