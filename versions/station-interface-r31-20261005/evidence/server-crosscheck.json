@@ -1,0 +1,94 @@
+{
+  "serverDocumentCommit": "61c0411d0a306f348f48647b466a05a3d0f78733",
+  "serverDocumentPath": "docs/station-android/RETORNO-SERVIDOR-NETPLAY-INTERNET-STATION-R12-20261005.md",
+  "serverDocumentSHA256": "ac959244bcdbccb026f01a3b753a8cc14a02ed04677324467835062ae4b89206",
+  "serverSourceRevision": "e4e557a985ac5bead24885149c8650a5bb2dfae8",
+  "serverDLLSHA256": "7ecb6c8d94c5ab42c26638b5f9bdf7ffd0e70f99e047463ee5293af34f7bdcf5",
+  "unchangedRoomsDEX": "45675ff1b72c76bc6d388f6fa6f016a55cc1d06c4fbec09689ab4654dde3e9f1",
+  "sourceChecks": {
+    "uuidRequestId": {
+      "file": "StationOnlineClient.java",
+      "line": 13,
+      "sha256": "e2fa299c033a399831f6050cd29f7297ed8564988eea876a2e186bc259f0abc5"
+    },
+    "leasedSession": {
+      "file": "StationOnlineClient.java",
+      "line": 18,
+      "sha256": "e2fa299c033a399831f6050cd29f7297ed8564988eea876a2e186bc259f0abc5"
+    },
+    "instanceAndRevision": {
+      "file": "StationOnlineClient.java",
+      "line": 24,
+      "sha256": "e2fa299c033a399831f6050cd29f7297ed8564988eea876a2e186bc259f0abc5"
+    },
+    "heartbeat20Seconds": {
+      "file": "StationRoomsActivity.java",
+      "line": 120,
+      "sha256": "b0678a7783c8413e1c3a4a0d2b171cfdd72c0de4796ed472175ae90c69481c21"
+    },
+    "advertisedRelayRequired": {
+      "file": "StationRoomStartState.java",
+      "line": 15,
+      "sha256": "d76709fce8ddd5a35675e86f022a08317bd82d41e2c0b62808a374a01575604b"
+    },
+    "perParticipantTicket": {
+      "file": "StationRoomsActivity.java",
+      "line": 324,
+      "sha256": "b0678a7783c8413e1c3a4a0d2b171cfdd72c0de4796ed472175ae90c69481c21"
+    },
+    "signedPathValidation": {
+      "file": "StationRetroLaunch.java",
+      "line": 17,
+      "sha256": "26ebf144d25fbcb1227a554061712fafacd868d56d8384bc4bc948b978d6b3fb"
+    },
+    "headerTicketOnly": {
+      "file": "StationRelayTunnel.java",
+      "line": 28,
+      "sha256": "d2e1cecc9948a4143905a7a44bbea6a3096c01c6494b75abeb0d2437465fb801"
+    },
+    "subprotocol": {
+      "file": "StationRelayTunnel.java",
+      "line": 27,
+      "sha256": "d2e1cecc9948a4143905a7a44bbea6a3096c01c6494b75abeb0d2437465fb801"
+    },
+    "queryRejected": {
+      "file": "StationRelayTunnel.java",
+      "line": 24,
+      "sha256": "d2e1cecc9948a4143905a7a44bbea6a3096c01c6494b75abeb0d2437465fb801"
+    },
+    "tcpNoDelay": {
+      "file": "StationRelayTunnel.java",
+      "line": 41,
+      "sha256": "d2e1cecc9948a4143905a7a44bbea6a3096c01c6494b75abeb0d2437465fb801"
+    },
+    "hostListeningCallback": {
+      "file": "StationGameSession.java",
+      "line": 37,
+      "sha256": "fa3933cbd4046efc8e83a0d03a071b454b0591e0a170db2a7e7fb353b5b11ef1"
+    },
+    "tlsEndpointIdentity": {
+      "file": "StationRelayTunnel.java",
+      "line": 29,
+      "sha256": "d2e1cecc9948a4143905a7a44bbea6a3096c01c6494b75abeb0d2437465fb801"
+    },
+    "ticketLength": {
+      "file": "StationRetroLaunch.java",
+      "line": 17,
+      "sha256": "26ebf144d25fbcb1227a554061712fafacd868d56d8384bc4bc948b978d6b3fb"
+    },
+    "nativeAndRemoteCleanup": {
+      "file": "StationRelayTunnel.java",
+      "line": 71,
+      "sha256": "d2e1cecc9948a4143905a7a44bbea6a3096c01c6494b75abeb0d2437465fb801"
+    }
+  },
+  "checksPassed": 15,
+  "clientRouteChangesRequired": false,
+  "serverDeploymentPerformed": false,
+  "serverReportedPublicWssP95Ms": 2291.8209,
+  "twoAndroidGameplayVerified": false,
+  "pocoLicenseStateInHandoff": "ACTIVE/PENDING_ENROLLMENT",
+  "activationCodeInGit": false,
+  "pocoActivationPerformed": false,
+  "rawDownloadDeltaIncluded": false
+}

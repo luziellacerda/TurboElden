@@ -1,3 +1,11 @@
+# R31B — visual compacto e retorno servidor61c0411 — 05/10/2026
+
+Leia `versions/station-interface-r31-20261005/README.md`, STATUS e recibos. APKfinal `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Interface-R31B-20261005.apk`, SHA76817d2dd48219bcd6e4d111b8471bf98925b02ab26ee517cea90e8df84b076c. Compilado/verificado, instalação final pendente. PrimeiroR31 efc2a845 instalado/hashconferido noSamsung, visual da linha/botões/tag registrado. R31B amplia otextoINSTALADO. Duas tentativasPOCO recusadas peloAndroid USER_RESTRICTED. Cópia emDownloads interrompida ao sair daUSB; pode estar incompleta, não instalar sem substituir/conferir. LicençaPOCO declaradaACTIVE/PENDING_ENROLLMENT nohandoff; código privado somente noLinux, não noGit. Não ativada por este agente.
+
+Fontescanônicas E:\ESTUDO APK\work\station-actions-gear-r31-20261005\native. ApenascarouselSO +3assetsLottie,13083entradas preservadas; salasR29B/classes35 intactas.6873checksC++/15contrato, NDK/assinatura/16KiB e restauração integral de fontes passaram. FonteR30+deltas; gear3 licençaLottie preservada. Novo servidor61c0411/e4e557a jácompatível, nenhuma nova rota; latênciaWSSp95~2,29s e gameplaydoisAndroid permanecem pendentes. Nenhuma implantação. Downloads11be7f3 continuam fora. Não promoverestável geral. Preservar dados/saves/licença. Samsung mantertelaligada passou0→3; restaurar0quando reconectar. POCO sem ajuste de tela.
+
+## Histórico anterior — a entrega atual está acima
+
 # R30 — Voltar nas coleções e correções das salas — 05/10/2026
 
 Leia `versions/station-back-rooms-r30-20261005/README.md`, STATUS e recibos. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Voltar-Salas-R30-20261005.apk`, SHA 1768b7df440dcdf99efbd2e8ff93181eae06edaab5bb9be85e073afeb639027b. Instalação por atualização, sem desinstalar nem limpar dados; consulte recibo para hash do telefone e conferência visual. Sem promoção estável geral ou partida real entre dois celulares.
