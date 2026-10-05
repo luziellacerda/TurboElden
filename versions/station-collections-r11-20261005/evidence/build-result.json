@@ -1,0 +1,22 @@
+{
+  "builtAt": "2026-10-05T14:24:18.768912+00:00",
+  "baseApk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Biblioteca-N64-Sinopses-R10-20261004.apk",
+  "baseSha256": "8bc1d2ef1b5864dc1d5359d1df05b90593cf483dff7f48819f7a7a6b52a84c0b",
+  "apk": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\TurboStations-Colecoes-Nomes-Sinopses-R11-20261005.apk",
+  "sha256": "7c5096d58991a9724537036e18eb42555f290e2f6d673904524520da0d0146d5",
+  "bytes": 1982770888,
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [],
+  "preservedEntries": 11102,
+  "roomsDexSha256": "0b9847c71cecd46eecdbd8681579296778a41e765d13dbed00e7aa2bb72bb8d4",
+  "certificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "fullPayloadIntegrityPassed": true,
+  "compressionPreserved": true,
+  "alignment16KiBPassed": true,
+  "serverDeployed": false,
+  "installed": false,
+  "androidGameplayVerified": false,
+  "stable": false
+}

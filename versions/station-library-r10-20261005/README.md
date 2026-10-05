@@ -1,3 +1,5 @@
+> Atualização posterior: R11 inclui esta integração e os nomes/sinopses das coleções. R10 foi arquivado em G:. Leia `../station-collections-r11-20261005/README.md`. Ambos ainda sem instalação; R9 é o último instalado comprovado.
+
 # R10 — integração do retorno N64/biblioteca, APP → SERVIDOR
 
 ## Estado e destinatário

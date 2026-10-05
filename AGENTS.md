@@ -1,3 +1,11 @@
+# Estado vigente — R11 coleções e servidor integrados, USB pendente — 05/10/2026
+
+Leia `versions/station-collections-r11-20261005/README.md` e o handoff R10 referenciado. APK final **7c5096d58991a9724537036e18eb42555f290e2f6d673904524520da0d0146d5**, 1.982.770.888bytes, compilado/assinado; **NÃO instalado: USB ausente**. Inclui tudo do R10 e corrige coleções: remove célula Jogos sem subpasta, conserva Todos os jogos incluindo raiz, nomes exatos visíveis e descrição com quantidade/títulos reais.440checks de navegação e6153textoUTF8 passaram. UmSO alterado sobreR10,11.102entradas preservadas. Não alegar visual Android ou partidas validados.
+
+Fonte canônica `E:\ESTUDO APK\work\station-netplay-20261004`; APK R11 na raiz; build/testes/backup em `collections-r11`. R10 eR9 arquivados comhash em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais`. **R9 continua último instalado comprovado; tela durante carga restaurada0**, não há pendência nesse ajuste. Manter salas/controles/motores/dados, não reaplicar scripts one-shot, não mover tag estável. Nenhum deployLinux. Próximo passo: conectarUSB, atualizar sem desinstalar e conferir coleções+integraçãoR10.
+
+## Histórico superado abaixo
+
 # Estado vigente — R10 biblioteca compilado, USB pendente — 05/10/2026
 
 Leia `versions/station-library-r10-20261005/README.md`. Retorno N64/biblioteca do Servidor-pix4e623bc aplicado sobreR9; fontes8do overlay ba669c mais cancelamento por geração, prioridade à fila de capas, validação metadata e diagnóstico de rota. APK R10 **8bc1d2ef1b5864dc1d5359d1df05b90593cf483dff7f48819f7a7a6b52a84c0b**, 1.982.754.504bytes, compilado/assinado, três entradas alteradas e11.100 preservadas.659checksJava,465C++ e paginaçãoUTF8, assinatura e integridade completa passaram. **Ainda não instalado: USB ausente.** Não alegar gameplay N64, visual, consumo ou partida2aparelhos validados.

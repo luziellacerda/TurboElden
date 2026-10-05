@@ -1,0 +1,69 @@
+{
+  "parentAppCommit": "894856e563233dc9d8564e63fa026e1f21f9fec0",
+  "normalization": "UTF-8 without BOM, LF line endings",
+  "runtimePaths": [
+    "native/native_folders.h",
+    "native/native_info.h",
+    "native/native_carousel.cpp",
+    "native/native_formation.h",
+    "native/collection_presentation.h"
+  ],
+  "files": {
+    "collection_presentation.h": {
+      "bytes": 2291,
+      "sha256": "da47101eefab8acc1868f6af701694c7262ef8ad312bddb4034419525e3029c2"
+    },
+    "implement_station_collections_r11.py": {
+      "bytes": 4340,
+      "sha256": "30b7155c101e8d2ca5a7d77bcec98cfcb8b5ed2fd6438cfad6915e7c9c716143"
+    },
+    "package_station_collections_r11.py": {
+      "bytes": 4179,
+      "sha256": "dfe5578e434105963291bb97eeba5d67e198200cc6ba7a50352f782de713c6f0"
+    },
+    "README.md": {
+      "bytes": 6737,
+      "sha256": "124b60dce18b376f6fdca7fe1745490c0d0e3445557466e5c64ab76cd06f278a"
+    },
+    "test_station_collections_r11.py": {
+      "bytes": 3725,
+      "sha256": "893d2c6b7f46803fe446ea9e8c7948a77d3ac39b5b515ef8619206ae89e9d2b7"
+    },
+    "evidence/build-result.json": {
+      "bytes": 974,
+      "sha256": "dbb320933dae7a31c05055c0e008ad759c06d7f8a10fc54d76d7021a4b8415b5"
+    },
+    "evidence/tests.json": {
+      "bytes": 452,
+      "sha256": "412bff856ccaf38a37ee9276523976ab2868e9e479f4364d3bb10e3ee82b1ed1"
+    },
+    "native/collection_presentation.h": {
+      "bytes": 2291,
+      "sha256": "da47101eefab8acc1868f6af701694c7262ef8ad312bddb4034419525e3029c2"
+    },
+    "native/native_carousel.cpp": {
+      "bytes": 29156,
+      "sha256": "ff169e6eafd329e48542bd0f95fc59503418207ce442f72cca1c4ce5aa6f1202"
+    },
+    "native/native_folders.h": {
+      "bytes": 8828,
+      "sha256": "ab3f254e538707c40e4c4c5c24810fcfe6255c725c85abab095f432d20442f83"
+    },
+    "native/native_formation.h": {
+      "bytes": 9305,
+      "sha256": "b27e33dacfa54602c364bf5651ea22307eed247db66e83231f6bb928e91ace2b"
+    },
+    "native/native_info.h": {
+      "bytes": 7784,
+      "sha256": "0395c4aebdd06b73e1a57b26ea8adeb51bed141ac021fef2ffa0469ead52c10c"
+    },
+    "tests/station_collection_description_test.cpp": {
+      "bytes": 1414,
+      "sha256": "0b896c5d24ca36c3feec82e10407240a9c9b5e3e3f4787dfa265750a494d1709"
+    },
+    "tests/station_collection_navigation_test.cpp": {
+      "bytes": 6412,
+      "sha256": "254dab862ab7210b4f6893382b2c0babc0ef6a3b92ef230d8d654531fa857e51"
+    }
+  }
+}

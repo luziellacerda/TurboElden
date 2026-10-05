@@ -1,0 +1,14 @@
+{
+  "native": [
+    {
+      "test": "station_collection_navigation_test",
+      "result": "PASS 440 native navigation checks; original IDs/indices, All, direct, nested, Back, flat catalogs and 200 refresh cycles"
+    },
+    {
+      "test": "station_collection_description_test",
+      "result": "PASS 6153 collection description, exact path and bounded UTF-8 checks"
+    }
+  ],
+  "deviceVisualVerified": false,
+  "gameIdsAndDownloadsUnchanged": true
+}
