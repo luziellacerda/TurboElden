@@ -1,0 +1,27 @@
+{
+  "apkSigned": false,
+  "installed": false,
+  "androidGameplayVerified": false,
+  "files": {
+    "libstation_frontend.so": {
+      "bytes": 662496,
+      "sha256": "ef9cd060bf2fa33a5eaa0ca1ecf2036ab3b98755c92332c3323bb7378cb0109c"
+    }
+  },
+  "parentAppCommit": "6ef86c4cfd8302c0673c784856f25cf673d261ca",
+  "javaChanged": false,
+  "dexReplacementRequired": false,
+  "rendererSyntax": "R11 renderer plus measured rate, Android26; fixture image headers only; no renderer binary/APK generated",
+  "runtimeSources": {
+    "station/src/native/station_frontend.cpp": "12e5babd82f3ddc071fa2c4daaeeebf2026305f5f40099fed57f7b31c032871b",
+    "native/native_search_download.h": "138fd2a7a74acb0e95afe805c8230f96bbb5067baeeb4aa7288aa40667fbe61f",
+    "station/src/native/station_transfer_rate.hpp": "c443fa0c62d8edac4f48e80b089f5af7b2221a6ab6943043359382a549f3d5e3"
+  },
+  "dexChanged": false,
+  "overlayR11": {
+    "verifiedBefore": 3,
+    "applied": 3,
+    "verifiedAfter": 0,
+    "fiveCollectionFilesPreserved": true
+  }
+}

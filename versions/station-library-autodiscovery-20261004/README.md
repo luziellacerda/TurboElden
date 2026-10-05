@@ -1,3 +1,5 @@
+> Atualização 05/10: Neo Geo e taxa MB/s estão em `../station-neogeo-rate-20261005/README.md`. Aplicar somente o delta de três arquivos sobre R11; não repetir este overlay histórico sobre R10/R11. R9 instalado e R11 compilado foram confirmados no retorno 6ef86c4.
+
 > Estado posterior: R9 instalado/hash conferido em04/10; tela durante carga restaurada0. R10 compilado em05/10; leia `../station-library-r10-20261005/README.md`. O estado de instalação abaixo é histórico.
 
 # APP ← SERVIDOR: N64 e biblioteca automática, 04/10/2026

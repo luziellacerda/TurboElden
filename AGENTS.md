@@ -1,10 +1,22 @@
-# Estado vigente — R12 netplay internet preparado, servidor e USB pendentes — 05/10/2026
+# Estado vigente — R12 netplay internet preparado, instalado, servidor pendente — 05/10/2026
 
 Leia `versions/station-internet-r12-20261005/README.md`. Pedido vigente usa o mesmo servidor Station para conectar redes distintas. Implementados WSS próprio, tickets individuais de uso único, bridge TCP local, encerramento e limites. Cem verificações locais passaram, inclusive Java→WSS C#→Java com 12.583.029 bytes em cada sentido. APK SHA256 **7684c6eee87985d8259becca9a22a9f4c7e3203f7c097df37da6998975596514**, 1.982.967.774bytes, em E:\ESTUDO APK\work\station-netplay-20261004. Fonte final `internet-r12`; netplay/src promovido com backup. R11 agora arquivado em G: com hash verificado.
 
-**Sem implantação Linux e sem partida entre dois aparelhos validada.** Operador publicará quatro arquivos e habilitará Station:Online:RelayEnabled no serviço existente com proxy WSS. Motores online continuam SNES/Mega; NeoGeo/arcades pendentes não foram liberados. Não marcar estável. Instalação R12 foi tentada nas plataformas, mas USB desconectou; ADB retornou falha, depois lista vazia. Conferir pacote/hash antes de afirmar instalado. R9 continua último comprovado. Configuração de tela não alterada; último valor conhecido0. Todos os motores/design/coleções/dados preservados.
+**Sem implantação Linux e sem partida entre dois aparelhos validada.** Operador publicará quatro arquivos e habilitará Station:Online:RelayEnabled no serviço existente com proxy WSS. Motores online continuam SNES/Mega; NeoGeo/arcades pendentes não foram liberados. Não marcar estável. R12 instalado por atualização após reconectar USB, com SHA256 do base.apk conferido igual. Tela do telefone apagada/bloqueada; validação visual ainda pendente. Configuração de tela não alterada; último valor conhecido0. Todos os motores/design/coleções/dados preservados.
 
-## Histórico superado abaixo
+Retorno remoto c8e240a de Neo Geo/taxa foi lido e preservado na conciliação Git. O delta de taxa MB/s ainda NÃO foi aplicado ao APK R12; Neo Geo offline usa o catálogo existente, online Geolith continua bloqueado. Não executar package_delta.py do retorno com base R11 apagando classes35 R12; próxima montagem precisa preservar este DEX.
+
+## Histórico e entrega paralela preservados
+
+# Estado vigente — Neo Geo publicado e taxa MB/s sobre R11, 05/10/2026
+
+Leia `versions/station-neogeo-rate-20261005/README.md`. Servidor catálogo 9, 2.162 jogos, 189 Neo Geo válidos, 255 IDs ocultos preservados, 2.119 sinopses e 374 jogos em subpastas. Neo Geo está na raiz do HD; 826 arquivos foram movidos sem alteração. Entrega mantém jogo ZIP fechado e BIOS ao lado. Alpha Mission II recebeu somente a BIOS exata no pacote de entrega; Art of Fighting 2 aguarda substituição do ZIP corrompido.
+
+O retorno 6ef86c4 foi incorporado: R9 é último instalado comprovado; R11 é compilado/assinado, USB pendente e ajuste de tela já restaurado a 0. O delta novo tem somente JNI, helper de taxa e native_search_download, com guardas SHA/backup. Preserva Java R10, coleções R11, quatro capas, fila, ABI, salas, assinatura e dados. Não reaplicar overlays históricos, não substituir classes28/classes35 pelos DEX antigos nem executar scripts one-shot R10/R11.
+
+O contador avança de 1 MB em 1 MB; isso não mede MB/s. Medições Linux: API 316,35 MB/s, Nginx 259,99 MB/s, HTTPS até 4,37 MB/s; sem limitador de bytes/s encontrado. Fonte nova mostra percentual e taxa real somente durante Baixando. 9 verificações C++ de taxa e 5 Java de ZIP/BIOS passaram; JNI compilada. Nenhum APK desta taxa foi assinado ou instalado no Linux. Incorporar JNI/carousel juntos sobre a base R11 canônica, mesmo certificado e atualização sem limpar dados. Gameplay Neo Geo e partida entre dois aparelhos ainda precisam de evidência.
+
+## Histórico anterior
 
 # Estado vigente — R11 coleções e servidor integrados, USB pendente — 05/10/2026
 
