@@ -6,6 +6,14 @@ Fontescanônicas E:\ESTUDO APK\work\station-actions-gear-r31-20261005\native. Ap
 
 ## Histórico anterior — a entrega atual está acima
 
+# Servidor R12/POCO publicado — 05/10/2026
+
+Leia `docs/server/RETORNO-SERVIDOR-NETPLAY-INTERNET-STATION-R12-20261005.md`. APIe4e557a/DLL7ecb6c8d/PID660598, WSS no mesmo domínio;512salas/1024conexões configuradas.256conexões reais/renovações e512TLSisoladas passaram. **Latência pública alta segue aberta:** p952291,82ms vs1,07ms Nginxlocal. DoisAndroid/gameplay não verificados. LicençaPOCO própria1aparelho/vitalícia, código somente privadoLinux, ativação até07/10 às17h11Maceió; licença original preservada.
+
+Retorno mais recente b4a9806: R30 instalado/hash1768b7df, Voltar/criação de sala/Pronto verificados em um aparelho. Usar R30 ou sucessora comprovada noPOCO; preservar dados, assinatura, saves e fontes do estado abaixo. Reconectar salas, mesmaROM/core/runtime/opções; somenteSNES/Megaonline. Catálogo14/2212/50CD intacto. Downloads11be7f3/6f012a7 continuam fora desteAPK. Nenhuma instalaçãoLinux.
+
+## Estado atual do aplicativo
+
 # R30 — Voltar nas coleções e correções das salas — 05/10/2026
 
 Leia `versions/station-back-rooms-r30-20261005/README.md`, STATUS e recibos. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Voltar-Salas-R30-20261005.apk`, SHA 1768b7df440dcdf99efbd2e8ff93181eae06edaab5bb9be85e073afeb639027b. Instalação por atualização, sem desinstalar nem limpar dados; consulte recibo para hash do telefone e conferência visual. Sem promoção estável geral ou partida real entre dois celulares.
