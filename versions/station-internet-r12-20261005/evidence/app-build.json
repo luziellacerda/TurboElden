@@ -1,0 +1,16 @@
+{
+  "sourceFiles": 141,
+  "java8Api34": true,
+  "dexApi26": true,
+  "files": {
+    "netplay-internet.jar": {
+      "bytes": 262926,
+      "sha256": "df1de701bd702ab1d968c9253e92c391e7a1b50758bef1d0c0f29f6cdc5332a2"
+    },
+    "dex\\classes.dex": {
+      "bytes": 297140,
+      "sha256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae"
+    }
+  },
+  "installed": false
+}

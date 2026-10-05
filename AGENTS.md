@@ -1,3 +1,11 @@
+# Estado vigente — R12 netplay internet preparado, servidor e USB pendentes — 05/10/2026
+
+Leia `versions/station-internet-r12-20261005/README.md`. Pedido vigente usa o mesmo servidor Station para conectar redes distintas. Implementados WSS próprio, tickets individuais de uso único, bridge TCP local, encerramento e limites. Cem verificações locais passaram, inclusive Java→WSS C#→Java com 12.583.029 bytes em cada sentido. APK SHA256 **7684c6eee87985d8259becca9a22a9f4c7e3203f7c097df37da6998975596514**, 1.982.967.774bytes, em E:\ESTUDO APK\work\station-netplay-20261004. Fonte final `internet-r12`; netplay/src promovido com backup. R11 agora arquivado em G: com hash verificado.
+
+**Sem implantação Linux e sem partida entre dois aparelhos validada.** Operador publicará quatro arquivos e habilitará Station:Online:RelayEnabled no serviço existente com proxy WSS. Motores online continuam SNES/Mega; NeoGeo/arcades pendentes não foram liberados. Não marcar estável. Instalação R12 foi tentada nas plataformas, mas USB desconectou; ADB retornou falha, depois lista vazia. Conferir pacote/hash antes de afirmar instalado. R9 continua último comprovado. Configuração de tela não alterada; último valor conhecido0. Todos os motores/design/coleções/dados preservados.
+
+## Histórico superado abaixo
+
 # Estado vigente — R11 coleções e servidor integrados, USB pendente — 05/10/2026
 
 Leia `versions/station-collections-r11-20261005/README.md` e o handoff R10 referenciado. APK final **7c5096d58991a9724537036e18eb42555f290e2f6d673904524520da0d0146d5**, 1.982.770.888bytes, compilado/assinado; **NÃO instalado: USB ausente**. Inclui tudo do R10 e corrige coleções: remove célula Jogos sem subpasta, conserva Todos os jogos incluindo raiz, nomes exatos visíveis e descrição com quantidade/títulos reais.440checks de navegação e6153textoUTF8 passaram. UmSO alterado sobreR10,11.102entradas preservadas. Não alegar visual Android ou partidas validados.

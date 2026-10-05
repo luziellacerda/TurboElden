@@ -1,0 +1,26 @@
+{
+  "builtAt": "2026-10-05T14:56:55.705573+00:00",
+  "baseApk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Colecoes-Nomes-Sinopses-R11-20261005.apk",
+  "baseSha256": "7c5096d58991a9724537036e18eb42555f290e2f6d673904524520da0d0146d5",
+  "apk": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\TurboStations-Netplay-Internet-R12-20261005.apk",
+  "sha256": "7684c6eee87985d8259becca9a22a9f4c7e3203f7c097df37da6998975596514",
+  "bytes": 1982967774,
+  "changed": [
+    "classes35.dex"
+  ],
+  "added": [
+    "assets/licenses/station-relay-websocket-LICENSE.txt",
+    "assets/licenses/station-relay-slf4j-LICENSE.txt",
+    "assets/licenses/station-relay-sources.json"
+  ],
+  "preservedEntries": 11102,
+  "roomsDexSha256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "certificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "fullPayloadIntegrityPassed": true,
+  "compressionPreserved": true,
+  "alignment16KiBPassed": true,
+  "serverDeployed": false,
+  "installed": false,
+  "androidGameplayVerified": false,
+  "stable": false
+}

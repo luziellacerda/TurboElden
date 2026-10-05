@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "regressionLog": "regression.log",
+  "signedHttpLog": "http.log",
+  "tlsBridgeLog": "relay-integration.log",
+  "productionDeployed": false,
+  "androidGameplay": false
+}

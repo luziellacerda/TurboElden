@@ -1,0 +1,671 @@
+{
+  "parentAppCommit": "6ef86c4cfd8302c0673c784856f25cf673d261ca",
+  "serverBase": "4e623bcbeaed3ee03d8a1767f66319e67659463d",
+  "normalization": "UTF8 LF",
+  "files": {
+    "build_station_internet_app.py": {
+      "bytes": 1586,
+      "sha256": "f6e55183be5ee3f24ef00d7e8282b78a52255e2e8954276a478ddeb7b25c6b69"
+    },
+    "package_station_internet_r12.py": {
+      "bytes": 4465,
+      "sha256": "039b1654c3a1e9fa2230a550e411e7854254f63fa72edff54f2868dc5b088b94"
+    },
+    "README.md": {
+      "bytes": 15243,
+      "sha256": "9bcde3df677bfcf852b2cb5ff202957cfd152de1272f195de10976f15bd36edd"
+    },
+    "RelayBridgeTests.java": {
+      "bytes": 3787,
+      "sha256": "75baa335bb55ac05b1ca3158e19ef1156ef8a7205dc2912c799ee5d093b5cc2f"
+    },
+    "RelayIntegrationTests.cs": {
+      "bytes": 7906,
+      "sha256": "cf39b84466ff3bb7e7d355a02ec8dd2b68185043cc67d4dba0687d15a17beb4b"
+    },
+    "run_station_relay_tests.py": {
+      "bytes": 2831,
+      "sha256": "5c6010a279c4487ff6284d487c1cdc16014a9f6959778bcf805bc40775603d67"
+    },
+    "dependencies/slf4j-LICENSE.txt": {
+      "bytes": 1154,
+      "sha256": "6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73"
+    },
+    "dependencies/sources.json": {
+      "bytes": 1418,
+      "sha256": "8e98902e232791d7915676949a5378bec3bd7a6990d3da5752a66fb4e5b37d05"
+    },
+    "dependencies/websocket-LICENSE.txt": {
+      "bytes": 1082,
+      "sha256": "15101a7cbdaa7f1c161424b760e907e7832e4a1e7f05d03373ca91fbffdb95ee"
+    },
+    "dependencies/websocket.pom": {
+      "bytes": 13425,
+      "sha256": "56a83e3452869e9c8e02ef0650fec57148a68820c8a815ab99d9774d5b9dbce9"
+    },
+    "evidence/alignment-check.log": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "evidence/app-build.json": {
+      "bytes": 388,
+      "sha256": "4000eb39d8b7f9553b6319ace8a6188f686195b41d1758422248c075ada97c3a"
+    },
+    "evidence/build-result.json": {
+      "bytes": 1112,
+      "sha256": "b67ba64157cddc6086304a3122687af2c39192eeb00a0f501c17b050fbb01669"
+    },
+    "evidence/http.log": {
+      "bytes": 8281,
+      "sha256": "a7f7612a85ccd46508842ef4577563e695ad386dc871404259b769a8135acdc9"
+    },
+    "evidence/installation.json": {
+      "bytes": 521,
+      "sha256": "6cfd16204e3ed56ddedb01aeecca5ad2ebb7cd549a3d5efbdafa988a0d64a615"
+    },
+    "evidence/regression.log": {
+      "bytes": 123,
+      "sha256": "2f18ed159bc20811cd4408bd107f64ebea0c7e2e95de75f9bb4c98c12158db2c"
+    },
+    "evidence/relay-integration.log": {
+      "bytes": 317,
+      "sha256": "819549ffa8aeaeaa72085896aa71ea14e72232fd315d0c1e25c8cfc62eef57cf"
+    },
+    "evidence/result.json": {
+      "bytes": 191,
+      "sha256": "6402b35fd6433623dd08853ab324e9e4bcdc468f1f9045c1b4528c1889a27e2c"
+    },
+    "evidence/signature.log": {
+      "bytes": 307,
+      "sha256": "86488100b4aa2cc18888de8b90a43bbe9e2c06f51eebc88946861351d4b1da5a"
+    },
+    "server/StationOnline.cs": {
+      "bytes": 20734,
+      "sha256": "cb61c3504e60a252f5ca803e06d660bf10ab6b5f06d37ee2ed38b7f8f0c66352"
+    },
+    "server/StationOnlineEndpoints.cs": {
+      "bytes": 7156,
+      "sha256": "c0cecd0f14d6c361fd2ad8c94f9b6baf89f30e7c70df69e84a5251b68ac412c8"
+    },
+    "server/StationOnlineRegistration.cs": {
+      "bytes": 1989,
+      "sha256": "bddc7cfb8b010c1ac0ca062b30239446c4dde04d4344942d4d87bd0bbbd93ea7"
+    },
+    "server/StationRelay.cs": {
+      "bytes": 3585,
+      "sha256": "2009e94fe795cd18638f16de506abc2b85ae0a10aeb1cc69ac7965f5a6f08866"
+    },
+    "tests/HttpTests.cs": {
+      "bytes": 6750,
+      "sha256": "3b3bb7e5efe4da5a69f13a7bbf5d0ff67af3ba81e01ae04d4dcd6bc4f53c7de6"
+    },
+    "tests/Program.cs": {
+      "bytes": 8059,
+      "sha256": "1e9268a5be812243a3e46708db83b06dbe27466abc157f6a4a6a03b86cb3ea2d"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/NetplayPaths.java": {
+      "bytes": 4817,
+      "sha256": "e1cfc916a17eaaabadbcd821c2483469b99e0057944e2f2118fad064187e6a67"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/NetplayUi.java": {
+      "bytes": 2264,
+      "sha256": "f205101af034b89aa257c61347af9f942fce1603478c6fabb24597c91d6037cd"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationActionButton.java": {
+      "bytes": 4253,
+      "sha256": "4bd4673c330a82a5a262e0b735bbd76354167a8a6e648edbcd2409481d7f37cb"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinNetplayActivity.java": {
+      "bytes": 5007,
+      "sha256": "f947b5f72a35184c3eafb2ad551f39ce5ded40a1949a3a536d685b2660461b8e"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java": {
+      "bytes": 3298,
+      "sha256": "fa3933cbd4046efc8e83a0d03a071b454b0591e0a170db2a7e7fb353b5b11ef1"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationLobbySurface.java": {
+      "bytes": 4867,
+      "sha256": "b2320101df0889e59fd4832f83596d8e8d448f688d33e82f5236167722df50db"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationNetplayActivity.java": {
+      "bytes": 7319,
+      "sha256": "12e65a4c3eb43130d5142bab08b4cd1fb57f8659f7a74d464896b45d9d3a8dd0"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java": {
+      "bytes": 4048,
+      "sha256": "9def66775c194bda0d67e0651070b7baf7bdea60337dec86cf90da30ef672f73"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineGame.java": {
+      "bytes": 5986,
+      "sha256": "76833fab7c1af2a8f646ba0140cfb9fd3195bcc84e3574b447b1c8283b8275bc"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPresence.java": {
+      "bytes": 4222,
+      "sha256": "978dd6280cac0cda5c08500d38c5dfd85e2f4cb39fc072e9d955bd97dc2cff37"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationProcess.java": {
+      "bytes": 670,
+      "sha256": "d024190147ae5cb66abc0932c7bcaf282586bbbe060093c7d72722103b83fa73"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRelayTls.java": {
+      "bytes": 2275,
+      "sha256": "6e899eee7227bf5f53a4496eac0029726f3fd0c76024f24c6d3288a22e201341"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java": {
+      "bytes": 4730,
+      "sha256": "fdaccda357e71ca5fe64fc80b3c2d0f14f01de0959f42c32c49877aa5d9be11c"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java": {
+      "bytes": 7031,
+      "sha256": "d44d9e6620a1f9aa0ea487dc94b7ab77f83cbd1ebd1598c15b9fd7f0ae7b020b"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java": {
+      "bytes": 7691,
+      "sha256": "26ebf144d25fbcb1227a554061712fafacd868d56d8384bc4bc948b978d6b3fb"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": {
+      "bytes": 31954,
+      "sha256": "b6948d4be5a62e94ec94f4e02af83486e5194a68d8d1ea71facc65fcc17d96d7"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomState.java": {
+      "bytes": 936,
+      "sha256": "3569a17e3b3134b0388d5a3231dad9f269461fa5b35566fd5195be21018ac5f9"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/ILoggerFactory.java": {
+      "bytes": 2360,
+      "sha256": "ab0bb52f4cf43e3a5fa27d00213755872578e7faee3e0c64839b80261bb70670"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/IMarkerFactory.java": {
+      "bytes": 2842,
+      "sha256": "b117ebd1bb1cb96f9c10126a1d9333c080cb8ab712bad44ce8df777ea3e0ef91"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/Logger.java": {
+      "bytes": 31588,
+      "sha256": "3260945ee26d761430c30b356dc3426a7685bf42c6e0683b4c071f0ba733b17f"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/LoggerFactory.java": {
+      "bytes": 21452,
+      "sha256": "fa196dd87db2ffdb16dbad229c2206af6fa04fce4e3bfeb1f4ff10eeac276618"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/LoggerFactoryFriend.java": {
+      "bytes": 1999,
+      "sha256": "7c03986dbf69b843ffef03d75f52626168050f62e128033c846ad0fea1543ecd"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/Marker.java": {
+      "bytes": 4930,
+      "sha256": "2f786e0c523a27f0f7cc170e4c7563cdd5a5fd213d38dd0aa112cee5858d225c"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/MarkerFactory.java": {
+      "bytes": 3449,
+      "sha256": "47cc0e35c53a2f2a92a4315a3b52af7957e782e587eaa71e460f918fe4a90a3f"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/MDC.java": {
+      "bytes": 11059,
+      "sha256": "1a21ecf457230b77e148a6262b84b599cf8069583c6a96b6522735c073003dd0"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/AbstractWebSocket.java": {
+      "bytes": 11072,
+      "sha256": "66585af4e4ad90bdadf3451c719dc8cb586792b731d41736568572977ec58ef5"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/AbstractWrappedByteChannel.java": {
+      "bytes": 3044,
+      "sha256": "0037c56793bc8c5a50760422a3d275bc1cad8bde9699a2e704d8f6dc0f9fdcb3"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/SocketChannelIOHelper.java": {
+      "bytes": 3916,
+      "sha256": "b623f316471565df650e9122ee9df6afcb48d1e8ffc75b543a165b99e0db37c2"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/SSLSocketChannel.java": {
+      "bytes": 21153,
+      "sha256": "1675dc60aec80de1e90bd8805d481fffb9faeeaada5f3b3135d233e000c30314"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/SSLSocketChannel2.java": {
+      "bytes": 15861,
+      "sha256": "763bce757f3a88ceb2da838801413bebe2ec428dfcff19d250118b4716da3724"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocket.java": {
+      "bytes": 7852,
+      "sha256": "472a0056be48f09412cfb1884171cb7bab58ebb5e3466497e0dd271ca120bea2"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketAdapter.java": {
+      "bytes": 4386,
+      "sha256": "02c2c4592d0c3229d45d4bf59b01d398d3e78d30ee2fc3024ed4132f333de18b"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketFactory.java": {
+      "bytes": 1892,
+      "sha256": "7fbe149158c87c4aa57fde6c58fa672f2ac737b8ad276d69c87ea01fdd011cef"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketImpl.java": {
+      "bytes": 30624,
+      "sha256": "eeb1f51152e7f99b07afafa3a5499407d76047267c117cd2d0b7fd5c3facaeac"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketListener.java": {
+      "bytes": 8873,
+      "sha256": "dbed53bf089cef30fa0ea77467c4477f648380861813d7320950a67960145185"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketServerFactory.java": {
+      "bytes": 2348,
+      "sha256": "ae2074e5016c48ec009e3e02ce48eabbe18cf58ab4d8af81ff5f22563bbaca0f"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WrappedByteChannel.java": {
+      "bytes": 2657,
+      "sha256": "bccd03ac637dd46006e09068722c64bb8b5c6977f53510f289e42297ef6db3e4"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/client/DnsResolver.java": {
+      "bytes": 1889,
+      "sha256": "be024a65b8102336e00e07fbbbe07207ca77bed2f391ad3fa7b52d3bc76439ce"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/client/package-info.java": {
+      "bytes": 1301,
+      "sha256": "e6eb138ea6a4823752540f46cabe2afde7ba5c32783dccdb3b1c7e1086776ff1"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/client/WebSocketClient.java": {
+      "bytes": 30212,
+      "sha256": "46d4e3d2b75c50a2a8067206c9cef8425404b82ae02b30626badad33f2c2dbc6"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/drafts/Draft.java": {
+      "bytes": 13397,
+      "sha256": "163e962b1accdf9b35d18355adb128871a8340b59e56f016a0a656bd27da71e2"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/drafts/Draft_6455.java": {
+      "bytes": 43178,
+      "sha256": "0197d66ad70b85a836d25f51fb46be5613bfdfd9a6d6660814358930cd4bd817"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/drafts/package-info.java": {
+      "bytes": 1302,
+      "sha256": "d707a48ef0eaba78736680ce7c1ccd6eb31956d3474f15e9601cbc58c7a3bba4"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/CloseHandshakeType.java": {
+      "bytes": 187,
+      "sha256": "59884bd60287636507d00f319cc3ac7daffaae28780e3f5898dbb3d9bbeab9c8"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/HandshakeState.java": {
+      "bytes": 291,
+      "sha256": "ae60ce0f03a6bf499498ad96382ba9c00a7645f2c23138e72cc19452042585bc"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/Opcode.java": {
+      "bytes": 202,
+      "sha256": "1615e6dd67f03d9205b191528ed3e25e973e4ae6d8f9aa3af7f3206eb85f125c"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/package-info.java": {
+      "bytes": 1253,
+      "sha256": "235f3fa12b48d8a6e1f32ab1fb6e2cb99d034df39683b60f7783c91d362499db"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/ReadyState.java": {
+      "bytes": 189,
+      "sha256": "412999c9839d9217e877767812d967f2168fe17e3fb1b3515114e862d358fb6d"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/Role.java": {
+      "bytes": 158,
+      "sha256": "962c180cae257db3736588fc21054f054c06f9090917fd28203c5302e29582db"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/IncompleteException.java": {
+      "bytes": 1897,
+      "sha256": "c3765c5261a7cbff4bf2e0f23f03a2efa1880f75e7ba305efe69b60b8eb70d77"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/IncompleteHandshakeException.java": {
+      "bytes": 2118,
+      "sha256": "c72d64535b7409caede1745e0e72f9ea48e4a3bbb6955ce91fd4e91e0587dfa6"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidDataException.java": {
+      "bytes": 2771,
+      "sha256": "7bb664e132af04e320f60ce8f8a6c39c6d8172c3d59715578487a44c8a755bf5"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidEncodingException.java": {
+      "bytes": 952,
+      "sha256": "5c23102e779218c2f255d128943be49215e6fedfd76fed48aaafd34eb2e28e34"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidFrameException.java": {
+      "bytes": 2618,
+      "sha256": "b15a160c29fd9720c448837394b7a4a44b19fa6bac0e485f25e849e7feb4ecaf"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidHandshakeException.java": {
+      "bytes": 2659,
+      "sha256": "8ceee2f64343c7b89b40c1d75313fe56d14733721675081d3944af3cd8f01e51"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/LimitExceededException.java": {
+      "bytes": 2833,
+      "sha256": "30473c6a7c8b9e0f6ab82350d788b45d59af3367360d514e8545a2daf1ace5c8"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/NotSendableException.java": {
+      "bytes": 2005,
+      "sha256": "1240d7e0061d3f110dac3be83da2bee4c261da89864c6d48eefba1db483c8058"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/package-info.java": {
+      "bytes": 1322,
+      "sha256": "7607ce0dee88234fb2db2eafc8a0ad3447c24f15315f2909d024777828ae15ef"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/WebsocketNotConnectedException.java": {
+      "bytes": 1475,
+      "sha256": "cdb759017cce67c99ae9265916d4453c1efe3a092605c7cbd5c23cecee0a12ca"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/WrappedIOException.java": {
+      "bytes": 2331,
+      "sha256": "ff198c13075649f0811eb86ff2621cb310d16d56eefb168937d8cce588498c3a"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/CompressionExtension.java": {
+      "bytes": 2436,
+      "sha256": "4c9105ac1a11fa8061adada1e2fbbcb5437056ec31f509156b1e4fc951bee2f1"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/DefaultExtension.java": {
+      "bytes": 3063,
+      "sha256": "12eb9ce24d5bd7e22e72b1568086f721270330dd19a416a613ee1d6ad992c171"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/ExtensionRequestData.java": {
+      "bytes": 1566,
+      "sha256": "4154be72a8374f5f6b764c4ab6e6fb10ac611ed099ed767ee5cde550e1c856cf"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/IExtension.java": {
+      "bytes": 5545,
+      "sha256": "6f3dfa7a6a6b5e30413d119ec9eb2845a825af8f5775c51a9f2be629ccfb1813"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/package-info.java": {
+      "bytes": 1342,
+      "sha256": "572e8742551e1744dbf1a0f7456ddf9081634fb26ca0dc4e4d8455d04d874c67"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/BinaryFrame.java": {
+      "bytes": 1493,
+      "sha256": "2311a98f870be98afa0e6bf09b970ab58abee53bde1bebb04e9196ad685cf9f0"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/CloseFrame.java": {
+      "bytes": 11444,
+      "sha256": "dbbeae482e141035a015d0d113a2280dcf455a4f5075ef971349af13d40aad2b"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/ContinuousFrame.java": {
+      "bytes": 1513,
+      "sha256": "8ca7a10fd568da830351a2ad3eb30b9db783db8b6cd68d5c4449dbabb5428cb5"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/ControlFrame.java": {
+      "bytes": 2205,
+      "sha256": "5611f08bf26559fc5b4cab58f17006e675c2ad56c6484dbcd3efd52e3d280ae0"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/DataFrame.java": {
+      "bytes": 1713,
+      "sha256": "ee2e0aa8f02045c0300e86fedbd7c2390b7e48653c02cf1441b93ef84ae61ebd"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/Framedata.java": {
+      "bytes": 2766,
+      "sha256": "af38393fc88c0e5dd59c50b889ac2e8de134b2ed5e80c4a9987c46f6537bec80"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/FramedataImpl1.java": {
+      "bytes": 7564,
+      "sha256": "990a639a7d2180cd4d960aa277c95f3fddb7c5eeb927e9a6881b60bb3368c41c"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/package-info.java": {
+      "bytes": 1321,
+      "sha256": "415b83e44d9aae2057a1711e190f2900ced106e7a4e59e08d6a70de4fc7d0be5"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/PingFrame.java": {
+      "bytes": 1486,
+      "sha256": "10652b5c92ca962f7e65d7cd50f7b7c47dcb8667adcdeadeeec176bf48b03b3b"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/PongFrame.java": {
+      "bytes": 1777,
+      "sha256": "961b25419f996fa0e86341af27985b732150c8f5b7db9583cd1b74b11506a25a"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/TextFrame.java": {
+      "bytes": 1889,
+      "sha256": "98deee54f1eeb955e6bd88ccfb0aabc12493cf74684ec5df851bab0ade7e9943"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/ClientHandshake.java": {
+      "bytes": 1501,
+      "sha256": "a36a37b2078f543dc1acbc1ad12118812bdd457013b2b65ef8d7b5b25e3d306f"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/ClientHandshakeBuilder.java": {
+      "bytes": 1540,
+      "sha256": "e3bd28b41043aaadc4ecce61064da149af97bd597f5a65196fbb3c9219bb7042"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeBuilder.java": {
+      "bytes": 1642,
+      "sha256": "f7ec4a3073c0ec22451283d6d2377099a7d3dd337e711e0414fa05d41bd65887"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/Handshakedata.java": {
+      "bytes": 1967,
+      "sha256": "4a4565a9b9fa40a1a6d7266217b2b024f427cffcbf485baad64d328d3aa71c9e"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakedataImpl1.java": {
+      "bytes": 2382,
+      "sha256": "b54306cc2dac9479e43f0657df1c86ffcbd44d48dad966a58da9cdf1efebb1c1"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeImpl1Client.java": {
+      "bytes": 1811,
+      "sha256": "3d32c3509eb158009ae181fffcc0ca654632b9f259a519561da15c593eacda4e"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeImpl1Server.java": {
+      "bytes": 1882,
+      "sha256": "89529286cfc97c0014277aaf7d79e1fb0ab7f20adea75d9315d67dd8500e529a"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/package-info.java": {
+      "bytes": 1328,
+      "sha256": "66d021e6df318310f89428f8b5ed0ac3bd873c333a5423776920186548b69072"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/ServerHandshake.java": {
+      "bytes": 1544,
+      "sha256": "d2c43a8669afaa39aca969c199875817e4e7f5a534e385e540607af2cd5129c6"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/ServerHandshakeBuilder.java": {
+      "bytes": 1640,
+      "sha256": "576b117ca7418d42dea670d399049092dce92948053bcee92ca0ea5178c4a1a6"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/interfaces/ISSLChannel.java": {
+      "bytes": 1547,
+      "sha256": "28eba50431a901a00d70e208eb80fe725f32df6ebaac8edf6df3a9bf147f5eb9"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/interfaces/package-info.java": {
+      "bytes": 1252,
+      "sha256": "ac800af5c90dec9eb645224453ee3f609bdce7ccc882a90f83271c90e2a3470f"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/protocols/IProtocol.java": {
+      "bytes": 2695,
+      "sha256": "986bc81466a806a5168a7508471f9c1f4fb8eef3179b2823379ae456ac321879"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/protocols/package-info.java": {
+      "bytes": 1339,
+      "sha256": "1b44adeb71125073b4d6953565a7cbe4846163903189f9877fbf6fb02c31111e"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/protocols/Protocol.java": {
+      "bytes": 2978,
+      "sha256": "632977dbcee22a27903759ccae2a164f045b9ff6dc10ae7ca61daea404079727"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/CustomSSLWebSocketServerFactory.java": {
+      "bytes": 4047,
+      "sha256": "bd9eee4432c8674a7b9c41173b9011c516d6ec7556037fb0f15236aa52998ba5"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/DefaultSSLWebSocketServerFactory.java": {
+      "bytes": 3555,
+      "sha256": "459a88e7416f35607f7d0f2b5d2f7bc7e385b65249322edb6cd94e6c9c64d439"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/DefaultWebSocketServerFactory.java": {
+      "bytes": 2098,
+      "sha256": "9195bb24756f85aba5d66c0ab95c5bb13d7557abc8597743ace501a07b6ec8e5"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/package-info.java": {
+      "bytes": 1301,
+      "sha256": "605c088e6297b5634d8390d8184396f3ca2eaa5850d9b267df5f25385604fa06"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/SSLParametersWebSocketServerFactory.java": {
+      "bytes": 3181,
+      "sha256": "90d97968529ed0b68ec5a39f4c580e55c49f04323252006b890053a5c00fa0b3"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/WebSocketServer.java": {
+      "bytes": 39314,
+      "sha256": "bec37425509d8b058af37c3b2532575b9e18abeea13b6997704a475111a96d19"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/Base64.java": {
+      "bytes": 46891,
+      "sha256": "1fbed083d1291a9a77c5d4f9333ef671728fc63f359e94aec6246ec65ab97448"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/ByteBufferUtils.java": {
+      "bytes": 2248,
+      "sha256": "72eb3957ce6a5a871c8cdb0c5560b761f2d117b403ac5fdaa4c1ddae1e31a6f7"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/Charsetfunctions.java": {
+      "bytes": 5726,
+      "sha256": "af2bf03f1b2e4c8749dff928f886d6203d2310efcbee38f52a62baedec669131"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/NamedThreadFactory.java": {
+      "bytes": 2092,
+      "sha256": "e4252112109f26144a6f32c48a3a49e9d927871cba8b1e9ec8b4518de3a08f17"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/package-info.java": {
+      "bytes": 1262,
+      "sha256": "f2d6e97908ae604ebfd9ad495847d91d942fc9a7e41cc03442e0e381981fc12e"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/permessage_deflate/PerMessageDeflateExtension.java": {
+      "bytes": 14064,
+      "sha256": "d5a2a373b99a115ab2eb374ba865c54785469733316d4eb7fd57c57487ddcd75"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/DefaultLoggingEvent.java": {
+      "bytes": 2975,
+      "sha256": "95801e024aafc8ce0dc93672b839eba56c5cd30b42f92ec1d7af8cb3da1a2925"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/EventConstants.java": {
+      "bytes": 578,
+      "sha256": "092f4b29eeb6d6d1ed43e67111dbe94f6dff9c42273cf879167312d9b067a331"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/EventRecordingLogger.java": {
+      "bytes": 2438,
+      "sha256": "e5af50242eaed3d021b9e11de196094b890547205973afba31ec35e121d24d14"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/KeyValuePair.java": {
+      "bytes": 790,
+      "sha256": "9e49c4990f2d926e0b309df9d34f5cacd3a1aadc7524cb5c4d8827a33fa3cce6"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/Level.java": {
+      "bytes": 1561,
+      "sha256": "71a2931e069faf3bd7f3a6da2a1ea48c64be96bd4af87c138995bcd15e45c03a"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/LoggingEvent.java": {
+      "bytes": 1039,
+      "sha256": "36f4b1427e7472a2ae9821346fd946f0d8f645497885f7761e51b23b21543780"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/SubstituteLoggingEvent.java": {
+      "bytes": 2397,
+      "sha256": "dc52015fdfd175fa15cc137a24037e5791cdd7008c69af9befbdbaec557b7f48"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/AbstractLogger.java": {
+      "bytes": 13802,
+      "sha256": "2d1071378e0e2cf5314898c2ff4e9d00a1f644e16f3e5d0ab66b9e216de6c7aa"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMarker.java": {
+      "bytes": 4990,
+      "sha256": "98744c8a47b722d01db353581ae24d684301ec3e357abf0407e77b7927bcdc9c"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMarkerFactory.java": {
+      "bytes": 3486,
+      "sha256": "ab5dcd8c3c343d7d8c0c9471d86bc334aaf906311c6c9d01ec6692e903e735f4"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMDCAdapter.java": {
+      "bytes": 5493,
+      "sha256": "1f7c073ecc7df8905ca56362f6fe8e9f4df114192b609b550dcc508c0ba47823"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/CheckReturnValue.java": {
+      "bytes": 1163,
+      "sha256": "ce7ac3af2b6db642e67ace0b92eca0fc5b2be6d0f8f610843c719fe5558cebdf"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/FormattingTuple.java": {
+      "bytes": 2065,
+      "sha256": "e2871e8b25e52508fb01880fe6e783e2e84e46faffdf09eadebcceb88c564101"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/LegacyAbstractLogger.java": {
+      "bytes": 945,
+      "sha256": "444bd61ad6540631364e228bb20a9d0c1b21c9591bc9c5a392d3fb8c5e8f69c3"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/MarkerIgnoringBase.java": {
+      "bytes": 4960,
+      "sha256": "85e756f52685605020d1ab40965e651d8b705e9ff4d4a63af8ee96359ba299c9"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/MessageFormatter.java": {
+      "bytes": 15407,
+      "sha256": "42ba80b2b7709cf4ae363fe8717c2ae4d4aaa8ceb680a1c4c554579deaa216e0"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NamedLoggerBase.java": {
+      "bytes": 2699,
+      "sha256": "5ec8420816f56f6d6beaaa8995b24fbea445e623f3e3622543af89a0bdbf200b"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPLogger.java": {
+      "bytes": 10481,
+      "sha256": "295c11c53b8fc37bd3d79d2e24ba3160a40bc7bef38de8291cefc99a0638d376"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPLoggerFactory.java": {
+      "bytes": 1771,
+      "sha256": "202266e72ed6c3ab853c9508c625cb3bebee97b4d0fd16a49f85a21aa9765cde"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPMDCAdapter.java": {
+      "bytes": 2370,
+      "sha256": "face675ee80a476f59bb01f9f464ba66cdf6c198c8faa3fc5025edf80d601986"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NOP_FallbackServiceProvider.java": {
+      "bytes": 1403,
+      "sha256": "5cf653995692d533390d28378a596f05dfcd67a72b8acc2217f154b9e1c51c5a"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NormalizedParameters.java": {
+      "bytes": 3605,
+      "sha256": "3fc1a44ce409d0c28961b574d3f1ff744d4bac2d4feb99dc570d51b7803556d9"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/Reporter.java": {
+      "bytes": 5683,
+      "sha256": "105e4aebc7e584cfbd9338066ceffe55533ea6f1db2c565f87f27b8da9086e2f"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteLogger.java": {
+      "bytes": 13493,
+      "sha256": "57504b2d3b085767ea30a2185d5ec69b783502a92c9668e6492703719483ca3a"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteLoggerFactory.java": {
+      "bytes": 2842,
+      "sha256": "7b3261816790f528985e86dc1f34cc24f0ab8fbe5f05eb17d795a429da7c045b"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteServiceProvider.java": {
+      "bytes": 1182,
+      "sha256": "3a69416d6bd17c445a399cb75c315cbd47fa4b73d7b6d2ec7e37804738035b23"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/ThreadLocalMapOfStacks.java": {
+      "bytes": 2244,
+      "sha256": "9d1b56a7a87aaf524d8b84536f8d19d3c35c85b6da2c89415db1e396a1f9121b"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/Util.java": {
+      "bytes": 5041,
+      "sha256": "fd3dea9b59d1a947216e9c5a71332342219f3c865adeff6339217488b9fd5cfd"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/CallerBoundaryAware.java": {
+      "bytes": 789,
+      "sha256": "6c4670c67fcae4654cbe0840a18e7ae64474c76815fdc021fe3b23d957807901"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/DefaultLoggingEventBuilder.java": {
+      "bytes": 8788,
+      "sha256": "36b6bd4afbd40c362ff2425b483b2a5916ee6d425fc802ef6b7631bdc8e9db51"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/LocationAwareLogger.java": {
+      "bytes": 2928,
+      "sha256": "6dc67d5ba05816b496afe72566fb58184e9cd224e1bf55f907d6c32c0bb3d891"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/LoggerFactoryBinder.java": {
+      "bytes": 2530,
+      "sha256": "6772d6bf13a3ee0d07075c664f309b37c79914bd8406ff829cdb27a046422285"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/LoggingEventAware.java": {
+      "bytes": 899,
+      "sha256": "3f01e6c131368e5af698c385d3e28fa74c96624e17b435b857dcbffa19b7ffbd"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/LoggingEventBuilder.java": {
+      "bytes": 5865,
+      "sha256": "be7aab88213bf95f3296b3f5ad5602264d7d278ce6a31abb37d470264fdfc81a"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/MarkerFactoryBinder.java": {
+      "bytes": 2522,
+      "sha256": "ac3fbba575e912d745cc43ada0effd20de42159b47ee22ba1d8f8b1241258bc0"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/MDCAdapter.java": {
+      "bytes": 4434,
+      "sha256": "6acf6b2804791f32b49199c833ed3ceda8b3ae8f2fd2689126121f17c4fd145f"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/NOPLoggingEventBuilder.java": {
+      "bytes": 2417,
+      "sha256": "9768d7e4823e6a54d9cd791ad48b698ed008730724542e00588483020f598c2b"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/SLF4JServiceProvider.java": {
+      "bytes": 1785,
+      "sha256": "494bc93fc7f053d0992bfba59574944c543066e3258e50b60bc8a5fc0262bd49"
+    }
+  }
+}
