@@ -1,3 +1,9 @@
+# R36 preparado — nome da plataforma no botão e layout — 05/10/2026
+
+Leia `versions/station-platform-button-r36-20261005/README.md`, STATUS e recibos. APK SHA dfe9dd4ce24fdca80986919e885b0a09d146f29dd8ab156f0dffdf18d2a46f57, somente carouselSO sobreR34;13.086 entradas preservadas. Nome/abreviação dentro botão da plataforma, sequência de metadados com dois espaços reais, cinco botões secundários iguais, faixa instalada mais alta/brilhante. 12.712 checks e assinatura/16KiB/preservação passaram. Instalado depois da reconexão no Samsung, SHA integral igual; recibo em evidence/installation-samsung.json. Conferência visual separada, sem teste de partida online. Fontes finais W36; restauração inclui JavaR34. Pendências Battletoads/player2/controles/Voltar em partida continuam. Sem mudança servidor. Preservar jogos/licença/saves. Não declarar estabilidade geral nem visual aprovado.
+
+## Histórico anterior
+
 # R34 instalado no Samsung — 05/10/2026
 
 Instalação solicitada concluída por atualização, SHA513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef conferido no aparelho. App abriu plataformas sem login. Ler evidence/installation-samsung.json no snapshotR34. Sem desinstalar/limpar dados. POCO ainda não conferido; Battletoads segundo jogador, controles e Voltar em partida continuam pendentes de validação. A configuração temporária Samsung de tela ligada foi restaurada para0. Não chamar de estável geral.

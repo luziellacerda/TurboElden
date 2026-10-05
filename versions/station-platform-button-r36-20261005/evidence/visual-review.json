@@ -1,0 +1,22 @@
+{
+  "rootPlatformNameInsideButton": true,
+  "rootExample": "Super Nintendo",
+  "duplicateRootTitleRemoved": true,
+  "collectionsKeepOpenLabel": true,
+  "metadataOrderObserved": true,
+  "equalSecondaryButtonsObserved": true,
+  "installedRibbonObserved": true,
+  "observedGame": "Battletoads in Battlemaniacs (USA)",
+  "synopsisMissingObserved": true,
+  "BRVariantVisuallyVerified": false,
+  "gameplayTested": false,
+  "screenshots": [
+    "E:\\ESTUDO APK\\work\\station-platform-button-r36-20261005\\device-evidence\\platform-button-r36.png",
+    "E:\\ESTUDO APK\\work\\station-platform-button-r36-20261005\\device-evidence\\platforms-r36.png",
+    "E:\\ESTUDO APK\\work\\station-platform-button-r36-20261005\\device-evidence\\platform-button-br-r36.png"
+  ],
+  "limitations": [
+    "User continued navigation during review; no automated claim of full navigation coverage",
+    "R37 requested afterwards: title +50%, five spaces, server profile name, complete synopses, richer ribbon"
+  ]
+}
