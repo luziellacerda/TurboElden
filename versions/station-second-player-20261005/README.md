@@ -1,15 +1,15 @@
-# Entrada do segundo jogador — delta sobre R30
+# Entrada do segundo jogador — delta conciliado com R34
 
-Fonte b282b04, três classes Java; 143 de146 fontes/dependências R30 intactas. Oferece **Entrar na sala** no perfil do anfitrião e outras salas com vaga quando a própria sala tem uma pessoa; confirma Sair e entrar, prepara jogo antes de sair e comprova membro no destino. Pronto confirma a sala atual.
+Fonte `f7f056125ad208d8a0e139b392d382d68f61787f`. Três classes Java alteradas;144 de147 fontes/dependências R34 intactas. O perfil do anfitrião oferece **Entrar na sala**; uma sala própria individual mostra outras salas com vaga. A troca confirma **Sair e entrar**, prepara o jogo antes da saída e confere o membro no destino. Pronto confirma a sala atual.
 
-Leia [handoff para produção](../../docs/server/RETORNO-SEGUNDO-JOGADOR-SALAS-STATION-20261005.md). Evidências de build/preservação/diagnóstico estão em evidence;20+107+11 verificações passaram. DEX compilado, ainda sem APK instalado. Nenhum servidor/motor/licença/download/carrossel alterado.
+Leia [o handoff de produção](../../docs/server/RETORNO-SEGUNDO-JOGADOR-SALAS-STATION-20261005.md). Evidências em `evidence`:20+107+60+15 verificações Java e11 do servidor, total213. DEX final compilado; APK desta correção ainda sem montagem/instalação. O R34 do Samsung está confirmado; a versão exata do POCO não foi conferida.
 
 ## Compilar
 
-No clone com snapshotsR27/R30 completos, executar `python recipes/build_second_player.py --android-jar CAMINHO --client-jar CAMINHO --r8-jar CAMINHO --output DIRETORIO_NOVO`. Opcionalmente informar java/javac/jar do JDK. A receita confere toda a fonte R30 antes de sobrepor este delta.
+No clone com os snapshots R27/R30/R34 completos, executar `python recipes/build_second_player.py --android-jar CAMINHO --client-jar CAMINHO --r8-jar CAMINHO --output DIRETORIO_NOVO`. Opcionalmente informar java/javac/jar. A receita confere a fonte exata R34 antes de sobrepor este delta.
 
-O resultado dex/classes.dex substitui apenas classes35.dex no R30 exato, SHA1768b7df. O handoff fornece todos os hashes/guards, assinatura/alinhamento e roteiro de instalação/teste. Se chegou APK posterior, conciliar antes; não alterar fontes congeladas ou instalar um APK anterior.
+O resultado `dex/classes.dex` substitui apenas `classes35.dex` no R34 exato, SHA513dd470. Manter o manifesto R34, incluindo o callback Voltar, recuperação de abertura, logs e design R33. O DEX inicial sobre R30 é histórico e foi substituído. O handoff traz hashes, assinatura/alinhamento, preservação integral e roteiro dos dois telefones.
 
 ## Limite da troca
 
-São leave e join existentes, após confirmação. A resposta de saída é aplicada antes da entrada. Se o destino fechar/lotar, a sala anterior já terá sido encerrada e a falha fica visível. Não há rollback fictício nem transferência silenciosa de partida em andamento.
+São leave e join existentes, após confirmação. A saída é aplicada antes da entrada. Se o destino fechar/lotar, a sala anterior já terá sido encerrada e a falha ficará visível. A troca não é atômica. O servidor, runtime, licenças e arquivos dos jogos permanecem preservados.

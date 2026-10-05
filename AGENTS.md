@@ -1,6 +1,6 @@
 # Segundo jogador — delta conciliado com R34 — 05/10/2026
 
-Leia docs/server/RETORNO-SEGUNDO-JOGADOR-SALAS-STATION-20261005.md. Perfil do anfitrião agora oferece Entrar; sala própria individual mostra outras salas com vaga, contagem1/2 e Sair e entrar após confirmação. Pronto não executa join. Delta inicialb282b04 foi conciliado com a8898a0/R34 instalado noSamsung513dd470, preservando recuperação da abertura/Voltar/manifesto e designR33. Ainda sem APK instalado desse delta; não usar o DEX inicialR30ef8a2d99 para substituir a versão R34. Servidor e4e557a inalterado. Preservar licença/saves/assinatura; gameplay em dupla/POCO ainda não comprovados.
+Leia docs/server/RETORNO-SEGUNDO-JOGADOR-SALAS-STATION-20261005.md. Fonte compilada f7f0561: perfil do anfitrião oferece Entrar; sala própria individual mostra outras salas com vaga, contagem1/2 e Sair e entrar após confirmação. Pronto confirma a sala atual.147 entradas Java/dependências compiladas,144 intactas e213 verificações aprovadas. DEX39864bd1/336988bytes. Conciliado com a8898a0/R34 instalado no Samsung513dd470, preservando recuperação da abertura/Voltar/manifesto e designR33. APK deste delta ainda sem montagem/instalação; a versão POCO não foi conferida. DEX inicial R30ef8a2d99 foi substituído. Servidor e4e557a inalterado. Preservar licença/saves/assinatura; não afirmar gameplay em dupla ou latência resolvidos sem prova nos aparelhos.
 
 # R34 instalado no Samsung — 05/10/2026
 
