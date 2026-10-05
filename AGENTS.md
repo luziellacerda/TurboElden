@@ -1,3 +1,13 @@
+# Estado vigente — Neo Geo publicado e taxa MB/s sobre R11, 05/10/2026
+
+Leia `versions/station-neogeo-rate-20261005/README.md`. Servidor catálogo 9, 2.162 jogos, 189 Neo Geo válidos, 255 IDs ocultos preservados, 2.119 sinopses e 374 jogos em subpastas. Neo Geo está na raiz do HD; 826 arquivos foram movidos sem alteração. Entrega mantém jogo ZIP fechado e BIOS ao lado. Alpha Mission II recebeu somente a BIOS exata no pacote de entrega; Art of Fighting 2 aguarda substituição do ZIP corrompido.
+
+O retorno 6ef86c4 foi incorporado: R9 é último instalado comprovado; R11 é compilado/assinado, USB pendente e ajuste de tela já restaurado a 0. O delta novo tem somente JNI, helper de taxa e native_search_download, com guardas SHA/backup. Preserva Java R10, coleções R11, quatro capas, fila, ABI, salas, assinatura e dados. Não reaplicar overlays históricos, não substituir classes28/classes35 pelos DEX antigos nem executar scripts one-shot R10/R11.
+
+O contador avança de 1 MB em 1 MB; isso não mede MB/s. Medições Linux: API 316,35 MB/s, Nginx 259,99 MB/s, HTTPS até 4,37 MB/s; sem limitador de bytes/s encontrado. Fonte nova mostra percentual e taxa real somente durante Baixando. 9 verificações C++ de taxa e 5 Java de ZIP/BIOS passaram; JNI compilada. Nenhum APK desta taxa foi assinado ou instalado no Linux. Incorporar JNI/carousel juntos sobre a base R11 canônica, mesmo certificado e atualização sem limpar dados. Gameplay Neo Geo e partida entre dois aparelhos ainda precisam de evidência.
+
+## Histórico anterior
+
 # Estado vigente — R11 coleções e servidor integrados, USB pendente — 05/10/2026
 
 Leia `versions/station-collections-r11-20261005/README.md` e o handoff R10 referenciado. APK final **7c5096d58991a9724537036e18eb42555f290e2f6d673904524520da0d0146d5**, 1.982.770.888bytes, compilado/assinado; **NÃO instalado: USB ausente**. Inclui tudo do R10 e corrige coleções: remove célula Jogos sem subpasta, conserva Todos os jogos incluindo raiz, nomes exatos visíveis e descrição com quantidade/títulos reais.440checks de navegação e6153textoUTF8 passaram. UmSO alterado sobreR10,11.102entradas preservadas. Não alegar visual Android ou partidas validados.

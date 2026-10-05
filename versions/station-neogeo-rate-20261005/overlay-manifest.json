@@ -1,0 +1,20 @@
+[
+  {
+    "path": "station/src/native/station_frontend.cpp",
+    "sourceVersion": "station-neogeo-rate-20261005",
+    "previousSha256": "4d926a216b83ac0a76f4c8baa0525d3f59b717721368b6cc483fbbfa96aaecf5",
+    "newSha256": "12e5babd82f3ddc071fa2c4daaeeebf2026305f5f40099fed57f7b31c032871b"
+  },
+  {
+    "path": "native/native_search_download.h",
+    "sourceVersion": "station-neogeo-rate-20261005",
+    "previousSha256": "1f13d213d3199e36ff4bee1bd180a5c1ebc8113422ced47f9c7886290caab19b",
+    "newSha256": "138fd2a7a74acb0e95afe805c8230f96bbb5067baeeb4aa7288aa40667fbe61f"
+  },
+  {
+    "path": "station/src/native/station_transfer_rate.hpp",
+    "sourceVersion": "station-neogeo-rate-20261005",
+    "previousSha256": null,
+    "newSha256": "c443fa0c62d8edac4f48e80b089f5af7b2221a6ab6943043359382a549f3d5e3"
+  }
+]
