@@ -1,3 +1,7 @@
+# Entrada do segundo jogador — correção preparada — 05/10/2026
+
+Leia docs/server/RETORNO-SEGUNDO-JOGADOR-SALAS-STATION-20261005.md. R30 oculta outras salas quando há sala própria e o perfil do anfitrião não oferece Entrar. Pronto não executa join. Fonteapp b282b04:3classes,146fontes compiladas/138verificações; DEXef8a2d99 pronto, APK ainda não atualizado. Servidor e4e557a inalterado. Uso imediato: POCO Sair da sala → Código TS1 da sala do primeiro → Entrar → dois nomes → doisProntos → hostIniciar. Preservar R30/assinatura/dados, não reenviarR27. Não afirmar gameplay/latência resolvidos sem aparelho.
+
 # Servidor R12/POCO publicado — 05/10/2026
 
 Leia `docs/server/RETORNO-SERVIDOR-NETPLAY-INTERNET-STATION-R12-20261005.md`. APIe4e557a/DLL7ecb6c8d/PID660598, WSS no mesmo domínio;512salas/1024conexões configuradas.256conexões reais/renovações e512TLSisoladas passaram. **Latência pública alta segue aberta:** p952291,82ms vs1,07ms Nginxlocal. DoisAndroid/gameplay não verificados. LicençaPOCO própria1aparelho/vitalícia, código somente privadoLinux, ativação até07/10 às17h11Maceió; licença original preservada.
