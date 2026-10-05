@@ -1,3 +1,11 @@
+# R15 instalada — 05/10/2026
+
+Atualização por USB concluída com sucesso, sem desinstalar ou limpar dados. SHA256 do base.apk no telefone **d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b**, igual ao APK preparado. Aplicativo aberto; catálogo Neo Geo com capa, sinopse e botões observado, sessão mantida sem digitar credenciais. Configurações de tela não alteradas. Recibo: `evidence/installation.json` nesta versão.
+
+Gameplay NeoGeo/N64, configurações do novo N64, retorno à coleção e medição real de FPS ainda não foram conferidos nesta instalação. Não promover a estável. Fonte candidata completa continua em `E:\ESTUDO APK\work\station-n64-complete-20261005\frontend-native`; shared native anterior continuaR14B. Nova instalação deve preservar a integração N64 e os ajustes R14B.
+
+## Estado anterior à instalação
+
 # TurboStations R15 — Neo Geo corrigido e Nintendo 64 completo
 
 ## Estado em 05/10/2026

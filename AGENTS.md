@@ -1,3 +1,11 @@
+# R15 instalada — 05/10/2026
+
+Atualização por USB concluída com sucesso, sem desinstalar ou limpar dados. SHA256 do base.apk no telefone **d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b**, igual ao APK preparado. Aplicativo aberto; catálogo Neo Geo com capa, sinopse e botões observado, sessão mantida sem digitar credenciais. Configurações de tela não alteradas. Recibo: `versions/station-emulators-r15-20261005/evidence/installation.json`.
+
+Gameplay NeoGeo/N64, configurações do novo N64, retorno à coleção e medição real de FPS ainda não foram conferidos nesta instalação. Não promover a estável. Fonte candidata completa continua em `E:\ESTUDO APK\work\station-n64-complete-20261005\frontend-native`; shared native anterior continuaR14B. Nova instalação deve preservar a integração N64 e os ajustes R14B.
+
+## Estado anterior à instalação
+
 # Candidato R15 Neo Geo / N64 — 05/10/2026
 
 Leia `versions/station-emulators-r15-20261005/README.md` e `BUILD.md`. APK **d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b**, 2.036.244.940 bytes, em `E:\ESTUDO APK\work\station-emulators-r15-20261005\TurboStations-NeoGeo-N64-R15-20261005.apk`. Compilado/assinado, **NÃO instalado: USB ausente**. Último instalado continua R14 a1566d3d. Não promover a estável nem afirmar gameplay corrigido no aparelho.

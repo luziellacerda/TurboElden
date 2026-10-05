@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-05T17:05:42.668556+00:00",
+  "package": "org.turboramastation.frontend",
+  "installed": true,
+  "installMethod": "adb install --no-incremental -r --user 0",
+  "apk": "E:\\ESTUDO APK\\work\\station-emulators-r15-20261005\\TurboStations-NeoGeo-N64-R15-20261005.apk",
+  "apkSha256": "d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b",
+  "deviceBaseApkSha256": "d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b",
+  "deviceHashMatches": true,
+  "userDataCleared": false,
+  "screenSettingsChanged": false,
+  "serverDeployed": false,
+  "stable": false,
+  "neoGeoGameplayVerified": false,
+  "n64GameplayVerified": false,
+  "collectionReturnVerified": false,
+  "frameRateMeasured": false,
+  "foreground": [
+    "topResumedActivity=ActivityRecord{61220922 u0 org.turboramastation.frontend/org.emulationstation.frontend.ESActivity t58}",
+    "ResumedActivity: ActivityRecord{61220922 u0 org.turboramastation.frontend/org.emulationstation.frontend.ESActivity t58}"
+  ],
+  "frontendObserved": true,
+  "frontendScreenVerified": true,
+  "observedScreen": "Neo Geo game list, World Heroes Perfect selected; cover/synopsis and native action buttons visible; existing session retained without entering credentials.",
+  "screenshotSha256": "5f1a92268bad98ebab647aed9a93b63efd4444df516b062f2eea5da3c77d3872"
+}
