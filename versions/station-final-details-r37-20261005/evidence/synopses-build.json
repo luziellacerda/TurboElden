@@ -1,0 +1,41 @@
+{
+  "scope": "Frozen public catalog revision 14, not a live HTTP read; no new IDs outside these 2212 implied.",
+  "serverCommit": "100e4bbd92aa4c85cda10a633e6463fbb24ae8ab",
+  "catalogPath": "docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "catalogSha256": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e",
+  "catalogRevision": 14,
+  "items": 2212,
+  "platforms": {
+    "snes": 644,
+    "snesbr": 191,
+    "megadrive": 887,
+    "megadrivebr": 94,
+    "n64": 157,
+    "neogeo": 189,
+    "neogeocd": 50
+  },
+  "sourceCounts": {
+    "server-catalog": 2168,
+    "editorial": 17,
+    "exact-xml": 27
+  },
+  "originalServerNonempty": 2169,
+  "originalServerEmpty": 43,
+  "serverDescriptionsPreservedVerbatim": 2168,
+  "titleOnlyValuesEnriched": 1,
+  "missing": 0,
+  "placeholders": 0,
+  "duplicates": 0,
+  "neoXmlSha256": "555672bfb311bcef62a5f5409e81a199b37e32eb082f2b04c5a1619bbcbe5463",
+  "snesXmlSha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+  "editorialSha256": "10dd914cf2708a60e036e1926f8d144c4a0fcac72dbc63f53e9f81ccdc54f3ba",
+  "outputHeaderSha256": "537f8ade06f24549f1f176708add5d5aebdfa1f550fd99d72a45140152653191",
+  "completeDataSha256": "74fea17341097e47ec30fb543bb6b67d4a3d44d2fc1ca6a82b5989fff3d06010",
+  "overrideHookRequired": "Call stationSynopsisNeedsOverride(id,serverDescription) in native_info before choosing server text; only Old Towers title-only is overridden.",
+  "limitations": [
+    "The 2168 preserved server descriptions have not been individually fact-checked or translated.",
+    "New future IDs need server descriptions or a regenerated offline index.",
+    "Named variants are described without inventing patch-specific behavior; ROM binaries not inspected.",
+    "No APK, installation, server, network or netplay changes performed by this generator."
+  ]
+}

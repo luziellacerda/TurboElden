@@ -1,0 +1,102 @@
+PASS 21 profile checks; 16237 concurrent snapshots; 20000 changed and 20000 identical publications
+0000000000023d58 T JNI_OnLoad
+0000000000024144 T Java_org_emulationstation_frontend_station_StationFrontend_publishCatalog
+000000000002597c T Java_org_emulationstation_frontend_station_StationFrontend_publishCover
+000000000002524c T Java_org_emulationstation_frontend_station_StationFrontend_publishCoverResult
+00000000000261c8 T Java_org_emulationstation_frontend_station_StationFrontend_publishError
+00000000000259e8 T Java_org_emulationstation_frontend_station_StationFrontend_publishForeground
+0000000000025a04 T Java_org_emulationstation_frontend_station_StationFrontend_publishJob
+0000000000023fd0 T Java_org_emulationstation_frontend_station_StationFrontend_publishPreparation
+00000000000281d4 T StationCatalog_active
+0000000000027a10 T StationCatalog_applyPending
+0000000000028120 T StationCatalog_cancel
+0000000000027d30 T StationCatalog_folderRevision
+0000000000027d3c T StationCatalog_itemFolderPath
+0000000000027a60 T StationCatalog_prioritize
+00000000000284ac T StationCatalog_progress
+00000000000262cc T StationCatalog_refresh
+0000000000027a34 T StationCatalog_refreshInstalled
+0000000000027ba8 T StationCatalog_start
+0000000000028178 T StationCatalog_uninstall
+0000000000026650 T StationCatalog_update
+0000000000027e58 T StationCatalog_visitFolders
+0000000000029100 T StationCore_request
+000000000002888c T StationDownload_networkRate
+00000000000285b0 T StationDownload_phase
+0000000000028ad8 T StationLicense_enter
+00000000000288f8 T StationLicense_sync
+0000000000029138 T StationLoading_draw
+0000000000023c98 T StationProfile_copyName
+0000000000023c88 T StationProfile_nameRevision
+0000000000028e4c T StationStats_background
+0000000000028edc T StationStats_end
+00000000000290e4 T StationStats_event
+0000000000028b24 T StationStats_init
+00000000000290a0 T StationStats_shutdown
+0000000000028e74 T StationStats_start
+0000000000028e30 T StationStats_update
+0000000000023b68 T JNI_OnLoad
+0000000000023f54 T Java_org_emulationstation_frontend_station_StationFrontend_publishCatalog
+0000000000025778 T Java_org_emulationstation_frontend_station_StationFrontend_publishCover
+0000000000025048 T Java_org_emulationstation_frontend_station_StationFrontend_publishCoverResult
+0000000000025fc4 T Java_org_emulationstation_frontend_station_StationFrontend_publishError
+00000000000257e4 T Java_org_emulationstation_frontend_station_StationFrontend_publishForeground
+0000000000025800 T Java_org_emulationstation_frontend_station_StationFrontend_publishJob
+0000000000023de0 T Java_org_emulationstation_frontend_station_StationFrontend_publishPreparation
+0000000000027fd0 T StationCatalog_active
+000000000002780c T StationCatalog_applyPending
+0000000000027f1c T StationCatalog_cancel
+0000000000027b2c T StationCatalog_folderRevision
+0000000000027b38 T StationCatalog_itemFolderPath
+000000000002785c T StationCatalog_prioritize
+00000000000282a8 T StationCatalog_progress
+00000000000260c8 T StationCatalog_refresh
+0000000000027830 T StationCatalog_refreshInstalled
+00000000000279a4 T StationCatalog_start
+0000000000027f74 T StationCatalog_uninstall
+000000000002644c T StationCatalog_update
+0000000000027c54 T StationCatalog_visitFolders
+0000000000028efc T StationCore_request
+0000000000028688 T StationDownload_networkRate
+00000000000283ac T StationDownload_phase
+00000000000288d4 T StationLicense_enter
+00000000000286f4 T StationLicense_sync
+0000000000028f34 T StationLoading_draw
+0000000000028c48 T StationStats_background
+0000000000028cd8 T StationStats_end
+0000000000028ee0 T StationStats_event
+0000000000028920 T StationStats_init
+0000000000028e9c T StationStats_shutdown
+0000000000028c70 T StationStats_start
+0000000000028c2c T StationStats_update
+
+Elf file type is DYN (Shared object file)
+Entry point 0x0
+There are 10 program headers, starting at offset 64
+
+Program Headers:
+  Type           Offset   VirtAddr           PhysAddr           FileSiz  MemSiz   Flg Align
+  PHDR           0x000040 0x0000000000000040 0x0000000000000040 0x000230 0x000230 R   0x8
+  LOAD           0x000000 0x0000000000000000 0x0000000000000000 0x01fae0 0x01fae0 R   0x4000
+  LOAD           0x01fae0 0x0000000000023ae0 0x0000000000023ae0 0x0377b0 0x0377b0 R E 0x4000
+  LOAD           0x057290 0x000000000005f290 0x000000000005f290 0x004450 0x004d70 RW  0x4000
+  LOAD           0x05b6e0 0x00000000000676e0 0x00000000000676e0 0x000188 0x0015d0 RW  0x4000
+  DYNAMIC        0x05b0d0 0x00000000000630d0 0x00000000000630d0 0x0001b0 0x0001b0 RW  0x8
+  GNU_RELRO      0x057290 0x000000000005f290 0x000000000005f290 0x004450 0x004d70 R   0x1
+  GNU_EH_FRAME   0x012484 0x0000000000012484 0x0000000000012484 0x001f1c 0x001f1c R   0x4
+  GNU_STACK      0x000000 0x0000000000000000 0x0000000000000000 0x000000 0x000000 RW  0x0
+  NOTE           0x000270 0x0000000000000270 0x0000000000000270 0x000098 0x000098 R   0x4
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .note.android.ident .dynsym .gnu.version .gnu.version_r .gnu.hash .dynstr .rela.dyn .rela.plt .gcc_except_table .rodata .eh_frame_hdr .eh_frame 
+   02     .text __lcxx_override .plt 
+   03     .data.rel.ro .fini_array .init_array .dynamic .got .got.plt .relro_padding 
+   04     .data .bss 
+   05     .dynamic 
+   06     .data.rel.ro .fini_array .init_array .dynamic .got .got.plt .relro_padding 
+   07     .eh_frame_hdr 
+   08     
+   09     .note.android.ident 
+   None   .comment .debug_loc .debug_abbrev .debug_info .debug_ranges .debug_str .debug_line .symtab .shstrtab .strtab 

@@ -1,0 +1,12 @@
+{
+  "suite": "R37 C++ exact runtime lookup",
+  "compiler": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+  "flags": "-std=c++17 -Wall -Wextra -Werror -O2",
+  "runtimeLookup": "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native\\station_game_lookup.h",
+  "runtimeLookupSha256": "1bf2f2a7d2ba116a2b3ba3012e3d7c686fbca53fbd75a0be6bb8c74e8bf14195",
+  "headerSha256": "537f8ade06f24549f1f176708add5d5aebdfa1f550fd99d72a45140152653191",
+  "successful": true,
+  "exitCode": 0,
+  "output": "PASS: 13284 C++ runtime checks; all 2212 exact IDs/platforms; Battletoads and exact override verified.",
+  "scope": "Host compilation and exact real lookup for 2212 frozen revision 14 IDs; no Android/phone execution."
+}

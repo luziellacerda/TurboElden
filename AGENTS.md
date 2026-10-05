@@ -1,3 +1,9 @@
+# R37 compilado — perfil real, sinopses completas e visual — 05/10/2026
+
+Leia `versions/station-final-details-r37-20261005/README.md`, STATUS e evidências. APK SHA75fd8b5806c6aa683796e1301fa8a92e3236f106a8837a0279b6d0ae094999fc, fonteW37, somentecarouselSO+frontendSO sobreR36. Nome servidor ligado ao componente existente, fonte+50%/cincoespaços, faixa refinada,2.212sinopsesrecorte14 semvazios. Compilado/testadoPC, NÃO instalado: USBausente; últimoSamsungR36hashconfirmado. Conferirnome/visual noaparelho; nãoafirmar estávelgeral ou2jogadores. DEX/manifesto/motores/classes35R34 intactos. Retornoonlinea626b50 estánoGit mas nãofoiintegrado; deltaDownloads11be7f3 fora. Preservar dados/licença/saves e usarbaseR37parapróximointegração.
+
+## Histórico anterior
+
 # R36 preparado — nome da plataforma no botão e layout — 05/10/2026
 
 Leia `versions/station-platform-button-r36-20261005/README.md`, STATUS e recibos. APK SHA dfe9dd4ce24fdca80986919e885b0a09d146f29dd8ab156f0dffdf18d2a46f57, somente carouselSO sobreR34;13.086 entradas preservadas. Nome/abreviação dentro botão da plataforma, sequência de metadados com dois espaços reais, cinco botões secundários iguais, faixa instalada mais alta/brilhante. 12.712 checks e assinatura/16KiB/preservação passaram. Instalado depois da reconexão no Samsung, SHA integral igual; recibo em evidence/installation-samsung.json. Conferência visual separada, sem teste de partida online. Fontes finais W36; restauração inclui JavaR34. Pendências Battletoads/player2/controles/Voltar em partida continuam. Sem mudança servidor. Preservar jogos/licença/saves. Não declarar estabilidade geral nem visual aprovado.

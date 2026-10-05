@@ -1,0 +1,14 @@
+{
+  "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\station-native-rate-phase-20261005\\client\\src\\native\\station_frontend.cpp",
+  "sha256": "881a27ffe0d50cc406a1ef0ba62109460309c8be881972881797e3b301ba9bb5",
+  "baseFrontendSO": "ebb1a942dd59f62ab82d24d9021e382abab26d3258c7b266790a26ea00ad6cfe",
+  "headers": {
+    "station_catalog_abi.hpp": "16c65f6c7bba9eecec4c914490bd552978735be3d2da3c732d5f5c8486639824",
+    "station_collections.hpp": "a6e07c629355d34ae1ce4bdabf46654a2fed3ad4fde33b45fbfe5c9043e9647f",
+    "station_cover_plan.hpp": "2e82d8c3b9a7b4d914e598c717c52d5e58175b0e2f5cfb23d6736c2936d9e1a2",
+    "station_cover_publication.hpp": "0de61431fc7bbff10d446bf9a0cee36a9953d3fb57344ff61fe10b2b2d711c52",
+    "station_cover_retry.hpp": "c8384ba7c61e3fa091d099e1a2c3148f509fdc5927a11976530c9f50eebaf2cf",
+    "station_synopsis_pages.hpp": "db770934587c73a627d0c333249d7e6cd93c11b4e98abda8cf524dc77b7194e0",
+    "station_transfer_rate.hpp": "cf37bcdd37e0ff6abeeeff2116847e064fe8d66d546bfc4ae4917818ffd9272f"
+  }
+}

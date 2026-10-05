@@ -1,0 +1,13 @@
+{
+  "passed": 8,
+  "checks": [
+    "profile component hookup",
+    "bridge revision",
+    "bridge copy",
+    "five literal spaces",
+    "one internal space",
+    "exact override",
+    "no legacy name write",
+    "no profile logging"
+  ]
+}

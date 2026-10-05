@@ -1,0 +1,32 @@
+{
+  "createdAt": "2026-10-05T23:48:04.593828+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Visual-R36-20261005.apk",
+  "baseSHA256": "dfe9dd4ce24fdca80986919e885b0a09d146f29dd8ab156f0dffdf18d2a46f57",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Visual-R37-20261005.apk",
+  "sha256": "75fd8b5806c6aa683796e1301fa8a92e3236f106a8837a0279b6d0ae094999fc",
+  "bytes": 2054631976,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libstation_frontend.so",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13085,
+  "addedAssets": {},
+  "roomsDexSHA256": "0db040a6b3406e744053c63467ed0f26e3582928ef5b84ecb9e360603ce870f6",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "downloadImplementationUnchanged": true,
+  "rawTransferDeltaIncluded": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false,
+  "nativeSHA256": "beaa00d317ddaa5237c169eb5dff421f3d995ca77d70c0157549bf63a21c77d2",
+  "frontendSHA256": "d3bc8ef6fcd88a5cf16b577fdba83e5242a75f1d946a17019075ab56a9fe95ad",
+  "synopses": 2212,
+  "catalogRevision": 14,
+  "missingSynopses": 0,
+  "profileDeviceValidated": false,
+  "deviceVisualValidated": false,
+  "lastConfirmedInstalledRevision": "R36 Samsung",
+  "onlineSecondPlayerDeltaIncluded": false
+}

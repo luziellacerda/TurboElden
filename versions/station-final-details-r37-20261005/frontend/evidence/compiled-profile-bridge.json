@@ -1,0 +1,141 @@
+{
+  "testOutput": "PASS 21 profile checks; 16237 concurrent snapshots; 20000 changed and 20000 identical publications",
+  "sourceDeltaExact": true,
+  "existingExportsPreserved": true,
+  "newExports": [
+    "StationProfile_nameRevision",
+    "StationProfile_copyName"
+  ],
+  "maximumPageSize": 16384,
+  "target": "aarch64-linux-android26",
+  "baseFrontendSO": "ebb1a942dd59f62ab82d24d9021e382abab26d3258c7b266790a26ea00ad6cfe",
+  "files": {
+    "station_profile_bridge.h": {
+      "bytes": 750,
+      "sha256": "093212f9266d9c8c648268123a2099b946fdc6dac61b64cedf1b18a1f55a4447"
+    },
+    "station_catalog_abi.hpp": {
+      "bytes": 1593,
+      "sha256": "16c65f6c7bba9eecec4c914490bd552978735be3d2da3c732d5f5c8486639824"
+    },
+    "station_collections.hpp": {
+      "bytes": 2015,
+      "sha256": "a6e07c629355d34ae1ce4bdabf46654a2fed3ad4fde33b45fbfe5c9043e9647f"
+    },
+    "station_cover_plan.hpp": {
+      "bytes": 931,
+      "sha256": "2e82d8c3b9a7b4d914e598c717c52d5e58175b0e2f5cfb23d6736c2936d9e1a2"
+    },
+    "station_cover_publication.hpp": {
+      "bytes": 543,
+      "sha256": "0de61431fc7bbff10d446bf9a0cee36a9953d3fb57344ff61fe10b2b2d711c52"
+    },
+    "station_cover_retry.hpp": {
+      "bytes": 1039,
+      "sha256": "c8384ba7c61e3fa091d099e1a2c3148f509fdc5927a11976530c9f50eebaf2cf"
+    },
+    "station_profile_state.hpp": {
+      "bytes": 1248,
+      "sha256": "4691220d78ab1f103276771aa658dd5c2573dbc8ce79646c368436860ff375d5"
+    },
+    "station_synopsis_pages.hpp": {
+      "bytes": 996,
+      "sha256": "db770934587c73a627d0c333249d7e6cd93c11b4e98abda8cf524dc77b7194e0"
+    },
+    "station_transfer_rate.hpp": {
+      "bytes": 2461,
+      "sha256": "cf37bcdd37e0ff6abeeeff2116847e064fe8d66d546bfc4ae4917818ffd9272f"
+    },
+    "station_frontend.cpp": {
+      "bytes": 29405,
+      "sha256": "5f77d82d902dbe17bcba7870cd12e61b3bd44000caa395be4fede783512768bc"
+    },
+    "tests/profile_name_test.cpp": {
+      "bytes": 3867,
+      "sha256": "164fb31bfed3589ba0189a100ad6a411647556b5cd64d587597378f13bda83c9"
+    },
+    "tests/bridge_header_c_test.c": {
+      "bytes": 193,
+      "sha256": "8d67c46238c09840442e02ee13fa6038a9af3c38907e1862b59eb9b7bd2ec49d"
+    },
+    "build_frontend.py": {
+      "bytes": 5039,
+      "sha256": "1e835b9f8cb0a6dfef2918a62157e24882b4c87666a2156ff0ad5a59a5740850"
+    },
+    "build/libstation_frontend.so": {
+      "bytes": 3016112,
+      "sha256": "d3bc8ef6fcd88a5cf16b577fdba83e5242a75f1d946a17019075ab56a9fe95ad"
+    }
+  },
+  "commands": [
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang.exe",
+      "-x",
+      "c",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsyntax-only",
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend\\tests\\bridge_header_c_test.c"
+    ],
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend\\tests\\profile_name_test.cpp",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend\\build\\profile_name_test.exe"
+    ],
+    [
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend\\build\\profile_name_test.exe"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe",
+      "--target=aarch64-linux-android26",
+      "-std=c++17",
+      "-shared",
+      "-fPIC",
+      "-O2",
+      "-Wl,-z,max-page-size=16384",
+      "-Wl,--no-undefined",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wno-return-type-c-linkage",
+      "-static-libstdc++",
+      "-Wl,--exclude-libs,ALL",
+      "-I",
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend",
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend\\station_frontend.cpp",
+      "-ldl",
+      "-llog",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend\\build\\libstation_frontend.so"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-nm.exe",
+      "--defined-only",
+      "--dynamic",
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend\\build\\libstation_frontend.so"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-nm.exe",
+      "--defined-only",
+      "--dynamic",
+      "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\native-build\\libstation_frontend.so"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-readelf.exe",
+      "-lW",
+      "E:\\ESTUDO APK\\work\\station-final-details-r37-20261005\\frontend\\build\\libstation_frontend.so"
+    ]
+  ],
+  "apkPackaged": false,
+  "installed": false,
+  "serverChanged": false
+}
