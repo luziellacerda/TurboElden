@@ -1,0 +1,70 @@
+{
+  "capturedAt": "2026-10-05T21:47:46.116779+00:00",
+  "observations": [
+    "R30 launched logged in; 32 installed indicated on subsequent game list",
+    "VOLTAR on one line with arrow, matching alignment",
+    "Tap returned from collections to platforms",
+    "SNES collections reopened and Open entered full list",
+    "Battletoads installed: own room created on production API",
+    "Ready acknowledged, start disabled with single participant",
+    "R29B missing-game guidance visible and persisted while presence changed",
+    "R29B reconnect and return worked",
+    "Last UI changed to collections during check; cause of navigation not attributed",
+    "R27 earlier generic connection failure with installed room not reproduced or attributed; diagnostic log added",
+    "Only one device; no two-phone game/real production relay proof"
+  ],
+  "screenshotsNotPublished": true,
+  "files": {
+    "r30-installed": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-installed.png",
+      "sha256": "b40cde2d2f37d534c4528b3a6fc7f6d69160879516fee437233bf5be303741de"
+    },
+    "r30-collections": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-collections.png",
+      "sha256": "2c040d3cff13e7ed02c0cc61291edbe04b3817da70e0e13d3ed8afc1f862c8eb"
+    },
+    "r30-back-platforms": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-back-platforms.png",
+      "sha256": "165f614c1b029834ffb59027b82842e7f5077f4cde588d81dd4dd24be632f8cd"
+    },
+    "r30-reopen-collections": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-reopen-collections.png",
+      "sha256": "e7e4608de3e701d93cddc8768bb48c904fb0e3044b58b7a70682b75f1e7062fa"
+    },
+    "r30-game-list": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-game-list.png",
+      "sha256": "10b69f12913139713dec5291e08f457113c8c440d97df6afdf6e05adf125f4e5"
+    },
+    "r30-battletoads-lobby": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-battletoads-lobby.png",
+      "sha256": "c5f5c97f4f7e970aef28ab303a6e1380bd8981e35f6390be7731f698ea4a38f7"
+    },
+    "r30-create-room": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-create-room.png",
+      "sha256": "2130d5ebc10eb86e58534d7a95203ef5b6ee227ecbeafedd8f7647c272018dc7"
+    },
+    "r30-ready": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-ready.png",
+      "sha256": "3d6b8d08e42750f196fb336c952198aab717e7e3cf2f99ab02334711bc6f2737"
+    },
+    "r30-room-actions": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\r30-room-actions.png",
+      "sha256": "a1d86e88953fe1f52bf2a438d54ef8fe40b088d45b48831765151f430b9f4389"
+    },
+    "missing-game-message": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\missing-game-message.png",
+      "sha256": "21f47bada91253e9e0f11beb4dbdef5c8496189e5ccd2096a883a8b7ba2999fe"
+    },
+    "room-reconnect": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\room-reconnect.png",
+      "sha256": "9cdebf7b6a41024d41a05eb7846d36a7ab5724e1aaa62a841305ae37cca02bfd"
+    },
+    "rooms-back-to-game": {
+      "localPNG": "E:\\ESTUDO APK\\work\\station-room-diagnostics-r29-20261005\\device-evidence\\rooms-back-to-game.png",
+      "sha256": "3f946e239aa8ec22a92a5d195ef96e523d1eba53600abf3579ba6b8b5b3c81a7"
+    }
+  },
+  "screenSettingRestored": true,
+  "twoDeviceGameplayVerified": false,
+  "stablePromotion": false
+}

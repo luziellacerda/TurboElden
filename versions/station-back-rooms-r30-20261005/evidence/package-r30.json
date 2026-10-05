@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-05T21:37:17.827802+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Salas-Corrigidas-R29B-20261005.apk",
+  "baseSHA256": "76c8799d3d094a8d4186395897d73c3cb327a60476fd4d28f6d55783692228d5",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Voltar-Salas-R30-20261005.apk",
+  "sha256": "1768b7df440dcdf99efbd2e8ff93181eae06edaab5bb9be85e073afeb639027b",
+  "bytes": 2053858040,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13083,
+  "roomsDexSHA256": "45675ff1b72c76bc6d388f6fa6f016a55cc1d06c4fbec09689ab4654dde3e9f1",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "gameDownloadContentHashEnabled": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false
+}

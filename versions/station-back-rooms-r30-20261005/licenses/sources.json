@@ -1,0 +1,33 @@
+{
+  "websocket-sources.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/java-websocket/Java-WebSocket/1.6.0/Java-WebSocket-1.6.0-sources.jar",
+    "sha256": "0c64cd898770928467810e8ab4eeb6b99b76b40affda402faa6995f2def4eeef",
+    "bytes": 155085
+  },
+  "websocket.pom": {
+    "url": "https://repo.maven.apache.org/maven2/org/java-websocket/Java-WebSocket/1.6.0/Java-WebSocket-1.6.0.pom",
+    "sha256": "a8e84d553c34d793e2ea7e4a54b073f44ddb0bb442f4dd6fad0cecd755d1ceac",
+    "bytes": 13737
+  },
+  "slf4j-sources.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13-sources.jar",
+    "sha256": "84f366caa66ddaa9d204e5525580b562271663c05970f056815a1be8489e8b52",
+    "bytes": 74950
+  },
+  "websocket-LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/TooTallNate/Java-WebSocket/v1.6.0/LICENSE",
+    "sha256": "15101a7cbdaa7f1c161424b760e907e7832e4a1e7f05d03373ca91fbffdb95ee",
+    "bytes": 1082
+  },
+  "slf4j-LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/qos-ch/slf4j/v_2.0.13/LICENSE.txt",
+    "sha256": "6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73",
+    "bytes": 1154
+  },
+  "relocation": {
+    "websocket": "org.emulationstation.frontend.relay.ws",
+    "slf4j": "org.emulationstation.frontend.relay.log",
+    "sourceFiles": 124,
+    "reason": "Avoid class conflicts with emulators already bundled in APK"
+  }
+}

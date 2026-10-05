@@ -1,0 +1,123 @@
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:54067
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: E:\ESTUDO APK\work\station-room-diagnostics-r29-20261005\tests\relay
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[1]
+      Setting HTTP status code 401.
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType17`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - 401 - application/json;+charset=utf-8 24.8200ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[1]
+      Setting HTTP status code 401.
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType17`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - 401 - application/json;+charset=utf-8 1.5867ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType18`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - 200 - application/json;+charset=utf-8 32.3472ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType18`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - 200 - application/json;+charset=utf-8 3.8805ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType18`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - 200 - application/json;+charset=utf-8 1.1444ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[1]
+      Setting HTTP status code 404.
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType17`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - 404 - application/json;+charset=utf-8 0.5967ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[1]
+      Setting HTTP status code 413.
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType17`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - 413 - application/json;+charset=utf-8 0.8084ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType18`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/command'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/command - 200 - application/json;+charset=utf-8 0.7486ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/events - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/events'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/events - application/json;+charset=utf-8 -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /v1/station/online/events'
+info: Microsoft.AspNetCore.Http.Result.JsonResult[1]
+      Setting HTTP status code 429.
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType17`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/events'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/events - 429 - application/json;+charset=utf-8 0.4846ms
+info: Microsoft.AspNetCore.Http.Result.JsonResult[1]
+      Setting HTTP status code 401.
+info: Microsoft.AspNetCore.Http.Result.JsonResult[3]
+      Writing value of type '<>f__AnonymousType17`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /v1/station/online/events'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:54067/v1/station/online/events - 401 - application/json;+charset=utf-8 116.6594ms
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+{"passed":true,"checks":37,"scope":"Loopback Kestrel with production routes and signer, synthetic authentication; no production database or Android"}

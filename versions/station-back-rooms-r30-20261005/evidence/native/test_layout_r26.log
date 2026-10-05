@@ -1,0 +1,8 @@
+CONSOLE snes 6,66,508,477 visible=105788
+CONSOLE megadrive 12,20,506,428 visible=101876
+CONSOLE n64 9,142,500,421 visible=79777
+CONSOLE neogeo 9,0,507,486 visible=144517
+CONSOLE neogeocd 0,0,494,510 visible=141729
+CONSOLE naomi 12,143,499,415 visible=93827
+CONSOLE naomi2 5,99,501,407 visible=101895
+PASS 773128: player labels, folder/player row, header stars, twelve percent narrower actions, all alpha pixels, aspect and UV
