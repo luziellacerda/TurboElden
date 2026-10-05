@@ -1,16 +1,18 @@
 {
   "installed": true,
   "attempted": true,
-  "reason": "Second install succeeded after reconnect; SHA256 base.apk equal; display asleep/locked, user asked to unlock",
+  "reason": "Second install succeeded after reconnect; base.apk SHA256 equal; carousel visible after unlock",
   "serial": "RQCY30751WY",
   "foregroundBefore": "org.turboramastation.frontend/org.emulationstation.frontend.ESActivity",
   "availableKiBBefore": 12708140,
   "batteryBefore": 84,
   "apkSha256": "7684c6eee87985d8259becca9a22a9f4c7e3203f7c097df37da6998975596514",
-  "lastProvenInstalled": "R9",
+  "lastProvenInstalled": "R12",
   "deviceHashPending": false,
   "settingsChanged": false,
   "deviceSha256": "7684c6eee87985d8259becca9a22a9f4c7e3203f7c097df37da6998975596514",
   "updatePreservedData": true,
-  "visualVerified": false
+  "visualVerified": true,
+  "visualScope": "ESActivity carousel opened with eight platforms; rooms and gameplay not verified",
+  "laterUsbDisconnected": true
 }
