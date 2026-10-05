@@ -1,0 +1,23 @@
+10-05 15:00:30.464 18269 18269 I TurboMame: Configured ROM directory=/storage/emulated/0/EmulationStation/roms/.station-v2/neo-geo/station_bfd8cdbce34fc22645c7611c49ca5b0d/install-5568952315343860902/content; mode=filesystem; launch=svcplus.zip
+10-05 15:00:31.683 18269 18302 D libMAME4droid.so: setVideoCallbacks
+10-05 15:00:31.684 18269 18302 D libMAME4droid.so: setAudioCallbacks
+10-05 15:00:31.685 18269 18302 D libMAME4droid.so: setInputCallbacks
+10-05 15:00:31.686 18269 18302 D libMAME4droid.so: setSAFCallbacks
+10-05 15:00:31.688 18269 18302 D libMAME4droid.so: initMyOSD path: /data/user/0/org.turboramastation.frontend/files/mame/ nativeWidth: 2248 nativeHeight: 1080
+10-05 15:00:31.691 18269 18302 D libMAME4droid.so: *********** ANDROID MAIN ********
+10-05 15:00:31.693 18269 18302 D libMAME4droid.so: TOUCH PULSO BT1!
+10-05 15:00:31.728 18269 18302 D libMAME4droid.so: setNativeSize 2122x1080 (res:1 osd:9 zoom:1 game_full:0 osd_full:0)
+10-05 15:00:31.730 18269 18302 D libMAME4droid.so: DRC
+10-05 15:00:31.733 18269 18302 D libMAME4droid.so: uifont: res=1 res_osd=9 cjk=0 -> default
+10-05 15:00:31.733 18269 18302 D libMAME4droid.so: cli param -rompath
+10-05 15:00:31.733 18269 18302 D libMAME4droid.so: cli param /storage/emulated/0/EmulationStation/roms/.station-v2/neo-geo/station_bfd8cdbce34fc22645c7611c49ca5b0d/install-5568952315343860902/content
+10-05 15:00:32.474 18269 18302 D libMAME4droid.so: TOUCH PULSO BT1!
+10-05 15:00:32.474 18269 18302 D libMAME4droid.so: setNativeSize 2122x1080 (res:1 osd:9 zoom:1 game_full:0 osd_full:0)
+10-05 15:00:32.474 18269 18269 D libMAME4droid.so: setNativeSize 2122x1080 (res:1 osd:9 zoom:1 game_full:0 osd_full:0)
+10-05 15:00:33.761 18269 18269 D libMAME4droid.so: setNativeSize 2122x1080 (res:1 osd:9 zoom:1 game_full:0 osd_full:0)
+10-05 15:00:58.703 18269 18269 D libMAME4droid.so: doPause 1
+10-05 15:00:58.703 18269 18269 D libMAME4droid.so: doPause in emu 1...
+10-05 15:00:58.714 18269 18269 D libMAME4droid.so: doPause pausing 1...
+10-05 15:00:59.315 18269 18269 D libMAME4droid.so: doPause 0
+10-05 15:00:59.316 18269 18269 D libMAME4droid.so: doPause in emu 0...
+10-05 15:00:59.343 18269 18269 D libMAME4droid.so: doPause pausing 0...

@@ -1,0 +1,21 @@
+{
+  "createdAt": "2026-10-05T17:54:23.658278+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Desempenho-Offline-R16-20261005.apk",
+  "baseSHA256": "b52313bc6ef504b91239241b2a4bc8c9eb9f1eeeea937e61cbc4bd5628ef0eb1",
+  "apk": "E:\\ESTUDO APK\\work\\station-neogeo-access-20261005\\TurboStations-NeoGeo-Pastas-R18-20261005.apk",
+  "sha256": "a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4",
+  "bytes": 2036266872,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "classes30.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13079,
+  "roomsDexSHA256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "gameDownloadContentHashEnabled": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false
+}

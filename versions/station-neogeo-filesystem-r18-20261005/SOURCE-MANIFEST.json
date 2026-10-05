@@ -1,0 +1,20 @@
+{
+  "files": {
+    ".gitattributes": "308a40fa1d89ae5ea4390b4c9b46a0108b09f171f07898f25d451fa0c69c4e9f",
+    "evidence\\archive-directory.json": "3a7bbb9015c796fefa55318e2dca278c3f586b0d70519823a94ddad874537236",
+    "evidence\\bridge-build.json": "2a4cdcd028fd9b32d9ae6777e750f319359239bd61968413c2b23a39ad6062e8",
+    "evidence\\build-result.json": "f9ab7e01775b93f88feb6e3069e2fa8ec1ce7e840710b731dbc31650bd363ba1",
+    "evidence\\installation.json": "053e725edb1473aaf4d4c8cceb43db2091ebdcaa3da34a1992791b292dc08c7f",
+    "evidence\\mame-tests.json": "4536fa3c5ce9a5354d1e1f5d4a361828b70dbbcd34ace66aab6dd3fdd084a526",
+    "evidence\\navigation-tests.json": "8c605dd1558f6afd3a9ff930432d7078f82f99b1eb3bfb22396aa80358d76c55",
+    "evidence\\neo-geo-device.json": "dc3baa50ea60992a28d0883a8140b86b28dad017e3afab2cf8317a04b03a5dc6",
+    "evidence\\neo-geo-runtime.log": "a6c350a622a92e3ccac3538c5ee3cb55531e08f2697bbb0cf7596621f1bfd9b1",
+    "java\\org\\emulationstation\\frontend\\MameBootstrap.java": "947467469202c3f149df6115164a88fb4faed47774979410ff4ea1efad7b4d6f",
+    "java\\org\\emulationstation\\frontend\\MameEntryActivity.java": "4ce5d99c446ded3611a9140b35f3897dc742765a7366b9b513870d87a227c8ee",
+    "README.md": "ad6866c94969fea8a0aee09e1fe76a1dfc5d3869be219cb53c393a15a59bab9a",
+    "recipes\\build_neogeo_access_20261005.py": "d83ed90c0b1a96176dd9e39545cc82e841e190c7df93b5ec05bece73c2f984e3",
+    "recipes\\install_neogeo_r18_20261005.py": "eba67bf28f05b4bcdd6610fad8e0de0d417d2a62501a175d62038692f6dfb1e2",
+    "recipes\\package_neogeo_r18_20261005.py": "802e48ebfa31af9074b34197bc5ebb86ed6c5bb0bf05b218176394a7aac76883",
+    "recipes\\run_mame_filemode_tests.py": "f68d44f1c8e9f11642d79649da1e958f32486964c97ca2c8386eab5fa3b29039"
+  }
+}

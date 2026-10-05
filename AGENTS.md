@@ -1,3 +1,15 @@
+# R18 — Neo Geo filesystem + navegação R17 — 05/10/2026
+
+Leia `versions/station-neogeo-filesystem-r18-20261005/README.md` e os recibos. APK `a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4`, 2.036.266.872 bytes, em `E:\ESTUDO APK\work\station-neogeo-access-20261005\TurboStations-NeoGeo-Pastas-R18-20261005.apk`. Instalado por atualização; SHA no telefone idêntico. Não promover a estável nem afirmar todos os jogos validados.
+
+Causa Neo Geo: ROMsDIR físico ativava SAF sem URI no MAME. Ponte final define PREF_ROMsDIR_2 vazio (modo local upstream) e ACTION_VIEW cli_params `-rompath 'pai real'`; aspas simples do parser nativo. Só classes30 alterado para Neo Geo; classes29/core/configurações/saves intactos. 166 verificações de métodos reais + 15 contratos e API34/D8 passaram. Inclui SO R17 4d2b962e, com 3030 verificações de navegação; integra R16 offline/download sem revertê-lo. Duas entradas alteradas, 13079 preservadas, assinatura/alinhamento conferidos. R16 APK base está em G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais.
+
+Fontes da ponte final em E:\ESTUDO APK\work\station-neogeo-access-20261005\java. Navegação em E:\ESTUDO APK\work\station-single-folder-r17-20261005\native, herdando recursos R16. Não reaplicar receitas antigas nem instalar base R15/R16 por cima. Nenhum servidor modificado. Atualizações preservam dados.
+
+SVC Plus R18: seleção de personagens observada às 15:01; mode=filesystem/rompath correto e sem erros de arquivo no recorte. Mantenedor confirmou controles funcionando e saída. USB caiu antes de capturar retorno; navegação R17 no aparelho, outros jogos e desempenho sustentado seguem sem prova.
+
+## Histórico anterior
+
 # Navegação R17 compilada — subpastas únicas — 05/10/2026
 
 Leia `versions/station-single-folder-r17-20261005/README.md`. Header nativo pula telas com um único caminho e mantém escolhas com jogos diretos/ramificações. Voltar restaura a última tela exibida/seleção.3030checksC++ passaram, teste rejeitaR16 anterior, SO Android compilado SHA4d2b962e09c7924e7b9b14042ee4b43e08d704bedae021131668303ae42fb39d. **Ainda não instalado**: integração será feita junto de correçãoNeoGeo no chat “Desmonte o APK de testes (2)”. Não marcar estável nem substituir motores aqui.
