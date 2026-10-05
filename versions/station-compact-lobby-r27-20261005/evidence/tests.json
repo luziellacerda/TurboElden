@@ -1,0 +1,90 @@
+{
+  "createdAt": "2026-10-05T20:50:30.136055+00:00",
+  "javaOutput": "PASS 107 executable checks: compact player model, real room codes, stale presence, invite policy and snapshot ordering",
+  "checks": [
+    {
+      "name": "only rooms presentation and actionable error messages changed",
+      "passed": true
+    },
+    {
+      "name": "only three new production classes",
+      "passed": true
+    },
+    {
+      "name": "no cards or avatar in contact rows",
+      "passed": true
+    },
+    {
+      "name": "whole row opens profile",
+      "passed": true
+    },
+    {
+      "name": "48dp row touch target",
+      "passed": true
+    },
+    {
+      "name": "no invite button on rows",
+      "passed": true
+    },
+    {
+      "name": "search page scope explicit",
+      "passed": true
+    },
+    {
+      "name": "callbacks tied to current lifecycle",
+      "passed": true
+    },
+    {
+      "name": "no stale room state protection removed",
+      "passed": true
+    },
+    {
+      "name": "created room comes from actual response",
+      "passed": true
+    },
+    {
+      "name": "invites use existing signed client command",
+      "passed": true
+    },
+    {
+      "name": "codes use existing join preparation",
+      "passed": true
+    },
+    {
+      "name": "server restart invalidates old locator",
+      "passed": true
+    },
+    {
+      "name": "on stop cancels requests",
+      "passed": true
+    },
+    {
+      "name": "no production fake peers",
+      "passed": true
+    },
+    {
+      "name": "code dialog scrollable",
+      "passed": true
+    },
+    {
+      "name": "profile dialog scrollable",
+      "passed": true
+    },
+    {
+      "name": "baseline reproduces installed DEX",
+      "passed": true
+    }
+  ],
+  "baselineChanged": [
+    "StationOnlineClient.java",
+    "StationRoomsActivity.java"
+  ],
+  "sourceHashes": {
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationInvitationCode.java": "1149eab6e7c4d59e9327cb3075dfefbf26c1aabeab84849b5ae0ca4d869b19b5",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationPlayerModel.java": "324643b7fa3dfb4d13febe1fc03e2b5dedc4363d97f249ffaa4a88141b241dd4",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomState.java": "3569a17e3b3134b0388d5a3231dad9f269461fa5b35566fd5195be21018ac5f9",
+    "tests\\StationCompactLobbyTest.java": "49649bf8fc8db1c3e6fd804b5144de9bf3db4707eb7435eb58abc5ab90c1ab61"
+  },
+  "scope": "Executable JVM model/code tests and source preservation. Not Android visual or two-device gameplay validation.",
+  "passed": true
+}

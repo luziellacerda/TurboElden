@@ -1,3 +1,11 @@
+# R27 — jogadores online em lista compacta e painel de convites — 05/10/2026
+
+Leia `versions/station-compact-lobby-r27-20261005/README.md` e STATUS. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Salas-Lista-R27-20261005.apk`, SHA c1191ce1d531b1ec9171d6d4c2f57541349339e64e8941a33788c4067d616bd6. Compilado/testado PC, não instalado (ADB vazio); última instalação comprovada R25. Sem aprovação estética ou gameplay desta revisão.
+
+Sobre R26 exato, altera somente classes35.dex;13.083 entradas preservadas, inclusive carouselSO b2d706dc07d4423758798fe0d6d37ce01c8f395b344c685a7b796ce60d03dd70. Mantém layout/botões/LEDs/motores do R26. Lista48dp nome/status, perfil ao tocar, criar sala+convite real, código público TS1 (instance/roomId/itemId) com copiar/colar. Usa comandos existentes; não adiciona senha/token/servidor.107 testesJava+18preservação, assinatura/16KiB/pacote inteiro passaram. Fonte final E:\ESTUDO APK\work\station-compact-lobby-r27-20261005. TemporáriosE/APKfinalG. Não reaplicar receitas históricas nem instalarR26sobreR27. Dados/saves/licença preservados; instalar somente sem jogo/download ativo. Downloads11be7f3 continuam fora.
+
+## Histórico anterior — posições e estados podem ter sido substituídos acima
+
 # R26 — estrelas no cabeçalho, pasta/contagem e botões compactos — 05/10/2026
 
 Leia versions/station-layout-r26-20261005/README.md e STATUS. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Layout-R26-20261005.apk`, SHA `1d4549da6a15a9a9b2e8c52491ecc4382e0b5e050900763aebf163d136a36e75`. Compilado/testado no PC; ainda não instalado (USB ausente). BaseR25 `0d62d806fb0fd7ef45cf0167dd6908794e180e81171c8f7fa0b3e701aa78baad` continua última instalação, mas seu alinhamento foi rejeitado. Não confundir observação funcional com aprovação estética.

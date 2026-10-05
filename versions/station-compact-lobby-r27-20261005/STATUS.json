@@ -1,0 +1,23 @@
+{
+  "revision": "R27",
+  "createdAt": "2026-10-05T20:47:05.918966+00:00",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Salas-Lista-R27-20261005.apk",
+  "apkSHA256": "c1191ce1d531b1ec9171d6d4c2f57541349339e64e8941a33788c4067d616bd6",
+  "apkBytes": 2053862128,
+  "roomsDexSHA256": "ee0108d546daa061e701cf3817828b5cc1b32e9ef774c11c4de3e291d72ec6c5",
+  "baseRevision": "R26",
+  "baseSHA256": "1d4549da6a15a9a9b2e8c52491ecc4382e0b5e050900763aebf163d136a36e75",
+  "nativeCarouselSHA256": "b2d706dc07d4423758798fe0d6d37ce01c8f395b344c685a7b796ce60d03dd70",
+  "built": true,
+  "localTestsPassed": true,
+  "installed": false,
+  "androidVisualVerified": false,
+  "twoDeviceGameplayVerified": false,
+  "stablePromotion": false,
+  "serverChanged": false,
+  "priorInstalledRevision": "R25",
+  "usb": "ADB listed no connected devices; no installation attempted.",
+  "sourceDirectory": "E:\\ESTUDO APK\\work\\station-compact-lobby-r27-20261005",
+  "codeFormat": "TS1:<instance>:<roomId>:<itemId>",
+  "codeIsAuthorization": false
+}
