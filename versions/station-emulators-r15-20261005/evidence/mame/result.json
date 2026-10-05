@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "host": "PASS 53 exact bootstrap checks: Station parent paths, actual engine preference, first run, repeated run, retained saves and invalid prior path",
+  "keyVerifiedAgainstPackagedEngine": "PREF_ROMsDIR_2",
+  "missingGameDoesNotSilentlyOpenLibrary": true,
+  "devicePending": true
+}

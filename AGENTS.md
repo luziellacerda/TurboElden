@@ -1,3 +1,13 @@
+# Candidato R15 Neo Geo / N64 — 05/10/2026
+
+Leia `versions/station-emulators-r15-20261005/README.md` e `BUILD.md`. APK **d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b**, 2.036.244.940 bytes, em `E:\ESTUDO APK\work\station-emulators-r15-20261005\TurboStations-NeoGeo-N64-R15-20261005.apk`. Compilado/assinado, **NÃO instalado: USB ausente**. Último instalado continua R14 a1566d3d. Não promover a estável nem afirmar gameplay corrigido no aparelho.
+
+Neo Geo: chave real MAME PREF_ROMsDIR_2 e diretório pai do artefato Station. N64: Mupen64Plus AE 3.0.249(beta), commit33bf702, completo com UI/controles/plugins próprios, processos:n64/n64core, prefs n64., storage interno preparado. 53checksMAME,154rotasN64,127integração,49storage passaram; assinatura/16KiB/integridade integral conferidas. Cinco entradas antigas alteradas,11106preservadas,1970adicionadas; classes35R12 exato. Sem deploy servidor.
+
+Base R14B **arquivada em G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Visual-R14B-20261005.apk**, hash661a8738 completo no handoff; duplicataE removida só após conferência. Fonte canônica shared `station-netplay-20261004/native` permaneceR14B; fonte candidata completa `station-n64-complete-20261005/frontend-native`. Não perder pacing60 e retorno path+kind. Próxima instalação integrada é R15, coordenada com chat Desmonte o APK de testes (2). Atualizar sem desinstalar/limpar dados; conferir NeoGeo, N64/controles/settings, retorno à coleção e fluidez sem toque. Receitas históricas não devem ser reexecutadas sobre base nova.
+
+## Histórico
+
 # Estado vigente — R14B fluidez/retorno compilado, USB pendente — 05/10/2026
 
 Leia `versions/station-navigation-r14b-20261005/README.md`. APK **661a8738faf2e598d448017bcb87f09e7d39ac7d2984a653fac4e9a642a9742f**, 2.006.925.798bytes, `E:\ESTUDO APK\work\station-netplay-20261004\TurboStations-Visual-R14B-20261005.apk`. R14B mantém alvo60FPS no carrossel visível após parar toque (antes15/30 após650ms); vídeo30FPS permanece. Voltar e refresh restauram coleção por path+kind, inclusive após reordenação. 2080checks navegação,80política e600frames simulados passaram; ambos testes rejeitam código anterior. Apenas1SO alterado,11110entradas preservadas, assinatura/alinhamento verificados. **Não instalado: USB ausente na conferência. R14 a1566d3d continua último instalado/hash confirmado.** Sem medição nova GPU/temperatura/frame real. Não marcar estável.

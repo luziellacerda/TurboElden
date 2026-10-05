@@ -1,0 +1,14 @@
+{
+  "baseSourceSHA256": "853a112fd84945ab86630b08944fbc1f54c5948e5e4bbf54eabc4a4563c2ee6b",
+  "patchedSourceSHA256": "ed322aa4839b34946a7caa39770ac12909bc170ce43e230b1cb35af03ce9ef3e",
+  "soSHA256": "4e3b19daf697fbd1d41a7018bc9c93048c681af1ec8a29c80941e4a9ba7e142a",
+  "preservedR14BFiles": [
+    "native_menu_power.h",
+    "native_folders.h",
+    "native_formation.h",
+    "native_game_actions.h",
+    "native_netplay.h",
+    "native_system_video720.h",
+    "video720_posters.o"
+  ]
+}

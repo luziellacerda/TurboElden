@@ -1,0 +1,10 @@
+{
+  "baseDexSha256": "170cfc6544c1a3f4b4dda3eca72b7fc314071ab47f85cebc22b576b0448f133c",
+  "newDexSha256": "8748a125b1e59be70837f0e57993104802df81f4607a2d19d48fe77c0d82a32d",
+  "confirmedDefects": [
+    "PREF_ROMsDIR written but engine reads PREF_ROMsDIR_2",
+    "search path ignores Station installed artifact directory"
+  ],
+  "compiled": true,
+  "installed": false
+}

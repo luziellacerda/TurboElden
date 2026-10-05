@@ -1,0 +1,300 @@
+{
+  "changes": {
+    "smali_classes36/tn64core/shaded/androidx/multidex/MultiDexExtractor.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/tn64core/shaded/androidx/preference/PreferenceManager.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/SplashActivity.smali": "direct app-private preparation; no startup folder picker, log clear or TV job",
+    "smali_classes36/paulscode/android/mupen64plusae/dialog/LocaleDialog.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/game/GameActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/jni/RaphnetControllerHandler$1.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/jni/RaphnetControllerHandler.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/jni/RetroAchievementsManager.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/AppData.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/AudioPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/DataPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/DefaultsPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/DisplayPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/GamePrefs.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/GamePrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/GlobalPrefs.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/InputPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/NetplayPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/RetroAchievementsPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/ShaderPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/persistent/TouchscreenPrefsActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/profile/ManageProfilesActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/profile/ProfileActivity.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/task/ExtractAssetsOrCleanupTask.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/util/FileUtil.smali": "isolated preferences/provider/USB action",
+    "smali_classes36/paulscode/android/mupen64plusae/GalleryActivity.smali": "Preserve Gallery result recipient while game is active; original RESULT_OK callback returns to Station after exit"
+  },
+  "donorSecondDexClasses": 5,
+  "nativeLibraries": [
+    {
+      "source": "libae-bridge.so",
+      "target": "libae-bridge.so",
+      "originalSHA256": "4369b0a4723489a114680ddda9fbdb4a17a4c255d81db78c6ab36ac5ee27dcf0",
+      "sha256": "ba5a7582295215f159e197f805dbfe85851aa912462996870f61ccd752ecb360",
+      "dynamicEdits": [
+        {
+          "offset": 31372,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libc++_shared.so",
+      "target": "libn64cpp.so",
+      "originalSHA256": "69e517e645a6d38f7536d64108d245f5a8208a4a5cd43375b4906f60a60a86c4",
+      "sha256": "fa2c06d3c09c0d9a4931fa7cd03a3aba15f6ed7ea990d8e4a37b8a5811867c0d",
+      "dynamicEdits": [
+        {
+          "offset": 222958,
+          "tag": 14
+        }
+      ]
+    },
+    {
+      "source": "libfreetype.so",
+      "target": "libfreetype.so",
+      "originalSHA256": "9e374b7256f2920a11cc277393b5101d68ebd2f0ea6a3473ff87eee80a7a1b91",
+      "sha256": "9e374b7256f2920a11cc277393b5101d68ebd2f0ea6a3473ff87eee80a7a1b91",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libhidapi.so",
+      "target": "libhidapi.so",
+      "originalSHA256": "887eac0aa45e8e5ea3873680fecdf6ac8e9b55ed96efb7394e247a1a18cbea2f",
+      "sha256": "19714e0fa120f52d3e2ff708da5c1709ab67c89f7b1c63223c90675c92085078",
+      "dynamicEdits": [
+        {
+          "offset": 5123,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libjnidispatch.so",
+      "target": "libjnidispatch.so",
+      "originalSHA256": "ddfc6c965bbe366615c000ec1f06552ddf0bb2b4f9d921d0bff8c75b3cb2ca4c",
+      "sha256": "ddfc6c965bbe366615c000ec1f06552ddf0bb2b4f9d921d0bff8c75b3cb2ca4c",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libminiupnp-bridge.so",
+      "target": "libminiupnp-bridge.so",
+      "originalSHA256": "5742296768dd24075cfd7479e3ac8a059e1a5e8a457ede8f6ca07135a240c957",
+      "sha256": "7a9e7025ff7a1210b9ee9a4be778a36201d455b4d914c4b3441258a5a9861957",
+      "dynamicEdits": [
+        {
+          "offset": 7724,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libminiupnp-build.so",
+      "target": "libminiupnp-build.so",
+      "originalSHA256": "ec4ee8227bc0757de3bde76a3132374b977af1490b9624a970af7a492e699290",
+      "sha256": "ec4ee8227bc0757de3bde76a3132374b977af1490b9624a970af7a492e699290",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-audio-android-fp.so",
+      "target": "libmupen64plus-audio-android-fp.so",
+      "originalSHA256": "e449a34d25dfd2a2d4c7733bb03cf205663f479143eee811c388e1e01c0ad71d",
+      "sha256": "79bd6457b4a77364721e98df4946fadde2bc44256b156ae8b361bcf769e03f74",
+      "dynamicEdits": [
+        {
+          "offset": 19679,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libmupen64plus-audio-android.so",
+      "target": "libmupen64plus-audio-android.so",
+      "originalSHA256": "519fc8d53d71a05a9b92d757176a704e39edff9353a89e9f0c9ec94b1589ccaf",
+      "sha256": "a8f8a5f83827a5056fca58bf72dc25951c56cdba568c55773f81efb20f2f0be5",
+      "dynamicEdits": [
+        {
+          "offset": 19676,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libmupen64plus-core.so",
+      "target": "libmupen64plus-core.so",
+      "originalSHA256": "390d204cf75cb36198670b058820db4313b6ab6d9c0302bb66b3401654cddea0",
+      "sha256": "390d204cf75cb36198670b058820db4313b6ab6d9c0302bb66b3401654cddea0",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-input-android.so",
+      "target": "libmupen64plus-input-android.so",
+      "originalSHA256": "3830e91fff4586bd868136a16b243faeddf63964de7a1346313a166f03129e69",
+      "sha256": "11783275d71eaa14f3e15eff330a784195fdd98b31ea4c16d23d4691e5f91512",
+      "dynamicEdits": [
+        {
+          "offset": 2045,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libmupen64plus-input-raphnet.so",
+      "target": "libmupen64plus-input-raphnet.so",
+      "originalSHA256": "4def9b52c8d37c25bde4c2644a48a74bdde93a6ae3929e217541093986c9bb43",
+      "sha256": "4def9b52c8d37c25bde4c2644a48a74bdde93a6ae3929e217541093986c9bb43",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-rsp-cxd4.so",
+      "target": "libmupen64plus-rsp-cxd4.so",
+      "originalSHA256": "0f2bb0a515e8a03899ca543f9ec77d6a8ef816289df01645f198c75e573653d3",
+      "sha256": "0f2bb0a515e8a03899ca543f9ec77d6a8ef816289df01645f198c75e573653d3",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-rsp-hle.so",
+      "target": "libmupen64plus-rsp-hle.so",
+      "originalSHA256": "67d0f74eb35a889c6abbc0ab0503691f45555ca601570911e0435be492bcf189",
+      "sha256": "67d0f74eb35a889c6abbc0ab0503691f45555ca601570911e0435be492bcf189",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-rsp-parallel.so",
+      "target": "libmupen64plus-rsp-parallel.so",
+      "originalSHA256": "74d9ef492bfbc0278fcd4d25bde6f66e063e43a51873de83e99512a9df595e12",
+      "sha256": "74d9ef492bfbc0278fcd4d25bde6f66e063e43a51873de83e99512a9df595e12",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-video-angrylion-plus.so",
+      "target": "libmupen64plus-video-angrylion-plus.so",
+      "originalSHA256": "2f0d33a765c72dbb46f10c774ade9da2411b2cc5578b7efff637b30ff02eac51",
+      "sha256": "2f0d33a765c72dbb46f10c774ade9da2411b2cc5578b7efff637b30ff02eac51",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-video-glide64mk2-egl.so",
+      "target": "libmupen64plus-video-glide64mk2-egl.so",
+      "originalSHA256": "b2a4a3e3661b384b144e0ba1ef396a148e942fe79d7470479a90121f7ef00958",
+      "sha256": "6eef95fa7b03836d4b5e8f14cbbe8edd5692d6528d1298e36671dc79fc75d855",
+      "dynamicEdits": [
+        {
+          "offset": 5179,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libmupen64plus-video-glide64mk2.so",
+      "target": "libmupen64plus-video-glide64mk2.so",
+      "originalSHA256": "24469dc5e5603a3a138d7a19283d040a0e97313605df35d04652d0d71bb201ed",
+      "sha256": "5c10d28d442ce37cacaba892317319029a0340b4503dd8ac10ff850fdc5e9ce6",
+      "dynamicEdits": [
+        {
+          "offset": 7286,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libmupen64plus-video-GLideN64.so",
+      "target": "libmupen64plus-video-GLideN64.so",
+      "originalSHA256": "c2d4ea393b9acc65edf5dc118b54ca2937dc618c2247841dd093304176a65190",
+      "sha256": "c2d4ea393b9acc65edf5dc118b54ca2937dc618c2247841dd093304176a65190",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-video-gln64.so",
+      "target": "libmupen64plus-video-gln64.so",
+      "originalSHA256": "8405d0ec6b7d406e2db2f486386b7904d9d8fb09628682ffe3a64f4cce47d35c",
+      "sha256": "5ffc5aa3492c752a690bae837e8e7ecc28def030ad99f35fccd57a8b7716598f",
+      "dynamicEdits": [
+        {
+          "offset": 6062,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libmupen64plus-video-parallel.so",
+      "target": "libmupen64plus-video-parallel.so",
+      "originalSHA256": "6ee01f0624513825afc6d0096f48b282d5a27484e3a39b42ad6d23434208fb06",
+      "sha256": "6ee01f0624513825afc6d0096f48b282d5a27484e3a39b42ad6d23434208fb06",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libmupen64plus-video-rice.so",
+      "target": "libmupen64plus-video-rice.so",
+      "originalSHA256": "244723f5627306aa63b8855f505f70db921b14e0358edd04d1b88d51ad3edb30",
+      "sha256": "bbea101792ef16112504fe22ade903c0b1ab2c76123f83e7834a6ea34651c45f",
+      "dynamicEdits": [
+        {
+          "offset": 10053,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libnatpmp.so",
+      "target": "libnatpmp.so",
+      "originalSHA256": "450ce3bd0a295566efe70c7cfa043f3e1c8365bea06f690cd4d9b736c00c130e",
+      "sha256": "450ce3bd0a295566efe70c7cfa043f3e1c8365bea06f690cd4d9b736c00c130e",
+      "dynamicEdits": []
+    },
+    {
+      "source": "liboboe.so",
+      "target": "liboboe.so",
+      "originalSHA256": "a0a7bf30e8e0ddc3a9d4b28680efaa3def24bef2968abc540a04d53767a11e8c",
+      "sha256": "2d1ab385a0817273cbcd249ce6488b54a7d31dde193a8bf3037bcd901ea2079f",
+      "dynamicEdits": [
+        {
+          "offset": 76808,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libSDL2_net.so",
+      "target": "libSDL2_net.so",
+      "originalSHA256": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
+      "sha256": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
+      "dynamicEdits": []
+    },
+    {
+      "source": "libsoundtouch.so",
+      "target": "libsoundtouch.so",
+      "originalSHA256": "8f61cea1796ab2dad2ee6ef89c392e0e0f99c6ce4c4b1f48084a85c31b7df2b3",
+      "sha256": "9944e132db1c2362b52cd88b438413d92802847b2174c64ce4dc801a7eaa41e3",
+      "dynamicEdits": [
+        {
+          "offset": 18803,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libsoundtouch_fp.so",
+      "target": "libsoundtouch_fp.so",
+      "originalSHA256": "6433d24ad01d1e55c27ca36bfa289545c58f1e4ce398d251b2e18256216373f0",
+      "sha256": "5fae9c0a403f01415327b1175ac20460a438184075c8da467dcfea56435a002a",
+      "dynamicEdits": [
+        {
+          "offset": 18775,
+          "tag": 1
+        }
+      ]
+    },
+    {
+      "source": "libusb1.0.so",
+      "target": "libusb1.0.so",
+      "originalSHA256": "429ae49f0992c95547222cd0345edef0701ec2afad2a52d9abfe3e8e7ba0823d",
+      "sha256": "429ae49f0992c95547222cd0345edef0701ec2afad2a52d9abfe3e8e7ba0823d",
+      "dynamicEdits": []
+    }
+  ],
+  "tvChannelGridSyncCallsRemoved": 2
+}

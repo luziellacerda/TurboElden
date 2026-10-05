@@ -1,0 +1,10 @@
+{
+  "baseDexSHA256": "213357854b505cdf5832b63110a1a3eff77bcac93b3400a4fc782b668d776898",
+  "newDexSHA256": "7c7bc77016bf758b5b7c3efa13d439dca272aaf37c1967dae806eb9e25e66d07",
+  "modifiedClass": "org.yuzu.yuzu_emu.YuzuApplication",
+  "earlyInit": "N64Bootstrap.initProcess",
+  "processes": [
+    ":n64",
+    ":n64core"
+  ]
+}
