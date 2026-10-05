@@ -1,5 +1,7 @@
 # TurboStations R19B — controles e configurações próprios do Nintendo 64
 
+**Guia completo:** [funcionamento, mapa das funções, reconstrução, diagnóstico e limites](RECONSTRUCAO-E-FLUXOS.md). [Estado legível por ferramentas](STATUS.json) · [manifesto de arquivos publicados](SOURCE-MANIFEST.json).
+
 ## Estado final conferido em 05/10/2026
 
 **R19B instalada por atualização, com SHA-256 do `base.apk` igual ao candidato.** O recibo de instalação é `evidence/installation-r19b.json`; o campo `installed: false` do recibo de empacotamento registra o instante anterior à instalação e não deve ser usado como estado atual.
@@ -18,7 +20,7 @@ R19B corrige **11 referências de classes** nos fontes `resources/res/values/n6_
 
 A comparação semântica dos **43.618 recursos compilados** comprovou IDs/nomes idênticos e somente essas 11 referências alteradas. Outros **80.125 checks de recursos** passaram. `compiled-resource-tests.json` e `resource-tests.json` registram resultados. O recurso compilado foi reconstruído com apktool/aapt2, sem editar instruções ou substituir strings de outros módulos.
 
-APK final preparado: `E:\ESTUDO APK\work\station-n64-controls-r19-20261005\TurboStations-N64-Controles-R19B-20261005.apk`, SHA256 **`c8fcb15f0951cf5874ac9de2fa2f2e9bfbe26813b7e9ddea5b897355cea4157c`**, 2.036.265.660 bytes. Sobre R18, duas entradas mudam: SO do carrossel e `resources.arsc` (SHA `1e33730bf8fc2b7bd4c6994c2254b2dffb3e44fff8b359e22a51627dde9103dd`); **13.079 entradas preservadas**, incluindo todos os DEX/motores. Assinatura e alinhamento16KiB conferidos. Conferência Android desta revisão final deve ser lida no recibo correspondente, não no primeiro recibo R19.
+APK final compilado em E: e atualmente arquivado em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-N64-Controles-R19B-20261005.apk`, SHA256 **`c8fcb15f0951cf5874ac9de2fa2f2e9bfbe26813b7e9ddea5b897355cea4157c`**, 2.036.265.660 bytes. [Arquivamento conferido](evidence/r19b-archive.json). Sobre R18, duas entradas mudam: SO do carrossel e `resources.arsc` (SHA `1e33730bf8fc2b7bd4c6994c2254b2dffb3e44fff8b359e22a51627dde9103dd`); **13.079 entradas preservadas**, incluindo todos os DEX/motores. Assinatura e alinhamento16KiB conferidos. Conferência Android desta revisão final deve ser lida no recibo correspondente, não no primeiro recibo R19.
 
 `fix_n64_resources_r19b.py` cria um projeto temporário de recursos a partir da árvore R15 congelada, aplica as correções e compila. `verify_archive_n64_resources_r19b.py` compara o resultado semanticamente com R18 e arquiva o APK intermediário de recursos em `G:\BAKUP SISTEMA APP 03-10-2026\binarios-compilados\station-n64-controls-r19-20261005\n64-resources-r19b.apk`. Após a conferência, o projeto temporário de recursos e a duplicata desse APK em E foram removidos para liberar espaço. Fontes finais alteradas, script de importação, `resources.arsc` e recibos permanecem em E. `package_n64_controls_r19b.py` reúne a correção do roteador e esses recursos sobre R18, preservando todos os demais arquivos.
 
@@ -45,7 +47,7 @@ As instruções, hashes e testes estão em `resolver-evidence.json`, `bundled-pr
 
 ## Correção
 
-Único arquivo funcional alterado: `native/native_n64.h`.
+Único arquivo nativo alterado na etapa R19: `native/native_n64.h`. A etapa R19B acrescenta as correções de XML e do importador descritas acima.
 
 - `n64PlatformKey`: nomes e aliases reais do catálogo, incluindo os dois identificadores de pasta e N64 BR.
 - `n64Core`: aceita o nome completo do motor, o prefixo real `lib`, caminhos resolvidos e o ID de opções. Extrai o último componente e compara nomes completos; não utiliza correspondência genérica por trecho.
@@ -69,12 +71,13 @@ Fluxo preservado: catálogo → arquivo instalado → ponte N64 → Splash/Galle
 ## Caminhos canônicos e reconstrução
 
 - Fonte/build desta entrega: `E:\ESTUDO APK\work\station-n64-controls-r19-20261005`.
-- APK vigente: `TurboStations-N64-Controles-R19B-20261005.apk` nessa pasta. O APK R19 do histórico foi arquivado em G: e não é o candidato corrigido.
+- APK vigente: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-N64-Controles-R19B-20261005.apk`. Somente a duplicata APK em E: foi removida após conferir tamanho e SHA. O APK R19 do histórico também está em G: e não é o candidato corrigido.
 - Overlay nativo: quatro arquivos em `native`. Somente `native_n64.h` difere da base; cpp, navegação e download são cópias exatas do overlay R17.
 - Demais headers, bibliotecas de ligação e `video720_posters.o`: `E:\ESTUDO APK\work\station-download-performance-20261005\frontend-native`. Não usar o cpp antigo de outra revisão como substituto.
+- SO compilado R19B atualmente em `G:\BAKUP SISTEMA APP 03-10-2026\binarios-compilados\station-n64-controls-r19-20261005\libturbo_carousel.so`, SHA `e0f13c18e0f6c4efe8e1d279422f9ed5516bd4f8cc21b7df1cf0ab1406fd248c`. A duplicata em E: foi removida após conferência. `resources.arsc` permanece na pasta R19B de E:. [Recibo dos SO arquivados](evidence/native-output-archives.json).
 - Base R18 preservada em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-NeoGeo-Pastas-R18-20261005.apk`. Cópia/igualdade de tamanho e hash foram conferidas antes de remover só a duplicata APK em E. Fontes e recibos R18 permanecem em E.
 - SO R17 anterior arquivado em `G:\BAKUP SISTEMA APP 03-10-2026\binarios-compilados\station-single-folder-r17-20261005\libturbo_carousel.so`, SHA `4d2b962e09c7924e7b9b14042ee4b43e08d704bedae021131668303ae42fb39d`. Fontes R17 continuam na pasta original de E. Recibos dos dois arquivos estão nesta entrega.
 
-`prepare_n64_controls_r19.py` prepara uma pasta nova; não repetir sobre a montagem atual. `test_build_n64_controls_r19.py` executa testes e compila o SO. `audit_n64_resolver_r19.py` registra a evidência da base exata. `package_n64_controls_r19.py` substitui somente o SO na base R18, alinha, assina e verifica todas as entradas; não sobrescreve um APK existente. `archive_*.py` documentam as operações já concluídas de arquivo, não devem ser repetidos.
+`prepare_n64_controls_r19.py` prepara uma pasta nova; não repetir sobre a montagem atual. `test_build_n64_controls_r19.py` executa testes e compila o SO. `audit_n64_resolver_r19.py` registra a evidência da base exata. Para a revisão final, reconstruir/conferir os recursos R19B e usar **`package_n64_controls_r19b.py`**, que troca SO e `resources.arsc`, alinha, assina e verifica as entradas. `package_n64_controls_r19.py` é apenas histórico da revisão com o conflito visual. Nenhuma receita deve sobrescrever uma montagem congelada. `archive_*.py` registram operações já concluídas. A ordem completa e os insumos externos estão em [RECONSTRUCAO-E-FLUXOS.md](RECONSTRUCAO-E-FLUXOS.md).
 
 Atualizar por `adb install --no-incremental -r --user 0`, sem desinstalar/limpar dados. Não corrigir configuração apenas no telefone: qualquer correção necessária deve entrar na fonte e no APK. Verificar em Android a abertura pelo catálogo e pela engrenagem, controles próprios, retorno sem login e seleção da coleção. Não alterar o servidor nem o contrato de catálogo para corrigir esse despacho.

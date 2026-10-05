@@ -1,5 +1,11 @@
 # Neo Geo CD — dados publicados e ponte compilada — 05/10/2026
 
+## Atualização documental: base posterior R19B
+
+O roteiro abaixo registra o delta preparado sobre R18. Depois dele, **R19B foi instalada e conferida para N64**: [estado e evidências](../station-n64-controls-r19b-20261005/README.md), [distinção entre reprodução R19B e próxima integração](../station-n64-controls-r19b-20261005/RECONSTRUCAO-E-FLUXOS.md). Para uma nova entrega CD, revisar a base e as guardas da receita para preservar R19B ou sucessora comprovada. Não reconstruir uma atualização sobre R18 descartando as correções N64. Nenhum código/receita CD foi alterado por esta nota; o delta abaixo não foi incorporado ao APK R19B.
+
+## Registro original da preparação sobre R18
+
 Servidor **catálogo14 / 2.212 jogos**, incluindo 50 Neo Geo CD, com 50 revistas exatas e 50 sinopses. Pasta original `neogeo/neogeocd` mantida. Os 50 arquivos `.img` são CHD v5: entrega assinada usa **`.chd`, formato `raw`, bytes idênticos**, sem recompressão ou limitação de MB/s. Scanner/produção fonte [`9cff9b3`](https://github.com/luziellacerda/Servidor-pix/tree/9cff9b333b5e0fcaec6d8a12f75b61519d8c7018). Índice SHA `07ad4c3fda41a19c23745436c4c45c97a70b2c7688eff788612fe22743823a92`.
 
 **Esta pasta é um delta Java/DEX preparado, ainda não incorporado a um APK assinado/instalado.** A última instalação comprovada continua **R18**, SHA `a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4`. Preservar N64 completo, R17 navegação/60fps, R16 offline/download, salas R12, fontes do renderer, motores, certificado, licença, dados e saves. A R16 já incorporou MB/s e os ajustes de download/offline; não reaplicar o delta antigo R11 nem reintroduzir SHA do corpo dos jogos. Hash de build e de identidade do netplay continuam preservados.

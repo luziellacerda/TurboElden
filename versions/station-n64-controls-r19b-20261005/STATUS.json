@@ -1,0 +1,88 @@
+{
+  "schema": "documentation-status-v1",
+  "documentedAt": "2026-10-05T18:43:07.701029+00:00",
+  "scope": "N64 R19B delivery; not a global latest-release pointer",
+  "revision": "R19B",
+  "package": "org.turboramastation.frontend",
+  "frontendNamespace": "org.emulationstation.frontend",
+  "upstream": {
+    "name": "Mupen64Plus AE",
+    "version": "3.0.249(beta)",
+    "commit": "33bf7021549d7873e976884370fbd1a8e7333bc7",
+    "minimumAndroidApi": 28,
+    "nativeCompileTargetApi": 26
+  },
+  "sourceCommit": "0cfef94a4852eb622ac723e91d1b9a4c26612084",
+  "initialPublishedMerge": "0b4a405e907eccb303bc9c321fd555baa1d9619e",
+  "runtimeChangedByThisDocumentation": false,
+  "apk": {
+    "path": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-N64-Controles-R19B-20261005.apk",
+    "sha256": "c8fcb15f0951cf5874ac9de2fa2f2e9bfbe26813b7e9ddea5b897355cea4157c",
+    "bytes": 2036265660,
+    "installedByUpdate": true,
+    "installedHashMatched": true
+  },
+  "nativeOutput": {
+    "path": "G:\\BAKUP SISTEMA APP 03-10-2026\\binarios-compilados\\station-n64-controls-r19-20261005\\libturbo_carousel.so",
+    "sha256": "e0f13c18e0f6c4efe8e1d279422f9ed5516bd4f8cc21b7df1cf0ab1406fd248c",
+    "bytes": 85293984
+  },
+  "compiledResources": {
+    "path": "E:\\ESTUDO APK\\work\\station-n64-controls-r19-20261005\\resources.arsc",
+    "sha256": "1e33730bf8fc2b7bd4c6994c2254b2dffb3e44fff8b359e22a51627dde9103dd",
+    "bytes": 10691600
+  },
+  "localSourceRoot": "E:\\ESTUDO APK\\work\\station-n64-controls-r19-20261005",
+  "unchangedNativeDependencies": "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+  "historicalReproductionBase": {
+    "revision": "R18",
+    "path": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-NeoGeo-Pastas-R18-20261005.apk",
+    "sha256": "a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4"
+  },
+  "subsequentIntegrationBase": "R19B or a verified successor preserving its native route and resources",
+  "javaBridgeProvenance": [
+    {
+      "path": "versions/station-emulators-r15-20261005/n64/java/org/emulationstation/frontend/N64Bootstrap.java",
+      "sha256": "5cf2e051d3a407abb07029f48d04826bc26aaced7cd5e893f8e2faffb6a8dc7f",
+      "unchangedFromR15": true
+    },
+    {
+      "path": "versions/station-emulators-r15-20261005/n64/java/org/emulationstation/frontend/N64EntryActivity.java",
+      "sha256": "af7528e4d3574daf13d956b40c3b2efcc8adc7e0efac61d2461e2b96e0efec4e",
+      "unchangedFromR15": true
+    }
+  ],
+  "apkChangedEntries": [
+    "lib/arm64-v8a/libturbo_carousel.so",
+    "resources.arsc"
+  ],
+  "apkPreservedEntries": 13079,
+  "checks": {
+    "nativeRouting": 240,
+    "navigation": 3030,
+    "xml": 80125,
+    "compiledResourcesCompared": 43618,
+    "compiledResourcesChanged": 11
+  },
+  "deviceEvidence": "evidence/n64-device-result.json",
+  "confirmedByRuntime": [
+    "007 title screen",
+    "Mupen GameActivity/CoreService",
+    "own input plugin"
+  ],
+  "confirmedByMaintainer": [
+    "touch controls appear and respond",
+    "own menu opens",
+    "return without login"
+  ],
+  "notVerified": [
+    "settings entry from Station gear visually",
+    "all games",
+    "sustained performance",
+    "independent clean rebuild"
+  ],
+  "stablePromotion": false,
+  "serverChanged": false,
+  "neoGeoCdDeltaIncluded": false,
+  "r20VisualIncluded": false
+}

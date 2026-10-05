@@ -1,5 +1,11 @@
 # Retorno Neo Geo CD — 05/10/2026
 
+## Atualização de precedência após a conferência N64
+
+O relato abaixo foi preparado sobre R18. A revisão posterior **R19B foi instalada e conferida para N64**, conforme [handoff](../../versions/station-n64-controls-r19b-20261005/README.md) e [mapa de reconstrução](../../versions/station-n64-controls-r19b-20261005/RECONSTRUCAO-E-FLUXOS.md). O delta Neo Geo CD abaixo continua separado; sua receita deve ser conciliada com R19B ou sucessora comprovada, preservando o SO e os recursos N64. A menção histórica a R18 como última instalada não identifica mais a instalação após R19B. Esta nota não compila, instala nem valida Neo Geo CD.
+
+## Retorno original do servidor e delta preparado sobre R18
+
 Produção Station **catálogo14 / 2.212 visíveis / 255 compatíveis**,50NeoGeoCD,50capas revista480×720 e50sinopses. Disco`.img` original já éCHDv5; entrega`.chd` byte idêntica, sem recompressão. Originais ficam em`neogeo/neogeocd`. API931030b/PID347227 preservada, autoimport/reload ativos e nenhuma restrição artificial de MB/s adicionada.
 
 Servidor scanner9cff9b333b5e0fcaec6d8a12f75b61519d8c7018; índice SHA07ad4c3fda41a19c23745436c4c45c97a70b2c7688eff788612fe22743823a92. Catálogo/grants assinados, oito pares capa/download/compatibilidade, metadata/folderPath e50capas HTTPS/4workers aprovados. A BIOS CD continua ausente; download/catalogação independem dela.
