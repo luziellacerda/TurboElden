@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-05T19:06:02.521389+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Consoles-LED-R20-20261005.apk",
+  "baseSHA256": "64eae3ab4dd253e25ee826dd23bf02c947e5cbd1db70e6b07f759d988d465904",
+  "apk": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\TurboStations-Consoles-Sinopses-R21-20261005.apk",
+  "sha256": "4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4",
+  "bytes": 2041527332,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13080,
+  "roomsDexSHA256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "gameDownloadContentHashEnabled": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false
+}

@@ -1,0 +1,22 @@
+{
+  "compile_command": [
+    "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "-pedantic",
+    "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\synopsis-tests\\test_synopsis_scroll.cpp",
+    "-o",
+    "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\synopsis-tests\\test_synopsis_scroll.exe"
+  ],
+  "compile_returncode": 0,
+  "compile_stdout": "",
+  "compile_stderr": "",
+  "test_returncode": 0,
+  "test_stdout": "140 checks; 0 failures\n",
+  "test_stderr": "",
+  "sha256": {
+    "native\\station_synopsis_scroll.h": "f3d4de5ed22053324cff231eb1568ccc4be761603d3d30603b22689e1e2bb6ea",
+    "synopsis-tests\\test_synopsis_scroll.cpp": "88fbc73a3cc3337fe5457558ef94074928a84989cd4a63fcc790a3b08d98898b"
+  }
+}

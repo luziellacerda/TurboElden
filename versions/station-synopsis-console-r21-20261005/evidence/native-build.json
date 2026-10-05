@@ -1,0 +1,94 @@
+{
+  "baseRevision": "R20",
+  "baseAPKHash": "64eae3ab4dd253e25ee826dd23bf02c947e5cbd1db70e6b07f759d988d465904",
+  "changedSources": [
+    "native_carousel.cpp",
+    "native_info.h",
+    "station_info_layout.h"
+  ],
+  "tests": {
+    "visibility": "PASS 15375 checks: no console or reserved gap on systems/collections; games layout unchanged",
+    "scroll": "140 checks; 0 failures"
+  },
+  "priorFailsSameSystemVisibilityCheck": true,
+  "androidCompile": true,
+  "command": [
+    "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe",
+    "--target=aarch64-linux-android26",
+    "-std=c++17",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wl,-z,max-page-size=16384",
+    "-Wl,--no-undefined",
+    "-nostdlib",
+    "-fno-exceptions",
+    "-fno-rtti",
+    "-fno-stack-protector",
+    "-fno-builtin",
+    "-Wl,-soname,libturbo_carousel.so",
+    "-I",
+    "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+    "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\native\\native_carousel.cpp",
+    "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native\\video720_posters.o",
+    "-L",
+    "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+    "-lc",
+    "-ldl",
+    "-llog",
+    "-o",
+    "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\libturbo_carousel.so"
+  ],
+  "soSHA256": "f802efdc262bd6a0818bfee5b833499179bd910cc2f5b93da0d644504168d3ba",
+  "soBytes": 90550840,
+  "preservedR20Sources": [
+    "console_assets.h",
+    "magazine_shader.h",
+    "native_console.h",
+    "native_folders.h",
+    "native_magazine.h",
+    "native_n64.h",
+    "native_neogeocd_square.h",
+    "native_search_download.h",
+    "native_system_video720.h",
+    "neogeocd-square.glsl",
+    "neogeo_led_profile.h",
+    "premium-magazine-led-android.glsl",
+    "station_console_keys.h"
+  ],
+  "overlaySources": {
+    "console_assets.h": "ce75cda3a6adebe55bfeb61a4318e69e812cb68ae633703c6e8a8ba4236047fc",
+    "magazine_shader.h": "a9691a1b7c39a1ce7389c2ceba604412df6004b2d91b6a2d967b4c8617e7cbdb",
+    "native_carousel.cpp": "dc39bc5fd00e3949cc759c795debf452d271d6bc0fcf91a1fdb9bb886fdc59df",
+    "native_console.h": "5cda176438e955cccbe1f25deec1a33e1ab11f454c37bc3db7145cf660bc92d0",
+    "native_folders.h": "00d8b251298c1aab0be57ad7f9f0fba5ee6268c6d40734663d709e5f1e77eb15",
+    "native_info.h": "7b5f58c78c51fca0ceb7e016862707fdf1e122d286180ca0f8e762692ce0bed9",
+    "native_magazine.h": "bb5c28fc1a7426b8b999061b3973ab4add8fb3eae09e49394afc4f61bde36438",
+    "native_n64.h": "a3562d758dd63fd7c9e839e5dd46c67f890a29da1dc73002816c5b0e87cc2ce3",
+    "native_neogeocd_square.h": "a43dba476cea950d91d18a8b199ccc6ec09731bda5a77342000b94a682ebfeee",
+    "native_search_download.h": "4617777795d69f2dc09bcf1496dd5095ce4962513d2b7b5f86bc220a7b73ba1c",
+    "native_system_video720.h": "251af56249a27f0ceb475158ecef64776a2b39b115334079807b0fdeecedf049",
+    "neogeocd-square.glsl": "a3fb85a42eae1217100053accf9e44f8e87e9694a372ba50f250908807b00c0e",
+    "neogeo_led_profile.h": "19b46fb32d76051c3e641d404b5aa112c627904b1d9314d11c5a634201939976",
+    "premium-magazine-led-android.glsl": "df84ce7e42ae3d5e4db6eda7e3a15e9731f21b419287b099d3507a41ed63318d",
+    "station_console_keys.h": "b35124361715daca32b7f6d2c3dfc5ed62b1f9b75d8df7dcbecd1601fac4e86e",
+    "station_info_layout.h": "7f84f451085cbfebd6cd3ca40cdefe8ac01dacfa6a9e17e94e311f61ec38db8a",
+    "station_synopsis_scroll.h": "f3d4de5ed22053324cff231eb1568ccc4be761603d3d30603b22689e1e2bb6ea"
+  },
+  "createdAt": "2026-10-05T19:05:07.094476+00:00",
+  "addedSources": [
+    "station_synopsis_scroll.h"
+  ],
+  "synopsis": {
+    "nativeMeasuredHeight": true,
+    "clippedViewport": true,
+    "fullText": true,
+    "manualDragTextAndScrollbar": true,
+    "autoPageTimerRemoved": true,
+    "modes": [
+      "platforms",
+      "collections",
+      "games"
+    ]
+  }
+}

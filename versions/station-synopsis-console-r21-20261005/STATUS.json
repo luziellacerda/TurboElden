@@ -1,0 +1,109 @@
+{
+  "revision": "R21",
+  "createdAt": "2026-10-05T19:12:57.452404+00:00",
+  "apk": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\TurboStations-Consoles-Sinopses-R21-20261005.apk",
+  "apkSHA256": "4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4",
+  "bytes": 2041527332,
+  "nativeSHA256": "f802efdc262bd6a0818bfee5b833499179bd910cc2f5b93da0d644504168d3ba",
+  "installedByUpdate": true,
+  "hashVerified": true,
+  "stablePromotion": false,
+  "baseRevision": "R20",
+  "baseSHA256": "64eae3ab4dd253e25ee826dd23bf02c947e5cbd1db70e6b07f759d988d465904",
+  "visual": {
+    "createdAt": "2026-10-05T19:18:16.609904+00:00",
+    "apkSHA256": "4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4",
+    "installedHashVerified": true,
+    "platformHardwareAbsentObserved": [
+      "Super Nintendo",
+      "Nintendo 64"
+    ],
+    "collectionHardwareAbsentObserved": "Neo Geo / Todos os jogos",
+    "shortSynopsesInsideBoundsObserved": true,
+    "unneededScrollbarAbsentObserved": true,
+    "nativeHeightLogs": [
+      {
+        "mode": "platforms",
+        "content": 132.8,
+        "viewport": 421.2,
+        "scroll": false
+      },
+      {
+        "mode": "collections",
+        "content": 265.7,
+        "viewport": 421.2,
+        "scroll": false
+      }
+    ],
+    "longTextClippingAndroidVerified": true,
+    "textDragAndroidVerified": true,
+    "barDragAndroidVerified": true,
+    "allPlatformsIndividuallyTested": false,
+    "pcTests": {
+      "visibilityChecks": 15375,
+      "scrollChecks": 140,
+      "failures": 0
+    },
+    "screenshots": {
+      "beforePlatformHardware": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-160557.png",
+        "sha256": "c96c456fc58d1d00d48819b8728aaeefdd11dfe6986f006e611664a1754a4b65",
+        "published": false
+      },
+      "afterPlatformSnesNoHardware": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-160821.png",
+        "sha256": "dd5cb81c9a102fe88d6f59abc4d1b32b5ad886ad34a44a8fc97a5863b635a884",
+        "published": false
+      },
+      "afterPlatformN64NoHardware": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-160902.png",
+        "sha256": "ff812f1f155f1fe4af856516572f8ca40a5c850f287e1629187d2c5301a6a5ce",
+        "published": false
+      },
+      "afterCollectionsNoHardware": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-160946.png",
+        "sha256": "c031e4fced3f393bee535e4e60f8ab50ed4f3c69d908c337e684b040af21f7d7",
+        "published": false
+      },
+      "longTextTop": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-161420.png",
+        "sha256": "360de65aa21de4dfd43eadc7939a6d0460b6948d91067ff1c8e2a83d6276649f",
+        "published": false
+      },
+      "longTextDragged": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-161518.png",
+        "sha256": "8411ad8350ac8bb2123d3ed6546954594ed52723da7a84c43d8c3c3c423e2b45",
+        "published": false
+      },
+      "barDraggedToTop": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-161556.png",
+        "sha256": "4d23e36a185641b1ecd7b339820a55449d5825995c89ecd67081ae78699aee35",
+        "published": false
+      },
+      "trackEnd": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-161634.png",
+        "sha256": "57883758401a4cef0dfcd19f34057ec00b8a750c1dda38acf8d6e1a61b7e2524",
+        "published": false
+      },
+      "returnedN64Platforms": {
+        "path": "E:\\ESTUDO APK\\work\\station-console-games-only-r21-20261005\\device-evidence\\screen-161659.png",
+        "sha256": "fd2d74a7bc6e6e76449cf0efb118f1a1712785ce90a9a5adb336754b379c479f",
+        "published": false
+      }
+    },
+    "phoneOnlyChanges": false,
+    "changedDisplaySettings": false,
+    "stablePromotion": false,
+    "trackTapReachesEndAndroidVerified": true,
+    "returnToPlatformsNoLoginObserved": true,
+    "titleAndButtonsOutsideScrollingArea": true,
+    "gameHardwarePresentObserved": "Nintendo 64 / 007: The World Is Not Enough",
+    "longTextSample": {
+      "game": "007: The World Is Not Enough",
+      "bytes": 882,
+      "contentHeight": 797.0,
+      "viewportHeight": 406.1
+    },
+    "androidTestScope": "Short descriptions on SNES/N64 platforms and Neo Geo collections; long game description on N64, touch text/bar/end and return. Shared code applies to all systems; not each system individually tested."
+  }
+}
