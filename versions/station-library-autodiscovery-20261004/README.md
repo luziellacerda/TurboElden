@@ -1,3 +1,5 @@
+> Estado posterior: R9 instalado/hash conferido em04/10; tela durante carga restaurada0. R10 compilado em05/10; leia `../station-library-r10-20261005/README.md`. O estado de instalação abaixo é histórico.
+
 # APP ← SERVIDOR: N64 e biblioteca automática, 04/10/2026
 
 Base cliente: `a325e69`, preservando salas, botões e navegação por subpastas R9. Esta entrega acrescenta consulta de metadados do servidor e atualização automática do catálogo. **Fontes, DEX e JNI compilados no Linux; APK novo não assinado/instalado.** R8 é o último instalado comprovado; R9 é o candidato compilado separado. Não promover esta alteração a estável sem conferir no Android.

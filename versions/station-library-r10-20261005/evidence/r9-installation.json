@@ -1,0 +1,16 @@
+{
+  "apk": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\TurboStations-Salas-Subpastas-R9-20261004.apk",
+  "sha256": "b5c98ea40b915f738e29ef2b2e7168fcdf2d327aa64c862596dff15b5620fdf1",
+  "installed": true,
+  "adbResult": "Success",
+  "installedHashVerified": true,
+  "updateMode": "adb install --no-incremental -r --user 0",
+  "userAuthorizedClosingPreviousSession": true,
+  "uninstalled": false,
+  "dataCleared": false,
+  "stayOnWhilePluggedInRestored": 0,
+  "restoreVerified": true,
+  "uiVisualVerified": false,
+  "netplayTwoDevicesVerified": false,
+  "recordedAt": "2026-10-04T14:02:31.0263149-03:00"
+}

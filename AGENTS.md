@@ -1,3 +1,13 @@
+# Estado vigente — R10 biblioteca compilado, USB pendente — 05/10/2026
+
+Leia `versions/station-library-r10-20261005/README.md`. Retorno N64/biblioteca do Servidor-pix4e623bc aplicado sobreR9; fontes8do overlay ba669c mais cancelamento por geração, prioridade à fila de capas, validação metadata e diagnóstico de rota. APK R10 **8bc1d2ef1b5864dc1d5359d1df05b90593cf483dff7f48819f7a7a6b52a84c0b**, 1.982.754.504bytes, compilado/assinado, três entradas alteradas e11.100 preservadas.659checksJava,465C++ e paginaçãoUTF8, assinatura e integridade completa passaram. **Ainda não instalado: USB ausente.** Não alegar gameplay N64, visual, consumo ou partida2aparelhos validados.
+
+**R9 foi instalado e seu hash conferido no aparelho em04/10**, recibo nesta versão/evidence/r9-installation.json. `stay_on_while_plugged_in=0` já restaurado e conferido; NÃO está pendente. Históricos que dizemR8 último instalado estão superados. R9 agora arquivado em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais`; só cópia duplicada deEfoi removida após hashes iguais.
+
+Fonte canônica `E:\ESTUDO APK\work\station-netplay-20261004`; build `E:\ESTUDO APK\work\station-library-r10-build-20261004`; APK R10 na raiz canônica. Não reaplicar overlay antigo, não misturar candidato40mil, não trocar classes35/salas/motores. Instalar atualização preservando dados quando USB disponível. Catálogo1973/revisão8/sinopses1957/N64157/folderPath313 são evidências do operador, não uma nova medição do telefone. Sem implantação Linux nesta rodada. Tag estável preservada.
+
+## Histórico superado abaixo
+
 # Estado vigente — N64, subpastas e biblioteca automática, 04/10/2026
 
 Leia primeiro `versions/station-library-autodiscovery-20261004/README.md`. Servidor publicado: fonte `931030bba25ca8a783f096b72dcecd26a7b49387`, catálogo **8 / 1.973 jogos visíveis / 157 N64**, 255 IDs ocultos e 1.957 sinopses; 16 edições sem fonte. `folderPath` está publicado nos dois contratos do catálogo, com 313 jogos em subpastas. Timer de importação por minuto e reload da API a cada 10 segundos ativos. Capas N64 exatas da revista, compiladas em 480×720, conferidas por HTTPS com quatro workers.

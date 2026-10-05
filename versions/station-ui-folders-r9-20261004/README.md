@@ -1,3 +1,5 @@
+> Estado posterior: R9 instalado/hash conferido em04/10; tela durante carga restaurada0. R10 compilado em05/10; leia `../station-library-r10-20261005/README.md`. O estado de instalação abaixo é histórico.
+
 # TurboStations R9 — salas e subpastas
 
 ## Atualização posterior do servidor e das fontes — 04/10/2026

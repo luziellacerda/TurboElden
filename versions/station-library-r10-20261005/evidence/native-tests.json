@@ -1,0 +1,14 @@
+[
+  {
+    "test": "station_collection_test",
+    "output": "PASS 36 native collection checks; platform isolation, nesting, root, leaf, prefix and 4096 entries"
+  },
+  {
+    "test": "station_folder_navigation_test",
+    "output": "PASS 429 native navigation checks; original IDs/indices, All, direct, nested, Back, flat catalogs and 200 refresh cycles"
+  },
+  {
+    "test": "station_synopsis_pages_test",
+    "output": "PASS native synopsis paging, word and UTF-8 boundaries"
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "parentAppCommit": "ba669c27418341c7f232a644317881779ddd3bf3",
+  "sourceRoot": "E:\\ESTUDO APK\\work\\station-netplay-20261004",
+  "runtimePaths": [
+    "station/src/java/org/emulationstation/frontend/station/StationApi.java",
+    "station/src/java/org/emulationstation/frontend/station/StationCatalog.java",
+    "station/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "station/src/java/org/emulationstation/frontend/station/StationHttp.java",
+    "station/src/java/org/emulationstation/frontend/station/StationProtocol.java",
+    "station/src/native/station_frontend.cpp",
+    "station/src/native/station_synopsis_pages.hpp",
+    "native/native_info.h",
+    "station/src/java/org/emulationstation/frontend/station/StationDiagnostics.java",
+    "station/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+    "station/src/java/org/emulationstation/frontend/station/StationCatalogPoll.java"
+  ],
+  "files": {
+    "build_modules.py": {
+      "bytes": 3322,
+      "sha256": "fde2b95b379d841ee4782b0bd9756daf3e3f849f1a696f2c6691ceaefbe4eae9"
+    },
+    "implement_station_r10.py": {
+      "bytes": 4772,
+      "sha256": "8b4f92a4d09500bebe3fd86b0b1b0849a15ea775d67fc2c617214ffdb7143eed"
+    },
+    "package_station_library_r10.py": {
+      "bytes": 4255,
+      "sha256": "26ac6e6d91f87702ffeae220ad68eabfbadf55d7e6b8b15c2d7402017d9324a0"
+    },
+    "README.md": {
+      "bytes": 12887,
+      "sha256": "3ddc0b2dfa504e3c15f87f5fe96738591299eb8124eb113b73ab3739a0688601"
+    },
+    "test_station_library_r10.py": {
+      "bytes": 1102,
+      "sha256": "048fceb9fe494b2dd78325a47ef8892dd862d5b76aa4407d1f65438d934a3d7f"
+    },
+    "evidence/android-pending.json": {
+      "bytes": 230,
+      "sha256": "fd730b5f831cfbab1634282d17f33831398f8b59b1eb32794297e7eefe7596b3"
+    },
+    "evidence/build-result.json": {
+      "bytes": 1030,
+      "sha256": "7e96ee576a24b0808a6a1e0d2101f8057c56f7ced65f14e583e57e85de0e09bb"
+    },
+    "evidence/compiled-modules.json": {
+      "bytes": 670,
+      "sha256": "4a6a5a391baebc701ddac54f8006ee577a5e98c313c872fde62f41c475a499b3"
+    },
+    "evidence/java-tests.json": {
+      "bytes": 6482,
+      "sha256": "049759c9455839c3a2d8a6c4ab7f29c5b3c7326fd3ccc0e5834253476ce08b8c"
+    },
+    "evidence/native-tests.json": {
+      "bytes": 481,
+      "sha256": "b77babd8925a40edd41464f97cdae655feeda696846399dc1632376544789654"
+    },
+    "evidence/r9-installation.json": {
+      "bytes": 609,
+      "sha256": "0243e945fdbde4448e5f1d8bab76c7f389550b4555b62cc9fafde0b49829fcdb"
+    },
+    "native/native_info.h": {
+      "bytes": 6906,
+      "sha256": "0e67d7b3e072b061374ef0991d42ed879bdfc78145457c7579299e9722141a89"
+    },
+    "station/run_tests.py": {
+      "bytes": 2542,
+      "sha256": "bfdf1d625fa4e6b6db2c5b2e58733b24afc34f84b733f54bed8ce4f16d08956c"
+    },
+    "tests/station_collection_test.cpp": {
+      "bytes": 2334,
+      "sha256": "b92d2ae21f77061266ecd8c6e79359ab823935462a1befd74e913f0b264dfd37"
+    },
+    "tests/station_folder_navigation_test.cpp": {
+      "bytes": 5690,
+      "sha256": "82a4a3c528164cbfe422e6a059df51f3a369d91dc2d501a1d82e88d6d258a043"
+    },
+    "tests/station_synopsis_pages_test.cpp": {
+      "bytes": 667,
+      "sha256": "f7fdd2df4d441dad4fa8f002e636f7aa3d12f600b412da52c5e3f349695e1d09"
+    },
+    "station/tests/StationApiTest.java": {
+      "bytes": 15678,
+      "sha256": "5cc73e3ad4f3cd3ee35d062e1b29f1c27dd4ddf2be34f65ff0944a6df0de3c65"
+    },
+    "station/tests/StationAutomaticCatalogTest.java": {
+      "bytes": 1762,
+      "sha256": "3fd7d2c05624ebf6f10ba0d46a44cb8ed5b639cc3ce177731b7e7413e006ba68"
+    },
+    "station/tests/StationCatalogPollTest.java": {
+      "bytes": 3592,
+      "sha256": "9f98d68cf21cabf9b25c26546528b76fc93ceb99cae6aaae15b82db8df24f321"
+    },
+    "station/src/native/station_frontend.cpp": {
+      "bytes": 27573,
+      "sha256": "4d926a216b83ac0a76f4c8baa0525d3f59b717721368b6cc483fbbfa96aaecf5"
+    },
+    "station/src/native/station_synopsis_pages.hpp": {
+      "bytes": 996,
+      "sha256": "db770934587c73a627d0c333249d7e6cd93c11b4e98abda8cf524dc77b7194e0"
+    },
+    "station/src/java/org/emulationstation/frontend/station/StationApi.java": {
+      "bytes": 21057,
+      "sha256": "623eb3043e34002fe92c7df108b89ac4ed3cac7e74239bb93c8fe8588b91feb5"
+    },
+    "station/src/java/org/emulationstation/frontend/station/StationCatalog.java": {
+      "bytes": 8223,
+      "sha256": "1a5f2eb81e48857d8ff8e4c3e67a6eede8358bf494c4351770205613fd56b572"
+    },
+    "station/src/java/org/emulationstation/frontend/station/StationCatalogPoll.java": {
+      "bytes": 1089,
+      "sha256": "ca03baafce7af515d907eaa5b3e40ae7efff0efb3a50b4f1f571bcaba03e844b"
+    },
+    "station/src/java/org/emulationstation/frontend/station/StationCoordinator.java": {
+      "bytes": 8573,
+      "sha256": "e0930aff6d5535c323b3addd8a76b031af5b0246d5d2b1d517da865eeb044007"
+    },
+    "station/src/java/org/emulationstation/frontend/station/StationDiagnostics.java": {
+      "bytes": 3917,
+      "sha256": "2053a5603cbb37baccc0d795458e3f55eeec28575fc57dbe117e443e8bc81d54"
+    },
+    "station/src/java/org/emulationstation/frontend/station/StationFrontend.java": {
+      "bytes": 12996,
+      "sha256": "10e0e0a7310176f9ef5aee03616724497e90e1a197d531d30caf743a57f7c906"
+    },
+    "station/src/java/org/emulationstation/frontend/station/StationHttp.java": {
+      "bytes": 8449,
+      "sha256": "26f328be67ce6aa91744a4d87c34aacc0d94d941befdb99c1077f3da9c4375c1"
+    },
+    "station/src/java/org/emulationstation/frontend/station/StationProtocol.java": {
+      "bytes": 6018,
+      "sha256": "43bdf2b6f948eab1fd386741d88b2b57e65c37b63eb608eca9e156b128052c51"
+    }
+  },
+  "normalization": "UTF-8 without BOM; LF line endings for source comparison"
+}

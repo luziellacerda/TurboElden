@@ -1,0 +1,23 @@
+{
+  "apkSigned": false,
+  "installed": false,
+  "androidGameplayVerified": false,
+  "files": {
+    "station-client.jar": {
+      "bytes": 151964,
+      "sha256": "d9c6bfccb6f5350f20c354ba8050f4109e24f3362a781813f320a8000e5823f6"
+    },
+    "dex\\classes.dex": {
+      "bytes": 150368,
+      "sha256": "afcf67bd7c6aecc2c6a338e79c61903835a2940d0b4cd1cfe2eb396af8dc4cf8"
+    },
+    "libstation_frontend.so": {
+      "bytes": 3009408,
+      "sha256": "77630448e8e621708dc7fd6259b43b3e44ca1d3e7ae49251a66dc0131bc1db56"
+    },
+    "libturbo_carousel.so": {
+      "bytes": 80092368,
+      "sha256": "554ad95737dbff2a5812da084b54f62ceecb2eac699653d21b5cab264fb7f950"
+    }
+  }
+}
