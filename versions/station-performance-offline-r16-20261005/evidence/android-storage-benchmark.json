@@ -1,0 +1,566 @@
+{
+  "input_csv": "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\bench\\nohash\\android-shared-results-20261005.csv",
+  "meta": {
+    "java": "0",
+    "vm": "Dalvik",
+    "os": "Linux/aarch64",
+    "directory": "/storage/emulated/0/Download/.station-benchmark-20261005/station-bench-370741571086569596",
+    "bytes": "67108864",
+    "rounds": "3",
+    "expected_sha256": "6f27ffab3267ab309adbfbd8efb1fa4a04221a632381bbdf6737d0eae8b74dbf"
+  },
+  "verification": [
+    [
+      "current",
+      "PASS",
+      "success_digest|digest_mismatch|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "raw256",
+      "PASS",
+      "success_digest|digest_mismatch|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "buffered64",
+      "PASS",
+      "success_digest|digest_mismatch|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "buffered256",
+      "PASS",
+      "success_digest|digest_mismatch|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "current-nohash",
+      "PASS",
+      "no_runtime_digest|mismatch_not_checked|harness_content_check|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "buffered-nohash",
+      "PASS",
+      "no_runtime_digest|mismatch_not_checked|harness_content_check|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "current-profile",
+      "PASS",
+      "success_digest|digest_mismatch|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "raw256-profile",
+      "PASS",
+      "success_digest|digest_mismatch|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "buffered64-profile",
+      "PASS",
+      "success_digest|digest_mismatch|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "buffered256-profile",
+      "PASS",
+      "success_digest|digest_mismatch|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "current-nohash-profile",
+      "PASS",
+      "no_runtime_digest|mismatch_not_checked|harness_content_check|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ],
+    [
+      "buffered-nohash-profile",
+      "PASS",
+      "no_runtime_digest|mismatch_not_checked|harness_content_check|short_input|oversize|cancellation|preserve_previous|partial_cleanup"
+    ]
+  ],
+  "completion": [
+    [
+      "persisted_sha256_verified",
+      "6f27ffab3267ab309adbfbd8efb1fa4a04221a632381bbdf6737d0eae8b74dbf"
+    ],
+    [
+      "payload",
+      "/storage/emulated/0/Download/.station-benchmark-20261005/station-bench-370741571086569596/payload.bin"
+    ]
+  ],
+  "bench": [
+    {
+      "variant": "buffered-nohash",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "median_ms": 239.859,
+      "min_ms": 235.371,
+      "max_ms": 379.958,
+      "median_mib_per_s": 266.824,
+      "wall_reduction_percent_vs_current": 66.56
+    },
+    {
+      "variant": "buffered256",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "median_ms": 360.563,
+      "min_ms": 283.105,
+      "max_ms": 2078.096,
+      "median_mib_per_s": 177.5,
+      "wall_reduction_percent_vs_current": 49.73
+    },
+    {
+      "variant": "buffered64",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "median_ms": 305.61,
+      "min_ms": 285.164,
+      "max_ms": 2209.586,
+      "median_mib_per_s": 209.417,
+      "wall_reduction_percent_vs_current": 57.39
+    },
+    {
+      "variant": "current",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "median_ms": 717.257,
+      "min_ms": 325.6,
+      "max_ms": 1165.078,
+      "median_mib_per_s": 89.229,
+      "wall_reduction_percent_vs_current": 0.0
+    },
+    {
+      "variant": "current-nohash",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "median_ms": 436.886,
+      "min_ms": 319.74,
+      "max_ms": 768.163,
+      "median_mib_per_s": 146.491,
+      "wall_reduction_percent_vs_current": 39.09
+    },
+    {
+      "variant": "raw256",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "median_ms": 402.319,
+      "min_ms": 373.016,
+      "max_ms": 746.883,
+      "median_mib_per_s": 159.078,
+      "wall_reduction_percent_vs_current": 43.91
+    },
+    {
+      "variant": "buffered-nohash",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "median_ms": 258.708,
+      "min_ms": 203.781,
+      "max_ms": 368.643,
+      "median_mib_per_s": 247.383,
+      "wall_reduction_percent_vs_current": 21.61
+    },
+    {
+      "variant": "buffered256",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "median_ms": 288.756,
+      "min_ms": 254.5,
+      "max_ms": 366.82,
+      "median_mib_per_s": 221.64,
+      "wall_reduction_percent_vs_current": 12.51
+    },
+    {
+      "variant": "buffered64",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "median_ms": 347.947,
+      "min_ms": 267.642,
+      "max_ms": 374.417,
+      "median_mib_per_s": 183.936,
+      "wall_reduction_percent_vs_current": -5.43
+    },
+    {
+      "variant": "current",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "median_ms": 330.033,
+      "min_ms": 264.771,
+      "max_ms": 440.24,
+      "median_mib_per_s": 193.92,
+      "wall_reduction_percent_vs_current": 0.0
+    },
+    {
+      "variant": "current-nohash",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "median_ms": 306.699,
+      "min_ms": 301.717,
+      "max_ms": 359.737,
+      "median_mib_per_s": 208.674,
+      "wall_reduction_percent_vs_current": 7.07
+    },
+    {
+      "variant": "raw256",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "median_ms": 477.196,
+      "min_ms": 368.669,
+      "max_ms": 525.049,
+      "median_mib_per_s": 134.117,
+      "wall_reduction_percent_vs_current": -44.59
+    },
+    {
+      "variant": "buffered-nohash",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "median_ms": 287.241,
+      "min_ms": 138.279,
+      "max_ms": 409.872,
+      "median_mib_per_s": 222.809,
+      "wall_reduction_percent_vs_current": 23.66
+    },
+    {
+      "variant": "buffered256",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "median_ms": 257.556,
+      "min_ms": 179.049,
+      "max_ms": 287.909,
+      "median_mib_per_s": 248.49,
+      "wall_reduction_percent_vs_current": 31.55
+    },
+    {
+      "variant": "buffered64",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "median_ms": 253.741,
+      "min_ms": 212.718,
+      "max_ms": 343.845,
+      "median_mib_per_s": 252.226,
+      "wall_reduction_percent_vs_current": 32.57
+    },
+    {
+      "variant": "current",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "median_ms": 376.286,
+      "min_ms": 296.26,
+      "max_ms": 2232.065,
+      "median_mib_per_s": 170.083,
+      "wall_reduction_percent_vs_current": 0.0
+    },
+    {
+      "variant": "current-nohash",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "median_ms": 281.84,
+      "min_ms": 180.597,
+      "max_ms": 569.641,
+      "median_mib_per_s": 227.079,
+      "wall_reduction_percent_vs_current": 25.1
+    },
+    {
+      "variant": "raw256",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "median_ms": 264.775,
+      "min_ms": 250.666,
+      "max_ms": 363.521,
+      "median_mib_per_s": 241.715,
+      "wall_reduction_percent_vs_current": 29.63
+    }
+  ],
+  "profile": [
+    {
+      "variant": "buffered-nohash",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "wall_ms": 406.463,
+      "mib_per_s": 157.456,
+      "read_ms": 5.336,
+      "write_ms": 68.189,
+      "hash_ms": 0.0,
+      "flush_ms": 0.146,
+      "sync_ms": 273.025,
+      "move_ms": 35.143,
+      "other_ms": 13.287
+    },
+    {
+      "variant": "buffered256",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "wall_ms": 364.519,
+      "mib_per_s": 175.574,
+      "read_ms": 5.911,
+      "write_ms": 73.856,
+      "hash_ms": 47.767,
+      "flush_ms": 0.176,
+      "sync_ms": 179.894,
+      "move_ms": 31.035,
+      "other_ms": 11.588
+    },
+    {
+      "variant": "buffered64",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "wall_ms": 351.916,
+      "mib_per_s": 181.862,
+      "read_ms": 4.846,
+      "write_ms": 49.768,
+      "hash_ms": 46.022,
+      "flush_ms": 0.138,
+      "sync_ms": 191.751,
+      "move_ms": 36.472,
+      "other_ms": 12.844
+    },
+    {
+      "variant": "current",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "wall_ms": 422.927,
+      "mib_per_s": 151.326,
+      "read_ms": 6.923,
+      "write_ms": 206.906,
+      "hash_ms": 47.575,
+      "flush_ms": 0.0,
+      "sync_ms": 108.305,
+      "move_ms": 35.358,
+      "other_ms": 17.86
+    },
+    {
+      "variant": "current-nohash",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "wall_ms": 362.94,
+      "mib_per_s": 176.338,
+      "read_ms": 6.906,
+      "write_ms": 195.1,
+      "hash_ms": 0.0,
+      "flush_ms": 0.0,
+      "sync_ms": 124.876,
+      "move_ms": 25.237,
+      "other_ms": 16.475
+    },
+    {
+      "variant": "raw256",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "wall_ms": 440.465,
+      "mib_per_s": 145.301,
+      "read_ms": 7.396,
+      "write_ms": 210.167,
+      "hash_ms": 45.474,
+      "flush_ms": 0.0,
+      "sync_ms": 137.369,
+      "move_ms": 39.057,
+      "other_ms": 18.266
+    },
+    {
+      "variant": "buffered-nohash",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "wall_ms": 233.78,
+      "mib_per_s": 273.762,
+      "read_ms": 5.199,
+      "write_ms": 50.813,
+      "hash_ms": 0.0,
+      "flush_ms": 0.17,
+      "sync_ms": 127.8,
+      "move_ms": 33.515,
+      "other_ms": 11.873
+    },
+    {
+      "variant": "buffered256",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "wall_ms": 340.932,
+      "mib_per_s": 187.721,
+      "read_ms": 5.128,
+      "write_ms": 55.739,
+      "hash_ms": 45.48,
+      "flush_ms": 0.144,
+      "sync_ms": 199.605,
+      "move_ms": 31.674,
+      "other_ms": 12.696
+    },
+    {
+      "variant": "buffered64",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "wall_ms": 353.067,
+      "mib_per_s": 181.269,
+      "read_ms": 5.093,
+      "write_ms": 49.503,
+      "hash_ms": 45.233,
+      "flush_ms": 0.143,
+      "sync_ms": 201.738,
+      "move_ms": 38.352,
+      "other_ms": 12.651
+    },
+    {
+      "variant": "current",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "wall_ms": 392.816,
+      "mib_per_s": 162.926,
+      "read_ms": 6.875,
+      "write_ms": 159.514,
+      "hash_ms": 48.949,
+      "flush_ms": 0.0,
+      "sync_ms": 127.829,
+      "move_ms": 32.868,
+      "other_ms": 16.294
+    },
+    {
+      "variant": "current-nohash",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "wall_ms": 323.246,
+      "mib_per_s": 197.991,
+      "read_ms": 6.391,
+      "write_ms": 155.307,
+      "hash_ms": 0.0,
+      "flush_ms": 0.0,
+      "sync_ms": 123.026,
+      "move_ms": 35.246,
+      "other_ms": 13.935
+    },
+    {
+      "variant": "raw256",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "wall_ms": 328.116,
+      "mib_per_s": 195.053,
+      "read_ms": 6.811,
+      "write_ms": 152.161,
+      "hash_ms": 47.836,
+      "flush_ms": 0.0,
+      "sync_ms": 82.412,
+      "move_ms": 21.122,
+      "other_ms": 14.142
+    },
+    {
+      "variant": "buffered-nohash",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "wall_ms": 365.752,
+      "mib_per_s": 174.982,
+      "read_ms": 6.189,
+      "write_ms": 103.779,
+      "hash_ms": 0.0,
+      "flush_ms": 0.155,
+      "sync_ms": 218.855,
+      "move_ms": 35.013,
+      "other_ms": 9.245
+    },
+    {
+      "variant": "buffered256",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "wall_ms": 340.464,
+      "mib_per_s": 187.979,
+      "read_ms": 5.754,
+      "write_ms": 76.755,
+      "hash_ms": 44.256,
+      "flush_ms": 0.15,
+      "sync_ms": 145.354,
+      "move_ms": 36.275,
+      "other_ms": 12.156
+    },
+    {
+      "variant": "buffered64",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "wall_ms": 326.777,
+      "mib_per_s": 195.852,
+      "read_ms": 5.371,
+      "write_ms": 63.845,
+      "hash_ms": 44.043,
+      "flush_ms": 0.185,
+      "sync_ms": 130.983,
+      "move_ms": 19.061,
+      "other_ms": 8.639
+    },
+    {
+      "variant": "current",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "wall_ms": 329.969,
+      "mib_per_s": 193.958,
+      "read_ms": 5.604,
+      "write_ms": 70.097,
+      "hash_ms": 45.62,
+      "flush_ms": 0.0,
+      "sync_ms": 155.956,
+      "move_ms": 34.737,
+      "other_ms": 12.404
+    },
+    {
+      "variant": "current-nohash",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "wall_ms": 447.528,
+      "mib_per_s": 143.008,
+      "read_ms": 6.259,
+      "write_ms": 129.788,
+      "hash_ms": 0.0,
+      "flush_ms": 0.0,
+      "sync_ms": 259.169,
+      "move_ms": 39.044,
+      "other_ms": 12.322
+    },
+    {
+      "variant": "raw256",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "wall_ms": 323.63,
+      "mib_per_s": 197.756,
+      "read_ms": 6.717,
+      "write_ms": 94.928,
+      "hash_ms": 44.85,
+      "flush_ms": 0.0,
+      "sync_ms": 119.0,
+      "move_ms": 37.107,
+      "other_ms": 9.535
+    }
+  ],
+  "baseline": [
+    {
+      "kind": "read_only",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "median_ms": 2.745
+    },
+    {
+      "kind": "read_plus_sha256",
+      "fragment_bytes": 8192,
+      "n": 3,
+      "median_ms": 47.873
+    },
+    {
+      "kind": "read_only",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "median_ms": 1.833
+    },
+    {
+      "kind": "read_plus_sha256",
+      "fragment_bytes": 16384,
+      "n": 3,
+      "median_ms": 32.669
+    },
+    {
+      "kind": "read_only",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "median_ms": 1.967
+    },
+    {
+      "kind": "read_plus_sha256",
+      "fragment_bytes": 65536,
+      "n": 3,
+      "median_ms": 32.77
+    }
+  ],
+  "notes": [
+    "Uninstrumented BENCH groups include every recorded sample and report median/min/max.",
+    "PROFILE columns are independent medians; their sum need not equal median wall time.",
+    "Synthetic local data only. Network latency, server rate limits, HTTP/TLS and Wi-Fi are absent.",
+    "Fragment sizes limit each input read, so a larger requested read cannot combine fragments.",
+    "Original benchmark source copied byte for byte; variants derive from that baseline.",
+    "NoHash variants, when present, omit runtime content digest calculation/comparison; harness hashes are outside timed transfers."
+  ]
+}

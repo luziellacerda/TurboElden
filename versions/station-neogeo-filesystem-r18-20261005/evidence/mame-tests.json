@@ -1,0 +1,15 @@
+{
+  "sourceDirectory": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\neogeo-access-20261005\\java\\org\\emulationstation\\frontend",
+  "outputDirectory": "E:\\ESTUDO APK\\work\\station-neogeo-access-20261005\\tests\\filemode-rcss23gw",
+  "contractChecks": 15,
+  "hostOutput": "PASS 166 real-method filesystem mode, CLI quoting, path, settings, saves and failure checks",
+  "androidCompile": "API34 Java8",
+  "nativeExecuted": false,
+  "apkBuilt": false,
+  "deviceTested": false,
+  "sourceSha256": {
+    "MameBootstrap.java": "947467469202c3f149df6115164a88fb4faed47774979410ff4ea1efad7b4d6f",
+    "MameEntryActivity.java": "4ce5d99c446ded3611a9140b35f3897dc742765a7366b9b513870d87a227c8ee"
+  },
+  "quoteContract": "MAME4droid 1.41.2 myosd_droid_main: apostrophe 0x27; spaces outside quotes; no escape assumed"
+}

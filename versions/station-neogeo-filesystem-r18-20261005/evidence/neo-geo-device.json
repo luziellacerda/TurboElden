@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-05T18:02:45.638290+00:00",
+  "apkSHA256": "a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4",
+  "game": "SVC Plus",
+  "entrypoint": "svcplus.zip",
+  "runtime": "MAME4droid Current 1.41.2 / MAME 0.289",
+  "processId": 18269,
+  "actualFilesystemMode": true,
+  "nativeRompathArgumentObserved": true,
+  "missingFilesErrors": [],
+  "characterSelectionVisuallyObserved": true,
+  "screenshot": "E:\\ESTUDO APK\\work\\station-neogeo-access-20261005\\evidence\\screen-150111.png",
+  "controlsConfirmedByUser": true,
+  "exitReportedByUser": true,
+  "userReply": "Os controles funcionam; sa\u00ed do jogo",
+  "returnObservedThroughAdb": false,
+  "returnAdbLimit": "USB disconnected after game observation",
+  "otherGamesValidated": false,
+  "sustainedPerformanceMeasured": false
+}

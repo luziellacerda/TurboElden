@@ -1,8 +1,41 @@
 # Neo Geo CD preparado — produção catálogo14 — 05/10/2026
 
-Leia `docs/server/RETORNO-NEOGEOCD-20261005.md` e `versions/station-neogeocd-20261005/README.md`. Servidor publicou50CD/2.212jogos com capas/sinopses; BIOSCDausente. DeltaMAMEJava/DEX compilado/testado, ainda sem APKassinado/instalação. **R15 abaixo continua a última instalação comprovada**, incluindo N64completo/R14B/R12. Próximo build deve acrescentar apenas este delta guardado sobreR15 e preservar licença/dados/saves/certificado. Não repetir empacotadores históricos sobreR15.
+Leia `docs/server/RETORNO-NEOGEOCD-20261005.md` e `versions/station-neogeocd-20261005/README.md`. Servidor publicou 50 CD / 2.212 jogos com capas/sinopses; BIOS CD ausente. Delta MAME Java/DEX preparado, ainda sem APK assinado/instalação. **R18 abaixo é a última instalação comprovada**, com filesystem/rompath, R17 navegação, R16 offline/download e N64 completo. O delta CD foi conciliado com este retorno e recompilado; usar R18 como base e preservar licença/dados/saves/certificado.
 
 ---
+
+# R18 — Neo Geo filesystem + navegação R17 — 05/10/2026
+
+Leia `versions/station-neogeo-filesystem-r18-20261005/README.md` e os recibos. APK `a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4`, 2.036.266.872 bytes, em `E:\ESTUDO APK\work\station-neogeo-access-20261005\TurboStations-NeoGeo-Pastas-R18-20261005.apk`. Instalado por atualização; SHA no telefone idêntico. Não promover a estável nem afirmar todos os jogos validados.
+
+Causa Neo Geo: ROMsDIR físico ativava SAF sem URI no MAME. Ponte final define PREF_ROMsDIR_2 vazio (modo local upstream) e ACTION_VIEW cli_params `-rompath 'pai real'`; aspas simples do parser nativo. Só classes30 alterado para Neo Geo; classes29/core/configurações/saves intactos. 166 verificações de métodos reais + 15 contratos e API34/D8 passaram. Inclui SO R17 4d2b962e, com 3030 verificações de navegação; integra R16 offline/download sem revertê-lo. Duas entradas alteradas, 13079 preservadas, assinatura/alinhamento conferidos. R16 APK base está em G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais.
+
+Fontes da ponte final em E:\ESTUDO APK\work\station-neogeo-access-20261005\java. Navegação em E:\ESTUDO APK\work\station-single-folder-r17-20261005\native, herdando recursos R16. Não reaplicar receitas antigas nem instalar base R15/R16 por cima. Nenhum servidor modificado. Atualizações preservam dados.
+
+SVC Plus R18: seleção de personagens observada às 15:01; mode=filesystem/rompath correto e sem erros de arquivo no recorte. Mantenedor confirmou controles funcionando e saída. USB caiu antes de capturar retorno; navegação R17 no aparelho, outros jogos e desempenho sustentado seguem sem prova.
+
+## Histórico anterior
+
+# Navegação R17 compilada — subpastas únicas — 05/10/2026
+
+Leia `versions/station-single-folder-r17-20261005/README.md`. Header nativo pula telas com um único caminho e mantém escolhas com jogos diretos/ramificações. Voltar restaura a última tela exibida/seleção.3030checksC++ passaram, teste rejeitaR16 anterior, SO Android compilado SHA4d2b962e09c7924e7b9b14042ee4b43e08d704bedae021131668303ae42fb39d. **Ainda não instalado**: integração será feita junto de correçãoNeoGeo no chat “Desmonte o APK de testes (2)”. Não marcar estável nem substituir motores aqui.
+
+Fonte isolada `E:\ESTUDO APK\work\station-single-folder-r17-20261005`; inclui cpp/search_download do overlayR16, demaisheaders/objeto da baseR16. APK R16 instalado b52313bc... agora arquivado em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Desempenho-Offline-R16-20261005.apk`; duplicataE removida apósconferência. Preservar Javaoffline/download, classes35/N64, assinatura/dados. Instalação futura exige recibo novo; blocos históricos abaixo.
+
+## Histórico
+
+# R16 instalado — desempenho e abertura offline — 05/10/2026
+
+Leia `versions/station-performance-offline-r16-20261005/README.md` e `BUILD.md`.
+APK `b52313bc6ef504b91239241b2a4bc8c9eb9f1eeeea937e61cbc4bd5628ef0eb1`, 2.036.268.564 bytes, instalado por atualização e hash do base.apk igual. Pasta atual de fontes/build: `E:\ESTUDO APK\work\station-download-performance-20261005`; APK `TurboStations-Desempenho-Offline-R16-20261005.apk`. Base R15 arquivada em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais`, sem duplicata APK em E.
+
+Download/instalação de jogos sem SHA do corpo por pedido explícito: escrita 256KiB, sem busca/hashing de legado, sem releitura integral, consulta local apenas do entrypoint. Preserva tamanho/paths/transações/saves/TLS/licença. Hash do netplay permanece para identidade de sala. Native TSV de diagnóstico retirado do loop SDL; arquivo velho no aparelho não é catálogo atual. Fases e MB/s reais. Offline após catálogo assinado salvo; HTTP de poll não ocupa fila dos jogos locais. Ver handoff para bloqueio conhecido e limites.
+
+787checksJava/16suítes,32C++,API34/D8/assinatura/alinhamento passaram. Três entradas mudaram,13078preservadas; classes35/N64/NeoGeo/motores intactos. Android: Classic Kong recebido262144bytes em86ms; autorização141ms,cabeçalhos136ms,preparação102ms,UIINSTALADO/JOGAR. É arquivo pequeno, não prova taxa sustentada. Benchmark64MiB em Android é armazenamento sintético, não rede. Conferência offline coordenada separadamente; consultar evidência mais recente. Não promover a estável nem alegar gameplay de todos os motores. Nenhum deploy servidor. `CATALOG_PUBLISHED status=503` é marcador local herdado para cache, não prova HTTP503; usar traceHTTP.
+
+Não reaplicar scripts históricos na fonte congelada. Não partir de shared `station-netplay-20261004` (anterior) para perder R15/R16. Atualizar sem desinstalar/limpar dados. Preservar tags estáveis e insumos privados.
+
+## Histórico anterior
 
 # R15 instalada — 05/10/2026
 

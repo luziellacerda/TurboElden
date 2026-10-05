@@ -29,10 +29,10 @@ public final class MameEntryActivity extends Activity {
    i.setClassName(this,"com.seleuco.mame4droid.MAME4droid");
    if(rom!=null&&rom.isFile()){
     i.setAction(Intent.ACTION_VIEW);
-    i.putExtra("cli_params","");
+    i.putExtra("cli_params",MameBootstrap.cliParamsFor(game));
     if(cdBios!=null){
      i.setDataAndType(Uri.fromFile(new File(rom.getParentFile(),"neocdz.zip")),"application/zip");
-     i.putExtra("cli_params",NeoCdSupport.cli(rom,cdBios));
+     i.putExtra("cli_params",MameBootstrap.cliParamsFor(game)+" "+NeoCdSupport.cli(rom,cdBios));
     }else i.setDataAndType(Uri.fromFile(rom),mimeFor(game));
    }else{
     i.setAction(Intent.ACTION_MAIN);

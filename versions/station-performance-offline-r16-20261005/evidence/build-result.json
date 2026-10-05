@@ -1,0 +1,23 @@
+{
+  "createdAt": "2026-10-05T17:29:47.030505+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-NeoGeo-N64-R15-20261005.apk",
+  "baseSHA256": "d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b",
+  "apk": "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\TurboStations-Desempenho-Offline-R16-20261005.apk",
+  "sha256": "b52313bc6ef504b91239241b2a4bc8c9eb9f1eeeea937e61cbc4bd5628ef0eb1",
+  "bytes": 2036268564,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "classes28.dex",
+    "lib/arm64-v8a/libstation_frontend.so",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13078,
+  "roomsDexSHA256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "installed": true,
+  "stable": false,
+  "gameDownloadContentHashEnabled": false,
+  "netplayIdentityHashPreserved": true,
+  "installationEvidence": "device-evidence/installation.json"
+}

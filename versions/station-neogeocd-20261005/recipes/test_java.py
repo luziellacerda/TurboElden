@@ -27,7 +27,8 @@ public final class NeoCdSupportTest {
   rejects(()->NeoCdSupport.importBios(bios,new ByteArrayInputStream(new byte[8*1024*1024+1])));
   check(NeoCdSupport.cli(disc,"official").equals("-cdrom '"+disc.getAbsolutePath()+"' -bios official"));
   rejects(()->NeoCdSupport.cli(disc,"unexpected"));rejects(()->NeoCdSupport.cli(new File(content.toFile(),"quote'name.chd"),"official"));
-  System.out.println("CLI="+NeoCdSupport.cli(disc,"official"));
+  check(MameBootstrap.cliParamsFor(disc.toString()).equals("-rompath '"+disc.getParentFile().getAbsolutePath()+"'"));
+  System.out.println("CLI="+MameBootstrap.cliParamsFor(disc.toString())+" "+NeoCdSupport.cli(disc,"official"));
   // Private host test identities never enter Android source or compiled DEX.
   Field field=NeoCdSupport.class.getDeclaredField("IDENTITIES");field.setAccessible(true);String[][] ids=(String[][])field.get(null);
   byte[] firmware=new byte[524288];Arrays.fill(firmware,(byte)70);byte[] zoom=new byte[131072];Arrays.fill(zoom,(byte)90);
@@ -44,7 +45,17 @@ public final class NeoCdSupportTest {
 '''
 with tempfile.TemporaryDirectory(prefix='station-cd-host-') as t:
  work=Path(t);(work/'NeoCdSupportTest.java').write_text(test)
- subprocess.run(['javac','-encoding','UTF-8','-d',str(work),str(source),str(work/'NeoCdSupportTest.java')],check=True)
+ bootstrap=(root/'java/org/emulationstation/frontend/MameBootstrap.java').read_text()
+ def extract(signature):
+  a=bootstrap.index(signature);i=bootstrap.index('{',a)+1;depth=1
+  while depth:
+   if bootstrap[i]=='{':depth+=1
+   elif bootstrap[i]=='}':depth-=1
+   i+=1
+  return bootstrap[a:i]
+ real='package org.emulationstation.frontend;import java.io.*;public class MameBootstrap{'+extract('static String quoteCliPath(')+extract('static String cliParamsFor(')+'}'
+ (work/'MameBootstrap.java').write_text(real)
+ subprocess.run(['javac','-encoding','UTF-8','-d',str(work),str(source),str(work/'NeoCdSupportTest.java'),str(work/'MameBootstrap.java')],check=True)
  p=subprocess.run(['java','-cp',str(work),'org.emulationstation.frontend.NeoCdSupportTest',str(work/'fixture')],check=True,text=True,capture_output=True)
  print(p.stdout)
 result={'passed':True,'output':p.stdout.strip(),'androidRuntimeTested':False,'biosBundled':False}

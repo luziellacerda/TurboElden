@@ -1,0 +1,226 @@
+{
+  "metadataOnly": true,
+  "runtimeChanges": false,
+  "files": {
+    "svcplus.zip": {
+      "bytes": 43048343,
+      "entries": [
+        {
+          "name": "svc-c1.bin",
+          "bytes": 8388608,
+          "crcInDirectory": "a7826b89"
+        },
+        {
+          "name": "svc-c2.bin",
+          "bytes": 8388608,
+          "crcInDirectory": "ed3c2089"
+        },
+        {
+          "name": "svc-c3.bin",
+          "bytes": 8388608,
+          "crcInDirectory": "71ed8063"
+        },
+        {
+          "name": "svc-c4.bin",
+          "bytes": 8388608,
+          "crcInDirectory": "250bde2d"
+        },
+        {
+          "name": "svc-c5.bin",
+          "bytes": 8388608,
+          "crcInDirectory": "9817c082"
+        },
+        {
+          "name": "svc-c6.bin",
+          "bytes": 8388608,
+          "crcInDirectory": "2bc0307f"
+        },
+        {
+          "name": "svc-c7.bin",
+          "bytes": 8388608,
+          "crcInDirectory": "4358d7b9"
+        },
+        {
+          "name": "svc-c8.bin",
+          "bytes": 8388608,
+          "crcInDirectory": "366deee5"
+        },
+        {
+          "name": "svc-m1.bin",
+          "bytes": 131072,
+          "crcInDirectory": "804328c3"
+        },
+        {
+          "name": "svc-p1p.bin",
+          "bytes": 2097152,
+          "crcInDirectory": "a194d842"
+        },
+        {
+          "name": "svc-p2p.bin",
+          "bytes": 2097152,
+          "crcInDirectory": "50c0e2b7"
+        },
+        {
+          "name": "svc-p3p.bin",
+          "bytes": 2097152,
+          "crcInDirectory": "58cdc293"
+        },
+        {
+          "name": "svc-s1p.bin",
+          "bytes": 131072,
+          "crcInDirectory": "73344711"
+        },
+        {
+          "name": "svc-v1.bin",
+          "bytes": 4194304,
+          "crcInDirectory": "bd3a391f"
+        },
+        {
+          "name": "svc-v2.bin",
+          "bytes": 4194304,
+          "crcInDirectory": "b5097287"
+        },
+        {
+          "name": "svc-v3.bin",
+          "bytes": 4194304,
+          "crcInDirectory": "aa9849a0"
+        },
+        {
+          "name": "svc-v4.bin",
+          "bytes": 4194304,
+          "crcInDirectory": "33fc0b37"
+        }
+      ]
+    },
+    "neogeo.zip": {
+      "bytes": 1416625,
+      "entries": [
+        {
+          "name": "000-lo.lo",
+          "bytes": 131072,
+          "crcInDirectory": "5a86cff2"
+        },
+        {
+          "name": "asia-s3.rom",
+          "bytes": 131072,
+          "crcInDirectory": "91b64be3"
+        },
+        {
+          "name": "japan-j3.bin",
+          "bytes": 131072,
+          "crcInDirectory": "dff6d41f"
+        },
+        {
+          "name": "sfix.sfix",
+          "bytes": 131072,
+          "crcInDirectory": "c2ea0cfd"
+        },
+        {
+          "name": "sm1.sm1",
+          "bytes": 131072,
+          "crcInDirectory": "94416d67"
+        },
+        {
+          "name": "sp-1v1_3db8c.bin",
+          "bytes": 131072,
+          "crcInDirectory": "162f0ebe"
+        },
+        {
+          "name": "sp-45.sp1",
+          "bytes": 524288,
+          "crcInDirectory": "03cc9f6a"
+        },
+        {
+          "name": "sp-e.sp1",
+          "bytes": 131072,
+          "crcInDirectory": "2723a5b5"
+        },
+        {
+          "name": "sp-j2.sp1",
+          "bytes": 131072,
+          "crcInDirectory": "acede59c"
+        },
+        {
+          "name": "sp-s.sp1",
+          "bytes": 131072,
+          "crcInDirectory": "c7f2fa45"
+        },
+        {
+          "name": "sp-s2.sp1",
+          "bytes": 131072,
+          "crcInDirectory": "9036d879"
+        },
+        {
+          "name": "sp-u2.sp1",
+          "bytes": 131072,
+          "crcInDirectory": "e72943de"
+        },
+        {
+          "name": "sp1.jipan.1024",
+          "bytes": 131072,
+          "crcInDirectory": "9fb0abe4"
+        },
+        {
+          "name": "uni-bios_1_0.rom",
+          "bytes": 131072,
+          "crcInDirectory": "0ce453a0"
+        },
+        {
+          "name": "uni-bios_1_1.rom",
+          "bytes": 131072,
+          "crcInDirectory": "5dda0d84"
+        },
+        {
+          "name": "uni-bios_1_2.rom",
+          "bytes": 131072,
+          "crcInDirectory": "4fa698e9"
+        },
+        {
+          "name": "uni-bios_1_2o.rom",
+          "bytes": 131072,
+          "crcInDirectory": "e19d3ce9"
+        },
+        {
+          "name": "uni-bios_1_3.rom",
+          "bytes": 131072,
+          "crcInDirectory": "b24b44a0"
+        },
+        {
+          "name": "uni-bios_2_0.rom",
+          "bytes": 131072,
+          "crcInDirectory": "0c12c2ad"
+        },
+        {
+          "name": "uni-bios_2_1.rom",
+          "bytes": 131072,
+          "crcInDirectory": "8dabf76b"
+        },
+        {
+          "name": "uni-bios_2_2.rom",
+          "bytes": 131072,
+          "crcInDirectory": "2d50996a"
+        },
+        {
+          "name": "uni-bios_2_3.rom",
+          "bytes": 131072,
+          "crcInDirectory": "27664eb5"
+        },
+        {
+          "name": "uni-bios_2_3o.rom",
+          "bytes": 131072,
+          "crcInDirectory": "601720ae"
+        },
+        {
+          "name": "uni-bios_3_0.rom",
+          "bytes": 131072,
+          "crcInDirectory": "a97c89a9"
+        },
+        {
+          "name": "vs-bios.rom",
+          "bytes": 131072,
+          "crcInDirectory": "f0e8f27d"
+        }
+      ]
+    }
+  }
+}

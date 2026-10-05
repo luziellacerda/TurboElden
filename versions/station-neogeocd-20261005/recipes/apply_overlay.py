@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Apply the three bridge sources only after all R15 source hashes are checked."""
+"""Apply the three bridge sources only after all R18 source hashes are checked."""
 import argparse,hashlib,json,shutil
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('--target-java',type=Path,required=True);p.add_argument('--backup',type=Path);p.add_argument('--dry-run',action='store_true');a=p.parse_args()
-version=Path(__file__).resolve().parents[1];source=version/'java/org/emulationstation/frontend';prior=version.parent/'station-emulators-r15-20261005/mame/java/org/emulationstation/frontend'
+version=Path(__file__).resolve().parents[1];source=version/'java/org/emulationstation/frontend';prior=version.parent/'station-neogeo-filesystem-r18-20261005/java/org/emulationstation/frontend'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 changes=[]
 for file in sorted(source.glob('*.java')):
  target=a.target_java/file.name
  if target.exists() and sha(target)==sha(file):continue
  original=prior/file.name
- if original.exists():assert target.is_file() and sha(target)==sha(original),'R15 source differs; reconcile before replacing '+file.name
+ if original.exists():assert target.is_file() and sha(target)==sha(original),'R18 source differs; reconcile before replacing '+file.name
  else:assert not target.exists(),'New class already differs: '+file.name
  changes.append((file,target))
 print(json.dumps({'changes':[file.name for file,_ in changes],'dryRun':a.dry_run}))
