@@ -1,0 +1,33 @@
+{
+  "navigation": "PASS 3030 native navigation checks; original IDs/indices, All, direct, nested, Back, flat catalogs and 200 refresh cycles",
+  "oldRejected": true,
+  "androidCompiled": true,
+  "command": [
+    "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe",
+    "--target=aarch64-linux-android26",
+    "-std=c++17",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wl,-z,max-page-size=16384",
+    "-Wl,--no-undefined",
+    "-nostdlib",
+    "-fno-exceptions",
+    "-fno-rtti",
+    "-fno-stack-protector",
+    "-fno-builtin",
+    "-Wl,-soname,libturbo_carousel.so",
+    "-I",
+    "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+    "E:\\ESTUDO APK\\work\\station-single-folder-r17-20261005\\native\\native_carousel.cpp",
+    "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native\\video720_posters.o",
+    "-L",
+    "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+    "-lc",
+    "-ldl",
+    "-llog",
+    "-o",
+    "E:\\ESTUDO APK\\work\\station-single-folder-r17-20261005\\libturbo_carousel.so"
+  ],
+  "soSHA256": "4d2b962e09c7924e7b9b14042ee4b43e08d704bedae021131668303ae42fb39d"
+}

@@ -1,3 +1,11 @@
+# Navegação R17 compilada — subpastas únicas — 05/10/2026
+
+Leia `versions/station-single-folder-r17-20261005/README.md`. Header nativo pula telas com um único caminho e mantém escolhas com jogos diretos/ramificações. Voltar restaura a última tela exibida/seleção.3030checksC++ passaram, teste rejeitaR16 anterior, SO Android compilado SHA4d2b962e09c7924e7b9b14042ee4b43e08d704bedae021131668303ae42fb39d. **Ainda não instalado**: integração será feita junto de correçãoNeoGeo no chat “Desmonte o APK de testes (2)”. Não marcar estável nem substituir motores aqui.
+
+Fonte isolada `E:\ESTUDO APK\work\station-single-folder-r17-20261005`; inclui cpp/search_download do overlayR16, demaisheaders/objeto da baseR16. APK R16 instalado b52313bc... agora arquivado em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Desempenho-Offline-R16-20261005.apk`; duplicataE removida apósconferência. Preservar Javaoffline/download, classes35/N64, assinatura/dados. Instalação futura exige recibo novo; blocos históricos abaixo.
+
+## Histórico
+
 # R16 instalado — desempenho e abertura offline — 05/10/2026
 
 Leia `versions/station-performance-offline-r16-20261005/README.md` e `BUILD.md`.
