@@ -1,0 +1,67 @@
+{
+  "createdAt": "2026-10-05T19:31:07.524474+00:00",
+  "scope": "Exact presentation metadata only; no server or USB operations.",
+  "python": {
+    "command": "python tests/test_game_details.py",
+    "tests": 12,
+    "failures": 0,
+    "exitCode": 0
+  },
+  "cpp": {
+    "compiler": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+    "compileArguments": [
+      "-std=c++17",
+      "-O2",
+      "tests/test_game_details.cpp",
+      "-o",
+      "tests/test_game_details.exe"
+    ],
+    "compileExitCode": 0,
+    "runExitCode": 0,
+    "checks": 11070,
+    "failures": 0,
+    "publishedRowsExercised": 2212,
+    "output": "11070 checks; 0 failures; all 2212 published rows exercised"
+  },
+  "files": {
+    "generate_game_details.py": {
+      "sha256": "a0dc6fb61a13f762f8459e44f5ee96590cc033feb514bb63330588e65bd0bf71",
+      "bytes": 12681
+    },
+    "native/station_game_details.h": {
+      "sha256": "471c638eb3231ce61ccc0b298ead65df2c064f74c001e754c2b11dd6b4511dca",
+      "bytes": 116433
+    },
+    "tests/test_game_details.py": {
+      "sha256": "c7488233b11b1253b9b44a265725513e09c982671dc734afb07e3791e859cf8a",
+      "bytes": 6669
+    },
+    "tests/test_game_details.cpp": {
+      "sha256": "57ba430132952424890c2a8768c3008004b0cf914ba15f261c778e5d8a5fa74f",
+      "bytes": 2510
+    },
+    "tests/test_game_details.exe": {
+      "sha256": "67742768450e7cab30170e956f1370b862328b742c1a36616e3a4e0bb76cf140",
+      "bytes": 301056
+    },
+    "evidence/game-details-records.json": {
+      "sha256": "f975753abba69460297eab37afc700c9b249035d3877ef33b5fb9316c810a623",
+      "bytes": 891374
+    },
+    "evidence/game-details-build.json": {
+      "sha256": "5dc9c3184249c6b69996bb4c2d7288e9170450decb9f00c0628f948592d5a79e",
+      "bytes": 3728
+    }
+  },
+  "testedBehavior": [
+    "all published IDs and players preserved",
+    "all generated values match source records",
+    "unknown identities remain unknown",
+    "prefix aliases require exact independent IDs",
+    "exact XML fallback only",
+    "missing score distinct from explicit zero",
+    "rating bounds and numeric parsing",
+    "relative XML path identity and path validation",
+    "deterministic output and sanitized provenance"
+  ]
+}

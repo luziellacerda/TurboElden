@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-05T19:40:46.527545+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-NeoGeo-Colecoes-R22-20261005.apk",
+  "baseSHA256": "f7dfc90f0614644548f16cfc7a518ba869589c815adacd6adb9f411f6a97de29",
+  "apk": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\TurboStations-Jogadores-Estrelas-R23-20261005.apk",
+  "sha256": "58c61a4d1e74396ffbefb2c5b6108e1c78a951164080a3b0f32de696330233e8",
+  "bytes": 2053854544,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13083,
+  "roomsDexSHA256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "gameDownloadContentHashEnabled": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false
+}

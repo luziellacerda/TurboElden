@@ -1,0 +1,118 @@
+{
+  "generator": "generate_game_details.py",
+  "schema": 1,
+  "catalogCommit": "100e4bbd92aa4c85cda10a633e6463fbb24ae8ab",
+  "catalogRepositoryPath": "docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "inputSha256": {
+    "catalog": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e",
+    "identityMap": "e94db5ef1d55e3f8b92f03282563a401c79ec4ea424304c09b90078e9ced6c7f",
+    "frozenXmlAssets": {
+      "7e3a7dcedb814114d465b6e9c3f0b0e2119b7de8656def37857afa4969e817c9": "574648480e6db75d7cbf06ffd02f5c1448a2adc23b6895586de358a99b7fdc4c",
+      "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1": "73b1a11347e530e3096d1100e7a370e8e7441756c71f083a7e6ba0420a5211ce"
+    },
+    "originalPathXml": {
+      "n64": "ed9e30df64ab33e0bf13105bf44b1c50098b6e12c9f3675aeaa2b4c911bf7ea1",
+      "neogeo": "555672bfb311bcef62a5f5409e81a199b37e32eb082f2b04c5a1619bbcbe5463"
+    }
+  },
+  "headerSha256": "471c638eb3231ce61ccc0b298ead65df2c064f74c001e754c2b11dd6b4511dca",
+  "headerBytes": 116433,
+  "counts": {
+    "items": 2212,
+    "playersKnown": 2148,
+    "playersMissing": 64,
+    "playersFromServer": 2121,
+    "playersFromExactXml": 27,
+    "xmlMatched": 2161,
+    "ratingKnown": 1986,
+    "ratingMissing": 226,
+    "ratingExplicitZero": 9
+  },
+  "platforms": {
+    "megadrive": {
+      "items": 887,
+      "playersKnown": 855,
+      "playersMissing": 32,
+      "playersFromServer": 855,
+      "playersFromExactXml": 0,
+      "xmlMatched": 887,
+      "ratingKnown": 749,
+      "ratingMissing": 138,
+      "ratingExplicitZero": 0
+    },
+    "megadrivebr": {
+      "items": 94,
+      "playersKnown": 90,
+      "playersMissing": 4,
+      "playersFromServer": 90,
+      "playersFromExactXml": 0,
+      "xmlMatched": 94,
+      "ratingKnown": 87,
+      "ratingMissing": 7,
+      "ratingExplicitZero": 0
+    },
+    "n64": {
+      "items": 157,
+      "playersKnown": 156,
+      "playersMissing": 1,
+      "playersFromServer": 156,
+      "playersFromExactXml": 0,
+      "xmlMatched": 156,
+      "ratingKnown": 156,
+      "ratingMissing": 1,
+      "ratingExplicitZero": 1
+    },
+    "neogeo": {
+      "items": 189,
+      "playersKnown": 189,
+      "playersMissing": 0,
+      "playersFromServer": 162,
+      "playersFromExactXml": 27,
+      "xmlMatched": 189,
+      "ratingKnown": 185,
+      "ratingMissing": 4,
+      "ratingExplicitZero": 0
+    },
+    "neogeocd": {
+      "items": 50,
+      "playersKnown": 50,
+      "playersMissing": 0,
+      "playersFromServer": 50,
+      "playersFromExactXml": 0,
+      "xmlMatched": 0,
+      "ratingKnown": 0,
+      "ratingMissing": 50,
+      "ratingExplicitZero": 0
+    },
+    "snes": {
+      "items": 644,
+      "playersKnown": 617,
+      "playersMissing": 27,
+      "playersFromServer": 617,
+      "playersFromExactXml": 0,
+      "xmlMatched": 644,
+      "ratingKnown": 618,
+      "ratingMissing": 26,
+      "ratingExplicitZero": 6
+    },
+    "snesbr": {
+      "items": 191,
+      "playersKnown": 191,
+      "playersMissing": 0,
+      "playersFromServer": 191,
+      "playersFromExactXml": 0,
+      "xmlMatched": 191,
+      "ratingKnown": 191,
+      "ratingMissing": 0,
+      "ratingExplicitZero": 2
+    }
+  },
+  "playersPolicy": "Published nonempty value, then XML of exact item identity, then unknown.",
+  "ratingPolicy": "Catalog XML score [0,1], multiplied by 1000 and rounded half up; -1 absent; zero preserved.",
+  "ratingIsUserAverage": false,
+  "identityPolicy": "Exact published IDs only; original XML ordinal or reproduced server path hash; no title fallback.",
+  "missingXml": {
+    "n64": 1,
+    "neogeocd": 50
+  }
+}

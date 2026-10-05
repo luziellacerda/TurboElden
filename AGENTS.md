@@ -1,3 +1,11 @@
+# R23B — painel dos jogos preparado; integração R24 pendente — 05/10/2026
+
+Leia `versions/station-game-details-r23b-20261005/README.md` e STATUS. Fonte `E:\ESTUDO APK\work\station-game-details-r23-20261005\native`, SO `48eda90ac617b1dbd318f8932883386466d5f3cc8cb10ec6586a4b499d953fab` (93843368 bytes). Layout comum a todos jogos: contagem abaixo da sinopse; jogadores/estrelas acima do console; nome abaixo do console. Índice exato2.212 IDs,2.148 jogadores/1.986 notas; ausências explícitas, nota do catálogo/XML. Não há média comprovada de usuários nem metadados novos por rede automática.
+
+**Não há APK standalone R23B.** R23A58c61a4d1e74396ffbefb2c5b6108e1c78a951164080a3b0f32de696330233e8 foi instalado/hashigual, porém tela bloqueou antes da conferência; não contém contagemB. O chat coordenado prepara R24 com fonteB + quatro LEDs, sobre APK A. Consultar recibo R24 antes de declarar painel B instalado. FonteR22incluída integralmente, doisobjetospreviewsobrigatórios; jogos/saves/licença preservados. Tests12Python+11.070dados+26.834layout+8contagem passaram. Semestávelgeral; conferência visual multiplataforma pendente.
+
+## Histórico anterior
+
 # R22 — vídeos das coleções Neo Geo — 05/10/2026
 
 Leia `versions/station-neogeo-collection-videos-r22-20261005/README.md` e `STATUS.json`. APK `E:\ESTUDO APK\work\station-neogeo-collection-videos-r22-20261005\TurboStations-NeoGeo-Colecoes-R22-20261005.apk`, SHA `f7dfc90f0614644548f16cfc7a518ba869589c815adacd6adb9f411f6a97de29`. Acrescenta vídeos de Fatal Fury, Metal Slug e Samurai Shodown às pastas exatas confirmadas no TSV do Servidor-pix, commit 100e4bb. Todos os jogos usa o vídeo da plataforma. Mídia 720×720 a 30 fps, duração original, sem cortar ou esticar, com prévias do próprio vídeo. Somente a célula focada reproduz; orçamento de 8 texturas e 4 slots preservado. Passaram 3.317 verificações de rotas, 15.375 de layout, 140 de rolagem e a decodificação integral.
