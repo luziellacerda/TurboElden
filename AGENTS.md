@@ -1,3 +1,13 @@
+# Downloads CHD/ZIP preparados — 05/10/2026
+
+Leia `versions/station-raw-transfer-20261005/README.md` e `docs/server/RETORNO-DOWNLOADS-SEM-VERIFICACOES-20261005.md`. Pedido do mantenedor: retirar conferências de integridade/conteúdo e reduzir a espera para baixar, após Neo Geo CD lento nas duas fases. Delta de quatro classes Station R16 + ponte ZIP; DEX/biblioteca Android compilados, 821 verificações Java/18 suítes e14JNI reais Linux aprovadas. **Ainda sem APK assinado/instalado desta entrega. R20 abaixo continua última instalação recebida.**
+
+RAW recebido completo vira instalação por rename atômico, sem segunda cópia ou reabertura para conferir conteúdo; porcentagem/reserva uma vez. ZIP sem cálculo/validação CRC; mesmos libarchive3.8.9/xz5.8.3. Autorização usa catálogo salvo; consulta completa só por revisão alterada, com um refresh/retry. Transação, cancelamento, saves, TLS/licença e hash de identidade netplay preservados. Fontes R16/R18/R19B/R20 congelados não foram alterados. Só classes28.dex e libstation_archive.so mudam no APK; demais motores/recursos/carousel/classes35 devem permanecer exatos.
+
+Produção catálogo14/2212visíveis/50CD inalterada. Metal Slug431225741B: API311,329MB/s/Nginx311,232MB/s; HTTPS3,225MB/s/133,7035s, variável. Sem medição nova do aparelho; não atribuir exclusivamente à operadora/túnel nem dizer311MB/s pela internet. Licença sintética removida e serviços/PIDs preservados. Novo APK deve usar R20 ou sucessora visual conciliada; preservar ajuste solicitado de consoles somente na sinopse. Receita exige SHAexatoR20; atualizar guard só com recibo da sucessora, sem instalar versão antiga. Ponte CD/BIOS continua entrega separada.
+
+## Última instalação recebida e histórico
+
 # R20 — LEDs Neo Geo e consoles — 05/10/2026
 
 Leia `versions/station-console-led-r20-20261005/README.md`. R20 instalado por atualização, SHA do telefone igual a `64eae3ab4dd253e25ee826dd23bf02c947e5cbd1db70e6b07f759d988d465904`, APK em `E:\ESTUDO APK\work\station-console-neogeocd-r20-20261005\TurboStations-Consoles-LED-R20-20261005.apk`, 2.041.498.580 bytes. Só carousel SO alterado; 13.080 entradas preservadas da R19B (inclusive resources.arsc N64, Neo Geo R18 e todos os DEX/motores).
