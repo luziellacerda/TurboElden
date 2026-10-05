@@ -1,3 +1,16 @@
+# R16 instalado — desempenho e abertura offline — 05/10/2026
+
+Leia `versions/station-performance-offline-r16-20261005/README.md` e `BUILD.md`.
+APK `b52313bc6ef504b91239241b2a4bc8c9eb9f1eeeea937e61cbc4bd5628ef0eb1`, 2.036.268.564 bytes, instalado por atualização e hash do base.apk igual. Pasta atual de fontes/build: `E:\ESTUDO APK\work\station-download-performance-20261005`; APK `TurboStations-Desempenho-Offline-R16-20261005.apk`. Base R15 arquivada em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais`, sem duplicata APK em E.
+
+Download/instalação de jogos sem SHA do corpo por pedido explícito: escrita 256KiB, sem busca/hashing de legado, sem releitura integral, consulta local apenas do entrypoint. Preserva tamanho/paths/transações/saves/TLS/licença. Hash do netplay permanece para identidade de sala. Native TSV de diagnóstico retirado do loop SDL; arquivo velho no aparelho não é catálogo atual. Fases e MB/s reais. Offline após catálogo assinado salvo; HTTP de poll não ocupa fila dos jogos locais. Ver handoff para bloqueio conhecido e limites.
+
+787checksJava/16suítes,32C++,API34/D8/assinatura/alinhamento passaram. Três entradas mudaram,13078preservadas; classes35/N64/NeoGeo/motores intactos. Android: Classic Kong recebido262144bytes em86ms; autorização141ms,cabeçalhos136ms,preparação102ms,UIINSTALADO/JOGAR. É arquivo pequeno, não prova taxa sustentada. Benchmark64MiB em Android é armazenamento sintético, não rede. Conferência offline coordenada separadamente; consultar evidência mais recente. Não promover a estável nem alegar gameplay de todos os motores. Nenhum deploy servidor. `CATALOG_PUBLISHED status=503` é marcador local herdado para cache, não prova HTTP503; usar traceHTTP.
+
+Não reaplicar scripts históricos na fonte congelada. Não partir de shared `station-netplay-20261004` (anterior) para perder R15/R16. Atualizar sem desinstalar/limpar dados. Preservar tags estáveis e insumos privados.
+
+## Histórico anterior
+
 # R15 instalada — 05/10/2026
 
 Atualização por USB concluída com sucesso, sem desinstalar ou limpar dados. SHA256 do base.apk no telefone **d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b**, igual ao APK preparado. Aplicativo aberto; catálogo Neo Geo com capa, sinopse e botões observado, sessão mantida sem digitar credenciais. Configurações de tela não alteradas. Recibo: `versions/station-emulators-r15-20261005/evidence/installation.json`.

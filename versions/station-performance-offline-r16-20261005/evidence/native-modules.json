@@ -1,0 +1,82 @@
+{
+  "commands": [
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\station-native-rate-phase-20261005\\tests\\transfer-rate-phases.cpp",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\native-build\\transfer-rate-phases.exe"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe",
+      "--target=aarch64-linux-android26",
+      "-std=c++17",
+      "-shared",
+      "-fPIC",
+      "-O2",
+      "-Wl,-z,max-page-size=16384",
+      "-Wl,--no-undefined",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wno-return-type-c-linkage",
+      "-static-libstdc++",
+      "-Wl,--exclude-libs,ALL",
+      "-I",
+      "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\client\\src\\native",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\station-native-rate-phase-20261005\\client\\src\\native\\station_frontend.cpp",
+      "-ldl",
+      "-llog",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\native-build\\libstation_frontend.so"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe",
+      "--target=aarch64-linux-android26",
+      "-std=c++17",
+      "-shared",
+      "-fPIC",
+      "-O2",
+      "-Wl,-z,max-page-size=16384",
+      "-Wl,--no-undefined",
+      "-nostdlib",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-stack-protector",
+      "-fno-builtin",
+      "-Wl,-soname,libturbo_carousel.so",
+      "-I",
+      "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\station-native-rate-phase-20261005\\frontend-native\\native_carousel.cpp",
+      "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native\\video720_posters.o",
+      "-L",
+      "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+      "-lc",
+      "-ldl",
+      "-llog",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\native-build\\libturbo_carousel.so"
+    ]
+  ],
+  "files": {
+    "libstation_frontend.so": {
+      "bytes": 3014848,
+      "sha256": "ebb1a942dd59f62ab82d24d9021e382abab26d3258c7b266790a26ea00ad6cfe"
+    },
+    "libturbo_carousel.so": {
+      "bytes": 85292728,
+      "sha256": "1d12a1f2f27d548751ce95cc178c6a436965d997d2260b4f45489e23c71cc111"
+    }
+  },
+  "sourceBaseUnmodified": true,
+  "testOutput": "PASS 32 native transfer rate, phase and exact job checks",
+  "target": "aarch64-linux-android26",
+  "maximumPageSize": 16384,
+  "apkPackaged": false,
+  "installed": false
+}

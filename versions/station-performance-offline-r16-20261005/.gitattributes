@@ -1,0 +1,4 @@
+# Preserve frozen source bytes and their recorded SHA-256 values.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Empty context lines in unified diffs intentionally contain one space.
+*.patch -whitespace

@@ -1,0 +1,7 @@
+--------- beginning of main
+10-05 14:37:49.175 11821 11922 I StationService: CATALOG_CACHE status=0 count=2162
+10-05 14:37:49.803 11821 12005 I StationFrontend: Configuring catalog
+10-05 14:37:49.816 11821 12005 I StationFrontend: Storage root prepared
+10-05 14:37:50.102 11821 12005 I StationService: UNSUPPORTED_PLATFORM status=0 count=0
+10-05 14:37:50.102 11821 12005 I StationService: CATALOG_PUBLISHED status=503 count=2162
+10-05 14:37:50.102 11821 12005 I StationFrontend: Publishing catalog items=2162

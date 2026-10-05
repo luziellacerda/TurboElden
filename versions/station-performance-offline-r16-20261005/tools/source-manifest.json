@@ -1,0 +1,29 @@
+{
+  "base": "E:\\ESTUDO APK\\work\\station-download-performance-20261005",
+  "files": [
+    {
+      "path": "client/src/native/station_frontend.cpp",
+      "originalSha256": "4d926a216b83ac0a76f4c8baa0525d3f59b717721368b6cc483fbbfa96aaecf5",
+      "sha256": "881a27ffe0d50cc406a1ef0ba62109460309c8be881972881797e3b301ba9bb5",
+      "bytes": 28906
+    },
+    {
+      "path": "frontend-native/native_search_download.h",
+      "originalSha256": "5e9931ae6fa2d6038cd8b53460124de9eaddc6287a6d2a9ccf47f97210a1feb9",
+      "sha256": "4617777795d69f2dc09bcf1496dd5095ce4962513d2b7b5f86bc220a7b73ba1c",
+      "bytes": 12590
+    },
+    {
+      "path": "frontend-native/native_carousel.cpp",
+      "originalSha256": "ed322aa4839b34946a7caa39770ac12909bc170ce43e230b1cb35af03ce9ef3e",
+      "sha256": "539313cf23fac971af969eb9149b69fba96a72f24666c5786f96d54efae1c433",
+      "bytes": 28549
+    },
+    {
+      "path": "client/src/native/station_transfer_rate.hpp",
+      "originalSha256": null,
+      "sha256": "cf37bcdd37e0ff6abeeeff2116847e064fe8d66d546bfc4ae4917818ffd9272f",
+      "bytes": 2461
+    }
+  ]
+}

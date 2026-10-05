@@ -1,0 +1,60 @@
+--- a/src/java/org/emulationstation/frontend/station/StationFrontend.java
++++ b/src/java/org/emulationstation/frontend/station/StationFrontend.java
+@@ -59,15 +59,22 @@
+   catalogPollTask=catalogPoll.scheduleWithFixedDelay(()->{
+    if(!mayPoll())return;
+    StationCatalogPoll.Ticket ticket=automaticRefresh.begin();if(ticket==null)return;
+-   try{commands.execute(()->{
+-    try{if(!mayPoll()||!automaticRefresh.current(ticket))return;
+-     StationAndroid app=StationAndroid.current();if(app==null)return;
+-     StationCoordinator.Library old=app.coordinator.current();
+-     StationCoordinator.Library next=app.coordinator.refresh(ticket.cancel);
+-     if(foreground&&automaticRefresh.current(ticket)&&(old==null||StationCatalogPoll.changed(old.catalog.revision,old.displayName,next.catalog.revision,next.displayName)))publishCurrent(app);
+-    }catch(Exception failure){if(foreground&&automaticRefresh.current(ticket)&&failure instanceof StationApi.Failure&&((StationApi.Failure)failure).licenseDenied())publishError(utf8("Entre novamente para atualizar o catálogo."));}
+-    finally{automaticRefresh.finish(ticket);}
+-   });}catch(RejectedExecutionException busy){automaticRefresh.finish(ticket);}
++   boolean publicationQueued=false;
++   try{if(!mayPoll()||!automaticRefresh.current(ticket))return;
++    StationAndroid app=StationAndroid.current();if(app==null)return;
++    StationCoordinator.Library old=app.coordinator.current();
++    // HTTP runs on the poll worker, never on the queue that resolves installed games.
++    StationCoordinator.Library next=app.coordinator.refresh(ticket.cancel);
++    if(foreground&&automaticRefresh.current(ticket)&&(old==null||StationCatalogPoll.changed(old.catalog.revision,old.displayName,next.catalog.revision,next.displayName))){
++     commands.execute(()->{
++      try{if(foreground&&automaticRefresh.current(ticket))publishCurrent(app);}
++      catch(Exception failure){publishError(utf8("Não foi possível atualizar a exibição do catálogo."));}
++      finally{automaticRefresh.finish(ticket);}
++     });
++     publicationQueued=true;
++    }
++   }catch(Exception failure){if(foreground&&automaticRefresh.current(ticket)&&failure instanceof StationApi.Failure&&((StationApi.Failure)failure).licenseDenied())publishError(utf8("Entre novamente para atualizar o catálogo."));}
++   finally{if(!publicationQueued)automaticRefresh.finish(ticket);}
+   },5,60,TimeUnit.SECONDS);
+  }
+  private static synchronized void stopCatalogPoll(){
+--- a/tests/StationOfflineTest.java
++++ b/tests/StationOfflineTest.java
+@@ -57,6 +57,23 @@
+   ok(outage.owner.login(null,cancel()).catalog.items.size()==1,"Connected Wi-Fi with server down still opens locally");
+   fails(()->outage.owner.refresh(cancel()));ok(outage.owner.ready(),"Server connection failure preserves local access");
+   ok(reboot.owner.cover("item_12345",cancel()).equals(cover)&&server.requests==before,"Cold boot reads persistent cover without session");
++  java.util.concurrent.CountDownLatch entered=new java.util.concurrent.CountDownLatch(1),release=new java.util.concurrent.CountDownLatch(1);
++  server.reachable=true;
++  StationApi.Transport slow=(method,path,body,bearer,cancellation)->{
++   if(path.equals("/v1/station/me")){entered.countDown();try{if(!release.await(5,java.util.concurrent.TimeUnit.SECONDS))throw new IOException("Test barrier timed out");}catch(InterruptedException e){Thread.currentThread().interrupt();throw new InterruptedIOException();}}
++   return server.exchange(method,path,body,bearer,cancellation);
++  };
++  Client polling=new Client(first.root,server,new StationApi(slow,server,server,server.authority.getPublic(),"test-key"));
++  polling.owner.login(null,cancel());
++  java.util.concurrent.ExecutorService workers=java.util.concurrent.Executors.newFixedThreadPool(2);
++  try{
++   java.util.concurrent.Future<?> network=workers.submit(()->{try{polling.owner.refresh(cancel());}catch(Exception e){throw new RuntimeException(e);}});
++   ok(entered.await(2,java.util.concurrent.TimeUnit.SECONDS),"Background profile request is deliberately stalled");
++   java.util.concurrent.Future<Boolean> local=workers.submit(()->polling.owner.ready() && polling.owner.cover("item_12345",cancel()).equals(cover) && reopenedInstaller.find(polling.owner.current().catalog.find("item_12345"))!=null);
++   ok(local.get(2,java.util.concurrent.TimeUnit.SECONDS),"Slow server does not lock ready/current/cache/installed-game reads");
++   release.countDown();network.get(2,java.util.concurrent.TimeUnit.SECONDS);
++  }finally{release.countDown();workers.shutdownNow();}
++  before=server.requests;server.reachable=false;
+   Files.delete(cover);fails(()->reboot.owner.cover("item_12345",cancel()));ok(reboot.owner.ready()&&server.requests==before,"Missing offline cover does not lock app or start network");
+   reboot.owner.logout();ok(!reboot.owner.ready(),"Logout clears running access");reboot.owner.login(null,cancel());ok(reboot.owner.ready(),"Explicit re-entry restores registered installation");
+   StationApi.Cancellation stopped=cancel();stopped.cancel();fails(()->reboot.owner.login(null,stopped));ok(!reboot.owner.ready()&&server.requests==before,"Cancelled restore does not authorize");

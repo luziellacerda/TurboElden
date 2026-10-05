@@ -1,0 +1,40 @@
+{
+  "startedAt": "2026-10-05T17:35:10.296422+00:00",
+  "apkSha256": "b52313bc6ef504b91239241b2a4bc8c9eb9f1eeeea937e61cbc4bd5628ef0eb1",
+  "originalNetworkSettings": {
+    "wifi_on": "1",
+    "mobile_data": "1",
+    "airplane_mode_on": "0"
+  },
+  "screenSettingsChanged": false,
+  "dataCleared": false,
+  "gameplayTested": false,
+  "offlineConnectivity": [
+    "Active default network: none"
+  ],
+  "offlineSettings": {
+    "wifi_on": "0",
+    "mobile_data": "0",
+    "airplane_mode_on": "0"
+  },
+  "frontendResumedSeconds": 0.666,
+  "foregroundOffline": [
+    "topResumedActivity=ActivityRecord{59395977 u0 org.turboramastation.frontend/org.emulationstation.frontend.ESActivity t65}"
+  ],
+  "frontendResumedOffline": true,
+  "catalogCacheObserved": true,
+  "coverCacheObserved": false,
+  "catalogNetworkObserved": false,
+  "serverRequestTraces": 0,
+  "restoration": {
+    "wifi_on": "command completed",
+    "mobile_data": "command completed"
+  },
+  "finalNetworkSettings": {
+    "wifi_on": "1",
+    "mobile_data": "1",
+    "airplane_mode_on": "0"
+  },
+  "settingsRestored": true,
+  "finishedAt": "2026-10-05T17:35:21.078002+00:00"
+}

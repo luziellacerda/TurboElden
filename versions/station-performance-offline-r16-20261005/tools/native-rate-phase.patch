@@ -1,0 +1,209 @@
+--- a/client/src/native/station_frontend.cpp
++++ b/client/src/native/station_frontend.cpp
+@@ -4,6 +4,7 @@
+ #include "station_cover_retry.hpp"
+ #include "station_cover_plan.hpp"
+ #include "station_cover_publication.hpp"
++#include "station_transfer_rate.hpp"
+ #include <jni.h>
+ #include <dlfcn.h>
+ #include <algorithm>
+@@ -31,13 +32,14 @@
+  Env(){if(vm){int status=vm->GetEnv(reinterpret_cast<void**>(&env),JNI_VERSION_1_6);if(status==JNI_EDETACHED){attached=vm->AttachCurrentThread(&env,nullptr)==JNI_OK;if(!attached)env=nullptr;}}}
+  ~Env(){if(attached)vm->DetachCurrentThread();}
+ };
+-struct Job {Progress progress;std::string message,launch;int result=0;};
++struct Job {Progress progress;std::string message,launch;int result=0;double networkBytesPerSecond=0;};
+ struct CoverResult {std::string path;int result=0;int64_t retryMillis=0;};
+ std::atomic<bool> coversForeground{true};
+ struct Inbox {
+  std::mutex mutex;std::atomic<bool> changed{false};
+  bool hasCatalog=false;std::vector<Item> catalog;std::map<std::string,std::string> folderPaths;
+  std::map<std::string,CoverResult> covers;std::map<std::string,Job> jobs;
++ std::map<std::string,station::TransferRate> rates;
+  std::string error,name;
+ } inbox;
+ struct State {
+@@ -45,6 +47,7 @@
+  std::map<std::string,std::string> folderPaths,pendingFolders;uint64_t folderRevision=0;
+  std::vector<Item> catalog;
+  std::map<std::string,Job> jobs;
++ std::string progressSelection;
+  std::set<std::string> covers;
+  station::CoverRetry coverRetry;station::CoverBackoff coverBackoff;std::vector<size_t> coverPlan;int64_t nextCoverSweep=0;
+ } state; // Only the SDL thread reads/writes this state.
+@@ -125,7 +128,7 @@
+   else if(job.result==2){item.localPath.clear();item.fileName.clear();item.installed=false;}
+  }
+  catalog->items.swap(catalog->unusedPending);catalog->unusedPending.clear();state.folderPaths.swap(state.pendingFolders);state.pendingFolders.clear();++state.folderRevision;state.pending=false;__android_log_print(4,"StationNative","Catalog applied items=%zu",catalog->items.size());
+- catalog->priorities.clear();state.coverPlan.clear();state.nextCoverSweep=0;state.covers.clear();state.coverRetry.clear();state.jobs.clear();
++ catalog->priorities.clear();state.coverPlan.clear();state.nextCoverSweep=0;state.covers.clear();state.coverRetry.clear();state.jobs.clear();state.progressSelection.clear();
+  catalog->state=2;catalog->error.clear();preparationCommitted=true;changed(catalog);return true;
+ }
+ }
+@@ -193,6 +196,10 @@
+   Job job;job.progress.active=running;job.progress.received=received;job.progress.total=total;job.message=bytes(env,message,4096);job.launch=bytes(env,launch,8192);job.result=result;
+   if(result==3)job.progress.error=job.message;
+   std::lock_guard<std::mutex> lock(inbox.mutex);if(inbox.jobs.size()>=4096&&!inbox.jobs.count(key))throw std::runtime_error("Job queue limit");
++  if(station::transferPhase(running,result,job.message.c_str())==station::TransferPhase::Downloading){
++   const auto now=std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now().time_since_epoch()).count();
++   job.networkBytesPerSecond=inbox.rates[key].observe(received,total,static_cast<uint64_t>(now));
++  }else inbox.rates.erase(key);
+   inbox.jobs[key]=std::move(job);inbox.changed.store(true,std::memory_order_release);
+  }catch(const std::exception& failure){error(env,failure.what());}
+ }
+@@ -240,7 +247,22 @@
+ API void StationCatalog_cancel(Catalog* catalog,size_t index){if(owned(catalog)&&index<catalog->items.size())command(cancelMethod,&catalog->items[index].id);}
+ API bool StationCatalog_uninstall(Catalog* catalog,size_t index){return owned(catalog)&&index<catalog->items.size()&&command(removeMethod,&catalog->items[index].id,true);}
+ API std::vector<size_t> StationCatalog_active(Catalog* catalog){std::vector<size_t> result;if(owned(catalog))for(size_t i=0;i<catalog->items.size();++i){auto job=state.jobs.find(catalog->items[i].id);if(job!=state.jobs.end()&&job->second.progress.active)result.push_back(i);}return result;}
+-API Progress StationCatalog_progress(Catalog* catalog,size_t index){if(owned(catalog)&&index<catalog->items.size()){auto job=state.jobs.find(catalog->items[index].id);if(job!=state.jobs.end())return job->second.progress;}return {};}
++API Progress StationCatalog_progress(Catalog* catalog,size_t index){
++ state.progressSelection.clear();
++ if(owned(catalog)&&index<catalog->items.size()){
++  state.progressSelection=catalog->items[index].id;
++  const auto job=state.jobs.find(state.progressSelection);if(job!=state.jobs.end())return job->second.progress;
++ }return {};
++}
++// These extra symbols leave the 48-byte Progress ABI intact. Called on the SDL thread.
++API int StationDownload_phase(int64_t received,int64_t total){
++ const auto* job=station::exactActiveJob(state.jobs,state.progressSelection,received,total);
++ return job?static_cast<int>(station::transferPhase(job->progress.active,job->result,job->message.c_str())):0;
++}
++API double StationDownload_networkRate(int64_t received,int64_t total){
++ const auto* job=station::exactActiveJob(state.jobs,state.progressSelection,received,total);
++ return job&&station::transferPhase(job->progress.active,job->result,job->message.c_str())==station::TransferPhase::Downloading?job->networkBytesPerSecond:-1;
++}
+ 
+ namespace {
+ template<class T> T mainSymbol(const char* name){
+--- a/frontend-native/native_search_download.h
++++ b/frontend-native/native_search_download.h
+@@ -175,6 +175,10 @@
+  uiText(body,m,{tx,b.y+h*.084f,tw,h*.090f},.74f,0xE1EEE5ff,0,alpha);
+  uiMatrix(m);
+ }
++static char* downloadNumber(char*out,unsigned long long value){
++ char digits[24];int count=0;do{digits[count++]=char('0'+value%10);value/=10;}while(value);
++ while(count)*out++=digits[--count];return out;
++}
+ static void drawDownloadPresentationHook(void*p,float x,float y,float w,float h,long long current,long long total){
+  if(mappingCover){x=targetX+(x-sourceX)*scaleX;y=targetY+(y-sourceY)*scaleY;w*=scaleX;h*=scaleY;}
+  if(w<=0||h<=0)return;
+@@ -186,9 +190,21 @@
+  if(total>0){if(fraction>0)pauseSurface(bx,barY,bw*fraction,bh,bh*.5f,0x3CED80ff);}
+  else{float phase=float(fn<unsigned(*)()>(0x39e240)()%1600)/1600.f;pauseSurface(bx+(bw-bw*.22f)*phase,barY,bw*.22f,bh,bh*.5f,0x3CED80ff);}
+  if(w>at<float>(p,0x54)*.12f){
+-  char label[40]="BAIXANDO";
+-  if(total>0){int n=9,v=int(fraction*100);label[8]=' ';if(v>=100)label[n++]='1';if(v>=10)label[n++]=char('0'+(v/10)%10);label[n++]=char('0'+v%10);label[n++]='%';label[n]=0;}
+-  else memcpy(label,"BAIXANDO...",12);
++  // The item selected by StationCatalog_progress disambiguates equal counters.
++  static bool linked=false;static int(*phase)(long long,long long);static double(*networkRate)(long long,long long);
++  if(!linked){linked=true;void*lib=dlopen("libstation_frontend.so",2);if(lib){phase=(decltype(phase))dlsym(lib,"StationDownload_phase");networkRate=(decltype(networkRate))dlsym(lib,"StationDownload_networkRate");}}
++  const int step=phase?phase(current,total):2;
++  const char*title=step==3?"PREPARANDO":step==2?"BAIXANDO":step==1?"AGUARDANDO":"PROCESSANDO";
++  const double rate=step==2&&networkRate?networkRate(current,total):-1;
++  char label[80];U titleSize=strlen(title);memcpy(label,title,titleSize);char*out=label+titleSize;
++  if(total>0){*out++=' ';out=downloadNumber(out,(unsigned)int(fraction*100));*out++='%';}
++  else{memcpy(out,"...",3);out+=3;}
++  if(total>0&&rate>0&&rate<1e15){
++   const auto hundredths=(unsigned long long)(rate/10000.0+0.5);
++   const char separator[]=" · ";memcpy(out,separator,sizeof(separator)-1);out+=sizeof(separator)-1;
++   out=downloadNumber(out,hundredths/100);*out++='.';*out++=char('0'+hundredths/10%10);*out++=char('0'+hundredths%10);
++   memcpy(out," MB/s",5);out+=5;
++  }*out=0;
+   float scale=h/at<float>(p,0x58)*.80f;
+   uiLabel(p,50,label,&formationMatrix,{bx,by+h*.011f,bw,boxH*.60f},scale,0xDFFFF0ff,0);
+  }
+--- a/frontend-native/native_carousel.cpp
++++ b/frontend-native/native_carousel.cpp
+@@ -102,23 +102,11 @@
+ }
+ static void clearTextures(void*); static void invalidate(void*); static void rebuildHook(void*); static void refreshHook(void*);
+ #include "native_folders.h"
+-static void exportCatalog(void*real){
+- void*f=fopen("/storage/emulated/0/EmulationStation/native-catalog.tsv","wb");if(!f)return;
+- const U fields[]={0,0x60,0x18,0x90,0x78};
+- for(B*it=at<B*>(real,0x88);it<at<B*>(real,0x90);it+=0xe8){
+-  for(int j=0;j<5;j++){
+-   const char*t=strData(it+fields[j]);for(;*t;t++){char c=(*t=='\t'||*t=='\n'||*t=='\r')?' ':*t;fwrite(&c,1,1,f);}
+-   fwrite(j==4?"\n":"\t",1,1,f);
+-  }
+- }
+- fclose(f);log("Native catalog identity export complete");
+-}
+ static void syncModel(void*p){
+  initModel();void*real=fn<void*(*)()>(0x1887dc)();
+  if(at<int>(real,0x50)!=2)return;
+  int rev=at<int>(real,0xa8);U begin=at<U>(real,0x88),size=at<U>(real,0x90)-begin;
+  if(rev==syncedRevision&&begin==syncedItems&&size==syncedSize)return;
+- bool identityChanged=catalogIdentityChanged(syncedRevision,syncedItems,syncedSize,begin,size);
+  syncedRevision=rev;syncedItems=begin;syncedSize=size;
+  // Local covers exist before catalog startup. Never change IDs, download paths, or saves.
+  for(B*it=at<B*>(real,0x88);it<at<B*>(real,0x90);it+=0xe8){
+@@ -129,7 +117,6 @@
+   }
+  }
+ 
+- if(identityChanged)exportCatalog(real);
+  // Only entries with no artwork URL receive system artwork. Real game cover URLs/cache are preserved.
+  int defaults=0;
+  for(B*it=at<B*>(real,0x88);it<at<B*>(real,0x90);it+=0xe8){
+--- /dev/null
++++ b/client/src/native/station_transfer_rate.hpp
+@@ -0,0 +1,56 @@
++#pragma once
++#include <cstdint>
++#include <cstring>
++
++namespace station {
++// Bytes actually received during the network phase, averaged from its first event.
++struct TransferRate {
++    bool started = false;
++    int64_t first = 0, last = 0, total = -1;
++    uint64_t sinceMillis = 0, lastMillis = 0;
++    double observe(int64_t received, int64_t expected, uint64_t nowMillis) {
++        if (!started || received < last || expected != total || nowMillis < lastMillis) {
++            started = true; first = received; last = received;
++            total = expected; sinceMillis = lastMillis = nowMillis;
++            return 0;
++        }
++        last = received; lastMillis = nowMillis;
++        const uint64_t elapsed = nowMillis - sinceMillis;
++        return elapsed >= 500 ? double(received - first) * 1000.0 / double(elapsed) : 0;
++    }
++};
++
++enum class TransferPhase : int { Unknown = 0, Waiting = 1, Downloading = 2, Preparing = 3 };
++
++inline TransferPhase transferPhase(bool active, int result, const char* message) {
++    if (!active || result != 0 || !message) return TransferPhase::Unknown;
++    if (std::strcmp(message, "Baixando") == 0) return TransferPhase::Downloading;
++    if (std::strcmp(message, "Preparando") == 0 ||
++        std::strcmp(message, "Verificando integridade") == 0 ||
++        std::strcmp(message, "Conferindo arquivo já baixado") == 0) return TransferPhase::Preparing;
++    return TransferPhase::Waiting;
++}
++
++// The renderer requests Progress for an exact item before drawing its counters.
++// Never select a different job when that known item is inactive or has changed.
++// Older callers without an item selection may use only a unique active match.
++template<class Jobs, class Key>
++const typename Jobs::mapped_type* exactActiveJob(const Jobs& jobs, const Key& selected,
++                                               int64_t received, int64_t total) {
++    const auto matches = [&](const auto& job) {
++        return job.progress.active && job.result == 0 &&
++            job.progress.received == received && job.progress.total == total;
++    };
++    if (!selected.empty()) {
++        const auto found = jobs.find(selected);
++        return found != jobs.end() && matches(found->second) ? &found->second : nullptr;
++    }
++    const typename Jobs::mapped_type* result = nullptr;
++    for (const auto& entry : jobs) {
++        if (!matches(entry.second)) continue;
++        if (result) return nullptr;
++        result = &entry.second;
++    }
++    return result;
++}
++}

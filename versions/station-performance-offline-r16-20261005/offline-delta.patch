@@ -1,0 +1,535 @@
+--- a/run_tests.py
++++ b/run_tests.py
+@@ -14,7 +14,7 @@
+ from datetime import datetime
+ run_id=datetime.now().strftime('%Y%m%d-%H%M%S-%f')
+ results=[]
+-for name,folder in [('StationCatalogPollTest','poll-test'),('StationAutomaticCatalogTest','automatic-test'),('StationFoldersTest','folders-test'),('StationFilesTest','file-test'),('StationApiTest','api-test'),('StationOnlineApiTest','online-api-test'),('StationStorageTest','storage-test'),('StationCoordinatorTest','coordinator-test'),('StationInstallerTest','installer-test'),('StationClosureTest','closure-test'),('StationBootstrapTest','bootstrap-test'),('StationCoverConcurrencyTest','cover-concurrency-test'),('StationTransferReuseTest','transfer-reuse-test'),('StationCoverPublicationTest','cover-publication-test')]:
++for name,folder in [('StationOfflineTest','offline-test'),('StationCatalogPollTest','poll-test'),('StationAutomaticCatalogTest','automatic-test'),('StationFoldersTest','folders-test'),('StationFilesTest','file-test'),('StationApiTest','api-test'),('StationOnlineApiTest','online-api-test'),('StationStorageTest','storage-test'),('StationCoordinatorTest','coordinator-test'),('StationInstallerTest','installer-test'),('StationClosureTest','closure-test'),('StationBootstrapTest','bootstrap-test'),('StationCoverConcurrencyTest','cover-concurrency-test'),('StationTransferReuseTest','transfer-reuse-test'),('StationCoverPublicationTest','cover-publication-test')]:
+     cmd=[str(jdk/'java.exe'),'-cp',str(output)+';'+str(jsonjar),'org.emulationstation.frontend.station.'+name,str(build/folder/run_id)]
+     run=subprocess.run(cmd,check=True,capture_output=True,text=True); print(run.stdout.strip());results.append({'test':name,'output':run.stdout.strip()})
+ android=build/'android-classes';android.mkdir(exist_ok=True)
+--- a/src/java/org/emulationstation/frontend/auth/StationLogin.java
++++ b/src/java/org/emulationstation/frontend/auth/StationLogin.java
+@@ -60,6 +60,7 @@
+         return cancel;
+     }
+     private static String message(Exception error) {
++        if(error instanceof StationApi.Offline)return error.getMessage();
+         if(error instanceof StationApi.Failure){
+             StationApi.Failure failure=(StationApi.Failure)error;
+             if(failure.status==403||failure.status==401)return "Acesso não autorizado. Confira seu código ou fale com o suporte.";
+--- a/src/java/org/emulationstation/frontend/station/StationAndroid.java
++++ b/src/java/org/emulationstation/frontend/station/StationAndroid.java
+@@ -43,7 +43,7 @@
+         };
+         PublicKey authority=KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(
+             StationProtocol.decode(StationConfig.STATION_ASSERTION_SPKI_BASE64URL)));
+-        api=new StationApi(new StationHttp(),identity,clock,authority,StationConfig.STATION_ASSERTION_KEY_ID);
++        api=new StationApi(new StationHttp(()->networkAvailable(context)),identity,clock,authority,StationConfig.STATION_ASSERTION_KEY_ID);
+         // Reuses the existing device Keystore alias and verified license file on upgrade.
+         sessions=new StationSessions(api,clock,privateFiles.resolve("station-license-id.txt"));
+         catalogs=new StationCatalogStore(privateFiles.resolve("station-v2/catalog"));
+@@ -52,6 +52,15 @@
+         coordinator=new StationCoordinator(api,sessions,catalogs,covers,privateFiles,clock);
+         try{Class.forName("org.emulationstation.frontend.netplay.StationPresence").getMethod("install",Context.class).invoke(null,context);}
+         catch(ReflectiveOperationException optional){android.util.Log.w("StationOnline","Presence module unavailable");}
++    }
++    private static boolean networkAvailable(Context context) {
++        try {
++            android.net.ConnectivityManager manager=(android.net.ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
++            if(manager==null)return false;
++            android.net.Network network=manager.getActiveNetwork();
++            android.net.NetworkCapabilities caps=manager.getNetworkCapabilities(network);
++            return caps!=null && caps.hasCapability(android.net.NetworkCapabilities.NET_CAPABILITY_INTERNET);
++        }catch(SecurityException unavailable){return true;} // Existing manifest grants ACCESS_NETWORK_STATE.
+     }
+     private static String deviceText(String value) {
+         String text=value==null?"":value.trim();
+--- a/src/java/org/emulationstation/frontend/station/StationApi.java
++++ b/src/java/org/emulationstation/frontend/station/StationApi.java
+@@ -19,6 +19,7 @@
+     }
+     public interface Clock { long millis(); }
+     public interface Transport {
++        default boolean available() {return true;}
+         Response exchange(String method, String path, byte[] body, String bearer, Cancellation cancel) throws IOException;
+     }
+     public static final class Response implements AutoCloseable {
+@@ -46,6 +47,9 @@
+         }
+         synchronized void detach(Runnable action) { if (abort == action) abort=null; }
+     }
++    public static final class Offline extends IOException {
++        public Offline(){super("Sem internet. Os jogos instalados continuam disponíveis.");}
++    }
+     public static final class Failure extends IOException {
+         public final int status;
+         public final String code;
+@@ -53,6 +57,7 @@
+         Failure(int status,String code){this(status,code,0);}
+         Failure(int status,String code,long retryAfterMillis){super("Station " + status + " " + code);this.status=status;this.code=code;this.retryAfterMillis=retryAfterMillis;}
+         public boolean sessionDenied() { return status == 401 || status == 403; }
++        public boolean licenseDenied() {return status==403 && (code.equals("STATION_LICENSE_DENIED") || code.equals("STATION_DEVICE_DENIED"));}
+     }
+     public static final class Session {
+         public final String licenseId, deviceId, sessionId;
+@@ -100,6 +105,22 @@
+     public StationApi(Transport transport, Device device, Clock clock, PublicKey authority, String authorityId) throws Exception {
+         this.transport=transport;this.device=device;this.clock=clock;this.authority=authority;this.authorityId=authorityId;
+         this.deviceId=StationProtocol.deviceId(device.publicKey().getEncoded());
++    }
++
++    public boolean available(){return transport.available();}
++    String deviceId(){return deviceId;}
++    /** Local-only restore under the product's post-activation offline policy.
++     * Verifies server signature and installation ownership; creates no Session or Grant. */
++    CatalogSnapshot restoreLocalCatalog(byte[] envelope,String licenseId)throws Exception {
++        if(!StationProtocol.licenseId(licenseId))throw new IOException("Invalid local license");
++        if(envelope.length>StationProtocol.CATALOG_BODY_BYTES)throw new IOException("Catalog cache too large");
++        JSONObject payload=verify(envelope,StationProtocol.CATALOG,null,true);
++        equal(payload,"licenseId",licenseId);hexId(string(payload,"sessionId"));
++        return new CatalogSnapshot(StationCatalog.fromVerifiedPayload(payload),envelope.clone());
++    }
++    private Response exchange(String method,String path,byte[] body,String bearer,Cancellation cancel)throws IOException {
++        cancel.check();if(!transport.available())throw new Offline();
++        return transport.exchange(method,path,body,bearer,cancel);
+     }
+ 
+     public String activate(String code, Cancellation cancel) throws Exception {
+@@ -176,7 +197,7 @@
+ 
+     public byte[] cover(Session session,String coverId,Cancellation cancel) throws Exception {
+         StationCatalog.libraryId(coverId); valid(session);
+-        try (Response response=transport.exchange("GET",ROOT+"covers/"+coverId,null,session.token,cancel)) {
++        try (Response response=exchange("GET",ROOT+"covers/"+coverId,null,session.token,cancel)) {
+             success(response,cancel);
+             byte[] bytes=read(response,StationProtocol.COVER_BODY_BYTES,cancel);
+             String ext=StationFiles.imageExtension(bytes),type=mime(response.type);
+@@ -218,7 +239,7 @@
+         if(maximumBytes<grant.artifact.sizeBytes)throw new IOException("Artifact exceeds local transfer limit");
+         if (!grant.consumed.compareAndSet(false,true)) throw new IOException("Grant has already been used");
+         // Never retry this GET: the server consumes the grant even if the connection later fails.
+-        Response response=transport.exchange("GET",ROOT+"artifacts/"+grant.grantId,null,grant.session.token,cancel);
++        Response response=exchange("GET",ROOT+"artifacts/"+grant.grantId,null,grant.session.token,cancel);
+         boolean accepted=false;
+         try {
+             success(response,cancel);
+@@ -245,7 +266,7 @@
+     private SignedReply signedReply(String method,String path,byte[] request,Session session,String domain,int maximum,
+             Cancellation cancel) throws Exception {
+         cancel.check();if (session != null) valid(session);
+-        try (Response response=transport.exchange(method,ROOT+path,request,session == null ? null:session.token,cancel)) {
++        try (Response response=exchange(method,ROOT+path,request,session == null ? null:session.token,cancel)) {
+             success(response,cancel);
+             if (!mime(response.type).equals("application/json")) throw new IOException("Unexpected JSON MIME");
+             byte[] envelope=read(response,maximum,cancel);
+--- a/src/java/org/emulationstation/frontend/station/StationCatalogStore.java
++++ b/src/java/org/emulationstation/frontend/station/StationCatalogStore.java
+@@ -4,7 +4,7 @@
+ import java.nio.file.*;
+ import java.nio.charset.StandardCharsets;
+ 
+-/** Private signed catalog persistence. Cache is never accepted as login authorization. */
++/** Private server-signed catalog. Local access after activation is independent of online sessions. */
+ public final class StationCatalogStore {
+     private final Path directory;
+     public StationCatalogStore(Path directory) throws IOException {
+@@ -28,11 +28,31 @@
+         byte[] bytes=fresh.encoded();
+         StationFiles.replace(new ByteArrayInputStream(bytes),file(session),bytes.length,StationProtocol.CATALOG_BODY_BYTES,
+             cancel,StationFiles.NO_PROGRESS);
++        Files.deleteIfExists(blocked(session.licenseId,session.deviceId));
+         return fresh;
+     }
++    public synchronized StationApi.CatalogSnapshot readLocal(StationApi api,String licenseId)throws Exception {
++        if(Files.exists(blocked(licenseId,api.deviceId()),LinkOption.NOFOLLOW_LINKS))return null;
++        Path path=file(licenseId,api.deviceId());
++        if(!Files.exists(path,LinkOption.NOFOLLOW_LINKS))return null;
++        if(!Files.isRegularFile(path,LinkOption.NOFOLLOW_LINKS))throw new IOException("Invalid catalog cache path");
++        return api.restoreLocalCatalog(StationFiles.readBounded(path,StationProtocol.CATALOG_BODY_BYTES),licenseId);
++    }
++    /** Remember explicit license/device denial across process death, including offline restart. */
++    public synchronized void block(String licenseId,String deviceId)throws IOException {
++        byte[] marker={1};
++        try {StationFiles.replace(new ByteArrayInputStream(marker),blocked(licenseId,deviceId),1,1,
++            StationFiles.NEVER_CANCELLED,StationFiles.NO_PROGRESS);}
++        catch(IOException failure){Files.deleteIfExists(file(licenseId,deviceId));throw failure;}
++    }
++    private Path blocked(String licenseId,String deviceId)throws IOException {return directory.resolve(owner(licenseId,deviceId)+".blocked");}
++    private static String owner(String licenseId,String deviceId)throws IOException {
++        if(!StationProtocol.licenseId(licenseId))throw new IOException("Invalid local license");
++        return StationProtocol.base64Url(StationProtocol.sha256((licenseId+"\n"+deviceId).getBytes(StandardCharsets.UTF_8)));
++    }
++    private Path file(String licenseId,String deviceId)throws IOException {return directory.resolve(owner(licenseId,deviceId)+".json");}
+     private Path file(StationApi.Session session) throws IOException {
+         if (session == null) throw new IOException("Session required for catalog cache");
+-        String name=StationProtocol.base64Url(StationProtocol.sha256((session.licenseId+"\n"+session.deviceId).getBytes(StandardCharsets.UTF_8)));
+-        return directory.resolve(name+".json");
++        return file(session.licenseId,session.deviceId);
+     }
+ }
+--- a/src/java/org/emulationstation/frontend/station/StationCoordinator.java
++++ b/src/java/org/emulationstation/frontend/station/StationCoordinator.java
+@@ -29,7 +29,21 @@
+         this.privateFiles=privateFiles;this.clock=clock;
+     }
+     public synchronized Library login(String code,StationApi.Cancellation cancel) throws Exception {
+-        authorized=null;library=null;
++        authorized=null;library=null;cancel.check();
++        if(code==null||code.isEmpty()) {
++            try {
++                String license=sessions.savedLicense();
++                StationApi.CatalogSnapshot local=catalogs.readLocal(api,license);
++                if(local!=null){
++                    cancel.check();Library restored=new Library(readName(license,api.deviceId()),local.catalog,true);
++                    library=restored;StationDiagnostics.record(StationDiagnostics.Event.CATALOG_CACHE,0,local.catalog.items.size());
++                    return restored;
++                }
++            }catch(InterruptedIOException stopped){throw stopped;}
++            catch(IOException|java.security.GeneralSecurityException|org.json.JSONException invalidCache){
++                // Only a newly authenticated response can repair absent/corrupt local data.
++            }
++        }
+         if(code!=null&&!code.isEmpty())sessions.activate(code,cancel);
+         StationApi.Session session=null;
+         try(StationSessions.Lease lease=sessions.acquire(cancel)) {
+@@ -37,7 +51,8 @@
+             String name=loadName(session,cancel);
+             Library result=loadCatalog(session,name,cancel);
+             cancel.check();authorized=session;library=result;return result;
+-        }catch(Exception failure){if(session!=null)sessions.denied(session);throw failure;}
++        }catch(StationApi.Failure failure){invalidate(session,failure);throw failure;}
++        catch(Exception failure){if(session!=null)sessions.denied(session);throw failure;}
+     }
+     public synchronized Library refresh(StationApi.Cancellation cancel) throws Exception {
+         StationApi.Session session=null;
+@@ -45,7 +60,7 @@
+             session=lease.session;
+             Library result=loadCatalog(session,loadName(session,cancel),cancel);
+             cancel.check();authorized=session;library=result;return result;
+-        }catch(StationApi.Failure failure){if(session!=null&&failure.sessionDenied())invalidate(session);throw failure;}
++        }catch(StationApi.Failure failure){invalidate(session,failure);throw failure;}
+     }
+     /** Session/library snapshot used until the authenticated response has been accepted. */
+     public static final class Access implements AutoCloseable {
+@@ -57,19 +72,27 @@
+     public synchronized Access acquireItem(String itemId,StationApi.Cancellation cancel)throws Exception {
+         Library current=library;
+         if(current==null || current.catalog.find(itemId)==null)throw new IOException("Jogo ausente do catálogo autorizado");
+-        StationSessions.Lease lease=sessions.acquire(cancel);
++        StationSessions.Lease lease;
++        try {lease=sessions.acquire(cancel);}
++        catch(StationApi.Failure failure){invalidate(null,failure);throw failure;}
+         try {
+             if(lease.session!=authorized){current=loadCatalog(lease.session,current.displayName,cancel);library=current;authorized=lease.session;}
+             StationCatalog.Item item=current.catalog.find(itemId);
+             if(item==null)throw new IOException("Jogo ausente após renovar catálogo");
+             return new Access(item,lease);
+-        }catch(Exception failure){lease.close();if(failure instanceof StationApi.Failure && ((StationApi.Failure)failure).sessionDenied())invalidate(lease.session);throw failure;}
++        }catch(Exception failure){lease.close();if(failure instanceof StationApi.Failure && ((StationApi.Failure)failure).sessionDenied())invalidate(lease.session,(StationApi.Failure)failure);throw failure;}
+     }
+     public Path cover(String itemId,StationApi.Cancellation cancel) throws Exception {
++        Library snapshot=library;
++        StationCatalog.Item local=snapshot==null?null:snapshot.catalog.find(itemId);
++        if(local==null)throw new IOException("Jogo ausente do catálogo autorizado");
++        Path cached=covers.cached(local.coverId,local.revision,cancel);
++        cancel.check();
++        if(cached!=null && library==snapshot)return cached;
+         Access access=acquireItem(itemId,cancel);
+         try(Access held=access;StationDiagnostics.Scope trace=StationDiagnostics.selection(access.item.itemId,access.item.coverId,access.item.revision)){
+             return covers.get(access.lease.session,access.item.coverId,access.item.revision,cancel);
+-        }catch(StationApi.Failure failure){if(failure.sessionDenied())invalidate(access.lease.session);throw failure;}
++        }catch(StationApi.Failure failure){if(failure.sessionDenied())invalidate(access.lease.session,failure);throw failure;}
+     }
+     public StationApi.Grant authorize(String itemId,StationApi.Cancellation cancel) throws Exception {
+         Access access=acquireItem(itemId,cancel);
+@@ -77,7 +100,7 @@
+         catch(StationApi.Failure failure){rejected(access,failure);throw failure;}
+     }
+     void rejected(Access access,StationApi.Failure failure){
+-        if(access!=null&&failure.sessionDenied())invalidate(access.lease.session);
++        if(access!=null&&failure.sessionDenied())invalidate(access.lease.session,failure);
+     }
+     StationApi.Grant authorize(Access access,StationApi.Cancellation cancel)throws Exception {
+         try(StationDiagnostics.Scope trace=StationDiagnostics.selection(access.item.itemId,access.item.coverId,access.item.revision)){
+@@ -88,14 +111,21 @@
+         }
+     }
+     public boolean ready() {
+-        StationApi.Session session=authorized;
+-        StationApi.Session live=sessions.peek();
+-        return library!=null && session!=null && live==session && !live.needsRenewal(clock.millis());
++        return library!=null; // Online token expiry must not close an activated local library.
+     }
+     public Library current() {return library;}
+     public synchronized void logout() {authorized=null;library=null;sessions.forgetSession();}
+-    private synchronized void invalidate(StationApi.Session session) {
+-        if(authorized==session){authorized=null;library=null;}sessions.denied(session);
++    private synchronized void invalidate(StationApi.Session session,StationApi.Failure failure) {
++        if(!failure.sessionDenied())return;
++        StationApi.Session live=sessions.peek();
++        if(session!=null && live!=null && live!=session)return; // Late failure from an older bearer.
++        if(authorized==session)authorized=null;
++        sessions.denied(session);
++        if(failure.licenseDenied()) {
++            library=null;
++            try {catalogs.block(session==null?sessions.savedLicense():session.licenseId,api.deviceId());}
++            catch(IOException persistence){throw new IllegalStateException("Cannot persist Station denial",persistence);}
++        }
+     }
+     private Library loadCatalog(StationApi.Session session,String name,StationApi.Cancellation cancel) throws Exception {
+         try{
+@@ -118,13 +148,15 @@
+             return readName(session);
+         }
+     }
+-    private Path nameFile(StationApi.Session session) {
+-        String owner=StationProtocol.base64Url(StationProtocol.sha256((session.licenseId+"\n"+session.deviceId).getBytes(StandardCharsets.UTF_8)));
++    private Path nameFile(StationApi.Session session) {return nameFile(session.licenseId,session.deviceId);}
++    private Path nameFile(String licenseId,String deviceId) {
++        String owner=StationProtocol.base64Url(StationProtocol.sha256((licenseId+"\n"+deviceId).getBytes(StandardCharsets.UTF_8)));
+         return privateFiles.resolve("station-v2/profiles").resolve(owner+".json");
+     }
+-    private String readName(StationApi.Session session) {
++    private String readName(StationApi.Session session) {return readName(session.licenseId,session.deviceId);}
++    private String readName(String licenseId,String deviceId) {
+         try {
+-            Path file=nameFile(session);
++            Path file=nameFile(licenseId,deviceId);
+             if(!Files.isRegularFile(file,LinkOption.NOFOLLOW_LINKS))return "";
+             JSONObject data=new JSONObject(new String(StationFiles.readBounded(file,1024),StandardCharsets.UTF_8));
+             return StationCatalog.plainText(StationApi.string(data,"displayName"),80);
+--- a/src/java/org/emulationstation/frontend/station/StationCoverStore.java
++++ b/src/java/org/emulationstation/frontend/station/StationCoverStore.java
+@@ -53,7 +53,11 @@
+         this.api=api;this.sessions=sessions;this.clock=clock;this.validator=validator;
+     }
+     public Path get(String coverId,long revision,StationApi.Cancellation cancel) throws Exception {
++        Path cached=cached(coverId,revision,cancel);if(cached!=null)return cached;
+         try(StationSessions.Lease lease=sessions.acquire(cancel)){return get(lease.session,coverId,revision,cancel);}
++    }
++    public Path cached(String coverId,long revision,StationApi.Cancellation cancel)throws Exception {
++        return get(null,coverId,revision,cancel);
+     }
+     /** Uses the coordinator's session without renewing it while an artifact grant is in flight. */
+     public Path get(StationApi.Session session,String coverId,long revision,StationApi.Cancellation cancel) throws Exception {
+@@ -93,6 +97,7 @@
+                 return file;
+             }
+         }
++        if(session==null)return null; // Cache miss is not authorization to perform a request.
+         synchronized(state){
+             long now=clock.millis();Long retryAt=unavailable.get(key);
+             if(retryAt!=null&&now<retryAt)throw new Deferred(retryAt-now,false);
+--- a/src/java/org/emulationstation/frontend/station/StationFrontend.java
++++ b/src/java/org/emulationstation/frontend/station/StationFrontend.java
+@@ -52,7 +52,7 @@
+  private static final ScheduledExecutorService catalogPoll=Executors.newSingleThreadScheduledExecutor(r->{Thread t=new Thread(r,"Station-catalog-poll");t.setDaemon(true);return t;});
+  private static ScheduledFuture<?> catalogPollTask;
+  private static final StationCatalogPoll automaticRefresh=new StationCatalogPoll();
+- private static boolean mayPoll(){return foreground&&configured&&authorized()&&activeCount()==0&&images.activeCount()==0;}
++ private static boolean mayPoll(){return foreground&&configured&&StationAndroid.current()!=null&&StationAndroid.current().api.available()&&authorized()&&activeCount()==0&&images.activeCount()==0;}
+  private static synchronized void startCatalogPoll(){
+   if(catalogPollTask!=null||!foreground||!configured)return;
+   automaticRefresh.resume();
+@@ -65,7 +65,7 @@
+      StationCoordinator.Library old=app.coordinator.current();
+      StationCoordinator.Library next=app.coordinator.refresh(ticket.cancel);
+      if(foreground&&automaticRefresh.current(ticket)&&(old==null||StationCatalogPoll.changed(old.catalog.revision,old.displayName,next.catalog.revision,next.displayName)))publishCurrent(app);
+-    }catch(Exception failure){if(foreground&&automaticRefresh.current(ticket)&&failure instanceof StationApi.Failure&&((StationApi.Failure)failure).sessionDenied())publishError(utf8("Entre novamente para atualizar o catálogo."));}
++    }catch(Exception failure){if(foreground&&automaticRefresh.current(ticket)&&failure instanceof StationApi.Failure&&((StationApi.Failure)failure).licenseDenied())publishError(utf8("Entre novamente para atualizar o catálogo."));}
+     finally{automaticRefresh.finish(ticket);}
+    });}catch(RejectedExecutionException busy){automaticRefresh.finish(ticket);}
+   },5,60,TimeUnit.SECONDS);
+--- a/src/java/org/emulationstation/frontend/station/StationHttp.java
++++ b/src/java/org/emulationstation/frontend/station/StationHttp.java
+@@ -11,7 +11,10 @@
+     private final SSLSocketFactory sockets;
+     private final URL origin;
+ 
+-    public StationHttp() throws Exception {
++    private final java.util.function.BooleanSupplier connected;
++    public StationHttp()throws Exception {this(()->true);}
++    public StationHttp(java.util.function.BooleanSupplier connected) throws Exception {
++        this.connected=connected;
+         origin = new URL(StationConfig.BASE_URL);
+         if (!origin.getProtocol().equals("https") || origin.getUserInfo() != null
+                 || origin.getQuery() != null || origin.getRef() != null
+@@ -43,6 +46,7 @@
+         sockets = tls.getSocketFactory();
+     }
+ 
++    @Override public boolean available(){return connected.getAsBoolean();}
+     @Override public StationApi.Response exchange(String method, String path, byte[] body,
+             String token, StationApi.Cancellation cancellation) throws IOException {
+         if (!allowed(method, path) || body != null && body.length > StationProtocol.MAXIMUM_BODY_BYTES)
+--- a/src/java/org/emulationstation/frontend/station/StationSessions.java
++++ b/src/java/org/emulationstation/frontend/station/StationSessions.java
+@@ -42,14 +42,17 @@
+         awaitUnused(cancel);
+         if(current != null && !current.needsRenewal(clock.millis()))return current;
+         current=null;
+-        if (!Files.isRegularFile(licenseFile,LinkOption.NOFOLLOW_LINKS)) throw new IOException("Station activation required");
+-        String license=new String(StationFiles.readBounded(licenseFile,128),StandardCharsets.UTF_8).trim();
+-        if (!StationProtocol.licenseId(license)) throw new IOException("Stored license invalid");
+-        current=api.openSession(license,cancel);return current;
++        current=api.openSession(savedLicense(),cancel);return current;
+     }
+     public synchronized void denied(StationApi.Session rejected) {
+         if (current == rejected) current=null;
+     }
++    public String savedLicense()throws IOException {
++        if(!Files.isRegularFile(licenseFile,LinkOption.NOFOLLOW_LINKS))throw new IOException("Station activation required");
++        String license=new String(StationFiles.readBounded(licenseFile,128),StandardCharsets.UTF_8).trim();
++        if(!StationProtocol.licenseId(license))throw new IOException("Stored license invalid");
++        return license;
++    }
+     public StationApi.Session peek() {return current;}
+     public synchronized void forgetSession() {current=null;}
+ }
+--- a/tests/StationApiTest.java
++++ b/tests/StationApiTest.java
+@@ -25,6 +25,8 @@
+         final KeyPair authority,device;
+         final String deviceId,license="license_test_123",sessionId="2".repeat(64),challengeId="1".repeat(64);
+         volatile long time=1000;int requests,closed,artifactCalls;String tamper="",failedRoute="",errorCode="";int status=200;
++        boolean reachable=true;
++        @Override public boolean available(){return reachable;}
+         boolean rotateSessions;volatile int sessionCalls;
+         volatile String activeToken=token(3),activeSession=sessionId;
+         String displayName="Comprador";
+--- a/tests/StationCoordinatorTest.java
++++ b/tests/StationCoordinatorTest.java
+@@ -27,15 +27,15 @@
+         int requests=server.requests;fails(()->owner.cover("item_unknown",cancel));ok(requests==server.requests,"Unknown item not requested");
+         owner.logout();ok(!owner.ready()&&owner.current()==null,"Logout clears ready state");
+         server.failedRoute="/v1/station/me";server.status=503;server.errorCode="STATION_PROFILE_NOT_READY";
+-        library=owner.login("",cancel);ok(owner.ready()&&library.displayName.equals("Comprador"),"Cached name only after valid session");
++        library=owner.login("",cancel);ok(owner.ready()&&library.displayName.equals("Comprador"),"Cached name restored from activated local library");
+         server.failedRoute="/v1/station/catalog";server.errorCode="STATION_CATALOG_NOT_READY";
+         library=owner.refresh(cancel);ok(library.cached&&library.catalog.items.size()==1,"503 shows verified cache");
+         server.status=403;server.errorCode="STATION_LICENSE_DENIED";
+         fails(()->owner.refresh(cancel));ok(!owner.ready()&&owner.current()==null,"Revoked license closes frontend authorization");
+         server.failedRoute="";owner.login(null,cancel);
+         ok(owner.ready(),"Resume with saved license does not require code again");
+-        server.time+=165000;ok(!owner.ready(),"Expired ready state not accepted");
+-        sessions.get(cancel);ok(!owner.ready(),"Independently renewed session is not yet catalog-authorized");
++        server.time+=165000;ok(owner.ready(),"Online session expiry preserves activated local access");
++        sessions.get(cancel);ok(owner.ready(),"Local authorization is independent of renewed bearer");
+         owner.cover("item_12345",cancel);ok(owner.ready(),"Cover renewal reconciles catalog and live authorization");
+         server.displayName="Nome atualizado";
+         ok(owner.refresh(cancel).displayName.equals("Nome atualizado"),"Refresh reloads authenticated profile");
+--- a/tests/StationCoverConcurrencyTest.java
++++ b/tests/StationCoverConcurrencyTest.java
+@@ -106,9 +106,9 @@
+  }
+  static void denialRace(Path root)throws Exception{
+   Fixture f=new Fixture(root);StationApi.Cancellation cancel=new StationApi.Cancellation();f.server.error=401;StationApi.Session rejected=f.sessions.peek();
+-  try{f.owner.cover(id(0),cancel);throw new AssertionError();}catch(StationApi.Failure failure){ok(failure.sessionDenied()&&!f.owner.ready(),"401 invalidates active session without bypass");}
+-  f.server.error=0;f.owner.login(null,cancel);ok(f.owner.ready()&&f.server.base.sessionCalls==2,"Next authenticated login recovers after denial");f.owner.cover(id(0),cancel);ok(f.owner.ready(),"New session remains authorized after cover success");
+-  java.lang.reflect.Method invalidate=StationCoordinator.class.getDeclaredMethod("invalidate",StationApi.Session.class);invalidate.setAccessible(true);invalidate.invoke(f.owner,rejected);
++  try{f.owner.cover(id(0),cancel);throw new AssertionError();}catch(StationApi.Failure failure){ok(failure.sessionDenied()&&f.owner.ready()&&f.sessions.peek()==null,"401 invalidates bearer while preserving activated local library");}
++  f.server.error=0;f.owner.login(null,cancel);ok(f.owner.ready()&&f.server.base.sessionCalls==1,"Local entry needs no network after expired bearer");f.owner.cover(id(0),cancel);ok(f.owner.ready(),"New session remains authorized after cover success");
++  java.lang.reflect.Method invalidate=StationCoordinator.class.getDeclaredMethod("invalidate",StationApi.Session.class,StationApi.Failure.class);invalidate.setAccessible(true);invalidate.invoke(f.owner,rejected,new StationApi.Failure(401,"STATION_SESSION_INVALID"));
+   ok(f.owner.ready(),"Delayed rejection cannot clear a newer authorized session");
+  }
+ }
+--- /dev/null
++++ b/tests/StationOfflineTest.java
+@@ -0,0 +1,95 @@
++package org.emulationstation.frontend.station;
++
++import java.io.*;
++import java.nio.file.*;
++import java.nio.charset.StandardCharsets;
++import org.json.JSONObject;
++
++/** Real RSA signatures from the fixture; all offline network calls are counted. */
++public final class StationOfflineTest {
++ static int checks;
++ interface Op {void run()throws Exception;}
++ static void ok(boolean value,String why){checks++;if(!value)throw new AssertionError(why);}
++ static void fails(Op op)throws Exception{try{op.run();throw new AssertionError("Expected rejection");}catch(IOException|java.security.GeneralSecurityException|org.json.JSONException expected){checks++;}}
++ static final class Client {
++  final Path root; final StationApi api;final StationSessions sessions;final StationCatalogStore catalogs;
++  final StationCoordinator owner;
++  Client(Path root,StationApiTest.Fake server)throws Exception{this(root,server,server.api());}
++  Client(Path root,StationApiTest.Fake server,StationApi api)throws Exception{
++   this.root=root;this.api=api;Files.createDirectories(root);
++   sessions=new StationSessions(api,server,root.resolve("license"));
++   catalogs=new StationCatalogStore(root.resolve("catalog"));
++   StationCoverStore covers=new StationCoverStore(root.resolve("covers"),api,sessions,server,n->{},b->{});
++   owner=new StationCoordinator(api,sessions,catalogs,covers,root,server);
++  }
++  Path catalogFile()throws Exception{try(java.util.stream.Stream<Path> paths=Files.list(root.resolve("catalog"))){return paths.filter(p->p.toString().endsWith(".json")).findFirst().get();}}
++ }
++ static StationApi.Cancellation cancel(){return new StationApi.Cancellation();}
++ static void online(Client c,StationApiTest.Fake server)throws Exception{server.reachable=true;c.owner.login(StationApiTest.token(9),cancel());}
++ public static void main(String[] args)throws Exception{
++  Path root=Paths.get(args[0]);Files.createDirectories(root);StationApiTest.Fake server=new StationApiTest.Fake();
++  Client first=new Client(root.resolve("main"),server);server.reachable=false;
++  fails(()->first.owner.login(StationApiTest.token(9),cancel()));ok(!first.owner.ready()&&server.requests==0,"First activation requires network, no fake local grant");
++  online(first,server);ok(first.owner.ready(),"Online activation and library accepted");
++  Path cover=first.owner.cover("item_12345",cancel());
++  Path roms=Files.createDirectories(first.root.resolve("roms"));
++  StationInstaller installer=new StationInstaller(roms,first.root.resolve("records"),new StationInstallerTest.ZipReader());
++  Path staging=first.root.resolve("fixture.bin");Files.write(staging,server.artifact);
++  StationApi.Grant spec=first.owner.authorize("item_12345",cancel());
++  StationInstaller.Installed installed=installer.install(first.owner.current().catalog.find("item_12345"),spec,staging,cancel(),StationFiles.NO_PROGRESS);
++  byte[] good=Files.readAllBytes(first.catalogFile());
++  String disk=Files.readString(first.catalogFile());ok(!disk.contains(server.activeToken)&&!disk.contains("accessToken"),"No bearer persisted in signed catalog");
++  int before=server.requests;server.reachable=false;server.time+=365L*24*60*60*1000;
++  ok(first.owner.ready(),"A year offline does not expire local entry");
++  ok(first.owner.cover("item_12345",cancel()).equals(cover)&&server.requests==before,"Saved cover independent of expired session");
++  fails(()->first.owner.refresh(cancel()));ok(first.owner.ready(),"Offline refresh cannot close local library");
++  fails(()->first.owner.authorize("item_12345",cancel()));ok(first.owner.ready()&&server.requests==before,"Offline download creates no grant, library retained");
++  Client reboot=new Client(first.root,server);server.time=1;
++  StationCoordinator.Library library=reboot.owner.login(null,cancel());
++  ok(library.cached&&library.displayName.equals("Comprador")&&library.catalog.items.size()==1,"Cold boot restores name and signed catalog");
++  ok(reboot.sessions.peek()==null&&server.requests==before,"Cold boot makes zero requests and invents no online session");
++  StationInstaller reopenedInstaller=new StationInstaller(roms,first.root.resolve("records"),new StationInstallerTest.ZipReader());
++  StationInstaller.Installed localGame=reopenedInstaller.find(library.catalog.find("item_12345"));
++  ok(localGame!=null&&localGame.launchPath.equals(installed.launchPath)&&Files.size(localGame.launchPath)==3&&server.requests==before,"Installed game resolves after offline restart without transfer");
++  StationApi.Transport unreachable=(method,path,body,bearer,cancellation)->{throw new java.net.ConnectException("Fixture server offline");};
++  StationApi unavailableApi=new StationApi(unreachable,server,server,server.authority.getPublic(),"test-key");
++  Client outage=new Client(first.root,server,unavailableApi);
++  ok(outage.owner.login(null,cancel()).catalog.items.size()==1,"Connected Wi-Fi with server down still opens locally");
++  fails(()->outage.owner.refresh(cancel()));ok(outage.owner.ready(),"Server connection failure preserves local access");
++  ok(reboot.owner.cover("item_12345",cancel()).equals(cover)&&server.requests==before,"Cold boot reads persistent cover without session");
++  Files.delete(cover);fails(()->reboot.owner.cover("item_12345",cancel()));ok(reboot.owner.ready()&&server.requests==before,"Missing offline cover does not lock app or start network");
++  reboot.owner.logout();ok(!reboot.owner.ready(),"Logout clears running access");reboot.owner.login(null,cancel());ok(reboot.owner.ready(),"Explicit re-entry restores registered installation");
++  StationApi.Cancellation stopped=cancel();stopped.cancel();fails(()->reboot.owner.login(null,stopped));ok(!reboot.owner.ready()&&server.requests==before,"Cancelled restore does not authorize");
++  reboot.owner.login(null,cancel());server.reachable=true;server.failedRoute="/v1/station/me";server.status=503;server.errorCode="STATION_UNAVAILABLE";
++  fails(()->reboot.owner.refresh(cancel()));ok(reboot.owner.ready(),"Server outage preserves local library");
++  server.status=401;server.errorCode="STATION_SESSION_INVALID";fails(()->reboot.owner.refresh(cancel()));ok(reboot.owner.ready()&&reboot.sessions.peek()==null,"401 expires bearer, not purchased local access");
++  server.failedRoute="";reboot.owner.refresh(cancel());ok(reboot.sessions.peek()!=null,"Reconnection obtains real online session");
++  server.failedRoute="/v1/station/me";server.status=403;server.errorCode="STATION_LICENSE_DENIED";
++  fails(()->reboot.owner.refresh(cancel()));ok(!reboot.owner.ready(),"Explicit license denial closes local access");
++  server.reachable=false;Client denied=new Client(first.root,server);before=server.requests;
++  fails(()->denied.owner.login(null,cancel()));ok(!denied.owner.ready()&&server.requests==before,"Known denial survives offline restart");
++  server.reachable=true;server.failedRoute="";denied.owner.login(null,cancel());ok(denied.owner.ready(),"Server reapproval restores access with saved license");
++  server.time+=200000;server.failedRoute="/v1/station/challenges";server.status=403;server.errorCode="STATION_DEVICE_DENIED";
++  fails(()->denied.owner.authorize("item_12345",cancel()));ok(!denied.owner.ready(),"Device denial before session creation persists too");
++  server.reachable=false;fails(()->new Client(first.root,server).owner.login(null,cancel()));
++  server.reachable=true;server.failedRoute="";denied.owner.login(null,cancel());server.reachable=false;
++  Path cat=denied.catalogFile();before=server.requests;
++  // Persisted data may only be accepted for the exact server, product, app, device and license.
++  fails(()->denied.api.restoreLocalCatalog(good,"license_other_123"));
++  StationApiTest.Fake other=new StationApiTest.Fake();
++  StationApi otherDevice=new StationApi(server,other,server,server.authority.getPublic(),"test-key");
++  fails(()->otherDevice.restoreLocalCatalog(good,server.license));
++  fails(()->new StationApi(server,server,server,other.authority.getPublic(),"test-key").restoreLocalCatalog(good,server.license));
++  fails(()->new StationApi(server,server,server,server.authority.getPublic(),"wrong-key").restoreLocalCatalog(good,server.license));
++  JSONObject envelope=new JSONObject(new String(good,StandardCharsets.UTF_8));
++  byte[] signature=StationProtocol.decode(envelope.getString("signature"));signature[0]^=1;
++  byte[] corrupt=envelope.put("signature",StationProtocol.base64Url(signature)).toString().getBytes(StandardCharsets.UTF_8);
++  Files.write(cat,corrupt);fails(()->new Client(first.root,server).owner.login(null,cancel()));
++  Files.write(cat,"{}".getBytes(StandardCharsets.UTF_8));fails(()->new Client(first.root,server).owner.login(null,cancel()));
++  Files.write(cat,good);Files.writeString(first.root.resolve("license"),"license_other_123");fails(()->new Client(first.root,server).owner.login(null,cancel()));
++  Files.delete(first.root.resolve("license"));fails(()->new Client(first.root,server).owner.login(null,cancel()));
++  ok(server.requests==before,"Malformed/copied cache cannot bypass auth or make offline network requests");
++  ok(server.closed==server.requests,"All actual online responses closed");
++  System.out.println("PASS "+checks+" offline activation/cache/reboot/denial checks");
++ }
++}

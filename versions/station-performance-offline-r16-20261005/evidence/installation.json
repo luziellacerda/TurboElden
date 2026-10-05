@@ -1,0 +1,31 @@
+{
+  "createdAt": "2026-10-05T17:30:55.955826+00:00",
+  "package": "org.turboramastation.frontend",
+  "model": "SM-A566E",
+  "apk": "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\TurboStations-Desempenho-Offline-R16-20261005.apk",
+  "apkSHA256": "b52313bc6ef504b91239241b2a4bc8c9eb9f1eeeea937e61cbc4bd5628ef0eb1",
+  "installedBaseSHA256": "b52313bc6ef504b91239241b2a4bc8c9eb9f1eeeea937e61cbc4bd5628ef0eb1",
+  "installResult": "Performing Streamed Install\nSuccess",
+  "updatedWithoutUninstall": true,
+  "clearedData": false,
+  "startedThroughPublicLauncher": true,
+  "downloadMeasured": true,
+  "offlineValidated": false,
+  "gameplayValidated": false,
+  "download": {
+    "observedGame": "Classic Kong",
+    "platform": "Super Nintendo",
+    "artifactBytes": 262144,
+    "authorizeMillis": 141,
+    "artifactHeadersMillis": 136,
+    "downloadMillis": 86,
+    "installMillis": 102,
+    "uiShowsInstalled": true,
+    "uiShowsPlay": true,
+    "installedCountObserved": 26,
+    "sustainedNetworkThroughputMeasured": false,
+    "gameplayTested": false
+  },
+  "offlineBootValidated": true,
+  "offlineValidationScope": "Cold process -> ESActivity/catalog cache without default network; gameplay and game covers not exercised"
+}
