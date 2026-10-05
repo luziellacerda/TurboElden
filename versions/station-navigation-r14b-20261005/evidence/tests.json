@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "navigation": "PASS 2080 native navigation checks; original IDs/indices, All, direct, nested, Back, flat catalogs and 200 refresh cycles\n",
+  "pacing": "PASS 80 policy cases; 600 frames in 10000000 us with sleeping, stable foreground target and idle modal15; suspension/overrun recovery\n",
+  "bothRegressionTestsFailBeforeFix": true,
+  "compiledAndroid26": true,
+  "deviceFrameRateMeasured": false,
+  "deviceReturnVerified": false
+}

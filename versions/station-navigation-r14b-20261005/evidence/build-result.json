@@ -1,0 +1,22 @@
+{
+  "builtAt": "2026-10-05T16:00:38.890551+00:00",
+  "baseApk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Visual-R14-20261005.apk",
+  "baseSha256": "a1566d3d34305e01f5f445b6b61fb3db4e35fc8a4bc8a2f3e493fb3a433a38bf",
+  "apk": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\TurboStations-Visual-R14B-20261005.apk",
+  "sha256": "661a8738faf2e598d448017bcb87f09e7d39ac7d2984a653fac4e9a642a9742f",
+  "bytes": 2006925798,
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [],
+  "preservedEntries": 11110,
+  "roomsDexSha256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "certificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "fullPayloadIntegrityPassed": true,
+  "compressionPreserved": true,
+  "alignment16KiBPassed": true,
+  "serverDeployed": false,
+  "installed": false,
+  "androidGameplayVerified": false,
+  "stable": false
+}

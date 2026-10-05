@@ -1,3 +1,11 @@
+# Estado vigente — R14B fluidez/retorno compilado, USB pendente — 05/10/2026
+
+Leia `versions/station-navigation-r14b-20261005/README.md`. APK **661a8738faf2e598d448017bcb87f09e7d39ac7d2984a653fac4e9a642a9742f**, 2.006.925.798bytes, `E:\ESTUDO APK\work\station-netplay-20261004\TurboStations-Visual-R14B-20261005.apk`. R14B mantém alvo60FPS no carrossel visível após parar toque (antes15/30 após650ms); vídeo30FPS permanece. Voltar e refresh restauram coleção por path+kind, inclusive após reordenação. 2080checks navegação,80política e600frames simulados passaram; ambos testes rejeitam código anterior. Apenas1SO alterado,11110entradas preservadas, assinatura/alinhamento verificados. **Não instalado: USB ausente na conferência. R14 a1566d3d continua último instalado/hash confirmado.** Sem medição nova GPU/temperatura/frame real. Não marcar estável.
+
+Fonte canônica `E:\ESTUDO APK\work\station-netplay-20261004\native`; build/backup `navigation-r14b`. R14/R13/R12 e HUDR2 arquivados em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais` com hashes verificados. UsarR14B como base da próxima integração NeoGeo/N64 isolada no outro chat; não incluir inadvertidamente mame/classes30 de visual-r14. Motores, DEX, salas, vídeos, dados, cache e assinatura preservados. Nenhuma implantaçãoLinux ou alteração da configuração de tela.
+
+## Histórico anterior
+
 # Estado vigente — R14 visual instalado; 05/10/2026
 
 Leia `versions/station-visual-r14-20261005/README.md` e `evidence/device-result.json`. APK **a1566d3d34305e01f5f445b6b61fb3db4e35fc8a4bc8a2f3e493fb3a433a38bf**, 2.006.925.798 bytes, instalado por atualização e hash do base.apk igual. Botões inferiores com ícones/cores por função observados no SNES. Vídeos das coleções: célula original quadrada, vídeo inteiro sem crop/deformação e fundo derivado preparado offline; prévias novas. PC: 4096 meshes,1836 posições quadradas,443 navegações e5 vídeos decodificados. USB caiu antes da conferência visual do vídeo/retorno no telefone; não alegar essa prova nem marcar estável.
