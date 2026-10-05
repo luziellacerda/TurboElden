@@ -10,14 +10,18 @@
   "nativeCarouselSHA256": "b2d706dc07d4423758798fe0d6d37ce01c8f395b344c685a7b796ce60d03dd70",
   "built": true,
   "localTestsPassed": true,
-  "installed": false,
+  "installed": true,
   "androidVisualVerified": false,
   "twoDeviceGameplayVerified": false,
   "stablePromotion": false,
   "serverChanged": false,
   "priorInstalledRevision": "R25",
-  "usb": "ADB listed no connected devices; no installation attempted.",
+  "usb": "Authorized Samsung SM_A566E. Update succeeded; installed base.apk SHA256 matches R27.",
   "sourceDirectory": "E:\\ESTUDO APK\\work\\station-compact-lobby-r27-20261005",
   "codeFormat": "TS1:<instance>:<roomId>:<itemId>",
-  "codeIsAuthorization": false
+  "codeIsAuthorization": false,
+  "installedAt": "2026-10-05T21:02:02.251925+00:00",
+  "installedSHA256": "c1191ce1d531b1ec9171d6d4c2f57541349339e64e8941a33788c4067d616bd6",
+  "visualPendingReason": "Android keyguard locked after installation; only lock screen observed.",
+  "installationEvidence": "evidence/installation.json"
 }

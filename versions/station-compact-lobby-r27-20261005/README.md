@@ -12,9 +12,9 @@ APK: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Sala
 - Única entrada alterada: `classes35.dex`, SHA `ee0108d546daa061e701cf3817828b5cc1b32e9ef774c11c4de3e291d72ec6c5`.
 - 13.083 entradas preservadas, inclusive todos os motores, recursos, licença, catálogo, downloads, mídia e demais DEX.
 - Carrossel R26 preservado: `b2d706dc07d4423758798fe0d6d37ce01c8f395b344c685a7b796ce60d03dd70`.
-- Certificado original e alinhamento de 16 KiB conferidos. Compilado e testado no PC. **Não instalado e sem conferência visual Android desta revisão.**
+- Certificado original e alinhamento de 16 KiB conferidos. Compilado e testado no PC. **Instalado por atualização em 05/10/2026 às 18:02 (UTC−3); SHA integral no aparelho idêntico. Conferência visual Android desta revisão pendente.**
 
-O telefone permanece na última instalação comprovada R25. A conexão USB estava vazia nesta conferência; a tarefa coordenada registrou o dispositivo Samsung com erro de inicialização do driver (ProblemCode 10). Não houve alteração de driver, configurações, dados ou sessão do telefone. Não afirmar que a nova tela já apareceu no aparelho. Não promover como estável ou visual aprovado.
+Instalação R27 concluída sobre R25 com `adb install --no-incremental -r --user 0`, sem desinstalar ou limpar dados. Samsung SM_A566E com USB autorizada e aproximadamente 11,6 GiB livres antes da atualização. O hash integral de `base.apk` confere com o APK acima. A atividade pública de login foi iniciada; o Android havia bloqueado a tela durante a instalação. Não houve conferência visual das salas, confirmação de sessão após abertura ou partida entre dois aparelhos nesta etapa. Configurações de tela não foram alteradas. Recibo: `evidence/installation.json`. Não promover como estável ou visual aprovado.
 
 ## Interface
 
