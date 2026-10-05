@@ -1,0 +1,23 @@
+{
+  "startedAt": "2026-10-05T23:06:58.209730+00:00",
+  "device": "Samsung SM_A566E",
+  "serial": "RQCY30751WY",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Salas-Retorno-R34-20261005.apk",
+  "expectedSHA256": "513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef",
+  "previousSHA256": "efc2a84593b9a6ecc0a25f59dcff1257b703e7fd4c761e8cd99d532b2431104b",
+  "uninstallPerformed": false,
+  "dataCleared": false,
+  "activationPerformed": false,
+  "gameplayValidated": false,
+  "installOutput": "Performing Streamed Install\nSuccess",
+  "exitCode": 0,
+  "installed": true,
+  "installedSHA256": "513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef",
+  "hashMatches": true,
+  "launchOutput": "Starting: Intent { cmp=org.turboramastation.frontend/org.emulationstation.frontend.auth.LoginActivity }",
+  "finishedAt": "2026-10-05T23:08:27.243198+00:00",
+  "topResumedActivity": [
+    "topResumedActivity=ActivityRecord{179195397 u0 org.turboramastation.frontend/org.emulationstation.frontend.ESActivity t144}"
+  ],
+  "temporaryStayAwakeRestoredToOriginal": 0
+}

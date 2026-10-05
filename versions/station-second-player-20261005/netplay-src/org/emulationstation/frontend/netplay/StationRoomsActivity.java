@@ -200,7 +200,7 @@ public final class StationRoomsActivity extends Activity {
             text(current,(members==null?0:members.length())+" de 2 jogadores nesta sala",12,white);
             if(StationPlayerModel.soloWaitingRoom(snapshot))text(current,"Você está sozinho nesta sala. Convide um jogador ou entre em outra sala abaixo. Estou pronto não entra na sala de outro jogador.",12,muted);
             if(members!=null)for(int i=0;i<members.length();i++){String id=members.optString(i);text(current,(contains(rd,id)?"✓  ":"○  ")+nickname(snapshot,id)+(self.equals(id)?" (você)":"")+(contains(rd,id)?"  ·  Pronto":"  ·  Aguardando"),13,contains(rd,id)?green:white);}
-            if("waiting".equals(mine.optString("state"))){ready=button(current,contains(rd,self)?"Cancelar confirmação":"Estou pronto  ✓",()->command("ready","value",!contains(rd,self)),true);if(self.equals(mine.optString("hostId")))start=button(current,"Iniciar partida  →",()->startDialog(),false);}
+            if("waiting".equals(mine.optString("state"))){ready=button(current,contains(rd,self)?"Cancelar confirmação":"Estou pronto  ✓",()->command("ready","value",!contains(rd,self)),true);if(self.equals(mine.optString("hostId")))start=button(current,"Iniciar partida  →",()->startDialog(),false);else text(current,"Quando os dois estiverem prontos, o criador inicia. Seu jogo abrirá automaticamente.",12,muted);}
             if(StationPlayerModel.shareable(snapshot))button(current,"Código da sala",()->showRoomCode(),false);
             leave=button(current,"Sair da sala",()->command("leave",null,null),false);
             if(StationPlayerModel.soloWaitingRoom(snapshot))otherRooms(snapshot,mine.optString("roomId"));
@@ -208,7 +208,10 @@ public final class StationRoomsActivity extends Activity {
             if(count==0)empty(messages,"…","Diga olá","As mensagens ficam visíveis aos jogadores desta sala.");
             if(msgs!=null)for(int i=0;i<msgs.length();i++){JSONObject m=msgs.optJSONObject(i);if(m==null)continue;LinearLayout bubble=card(messages);boolean own=self.equals(m.optString("fromPeerId"));LinearLayout.LayoutParams bp=(LinearLayout.LayoutParams)bubble.getLayoutParams();bp.setMargins(own?dp(18):0,0,own?0:dp(18),dp(8));bubble.setLayoutParams(bp);bubble.setBackground(bg(own?0xff153924:0xff112219,own?0xff326243:0xff254232));bold(text(bubble,m.optString("nickname"),11,green));TextView message=text(bubble,m.optString("text"),13,white);message.setTextIsSelectable(true);message.setLineSpacing(dp(2),1);}
             if(count!=paintedMessages||!mine.optString("roomId").equals(paintedRoom)){chatScroll.post(()->chatScroll.fullScroll(View.FOCUS_DOWN));}else chatScroll.post(()->chatScroll.scrollTo(0,cy));paintedMessages=count;paintedRoom=mine.optString("roomId");
-            if("connecting".equals(mine.optString("state"))||("starting".equals(mine.optString("state"))&&self.equals(mine.optString("hostId"))))launch(mine,snapshot);
+            if(StationLaunchPolicy.eligible(mine.optString("state"),self.equals(mine.optString("hostId")))){
+                if(!launching&&StationLaunchPolicy.key(mine).equals(launchKey))button(current,"Tentar abrir a partida novamente",()->{launchKey="";launch(mine,snapshot);},true);
+                else launch(mine,snapshot);
+            }
         }
         updateStartState();peerScroll.post(()->peerScroll.scrollTo(0,py));roomScroll.post(()->roomScroll.scrollTo(0,ry));
     }
@@ -370,10 +373,14 @@ public final class StationRoomsActivity extends Activity {
             .setMessage("Os dois jogadores serão conectados pelo servidor TurboStations. Cada um pode usar sua própria rede Wi-Fi ou internet móvel. A qualidade da partida depende da conexão dos dois aparelhos.")
             .setNegativeButton("Cancelar",null).setPositiveButton("Iniciar partida",(d,w)->action(cancel->{String changed=StationRoomStartState.reason(state.get());if(!changed.isEmpty())throw new StationOnlineGame.Unavailable(changed);return client.call(StationOnlineClient.command("start").put("roomId",room().getString("roomId")).put("transport","relay-wss-v1"),false,cancel);})).create();styleDialog(dialog);
     }
-    private void launch(JSONObject room,JSONObject snapshot){String key=room.optString("roomId")+":"+room.optLong("generation");if(launching||key.equals(launchKey))return;launchKey=key;launching=true;int generation=epoch;StationApi.Cancellation cancel=new StationApi.Cancellation();requests.add(cancel);status.setText("Conectando a partida online…");
+    private void launch(JSONObject room,JSONObject snapshot){String key=StationLaunchPolicy.key(room);if(launching||key.equals(launchKey))return;launchKey=key;launching=true;int generation=epoch;StationApi.Cancellation cancel=new StationApi.Cancellation();requests.add(cancel);status.setText("Conectando a partida online…");android.util.Log.i("StationRooms","launch stage=prepare room="+room.optString("roomId")+" generation="+room.optLong("generation")+" host="+snapshot.optString("selfId").equals(room.optString("hostId")));
         commands.execute(()->{try{StationOnlineGame game=prepared;if(game==null)game=StationOnlineGame.prepare(this,client,room.getString("itemId"),snapshot,cancel);JSONObject gameRoom=room;
-            if("relay-wss-v1".equals(room.optString("transport"))){JSONObject connection=client.call(StationOnlineClient.command("relay-ticket").put("roomId",room.getString("roomId")),false,cancel);gameRoom=connection.getJSONObject("room");}
-            game.verifyRoom(gameRoom);String file=StationRetroLaunch.prepare(this,game,gameRoom,snapshot,cancel);runOnUiThread(()->{if(active&&generation==epoch){returningFromGame=true;try{startActivity(new Intent(this,StationRetroActivity.class).putExtra("station.launch",file).putExtra(StationGameSession.EXTRA,StationGameSession.create(this,room.optString("roomId"))));}catch(RuntimeException e){returningFromGame=false;launching=false;StationRetroLaunch.discard(this,file);failure(e,generation);}}else StationRetroLaunch.discard(this,file);});}catch(Exception e){launching=false;failure(e,generation);}finally{requests.remove(cancel);}});
+            if("relay-wss-v1".equals(room.optString("transport"))){JSONObject connection=client.call(StationOnlineClient.command("relay-ticket").put("roomId",room.getString("roomId")),false,cancel);gameRoom=connection.getJSONObject("room");android.util.Log.i("StationRooms","launch stage=relay-ticket-received");}
+            game.verifyRoom(gameRoom);String file=StationRetroLaunch.prepare(this,game,gameRoom,snapshot,cancel);runOnUiThread(()->{if(active&&generation==epoch){returningFromGame=true;try{android.util.Log.i("StationRooms","launch stage=activity");startActivity(new Intent(this,StationRetroActivity.class).putExtra("station.launch",file).putExtra(StationGameSession.EXTRA,StationGameSession.create(this,room.optString("roomId"))));}catch(RuntimeException e){returningFromGame=false;StationRetroLaunch.discard(this,file);launchFailure(e,generation);}}else StationRetroLaunch.discard(this,file);});}catch(Exception e){launchFailure(e,generation);}finally{requests.remove(cancel);}});
+    }
+    private void launchFailure(Throwable error,int generation){
+        recordFailure(error);
+        runOnUiThread(()->{if(active&&generation==epoch){launching=false;busy=false;feedback.fail(StationOnlineClient.message(error));painted=-1;JSONObject current=state.get();if(current!=null)paint(current);}});
     }
     private void exitRooms(){if(busy)return;if(client==null||state.get()==null){finish();return;}action(cancel->{JSONObject result=client.call(StationOnlineClient.command("offline"),false,cancel);runOnUiThread(this::finish);return result;});}
     @Override public void onBackPressed(){exitRooms();}

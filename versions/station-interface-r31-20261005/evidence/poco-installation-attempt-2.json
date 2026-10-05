@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-10-05T22:28:59.125879+00:00",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Interface-R31B-20261005.apk",
+  "expectedSHA256": "76817d2dd48219bcd6e4d111b8471bf98925b02ab26ee517cea90e8df84b076c",
+  "previousSHA256": null,
+  "uninstallPerformed": false,
+  "dataCleared": false,
+  "screenSettingTemporary": false,
+  "deviceModel": "POCO 2412DPC0AG",
+  "activationPerformed": false,
+  "installOutput": "Performing Streamed Install\nadb.exe: failed to install G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Interface-R31B-20261005.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]",
+  "exitCode": 1,
+  "installed": false,
+  "finishedAt": "2026-10-05T22:30:23.826272+00:00"
+}

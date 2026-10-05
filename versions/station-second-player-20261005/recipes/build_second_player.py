@@ -1,4 +1,4 @@
-"""Restore exact R30 Java inputs, overlay this delta and compile only classes35.
+"""Restore exact R34 Java inputs, overlay this delta and compile only classes35.
 
 No APK installation, signing material or production server mutation.
 """
@@ -18,12 +18,14 @@ def hashes(root):
 
 def restore(delta, destination):
     versions=delta.parent
-    expected=json.loads((versions/'station-back-rooms-r30-20261005/SOURCE-MANIFEST.json').read_text())
+    expected=json.loads((versions/'station-online-recovery-r34-20261005/SOURCE-MANIFEST.json').read_text())
     for group in ('netplay-src','dependency-src'):
         shutil.copytree(versions/'station-compact-lobby-r27-20261005'/group,destination/group)
         previous=versions/'station-back-rooms-r30-20261005'/group
         if previous.exists():shutil.copytree(previous,destination/group,dirs_exist_ok=True)
-        if hashes(destination/group)!=expected[group]:raise RuntimeError('R30 source bytes differ: '+group)
+        recovery=versions/'station-online-recovery-r34-20261005'/group
+        if recovery.exists():shutil.copytree(recovery,destination/group,dirs_exist_ok=True)
+        if hashes(destination/group)!=expected[group]:raise RuntimeError('R34 source bytes differ: '+group)
     for source in (delta/'netplay-src').rglob('*.java'):
         shutil.copyfile(source,destination/'netplay-src'/source.relative_to(delta/'netplay-src'))
 
@@ -42,7 +44,7 @@ def main():
     sources=sorted((out/'src').rglob('*.java'))
     # An argfile handles both the Windows source paths and the full dependency set.
     argfile=out/'javac.args'
-    args=['--release','8','-encoding','UTF-8','-classpath',os.pathsep.join(map(str,inputs[:2])),'-d',str(classes)]+list(map(str,sources))
+    args=['--release','8','-Xlint:-options','-encoding','UTF-8','-classpath',os.pathsep.join(map(str,inputs[:2])),'-d',str(classes)]+list(map(str,sources))
     argfile.write_text('\n'.join(json.dumps(x,ensure_ascii=False) for x in args)+'\n',encoding='utf-8')
     subprocess.run([a.javac,'@'+str(argfile)],check=True)
     jar=out/'netplay-second-player.jar'
@@ -52,8 +54,8 @@ def main():
     if sorted(x.name for x in dex.glob('*.dex'))!=['classes.dex']:raise RuntimeError('Unexpected multidex result')
     source={group:hashes(out/'src'/group) for group in ('netplay-src','dependency-src')}
     (out/'SOURCE-MANIFEST.json').write_text(json.dumps(source,indent=2)+'\n')
-    report={'compiled':True,'javaSources':len(sources),'sourceBase':'R30','javaRelease':8,'minApi':26,
-            'originalApkSha256':'1768b7df440dcdf99efbd2e8ff93181eae06edaab5bb9be85e073afeb639027b',
+    report={'compiled':True,'javaSources':len(sources),'sourceBase':'R34','javaRelease':8,'minApi':26,
+            'originalApkSha256':'513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef',
             'replaceOnly':'classes35.dex','dexSha256':hashlib.sha256((dex/'classes.dex').read_bytes()).hexdigest(),
             'dexBytes':(dex/'classes.dex').stat().st_size,'installed':False,'twoAndroidGameplayVerified':False}
     (out/'build-result.json').write_text(json.dumps(report,indent=2)+'\n')

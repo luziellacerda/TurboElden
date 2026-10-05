@@ -1,6 +1,32 @@
-# Entrada do segundo jogador — correção preparada — 05/10/2026
+# Segundo jogador — delta conciliado com R34 — 05/10/2026
 
-Leia docs/server/RETORNO-SEGUNDO-JOGADOR-SALAS-STATION-20261005.md. R30 oculta outras salas quando há sala própria e o perfil do anfitrião não oferece Entrar. Pronto não executa join. Fonteapp b282b04:3classes,146fontes compiladas/138verificações; DEXef8a2d99 pronto, APK ainda não atualizado. Servidor e4e557a inalterado. Uso imediato: POCO Sair da sala → Código TS1 da sala do primeiro → Entrar → dois nomes → doisProntos → hostIniciar. Preservar R30/assinatura/dados, não reenviarR27. Não afirmar gameplay/latência resolvidos sem aparelho.
+Leia docs/server/RETORNO-SEGUNDO-JOGADOR-SALAS-STATION-20261005.md. Perfil do anfitrião agora oferece Entrar; sala própria individual mostra outras salas com vaga, contagem1/2 e Sair e entrar após confirmação. Pronto não executa join. Delta inicialb282b04 foi conciliado com a8898a0/R34 instalado noSamsung513dd470, preservando recuperação da abertura/Voltar/manifesto e designR33. Ainda sem APK instalado desse delta; não usar o DEX inicialR30ef8a2d99 para substituir a versão R34. Servidor e4e557a inalterado. Preservar licença/saves/assinatura; gameplay em dupla/POCO ainda não comprovados.
+
+# R34 instalado no Samsung — 05/10/2026
+
+Instalação solicitada concluída por atualização, SHA513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef conferido no aparelho. App abriu plataformas sem login. Ler evidence/installation-samsung.json no snapshotR34. Sem desinstalar/limpar dados. POCO ainda não conferido; Battletoads segundo jogador, controles e Voltar em partida continuam pendentes de validação. A configuração temporária Samsung de tela ligada foi restaurada para0. Não chamar de estável geral.
+
+## Histórico anterior
+
+# R34 — candidato de recuperação online; diagnóstico Battletoads pendente — 05/10/2026
+
+Leia `versions/station-online-recovery-r34-20261005/README.md` e STATUS. APK SHA513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef, classes35+booleanoBack da Activity online sobreR33. Callback oficial Android33+, diálogo Voltar, retry explícito se abertura falha, fases de diagnóstico. Testes locais passaram; NÃO instalado, USB vazia. Segundo jogador Battletoads e controles diferentes continuam sem correção validada: não declarar resolvidos. Só host inicia; convidado automático emconnecting. SNES localEX+ e onlinebsnes/RetroArch têm controles distintos; não foram alterados. Capturar jogador2 primeiro, um telefone por vez; preservar licença/saves. Runtime/allowlist/servidor/design R33 intactos. Ler limitações Android26–32 e dois aparelhos nohandoff.
+
+## Histórico anterior
+
+# R33 — título maior, barra completa e faixa instalada — 05/10/2026
+
+Leia `versions/station-title-actions-r33-20261005/README.md`, STATUS e evidências. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Titulo-Barra-R33-20261005.apk`, SHA `9313b3b893468270512b8e8ee3fa984763d6db334b4534a2f863216a0cc4a7ea`. Fontes `E:\ESTUDO APK\work\station-title-actions-r33-20261005\native`. Compilado/conferido PC; não instalado, USB ausente. Usuário informou instalação manual anterior no POCO, hash/ativação não verificados. R33 inclui faixa diagonal R32, título +50% e contagem/jogadores/estrelas em sequência, Jogar com largura da capa e barra até97,5% da tela. 9.604 verificações C++, assinatura,16KiB e13.086 entradas preservadas; somente carouselSO mudou. DEX/motores/salas/downloads intactos. Não promover estável nem supor validação visual. Preservar dados/licença/saves. Samsung tela ligada0→3 continua pendente de restaurar0quando reconectar.
+
+## Histórico anterior — a entrega atual está acima
+
+# R31B — visual compacto e retorno servidor61c0411 — 05/10/2026
+
+Leia `versions/station-interface-r31-20261005/README.md`, STATUS e recibos. APKfinal `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Interface-R31B-20261005.apk`, SHA76817d2dd48219bcd6e4d111b8471bf98925b02ab26ee517cea90e8df84b076c. Compilado/verificado, instalação final pendente. PrimeiroR31 efc2a845 instalado/hashconferido noSamsung, visual da linha/botões/tag registrado. R31B amplia otextoINSTALADO. Duas tentativasPOCO recusadas peloAndroid USER_RESTRICTED. Cópia emDownloads interrompida ao sair daUSB; pode estar incompleta, não instalar sem substituir/conferir. LicençaPOCO declaradaACTIVE/PENDING_ENROLLMENT nohandoff; código privado somente noLinux, não noGit. Não ativada por este agente.
+
+Fontescanônicas E:\ESTUDO APK\work\station-actions-gear-r31-20261005\native. ApenascarouselSO +3assetsLottie,13083entradas preservadas; salasR29B/classes35 intactas.6873checksC++/15contrato, NDK/assinatura/16KiB e restauração integral de fontes passaram. FonteR30+deltas; gear3 licençaLottie preservada. Novo servidor61c0411/e4e557a jácompatível, nenhuma nova rota; latênciaWSSp95~2,29s e gameplaydoisAndroid permanecem pendentes. Nenhuma implantação. Downloads11be7f3 continuam fora. Não promoverestável geral. Preservar dados/saves/licença. Samsung mantertelaligada passou0→3; restaurar0quando reconectar. POCO sem ajuste de tela.
+
+## Histórico anterior — a entrega atual está acima
 
 # Servidor R12/POCO publicado — 05/10/2026
 

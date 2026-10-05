@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": {
+    "api33_registration": true,
+    "unregister": true,
+    "one_exit_dialog": true,
+    "legacy_back": true,
+    "retry_explicit": true,
+    "retry_not_automatic": true,
+    "retry_error_redraw": true
+  },
+  "scope": "Source contract and JVM policy only. Android Back and real second-player Battletoads entry are pending device validation."
+}

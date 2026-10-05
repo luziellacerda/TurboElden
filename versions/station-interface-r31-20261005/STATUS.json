@@ -1,0 +1,35 @@
+{
+  "createdAt": "2026-10-05T22:18:23.366880+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Voltar-Salas-R30-20261005.apk",
+  "baseSHA256": "1768b7df440dcdf99efbd2e8ff93181eae06edaab5bb9be85e073afeb639027b",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Interface-R31B-20261005.apk",
+  "sha256": "76817d2dd48219bcd6e4d111b8471bf98925b02ab26ee517cea90e8df84b076c",
+  "bytes": 2053910613,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13083,
+  "addedAssets": {
+    "assets/turborama-ui/gear-3-LICENSE.html": "cd3bfe93634f45b1e2ecf0637dc0f43ce683d6e4e582f9c82648fe0fc2106a8e",
+    "assets/turborama-ui/gear-3-NOTICE.txt": "4f54f773b7ed44a5d1ee3b6e444f7fe99fbd172cbb69468054c02e6b6e232ea6",
+    "assets/turborama-ui/gear-3.json": "9c6b8546fbe7e11d6e31d140c5342227f40a54e3d575a71fb915decdf6177eb7"
+  },
+  "roomsDexSHA256": "45675ff1b72c76bc6d388f6fa6f016a55cc1d06c4fbec09689ab4654dde3e9f1",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false,
+  "downloadImplementationUnchanged": true,
+  "rawTransferDeltaIncluded": false,
+  "finalCandidateInstalled": false,
+  "samsungCandidateAInstalled": true,
+  "pocoInstalled": false,
+  "pocoActivationPerformed": false,
+  "pocoInstallFailure": "INSTALL_FAILED_USER_RESTRICTED",
+  "pocoCopyComplete": false,
+  "sourceRestorationVerified": true,
+  "samsungStayAwakeOriginal": 0,
+  "samsungStayAwakeRestorePending": true
+}
