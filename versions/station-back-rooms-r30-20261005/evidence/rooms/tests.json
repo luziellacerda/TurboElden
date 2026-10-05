@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "logs": [
+    "60 room readiness, feedback and actual game-path boundary checks passed",
+    "PASS 107 executable checks: compact player model, real room codes, stale presence, invite policy and snapshot ordering"
+  ],
+  "changedProductionFiles": [
+    "StationOnlineGame.java",
+    "StationRoomsActivity.java"
+  ],
+  "sourceHashes": {
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomStartState.java": "d76709fce8ddd5a35675e86f022a08317bd82d41e2c0b62808a374a01575604b",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomFeedback.java": "7a90edf37c15d3059a9160e05404d41058500b926f9843940bb516b189a4c701",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationOnlineGame.java": "cdc41fd92d176a4393c036dcb91cd29e0840983b45d9923faf12c42fa2fa068d",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationInvitationCode.java": "1149eab6e7c4d59e9327cb3075dfefbf26c1aabeab84849b5ae0ca4d869b19b5",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationPlayerModel.java": "324643b7fa3dfb4d13febe1fc03e2b5dedc4363d97f249ffaa4a88141b241dd4",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomState.java": "3569a17e3b3134b0388d5a3231dad9f269461fa5b35566fd5195be21018ac5f9"
+  },
+  "scope": "Real Java readiness/feedback/game-file boundary with Android/frontend stubs; UI and real-server Android actions recorded separately."
+}

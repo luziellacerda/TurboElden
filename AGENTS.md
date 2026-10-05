@@ -1,3 +1,11 @@
+# R30 — Voltar nas coleções e correções das salas — 05/10/2026
+
+Leia `versions/station-back-rooms-r30-20261005/README.md`, STATUS e recibos. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Voltar-Salas-R30-20261005.apk`, SHA 1768b7df440dcdf99efbd2e8ff93181eae06edaab5bb9be85e073afeb639027b. Instalação por atualização, sem desinstalar nem limpar dados; consulte recibo para hash do telefone e conferência visual. Sem promoção estável geral ou partida real entre dois celulares.
+
+Base R27 + classes35 R29B (45675ff1) + carousel R30 (142ebfa9). Voltar nas coleções ganhou largura para seta e texto inteiro; Abrir mantém alinhamento, mesma geometria de desenho/toque. R26 restante intacto, R28 cancelado NÃO incluído. Salas: arquivo não baixado ganha mensagem correta, erro persiste após atualização da presença, iniciar exige dois participantes prontos e transporte anunciado; diagnóstico não registra credenciais. 773128 testes anteriores +252 de geometria +267 verificações Java/serviço/relay isolados passaram. Fontes nativas W30, Java W29, dependências W16/W22 e receita no snapshot. Sem servidor alterado; downloads11be7f3 continuam fora. Preservar saves/jogos/licença e usar versão sucessora comprovada.
+
+## Histórico anterior — consultar acima para a entrega atual
+
 # R27 — jogadores online em lista compacta e painel de convites — 05/10/2026
 
 Leia `versions/station-compact-lobby-r27-20261005/README.md` e STATUS. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Salas-Lista-R27-20261005.apk`, SHA c1191ce1d531b1ec9171d6d4c2f57541349339e64e8941a33788c4067d616bd6. Compilado/testado PC e instalado sobre R25 em 05/10/2026 às 18:02 (UTC−3), SHA integral do telefone igual. Dados preservados por atualização, sem desinstalar/limpar. Tela Android bloqueou durante instalação; conferência visual/sessão/gameplay R27 pendentes. Leia evidence/installation.json. Sem aprovação estética ou promoção estável desta revisão.
