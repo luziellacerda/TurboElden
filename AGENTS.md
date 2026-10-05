@@ -1,3 +1,9 @@
+# R34 — candidato de recuperação online; diagnóstico Battletoads pendente — 05/10/2026
+
+Leia `versions/station-online-recovery-r34-20261005/README.md` e STATUS. APK SHA513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef, classes35+booleanoBack da Activity online sobreR33. Callback oficial Android33+, diálogo Voltar, retry explícito se abertura falha, fases de diagnóstico. Testes locais passaram; NÃO instalado, USB vazia. Segundo jogador Battletoads e controles diferentes continuam sem correção validada: não declarar resolvidos. Só host inicia; convidado automático emconnecting. SNES localEX+ e onlinebsnes/RetroArch têm controles distintos; não foram alterados. Capturar jogador2 primeiro, um telefone por vez; preservar licença/saves. Runtime/allowlist/servidor/design R33 intactos. Ler limitações Android26–32 e dois aparelhos nohandoff.
+
+## Histórico anterior
+
 # R33 — título maior, barra completa e faixa instalada — 05/10/2026
 
 Leia `versions/station-title-actions-r33-20261005/README.md`, STATUS e evidências. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Titulo-Barra-R33-20261005.apk`, SHA `9313b3b893468270512b8e8ee3fa984763d6db334b4534a2f863216a0cc4a7ea`. Fontes `E:\ESTUDO APK\work\station-title-actions-r33-20261005\native`. Compilado/conferido PC; não instalado, USB ausente. Usuário informou instalação manual anterior no POCO, hash/ativação não verificados. R33 inclui faixa diagonal R32, título +50% e contagem/jogadores/estrelas em sequência, Jogar com largura da capa e barra até97,5% da tela. 9.604 verificações C++, assinatura,16KiB e13.086 entradas preservadas; somente carouselSO mudou. DEX/motores/salas/downloads intactos. Não promover estável nem supor validação visual. Preservar dados/licença/saves. Samsung tela ligada0→3 continua pendente de restaurar0quando reconectar.
