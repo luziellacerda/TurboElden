@@ -1,3 +1,11 @@
+# Servidor R12/POCO publicado — 05/10/2026
+
+Leia `docs/server/RETORNO-SERVIDOR-NETPLAY-INTERNET-STATION-R12-20261005.md`. APIe4e557a/DLL7ecb6c8d/PID660598, WSS no mesmo domínio;512salas/1024conexões configuradas.256conexões reais/renovações e512TLSisoladas passaram. **Latência pública alta segue aberta:** p952291,82ms vs1,07ms Nginxlocal. DoisAndroid/gameplay não verificados. LicençaPOCO própria1aparelho/vitalícia, código somente privadoLinux, ativação até07/10 às17h11Maceió; licença original preservada.
+
+R27/retorno4fd2231 instalado/hashconferido conforme estado abaixo; não instalar baseR12/R26 antiga. Reconectar salas, mesmaROM/core/runtime/opções; somenteSNES/Megaonline. Catálogo14/2212/50CD intacto. Esta entrega não compila/instalaAPK nem integra os módulos separados de downloads11be7f3/6f012a7.
+
+## Estado atual do aplicativo
+
 # R27 — jogadores online em lista compacta e painel de convites — 05/10/2026
 
 Leia `versions/station-compact-lobby-r27-20261005/README.md` e STATUS. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Salas-Lista-R27-20261005.apk`, SHA c1191ce1d531b1ec9171d6d4c2f57541349339e64e8941a33788c4067d616bd6. Compilado/testado PC e instalado sobre R25 em 05/10/2026 às 18:02 (UTC−3), SHA integral do telefone igual. Dados preservados por atualização, sem desinstalar/limpar. Tela Android bloqueou durante instalação; conferência visual/sessão/gameplay R27 pendentes. Leia evidence/installation.json. Sem aprovação estética ou promoção estável desta revisão.
