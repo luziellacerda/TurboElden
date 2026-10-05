@@ -4,6 +4,13 @@ Leia `versions/station-platform-button-r36-20261005/README.md`, STATUS e recibos
 
 ## Histórico anterior
 
+## Retorno online recebido, ainda separado do APK
+
+# Segundo jogador — delta conciliado com R34 — 05/10/2026
+
+Leia docs/server/RETORNO-SEGUNDO-JOGADOR-SALAS-STATION-20261005.md. Fonte compilada f7f0561: perfil do anfitrião oferece Entrar; sala própria individual mostra outras salas com vaga, contagem1/2 e Sair e entrar após confirmação. Pronto confirma a sala atual.147 entradas Java/dependências compiladas,144 intactas e213 verificações aprovadas. DEX39864bd1/336988bytes. Conciliado com a8898a0/R34 instalado no Samsung513dd470, preservando recuperação da abertura/Voltar/manifesto e designR33. APK deste delta ainda sem montagem/instalação; a versão POCO não foi conferida. DEX inicial R30ef8a2d99 foi substituído. Servidor e4e557a inalterado. Preservar licença/saves/assinatura; não afirmar gameplay em dupla ou latência resolvidos sem prova nos aparelhos.
+
+
 # R34 instalado no Samsung — 05/10/2026
 
 Instalação solicitada concluída por atualização, SHA513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef conferido no aparelho. App abriu plataformas sem login. Ler evidence/installation-samsung.json no snapshotR34. Sem desinstalar/limpar dados. POCO ainda não conferido; Battletoads segundo jogador, controles e Voltar em partida continuam pendentes de validação. A configuração temporária Samsung de tela ligada foi restaurada para0. Não chamar de estável geral.
