@@ -1,0 +1,21 @@
+{
+  "libmainSHA256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+  "prefixAddress": "0xc6477",
+  "prefix": "lib",
+  "verifiedInstructions": true,
+  "disassembly": {
+    "bundled-prefix": {
+      "start": "0x2a8e14",
+      "end": "0x2a8e68"
+    },
+    "resolved-run": {
+      "start": "0x233540",
+      "end": "0x2335b0"
+    }
+  },
+  "oldRouteRegressionTest": "Fails at check 1 for libmupen64plus_ae_android.so",
+  "catalogFolders": [
+    "nintendo-64",
+    "nintendo-64--br"
+  ]
+}

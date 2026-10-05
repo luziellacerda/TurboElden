@@ -1,3 +1,15 @@
+# R19B — N64 próprio, abertura e controles conferidos — 05/10/2026
+
+Leia `versions/station-n64-controls-r19b-20261005/README.md`. APK instalado por atualização: `E:\ESTUDO APK\work\station-n64-controls-r19-20261005\TurboStations-N64-Controles-R19B-20261005.apk`, SHA256 `c8fcb15f0951cf5874ac9de2fa2f2e9bfbe26813b7e9ddea5b897355cea4157c`, 2.036.265.660 bytes; hash do telefone idêntico.
+
+N64: prefixo `lib`/caminhos resolvidos e slugs Station corrigidos no despacho; agora abre Mupen64Plus AE próprio. Primeiro R19 fechava por classe Material conflitante; R19B corrige 11 referências XML e o algoritmo de importação. Testes: 240 rotas + 3030 navegações + 80125 checks XML; comparação dos 43618 recursos compilados mostrou somente essas 11 diferenças. APK muda somente carousel SO e resources.arsc, preservando 13079 entradas, DEX/motores, NeoGeo R18, offline/download R16 e navegação R17. Certificado original/16KiB conferidos.
+
+Android: 007 abriu em GameActivity/CoreService próprios, com entrada Android do Mupen. Mantenedor confirmou botões respondendo, menu próprio e saída sem login. USB caiu depois da captura inicial; controles/retorno são confirmação do mantenedor. Engrenagem do N64 não recebeu conferência visual nesta rodada; FPS/outros jogos não validados. Não promover a estável geral. Não houve correção só no telefone nem mudança no servidor.
+
+Fontes finais: overlay native em `E:\ESTUDO APK\work\station-n64-controls-r19-20261005`, demais headers/objetos de `station-download-performance-20261005/frontend-native`. Usar recursos R19B. Base R18 e primeiro R19 arquivados em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais` (duplicatas E removidas após hashes iguais). Não instalar primeiro R19. Trabalho visual R20 separado ainda não integra esta revisão. Preservar jogos/saves/licença e atualizar sem limpar dados.
+
+## Histórico anterior
+
 # R18 — Neo Geo filesystem + navegação R17 — 05/10/2026
 
 Leia `versions/station-neogeo-filesystem-r18-20261005/README.md` e os recibos. APK `a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4`, 2.036.266.872 bytes, em `E:\ESTUDO APK\work\station-neogeo-access-20261005\TurboStations-NeoGeo-Pastas-R18-20261005.apk`. Instalado por atualização; SHA no telefone idêntico. Não promover a estável nem afirmar todos os jogos validados.

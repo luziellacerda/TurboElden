@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-05T18:30:05.741301+00:00",
+  "revision": "R19B",
+  "apkSHA256": "c8fcb15f0951cf5874ac9de2fa2f2e9bfbe26813b7e9ddea5b897355cea4157c",
+  "installedByUpdate": true,
+  "installedHashVerified": true,
+  "game": "007 - The World Is Not Enough",
+  "launchWindowLocal": "2026-10-05 15:22:39.563 through 15:22:41.317 America/Fortaleza",
+  "gameActivity": "paulscode.android.mupen64plusae.game.GameActivity",
+  "gameTitleScreenObserved": true,
+  "ownInputPluginObserved": "mupen64plus-input-android",
+  "controllerResponse": {
+    "confirmedBy": "maintainer",
+    "response": "Sim, aparecem e respondem"
+  },
+  "ownMenuAndReturn": {
+    "confirmedBy": "maintainer",
+    "response": "Sim, abriu o menu e voltou sem login"
+  },
+  "usbDisconnectedAfterInitialCapture": true,
+  "phoneOnlyPreferenceFixes": false,
+  "settingsGearVisualCheck": false,
+  "performanceMeasurement": false,
+  "allGamesVerified": false,
+  "stablePromotion": false,
+  "localScreenshot": {
+    "path": "E:\\ESTUDO APK\\work\\station-n64-controls-r19-20261005\\device-evidence\\n64-r19b-game.png",
+    "sha256": "08090af47a730e4b0de44ede5b4c5ef5b85780e28e2c2a32022c2e2737d7e566",
+    "published": false
+  }
+}

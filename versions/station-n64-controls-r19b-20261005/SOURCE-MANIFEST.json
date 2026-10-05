@@ -1,0 +1,240 @@
+{
+  "revision": "R19B",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 73,
+      "sha256": "2cacd8c5b88d28a6324a5b106d17970ce30df8e32f9b76c87d00d4ca430747a8"
+    },
+    {
+      "path": "before/native_n64.h",
+      "bytes": 3726,
+      "sha256": "816c4b8e04923478ccb2e56343e187dbfb1b6328d9e04a025b03c14564aa646e"
+    },
+    {
+      "path": "before-resources/res/values/n6_strings.xml",
+      "bytes": 97147,
+      "sha256": "b2763d454df04ee9cc54a8498a2bcc69f43f0248dca9e099d8985fc3c26ce65c"
+    },
+    {
+      "path": "before-resources/res/values/n6_styles.xml",
+      "bytes": 627088,
+      "sha256": "699424b3483575798f0f252cd4429b3f4dec1a63e0ff7f43a30e36fa98d6c244"
+    },
+    {
+      "path": "evidence/android-build.log",
+      "bytes": 3546,
+      "sha256": "5dbca1e4170337235dbead54cd0064967b4c043c30e07c48de04079aa9522029"
+    },
+    {
+      "path": "evidence/build-result-r19b.json",
+      "bytes": 970,
+      "sha256": "8961a976ee4565a18f5f427d76907203d6af33495c12e09b901277d1d490065a"
+    },
+    {
+      "path": "evidence/build-result.json",
+      "bytes": 946,
+      "sha256": "96b96db54bcb746e0ad92ce713f81bdd51070041154b570f31496265213160f9"
+    },
+    {
+      "path": "evidence/bundled-prefix.txt",
+      "bytes": 1805,
+      "sha256": "81d4467c5711cc1161b2811cf223829f3ebd6c2be3708c90b9fe63e82efab2fd"
+    },
+    {
+      "path": "evidence/compiled-resource-tests.json",
+      "bytes": 902,
+      "sha256": "83d352cdb56ae787fbca5c7812394d68dad893b5d677ada510e6da2f897040c1"
+    },
+    {
+      "path": "evidence/installation-r19b.json",
+      "bytes": 243,
+      "sha256": "00f993288ec15c0d2d1bb1055e0598e8c0ce9fe4ba393db6c9a9687cd713f701"
+    },
+    {
+      "path": "evidence/n64-device-result.json",
+      "bytes": 1224,
+      "sha256": "2eaed1fdec8f3b5bae8b788a1fcfc3c92fe742176b3e34519d556a6b8bcfb8b7"
+    },
+    {
+      "path": "evidence/n64-runtime.log",
+      "bytes": 1954,
+      "sha256": "6edee0ac00ceb7b84c80e09516df59901054ab178f263839a2dd5b675d874082"
+    },
+    {
+      "path": "evidence/navigation.log",
+      "bytes": 123,
+      "sha256": "59048687d4c4731e9346aa0edf970b40a3c621e0d9d12e873f7f28883c842b69"
+    },
+    {
+      "path": "evidence/old-routes.log",
+      "bytes": 26,
+      "sha256": "1ead3b0eddcba13c43ac9351dae14bc946cea850b1af2a087d18ca2dfc574b48"
+    },
+    {
+      "path": "evidence/r17-binary-archive.json",
+      "bytes": 397,
+      "sha256": "404bf3df96642ec9d96279b432f53edf71f302411b25bbf949cab86963bd7566"
+    },
+    {
+      "path": "evidence/r18-archive.json",
+      "bytes": 404,
+      "sha256": "fab21178946609d91c3b3b130d006124a0599a5ae39f535e1afd24d873691493"
+    },
+    {
+      "path": "evidence/r19-archive.json",
+      "bytes": 474,
+      "sha256": "ec12ee20d56cef48b5d2b6a252d5e079aceaf1919b57ff9073244c74d265e64b"
+    },
+    {
+      "path": "evidence/resolved-run.txt",
+      "bytes": 1912,
+      "sha256": "4a530a1127d9cdcfd99df90a14d92e4d2c2c765f87bcad0597251af6bc14af70"
+    },
+    {
+      "path": "evidence/resolver-evidence.json",
+      "bytes": 524,
+      "sha256": "7d3d9253201a546b106f891b30f38176fcbff356b30c2ffcb2939efc2cc91b4e"
+    },
+    {
+      "path": "evidence/resource-tests.json",
+      "bytes": 3354,
+      "sha256": "6f2466591355e64d717aa9b47cb1e45ca24b2c920913248ceed583789691180f"
+    },
+    {
+      "path": "evidence/resources-archive.json",
+      "bytes": 340,
+      "sha256": "a740ae456838c1aeac5444dc8f3ccc3e56d328ddf418ec64190affc39d99cbb4"
+    },
+    {
+      "path": "evidence/resources-build.log",
+      "bytes": 219,
+      "sha256": "50c19b72fb80524d9ba9daa2a84a64c39da08505bc3985f6ba8800299d647bae"
+    },
+    {
+      "path": "evidence/routes.log",
+      "bytes": 119,
+      "sha256": "570bc971540c4a561bd49b05f57eb7f613eed035226e724733cf9fe57f42eb95"
+    },
+    {
+      "path": "evidence/signature.log",
+      "bytes": 311,
+      "sha256": "5156f8574799d3eda2899fd9be92de0f256eee680ef70b04dc10507963484260"
+    },
+    {
+      "path": "evidence/source-base.json",
+      "bytes": 938,
+      "sha256": "d16b630f1a3cb75978936bfb4f1842431b63794260aa81c872ed94e3e2f115d0"
+    },
+    {
+      "path": "evidence/tests.json",
+      "bytes": 1384,
+      "sha256": "341f142325461698cc5e8eb04f3e2f4bddc9d4efdc24c6b81c6573b6ac492852"
+    },
+    {
+      "path": "native/native_carousel.cpp",
+      "bytes": 28549,
+      "sha256": "539313cf23fac971af969eb9149b69fba96a72f24666c5786f96d54efae1c433"
+    },
+    {
+      "path": "native/native_folders.h",
+      "bytes": 11804,
+      "sha256": "00d8b251298c1aab0be57ad7f9f0fba5ee6268c6d40734663d709e5f1e77eb15"
+    },
+    {
+      "path": "native/native_n64.h",
+      "bytes": 4189,
+      "sha256": "a3562d758dd63fd7c9e839e5dd46c67f890a29da1dc73002816c5b0e87cc2ce3"
+    },
+    {
+      "path": "native/native_search_download.h",
+      "bytes": 12590,
+      "sha256": "4617777795d69f2dc09bcf1496dd5095ce4962513d2b7b5f86bc220a7b73ba1c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11106,
+      "sha256": "c9b81ea24d060249ff9ea8bb1fa2e5f544813dc117a54c5595e60a48f00f812a"
+    },
+    {
+      "path": "recipes/archive_r17_binary_for_r19.py",
+      "bytes": 1177,
+      "sha256": "8adb30f685cd556711b71f2b2181a32eeb44ce2a2e05d03ec5cc4a853bd3176a"
+    },
+    {
+      "path": "recipes/archive_r18_for_r19.py",
+      "bytes": 1199,
+      "sha256": "25f4ce37dd17aecf55f434ce3adfeaffd2693107652533fc42fcb035a59c101a"
+    },
+    {
+      "path": "recipes/audit_n64_resolver_r19.py",
+      "bytes": 1711,
+      "sha256": "1e1b9fd6339e98b00c927dfaba65917f7f2a1a3577a413cdad0ec0eb047ad40d"
+    },
+    {
+      "path": "recipes/fix_n64_resources_r19b.py",
+      "bytes": 3244,
+      "sha256": "44256784e1087123140f7e6881d514eb09d531d0227a5871042ea4053c05c1ab"
+    },
+    {
+      "path": "recipes/merge_resources.py",
+      "bytes": 7967,
+      "sha256": "3739da1dabdbe4d3ac574d676c3c1a9d6698bdd7f213c88f2f4bacdd2492d856"
+    },
+    {
+      "path": "recipes/package_n64_controls_r19.py",
+      "bytes": 5243,
+      "sha256": "fa88e4047c6747633b6a7cb3f51c7924365e380216ae75b02b130116d6f27499"
+    },
+    {
+      "path": "recipes/package_n64_controls_r19b.py",
+      "bytes": 5375,
+      "sha256": "676ec1a18469a7c0c9b9fa272fafcea490b9628399368485ff93a485934a7f8a"
+    },
+    {
+      "path": "recipes/prepare_n64_controls_r19.py",
+      "bytes": 2591,
+      "sha256": "a5c59125fb82a4123cc6d5a1e569c94d3d4bc67a8f48f4b6a4156b89c8fa678e"
+    },
+    {
+      "path": "recipes/publish_n64_r19b_snapshot.py",
+      "bytes": 6879,
+      "sha256": "074322cb2c87802fa65a8f94da4183ead02fd5f58a0f32a821d616bf25e3ac54"
+    },
+    {
+      "path": "recipes/test_build_n64_controls_r19.py",
+      "bytes": 6504,
+      "sha256": "0ab85d5f43d5d92c0417673dd67fdfecf3ec466a94e778f1c1abdc101f204698"
+    },
+    {
+      "path": "recipes/verify_archive_n64_resources_r19b.py",
+      "bytes": 1973,
+      "sha256": "e56db7304ff7a2ba3bc723f758f7f545e4a2b8173fe57ec557e84280f2faa567"
+    },
+    {
+      "path": "resources/res/values/n6_strings.xml",
+      "bytes": 97259,
+      "sha256": "e41d1a9613e2174f1de760d41a4c1743ece2f93a01a53ecc98cdbc79d184924f"
+    },
+    {
+      "path": "resources/res/values/n6_styles.xml",
+      "bytes": 627152,
+      "sha256": "0b84eec5212c040207d22d10fce4f3c35a0a84350fff33cc1df7621bcdfab679"
+    },
+    {
+      "path": "tests/navigation.cpp",
+      "bytes": 12001,
+      "sha256": "f2d8884b8a73b700c01a0bdd9e01eb7690a95848fd1ea696af20956ae6b0b091"
+    },
+    {
+      "path": "tests/old-routes.cpp",
+      "bytes": 6242,
+      "sha256": "c0f4704dc8a033415ae3ac1d0d38ce8c9cb9df3d65e95deb0fd6ca488637763e"
+    },
+    {
+      "path": "tests/routes.cpp",
+      "bytes": 6705,
+      "sha256": "50566fa2569f1726ff2c5b4e544ab943b69db6b8968b1f38bb70b9dfe396381a"
+    }
+  ]
+}

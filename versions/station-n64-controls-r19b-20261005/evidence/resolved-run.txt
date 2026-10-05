@@ -1,0 +1,34 @@
+
+E:\ESTUDO APK\work\station-n64-controls-r19-20261005\libmain.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000232e00 <_ZN8GuiStore10launchItemEm>:
+  233540: 910183e8     	add	x8, sp, #0x60
+  233544: 910283e0     	add	x0, sp, #0xa0
+  233548: 910303e1     	add	x1, sp, #0xc0
+  23354c: 9405a9c5     	bl	0x39dc60 <_ZN14LibretroPlayer11resolveCoreERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_@plt>
+  233550: 9405aafc     	bl	0x39e140 <_ZN16TelemetryService3getEv@plt>
+  233554: aa0003f5     	mov	x21, x0
+  233558: 910383e8     	add	x8, sp, #0xe0
+  23355c: 910183e0     	add	x0, sp, #0x60
+  233560: 9405a938     	bl	0x39da40 <_ZN5Utils10FileSystem11getFileNameERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>
+  233564: 91006281     	add	x1, x20, #0x18
+  233568: 9101e282     	add	x2, x20, #0x78
+  23356c: 910383e3     	add	x3, sp, #0xe0
+  233570: aa1503e0     	mov	x0, x21
+  233574: 9405b3c3     	bl	0x3a0480 <_ZN16TelemetryService11gameStartedERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_S8_@plt>
+  233578: 394383e8     	ldrb	w8, [sp, #0xe0]
+  23357c: 36000068     	tbz	w8, #0x0, 0x233588 <_ZN8GuiStore10launchItemEm+0x788>
+  233580: f9407be0     	ldr	x0, [sp, #0xf0]
+  233584: 9405a8a7     	bl	0x39d820 <_ZdlPv@plt>
+  233588: 394183e8     	ldrb	w8, [sp, #0x60]
+  23358c: f94037e9     	ldr	x9, [sp, #0x68]
+  233590: d341fd0a     	lsr	x10, x8, #1
+  233594: 7200011f     	tst	w8, #0x1
+  233598: 9a890148     	csel	x8, x10, x9, eq
+  23359c: b40001a8     	cbz	x8, 0x2335d0 <_ZN8GuiStore10launchItemEm+0x7d0>
+  2335a0: 910383e8     	add	x8, sp, #0xe0
+  2335a4: 910183e0     	add	x0, sp, #0x60
+  2335a8: 910203e1     	add	x1, sp, #0x80
+  2335ac: 9405a9b1     	bl	0x39dc70 <_ZN14LibretroPlayer3runERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_@plt>

@@ -1,0 +1,16 @@
+{
+  "baseAPK": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-NeoGeo-Pastas-R18-20261005.apk",
+  "baseSHA256": "a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4",
+  "nativeOverlay": "E:\\ESTUDO APK\\work\\station-single-folder-r17-20261005\\native",
+  "unchangedDependencies": "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+  "changedSource": [
+    "native_n64.h"
+  ],
+  "beforeSHA256": "816c4b8e04923478ccb2e56343e187dbfb1b6328d9e04a025b03c14564aa646e",
+  "files": {
+    "native_carousel.cpp": "539313cf23fac971af969eb9149b69fba96a72f24666c5786f96d54efae1c433",
+    "native_folders.h": "00d8b251298c1aab0be57ad7f9f0fba5ee6268c6d40734663d709e5f1e77eb15",
+    "native_n64.h": "a3562d758dd63fd7c9e839e5dd46c67f890a29da1dc73002816c5b0e87cc2ce3",
+    "native_search_download.h": "4617777795d69f2dc09bcf1496dd5095ce4962513d2b7b5f86bc220a7b73ba1c"
+  }
+}

@@ -1,0 +1,25 @@
+10-05 15:22:39.563 29247 29247 I TurboN64: Opening upstream N64 game: 007 - The World is Not Enough.z64
+10-05 15:22:40.372 29349 29349 I GameActivity: onCreate
+10-05 15:22:40.390 29349 29349 I GameActivity: mShouldExit=false
+10-05 15:22:40.391 29349 29349 I GameActivity: forceExit=false
+10-05 15:22:40.473 29349 29349 I GameActivity: Player 1 controller has been enabled
+10-05 15:22:40.473 29349 29349 I GameActivity: Player 2 controller has been enabled
+10-05 15:22:40.473 29349 29349 I GameActivity: Player 3 controller has been enabled
+10-05 15:22:40.473 29349 29349 I GameActivity: Player 4 controller has been enabled
+10-05 15:22:40.475 29349 29349 I GameActivity: onStart
+10-05 15:22:40.480 29349 29349 I GameActivity: onResume
+10-05 15:22:40.524 29349 29349 I CoreService: OnCreate
+10-05 15:22:40.542 29349 29349 I CoreService: onStartCommand
+10-05 15:22:40.596 29349 29349 I CoreService: setCoreServiceListener
+10-05 15:22:40.596 29349 29349 I CoreService: setLoadingDataListener
+10-05 15:22:40.601 29349 29426 I CoreService: Using high priority mode
+10-05 15:22:40.686 29349 29349 I GameActivity: onWindowFocusChanged: true
+10-05 15:22:40.736 29349 29349 I GameActivity: onWindowFocusChanged: false
+10-05 15:22:40.877 29349 29426 W CoreInterface: Using plugin for type: M64PLUGIN_GFX:mupen64plus-video-glide64mk2
+10-05 15:22:40.888 29349 29426 W CoreInterface: Using plugin for type: M64PLUGIN_AUDIO:mupen64plus-audio-android
+10-05 15:22:40.890 29349 29426 W CoreInterface: Using plugin for type: M64PLUGIN_INPUT:mupen64plus-input-android
+10-05 15:22:40.891 29349 29426 W CoreInterface: Using plugin for type: M64PLUGIN_RSP:mupen64plus-rsp-hle
+10-05 15:22:40.897 29349 29349 I GameActivity: onCoreServiceStarted
+10-05 15:22:40.949 29349 29349 I GameActivity: onWindowFocusChanged: true
+10-05 15:22:41.317 29349 29349 E CoreService: resume emulator
+10-05 15:22:41.317 29349 29349 E CoreService: Actually resume emulator

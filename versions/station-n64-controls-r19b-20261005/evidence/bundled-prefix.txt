@@ -1,0 +1,27 @@
+
+E:\ESTUDO APK\work\station-n64-controls-r19-20261005\libmain.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000002a8b18 <_ZN14LibretroPlayer11resolveCoreERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_>:
+  2a8e14: 9101c3e0     	add	x0, sp, #0x70
+  2a8e18: 9403dab6     	bl	0x39f8f0 <_ZN14LibretroPlayer13isBundledCoreERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE@plt>
+  2a8e1c: 36000460     	tbz	w0, #0x0, 0x2a8ea8 <_ZN14LibretroPlayer11resolveCoreERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_+0x390>
+  2a8e20: 910ba3e8     	add	x8, sp, #0x2e8
+  2a8e24: 9101c3e0     	add	x0, sp, #0x70
+  2a8e28: 9403d306     	bl	0x39da40 <_ZN5Utils10FileSystem11getFileNameERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>
+  2a8e2c: d0fff0e2     	adrp	x2, 0xc6000
+  2a8e30: 9111dc42     	add	x2, x2, #0x477
+  2a8e34: 910ba3e0     	add	x0, sp, #0x2e8
+  2a8e38: aa1f03e1     	mov	x1, xzr
+  2a8e3c: 9403d3a1     	bl	0x39dcc0 <_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6insertEmPKc@plt>
+  2a8e40: f9400808     	ldr	x8, [x0, #0x10]
+  2a8e44: 3dc00000     	ldr	q0, [x0]
+  2a8e48: f9000a68     	str	x8, [x19, #0x10]
+  2a8e4c: 3d800260     	str	q0, [x19]
+  2a8e50: a900fc1f     	stp	xzr, xzr, [x0, #0x8]
+  2a8e54: f900001f     	str	xzr, [x0]
+  2a8e58: 394ba3e8     	ldrb	w8, [sp, #0x2e8]
+  2a8e5c: 36003508     	tbz	w8, #0x0, 0x2a94fc <_ZN14LibretroPlayer11resolveCoreERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_+0x9e4>
+  2a8e60: f9417fe0     	ldr	x0, [sp, #0x2f8]
+  2a8e64: 140001a5     	b	0x2a94f8 <_ZN14LibretroPlayer11resolveCoreERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_+0x9e0>

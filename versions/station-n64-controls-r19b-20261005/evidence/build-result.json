@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-05T18:07:41.487353+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-NeoGeo-Pastas-R18-20261005.apk",
+  "baseSHA256": "a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4",
+  "apk": "E:\\ESTUDO APK\\work\\station-n64-controls-r19-20261005\\TurboStations-N64-Controles-R19-20261005.apk",
+  "sha256": "6e6e87a5befe55324569591a0cd0095c1cb94cb57e8ffea29433cafcdbf96819",
+  "bytes": 2036266368,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13080,
+  "roomsDexSHA256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "gameDownloadContentHashEnabled": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false
+}

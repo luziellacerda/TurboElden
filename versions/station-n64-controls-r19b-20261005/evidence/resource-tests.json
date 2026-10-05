@@ -1,0 +1,73 @@
+{
+  "changes": [
+    {
+      "file": "res\\values\\n6_strings.xml",
+      "resource": "n6_appbar_scrolling_view_behavior",
+      "from": "com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior",
+      "to": "tn64core.shaded.com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    },
+    {
+      "file": "res\\values\\n6_strings.xml",
+      "resource": "n6_bottom_sheet_behavior",
+      "from": "com.google.android.material.bottomsheet.BottomSheetBehavior",
+      "to": "tn64core.shaded.com.google.android.material.bottomsheet.BottomSheetBehavior"
+    },
+    {
+      "file": "res\\values\\n6_strings.xml",
+      "resource": "n6_fab_transformation_scrim_behavior",
+      "from": "com.google.android.material.transformation.FabTransformationScrimBehavior",
+      "to": "tn64core.shaded.com.google.android.material.transformation.FabTransformationScrimBehavior"
+    },
+    {
+      "file": "res\\values\\n6_strings.xml",
+      "resource": "n6_fab_transformation_sheet_behavior",
+      "from": "com.google.android.material.transformation.FabTransformationSheetBehavior",
+      "to": "tn64core.shaded.com.google.android.material.transformation.FabTransformationSheetBehavior"
+    },
+    {
+      "file": "res\\values\\n6_strings.xml",
+      "resource": "n6_hide_bottom_view_on_scroll_behavior",
+      "from": "com.google.android.material.behavior.HideBottomViewOnScrollBehavior",
+      "to": "tn64core.shaded.com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+    },
+    {
+      "file": "res\\values\\n6_strings.xml",
+      "resource": "n6_searchbar_scrolling_view_behavior",
+      "from": "com.google.android.material.search.SearchBar$ScrollingViewBehavior",
+      "to": "tn64core.shaded.com.google.android.material.search.SearchBar$ScrollingViewBehavior"
+    },
+    {
+      "file": "res\\values\\n6_strings.xml",
+      "resource": "n6_side_sheet_behavior",
+      "from": "com.google.android.material.sidesheet.SideSheetBehavior",
+      "to": "tn64core.shaded.com.google.android.material.sidesheet.SideSheetBehavior"
+    },
+    {
+      "file": "res\\values\\n6_styles.xml",
+      "resource": "n6_viewInflaterClass",
+      "from": "com.google.android.material.theme.MaterialComponentsViewInflater",
+      "to": "tn64core.shaded.com.google.android.material.theme.MaterialComponentsViewInflater"
+    },
+    {
+      "file": "res\\values\\n6_styles.xml",
+      "resource": "n6_viewInflaterClass",
+      "from": "com.google.android.material.theme.MaterialComponentsViewInflater",
+      "to": "tn64core.shaded.com.google.android.material.theme.MaterialComponentsViewInflater"
+    },
+    {
+      "file": "res\\values\\n6_styles.xml",
+      "resource": "n6_viewInflaterClass",
+      "from": "com.google.android.material.theme.MaterialComponentsViewInflater",
+      "to": "tn64core.shaded.com.google.android.material.theme.MaterialComponentsViewInflater"
+    },
+    {
+      "file": "res\\values\\n6_styles.xml",
+      "resource": "n6_viewInflaterClass",
+      "from": "com.google.android.material.theme.MaterialComponentsViewInflater",
+      "to": "tn64core.shaded.com.google.android.material.theme.MaterialComponentsViewInflater"
+    }
+  ],
+  "resourceChecks": 80125,
+  "nonN64XmlByteIdentical": true,
+  "classReferencesMatchRelocatedDex": true
+}
