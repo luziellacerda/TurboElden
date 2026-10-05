@@ -1,3 +1,5 @@
+> Atualização: R12 instalado por atualização após reconexão USB; SHA256 integral no telefone confirmado. Servidor ainda sem deploy e partida entre dois aparelhos não verificada. Retorno remoto c8e240a (Neo Geo offline/taxa MB/s) conciliado no Git; seu delta de taxa ainda não integra este APK. Na próxima montagem, preservar classes35 R12; não voltar ao DEX R11.
+
 > Atualização: R12 instalado por atualização após reconexão USB; hash integral no telefone confirmado. Tela estava apagada/bloqueada e foi solicitado desbloqueio. Servidor ainda sem deploy e partida entre dois aparelhos não verificada. Retorno remoto c8e240a (Neo Geo offline/taxa MB/s) conciliado no Git; seu delta de taxa ainda não integra este APK. Na próxima montagem, preservar classes35 R12; não voltar ao DEX R11.
 
 # APP â†’ SERVIDOR â€” Netplay pela internet no mesmo Station â€” R12, 05/10/2026
