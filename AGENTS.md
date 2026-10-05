@@ -1,12 +1,22 @@
 # R21 — sinopses roláveis; console somente nos jogos — 05/10/2026
 
-Leia `versions/station-synopsis-console-r21-20261005/README.md`, STATUS e evidências. APK `E:\ESTUDO APK\work\station-console-games-only-r21-20261005\TurboStations-Consoles-Sinopses-R21-20261005.apk`, SHA `4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4`, 2041527332 bytes, instalado por atualização e hash do telefone igual. Fonte nativa final: `E:\ESTUDO APK\work\station-console-games-only-r21-20261005\native`. Base R20 arquivada em G; consulte recibo de arquivos antes de procurar APK/SO no caminho antigo em E.
+Leia `versions/station-synopsis-console-r21-20261005/README.md`, STATUS e evidências. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Consoles-Sinopses-R21-20261005.apk`, SHA `4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4`, 2041527332 bytes, instalado por atualização e hash do telefone igual. Fonte nativa final: `E:\ESTUDO APK\work\station-console-games-only-r21-20261005\native`. Base R20 arquivada em G; consulte recibo de arquivos antes de procurar APK/SO no caminho antigo em E.
 
 Sinopses completas recortadas na área própria, altura medida pelo componente nativo; arrasto e barra quando transborda, sem paginação automática. Regra compartilhada por plataformas/coleções/jogos. Hardware somente ao lado da sinopse dos jogos; principal/coleções sem hardware nem coluna reservada. 15.375 checks de layout e 140 de rolagem passaram; ABI auditada, build/assinatura/alinhamento e todas as entradas do pacote conferidas. Android: sinopse longa 007 recortada, arrasto do texto/barra, início/fim e retorno N64 às plataformas conferidos; hardware só nos jogos. Outros sistemas usam o mesmo componente, sem afirmação de teste manual individual. Não promover estabilidade geral.
 
 Somente carousel SO mudou, 13080 entradas preservadas da R20 (incluindo recursos N64 corrigidos, DEX/motores, NeoGeo/offline/pastas e LEDs). Próxima W22 de vídeos das coleções deve usar R21 como base e preservar este overlay. Nenhum deploy servidor. Nenhum ajuste exclusivo no telefone. Preservar dados/saves/licença.
 
 ## Histórico anterior
+
+# Downloads CHD/ZIP preparados — 05/10/2026
+
+Leia `versions/station-raw-transfer-20261005/README.md` e `docs/server/RETORNO-DOWNLOADS-SEM-VERIFICACOES-20261005.md`. Pedido do mantenedor: retirar conferências de integridade/conteúdo e reduzir a espera para baixar, após Neo Geo CD lento nas duas fases. Delta de quatro classes Station R16 + ponte ZIP; DEX/biblioteca Android compilados, 821 verificações Java/18 suítes e14JNI reais Linux aprovadas. **Delta separado ainda sem APK assinado/instalado; a última instalação visual confirmada é R21 acima. Não está incluído no APK R21.**
+
+RAW recebido completo vira instalação por rename atômico, sem segunda cópia ou reabertura para conferir conteúdo; porcentagem/reserva uma vez. ZIP sem cálculo/validação CRC; mesmos libarchive3.8.9/xz5.8.3. Autorização usa catálogo salvo; consulta completa só por revisão alterada, com um refresh/retry. Transação, cancelamento, saves, TLS/licença e hash de identidade netplay preservados. Fontes R16/R18/R19B/R20 congelados não foram alterados. Só classes28.dex e libstation_archive.so mudam no APK; demais motores/recursos/carousel/classes35 devem permanecer exatos.
+
+Produção catálogo14/2212visíveis/50CD inalterada. Metal Slug431225741B: API311,329MB/s/Nginx311,232MB/s; HTTPS3,225MB/s/133,7035s, variável. Sem medição nova do aparelho; não atribuir exclusivamente à operadora/túnel nem dizer311MB/s pela internet. Licença sintética removida e serviços/PIDs preservados. Novo APK deve usar R20 ou sucessora visual conciliada; preservar ajuste solicitado de consoles somente na sinopse. Receita exige SHAexatoR20; atualizar guard só com recibo da sucessora, sem instalar versão antiga. Ponte CD/BIOS continua entrega separada.
+
+## Histórico R20
 
 # R20 — LEDs Neo Geo e consoles — 05/10/2026
 

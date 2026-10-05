@@ -1,0 +1,7 @@
+build/
+*.apk
+*.dex
+*.class
+*.jar
+*.aar
+__pycache__/

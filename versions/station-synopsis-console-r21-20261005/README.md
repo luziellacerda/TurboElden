@@ -4,7 +4,7 @@
 
 O mantenedor pediu remover a foto adicional do hardware do carrossel principal e limitar as sinopses de todos os sistemas à área da tela, com barra de rolagem para textos longos. Esta revisão usa a camada nativa existente. A regra é compartilhada por plataformas, coleções e jogos; o nome do item e os botões permanecem fora da área rolável.
 
-APK: `E:\ESTUDO APK\work\station-console-games-only-r21-20261005\TurboStations-Consoles-Sinopses-R21-20261005.apk`
+APK atual (arquivado após conferência): `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Consoles-Sinopses-R21-20261005.apk`
 SHA-256: `4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4`
 Tamanho: 2041527332 bytes. SO: `f802efdc262bd6a0818bfee5b833499179bd910cc2f5b93da0d644504168d3ba`.
 
@@ -56,3 +56,7 @@ Capturas e registros completos ficam localmente em `device-evidence/`; não publ
 ## Conferência final no Android
 
 Em 05/10/2026, R21 foi conferida no Samsung SM-A566E. SNES e N64 no principal e coleções Neo Geo não exibiram hardware extra. No jogo 007, sinopse de 882 bytes/797px em viewport de 406,1px exibiu barra; arrasto do texto moveu a descrição, arrasto do indicador voltou ao início, toque no fim da trilha exibiu a última linha. Texto permaneceu recortado acima do título e dos botões, e a foto N64 ficou à direita. VOLTAR restaurou N64 no principal sem login. Capturas locais referenciadas por hash no recibo; nenhum jogo foi iniciado ou dado apagado nesta conferência. A regra é comum a todos os sistemas, mas não se afirma teste manual de cada plataforma individual.
+
+## Arquivamento após a entrega
+
+O chat coordenado copiou o APK e SO R21 para G: e verificou SHA/tamanho antes de remover apenas as duplicatas compiladas E:. `evidence/r21-output-archives.json` contém caminhos atuais. Fontes e recibos E: permanecem; receitas e recibos de build/instalação mantêm seus caminhos históricos. O trabalho de downloads do commit 6f012a7 foi conciliado no Git, mas não incluído no APK R21.
