@@ -1,0 +1,15 @@
+{
+  "synopsis": "140 checks; 0 failures",
+  "visibility": "PASS 15375 checks: no console or reserved gap on systems/collections; games layout unchanged",
+  "compiledPosterSymbols": 52,
+  "newPosterSymbols": [
+    "00000000055bd880 r station_neogeo_collection_fatalfury",
+    "00000000056baa80 r station_neogeo_collection_metalslug",
+    "00000000057b7c80 r station_neogeo_collection_samuraishodown"
+  ],
+  "existingPosterSymbols": 49,
+  "duplicatePosterSymbols": false,
+  "textureBudgetUnchanged": 8,
+  "playerSlotLimitUnchanged": 4,
+  "rendersOrPlayersAdded": 0
+}

@@ -1,3 +1,13 @@
+# R22 — vídeos das coleções Neo Geo — 05/10/2026
+
+Leia `versions/station-neogeo-collection-videos-r22-20261005/README.md` e `STATUS.json`. APK `E:\ESTUDO APK\work\station-neogeo-collection-videos-r22-20261005\TurboStations-NeoGeo-Colecoes-R22-20261005.apk`, SHA `f7dfc90f0614644548f16cfc7a518ba869589c815adacd6adb9f411f6a97de29`. Acrescenta vídeos de Fatal Fury, Metal Slug e Samurai Shodown às pastas exatas confirmadas no TSV do Servidor-pix, commit 100e4bb. Todos os jogos usa o vídeo da plataforma. Mídia 720×720 a 30 fps, duração original, sem cortar ou esticar, com prévias do próprio vídeo. Somente a célula focada reproduz; orçamento de 8 texturas e 4 slots preservado. Passaram 3.317 verificações de rotas, 15.375 de layout, 140 de rolagem e a decodificação integral.
+
+Base R21 `4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4`: somente o SO do carrossel alterado, 3 MP4 adicionados e 13080 entradas preservadas. Fontes R21 intactas (rolagem e console somente nos jogos), LEDs R20, N64, Neo Geo R18, DEX e motores preservados. Ver instalação em STATUS/evidence; não promover estabilidade geral ou FPS sem prova. Nenhum servidor alterado. Fontes finais em W22/native, dependências W16; SO compilado e APK/SO R21 arquivados em G: com SHA em evidence/compiled-output-archives.json. Não procurar apenas no caminho antigo em E: e não reaplicar pacote R18.
+
+Instalação R22 confirmada pelo SHA do telefone. Logs mostraram os três vídeos preparados/retomados, mas houve um timeout posterior de pré-carga Fatal Fury durante navegação rápida; causa/recuperação e loop sustentado ainda não conferidos. Captura final estava na lista KOF. Ver evidence/runtime-summary.json. Retorno de downloads 11be7f3/6f012a7 foi lido e comparado, porém os dois módulos novos continuam fora deste APK; leia docs/server/ANALISE-RETORNO-DOWNLOADS-20261005-R22.md.
+
+## Histórico anterior
+
 # R21 — sinopses roláveis; console somente nos jogos — 05/10/2026
 
 Leia `versions/station-synopsis-console-r21-20261005/README.md`, STATUS e evidências. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Consoles-Sinopses-R21-20261005.apk`, SHA `4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4`, 2041527332 bytes, instalado por atualização e hash do telefone igual. Fonte nativa final: `E:\ESTUDO APK\work\station-console-games-only-r21-20261005\native`. Base R20 arquivada em G; consulte recibo de arquivos antes de procurar APK/SO no caminho antigo em E.

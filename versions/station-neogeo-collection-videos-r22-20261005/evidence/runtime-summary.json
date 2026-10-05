@@ -1,0 +1,38 @@
+{
+  "apkSHA256": "f7dfc90f0614644548f16cfc7a518ba869589c815adacd6adb9f411f6a97de29",
+  "installedHashVerified": true,
+  "allThreeVideosPreparedAndResumedInRuntimeLog": true,
+  "times": {
+    "metalslug": [
+      "16:26:08",
+      "16:26:13"
+    ],
+    "samuraishodown": [
+      "16:26:14",
+      "16:26:20"
+    ],
+    "fatalfury": [
+      "16:26:17",
+      "16:26:18"
+    ]
+  },
+  "collectionNavigationObserved": {
+    "platform": "Neo Geo",
+    "folder": "# 2 - SAMURAI SHODOWN COLE\u00c7\u00c3O #",
+    "visibleGames": 6,
+    "returnToCollections": true
+  },
+  "screenshotActualState": "Neo Geo / The King of Fighters game list; not the selected collection video",
+  "warning": {
+    "time": "16:26:40",
+    "asset": "turbo-system-videos/720-collection-neogeo-fatalfury.mp4",
+    "error": "Video first-frame timeout",
+    "context": "subsequent preload during multiple focus and folder changes",
+    "causeConfirmed": false,
+    "recoveryAfterWarningVerified": false
+  },
+  "sourceLogSHA256": "0fa889c455171baae1e3c0ca577562a083f324a8ac5d6da6e220c9ca57ce8654",
+  "continuousLoopVisuallyValidated": false,
+  "sustainedPerformanceMeasured": false,
+  "stable": false
+}

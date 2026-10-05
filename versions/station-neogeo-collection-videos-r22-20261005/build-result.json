@@ -1,0 +1,24 @@
+{
+  "createdAt": "2026-10-05T19:22:40.742401+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Consoles-Sinopses-R21-20261005.apk",
+  "baseSHA256": "4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4",
+  "apk": "E:\\ESTUDO APK\\work\\station-neogeo-collection-videos-r22-20261005\\TurboStations-NeoGeo-Colecoes-R22-20261005.apk",
+  "sha256": "f7dfc90f0614644548f16cfc7a518ba869589c815adacd6adb9f411f6a97de29",
+  "bytes": 2053643400,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [
+    "assets/turbo-system-videos/720-collection-neogeo-fatalfury.mp4",
+    "assets/turbo-system-videos/720-collection-neogeo-metalslug.mp4",
+    "assets/turbo-system-videos/720-collection-neogeo-samuraishodown.mp4"
+  ],
+  "preservedEntries": 13080,
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "r21NativeSourcesPreserved": true,
+  "sourceRouteEvidence": "evidence/integration.json",
+  "installed": false,
+  "stable": false
+}

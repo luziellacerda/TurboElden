@@ -1,0 +1,34 @@
+{
+  "revision": "R22",
+  "createdAt": "2026-10-05T19:26:26.932564+00:00",
+  "scope": "Three user-supplied Neo Geo collection videos; no engine/catalog/data changes",
+  "apk": "E:\\ESTUDO APK\\work\\station-neogeo-collection-videos-r22-20261005\\TurboStations-NeoGeo-Colecoes-R22-20261005.apk",
+  "sha256": "f7dfc90f0614644548f16cfc7a518ba869589c815adacd6adb9f411f6a97de29",
+  "baseSHA256": "4c6bf41312be20e98ff15a6b7fbc2f85bb470bca1af39058ab362e39015543b4",
+  "installedByUpdate": true,
+  "deviceVisualValidation": false,
+  "stablePromotion": false,
+  "sourceOverlay": "E:\\ESTUDO APK\\work\\station-neogeo-collection-videos-r22-20261005\\native",
+  "compiledNativeArchive": "G:\\BAKUP SISTEMA APP 03-10-2026\\binarios-compilados\\station-neogeo-collection-videos-r22-20261005\\libturbo_carousel.so",
+  "retainedSourceVersion": "station-synopsis-console-r21-20261005",
+  "privateMediaIncludedInGit": false,
+  "newAssets": [
+    "assets/turbo-system-videos/720-collection-neogeo-fatalfury.mp4",
+    "assets/turbo-system-videos/720-collection-neogeo-metalslug.mp4",
+    "assets/turbo-system-videos/720-collection-neogeo-samuraishodown.mp4"
+  ],
+  "changedExistingEntries": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "serverChanged": false,
+  "runtimeVideoReadyObserved": 3,
+  "runtimeWarning": {
+    "time": "16:26:40",
+    "asset": "turbo-system-videos/720-collection-neogeo-fatalfury.mp4",
+    "error": "Video first-frame timeout",
+    "context": "subsequent preload during multiple focus and folder changes",
+    "causeConfirmed": false,
+    "recoveryAfterWarningVerified": false
+  },
+  "downloadOptimizationIncluded": false
+}

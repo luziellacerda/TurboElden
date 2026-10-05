@@ -1,0 +1,149 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "build-result.json",
+      "bytes": 1122,
+      "sha256": "81ccde8ebb77cf1287f3d9d29ca8c84c38d77c50d8183663c0b29ca44114d457"
+    },
+    {
+      "path": "evidence/alignment.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/catalog-folders.json",
+      "bytes": 1218,
+      "sha256": "3896aa580b3e050a811e35dff52804b4940b300059554b35f912cbd7f764f9f7"
+    },
+    {
+      "path": "evidence/compiled-output-archives.json",
+      "bytes": 1253,
+      "sha256": "c7c6ac3d07cd07f849e08332924c0a1fec4b7123f08bc77215e6ceb7cd27d4e2"
+    },
+    {
+      "path": "evidence/installation.json",
+      "bytes": 698,
+      "sha256": "1b46dd4216db40dc62e40e8dbd22def1525c344f1d7831ff5bc9b1cf713cf90f"
+    },
+    {
+      "path": "evidence/integration.json",
+      "bytes": 5412,
+      "sha256": "eaa5e8faf8a11244b202cd5fe467f1717ab7cb51f5e9b0f24c873a2df3300318"
+    },
+    {
+      "path": "evidence/regressions.json",
+      "bytes": 580,
+      "sha256": "f11df90b32d44caa593c683364995fa770ed41d6f960a141a3d26c4b552a345a"
+    },
+    {
+      "path": "evidence/runtime-summary.json",
+      "bytes": 1206,
+      "sha256": "98ed10cd51ea09e1abd742ca9a345268ea91fc32a181f9a29647957d133c6891"
+    },
+    {
+      "path": "evidence/signature.log",
+      "bytes": 311,
+      "sha256": "5156f8574799d3eda2899fd9be92de0f256eee680ef70b04dc10507963484260"
+    },
+    {
+      "path": "media-manifest.json",
+      "bytes": 33012,
+      "sha256": "d39d53fc59d5d4cdbf903e8c77c6823a75e5c3ffc46cadfd008f0a631074f9ea"
+    },
+    {
+      "path": "native/collection_video_policy.h",
+      "bytes": 2028,
+      "sha256": "80d53f41777a7370157e454982c69e8aa09b9beff46abcbee997aae61ebd399c"
+    },
+    {
+      "path": "native/video720_posters.h",
+      "bytes": 6498,
+      "sha256": "3e4475a64c1c0de44c83b3dea04bcbc5524232982da6013cc3a9c92f13bf3e36"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10898,
+      "sha256": "a90e57be847279d80dbc24c8b2271976f947ef1b7953cd712e664b9393d788c3"
+    },
+    {
+      "path": "recipes/archive_verified_outputs_for_r22.py",
+      "bytes": 1597,
+      "sha256": "00b03c4a3c4332ff7b8e12efbc60e353628bbf563e0274aee8ff3af4cc7d6486"
+    },
+    {
+      "path": "recipes/capture_neogeo_collection_videos_r22.py",
+      "bytes": 1127,
+      "sha256": "2f0f61268823167eb39962c67a8d16627e6116084f50b6590b9c4b42a9985abe"
+    },
+    {
+      "path": "recipes/install_neogeo_collection_videos_r22.py",
+      "bytes": 2466,
+      "sha256": "1762d2567fa96568808eb38ad9af39c32a2e1c0e99a2e17d9e31b6c43ff3e107"
+    },
+    {
+      "path": "recipes/integrate_neogeo_collection_videos_r22.py",
+      "bytes": 6841,
+      "sha256": "5314036f196db963cde8d072a4221abdc8398a5f2daf44b3f8e9a49fe7db27d4"
+    },
+    {
+      "path": "recipes/package_neogeo_collection_videos_r22.py",
+      "bytes": 5402,
+      "sha256": "5169ea8a38092126e4bef08cf84044619c65c7d951e7a80f0c5c656d8fea5d5d"
+    },
+    {
+      "path": "recipes/prepare_neogeo_collection_videos_r22.py",
+      "bytes": 3992,
+      "sha256": "fd32396c2f3fe46887f8124ee52fd3ca1ea985094b83d24ceaaec554ba89cf62"
+    },
+    {
+      "path": "recipes/record_neogeo_collection_catalog_r22.py",
+      "bytes": 1237,
+      "sha256": "6427b4de2e22562d6136b3ee027397aca1c1eda1351d04dd1d7e681b0d24d6e9"
+    },
+    {
+      "path": "recipes/test_neogeo_collection_videos_r22.cpp",
+      "bytes": 2080,
+      "sha256": "5bbd6ae4a6bab5389ec38fb529d116bc38720beda9eec8b11b40deccce0c02b9"
+    },
+    {
+      "path": "recipes/verify_neogeo_collection_overlay_r22.py",
+      "bytes": 2281,
+      "sha256": "70fdadd8526c11b963b32812cb80d1e23bc9f6a5f1c475f6f6a65294b142990c"
+    },
+    {
+      "path": "STATUS.json",
+      "bytes": 1669,
+      "sha256": "000789193a5ebc56f4e89adbc6c3942a0d0b56d8d23a2d2a725861d1e83cef3c"
+    },
+    {
+      "path": "tests/android-build.log",
+      "bytes": 3568,
+      "sha256": "e99d92f6bb58e781459d57e372f408f8f9f299fc61188cd3ac81db7d7c3af135"
+    },
+    {
+      "path": "tests/routes-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/routes.log",
+      "bytes": 45,
+      "sha256": "f5e5557f2b7b8f7fd3a7cd8d3be61dc2e2854286d8c2312ed4a9eb8094bbb39a"
+    },
+    {
+      "path": "tests/scroll.log",
+      "bytes": 24,
+      "sha256": "8bcc278e66a95e30306dd550633e8a9ce12bd33a5df0aa2791386a4c62b3f8da"
+    },
+    {
+      "path": "tests/visibility.log",
+      "bytes": 94,
+      "sha256": "7bcf77b6b0cabb05c3b1755030a11e9884be58cb934c895a68955ac6c0957422"
+    }
+  ]
+}

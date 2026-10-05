@@ -1,0 +1,41 @@
+{
+  "source": "server-published-catalog-tsv",
+  "platform": "neogeo",
+  "commit": "100e4bbd92aa4c85cda10a633e6463fbb24ae8ab",
+  "path": "docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "sourceSHA256": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e",
+  "serverDeclaredCatalogRevision": 14,
+  "url": "https://github.com/luziellacerda/Servidor-pix/blob/100e4bbd92aa4c85cda10a633e6463fbb24ae8ab/docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "folders": [
+    {
+      "folderPath": "",
+      "count": 128
+    },
+    {
+      "folderPath": "# 0 - ART OF FIGTHERS COLE\u00c7\u00c3O #",
+      "count": 2
+    },
+    {
+      "folderPath": "# 1 - METAL SLUG COLE\u00c7\u00c3O #",
+      "count": 9
+    },
+    {
+      "folderPath": "# 2 - SAMURAI SHODOWN COLE\u00c7\u00c3O #",
+      "count": 6
+    },
+    {
+      "folderPath": "# 3 - THE KING OF FIGTHERS COLE\u00c7\u00c3O #",
+      "count": 26
+    },
+    {
+      "folderPath": "# 4 - FATAL FURY COLE\u00c7\u00c3O #",
+      "count": 4
+    },
+    {
+      "folderPath": "# 5 - HACKS #",
+      "count": 14
+    }
+  ],
+  "visibleItems": 189,
+  "deviceObserved": false
+}
