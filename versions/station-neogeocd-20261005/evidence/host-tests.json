@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "output": "CLI=-rompath '/tmp/station-cd-host-b2dlkzlr/fixture/roms/.station-v2/neo-geo-cd/station_fixture/install-1/content' -cdrom '/tmp/station-cd-host-b2dlkzlr/fixture/roms/.station-v2/neo-geo-cd/station_fixture/install-1/content/Magical Drop 2 (World).chd' -bios official\nPASS 25 CD dependency, import, exact identity, header, CLI and preservation checks",
+  "androidRuntimeTested": false,
+  "biosBundled": false
+}

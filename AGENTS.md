@@ -8,7 +8,17 @@ Android: 007 abriu em GameActivity/CoreService próprios, com entrada Android do
 
 Fontes finais: overlay native em `E:\ESTUDO APK\work\station-n64-controls-r19-20261005`, demais headers/objetos de `station-download-performance-20261005/frontend-native`. Usar recursos R19B. Base R18 e primeiro R19 arquivados em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais` (duplicatas E removidas após hashes iguais). Não instalar primeiro R19. Trabalho visual R20 separado ainda não integra esta revisão. Preservar jogos/saves/licença e atualizar sem limpar dados.
 
-## Histórico anterior
+## Neo Geo CD recebido separadamente
+
+Os commits remotos 0e82d7a/140f43a/5dea14c e seus documentos foram preservados na conciliação. O delta CD foi preparado sobre R18 e NÃO está no APK R19B. A receita de empacotamento CD exige revisão para usar a base R19B e preservar SO/recursos N64 corrigidos; não executar a receita R18 sobre a instalação mais nova. Nenhum novo motor CD foi instalado nesta entrega.
+
+## Histórico anterior (R18 e retorno CD anterior à R19B)
+
+# Neo Geo CD preparado — produção catálogo14 — 05/10/2026
+
+Leia `docs/server/RETORNO-NEOGEOCD-20261005.md` e `versions/station-neogeocd-20261005/README.md`. Servidor publicou 50 CD / 2.212 jogos com capas/sinopses; BIOS CD ausente. Delta MAME Java/DEX preparado, ainda sem APK assinado/instalação. **R18 abaixo é a última instalação comprovada**, com filesystem/rompath, R17 navegação, R16 offline/download e N64 completo. O delta CD foi conciliado com este retorno e recompilado; usar R18 como base e preservar licença/dados/saves/certificado.
+
+---
 
 # R18 — Neo Geo filesystem + navegação R17 — 05/10/2026
 

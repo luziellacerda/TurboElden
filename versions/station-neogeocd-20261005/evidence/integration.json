@@ -1,0 +1,11 @@
+{
+  "mameCliParserSha256": "b0e52999ac34123f1bb2f6a6cd4d958b9fb95cb77b828c1cb8b2dd3d9a4d4aa0",
+  "rompathAndCdPathWithSpacesCorrect": true,
+  "nativeArgvCount": 6,
+  "overlayChecks": "dry-run2 / apply2 / dry-run0",
+  "bootstrapIdenticalToR18": true,
+  "baseCommit": "954707196be089969b723e16f68cccaa0c48dea2",
+  "baseApkSha256": "a29151da312830d826f6ea71ebb61cb8a39fe1c21786f719e26a61568b29b1c4",
+  "apkProduced": false,
+  "deviceTested": false
+}
