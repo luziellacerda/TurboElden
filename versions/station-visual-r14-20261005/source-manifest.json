@@ -1,0 +1,122 @@
+{
+  "parentAppCommit": "3a5a29dc93648e467d631ba2b02e8522111eee0c",
+  "privateMediaExcluded": true,
+  "files": {
+    "apply_action_visual_r14.py": {
+      "bytes": 2300,
+      "sha256": "40c71c2cbe55e0d59e10bad7ffcbf320f02f720eb9dfedf14ce6e7553f2bc7e2"
+    },
+    "evidence/actions.log": {
+      "bytes": 129,
+      "sha256": "3fe18ba0a5e70755d78a6f9144082972c2f2a1eb4073270bde7a287210fe7734"
+    },
+    "evidence/alignment-check.log": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "evidence/build-result.json": {
+      "bytes": 1215,
+      "sha256": "9c5fa634b7bea361a6ccaa9b4a0570ee521e80c86145c5f30c94a704bce24b9d"
+    },
+    "evidence/buttons-preview.png": {
+      "bytes": 23968,
+      "sha256": "8c75536f1caf4e7ae8c38e0cfa94855c909fac83b0af5376f5a8aa1800bbe384"
+    },
+    "evidence/device-games.png": {
+      "bytes": 2660493,
+      "sha256": "13555a72b476e853c23708acece2d56e40600e7f34577fefdc9e94156794e99e"
+    },
+    "evidence/device-result.json": {
+      "bytes": 1155,
+      "sha256": "e200b63dadc6068082de7a115cb665b8e69b66e13eebb5e4f4171c69409eda41"
+    },
+    "evidence/media-manifest.json": {
+      "bytes": 4640,
+      "sha256": "f895c72dc8978c81ecebab0a4b8de0cb45942992b1ec06eb8bed742aa165fe22"
+    },
+    "evidence/navigation.log": {
+      "bytes": 121,
+      "sha256": "f419d52761d45ef7e083ad64af7d8e5293ee57f2f198faf7bd39e017cb66f1d6"
+    },
+    "evidence/signature.log": {
+      "bytes": 307,
+      "sha256": "86488100b4aa2cc18888de8b90a43bbe9e2c06f51eebc88946861351d4b1da5a"
+    },
+    "evidence/tests.json": {
+      "bytes": 2691,
+      "sha256": "1cd74d9c8d0345775cf01e726ea9233fe20fb80b296e1e78c367dd2c326fc57a"
+    },
+    "native/collection_video_policy.h": {
+      "bytes": 1518,
+      "sha256": "14b99207d83c0453456c743656929f7c9b2fcbd7c83788ce483889acfd3377d8"
+    },
+    "native/native_action_motion.h": {
+      "bytes": 3179,
+      "sha256": "f601bb306f07ef30797abee7006dc13ee40958540f654f6ccda6fba2befb2c00"
+    },
+    "native/native_carousel.cpp": {
+      "bytes": 29144,
+      "sha256": "853a112fd84945ab86630b08944fbc1f54c5948e5e4bbf54eabc4a4563c2ee6b"
+    },
+    "native/native_folders.h": {
+      "bytes": 9078,
+      "sha256": "66d904b0d4dffde9a3a70532796f45eed31cff970cfaacf19383fd0189724e6f"
+    },
+    "native/native_formation.h": {
+      "bytes": 9233,
+      "sha256": "11d65bf792c603756f2cda15626cb20a6e7d3ac72fbaeaca60fcbffe908b0e56"
+    },
+    "native/native_game_actions.h": {
+      "bytes": 5523,
+      "sha256": "571e04f31351312a5b520299d2b7b1e392f997c432e8b14fbc7e296710895330"
+    },
+    "native/native_info.h": {
+      "bytes": 6640,
+      "sha256": "1f3690a6991d167a2adcb2621242a5d38e5e144192a5974ae191a39463c9f7c2"
+    },
+    "native/native_netplay.h": {
+      "bytes": 4024,
+      "sha256": "dc2765d93f004217d1e01b3e71adfeb637ce87e37a03b76f9a1ddc64daa4694f"
+    },
+    "native/native_skin.h": {
+      "bytes": 12972,
+      "sha256": "81d8d9d6669ffb28a37c3ff2f697429431425c14318db220921e268b0e4cde93"
+    },
+    "native/native_system_video720.h": {
+      "bytes": 17481,
+      "sha256": "3effaed1cc117e5132ecbbb362000932cdff5e3a1aeb14ebb3c783c291291160"
+    },
+    "native/video720_posters.h": {
+      "bytes": 5994,
+      "sha256": "3a8911b727fc08722659b7859d53857e2079f3b0574e9c147b4e5722e9a9c101"
+    },
+    "native_game_actions_r14.h": {
+      "bytes": 5523,
+      "sha256": "571e04f31351312a5b520299d2b7b1e392f997c432e8b14fbc7e296710895330"
+    },
+    "package_visual_r14.py": {
+      "bytes": 4321,
+      "sha256": "440a401f0a9c35af9863bcff21233b48880e981a338db48dcc252ec9bec93238"
+    },
+    "prepare_visual_r14.py": {
+      "bytes": 3804,
+      "sha256": "94f5cfdcbc3cbd41098863eea8a6f7d7101a4fa0f4c493b05b8888b0936eeb5d"
+    },
+    "README.md": {
+      "bytes": 8176,
+      "sha256": "7e90c73c8c375105bdbcd3635c17d4a3633a399635fae4f174eb18c27aad858e"
+    },
+    "test_build_visual_r14.py": {
+      "bytes": 8107,
+      "sha256": "ed30a17d986c1a228a81bc1dc0a0235c85847d5f2402ffc5d62067d99c28e4dc"
+    },
+    "tests/actions.cpp": {
+      "bytes": 4297,
+      "sha256": "deb7e1e26e840b93f6bd6b706c99aea309468b4ce69eb064cbd018769c25299f"
+    },
+    "tests/navigation.cpp": {
+      "bytes": 6524,
+      "sha256": "ca79504ab34ed104c86f729525d99960cf61e0bf2eafd4f3e7a4a7b2acee34ef"
+    }
+  }
+}

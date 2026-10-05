@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-05T15:50:09.816071+00:00",
+  "installed": true,
+  "installMethod": "adb install --no-incremental -r --user 0",
+  "package": "org.turboramastation.frontend",
+  "apkSha256": "a1566d3d34305e01f5f445b6b61fb3db4e35fc8a4bc8a2f3e493fb3a433a38bf",
+  "deviceBaseApkSha256": "a1566d3d34305e01f5f445b6b61fb3db4e35fc8a4bc8a2f3e493fb3a433a38bf",
+  "deviceHashMatches": true,
+  "foreground": "org.emulationstation.frontend.ESActivity",
+  "observed": "SNES games, Clay Fighter selected; Download/Online/Saves/Delete/Refresh/Back icons and labels aligned, function colors visible. Saves/Delete disabled for non-installed selection. No login prompt in observed game list.",
+  "gameScreenScreenshotSha256": "13555a72b476e853c23708acece2d56e40600e7f34577fefdc9e94156794e99e",
+  "collectionVideoVisualVerified": false,
+  "reason": "USB disconnected before collection-return action; tap failed with no devices found. No claim that the return gesture or collection video was observed in R14. Foreground video geometry/content tested on PC.",
+  "screenSettingsChanged": false,
+  "userDataCleared": false,
+  "serverDeployed": false,
+  "stable": false
+}

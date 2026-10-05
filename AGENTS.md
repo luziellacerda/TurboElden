@@ -1,3 +1,13 @@
+# Estado vigente — R14 visual instalado; 05/10/2026
+
+Leia `versions/station-visual-r14-20261005/README.md` e `evidence/device-result.json`. APK **a1566d3d34305e01f5f445b6b61fb3db4e35fc8a4bc8a2f3e493fb3a433a38bf**, 2.006.925.798 bytes, instalado por atualização e hash do base.apk igual. Botões inferiores com ícones/cores por função observados no SNES. Vídeos das coleções: célula original quadrada, vídeo inteiro sem crop/deformação e fundo derivado preparado offline; prévias novas. PC: 4096 meshes,1836 posições quadradas,443 navegações e5 vídeos decodificados. USB caiu antes da conferência visual do vídeo/retorno no telefone; não alegar essa prova nem marcar estável.
+
+Fonte canônica `E:\ESTUDO APK\work\station-netplay-20261004`; build `visual-r14`; APK `TurboStations-Visual-R14-20261005.apk`. R13 eR12 arquivados em G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais com hashes. Apenas4MP4 e1SO alterados sobreR13;11106entradas preservadas, classes35R12 e todos motores/DEX intactos. `native/video720_posters.o` canônico já contém49prévias; não adicionar novamente os5símbolos. Regeneração usa legado44 de `collection-video-r13/before/video720_posters.o`. Não reaplicar scripts one-shot. Nenhuma alteração em configuração de tela ou dados.
+
+Trabalho NeoGeo/N64 separado em outro chat está em preparação; `visual-r14/mame` e `visual-r14/classes30.dex`, criados por aquele trabalho antes de sua separação em `E:\ESTUDO APK\work\station-emulators-r15-20261005`, NÃO fazem parte deste APK/snapshot. Não empacotar a pasta por wildcard. O próximo candidato deve partir do R14 verificado e preservar mídia/visual/salas. Netplay R12/servidor continua conforme handoff anterior; não houve deploy Linux aqui.
+
+## Histórico anterior
+
 # Estado vigente — R12 netplay internet preparado, instalado, servidor pendente — 05/10/2026
 
 Leia `versions/station-internet-r12-20261005/README.md`. Pedido vigente usa o mesmo servidor Station para conectar redes distintas. Implementados WSS próprio, tickets individuais de uso único, bridge TCP local, encerramento e limites. Cem verificações locais passaram, inclusive Java→WSS C#→Java com 12.583.029 bytes em cada sentido. APK SHA256 **7684c6eee87985d8259becca9a22a9f4c7e3203f7c097df37da6998975596514**, 1.982.967.774bytes, em E:\ESTUDO APK\work\station-netplay-20261004. Fonte final `internet-r12`; netplay/src promovido com backup. R11 agora arquivado em G: com hash verificado.

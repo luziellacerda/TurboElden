@@ -1,0 +1,67 @@
+{
+  "videos": [
+    {
+      "source": "C:\\Users\\Admin\\Videos\\New folder\\## BOMBER MAN ##.mp4",
+      "sourceSha256": "c2832d57a9d08584fa0bdb47dd4256eef5b40e040d9072a5622c00420fbac858",
+      "asset": "assets/turbo-system-videos/720-collection-snes-bomberman.mp4",
+      "sha256": "41eaddb97660dd22f55629f2ee3d8ef5ffe431f262264a69df0b1665f73f84ac",
+      "previewSha256": "9f4e5860153b53211490691c74981789b5d693396347c44b22a9adad971a1b7a",
+      "displayAspect": 1.7777777777777777,
+      "fps": 30,
+      "speed": 1,
+      "audio": false,
+      "onlyFocusedPlays": true
+    },
+    {
+      "source": "C:\\Users\\Admin\\Videos\\New folder\\## DONKEY KONG ##.mp4",
+      "sourceSha256": "1e99ccba3c7bde53b7743d9ead2f3a6d2a6717da14e0a2fe2b195f396a25995f",
+      "asset": "assets/turbo-system-videos/720-collection-snes-donkeykong.mp4",
+      "sha256": "6ab7580783d43994bc51247bc3738b26ce73242ffbcae95f626927f3324411b4",
+      "previewSha256": "8960d7172f7951505d8e03081aa7f87e87fb98bcdb10daa3f7faf31fe88d9aeb",
+      "displayAspect": 1.7777777777777777,
+      "fps": 30,
+      "speed": 1,
+      "audio": false,
+      "onlyFocusedPlays": true
+    },
+    {
+      "source": "C:\\Users\\Admin\\Videos\\New folder\\## SUPER MARIO ##.mp4",
+      "sourceSha256": "57f0f1ee964c5ebd8571c64b6b0a8a6d53dd0c8d60c58f5a856e2c8c78d4d3c3",
+      "asset": "assets/turbo-system-videos/720-collection-snes-mario.mp4",
+      "sha256": "9c612fcaa3922c0610b6de7a8d3cc1fbd425ee9480093bd32f2b784ad27c9840",
+      "previewSha256": "840d8b3ed6b74494fe085bc285240a2cac70d5deb21fdf3780c3eee5b9e42c5e",
+      "displayAspect": 1,
+      "fps": 30,
+      "speed": 1,
+      "audio": false,
+      "onlyFocusedPlays": true
+    },
+    {
+      "source": "C:\\Users\\Admin\\Videos\\New folder\\## TOP GEAR ##.mp4",
+      "sourceSha256": "370a643a0dbb7bc8ad5058cea50a66642ce3ebf268cbbd544b8cfdf7a728175b",
+      "asset": "assets/turbo-system-videos/720-collection-snes-topgear.mp4",
+      "sha256": "488713cd2c0f6c283ede05be7f71bc6d37cf88ea5579894ef230e18522f88127",
+      "previewSha256": "ee10a9b065ea0db08bfd317d14a348e665aea3d318e307da8c72256f4d602860",
+      "displayAspect": 1.7777777777777777,
+      "fps": 30,
+      "speed": 1,
+      "audio": false,
+      "onlyFocusedPlays": true
+    },
+    {
+      "source": "C:\\Users\\Admin\\Videos\\New folder\\1 -PT-BR.mp4",
+      "sourceSha256": "e0f05631592f7fae2362cf5c76ffd6fb1b065f04921f2fdf2861719dbde99afb",
+      "asset": "assets/turbo-system-videos/720-collection-snes-ptbr.mp4",
+      "sha256": "bf184b1cd5775bd7db61e18ac64ba93eb76ad58ff425f3a34c94213e96e9c307",
+      "previewSha256": "d83837529fa904d79a1c2517061b3a4eae012c9dc0345aee66d0a6b1c92dd9a2",
+      "displayAspect": 1.7777777777777777,
+      "fps": 30,
+      "speed": 1,
+      "audio": false,
+      "onlyFocusedPlays": true
+    }
+  ],
+  "sourceFolder": "C:\\Users\\Admin\\Videos\\New folder",
+  "allGamesUsesPlatformVideo": true,
+  "cellLabelsRemoved": true
+}

@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "actions": "PASS 4096 action meshes: all vertices inside, 8 icons, 6 distinct colors, disabled/confirming states; 1836 square carousel slots\n",
+  "navigation": "PASS 443 native navigation checks; original IDs/indices, All, direct, nested, Back, flat catalogs and 200 refresh cycles\n",
+  "checks": [
+    {
+      "name": "static bool touchOnlineAction( unchanged",
+      "passed": true
+    },
+    {
+      "name": "static bool dispatchStationNetplay( unchanged",
+      "passed": true
+    },
+    {
+      "name": "native hit rectangles unchanged",
+      "passed": true
+    },
+    {
+      "name": "square all folder/platform cells",
+      "passed": true
+    },
+    {
+      "name": "cell strips and labels remain removed",
+      "passed": true
+    },
+    {
+      "name": "video lifecycle source unchanged",
+      "passed": true
+    }
+  ],
+  "media": [
+    {
+      "asset": "assets/turbo-system-videos/720-collection-snes-bomberman.mp4",
+      "fullDecodePassed": true,
+      "duration": "00:00:06.03",
+      "frame": "720x720",
+      "fps": 30,
+      "fullForegroundMeanAbsoluteError": 5.7666072245084585,
+      "foregroundBounds": [
+        0,
+        157,
+        720,
+        405
+      ],
+      "foregroundAspect": 1.7777777777777777
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-collection-snes-donkeykong.mp4",
+      "fullDecodePassed": true,
+      "duration": "00:00:08.03",
+      "frame": "720x720",
+      "fps": 30,
+      "fullForegroundMeanAbsoluteError": 3.337760631001372,
+      "foregroundBounds": [
+        0,
+        157,
+        720,
+        405
+      ],
+      "foregroundAspect": 1.7777777777777777
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-collection-snes-mario.mp4",
+      "fullDecodePassed": true,
+      "duration": "00:00:21.23",
+      "frame": "720x720",
+      "fps": 30
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-collection-snes-topgear.mp4",
+      "fullDecodePassed": true,
+      "duration": "00:00:06.03",
+      "frame": "720x720",
+      "fps": 30,
+      "fullForegroundMeanAbsoluteError": 4.977718335619571,
+      "foregroundBounds": [
+        0,
+        157,
+        720,
+        405
+      ],
+      "foregroundAspect": 1.7777777777777777
+    },
+    {
+      "asset": "assets/turbo-system-videos/720-collection-snes-ptbr.mp4",
+      "fullDecodePassed": true,
+      "duration": "00:00:15.03",
+      "frame": "720x720",
+      "fps": 30,
+      "fullForegroundMeanAbsoluteError": 4.6900045724737085,
+      "foregroundBounds": [
+        0,
+        157,
+        720,
+        405
+      ],
+      "foregroundAspect": 1.7777777777777777
+    }
+  ],
+  "compiledAndroid26": true,
+  "deviceVisualVerified": false
+}

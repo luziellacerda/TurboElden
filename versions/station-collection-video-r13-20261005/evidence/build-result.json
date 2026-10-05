@@ -1,0 +1,28 @@
+{
+  "builtAt": "2026-10-05T15:23:07.761447+00:00",
+  "baseApk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Netplay-Internet-R12-20261005.apk",
+  "baseSha256": "7684c6eee87985d8259becca9a22a9f4c7e3203f7c097df37da6998975596514",
+  "apk": "E:\\ESTUDO APK\\work\\station-netplay-20261004\\TurboStations-Colecoes-Videos-R13-20261005.apk",
+  "sha256": "1dd21157ce0a0fcf5836bb3827e1eed90637eaac8fa09559f3dc0eb15ccf5a60",
+  "bytes": 2009321958,
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [
+    "assets/turbo-system-videos/720-collection-snes-bomberman.mp4",
+    "assets/turbo-system-videos/720-collection-snes-donkeykong.mp4",
+    "assets/turbo-system-videos/720-collection-snes-mario.mp4",
+    "assets/turbo-system-videos/720-collection-snes-ptbr.mp4",
+    "assets/turbo-system-videos/720-collection-snes-topgear.mp4"
+  ],
+  "preservedEntries": 11105,
+  "roomsDexSha256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "certificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "fullPayloadIntegrityPassed": true,
+  "compressionPreserved": true,
+  "alignment16KiBPassed": true,
+  "serverDeployed": false,
+  "installed": false,
+  "androidGameplayVerified": false,
+  "stable": false
+}
