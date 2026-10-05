@@ -1,0 +1,36 @@
+R20 local ANGLE shader validation
+
+Requirements: Windows x64, Python with NumPy 2.3.5 and Pillow 12.3.0, and compatible
+ANGLE libEGL.dll/libGLESv2.dll in one directory. The DLLs are external dependencies
+and are not included here. Install Python dependencies from requirements.txt.
+
+Invoke in PowerShell:
+  .\run.ps1 -Root <R20-root> -AngleDll <ANGLE-directory> -Python <python.exe>
+
+R20-root must contain:
+  native/premium-magazine-led-android.glsl
+  native/native_neogeocd_square.h
+  refs/neogeo-svcplus.png
+  refs/neogeo-aof.png
+  refs/neogeocd-square.png
+  refs/neogeocd-video-frame.png
+
+The recipe includes a byte-identical W16 baseline shader and the ordinary-photo
+negative control. The source provenance/hashes for all inputs are in inputs.json.
+Source PNGs are decoded, uploaded unchanged, and rendered with GLES. Pillow is
+used only for PNG decoding/encoding. Small-card textures and ordinary-art crops
+are produced by GLES, and each saved effect preview comes from glReadPixels.
+
+Each run writes a new R20-root/led-tests/angle-TIMESTAMP directory and latest.json.
+report.json records the Python/package versions, harness SHA-256, DLL hashes,
+shader/input hashes, compile/link logs, every GL error check and pixel results.
+
+Checks include frames 0/60/120, native-size 262x393 signatures, ordinary-art
+negative controls, W16/R20 profile 0/1/2 byte-identical readbacks, square 2D/OES
+equivalence, the bottom-dot exclusion, four animated pictograms, and no new
+clipped-white blocks. OES uses EGLImage-backed real reference pixels, not a
+running Android MediaPlayer. Instrumented texture-call counts are source-level
+counts, not GPU hardware/cache counters. PC results do not certify Android
+performance, timing, or user visual approval.
+
+No shader edits, APK builds, USB operations, or Git operations are performed.

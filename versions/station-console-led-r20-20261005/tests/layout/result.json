@@ -1,0 +1,30 @@
+{
+  "base": "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native",
+  "native": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\native",
+  "host_test": "PASS 11601 checks: systems and games bands, landscape and portrait, no artwork, narrow text, offscreen origins, no overlap",
+  "compile": [
+    "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "-pedantic",
+    "-IE:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\native",
+    "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\info-tests\\layout.cpp",
+    "-o",
+    "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\info-tests\\layout.exe"
+  ],
+  "metadata_paging_unchanged": true,
+  "title_placement_unchanged": true,
+  "headers": {
+    "native_info.h": {
+      "before_sha256": "1f3690a6991d167a2adcb2621242a5d38e5e144192a5974ae191a39463c9f7c2",
+      "after_sha256": "3e31aa133607f6ab3b986e92c3850333d4085b091ad3cd64713f29a77cb08dc0"
+    },
+    "station_info_layout.h": {
+      "before_sha256": "d93c3c14843f96e969a5dc2c1c148d7fef3385dcd83b9e8a2391661cb7ab8858",
+      "after_sha256": "d07e1865b38e2207bb4dac7c507eedf602aa910c6b88a9beee0e435da1bd8731"
+    }
+  },
+  "integration_note": "Root must remove the systemsMode guard from drawStationConsole in native_console.h.",
+  "no_apk_usb_git_operations": true
+}

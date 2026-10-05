@@ -1,3 +1,15 @@
+# R20 — LEDs Neo Geo e consoles — 05/10/2026
+
+Leia `versions/station-console-led-r20-20261005/README.md`. R20 instalado por atualização, SHA do telefone igual a `64eae3ab4dd253e25ee826dd23bf02c947e5cbd1db70e6b07f759d988d465904`, APK em `E:\ESTUDO APK\work\station-console-neogeocd-r20-20261005\TurboStations-Consoles-LED-R20-20261005.apk`, 2.041.498.580 bytes. Só carousel SO alterado; 13.080 entradas preservadas da R19B (inclusive resources.arsc N64, Neo Geo R18 e todos os DEX/motores).
+
+Máscara própria para revistas Neo Geo e Neo Geo CD quadrado/vídeo, com programas 2D/OES e cores da arte. Sete ilustrações locais de hardware: SNES/Mega/N64/NeoGeo/CD/Naomi1/2; aliases regionais. Testes: 11.601 layout, 52 chaves, 3.030 navegação, 10 programas GLES/125 checks GL; 18 renders antigos byte-identical. NDK/API26, assinatura/alinhamento e preservação por entrada passaram. Android: foto MegaBR ao lado da sinopse observada; LED específico NeoGeo/CD ainda não conferido visualmente no aparelho. Não declarar estabilidade geral/FPS/consumo comprovados.
+
+**Correção posterior do mantenedor:** console somente na sinopse dos jogos, não no carrossel principal/coleções. R20 já tinha sido instalado com hardware nos três modos; chat coordenado prepara delta sobre R20 para restringir isso, preservando os LEDs. Não repetir o layout R20 de plataformas como requisito final aprovado.
+
+Fontes finais R20 em E: `station-console-neogeocd-r20-20261005/native`; includes/objeto restantes W16 em `station-download-performance-20261005/frontend-native`. Header console_assets gerado dos PNGs versionados; não depende da pasta de geração da IA. APK R19B e SOs históricos R19B/W16 arquivados G com hashes, fontes/recursos/stubs/objeto permanecem E. Novo motor CD recebido do servidor/Git ainda não incluído no APK R20. Preservar dados/licença/saves. Ver recibos e manifesto para próximos empacotamentos.
+
+## Histórico anterior
+
 # R19B — N64 próprio, abertura e controles conferidos — 05/10/2026
 
 Leia `versions/station-n64-controls-r19b-20261005/README.md` e `RECONSTRUCAO-E-FLUXOS.md` na mesma pasta. APK instalado por atualização, agora arquivado em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-N64-Controles-R19B-20261005.apk`, SHA256 `c8fcb15f0951cf5874ac9de2fa2f2e9bfbe26813b7e9ddea5b897355cea4157c`, 2.036.265.660 bytes; hash do telefone idêntico. `STATUS.json` e recibos registram localização/estado; a duplicata APK em E: foi removida só após conferir a cópia.

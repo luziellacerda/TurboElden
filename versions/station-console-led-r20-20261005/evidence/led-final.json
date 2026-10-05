@@ -1,0 +1,1987 @@
+{
+  "environment": "Windows ANGLE offscreen GLES2; not Android hardware",
+  "output": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629",
+  "compile": [
+    {
+      "name": "R20 magazine actual GLES100 models0/1/2/3",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "6b6b282866ba897ef821e6ef30862f8c50b74fe37ae5befbd47fcf5c2e40d250",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "0617824fb8b9a526f7cf83c2a846fde34a03cb358487fc6390779d8ff373dbe9",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": "(151,1): warning X4000: use of potentially uninitialized variable (f_region)\n\n\n"
+    },
+    {
+      "name": "W16 magazine actual GLES100 models0/1/2",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "b76c20c6b5f1ed25f8eb1f22619b42eb604d65ec048b34a85e27d1fdc2cfce90",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "e8af7c1bfa8c94e6f75f86b9f41ed66ea89cd444946194318c073621544496d2",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": "(151,1): warning X4000: use of potentially uninitialized variable (f_region)\n\n\n"
+    },
+    {
+      "name": "source passthrough",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "a382a0df5ac4fbae255adef714752494e076d56391e08d065e4f459f3985e389",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    },
+    {
+      "name": "R20 square actual sampler2D",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "220b54ce2f55c30e9f5a89a7d5547480326272c6387753471f38e9791eb5e15c",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    },
+    {
+      "name": "R20 square actual samplerExternalOES",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "24e8c10c4948302ed5b2ada208afd65baf9e693c19a7d3750a6abec2c83a7f2f",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    },
+    {
+      "name": "diagnostic Neo signature",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "6b6b282866ba897ef821e6ef30862f8c50b74fe37ae5befbd47fcf5c2e40d250",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "7622ecdb8cba44be4bffd19807ac2ed8cbee4cb9c9b4818e27fdb6d2ec9725cf",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    },
+    {
+      "name": "diagnostic Neo geometry mask",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "6b6b282866ba897ef821e6ef30862f8c50b74fe37ae5befbd47fcf5c2e40d250",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "4f9031242327539157b17ac79a4684678d19c2aadfb51d268853fbeaf6140817",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    },
+    {
+      "name": "diagnostic source sampleArt call counter (not hardware fetch counter)",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "0bfe2b5ce1c81e2961a75f882c12b170b601e68d6f281be2ca8ddb326673cf72",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "f3e777f53c3b673ecf0b13c01965779c0786e9b6c6aa289c4ae1125a65d43030",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    },
+    {
+      "name": "ordinary game-art crop through GLES svcplus",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "ea9c69722facc93fa9ea7008fe7774f435d1ae9510a4bc00a170ad297e6a2dce",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    },
+    {
+      "name": "ordinary game-art crop through GLES aof",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "ea9c69722facc93fa9ea7008fe7774f435d1ae9510a4bc00a170ad297e6a2dce",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    }
+  ],
+  "gl_errors": [
+    {
+      "operation": "initialize",
+      "errors": []
+    },
+    {
+      "operation": "compile R20 magazine actual GLES100 models0/1/2/3",
+      "errors": []
+    },
+    {
+      "operation": "compile W16 magazine actual GLES100 models0/1/2",
+      "errors": []
+    },
+    {
+      "operation": "compile source passthrough",
+      "errors": []
+    },
+    {
+      "operation": "compile R20 square actual sampler2D",
+      "errors": []
+    },
+    {
+      "operation": "compile R20 square actual samplerExternalOES",
+      "errors": []
+    },
+    {
+      "operation": "compile diagnostic Neo signature",
+      "errors": []
+    },
+    {
+      "operation": "compile diagnostic Neo geometry mask",
+      "errors": []
+    },
+    {
+      "operation": "compile diagnostic source sampleArt call counter (not hardware fetch counter)",
+      "errors": []
+    },
+    {
+      "operation": "upload (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 9 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 21 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 24 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 9 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "upload (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "compile ordinary game-art crop through GLES svcplus",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 27 f0 (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "upload (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "upload (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 9 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 21 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 24 f0 (1024, 1536)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 9 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "upload (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "compile ordinary game-art crop through GLES aof",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 30 f0 (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "upload (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (320, 480)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 6 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (262, 393)",
+      "errors": []
+    },
+    {
+      "operation": "upload (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 9 f0 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "EGLImage external texture",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 12 f0 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 15 f0 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 12 f60 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 15 f60 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 12 f120 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 15 f120 (1254, 1254)",
+      "errors": []
+    },
+    {
+      "operation": "upload (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 9 f0 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "EGLImage external texture",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 12 f0 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 15 f0 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 12 f60 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 15 f60 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 12 f120 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 15 f120 (720, 720)",
+      "errors": []
+    },
+    {
+      "operation": "upload (512, 512)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 9 f0 (512, 512)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 18 f0 (1, 1)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f0 (512, 512)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f60 (512, 512)",
+      "errors": []
+    },
+    {
+      "operation": "draw/read 3 f120 (512, 512)",
+      "errors": []
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-source-gl.png",
+      "pixel_sha256": "640af2f949ed52f36ee51de713105fc06f2bbe1ced50d7045927e8b00106f2a9",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-f0.png",
+      "pixel_sha256": "ee014f08e259b2d66ffe4dfc866ee42b6f19c7243ccd49a75dc9d60ab8b2862e",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-ledonly-f0.png",
+      "pixel_sha256": "d1739d1cbaa5a5af72c6aa14394980a5f23ed0ddf5270a9291177af862fb0e46",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-f60.png",
+      "pixel_sha256": "6d86252e820531716eb106f96b1dd139c36413f1983bbf25b65b0cf692fb5983",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-ledonly-f60.png",
+      "pixel_sha256": "656ad54e2f2579d34d12126c4d3df4b3a85068f8ae2df0af77e0e7ee229d15f5",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-f120.png",
+      "pixel_sha256": "cebfe9983ca970c95594898894b919313a5b2b827b60ffebeb5514af04ed0a3e",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-ledonly-f120.png",
+      "pixel_sha256": "e1c214cd1b988914b6306da7d8a5e7fa3e35453fd4cc54bc51059cd63e05da8e",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-geometry-mask.png",
+      "pixel_sha256": "6ad72e95da2b4b710ea898f4cc43fbcc8cf871298cd44dc68336d7159c265c1d",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-temporal-mask.png",
+      "pixel_sha256": "de8fa3d7c4b98a4904ef2ec4ebf747eed9c6395c76d13709e665df879b6bc428",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-ledonly-temporal-mask.png",
+      "pixel_sha256": "c77cda42d8ffa03e88abc5ec0a39291ffcd41ec4f2206a2541c3f5be6301a2b2",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-small-f0.png",
+      "pixel_sha256": "329a90958e7c0c6d2e9e116fd2a29371f82e19878fce3053b418fbaffae7c186",
+      "size": [
+        262,
+        393
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-small-f60.png",
+      "pixel_sha256": "d608a7ca87fec76c3d00b9d1afe055590c1a0df6888fd7ad5a0f5b213c60b2ce",
+      "size": [
+        262,
+        393
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-small-f120.png",
+      "pixel_sha256": "d45e00f7ac2f731ab3ebddb14874750ad23180ab3d20dbdfe00e4877cabf8ba7",
+      "size": [
+        262,
+        393
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-small-temporal-mask.png",
+      "pixel_sha256": "7cb4bc639c39507ff497e73c9962072819020aed4df4c4365dc85daa20e4cd1d",
+      "size": [
+        262,
+        393
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\svcplus-ordinary-art-gl.png",
+      "pixel_sha256": "4cfea2b3f034b3d0e4a9113d2400ac2c84351241b5bc9fcf0aba27f1fac33186",
+      "size": [
+        320,
+        480
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-source-gl.png",
+      "pixel_sha256": "49fde7eef66082a8821ca31ae6a4aee16e043c141827dd4353a2cd101ce3c4c9",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-f0.png",
+      "pixel_sha256": "5d0e617e523e0739a7b571c292f46df05a511f9644a6e4127067ebf88d6b76f3",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-ledonly-f0.png",
+      "pixel_sha256": "fbdb1b786207eecbb8148d68999d640ecd8d0dec4256f3fa26f814dbc4044de1",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-f60.png",
+      "pixel_sha256": "12652a782746d351a274d2f333225b24a4e1f77cef578dcf7c10822e651bc2e9",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-ledonly-f60.png",
+      "pixel_sha256": "ed9eb98263a717d091195b4dc02a3fb3d97b7b3896d019b5394013c937d63262",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-f120.png",
+      "pixel_sha256": "be876be697cb9c9bd34fe0ec3816e0c0a9b3a36dd7957148c3fcfffbb05e79c6",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-ledonly-f120.png",
+      "pixel_sha256": "19cbf2d56dc20fd4eafd3bf4d43ff450764928f843ef15bbe2edce5b79a062d1",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-geometry-mask.png",
+      "pixel_sha256": "6ad72e95da2b4b710ea898f4cc43fbcc8cf871298cd44dc68336d7159c265c1d",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-temporal-mask.png",
+      "pixel_sha256": "aa7618aad6685eaa9db70591f37a86566e668cef6a25a97fa6e00257f6e35c06",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-ledonly-temporal-mask.png",
+      "pixel_sha256": "3ff8b677052f461fbf075be48a47143543019e2491101a12d821aaecc7adf3c8",
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-small-f0.png",
+      "pixel_sha256": "c37995552e3f0267a97abb0c178c63812175f2ef279ba02f41937a16e011cc27",
+      "size": [
+        262,
+        393
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-small-f60.png",
+      "pixel_sha256": "2366a6f5c44499a6aa5f2387f43bb48389960f602bcf7e89a14bad77f3b5f6d0",
+      "size": [
+        262,
+        393
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-small-f120.png",
+      "pixel_sha256": "7a5a2bc050eb0c6cec68f88ff6fbb3a2ceeb65d4748984322452a93975964c28",
+      "size": [
+        262,
+        393
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-small-temporal-mask.png",
+      "pixel_sha256": "9a90557fe18e6e8a1f30e7b7a2bab89661656c88d4439d739cf10c8869a3d851",
+      "size": [
+        262,
+        393
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\aof-ordinary-art-gl.png",
+      "pixel_sha256": "5555ffa6a922c0cf702b2320dc728dc2b102ff93fc1a61addce477680a2f86ac",
+      "size": [
+        320,
+        480
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-square-source-gl.png",
+      "pixel_sha256": "bd45fc28b4b64e463b559f8887822811277f2945876ec71303866addbb0080d8",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-square-2d-f0.png",
+      "pixel_sha256": "42a0179d4c64acdb1c3a75dfbc8c25955f4a4bad02e9a98328cdbd24835a6014",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-square-oes-f0.png",
+      "pixel_sha256": "42a0179d4c64acdb1c3a75dfbc8c25955f4a4bad02e9a98328cdbd24835a6014",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-square-2d-f60.png",
+      "pixel_sha256": "9e7e9c57a711182074a608a8dab8f4cb85e9ce041ed74afcf0af0143a064033e",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-square-oes-f60.png",
+      "pixel_sha256": "9e7e9c57a711182074a608a8dab8f4cb85e9ce041ed74afcf0af0143a064033e",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-square-2d-f120.png",
+      "pixel_sha256": "6f2cfd05af26564eaf622eeefcc1d58822179af5ee7f1a74570d60baf5488684",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-square-oes-f120.png",
+      "pixel_sha256": "6f2cfd05af26564eaf622eeefcc1d58822179af5ee7f1a74570d60baf5488684",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-square-temporal-mask.png",
+      "pixel_sha256": "eeceb7eed5733e43854d8ebedf1f1f264ad39adf515ab3d619baf425a3154996",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-video-source-gl.png",
+      "pixel_sha256": "bd4961dea86727a31b7e21553ea10fde70af0e16269dff8765d773e7f9958d83",
+      "size": [
+        720,
+        720
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-video-2d-f0.png",
+      "pixel_sha256": "16f9006d2fc297e5823d53120ef6cf7c453716da27102fec96b21d2d5b4801c9",
+      "size": [
+        720,
+        720
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-video-oes-f0.png",
+      "pixel_sha256": "16f9006d2fc297e5823d53120ef6cf7c453716da27102fec96b21d2d5b4801c9",
+      "size": [
+        720,
+        720
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-video-2d-f60.png",
+      "pixel_sha256": "d0033f01b85655fd68dc46471f5c6812d6b930c3e92f9c49269e5d2b5cf4d54d",
+      "size": [
+        720,
+        720
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-video-oes-f60.png",
+      "pixel_sha256": "d0033f01b85655fd68dc46471f5c6812d6b930c3e92f9c49269e5d2b5cf4d54d",
+      "size": [
+        720,
+        720
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-video-2d-f120.png",
+      "pixel_sha256": "84cef80946bfc01ae0788419bdd0fa7bc68fa99bedbe6f569ba8dd788d450c7d",
+      "size": [
+        720,
+        720
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-video-oes-f120.png",
+      "pixel_sha256": "84cef80946bfc01ae0788419bdd0fa7bc68fa99bedbe6f569ba8dd788d450c7d",
+      "size": [
+        720,
+        720
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\neogeocd-video-temporal-mask.png",
+      "pixel_sha256": "d4061339a25cb316665b1de30ae3b5c582cdc5b07c4bb05ccc453dd867f271ed",
+      "size": [
+        720,
+        720
+      ]
+    },
+    {
+      "file": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\angle-20261005-153629\\ordinary-console-photo-source-gl.png",
+      "pixel_sha256": "8d0cb2454784cdbec919b42f83000a21ea8b492c6630a7a891a42b64c5df447b",
+      "size": [
+        512,
+        512
+      ]
+    }
+  ],
+  "legacy": [
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    }
+  ],
+  "neo": [
+    {
+      "name": "svcplus",
+      "source": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeo-svcplus.png",
+      "source_sha256": "9e9aef8d5d7953a26bdbb25a10f345c27f58b110e64043311ba036631da23de4",
+      "source_dimensions": [
+        1024,
+        1536
+      ],
+      "signature_0_to_1": 0.9176470588235294,
+      "render_readback_ms": [
+        12.506700004450977,
+        12.057800020556897,
+        13.269699993543327
+      ],
+      "source_sample_calls_per_pixel": {
+        "15": 1495484,
+        "16": 12336,
+        "17": 672,
+        "18": 1248,
+        "19": 12120,
+        "20": 51004
+      },
+      "led_changes_outside_expanded_chassis_gt1": 0,
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "temporal_changed_pixels_gt1": 1005275,
+      "temporal_max_delta": 255,
+      "versus_source": [
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 255,
+          "changed_pixels_gt1": 1129667,
+          "mean_channel_delta": 10.039238135019938
+        },
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 123,
+          "changed_pixels_gt1": 1126574,
+          "mean_channel_delta": 10.35079828898112
+        },
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 123,
+          "changed_pixels_gt1": 1127906,
+          "mean_channel_delta": 11.60527769724528
+        }
+      ],
+      "led_only": {
+        "frames": [
+          0,
+          60,
+          120
+        ],
+        "temporal_changed_pixels_gt1": 39765,
+        "temporal_max_delta": 255,
+        "versus_source": [
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 255,
+            "changed_pixels_gt1": 41159,
+            "mean_channel_delta": 0.3028570810953776
+          },
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 33,
+            "changed_pixels_gt1": 40217,
+            "mean_channel_delta": 0.10106706619262695
+          },
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 44,
+            "changed_pixels_gt1": 39762,
+            "mean_channel_delta": 0.09404865900675456
+          }
+        ]
+      },
+      "signature_gpu262x393": 0.9294117647058824,
+      "gpu262x393": {
+        "frames": [
+          0,
+          60,
+          120
+        ],
+        "temporal_changed_pixels_gt1": 65056,
+        "temporal_max_delta": 255,
+        "versus_source": [
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 255,
+            "changed_pixels_gt1": 72503,
+            "mean_channel_delta": 9.89576170774819
+          },
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 124,
+            "changed_pixels_gt1": 72203,
+            "mean_channel_delta": 10.145237262785773
+          },
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 124,
+            "changed_pixels_gt1": 72416,
+            "mean_channel_delta": 11.394967756346755
+          }
+        ]
+      }
+    },
+    {
+      "name": "aof",
+      "source": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeo-aof.png",
+      "source_sha256": "0751ecf65c8973e9cc1c4b3cdc7e4e856a129ab271d796f78b72226c3fc13896",
+      "source_dimensions": [
+        1024,
+        1536
+      ],
+      "signature_0_to_1": 0.9215686274509803,
+      "render_readback_ms": [
+        15.280399995390326,
+        14.637700049206614,
+        12.142000021412969
+      ],
+      "source_sample_calls_per_pixel": {
+        "15": 1495484,
+        "16": 12336,
+        "17": 672,
+        "18": 1248,
+        "19": 12120,
+        "20": 51004
+      },
+      "led_changes_outside_expanded_chassis_gt1": 0,
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "temporal_changed_pixels_gt1": 896947,
+      "temporal_max_delta": 255,
+      "versus_source": [
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 255,
+          "changed_pixels_gt1": 1007088,
+          "mean_channel_delta": 8.967715740203857
+        },
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 124,
+          "changed_pixels_gt1": 1005591,
+          "mean_channel_delta": 9.137050787607828
+        },
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 124,
+          "changed_pixels_gt1": 1012545,
+          "mean_channel_delta": 9.381138801574707
+        }
+      ],
+      "led_only": {
+        "frames": [
+          0,
+          60,
+          120
+        ],
+        "temporal_changed_pixels_gt1": 39711,
+        "temporal_max_delta": 255,
+        "versus_source": [
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 255,
+            "changed_pixels_gt1": 41006,
+            "mean_channel_delta": 0.303677241007487
+          },
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 34,
+            "changed_pixels_gt1": 40120,
+            "mean_channel_delta": 0.10169871648152669
+          },
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 45,
+            "changed_pixels_gt1": 39765,
+            "mean_channel_delta": 0.09438212712605794
+          }
+        ]
+      },
+      "signature_gpu262x393": 0.9372549019607843,
+      "gpu262x393": {
+        "frames": [
+          0,
+          60,
+          120
+        ],
+        "temporal_changed_pixels_gt1": 57925,
+        "temporal_max_delta": 255,
+        "versus_source": [
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 255,
+            "changed_pixels_gt1": 64489,
+            "mean_channel_delta": 8.896832449546451
+          },
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 126,
+            "changed_pixels_gt1": 64265,
+            "mean_channel_delta": 9.02443525047103
+          },
+          {
+            "pixel_byte_equal": false,
+            "max_channel_delta": 126,
+            "changed_pixels_gt1": 64871,
+            "mean_channel_delta": 9.323604393683352
+          }
+        ]
+      }
+    }
+  ],
+  "square": [
+    {
+      "name": "neogeocd-square",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "source_texture_reads_static_2d": 1,
+      "source_texture_reads_static_oes": 1,
+      "bottom_dot_region_changed_pixels_gt1": 0,
+      "four_icons_temporal_changed_pixels_gt1": [
+        3489,
+        3075,
+        2006,
+        1801
+      ],
+      "new_clipped_white_pixels_by_frame": [
+        0,
+        0,
+        0
+      ],
+      "oes_vs_2d": [
+        {
+          "frame": 0,
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "frame": 60,
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "frame": 120,
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        }
+      ],
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "temporal_changed_pixels_gt1": 80052,
+      "temporal_max_delta": 83,
+      "versus_source": [
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 79,
+          "changed_pixels_gt1": 79038,
+          "mean_channel_delta": 0.39772282126223196
+        },
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 87,
+          "changed_pixels_gt1": 74112,
+          "mean_channel_delta": 0.21160961160331596
+        },
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 89,
+          "changed_pixels_gt1": 73095,
+          "mean_channel_delta": 0.2287568139211302
+        }
+      ]
+    },
+    {
+      "name": "neogeocd-video",
+      "source_dimensions": [
+        720,
+        720
+      ],
+      "source_texture_reads_static_2d": 1,
+      "source_texture_reads_static_oes": 1,
+      "bottom_dot_region_changed_pixels_gt1": 0,
+      "four_icons_temporal_changed_pixels_gt1": [
+        1286,
+        1138,
+        836,
+        748
+      ],
+      "new_clipped_white_pixels_by_frame": [
+        0,
+        0,
+        0
+      ],
+      "oes_vs_2d": [
+        {
+          "frame": 0,
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "frame": 60,
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "frame": 120,
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        }
+      ],
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "temporal_changed_pixels_gt1": 27130,
+      "temporal_max_delta": 84,
+      "versus_source": [
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 78,
+          "changed_pixels_gt1": 26780,
+          "mean_channel_delta": 0.4893793402777778
+        },
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 88,
+          "changed_pixels_gt1": 25877,
+          "mean_channel_delta": 0.2703293788580247
+        },
+        {
+          "pixel_byte_equal": false,
+          "max_channel_delta": 91,
+          "changed_pixels_gt1": 25692,
+          "mean_channel_delta": 0.2782156635802469
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "name": "svcplus-ordinary-game-art-GLES-crop",
+      "signature_0_to_1": 0.0,
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "versus_source": [
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        }
+      ]
+    },
+    {
+      "name": "aof-ordinary-game-art-GLES-crop",
+      "signature_0_to_1": 0.0,
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "versus_source": [
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        }
+      ]
+    },
+    {
+      "name": "neogeocd-square",
+      "signature_0_to_1": 0.0,
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "versus_source": [
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        }
+      ]
+    },
+    {
+      "name": "neogeocd-video",
+      "signature_0_to_1": 0.0,
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "versus_source": [
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        }
+      ]
+    },
+    {
+      "name": "ordinary-console-photo",
+      "signature_0_to_1": 0.0,
+      "frames": [
+        0,
+        60,
+        120
+      ],
+      "versus_source": [
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        },
+        {
+          "pixel_byte_equal": true,
+          "max_channel_delta": 0,
+          "changed_pixels_gt1": 0,
+          "mean_channel_delta": 0.0
+        }
+      ]
+    }
+  ],
+  "harness": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\test_console_led_angle_R20.py",
+    "sha256": "718aa350a6242a242352ddefb42b8a12cb7cd1f792e931da90829143d2eecca2",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "pillow": "12.3.0"
+  },
+  "angle_dll_sha256": {
+    "libEGL.dll": "863f7628ef801875a370199829d8b597a953411c26f5723662b5beea874d864c",
+    "libGLESv2.dll": "a12bcf1926ba2974b206e01b3c2eaa24b0c3c2bf0fc50787e8afc409d498ffea"
+  },
+  "loaded_sources": {
+    "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\native\\premium-magazine-led-android.glsl": "df84ce7e42ae3d5e4db6eda7e3a15e9731f21b419287b099d3507a41ed63318d",
+    "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native\\premium-magazine-led-android.glsl": "e27757987e92488763ab1ed4bfc73e3e2770af66f75901da4f26faa854e7bd32",
+    "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\native\\native_neogeocd_square.h": "a43dba476cea950d91d18a8b199ccc6ec09731bda5a77342000b94a682ebfeee"
+  },
+  "legacy_retained_source_utf8_equal": true,
+  "legacy_retained_source_sha256": "15725a9ccb3e540c302399006607ed0cbb496189c170873dae74d6c362a296a1",
+  "legacy_baseline_source_sha256": "15725a9ccb3e540c302399006607ed0cbb496189c170873dae74d6c362a296a1",
+  "legacy_retained_bytes_exact_equal": true,
+  "legacy_retained_bytes_sha256": "e27757987e92488763ab1ed4bfc73e3e2770af66f75901da4f26faa854e7bd32",
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 SUPER (0x00001F06) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.16.1074)",
+  "version": "OpenGL ES 3.0 (ANGLE 2.1 git hash: unknown hash)",
+  "gl_extensions": [
+    "GL_AMD_performance_monitor",
+    "GL_ANGLE_base_vertex_base_instance_shader_builtin",
+    "GL_ANGLE_blob_cache",
+    "GL_ANGLE_client_arrays",
+    "GL_ANGLE_clip_cull_distance",
+    "GL_ANGLE_copy_texture_3d",
+    "GL_ANGLE_depth_texture",
+    "GL_ANGLE_framebuffer_blit",
+    "GL_ANGLE_framebuffer_multisample",
+    "GL_ANGLE_get_serialized_context_string",
+    "GL_ANGLE_get_tex_level_parameter",
+    "GL_ANGLE_instanced_arrays",
+    "GL_ANGLE_lossy_etc_decode",
+    "GL_ANGLE_memory_size",
+    "GL_ANGLE_multiview_multisample",
+    "GL_ANGLE_pack_reverse_row_order",
+    "GL_ANGLE_polygon_mode",
+    "GL_ANGLE_program_binary_readiness_query",
+    "GL_ANGLE_program_cache_control",
+    "GL_ANGLE_provoking_vertex",
+    "GL_ANGLE_renderability_validation",
+    "GL_ANGLE_request_extension",
+    "GL_ANGLE_robust_client_memory",
+    "GL_ANGLE_shader_pixel_local_storage",
+    "GL_ANGLE_shader_pixel_local_storage_coherent",
+    "GL_ANGLE_stencil_texturing",
+    "GL_ANGLE_texture_compression_dxt3",
+    "GL_ANGLE_texture_compression_dxt5",
+    "GL_ANGLE_texture_multisample",
+    "GL_ANGLE_texture_usage",
+    "GL_ANGLE_translated_shader_source",
+    "GL_APPLE_clip_distance",
+    "GL_ARM_rgba8",
+    "GL_CHROMIUM_bind_generates_resource",
+    "GL_CHROMIUM_bind_uniform_location",
+    "GL_CHROMIUM_copy_compressed_texture",
+    "GL_CHROMIUM_copy_texture",
+    "GL_CHROMIUM_lose_context",
+    "GL_EXT_EGL_image_external_wrap_modes",
+    "GL_EXT_base_instance",
+    "GL_EXT_blend_func_extended",
+    "GL_EXT_blend_minmax",
+    "GL_EXT_clip_control",
+    "GL_EXT_clip_cull_distance",
+    "GL_EXT_color_buffer_float",
+    "GL_EXT_color_buffer_half_float",
+    "GL_EXT_conservative_depth",
+    "GL_EXT_debug_label",
+    "GL_EXT_debug_marker",
+    "GL_EXT_depth_clamp",
+    "GL_EXT_discard_framebuffer",
+    "GL_EXT_disjoint_timer_query",
+    "GL_EXT_draw_buffers",
+    "GL_EXT_draw_buffers_indexed",
+    "GL_EXT_draw_elements_base_vertex",
+    "GL_EXT_float_blend",
+    "GL_EXT_frag_depth",
+    "GL_EXT_instanced_arrays",
+    "GL_EXT_map_buffer_range",
+    "GL_EXT_occlusion_query_boolean",
+    "GL_EXT_polygon_offset_clamp",
+    "GL_EXT_read_format_bgra",
+    "GL_EXT_render_snorm",
+    "GL_EXT_robustness",
+    "GL_EXT_sRGB",
+    "GL_EXT_shader_texture_lod",
+    "GL_EXT_texture_border_clamp",
+    "GL_EXT_texture_compression_bptc",
+    "GL_EXT_texture_compression_dxt1",
+    "GL_EXT_texture_compression_rgtc",
+    "GL_EXT_texture_compression_s3tc_srgb",
+    "GL_EXT_texture_filter_anisotropic",
+    "GL_EXT_texture_format_BGRA8888",
+    "GL_EXT_texture_mirror_clamp_to_edge",
+    "GL_EXT_texture_norm16",
+    "GL_EXT_texture_rg",
+    "GL_EXT_texture_storage",
+    "GL_EXT_texture_type_2_10_10_10_REV",
+    "GL_EXT_unpack_subimage",
+    "GL_KHR_debug",
+    "GL_KHR_parallel_shader_compile",
+    "GL_KHR_robustness",
+    "GL_NV_EGL_stream_consumer_external",
+    "GL_NV_fence",
+    "GL_NV_framebuffer_blit",
+    "GL_NV_pack_subimage",
+    "GL_NV_pixel_buffer_object",
+    "GL_NV_shader_noperspective_interpolation",
+    "GL_OES_EGL_image",
+    "GL_OES_EGL_image_external",
+    "GL_OES_EGL_image_external_essl3",
+    "GL_OES_compressed_EAC_R11_signed_texture",
+    "GL_OES_compressed_EAC_R11_unsigned_texture",
+    "GL_OES_compressed_EAC_RG11_signed_texture",
+    "GL_OES_compressed_EAC_RG11_unsigned_texture",
+    "GL_OES_compressed_ETC2_RGB8_texture",
+    "GL_OES_compressed_ETC2_RGBA8_texture",
+    "GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture",
+    "GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture",
+    "GL_OES_compressed_ETC2_sRGB8_alpha8_texture",
+    "GL_OES_compressed_ETC2_sRGB8_texture",
+    "GL_OES_depth24",
+    "GL_OES_depth32",
+    "GL_OES_draw_buffers_indexed",
+    "GL_OES_draw_elements_base_vertex",
+    "GL_OES_element_index_uint",
+    "GL_OES_fbo_render_mipmap",
+    "GL_OES_get_program_binary",
+    "GL_OES_mapbuffer",
+    "GL_OES_packed_depth_stencil",
+    "GL_OES_required_internalformat",
+    "GL_OES_rgb8_rgba8",
+    "GL_OES_sample_variables",
+    "GL_OES_shader_multisample_interpolation",
+    "GL_OES_standard_derivatives",
+    "GL_OES_surfaceless_context",
+    "GL_OES_texture_border_clamp",
+    "GL_OES_texture_float",
+    "GL_OES_texture_float_linear",
+    "GL_OES_texture_half_float",
+    "GL_OES_texture_half_float_linear",
+    "GL_OES_texture_npot",
+    "GL_OES_texture_stencil8",
+    "GL_OES_texture_storage_multisample_2d_array",
+    "GL_OES_vertex_array_object",
+    "GL_OVR_multiview",
+    "GL_OVR_multiview2",
+    "GL_WEBGL_video_texture"
+  ],
+  "egl_extensions": [
+    "EGL_EXT_create_context_robustness",
+    "EGL_ANGLE_d3d_share_handle_client_buffer",
+    "EGL_ANGLE_d3d_texture_client_buffer",
+    "EGL_ANGLE_surface_d3d_texture_2d_share_handle",
+    "EGL_ANGLE_query_surface_pointer",
+    "EGL_ANGLE_window_fixed_size",
+    "EGL_ANGLE_keyed_mutex",
+    "EGL_ANGLE_surface_orientation",
+    "EGL_ANGLE_direct_composition",
+    "EGL_NV_post_sub_buffer",
+    "EGL_KHR_create_context",
+    "EGL_KHR_image",
+    "EGL_KHR_image_base",
+    "EGL_KHR_gl_texture_2D_image",
+    "EGL_KHR_gl_texture_cubemap_image",
+    "EGL_KHR_gl_renderbuffer_image",
+    "EGL_KHR_get_all_proc_addresses",
+    "EGL_KHR_stream",
+    "EGL_KHR_stream_consumer_gltexture",
+    "EGL_NV_stream_consumer_gltexture_yuv",
+    "EGL_ANGLE_stream_producer_d3d_texture",
+    "EGL_ANGLE_create_context_webgl_compatibility",
+    "EGL_CHROMIUM_create_context_bind_generates_resource",
+    "EGL_CHROMIUM_sync_control",
+    "EGL_EXT_pixel_format_float",
+    "EGL_KHR_surfaceless_context",
+    "EGL_ANGLE_display_texture_share_group",
+    "EGL_ANGLE_display_semaphore_share_group",
+    "EGL_ANGLE_create_context_client_arrays",
+    "EGL_ANGLE_program_cache_control",
+    "EGL_ANGLE_robust_resource_initialization",
+    "EGL_ANGLE_create_context_extensions_enabled",
+    "EGL_ANDROID_blob_cache",
+    "EGL_ANDROID_recordable",
+    "EGL_ANGLE_image_d3d11_texture",
+    "EGL_ANGLE_create_context_backwards_compatible",
+    "EGL_KHR_no_config_context",
+    "EGL_KHR_create_context_no_error",
+    "EGL_KHR_reusable_sync",
+    "EGL_ANGLE_memory_usage_report"
+  ],
+  "egl_version": [
+    1,
+    5
+  ],
+  "reference_inputs": {
+    "svcplus": {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeo-svcplus.png",
+      "sha256": "9e9aef8d5d7953a26bdbb25a10f345c27f58b110e64043311ba036631da23de4"
+    },
+    "aof": {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeo-aof.png",
+      "sha256": "0751ecf65c8973e9cc1c4b3cdc7e4e856a129ab271d796f78b72226c3fc13896"
+    },
+    "neogeocd-square": {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeocd-square.png",
+      "sha256": "ca247015aea81d09c267151c27ef8da2f46eb197a2ab936b0f226765e6644b1d"
+    },
+    "neogeocd-video": {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeocd-video-frame.png",
+      "sha256": "762ea78d280651195950ab211837bc5b51cf6e3e7c28161bef3435f1152a86c1"
+    },
+    "ordinary-console-photo": {
+      "path": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\assets\\turbo-console\\snes.png",
+      "sha256": "c58b85b9ac513031fa3c89957d92f73e6913af7c779bbb3523b852f7e0668649"
+    }
+  },
+  "sources_unchanged_during_test": {
+    "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\native\\premium-magazine-led-android.glsl": true,
+    "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native\\premium-magazine-led-android.glsl": true,
+    "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\native\\native_neogeocd_square.h": true
+  },
+  "passed": true,
+  "limitations": [
+    "ANGLE PC output does not establish Android device performance or visual approval.",
+    "OES uses EGLImage-backed copies of real reference pixels, not a running Android MediaPlayer.",
+    "Small-card textures are resampled by GLES passthrough; Android ImageIO resampling may differ.",
+    "Sample counts are instrumented GLSL call counts, not GPU hardware cache/memory fetch counters.",
+    "Preview PNG pixels are unaltered GL readbacks. Temporal masks are separate numerical diagnostics."
+  ]
+}

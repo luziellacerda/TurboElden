@@ -1,0 +1,22 @@
+{
+  "revision": "R20",
+  "base": "R19B",
+  "apk": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\TurboStations-Consoles-LED-R20-20261005.apk",
+  "sha256": "64eae3ab4dd253e25ee826dd23bf02c947e5cbd1db70e6b07f759d988d465904",
+  "installed": true,
+  "stable": false,
+  "modifiedAPKEntries": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13080,
+  "motorNeoGeoCDDeltaIncluded": false,
+  "consoleFamilies": [
+    "snes",
+    "megadrive",
+    "n64",
+    "neogeo",
+    "neogeocd",
+    "naomi",
+    "naomi2"
+  ]
+}

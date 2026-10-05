@@ -1,0 +1,128 @@
+[
+  {
+    "key": "snes",
+    "source": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\assets\\turbo-console\\snes.png",
+    "sourceSha256": "c58b85b9ac513031fa3c89957d92f73e6913af7c779bbb3523b852f7e0668649",
+    "sourceSize": [
+      512,
+      512
+    ],
+    "asset": "assets/turbo-console/snes.png",
+    "assetSha256": "c58b85b9ac513031fa3c89957d92f73e6913af7c779bbb3523b852f7e0668649",
+    "size": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "origin": "Existing generated illustration",
+    "transform": "RGBA and maximum512px thumbnail preserving original aspect and alpha"
+  },
+  {
+    "key": "megadrive",
+    "source": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\assets\\turbo-console\\megadrive.png",
+    "sourceSha256": "1dd2bae9a9a676db13accd8d407542ef9e9310c4ea52f996bfbd4120ee69cbab",
+    "sourceSize": [
+      512,
+      512
+    ],
+    "asset": "assets/turbo-console/megadrive.png",
+    "assetSha256": "1dd2bae9a9a676db13accd8d407542ef9e9310c4ea52f996bfbd4120ee69cbab",
+    "size": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "origin": "Existing generated illustration",
+    "transform": "RGBA and maximum512px thumbnail preserving original aspect and alpha"
+  },
+  {
+    "key": "n64",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10cb7-1cfd-70f0-b504-8ff3168858f5\\exec-ac123398-d224-49e0-adeb-c6d95ee602de.png",
+    "sourceSha256": "48f8d9eb866b91aec1d24a12411820bac90b2de19ee5b1325a20e6c2098f9d61",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "asset": "assets/turbo-console/n64.png",
+    "assetSha256": "2741699484f133fa1b55b43a19b194b44f6c3a3d42c46a2b6a52e5c0002a4af4",
+    "size": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "origin": "Built-in ImageGen extraction of console from user theme card; generated illustration, not archival photo",
+    "transform": "RGBA and maximum512px thumbnail preserving original aspect and alpha"
+  },
+  {
+    "key": "neogeo",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10cb7-1cfd-70f0-b504-8ff3168858f5\\exec-70afe527-c96a-4fc9-a240-ee982f4bc112.png",
+    "sourceSha256": "2fd61953048cdf5da085b8330e78537508ebf278ae69b34bb7e7a2934add985c",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "asset": "assets/turbo-console/neogeo.png",
+    "assetSha256": "fbb3256fa307a79fea1433c14589aa6aaeef4be77fa06990e1f62aa9f0c1eaab",
+    "size": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "origin": "Built-in ImageGen extraction of console from user theme card; generated illustration, not archival photo",
+    "transform": "RGBA and maximum512px thumbnail preserving original aspect and alpha"
+  },
+  {
+    "key": "neogeocd",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10cb7-1cfd-70f0-b504-8ff3168858f5\\exec-ae5af701-41f1-42ab-b897-4cf81725f0ad.png",
+    "sourceSha256": "f601b96f34f8cbc84a291fa21a2ce87b11e064ccb675d6f7bffca212516fae7f",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "asset": "assets/turbo-console/neogeocd.png",
+    "assetSha256": "bf26367c0d3b7d859d2524b5ea9e36a190a842cc0637a2f9c6d145f1b37ecc11",
+    "size": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "origin": "Built-in ImageGen extraction of console from user theme card; generated illustration, not archival photo",
+    "transform": "RGBA and maximum512px thumbnail preserving original aspect and alpha"
+  },
+  {
+    "key": "naomi",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10cb7-1cfd-70f0-b504-8ff3168858f5\\exec-e9e1ac80-0a4a-4552-9445-8c490bce5e8d.png",
+    "sourceSha256": "3cd565d2f89c41d5c9dbce3c975159e1bffacf7649eee26af02e210ee76e5763",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "asset": "assets/turbo-console/naomi.png",
+    "assetSha256": "377c11aba35c0ea3189af7c4d932c006cb4af17b0fb3738db1c427e25860ec04",
+    "size": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "origin": "Built-in ImageGen extraction of console from user theme card; generated illustration, not archival photo",
+    "transform": "RGBA and maximum512px thumbnail preserving original aspect and alpha"
+  },
+  {
+    "key": "naomi2",
+    "source": "C:\\Users\\Admin\\.codex\\generated_images\\01a10cb7-1cfd-70f0-b504-8ff3168858f5\\exec-9272cf4d-b890-467a-9535-084894b3bb8b.png",
+    "sourceSha256": "853e83bd07727df73b999e9d00631d454be9d0b61197a1cdc1cf708969ddc483",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "asset": "assets/turbo-console/naomi2.png",
+    "assetSha256": "08af3e381d72378a18d8691937e8c39b1f0bdeab55cd54a44f8f6dc27dd0d837",
+    "size": [
+      512,
+      512
+    ],
+    "rgbaBytes": 1048576,
+    "origin": "Built-in ImageGen extraction of console from user theme card; generated illustration, not archival photo",
+    "transform": "RGBA and maximum512px thumbnail preserving original aspect and alpha"
+  }
+]

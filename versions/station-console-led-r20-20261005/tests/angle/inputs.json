@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\recipe\\controls\\ordinary-console-snes.png",
+      "bytes": 192690,
+      "sha256": "c58b85b9ac513031fa3c89957d92f73e6913af7c779bbb3523b852f7e0668649"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\recipe\\REPRODUCE.txt",
+      "bytes": 1859,
+      "sha256": "14f7aba6fe470bdc0e1fa726663c35fa40742418329857044ebe640ffd69d1ab"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\recipe\\requirements.txt",
+      "bytes": 30,
+      "sha256": "0d8591fbb38d29c9457b1ecb01e415c737b258eecfbf01eade0e7d4b21f73eb3"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\recipe\\run.ps1",
+      "bytes": 647,
+      "sha256": "fe07c8b4479164ee4aaa2cc25b9fd7ed1d96de41a8f23bc788ba10a5a28518cb"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\recipe\\test_console_led_angle_R20.py",
+      "bytes": 24244,
+      "sha256": "718aa350a6242a242352ddefb42b8a12cb7cd1f792e931da90829143d2eecca2"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\led-tests\\recipe\\w16\\premium-magazine-led-android.glsl",
+      "bytes": 14566,
+      "sha256": "e27757987e92488763ab1ed4bfc73e3e2770af66f75901da4f26faa854e7bd32"
+    }
+  ],
+  "r20_inputs": [
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\native\\premium-magazine-led-android.glsl",
+      "bytes": 17602,
+      "sha256": "df84ce7e42ae3d5e4db6eda7e3a15e9731f21b419287b099d3507a41ed63318d"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\native\\native_neogeocd_square.h",
+      "bytes": 5991,
+      "sha256": "a43dba476cea950d91d18a8b199ccc6ec09731bda5a77342000b94a682ebfeee"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeo-svcplus.png",
+      "bytes": 2966541,
+      "sha256": "9e9aef8d5d7953a26bdbb25a10f345c27f58b110e64043311ba036631da23de4"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeo-aof.png",
+      "bytes": 2780335,
+      "sha256": "0751ecf65c8973e9cc1c4b3cdc7e4e856a129ab271d796f78b72226c3fc13896"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeocd-square.png",
+      "bytes": 563626,
+      "sha256": "ca247015aea81d09c267151c27ef8da2f46eb197a2ab936b0f226765e6644b1d"
+    },
+    {
+      "path": "E:\\ESTUDO APK\\work\\station-console-neogeocd-r20-20261005\\refs\\neogeocd-video-frame.png",
+      "bytes": 451541,
+      "sha256": "762ea78d280651195950ab211837bc5b51cf6e3e7c28161bef3435f1152a86c1"
+    }
+  ],
+  "baseline_origin": "E:\\ESTUDO APK\\work\\station-download-performance-20261005\\frontend-native\\premium-magazine-led-android.glsl",
+  "control_origin": "E:\\ESTUDO APK\\work\\station-visual-covers-20261003\\assets\\turbo-console\\snes.png"
+}
