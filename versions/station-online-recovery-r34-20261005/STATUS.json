@@ -18,11 +18,16 @@
   "downloadImplementationUnchanged": true,
   "rawTransferDeltaIncluded": false,
   "netplayIdentityHashPreserved": true,
-  "installed": false,
+  "installed": true,
   "stable": false,
   "knownPending": [
     "Real Battletoads second-player failure cause not captured: no USB",
     "Online controls still use different emulator overlay; unchanged",
     "Android Back fix needs device validation; NativeActivity legacy Android input path remains to be verified"
-  ]
+  ],
+  "device": "Samsung SM_A566E",
+  "installedSHA256": "513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef",
+  "installationReceipt": "evidence/installation-samsung.json",
+  "platformsOpenedWithoutLogin": true,
+  "gameplayValidated": false
 }

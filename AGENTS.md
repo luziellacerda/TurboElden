@@ -1,3 +1,9 @@
+# R34 instalado no Samsung — 05/10/2026
+
+Instalação solicitada concluída por atualização, SHA513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef conferido no aparelho. App abriu plataformas sem login. Ler evidence/installation-samsung.json no snapshotR34. Sem desinstalar/limpar dados. POCO ainda não conferido; Battletoads segundo jogador, controles e Voltar em partida continuam pendentes de validação. A configuração temporária Samsung de tela ligada foi restaurada para0. Não chamar de estável geral.
+
+## Histórico anterior
+
 # R34 — candidato de recuperação online; diagnóstico Battletoads pendente — 05/10/2026
 
 Leia `versions/station-online-recovery-r34-20261005/README.md` e STATUS. APK SHA513dd4700192b994d93cdaf6cd55b79eccb804fa33eda43166304f5d2bcdb5ef, classes35+booleanoBack da Activity online sobreR33. Callback oficial Android33+, diálogo Voltar, retry explícito se abertura falha, fases de diagnóstico. Testes locais passaram; NÃO instalado, USB vazia. Segundo jogador Battletoads e controles diferentes continuam sem correção validada: não declarar resolvidos. Só host inicia; convidado automático emconnecting. SNES localEX+ e onlinebsnes/RetroArch têm controles distintos; não foram alterados. Capturar jogador2 primeiro, um telefone por vez; preservar licença/saves. Runtime/allowlist/servidor/design R33 intactos. Ler limitações Android26–32 e dois aparelhos nohandoff.

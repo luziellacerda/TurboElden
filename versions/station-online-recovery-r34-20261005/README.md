@@ -1,5 +1,9 @@
 # R34 — recuperação de abertura online e Voltar Android
 
+## Instalação posterior — 05/10/2026, 20h08 (UTC−3)
+
+R34 instalado por atualização no Samsung SM_A566E, SHA integral igual ao APK513dd470. Sem desinstalar nem limpar dados. App abriu nas plataformas com sessão mantida; captura local device-evidence/installed-r34.png. Não foram testados Voltar dentro do jogo, segundo jogador ou os controles nesta instalação. O aparelho conectado era o Samsung; instalação POCO continua não conferida. Configuração temporária Samsung stay_on_while_plugged_in restaurada de3 para o original0 e relida. Recibo evidence/installation-samsung.json prevalece sobre o estado histórico de compilação abaixo.
+
 ## Estado e impedimentos
 
 Relato: Battletoads SNES, segundo jogador não entra, somente anfitrião tem Iniciar, controles mudam online, Voltar do telefone não responde. Usuário dispõe de uma conexão USB por vez: conferir primeiro jogador2, depois1 se necessário. **Nenhum aparelho apareceu conectado nesta etapa. Não há causa comprovada para a falha inicial do segundo jogador. Não declarar partida corrigida nem controles iguais.**
