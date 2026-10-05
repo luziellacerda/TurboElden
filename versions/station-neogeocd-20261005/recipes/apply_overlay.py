@@ -4,6 +4,8 @@ import argparse,hashlib,json,shutil
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('--target-java',type=Path,required=True);p.add_argument('--backup',type=Path);p.add_argument('--dry-run',action='store_true');a=p.parse_args()
 version=Path(__file__).resolve().parents[1];source=version/'java/org/emulationstation/frontend';prior=version.parent/'station-neogeo-filesystem-r18-20261005/java/org/emulationstation/frontend'
+assert not a.target_java.resolve().is_relative_to(prior.resolve()),'Copy frozen R18 sources to a new candidate first'
+assert 'station-neogeo-access-20261005' not in a.target_java.parts,'Preserve the frozen Windows R18 source; use a new candidate copy'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 changes=[]
 for file in sorted(source.glob('*.java')):
