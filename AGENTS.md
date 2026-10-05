@@ -1,3 +1,21 @@
+# R26 — estrelas no cabeçalho, pasta/contagem e botões compactos — 05/10/2026
+
+Leia versions/station-layout-r26-20261005/README.md e STATUS. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Layout-R26-20261005.apk`, SHA `1d4549da6a15a9a9b2e8c52491ecc4382e0b5e050900763aebf163d136a36e75`. Compilado/testado no PC; ainda não instalado (USB ausente). BaseR25 `0d62d806fb0fd7ef45cf0167dd6908794e180e81171c8f7fa0b3e701aa78baad` continua última instalação, mas seu alinhamento foi rejeitado. Não confundir observação funcional com aprovação estética.
+
+Pedido mais recente substitui posições anteriores: estrelas junto do estado Não instalado; pasta e contagem no lugar das estrelas acima do console, jogadores na mesma linha; contador abaixo da sinopse removido. Botões inferiores todos12% mais estreitos, retângulos de toque iguais ao desenho. Console fit R25, título, LEDs R24, sinopses e motores intactos.773.128 verificações e pacote completo passaram; apenascarouselSO muda/13.083 entradas preservadas. Fonte `E:\ESTUDO APK\work\station-layout-r26-20261005\native`; dependênciasW16+objetosW16/W22. SO permaneceE; APK final e base arquivadosG. Não promover estável nem supor instalação. Atualizar sem limpar dados, sem partida/download ativo.
+
+Evidências R24 multiplataforma e integração R23B incorporadas; apenas históricas. Download11be7f3 não integrado. Chat coordenado prepara UI Java das salas e deve preservar SO R26 no próximo APK; coordenar antes de nova instalação.
+
+## Histórico anterior — posições e estados podem ter sido substituídos acima
+
+# R25 — estrelas e jogadores juntos, console maior — 05/10/2026
+
+Leia `versions/station-console-panel-r25-20261005/README.md` e STATUS. APK `E:\ESTUDO APK\work\station-console-panel-r25-20261005\TurboStations-Console-Players-R25-20261005.apk`, SHA0d62d806fb0fd7ef45cf0167dd6908794e180e81171c8f7fa0b3e701aa78baad. Remove nota/legenda, mantém estrelas e mostra ícone com1/2players conforme dados (faixas usam máximo; ausente traço). Console maior com UV dos pixels visíveis, sem cortar/desfigurar. Contagem abaixo sinopse/título abaixo console preservados.
+
+Base R24d355, LEDs intactos;3fontes mudam+2helpers.772.456 verificações PC,build/assinatura/alinhamento/pacote inteiro passaram; sócarouselSO muda,13.083 entradas intactas. Fonte final W25/native, W16+objetosW16/W22; APKbaseR24/SOfinal/rendersPC antigos arquivadosGcomhashes. Inicialmente compilado, instalação/visual consultarSTATUS. Não marcar estável nem supor dados faltantes. Downloads11be7f3 não incluídos. Preservar dados/saves/licença.
+
+## Histórico anterior
+
 # R24 — laser Neo Geo/CD no padrão SNES — 05/10/2026
 
 Leia `versions/station-neogeo-laser-r24-20261005/README.md` e STATUS. APK `E:\ESTUDO APK\work\station-neogeo-laser-r24-20261005\TurboStations-NeoGeo-Laser-R24-20261005.apk`, SHA d35516420934aeda7cee96af6185a17506146ae7fa2c28f867d6e7c44e721a0b. Base APK R23A + fontes R23B (sem APK próprio) + quatro arquivos LED. Inclui contagem, jogadores/nota/título do painel R23B. Mesmo movimento/cálculo SNES nas revistas Neo; quadrado CD com feixe proporcional .007 e mesmo relógio. Preserva cores, máscaras, vídeos R22 e todos os motores/DEX.

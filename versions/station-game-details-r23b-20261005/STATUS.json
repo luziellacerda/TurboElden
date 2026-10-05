@@ -8,8 +8,14 @@
   "baseAPKHash": "f7dfc90f0614644548f16cfc7a518ba869589c815adacd6adb9f411f6a97de29",
   "r23aInstalledAPKHash": "58c61a4d1e74396ffbefb2c5b6108e1c78a951164080a3b0f32de696330233e8",
   "r23bStandaloneAPKCreated": false,
-  "r23bInstalled": false,
-  "visualAndroidVerified": false,
-  "plannedIntegration": "R24 will combine this full native overlay with four independently reviewed LED files over exact R23A APK.",
-  "stablePromotion": false
+  "visualAndroidVerified": "Recorded R24 cases only; see receipt. Later positioning superseded by R25/R26.",
+  "stablePromotion": false,
+  "integratedIntoRevision": "R24",
+  "installedViaIntegratedAPK": true,
+  "r23bStandaloneInstalled": false,
+  "integratedAPKHash": "d35516420934aeda7cee96af6185a17506146ae7fa2c28f867d6e7c44e721a0b",
+  "integratedAPKBytes": 2053849968,
+  "integratedNativeHash": "bf702a1eee840a850df007f2eb684d9aa7ef7ca7bec486e84bb01f9d9450b2e6",
+  "installationEvidence": "../station-neogeo-laser-r24-20261005/evidence/installation.json",
+  "panelEvidence": "../station-neogeo-laser-r24-20261005/evidence/multiplatform-visual.json"
 }

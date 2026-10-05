@@ -1,0 +1,94 @@
+{
+  "createdAt": "2026-10-05T20:10:52.131840+00:00",
+  "scope": "Read-only source audit for three SNES games observed by the coordinating chat; this file was written in the chat workspace only.",
+  "catalog": {
+    "commit": "100e4bbd92aa4c85cda10a633e6463fbb24ae8ab",
+    "sha256": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e"
+  },
+  "headerSha256": "471c638eb3231ce61ccc0b298ead65df2c064f74c001e754c2b11dd6b4511dca",
+  "r24ReceiptUsesSameHeader": true,
+  "games": [
+    {
+      "name": "Classic Kong",
+      "platform": "snes",
+      "itemId": "da2d0a8bd5c0d375b1fd20832691dc17",
+      "sourceXmlSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+      "sourceOrdinal": 98,
+      "sourceAssetSha256": "73b1a11347e530e3096d1100e7a370e8e7441756c71f083a7e6ba0420a5211ce",
+      "originalXml": {
+        "players": "1-2",
+        "rating": "0.7",
+        "descriptionCharacters": 594
+      },
+      "generatedHeader": {
+        "players": "1-2",
+        "ratingThousandths": 700,
+        "playersSource": "published-catalog"
+      },
+      "offlineSynopsisCharacters": 594
+    },
+    {
+      "name": "Double Dragon V - The Shadow Falls",
+      "platform": "snes",
+      "itemId": "bd7c338745e46a055f7ab53b3c0e4363",
+      "sourceXmlSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+      "sourceOrdinal": 788,
+      "sourceAssetSha256": "73b1a11347e530e3096d1100e7a370e8e7441756c71f083a7e6ba0420a5211ce",
+      "originalXml": {
+        "players": "",
+        "rating": "",
+        "descriptionCharacters": 0
+      },
+      "generatedHeader": {
+        "players": "",
+        "ratingThousandths": -1,
+        "playersSource": "missing"
+      },
+      "offlineSynopsisCharacters": 308,
+      "synopsisSupplement": {
+        "sourceXmlSha256": "733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc",
+        "sourceOrdinal": 174,
+        "playersPresentButNotImported": "2",
+        "rating": "",
+        "scope": "Only the synopsis was recovered from this source; metadata generator uses the original source identity."
+      }
+    },
+    {
+      "name": "Battletoads in Battlemaniacs (USA)",
+      "platform": "snes",
+      "itemId": "826da6daebe9edbebffb3721f83abf12",
+      "sourceXmlSha256": "f459dfd5b5960e13bf1d989b6d107e29759d6d8da15e9d0d1efbc3525b583ee1",
+      "sourceOrdinal": 835,
+      "sourceAssetSha256": "73b1a11347e530e3096d1100e7a370e8e7441756c71f083a7e6ba0420a5211ce",
+      "originalXml": {
+        "players": "",
+        "rating": "",
+        "descriptionCharacters": 0
+      },
+      "generatedHeader": {
+        "players": "",
+        "ratingThousandths": -1,
+        "playersSource": "missing"
+      },
+      "offlineSynopsisCharacters": 0,
+      "displayFallback": {
+        "text": "Sinopse ainda não disponível nesta edição.",
+        "utf8Bytes": 46
+      }
+    }
+  ],
+  "conclusion": {
+    "prefixDefectFound": false,
+    "reason": "Both empty rows exist under the exact published bare IDs and their original XML lacks players/rating. Classic Kong has known values under a bare ID and matches the phone report.",
+    "idFlow": "StationCatalog validates without rewriting; StationPublication keeps Item; StationFrontend sends itemId in field 0; station_frontend copies field 0 into Item.id; native_info reads strData(item).",
+    "battletoads46ByteLogExplained": true
+  },
+  "inferenceLimits": [
+    "No new phone, USB, Git or server access occurred during this audit. Device observations were reported by the coordinating chat.",
+    "Absent metadata does not mean the game has zero players or a zero rating.",
+    "The source audit does not prove every platform or control was tested on the device.",
+    "Separate BR releases are separate IDs; their metadata was not copied onto the USA edition.",
+    "The Double Dragon synopsis supplement contains players=2, but importing it would require an explicit extension of the metadata identity policy; no such change was made.",
+    "No code, repository, E: or G: file was changed."
+  ]
+}

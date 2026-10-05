@@ -1,0 +1,148 @@
+{
+  "revision": "R24",
+  "createdAt": "2026-10-05T20:16:35.700537+00:00",
+  "package": "org.turboramastation.frontend",
+  "apkSHA256": "d35516420934aeda7cee96af6185a17506146ae7fa2c28f867d6e7c44e721a0b",
+  "apkBytes": 2053849968,
+  "installationEvidence": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\device-evidence\\installation.json",
+  "installationEvidenceSHA256": "fb2f57bcb679bbaa71ab3ad2c5097c1dcdc3f7b774607c28240747426c2d46dc",
+  "verifiedDeviceUpdateWithoutDataClear": true,
+  "captureProcessId": 30753,
+  "visualObservations": [
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-170300.png",
+      "imageSHA256": "1aadceba343232049429d99d16621392442170a2216fdede8f1c6301d058b9d6",
+      "platform": "snes",
+      "titleObserved": "Classic Kong",
+      "visibleGameCount": 644,
+      "playersObserved": "1-2",
+      "catalogRatingObserved": "3.5/5",
+      "synopsisState": "short_text_no_scrollbar",
+      "observation": "Title below console; players/stars above; count below synopsis."
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-170357.png",
+      "imageSHA256": "f84418bad9f1d53eace04daf1a08da5aede94609b2f63822aacb6a751ae9d7bf",
+      "platform": "snes",
+      "titleObserved": "Double Dragon V - The Shadow Falls",
+      "visibleGameCount": 644,
+      "playersObserved": null,
+      "catalogRatingObserved": null,
+      "synopsisState": "short_text_no_scrollbar",
+      "observation": "Unknown fields explicit; supplementary synopsis available; common layout."
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-170946.png",
+      "imageSHA256": "69586f5a5fd8f934bbcf8d6aa9cc63797f3a8bc8ffaf51e8a45474eaa77917fc",
+      "platform": "snes",
+      "titleObserved": "Fatal Fury Special",
+      "visibleGameCount": 644,
+      "playersObserved": null,
+      "catalogRatingObserved": null,
+      "synopsisState": "text_fits_no_scrollbar",
+      "observation": "Common layout; metadata absent; no overlap after carousel settles."
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171056.png",
+      "imageSHA256": "ecd1a716619cb807589cbde128504bd38a166bc8efcd4e2e346e462442712dfa",
+      "platform": "megadrive",
+      "titleObserved": "Cutthroat Island",
+      "visibleGameCount": 887,
+      "playersObserved": "1-2",
+      "catalogRatingObserved": "2.3/5",
+      "synopsisState": "text_fits_no_scrollbar",
+      "observation": "Common layout; installed game displayed without launching."
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171141.png",
+      "imageSHA256": "369d283cfc8a1b815f2be39e31be392197cfe6515f78bfe7b1e2f37775a50a5d",
+      "platform": "megadrive",
+      "titleObserved": "NBA Jam : Tournament Edition",
+      "visibleGameCount": 887,
+      "playersObserved": "1-4",
+      "catalogRatingObserved": "3.8/5",
+      "synopsisState": "overflow_top",
+      "observation": "Scrollbar visible; text clipped within synopsis viewport."
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171210.png",
+      "imageSHA256": "f8461f84467f978b16967c21f4fcc9bfbc9ab7051e3223b7034e3e3627800cf1",
+      "platform": "megadrive",
+      "titleObserved": "NBA Jam : Tournament Edition",
+      "visibleGameCount": 887,
+      "playersObserved": "1-4",
+      "catalogRatingObserved": "3.8/5",
+      "synopsisState": "overflow_after_touch_drag",
+      "observation": "Text and thumb moved; title, console, count and buttons remained fixed."
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171344.png",
+      "imageSHA256": "e85247e905d4dc2ee4a20cacc3d18e11718367b3af9719bd775c0207297ad669",
+      "platform": "neogeo",
+      "titleObserved": "2020 Super Baseball (set 1)",
+      "visibleGameCount": 189,
+      "playersObserved": "1-2",
+      "catalogRatingObserved": "3.0/5",
+      "synopsisState": "overflow_top",
+      "observation": "Same layout; scrollbar visible."
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171408.png",
+      "imageSHA256": "1eecb7001e43c47d1a0a513ec770db0ee49a44bd9fec972db83d36dd94b6bac1",
+      "platform": "neogeo",
+      "titleObserved": "2020 Super Baseball (set 1)",
+      "visibleGameCount": 189,
+      "playersObserved": "1-2",
+      "catalogRatingObserved": "3.0/5",
+      "synopsisState": "overflow_after_touch_drag",
+      "observation": "Text and thumb moved; title, console, count and buttons remained fixed."
+    }
+  ],
+  "navigation": [
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171006.png",
+      "imageSHA256": "127d781762a61ffdb390a8bd9579f64ede9b660b2004a1c1f4fca1ccd60a78db",
+      "mode": "principal",
+      "platform": "snes",
+      "separateConsolePanelVisible": false,
+      "returnedWithoutLogin": true
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171233.png",
+      "imageSHA256": "777f7e70d31e4b27afea11f255611c7a08e28e185575c076b39c143e44d430e9",
+      "mode": "principal",
+      "platform": "megadrive",
+      "separateConsolePanelVisible": false,
+      "returnedWithoutLogin": true
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171316.png",
+      "imageSHA256": "0fd3e8560e5c416977be00f88a163168f3dc8438c5da12ac6209e139227368b1",
+      "mode": "collections",
+      "platform": "neogeo",
+      "separateConsolePanelVisible": false,
+      "returnedWithoutLogin": true
+    },
+    {
+      "image": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\device-evidence\\screen-171450.png",
+      "imageSHA256": "44cec39d7d2c3b0766677d980b2db357b26bf0adec38b3325caf772f7ec9c46d",
+      "mode": "principal",
+      "platform": "neogeo",
+      "separateConsolePanelVisible": false,
+      "returnedWithoutLogin": true
+    }
+  ],
+  "metadataAudit": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\metadata-audit-r24-snes-20261005.json",
+  "metadataAuditSHA256": "3b8354d9b609368ae3439e8de6ad298ebb2364fc46d01f9d41e9370562732141",
+  "testsReceipt": "E:\\ESTUDO APK\\work\\station-game-details-r23-20261005\\evidence\\final-regression.json",
+  "testsReceiptSHA256": "c102e0f1c80ba8fd1078ce7d127601dead9e800d05d38807c284801bdf9458f3",
+  "sourceRule": "Common native game mode gate (!systemsMode && !folderMode), not N64-specific.",
+  "limits": [
+    "These screenshots validate the listed samples, not every game or every platform individually.",
+    "N64 touch-scroll evidence belongs to earlier R21; R24 did not repeat that device scenario.",
+    "No downloads, emulator gameplay, FPS, power usage or overall stable promotion tested here.",
+    "Metadata numbers are catalog/XML values, not a verified average of user reviews.",
+    "R25 later changes the upper metadata row and console size; these screenshots are R24 only."
+  ],
+  "finalDeviceState": "Platforms / Neo Geo, no active game; USB released to coordinated R25 installer at 17:14:50 local."
+}

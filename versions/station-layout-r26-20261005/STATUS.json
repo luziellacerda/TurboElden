@@ -1,0 +1,20 @@
+{
+  "revision": "R26",
+  "baseRevision": "R25",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Layout-R26-20261005.apk",
+  "apkSHA256": "1d4549da6a15a9a9b2e8c52491ecc4382e0b5e050900763aebf163d136a36e75",
+  "bytes": 2053848592,
+  "nativeSHA256": "b2d706dc07d4423758798fe0d6d37ce01c8f395b344c685a7b796ce60d03dd70",
+  "sourceOverlay": "E:\\ESTUDO APK\\work\\station-layout-r26-20261005\\native",
+  "compiled": true,
+  "installed": false,
+  "deviceVisualConfirmed": false,
+  "stable": false,
+  "testsPassed": 773128,
+  "preservedEntries": 13083,
+  "changedEntries": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "usbStatus": "No device connected at final build check",
+  "r25VisualRejected": true
+}

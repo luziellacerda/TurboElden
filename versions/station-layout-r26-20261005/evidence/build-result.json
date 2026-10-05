@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-05T20:32:11.157210+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Console-Players-R25-20261005.apk",
+  "baseSHA256": "0d62d806fb0fd7ef45cf0167dd6908794e180e81171c8f7fa0b3e701aa78baad",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Layout-R26-20261005.apk",
+  "sha256": "1d4549da6a15a9a9b2e8c52491ecc4382e0b5e050900763aebf163d136a36e75",
+  "bytes": 2053848592,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13083,
+  "roomsDexSHA256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "gameDownloadContentHashEnabled": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false
+}

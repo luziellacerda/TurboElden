@@ -66,3 +66,9 @@ Use os fontes finais deste snapshot com o comando e os hashes em `evidence/nativ
 Instalar apenas por atualização, mesmo certificado, sem limpar dados. A receita confere o APK instalado R23A, que o frontend está aberto e o hash final. **Instalação R24 concluída às 17:01 de 05/10: atualização sem limpar dados; SHA do telefone idêntico.** SNES aberto com sessão preservada. LED específico Neo Geo ainda não recebeu conferência visual no aparelho; painel em outras plataformas é conferido pelo chat coordenado. Consultar `STATUS.json` e eventual `evidence/installation.json` para o estado posterior. A conferência do painel em várias plataformas está coordenada com o chat original.
 
 Downloads do retorno Servidor-pix `11be7f3`/cliente `6f012a7` continuam separados; não foram introduzidos nesta mudança de LED. Nenhum servidor, jogo, save, sessão, tag estável ou motor foi alterado.
+
+## Evidência posterior da integração R23B/R24
+
+`evidence/multiplatform-visual.json` registra as capturas reais R24 de SNES, Mega Drive e Neo Geo, incluindo rolagem da sinopse. Os hashes dos PNGs foram conferidos ao incorporar este recibo. Não é prova visual da revisão R26 nem aprovação do laser no Neo Geo CD. O APK R24 está no backup em G:, conforme STATUS.
+
+`evidence/metadata-audit-snes.json` separa dados ausentes no XML e dados complementares: não foi demonstrada falha de busca por prefixo/ID. Nenhuma nota ou quantidade de jogadores foi inventada. As posições observadas nas capturas são históricas e foram substituídas pelos pedidos R25/R26.

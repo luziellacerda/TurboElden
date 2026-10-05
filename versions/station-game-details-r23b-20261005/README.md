@@ -61,3 +61,7 @@ Este snapshot inclui todos os headers/C++/GLSL finais, exceto `console_assets.h`
 Base R22 arquivada em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-NeoGeo-Colecoes-R22-20261005.apk`, SHA `f7dfc90f0614644548f16cfc7a518ba869589c815adacd6adb9f411f6a97de29`. Arquivo R23A/receita de instalação estão em W23; consulte arquivamento posterior antes de usar seu caminho E. R23A histórico fica em `history-r23a`; seu SO 0bacfd... não contém a contagem B e não deve ser escolhido como final. SO B atual 48eda... é o recibo autoridade de fonte para R24; verificar todos seus hashes antes de sobrepor somente os quatro arquivos LED combinados.
 
 O delta downloads `6f012a7` permanece separado e não integra R23A/B. Próxima montagem deve comparar todas as entradas contra a base APK e publicar recibo próprio. Instalar apenas atualização, sem desinstalação/limpeza de dados e sem interromper jogo ativo.
+
+## Integração concluída em R24
+
+A preparação descrita acima foi concluída através do APK R24 `d35516420934aeda7cee96af6185a17506146ae7fa2c28f867d6e7c44e721a0b`, com SO integrado `bf702a1eee840a850df007f2eb684d9aa7ef7ca7bec486e84bb01f9d9450b2e6`. Não houve APK independente R23B. Consulte os recibos de instalação e casos visuais no snapshot R24. Fonte e SO independente R23B permanecem históricos, intactos; R25/R26 substituem as posições dos metadados por novos pedidos do mantenedor.

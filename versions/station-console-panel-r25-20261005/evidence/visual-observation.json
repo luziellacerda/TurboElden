@@ -1,0 +1,21 @@
+{
+  "revision": "R25",
+  "apkSHA256": "0d62d806fb0fd7ef45cf0167dd6908794e180e81171c8f7fa0b3e701aa78baad",
+  "capture": "E:\\ESTUDO APK\\work\\station-console-panel-r25-20261005\\device-evidence\\screen-171935.png",
+  "captureSHA256": "350fd25dedcb277c3068acb7be800441caff7751e0571116d6d2e3196767f137",
+  "resolution": [
+    2340,
+    1080
+  ],
+  "observed": [
+    "SNES / Mega Man X",
+    "Stars and player icon with 1 player",
+    "Console enlarged with title below",
+    "5 jogos below synopsis",
+    "No numeric rating or Nota do catálogo"
+  ],
+  "userVisualAcceptance": false,
+  "userFeedback": "veja foto está muito desalinhado bagunçado",
+  "supersededBy": "R26: stars beside installation state; folder/count replaces former stars; twelve percent narrower bottom actions",
+  "limitation": "One Android case observed, not broad visual approval. Concurrent navigation/download detected; input commands stopped."
+}
