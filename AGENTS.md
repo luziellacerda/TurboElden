@@ -1,3 +1,9 @@
+# R33 — título maior, barra completa e faixa instalada — 05/10/2026
+
+Leia `versions/station-title-actions-r33-20261005/README.md`, STATUS e evidências. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Titulo-Barra-R33-20261005.apk`, SHA `9313b3b893468270512b8e8ee3fa984763d6db334b4534a2f863216a0cc4a7ea`. Fontes `E:\ESTUDO APK\work\station-title-actions-r33-20261005\native`. Compilado/conferido PC; não instalado, USB ausente. Usuário informou instalação manual anterior no POCO, hash/ativação não verificados. R33 inclui faixa diagonal R32, título +50% e contagem/jogadores/estrelas em sequência, Jogar com largura da capa e barra até97,5% da tela. 9.604 verificações C++, assinatura,16KiB e13.086 entradas preservadas; somente carouselSO mudou. DEX/motores/salas/downloads intactos. Não promover estável nem supor validação visual. Preservar dados/licença/saves. Samsung tela ligada0→3 continua pendente de restaurar0quando reconectar.
+
+## Histórico anterior — a entrega atual está acima
+
 # R31B — visual compacto e retorno servidor61c0411 — 05/10/2026
 
 Leia `versions/station-interface-r31-20261005/README.md`, STATUS e recibos. APKfinal `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Interface-R31B-20261005.apk`, SHA76817d2dd48219bcd6e4d111b8471bf98925b02ab26ee517cea90e8df84b076c. Compilado/verificado, instalação final pendente. PrimeiroR31 efc2a845 instalado/hashconferido noSamsung, visual da linha/botões/tag registrado. R31B amplia otextoINSTALADO. Duas tentativasPOCO recusadas peloAndroid USER_RESTRICTED. Cópia emDownloads interrompida ao sair daUSB; pode estar incompleta, não instalar sem substituir/conferir. LicençaPOCO declaradaACTIVE/PENDING_ENROLLMENT nohandoff; código privado somente noLinux, não noGit. Não ativada por este agente.

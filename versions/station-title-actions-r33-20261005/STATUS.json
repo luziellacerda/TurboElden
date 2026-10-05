@@ -1,0 +1,22 @@
+{
+  "createdAt": "2026-10-05T22:50:07.828043+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Interface-R31B-20261005.apk",
+  "baseSHA256": "76817d2dd48219bcd6e4d111b8471bf98925b02ab26ee517cea90e8df84b076c",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Titulo-Barra-R33-20261005.apk",
+  "sha256": "9313b3b893468270512b8e8ee3fa984763d6db334b4534a2f863216a0cc4a7ea",
+  "bytes": 2053911349,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13086,
+  "addedAssets": {},
+  "roomsDexSHA256": "45675ff1b72c76bc6d388f6fa6f016a55cc1d06c4fbec09689ab4654dde3e9f1",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "downloadImplementationUnchanged": true,
+  "rawTransferDeltaIncluded": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false
+}
