@@ -1,0 +1,12 @@
+{
+  "compiled": true,
+  "androidJarSha256": "d9eb9da824d9e247a352f570f01e1169e725b2954bca9e283a71786c59b59f9a",
+  "minApi": 26,
+  "dexSha256": "5e1727190e37af5b121ab52ffb2add4d16492d20eb1897bee8f4cae6e8400310",
+  "sources": {
+    "java/org/emulationstation/frontend/MameBootstrap.java": "0ec6c663aba2bb6cf0a8358b577819b91a52ff6bd6c810288bf7513a7572b87e",
+    "java/org/emulationstation/frontend/MameEntryActivity.java": "b1756c4b708ab67154033e90ec7cdf444505870077d198acce068bdcffcc0ccf",
+    "java/org/emulationstation/frontend/NeoCdSupport.java": "bed8cf72bbc342de9b1b4f4811ed04ef8a2ff2c116d351e6d6bcab2f53b9d1b5"
+  },
+  "apkSignedOrInstalled": false
+}

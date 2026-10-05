@@ -1,0 +1,9 @@
+{
+  "mameCliParserSha256": "b0e52999ac34123f1bb2f6a6cd4d958b9fb95cb77b828c1cb8b2dd3d9a4d4aa0",
+  "quotedPathWithSpacesCorrect": true,
+  "nativeArgvCount": 4,
+  "overlayChecks": "dry-run2 / apply2 / dry-run0",
+  "bootstrapIdenticalToR15": true,
+  "apkProduced": false,
+  "deviceTested": false
+}

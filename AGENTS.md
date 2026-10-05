@@ -1,3 +1,9 @@
+# Neo Geo CD preparado — produção catálogo14 — 05/10/2026
+
+Leia `docs/server/RETORNO-NEOGEOCD-20261005.md` e `versions/station-neogeocd-20261005/README.md`. Servidor publicou50CD/2.212jogos com capas/sinopses; BIOSCDausente. DeltaMAMEJava/DEX compilado/testado, ainda sem APKassinado/instalação. **R15 abaixo continua a última instalação comprovada**, incluindo N64completo/R14B/R12. Próximo build deve acrescentar apenas este delta guardado sobreR15 e preservar licença/dados/saves/certificado. Não repetir empacotadores históricos sobreR15.
+
+---
+
 # R15 instalada — 05/10/2026
 
 Atualização por USB concluída com sucesso, sem desinstalar ou limpar dados. SHA256 do base.apk no telefone **d99b051f50eb3b5069b68fe96e6501b4e3d4a66755ded8489d357789f72a8c5b**, igual ao APK preparado. Aplicativo aberto; catálogo Neo Geo com capa, sinopse e botões observado, sessão mantida sem digitar credenciais. Configurações de tela não alteradas. Recibo: `versions/station-emulators-r15-20261005/evidence/installation.json`.
