@@ -1,0 +1,5355 @@
+{
+  "legacy": [
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 0,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 1,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "snes",
+      "model": 2,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 60,
+      "pixel_byte_equal": false,
+      "max_channel_delta": 1,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 2.4279859371054522e-06
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 0,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 60,
+      "pixel_byte_equal": false,
+      "max_channel_delta": 1,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 2.4279859371054522e-06
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 1,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "mega",
+      "model": 2,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 0,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 1,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "n64",
+      "model": 2,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 0,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 1,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "svcplus",
+      "model": 2,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 0,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 1,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 208,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 209,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 624,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "aof",
+      "model": 2,
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    }
+  ],
+  "neo": [
+    {
+      "name": "svcplus",
+      "temporal": 255,
+      "smallTextureChanged": {
+        "pixel_byte_equal": false,
+        "max_channel_delta": 205,
+        "changed_pixels_gt1": 73388,
+        "mean_channel_delta": 13.252838315560476
+      },
+      "newVsOld": {
+        "pixel_byte_equal": false,
+        "max_channel_delta": 203,
+        "changed_pixels_gt1": 39205,
+        "mean_channel_delta": 2.1954965716838566
+      }
+    },
+    {
+      "name": "aof",
+      "temporal": 255,
+      "smallTextureChanged": {
+        "pixel_byte_equal": false,
+        "max_channel_delta": 208,
+        "changed_pixels_gt1": 65864,
+        "mean_channel_delta": 10.938511256142805
+      },
+      "newVsOld": {
+        "pixel_byte_equal": false,
+        "max_channel_delta": 205,
+        "changed_pixels_gt1": 30612,
+        "mean_channel_delta": 1.973243594973098
+      }
+    }
+  ],
+  "square": [
+    {
+      "name": "neogeocd-square",
+      "frame": 0,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      }
+    },
+    {
+      "name": "neogeocd-square",
+      "frame": 35,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      }
+    },
+    {
+      "name": "neogeocd-square",
+      "frame": 60,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      }
+    },
+    {
+      "name": "neogeocd-square",
+      "frame": 120,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      }
+    },
+    {
+      "name": "neogeocd-square",
+      "frame": 175,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      },
+      "dotChanges": 0,
+      "temporal": 255
+    },
+    {
+      "name": "neogeocd-video-frame",
+      "frame": 0,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      }
+    },
+    {
+      "name": "neogeocd-video-frame",
+      "frame": 35,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      }
+    },
+    {
+      "name": "neogeocd-video-frame",
+      "frame": 60,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      }
+    },
+    {
+      "name": "neogeocd-video-frame",
+      "frame": 120,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      }
+    },
+    {
+      "name": "neogeocd-video-frame",
+      "frame": 175,
+      "oes2d": {
+        "pixel_byte_equal": true,
+        "max_channel_delta": 0,
+        "changed_pixels_gt1": 0,
+        "mean_channel_delta": 0.0
+      },
+      "dotChanges": 0,
+      "temporal": 255
+    }
+  ],
+  "controls": [
+    {
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    }
+  ],
+  "flow": [
+    {
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 5,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 10,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 15,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 20,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 25,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 30,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 40,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 45,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 50,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 55,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 65,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 70,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 75,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 80,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 85,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 90,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 95,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 100,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 105,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 110,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 115,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 125,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 130,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 135,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 140,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 145,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 150,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 155,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 160,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 165,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 170,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 180,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 185,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 190,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 195,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 200,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 205,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 210,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 215,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 220,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 225,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 230,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 235,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 240,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 245,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 250,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 255,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 260,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 265,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 270,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 275,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 280,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 285,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 290,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 295,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 300,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 305,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 310,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 315,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 320,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 325,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 330,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 335,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 340,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 345,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 350,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 355,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 360,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 365,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 370,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 375,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 380,
+      "pixel_byte_equal": false,
+      "max_channel_delta": 1,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0006361323155216285
+    },
+    {
+      "frame": 385,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 390,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 395,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 400,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 405,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 410,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 415,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 420,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 425,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 430,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 435,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 440,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 445,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 450,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 455,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 460,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 465,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 470,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 475,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 480,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 485,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 490,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 495,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 500,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 505,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 510,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 515,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 520,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 525,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 530,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 535,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 540,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 545,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 550,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 555,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 560,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 565,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 570,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 575,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 580,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 585,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 590,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 595,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 600,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 605,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 610,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 615,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 620,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "frame": 625,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    }
+  ],
+  "culling": [
+    {
+      "image": "neogeocd-square",
+      "frame": 0,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "neogeocd-square",
+      "frame": 35,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "neogeocd-square",
+      "frame": 60,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "neogeocd-square",
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "neogeocd-square",
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "neogeocd-video-frame",
+      "frame": 0,
+      "pixel_byte_equal": false,
+      "max_channel_delta": 1,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 4.8559718742109044e-06
+    },
+    {
+      "image": "neogeocd-video-frame",
+      "frame": 35,
+      "pixel_byte_equal": false,
+      "max_channel_delta": 1,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 1.1330601039825443e-05
+    },
+    {
+      "image": "neogeocd-video-frame",
+      "frame": 60,
+      "pixel_byte_equal": false,
+      "max_channel_delta": 1,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 1.618657291403635e-06
+    },
+    {
+      "image": "neogeocd-video-frame",
+      "frame": 120,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    },
+    {
+      "image": "neogeocd-video-frame",
+      "frame": 175,
+      "pixel_byte_equal": true,
+      "max_channel_delta": 0,
+      "changed_pixels_gt1": 0,
+      "mean_channel_delta": 0.0
+    }
+  ],
+  "output": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108",
+  "referenceSHA256": {
+    "G:\\TURBORAMA\\RetroBat\\roms\\snes\\media\\revista\\Arcana (USA).png": "cc810013bbf5a9bf4a73940be61edb7b68001f636bd0e336574a75dcaca7a2fa",
+    "G:\\TURBORAMA\\RetroBat\\roms\\megadrive\\media\\revista\\688 Attack Sub (USA, Europe).png": "4a7e8c516a9e58958160fcf0795e43194cf975187e416f59c8411632a316fc11",
+    "G:\\TURBORAMA\\RetroBat\\roms\\n64\\media\\revista\\Yoshi's Story.png": "d4a35c55c6d290d71551a2816a8b858e95608ad77cccdf68f98219fa24cc7797",
+    "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\refs\\neogeo-svcplus.png": "9e9aef8d5d7953a26bdbb25a10f345c27f58b110e64043311ba036631da23de4",
+    "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\refs\\neogeo-aof.png": "0751ecf65c8973e9cc1c4b3cdc7e4e856a129ab271d796f78b72226c3fc13896"
+  },
+  "sourceSHA256": {
+    "collection_video_policy.h": "80d53f41777a7370157e454982c69e8aa09b9beff46abcbee997aae61ebd399c",
+    "console_assets.h": "ce75cda3a6adebe55bfeb61a4318e69e812cb68ae633703c6e8a8ba4236047fc",
+    "magazine_shader.h": "61ca83f7134b34157618318c072e852d2e41f715721426f1fcadf6db15853e39",
+    "native_carousel.cpp": "dc39bc5fd00e3949cc759c795debf452d271d6bc0fcf91a1fdb9bb886fdc59df",
+    "native_console.h": "5cda176438e955cccbe1f25deec1a33e1ab11f454c37bc3db7145cf660bc92d0",
+    "native_folders.h": "00d8b251298c1aab0be57ad7f9f0fba5ee6268c6d40734663d709e5f1e77eb15",
+    "native_info.h": "7b5f58c78c51fca0ceb7e016862707fdf1e122d286180ca0f8e762692ce0bed9",
+    "native_magazine.h": "bb5c28fc1a7426b8b999061b3973ab4add8fb3eae09e49394afc4f61bde36438",
+    "native_n64.h": "a3562d758dd63fd7c9e839e5dd46c67f890a29da1dc73002816c5b0e87cc2ce3",
+    "native_neogeocd_square.h": "669ffa0f883ebcee026eebb5dae73122d2ace2d2201eef839ec165ce3167d4ef",
+    "native_search_download.h": "4617777795d69f2dc09bcf1496dd5095ce4962513d2b7b5f86bc220a7b73ba1c",
+    "native_system_video720.h": "251af56249a27f0ceb475158ecef64776a2b39b115334079807b0fdeecedf049",
+    "neogeocd-square.glsl": "ce71ed5b0d9b991bfa6b7641e71bbc7d14784427c407039f9bc905837d41713a",
+    "neogeo_led_profile.h": "19b46fb32d76051c3e641d404b5aa112c627904b1d9314d11c5a634201939976",
+    "premium-magazine-led-android.glsl": "050d3bce5c801dc3f348818f7f141fd493fe12b2cccaf0f51282542af3f01db5",
+    "station_console_keys.h": "b35124361715daca32b7f6d2c3dfc5ed62b1f9b75d8df7dcbecd1601fac4e86e",
+    "station_info_layout.h": "7f84f451085cbfebd6cd3ca40cdefe8ac01dacfa6a9e17e94e311f61ec38db8a",
+    "station_synopsis_scroll.h": "f3d4de5ed22053324cff231eb1568ccc4be761603d3d30603b22689e1e2bb6ea",
+    "video720_posters.h": "3e4475a64c1c0de44c83b3dea04bcbc5524232982da6013cc3a9c92f13bf3e36"
+  },
+  "passed": true,
+  "GL": {
+    "environment": "Windows ANGLE offscreen GLES2; not Android hardware",
+    "output": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108",
+    "compile": [
+      {
+        "name": "new common SNES lamp engine",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "507b7ade9279586d983e1f35be095a9fb385dd9253e2f301e85068f704eba46c",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "3431c3026447eb90313082edcb22448f78ef52ea74c7a7331d5f8c0423d230ed",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": "(155,1): warning X4000: use of potentially uninitialized variable (f_region)\n\n\n"
+      },
+      {
+        "name": "R22 magazine reference",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "6b6b282866ba897ef821e6ef30862f8c50b74fe37ae5befbd47fcf5c2e40d250",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "0617824fb8b9a526f7cf83c2a846fde34a03cb358487fc6390779d8ff373dbe9",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": "(151,1): warning X4000: use of potentially uninitialized variable (f_region)\n\n\n"
+      },
+      {
+        "name": "reference",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "a382a0df5ac4fbae255adef714752494e076d56391e08d065e4f459f3985e389",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": ""
+      },
+      {
+        "name": "square sampler2D",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "7cbbdea2751b7d3eb74bddced97fa1149b04f5176f8af81c71c4c30dfe4a8ee4",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": "(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(70,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n\n\n"
+      },
+      {
+        "name": "square external OES",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "8644c4ba2c8f4fba772ce94ab20732155cbe12094109777423c8794f45d27392",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": "(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(75,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n\n\n"
+      },
+      {
+        "name": "square before empty-region optimization",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "94bc54f32a68ddd1d0c58a2c581a4df40bde12af1272bd1a0465b47d6bcd0486",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": ""
+      },
+      {
+        "name": "SNES reference envelope",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "fe3b89607e50eef1bcea9943128645bc0901524b415b036d7fd96066a934be84",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "152a9df06a51c6fdb62f07cf4dc5704eed3785f7285d2341030bc143b2fc90ef",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": ""
+      },
+      {
+        "name": "square actual envelope",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "728c9668f2227319e380deafcaeb91534e0826c845a0f6931309f2f74a93889e",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": ""
+      }
+    ],
+    "gl_errors": [
+      {
+        "operation": "initialize",
+        "errors": []
+      },
+      {
+        "operation": "compile new common SNES lamp engine",
+        "errors": []
+      },
+      {
+        "operation": "compile R22 magazine reference",
+        "errors": []
+      },
+      {
+        "operation": "compile reference",
+        "errors": []
+      },
+      {
+        "operation": "compile square sampler2D",
+        "errors": []
+      },
+      {
+        "operation": "compile square external OES",
+        "errors": []
+      },
+      {
+        "operation": "compile square before empty-region optimization",
+        "errors": []
+      },
+      {
+        "operation": "upload (1024, 1536)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "upload (1024, 1536)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "upload (1024, 1536)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "upload (1024, 1536)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 9 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "upload (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "upload (1024, 1536)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f209 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f624 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f625 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 9 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f175 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f35 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "upload (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 6 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "upload (1254, 1254)",
+        "errors": []
+      },
+      {
+        "operation": "EGLImage external texture",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 9 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f35 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f35 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f35 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f60 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f60 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f60 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f120 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f120 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f120 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f175 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f175 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f175 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "upload (720, 720)",
+        "errors": []
+      },
+      {
+        "operation": "EGLImage external texture",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 9 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f35 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f35 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f35 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f60 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f60 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f60 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f120 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f120 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f120 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 12 f175 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 15 f175 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 18 f175 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (393, 393)",
+        "errors": []
+      },
+      {
+        "operation": "compile SNES reference envelope",
+        "errors": []
+      },
+      {
+        "operation": "compile square actual envelope",
+        "errors": []
+      },
+      {
+        "operation": "upload (720, 720)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f0 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f0 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f5 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f5 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f10 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f10 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f15 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f15 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f20 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f20 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f25 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f25 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f30 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f30 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f35 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f35 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f40 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f40 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f45 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f45 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f50 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f50 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f55 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f55 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f60 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f60 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f65 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f65 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f70 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f70 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f75 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f75 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f80 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f80 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f85 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f85 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f90 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f90 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f95 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f95 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f100 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f100 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f105 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f105 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f110 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f110 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f115 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f115 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f120 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f120 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f125 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f125 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f130 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f130 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f135 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f135 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f140 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f140 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f145 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f145 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f150 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f150 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f155 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f155 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f160 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f160 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f165 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f165 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f170 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f170 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f175 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f175 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f180 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f180 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f185 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f185 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f190 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f190 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f195 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f195 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f200 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f200 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f205 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f205 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f210 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f210 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f215 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f215 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f220 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f220 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f225 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f225 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f230 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f230 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f235 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f235 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f240 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f240 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f245 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f245 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f250 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f250 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f255 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f255 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f260 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f260 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f265 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f265 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f270 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f270 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f275 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f275 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f280 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f280 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f285 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f285 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f290 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f290 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f295 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f295 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f300 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f300 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f305 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f305 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f310 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f310 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f315 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f315 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f320 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f320 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f325 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f325 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f330 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f330 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f335 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f335 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f340 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f340 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f345 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f345 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f350 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f350 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f355 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f355 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f360 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f360 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f365 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f365 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f370 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f370 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f375 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f375 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f380 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f380 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f385 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f385 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f390 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f390 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f395 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f395 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f400 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f400 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f405 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f405 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f410 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f410 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f415 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f415 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f420 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f420 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f425 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f425 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f430 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f430 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f435 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f435 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f440 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f440 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f445 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f445 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f450 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f450 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f455 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f455 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f460 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f460 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f465 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f465 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f470 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f470 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f475 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f475 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f480 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f480 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f485 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f485 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f490 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f490 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f495 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f495 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f500 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f500 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f505 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f505 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f510 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f510 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f515 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f515 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f520 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f520 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f525 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f525 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f530 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f530 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f535 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f535 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f540 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f540 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f545 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f545 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f550 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f550 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f555 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f555 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f560 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f560 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f565 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f565 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f570 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f570 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f575 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f575 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f580 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f580 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f585 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f585 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f590 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f590 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f595 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f595 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f600 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f600 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f605 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f605 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f610 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f610 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f615 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f615 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f620 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f620 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 21 f625 (8, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 24 f625 (8, 393)",
+        "errors": []
+      }
+    ],
+    "artifacts": [
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\snes-reference-f120.png",
+        "pixel_sha256": "3b18770ced750239cf2a9cdc9b81986cd977353f00a59e53401519cca073c2a2",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\mega-reference-f120.png",
+        "pixel_sha256": "c25d89128ebaf6dcc0b75d9eae1c995775949dca6d940bf8b94614dccf552176",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\n64-reference-f120.png",
+        "pixel_sha256": "4788f2c664fd03308b613cccd03724c07c27fc0cd1dd8190c16ccd9273e96632",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\svcplus-f0.png",
+        "pixel_sha256": "4c503aeaf1dce5d6dcd9976e58c1a7060606f7969dd82b7ec4fff779160d0418",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\svcplus-f35.png",
+        "pixel_sha256": "e88d3700dfb993d1fad9fa1883a722ab4505c4fc619001db996b1cfa4c6718ba",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\svcplus-f60.png",
+        "pixel_sha256": "221fb79c1db061f9cebff13686c06c732eccbd0e9b4875cdedf98ebe37d41d59",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\svcplus-f120.png",
+        "pixel_sha256": "104c247aab4dd8eaa9afe51d228e00cb5b720c8196829ffed6b9f6f4f425295f",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\svcplus-f175.png",
+        "pixel_sha256": "4721067b8fa66e77f736286341031badd5c3c72d1e665442026eb5eb1243f43e",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\svcplus-old-f35.png",
+        "pixel_sha256": "3d3f9cc65fc5ea35c73fa470cffa29e7ec044d5a03a6402066028afb8e9e6a1f",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\svcplus-old-f120.png",
+        "pixel_sha256": "4c35dc62126559a01b56ad0ab97f64bc277230bbc425c598c12935f2adf5faef",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\aof-f0.png",
+        "pixel_sha256": "4ee1a4ea0b172ff69c2677ff7b293ced17d7c75c8e6b0d31cce1beb6e4a71fd1",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\aof-f35.png",
+        "pixel_sha256": "9cc8d3f7a23a7280a64b2f8419944434e0f3b179b501cc5246d9ca13e59048eb",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\aof-f60.png",
+        "pixel_sha256": "4ec574d3c0429190a0adf015fd25ea1a95ef3b52b7af7cfdf04dc299c47cac87",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\aof-f120.png",
+        "pixel_sha256": "13472974478648c9f59c2eeff2557fb69c0e58899663e8f8fe9fefb31685ace2",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\aof-f175.png",
+        "pixel_sha256": "ab0a8d422f35717be6f0d7a04d7a4bbccd58bdf7ccec51b991c342977404ee06",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\aof-old-f35.png",
+        "pixel_sha256": "cbb49254ca38e2f320d20ee23a78623e4aa6f8c21dc2b464d24e0425c8389bcd",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\aof-old-f120.png",
+        "pixel_sha256": "91c12dcc4e686a3ffdb5ccedf4924b99f285bc2f337cff5690991644ba18a3c7",
+        "size": [
+          262,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-square-f0.png",
+        "pixel_sha256": "c8921b8425d27a54f1405be0746b49b79be3f6bbd2b376ef31b96f5da991f89f",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-square-f35.png",
+        "pixel_sha256": "7518e645266edcf6109af930d1c552bf15477e51e6321fa8fe685fec3c542e68",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-square-f60.png",
+        "pixel_sha256": "867855f0966744d1fd8e60a1e9aa908c6c3a517ab5d6ee07269574ab0b60bdd9",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-square-f120.png",
+        "pixel_sha256": "b45bf7919ed623b6604cdad614724d68316cc4179cb398d0936b46b1c5cd74a9",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-square-f175.png",
+        "pixel_sha256": "18342799360bbdf5355f07ade521da7c791d2cb8f702cdad410c0bb1d65e76a5",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-video-frame-f0.png",
+        "pixel_sha256": "28d67420ec850f10f82c0d0fef8e2e9573c7058b7589562b22ba328574bafc39",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-video-frame-f35.png",
+        "pixel_sha256": "9315abd1176e098c367165fb51bc7225e46dd4514699b02d96abb62055cb17bf",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-video-frame-f60.png",
+        "pixel_sha256": "a3a622379537995ac1e1b8d73521185df24d3bffba1c53e14c61ec0a4d646dfe",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-video-frame-f120.png",
+        "pixel_sha256": "8ae237de844a5087d35e9e80ca1207824c6ad8bac136766d7abbf2e033f21a88",
+        "size": [
+          393,
+          393
+        ]
+      },
+      {
+        "file": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\tests\\angle-20261005-165108\\neogeocd-video-frame-f175.png",
+        "pixel_sha256": "e84e5dafb5709d30ce5ef6d3f4d8e471684b655a16bb93ac04748cce46496827",
+        "size": [
+          393,
+          393
+        ]
+      }
+    ],
+    "legacy": [],
+    "neo": [],
+    "square": [],
+    "controls": [],
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 SUPER (0x00001F06) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.16.1074)",
+    "version": "OpenGL ES 3.0 (ANGLE 2.1 git hash: unknown hash)",
+    "gl_extensions": [
+      "GL_AMD_performance_monitor",
+      "GL_ANGLE_base_vertex_base_instance_shader_builtin",
+      "GL_ANGLE_blob_cache",
+      "GL_ANGLE_client_arrays",
+      "GL_ANGLE_clip_cull_distance",
+      "GL_ANGLE_copy_texture_3d",
+      "GL_ANGLE_depth_texture",
+      "GL_ANGLE_framebuffer_blit",
+      "GL_ANGLE_framebuffer_multisample",
+      "GL_ANGLE_get_serialized_context_string",
+      "GL_ANGLE_get_tex_level_parameter",
+      "GL_ANGLE_instanced_arrays",
+      "GL_ANGLE_lossy_etc_decode",
+      "GL_ANGLE_memory_size",
+      "GL_ANGLE_multiview_multisample",
+      "GL_ANGLE_pack_reverse_row_order",
+      "GL_ANGLE_polygon_mode",
+      "GL_ANGLE_program_binary_readiness_query",
+      "GL_ANGLE_program_cache_control",
+      "GL_ANGLE_provoking_vertex",
+      "GL_ANGLE_renderability_validation",
+      "GL_ANGLE_request_extension",
+      "GL_ANGLE_robust_client_memory",
+      "GL_ANGLE_shader_pixel_local_storage",
+      "GL_ANGLE_shader_pixel_local_storage_coherent",
+      "GL_ANGLE_stencil_texturing",
+      "GL_ANGLE_texture_compression_dxt3",
+      "GL_ANGLE_texture_compression_dxt5",
+      "GL_ANGLE_texture_multisample",
+      "GL_ANGLE_texture_usage",
+      "GL_ANGLE_translated_shader_source",
+      "GL_APPLE_clip_distance",
+      "GL_ARM_rgba8",
+      "GL_CHROMIUM_bind_generates_resource",
+      "GL_CHROMIUM_bind_uniform_location",
+      "GL_CHROMIUM_copy_compressed_texture",
+      "GL_CHROMIUM_copy_texture",
+      "GL_CHROMIUM_lose_context",
+      "GL_EXT_EGL_image_external_wrap_modes",
+      "GL_EXT_base_instance",
+      "GL_EXT_blend_func_extended",
+      "GL_EXT_blend_minmax",
+      "GL_EXT_clip_control",
+      "GL_EXT_clip_cull_distance",
+      "GL_EXT_color_buffer_float",
+      "GL_EXT_color_buffer_half_float",
+      "GL_EXT_conservative_depth",
+      "GL_EXT_debug_label",
+      "GL_EXT_debug_marker",
+      "GL_EXT_depth_clamp",
+      "GL_EXT_discard_framebuffer",
+      "GL_EXT_disjoint_timer_query",
+      "GL_EXT_draw_buffers",
+      "GL_EXT_draw_buffers_indexed",
+      "GL_EXT_draw_elements_base_vertex",
+      "GL_EXT_float_blend",
+      "GL_EXT_frag_depth",
+      "GL_EXT_instanced_arrays",
+      "GL_EXT_map_buffer_range",
+      "GL_EXT_occlusion_query_boolean",
+      "GL_EXT_polygon_offset_clamp",
+      "GL_EXT_read_format_bgra",
+      "GL_EXT_render_snorm",
+      "GL_EXT_robustness",
+      "GL_EXT_sRGB",
+      "GL_EXT_shader_texture_lod",
+      "GL_EXT_texture_border_clamp",
+      "GL_EXT_texture_compression_bptc",
+      "GL_EXT_texture_compression_dxt1",
+      "GL_EXT_texture_compression_rgtc",
+      "GL_EXT_texture_compression_s3tc_srgb",
+      "GL_EXT_texture_filter_anisotropic",
+      "GL_EXT_texture_format_BGRA8888",
+      "GL_EXT_texture_mirror_clamp_to_edge",
+      "GL_EXT_texture_norm16",
+      "GL_EXT_texture_rg",
+      "GL_EXT_texture_storage",
+      "GL_EXT_texture_type_2_10_10_10_REV",
+      "GL_EXT_unpack_subimage",
+      "GL_KHR_debug",
+      "GL_KHR_parallel_shader_compile",
+      "GL_KHR_robustness",
+      "GL_NV_EGL_stream_consumer_external",
+      "GL_NV_fence",
+      "GL_NV_framebuffer_blit",
+      "GL_NV_pack_subimage",
+      "GL_NV_pixel_buffer_object",
+      "GL_NV_shader_noperspective_interpolation",
+      "GL_OES_EGL_image",
+      "GL_OES_EGL_image_external",
+      "GL_OES_EGL_image_external_essl3",
+      "GL_OES_compressed_EAC_R11_signed_texture",
+      "GL_OES_compressed_EAC_R11_unsigned_texture",
+      "GL_OES_compressed_EAC_RG11_signed_texture",
+      "GL_OES_compressed_EAC_RG11_unsigned_texture",
+      "GL_OES_compressed_ETC2_RGB8_texture",
+      "GL_OES_compressed_ETC2_RGBA8_texture",
+      "GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture",
+      "GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture",
+      "GL_OES_compressed_ETC2_sRGB8_alpha8_texture",
+      "GL_OES_compressed_ETC2_sRGB8_texture",
+      "GL_OES_depth24",
+      "GL_OES_depth32",
+      "GL_OES_draw_buffers_indexed",
+      "GL_OES_draw_elements_base_vertex",
+      "GL_OES_element_index_uint",
+      "GL_OES_fbo_render_mipmap",
+      "GL_OES_get_program_binary",
+      "GL_OES_mapbuffer",
+      "GL_OES_packed_depth_stencil",
+      "GL_OES_required_internalformat",
+      "GL_OES_rgb8_rgba8",
+      "GL_OES_sample_variables",
+      "GL_OES_shader_multisample_interpolation",
+      "GL_OES_standard_derivatives",
+      "GL_OES_surfaceless_context",
+      "GL_OES_texture_border_clamp",
+      "GL_OES_texture_float",
+      "GL_OES_texture_float_linear",
+      "GL_OES_texture_half_float",
+      "GL_OES_texture_half_float_linear",
+      "GL_OES_texture_npot",
+      "GL_OES_texture_stencil8",
+      "GL_OES_texture_storage_multisample_2d_array",
+      "GL_OES_vertex_array_object",
+      "GL_OVR_multiview",
+      "GL_OVR_multiview2",
+      "GL_WEBGL_video_texture"
+    ],
+    "egl_extensions": [
+      "EGL_EXT_create_context_robustness",
+      "EGL_ANGLE_d3d_share_handle_client_buffer",
+      "EGL_ANGLE_d3d_texture_client_buffer",
+      "EGL_ANGLE_surface_d3d_texture_2d_share_handle",
+      "EGL_ANGLE_query_surface_pointer",
+      "EGL_ANGLE_window_fixed_size",
+      "EGL_ANGLE_keyed_mutex",
+      "EGL_ANGLE_surface_orientation",
+      "EGL_ANGLE_direct_composition",
+      "EGL_NV_post_sub_buffer",
+      "EGL_KHR_create_context",
+      "EGL_KHR_image",
+      "EGL_KHR_image_base",
+      "EGL_KHR_gl_texture_2D_image",
+      "EGL_KHR_gl_texture_cubemap_image",
+      "EGL_KHR_gl_renderbuffer_image",
+      "EGL_KHR_get_all_proc_addresses",
+      "EGL_KHR_stream",
+      "EGL_KHR_stream_consumer_gltexture",
+      "EGL_NV_stream_consumer_gltexture_yuv",
+      "EGL_ANGLE_stream_producer_d3d_texture",
+      "EGL_ANGLE_create_context_webgl_compatibility",
+      "EGL_CHROMIUM_create_context_bind_generates_resource",
+      "EGL_CHROMIUM_sync_control",
+      "EGL_EXT_pixel_format_float",
+      "EGL_KHR_surfaceless_context",
+      "EGL_ANGLE_display_texture_share_group",
+      "EGL_ANGLE_display_semaphore_share_group",
+      "EGL_ANGLE_create_context_client_arrays",
+      "EGL_ANGLE_program_cache_control",
+      "EGL_ANGLE_robust_resource_initialization",
+      "EGL_ANGLE_create_context_extensions_enabled",
+      "EGL_ANDROID_blob_cache",
+      "EGL_ANDROID_recordable",
+      "EGL_ANGLE_image_d3d11_texture",
+      "EGL_ANGLE_create_context_backwards_compatible",
+      "EGL_KHR_no_config_context",
+      "EGL_KHR_create_context_no_error",
+      "EGL_KHR_reusable_sync",
+      "EGL_ANGLE_memory_usage_report"
+    ],
+    "egl_version": [
+      1,
+      5
+    ]
+  },
+  "cullingTolerancePerChannel": 1,
+  "legacyTolerancePerChannel": 1,
+  "limitations": [
+    "ANGLE PC is not Android performance or visual acceptance.",
+    "OES input uses EGLImage from reference frame; live decoder not exercised."
+  ]
+}

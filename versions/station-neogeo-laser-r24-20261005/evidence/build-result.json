@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-05T19:56:21.004550+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Jogadores-Estrelas-R23-20261005.apk",
+  "baseSHA256": "58c61a4d1e74396ffbefb2c5b6108e1c78a951164080a3b0f32de696330233e8",
+  "apk": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\TurboStations-NeoGeo-Laser-R24-20261005.apk",
+  "sha256": "d35516420934aeda7cee96af6185a17506146ae7fa2c28f867d6e7c44e721a0b",
+  "bytes": 2053849968,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13083,
+  "roomsDexSHA256": "8961f4a11aece9cb0a7a264767043664e008359202dd55dbbfd6cc02079eb4ae",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "gameDownloadContentHashEnabled": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false
+}

@@ -1,3 +1,11 @@
+# R24 — laser Neo Geo/CD no padrão SNES — 05/10/2026
+
+Leia `versions/station-neogeo-laser-r24-20261005/README.md` e STATUS. APK `E:\ESTUDO APK\work\station-neogeo-laser-r24-20261005\TurboStations-NeoGeo-Laser-R24-20261005.apk`, SHA d35516420934aeda7cee96af6185a17506146ae7fa2c28f867d6e7c44e721a0b. Base APK R23A + fontes R23B (sem APK próprio) + quatro arquivos LED. Inclui contagem, jogadores/nota/título do painel R23B. Mesmo movimento/cálculo SNES nas revistas Neo; quadrado CD com feixe proporcional .007 e mesmo relógio. Preserva cores, máscaras, vídeos R22 e todos os motores/DEX.
+
+8 programas GLES,135 comparações legadas (133 exatas;2 até1/255),126 envelopes,10 pares2D/OES e pacote inteiro conferidos. Só carousel SO alterado;13.083 entradas intactas. Fonte final W24/native, dependênciasW16+dois objetosW16/W22. SO e APKbase arquivadosG comSHA/recibos; não procurar sóE. Instalado às17:01 por atualização, SHAtelefone igual; capturaSNES com sessão. LEDNeo/validação de todasplataformas pendentes; STATUS/evidência posterior prevalecem. Novo pedido posterior (retirar nota/legenda, jogadores junto às estrelas e console maior) será R25 separado. Não marcar estável/FPS/aceite visual sem prova. Downloads11be7f3 continuam fora. Preservar jogos/saves/licença.
+
+## Histórico anterior
+
 # R23B — painel dos jogos preparado; integração R24 pendente — 05/10/2026
 
 Leia `versions/station-game-details-r23b-20261005/README.md` e STATUS. Fonte `E:\ESTUDO APK\work\station-game-details-r23-20261005\native`, SO `48eda90ac617b1dbd318f8932883386466d5f3cc8cb10ec6586a4b499d953fab` (93843368 bytes). Layout comum a todos jogos: contagem abaixo da sinopse; jogadores/estrelas acima do console; nome abaixo do console. Índice exato2.212 IDs,2.148 jogadores/1.986 notas; ausências explícitas, nota do catálogo/XML. Não há média comprovada de usuários nem metadados novos por rede automática.

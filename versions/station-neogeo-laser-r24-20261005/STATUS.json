@@ -1,0 +1,19 @@
+{
+  "revision": "R24",
+  "baseAPK": "R23A",
+  "sourceBase": "R23B compiled overlay (no standalone APK)",
+  "baseCommit": "8ead3d767bae957cf82ced448931c69dd0e92a1d",
+  "apk": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\TurboStations-NeoGeo-Laser-R24-20261005.apk",
+  "apkSHA256": "d35516420934aeda7cee96af6185a17506146ae7fa2c28f867d6e7c44e721a0b",
+  "apkBytes": 2053849968,
+  "nativeSHA256": "bf702a1eee840a850df007f2eb684d9aa7ef7ca7bec486e84bb01f9d9450b2e6",
+  "compiled": true,
+  "installed": true,
+  "visualAndroidConfirmed": false,
+  "stable": false,
+  "ledPCPassed": true,
+  "unchangedAPKEntries": 13083,
+  "sourceOverlay": "E:\\ESTUDO APK\\work\\station-neogeo-laser-r24-20261005\\native",
+  "note": "R24 update installed and APK hash confirmed. SNES frontend captured. Neo Geo laser visual acceptance and cross-platform panel validation remain pending.",
+  "installationEvidence": "evidence/installation.json"
+}
