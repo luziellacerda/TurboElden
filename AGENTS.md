@@ -1,12 +1,8 @@
-# R55: prontidão conciliada sobre a fonte atual — 06/10/2026
+# Sucessora visual R57 — fonte funcional online R55 preservada
 
-Leia `docs/server/RETORNO-ANALISE-APP-R55-STATION-20261006.md` e `versions/station-relay-readiness-r55-20261006/README.md`. Fonte recebida:9d3d45f; implementação conciliada:8e62ed2; retorno servidor:2fba03b. R55 instalada no Motorola segundo o recibo recebido; versão do outro aparelho ainda precisa ser conferida. O delta mantém o canal ResultReceiver normalizado nos dois sentidos, proprietário e saída idempotente da R54, StationExitPanel e módulos nativos/cliente da R55.
+Leia [R57: barra fina e Criar sala](versions/station-layout-r57-20261006/README.md) e seu `STATUS.json`. APK SHA `e6159fa3564f0b30c1415b062f42e08e47ea625832e1b2640375b3e8b2b55566`. A fonte atual é o snapshot R55 mais o overlay R57 explicitamente listado; não há mudança no protocolo/motor online. Faixa INSTALADO e posição das capas permanecem idênticas à R55. O pedido de revisão funcional R55 no servidor continua válido; ao alterar a Activity de salas, considerar também o layout R57. Candidato de prontidão d1b535c não integrado; nenhuma partida em dupla declarada corrigida.
 
-346 arquivos conferidos; 154 fontes Java preservados, dois alterados e um novo. Passaram 39 verificações TCP/TLS/relay e 255 das regras de salas; 157 fontes compilaram Java8/API34 somente em api-check-only. Não há novo DEX/APK compilado ou instalado, nem gameplay físico comprovado. Sem alteração de servidor necessária para este delta; produção apenas inspecionada, API a2bb176/PID875574 preservada.
-
-No PC, usar as receitas novas sobre o APK R55/hash4c8de4f8, com dependências e certificado originais. A receita R41 não serve para a versão atual. Conferir ambas as instalações e testar Battletoads, confirmação, inputs dos dois jogadores, saída e retorno. Não limpar dados nem trocar assinatura. Controles online próprios, aquecimento medido e latência externa continuam pendentes.
-
-## Histórico anterior
+## Publicação R55 e histórico preservados
 
 # Fonte atual do app: R55 enviada para análise do servidor — 06/10/2026
 

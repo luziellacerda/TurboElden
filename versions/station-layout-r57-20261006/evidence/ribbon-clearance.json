@@ -1,0 +1,17 @@
+{
+  "headerHeightRatio": 0.085,
+  "previousHeaderHeightRatio": 0.105,
+  "platformCoverTopRatio": 0.135,
+  "gameCoverTopRatio": 0.115,
+  "coversUnmoved": true,
+  "ribbonUnmodified": true,
+  "unchangedSources": {
+    "native_formation.h": "d40e9d1047f1816acee4e49ddd570b88bbf81a25a10ceeccf1085f7d34c759a8",
+    "native_installed_tag.h": "e2f279f76d837591533c942b9fa63c3cbd2b28a5d8d238922c6cd907157ee085",
+    "station_ribbon_placement.h": "6a9327f32045a259eba80996e2ce81d6f30507df99cc2490538e972d436582cb",
+    "installed_art_asset.h": "068fd7e1ecbe2f9971917381cfa60ef72c85bed68a13b9df6995870a36ab4177",
+    "installed_art_r48.h": "ccc58c7196850819a7a331e4ed3dd7ea7f761f4f9686652f4f24b2891a1b64b0"
+  },
+  "visibleRibbonAlphaTop": 108,
+  "testedGeometryCases": 8820
+}

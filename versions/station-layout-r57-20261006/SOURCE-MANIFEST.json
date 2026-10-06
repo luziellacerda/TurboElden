@@ -1,0 +1,77 @@
+{
+  "baseSourceCommit": "9d3d45f048aa44bb2ee9c41f567e985901628daa",
+  "baseSnapshot": "versions/station-current-r55-20261006",
+  "overlay": {
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": {
+      "sha256": "cbca629b858eb52947765f61114e3481e38649176ab74a53b9bd2153bda5ebad",
+      "bytes": 61592,
+      "origin": "E:\\ESTUDO APK\\work\\station-create-card-r56-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomsActivity.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationCreateGameCard.java": {
+      "sha256": "c7011c35ff3e5b3b60a8525ca770262cc98a4d5982c17fa961d1a0a62a84c4a7",
+      "bytes": 3035,
+      "origin": "E:\\ESTUDO APK\\work\\station-create-card-r56-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationCreateGameCard.java"
+    },
+    "native/native_carousel.cpp": {
+      "sha256": "ae1255f4b19824e7838ddca76a2fa946863dd2289e9580d23d460e2b285ef8ca",
+      "bytes": 29807,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\native\\native_carousel.cpp"
+    },
+    "native/native_skin.h": {
+      "sha256": "6d73d0132dae7fc9485780f54e676db91d2e2b6e9c78d06f5ee59a7b4d1e815a",
+      "bytes": 14293,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\native\\native_skin.h"
+    },
+    "native/native_profile_name.h": {
+      "sha256": "448bdfc2255b36fa794c9623e2e4f35a4d60d0c1d5205f595fe9c41cb6292552",
+      "bytes": 4361,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\native\\native_profile_name.h"
+    },
+    "native/station_compact_topbar.h": {
+      "sha256": "d4fed4687cc9d92422b476d94aa9ea28e7a6cb8ebd1753e1ec2eea0bf175564a",
+      "bytes": 236,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\native\\station_compact_topbar.h"
+    },
+    "evidence/native-build.json": {
+      "sha256": "208a28c659d09dbbe187d86b9f2e1b2802a2dea007a5dd8f3562c69ea0a01cda",
+      "bytes": 14766,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\evidence\\native-build.json"
+    },
+    "evidence/compiled-products.json": {
+      "sha256": "ab664e79c2cf674a71044d80c4cf4cce690cf2d5dfb1b6610c54e044f5d0044e",
+      "bytes": 178,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\evidence\\compiled-products.json"
+    },
+    "evidence/header-test.log": {
+      "sha256": "8a4510e69227a5067cdbfed0d658dfdc938a1963eee5f5348dd902aa2ff8b7b3",
+      "bytes": 77,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\evidence\\header-test.log"
+    },
+    "evidence/ribbon-clearance.json": {
+      "sha256": "e844d280c16da14728bb1cd1c7b3b620c547da3f95e260962ac5bc9e667540b6",
+      "bytes": 780,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\evidence\\ribbon-clearance.json"
+    },
+    "evidence/rooms-source-delta.json": {
+      "sha256": "ce23431b76c385365f8dd88e50b0b3cf83013c62abe39789330a84f5b2581651",
+      "bytes": 412,
+      "origin": "E:\\ESTUDO APK\\work\\station-create-card-r56-20261006\\evidence\\source-delta.json"
+    },
+    "evidence/rooms-build.json": {
+      "sha256": "b9b43797b89bf2ad91c3ff891ec3e283b7b8ad7220b8592dbdd57efecc481426",
+      "bytes": 26070,
+      "origin": "E:\\ESTUDO APK\\work\\station-create-card-r56-20261006\\build\\final\\result.json"
+    },
+    "STATUS.json": {
+      "sha256": "c2727468654843e6b091864b302d0ef847a240ced5cc60ab93986e1834f0e055",
+      "bytes": 1735,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\build-result.json"
+    },
+    "tests/test_header.cpp": {
+      "sha256": "1fbc1295c55cb48973b33f0c494e034d3e8f165496a5b1e3a45963f16307e7c2",
+      "bytes": 647,
+      "origin": "E:\\ESTUDO APK\\work\\station-compact-header-r57-20261006\\test_header.cpp"
+    }
+  },
+  "standaloneFullAPKBuild": false
+}

@@ -1,0 +1,14 @@
+{
+  "baseAPK": "4c8de4f899af291becdf22c0b551df5e03a813f7ecf536fb360436a5d24d7b39",
+  "changed": [
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomsActivity.java"
+  ],
+  "added": [
+    "StationCreateGameCard.java"
+  ],
+  "unchangedJava": 155,
+  "sharedBitmap": true,
+  "newCoverDownload": false,
+  "roomProtocolChanged": false,
+  "serverReadinessCandidateIntegrated": false
+}
