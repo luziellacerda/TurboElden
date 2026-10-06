@@ -3,7 +3,7 @@
   "installed": true,
   "stable": false,
   "deviceValidationPending": true,
-  "serverDeployed": false,
+  "serverDeployed": true,
   "canonicalDirectory": "E:\\ESTUDO APK\\work\\station-community-r41-20261006",
   "artifact": {
     "createdAt": "2026-10-06T15:22:47.897943+00:00",
@@ -34,5 +34,11 @@
   "installedSHA256": "b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d",
   "installationEvidence": "evidence/installation-samsung-r41.json",
   "launchVerified": true,
-  "communityOpened": true
+  "communityOpened": true,
+  "serverSocialEnabled": true,
+  "serverDeploymentEvidence": "evidence/server-deployment-r41.json",
+  "serverReturn": "RETORNO-COMUNIDADE-STATION-R41-20261006.md",
+  "apiSourceRevision": "a2bb176530fd4d2dfa740da7e934fd84d097404e",
+  "serverReturnRevision": "30e362b81c35f84fb6d583a92e267f5e57ad6c86",
+  "artifactStatusNote": "artifact preserves the original build-time report; current installation and server state are the top-level fields and separately dated receipts."
 }

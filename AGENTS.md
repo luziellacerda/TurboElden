@@ -1,3 +1,9 @@
+# Servidor da comunidade R41 publicado — 06/10/2026
+
+Leia docs/server/RETORNO-COMUNIDADE-STATION-R41-20261006.md e versions/station-community-r41-20261006/evidence/server-deployment-r41.json. API a2bb176530fd4d2dfa740da7e934fd84d097404e, DLL d181bf97d5b39a334e95144267d6ece3f11d4e659a314d7d16cd2746e1999e13, SocialEnabled=true;186 checks autenticados no domínio público por três licenças sintéticas, conversa privada/pedido/aceite/dois membros/WSS65539 bytes por direção e pin conferido. Fonte/snapshot/DEX/APK R41 preservados; servidor retorna até32 mensagens privadas e64KiB das mais recentes. Catálogo14/2212, licenças/chaves/relay512/1024 e outros serviços preservados. Recibo5e40f7e confirma R41 instalada no Samsung/hashb6b19321/dados preservados. Agora testar R41 nos dois celulares: pessoas/DM/pedido/convite/sala/Pronto/Iniciar/gameplay. Conferir Voltar vindo das configurações e Boogerman no catálogo vsBattletoads no cabeçalho: causa ainda não estabelecida. POCO e latência externa continuam sem prova nova. Não usar delta R34 sobre R41, não limpar dados, não marcar estável geral e não enviar WhatsApp/MenuIA por inferência.
+
+## Histórico anterior — os blocos abaixo descrevem evidências nas datas originais
+
 # R41 instalada no Samsung — 06/10/2026
 
 Atualização R39→R41 concluída, SHA integral b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d conferido no aparelho. Sem desinstalar, limpar dados ou alterar a configuração de tela ligada. Leia `versions/station-community-r41-20261006/evidence/installation-samsung-r41.json` e STATUS. Catálogo abriu com sessão preservada; comunidade mostrou Online, zero salas, formulários de criação/conversa. USB saiu antes de conferir retorno/Pessoas online; testes em dupla e capacidades sociais do servidor pendentes. Recibo distingue capturas e observações. Servidor: handoff 32b12bc publicado, implantação não comprovada. Não marcar estabilidade geral nem partida em dupla.

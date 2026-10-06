@@ -1,13 +1,13 @@
 # TurboStations — Comunidade R41
 
-Nova página online com menu lateral, salas públicas, pessoas online, criação de sala e conversas dentro do app. Leia o handoff APP→SERVIDOR nesta pasta para contratos completos, fluxos, limites e publicação. Não confundir esta entrega com servidor implantado.
+Nova página online com menu lateral, salas públicas, pessoas online, criação de sala e conversas dentro do app. Leia o handoff APP→SERVIDOR nesta pasta para contratos completos, fluxos, limites e publicação. A publicação efetiva do servidor está registrada no RETORNO-COMUNIDADE-STATION-R41-20261006.md e no recibo datado de deployment.
 
 APK pronto: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Comunidade-R41-20261006.apk`.
 SHA256: `b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d`.
 
 Base R40 com céu azul/nuvens claras, menus pretos, seletor à direita e robô contínuo. Preserva emuladores/relay/controles/autenticação/downloads. Somente classes35 muda sobre R40;13.179 entradas preservadas. Segundo jogador conciliado com f7f0561.
 
-**R41 instalada no Samsung SM_A566E em 06/10/2026 por atualização; SHA integral conferido e dados preservados. Catálogo/sessão e abertura da comunidade conferidos. USB desconectou antes de concluir Pessoas online e retorno; partida em dupla e capacidades novas do servidor continuam sem validação. Não estável geral.** Conversa privada e pedir vaga exigem SocialEnabled no servidor com o delta fornecido. Convites/salas/chat da sala existentes permanecem compatíveis. Não implementa nem envia WhatsApp real/MenuIA; confirmação do usuário sobre esse canal está pendente após instrução para não usá-lo.
+**R41 instalada no Samsung SM_A566E em 06/10/2026 por atualização; SHA integral conferido e dados preservados. Catálogo/sessão e abertura da comunidade conferidos. USB desconectou antes de concluir Pessoas online e retorno. Partida em dupla ainda não foi testada. As capacidades novas do servidor foram validadas por licenças sintéticas no domínio público; uso dessas capacidades no aparelho ainda não foi verificado. Não estável geral.** Conversa privada e pedir vaga foram habilitadas em produção em06/10/2026: API a2bb176, SocialEnabled=true,186 checks autenticados públicos e WSS com pin. Leia RETORNO-COMUNIDADE-STATION-R41-20261006.md e evidence/server-deployment-r41.json. A navegação completa e o gameplay de doisAndroid ainda precisam de teste. Convites/salas/chat da sala existentes permanecem compatíveis. Não implementa nem envia WhatsApp real/MenuIA; confirmação do usuário sobre esse canal está pendente após instrução para não usá-lo.
 
 ## Reproduzir
 
