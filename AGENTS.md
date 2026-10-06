@@ -1,3 +1,9 @@
+# Cadastro de clientes Station no painel — publicado06/10/2026
+
+Leia docs/server/RETORNO-CADASTRO-CLIENTES-STATION-20261006.md e CADASTRO-CLIENTES-STATION-PRODUCAO-20261006.json. Administraçãofe4b631 publicada às15h45Maceió: Novo cliente e código, cadastro novo/existente, venda paga/cortesia/teste, segunda licença para outro aparelho. Código30min/uso único e senha administrativa para confirmar. Banco/backup/Chrome1440/390 e dois acessos sintéticos independentes na API pública passaram, limpeza confirmada, zero mensagens/compras. APIa2bb176/PID875574/SocialEnabled e catálogo14/2212 preservados. Fonte/runtime/snapshot/APKR41 mantidos; não recompilar por causa do painel. App continua usando desafio/ativação/sessão/perfil assinado; rotas de cadastro são privadas de administração. Orientação antiga de buscar apenas licença/Vendas foi substituída. Gameplay físico/POCO/latência continuam pendentes no retornoR41.
+
+## Histórico anterior
+
 # Códigos Station no painel publicado — 06/10/2026
 
 Leia docs/server/RETORNO-PAINEL-CODIGOS-STATION-20261006.md e PAINEL-CODIGOS-STATION-PRODUCAO-20261006.json na mesma pasta. Site17e564a publicado: Códigos Station/Gerar código/Trocar celular, confirmação com senha administrativa, código30min/uso único/um aparelho por licença. HTTPS autenticado e hashes conferidos. Atualização somente no site; não exige recompilar APK. Fonte congeladaR41/runtime/manifestos mantidos, API/comunidadeR41 seguem o retorno abaixo. Nenhuma licença real alterada, zeroWhatsApp. Gameplay em dupla, POCO e latência externa continuam pendentes.
