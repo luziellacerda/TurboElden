@@ -1,0 +1,18 @@
+{
+  "candidate": "automatic-room-access-v1",
+  "functionalBaseCommit": "9d3d45f048aa44bb2ee9c41f567e985901628daa",
+  "visualBaseCommit": "8980cd422d63068299b5e9946c120f81a9c94f29",
+  "readinessImplementation": "f8b019d6c7f3314aebfdc1afd62f4a505154935a",
+  "roomCodeCharacters": 8,
+  "automaticNativePasswordImplemented": true,
+  "runtimeCompiled": true,
+  "runtimeSHA256": "899e35279cf046242a7ae31f502078080bd6a94404770fe99e1e2e90be58a1ef",
+  "sourceFilesCompiled": 158,
+  "apiCheckOnly": true,
+  "dexBuilt": false,
+  "apkBuilt": false,
+  "installed": false,
+  "androidGameplayVerified": false,
+  "serverProductionConfirmed": false,
+  "serverRequiresAdditiveEngineRegistry": true
+}

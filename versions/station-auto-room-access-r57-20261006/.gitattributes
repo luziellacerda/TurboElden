@@ -1,0 +1,4 @@
+* -text
+*.patch -whitespace
+# Preserve the two existing blank lines with spaces from the received R57 Activity.
+netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java -whitespace

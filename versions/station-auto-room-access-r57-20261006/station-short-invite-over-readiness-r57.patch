@@ -1,0 +1,108 @@
+--- a/netplay-src/org/emulationstation/frontend/netplay/StationInvitationCode.java
++++ b/netplay-src/org/emulationstation/frontend/netplay/StationInvitationCode.java
+@@ -3,14 +3,27 @@
+ /** A public room locator, never an authorization token or emulator password. */
+ final class StationInvitationCode {
+     final String instance, roomId, itemId;
+-    private StationInvitationCode(String instance,String room,String item){this.instance=instance;roomId=room;itemId=item;}
++    final String shortCode;
++    private StationInvitationCode(String instance,String room,String item){this.instance=instance;roomId=room;itemId=item;shortCode="";}
++    private StationInvitationCode(String code){instance=roomId=itemId="";shortCode=code;}
++    static String display(String code){
++        if(code==null||!code.matches("[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}"))throw new IllegalArgumentException("O convite desta sala ainda não está disponível.");
++        return code.substring(0,4)+"-"+code.substring(4);
++    }
+     static String encode(String instance,String room,String item){
+         validate(instance,room,item);
+         return "TS1:"+instance+":"+room+":"+item;
+     }
+     static StationInvitationCode parse(String value){
+         if(value==null||value.length()>160)throw new IllegalArgumentException("Cole o código completo de uma sala TurboStations.");
+-        String[] parts=value.trim().split(":",-1);
++        String trimmed=value.trim();
++        if(!trimmed.startsWith("TS1:")){
++            String code=trimmed.toUpperCase(java.util.Locale.ROOT);
++            if(code.length()==9&&code.charAt(4)=='-')code=code.substring(0,4)+code.substring(5);
++            if(!code.matches("[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}"))throw new IllegalArgumentException("Digite os 8 caracteres do convite, por exemplo 7KPM-4XRT.");
++            return new StationInvitationCode(code);
++        }
++        String[] parts=trimmed.split(":",-1);
+         if(parts.length!=4||!"TS1".equals(parts[0]))throw new IllegalArgumentException("Este código não é uma sala TurboStations válida.");
+         validate(parts[1],parts[2],parts[3]);
+         return new StationInvitationCode(parts[1],parts[2],parts[3]);
+--- a/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java
++++ b/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java
+@@ -35,6 +35,8 @@
+                 case "STATION_ONLINE_REQUEST_EXISTS":return "Seu pedido já foi enviado. Aguarde a resposta do anfitrião.";
+                 case "STATION_ONLINE_JOIN_REQUEST_NOT_FOUND":return "Este pedido expirou ou já foi respondido.";
+                 case "STATION_ONLINE_TEXT_INVALID":return "Escreva uma mensagem de até 500 caracteres, sem quebras de linha.";
++                case "STATION_ONLINE_CODE_INVALID":return "Confira os 8 caracteres do convite. Você pode colar o código completo.";
++                case "STATION_ONLINE_CODE_NOT_FOUND":return "Este convite não está mais disponível. Peça um novo código da sala.";
+                 case "STATION_ONLINE_ROOM_NOT_FOUND":return "Esta sala foi encerrada. Peça um novo código ou convite.";
+                 case "STATION_ONLINE_PEER_NOT_FOUND":return "Este jogador não está mais disponível. Atualize a lista.";
+                 case "STATION_ONLINE_ALREADY_IN_ROOM":return "Você já está em uma sala. Saia dela antes de entrar em outra.";
+--- a/netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java
++++ b/netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java
+@@ -361,16 +361,16 @@
+     private void showRoomCode(){
+         JSONObject snapshot=state.get();if(!StationPlayerModel.shareable(snapshot)){peerFeedback="O código está disponível quando sua sala tem uma vaga e aguarda jogadores.";refreshPlayerSheet();status.setText(peerFeedback);return;}
+         JSONObject mine=snapshot.optJSONObject("room");final String code;
+-        try{code=StationInvitationCode.encode(snapshot.optString("instance"),mine.optString("roomId"),mine.optString("itemId"));}catch(IllegalArgumentException e){status.setText(e.getMessage());return;}
+-        LinearLayout panel=codePanel("Código da sua sala",client.name(mine.optString("itemId"))+"\nCompartilhe com outro jogador. Ele entra em Código no lobby e cola o convite.");
+-        TextView value=text(panel,code,12,white);value.setTypeface(Typeface.MONOSPACE);value.setTextIsSelectable(true);value.setPadding(dp(12),dp(12),dp(12),dp(12));value.setBackground(bg(0xff060f0a,0xff294634));
++        try{code=mine.has("inviteCode")?StationInvitationCode.display(mine.optString("inviteCode")):StationInvitationCode.encode(snapshot.optString("instance"),mine.optString("roomId"),mine.optString("itemId"));}catch(IllegalArgumentException e){status.setText(e.getMessage());return;}
++        LinearLayout panel=codePanel("Código da sua sala",client.name(mine.optString("itemId"))+"\nCompartilhe com outro jogador. "+(code.startsWith("TS1:")?"Ele cola o convite em Código de convite.":"Ele digita ou cola os 8 caracteres em Código de convite.")+" A senha da partida é automática após atualizar o app.");
++        TextView value=text(panel,code,code.startsWith("TS1:")?12:26,white);value.setTypeface(Typeface.MONOSPACE);value.setTextIsSelectable(true);value.setPadding(dp(12),dp(12),dp(12),dp(12));value.setBackground(bg(0xff060f0a,0xff294634));
+         text(panel,"Válido enquanto esta sala existir e tiver uma vaga. O outro jogador precisa da mesma edição instalada.",11,muted);
+         Button copy=button(panel,"Copiar código",()->{android.content.ClipboardManager clipboard=(android.content.ClipboardManager)getSystemService(CLIPBOARD_SERVICE);if(clipboard!=null){clipboard.setPrimaryClip(ClipData.newPlainText("Convite TurboStations",code));Toast.makeText(this,"Código copiado",Toast.LENGTH_SHORT).show();}},true);
+         button(panel,"Fechar",()->codeDialog.dismiss(),false);displayCodePanel();
+     }
+     private void enterCodeDialog(){
+-        if(busy)return;LinearLayout panel=codePanel("Entrar por código","Cole o código compartilhado por quem criou a sala.");
+-        EditText input=new EditText(this);field(input,"TS1:…");input.setSingleLine(true);input.setTextSize(12);input.setFilters(new android.text.InputFilter[]{new android.text.InputFilter.LengthFilter(160)});input.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);panel.addView(input,new LinearLayout.LayoutParams(-1,dp(48)));
++        if(busy)return;LinearLayout panel=codePanel("Entrar por código","Digite ou cole o convite de 8 caracteres. Convites antigos também são aceitos.");
++        EditText input=new EditText(this);field(input,"7KPM-4XRT");input.setSingleLine(true);input.setTextSize(12);input.setFilters(new android.text.InputFilter[]{new android.text.InputFilter.LengthFilter(160)});input.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);panel.addView(input,new LinearLayout.LayoutParams(-1,dp(48)));
+         TextView error=text(panel,"",12,0xffefad98);error.setVisibility(View.GONE);error.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
+         button(panel,"Entrar na sala",()->{
+             JSONObject snapshot=state.get();
+@@ -379,11 +379,38 @@
+                 if(snapshot==null||!active)throw new IllegalArgumentException("Conecte-se ao lobby antes de entrar.");
+                 if(snapshot.optJSONObject("room")!=null)throw new IllegalArgumentException("Saia da sala atual antes de usar outro código.");
+                 StationInvitationCode parsed=StationInvitationCode.parse(input.getText().toString());
+-                if(!parsed.instance.equals(snapshot.optString("instance")))throw new IllegalArgumentException("Este código expirou após a atualização das salas. Peça um novo convite.");
+-                codeDialog.dismiss();join(parsed.roomId,parsed.itemId);
++                if(!parsed.shortCode.isEmpty()){
++                    if(!supportsShortInvite(snapshot))throw new IllegalArgumentException("Os convites curtos aguardam a atualização do servidor.");
++                    codeDialog.dismiss();joinCode(parsed.shortCode);
++                }else{
++                    if(!parsed.instance.equals(snapshot.optString("instance")))throw new IllegalArgumentException("Este código expirou após a atualização das salas. Peça um novo convite.");
++                    codeDialog.dismiss();join(parsed.roomId,parsed.itemId);
++                }
+             }catch(IllegalArgumentException e){error.setText(e.getMessage());error.setVisibility(View.VISIBLE);}
+         },true);
+         button(panel,"Cancelar",()->codeDialog.dismiss(),false);displayCodePanel();
++    }
++
++    private static boolean supportsShortInvite(JSONObject snapshot){
++        JSONArray caps=snapshot.optJSONArray("roomCapabilities");
++        for(int i=0;caps!=null&&i<caps.length();i++)if("short-invite-v1".equals(caps.optString(i)))return true;
++        return false;
++    }
++    private void joinCode(String code){
++        status.setText("Localizando a sala…");
++        action(cancel->{
++            if(room()!=null)throw new StationOnlineGame.Unavailable("Saia da sala atual antes de usar outro convite.");
++            JSONObject resolved=client.call(StationOnlineClient.command("resolve-code").put("inviteCode",code),false,cancel);
++            JSONObject target=resolved.getJSONObject("resolvedRoom");
++            String roomId=target.getString("roomId"),itemId=target.getString("itemId");
++            // Validate the signed locator before preparing local files or joining.
++            StationInvitationCode.encode(resolved.getString("instance"),roomId,itemId);
++            StationOnlineGame game=StationOnlineGame.prepare(this,client,itemId,resolved,cancel);
++            JSONObject joined=client.call(game.fields(StationOnlineClient.command("join").put("roomId",roomId)),false,cancel);
++            JSONObject actual=joined.optJSONObject("room");
++            if(actual==null||!roomId.equals(actual.optString("roomId"))||!StationPlayerModel.member(actual,joined.optString("selfId")))throw new java.io.IOException("Room join not acknowledged");
++            game.verifyRoom(actual);prepared=game;return joined;
++        },()->{if(playerSheet!=null)playerSheet.dismiss();});
+     }
+ 
+     private void styleNavigation(Button button,boolean selected){
