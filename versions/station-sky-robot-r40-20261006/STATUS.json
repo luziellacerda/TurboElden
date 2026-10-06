@@ -1,0 +1,30 @@
+{
+  "compiled": true,
+  "installed": false,
+  "stable": false,
+  "deviceValidationPending": true,
+  "serverDeployed": false,
+  "canonicalDirectory": "E:\\ESTUDO APK\\work\\station-sky-robot-r40-20261006",
+  "artifact": {
+    "createdAt": "2026-10-06T14:49:05.199634+00:00",
+    "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Temas-Colecoes-R39-20261006.apk",
+    "baseSHA256": "e1a38b502843e3506c06f510e79741a6a6e65247ef1246264b9a361ad56cc840",
+    "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Ceu-Robo-R40-20261006.apk",
+    "sha256": "da803b3eb7c0fb24b272795449c5527d752f71e8809d132cae3300071a3c5678",
+    "bytes": 2086148577,
+    "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+    "changed": [
+      "lib/arm64-v8a/libturbo_carousel.so"
+    ],
+    "preservedEntries": 13179,
+    "addedAssets": {},
+    "roomsDexSHA256": "0db040a6b3406e744053c63467ed0f26e3582928ef5b84ecb9e360603ce870f6",
+    "allPackageEntriesVerified": true,
+    "alignment16KiB": true,
+    "downloadImplementationUnchanged": true,
+    "rawTransferDeltaIncluded": false,
+    "netplayIdentityHashPreserved": true,
+    "installed": false,
+    "stable": false
+  }
+}

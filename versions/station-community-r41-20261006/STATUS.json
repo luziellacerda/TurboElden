@@ -1,0 +1,33 @@
+{
+  "compiled": true,
+  "installed": false,
+  "stable": false,
+  "deviceValidationPending": true,
+  "serverDeployed": false,
+  "canonicalDirectory": "E:\\ESTUDO APK\\work\\station-community-r41-20261006",
+  "artifact": {
+    "createdAt": "2026-10-06T15:17:50.616239+00:00",
+    "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Ceu-Robo-R40-20261006.apk",
+    "baseSHA256": "da803b3eb7c0fb24b272795449c5527d752f71e8809d132cae3300071a3c5678",
+    "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Comunidade-R41-20261006.apk",
+    "sha256": "0457d77842c7f2151bf7a6d1c2e3a20251aaebe79eec2dcfa5bf517f9e837ca6",
+    "bytes": 2086191545,
+    "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+    "changed": [
+      "classes35.dex"
+    ],
+    "preservedEntries": 13179,
+    "addedAssets": {},
+    "roomsDexSHA256": "382e5137e5b123289fbc1d005c3b8d4c15f426b8565dab78f573eee2ee25dcc4",
+    "allPackageEntriesVerified": true,
+    "alignment16KiB": true,
+    "downloadImplementationUnchanged": true,
+    "rawTransferDeltaIncluded": false,
+    "netplayIdentityHashPreserved": true,
+    "installed": false,
+    "stable": false,
+    "serverDeployed": false,
+    "socialServerFlag": "Station:Online:SocialEnabled",
+    "twoDeviceGameplayVerified": false
+  }
+}

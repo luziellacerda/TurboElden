@@ -1,3 +1,17 @@
+# R41 comunidade + R40 céu — compilados em06/10/2026
+
+Leia `versions/station-community-r41-20261006/README.md` e o handoff APP→SERVIDOR nessa pasta. APK SHA0457d77842c7f2151bf7a6d1c2e3a20251aaebe79eec2dcfa5bf517f9e837ca6, DEX382e5137; R40 céu SOd7839c70 herdado. Fonte completa E:\ESTUDO APK\work\station-community-r41-20261006. Menu lateral/salas/pessoas/criar/conversa interna, segundo jogador f7f0561 conciliado, presença com reconexão/aviso e Voltar sem esperar rede.255Java+64C#; assinatura/preservação integral passaram. R40 mantém UIpreta, céuazul/nuvensclaras, seletordireita e robôloop.
+
+**R40/R41 NÃO instalados: USB ausente; R39 abaixo continua última instalação comprovada.** Servidor novo tem extensão em dois arquivos, SocialEnabled=false por padrão. Conversa privada/pedido de vaga só habilitam mediante capacidades assinadas após operador publicar. Sem deployLinux, WhatsApp/MenuIA ou gameplay2Android. Não marcar estável geral. Preservar licença/jogos/saves/emuladores, usar APKsucessor, nunca desinstalar/limpar. MenuIA foi mencionado depois de recusa de WhatsApp real: canal ainda em esclarecimento, NÃO enviar externamente por inferência. Handoff explícito com limites de histórico efêmero32/peer,flag,rotas,ações e validação. Não misturar deltaDownloads11be7f3.
+
+## Estado anterior
+
+# Instalação R39 confirmada — Samsung — 06/10/2026
+
+R39 instalada por atualização, SHA integral e1a38b502843e3506c06f510e79741a6a6e65247ef1246264b9a361ad56cc840 igual ao APK. Abriu ESActivity/plataformas sem pedir login. Sem desinstalar/limpar dados. Recibo `versions/station-theme-collections-r39-20261006/evidence/installation-samsung-r39.json`. Configuração temporária de tela ligada restaurada e conferida em0; não deixar pendência antiga aberta. Conferência visual das novas funções/pesquisa e gameplay continuam separadas; não marcar estável geral.
+
+## Estado de compilação e histórico anterior
+
 # R39 compilado — temas, quatro Lotties, metadados e pesquisa — 06/10/2026
 
 Leia `versions/station-theme-collections-r39-20261006/README.md`, STATUS e evidências. APK e1a38b502843e3506c06f510e79741a6a6e65247ef1246264b9a361ad56cc840; carrossel SO9bcb3113. Fonte canônica E:\ESTUDO APK\work\station-theme-collections-r39-20261006; APK final G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais. Preto/Azul persistente e quatro animações originais, descrições de coleções ampliadas, estrelas no botão principal, cabeçalho e botões atualizados, cursor novo no início, pesquisas plataformas/jogos com limpeza completa de tokens, Voltar explícito, recuperação vazia e cache de resultado vazio. Testes PC e restauração compilam módulo byte-idêntico. **R39 não instalado**; usuário conectará depois. Última instalação comprovada R38 Samsung, receipt anexado/corrigido. Não afirmar validação visual Android nem estável geral. Ajuste temporário de tela ligada Samsung ainda3; restaurar0quando reconectar.

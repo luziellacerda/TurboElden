@@ -9,9 +9,9 @@ Pacote `org.turboramastation.frontend`, namespace Java `org.emulationstation.fro
 - SHA-256 `libturbo_carousel.so`: `9bcb311321b90deb16e96ea462a912a354dfe85b6c991a06d22b5e7474f86cd6`.
 - Base exata R38: `58b337511bef62a98cae6d17982a4f139c1b0e6049def18894258d98dd5bbdfd`.
 - Assinatura original e alinhamento de 16 KiB conferidos; 13.086 entradas antigas idênticas. Só o módulo do carrossel foi substituído; recursos informativos e animações foram acrescentados. Consulte `STATUS.json` para todos os hashes dos novos assets.
-- **Compilado e testado no PC; R39 não instalado.** O mantenedor informou que conectará o telefone depois. Conferência visual/IME/Voltar no Android, consumo, FPS e partida online não estão aprovados nesta entrega.
+- **R39 instalada no Samsung em 2026-10-06T14:33:15.734937+00:00, por atualização, com SHA integral conferido.** O aplicativo abriu ESActivity/plataformas sem pedir login. Recibo: `evidence/installation-samsung-r39.json`. Conferência visual/IME/Voltar no Android, consumo, FPS e partida online não estão aprovados nesta entrega.
 
-Corrige-se o registro anterior: R38 foi instalada no Samsung SM_A566E em 06/10/2026 às 11:51:27 UTC, por atualização e com SHA integral conferido. Consulte `evidence/installation-r38.json`. A tela de login usa proteção contra captura; não houve aprovação visual da R38. O ajuste temporário `stay_on_while_plugged_in` 0 → 3 ainda precisa ser restaurado para **0** quando esse Samsung reconectar; não assumir que foi restaurado. Não alterar essa preferência de outro aparelho.
+Corrige-se o registro anterior: R38 foi instalada no Samsung SM_A566E em 06/10/2026 às 11:51:27 UTC, por atualização e com SHA integral conferido. Consulte `evidence/installation-r38.json`. A tela de login usa proteção contra captura; não houve aprovação visual da R38. O ajuste temporário `stay_on_while_plugged_in` 0 → 3 foi restaurado e conferido em **0** após a instalação R39; recibo `evidence/samsung-temporary-awake-restored.json`.
 
 ## Pedidos implementados
 

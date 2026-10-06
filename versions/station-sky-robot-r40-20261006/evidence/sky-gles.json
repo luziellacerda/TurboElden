@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 SUPER (0x00001F06) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.16.1074)",
+  "compile": [
+    {
+      "name": "R40 neutral white clouds, original black preserved",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "fce0f468cc9ffb61d82584ebbfde0c7cd8b29f0bdff5401ffb9429865808d159",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    },
+    {
+      "name": "R39 black reference",
+      "stages": [
+        {
+          "stage": "vertex",
+          "sha256": "151654b193dbac016767c6497a7d522e53417e48a5da3dd15ec6f617f5c40f04",
+          "passed": true,
+          "log": ""
+        },
+        {
+          "stage": "fragment",
+          "sha256": "25780d831b17a1aa0f2a3ff11cf34dc8095454a5419c6675ed4cab001fd5e986",
+          "passed": true,
+          "log": ""
+        }
+      ],
+      "linked": true,
+      "log": ""
+    }
+  ],
+  "errors": [
+    {
+      "operation": "initialize",
+      "errors": []
+    },
+    {
+      "operation": "compile R40 neutral white clouds, original black preserved",
+      "errors": []
+    },
+    {
+      "operation": "compile R39 black reference",
+      "errors": []
+    },
+    {
+      "operation": "upload (64, 64)",
+      "errors": []
+    },
+    {
+      "operation": "read theme 0",
+      "errors": []
+    },
+    {
+      "operation": "read theme 0",
+      "errors": []
+    },
+    {
+      "operation": "read theme 1",
+      "errors": []
+    },
+    {
+      "operation": "read theme 0",
+      "errors": []
+    }
+  ],
+  "pixels": 4096,
+  "blackMatchesR39ByteForByte": true,
+  "alphaPreserved": true,
+  "blueThemeCloudMinimumRGB": 173,
+  "whiteShadingNotBlueTint": true,
+  "androidVisualValidation": false
+}

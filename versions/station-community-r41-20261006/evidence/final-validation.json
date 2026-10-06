@@ -1,0 +1,31 @@
+{
+  "createdUTC": "2026-10-06T15:13:05.620977+00:00",
+  "baseline": "R34 restored plus verified f7f0561 second-player delta",
+  "sourceFiles": 149,
+  "changedFromReconciledBaseline": [
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationPlayerSheet.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationPresence.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "new": [
+    "netplay-src/org/emulationstation/frontend/netplay/StationSocial.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationSocialIcon.java"
+  ],
+  "unchangedExisting": 143,
+  "criticalLaunchAndRelayUnchanged": [
+    "StationRetroActivity.java",
+    "StationRetroLaunch.java",
+    "StationGameSession.java",
+    "StationRelayTunnel.java",
+    "StationRelayTls.java",
+    "StationLaunchPolicy.java",
+    "StationOnlineGame.java"
+  ],
+  "javaChecks": 255,
+  "serverChecks": 64,
+  "serverDeployed": false,
+  "realTwoDeviceGameplayTested": false,
+  "externalMessagesSent": false,
+  "menuiaIntegrated": false
+}
