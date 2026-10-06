@@ -1,3 +1,13 @@
+# Prontidão conciliada com a fonte online R55 e visual R57 — 06/10/2026
+
+Leia `docs/server/RETORNO-ANALISE-APP-R55-STATION-20261006.md` e `versions/station-relay-readiness-r57-20261006/README.md`. Fonte funcional recebida:9d3d45f; sucessora visual considerada:8980cd4; implementação atual:f8b019d6; retorno servidor:e9d86a2. A R57 foi instalada no Motorola segundo o recibo recebido. A versão do outro telefone ainda precisa ser conferida.
+
+O delta conserva o canal ResultReceiver e a saída idempotente da R54, mais o layout atual da R57: Criar sala, barra fina, capas e faixa INSTALADO. Todos os157 hashes Java da composição R57 coincidem com o recibo de produção. São155 arquivos preservados, dois alterados e um novo;158 fontes compilaram Java8/API34 em api-check-only. As39 provas de transporte e255 funcionais se aplicam aos mesmos componentes, sem repetição por alteração visual.
+
+Não há novo DEX/APK compilado ou instalado nem gameplay físico comprovado. Sem alteração de servidor necessária para este delta. No PC usar as receitas novas em station-relay-readiness-r57-20261006, sobre APKbaseR57/e6159fa3, com dependências e certificado originais. Os empacotadores antigos R41/R55 não servem para a sucessora. Não limpar dados ou trocar assinatura; conferir ambos os aparelhos e testar Battletoads, confirmação, inputs e saída/retorno. Controles online próprios, latência externa e aquecimento medido continuam pendentes.
+
+## Histórico anterior
+
 # Sucessora visual R57 — fonte funcional online R55 preservada
 
 Leia [R57: barra fina e Criar sala](versions/station-layout-r57-20261006/README.md) e seu `STATUS.json`. APK SHA `e6159fa3564f0b30c1415b062f42e08e47ea625832e1b2640375b3e8b2b55566`. A fonte atual é o snapshot R55 mais o overlay R57 explicitamente listado; não há mudança no protocolo/motor online. Faixa INSTALADO e posição das capas permanecem idênticas à R55. O pedido de revisão funcional R55 no servidor continua válido; ao alterar a Activity de salas, considerar também o layout R57. Candidato de prontidão d1b535c não integrado; nenhuma partida em dupla declarada corrigida.
