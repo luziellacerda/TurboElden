@@ -1,0 +1,42 @@
+from pathlib import Path
+import json, shutil, subprocess, hashlib, re, os
+W=Path(r'E:\ESTUDO APK\work\station-carousel-scope-r38-20261006');N=W/'native';BASE=Path(r'E:\ESTUDO APK\work\station-final-details-r37-20261005')
+os.environ['TEMP']=os.environ['TMP']=str(W/'temp')
+shutil.copy2(Path(__file__).with_name('r38_test_ribbons.cpp'),W/'tests/test_ribbons.cpp')
+for script in ('prepare_r38.py','r38_system_editorial.py','r38_finish_tests.py'):shutil.copy2(Path(__file__).with_name(script),W/script)
+p=W/'tests/test_ui_r37.cpp';s=p.read_text('utf8');s=s.replace('assert(collection.w>h*.26f);checks++;','assert(collection.w>h*.26f);checks++;\n  auto primary=stationCollectionAction(w*.035f,h*.851f,h*.665f,h*.094f,false);\n  assert(primary.x==w*.035f&&primary.w==h*.665f);assert(collection.x>primary.x+primary.w);assert(collection.x+collection.w<w*.965f);checks+=4;')
+p.write_text(s,'utf8')
+compiler=r'C:\Program Files\LLVM\bin\clang++.exe'
+for name in ('test_ribbons',):
+ r=subprocess.run([compiler,'-std=c++17','-O2','-I',str(N),str(W/'tests'/f'{name}.cpp'),'-o',str(W/'tests'/f'{name}.exe')],capture_output=True,text=True)
+ assert r.returncode==0,r.stderr
+ r=subprocess.run([str(W/'tests'/f'{name}.exe')],capture_output=True,text=True)
+ (W/'evidence'/f'{name}.log').write_text(r.stdout+r.stderr,'utf8');assert r.returncode==0,r.stdout+r.stderr;print(r.stdout)
+checks=[]
+def check(name,condition):
+ assert condition,name;checks.append(name)
+video=(N/'native_system_video720.h').read_text('utf8')
+old=(BASE/'native/native_system_video720.h').read_text('utf8')
+expected=old.replace('#include "native_neogeocd_square.h"\n','').replace('  if(r.index==cursor&&neoSquareVideoAsset(asset))\n   useNeoSquareProgram(live>=0,mvp,live>=0?matrices[live]:nullptr,now);\n','')
+check('Video unchanged except removed Neo CD shader override',video==expected)
+check('Video always uses ordinary OES or 2D retained program','g.UseProgram(systemVideoProgram)' in video and 'g.UseProgram(video720PreviewProgram)' in video and 'neoSquare' not in video)
+mag=(N/'native_magazine.h').read_text('utf8')
+check('Game art shader explicitly excludes platforms and collections','if(systemsMode||folderMode||count!=4' in mag)
+check('Both Neo Geo families select measured game-cover map','else if(neoMagazineKey(key))model=3;' in mag)
+aliases=(N/'neogeo_led_profile.h').read_text('utf8')
+check('Neo Geo and CD identifiers supported',all('"'+k+'"' in aliases for k in ['Neo Geo','Neo Geo CD','neogeo','neogeocd','neo-geo','neo-geo-cd']))
+check('Game shader pixel masks unchanged',(N/'magazine_shader.h').read_bytes()==(BASE/'native/magazine_shader.h').read_bytes())
+form=(N/'native_formation.h').read_text('utf8');ribbon=(N/'native_installed_tag.h').read_text('utf8')
+check('Ribbons rendered with original card index and geometry','drawInstalledCover(p,index,r)' in form)
+check('Ribbons no cursor or rest-only gate',all(s not in ribbon for s in ('0x21b0c8','0xf0','0xf4','distance')))
+check('No per-card text allocation or resizing', 'cover.w/reference' in ribbon and 'oldLength!=ribbon.length' in ribbon and 'owner!=p' in ribbon)
+check('Game synopsis and metadata preserved',all((N/n).read_bytes()==(BASE/'native'/n).read_bytes() for n in ['station_game_infos.h','station_game_details.h','station_game_meta_row.h']))
+rows=json.loads((W/'data/system-synopses.json').read_text('utf8'))
+check('All 52 existing system keys have complete editorial summaries',len(rows)==52 and len({r['key'] for r in rows})==52 and all(len(r['description'])>=640 and '\n\n' in r['description'] and not r['description'].endswith('…') for r in rows))
+info=(N/'native_info.h').read_text('utf8')
+check('Collection action takes the selected real folder name','preparePlatformActionLabel(p,folderPlatform,heading)' in info and '"ABRIR "' in info)
+check('Long label uses native measured UTF8 ellipsis','fitGameTitleOneLine(t,label,platformActionRect,.92f)' in info)
+check('Collection title is no longer repeated outside button','if(infoTitle&&!systemsMode&&infoTitleViewport.w>0)' in info)
+check('Synopsis scroll and clipping preserved',(N/'station_synopsis_scroll.h').read_bytes()==(BASE/'native/station_synopsis_scroll.h').read_bytes() and 'clipSynopsis(infoViewport)' in info)
+(W/'evidence/contracts.json').write_text(json.dumps({'passed':True,'checks':checks},indent=2),'utf8')
+print('PASS',len(checks),'integration contracts')

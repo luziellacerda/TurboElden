@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "restoredTo": "E:\\ESTUDO APK\\work\\station-r38-published-restore-20261006",
+  "restoreOutput": "Complete native/Java source restored and all hashes verified: E:\\ESTUDO APK\\work\\station-r38-published-restore-20261006\nComplete R31B native/Java source restored; all hashes match: E:\\ESTUDO APK\\work\\station-r38-published-restore-20261006\nComplete R33 native/Java source restored; all hashes match: E:\\ESTUDO APK\\work\\station-r38-published-restore-20261006\nComplete R36 native/Java source restored; all hashes match: E:\\ESTUDO APK\\work\\station-r38-published-restore-20261006\nComplete R37 native/profile/Java sources restored; all hashes match: E:\\ESTUDO APK\\work\\station-r38-published-restore-20261006\nComplete R38 native/profile/Java sources restored; all hashes match: E:\\ESTUDO APK\\work\\station-r38-published-restore-20261006\n",
+  "testsOutput": "PASS 56800 checks: actual ribbon function, filtered indices, all moving cards, install/delete state, gates, one cached text layout\nPASS 12880: cover-width primary action, full-width row, five-space metadata flow, larger text and bounded icons, equal secondary actions, scroll viewport, collection Back, exact Lottie frame geometry\n",
+  "groups": [
+    "native",
+    "netplay-src",
+    "dependency-src",
+    "frontend"
+  ]
+}

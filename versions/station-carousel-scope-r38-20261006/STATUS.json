@@ -1,0 +1,29 @@
+{
+  "createdAt": "2026-10-06T11:32:58.704064+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Visual-R37-20261005.apk",
+  "baseSHA256": "75fd8b5806c6aa683796e1301fa8a92e3236f106a8837a0279b6d0ae094999fc",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Carrossel-R38-20261006.apk",
+  "sha256": "58b337511bef62a98cae6d17982a4f139c1b0e6049def18894258d98dd5bbdfd",
+  "bytes": 2054649656,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13086,
+  "addedAssets": {},
+  "roomsDexSHA256": "0db040a6b3406e744053c63467ed0f26e3582928ef5b84ecb9e360603ce870f6",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "downloadImplementationUnchanged": true,
+  "rawTransferDeltaIncluded": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false,
+  "nativeSHA256": "4a581bea9f260354f645efca30a4722e4823d89814cfb08000d1e4da65f2c95e",
+  "sourceWorkspace": "E:\\ESTUDO APK\\work\\station-carousel-scope-r38-20261006",
+  "systemSummaries": 52,
+  "gameSynopsesUnchanged": 2212,
+  "lastConfirmedInstalledRevision": "R37 Samsung",
+  "onlineSecondPlayerDeltaIncluded": false,
+  "deviceVisualValidated": false
+}

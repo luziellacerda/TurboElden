@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "Video unchanged except removed Neo CD shader override",
+    "Video always uses ordinary OES or 2D retained program",
+    "Game art shader explicitly excludes platforms and collections",
+    "Both Neo Geo families select measured game-cover map",
+    "Neo Geo and CD identifiers supported",
+    "Game shader pixel masks unchanged",
+    "Ribbons rendered with original card index and geometry",
+    "Ribbons no cursor or rest-only gate",
+    "No per-card text allocation or resizing",
+    "Game synopsis and metadata preserved",
+    "All 52 existing system keys have complete editorial summaries",
+    "Collection action takes the selected real folder name",
+    "Long label uses native measured UTF8 ellipsis",
+    "Collection title is no longer repeated outside button",
+    "Synopsis scroll and clipping preserved"
+  ]
+}

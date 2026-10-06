@@ -1,3 +1,9 @@
+# R38 compilado — capas, coleções e sinopses — 06/10/2026
+
+Leia `versions/station-carousel-scope-r38-20261006/README.md`, STATUS e evidências. APK SHA58b337511bef62a98cae6d17982a4f139c1b0e6049def18894258d98dd5bbdfd, base exata R37, somente carrossel SO4a581bea. Efeito Neo Geo/CD somente nas revistas dos jogos; vídeos principais normais e LED externo preservado. ABRIR + coleção dentro do botão com largura da capa; Voltar ao lado. Selo instalado em cada capa visível, durante movimento, por índice real.52 sinopses de sistemas ampliadas;2.212 sinopses de jogos/perfil R37 intactos. Compilado/testadoPC, NÃO instalado porque USB desconectou; última instalação R37Samsung. Fontes W38 `E:\ESTUDO APK\work\station-carousel-scope-r38-20261006`. Restauração e testes a partir do snapshot conferidos. DEX/manifesto/emuladores/licença/downloads/classes35R34 intactos. a626b50 e11be7f3 separados. Não declarar gameplayonline/FPS/estável geral. Preservar dados e atualizar com mesma assinatura; conferir recibo antes de atribuir instalação.
+
+## Histórico anterior
+
 # R37 compilado — perfil real, sinopses completas e visual — 05/10/2026
 
 Leia `versions/station-final-details-r37-20261005/README.md`, STATUS e evidências. APK SHA75fd8b5806c6aa683796e1301fa8a92e3236f106a8837a0279b6d0ae094999fc, fonteW37, somentecarouselSO+frontendSO sobreR36. Nome servidor ligado ao componente existente, fonte+50%/cincoespaços, faixa refinada,2.212sinopsesrecorte14 semvazios. Instalado no Samsung em06/10/2026, SHA integral igual aoAPK; recibo evidence/installation-samsung-20261006.json. Tela ligada temporária restaurada ao original. Conferência visual separada, sem gameplayonline. Conferirnome/visual noaparelho; nãoafirmar estávelgeral ou2jogadores. DEX/manifesto/motores/classes35R34 intactos. Retornoonlinea626b50 estánoGit mas nãofoiintegrado; deltaDownloads11be7f3 fora. Preservar dados/licença/saves e usarbaseR37parapróximointegração.
