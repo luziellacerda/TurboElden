@@ -1,3 +1,11 @@
+# Fonte atual do app: R55 enviada para análise do servidor — 06/10/2026
+
+A versão atual é **R55**, instalada no Motorola e identificada pelo APK SHA-256 `4c8de4f899af291becdf22c0b551df5e03a813f7ecf536fb360436a5d24d7b39`. Leia [o handoff R55 APP → SERVIDOR](versions/station-current-r55-20261006/HANDOFF-APP-R55-PARA-SERVIDOR-20261006.md) e [o snapshot atual](versions/station-current-r55-20261006/README.md).
+
+R42–R55 ficaram anteriormente apenas no PC/aparelho; esta publicação corrige a defasagem. O candidato de prontidão do servidor d1b535c está preservado, mas foi derivado da R41 e **ainda não foi integrado na R55**. Conciliar com `StationSessionChannel`, fechamento idempotente e HUD atuais: não substituir a Activity inteira pela R41. R55 não é estabilidade geral, não tem partida entre dois aparelhos comprovada nem controles online próprios corrigidos. Não executar a receita de empacotamento R41 sobre R55. Fontes, hashes, testes e dependências externas estão no snapshot; nenhum APK, segredo ou mídia privada foi publicado.
+
+## Histórico anterior — as referências R41 abaixo não identificam o APK atual
+
 # Battletoads: delta de prontidão implementado sobre R41 — 06/10/2026
 
 Leia `docs/server/RETORNO-BATTLETOADS-CONEXAO-HOST-STATION-20261006.md` e `versions/station-relay-readiness-20261006/README.md`. Produção: dois membros/ambosPronto/start200/ticket200/WSShost, semhost-listening observado/sem novosbytes; convidado ficou starting. Delta3Java conecta e conserva TCP real, sinaliza após TCP+WSS, dispensa dependência exclusivaJNI, mantém Binder/sessão e elegibilidade do convidado.39checksTCP/TLS/relay passaram,12,58MB por direção;150Java/API34 compilaram emapi-check-only. NÃO há APKnovo/instalação/gameplayvalidado nem causa específica JNI/Binder comprovada. Usuário conectará porUSB o telefone que abre o jogo noPCWindows: capturar logs antes de atualizar; seguir build_candidate.py→package_candidate.py, somenteclasses35.dex sobreR41/hashb6b19321, certificadooriginal, licença/saves preservados. SnapshotR41/APIa2bb176/PID875574/motores preservados; não forçar connecting. Clipboard247bb0a jápublicado no site/retornoservidor0820fd0, semAPK; usuárioentrou antes. LogsprivadosforaGit, não publicar segredo/serial/apelido. Se houver source sucessor noPC, conciliar antes de montar.
