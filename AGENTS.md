@@ -1,3 +1,9 @@
+# R41 instalada no Samsung — 06/10/2026
+
+Atualização R39→R41 concluída, SHA integral b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d conferido no aparelho. Sem desinstalar, limpar dados ou alterar a configuração de tela ligada. Leia `versions/station-community-r41-20261006/evidence/installation-samsung-r41.json` e STATUS. Catálogo abriu com sessão preservada; comunidade mostrou Online, zero salas, formulários de criação/conversa. USB saiu antes de conferir retorno/Pessoas online; testes em dupla e capacidades sociais do servidor pendentes. Recibo distingue capturas e observações. Servidor: handoff 32b12bc publicado, implantação não comprovada. Não marcar estabilidade geral nem partida em dupla.
+
+## Estado de preparação anterior
+
 # R41 comunidade + R40 céu — compilados em06/10/2026
 
 Leia `versions/station-community-r41-20261006/README.md` e o handoff APP→SERVIDOR nessa pasta. APK SHAb6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d, DEX42c1fc51; R40 céu SOd7839c70 herdado. Fonte completa E:\ESTUDO APK\work\station-community-r41-20261006. Menu lateral/salas/pessoas/criar/conversa interna, segundo jogador f7f0561 conciliado, presença com reconexão/aviso e Voltar sem esperar rede.255Java+64C#; assinatura/preservação integral passaram. R40 mantém UIpreta, céuazul/nuvensclaras, seletordireita e robôloop.

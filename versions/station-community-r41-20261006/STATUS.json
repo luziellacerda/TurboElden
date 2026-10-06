@@ -1,6 +1,6 @@
 {
   "compiled": true,
-  "installed": false,
+  "installed": true,
   "stable": false,
   "deviceValidationPending": true,
   "serverDeployed": false,
@@ -29,5 +29,10 @@
     "serverDeployed": false,
     "socialServerFlag": "Station:Online:SocialEnabled",
     "twoDeviceGameplayVerified": false
-  }
+  },
+  "installedDevice": "Samsung SM_A566E",
+  "installedSHA256": "b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d",
+  "installationEvidence": "evidence/installation-samsung-r41.json",
+  "launchVerified": true,
+  "communityOpened": true
 }

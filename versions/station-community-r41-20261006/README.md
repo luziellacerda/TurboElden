@@ -7,7 +7,7 @@ SHA256: `b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d`.
 
 Base R40 com céu azul/nuvens claras, menus pretos, seletor à direita e robô contínuo. Preserva emuladores/relay/controles/autenticação/downloads. Somente classes35 muda sobre R40;13.179 entradas preservadas. Segundo jogador conciliado com f7f0561.
 
-**Não instalado, USB ausente. Não estável geral.** Conversa privada e pedir vaga exigem SocialEnabled no servidor com o delta fornecido. Convites/salas/chat da sala existentes permanecem compatíveis. Não implementa nem envia WhatsApp real/MenuIA; confirmação do usuário sobre esse canal está pendente após instrução para não usá-lo.
+**R41 instalada no Samsung SM_A566E em 06/10/2026 por atualização; SHA integral conferido e dados preservados. Catálogo/sessão e abertura da comunidade conferidos. USB desconectou antes de concluir Pessoas online e retorno; partida em dupla e capacidades novas do servidor continuam sem validação. Não estável geral.** Conversa privada e pedir vaga exigem SocialEnabled no servidor com o delta fornecido. Convites/salas/chat da sala existentes permanecem compatíveis. Não implementa nem envia WhatsApp real/MenuIA; confirmação do usuário sobre esse canal está pendente após instrução para não usá-lo.
 
 ## Reproduzir
 

@@ -1,0 +1,35 @@
+{
+  "installed": true,
+  "device": "Samsung SM_A566E",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Comunidade-R41-20261006.apk",
+  "previousSHA256": "e1a38b502843e3506c06f510e79741a6a6e65247ef1246264b9a361ad56cc840",
+  "installedSHA256": "b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d",
+  "hashMatches": true,
+  "uninstall": false,
+  "clearData": false,
+  "screenAwakeSettingChanged": false,
+  "originalAwake": "0",
+  "visualVerified": false,
+  "launchVerified": true,
+  "twoDeviceGameplayVerified": false,
+  "finishedUTC": "2026-10-06T15:37:51.287661+00:00",
+  "returnedToCatalogWithoutLogin": true,
+  "catalogVisualVerified": true,
+  "communityOpened": true,
+  "communityStatusObserved": "Online; zero public rooms",
+  "observedPanels": [
+    "rooms",
+    "create form",
+    "conversation empty state"
+  ],
+  "returnButtonVerified": false,
+  "peoplePanelVerified": false,
+  "serverSocialCapabilitiesVerified": false,
+  "deviceDisconnectedBeforeNavigationCompleted": true,
+  "limitations": [
+    "No room created, invitations or messages sent",
+    "No two-device gameplay tested",
+    "UI source review notes finish returns to prior Activity; return from settings entry not verified",
+    "Initial catalog capture showed Boogerman, community header Battletoads; selection correspondence requires isolated check, cause not established"
+  ]
+}
