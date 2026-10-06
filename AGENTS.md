@@ -1,6 +1,6 @@
 # R37 compilado — perfil real, sinopses completas e visual — 05/10/2026
 
-Leia `versions/station-final-details-r37-20261005/README.md`, STATUS e evidências. APK SHA75fd8b5806c6aa683796e1301fa8a92e3236f106a8837a0279b6d0ae094999fc, fonteW37, somentecarouselSO+frontendSO sobreR36. Nome servidor ligado ao componente existente, fonte+50%/cincoespaços, faixa refinada,2.212sinopsesrecorte14 semvazios. Compilado/testadoPC, NÃO instalado: USBausente; últimoSamsungR36hashconfirmado. Conferirnome/visual noaparelho; nãoafirmar estávelgeral ou2jogadores. DEX/manifesto/motores/classes35R34 intactos. Retornoonlinea626b50 estánoGit mas nãofoiintegrado; deltaDownloads11be7f3 fora. Preservar dados/licença/saves e usarbaseR37parapróximointegração.
+Leia `versions/station-final-details-r37-20261005/README.md`, STATUS e evidências. APK SHA75fd8b5806c6aa683796e1301fa8a92e3236f106a8837a0279b6d0ae094999fc, fonteW37, somentecarouselSO+frontendSO sobreR36. Nome servidor ligado ao componente existente, fonte+50%/cincoespaços, faixa refinada,2.212sinopsesrecorte14 semvazios. Instalado no Samsung em06/10/2026, SHA integral igual aoAPK; recibo evidence/installation-samsung-20261006.json. Tela ligada temporária restaurada ao original. Conferência visual separada, sem gameplayonline. Conferirnome/visual noaparelho; nãoafirmar estávelgeral ou2jogadores. DEX/manifesto/motores/classes35R34 intactos. Retornoonlinea626b50 estánoGit mas nãofoiintegrado; deltaDownloads11be7f3 fora. Preservar dados/licença/saves e usarbaseR37parapróximointegração.
 
 ## Histórico anterior
 

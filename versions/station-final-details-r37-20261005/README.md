@@ -1,3 +1,7 @@
+## Instalação em 06/10/2026
+
+R37 instalada no Samsung A56 por atualização; SHA integral do APK no aparelho igual a 75fd8b5806c6aa683796e1301fa8a92e3236f106a8837a0279b6d0ae094999fc. Sem desinstalar ou limpar dados. Recibo em evidence/installation-samsung-20261006.json. A ausência de USB descrita no histórico abaixo foi resolvida. Conferência visual, quando registrada, está no recibo separado; não significa teste de partida online. Configuração temporária de tela ligada restaurada ao valor original e conferida.
+
 # R37 — perfil do servidor, sinopses completas e acabamento visual
 
 ## Entrega e estado real
