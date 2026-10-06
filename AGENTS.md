@@ -1,3 +1,9 @@
+# Sucessora visual R57 — fonte funcional online R55 preservada
+
+Leia [R57: barra fina e Criar sala](versions/station-layout-r57-20261006/README.md) e seu `STATUS.json`. APK SHA `e6159fa3564f0b30c1415b062f42e08e47ea625832e1b2640375b3e8b2b55566`. A fonte atual é o snapshot R55 mais o overlay R57 explicitamente listado; não há mudança no protocolo/motor online. Faixa INSTALADO e posição das capas permanecem idênticas à R55. O pedido de revisão funcional R55 no servidor continua válido; ao alterar a Activity de salas, considerar também o layout R57. Candidato de prontidão d1b535c não integrado; nenhuma partida em dupla declarada corrigida.
+
+## Publicação R55 e histórico preservados
+
 # Fonte atual do app: R55 enviada para análise do servidor — 06/10/2026
 
 A versão atual é **R55**, instalada no Motorola e identificada pelo APK SHA-256 `4c8de4f899af291becdf22c0b551df5e03a813f7ecf536fb360436a5d24d7b39`. Leia [o handoff R55 APP → SERVIDOR](versions/station-current-r55-20261006/HANDOFF-APP-R55-PARA-SERVIDOR-20261006.md) e [o snapshot atual](versions/station-current-r55-20261006/README.md).

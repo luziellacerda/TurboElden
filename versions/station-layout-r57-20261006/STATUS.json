@@ -1,0 +1,42 @@
+{
+  "createdAt": "2026-10-06T22:04:54.370223+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R56-20261006.apk",
+  "baseSHA256": "69a72f34ea2ac2706dde760fb5e9363f8adcacafdf7e6175242cd277022c44aa",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R57-20261006.apk",
+  "sha256": "e6159fa3564f0b30c1415b062f42e08e47ea625832e1b2640375b3e8b2b55566",
+  "bytes": 2093276800,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13193,
+  "addedAssets": {},
+  "roomsDexSHA256": "cf3a92bce2927c0561c64783ae0030c6e5dc90fa81264564d977974a746c74fd",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "downloadImplementationUnchanged": true,
+  "rawTransferDeltaIncluded": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": true,
+  "stable": false,
+  "loginVisualVerified": false,
+  "videoConsumptionMeasuredOnDevice": false,
+  "onlineExitOnDeviceVerified": false,
+  "onlineEngineAndControlsChanged": false,
+  "onlyFocusedVideoRequested": true,
+  "allEmulatorExitMenusRedesigned": false,
+  "socialServerFlag": "Station:Online:SocialEnabled",
+  "twoDeviceGameplayVerified": false,
+  "createRoomLayoutUpdated": true,
+  "compactHeader": true,
+  "serverReadinessCandidateIntegrated": false,
+  "installedVerifiedDevices": [
+    {
+      "model": "Motorola Edge 30",
+      "sha256": "e6159fa3564f0b30c1415b062f42e08e47ea625832e1b2640375b3e8b2b55566"
+    }
+  ],
+  "motorolaSessionPreserved": true,
+  "compactHeaderVisibleOnDevice": true,
+  "createRoomVisualVerified": false
+}
