@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-06T15:16:15.345621+00:00",
+  "createdAt": "2026-10-06T15:22:09.913989+00:00",
   "label": "final",
   "sourceFiles": 149,
   "files": {
@@ -23,7 +23,7 @@
     "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRetroActivity.java": "897a2b5227a922702daa9ed072c8888cefcc2f8e83e397b0147b234cfbea83f3",
     "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRetroLaunch.java": "26ebf144d25fbcb1227a554061712fafacd868d56d8384bc4bc948b978d6b3fb",
     "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomFeedback.java": "7a90edf37c15d3059a9160e05404d41058500b926f9843940bb516b189a4c701",
-    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomsActivity.java": "ceff727952e4290a39038ca7e8b1f90d45326dd8330da21e79f5eb44c5214c0a",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomsActivity.java": "7f990b8c146fa8d1ae30f094f5476d407078fa37b31c7c6845319225b49b5680",
     "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomStartState.java": "d76709fce8ddd5a35675e86f022a08317bd82d41e2c0b62808a374a01575604b",
     "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomState.java": "3569a17e3b3134b0388d5a3231dad9f269461fa5b35566fd5195be21018ac5f9",
     "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationSocial.java": "c0a8b36cf544cfb5b6bbb1c0a2becfb617f282f57992b3f99f859cf40e254be2",
@@ -154,8 +154,8 @@
     "dependency-src\\org\\emulationstation\\frontend\\relay\\ws\\WrappedByteChannel.java": "bccd03ac637dd46006e09068722c64bb8b5c6977f53510f289e42297ef6db3e4"
   },
   "dex": "E:\\ESTUDO APK\\work\\station-community-r41-20261006\\build\\final\\dex\\classes.dex",
-  "dexSHA256": "382e5137e5b123289fbc1d005c3b8d4c15f426b8565dab78f573eee2ee25dcc4",
-  "dexBytes": 347280,
+  "dexSHA256": "42c1fc51402e6e464e97ad0561f2ffca4bdb5908189932f545a2e625e4333ad1",
+  "dexBytes": 347308,
   "java8API34": true,
   "minAPI": 26
 }

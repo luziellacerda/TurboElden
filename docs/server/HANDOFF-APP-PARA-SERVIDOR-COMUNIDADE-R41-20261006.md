@@ -14,9 +14,9 @@ O usuário pediu navegação lateral Ver salas / Pessoas online / Criar sala, pe
 
 APK: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Comunidade-R41-20261006.apk`.
 
-SHA256: `0457d77842c7f2151bf7a6d1c2e3a20251aaebe79eec2dcfa5bf517f9e837ca6`.
+SHA256: `b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d`.
 
-Base R40: `da803b3eb7c0fb24b272795449c5527d752f71e8809d132cae3300071a3c5678`. Só `classes35.dex` foi alterado nesta montagem: `382e5137e5b123289fbc1d005c3b8d4c15f426b8565dab78f573eee2ee25dcc4`. Todas as 13.179 demais entradas foram conferidas integralmente. Inclui R40 (céu azul/nuvens claras, interface preta, seletor à direita, robô em ciclo normal), por herança da base. R40/R41 ainda NÃO instaladas: USB ausente. R39 é a última instalação comprovada. Não promover a estável nem afirmar partida entre dois Android.
+Base R40: `da803b3eb7c0fb24b272795449c5527d752f71e8809d132cae3300071a3c5678`. Só `classes35.dex` foi alterado nesta montagem: `42c1fc51402e6e464e97ad0561f2ffca4bdb5908189932f545a2e625e4333ad1`. Todas as 13.179 demais entradas foram conferidas integralmente. Inclui R40 (céu azul/nuvens claras, interface preta, seletor à direita, robô em ciclo normal), por herança da base. R40/R41 ainda NÃO instaladas: USB ausente. R39 é a última instalação comprovada. Não promover a estável nem afirmar partida entre dois Android.
 
 Fonte completa: `E:\ESTUDO APK\work\station-community-r41-20261006`, snapshot `versions/station-community-r41-20261006` no TurboElden. Não usar receitas R30/R34 antigas sobre o APK atual. O delta do segundo jogador f7f0561 foi conciliado antes da nova UI. Preservados exatamente: classes de abertura/relay/runtime, identidade dos jogos, controles, Voltar do motor, TLS, licença, saves e todos os emuladores locais.
 

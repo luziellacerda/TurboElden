@@ -105,10 +105,11 @@ public final class StationRoomsActivity extends Activity {
         peers=vertical();peerScroll=scroll(leftPanel,peers);peerScroll.setVerticalScrollBarEnabled(true);
         playerSearch.addTextChangedListener(new android.text.TextWatcher(){public void beforeTextChanged(CharSequence s,int a,int c,int n){}public void afterTextChanged(android.text.Editable e){}public void onTextChanged(CharSequence s,int a,int b,int c){if(state.get()!=null)renderPlayers(state.get());}});
         roomTitle=text(middlePanel,"VER SALAS",12,green);bold(roomTitle);rooms=vertical();roomScroll=scroll(middlePanel,rooms);roomScroll.setVerticalScrollBarEnabled(true);
-        bold(text(createPanel,"CRIAR SALA",12,green));text(createPanel,"Uma partida, dois jogadores",20,white);text(createPanel,"Escolha o jogo. A sala fica visível para as pessoas conectadas ao aplicativo.",13,muted);
-        createGame=text(createPanel,"Jogo não selecionado",16,white);bold(createGame);button(createPanel,"Escolher jogo",()->chooseGame(),false);
-        text(createPanel,"Os dois jogadores precisam ter a mesma edição instalada. O aplicativo confere o jogo antes de abrir a sala.",12,muted);
-        create=button(createPanel,"Criar sala deste jogo",()->{conversationPeer="";navigate(0);createRoom();},true);create.setEnabled(false);
+        ScrollView createScroll=new ScrollView(this);LinearLayout createBody=vertical();createScroll.addView(createBody,new ScrollView.LayoutParams(-1,-2));createPanel.addView(createScroll,new LinearLayout.LayoutParams(-1,-1));
+        bold(text(createBody,"CRIAR SALA",12,green));text(createBody,"Uma partida, dois jogadores",20,white);text(createBody,"Escolha o jogo. A sala fica visível para as pessoas conectadas ao aplicativo.",13,muted);
+        createGame=text(createBody,"Jogo não selecionado",16,white);bold(createGame);button(createBody,"Escolher jogo",()->chooseGame(),false);
+        text(createBody,"Os dois jogadores precisam ter a mesma edição instalada. O aplicativo confere o jogo antes de abrir a sala.",12,muted);
+        create=button(createBody,"Criar sala deste jogo",()->{conversationPeer="";navigate(0);createRoom();},true);create.setEnabled(false);
         chatTitle=text(rightPanel,"CONVERSAS",15,white);bold(chatTitle);chatHint=text(rightPanel,"Selecione uma pessoa ou entre em uma sala",11,muted);
         inboxNotice=text(rightPanel,"",12,green);inboxNotice.setVisibility(View.GONE);inboxNotice.setPadding(0,dp(8),0,dp(8));inboxNotice.setOnClickListener(v->{if(!pendingPeer.isEmpty())openConversation(pendingPeer,pendingName);});
         chatActions=row();rightPanel.addView(chatActions,new LinearLayout.LayoutParams(-1,-2));messages=vertical();chatScroll=scroll(rightPanel,messages);chatScroll.setVerticalScrollBarEnabled(true);

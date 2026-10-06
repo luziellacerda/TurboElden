@@ -3,7 +3,7 @@
 Nova página online com menu lateral, salas públicas, pessoas online, criação de sala e conversas dentro do app. Leia o handoff APP→SERVIDOR nesta pasta para contratos completos, fluxos, limites e publicação. Não confundir esta entrega com servidor implantado.
 
 APK pronto: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Comunidade-R41-20261006.apk`.
-SHA256: `0457d77842c7f2151bf7a6d1c2e3a20251aaebe79eec2dcfa5bf517f9e837ca6`.
+SHA256: `b6b19321ec529945870dc919c3de5f0eba75aa54330d3672227b8e632302b28d`.
 
 Base R40 com céu azul/nuvens claras, menus pretos, seletor à direita e robô contínuo. Preserva emuladores/relay/controles/autenticação/downloads. Somente classes35 muda sobre R40;13.179 entradas preservadas. Segundo jogador conciliado com f7f0561.
 
