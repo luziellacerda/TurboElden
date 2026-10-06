@@ -1,0 +1,164 @@
+{
+  "files": {
+    "assets/station-online/engines.json": {
+      "sha256": "36504c3c8a5b3ec6d7fd5ce74b431d2534809e94d018babc944e560d2eee62fd",
+      "bytes": 2027
+    },
+    "assets/station-online/licenses/AUTO-PASSWORD-NOTICE.txt": {
+      "sha256": "86b855c702526c6c2f84193a68da052aa1524e9fc2979813a14c9fd54961bb77",
+      "bytes": 625
+    },
+    "assets/station-online/licenses/RetroArch-COPYING": {
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    "BUILD-RECEIPT.json": {
+      "sha256": "16b45f76d9b547622aea69ee98fb59fd852998ba47cb7d566c9acd2e1f3e01be",
+      "bytes": 1652
+    },
+    "engine-patches/retroarch-station-auto-password.patch": {
+      "sha256": "62254789975d892b2717e65b5f0232656befd347ed43232987c6ca2f2beabff2",
+      "bytes": 4984
+    },
+    "evidence/git-restore-rebuild.json": {
+      "sha256": "604736547716721d25e1f7a82c304a525fa545324cc004d1bd92d8a29e0ebdb6",
+      "bytes": 1290
+    },
+    "evidence/integration.json": {
+      "sha256": "8f5e71918d684ffc839c346e98710d689eda5456640615fc9a02e64b2e8c4754",
+      "bytes": 14981
+    },
+    "evidence/java-build.json": {
+      "sha256": "fddcc4848be5ac753ed9dbc17320e498ffda5e790c4354a503aa547c0ff7dfee",
+      "bytes": 26691
+    },
+    "evidence/local-tests.json": {
+      "sha256": "fdff6da5b2d13471996de6d2ed493a3a9797272b3e381db84b543160cbba8a79",
+      "bytes": 1756
+    },
+    "HANDOFF-APP-R63-PARA-SERVIDOR-20261006.md": {
+      "sha256": "be5238bf9f0647af39315dfb7b00de78fe1ed527d6c6a39d5d1b7d6e8af5369f",
+      "bytes": 10049
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationInvitationCode.java": {
+      "sha256": "611c98d7c8c6428dbed0d271e8ccdb9a0cf4f8e54c215ff17386dfa604b8aa0f",
+      "bytes": 2214
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java": {
+      "sha256": "eae95608a453d33aecd003d271fc07d2d501919f30bd2a4bad4aedf550147229",
+      "bytes": 6004
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": {
+      "sha256": "1105417efb015cc6a8b8feeca4af7f7e34f122527c9aa75671ce09db04732323",
+      "bytes": 69695
+    },
+    "README.md": {
+      "sha256": "4a9fd124806816b496cc0f80e3e908c3cd26cc7d656d8ca40a1e20e3e0951a74",
+      "bytes": 374
+    },
+    "received-server-evidence/api34-compile.json": {
+      "sha256": "418f99e420cfe47cabc0659896b9581bd6f57b1174de94fdf799957190ea3a3e",
+      "bytes": 1503
+    },
+    "received-server-evidence/native-build.json": {
+      "sha256": "2b4065b758c58099ae0c1dbeb0827552a2ca1f52b488c0b8dfb75248304e724a",
+      "bytes": 2374
+    },
+    "received-server-evidence/native-password-tests.json": {
+      "sha256": "187c93cf336bb8d93a7be062cb96915ab0f0beabc2e3039f3aeedf6388410157",
+      "bytes": 353
+    },
+    "received-server-evidence/package-guards.json": {
+      "sha256": "36455efd2ae51c6917bf8751adb6e3fd89a71baaac9a00ec6de47cd6cd68f7de",
+      "bytes": 452
+    },
+    "received-server-evidence/patch-replay.json": {
+      "sha256": "48cb09cae661dbe7e75d1297fb263463475633576570e2c9d66f170f8a8901bf",
+      "bytes": 267
+    },
+    "received-server-evidence/server-tests.json": {
+      "sha256": "2d3eff9c9ba77c2c077fcf66e244faa64b2e66239a43e450000e6f5de364bcd9",
+      "bytes": 502
+    },
+    "received-server-evidence/SOURCE-MANIFEST.json": {
+      "sha256": "b86a1a9d24c5d7ae79db5b3c0be0042512c7931da7ddd529f06eaf89ad148af0",
+      "bytes": 5464
+    },
+    "received-server-evidence/state-tests.json": {
+      "sha256": "c2dec2d473e35b77ee4be16b14539e5ea898aef6bdb91a7596ab28f1972ed0ca",
+      "bytes": 2674
+    },
+    "received-server-evidence/transport-tests.json": {
+      "sha256": "e2480dd5ac407b5813581c2cc997d52b82b4d015a596997aac182ebffa70522e",
+      "bytes": 24675
+    },
+    "recipes/build_java.py": {
+      "sha256": "c22151ec500c691264f57902c032d993cae2c848f592f65528535d9c7f30c248",
+      "bytes": 2102
+    },
+    "recipes/build_native_runtime.py": {
+      "sha256": "401ad617e6262709ad812c1f4421580e85fce3d2b87cbe9b72fbf2241a1a3921",
+      "bytes": 4344
+    },
+    "recipes/package_r63.py": {
+      "sha256": "676eb7e3d930ec99ce45a996880bcdcebd1f7aca2116d0cfffca5f892281ae59",
+      "bytes": 7338
+    },
+    "recipes/restore_sources.py": {
+      "sha256": "d13d97de1332e8cae48c14d0ec98b5930753a91b149c65433a574fd3c126fa08",
+      "bytes": 1672
+    },
+    "recipes/run_local_tests.py": {
+      "sha256": "d84463ecb7e6c56ade33115ab32d3e365f0681295cb1520eb36695a926a3f930",
+      "bytes": 1227
+    },
+    "recipes/test_native_password.py": {
+      "sha256": "68fe8742b5df318ce331d400a0611d6f7bdde25a683298a8ac1e96a90d1d9745",
+      "bytes": 7392
+    },
+    "runtime/libstation_retroarch.so": {
+      "sha256": "899e35279cf046242a7ae31f502078080bd6a94404770fe99e1e2e90be58a1ef",
+      "bytes": 10666496
+    },
+    "server-contract/engine-registry-additions.json": {
+      "sha256": "8ef6ab559a9ec5413d64092883235d06d6082bf4d360b1dc987147b2173f0445",
+      "bytes": 523
+    },
+    "SOURCE-MANIFEST.json": {
+      "sha256": "e5f9622dbc39219d62ec7b55ccf8826102deea6f05bb1aa5eaa10274f90155b5",
+      "bytes": 26811
+    },
+    "STATUS.json": {
+      "sha256": "edb5463815116aadccddad2276665c7c6eb253f707bb076852affed255786b29",
+      "bytes": 804
+    },
+    "tests/StationCompactLobbyTest.java": {
+      "sha256": "49649bf8fc8db1c3e6fd804b5144de9bf3db4707eb7435eb58abc5ab90c1ab61",
+      "bytes": 5774
+    },
+    "tests/StationHostConnectorTest.java": {
+      "sha256": "314179ce0e2f88b634403338c813bc4cd3104e26f086fbd6c8d2dfb2f9553874",
+      "bytes": 3412
+    },
+    "tests/StationJoinPlayerTest.java": {
+      "sha256": "cac2fd8204369e69cad72cd2398b90ac3a091e393943cfef42aa288b873016a1",
+      "bytes": 4078
+    },
+    "tests/StationLaunchPolicyTest.java": {
+      "sha256": "2460d0f51c1d395addf785ba3b1d0e165ee097284562ac5eb4e76c2e62d40479",
+      "bytes": 1056
+    },
+    "tests/StationRoomCreationTest.java": {
+      "sha256": "7f3b87bfbfb1c0828dbacafb09f15fb7065a39e60d69c9fe02e26f967b1ccbbb",
+      "bytes": 2311
+    },
+    "tests/StationShortInvitationTest.java": {
+      "sha256": "06c1d38f30f10826dbd7fde724d4dceeebd23fc0bb11331a142d2222aefa03f5",
+      "bytes": 1718
+    },
+    "tests/StationSocialTest.java": {
+      "sha256": "3f11d12691892ed705b14b8c94533bc9c6355c73a66d05a1a8961d2a453a7a7a",
+      "bytes": 1669
+    }
+  }
+}

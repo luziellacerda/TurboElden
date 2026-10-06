@@ -1,0 +1,21 @@
+{
+  "all161CompilerInputsEqual": true,
+  "dexByteIdentical": true,
+  "dexSHA256": "e910f431b2f3cd3117389afb3e831a972f5284c38f683d6f06602770bd366b2e",
+  "restoredWorkspace": "E:\\ESTUDO APK\\work\\station-r63-git-restore-20261006",
+  "localTestsRepeated": {
+    "utc": "2026-10-06T23:31:24.565261+00:00",
+    "results": {
+      "StationCompactLobbyTest": "PASS 107 executable checks: compact player model, real room codes, stale presence, invite policy and snapshot ordering",
+      "StationHostConnectorTest": "{\"passed\":true,\"checks\":10,\"scope\":\"Real loopback TCP: late listener without JNI, retained stream, false native hint, deadline and cancellation\"}",
+      "StationJoinPlayerTest": "PASS 20 checks: guest entry, two solo rooms, shared membership and unavailable destinations",
+      "StationLaunchPolicyTest": "PASS 15: host/guest launch eligibility and generation identity",
+      "StationRoomCreationTest": "PASS 14 room creation acknowledgment checks",
+      "StationShortInvitationTest": "PASS 23 checks: short invitations, manual input, authenticated resolution and TS1 compatibility",
+      "StationSocialTest": "PASS 113 social client checks"
+    },
+    "androidExecuted": false,
+    "productionModified": false
+  },
+  "androidExecuted": false
+}

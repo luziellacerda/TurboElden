@@ -1,0 +1,37 @@
+{
+  "createdAt": "2026-10-06T23:25:26.650873+00:00",
+  "passed": true,
+  "executedOn": "Windows JVM; exact final compiled classes",
+  "results": {
+    "StationCompactLobbyTest": "PASS 107 executable checks: compact player model, real room codes, stale presence, invite policy and snapshot ordering",
+    "StationJoinPlayerTest": "PASS 20 checks: guest entry, two solo rooms, shared membership and unavailable destinations",
+    "StationLaunchPolicyTest": "PASS 15: host/guest launch eligibility and generation identity",
+    "StationSocialTest": "PASS 113 social client checks",
+    "StationShortInvitationTest": "PASS 23 checks: short invitations, manual input, authenticated resolution and TS1 compatibility",
+    "StationHostConnectorTest": "{\"passed\":true,\"checks\":10,\"scope\":\"Real loopback TCP: late listener without JNI, retained stream, false native hint, deadline and cancellation\"}",
+    "StationRoomCreationTest": "PASS 14 room creation acknowledgment checks"
+  },
+  "sourcePreservation": {
+    "changed": [
+      "netplay-src/org/emulationstation/frontend/netplay/StationInvitationCode.java",
+      "netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java",
+      "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+    ],
+    "unchanged": 158,
+    "serverFilesExact": 5
+  },
+  "runtime": {
+    "sha256": "899e35279cf046242a7ae31f502078080bd6a94404770fe99e1e2e90be58a1ef",
+    "architecture": "AArch64",
+    "loadAlignments": [
+      16384,
+      16384,
+      16384
+    ],
+    "nativeActivitySymbolPresent": true,
+    "autoPasswordSymbolPresent": true
+  },
+  "androidExecuted": false,
+  "productionModified": false,
+  "twoDeviceGameplayVerified": false
+}

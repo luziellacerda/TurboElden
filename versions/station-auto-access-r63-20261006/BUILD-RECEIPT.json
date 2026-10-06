@@ -1,0 +1,37 @@
+{
+  "createdAt": "2026-10-06T23:26:19.653975+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R62-20261006.apk",
+  "baseSHA256": "114dba8af4cb2a0a6beec1aff8123959bcc150fbfbd6dd706afa5bf5f6ef54c7",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R63-20261006.apk",
+  "sha256": "d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c",
+  "bytes": 2093321666,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "assets/station-online/engines.json",
+    "classes35.dex",
+    "lib/arm64-v8a/libstation_retroarch.so"
+  ],
+  "preservedEntries": 13191,
+  "addedAssets": {
+    "assets/station-online/licenses/AUTO-PASSWORD-NOTICE.txt": "86b855c702526c6c2f84193a68da052aa1524e9fc2979813a14c9fd54961bb77"
+  },
+  "roomsDexSHA256": "e910f431b2f3cd3117389afb3e831a972f5284c38f683d6f06602770bd366b2e",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "downloadImplementationUnchanged": true,
+  "rawTransferDeltaIncluded": false,
+  "netplayEngineRegistryUpdated": true,
+  "installed": false,
+  "stable": false,
+  "loginVisualVerified": false,
+  "videoConsumptionMeasuredOnDevice": false,
+  "onlineExitOnDeviceVerified": false,
+  "onlineRuntimeChanged": true,
+  "onlineCoreAndControlsChanged": false,
+  "onlyFocusedVideoRequested": true,
+  "allEmulatorExitMenusRedesigned": false,
+  "socialServerFlag": "Station:Online:SocialEnabled",
+  "twoDeviceGameplayVerified": false,
+  "createRoomLayoutUpdated": true,
+  "serverReadinessCandidateIntegrated": true
+}

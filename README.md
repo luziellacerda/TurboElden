@@ -1,3 +1,9 @@
+# R63 — convite curto e senha automática integrados sobre R62
+
+Leia `versions/station-auto-access-r63-20261006/HANDOFF-APP-R63-PARA-SERVIDOR-20261006.md`, STATUS e recibos. Retorno 8d9c670/candidato 1e0f862 conciliados com R62: 161 Java, 158 preservados, três alterados; runtime 899e3527/IDs autopass1. APK d9a35602/DEX e910f431, 302 testes no Windows e recompilação idêntica pela restauração publicada. Visual, Binder, saída e motores locais preservados. Instalação aguarda saída da partida no Motorola; Samsung R62/Motorola R58. Atualizar ambos antes do teste em dupla. Sem gameplay físico comprovado, estabilidade geral ou deploy Linux.
+
+## Histórico preservado
+
 # R62 — handoff do servidor integrado no APK
 
 Leia `versions/station-online-integrated-r62-20261006/HANDOFF-APP-R62-PARA-SERVIDOR-20261006.md`, STATUS e recibos. Fonte atual = R55 + R57 + nove Java R62. Retorno7c6e167/implementaçãof8b019d6 incorporados; agora há DEX/APK Android real. Inclui capas maiores/Sua sala, miniaturas autenticadas, botões finos e criação que só navega após confirmação. Nativo/faixa/motores preservados; sem deployLinux. APK114dba8a. Testes locais10TCP+255salas+14criação e454ParcelAndroidA56 passaram. Gameplay2aparelhos/saídaonline completa/controles online próprios ainda pendentes; não marcar estável geral. Usar recibos para identificar qual APK está em cada telefone.
