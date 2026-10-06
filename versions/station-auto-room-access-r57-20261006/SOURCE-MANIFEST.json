@@ -6,12 +6,12 @@
       "sha256": "d10c66a8bbff25c893cd59b7a4309bf3c9e9a051df4089242f3ba5cc78250715"
     },
     "README.md": {
-      "bytes": 5657,
-      "sha256": "9594b2c5f1faf0141b7ee7fef1c713bb9083af2dfbd24b57d650ccb66cc4039d"
+      "bytes": 5739,
+      "sha256": "79cf720f760043dd8fc91ff88a94e566707971d23151ee61bbddce1f7ab50a6f"
     },
     "STATUS.json": {
-      "bytes": 682,
-      "sha256": "26e6d11fd604f67fc9c70b0312d14fafd1a7e197b64612356840b27f215d3edb"
+      "bytes": 936,
+      "sha256": "9ec4d01f0371727643925a7681dfb3062e0345d6a02efe28af053f483df5a511"
     },
     "assets/station-online/engines.json": {
       "bytes": 2027,
@@ -41,6 +41,10 @@
       "bytes": 353,
       "sha256": "187c93cf336bb8d93a7be062cb96915ab0f0beabc2e3039f3aeedf6388410157"
     },
+    "evidence/native-patch-replay.json": {
+      "bytes": 263,
+      "sha256": "65c6d56323bb698446e11530ea938cb705804e023cb2febb4650e914dea44ee9"
+    },
     "evidence/package-guards.json": {
       "bytes": 452,
       "sha256": "36455efd2ae51c6917bf8751adb6e3fd89a71baaac9a00ec6de47cd6cd68f7de"
@@ -48,6 +52,10 @@
     "evidence/patch-replay.json": {
       "bytes": 267,
       "sha256": "48cb09cae661dbe7e75d1297fb263463475633576570e2c9d66f170f8a8901bf"
+    },
+    "evidence/production.json": {
+      "bytes": 2078,
+      "sha256": "52068a7ed7c9d777bb6256abc69b60484af56305ceed8777e71fcdc4b2c080cd"
     },
     "evidence/server-tests.json": {
       "bytes": 502,

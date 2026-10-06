@@ -36,4 +36,4 @@ Usar esta pasta junto de `station-current-r55-20261006`, `station-layout-r57-202
 
 Para reproduzir o motor, `recipes/build_native_runtime.py --source-zip <zip-oficial-fixado> --ndk <r28c> --output <novo-diretorio>` aplica o patch consolidado original e o incremental desta pasta. Um rebuild diferente exige atualizar os manifestos/registro e nova conferência; não substituir silenciosamente o binário pinado. O patch Java sobre a prontidão R57 está em `station-short-invite-over-readiness-r57.patch`; a composição completa desta pasta já inclui os fontes herdados.
 
-Contrato e implantação do servidor: consultar `docs/station-android/RETORNO-CONVITE-CURTO-SENHA-AUTOMATICA-STATION-20261006.md` no Servidor-pix. O estado de produção será confirmado no recibo de publicação; esta pasta por si só não implica APK instalado.
+Contrato e implantação do servidor: consultar `docs/station-android/RETORNO-CONVITE-CURTO-SENHA-AUTOMATICA-STATION-20261006.md` no Servidor-pix. Servidor publicado em a3e83d96, PID970425, convite curto e dois novos motores registrados; provas em evidence/production.json. O APK permanece pendente de compilação/assinatura/instalação no PC.

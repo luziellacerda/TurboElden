@@ -13,6 +13,10 @@
   "apkBuilt": false,
   "installed": false,
   "androidGameplayVerified": false,
-  "serverProductionConfirmed": false,
-  "serverRequiresAdditiveEngineRegistry": true
+  "serverProductionConfirmed": true,
+  "serverRequiresAdditiveEngineRegistry": true,
+  "serverSourceRevision": "a3e83d96b8025cde058e267eaa74e4505f654b15",
+  "serverDllSHA256": "5fff55c11a7e85d97d0ba155ea0387584dbeea207a82be294bda958655bf5331",
+  "serverPID": 970425,
+  "appImplementationCommit": "1e0f86241851d6c9c17c379ed23fd238637bbcbd"
 }
