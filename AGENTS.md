@@ -1,3 +1,9 @@
+# Battletoads: diagnóstico de prontidão do anfitrião — 06/10/2026
+
+Leia `docs/server/RETORNO-BATTLETOADS-CONEXAO-HOST-STATION-20261006.md` antes da próxima atualização. Produção às18h02Maceió:2membros/2Pronto/start200/ticket200/WSShost, sala fica starting, nenhum host-listening observado e zero bytes de jogo novos. Não forçar connecting nem antecipar convidado. Usuário conectará porUSB o telefone que abre o jogo ao PC de produção: capturar Activity/logs nativo/JNI/Binder antes de instalar. Este Linux não acessa oUSBAndroid. Delta do túnel em preparação, ainda não compilado/instalado neste primeiro recibo. APIa2bb176/PID875574 preservada; manter fonteR41/assinatura/licença/saves e usar sucessorR41. Gameplay em dupla e causa específica do motor ainda pendentes.
+
+## Histórico anterior
+
 # Cadastro de clientes Station no painel — publicado06/10/2026
 
 Leia docs/server/RETORNO-CADASTRO-CLIENTES-STATION-20261006.md e CADASTRO-CLIENTES-STATION-PRODUCAO-20261006.json. Administraçãofe4b631 publicada às15h45Maceió: Novo cliente e código, cadastro novo/existente, venda paga/cortesia/teste, segunda licença para outro aparelho. Código30min/uso único e senha administrativa para confirmar. Banco/backup/Chrome1440/390 e dois acessos sintéticos independentes na API pública passaram, limpeza confirmada, zero mensagens/compras. APIa2bb176/PID875574/SocialEnabled e catálogo14/2212 preservados. Fonte/runtime/snapshot/APKR41 mantidos; não recompilar por causa do painel. App continua usando desafio/ativação/sessão/perfil assinado; rotas de cadastro são privadas de administração. Orientação antiga de buscar apenas licença/Vendas foi substituída. Gameplay físico/POCO/latência continuam pendentes no retornoR41.
