@@ -1,3 +1,13 @@
+# R55: prontidão conciliada sobre a fonte atual — 06/10/2026
+
+Leia `docs/server/RETORNO-ANALISE-APP-R55-STATION-20261006.md` e `versions/station-relay-readiness-r55-20261006/README.md`. Fonte recebida:9d3d45f; implementação conciliada:8e62ed2; retorno servidor:2fba03b. R55 instalada no Motorola segundo o recibo recebido; versão do outro aparelho ainda precisa ser conferida. O delta mantém o canal ResultReceiver normalizado nos dois sentidos, proprietário e saída idempotente da R54, StationExitPanel e módulos nativos/cliente da R55.
+
+346 arquivos conferidos; 154 fontes Java preservados, dois alterados e um novo. Passaram 39 verificações TCP/TLS/relay e 255 das regras de salas; 157 fontes compilaram Java8/API34 somente em api-check-only. Não há novo DEX/APK compilado ou instalado, nem gameplay físico comprovado. Sem alteração de servidor necessária para este delta; produção apenas inspecionada, API a2bb176/PID875574 preservada.
+
+No PC, usar as receitas novas sobre o APK R55/hash4c8de4f8, com dependências e certificado originais. A receita R41 não serve para a versão atual. Conferir ambas as instalações e testar Battletoads, confirmação, inputs dos dois jogadores, saída e retorno. Não limpar dados nem trocar assinatura. Controles online próprios, aquecimento medido e latência externa continuam pendentes.
+
+## Histórico anterior
+
 # Fonte atual do app: R55 enviada para análise do servidor — 06/10/2026
 
 A versão atual é **R55**, instalada no Motorola e identificada pelo APK SHA-256 `4c8de4f899af291becdf22c0b551df5e03a813f7ecf536fb360436a5d24d7b39`. Leia [o handoff R55 APP → SERVIDOR](versions/station-current-r55-20261006/HANDOFF-APP-R55-PARA-SERVIDOR-20261006.md) e [o snapshot atual](versions/station-current-r55-20261006/README.md).
