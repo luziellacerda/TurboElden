@@ -4,6 +4,8 @@ Leia `versions/station-community-r41-20261006/README.md` e o handoff APP→SERVI
 
 **R40/R41 NÃO instalados: USB ausente; R39 abaixo continua última instalação comprovada.** Servidor novo tem extensão em dois arquivos, SocialEnabled=false por padrão. Conversa privada/pedido de vaga só habilitam mediante capacidades assinadas após operador publicar. Sem deployLinux, WhatsApp/MenuIA ou gameplay2Android. Não marcar estável geral. Preservar licença/jogos/saves/emuladores, usar APKsucessor, nunca desinstalar/limpar. MenuIA foi mencionado depois de recusa de WhatsApp real: canal ainda em esclarecimento, NÃO enviar externamente por inferência. Handoff explícito com limites de histórico efêmero32/peer,flag,rotas,ações e validação. Não misturar deltaDownloads11be7f3.
 
+Servidor: delta e handoff publicados em `feat/station-community-r41-20261006`, commit `32b12bc5654b28f6dc73b9f5c2de2ef6a64bb616`. Recibo `versions/station-community-r41-20261006/evidence/server-publication.json`. Publicação Git confirmada; implantação Linux e instalação R41 no Android continuam pendentes.
+
 ## Estado anterior
 
 # Instalação R39 confirmada — Samsung — 06/10/2026

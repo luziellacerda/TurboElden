@@ -10,6 +10,28 @@ Base remota lida: `be2ba1f9c4d822c4c5d9731af375498d869184b2`, branch `feat/stati
 
 O usuário pediu navegação lateral Ver salas / Pessoas online / Criar sala, pessoas visíveis com o app aberto, convite e conversa no próprio aplicativo. Corrigiu expressamente “não é para chamar no WhatsApp real”. Depois informou que há MenuIA. A pergunta sobre canal continua pendente: NÃO habilitar disparos externos por inferência. Nesta revisão não há integração MenuIA, número de telefone, appkey ou envio externo.
 
+## Publicação vinculada e arquivos exatos
+
+App publicado: TurboElden, branch `feat/station-capas-visuais-netplay-20261003`, commit `cfa5ac2666d950fc1f8d9b58ec3e0a0c046a36e9`. [Fonte e receita exatas](https://github.com/luziellacerda/TurboElden/tree/cfa5ac2666d950fc1f8d9b58ec3e0a0c046a36e9/versions/station-community-r41-20261006). Esta branch de servidor é `feat/station-community-r41-20261006`, descendente direto de `be2ba1f9c4d822c4c5d9731af375498d869184b2`. Não representa uma implantação.
+
+| Arquivo | SHA256 antes | SHA256 entregue |
+|---|---|---|
+| `src/TurboRamaSuiteOnlineServer/StationOnline.cs` | `cb61c3504e60a252f5ca803e06d660bf10ab6b5f06d37ee2ed38b7f8f0c66352` | `476eaee22c4e0870f221aa4f7870bf1f47f25848d621d0f6a11c992e3a2a9449` |
+| `src/TurboRamaSuiteOnlineServer/StationOnlineRegistration.cs` | `8f8ce5fcad008ec55c63342060dddfc1cbcec194ffc9463410beb88844ab687a` | `6fa41b5b46d5081350f6e293861e0037c20789394773b32b676302535e614249` |
+
+O delta inclui somente duas fontes da API, testes sociais isolados e este handoff/evidência. Os arquivos `.base` estão no snapshot do app. Se a release efetiva divergir, conciliar o delta: não copiar arquivos sobre modificações do operador sem análise.
+
+Comandos na raiz do repositório em ambiente isolado:
+
+```sh
+dotnet run --project tests/StationOnlineSocial/StationOnlineSocial.Tests.csproj -c Release
+dotnet run --project tests/StationOnline/StationOnline.Tests.csproj -c Release
+dotnet build src/TurboRamaSuiteOnlineServer/TurboRamaSuiteOnlineServer.csproj -c Release
+dotnet run --project tests/StationOnline/HttpTests.csproj -c Release
+```
+
+As duas primeiras suítes tiveram 25+39 verificações aprovadas no PC. Build completo da API e testes HTTP são exigências de homologação do operador; não foram declarados aprovados nesta entrega. Nenhum acesso à máquina Linux, restart ou alteração de configuração foi realizado aqui. O inventário Linux datado no Git não substitui conferir o serviço em execução.
+
 ## Artefato Android pronto
 
 APK: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Comunidade-R41-20261006.apk`.
