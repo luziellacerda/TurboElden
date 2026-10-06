@@ -1,0 +1,23 @@
+{
+  "test": "shared production functions with simulated original GuiStore, no Android claim",
+  "command": [
+    "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+    "-std=c++17",
+    "-O2",
+    "-I",
+    "E:\\ESTUDO APK\\work\\station-theme-collections-r39-20261006\\native",
+    "E:\\ESTUDO APK\\work\\station-theme-collections-r39-20261006\\tests\\r39_search_tests.cpp",
+    "-o",
+    "E:\\ESTUDO APK\\work\\station-theme-collections-r39-20261006\\tests\\r39_search_tests.exe"
+  ],
+  "returncode": 0,
+  "output": "13839 search/Back/scope/cache/touch/root-label checks passed; 40,000 entries, 10,000 unchanged empty frames: 0.132 ms on host (not Android).\n",
+  "sources": {
+    "native_search_state.h": "2a58372fd3d86d8722e19d8fc0dbd36a6eec394d808e9bbf450cdf1bbe34f721",
+    "station_search_actions.h": "50a2d4aecd162efc97377cd63013c7aae0a936413900a7378659dc8e60a2fe52",
+    "native_search_download.h": "225341cb4204a67a7a848f5c499afe0f01359d45c3ac3c93466e883edd6c585c",
+    "native_carousel.cpp": "f78c676752e8fbab6fe3f78627c74e12d7892ab181220bc9ebbd794d5393a856",
+    "native_folders.h": "2ccfc8c63bba1f5bcdf27fdf8ca299ee2c94036f12f02457ff6886943a0bf088",
+    "station_root_label.h": "f2a51f9073017ed273352119c55c8081021875365e9da8cea428fb2e02c2064f"
+  }
+}

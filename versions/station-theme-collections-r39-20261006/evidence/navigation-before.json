@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "expectedFailure": true,
+  "returncode": 3221226505,
+  "output": "Failed navigation check 5\n",
+  "method": "Same real native folder code with pre-R39 entry-selection placement, simulated native rebuild restores an out-of-range cursor; post-fix harness passes."
+}

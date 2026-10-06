@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList metadataOnly="true" platform="supergrafx" source="LaunchBox Games Database" retrieved="2026-10-06">
+  <game id="launchbox:91008">
+    <name>1941: Counter Attack</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="105" scale="0..1">0.728</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:91009">
+    <name>Aldynes: The Misson Code for Rage Crisis</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="60" scale="0..1">0.710</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:91012">
+    <name>Battle Ace</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="43" scale="0..1">0.578</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:91010">
+    <name>Daimakaimura</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="106" scale="0..1">0.822</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:218908">
+    <name>Madou King Granzort</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="25" scale="0..1">0.722</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+</gameList>

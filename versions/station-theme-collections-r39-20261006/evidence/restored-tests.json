@@ -1,0 +1,10 @@
+{
+  "r39_tests": "PASS 31452 theme, gesture, one-shot Lottie, rating geometry and complete collection editorial checks\n",
+  "r39_jni_tests": "PASS actual preference JNI adapter under simulated Android API: restore, no per-frame IO, failures and balanced local references\n",
+  "navigation": "PASS 3541 native navigation checks; original IDs/indices, All, direct, nested, Back, flat catalogs and 200 refresh cycles\n",
+  "test_ui_r37": "PASS 12670: cover-width primary action, full-width row, five-space metadata flow, larger text and bounded icons, equal secondary actions, scroll viewport, collection Back, exact Lottie frame geometry\n",
+  "r39_search_tests": "13839 search/Back/scope/cache/touch/root-label checks passed; 40,000 entries, 10,000 unchanged empty frames: 0.133 ms on host (not Android).\n",
+  "r39_extra_tests": "PASS 405264 checks; 91838 metadata keys; complete binary-search sweep 23.892 ms (host only)\n",
+  "test_ribbons": "PASS 56800 checks: actual ribbon function, filtered indices, all moving cards, install/delete state, gates, one cached text layout\n",
+  "XML games": 72033
+}

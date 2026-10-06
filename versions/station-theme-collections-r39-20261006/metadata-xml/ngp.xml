@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList metadataOnly="true" platform="ngp" source="LaunchBox Games Database" retrieved="2026-10-06">
+  <game id="launchbox:27868">
+    <name>Baseball Stars</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="34" scale="0..1">0.618</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:27869">
+    <name>King of Fighters R-1: Pocket Fighting Series</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="31" scale="0..1">0.705</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:167547">
+    <name>King of Fighters R-1: Pocket Kakutou Series &amp; Melon-chan no Seichou Nikki</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="7" scale="0..1">0.671</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Unreleased</releaseType>
+  </game>
+  <game id="launchbox:34149">
+    <name>Melon-chan no Seichou Nikki</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="24" scale="0..1">0.529</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:27870">
+    <name>Neo Cherry Master: Real Casino Series</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="13" scale="0..1">0.508</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:27871">
+    <name>NeoGeo Cup '98</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="29" scale="0..1">0.524</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:27872">
+    <name>Pocket Tennis: Pocket Sports Series</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="23" scale="0..1">0.670</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:219935">
+    <name>Renketsu Puzzle Tsunagete Pon!</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="13" scale="0..1">0.667</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:27873">
+    <name>Samurai Shodown!: Pocket Fighting Series</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="33" scale="0..1">0.703</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:34150">
+    <name>Shougi no Tatsujin: Master of Syougi</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.388</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+</gameList>

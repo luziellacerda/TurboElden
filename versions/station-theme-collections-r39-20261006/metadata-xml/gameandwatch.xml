@@ -1,0 +1,2526 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList metadataOnly="true" platform="gameandwatch" source="LaunchBox Games Database" retrieved="2026-10-06">
+  <game id="launchbox:467022">
+    <name>007: GoldenEye</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:464680">
+    <name>2 Player Baseball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:423404">
+    <name>3 in 1 Sports Arena</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.575</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:205376">
+    <name>Air Port Panic</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="19" scale="0..1">0.695</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+  </game>
+  <game id="launchbox:480475">
+    <name>Alien Attack</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:467024">
+    <name>Altered Beast</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:480477">
+    <name>Amaze-a-Tron</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:458215">
+    <name>Apollo 13</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.267</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:220176">
+    <name>Armor Battle</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="17" scale="0..1">0.506</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422026">
+    <name>Asterix: Hunt for the Boars</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:456031">
+    <name>Autoslalom</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:440664">
+    <name>Back to the Future</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:129201">
+    <name>Ball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="37" scale="0..1">0.684</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169595">
+    <name>Ball (Re-Issue)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.567</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169684">
+    <name>Balloon Fight (Crystal Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="17" scale="0..1">0.647</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:142006">
+    <name>Balloon Fight (New Wide Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="20" scale="0..1">0.695</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:219960">
+    <name>Banana</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.462</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:419684">
+    <name>Baseball (Vtech, Explorer Time &amp; Fun)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.518</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:457610">
+    <name>Batman</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:458216">
+    <name>Batman Forever: Double Dose of Doom</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:467007">
+    <name>Batman: The Animated Series</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:458217">
+    <name>Battletoads</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:218307">
+    <name>Bill Elliott's NASCAR Racing</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.675</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:144228">
+    <name>Black Jack</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.519</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:217676">
+    <name>Blades of Steel</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.550</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:219958">
+    <name>Bomb Fight</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:142008">
+    <name>Bomb Sweeper</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="22" scale="0..1">0.705</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:217578">
+    <name>Bottom of the Ninth</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:142012">
+    <name>Boxing</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.657</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189538">
+    <name>Bucky O'Hare</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.462</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190438">
+    <name>BurgerTime (VFD)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.650</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477500">
+    <name>Casper</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:217574">
+    <name>Castlevania II: Simon's Quest</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.457</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190467">
+    <name>Caveman</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.800</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:480916">
+    <name>Championship Football</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162004">
+    <name>Chef</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.714</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147715">
+    <name>Chicky Woggy</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.607</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:127693">
+    <name>Chicky Woggy (Tini Arcade)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="13" scale="0..1">0.669</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169686">
+    <name>Climber (Crystal Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="15" scale="0..1">0.760</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162005">
+    <name>Climber (New Wide Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.633</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126228">
+    <name>Condor</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.562</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189539">
+    <name>Contra</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.643</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190468">
+    <name>Cosmic Combat</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.333</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169590">
+    <name>Crab Grab</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.582</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126231">
+    <name>Crazy Chewy</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.470</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190439">
+    <name>Crazy Climber</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.580</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:154329">
+    <name>Crazy Kong</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="4" scale="0..1">0.725</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126232">
+    <name>Defendo</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:419638">
+    <name>Deluxe Football with Instant Replay</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.425</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:154212">
+    <name>Demon Driver</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.560</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190398">
+    <name>Dennis the Menace</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.556</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190480">
+    <name>Dig Dug</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.717</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476604">
+    <name>Disney's 101 Dalmatians</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477408">
+    <name>Disney's Aladdin</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477137">
+    <name>Disney's Aladdin The Series</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476446">
+    <name>Disney's Beauty and the Beast</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478237">
+    <name>Disney's Darkwing Duck</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477258">
+    <name>Disney's Goof Troop</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478154">
+    <name>Disney's Hercules</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477041">
+    <name>Disney's The Lion King</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476150">
+    <name>Disney's The Little Mermaid</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190440">
+    <name>Dokodemo Dorayaki Doraemon</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.711</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:149339">
+    <name>Donkey Angler </name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.490</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126207">
+    <name>Donkey Kong</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="49" scale="0..1">0.732</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:135735">
+    <name>Donkey Kong (Coleco)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="15" scale="0..1">0.613</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:173941">
+    <name>Donkey Kong 3</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.538</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126202">
+    <name>Donkey Kong Circus</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="36" scale="0..1">0.683</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169589">
+    <name>Donkey Kong Hockey</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="15" scale="0..1">0.743</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126204">
+    <name>Donkey Kong II</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="35" scale="0..1">0.725</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:135220">
+    <name>Donkey Kong Jr. (Coleco)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.631</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126205">
+    <name>Donkey Kong Jr. (New Wide Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="30" scale="0..1">0.803</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:142003">
+    <name>Donkey Kong Jr. (Panorama Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="23" scale="0..1">0.652</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:135255">
+    <name>Donkey Kong Jr. (Tabletop)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.670</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:459222">
+    <name>Dora the Explorer: Dora's World Adventure!</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190399">
+    <name>Double Dragon</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.508</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190400">
+    <name>Double Dragon 3: The Rosetta Stone</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.588</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:455679">
+    <name>Double Dragon II: The Revenge</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189540">
+    <name>Double Dribble</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.671</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190478">
+    <name>Dracula</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.350</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147974">
+    <name>Dungeons &amp; Dragons </name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.409</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126250">
+    <name>Egg</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="17" scale="0..1">0.735</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477452">
+    <name>Electronic Bowling</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190482">
+    <name>Electronic Football (Epoch)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.467</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190483">
+    <name>Electronic Quarterback</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.320</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126255">
+    <name>Engine Room</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.522</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126256">
+    <name>Escape</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.391</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126257">
+    <name>Explorers of Space</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.629</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169450">
+    <name>Fire (Silver)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.718</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:130121">
+    <name>Fire (Wide Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="15" scale="0..1">0.680</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162006">
+    <name>Fire Attack</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="18" scale="0..1">0.711</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164264">
+    <name>Firefox F-7</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:135117">
+    <name>Flagman</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.643</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126272">
+    <name>Fowling</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.411</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190441">
+    <name>Frisky Tom</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.667</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:126273">
+    <name>Frog Boaster</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.700</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190484">
+    <name>Frogger (Coleco)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.660</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478606">
+    <name>Frogger (Gakken Compact Vision TV Boy)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476272">
+    <name>Frogger (Parker Brothers)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476768">
+    <name>G.I. Joe: Star Brigade</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422775">
+    <name>Galaxian (Bandai)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:447626">
+    <name>Galaxian (Coleco)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:175571">
+    <name>Galaxian 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.660</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147975">
+    <name>Galaxy II</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.750</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:154330">
+    <name>Galaxy Invader 1000</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.733</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:171925">
+    <name>Game &amp; Watch: Super Mario Bros. (Crystal Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="20" scale="0..1">0.725</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189541">
+    <name>Garfield</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.367</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:217577">
+    <name>Gargoyles: Night Flight</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.680</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190402">
+    <name>Gauntlet</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478778">
+    <name>Godzilla</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164258">
+    <name>Gold Cliff</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.625</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190403">
+    <name>Golden Axe</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="15" scale="0..1">0.613</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477270">
+    <name>Goofy</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:149337">
+    <name>Grab Man</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.512</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189542">
+    <name>Gradius</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.656</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162007">
+    <name>Green House</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="15" scale="0..1">0.740</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422780">
+    <name>Gunfighter</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.633</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476296">
+    <name>Hang-On</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190485">
+    <name>Head to Head: Electronic Baseball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.433</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162008">
+    <name>Helmet</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.631</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:156500">
+    <name>Hippo Teeth (VTech, Sporty Time &amp; Fun)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="6" scale="0..1">0.550</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+  </game>
+  <game id="launchbox:155822">
+    <name>Hippo Teeth (Vtech, Mini)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.512</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190404">
+    <name>Home Alone</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.478</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190405">
+    <name>Home Alone 2: Lost in New York</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190406">
+    <name>Hook</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.667</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147976">
+    <name>Hot Line</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.589</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147977">
+    <name>Hot Line: Sporty Time Edition</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.540</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190408">
+    <name>Independence Day</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.433</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479671">
+    <name>Inspector Gadget</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:462397">
+    <name>Invader</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190486">
+    <name>Invader 2000</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.460</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190487">
+    <name>Invader from Space</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:156497">
+    <name>Isidoro &amp; Sonja: Caccia al Ladro</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.571</rating>
+    <metadataStatus>complete</metadataStatus>
+  </game>
+  <game id="launchbox:149312">
+    <name>Isidoro &amp; Sonja: Cessate il Fuoco</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="13" scale="0..1">0.538</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477319">
+    <name>Jim Henson's Muppets: Street Surfin'</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:134977">
+    <name>Judge</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.611</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190409">
+    <name>Judge Dredd</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.425</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190488">
+    <name>Jungler</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190410">
+    <name>Jurassic Park</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.471</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190411">
+    <name>Karnov</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190412">
+    <name>Kazaam</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.675</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476168">
+    <name>King Kong Jungle</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190489">
+    <name>Kingman</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.450</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479724">
+    <name>Land of the Lost</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147978">
+    <name>Las Vegas</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.680</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476302">
+    <name>Lee Trevino's Fighting Golf</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:134866">
+    <name>Lifeboat</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="18" scale="0..1">0.828</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162009">
+    <name>Lion</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:210822">
+    <name>Live Action Football</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189543">
+    <name>Lone Ranger</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.660</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:208612">
+    <name>Look Alive! Football</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190413">
+    <name>MC Hammer: U Can't Touch This</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.617</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190442">
+    <name>Machine Man</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.533</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:481027">
+    <name>Madden '95</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162010">
+    <name>Manhole (Gold)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="13" scale="0..1">0.646</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162011">
+    <name>Manhole (New Wide Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.750</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:134772">
+    <name>Mario Bros.</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="43" scale="0..1">0.826</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:142014">
+    <name>Mario the Juggler</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.735</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:134638">
+    <name>Mario's Bombs Away (Panorama Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="20" scale="0..1">0.623</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164115">
+    <name>Mario's Cement Factory (New Wide Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.591</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169593">
+    <name>Mario's Cement Factory (Tabletop)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.729</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422776">
+    <name>Master Merlin</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190490">
+    <name>Match Number</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:210825">
+    <name>Mattel Electronics: Auto Race</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.625</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:210826">
+    <name>Mattel Electronics: Baseball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:462399">
+    <name>Mattel Electronics: Basketball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:480573">
+    <name>Mattel Electronics: Basketball 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:210828">
+    <name>Mattel Electronics: Football</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.700</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:200757">
+    <name>Mattel Electronics: Football 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.375</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:200085">
+    <name>Mattel Electronics: Hockey</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:210829">
+    <name>Mattel Electronics: Missile Attack</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:200086">
+    <name>Mattel Electronics: Soccer</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:217576">
+    <name>Mega Man 3</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.480</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422760">
+    <name>Merlin</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169660">
+    <name>Merry Cook</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164116">
+    <name>Mickey &amp; Donald</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.658</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477197">
+    <name>Mickey &amp; Friends</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:134637">
+    <name>Mickey Mouse (Panorama Screen) </name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="17" scale="0..1">0.688</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:134636">
+    <name>Mickey Mouse (Wide Screen) </name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="21" scale="0..1">0.733</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:423442">
+    <name>Micro-Game Centre</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:441315">
+    <name>Mighty Max</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.350</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476265">
+    <name>Mighty Morphin Power Rangers</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:154318">
+    <name>Mini Munchman</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="5" scale="0..1">0.420</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147979">
+    <name>Monkey</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.729</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:155821">
+    <name>Monkey Jump</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.525</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190414">
+    <name>Mortal Kombat</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.550</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:128569">
+    <name>Motor Cross</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.609</rating>
+    <metadataStatus>complete</metadataStatus>
+  </game>
+  <game id="launchbox:479294">
+    <name>Mrs. Potato Head Mr. Potato Head</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190491">
+    <name>Ms. Pac-Man</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.550</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189544">
+    <name>NFL Football</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.380</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476183">
+    <name>Nicktoons Plug and Play</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164557">
+    <name>Nightmare Before Christmas</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.633</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190415">
+    <name>Ninja Gaiden</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.522</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:217575">
+    <name>Ninja Gaiden III: The Ancient Ship of Doom</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.280</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:161933">
+    <name>Octopus </name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="18" scale="0..1">0.811</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162012">
+    <name>Oil Panic</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.714</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190416">
+    <name>Operation: Aliens</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.517</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147980">
+    <name>Pac Man</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:194732">
+    <name>Pac-Man</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:459663">
+    <name>Pac-Man Arcade in a Tin</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190445">
+    <name>Packri Monster</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.667</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190448">
+    <name>Pair Match</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.425</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147981">
+    <name>Pancake</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.620</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476343">
+    <name>Paperboy</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476341">
+    <name>Paperboy 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:132244">
+    <name>Parachute</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="25" scale="0..1">0.732</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190449">
+    <name>Pengo</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:149338">
+    <name>Penguin Land</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.800</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164260">
+    <name>Pinball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.625</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147982">
+    <name>Pirate</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.762</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:440142">
+    <name>Pit-Fighter</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.350</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164218">
+    <name>Popeye (Panorama Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.622</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169592">
+    <name>Popeye (Tabletop)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.633</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164119">
+    <name>Popeye (Wide Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.719</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:38718">
+    <name>Power House Pinball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:194497">
+    <name>R-Zone: Batman Forever</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.514</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:194496">
+    <name>R-Zone: Battle Arena Toshinden</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.450</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:194498">
+    <name>R-Zone: Indy 500</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.350</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162016">
+    <name>Rain Shower</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.700</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478647">
+    <name>Road Runner</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190417">
+    <name>Robin Hood</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.450</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190418">
+    <name>Robocop 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.571</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190419">
+    <name>Robocop 3</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.533</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147983">
+    <name>Roller Coaster</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479773">
+    <name>Rugrats</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147984">
+    <name>Safari</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162015">
+    <name>Safebuster</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.740</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:154257">
+    <name>Scramble</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="5" scale="0..1">0.640</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477395">
+    <name>Shaq Attaq: Monster Jam</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476798">
+    <name>Shinobi</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169659">
+    <name>Shuttle Voyage</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.433</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190495">
+    <name>Simon</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">4</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.733</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:218306">
+    <name>Skate or Die</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190422">
+    <name>Skeleton Warriors: The Dark Crusade</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.667</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:153041">
+    <name>Sleepwalker</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.494</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:132348">
+    <name>Snoopy (Panorama Screen) </name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="15" scale="0..1">0.733</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:132347">
+    <name>Snoopy (Tabletop)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.570</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:128741">
+    <name>Snoopy Tennis</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="26" scale="0..1">0.688</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:209356">
+    <name>Soccer 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:134994">
+    <name>Soldier Fighter</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.433</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476125">
+    <name>Sonic The Hedgehog 3</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479804">
+    <name>Sonic X (Leapfrog Leapster)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190423">
+    <name>Sonic the Hedgehog</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.536</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190424">
+    <name>Sonic the Hedgehog 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.489</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477454">
+    <name>Sonic the Hedgehog: Spinball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190425">
+    <name>Space Harrier II</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.403</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190426">
+    <name>Space Jam</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.550</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:202750">
+    <name>Space Mission</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:169644">
+    <name>Space Rescue</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.650</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190427">
+    <name>Spider-Man</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.549</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162014">
+    <name>Spitball Sparky</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.733</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479803">
+    <name>SpongeBob SquarePants: Saves the Day (Leapfrog Leapster)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164118">
+    <name>Squish</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.700</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:210830">
+    <name>Star Fox Game Watch</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.668</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476705">
+    <name>Star Trek The Next Generation</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422778">
+    <name>Star Trek: 25th Anniversary</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190496">
+    <name>Star Wars: Electronic Battle Command</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422795">
+    <name>Star Wars: Electronic Laser Battle Game</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190428">
+    <name>Street Fighter 2010: The Final Fight</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.475</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190429">
+    <name>Street Fighter II</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.482</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164558">
+    <name>Strider</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.480</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:128570">
+    <name>Sub Chase</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.420</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:204360">
+    <name>Super Cobra (Gakken)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.733</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190430">
+    <name>Super Double Dragon</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.540</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:159971">
+    <name>Super Mario Bros. (New Wide Screen)</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="22" scale="0..1">0.700</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:458869">
+    <name>Super Mario Bros. 3 Game Watch</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.350</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:458871">
+    <name>Super Mario World Game Watch</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190431">
+    <name>Swamp Thing</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:210821">
+    <name>TC7: Air Traffic Control</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478695">
+    <name>Talking MTV's Beavis and Butt-Head: This Game Rules!!!</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190451">
+    <name>Tamagotchi</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:467071">
+    <name>Tandy Stack Challenge</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478875">
+    <name>Taz-Mania</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478747">
+    <name>Tecmo Bowl</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189545">
+    <name>Teenage Mutant Ninja Turtles</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422763">
+    <name>Teenage Mutant Ninja Turtles 3: Shredder's Last Stand</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422761">
+    <name>Teenage Mutant Ninja Turtles II: Splinter Speaks</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.367</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422779">
+    <name>Teenage Mutant Ninja Turtles: Basketball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.350</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477663">
+    <name>Teenage Mutant Ninja Turtles: Dimension X Assault</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:206754">
+    <name>Tennis</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="3" scale="0..1">0.700</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:128568">
+    <name>Tennis Menace</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.583</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:458514">
+    <name>The Addams Family</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:425404">
+    <name>The Adventures of Bayou Billy</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.375</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190401">
+    <name>The Flash</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.275</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477854">
+    <name>The Flintstones</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190407">
+    <name>The Incredible Crash Dummies</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.633</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479021">
+    <name>The Pagemaster</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190420">
+    <name>The Rocketeer</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.450</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190421">
+    <name>The Shadow</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.586</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479141">
+    <name>The Simpsons</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479360">
+    <name>The Simpsons: Bart vs Homersaurus</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:206476">
+    <name>Thunder Ball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:149248">
+    <name>Tom &amp; Jerry Popper</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.564</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147987">
+    <name>Tom &amp; Jerry Prank </name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.580</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:476921">
+    <name>Tom and Jerry: The Movie</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:189546">
+    <name>Top Gun</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.617</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422771">
+    <name>Top Gun: The Second Mission</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.450</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190497">
+    <name>Touch Me</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">4</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:147989">
+    <name>Towering Rescue</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.662</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190432">
+    <name>Transformers: Generation 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.586</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:128571">
+    <name>Tron</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="12" scale="0..1">0.725</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:162013">
+    <name>Tropical Fish</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="11" scale="0..1">0.682</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:129203">
+    <name>Turtle Bridge</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="21" scale="0..1">0.714</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:462406">
+    <name>Turtles</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:422765">
+    <name>U-Boat</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190452">
+    <name>Ultraman Monster Battle</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.738</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:129202">
+    <name>Vermin</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.621</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190433">
+    <name>Vindicators</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.475</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:477157">
+    <name>Walt Disney's Snow White and the Seven Dwarfs</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:479215">
+    <name>Walt Disney's The Jungle Book</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190434">
+    <name>Wayne's World</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="9" scale="0..1">0.444</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:128045">
+    <name>Wild Man Jump</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="17" scale="0..1">0.482</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190435">
+    <name>X-Men</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.280</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190436">
+    <name>X-Men: Project X</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.762</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:478525">
+    <name>Yo, Yogi!</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190453">
+    <name>Zackman: The Pit</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.360</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:190454">
+    <name>Zaxxon</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.200</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:164290">
+    <name>Zelda</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="24" scale="0..1">0.733</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+</gameList>

@@ -17,13 +17,14 @@
   "downloadImplementationUnchanged": true,
   "rawTransferDeltaIncluded": false,
   "netplayIdentityHashPreserved": true,
-  "installed": false,
+  "installed": true,
   "stable": false,
   "nativeSHA256": "4a581bea9f260354f645efca30a4722e4823d89814cfb08000d1e4da65f2c95e",
   "sourceWorkspace": "E:\\ESTUDO APK\\work\\station-carousel-scope-r38-20261006",
   "systemSummaries": 52,
   "gameSynopsesUnchanged": 2212,
-  "lastConfirmedInstalledRevision": "R37 Samsung",
+  "lastConfirmedInstalledRevision": "R38 Samsung",
   "onlineSecondPlayerDeltaIncluded": false,
-  "deviceVisualValidated": false
+  "deviceVisualValidated": false,
+  "installationReceipt": "evidence/installation-samsung-20261006.json"
 }

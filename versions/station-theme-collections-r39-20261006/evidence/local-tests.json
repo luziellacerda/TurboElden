@@ -1,0 +1,18 @@
+{
+  "r39_tests": {
+    "returncode": 0,
+    "output": "PASS 31452 theme, gesture, one-shot Lottie, rating geometry and complete collection editorial checks\n"
+  },
+  "r39_jni_tests": {
+    "returncode": 0,
+    "output": "PASS actual preference JNI adapter under simulated Android API: restore, no per-frame IO, failures and balanced local references\n"
+  },
+  "navigation": {
+    "returncode": 0,
+    "output": "PASS 3541 native navigation checks; original IDs/indices, All, direct, nested, Back, flat catalogs and 200 refresh cycles\n"
+  },
+  "test_ui_r37": {
+    "returncode": 0,
+    "output": "PASS 12670: cover-width primary action, full-width row, five-space metadata flow, larger text and bounded icons, equal secondary actions, scroll viewport, collection Back, exact Lottie frame geometry\n"
+  }
+}

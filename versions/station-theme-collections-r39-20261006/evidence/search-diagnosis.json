@@ -1,0 +1,25 @@
+{
+  "scope": "Static evidence + host execution of shared production helpers; Android reproduction pending",
+  "decompilationImageBase": "0x100000",
+  "nativeFunctions": {
+    "closeSearch": "0x219570",
+    "setSearchQuery": "0x21c414",
+    "rebuildVisible": "0x21b134",
+    "input": "0x2354d4",
+    "touch": "0x234878"
+  },
+  "observations": [
+    "Direct query-string clears on 4 transitions left native search tokens unchanged. Replaced by native closeSearch(clear=true) before changing facade/scope.",
+    "Native input routes Android AC_BACK past closeSearch with non-pad keyboard. Shared Back now explicitly closes search; subsequent Back clears query.",
+    "Original rebuild treats empty visible list as invalid every frame. Reuse only a completed empty search with unchanged owner/catalog/storage/revision/query/platform/installed flag. Navigation invalidates explicitly.",
+    "Original full-text branch bypasses platform and installed conditions. Postfilter now enforces both, then existing folder filter.",
+    "No-result view offers Clear/Edit; IME view offers Clear/Show results using existing native routes. Touch uses native types 0=down/1=move/2=up. No simulated coordinate navigation."
+  ],
+  "sourceFiles": {
+    "00319570_GuiStore__closeSearch.c": "631d9d7f76950767ffac3d1c40dc1924bac6e2175783e36e95e78c491cb14f09",
+    "0031c414_GuiStore__setSearchQuery.c": "343242a73172aee53220701a127855dd407a0a963bcb6f1c71a0584ad05338c2",
+    "0031b134_GuiStore__rebuildVisible.c": "6d525df5f15fbe3364a4e79701130c99127e75db6c70c1e6ca23b51ca8f7ca40",
+    "003354d4_GuiStore__input.c": "8433faa5873e0e79b7d9ed04ca053a2f96e679e2b9c7272bcb8e3125f1ffcf6f",
+    "00334878_GuiStore__touch.c": "ad85c66c0269acee38ad2c5fefe63262d424d2099917d3660d2aefcc32430827"
+  }
+}

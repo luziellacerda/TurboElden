@@ -1,0 +1,599 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gameList metadataOnly="true" platform="virtualboy" source="LaunchBox Games Database" retrieved="2026-10-06">
+  <game id="launchbox:422806">
+    <name>3-D BattleSnake</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.775</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:422807">
+    <name>3D Crosswords</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="5" scale="0..1">0.700</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14736">
+    <name>3D Tetris</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="74" scale="0..1">0.672</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445022">
+    <name>Advanced Pasta Cooking Simulator</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="2" scale="0..1">0.500</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445029">
+    <name>Bad Apple</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445030">
+    <name>Ballface</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:147897">
+    <name>Blox</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="20" scale="0..1">0.670</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:197376">
+    <name>Blox 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="8" scale="0..1">0.662</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:20556">
+    <name>Bound High</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="49" scale="0..1">0.678</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Unreleased</releaseType>
+  </game>
+  <game id="launchbox:445031">
+    <name>Capitan Sevilla 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445040">
+    <name>Capitan Sevilla 3D</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445008">
+    <name>Castle of Doom</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:471533">
+    <name>Castle of Doom Redux</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:471529">
+    <name>Chris's Casino</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:197387">
+    <name>Deathchase</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.750</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:457618">
+    <name>Dragon Hopper</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.650</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445034">
+    <name>Elevated Speed</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:148663">
+    <name>Etch-A-Sketch</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.670</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:26772">
+    <name>Faceball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="25" scale="0..1">0.600</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Unreleased</releaseType>
+  </game>
+  <game id="launchbox:218100">
+    <name>Faceball Remastered</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.550</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>ROM Hack</releaseType>
+  </game>
+  <game id="launchbox:148442">
+    <name>Fishbone</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="7" scale="0..1">0.800</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445023">
+    <name>Flappy Cheep Cheep</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="2" scale="0..1">0.550</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445015">
+    <name>Formula V</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14738">
+    <name>Galactic Pinball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="54" scale="0..1">0.712</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445024">
+    <name>Game Hero</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445025">
+    <name>GoSub</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="2" scale="0..1">0.450</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14739">
+    <name>Golf</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="40" scale="0..1">0.610</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445042">
+    <name>HAMBURGERS EN ROUTE TO SWITZERLAND</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:167849">
+    <name>Hyper Fighting</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="14" scale="0..1">0.793</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445016">
+    <name>INSECTICIDE</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:19238">
+    <name>Innsmouse no Yakata</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="40" scale="0..1">0.597</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:14740">
+    <name>Jack Bros.</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="64" scale="0..1">0.764</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:14743">
+    <name>Mario Clash</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="65" scale="0..1">0.692</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445017">
+    <name>Mario Combat</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:163249">
+    <name>Mario Kart: Virtual Cup</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="22" scale="0..1">0.691</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:446008">
+    <name>Mario Land VB</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="5" scale="0..1">0.640</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14744">
+    <name>Mario's Tennis</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="87" scale="0..1">0.693</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:14745">
+    <name>Nester's Funky Bowling</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="38" scale="0..1">0.534</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445018">
+    <name>Null Pointer Mockup</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Unreleased</releaseType>
+  </game>
+  <game id="launchbox:471505">
+    <name>Pac-Man</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14737">
+    <name>Panic Bomber</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="31" scale="0..1">0.673</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445009">
+    <name>Pineapple 64</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14748">
+    <name>Red Alarm</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="59" scale="0..1">0.659</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445006">
+    <name>Red Square</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:19239">
+    <name>SD Gundam Dimension War</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="35" scale="0..1">0.303</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:423557">
+    <name>SPONG</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445007">
+    <name>Snatcher</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.650</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:446000">
+    <name>Snowball Wars</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445019">
+    <name>Soviet Union 2010</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445020">
+    <name>Soviet Union 2011</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:19240">
+    <name>Space Invaders: Virtual Collection</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="28" scale="0..1">0.650</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:132646">
+    <name>Space Pinball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="16" scale="0..1">0.572</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Unreleased</releaseType>
+  </game>
+  <game id="launchbox:19179">
+    <name>Space Squash</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="27" scale="0..1">0.669</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:446001">
+    <name>StarFox</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14749">
+    <name>Teleroboxer</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="44" scale="0..1">0.707</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:459778">
+    <name>Test Chamber</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:148669">
+    <name>Tic Tac Toe</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="6" scale="0..1">0.617</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:148714">
+    <name>Tron</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="10" scale="0..1">0.755</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:19241">
+    <name>V-Tetris</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="50" scale="0..1">0.640</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:445026">
+    <name>VB Racing</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445027">
+    <name>VUE Snake</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445021">
+    <name>VUEngine Platformer</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14750">
+    <name>Vertical Force</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="44" scale="0..1">0.703</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:19242">
+    <name>Virtual Bowling</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="30" scale="0..1">0.420</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:14734">
+    <name>Virtual Boy Wario Land</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="114" scale="0..1">0.873</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:471532">
+    <name>Virtual E.T.</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:19243">
+    <name>Virtual Fishing</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="26" scale="0..1">0.562</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:19244">
+    <name>Virtual Lab</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="22" scale="0..1">0.466</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:14751">
+    <name>Virtual League Baseball</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="37" scale="0..1">0.554</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:464554">
+    <name>Virtual League Baseball 2</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>source_missing_fields</metadataStatus>
+    <releaseType>Unreleased</releaseType>
+  </game>
+  <game id="launchbox:476810">
+    <name>Virtual Picross</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.500</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:148718">
+    <name>Virtual Pong</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="4" scale="0..1">0.550</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:445028">
+    <name>Virtual WarZone</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">2</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.400</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Homebrew</releaseType>
+  </game>
+  <game id="launchbox:14752">
+    <name>Waterworld</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="36" scale="0..1">0.628</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+  <game id="launchbox:468096">
+    <name>ZERO RACERS</name>
+    <sourceUrl>https://gamesdb.launchbox-app.com/Metadata.zip</sourceUrl>
+    <players kind="maximum_reported">1</players>
+    <rating kind="community_average" votes="1" scale="0..1">0.300</rating>
+    <metadataStatus>complete</metadataStatus>
+    <releaseType>Released</releaseType>
+  </game>
+</gameList>

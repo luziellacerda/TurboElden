@@ -1,0 +1,52 @@
+{
+  "switch": {
+    "width": 384,
+    "height": 216,
+    "frames": 86,
+    "rleBytes": 4033336,
+    "sha256": "470a651e8844a995bd9b950c26046c96a60ac5975972dc7d4f74bd33541daecf",
+    "roundTripAllFrames": true,
+    "liveRGBABytes": 331776,
+    "transparentMarginCrop": null
+  },
+  "stars": {
+    "width": 128,
+    "height": 128,
+    "frames": 127,
+    "rleBytes": 421160,
+    "sha256": "22ab843a980abd114e816a51af4f8d69e706e9984b513568945074197fcc0861",
+    "roundTripAllFrames": true,
+    "liveRGBABytes": 65536,
+    "transparentMarginCrop": null
+  },
+  "chatbot": {
+    "width": 202,
+    "height": 159,
+    "frames": 86,
+    "rleBytes": 4117136,
+    "sha256": "3863dc6e02b81b07bc326fc452824ddd6790a04e70550be717ba579ca1da3f95",
+    "roundTripAllFrames": true,
+    "liveRGBABytes": 128472,
+    "transparentMarginCrop": [
+      29,
+      15,
+      231,
+      174
+    ]
+  },
+  "online": {
+    "width": 138,
+    "height": 150,
+    "frames": 242,
+    "rleBytes": 7779392,
+    "sha256": "cf4b4973dcd5f5dfac6f998487936bb8a4a98cc9e9cf0969818005359b82d8b0",
+    "roundTripAllFrames": true,
+    "liveRGBABytes": 82800,
+    "transparentMarginCrop": [
+      10,
+      5,
+      148,
+      155
+    ]
+  }
+}

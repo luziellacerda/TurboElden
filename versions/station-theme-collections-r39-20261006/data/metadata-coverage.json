@@ -1,0 +1,445 @@
+{
+  "publicSource": "https://gamesdb.launchbox-app.com/Metadata.zip",
+  "catalogItems": 2212,
+  "currentMissingPlayers": 1,
+  "currentMissingRatings": 1,
+  "currentUniquePublicMatches": 2096,
+  "currentChanged": 2082,
+  "futureLookupKeys": 91838,
+  "futureGames": 72033,
+  "platforms": {
+    "3do": {
+      "games": 386,
+      "complete": 276,
+      "missingRatings": 5,
+      "missingPlayers": 108
+    },
+    "arcade": {
+      "games": 7180,
+      "complete": 4538,
+      "missingRatings": 778,
+      "missingPlayers": 2342
+    },
+    "atari2600": {
+      "games": 1298,
+      "complete": 857,
+      "missingRatings": 426,
+      "missingPlayers": 53
+    },
+    "atari5200": {
+      "games": 148,
+      "complete": 140,
+      "missingRatings": 8,
+      "missingPlayers": 1
+    },
+    "atari7800": {
+      "games": 163,
+      "complete": 118,
+      "missingRatings": 43,
+      "missingPlayers": 5
+    },
+    "jaguar": {
+      "games": 128,
+      "complete": 106,
+      "missingRatings": 18,
+      "missingPlayers": 5
+    },
+    "jaguarcd": {
+      "games": 46,
+      "complete": 37,
+      "missingRatings": 5,
+      "missingPlayers": 5
+    },
+    "lynx": {
+      "games": 162,
+      "complete": 108,
+      "missingRatings": 53,
+      "missingPlayers": 8
+    },
+    "colecovision": {
+      "games": 552,
+      "complete": 370,
+      "missingRatings": 167,
+      "missingPlayers": 24
+    },
+    "intellivision": {
+      "games": 180,
+      "complete": 170,
+      "missingRatings": 5,
+      "missingPlayers": 7
+    },
+    "odyssey2": {
+      "games": 96,
+      "complete": 82,
+      "missingRatings": 3,
+      "missingPlayers": 13
+    },
+    "pcengine": {
+      "games": 343,
+      "complete": 331,
+      "missingRatings": 4,
+      "missingPlayers": 8
+    },
+    "pcenginecd": {
+      "games": 446,
+      "complete": 364,
+      "missingRatings": 22,
+      "missingPlayers": 72
+    },
+    "supergrafx": {
+      "games": 5,
+      "complete": 5,
+      "missingRatings": 0,
+      "missingPlayers": 0
+    },
+    "pcfx": {
+      "games": 73,
+      "complete": 65,
+      "missingRatings": 5,
+      "missingPlayers": 3
+    },
+    "nes": {
+      "games": 3843,
+      "complete": 2835,
+      "missingRatings": 851,
+      "missingPlayers": 275
+    },
+    "fds": {
+      "games": 270,
+      "complete": 260,
+      "missingRatings": 8,
+      "missingPlayers": 3
+    },
+    "gb": {
+      "games": 1605,
+      "complete": 1083,
+      "missingRatings": 316,
+      "missingPlayers": 264
+    },
+    "gbc": {
+      "games": 1567,
+      "complete": 781,
+      "missingRatings": 392,
+      "missingPlayers": 453
+    },
+    "gba": {
+      "games": 2367,
+      "complete": 1499,
+      "missingRatings": 342,
+      "missingPlayers": 600
+    },
+    "snes": {
+      "games": 2959,
+      "complete": 2332,
+      "missingRatings": 491,
+      "missingPlayers": 184
+    },
+    "n64": {
+      "games": 800,
+      "complete": 576,
+      "missingRatings": 202,
+      "missingPlayers": 44
+    },
+    "nds": {
+      "games": 4576,
+      "complete": 2696,
+      "missingRatings": 807,
+      "missingPlayers": 1490
+    },
+    "gamecube": {
+      "games": 811,
+      "complete": 675,
+      "missingRatings": 47,
+      "missingPlayers": 93
+    },
+    "wii": {
+      "games": 2297,
+      "complete": 1859,
+      "missingRatings": 110,
+      "missingPlayers": 357
+    },
+    "gameandwatch": {
+      "games": 317,
+      "complete": 308,
+      "missingRatings": 0,
+      "missingPlayers": 9
+    },
+    "virtualboy": {
+      "games": 75,
+      "complete": 71,
+      "missingRatings": 0,
+      "missingPlayers": 4
+    },
+    "atomiswave": {
+      "games": 34,
+      "complete": 31,
+      "missingRatings": 1,
+      "missingPlayers": 3
+    },
+    "sega32x": {
+      "games": 63,
+      "complete": 53,
+      "missingRatings": 7,
+      "missingPlayers": 4
+    },
+    "segacd": {
+      "games": 232,
+      "complete": 225,
+      "missingRatings": 4,
+      "missingPlayers": 4
+    },
+    "dreamcast": {
+      "games": 911,
+      "complete": 710,
+      "missingRatings": 104,
+      "missingPlayers": 112
+    },
+    "gamegear": {
+      "games": 412,
+      "complete": 398,
+      "missingRatings": 11,
+      "missingPlayers": 5
+    },
+    "megadrive": {
+      "games": 2128,
+      "complete": 1405,
+      "missingRatings": 656,
+      "missingPlayers": 115
+    },
+    "mastersystem": {
+      "games": 555,
+      "complete": 446,
+      "missingRatings": 89,
+      "missingPlayers": 26
+    },
+    "model2": {
+      "games": 35,
+      "complete": 34,
+      "missingRatings": 1,
+      "missingPlayers": 1
+    },
+    "model3": {
+      "games": 29,
+      "complete": 28,
+      "missingRatings": 1,
+      "missingPlayers": 1
+    },
+    "naomi": {
+      "games": 154,
+      "complete": 145,
+      "missingRatings": 5,
+      "missingPlayers": 4
+    },
+    "naomi2": {
+      "games": 21,
+      "complete": 20,
+      "missingRatings": 1,
+      "missingPlayers": 1
+    },
+    "saturn": {
+      "games": 1194,
+      "complete": 1133,
+      "missingRatings": 54,
+      "missingPlayers": 8
+    },
+    "sg1000": {
+      "games": 112,
+      "complete": 101,
+      "missingRatings": 10,
+      "missingPlayers": 2
+    },
+    "neogeo": {
+      "games": 180,
+      "complete": 167,
+      "missingRatings": 6,
+      "missingPlayers": 7
+    },
+    "neogeocd": {
+      "games": 112,
+      "complete": 80,
+      "missingRatings": 7,
+      "missingPlayers": 26
+    },
+    "ngp": {
+      "games": 10,
+      "complete": 9,
+      "missingRatings": 0,
+      "missingPlayers": 1
+    },
+    "ngpc": {
+      "games": 84,
+      "complete": 75,
+      "missingRatings": 8,
+      "missingPlayers": 1
+    },
+    "psx": {
+      "games": 4649,
+      "complete": 3891,
+      "missingRatings": 367,
+      "missingPlayers": 466
+    },
+    "ps2": {
+      "games": 4783,
+      "complete": 2779,
+      "missingRatings": 911,
+      "missingPlayers": 1730
+    },
+    "ps3": {
+      "games": 2606,
+      "complete": 1593,
+      "missingRatings": 367,
+      "missingPlayers": 894
+    },
+    "psp": {
+      "games": 2041,
+      "complete": 1580,
+      "missingRatings": 236,
+      "missingPlayers": 269
+    },
+    "xbox": {
+      "games": 1143,
+      "complete": 908,
+      "missingRatings": 45,
+      "missingPlayers": 214
+    },
+    "xbox360": {
+      "games": 5735,
+      "complete": 1558,
+      "missingRatings": 3471,
+      "missingPlayers": 3305
+    },
+    "3ds": {
+      "games": 1707,
+      "complete": 616,
+      "missingRatings": 409,
+      "missingPlayers": 949
+    },
+    "wiiu": {
+      "games": 819,
+      "complete": 644,
+      "missingRatings": 42,
+      "missingPlayers": 152
+    },
+    "psvita": {
+      "games": 1190,
+      "complete": 451,
+      "missingRatings": 248,
+      "missingPlayers": 673
+    },
+    "switch": {
+      "games": 6609,
+      "complete": 3375,
+      "missingRatings": 2731,
+      "missingPlayers": 1255
+    },
+    "astrocade": {
+      "games": 51,
+      "complete": 50,
+      "missingRatings": 0,
+      "missingPlayers": 1
+    },
+    "loopy": {
+      "games": 10,
+      "complete": 6,
+      "missingRatings": 0,
+      "missingPlayers": 4
+    },
+    "pv1000": {
+      "games": 13,
+      "complete": 13,
+      "missingRatings": 0,
+      "missingPlayers": 0
+    },
+    "amigacd32": {
+      "games": 406,
+      "complete": 222,
+      "missingRatings": 130,
+      "missingPlayers": 118
+    },
+    "arcadia": {
+      "games": 62,
+      "complete": 59,
+      "missingRatings": 1,
+      "missingPlayers": 2
+    },
+    "scv": {
+      "games": 29,
+      "complete": 29,
+      "missingRatings": 0,
+      "missingPlayers": 0
+    },
+    "channelf": {
+      "games": 46,
+      "complete": 44,
+      "missingRatings": 1,
+      "missingPlayers": 1
+    },
+    "vectrex": {
+      "games": 103,
+      "complete": 79,
+      "missingRatings": 21,
+      "missingPlayers": 12
+    },
+    "n64dd": {
+      "games": 13,
+      "complete": 13,
+      "missingRatings": 0,
+      "missingPlayers": 0
+    },
+    "pokemonmini": {
+      "games": 42,
+      "complete": 39,
+      "missingRatings": 0,
+      "missingPlayers": 3
+    },
+    "ngage": {
+      "games": 74,
+      "complete": 64,
+      "missingRatings": 7,
+      "missingPlayers": 5
+    },
+    "cdi": {
+      "games": 283,
+      "complete": 107,
+      "missingRatings": 19,
+      "missingPlayers": 164
+    },
+    "videopacplus": {
+      "games": 86,
+      "complete": 51,
+      "missingRatings": 7,
+      "missingPlayers": 28
+    },
+    "pico": {
+      "games": 262,
+      "complete": 92,
+      "missingRatings": 28,
+      "missingPlayers": 168
+    },
+    "gamecom": {
+      "games": 23,
+      "complete": 23,
+      "missingRatings": 0,
+      "missingPlayers": 0
+    },
+    "supervision": {
+      "games": 79,
+      "complete": 63,
+      "missingRatings": 11,
+      "missingPlayers": 6
+    },
+    "wonderswan": {
+      "games": 113,
+      "complete": 109,
+      "missingRatings": 2,
+      "missingPlayers": 2
+    },
+    "wonderswancolor": {
+      "games": 97,
+      "complete": 92,
+      "missingRatings": 5,
+      "missingPlayers": 1
+    }
+  },
+  "matching": "Unique exact normalized platform and title or published alternate name; punctuation and accents ignored; no fuzzy or cross-platform joins. XMLs are metadata-only, not downloadable catalog entries."
+}

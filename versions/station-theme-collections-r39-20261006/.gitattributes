@@ -1,0 +1,3 @@
+* -text whitespace=cr-at-eol
+# Preserve downloaded license pages byte-for-byte, including their original spacing.
+assets/*-LICENSE.html -whitespace

@@ -2,7 +2,7 @@
 
 ## Entrega e estado comprovado
 
-APK: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Carrossel-R38-20261006.apk`. SHA-256 `58b337511bef62a98cae6d17982a4f139c1b0e6049def18894258d98dd5bbdfd`, 2054649656 bytes. Pacote `org.turboramastation.frontend`, classes Java `org.emulationstation.frontend`. Compilado e conferido no PC. **Ainda não instalado: Samsung deixou de aparecer na depuração USB. Última instalação comprovada: R37.** Instalação e conferência visual pendentes; não declarar estabilidade geral nem teste online em dupla.
+APK: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Carrossel-R38-20261006.apk`. SHA-256 `58b337511bef62a98cae6d17982a4f139c1b0e6049def18894258d98dd5bbdfd`, 2054649656 bytes. Pacote `org.turboramastation.frontend`, classes Java `org.emulationstation.frontend`. Compilado e conferido no PC. **Instalação posterior confirmada no Samsung às 11:51:27 UTC de 06/10/2026, SHA integral igual ao APK; recibo em evidence/installation-samsung-20261006.json.** Conferência visual pendente; não declarar estabilidade geral nem teste online em dupla.
 
 Fonte final: `E:\ESTUDO APK\work\station-carousel-scope-r38-20261006`. Compilação e temporários em E:, APK final em G:. Atualizar sem desinstalar nem apagar dados. Nenhuma alteração exclusiva no telefone e nenhum servidor modificado.
 

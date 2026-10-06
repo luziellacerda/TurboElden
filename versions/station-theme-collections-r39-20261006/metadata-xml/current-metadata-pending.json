@@ -1,0 +1,38 @@
+[
+  {
+    "itemId": "station_37a54d4e820273dde0436dc6383a0e40",
+    "platform": "megadrive",
+    "name": "Super Mario World",
+    "players": "",
+    "ratingThousandths": 500,
+    "ratingSource": "launchbox_community",
+    "publicMatch": "451348",
+    "matchingCandidates": 1,
+    "before": [
+      "",
+      -1
+    ],
+    "votes": 5,
+    "reviewedAlias": "Existing description identifies Squirrel King hack by Chuanpu/Jazz Dark; not World 64.",
+    "ratingScope": "platform_release",
+    "sourceUrl": "https://gamesdb.launchbox-app.com/Metadata.zip"
+  },
+  {
+    "itemId": "station_d07c3ccafb8e758e8fec214bdae6899a",
+    "platform": "neogeo",
+    "name": "Dragon's Heaven (development board)",
+    "players": "1-2",
+    "ratingThousandths": -1,
+    "ratingSource": "unavailable",
+    "publicMatch": null,
+    "matchingCandidates": 0,
+    "before": [
+      "1-2",
+      -1
+    ],
+    "votes": null,
+    "reviewedAlias": null,
+    "ratingScope": "platform_release",
+    "sourceUrl": null
+  }
+]
