@@ -1,0 +1,155 @@
+{
+  "applyOrder": [
+    "versions/station-current-r55-20261006",
+    "versions/station-layout-r57-20261006",
+    "versions/station-online-integrated-r62-20261006"
+  ],
+  "functionalSourceCommit": "9d3d45f048aa44bb2ee9c41f567e985901628daa",
+  "visualSourceCommit": "8980cd422d63068299b5e9946c120f81a9c94f29",
+  "serverImplementationCommit": "f8b019d6c7f3314aebfdc1afd62f4a505154935a",
+  "serverReturnCommit": "7c6e1674eaabab4d69d83b022a9660466dd0ec0c",
+  "all161CompilerInputsResolved": true,
+  "overlay": {
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": {
+      "sha256": "c719ab6b8fdf8e1835d24b50ff94888003cda1a910fbf0813a233571b5379f2b",
+      "bytes": 67292,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomsActivity.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationCreateGameCard.java": {
+      "sha256": "ccdd4e971da51331181cb017ccc11682b0cfdaee13252eb85344586b251431fd",
+      "bytes": 3929,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationCreateGameCard.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomArtwork.java": {
+      "sha256": "3fd146633671ad30baf722fb2904f72376458c27cffa28ad0411eed436891c4c",
+      "bytes": 4224,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomArtwork.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomCreation.java": {
+      "sha256": "104b87d5717839fd56c93327d7f108b44406e0e86768ffed5922f0877e1b4578",
+      "bytes": 837,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomCreation.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationHostConnector.java": {
+      "sha256": "c909aea87a8e6c4631002a565a8e4b8b720ffcc1f964dcb8796c4bc155002032",
+      "bytes": 2176,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationHostConnector.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java": {
+      "sha256": "b4a781eb21760e1f1adc9527bae18d5a9ffa7b5047039cd033e978cd0f25277d",
+      "bytes": 5279,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRelayTunnel.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java": {
+      "sha256": "ca7a75d758f9951d4c4dbfe8391f4ec86179a3c011ec98fb838afe9f7781227c",
+      "bytes": 10753,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRetroActivity.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationFlowPanel.java": {
+      "sha256": "219153461d015c13557051e6ca0a59895ccf799a004665d2c38394f74f7c1794",
+      "bytes": 2509,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationFlowPanel.java"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPlayerSheet.java": {
+      "sha256": "81a4c6eeceb30613b649055c3bc7c36b33aa6213669560fd428ce146cda434d8",
+      "bytes": 6471,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationPlayerSheet.java"
+    },
+    "recipes/build_java.py": {
+      "sha256": "c22151ec500c691264f57902c032d993cae2c848f592f65528535d9c7f30c248",
+      "bytes": 2102,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\build_java.py"
+    },
+    "recipes/restore_sources.py": {
+      "sha256": "1cca858dd08b18a0b7c45e46fc7a3bb8032c38b7d7206130fcf5f4defc32c975",
+      "bytes": 1406,
+      "origin": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\restore_station_r62_sources.py"
+    },
+    "evidence/java-build.json": {
+      "sha256": "47a0034dc7e55358097c5b3b2016f8c485d1dd9099b60170498d03fcec9b125d",
+      "bytes": 26690,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\build\\final\\result.json"
+    },
+    "evidence/r60-source-delta.json": {
+      "sha256": "833b139840f9be19c939e44e40c108d5017f6c066ef4490a27b6f579e7fe0e49",
+      "bytes": 570,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-flow-r60-20261006\\evidence\\source-delta.json"
+    },
+    "evidence/source-preservation.json": {
+      "sha256": "ea925f554a943e4441b7fa594280be86940ac2a591b02b41883c1dfff714fa6d",
+      "bytes": 1115,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\evidence\\source-preservation.json"
+    },
+    "BUILD-RECEIPT.json": {
+      "sha256": "0b2f2833a493c81f54171d57d88f05b062e96d2a82a76e28a22ba6bcd4d6bba3",
+      "bytes": 1397,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\build-result.json"
+    },
+    "evidence/r62-source-delta.json": {
+      "sha256": "2f4b484d4f0d4839721f380e1bdff99efab1e9a11ec6cca234d550fee9a32a96",
+      "bytes": 176,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\evidence\\source-delta.json"
+    },
+    "evidence/r61-source-delta.json": {
+      "sha256": "3f185006878a3f0b8992ddd0aed1d9aad248e9ec0bbac2fb6572c4b7392079b2",
+      "bytes": 446,
+      "origin": "E:\\ESTUDO APK\\work\\station-flow-art-r61-20261006\\evidence\\source-delta.json"
+    },
+    "evidence/creation-checks.log": {
+      "sha256": "2c8d6be5fdf0b9cdaa5958149784930e8b6fbd13d471cdc5344ef2adb2df8246",
+      "bytes": 45,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\evidence\\creation-checks.log"
+    },
+    "tests/StationRoomCreationTest.java": {
+      "sha256": "7f3b87bfbfb1c0828dbacafb09f15fb7065a39e60d69c9fe02e26f967b1ccbbb",
+      "bytes": 2311,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-flow-r60-20261006\\tests\\StationRoomCreationTest.java"
+    },
+    "evidence/r59-integration.json": {
+      "sha256": "5f73c3bd06a0dbcb8f102fb9cbcfa8c89183b690816505fa2398dd79f4903ee3",
+      "bytes": 16464,
+      "origin": "E:\\ESTUDO APK\\work\\station-online-integrated-r59-20261006\\evidence\\integration.json"
+    },
+    "evidence/host-connector-windows.log": {
+      "sha256": "7118e0233f1f6c7717c2dbaf3db2f9b0fb734b8854f237b38dd302213977aa85",
+      "bytes": 147,
+      "origin": "E:\\ESTUDO APK\\work\\station-online-integrated-r59-20261006\\evidence\\host-connector-windows.log"
+    },
+    "evidence/android-parcel-a56.log": {
+      "sha256": "3d963559d3151c8fe22f4e1c5ec4ecb82849aa0a2eca00439f1c1e45c6c5912b",
+      "bytes": 117,
+      "origin": "E:\\ESTUDO APK\\work\\station-online-integrated-r59-20261006\\evidence\\android-probe-result.log"
+    },
+    "evidence/state-tests-windows.json": {
+      "sha256": "774a3dc22157bf551db6ab39b8168c941aa56c5497a3a7ca1daaf06af4dea878",
+      "bytes": 2125,
+      "origin": "E:\\ESTUDO APK\\work\\station-online-integrated-r59-20261006\\tests\\state\\result.json"
+    },
+    "tests/StationSessionChannelDeviceTest.java": {
+      "sha256": "64592ac3896cc5cfc90a31025b4f796bbb7777fc986860242dd315788420cabe",
+      "bytes": 2848,
+      "origin": "E:\\ESTUDO APK\\work\\station-online-integrated-r59-20261006\\StationSessionChannelDeviceTest.java"
+    },
+    "tests/StationHostConnectorTest.java": {
+      "sha256": "314179ce0e2f88b634403338c813bc4cd3104e26f086fbd6c8d2dfb2f9553874",
+      "bytes": 3412,
+      "origin": "E:\\ESTUDO APK\\work\\station-online-integrated-r59-20261006\\tests\\StationHostConnectorTest.java"
+    },
+    "evidence/r58-source-checks.json": {
+      "sha256": "3f186d6d85d7b2092d5402da9cf39d4e670a859828467d044ba4eebcf23c6e77",
+      "bytes": 858,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-art-r58-20261006\\evidence\\source-checks.json"
+    },
+    "evidence/installation.json": {
+      "sha256": "dca666f9e89e0a186ce0e1c75e77b19e148766adf8c60e1cf90988b39ec4b4a2",
+      "bytes": 425,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\evidence\\installation.json"
+    },
+    "evidence/visual-check.json": {
+      "sha256": "b44a35fdae72188e7c6c2004241fb892642012b9229a14c36bc96d3c0f933f99",
+      "bytes": 617,
+      "origin": "E:\\ESTUDO APK\\work\\station-room-space-r62-20261006\\evidence\\visual-check.json"
+    }
+  },
+  "standaloneFullAPKBuild": false
+}

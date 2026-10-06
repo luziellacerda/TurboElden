@@ -1,0 +1,12 @@
+{
+  "base": "R60",
+  "changed": [
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationCreateGameCard.java",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationPlayerSheet.java",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomsActivity.java"
+  ],
+  "added": [
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationFlowPanel.java"
+  ],
+  "preservedJavaSources": 157
+}

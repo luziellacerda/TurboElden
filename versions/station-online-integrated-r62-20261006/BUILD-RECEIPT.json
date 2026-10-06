@@ -1,0 +1,32 @@
+{
+  "createdAt": "2026-10-06T22:59:47.510711+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R61-20261006.apk",
+  "baseSHA256": "6a5e6598dbf923e084be25aca500f3c156955c748d8d8ddd155f95d66d7d8b84",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R62-20261006.apk",
+  "sha256": "114dba8af4cb2a0a6beec1aff8123959bcc150fbfbd6dd706afa5bf5f6ef54c7",
+  "bytes": 2093292264,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "classes35.dex"
+  ],
+  "preservedEntries": 13193,
+  "addedAssets": {},
+  "roomsDexSHA256": "861402ef2fd7c6995110cc9f1abda12465d535629c4d4f78152c5515977e1b94",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "downloadImplementationUnchanged": true,
+  "rawTransferDeltaIncluded": false,
+  "netplayIdentityHashPreserved": true,
+  "installed": false,
+  "stable": false,
+  "loginVisualVerified": false,
+  "videoConsumptionMeasuredOnDevice": false,
+  "onlineExitOnDeviceVerified": false,
+  "onlineEngineAndControlsChanged": false,
+  "onlyFocusedVideoRequested": true,
+  "allEmulatorExitMenusRedesigned": false,
+  "socialServerFlag": "Station:Online:SocialEnabled",
+  "twoDeviceGameplayVerified": false,
+  "createRoomLayoutUpdated": true,
+  "serverReadinessCandidateIntegrated": true
+}

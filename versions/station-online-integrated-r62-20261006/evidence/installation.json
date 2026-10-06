@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-06T23:02:54.520927+00:00",
+  "deviceModel": "Samsung A56",
+  "stage": "installed",
+  "apkSHA256": "114dba8af4cb2a0a6beec1aff8123959bcc150fbfbd6dd706afa5bf5f6ef54c7",
+  "package": "org.turboramastation.frontend",
+  "updateWithoutDataClear": true,
+  "installCommand": "adb install --no-incremental -r --user 0",
+  "gamesSavesAndLicenseNotCleared": true,
+  "wholeInstalledAPKHashVerified": true
+}

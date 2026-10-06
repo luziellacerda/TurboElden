@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "StationHostConnector": "exact server f8b019d6 source preserved",
+    "StationRelayTunnel": "exact server f8b019d6 source preserved",
+    "StationRetroActivity": "exact server f8b019d6 source preserved",
+    "StationGameSession": "exact R55 source preserved",
+    "StationSessionChannel": "exact R55 source preserved",
+    "StationRetroLaunch": "exact R55 source preserved",
+    "StationLaunchPolicy": "exact R55 source preserved",
+    "StationOnlineGame": "exact R55 source preserved",
+    "StationOnlineClient": "exact R55 source preserved",
+    "StationRoomStartState": "exact R55 source preserved",
+    "StationRoomState": "exact R55 source preserved",
+    "StationSocial": "exact R55 source preserved",
+    "StationPlayerModel": "exact R55 source preserved",
+    "StationInvitationCode": "exact R55 source preserved",
+    "StationExitPanel": "exact R55 source preserved",
+    "StationRoomCreation": "exact R60 source preserved",
+    "StationRoomArtwork": "exact R60 source preserved"
+  },
+  "allPassed": true,
+  "count": 17,
+  "doesNotProvePhysicalGameplay": true
+}

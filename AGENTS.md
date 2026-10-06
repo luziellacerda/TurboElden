@@ -1,3 +1,9 @@
+# R62 — handoff do servidor integrado no APK
+
+Leia `versions/station-online-integrated-r62-20261006/HANDOFF-APP-R62-PARA-SERVIDOR-20261006.md`, STATUS e recibos. Fonte atual = R55 + R57 + nove Java R62. Retorno7c6e167/implementaçãof8b019d6 incorporados; agora há DEX/APK Android real. Inclui capas maiores/Sua sala, miniaturas autenticadas, botões finos e criação que só navega após confirmação. Nativo/faixa/motores preservados; sem deployLinux. APK114dba8a. Testes locais10TCP+255salas+14criação e454ParcelAndroidA56 passaram. Gameplay2aparelhos/saídaonline completa/controles online próprios ainda pendentes; não marcar estável geral. Usar recibos para identificar qual APK está em cada telefone.
+
+## Histórico preservado
+
 # Prontidão conciliada com a fonte online R55 e visual R57 — 06/10/2026
 
 Leia `docs/server/RETORNO-ANALISE-APP-R55-STATION-20261006.md` e `versions/station-relay-readiness-r57-20261006/README.md`. Fonte funcional recebida:9d3d45f; sucessora visual considerada:8980cd4; implementação atual:f8b019d6; retorno servidor:e9d86a2. A R57 foi instalada no Motorola segundo o recibo recebido. A versão do outro telefone ainda precisa ser conferida.

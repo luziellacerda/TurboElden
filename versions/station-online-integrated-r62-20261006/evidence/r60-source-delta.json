@@ -1,0 +1,14 @@
+{
+  "base": "E:\\ESTUDO APK\\work\\station-online-integrated-r59-20261006",
+  "changed": [
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomsActivity.java"
+  ],
+  "added": [
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomArtwork.java",
+    "netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomCreation.java"
+  ],
+  "preserved": 157,
+  "serverDeliveryPreserved": true,
+  "serverOnlineSourceComparedToProduction": "a2bb176530fd4d2dfa740da7e934fd84d097404e",
+  "serverOnlineSourceUnchanged": true
+}
