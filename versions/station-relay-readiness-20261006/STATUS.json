@@ -1,0 +1,17 @@
+{
+  "sourceBase": "R41",
+  "implemented": true,
+  "isolatedChecks": 39,
+  "javaApi34Compiled": true,
+  "javaSources": 150,
+  "linuxCompileApiCheckOnly": true,
+  "windowsProductionDexBuilt": false,
+  "apkBuilt": false,
+  "installed": false,
+  "twoDeviceGameplayVerified": false,
+  "exactPhysicalNativeCauseProven": false,
+  "productionServerModified": false,
+  "stable": false,
+  "readme": "README.md",
+  "observation": "evidence/production-observation.json"
+}
