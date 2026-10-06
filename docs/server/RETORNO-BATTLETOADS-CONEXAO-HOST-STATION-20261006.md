@@ -18,8 +18,14 @@ O usuário informou Samsung da loja e confirmou que conectará por USB **o telef
 4. Se `native-listening` está ausente, verificar o erro nativo e se o runtime carregado tem os patches de papelhost/client e listener. Se o sinal chega, investigar entrega por ResultReceiver/Binder e a chamada autenticada `host-listening`. Registrar apenas fase/classe/código e resultados, sem sala, apelido, ticket, bearer, senha ou código de acesso.
 5. Preservar licença, saves, assinatura, todos motores e fonte congeladaR41. Atualizações são APKsucessor sobre R41, sem desinstalar/limpar. Não aplicar R34 antigo sobre R41.
 
-## Correção em preparação
+## Delta implementado e testado; instalação pendente
 
-O túnel atual aguarda exclusivamente o callbackJNI por60s antes de conectar ao TCP local. Está sendo preparado um delta que mantém como fluxo de jogo a primeira conexão TCP real bem-sucedida emloopback; sinaliza a prontidão somente após TCP conectado e WSS aberto. O callback nativo passa a acelerar a espera. O convidado continua aguardando a confirmação autenticada no servidor.
+Fonte: `versions/station-relay-readiness-20261006`, três classesJava sobreR41, sem alteração do snapshot/runtime congelado. O túnel mantém a primeira conexãoTCP real e anuncia prontidão após TCP conectado/WSS aberto; o avisoJNI acelera a espera. O convidado continua aguardando confirmaçãoautenticada. Falhas do motor/relay ficam explícitas, incluindo as ocorridas antes doonStart.
 
-**Neste recibo inicial o delta ainda está em testes e não está compilado/instalado no telefone.** A causa específica do motor e a captura USB permanecem pendentes. Não marcar a partida corrigida. A publicação seguinte anexará fontes, testes e receita concreta do candidato.
+39verificações TCP/TLS/relay passaram,12.583.029bytes por direção; baselineR41 falha no mesmo transporte semcallback.150fontes compilaram Java8/API34, usando SDKexato e classpathAPIderivadoR16. Não há DEX/APKnovo produzido nesta máquina. A receitaWindows exige jar/D8deproduçãoexatos e preserva todas entradas exceto classes35.dex sobre o APKR41/hashb6b19321.
+
+Ler README/STATUS/evidence e executar build_candidate.py→package_candidate.py no PCWindows apóscapturaprivada doAndroid. Atualizar com assinaturaoriginal; preservar licença/jogos/saves. Ainda é necessário verificar o motor/JNI/Binder nos aparelhos e confirmar inputs/gameplay dos dois. O delta não comprova que o JNI foi a causa específica da tentativa real e não autoriza declarar gameplayresolvido.
+
+## Cópia de códigos de acesso
+
+A melhoria de compatibilidade do botão Copiar código já está publicada no site, fonte247bb0a/retornoservidor0820fd0,17h59Maceió. Ler RETORNO-COPIA-CODIGOS-STATION-20261006.md e COPIA-CODIGOS-STATION-PRODUCAO-20261006.json. O usuário havia conseguido ativar antes dessa publicação; não reemitir códigos para diagnosticar a sala. API/admin/helper/licenças/servidorR41 preservados.
