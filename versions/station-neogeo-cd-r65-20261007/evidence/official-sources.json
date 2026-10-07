@@ -1,0 +1,14 @@
+{
+  "neogeo.cpp": {
+    "url": "https://raw.githubusercontent.com/mamedev/mame/mame0289/src/mame/snk/neogeo.cpp",
+    "sha256": "38f76752ef8483c6760851366e47d1443c7d536d89e5fddcc4d928aaa4a8e427"
+  },
+  "neogeocd.cpp": {
+    "url": "https://raw.githubusercontent.com/mamedev/mame/mame0289/src/mame/snk/neogeocd.cpp",
+    "sha256": "127d44140d3989835895a5636fa9a638708fac67c58d6f2765b510c1e78c76d5"
+  },
+  "mame.lst": {
+    "url": "https://raw.githubusercontent.com/mamedev/mame/mame0289/src/mame/mame.lst",
+    "sha256": "0543ced9d31e29110b85db8a0314a40d48f7b01f8acde7aeea8736f969a0b6fc"
+  }
+}

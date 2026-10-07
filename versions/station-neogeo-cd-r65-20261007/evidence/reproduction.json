@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "dexSHA256": "9dc641418b05663f0b548dbb01b3e2dab398fd73122a2b734b8509c19f68b080",
+  "sourceFiles": {
+    "java/org/emulationstation/frontend/MameBootstrap.java": "947467469202c3f149df6115164a88fb4faed47774979410ff4ea1efad7b4d6f",
+    "java/org/emulationstation/frontend/MameEntryActivity.java": "da201de43c88b2daf4686b82d9aef712f2f2627637096b06559edb21e57821f0",
+    "java/org/emulationstation/frontend/NeoCdSupport.java": "bed8cf72bbc342de9b1b4f4811ed04ef8a2ff2c116d351e6d6bcab2f53b9d1b5"
+  },
+  "reproducedIdenticalDEX": true,
+  "androidJarSHA256": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+  "d8JarSHA256": "d43c8a94c9b1f1da1a7cc49c32b81e8cee1708b37ee8b530a81a0688222b42c0",
+  "apkInstalled": false
+}

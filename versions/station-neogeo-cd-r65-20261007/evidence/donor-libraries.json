@@ -1,0 +1,14 @@
+[
+  {
+    "library": "lib/arm64-v8a/libMAME4droid.so",
+    "donorSHA256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+    "appSHA256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+    "identical": true
+  },
+  {
+    "library": "lib/arm64-v8a/libmame4droid-jni.so",
+    "donorSHA256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+    "appSHA256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+    "identical": true
+  }
+]

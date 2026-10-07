@@ -1,0 +1,86 @@
+{
+  "BUILD-RECEIPT.json": {
+    "sha256": "30cd6373931749f1ee80fbbfeb31a6ac831c29d922df54e87808dc5ac4b4ee16",
+    "bytes": 1219
+  },
+  "evidence/build.json": {
+    "sha256": "b69beffa293cb89bb669d8559fa5023a2da9fad6a2761590a555faced72f0054",
+    "bytes": 684
+  },
+  "evidence/device-observation.json": {
+    "sha256": "f6c36ad38a48c3b2e277c54534f9d1b7027f83415a023a214a6860c320f6a095",
+    "bytes": 756
+  },
+  "evidence/donor-libraries.json": {
+    "sha256": "99b29d784f89a51a0f84ba879eb9eb7d453c9505021d135b59447c9b76dfc4f7",
+    "bytes": 523
+  },
+  "evidence/driver-catalog-audit.json": {
+    "sha256": "6d4566eff4918442d34c4da76f31e5a35f8375fdaec2725be1d4c327d512c715",
+    "bytes": 49328
+  },
+  "evidence/host-tests.json": {
+    "sha256": "91db5052ecbca2019fdd075d354d1fb873987ea0eece6bf2372d843c201505bb",
+    "bytes": 527
+  },
+  "evidence/official-sources.json": {
+    "sha256": "9c1ecde5923e4c73c32b05efdb29baac7272091b9d393f0abf64e4267d258c47",
+    "bytes": 607
+  },
+  "evidence/reproduced-catalog-audit.json": {
+    "sha256": "8c789d909274baf6f89b66a52b73674acdb4cf385d06cc2c64d6ee067d5e2f7a",
+    "bytes": 49278
+  },
+  "evidence/reproduction-tests.json": {
+    "sha256": "098e6ae4d7743709e7f795d2d47e81ad4b51e4b43bf08697be1c97b3ba9c2d6f",
+    "bytes": 508
+  },
+  "evidence/reproduction.json": {
+    "sha256": "eb328d830d782aa69268a0fa387a4646b2c01eff2912b8a39d446652d0d013ff",
+    "bytes": 764
+  },
+  "evidence/runtime-comparison.json": {
+    "sha256": "6563f7068702e4e83d1109a46001b19b2db78a14f4a579c5eec534901ea28b9f",
+    "bytes": 253
+  },
+  "java/org/emulationstation/frontend/MameBootstrap.java": {
+    "sha256": "947467469202c3f149df6115164a88fb4faed47774979410ff4ea1efad7b4d6f",
+    "bytes": 6799
+  },
+  "java/org/emulationstation/frontend/MameEntryActivity.java": {
+    "sha256": "da201de43c88b2daf4686b82d9aef712f2f2627637096b06559edb21e57821f0",
+    "bytes": 7054
+  },
+  "java/org/emulationstation/frontend/NeoCdSupport.java": {
+    "sha256": "bed8cf72bbc342de9b1b4f4811ed04ef8a2ff2c116d351e6d6bcab2f53b9d1b5",
+    "bytes": 8312
+  },
+  "README.md": {
+    "sha256": "7f8803da06d1a994eb6ee992d67e5c99031e5ed2cfd8ea9b8546b72b1e14c6d9",
+    "bytes": 13521
+  },
+  "recipes/audit_catalog.py": {
+    "sha256": "9954b083ebd26ca44974b5d040e55be8ce9c8efd7f7b053853bd472a5f9c1f1d",
+    "bytes": 2325
+  },
+  "recipes/build_bridge.py": {
+    "sha256": "b041ad0e8a4e63f772956a48c1bf30af6dcce8201f6a40048f9980dc3fa3ea33",
+    "bytes": 2283
+  },
+  "recipes/package_r65.py": {
+    "sha256": "61786fa33c26c096eb36a7142ec40caf6754038a1b46c0a837035100e34dba81",
+    "bytes": 6498
+  },
+  "recipes/test_bridge.py": {
+    "sha256": "a84c999cc204a16f8300a78fb571f9af5b1fc31666016e3864ed45eed30e10e2",
+    "bytes": 2135
+  },
+  "STATUS.json": {
+    "sha256": "bf89a9b248778d0b57d9b93a2df4ae41ebcb0e2d7062a70a9d92ed89d909b60f",
+    "bytes": 728
+  },
+  "tests/NeoCdSupportTest.java": {
+    "sha256": "eefe4dc6791b05d130ba0a94433170aeb4bc6577b928c3780151591e13cab79d",
+    "bytes": 5281
+  }
+}

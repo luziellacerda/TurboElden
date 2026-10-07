@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "checks": 37,
+  "sourceSHA256": "bed8cf72bbc342de9b1b4f4811ed04ef8a2ff2c116d351e6d6bcab2f53b9d1b5",
+  "syntheticBIOSOnly": true,
+  "androidRuntimeTested": false,
+  "result": "CLI=-rompath 'E:\\ESTUDO APK\\work\\station-neogeo-cd-r65-tests-reproduced-20261007\\fixtures\\roms\\.station-v2\\neo-geo-cd\\station_fixture\\install-1\\content' -cdrom '/games/Neo Geo CD/Disc.chd' -bios official\nPASS 37 CD dependency, import, exact identity, header, CLI and preservation checks\n"
+}

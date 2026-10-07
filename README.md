@@ -1,3 +1,9 @@
+# R65 — Neo Geo CD integrado; auditoria de Neo Geo/KOF
+
+[Relatório completo, fontes e reprodução](versions/station-neogeo-cd-r65-20261007/README.md). Candidato sobre R64, APK SHA `1858459b62a38a85cdd9fbeaafc68d3560008f154f99dd1431752aa0594eb081`, somente `classes30.dex` alterado. 37 verificações locais e recompilação idêntica. Não instalado nem declarado estável. O CD anterior não tinha o helper de preparação integrado; R65 monta o CHD com neocdz e BIOS reconhecida. Na revisão14 do catálogo,13nomes de cartucho não constam no MAME0289, incluindo seis da coleção KOF; o defeito gráfico de KOF98 padrão permanece em investigação. USB desconectada antes da leitura de ROM/BIOS. Recuperação online continua pendente; demais mudanças R64 preservadas.
+
+## Histórico preservado
+
 # R64 candidata — controles online e diagnóstico de encerramento — 07/10/2026
 
 Leia versions/station-online-controls-r64-20261007/README.md e o HANDOFF-QUEDA-ONLINE-APP-PARA-SERVIDOR-20261007.md. Mantenedor confirmou R63 jogando online/controles respondem, depois houve queda real às12:24:07Z. Causa exata ainda não comprovada; cliente descartava motivo detalhado. R64 mantém runtime/IDs/protocolo/timers, adapta visual SNES/Mega e adiciona registros seguros. Candidato compilado/testado, ainda não instalado. Não afirmar retomada implementada ou estabilidade geral; operador precisa correlacionarQ01–Q08. Preservar jogos/licença/saves/faixa/nativo/Binder.

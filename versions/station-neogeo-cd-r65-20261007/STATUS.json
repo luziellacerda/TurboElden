@@ -1,0 +1,26 @@
+{
+  "version": "R65",
+  "built": true,
+  "installed": false,
+  "stable": false,
+  "base": "R64",
+  "changedEntries": [
+    "classes30.dex"
+  ],
+  "hostChecksPassed": 37,
+  "neoCdBridgeImplemented": true,
+  "neoCdAndroidGameplayVerified": false,
+  "cartridgeGraphicsFaultFixed": false,
+  "catalogAuditLiveHTTP": false,
+  "catalogRevisionAudited": 14,
+  "cartridgeItemsAudited": 189,
+  "cdItemsAudited": 50,
+  "unregisteredCartridgeLaunchNames": 13,
+  "kofCollectionItems": 26,
+  "kofUnregisteredLaunchNames": 6,
+  "otherHardwareClassifiedAsNeoGeo": 2,
+  "onlineRuntimeChanged": false,
+  "onlineRecoveryImplemented": false,
+  "twoDeviceGameplayVerified": false,
+  "phoneUSBAvailableAtLastCheck": false
+}

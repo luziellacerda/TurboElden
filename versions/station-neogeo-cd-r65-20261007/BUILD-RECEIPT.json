@@ -1,0 +1,29 @@
+{
+  "createdAt": "2026-10-07T13:51:35.546662+00:00",
+  "base": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R64-20261007.apk",
+  "baseSHA256": "e2bb778319e03d878ac5de3749f06af1b5e7bbffd06b8232402d2d2f610ba868",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R65-20261007.apk",
+  "sha256": "1858459b62a38a85cdd9fbeaafc68d3560008f154f99dd1431752aa0594eb081",
+  "bytes": 2093415593,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "classes30.dex"
+  ],
+  "preservedEntries": 13218,
+  "addedAssets": {},
+  "roomsDexSHA256": "b11459d8bf42e12d26ed5103b9ed62d1e0df674cfc31c79bffe49b48756f2a97",
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "onlineRuntimeChanged": false,
+  "netplayProtocolChanged": false,
+  "timeoutPolicyChanged": false,
+  "nativeEmulatorsAndUserSettingsPreserved": true,
+  "neoCdBridgeChanged": true,
+  "cartridgeFaultFixed": false,
+  "neoCdAndroidGameplayVerified": false,
+  "installed": false,
+  "stable": false,
+  "androidControlsVerified": false,
+  "disconnectFixed": false,
+  "twoDeviceGameplayVerified": false
+}
