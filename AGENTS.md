@@ -1,3 +1,13 @@
+# Retornos R62–R66 conciliados com o servidor — análise de07/10/2026
+
+Leia `docs/server/RETORNO-ANALISE-HANDOFFS-R62-R66-STATION-20261007.md`. API da07355/PID1147382/usuário exclusivo continua publicada; sem nova implantação por esta análise. APP atual R66/291f3949: Samsung e4397fd7 instalado/hash integral e catálogo conferidos; Motorola últimaR63/d9a35602. Recibos posteriores prevalecem sobre STATUS/README de preparação. Mantenedor relatou partida e comandos R63; gameplay CD/retomada não comprovados.
+
+Linux correlacionou aborto dos dois WSS às12:24:07UTC, depois de renovação200 às12:23:46. Gatilho inicial/heartbeat por participante continuam desconhecidos. v1 encerra ambos/Leave; Q01–Q08 aguardam contrato e implementação coordenada. Inventário189ZIPs originais com CRC declarado foi cruzado ao TSV14/IDs/capas; não comprova bytes ou pacotes ativos. BIOS CD já incluída é preparada automaticamente naR66; preservar esta integração.
+
+SegurançaAndroid213cfce foi preparada em outra branch, sobreR57. Conciliar cliente/prova com composiçãoR55→R57→R62→R63→R64→R65→R66; preservar DEX30R66, controles/diagnóstico, Binder, saída, salas/capas, runtime899e, aliasRSA/assinatura/licença/saves. Recompilar DEX28+35 juntos e empacotar sobreAPKR66/e4397fd7 com novas provas. Não usar receitas históricasR57 para atualizarR66. RequireVerifiedApp=false preserva clientes atuais; acesso exclusivo aoAPK não demonstrado. Esta branch de análise acrescenta documentos, não integra a proteção nem a retomada no código.
+
+## Histórico de instalação
+
 # R66 instalada no A56 — BIOS automática — 07/10/2026
 
 R66 instalada após reconexão, hash integral conferido `e4397fd743c410ea060f17446706d9475b5568caad379e1a6df37672c60398d1`, UID/data original preservados. Antes de instalar havia apenas ESActivity e a entrada com erro de BIOS, sem Activity de jogo. Não desinstalou/limpou dados/mudou ajustes. Entrada oficial abriu, aparelho bloqueado ainda em LoginActivity; não afirmar autologin ou gameplay CD conferidos. Após desbloqueio, catálogo ESActivity conferido. Mantenedor depois confirmou tocar JOGAR no CD, mas a USB desconectou antes da captura e continuou ausente; nenhuma execução CD foi comprovada. Fonte `291f3949760c0d77030e4872520efc3e1c8f928b`; recibo `docs/server/RECIBO-R66-BIOS-INSTALADA-SAMSUNG-20261007.json`. Correção da análise publicada no Servidor-pix `7a5db18564d50607a6ef90ef31b45a03232ae45a`, branch `docs/station-neogeocd-bios-r66-20261007`, adendo APP→SERVIDOR. Firmware JÁ existia no APK/telefone; R66 usa os assets automaticamente, sem importação manual normal. Outro aparelho última conferência R63. Cartuchos/KOF98/retomada online seguem pendentes.
