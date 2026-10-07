@@ -98,8 +98,8 @@
     },
     {
       "path": "versions/station-online-layout-r71-20261007/STATUS.json",
-      "bytes": 2659,
-      "sha256": "998b2ebb8e72ba89b76bc9acac0861a81bbcb75080a3b07a67c9f73a45528c05"
+      "bytes": 2873,
+      "sha256": "3d89612bb13d9fa97ed88be84b4007fe70a8b8afcd5bd66693d6320c657b6125"
     },
     {
       "path": "versions/station-online-layout-r71-20261007/evidence/activity-resource-audit.json",
@@ -125,6 +125,11 @@
       "path": "versions/station-online-layout-r71-20261007/evidence/engines.json",
       "bytes": 2144,
       "sha256": "034e02d866a5b5849ce093ed1b71748c3237b1c9ba93660aef1a70e7891bc6ac"
+    },
+    {
+      "path": "versions/station-online-layout-r71-20261007/evidence/installation-motorola-r71-20261007.json",
+      "bytes": 1234,
+      "sha256": "a57797d4e1abc9b08181022944e6104fe5e6e4a5d27b5ef6b167a1ae8585dcd3"
     },
     {
       "path": "versions/station-online-layout-r71-20261007/evidence/installation-samsung-r71-20261007.json",

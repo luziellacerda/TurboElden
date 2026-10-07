@@ -1,3 +1,9 @@
+# R71 agora instalada nos dois aparelhos — 07/10/2026
+
+Motorola Edge30 atualizado diretamente às21:37:39UTC deR70 paraR71, mesmo SHA integral do A56: `556170c32b6dd25fb5084693826d854adf736b4a1df156fd9229a8458b025018`. UID/data original preservados; sem partida ativa, desinstalação, limpeza de dados, ajuste no aparelho ou APKextra. Recibo `versions/station-online-layout-r71-20261007/evidence/installation-motorola-r71-20261007.json`. Entrada oficial solicitada. Ambos agora na mesmaR71; testes físicos pelo mantenedor. Servidor ainda conforme retorno publicado; não confundir instalação com ativaçãov2/gameplay. O handoff servidor e03a872 registra a entrega anterior a esta segunda instalação.
+
+## Histórico anterior
+
 # R71 completa instalada no A56 — salas, recuperação e tarefa única — 07/10/2026
 
 Leia `versions/station-online-layout-r71-20261007/README.md`, STATUS, NAVIGATION-AUDIT e HANDOFF-APP-R71-PARA-SERVIDOR-20261007.md. APK `556170c32b6dd25fb5084693826d854adf736b4a1df156fd9229a8458b025018`, 2122893402 bytes, final `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Premium-R71-Completa-20261007.apk`. Build `E:\ESTUDO APK\work\station-online-layout-r71-20261007-complete`; 198 Java finais, 1152 verificações/56 guardas, 46 verificações TLS/WSS/TCP isoladas. Seis substituições + um vídeo, 13218 entradas preservadas, certificado original e16KiB. Candidato preliminar sem Completa/a135650c nunca instalado e superado.

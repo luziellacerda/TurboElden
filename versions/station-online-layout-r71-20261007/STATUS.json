@@ -35,7 +35,7 @@
   },
   "installedDevice": "Samsung A56 (SM-A566E)",
   "installationReceipt": "evidence/installation-samsung-r71-20261007.json",
-  "otherDevice": "Motorola Edge30: last verified R70; R71 not installed in this delivery.",
+  "otherDevice": "Motorola Edge30 updated R70 to R71 at 2026-10-07T21:37:39Z; full installed SHA, UID and firstInstallTime verified.",
   "androidObservation": {
     "officialLoginActivityOpened": true,
     "screenLocked": true,
@@ -44,5 +44,10 @@
     "deviceSettingsChanged": false,
     "catalogOpenedLater": true,
     "followupReceipt": "evidence/android-followup-samsung-r71.json"
-  }
+  },
+  "installedDevices": [
+    "Samsung A56 (SM-A566E)",
+    "Motorola Edge30"
+  ],
+  "motorolaInstallationReceipt": "evidence/installation-motorola-r71-20261007.json"
 }
