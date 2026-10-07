@@ -1,0 +1,12 @@
+{
+  "direction": "APP_TO_SERVER",
+  "serverBranch": "docs/station-r64-recovery-request-20261007",
+  "serverCommit": "553a26c8045cd2fd324ec871ef79950faa316728",
+  "serverDocument": "docs/station-android/PEDIDO-QUEDA-RETOMADA-PARTIDA-STATION-20261007.md",
+  "appSourceCommit": "8812bacf8154f25fd7739f95a2db0729f36e4c72",
+  "appCandidateRevision": "R64",
+  "candidateInstalled": false,
+  "networkRecoveryImplemented": false,
+  "serverDeployed": false,
+  "requiredNextStep": "Server operator must provide versioned authenticated recovery contract and implementation; reconcile client/native pause-resume against R64 and register changed runtime hashes before Android installation."
+}

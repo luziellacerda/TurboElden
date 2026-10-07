@@ -2,6 +2,8 @@
 
 Leia versions/station-online-controls-r64-20261007/README.md e o HANDOFF-QUEDA-ONLINE-APP-PARA-SERVIDOR-20261007.md. Mantenedor confirmou R63 jogando online/controles respondem, depois houve queda real às12:24:07Z. Causa exata ainda não comprovada; cliente descartava motivo detalhado. R64 mantém runtime/IDs/protocolo/timers, adapta visual SNES/Mega e adiciona registros seguros. Candidato compilado/testado, ainda não instalado. Não afirmar retomada implementada ou estabilidade geral; operador precisa correlacionarQ01–Q08. Preservar jogos/licença/saves/faixa/nativo/Binder.
 
+Pedido de retomada publicado no Servidor-pix: `553a26c8045cd2fd324ec871ef79950faa316728`, branch `docs/station-r64-recovery-request-20261007`, documento `PEDIDO-QUEDA-RETOMADA-PARTIDA-STATION-20261007.md`. APP → SERVIDOR, ainda sem retorno. Mantenedor exige loading Aguardando conexão até recuperação, sem encerramento por inatividade. R64 NÃO implementa retomada. Recibo em docs/server/RECIBO-PEDIDO-RETOMADA-STATION-20261007.json.
+
 ## Histórico preservado
 
 # R63 instalada nos dois aparelhos — 07/10/2026
