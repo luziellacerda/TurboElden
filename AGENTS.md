@@ -1,3 +1,9 @@
+# R66 candidata — BIOS CD já existente agora preparada automaticamente
+
+Leia `versions/station-neogeocd-bundled-bios-r66-20261007/README.md`. Correção da análise R65: os assets `bios/neocd/neocd.bin`, `000-lo.lo` e `uni-bioscd.rom` JÁ estavam no APK e telefone com identidades válidas. O novo lançador R65 ignorava essa origem. R66 usa AssetManager no worker e prepara atomicamente as dependências ausentes, preservando importações válidas; instalação nova não precisa importar manualmente. Só classes30.dex mudou;66 testes locais, DEX reproduzido idêntico, APK SHAe4397fd7. Nenhum firmware novo/baixado/adicionado ao APK. R66 ainda NÃO instalada: USB desconectou durante preparação. Samsung continua R65, outro telefone última conferência R63. Cartucho/KOF98 e retomada online permanecem pendentes; não declarar gameplay CD ou estabilidade. Código no APK, nunca corrigir apenas a pasta do telefone.
+
+## Histórico de instalação preservado
+
 # R65 instalada no Samsung A56 — 07/10/2026
 
 Atualização solicitada pelo mantenedor concluída com `adb install --no-incremental -r --user 0`. SHA completo do APK instalado `1858459b62a38a85cdd9fbeaafc68d3560008f154f99dd1431752aa0594eb081`, igual ao candidato. UID e data original de instalação preservados; não desinstalou, não limpou dados nem mudou configuração do telefone. Antes de instalar, somente ESActivity no histórico ativo do app, sem partida interrompida. Entrada oficial LoginActivity abriu, mas o aparelho estava bloqueado e permaneceu nela: não afirmar retorno ao catálogo/autologin conferido. CD/gameplay/KOF98 ainda pendentes; R65 não é estabilidade geral. Outro telefone não atualizado nesta etapa. Recibo: `docs/server/RECIBO-INSTALACAO-R65-SAMSUNG-20261007.json`. Os textos de candidato não instalado abaixo descrevem a preparação anterior.

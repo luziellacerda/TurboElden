@@ -1,0 +1,62 @@
+{
+  "BUILD-RECEIPT.json": {
+    "sha256": "fb245314c9f3a619e4e299ab1298c169267ad63d5756d2a3fd578e409279c72b",
+    "bytes": 1296
+  },
+  "evidence/build.json": {
+    "sha256": "23f33a2f9f58823504e795303add2615c47527bf07628fd7177b2783b7f2f8c6",
+    "bytes": 928
+  },
+  "evidence/diagnosis.json": {
+    "sha256": "2899eb3c65823959e18b7ad0c8232d12a1af25383c595a8d12ad77be472254bc",
+    "bytes": 458
+  },
+  "evidence/host-tests.json": {
+    "sha256": "da95d8f78c2fa668b092bec6aa9a45f1fed85d3e5e0fdfd0ee791d05eaa2b709",
+    "bytes": 1197
+  },
+  "evidence/reproduced-build.json": {
+    "sha256": "3617683cd9a93979f9cf449845b34334fd8fb20c07b45adb243367ed7175d9ea",
+    "bytes": 927
+  },
+  "java/org/emulationstation/frontend/MameBootstrap.java": {
+    "sha256": "947467469202c3f149df6115164a88fb4faed47774979410ff4ea1efad7b4d6f",
+    "bytes": 6799
+  },
+  "java/org/emulationstation/frontend/MameEntryActivity.java": {
+    "sha256": "4ad93d82c3a3309ec91d8dc6488f9aa837330ec40fee2371b094627d3867e709",
+    "bytes": 7110
+  },
+  "java/org/emulationstation/frontend/NeoCdSupport.java": {
+    "sha256": "5412bbba56bd426cee3b4092e5f08f0142d227109d003f0d062a009c25314600",
+    "bytes": 9559
+  },
+  "README.md": {
+    "sha256": "6dc01cf9d68d748cb52c686447ce02a4bbf6370671ccdb59d7766002123b854d",
+    "bytes": 5553
+  },
+  "recipes/build_bridge.py": {
+    "sha256": "7ca4b91c0648991c17383c1029b94bab7f1345439aefa61f863818c6638553fc",
+    "bytes": 2039
+  },
+  "recipes/package_r66.py": {
+    "sha256": "199a50d63075dd57a0ee9e1386157fad5c8705dbf95f60bc41067d795e09d48f",
+    "bytes": 6683
+  },
+  "recipes/test_bios.py": {
+    "sha256": "8ec22ff1dc7e857cded105f7f652a6b1ab5063157ee0cd9b5031670e74c98c9a",
+    "bytes": 2462
+  },
+  "STATUS.json": {
+    "sha256": "77072ea77f69b22b029446fe6590d5f44241a73cc70a3a885b22c849847a19e5",
+    "bytes": 397
+  },
+  "tests/NeoCdBundledTest.java": {
+    "sha256": "f1528c7b6cfe7d2d9e2693a424573130eb020de793f4159b8b9354f06be32b7c",
+    "bytes": 4712
+  },
+  "tests/NeoCdSupportTest.java": {
+    "sha256": "eefe4dc6791b05d130ba0a94433170aeb4bc6577b928c3780151591e13cab79d",
+    "bytes": 5281
+  }
+}

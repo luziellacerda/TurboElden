@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-07",
+  "biosWasAlreadyInR65APK": true,
+  "biosWasAlreadyOnPhone": true,
+  "phoneAssetSHA1Matched": true,
+  "fault": "R65 bridge did not read existing APK BIOS assets",
+  "correction": "R66 prepares missing CD dependencies from the embedded assets",
+  "newFirmwareDownloaded": false,
+  "newFirmwareAddedToAPK": false,
+  "androidInstalled": false,
+  "deviceDisconnectedDuringBuild": true,
+  "androidGameplayVerified": false
+}

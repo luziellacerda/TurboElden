@@ -1,0 +1,18 @@
+{
+  "compiled": true,
+  "sourceFiles": {
+    "java/org/emulationstation/frontend/MameBootstrap.java": "947467469202c3f149df6115164a88fb4faed47774979410ff4ea1efad7b4d6f",
+    "java/org/emulationstation/frontend/MameEntryActivity.java": "4ad93d82c3a3309ec91d8dc6488f9aa837330ec40fee2371b094627d3867e709",
+    "java/org/emulationstation/frontend/NeoCdSupport.java": "5412bbba56bd426cee3b4092e5f08f0142d227109d003f0d062a009c25314600"
+  },
+  "dexSHA256": "1dcfa1e69686a326e22c54b9adc7c6013644e69d14642664e2ab7b5e2eee4ff4",
+  "dexBytes": 26280,
+  "androidJarSHA256": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+  "d8JarSHA256": "d43c8a94c9b1f1da1a7cc49c32b81e8cee1708b37ee8b530a81a0688222b42c0",
+  "expectedDEXMatched": true,
+  "bundledBIOSAutomaticPreparation": true,
+  "newBIOSAssetsAdded": false,
+  "cartridgeRouteChanged": false,
+  "runtimeChanged": false,
+  "androidInstalled": false
+}

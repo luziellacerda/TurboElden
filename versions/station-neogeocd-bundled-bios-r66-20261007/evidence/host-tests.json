@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "syntheticHelperChecks": 37,
+  "existingAPKBIOSChecks": 29,
+  "totalChecks": 66,
+  "output": "CLI=-rompath 'E:\\ESTUDO APK\\work\\station-neogeocd-bios-r66-tests-20261007\\synthetic-fixtures\\roms\\.station-v2\\neo-geo-cd\\station_fixture\\install-1\\content' -cdrom '/games/Neo Geo CD/Disc.chd' -bios official\nPASS 37 CD dependency, import, exact identity, header, CLI and preservation checks\nPASS 29 bundled BIOS cold-start, preservation, fallback and failure checks\n",
+  "sourceSHA256": "5412bbba56bd426cee3b4092e5f08f0142d227109d003f0d062a009c25314600",
+  "existingAPKAssets": {
+    "assets/bios/neocd/000-lo.lo": {
+      "bytes": 131072,
+      "sha256": "2a76f023dc578804c6bcd58ed514ffc04fcb433b3bd75d4452575ffda57a0707"
+    },
+    "assets/bios/neocd/neocd.bin": {
+      "bytes": 524288,
+      "sha256": "2e93af5848080ea04d17a7841b742f009330d30e4ff40c3410547581d921c892"
+    },
+    "assets/bios/neocd/uni-bioscd.rom": {
+      "bytes": 524288,
+      "sha256": "1c3ec20824a58e5f5cbf47ccc2c91a10f34d21cfa2791b3413cea89b0c920db8"
+    }
+  },
+  "newFirmwareDownloaded": false,
+  "newFirmwareAddedToAPK": false,
+  "androidGameplayVerified": false
+}

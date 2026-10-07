@@ -1,3 +1,9 @@
+# R66 — BIOS CD automática
+
+[Correção, fontes e reprodução](versions/station-neogeocd-bundled-bios-r66-20261007/README.md). A BIOS correta já estava no APK e telefone; o lançador R65 ignorava os assets existentes. R66 prepara esses recursos automaticamente em instalações novas, com validação e preservação das importações válidas.66 testes locais e DEX reproduzido idêntico. APK `e4397fd743c410ea060f17446706d9475b5568caad379e1a6df37672c60398d1`, ainda não instalado porque a USB desconectou. Última instalação A56: R65. Gameplay CD e auditoria KOF permanecem pendentes.
+
+## Histórico de instalação
+
 # R65 instalada no Samsung A56
 
 Em 07/10/2026, a atualização R65 foi instalada com dados preservados e SHA completo conferido: `1858459b62a38a85cdd9fbeaafc68d3560008f154f99dd1431752aa0594eb081`. O telefone bloqueado impediu a conferência posterior do catálogo e dos jogos. CD, defeito gráfico do KOF98 e retomada online continuam pendentes de validação/correção conforme o relatório. [Recibo da instalação](docs/server/RECIBO-INSTALACAO-R65-SAMSUNG-20261007.json). O outro telefone não foi atualizado nesta etapa.
