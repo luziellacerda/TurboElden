@@ -1,6 +1,16 @@
 {
   "files": [
     {
+      "path": "evidence/both-device-entry-r72.json",
+      "bytes": 339,
+      "sha256": "1dec96fef4a5298ab6141acc3b2e6d3f6ee0e745539d45de1dea9756be38f657"
+    },
+    {
+      "path": "evidence/installation-motorola-r72-20261007.json",
+      "bytes": 1041,
+      "sha256": "320928995578c39281878135a66a29b2df2ec415b567498cb4b52acc72301845"
+    },
+    {
       "path": "evidence/installation-samsung-r72-20261007.json",
       "bytes": 1033,
       "sha256": "891f7ca413d5f51b41e1e15cda2d18f89c987cc06ddde86a8b615225aa908b74"
@@ -26,9 +36,14 @@
       "sha256": "1c3e9ae5ee8ac3fdfcffd99d9579147d1c66f8499cf18c3333694c40eeda8b09"
     },
     {
+      "path": "evidence/physical-attempt-mixed-r72-r71.json",
+      "bytes": 1553,
+      "sha256": "180d83957c1eef0fd563c1788d9e7fe9dcec827fea7b3b05bac03a40ab14a5f6"
+    },
+    {
       "path": "HANDOFF-APP-R72-PARA-SERVIDOR-20261007.md",
-      "bytes": 6944,
-      "sha256": "681077d41658c858cb2f21778ddf5f6d5831b676d812414d955a71317884c839"
+      "bytes": 8546,
+      "sha256": "fb7dd0530c44f6d9b489edc6596d77e1a71388301438ce3889788cf1f6597896"
     },
     {
       "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
@@ -54,6 +69,11 @@
       "path": "recipes/build_candidate.py",
       "bytes": 11933,
       "sha256": "3687ab8d033eb739f5edf04b7641fbf11ab5f439709626c3b70af179f6e4c6c4"
+    },
+    {
+      "path": "recipes/install_verified.py",
+      "bytes": 4220,
+      "sha256": "94c3aba0aea902a072a590b45b10b8b88965989e968bde8832b1ede45453b35c"
     },
     {
       "path": "recipes/package_r72.py",
@@ -97,8 +117,8 @@
     },
     {
       "path": "STATUS.json",
-      "bytes": 748,
-      "sha256": "431fb53acfa801d109b002a41e942762564340b7dbb0afa79d33640caa53cfa7"
+      "bytes": 917,
+      "sha256": "d0299b1bcd524176db92b49101102951ed41dfc67718f88192fbb5c4c40e55bd"
     },
     {
       "path": "tests/StationOwnRoomProfilesTest.java",

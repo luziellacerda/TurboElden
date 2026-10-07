@@ -1,3 +1,9 @@
+# R72 agora instalada nos dois aparelhos — 07/10/2026
+
+Samsung A56 e Motorola Edge30 com APK integral a8d3d28bb70618c52debf6e4cb0acaaf1f3bd1de19fe410dda85f6953caaec8e conferido. Motorola às22:44:21UTC, UID/data preservados. Tentativa mista anterior: host Samsung R72 passou native-hooks-loaded/native-listening/host-listening-ack e manteve PONGs, mas tela preta; convidado R71 reutilizou processo nativo preso com pause/stop timeouts. Mantenedor autorizou encerrar essa tentativa nos dois aparelhos antes de atualizar Motorola; sem limpar dados. Próxima conferência exige sala nova com ambos R72. Não afirmar gameplay corrigido. Ler recibos e handoff R72.
+
+## Histórico anterior
+
 # R72 instalada no Samsung — registro JNI e perfis da sala — 07/10/2026
 
 Leia `versions/station-native-registration-r72-20261007/README.md`, STATUS e HANDOFF-APP-R72-PARA-SERVIDOR-20261007.md. Retorno servidor c1e44a1225a101478ceb29f4e624885331872c0d integrado: produção v2 já declarada ativa às21:59UTC, fonteab192bf/DLL815fc8bc. Não repetir a antiga pendência de ativação da R71.

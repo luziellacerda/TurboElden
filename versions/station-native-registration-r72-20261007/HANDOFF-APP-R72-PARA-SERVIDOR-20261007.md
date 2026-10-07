@@ -44,6 +44,14 @@ A coleta USB anterior ao patch não retornou linhas úteis dos tags. Portanto **
 
 ## 4. Pedido preciso ao servidor e conferência conjunta
 
+### Evidência posterior à instalação (22:38 UTC)
+
+Em tentativa com **Samsung R72 anfitrião e Motorola ainda R71 convidado**, o Samsung registrou `native-hooks-loaded`, `native-listening role=host`, `host-listening-ack`, STATE epoch1/state0 e PONGs continuados (amostras105–171ms). A imagem permaneceu preta. Portanto a R72 ultrapassou o registro JNI e a confirmação de escuta; ainda não houve partida demonstrada. No Motorola houve prepare/ticket recebido/launch Activity, mas sem novas linhas nativas; Android reutilizou processo de emulação anterior e registrou pause/stop timeouts. A captura ficou vazia. Erros de06/10 no crash buffer são históricos e não explicam automaticamente esta tentativa.
+
+O mantenedor autorizou encerrar a tentativa travada e atualizar o Motorola. Não atribuir a espera restante ao servidor sem conferir os dois aparelhos na R72 e uma sessão nova. Evidência saneada: `evidence/physical-attempt-mixed-r72-r71.json`. Logs/imagens pessoais ficam somente no PC. A próxima resposta precisa distinguir falha JNI inicial, reutilização de processo e sincronização de protocolo; são etapas diferentes.
+
+**Motorola atualizado para R72 às22:44:21UTC**, APK integral conferido e UID/data original preservados. Samsung também R72. Depois, Samsung chegou a ESActivity e Motorola a StationRoomsActivity. O fechamento do teste anterior foi autorizado pelo mantenedor para a atualização; não contar essa ação humana como nova queda espontânea. Os recibos de instalação dos dois estão anexos. Ainda é necessária a conferência de uma sala nova R72/R72.
+
 1. Ler os dois arquivos exatos da R72 e confirmar a integração do candidato JNI e de memberProfiles. Não responder sobre Activities da R57 ou R71 antigas.
 2. Para a próxima sala nova, correlacionar por IDs privados e horário: start aceito, ticket host/guest, host-listening, WSS de cada lado, primeiro motivo de encerramento e ordem causal. Publicar somente evidências saneadas, sem tokens/licenças/dados pessoais.
 3. Conferir o perfil assinado de ambos os membros, incluindo quando não aparecem na página social. Comparar nomes exibidos por ID, sem inventar participante ausente.

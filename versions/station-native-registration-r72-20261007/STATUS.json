@@ -9,11 +9,15 @@
   "samsungInstalled": true,
   "samsungInstalledHashVerified": true,
   "samsungScreenLockedAfterInstall": true,
-  "motorolaLatestVerifiedVersion": "R71",
-  "motorolaR72Installed": false,
+  "motorolaLatestVerifiedVersion": "R72",
+  "motorolaR72Installed": true,
   "serverRecoveryPublishedPerReceipt": true,
   "linuxDeployedByThisDelivery": false,
   "nativeHookFailureConfirmedOnPhone": false,
   "twoDeviceGameplayVerified": false,
-  "stable": false
+  "stable": false,
+  "motorolaInstalledHashVerified": true,
+  "nativeHooksLoadedOnSamsung": true,
+  "hostListeningAcknowledgedOnSamsung": true,
+  "mixedVersionAttemptStillBlack": true
 }
