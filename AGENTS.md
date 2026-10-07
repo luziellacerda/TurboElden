@@ -1,3 +1,9 @@
+# R64 candidata — controles online e diagnóstico de encerramento — 07/10/2026
+
+Leia versions/station-online-controls-r64-20261007/README.md e o HANDOFF-QUEDA-ONLINE-APP-PARA-SERVIDOR-20261007.md. Mantenedor confirmou R63 jogando online/controles respondem, depois houve queda real às12:24:07Z. Causa exata ainda não comprovada; cliente descartava motivo detalhado. R64 mantém runtime/IDs/protocolo/timers, adapta visual SNES/Mega e adiciona registros seguros. Candidato compilado/testado, ainda não instalado. Não afirmar retomada implementada ou estabilidade geral; operador precisa correlacionarQ01–Q08. Preservar jogos/licença/saves/faixa/nativo/Binder.
+
+## Histórico preservado
+
 # R63 instalada nos dois aparelhos — 07/10/2026
 
 Samsung A56 atualizado após liberação de espaço. Motorola Edge30 já havia sido atualizado. Nos dois, o SHA integral do APK instalado é `d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c`. Sem desinstalação, limpeza de dados, troca de assinatura ou mudança da configuração de tela ligada. UID e data original de instalação preservados. A entrada oficial LoginActivity retornou ao catálogo ESActivity, sem nova digitação de licença.

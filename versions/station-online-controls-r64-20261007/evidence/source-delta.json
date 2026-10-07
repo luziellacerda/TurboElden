@@ -1,0 +1,12 @@
+{
+  "baseAppCommit": "8613d88d4f553e72e5fedcd1d3ea470010301734",
+  "changed": [
+    "netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java"
+  ],
+  "runtimeChanged": false,
+  "timeoutPolicyChanged": false,
+  "protocolChanged": false
+}

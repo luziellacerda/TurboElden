@@ -1,0 +1,9 @@
+TurboStations online controls R64
+Original controller textures: Robert Broglia / EX Emulators, source commit
+1c12fac5ce49badaadff2e2f210dcc30b89f4943, Snes9x/res/android/assets/gpOverlay.png
+and MD.emu/res/android/assets/gpOverlay.png. Source and COPYING.GPL retained in
+the corresponding-source snapshot. Atlas rectangles follow AppMeta.cc exactly.
+Texture extraction changes no source pixels. New touch layout uses Libretro's
+input overlay API. Emulator cores, local VController settings and netplay protocol
+are not changed. These are adapted controls, not the local emulator executing online.
+Upstream: https://github.com/Rakashazi/emu-ex-plus-alpha/tree/1c12fac5ce49badaadff2e2f210dcc30b89f4943
