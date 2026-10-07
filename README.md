@@ -1,3 +1,9 @@
+# R65 instalada no Samsung A56
+
+Em 07/10/2026, a atualização R65 foi instalada com dados preservados e SHA completo conferido: `1858459b62a38a85cdd9fbeaafc68d3560008f154f99dd1431752aa0594eb081`. O telefone bloqueado impediu a conferência posterior do catálogo e dos jogos. CD, defeito gráfico do KOF98 e retomada online continuam pendentes de validação/correção conforme o relatório. [Recibo da instalação](docs/server/RECIBO-INSTALACAO-R65-SAMSUNG-20261007.json). O outro telefone não foi atualizado nesta etapa.
+
+## Preparação e auditoria anteriores
+
 # R65 — Neo Geo CD integrado; auditoria de Neo Geo/KOF
 
 [Relatório completo, fontes e reprodução](versions/station-neogeo-cd-r65-20261007/README.md). Candidato sobre R64, APK SHA `1858459b62a38a85cdd9fbeaafc68d3560008f154f99dd1431752aa0594eb081`, somente `classes30.dex` alterado. 37 verificações locais e recompilação idêntica. Não instalado nem declarado estável. O CD anterior não tinha o helper de preparação integrado; R65 monta o CHD com neocdz e BIOS reconhecida. Na revisão14 do catálogo,13nomes de cartucho não constam no MAME0289, incluindo seis da coleção KOF; o defeito gráfico de KOF98 padrão permanece em investigação. USB desconectada antes da leitura de ROM/BIOS. Recuperação online continua pendente; demais mudanças R64 preservadas.

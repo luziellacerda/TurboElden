@@ -1,3 +1,9 @@
+# R65 instalada no Samsung A56 — 07/10/2026
+
+Atualização solicitada pelo mantenedor concluída com `adb install --no-incremental -r --user 0`. SHA completo do APK instalado `1858459b62a38a85cdd9fbeaafc68d3560008f154f99dd1431752aa0594eb081`, igual ao candidato. UID e data original de instalação preservados; não desinstalou, não limpou dados nem mudou configuração do telefone. Antes de instalar, somente ESActivity no histórico ativo do app, sem partida interrompida. Entrada oficial LoginActivity abriu, mas o aparelho estava bloqueado e permaneceu nela: não afirmar retorno ao catálogo/autologin conferido. CD/gameplay/KOF98 ainda pendentes; R65 não é estabilidade geral. Outro telefone não atualizado nesta etapa. Recibo: `docs/server/RECIBO-INSTALACAO-R65-SAMSUNG-20261007.json`. Os textos de candidato não instalado abaixo descrevem a preparação anterior.
+
+## Histórico de preparação preservado
+
 # R65 candidata — Neo Geo CD e auditoria de cartuchos — 07/10/2026
 
 Leia `versions/station-neogeo-cd-r65-20261007/README.md`, STATUS e recibos. R65 sobre R64 altera somente classes30.dex: integra o helper CD ausente no APK anterior, valida/importa BIOS e monta CHD com neocdz, fora da thread de interface. APK1858459b, 37 verificações locais e DEX reproduzido idêntico. NÃO instalado, NÃO estável. Última instalação física R63; USB ausente durante diagnóstico de KOF98. Catálogo publicado/revisão14:189cartuchos+50CD,13nomes sem registro MAME0289 (seis da coleção KOF), dois itens de outro hardware. Isso não substitui inspeção de chips/BIOS ou gameplay. KOF98 padrão é registrado e chegou ao motor, captura curta com imagem corrompida; causa ainda desconhecida. Não renomear variantes por suposição, trocar controles/motor ou limpar dados. R64 online/diagnóstico herdado; retomada NÃO implementada, pedido ao servidor continua aberto. Não publicar ROM/BIOS/APK/segredos/logs pessoais. Build E:, finais G:.
