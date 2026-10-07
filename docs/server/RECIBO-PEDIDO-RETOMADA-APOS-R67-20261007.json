@@ -1,0 +1,16 @@
+{
+  "direction": "APP_TO_SERVER",
+  "serverRepository": "luziellacerda/Servidor-pix",
+  "branch": "docs/station-r67-recovery-implementation-20261007",
+  "commit": "6c5f5cf33cf3ee9930066d52a55fa3357de75c13",
+  "document": "docs/station-android/PEDIDO-IMPLEMENTACAO-RETOMADA-ONLINE-APOS-APP-R67-20261007.md",
+  "url": "https://github.com/luziellacerda/Servidor-pix/blob/6c5f5cf33cf3ee9930066d52a55fa3357de75c13/docs/station-android/PEDIDO-IMPLEMENTACAO-RETOMADA-ONLINE-APOS-APP-R67-20261007.md",
+  "appSourceCommit": "0d7a44f371e846a9821426a9082405836e250b0e",
+  "appDeliveryCommit": "589d678612880c10e40ef42d23e73451ac2397d9",
+  "apkSHA256": "d746cc02b602162b19509cd44ad7cf751e320de3b52199e7d48e86e9e897228f",
+  "requestSHA256": "3834581cb915749b6e3585bb6f0db2247aa88d710a66021ab9c66844bbf04e6c",
+  "publishedAfterVerifiedInstallation": true,
+  "linuxDeployed": false,
+  "onlineRecoveryImplemented": false,
+  "utc": "2026-10-07T18:50:57.881000+00:00"
+}
