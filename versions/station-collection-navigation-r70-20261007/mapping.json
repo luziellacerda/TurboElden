@@ -1,0 +1,34 @@
+{
+  "sourceDirectory": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\Sele;'ao",
+  "videos": [
+    {
+      "file": "SUPER MARIO COLEÇÃO.mp4",
+      "key": "snes-mario",
+      "family": 0,
+      "catalogLeaf": "SUPER MARIO",
+      "sourceSha256": "c1a4c8bb0ae8344c2564918913596845610e28030e840689c73c402e889af0e9",
+      "asset": "assets/turbo-system-videos/720-collection-snes-mario.mp4",
+      "symbol": "station_collection_r70_snes_mario",
+      "change": "replacement",
+      "replacesSymbol": "station_collection_video_2"
+    },
+    {
+      "file": "top gear coleção.mp4",
+      "key": "snes-topgear",
+      "family": 0,
+      "catalogLeaf": "TOP GEAR",
+      "sourceSha256": "2ea49c65b99a959f12b7872a96d20f1624211a215fb5cb4cd9da549c397244e2",
+      "asset": "assets/turbo-system-videos/720-collection-snes-topgear.mp4",
+      "symbol": "station_collection_r70_snes_topgear",
+      "change": "replacement",
+      "replacesSymbol": "station_collection_r69_snes_topgear",
+      "replacesSourceSha256": "8bf74eec8a4cc50f455ad7576bf9d439e4b24f04a52eb1761cdddf766519e2e6"
+    }
+  ],
+  "width": 720,
+  "height": 720,
+  "fps": 30,
+  "audio": false,
+  "playbackSpeed": 1,
+  "focusedDecoderOnly": true
+}

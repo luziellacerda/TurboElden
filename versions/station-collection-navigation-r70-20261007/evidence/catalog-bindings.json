@@ -1,0 +1,91 @@
+{
+  "source": "server-published-catalog-tsv",
+  "commit": "112d6b03d6ce00ccb340ed400806791f0fe7263d",
+  "path": "docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "sha256": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e",
+  "bindings": [
+    {
+      "key": "snes-mario",
+      "matches": [
+        {
+          "platform": "snes",
+          "folderPath": "## SUPER MARIO ##",
+          "games": 11,
+          "items": [
+            {
+              "itemId": "station_63b61be4fcbc347a7f04c06da97a77d8",
+              "name": "Mario Is Missing!"
+            },
+            {
+              "itemId": "station_508865674c25e2e41e04dcc3e0029dc7",
+              "name": "Mario's Early Years : Fun with Letters"
+            },
+            {
+              "itemId": "station_ed401af2e32de7d07daad778a7a3678c",
+              "name": "Mario's Early Years : Fun with Numbers"
+            },
+            {
+              "itemId": "station_4fcfe6b1737724abde7ca9ce52935d3e",
+              "name": "Mario's Early Years : Preschool Fun"
+            },
+            {
+              "itemId": "station_06294f9e381e487eb7abd129181c338e",
+              "name": "Mario's Time Machine"
+            },
+            {
+              "itemId": "station_fe4b728897ff165996402723e8ba2dd3",
+              "name": "Super Mario All-Stars"
+            },
+            {
+              "itemId": "station_0c1b3a172929a3aebad25b11cd0c36f0",
+              "name": "Super Mario All-Stars + Super Mario World"
+            },
+            {
+              "itemId": "station_c163bc17b96efcad31302280d44fb819",
+              "name": "Super Mario Kart"
+            },
+            {
+              "itemId": "65e80a325319043a87e3b39670cc8abe",
+              "name": "Super Mario RPG : Legend of the Seven Stars"
+            },
+            {
+              "itemId": "station_921bc37a5c9c0b06f44b8e6e3c844592",
+              "name": "Super Mario World"
+            },
+            {
+              "itemId": "077a3c0b5b565b2a39008e5f36564464",
+              "name": "Super Mario World 2 : Yoshi's Island"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "snes-topgear",
+      "matches": [
+        {
+          "platform": "snes",
+          "folderPath": "## TOP GEAR ##",
+          "games": 3,
+          "items": [
+            {
+              "itemId": "station_d120876f66cd88990155109886656d6e",
+              "name": "Top Gear"
+            },
+            {
+              "itemId": "station_9cbc25855dd07703ce32314b93256e59",
+              "name": "Top Gear 2"
+            },
+            {
+              "itemId": "station_b0a50897ab5c3663dbabd624b7469572",
+              "name": "Top Gear 3000"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deviceObserved": false,
+  "catalogMutation": false,
+  "note": "Mapping evidence is the same published TSV snapshot used for R67/R69; this preparation does not query or change the live catalog."
+}

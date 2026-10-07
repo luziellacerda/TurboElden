@@ -1,0 +1,27 @@
+{
+  "files": {
+    "evidence/build.json": "783edb4db4e2012e6e813eee0b01f631a6d7b6844bef97dd738daf3285a6ca11",
+    "evidence/catalog-bindings.json": "a3e057cbdef68740664c330e8c08a60b03ae9563ce8ec803d089109d96a2da40",
+    "evidence/media-source-audit.json": "8608ba02cbfdf9b1ccbebacf7454d342581420f73cc38614d0d5da46afa97b7f",
+    "evidence/navigation-diagnosis.json": "39f528d898d53b9c331e8389bc2d187d9840bbdf4914fdf11a952d794f6bd780",
+    "evidence/package.json": "3dd13b0f0788ead4b255852206c730c53be2ffa4c67f5754bfb10823ac4e2b4c",
+    "mapping.json": "a77c5c7c5fa04cb13dae691b4e5c51c4ca29949b66f059d28a12bbd172ee10e2",
+    "native/collection_video_policy.h": "be4f6bfedaef9e6658f0beb08b089536b2dc6a72093970b11eb3c546b40870b3",
+    "native/native_folders.h": "71fa0864f7833c1e2cf29eac8c7a0bf97ff15115625fd55789819a69d23b1944",
+    "native/native_profile_name.h": "d5a465e6297332f0d3c8524082192b2bcac8e44efb51d3fc5e65257341851acb",
+    "native/native_search_state.h": "b602d20be19eb0827c85eb552c1bf963d3fea4149b32b4dceef28d5103376b43",
+    "native/native_skin.h": "dfccab127868dfb8f342eaaf8e865d76e6c2c3ad24c50fd2aae5290d92b77ba5",
+    "native/station_collection_settings_layout.h": "52a0a13ae63b63f505c8976a9d12079dc24686570621e94b105cb614bf10249e",
+    "native/video720_posters.h": "ca834c29b24327352ca32bbe61960c7613a6f782df98c303a09da04353d4c264",
+    "README.md": "7db252a0c0611e71321c53cad83c87e76b330c70e8e215d0daf910a038f4960f",
+    "recipes/build_r70.py": "a2424e89d1e3a985c49d326649ec466bfaa6d22a3faea2ad4d47b698cf4f723c",
+    "recipes/install_verified.py": "20b5f27c9052f958d265659501bd49fe0585115c54c19ff2680a44e30f0344bf",
+    "recipes/package_r70.py": "85612c1d656d51fb0f23f317d72b03720ad91042ee51bfd4a489e0a01a8ceb49",
+    "STATUS.json": "84597a37f171b2f2f7b72bacdbea554d1f9a142ba0232fa66f80be318891cbb1",
+    "tests/collection_routes.cpp": "3ca09986af063837434c6811be60d391c6f7beec602195db669d2d3fbab96002",
+    "tests/collection_settings.cpp": "c239812cd4c316eb89542551dd6e1a76bb2e5dfab593c46399d03fbc5be16b60",
+    "tests/navigation.cpp": "2e4e573173579bb72e4b6ad3691e9e5e371a84f1351e760cb274b082b40f572f"
+  },
+  "base": "station-collection-media-r69-20261007",
+  "privateBinariesExcluded": true
+}

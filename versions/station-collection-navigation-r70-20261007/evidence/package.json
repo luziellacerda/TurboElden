@@ -1,0 +1,30 @@
+{
+  "createdUTC": "2026-10-07T20:08:02.345999+00:00",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R70-20261007.apk",
+  "sha256": "c12ee4e2928a629be4a2cc6dc9201fc7c5722e21a1fa8385d21da7a7dc69a32e",
+  "bytes": 2118780321,
+  "baseSHA256": "901e5eb495a858fc6877f7a22e325b5fcb3b73807af8c6d2888c90f1425773e4",
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changed": [
+    "assets/turbo-system-videos/720-collection-snes-mario.mp4",
+    "assets/turbo-system-videos/720-collection-snes-topgear.mp4",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "added": [],
+  "preservedEntries": 13221,
+  "allPackageEntriesVerified": true,
+  "alignment16KiB": true,
+  "allDexPreserved": true,
+  "updatedVideos": 2,
+  "totalVideos": 57,
+  "allEmulatorsPreserved": true,
+  "onlyAllGamesCollectionCellRounded": true,
+  "actualCollectionsSquareEvenSelected": true,
+  "mainPlatformsUnchanged": true,
+  "individualGameCoversUnchanged": true,
+  "menu30FpsPreserved": true,
+  "securityR67Preserved": true,
+  "collectionSelectionRemapped": true,
+  "collectionSettingsInFooter": true,
+  "installed": false
+}

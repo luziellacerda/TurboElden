@@ -1,0 +1,527 @@
+{
+  "createdAt": "2026-10-07T20:01:38.534550+00:00",
+  "sourceDirectory": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\Sele;'ao",
+  "baselineMappings": [
+    "station-collection-videos-r67-20261007/mapping.json",
+    "station-collection-media-r69-20261007/mapping.json"
+  ],
+  "files": [
+    {
+      "file": "art of fighi.mp4",
+      "sourceSha256": "4c4e78b9c3a7afe08b84032b731c8ae97e6abffec340cf9e44b80ed2f1c40ef5",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-videos-r67-20261007",
+      "priorSourceSha256": "4c4e78b9c3a7afe08b84032b731c8ae97e6abffec340cf9e44b80ed2f1c40ef5",
+      "bytes": 5747735,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "bomberman coleção.mp4",
+      "sourceSha256": "03f8fc05506b1e344ab14feacc03080f786ec6db25d0ba5c84e32c5ef2a065de",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-videos-r67-20261007",
+      "priorSourceSha256": "03f8fc05506b1e344ab14feacc03080f786ec6db25d0ba5c84e32c5ef2a065de",
+      "bytes": 8039485,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "donkey kong.mp4",
+      "sourceSha256": "422ab7f2380db07942066dcbf365dde4dd6cdb0600ac2067b4d75612bbe2dba3",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-videos-r67-20261007",
+      "priorSourceSha256": "422ab7f2380db07942066dcbf365dde4dd6cdb0600ac2067b4d75612bbe2dba3",
+      "bytes": 6483239,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "25/1",
+            "avg_frame_rate": "25/1",
+            "duration": "5.160000",
+            "disposition": {
+              "attached_pic": 0
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.160000"
+        }
+      }
+    },
+    {
+      "file": "fatalfury.mp4",
+      "sourceSha256": "094f680c9a9f8e4069f4cc03f7f935127ccf6ba0ce1737da11d03791498027b5",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-videos-r67-20261007",
+      "priorSourceSha256": "094f680c9a9f8e4069f4cc03f7f935127ccf6ba0ce1737da11d03791498027b5",
+      "bytes": 9894055,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "final figth coleção.mp4",
+      "sourceSha256": "92382c50cb091c7fd151014ee1587493aa3aea982bd75cb378ecc9906e8a239c",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-media-r69-20261007",
+      "priorSourceSha256": "92382c50cb091c7fd151014ee1587493aa3aea982bd75cb378ecc9906e8a239c",
+      "bytes": 9955092,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "mega man coleção.mp4",
+      "sourceSha256": "1678aeeac84eb2622a093cda251e38b2df824b319befb33f1bc67b33c6726bea",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-media-r69-20261007",
+      "priorSourceSha256": "1678aeeac84eb2622a093cda251e38b2df824b319befb33f1bc67b33c6726bea",
+      "bytes": 12101374,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "duration": "6.000000",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "megal slug.mp4",
+      "sourceSha256": "636e6756ad99e854a151264fb33d1d3b852bf565fe885f496420e526bd834242",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-videos-r67-20261007",
+      "priorSourceSha256": "636e6756ad99e854a151264fb33d1d3b852bf565fe885f496420e526bd834242",
+      "bytes": 11958293,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "duration": "6.000000",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "samurayshodow.mp4",
+      "sourceSha256": "e7a75efd37e005921a92f6bed729a85007faa318707fa4d39bf6c905de675216",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-videos-r67-20261007",
+      "priorSourceSha256": "e7a75efd37e005921a92f6bed729a85007faa318707fa4d39bf6c905de675216",
+      "bytes": 11574404,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "duration": "6.000000",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "SUPER MARIO COLEÇÃO.mp4",
+      "sourceSha256": "c1a4c8bb0ae8344c2564918913596845610e28030e840689c73c402e889af0e9",
+      "sourceChange": "addition",
+      "baseline": null,
+      "priorSourceSha256": null,
+      "bytes": 3706665,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "25/1",
+            "avg_frame_rate": "25/1",
+            "duration": "5.160000",
+            "disposition": {
+              "attached_pic": 0
+            }
+          }
+        ],
+        "format": {
+          "duration": "5.160000"
+        }
+      }
+    },
+    {
+      "file": "the king hack.mp4",
+      "sourceSha256": "99be72559e4b4402923f620baf572e5f8cbfc9e36b977b8e322f0f9f3dc11c22",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-videos-r67-20261007",
+      "priorSourceSha256": "99be72559e4b4402923f620baf572e5f8cbfc9e36b977b8e322f0f9f3dc11c22",
+      "bytes": 4872123,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "duration": "6.000000",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "the king of fithers.mp4",
+      "sourceSha256": "22dd58cc7499f4beb3932e44c777fd65fea845b3694227ea8cccdd317be77ff6",
+      "sourceChange": "unchanged",
+      "baseline": "station-collection-videos-r67-20261007",
+      "priorSourceSha256": "22dd58cc7499f4beb3932e44c777fd65fea845b3694227ea8cccdd317be77ff6",
+      "bytes": 12180069,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    },
+    {
+      "file": "top gear coleção.mp4",
+      "sourceSha256": "2ea49c65b99a959f12b7872a96d20f1624211a215fb5cb4cd9da549c397244e2",
+      "sourceChange": "replacement",
+      "baseline": "station-collection-media-r69-20261007",
+      "priorSourceSha256": "8bf74eec8a4cc50f455ad7576bf9d439e4b24f04a52eb1761cdddf766519e2e6",
+      "bytes": 6318085,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 0
+            }
+          },
+          {
+            "codec_name": "mjpeg",
+            "codec_type": "video",
+            "width": 960,
+            "height": 960,
+            "r_frame_rate": "90000/1",
+            "avg_frame_rate": "0/0",
+            "duration": "6.041667",
+            "disposition": {
+              "attached_pic": 1
+            }
+          }
+        ],
+        "format": {
+          "duration": "6.041667"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "addition": 1,
+    "replacement": 1,
+    "unchanged": 10
+  },
+  "assetReplacements": 2,
+  "encoded": false,
+  "compiled": false,
+  "installed": false
+}

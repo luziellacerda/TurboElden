@@ -1,0 +1,44 @@
+{
+  "scope": "Static binary/source inspection plus host execution of production filter/navigation headers; no phone or server changes by this audit",
+  "base": "R69",
+  "baseAPK": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R69-20261007.apk",
+  "baseAPKLibmainSHA256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+  "disassemblyLibrary": "E:\\ESTUDO APK\\work\\native-carousel\\libmain-baseline.so",
+  "disassemblyLibrarySHA256": "a1ae357dc29caac52d47386a71a0a9a685ecffb9c01d536f5af50b5ba658cda8",
+  "decompilationDirectory": "E:\\ESTUDO APK\\work\\turbostations-reconstruction-20261002\\decompiled",
+  "decompilationImageBase": "0x100000",
+  "binaryRegionsComparedToR69APK": [
+    {"function": "GuiStore::refreshTexts", "start": "0x215400", "endExclusive": "0x2170d0", "differentBytes": 0},
+    {"function": "GuiStore::rebuildVisible relevant body", "start": "0x21b134", "endExclusive": "0x21ba38", "differentBytes": 0},
+    {"function": "GuiStore::update prefix", "start": "0x231bac", "endExclusive": "0x231f20", "differentBytes": 0}
+  ],
+  "observations": [
+    "R69 enterFolderGames already performs invalidate, rebuildHook, firstFolderGame and refreshHook. Adding another reset at the same location does not address later native rebuilds.",
+    "00331bac_GuiStore__update.c calls CatalogService::update, optionally swapPendingCatalog, then rebuildVisible (line 114). A subsequent catalog revision can therefore rebuild after the explicit first-game reset.",
+    "rebuildVisible at 0x21b7f4 through 0x21b830 restores the selected catalog index in its wider native result. It writes that wider-list position to cursor and animation at 0x21b930 and 0x21b934.",
+    "R69 native_folders.h::filterFolderGames shrinks the platform list to one collection but retains the wider-list cursor, clamping invalid positions to visible-1. R69 native_search_state.h::stationSearchScope has the same selection loss when removing other platforms or non-installed items.",
+    "Concrete reproduced sequence: collection visible indices [2,4], cursor 0; native rebuild expands to platform indices [0,1,2,4], restoring selected index 2 at cursor 2; old collection filter shrinks to [2,4] then clamps cursor 2 to 1, the last game.",
+    "refreshTexts reads the cursor but contains no direct cursor write in the inspected body. The historical R39 harness did not model the native identity restore followed by filter compaction.",
+    "The pending restore ID at 0x630 is consumed by the native rebuild. This fix does not alter it because its modification is unnecessary for the reproduced defect."
+  ],
+  "fix": [
+    "Both filters capture the selected catalog index before overwriting the visible vector and record its new position while retaining entries.",
+    "If compaction removes the selected item, or the old selection is invalid, select the first remaining item (0), also safe for an empty list.",
+    "When compaction changes positions, update cursor and animation together; retain the original cache invalidation. Without compaction and with a valid selection, preserve the ongoing animation.",
+    "Keep firstFolderGame on fresh entry and preserve Back restoration by stable folder path plus kind. No per-frame reset or selection lock is added."
+  ],
+  "changedProductionHeaders": ["native_folders.h", "native_search_state.h"],
+  "test": {
+    "source": "tests/navigation.cpp",
+    "hostCompiler": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+    "flags": ["-std=c++17", "-O2", "-finput-charset=UTF-8", "-fexec-charset=UTF-8"],
+    "outputDirectory": "E:\\ESTUDO APK\\work\\station-collection-navigation-r70-audit-tests",
+    "baselineHeaders": "E:\\ESTUDO APK\\work\\station-collection-media-r69-20261007-final\\native",
+    "r69Result": {"exitCode": 1, "output": "Failed navigation check 3544", "expectedFailure": true},
+    "r70Result": {"exitCode": 0, "checks": 3584, "output": "PASS 3584 native navigation checks; original IDs/indices, All, direct, nested, Back, flat catalogs and 200 refresh cycles"},
+    "coverage": ["exact first-to-last regression", "middle and last game retained across rebuilds", "platform and collection filters composed", "installed-only scope", "invalid and removed selections", "empty results", "animation retained without compaction", "fresh entry reset", "Back restores collection", "nested/direct/all-games paths", "catalog refresh cycles"],
+    "limitations": "The host harness models the inspected native rebuild and calls actual production filter/navigation headers; it does not execute Android rendering or establish device reproduction."
+  },
+  "phoneChanged": false,
+  "serverChanged": false
+}

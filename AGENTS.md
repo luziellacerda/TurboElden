@@ -1,3 +1,11 @@
+# R70 pronta — navegação, configurações e vídeos — 07/10/2026
+
+Leia `versions/station-collection-navigation-r70-20261007/README.md`, STATUS e recibos. APK c12ee4e2928a629be4a2cc6dc9201fc7c5722e21a1fa8385d21da7a7dc69a32e compilado/assinado; 13.221 entradas preservadas. Não instalado: USB vazia no preflight. Última física R69/901e5eb4 no A56, tag estável do menu `estavel-menu30fps-colecoes-r69-20261007`, commit17cd4718740e79c62e0522a1b0d3c363d7177068.
+
+Corrige seleção pelo índice original após compactar filtros; defeito do último jogo reproduzido R69, R70 passou3584 verificações. Robô configurações rodapé direito somente coleções, ação/retângulo original+0x1410. Mario/TopGear novos720x720/30fps/silenciosos;57vídeos. Mantém Todos os jogos arredondado, coleções quadradas, um decoder, menu30fps; nenhum limite de30fps imposto aos emuladores. Sem prova térmica percentual, retomada online ou deployLinux. Build E:station-collection-navigation-r70-20261007-final2; finais G:apks-candidatos-visuais. Preservar assinatura/licença/saves e confirmar ausência de partida antes de instalar. Não publicar mídias privadas/capturas/credenciais.
+
+## Histórico anterior
+
 # R69 instalada — Todos os jogos arredondado e três vídeos — 07/10/2026
 
 Leia `versions/station-collection-media-r69-20261007/README.md` e recibos. APK 901e5eb495a858fc6877f7a22e325b5fcb3b73807af8c6d2888c90f1425773e4 instalado/hash integral A56, UID/data preservados; ESActivity abriu. Confirmação FINAL do mantenedor: só Todos os jogos arredondado nas coleções; todas as coleções quadradas mesmo selecionadas. Identificar FolderMeta.kind==2 pelo índice original, nunca pelo foco/posição zero. Main platforms e game covers preservados.

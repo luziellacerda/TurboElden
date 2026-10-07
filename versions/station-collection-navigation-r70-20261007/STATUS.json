@@ -1,0 +1,21 @@
+{
+  "version": "R70",
+  "base": "R69",
+  "baseStableTag": "estavel-menu30fps-colecoes-r69-20261007",
+  "compiled": true,
+  "packaged": true,
+  "installed": false,
+  "navigationTests": 3584,
+  "settingsPlacementTests": 60,
+  "cornerPolicyTests": 66,
+  "oneDecoderPreserved": true,
+  "menuFps": 30,
+  "emulatorFpsUnchanged": true,
+  "thermalSavingsMeasured": false,
+  "onlineRecoveryImplemented": false,
+  "apkSHA256": "c12ee4e2928a629be4a2cc6dc9201fc7c5722e21a1fa8385d21da7a7dc69a32e",
+  "apkBytes": 2118780321,
+  "installBlocked": "No authorized USB device at installation preflight",
+  "lastInstalled": "R69 on Samsung A56",
+  "visualPhoneVerification": false
+}
