@@ -1,0 +1,22 @@
+[
+  {
+    "test": "StationApiTest",
+    "exitCode": 0,
+    "output": "PASS 75 protocol and catalog checks"
+  },
+  {
+    "test": "StationTransferReuseTest",
+    "exitCode": 0,
+    "output": "PASS 13 TLS response reuse and exact-artifact-first checks"
+  },
+  {
+    "test": "StationCoverConcurrencyTest",
+    "exitCode": 0,
+    "output": "PASS 41 cover concurrency, cache, session, lifecycle and backoff checks"
+  },
+  {
+    "test": "StationCoverPublicationTest",
+    "exitCode": 0,
+    "output": "PASS 180 atomic catalog publication checks (20 races)"
+  }
+]

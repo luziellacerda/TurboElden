@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "scope": "isolated candidate C# API/PostgreSQL plus actual Java StationApi",
+  "protectedJavaRequests": 21,
+  "serverSecurityChecks": 28,
+  "copiedTokenDenied": true,
+  "replayDenied": true,
+  "pathBodyKeyTokenAlterationDenied": true,
+  "signedDowngradeDenied": true,
+  "protectedRelayBytesBothDirections": true,
+  "profileCatalogRenewalAndExactArtifact": true,
+  "fourCoversParallel": true,
+  "adminCommerceAndTransferRegression": true,
+  "hardwareAttestationVerified": false,
+  "apkBuilt": false,
+  "installed": false
+}

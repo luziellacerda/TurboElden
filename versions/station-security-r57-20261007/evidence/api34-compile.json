@@ -1,0 +1,23 @@
+{
+  "createdAt": "2026-10-07T14:12:13.253496+00:00",
+  "compiled": true,
+  "sourceBase": "R57",
+  "securityOverlay": "request-proof-v1",
+  "baseCommit": "8980cd422d63068299b5e9946c120f81a9c94f29",
+  "previousHandoffCommit": "029612b06205ff66cc1c7dcb2a2dd1a4c47aa1f9",
+  "inputs": {
+    "androidJar": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+    "stationJar": "c643277c7aae497331d1bffb2522aac088092b1fb57be4a4f2d9656a5420dca3"
+  },
+  "sourceFiles": 190,
+  "apiCheckOnly": true,
+  "java8API34": true,
+  "minAPI": 26,
+  "clientJarSHA256": "ca033a571f379ab6a7eb133b2766ac3fbca229b6d3b838c182200d65922e18dc",
+  "netplayJarSHA256": "415f3473bc7504c1a1b284f35ef5518b79351f072d77eb9a90c46ba597c02189",
+  "apkBuilt": false,
+  "installed": false,
+  "hardwareAttestationVerified": false,
+  "twoDeviceGameplayVerified": false,
+  "scope": "Java8/API34 with real updated client jar as rooms classpath; no D8/APK/signing"
+}

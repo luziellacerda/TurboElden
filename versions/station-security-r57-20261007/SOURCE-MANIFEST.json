@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "baseHandoffCommit": "029612b06205ff66cc1c7dcb2a2dd1a4c47aa1f9",
+  "overlay": {
+    "client/src/java/org/emulationstation/frontend/station/StationAndroid.java": {
+      "bytes": 5300,
+      "sha256": "2ccba05c9db2bc7df151d32f4f888abd2e2a2ee5a3566bb126a2ce93bb4dc5d0"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationApi.java": {
+      "bytes": 28285,
+      "sha256": "a4e1eaa4a847fce42e9440fe730b76ba5c5be033542e300f52090d1f03f5d01e"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCrypto.java": {
+      "bytes": 6101,
+      "sha256": "f2b50178b9d83421dfd0379f99f12809ab5182e61c49aeab2f4c7ada6f967881"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationHttp.java": {
+      "bytes": 9460,
+      "sha256": "b9f6dbf330663d55aa772c682dbdb13dd5a24736f99613b6a9d146484ebdb815"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationRequestProof.java": {
+      "bytes": 1542,
+      "sha256": "40ba9734251969e4c1b3042e332f12e471b14f0bd5232e7444342428a3d9a5d9"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java": {
+      "bytes": 6443,
+      "sha256": "b81ffd4e751d3c1f068d8bd3bca51929ef6cfe450081f89aee2a5c34b8f02677"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java": {
+      "bytes": 5663,
+      "sha256": "f624c12cae22981893ecb87cdfef082a3321d03b7886114f07405ddefa2c8520"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java": {
+      "bytes": 10691,
+      "sha256": "da42a51e60a31afaa0a288eb0f594c26c458236f573c075e1584a5652a18879d"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java": {
+      "bytes": 7801,
+      "sha256": "4db52080914f6beaf53a0324da1454c32a005021d1bb6f6f5df681389d52f4f9"
+    }
+  },
+  "files": {
+    ".gitattributes": {
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    "HANDOFF-SEGURANCA-STATION-20261007.md": {
+      "bytes": 6423,
+      "sha256": "ad903026c6a8ea10e14332d1e3565a77cd0cdb09ecc2a19289a027d9a9c82f7c"
+    },
+    "README.md": {
+      "bytes": 2760,
+      "sha256": "6186f3dff5a9911588ff527b14907ead0ebdd3cff2ad93576138edb78ae43fc8"
+    },
+    "STATUS.json": {
+      "bytes": 836,
+      "sha256": "ec4c9c37b082dac27e96911600b10474e326377686d674697ee22099c555ab94"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationAndroid.java": {
+      "bytes": 5300,
+      "sha256": "2ccba05c9db2bc7df151d32f4f888abd2e2a2ee5a3566bb126a2ce93bb4dc5d0"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationApi.java": {
+      "bytes": 28285,
+      "sha256": "a4e1eaa4a847fce42e9440fe730b76ba5c5be033542e300f52090d1f03f5d01e"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCrypto.java": {
+      "bytes": 6101,
+      "sha256": "f2b50178b9d83421dfd0379f99f12809ab5182e61c49aeab2f4c7ada6f967881"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationHttp.java": {
+      "bytes": 9460,
+      "sha256": "b9f6dbf330663d55aa772c682dbdb13dd5a24736f99613b6a9d146484ebdb815"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationRequestProof.java": {
+      "bytes": 1542,
+      "sha256": "40ba9734251969e4c1b3042e332f12e471b14f0bd5232e7444342428a3d9a5d9"
+    },
+    "evidence/api34-compile.json": {
+      "bytes": 936,
+      "sha256": "03ac9125a2f46bf3b413820c3fe8b7685f8fec71676216235e442341946a8d29"
+    },
+    "evidence/dex-module-guards.json": {
+      "bytes": 216,
+      "sha256": "be5cf021d62952e76b8aca05585f415edbe88e250d95a246a54ec3534060df22"
+    },
+    "evidence/http-integration.json": {
+      "bytes": 544,
+      "sha256": "8af4eeef9a6053922f81a4fa9b286efd18117d832672c8923db13d00d5e45887"
+    },
+    "evidence/legacy-client-tests.json": {
+      "bytes": 556,
+      "sha256": "b8423431f335a9b5a3d74258ec14a6f67b088bdc49ebb0bb8fdd080723255271"
+    },
+    "evidence/recipe-guards.json": {
+      "bytes": 139,
+      "sha256": "1ed1ae8db967dcf5748cd89a51cf7fb5e47966f0d1087e791ff372f72fe4720b"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java": {
+      "bytes": 6443,
+      "sha256": "b81ffd4e751d3c1f068d8bd3bca51929ef6cfe450081f89aee2a5c34b8f02677"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java": {
+      "bytes": 5663,
+      "sha256": "f624c12cae22981893ecb87cdfef082a3321d03b7886114f07405ddefa2c8520"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java": {
+      "bytes": 10691,
+      "sha256": "da42a51e60a31afaa0a288eb0f594c26c458236f573c075e1584a5652a18879d"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java": {
+      "bytes": 7801,
+      "sha256": "4db52080914f6beaf53a0324da1454c32a005021d1bb6f6f5df681389d52f4f9"
+    },
+    "recipes/build_candidate.py": {
+      "bytes": 6355,
+      "sha256": "57a1af1474d55a99bf74d3dc5f940d03e47a6fa906592835fa44db534ebfb759"
+    },
+    "recipes/dex_gates.py": {
+      "bytes": 2667,
+      "sha256": "3dee834410b422761a197a37669730a010dcf1e5dd194b0b74a7a58308cb6fa6"
+    },
+    "recipes/package_candidate.py": {
+      "bytes": 11011,
+      "sha256": "01cc5df3839b2fe8613426ad5b56f1137740270489c8f0a1b25a9b0fc1dd6a55"
+    },
+    "tests/StationSecurityHttpTest.java": {
+      "bytes": 6292,
+      "sha256": "a722cf09443bb3317378bcc017cc446a73a73d79ce0f99cb052dc7e582005169"
+    },
+    "tests/test_package_guards.py": {
+      "bytes": 2181,
+      "sha256": "a96c8daf4971bc89072c09e96b17c006f0e21ae6ab1d919aa60ef9ba72ec3f97"
+    },
+    ".gitignore": {
+      "bytes": 23,
+      "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
+    }
+  }
+}
