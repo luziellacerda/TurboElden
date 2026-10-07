@@ -5,7 +5,7 @@
   "dexSHA256": "e910f431b2f3cd3117389afb3e831a972f5284c38f683d6f06602770bd366b2e",
   "installed": true,
   "installationBlock": null,
-  "samsungLastVerified": "R62; R63 installation refused by Android due to insufficient storage",
+  "samsungLastVerified": "R63 / d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c",
   "motorolaLastVerified": "R63 / d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c",
   "localChecks": 302,
   "serverReturnCommit": "8d9c670ba813fb970a61ff9bf329e6286b51ad07",
@@ -14,11 +14,17 @@
   "twoDeviceGameplayVerified": false,
   "stable": false,
   "productionModified": false,
-  "installationReceipt": "evidence/installation-motorola-r63-20261007.json",
+  "installationReceipt": "evidence/installation-samsung-r63-20261007.json",
   "platformActivityResumedOnMotorola": true,
   "physicalChecksOwnedByUser": true,
   "pending": [
-    "Free storage and install R63 on Samsung before two-device tests",
-    "Physical verification and real two-device gameplay"
-  ]
+    "Physical verification and real two-device gameplay",
+    "Online controls and external-network latency remain separate work"
+  ],
+  "installationReceipts": [
+    "evidence/installation-samsung-r63-20261007.json",
+    "evidence/installation-motorola-r63-20261007.json"
+  ],
+  "platformActivityResumedOnSamsung": true,
+  "bothDevicesSameApkVerified": true
 }

@@ -1,3 +1,11 @@
+# R63 instalada nos dois aparelhos — 07/10/2026
+
+Samsung A56 atualizado após liberação de espaço. Motorola Edge30 já havia sido atualizado. Nos dois, o SHA integral do APK instalado é `d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c`. Sem desinstalação, limpeza de dados, troca de assinatura ou mudança da configuração de tela ligada. UID e data original de instalação preservados. A entrada oficial LoginActivity retornou ao catálogo ESActivity, sem nova digitação de licença.
+
+Recibos: `versions/station-auto-access-r63-20261006/evidence/installation-samsung-r63-20261007.json` e `versions/station-auto-access-r63-20261006/evidence/installation-motorola-r63-20261007.json`. As falhas anteriores de armazenamento abaixo são históricas e foram superadas. Conferências físicas ficam com o mantenedor; não foi validado gameplay em dupla, retorno online completo, latência externa ou controles online próprios. Criar sala nova usando os dois aplicativos R63. Nenhuma alteração funcional adicional foi feita por esta instalação.
+
+## Histórico preservado
+
 # R63 instalada no Motorola Edge30 — 07/10/2026
 
 Atualização concluída e SHA integral `d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c` conferido no aparelho. Mesmo UID e data original de instalação, sem desinstalar, limpar dados ou modificar a configuração de tela ligada. Antes da instalação havia somente ESActivity no histórico ativo da TurboStations; não interrompemos partida. A entrada oficial LoginActivity retornou ao catálogo ESActivity, sem nova digitação de licença. A conferência seguinte mostrou StationRoomsActivity; depois a USB desconectou. A navegação física ficou com o mantenedor. O mantenedor fará as conferências físicas; sem gameplay em dupla comprovado.
