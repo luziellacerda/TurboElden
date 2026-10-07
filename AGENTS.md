@@ -1,3 +1,9 @@
+# R66 instalada no A56 — BIOS automática — 07/10/2026
+
+R66 instalada após reconexão, hash integral conferido `e4397fd743c410ea060f17446706d9475b5568caad379e1a6df37672c60398d1`, UID/data original preservados. Antes de instalar havia apenas ESActivity e a entrada com erro de BIOS, sem Activity de jogo. Não desinstalou/limpou dados/mudou ajustes. Entrada oficial abriu, aparelho bloqueado ainda em LoginActivity; não afirmar autologin ou gameplay CD conferidos. Mantenedor foi solicitado a desbloquear e abrir CD, resposta pendente. Fonte `291f3949760c0d77030e4872520efc3e1c8f928b`; recibo `docs/server/RECIBO-R66-BIOS-INSTALADA-SAMSUNG-20261007.json`. Correção da análise publicada no Servidor-pix `7a5db18564d50607a6ef90ef31b45a03232ae45a`, branch `docs/station-neogeocd-bios-r66-20261007`, adendo APP→SERVIDOR. Firmware JÁ existia no APK/telefone; R66 usa os assets automaticamente, sem importação manual normal. Outro aparelho última conferência R63. Cartuchos/KOF98/retomada online seguem pendentes.
+
+## Histórico de preparação preservado
+
 # R66 candidata — BIOS CD já existente agora preparada automaticamente
 
 Leia `versions/station-neogeocd-bundled-bios-r66-20261007/README.md`. Correção da análise R65: os assets `bios/neocd/neocd.bin`, `000-lo.lo` e `uni-bioscd.rom` JÁ estavam no APK e telefone com identidades válidas. O novo lançador R65 ignorava essa origem. R66 usa AssetManager no worker e prepara atomicamente as dependências ausentes, preservando importações válidas; instalação nova não precisa importar manualmente. Só classes30.dex mudou;66 testes locais, DEX reproduzido idêntico, APK SHAe4397fd7. Nenhum firmware novo/baixado/adicionado ao APK. R66 ainda NÃO instalada: USB desconectou durante preparação. Samsung continua R65, outro telefone última conferência R63. Cartucho/KOF98 e retomada online permanecem pendentes; não declarar gameplay CD ou estabilidade. Código no APK, nunca corrigir apenas a pasta do telefone.

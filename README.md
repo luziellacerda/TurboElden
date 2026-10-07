@@ -1,3 +1,9 @@
+# R66 instalada no Samsung A56
+
+SHA integral no aparelho conferido: `e4397fd743c410ea060f17446706d9475b5568caad379e1a6df37672c60398d1`, dados preservados. A BIOS correta já estava no APK; R66 corrige sua preparação automática.66 testes locais passaram; abertura de jogo CD no Android ainda aguarda o aparelho desbloqueado. [Recibo da instalação e publicação ao servidor](docs/server/RECIBO-R66-BIOS-INSTALADA-SAMSUNG-20261007.json).
+
+## Histórico de preparação
+
 # R66 — BIOS CD automática
 
 [Correção, fontes e reprodução](versions/station-neogeocd-bundled-bios-r66-20261007/README.md). A BIOS correta já estava no APK e telefone; o lançador R65 ignorava os assets existentes. R66 prepara esses recursos automaticamente em instalações novas, com validação e preservação das importações válidas.66 testes locais e DEX reproduzido idêntico. APK `e4397fd743c410ea060f17446706d9475b5568caad379e1a6df37672c60398d1`, ainda não instalado porque a USB desconectou. Última instalação A56: R65. Gameplay CD e auditoria KOF permanecem pendentes.
