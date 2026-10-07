@@ -2,6 +2,8 @@
 
 Leia `versions/station-neogeo-cd-r65-20261007/README.md`, STATUS e recibos. R65 sobre R64 altera somente classes30.dex: integra o helper CD ausente no APK anterior, valida/importa BIOS e monta CHD com neocdz, fora da thread de interface. APK1858459b, 37 verificações locais e DEX reproduzido idêntico. NÃO instalado, NÃO estável. Última instalação física R63; USB ausente durante diagnóstico de KOF98. Catálogo publicado/revisão14:189cartuchos+50CD,13nomes sem registro MAME0289 (seis da coleção KOF), dois itens de outro hardware. Isso não substitui inspeção de chips/BIOS ou gameplay. KOF98 padrão é registrado e chegou ao motor, captura curta com imagem corrompida; causa ainda desconhecida. Não renomear variantes por suposição, trocar controles/motor ou limpar dados. R64 online/diagnóstico herdado; retomada NÃO implementada, pedido ao servidor continua aberto. Não publicar ROM/BIOS/APK/segredos/logs pessoais. Build E:, finais G:.
 
+Pedido NG-01–NG-07 publicado no Servidor-pix: `4d9893d898213ec3202313d3209c072e73642586`, branch `docs/station-neogeo-audit-r65-20261007`, `PEDIDO-AUDITORIA-NEOGEO-CARTUCHO-CD-R65-20261007.md`. APP → SERVIDOR; ainda sem resposta. Recibo em `docs/server/RECIBO-PEDIDO-NEOGEO-R65-20261007.json`. USB continuou ausente na última conferência, sem instalação R65.
+
 ## Histórico preservado
 
 # R64 candidata — controles online e diagnóstico de encerramento — 07/10/2026

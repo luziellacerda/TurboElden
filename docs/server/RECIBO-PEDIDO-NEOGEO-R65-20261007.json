@@ -1,0 +1,20 @@
+{
+  "direction": "APP_TO_SERVER_REQUEST",
+  "published": true,
+  "date": "2026-10-07",
+  "appSourceCommit": "e99f6fa705f4629085c426ffb7cf02b4fc624239",
+  "appBranch": "fix/station-neogeo-cd-r65-20261007",
+  "serverCommit": "4d9893d898213ec3202313d3209c072e73642586",
+  "serverBranch": "docs/station-neogeo-audit-r65-20261007",
+  "document": "docs/station-android/PEDIDO-AUDITORIA-NEOGEO-CARTUCHO-CD-R65-20261007.md",
+  "url": "https://github.com/luziellacerda/Servidor-pix/blob/4d9893d898213ec3202313d3209c072e73642586/docs/station-android/PEDIDO-AUDITORIA-NEOGEO-CARTUCHO-CD-R65-20261007.md",
+  "requestedAnswers": ["NG-01", "NG-02", "NG-03", "NG-04", "NG-05", "NG-06", "NG-07"],
+  "serverReplyReceived": false,
+  "linuxDeployed": false,
+  "apkInstalled": false,
+  "lastConfirmedInstalledRevision": "R63",
+  "USBConnectedAtLastCheck": false,
+  "pendingCartridgeGraphicsInvestigation": true,
+  "pendingAndroidCDGameplayValidation": true,
+  "onlineRecoveryRequestStillOpen": true
+}
