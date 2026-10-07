@@ -1,9 +1,9 @@
 {
   "candidate": "station-security-request-proof-v1",
   "previousHandoffCommit": "029612b06205ff66cc1c7dcb2a2dd1a4c47aa1f9",
-  "serverImplementationCommit": "defd38201ccbe331b2c0761c8e24dc4e47aef3ee",
-  "serverProductionConfirmed": false,
-  "serverDeploymentAwaitingNativeAuthentication": true,
+  "serverImplementationCommit": "da073551428c4b1320a3abebc257b3c3c933b3ca",
+  "serverProductionConfirmed": true,
+  "serverDeploymentAwaitingNativeAuthentication": false,
   "sourceFilesCompiled": 190,
   "apiCheckOnly": true,
   "dexBuilt": false,
@@ -17,5 +17,8 @@
   "romIntegrityChecksAdded": false,
   "nativeRuntimeSHA256": "899e35279cf046242a7ae31f502078080bd6a94404770fe99e1e2e90be58a1ef",
   "originalSigningCertificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
-  "newUnusableSecondaryKeysDiscarded": true
+  "newUnusableSecondaryKeysDiscarded": true,
+  "serverDLLSHA256": "83c8d2b3da68c85da7402165a7fa915fa7a084125511ec2df5541ec36ecaf682",
+  "serverPID": 1147382,
+  "serverProductionAtUtc": "2026-10-07T15:38:05.437688+00:00"
 }

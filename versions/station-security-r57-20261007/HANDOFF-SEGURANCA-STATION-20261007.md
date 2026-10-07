@@ -2,7 +2,7 @@
 
 ## Fonte e estado
 
-Base Android publicada: 029612b06205ff66cc1c7dcb2a2dd1a4c47aa1f9. Composição congelada: R55/9d3d45f + visual R57/8980cd4 + prontidão f8b019d + acesso automático 1e0f862. Servidor implementado em defd38201ccbe331b2c0761c8e24dc4e47aef3ee, base 8d9c670; publicação Linux aguardando autenticação nativa, ainda não comprovada neste recibo. Consultar STATUS e retorno específico do servidor para o estado posterior.
+Base Android publicada: 029612b06205ff66cc1c7dcb2a2dd1a4c47aa1f9. Composição congelada: R55/9d3d45f + visual R57/8980cd4 + prontidão f8b019d + acesso automático 1e0f862. Servidor implementado em da073551428c4b1320a3abebc257b3c3c933b3ca, base 8d9c670; publicada no Linux em07/10/2026 às15h38UTC/12h38Maceió, DLL83c8d2b3/PID1147382, identidade exclusiva. Backup/restauração,4921arquivos,198checksHTTPS+15proteção e2554relay passaram; licenças/chaves/catálogo14/2212 e outros produtos preservados. Origemdireta404, sem mudança de firewall/SSH/Cloudflare. Consultar STATUS e recibo agregado do servidor.
 
 APK privado base R57 SHA256 e6159fa3564f0b30c1415b062f42e08e47ea625832e1b2640375b3e8b2b55566; certificado 7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825; pacote org.turboramastation.frontend. URL, pin TLS e assertionKeyId atuais permanecem. Chave RSA principal turborama.station.device.v1 e licenseId não mudarão. App antigo permanece compatível no servidor.
 
@@ -44,3 +44,8 @@ metadata=1 agora recebe objeto com strings vazias quando não há sinopse; o app
 Receitas build_candidate.py/package_candidate.py desta pasta produzem os dois DEX juntos e exigem o APK exato R57, SDK/D8/classpath original e assinatura original. Runtime 899e35279cf046242a7ae31f502078080bd6a94404770fe99e1e2e90be58a1ef é o já compilado de senha automática, não um novo motor; cores e controles preservados. Confere alinhamento16KiB, todas as outras entradas e duplicação de classes entre DEX. Gates sintéticos/recusa de api-check-only passaram; não são um APK real.
 
 Teste físico: atualizar ambos sem limpar dados, conferir sessão antiga→protegida, capas quatro por vez, download/renovação, nome dos dois na sala, Pronto, entrada automática, inputs, saída/retorno e reconexão. Registrar pacote/versionCode/certificado, modo protegido e verifiedApp, modelo/SDK/boot e certificado recusado quando houver fallback. Não registrar tokens/códigos/senhas/cadeia contendo identificadores pessoais em Git. Novo DEX/APK, assinatura/instalação e gameplay continuam pendentes no PC de produção.
+
+
+## Publicação confirmada e limite atual
+
+Servidor atualizado e saudável. RequireVerifiedApp=false; a prova por pedido protege apenas o vínculo que aderiu com o novo cliente. Clientes antigos preservados. A qualificação de APK/hardware e partida em dois telefones precisa do novo DEX/APK e instalação no PC. Não interpretar o ensaio sintético do relay como gameplay físico.

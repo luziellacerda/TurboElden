@@ -45,16 +45,16 @@
       "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     },
     "HANDOFF-SEGURANCA-STATION-20261007.md": {
-      "bytes": 6423,
-      "sha256": "f90208e825f8b609ac14394154cb948871fe46292d769c8fa115e7d6f0e81855"
+      "bytes": 7002,
+      "sha256": "669aa97cb3d62e3343c01bca0b2b1d7c322f9107a5165d8fb64b20400949ed58"
     },
     "README.md": {
       "bytes": 2760,
       "sha256": "6186f3dff5a9911588ff527b14907ead0ebdd3cff2ad93576138edb78ae43fc8"
     },
     "STATUS.json": {
-      "bytes": 881,
-      "sha256": "bea4656534fb8867409071e4b232c891e946f40dc4f508e46edd814a15fa9af5"
+      "bytes": 1057,
+      "sha256": "ef0e42cad473fdc2e95ba0070f21ec23c80e4470aaffeeedc9335ae8aab56c4a"
     },
     "client/src/java/org/emulationstation/frontend/station/StationAndroid.java": {
       "bytes": 5300,
@@ -135,6 +135,10 @@
     ".gitignore": {
       "bytes": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
+    },
+    "evidence/server-production.json": {
+      "bytes": 3836,
+      "sha256": "ef82246fc59acde5b6d05de7c4227b0b575cd292939423b1e0f3bbc987369d3e"
     }
   }
 }

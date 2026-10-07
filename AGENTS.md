@@ -1,3 +1,11 @@
+# Segurança Station publicada — 07/10/2026
+
+Leia versions/station-security-r57-20261007/README.md, STATUS e HANDOFF, e docs/server/RETORNO-SEGURANCA-STATION-20261007.md. Servidorda07355/DLL83c8d2b3/PID1147382 publicado12h38Maceió: identidade própria, visões Station, mídias somente leitura, segredos de outros sistemas inacessíveis, origemdireta404. Backup/restauração,198HTTPS+15segurança+2554relay passaram; catálogo14/2212/chaves/licenças/outros serviços preservados. Migrations031/032 aditivas; firewall/SSH/Cloudflare intactos.
+
+Cliente213cfce compõe R55+visualR57+prontidão+senha automática+prova HTTP/WSS/atestação opcional.190Java8/API34 compilaram; novoDEX28+35/APK/assinatura/instalação/hardware/gameplay pendentes no PC. RequireVerifiedApp=false preserva antigos; não declarar acesso exclusivo ao APK nem segurança absoluta. Receitas novas exigem baseAPKR57/e6159fa3/cert7b16/runtime899e, conferem outros módulos/classes/alinhamento16KiB. Atualizar ambos sem limpar dados ou desinstalar. Senha privada/aliasRSA/cores/controles/layout mantidos. Não executar empacotadores históricos sobre este delta.
+
+## Histórico anterior
+
 # Convites curtos e palavra passe automática — 06/10/2026
 
 Leia `docs/server/RETORNO-CONVITE-CURTO-SENHA-AUTOMATICA-STATION-20261006.md`. APIa3e83d96/DLL5fff55c1/PID970425 publicada20h04Maceió. Convite8caracteres, resolução autenticada/assinada sem senha ou entrada implícita; quatro motores no registro, dois originais e dois -autopass1. Runtime899e3527 arm64/API26/16KiB compilado, cores/opções/controles preservados. Backup restaurado, provas sombra/HTTPS/relay e limpeza passaram; catálogo14/2212, licenças, chaves, serviços e mídias preservados. Sem migration/mensagens.
