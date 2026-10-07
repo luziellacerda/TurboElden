@@ -8,6 +8,8 @@ Sala exibe dois membros vinculados porID, botões compactos, cache limitado de n
 
 Servidor retorno6f8dcead3af84ed1c8323f6e241900bf2f36a938/código32ce9d2b30bb23deef17899e10fc285f38ea81ab declara produção NÃO implantada/RecoveryEnabledfalse. RuntimeWindows corrigido `d66267cd42507388f86034deb47e9f9670875784efb9afabfb8ffc64e3f3a856`, IDsrs2 específicos; registrar adições preservando antigos e ativar v2 antes da homologação. Não há fallback novo→v1. Sem deployLinux ou gameplay físico de recuperação comprovado; não marcar estável geral/ganho térmico. Tag estável de menu R69 preservada. Não publicar APKs, vídeos, ROM/BIOS, chaves ou logs pessoais.
 
+Handoff completo APP→SERVIDOR publicado em `e03a87217df9e51908b97bb775ecac889c22088c`, branch `docs/station-r71-recovery-build-20261007`, arquivo `docs/station-android/ENTREGA-APP-R71-COMPLETA-PARA-SERVIDOR-20261007.md`. App analisável `0368bf0586fd6fa1b38ed4c98bcf6cee73810595` (código c0d36af6). 27 arquivos documentais/evidências, checkout/index servidor preservados; não é resposta nem deployLinux. Recibo `docs/server/RECIBO-ENTREGA-R71-COMPLETA-20261007.json`. Mantenedor testa os aparelhos; não alterar a navegação com base no relato depois atribuído ao estado antigo aberto.
+
 ## Histórico anterior
 
 # R70 instalada A56 e Motorola — navegação, configurações e vídeos — 07/10/2026
