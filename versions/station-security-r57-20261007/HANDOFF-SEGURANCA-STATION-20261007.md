@@ -2,7 +2,7 @@
 
 ## Fonte e estado
 
-Base Android publicada: 029612b06205ff66cc1c7dcb2a2dd1a4c47aa1f9. Composição congelada: R55/9d3d45f + visual R57/8980cd4 + prontidão f8b019d + acesso automático 1e0f862. Servidor implementado em 882a009ffe3bdbffa08b108cebd8c0a0b99130ff, base 8d9c670; publicação Linux aguardando autenticação nativa, ainda não comprovada neste recibo. Consultar STATUS e retorno específico do servidor para o estado posterior.
+Base Android publicada: 029612b06205ff66cc1c7dcb2a2dd1a4c47aa1f9. Composição congelada: R55/9d3d45f + visual R57/8980cd4 + prontidão f8b019d + acesso automático 1e0f862. Servidor implementado em defd38201ccbe331b2c0761c8e24dc4e47aef3ee, base 8d9c670; publicação Linux aguardando autenticação nativa, ainda não comprovada neste recibo. Consultar STATUS e retorno específico do servidor para o estado posterior.
 
 APK privado base R57 SHA256 e6159fa3564f0b30c1415b062f42e08e47ea625832e1b2640375b3e8b2b55566; certificado 7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825; pacote org.turboramastation.frontend. URL, pin TLS e assertionKeyId atuais permanecem. Chave RSA principal turborama.station.device.v1 e licenseId não mudarão. App antigo permanece compatível no servidor.
 

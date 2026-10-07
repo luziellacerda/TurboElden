@@ -1,7 +1,7 @@
 {
   "candidate": "station-security-request-proof-v1",
   "previousHandoffCommit": "029612b06205ff66cc1c7dcb2a2dd1a4c47aa1f9",
-  "serverImplementationCommit": "882a009ffe3bdbffa08b108cebd8c0a0b99130ff",
+  "serverImplementationCommit": "defd38201ccbe331b2c0761c8e24dc4e47aef3ee",
   "serverProductionConfirmed": false,
   "serverDeploymentAwaitingNativeAuthentication": true,
   "sourceFilesCompiled": 190,
@@ -16,5 +16,6 @@
   "fourCoversParallelPreserved": true,
   "romIntegrityChecksAdded": false,
   "nativeRuntimeSHA256": "899e35279cf046242a7ae31f502078080bd6a94404770fe99e1e2e90be58a1ef",
-  "originalSigningCertificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825"
+  "originalSigningCertificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "newUnusableSecondaryKeysDiscarded": true
 }

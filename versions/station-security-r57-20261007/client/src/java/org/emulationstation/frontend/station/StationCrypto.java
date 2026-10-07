@@ -32,6 +32,7 @@ public final class StationCrypto {
             return cachedRequestKey;
         long now=android.os.SystemClock.elapsedRealtime();
         if(now<retryAfter)return null;
+        String generatedAlias=null;
         try{
             KeyStore store=KeyStore.getInstance("AndroidKeyStore");store.load(null);
             String prefix="turborama.station.request.v1."+StationProtocol.base64Url(MessageDigest.getInstance("SHA-256").digest(challenge)).substring(0,16)+".";
@@ -42,6 +43,7 @@ public final class StationCrypto {
             }
             if(alias==null){
                 alias=prefix+java.util.UUID.randomUUID().toString();
+                generatedAlias=alias;
                 KeyPairGenerator generator=KeyPairGenerator.getInstance(KeyProperties.KEY_ALGORITHM_EC,"AndroidKeyStore");
                 generator.initialize(new KeyGenParameterSpec.Builder(alias,KeyProperties.PURPOSE_SIGN)
                     .setAlgorithmParameterSpec(new ECGenParameterSpec("secp256r1"))
@@ -49,7 +51,7 @@ public final class StationCrypto {
                     .setUserAuthenticationRequired(false).build());
                 generator.generateKeyPair();
             }
-            final String selected=alias;final PublicKey publicKey=store.getCertificate(alias).getPublicKey();
+            final PublicKey publicKey=store.getCertificate(alias).getPublicKey();
             final PrivateKey privateKey=(PrivateKey)store.getKey(alias,null);final byte[][] certificates=encoded(store,alias);
             if(!usable(certificates))throw new java.security.GeneralSecurityException("Attestation unavailable");
             cachedRequestKey=new StationApi.RequestKey(){
@@ -62,7 +64,15 @@ public final class StationCrypto {
                     for(int i=0;i<copy.length;i++)copy[i]=certificates[i].clone();return copy;}
             };
             cachedChallenge=challenge.clone();return cachedRequestKey;
-        }catch(Exception unavailable){retryAfter=now+3600000;return null;}
+        }catch(Exception unavailable){
+            // Only discard a new secondary key that was never returned to a session.
+            // Older request keys and the principal RSA alias stay intact.
+            if(generatedAlias!=null)try{
+                KeyStore cleanup=KeyStore.getInstance("AndroidKeyStore");cleanup.load(null);
+                cleanup.deleteEntry(generatedAlias);
+            }catch(Exception ignored){}
+            retryAfter=now+3600000;return null;
+        }
     }
     private static byte[][] encoded(KeyStore store,String alias)throws Exception {
         java.security.cert.Certificate[] chain=store.getCertificateChain(alias);

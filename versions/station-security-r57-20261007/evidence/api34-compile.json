@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-07T14:12:13.253496+00:00",
+  "createdAt": "2026-10-07T14:38:23.595725+00:00",
   "compiled": true,
   "sourceBase": "R57",
   "securityOverlay": "request-proof-v1",
@@ -13,11 +13,11 @@
   "apiCheckOnly": true,
   "java8API34": true,
   "minAPI": 26,
-  "clientJarSHA256": "ca033a571f379ab6a7eb133b2766ac3fbca229b6d3b838c182200d65922e18dc",
-  "netplayJarSHA256": "415f3473bc7504c1a1b284f35ef5518b79351f072d77eb9a90c46ba597c02189",
+  "clientJarSHA256": "7295f579ec42eb2a6eaf473ae758ea37ccd391e501a47530bba3733c56012016",
+  "netplayJarSHA256": "aeeccebad7acfdaa482c7762040ef4a1aef693149e276804b2a017556073f503",
   "apkBuilt": false,
   "installed": false,
   "hardwareAttestationVerified": false,
   "twoDeviceGameplayVerified": false,
-  "scope": "Java8/API34 with real updated client jar as rooms classpath; no D8/APK/signing"
+  "scope": "Java8/API34 composed modules; failed new secondary keys cleaned; original RSA and old keys preserved; no D8/APK"
 }
