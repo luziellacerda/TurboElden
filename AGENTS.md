@@ -2,6 +2,8 @@
 
 Leia versions/station-recovery-handshake-r73-20261007/HANDOFF-APP-R73-PARA-SERVIDOR-20261007.md e STATUS. APK b23ff3d1e319ee050e6eb867e2643a5f66661da481dd2e3a4e50089d1604f077; runtime 9af2778898e4ba026d65d9b5c74ef3d8089e58bdbdf9be40f8e28f0eedcb14c2. Baseline nativo reproduziu MODE retido; função R73 envia não bloqueante e espera buffers drenarem antes READY. 1206checksJava+22nativos+39guardas. Dialog visível separado/diagnóstico limitado. **NÃO instalada nem homologada: servidor precisa adicionar duas identidades exatas preservando seis antigas.** Ambos os aparelhos permanecem R72/a8d3d28b. Teste R72/R72 22:48UTC: JNI ok/host-listening, ambos state1/PONGs, telaspretas. Sem atribuir causaúnica sem teste. Não removersegurança/timers, não trocar opções/cores, não ativarNeoGeo. Fontes/temporários E:, APK G:; dados/assinatura preservados. Operador implanta registro; nós não implantamosLinux.
 
+Handoff APP→SERVIDOR publicado em `1b26b34cd0f205afaf70b4f9ebf2391da7853537`, branch `docs/station-r73-handshake-flush-20261007`, documento `docs/station-android/ENTREGA-APP-R73-HANDSHAKE-PARA-SERVIDOR-20261007.md`. Fonte R73 `5657dce678609f25501321e307839a6e0c018d4e`. Cadastro é lido na inicialização; operador deve coordenar ativação sem interromper partidas. Não é retorno do servidor, deploy ou confirmação de gameplay. Recibo em docs/server/RECIBO-PEDIDO-R73-HANDSHAKE-20261007.json.
+
 ## Histórico anterior
 
 # R72 agora instalada nos dois aparelhos — 07/10/2026
