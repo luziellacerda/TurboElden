@@ -1,0 +1,26 @@
+{
+  "commit": "c1e44a1225a101478ceb29f4e624885331872c0d",
+  "branch": "fix/station-r71-server-recovery-20261007",
+  "files": [
+    {
+      "path": "docs/station-android/recovery-r71-20261007/CONTRATO-SERVIDOR.md",
+      "sha256": "1e1ea3b09390d603f1bfc731c3ad5b479eae1d327320ac8452f57976e07710d5"
+    },
+    {
+      "path": "docs/station-android/recovery-r71-20261007/PRODUCAO-EFETIVA.json",
+      "sha256": "262406c630b242915d4673c0a88e7b4d48cbcdaf67fa17a66ffa4e573c7d70ac"
+    },
+    {
+      "path": "docs/station-android/recovery-r71-20261007/ANALISE-POS-IMPLANTACAO.json",
+      "sha256": "52f644dc8ac5f817bea878c949f40826ced376bd2c8f768555f489338c72e380"
+    },
+    {
+      "path": "docs/station-android/recovery-r71-20261007/openapi.json",
+      "sha256": "2a9b62ecaddb720a97eaa1f85cb1d46ef3cd903895c76dbbbead8f34b77855db"
+    },
+    {
+      "path": "docs/station-android/recovery-r71-20261007/preparar-jni-registration-r71.py",
+      "sha256": "4e1a14cd8c68966b79c09a59ff8d6b4cea7cabf628d2a78bc0ef1b479e577c46"
+    }
+  ]
+}

@@ -1,3 +1,13 @@
+# R72 instalada no Samsung — registro JNI e perfis da sala — 07/10/2026
+
+Leia `versions/station-native-registration-r72-20261007/README.md`, STATUS e HANDOFF-APP-R72-PARA-SERVIDOR-20261007.md. Retorno servidor c1e44a1225a101478ceb29f4e624885331872c0d integrado: produção v2 já declarada ativa às21:59UTC, fonteab192bf/DLL815fc8bc. Não repetir a antiga pendência de ativação da R71.
+
+APK a8d3d28bb70618c52debf6e4cb0acaaf1f3bd1de19fe410dda85f6953caaec8e, 2122892378 bytes. Apenas DEX35 mudou: System.loadLibrary + probes JNI na Activity, candidato exato2c160af6; roster consome memberProfiles assinado por ID real/capacidade. Runtime d662, engines, DEX28, mídia e controles idênticos. 198 fontes,196 preservadas;1181 checks passaram;13224 entradas preservadas. Chave local expressamente autorizada e certificado original conferido antes da assinatura.
+
+Samsung A56 instalado diretamente às22:36:25UTC, SHA integral/UID/data original preservados. Entrada solicitada, mas tela bloqueada em LoginActivity; abertura autenticada/gameplay ainda não conferidos. Motorola última R71, ainda precisa R72 para o mesmo teste nos dois papéis. Nenhuma partida interrompida, ajuste de aparelho, APK extra, desinstalação ou limpeza. Diagnóstico JNI como primeira causa da tela preta não confirmado em logs; mantenedor relatou ambos anfitriões pretos. Não afirmar correção física/retomada/estabilidade geral só por compilação. Fontes/buildE:, APKfinalG:, sem publicação de APK/mídia/chaves/logs privados.
+
+## Histórico anterior
+
 # R71 agora instalada nos dois aparelhos — 07/10/2026
 
 Motorola Edge30 atualizado diretamente às21:37:39UTC deR70 paraR71, mesmo SHA integral do A56: `556170c32b6dd25fb5084693826d854adf736b4a1df156fd9229a8458b025018`. UID/data original preservados; sem partida ativa, desinstalação, limpeza de dados, ajuste no aparelho ou APKextra. Recibo `versions/station-online-layout-r71-20261007/evidence/installation-motorola-r71-20261007.json`. Entrada oficial solicitada. Ambos agora na mesmaR71; testes físicos pelo mantenedor. Servidor ainda conforme retorno publicado; não confundir instalação com ativaçãov2/gameplay. O handoff servidor e03a872 registra a entrega anterior a esta segunda instalação.
