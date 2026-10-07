@@ -1,3 +1,11 @@
+# R68 instalada — cantos retos em todas as coleções — 07/10/2026
+
+Leia `versions/station-collection-corners-r68-20261007/README.md` e recibos. APK 72ce7c2cbb3d7cf14ad122b0b98e42a41563114bbbc5c925caedbdee49ff66c3 instalado/hash integral no A56, UID/data original preservados; ESActivity e coleções SNES observadas. Política compartilhada remove arredondamento somente em páginas de coleções, de qualquer sistema atual/futuro; plataformas principais e jogos conservam formato. Mudança única no APK: libturbo_carousel.so; 13.221 outras entradas iguais à R67. 24 verificações de política e três de ligação passaram. Vídeos, DEX, motores, segurança e 30 fps R67 preservados.
+
+O pedido de retomada online REC-01 a REC-09 da R67 continua aberto; esta atualização visual não altera o contrato/runtime/Java. Conciliar o overlay R68 ao preparar novo APK. Build válido termina em `station-collection-corners-r68-20261007-final`; protótipo sem final, restrito a SNES/Neo Geo, foi superado e nunca empacotado. Capturas pessoais ficam fora do Git.
+
+## Histórico anterior
+
 # R67 instalada no A56 — vídeos, segurança e consumo do menu — 07/10/2026
 
 Leia `versions/station-collection-videos-r67-20261007/README.md`, STATUS e o handoff APP→SERVIDOR. APK d746cc02b602162b19509cd44ad7cf751e320de3b52199e7d48e86e9e897228f instalado/hash integral conferido no Samsung A56; UID/data original preservados. Entrada abriu ESActivity com sessão/perfil/catálogo200 (2212); alvo nativo30fps observado. Sem desinstalar, limpar dados, trocar assinatura ou ajustes do aparelho. Outro telefone não atualizado nesta entrega.
