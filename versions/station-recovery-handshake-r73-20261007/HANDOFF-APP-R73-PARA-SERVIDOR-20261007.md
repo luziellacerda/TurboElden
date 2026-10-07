@@ -2,6 +2,12 @@
 
 **Destinatário: operador do Station Android no Servidor-pix.** Pedido técnico do cliente, não resposta do servidor nem implantação já executada. O mantenedor relatou os dois aparelhos R72 na tela preta. Esta entrega produz o candidato corrigido e pede cadastro aditivo das identidades exatas abaixo antes do teste físico.
 
+## Atualização de instalação — 07/10/2026, 23:13 UTC
+
+O mantenedor pediu explicitamente instalar nos dois aparelhos enquanto o cadastro era realizado. Samsung A56 atualizado às23:11:17UTC e Motorola Edge30 às23:12:57UTC. O SHA-256 integral de ambos confere com a R73 b23ff3d1e319ee050e6eb867e2643a5f66661da481dd2e3a4e50089d1604f077. UID/data original preservados; nenhuma partida ativa identificada; sem desinstalação, limpeza, alteração de ajustes ou cópia extra de APK. Instalação por streaming. Recibos individuais em evidence/installation-*-r73.json.
+
+A validação do registro é mantida: StationOnlineGame.prepare recusa criar/entrar em partida se a identidade exata ainda não estiver autorizada. Não é bloqueio global do login/catálogo. Nenhuma partida online foi iniciada na conferência. Cadastro/ativação em produção e gameplay R73 continuam sem confirmação. O último retorno real consultado ainda é c1e44a1225a101478ceb29f4e624885331872c0d; a entrega1b26b34c é nosso pedido. Os estados de preparação abaixo/evidence/package.json são históricos; os recibos de instalação posteriores prevalecem para identificar a versão dos telefones.
+
 ## 1. Fonte exata e estado
 
 - App: branch `fix/station-r73-recovery-handshake-20261007`; commit completo no documento de entrega que acompanha este handoff.

@@ -11,6 +11,16 @@
       "sha256": "1cad66f78f63286078621ecd7691f3aab2a420fc570598ea9d046bb6f5391574"
     },
     {
+      "path": "evidence/installation-motorola-r73.json",
+      "bytes": 1108,
+      "sha256": "e00910bb8ffac7d881ac26a3ad5ff747256be32d8ce304e7350ee2bdc28c622d"
+    },
+    {
+      "path": "evidence/installation-samsung-r73.json",
+      "bytes": 1100,
+      "sha256": "e7362329f7040de7e2af56122e2a91f91c259746836d540887f27cbb3f44ceab"
+    },
+    {
       "path": "evidence/java-dex-build.json",
       "bytes": 73594,
       "sha256": "f5f728c3bd06be6a5c00157402ef9711406fe65bd6a959d9a61f860f84a64f35"
@@ -47,8 +57,8 @@
     },
     {
       "path": "HANDOFF-APP-R73-PARA-SERVIDOR-20261007.md",
-      "bytes": 9688,
-      "sha256": "71c32c9a152de99a4457e2983ca6c8f87b03d29ee66c66fd4a6becc5c0df207d"
+      "bytes": 10875,
+      "sha256": "04a51f50b5eac13e0b6874430b684a8cf4c9e0b48e70796b5130861e3cc44c1a"
     },
     {
       "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRecoveryTunnel.java",
@@ -72,8 +82,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 976,
-      "sha256": "e9ab2a928c6529bc4c31a098f20f40759dc5adbbc42f6e68837b5c066ed33f2b"
+      "bytes": 1007,
+      "sha256": "9e306fffe579cf515309abcf3903571aac69c4fdc4492e6c03716eb8ec328c00"
     },
     {
       "path": "recipes/build_candidate.py",
@@ -84,6 +94,11 @@
       "path": "recipes/build_native_r73.py",
       "bytes": 11296,
       "sha256": "81407acd328152353a307b00e8cee4a9d35b71b2ce9cefebeb9966105a25a55b"
+    },
+    {
+      "path": "recipes/install_verified.py",
+      "bytes": 4379,
+      "sha256": "335e36f3f63b55d80db2df2da7c0aa8af838571a11f61e3c28bfd73740392609"
     },
     {
       "path": "recipes/package_r73.py",
@@ -107,8 +122,8 @@
     },
     {
       "path": "STATUS.json",
-      "bytes": 643,
-      "sha256": "c16e4d2e4f31921a0fc90231c0611e90ca24d1d1b2ab25b1522b9698cbb5202f"
+      "bytes": 702,
+      "sha256": "5d66e8628a6fdf93a7afbf4f840406e5dbf08b92299a5979a87aaff0f6b1feea"
     },
     {
       "path": "tests/NATIVE-FINDINGS.md",

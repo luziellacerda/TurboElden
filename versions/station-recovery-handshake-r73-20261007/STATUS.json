@@ -10,11 +10,12 @@
   "sourceLifecycleGuards": 39,
   "serverActivationVerified": false,
   "serverRegistryAdditionsRequired": true,
-  "installed": false,
+  "installed": true,
   "currentDevices": {
-    "Samsung A56": "R72",
-    "Motorola Edge30": "R72"
+    "Samsung A56": "R73",
+    "Motorola Edge30": "R73"
   },
   "androidGameplayVerified": false,
-  "stable": false
+  "stable": false,
+  "installationRequestedBeforeRegistryConfirmation": true
 }
