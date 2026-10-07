@@ -1,0 +1,24 @@
+{
+  "files": {
+    "evidence/build.json": "8bd3c42c4668e25d02eeb6570a4395fca2fee5833f594b4f724ab61a64fe5281",
+    "evidence/catalog-bindings.json": "7abcdaff1b881fac6093f22d8dd2caa35df829f30d5f227009a9d629d6634e59",
+    "evidence/installation-samsung.json": "66935605bfb8e5a96d2c739db9505fe25dfa09dbd98cf499292b1cc14cc5a6d7",
+    "evidence/media-source-audit.json": "17c3f20f90dad41bd0ba3a11d4aa0f661da044ebe222f7fb837b241902967adc",
+    "evidence/package.json": "bcd733e12f63890315ba404b20662b113108c5fbbcde9c411ffb5be108605e14",
+    "mapping.json": "cf4ced678a9c440081662cb4fa26fcc704ad16bd263f55a4df26ab41b61e0686",
+    "native/collection_corner_policy.h": "624b18a0a79ba7adfb4956ae3d5949bb432521182639e2da415b3d62ebfe2701",
+    "native/collection_video_policy.h": "be4f6bfedaef9e6658f0beb08b089536b2dc6a72093970b11eb3c546b40870b3",
+    "native/native_formation.h": "d6aa878ecc5d41198e45f4d216884dabec4b55264368574bbfc8145b8bc27326",
+    "native/native_system_video720.h": "594108f612f5fe23a9bc8c9cb7e65bac4703d5a257f1679c1f5b680ff21679e5",
+    "native/video720_posters.h": "e51cd3a103542afdcf7a9afab22db4fded2197cda9b0d293da19bcb91694afd2",
+    "README.md": "6f732d1cb6bbec50a92327115ba4db9e4acc086c8372b7786e843f6c696ad0d8",
+    "recipes/build_r69.py": "18c63d8a77200d442992c6cfa798f64642b31625e1baf5ff9e8fa46be15c4cbc",
+    "recipes/install_verified.py": "20b5f27c9052f958d265659501bd49fe0585115c54c19ff2680a44e30f0344bf",
+    "recipes/package_r69.py": "7af8c04136c2c3c242cf3624bdd2c0a57978652029b8e984054fb3ee2f59b7ec",
+    "STATUS.json": "666f2b056d826085fc682aa936fcc2db2d5d382361b1d4f49d5bd4d561955a09",
+    "tests/collection_corners.cpp": "f0e449c14dd35e68cdd822144a21042453bc27a2aff237fe99d3fbf47e15d78f",
+    "tests/collection_routes.cpp": "10ff4605b80d7bb8c2c24a7bc240e17bb972a3a58d09c79aa7aeecdb2dc5f0ee"
+  },
+  "base": "station-collection-corners-r68-20261007",
+  "privateBinariesExcluded": true
+}

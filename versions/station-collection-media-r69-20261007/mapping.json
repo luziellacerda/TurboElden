@@ -1,0 +1,42 @@
+{
+  "sourceDirectory": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\Sele;'ao",
+  "videos": [
+    {
+      "file": "final figth coleção.mp4",
+      "key": "snes-finalfight",
+      "family": 0,
+      "catalogLeaf": "FINAL FIGHT",
+      "sourceSha256": "92382c50cb091c7fd151014ee1587493aa3aea982bd75cb378ecc9906e8a239c",
+      "asset": "assets/turbo-system-videos/720-collection-snes-finalfight.mp4",
+      "symbol": "station_collection_r69_snes_finalfight",
+      "change": "addition"
+    },
+    {
+      "file": "mega man coleção.mp4",
+      "key": "snes-megaman",
+      "family": 0,
+      "catalogLeaf": "MEGA MAN",
+      "sourceSha256": "1678aeeac84eb2622a093cda251e38b2df824b319befb33f1bc67b33c6726bea",
+      "asset": "assets/turbo-system-videos/720-collection-snes-megaman.mp4",
+      "symbol": "station_collection_r69_snes_megaman",
+      "change": "addition"
+    },
+    {
+      "file": "top gear coleção.mp4",
+      "key": "snes-topgear",
+      "family": 0,
+      "catalogLeaf": "TOP GEAR",
+      "sourceSha256": "8bf74eec8a4cc50f455ad7576bf9d439e4b24f04a52eb1761cdddf766519e2e6",
+      "asset": "assets/turbo-system-videos/720-collection-snes-topgear.mp4",
+      "symbol": "station_collection_r69_snes_topgear",
+      "change": "replacement",
+      "replacesSourceSha256": "a3476ce96f9bf7959f3ac73239de31aac3c89d05e52cc1c94539269d77610091"
+    }
+  ],
+  "width": 720,
+  "height": 720,
+  "fps": 30,
+  "audio": false,
+  "playbackSpeed": 1,
+  "focusedDecoderOnly": true
+}

@@ -1,0 +1,91 @@
+{
+  "source": "server-published-catalog-tsv",
+  "commit": "112d6b03d6ce00ccb340ed400806791f0fe7263d",
+  "path": "docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "sha256": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e",
+  "bindings": [
+    {
+      "key": "snes-finalfight",
+      "matches": [
+        {
+          "platform": "snes",
+          "folderPath": "## FINAL FIGHT ##",
+          "games": 3,
+          "items": [
+            {
+              "itemId": "31feb4cae74e98ed7f4462338f40287f",
+              "name": "Final Fight"
+            },
+            {
+              "itemId": "d5156a9ac3ee2e85bd9ba68fa037086f",
+              "name": "Final Fight 2"
+            },
+            {
+              "itemId": "62fe9cd9cbe35e1dc5663fd8c1627fca",
+              "name": "Final Fight 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "snes-megaman",
+      "matches": [
+        {
+          "platform": "snes",
+          "folderPath": "## MEGA MAN ##",
+          "games": 5,
+          "items": [
+            {
+              "itemId": "station_15a4ce6bca5b5788418d84911fa7b4c4",
+              "name": "Mega Man 7"
+            },
+            {
+              "itemId": "station_c9cde246858769a6672357a576e3662c",
+              "name": "Mega Man Soccer"
+            },
+            {
+              "itemId": "352be7597989526657f6958b0fa99cdf",
+              "name": "Mega Man X"
+            },
+            {
+              "itemId": "station_8d8b34875c8172f3ae8fac54bc6e7373",
+              "name": "Mega Man X2"
+            },
+            {
+              "itemId": "station_2cb6832b8866bfffed3b689d3f3b75d3",
+              "name": "Mega Man X3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "snes-topgear",
+      "matches": [
+        {
+          "platform": "snes",
+          "folderPath": "## TOP GEAR ##",
+          "games": 3,
+          "items": [
+            {
+              "itemId": "station_d120876f66cd88990155109886656d6e",
+              "name": "Top Gear"
+            },
+            {
+              "itemId": "station_9cbc25855dd07703ce32314b93256e59",
+              "name": "Top Gear 2"
+            },
+            {
+              "itemId": "station_b0a50897ab5c3663dbabd624b7469572",
+              "name": "Top Gear 3000"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deviceObserved": false,
+  "catalogMutation": false,
+  "note": "Mapping evidence is the same published TSV snapshot used for R67; this preparation does not query or change the live catalog."
+}

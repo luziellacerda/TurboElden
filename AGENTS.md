@@ -1,3 +1,11 @@
+# R69 instalada — Todos os jogos arredondado e três vídeos — 07/10/2026
+
+Leia `versions/station-collection-media-r69-20261007/README.md` e recibos. APK 901e5eb495a858fc6877f7a22e325b5fcb3b73807af8c6d2888c90f1425773e4 instalado/hash integral A56, UID/data preservados; ESActivity abriu. Confirmação FINAL do mantenedor: só Todos os jogos arredondado nas coleções; todas as coleções quadradas mesmo selecionadas. Identificar FolderMeta.kind==2 pelo índice original, nunca pelo foco/posição zero. Main platforms e game covers preservados.
+
+Final Fight/Mega Man adicionados, Top Gear atualizado da pasta Sele;'ao; 720x720/30fps/silenciosos, 57 vídeos totais. 66 checks, nove ligações, um decoder e rotas13 passaram; 13.220 outras entradas APK preservadas. DEX/motores/segurança/runtime online iguais à R68. Pastas build E: station-collection-media-r69-20261007-final, final G: apks-candidatos-visuais. SNES observado: Todos os jogos arredondado, Super Mario selecionado quadrado, novos posters presentes. Mantenedor pediu tag estável do menu/consumo; sem medição térmica. Novos pedidos de seleção ao entrar/configurações/vídeos seguirão na R70. Não afirmar gameplay/retomada ou ganho térmico. Pedido REC01–09 R67 continua aberto; conciliar este overlay visual nas futuras atualizações.
+
+## Histórico anterior
+
 # R68 instalada — cantos retos em todas as coleções — 07/10/2026
 
 Leia `versions/station-collection-corners-r68-20261007/README.md` e recibos. APK 72ce7c2cbb3d7cf14ad122b0b98e42a41563114bbbc5c925caedbdee49ff66c3 instalado/hash integral no A56, UID/data original preservados; ESActivity e coleções SNES observadas. Política compartilhada remove arredondamento somente em páginas de coleções, de qualquer sistema atual/futuro; plataformas principais e jogos conservam formato. Mudança única no APK: libturbo_carousel.so; 13.221 outras entradas iguais à R67. 24 verificações de política e três de ligação passaram. Vídeos, DEX, motores, segurança e 30 fps R67 preservados.

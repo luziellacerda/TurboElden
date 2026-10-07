@@ -1,0 +1,34 @@
+{
+  "version": "R69",
+  "base": "R68",
+  "compiled": true,
+  "packaged": true,
+  "apkSHA256": "901e5eb495a858fc6877f7a22e325b5fcb3b73807af8c6d2888c90f1425773e4",
+  "apkBytes": 2119264138,
+  "installed": true,
+  "allGamesOnlyRounded": true,
+  "actualCollectionsSquareEvenFocused": true,
+  "newCollectionVideos": [
+    "Final Fight",
+    "Mega Man"
+  ],
+  "replacedCollectionVideos": [
+    "Top Gear"
+  ],
+  "videoResolution": "720x720",
+  "videoFps": 30,
+  "videoAudio": false,
+  "totalVideos": 57,
+  "allDexEmulatorsPreserved": true,
+  "serverOrContractChanged": false,
+  "onlineRecoveryImplemented": false,
+  "thermalSavingsMeasured": false,
+  "visualPhoneVerification": "SNES: Todos os jogos rounded; Super Mario selected square; new posters observed",
+  "model": "SM-A566E",
+  "deviceHashVerified": true,
+  "uidPreserved": true,
+  "originalInstallTimestampPreserved": true,
+  "launchVerified": true,
+  "markedStableByMaintainer": true,
+  "stableScope": "Menu rendering policy and collection presentation; later navigation bug tracked separately in R70"
+}
