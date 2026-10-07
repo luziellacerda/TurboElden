@@ -3,15 +3,22 @@
   "compiled": true,
   "apkSHA256": "d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c",
   "dexSHA256": "e910f431b2f3cd3117389afb3e831a972f5284c38f683d6f06602770bd366b2e",
-  "installed": false,
-  "installationBlock": "Motorola Edge30 is still in StationRetroActivity; requested safe game exit. User owns physical checks.",
-  "samsungLastVerified": "R62 / 114dba8af4cb2a0a6beec1aff8123959bcc150fbfbd6dd706afa5bf5f6ef54c7",
-  "motorolaLastVerified": "R58; active game",
+  "installed": true,
+  "installationBlock": null,
+  "samsungLastVerified": "R62; R63 installation refused by Android due to insufficient storage",
+  "motorolaLastVerified": "R63 / d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c",
   "localChecks": 302,
   "serverReturnCommit": "8d9c670ba813fb970a61ff9bf329e6286b51ad07",
   "serverCandidateCommit": "1e0f86241851d6c9c17c379ed23fd238637bbcbd",
   "bothDevicesRequireR63": true,
   "twoDeviceGameplayVerified": false,
   "stable": false,
-  "productionModified": false
+  "productionModified": false,
+  "installationReceipt": "evidence/installation-motorola-r63-20261007.json",
+  "platformActivityResumedOnMotorola": true,
+  "physicalChecksOwnedByUser": true,
+  "pending": [
+    "Free storage and install R63 on Samsung before two-device tests",
+    "Physical verification and real two-device gameplay"
+  ]
 }

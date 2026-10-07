@@ -24,6 +24,14 @@
       "sha256": "604736547716721d25e1f7a82c304a525fa545324cc004d1bd92d8a29e0ebdb6",
       "bytes": 1290
     },
+    "evidence/installation-motorola-r63-20261007.json": {
+      "sha256": "dfbffd1e10104fafe920e288cbd99ad8f9a54bb94ff3dc6363b5c10bfb312a23",
+      "bytes": 1396
+    },
+    "evidence/installation-samsung-r63-failed-storage-20261007.json": {
+      "sha256": "6dd5c4576f7737a06b7924b791aa8d0726feb282feb66e9f53d985533e9b6bb0",
+      "bytes": 707
+    },
     "evidence/integration.json": {
       "sha256": "8f5e71918d684ffc839c346e98710d689eda5456640615fc9a02e64b2e8c4754",
       "bytes": 14981
@@ -37,8 +45,8 @@
       "bytes": 1756
     },
     "HANDOFF-APP-R63-PARA-SERVIDOR-20261006.md": {
-      "sha256": "be5238bf9f0647af39315dfb7b00de78fe1ed527d6c6a39d5d1b7d6e8af5369f",
-      "bytes": 10049
+      "sha256": "b164d713779156066a9f9c5611865e09f7ec0e378cb00e2728e7c65c86ab9321",
+      "bytes": 11213
     },
     "netplay-src/org/emulationstation/frontend/netplay/StationInvitationCode.java": {
       "sha256": "611c98d7c8c6428dbed0d271e8ccdb9a0cf4f8e54c215ff17386dfa604b8aa0f",
@@ -53,8 +61,8 @@
       "bytes": 69695
     },
     "README.md": {
-      "sha256": "4a9fd124806816b496cc0f80e3e908c3cd26cc7d656d8ca40a1e20e3e0951a74",
-      "bytes": 374
+      "sha256": "b3c17e32b5fa53cca49b59015b7c547edfbabd14a8bd2befa6c4f6ea8aa5aab8",
+      "bytes": 1538
     },
     "received-server-evidence/api34-compile.json": {
       "sha256": "418f99e420cfe47cabc0659896b9581bd6f57b1174de94fdf799957190ea3a3e",
@@ -129,8 +137,8 @@
       "bytes": 26811
     },
     "STATUS.json": {
-      "sha256": "edb5463815116aadccddad2276665c7c6eb253f707bb076852affed255786b29",
-      "bytes": 804
+      "sha256": "8ea0fe569114c8621079871d8caecc18e810dc2b772f2eb7939b47ca7911a67d",
+      "bytes": 1069
     },
     "tests/StationCompactLobbyTest.java": {
       "sha256": "49649bf8fc8db1c3e6fd804b5144de9bf3db4707eb7435eb58abc5ab90c1ab61",

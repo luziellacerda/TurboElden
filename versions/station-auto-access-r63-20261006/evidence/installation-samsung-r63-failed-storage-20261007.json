@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-07T11:18:32.539711+00:00",
+  "deviceModel": "Samsung A56",
+  "versionAttempted": "R63",
+  "installed": false,
+  "error": "INSTALL_FAILED_INSUFFICIENT_STORAGE: Failed to override installation location",
+  "freeSpaceAfterCleanupGiBApprox": 4.4,
+  "remainingInstalledVersion": "R62",
+  "remainingApkSHA256": "114dba8af4cb2a0a6beec1aff8123959bcc150fbfbd6dd706afa5bf5f6ef54c7",
+  "remainingFullHashVerified": true,
+  "targetApkSHA256": "d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c",
+  "noUninstallOrDataClear": true,
+  "noKeepAwakeChange": true,
+  "noGameInterrupted": true,
+  "additionalSpaceRequestedGiBApprox": 4,
+  "awaitingUserSpaceRelease": true
+}

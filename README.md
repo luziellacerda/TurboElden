@@ -1,3 +1,11 @@
+# R63 instalada no Motorola Edge30 — 07/10/2026
+
+Atualização concluída e SHA integral `d9a35602ddc1141617df70d4b2b1f202d8646c538d4508f5fb3e53ef6b7abc4c` conferido no aparelho. Mesmo UID e data original de instalação, sem desinstalar, limpar dados ou modificar a configuração de tela ligada. Antes da instalação havia somente ESActivity no histórico ativo da TurboStations; não interrompemos partida. A entrada oficial LoginActivity retornou ao catálogo ESActivity, sem nova digitação de licença. A conferência seguinte mostrou StationRoomsActivity; depois a USB desconectou. A navegação física ficou com o mantenedor. O mantenedor fará as conferências físicas; sem gameplay em dupla comprovado.
+
+Samsung A56 permanece na R62: a tentativa R63 foi recusada pelo Android por falta de armazenamento, e o hash114dba8a da R62 foi conferido após a recusa. Atualizar o Samsung para R63 antes da partida em dupla. Não afirmar que os dois aparelhos estão atualizados. Recibos: `versions/station-auto-access-r63-20261006/evidence/installation-motorola-r63-20261007.json` e `versions/station-auto-access-r63-20261006/evidence/installation-samsung-r63-failed-storage-20261007.json`.
+
+## Histórico de preparação preservado
+
 # R63 — convite curto e senha automática integrados sobre R62
 
 Leia `versions/station-auto-access-r63-20261006/HANDOFF-APP-R63-PARA-SERVIDOR-20261006.md`, STATUS e recibos. Retorno 8d9c670/candidato 1e0f862 conciliados com R62: 161 Java, 158 preservados, três alterados; runtime 899e3527/IDs autopass1. APK d9a35602/DEX e910f431, 302 testes no Windows e recompilação idêntica pela restauração publicada. Visual, Binder, saída e motores locais preservados. Instalação aguarda saída da partida no Motorola; Samsung R62/Motorola R58. Atualizar ambos antes do teste em dupla. Sem gameplay físico comprovado, estabilidade geral ou deploy Linux.
