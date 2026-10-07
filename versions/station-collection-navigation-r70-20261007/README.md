@@ -45,3 +45,13 @@ Fontes, testes e recibos podem ser publicados; APK, mídias privadas, objetos, s
 ## Estado da entrega
 
 APK R70 SHA-256 `c12ee4e2928a629be4a2cc6dc9201fc7c5722e21a1fa8385d21da7a7dc69a32e`, 2.118.780.321 bytes. Assinatura e alinhamento conferidos, 13.221 outras entradas preservadas. Todos os testes locais passaram. Instalação não iniciou: nenhum aparelho apareceu na USB na conferência anterior ao envio. R69 continua a última versão comprovadamente instalada no A56. Aguardando reconexão; sem conferência visual R70 no aparelho.
+
+## Instalação concluída no A56
+
+Em 07/10/2026 às 20:21:12 UTC a instalação direta terminou com sucesso. Hash integral R70 conferido no A56; mesmo UID/data original, sem desinstalar, limpar dados ou mudar configurações. A tentativa intermediária de cópia foi cancelada a pedido do mantenedor e o APK temporário de 2.118.780.321 bytes foi removido. Usar instalação direta nas próximas atualizações. A entrada oficial foi solicitada; a USB mudou para Motorola Edge 30 antes da captura, por isso navegação/robô/vídeos da R70 ainda não foram visualmente conferidos no A56.
+
+A receita de instalação agora fixa o alvo pelo identificador USB privado observado no início, evitando seguir outro aparelho se o cabo for trocado; esse identificador não é publicado. Para atualizar outro telefone com versão anterior diferente, informar --expected-installed-sha256 somente depois de conferir seu hash. Mantém checagem de partida, assinatura Android, UID/data e hash final. Não usar --no-streaming nem deixar cópia extra em Downloads/data-local-tmp.
+
+## Motorola atualizado
+
+R70 instalada diretamente no Motorola Edge 30 em 07/10/2026 às 20:25:52 UTC, substituindo R63 (`d9a35602…`). Hash integral c12ee4e2… conferido, UID/data original preservados. ESActivity e catálogo observados; o mantenedor iniciou um jogo antes da conferência das coleções. Não interferimos na partida. Testes locais da navegação/cantos/robô passaram; não declarar a conferência física desses três itens como concluída. Ambos os aparelhos agora têm a mesma R70. Recibo `evidence/installation-motorola.json`.

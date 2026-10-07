@@ -4,6 +4,7 @@ from pathlib import Path
 
 p=argparse.ArgumentParser()
 p.add_argument('--workspace', required=True)
+p.add_argument('--expected-installed-sha256', help='Explicitly verified installed version on another authorized phone')
 a=p.parse_args()
 w=Path(a.workspace).resolve()
 assert w.drive.upper()=='E:'
@@ -12,9 +13,10 @@ apk=Path(receipt['apk'])
 with apk.open('rb') as f: assert hashlib.file_digest(f,'sha256').hexdigest()==receipt['sha256']
 adb=r'G:\Android\Sdk\platform-tools\adb.exe'
 package='org.turboramastation.frontend'
+target=None
 
 def run(*args):
- r=subprocess.run([adb,*map(str,args)],capture_output=True,text=True,encoding='utf8',errors='replace')
+ r=subprocess.run([adb,*(['-s',target] if target else []),*map(str,args)],capture_output=True,text=True,encoding='utf8',errors='replace')
  if r.returncode:
   error=(r.stdout+'\n'+r.stderr).strip()
   (w/'evidence/adb-last-failure.txt').write_text(error,'utf8')
@@ -23,6 +25,7 @@ def run(*args):
 
 devices=[s for s in run('devices').splitlines()[1:] if s.strip()]
 assert len(devices)==1 and devices[0].split()[1]=='device', 'Need one authorized phone'
+target=devices[0].split()[0] # Pin this phone: never follow a different device after a cable swap.
 activities=run('shell','dumpsys','activity','activities')
 hist=[s for s in activities.splitlines() if re.search(r'\* Hist\s+#',s) and package+'/' in s]
 allowed=['org.emulationstation.frontend.ESActivity','org.emulationstation.frontend.auth.LoginActivity','org.emulationstation.frontend.netplay.StationRoomsActivity']
@@ -41,7 +44,9 @@ def installed_hash():
 
 before=identity()
 base_hash=installed_hash()
-assert base_hash==receipt['baseSHA256'], 'Installed base differs; inspect before updating'
+expected_base=a.expected_installed_sha256 or receipt['baseSHA256']
+assert re.fullmatch('[0-9a-f]{64}',expected_base)
+assert base_hash==expected_base, 'Installed base differs; inspect before updating'
 model=run('shell','getprop','ro.product.model').strip()
 start=datetime.datetime.now(datetime.timezone.utc).isoformat()
 print('Installing verified APK; preserving existing data',flush=True)
