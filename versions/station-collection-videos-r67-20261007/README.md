@@ -78,4 +78,6 @@ Faltam medir consumo/temperatura, conferir visual e todos os vídeos no aparelho
 
 ## Reexecução final dos testes locais
 
-`python recipes/run_local_tests.py --workspace "E:\ESTUDO APK\work\station-collection-videos-r67-20261007-final"` reexecutou 449 verificações mais o diagnóstico de relay. Ver `evidence/local-tests-final.json`: 193 fontes de produção vinculadas aos hashes da compilação DEX, 11 fontes de teste, 307 classes em memória. Nenhuma partida real é simulada como prova de gameplay.
+`python recipes/run_local_tests.py` reexecutou 449 verificações mais o diagnóstico de relay. Ver `evidence/local-tests-final.json`: 193 fontes de produção vinculadas aos hashes da compilação DEX, 11 fontes de teste, 307 classes em memória. Nenhuma partida real é simulada como prova de gameplay.
+
+Fonte funcional desta compilação: `0d7a44f371e846a9821426a9082405836e250b0e`. Alterações posteriores de handoff/recibos não recompilam o APK.

@@ -1,0 +1,13 @@
+{
+  "direction": "APP_TO_SERVER",
+  "sourceCommit": "0d7a44f371e846a9821426a9082405836e250b0e",
+  "sourceBranch": "fix/station-r67-media-security-20261007",
+  "baseDocumentationCommit": "6c515fdb7dc81db1d9509197d8fed083b28b8745",
+  "sourceFolder": "versions/station-collection-videos-r67-20261007",
+  "apkSha256": "d746cc02b602162b19509cd44ad7cf751e320de3b52199e7d48e86e9e897228f",
+  "installationReceipt": "versions/station-collection-videos-r67-20261007/evidence/installation-samsung.json",
+  "serverReturnIntegrated": "b37c873b70bf361388b3a18fd58eed3b5452565a",
+  "recoveryImplemented": false,
+  "linuxDeployed": false,
+  "createdUTC": "2026-10-07T18:45:16.684767+00:00"
+}

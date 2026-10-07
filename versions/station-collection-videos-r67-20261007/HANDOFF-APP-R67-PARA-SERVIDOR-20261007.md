@@ -9,7 +9,7 @@ Data de preparação: 07/10/2026. Destinatário: implementador e operador do **S
 | Evidência | Resultado |
 |---|---|
 | Branch do app | `fix/station-r67-media-security-20261007` |
-| Fonte exata | O commit das fontes será identificado no recibo documental de publicação desta entrega; os hashes abaixo já identificam exatamente o binário instalado. |
+| Fonte exata | `0d7a44f371e846a9821426a9082405836e250b0e` — [fonte R67](https://github.com/luziellacerda/TurboElden/tree/0d7a44f371e846a9821426a9082405836e250b0e/versions/station-collection-videos-r67-20261007). Recibo de publicação em `docs/server/RECIBO-FONTE-R67-20261007.json`. |
 | APK | `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Premium-R67-20261007.apk` |
 | Bytes / SHA-256 | 2110287552 / `d746cc02b602162b19509cd44ad7cf751e320de3b52199e7d48e86e9e897228f` |
 | `classes28.dex` | `4e912015b3daac63cf48f4621ee0022448e917927a41990e9bd22e96feecb810` |
