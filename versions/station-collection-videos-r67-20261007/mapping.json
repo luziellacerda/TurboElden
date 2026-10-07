@@ -1,0 +1,92 @@
+{
+  "sourceDirectory": "G:\\TURBORAMA\\RetroBat\\emulationstation\\.emulationstation\\themes\\TURBORAMAx\\_theme_inc\\images\\caratulas\\Sele;'ao",
+  "videos": [
+    {
+      "file": "art of fighi.mp4",
+      "key": "neogeo-artoffighting",
+      "family": 1,
+      "catalogLeaf": "0 - ART OF FIGTHERS COLEÇÃO",
+      "sourceSha256": "4c4e78b9c3a7afe08b84032b731c8ae97e6abffec340cf9e44b80ed2f1c40ef5",
+      "asset": "assets/turbo-system-videos/720-collection-neogeo-artoffighting.mp4",
+      "symbol": "station_collection_r67_neogeo_artoffighting"
+    },
+    {
+      "file": "bomberman coleção.mp4",
+      "key": "snes-bomberman",
+      "family": 0,
+      "catalogLeaf": "BOMBER MAN",
+      "sourceSha256": "03f8fc05506b1e344ab14feacc03080f786ec6db25d0ba5c84e32c5ef2a065de",
+      "asset": "assets/turbo-system-videos/720-collection-snes-bomberman.mp4",
+      "symbol": "station_collection_r67_snes_bomberman"
+    },
+    {
+      "file": "donkey kong.mp4",
+      "key": "snes-donkeykong",
+      "family": 0,
+      "catalogLeaf": "DONKEY KONG",
+      "sourceSha256": "422ab7f2380db07942066dcbf365dde4dd6cdb0600ac2067b4d75612bbe2dba3",
+      "asset": "assets/turbo-system-videos/720-collection-snes-donkeykong.mp4",
+      "symbol": "station_collection_r67_snes_donkeykong"
+    },
+    {
+      "file": "fatalfury.mp4",
+      "key": "neogeo-fatalfury",
+      "family": 1,
+      "catalogLeaf": "4 - FATAL FURY COLEÇÃO",
+      "sourceSha256": "094f680c9a9f8e4069f4cc03f7f935127ccf6ba0ce1737da11d03791498027b5",
+      "asset": "assets/turbo-system-videos/720-collection-neogeo-fatalfury.mp4",
+      "symbol": "station_collection_r67_neogeo_fatalfury"
+    },
+    {
+      "file": "megal slug.mp4",
+      "key": "neogeo-metalslug",
+      "family": 1,
+      "catalogLeaf": "1 - METAL SLUG COLEÇÃO",
+      "sourceSha256": "636e6756ad99e854a151264fb33d1d3b852bf565fe885f496420e526bd834242",
+      "asset": "assets/turbo-system-videos/720-collection-neogeo-metalslug.mp4",
+      "symbol": "station_collection_r67_neogeo_metalslug"
+    },
+    {
+      "file": "samurayshodow.mp4",
+      "key": "neogeo-samuraishodown",
+      "family": 1,
+      "catalogLeaf": "2 - SAMURAI SHODOWN COLEÇÃO",
+      "sourceSha256": "e7a75efd37e005921a92f6bed729a85007faa318707fa4d39bf6c905de675216",
+      "asset": "assets/turbo-system-videos/720-collection-neogeo-samuraishodown.mp4",
+      "symbol": "station_collection_r67_neogeo_samuraishodown"
+    },
+    {
+      "file": "the king hack.mp4",
+      "key": "neogeo-kofhacks",
+      "family": 1,
+      "catalogLeaf": "5 - HACKS",
+      "sourceSha256": "99be72559e4b4402923f620baf572e5f8cbfc9e36b977b8e322f0f9f3dc11c22",
+      "asset": "assets/turbo-system-videos/720-collection-neogeo-kofhacks.mp4",
+      "symbol": "station_collection_r67_neogeo_kofhacks"
+    },
+    {
+      "file": "the king of fithers.mp4",
+      "key": "neogeo-kof",
+      "family": 1,
+      "catalogLeaf": "3 - THE KING OF FIGTHERS COLEÇÃO",
+      "sourceSha256": "22dd58cc7499f4beb3932e44c777fd65fea845b3694227ea8cccdd317be77ff6",
+      "asset": "assets/turbo-system-videos/720-collection-neogeo-kof.mp4",
+      "symbol": "station_collection_r67_neogeo_kof"
+    },
+    {
+      "file": "top gear coleção.mp4",
+      "key": "snes-topgear",
+      "family": 0,
+      "catalogLeaf": "TOP GEAR",
+      "sourceSha256": "a3476ce96f9bf7959f3ac73239de31aac3c89d05e52cc1c94539269d77610091",
+      "asset": "assets/turbo-system-videos/720-collection-snes-topgear.mp4",
+      "symbol": "station_collection_r67_snes_topgear"
+    }
+  ],
+  "width": 720,
+  "height": 720,
+  "fps": 30,
+  "audio": false,
+  "playbackSpeed": 1,
+  "focusedDecoderOnly": true
+}

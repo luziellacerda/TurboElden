@@ -1,3 +1,13 @@
+# R67 instalada no A56 — vídeos, segurança e consumo do menu — 07/10/2026
+
+Leia `versions/station-collection-videos-r67-20261007/README.md`, STATUS e o handoff APP→SERVIDOR. APK d746cc02b602162b19509cd44ad7cf751e320de3b52199e7d48e86e9e897228f instalado/hash integral conferido no Samsung A56; UID/data original preservados. Entrada abriu ESActivity com sessão/perfil/catálogo200 (2212); alvo nativo30fps observado. Sem desinstalar, limpar dados, trocar assinatura ou ajustes do aparelho. Outro telefone não atualizado nesta entrega.
+
+Nove vídeos de coleções atualizados (inclui Top Gear e Samurai novo),55 vídeos720×720/30fps/sem áudio. DEX28+35 conciliam segurança213cfce com composição R66/R64, sem restaurar Activities antigas. DEX30 BIOS, runtime899e, motores/controles/faixa/saves preservados;13210 entradas iguais. GuiStore limitado30fps/diálogo parado15; callbacks Java34ms não formam teto global das salas. Não afirmar redução térmica50% ou prova/atestação hardware só pelos HTTP200.
+
+Retomada online NÃO implementada; retorno servidorb37c873 é análise. Pedido detalhado REC01–09 exige sessão sobrevivendo à queda, pausa real, sincronização e contrato/runtime coordenados. Não retirar timers/reabrir socket cru como suposta correção. Preservar v1 e outras plataformas. Fonte e recibos identificam APKexato; nenhum APK,segredo,ROM,BIOS ou captura pessoal deve ser publicado. Temporários E:, finais G:.
+
+## Histórico anterior
+
 # Retornos R62–R66 conciliados com o servidor — análise de07/10/2026
 
 Leia `docs/server/RETORNO-ANALISE-HANDOFFS-R62-R66-STATION-20261007.md`. API da07355/PID1147382/usuário exclusivo continua publicada; sem nova implantação por esta análise. APP atual R66/291f3949: Samsung e4397fd7 instalado/hash integral e catálogo conferidos; Motorola últimaR63/d9a35602. Recibos posteriores prevalecem sobre STATUS/README de preparação. Mantenedor relatou partida e comandos R63; gameplay CD/retomada não comprovados.
