@@ -151,3 +151,12 @@ Motorola Edge30 continua na última versão conferida R70 e precisa receber o me
 APK R71 antes de testes online em dupla. Servidor ainda depende da publicação,
 registro dos hashes exatos e ativação declarados no handoff. R71 não é tag estável
 geral e não substitui a tag estável de menu R69.
+
+### Observação posterior à instalação
+
+Após o desbloqueio pelo usuário, ActivityManager confirmou ESActivity em RESUMED:
+o carrossel abriu no pacote instalado. O mantenedor atribuiu o relato de Voltar
+à instalação/estado antigo aberto e informou que deixou de ocorrer. Não foi
+demonstrado crash da R71 nem criado um novo patch por essa hipótese. Não equivale
+a teste do retorno de salas ou gameplay. Recibo sanitizado:
+`evidence/android-followup-samsung-r71.json`.

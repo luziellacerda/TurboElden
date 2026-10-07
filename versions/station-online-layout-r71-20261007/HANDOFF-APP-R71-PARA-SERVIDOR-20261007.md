@@ -167,3 +167,12 @@ Recibo sanitizado: `evidence/installation-samsung-r71-20261007.json`.
 Motorola Edge30: última conferência R70. Atualizar para esta mesma R71 antes de
 homologar recuperação em dupla. A instalação no A56 não prova implantação Linux.
 STATUS separa compilação, instalação, visual, gameplay e servidor.
+
+### Observação posterior à instalação
+
+Após o desbloqueio pelo usuário, ActivityManager confirmou ESActivity em RESUMED:
+o carrossel abriu no pacote instalado. O mantenedor atribuiu o relato de Voltar
+à instalação/estado antigo aberto e informou que deixou de ocorrer. Não foi
+demonstrado crash da R71 nem criado um novo patch por essa hipótese. Não equivale
+a teste do retorno de salas ou gameplay. Recibo sanitizado:
+`evidence/android-followup-samsung-r71.json`.

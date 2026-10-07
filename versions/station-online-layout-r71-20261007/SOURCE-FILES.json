@@ -73,8 +73,8 @@
     },
     {
       "path": "versions/station-online-layout-r71-20261007/HANDOFF-APP-R71-PARA-SERVIDOR-20261007.md",
-      "bytes": 10589,
-      "sha256": "bf79fd46a04cd8b17cdc95d0c703f03fee8c4a7a764dd58cdd88f09506618e1b"
+      "bytes": 11077,
+      "sha256": "7cb48d693b51615f55507dc7043bdb51932da761a4944b4bdd6c5c975ef22946"
     },
     {
       "path": "versions/station-online-layout-r71-20261007/JAVA-OVERLAY-MANIFEST.json",
@@ -93,18 +93,23 @@
     },
     {
       "path": "versions/station-online-layout-r71-20261007/README.md",
-      "bytes": 9319,
-      "sha256": "34f117e23b84fe45ad0608d75e236c36dafe79231d3c1c886e3cd6aa4abfa281"
+      "bytes": 9807,
+      "sha256": "289dfe27492573b87de061e99b6c91cad42859d9c8b8e033767fdb725bdb8264"
     },
     {
       "path": "versions/station-online-layout-r71-20261007/STATUS.json",
-      "bytes": 2556,
-      "sha256": "31011efc0bf0e811139d957124c8de4484914a58e4ba42c0514a2926bc5f1828"
+      "bytes": 2659,
+      "sha256": "998b2ebb8e72ba89b76bc9acac0861a81bbcb75080a3b07a67c9f73a45528c05"
     },
     {
       "path": "versions/station-online-layout-r71-20261007/evidence/activity-resource-audit.json",
       "bytes": 8682,
       "sha256": "7668e777f3088feb9610936d48c7e9d60125b7a5ef93737fd72393560320b253"
+    },
+    {
+      "path": "versions/station-online-layout-r71-20261007/evidence/android-followup-samsung-r71.json",
+      "bytes": 624,
+      "sha256": "d9ded63c4541031029ea87ca0b77c58690adab0d3e99a0abcf3d61801df88eaa"
     },
     {
       "path": "versions/station-online-layout-r71-20261007/evidence/carousel-build-r71.json",

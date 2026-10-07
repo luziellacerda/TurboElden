@@ -41,6 +41,8 @@
     "screenLocked": true,
     "catalogAuthenticationVerified": false,
     "navigationRuntimeVerified": false,
-    "deviceSettingsChanged": false
+    "deviceSettingsChanged": false,
+    "catalogOpenedLater": true,
+    "followupReceipt": "evidence/android-followup-samsung-r71.json"
   }
 }
