@@ -1,3 +1,9 @@
+# R73 candidata compilada — handshake sob pausa — 07/10/2026
+
+Leia versions/station-recovery-handshake-r73-20261007/HANDOFF-APP-R73-PARA-SERVIDOR-20261007.md e STATUS. APK b23ff3d1e319ee050e6eb867e2643a5f66661da481dd2e3a4e50089d1604f077; runtime 9af2778898e4ba026d65d9b5c74ef3d8089e58bdbdf9be40f8e28f0eedcb14c2. Baseline nativo reproduziu MODE retido; função R73 envia não bloqueante e espera buffers drenarem antes READY. 1206checksJava+22nativos+39guardas. Dialog visível separado/diagnóstico limitado. **NÃO instalada nem homologada: servidor precisa adicionar duas identidades exatas preservando seis antigas.** Ambos os aparelhos permanecem R72/a8d3d28b. Teste R72/R72 22:48UTC: JNI ok/host-listening, ambos state1/PONGs, telaspretas. Sem atribuir causaúnica sem teste. Não removersegurança/timers, não trocar opções/cores, não ativarNeoGeo. Fontes/temporários E:, APK G:; dados/assinatura preservados. Operador implanta registro; nós não implantamosLinux.
+
+## Histórico anterior
+
 # R72 agora instalada nos dois aparelhos — 07/10/2026
 
 Samsung A56 e Motorola Edge30 com APK integral a8d3d28bb70618c52debf6e4cb0acaaf1f3bd1de19fe410dda85f6953caaec8e conferido. Motorola às22:44:21UTC, UID/data preservados. Tentativa mista anterior: host Samsung R72 passou native-hooks-loaded/native-listening/host-listening-ack e manteve PONGs, mas tela preta; convidado R71 reutilizou processo nativo preso com pause/stop timeouts. Mantenedor autorizou encerrar essa tentativa nos dois aparelhos antes de atualizar Motorola; sem limpar dados. Próxima conferência exige sala nova com ambos R72. Não afirmar gameplay corrigido. Ler recibos e handoff R72.

@@ -1,0 +1,27 @@
+bool station_netplay_recovery_poll(void)
+{
+   netplay_t *np=networking_driver_st.data;
+   if(!np)return false;
+   if(!netplay_sync_pre_frame(np)){station_recovery_fail();return false;}
+   {
+      size_t i;
+      bool pending = false;
+      for (i = 0; i < np->connections_size; i++)
+      {
+         struct netplay_connection *connection = &np->connections[i];
+         if ((connection->flags & NETPLAY_CONN_FLAG_ACTIVE) &&
+             !netplay_send_flush(&connection->send_packet_buffer,
+                connection->fd, false))
+         {
+            station_recovery_fail();
+            return false;
+         }
+         if ((connection->flags & NETPLAY_CONN_FLAG_ACTIVE) &&
+             buf_used(&connection->send_packet_buffer) != 0)
+            pending = true;
+      }
+      if (pending) return false;
+   }
+   return np->modus==NETPLAY_MODUS_INPUT_FRAME_SYNC &&
+      (np->is_server?np->connected_players>1:np->self_mode==NETPLAY_CONNECTION_PLAYING);
+}
