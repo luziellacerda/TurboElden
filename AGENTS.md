@@ -1,3 +1,16 @@
+# Retorno do servidor R71 ativo; falha Samsung antes do WSS — 07/10/2026
+
+Leia `docs/server/RETORNO-SERVIDOR-PARA-CLIENTE-RECONSTRUIDO-STATION-20261002.md`.
+API fonte `ab192bf1585e30f303d041f13b36a1f9c96d2caa`, DLL `815fc8bc99a9d16247488a1797d2726b928eb3e592fd8a19700371e8d57c3243`, PID observado 1230693. Ativada às 21:59:53 UTC: v2, seis engines exatas, quatro antigas preservadas. Passaram 91 verificações de estado, 177 isoladas e 181 públicas, com retomada, v1, catálogo 14/2212, capa e download real. Backup restaurado isoladamente; chaves, licenças, sandbox e outros produtos preservados.
+
+Perfis completos assinados em `room.memberProfiles`, capacidade `own-room-member-profiles-v1`, independem da página social. Contrato/esquema/recibos em `docs/server/recovery-r71-20261007`. O app pode incorporá-los em sucessora mantendo `members`/`ready` como autoridade.
+
+Recibo f64f685 confirma R71/SHA556170c3 nos dois. O teste NÃO comprovou gameplay: Samsung anfitrião completamente preto, Motorola aguardando. `recovery-failed` às 22:00:59.991 UTC antecede finalização WSS401 às 22:00:59.993; nenhum stream/host-listening/ticket do convidado. Não declarar licença ou autenticação como primeira causa. Capturar categoria/erro do Samsung por USB no PC do APK, com serial fixado, sem apagar dados ou alterar licença.
+
+A Activity não registra `libstation_retroarch` no carregador Java antes de chamar os JNI. Hipótese NATIVE_HOOK/UnsatisfiedLinkError, sem categoria real capturada. Preparador guardado `docs/server/recovery-r71-20261007/preparar-jni-registration-r71.py` compila Java8/API34 junto às interfaces R71; não é DEX/APK instalado nem correção física confirmada. Se corroborado, compor sucessora sobre R71 completa, preservando snapshot selado, DEX28, runtime d662, engines, menu, assinatura, UID/licença/saves. Não reduzir segurança nem forçar estado playing.
+
+## Histórico anterior
+
 # R71 agora instalada nos dois aparelhos — 07/10/2026
 
 Motorola Edge30 atualizado diretamente às21:37:39UTC deR70 paraR71, mesmo SHA integral do A56: `556170c32b6dd25fb5084693826d854adf736b4a1df156fd9229a8458b025018`. UID/data original preservados; sem partida ativa, desinstalação, limpeza de dados, ajuste no aparelho ou APKextra. Recibo `versions/station-online-layout-r71-20261007/evidence/installation-motorola-r71-20261007.json`. Entrada oficial solicitada. Ambos agora na mesmaR71; testes físicos pelo mantenedor. Servidor ainda conforme retorno publicado; não confundir instalação com ativaçãov2/gameplay. O handoff servidor e03a872 registra a entrega anterior a esta segunda instalação.
