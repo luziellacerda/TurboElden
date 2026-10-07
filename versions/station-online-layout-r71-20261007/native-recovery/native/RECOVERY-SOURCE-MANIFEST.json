@@ -1,0 +1,11 @@
+{
+  "upstreamCommit": "69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576",
+  "files": {
+    "native/station_recovery.h": "40cb8f2a75cd31cc530b41e853cce31524dd32ddc82a95313a328f358383108a",
+    "native/base-files.json": "7cc9069962704e78cf627885e688c140662d807986f9c0c94ba0aafb7560631c",
+    "recipes/patch_native.py": "7117bfcf668c40b65e3c904f15e2ca95e32ffb60166c7b4f27da49d52245434a",
+    "engine-patches/retroarch-station-all.patch": "45a5da0970b3a150b2652b3a7ee38ce798617d5778e94f26a9dd81c3826864ec",
+    "engine-patches/retroarch-station-auto-password.patch": "62254789975d892b2717e65b5f0232656befd347ed43232987c6ca2f2beabff2",
+    "engine-patches/retroarch-station-recovery.patch": "dfa54bc1c8524b036ffaefa49f89278c77a815b138bc2f4b69d153e60270c0a2"
+  }
+}

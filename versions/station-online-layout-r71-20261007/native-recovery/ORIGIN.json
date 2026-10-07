@@ -1,0 +1,25 @@
+{
+  "sourceCommit": "4d30401a80658dd56666ef10f48d9556b3fdd9e9",
+  "sourceManifestSHA256": "6a4c528ab4e270fffb29a8ff78f1735bc5c9b5d9ab010e1f21c08700161b3f55",
+  "originalFiles": {
+    "native/station_recovery.h": "40cb8f2a75cd31cc530b41e853cce31524dd32ddc82a95313a328f358383108a",
+    "native/base-files.json": "7cc9069962704e78cf627885e688c140662d807986f9c0c94ba0aafb7560631c",
+    "recipes/patch_native.py": "343c6f0513c3bbefc171da1a91142de7a902c0bd195f130ae1d14ec27602bd81",
+    "engine-patches/retroarch-station-all.patch": "45a5da0970b3a150b2652b3a7ee38ce798617d5778e94f26a9dd81c3826864ec",
+    "engine-patches/retroarch-station-auto-password.patch": "62254789975d892b2717e65b5f0232656befd347ed43232987c6ca2f2beabff2",
+    "engine-patches/retroarch-station-recovery.patch": "34469bb6fb9f6ce4272983e01c36fd1f0f1673c32f367c24eb0c5a3723f4a66a",
+    "recipes/build_native_runtime.py": "7d594d76e21cabda3375eb0f9f1295e903765d1a3d2ee798afb4e95d931e964a",
+    "tests/native_recovery_test.c": "b15734a014e6cbade770b71b8195126320722804d1bfcb32d81b51982dc6c4e4"
+  },
+  "modifiedFiles": {
+    "recipes/patch_native.py": {
+      "before": "343c6f0513c3bbefc171da1a91142de7a902c0bd195f130ae1d14ec27602bd81",
+      "after": "7117bfcf668c40b65e3c904f15e2ca95e32ffb60166c7b4f27da49d52245434a"
+    },
+    "engine-patches/retroarch-station-recovery.patch": {
+      "before": "34469bb6fb9f6ce4272983e01c36fd1f0f1673c32f367c24eb0c5a3723f4a66a",
+      "after": "dfa54bc1c8524b036ffaefa49f89278c77a815b138bc2f4b69d153e60270c0a2"
+    }
+  },
+  "purpose": "Only running-fast starvation requests recovery; ordinary input-latency, spectator and server pacing remain upstream behavior. No input latency, buffer or core changes."
+}

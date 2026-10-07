@@ -1,0 +1,181 @@
+--- a/frontend/drivers/platform_unix.c
++++ b/frontend/drivers/platform_unix.c
+@@ -606,6 +606,13 @@
+ }
+ 
+ /* Automatic credentials are permitted only for the typed Station client launch. */
++#include "station_recovery.h"
++JNIEXPORT void JNICALL Java_org_emulationstation_frontend_netplay_StationRetroActivity_stationRecoveryControl(JNIEnv *env,jclass type,jlong epoch,jboolean wait,jboolean visible)
++{ (void)env;(void)type;station_recovery_request(epoch,wait,visible); }
++JNIEXPORT jlong JNICALL Java_org_emulationstation_frontend_netplay_StationRetroActivity_stationRecoveryStatus(JNIEnv *env,jclass type)
++{ (void)env;(void)type;return station_recovery_status(); }
++JNIEXPORT jboolean JNICALL Java_org_emulationstation_frontend_netplay_StationRetroActivity_stationRecoveryStalled(JNIEnv *env,jclass type)
++{ (void)env;(void)type;return station_recovery_is_stalled(); }
+ static bool station_netplay_client = false;
+ bool station_android_netplay_autopassword(void)
+ {
+@@ -1506,6 +1513,11 @@
+       args->station_netplay_address = station_address;
+       args->station_netplay_port = station_port;
+       station_netplay_client = args->station_netplay_role == 2;
++      CALL_OBJ_METHOD_PARAM(env,jstr,obj,android_app->getStringExtra,
++            (*env)->NewStringUTF(env,"STATION_RECOVERY_PROTOCOL"));
++      if(jstr) { const char *value=(*env)->GetStringUTFChars(env,jstr,0);
++         station_recovery_configure(args->station_netplay_role!=0 && value && !strcmp(value,"station-stream.v2"));
++         if(value)(*env)->ReleaseStringUTFChars(env,jstr,value); }
+    }
+ 
+    /* Current IME. */
+--- a/network/netplay/netplay_frontend.c
++++ b/network/netplay/netplay_frontend.c
+@@ -8355,7 +8355,11 @@
+    }
+ 
+    /* If we're stalling, consider disconnection. */
+-   if (netplay->stall != NETPLAY_STALL_NONE && netplay->stall_time)
++   if (netplay->stall != NETPLAY_STALL_NONE && netplay->stall_time
++#ifdef ANDROID
++       && !station_recovery_active()
++#endif
++   )
+    {
+       retro_time_t now = cpu_features_get_time_usec();
+ 
+@@ -8959,6 +8963,16 @@
+  * Returns: true if the frontend is cleared to emulate the frame,
+  * false if we're stalled or paused
+  **/
++#ifdef ANDROID
++bool station_netplay_recovery_poll(void)
++{
++   netplay_t *np=networking_driver_st.data;
++   if(!np)return false;
++   if(!netplay_sync_pre_frame(np)){station_recovery_fail();return false;}
++   return np->modus==NETPLAY_MODUS_INPUT_FRAME_SYNC &&
++      (np->is_server?np->connected_players>1:np->self_mode==NETPLAY_CONNECTION_PLAYING);
++}
++#endif
+ static bool netplay_pre_frame(netplay_t *netplay)
+ {
+    /* FIXME: This is an ugly way to learn we're not paused anymore */
+@@ -8971,6 +8985,9 @@
+ 
+    if (!netplay_sync_pre_frame(netplay))
+    {
++#ifdef ANDROID
++      if(station_recovery_active()){station_recovery_fail();return false;}
++#endif
+       netplay_disconnect(netplay);
+       return true;
+    }
+@@ -9027,6 +9044,9 @@
+       /* We may have received data even if we're stalled,
+        * so run post-frame sync. */
+       netplay_sync_input_post_frame(netplay, true);
++#ifdef ANDROID
++      if(station_recovery_active() && netplay->stall!=NETPLAY_STALL_NONE)station_recovery_mark_stalled();
++#endif
+       return false;
+    }
+ 
+--- a/runloop.c
++++ b/runloop.c
+@@ -7361,6 +7361,16 @@
+          break;
+    }
+ 
++#if defined(ANDROID) && defined(HAVE_NETWORKING)
++   if(station_recovery_waiting())
++   {
++      bool connected=station_netplay_recovery_poll();
++      station_recovery_confirm(true,connected);
++      /* No retro_run, rollback replay, audio generation or cached-frame rendering. */
++      retro_sleep(50);return 0;
++   }
++   if(station_recovery_active())station_recovery_confirm(false,true);
++#endif
+ #ifdef HAVE_THREADS
+    if (runloop_st->flags & RUNLOOP_FLAG_AUTOSAVE)
+       autosave_lock();
+--- /dev/null
++++ b/frontend/drivers/station_recovery.h
+@@ -0,0 +1,79 @@
++#ifndef STATION_RECOVERY_H
++#define STATION_RECOVERY_H
++#include <stdbool.h>
++#include <stdint.h>
++#include <pthread.h>
++
++/* Android Station-only state. JNI requests; only the emulation thread confirms.
++ * This header is compiled in RetroArch's Android griffin translation unit. */
++static pthread_mutex_t station_recovery_mutex = PTHREAD_MUTEX_INITIALIZER;
++static bool station_recovery_enabled, station_recovery_wait=true;
++static bool station_recovery_visible=true, station_recovery_confirmed_wait;
++static bool station_recovery_connected, station_recovery_failed;
++static bool station_recovery_stalled;
++static int64_t station_recovery_epoch, station_recovery_confirmed_epoch;
++static void station_recovery_configure(bool enabled)
++{
++   pthread_mutex_lock(&station_recovery_mutex);
++   station_recovery_enabled=enabled;
++   pthread_mutex_unlock(&station_recovery_mutex);
++}
++static bool station_recovery_active(void)
++{
++   bool result; pthread_mutex_lock(&station_recovery_mutex);
++   result=station_recovery_enabled; pthread_mutex_unlock(&station_recovery_mutex);
++   return result;
++}
++static void station_recovery_request(int64_t epoch, bool wait, bool visible)
++{
++   pthread_mutex_lock(&station_recovery_mutex);
++   if(epoch>=station_recovery_epoch && epoch<(INT64_MAX>>3))
++   {
++      if(epoch!=station_recovery_epoch || wait!=station_recovery_wait)
++         station_recovery_confirmed_epoch=-1;
++      station_recovery_epoch=epoch; station_recovery_wait=wait;
++      if(wait)station_recovery_stalled=false;
++      station_recovery_visible=visible;
++   }
++   pthread_mutex_unlock(&station_recovery_mutex);
++}
++static bool station_recovery_waiting(void)
++{
++   bool result; pthread_mutex_lock(&station_recovery_mutex);
++   result=station_recovery_enabled && (station_recovery_wait || station_recovery_failed);
++   pthread_mutex_unlock(&station_recovery_mutex); return result;
++}
++static void station_recovery_confirm(bool wait, bool connected)
++{
++   pthread_mutex_lock(&station_recovery_mutex);
++   station_recovery_confirmed_epoch=station_recovery_epoch;
++   station_recovery_confirmed_wait=wait; station_recovery_connected=connected;
++   pthread_mutex_unlock(&station_recovery_mutex);
++}
++static void station_recovery_fail(void)
++{
++   pthread_mutex_lock(&station_recovery_mutex);station_recovery_failed=true;
++   pthread_mutex_unlock(&station_recovery_mutex);
++}
++static void station_recovery_mark_stalled(void)
++{
++   pthread_mutex_lock(&station_recovery_mutex);station_recovery_stalled=true;
++   pthread_mutex_unlock(&station_recovery_mutex);
++}
++static bool station_recovery_is_stalled(void)
++{
++   bool result;pthread_mutex_lock(&station_recovery_mutex);result=station_recovery_stalled;
++   pthread_mutex_unlock(&station_recovery_mutex);return result;
++}
++static int64_t station_recovery_status(void)
++{
++   int64_t result;pthread_mutex_lock(&station_recovery_mutex);
++   result=station_recovery_confirmed_epoch<0?-1:
++      (station_recovery_confirmed_epoch<<3) |
++      (station_recovery_confirmed_wait?1:0) | (station_recovery_connected?2:0) |
++      (station_recovery_failed?4:0);
++   pthread_mutex_unlock(&station_recovery_mutex);return result;
++}
++/* Defined by netplay_frontend.c: receives/flushes protocol while retro_run is stopped. */
++bool station_netplay_recovery_poll(void);
++#endif
