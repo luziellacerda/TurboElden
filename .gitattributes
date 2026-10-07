@@ -41,3 +41,8 @@ versions/station-collection-corners-r68-20261007/** -text
 
 # Freeze the exact recovery candidate compiler inputs and evidence.
 versions/station-online-recovery-r67-20261007/** -text
+
+# Verbatim Linux receipts.
+docs/server/recovery-r67-20261007/** -text
+docs/server/entrega-app-r68-20261007/** -text whitespace=cr-at-eol
+docs/server/PEDIDO-IMPLEMENTACAO-RETOMADA-ONLINE-APOS-APP-R67-20261007.md -text

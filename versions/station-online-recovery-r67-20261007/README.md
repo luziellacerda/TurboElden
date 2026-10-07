@@ -33,7 +33,7 @@ Usar esta branch completa, com os snapshots R55/R57/R62/R63/R64/R67/R68 exigidos
 
 ## Testes reproduzíveis e limites
 
-`recipes/run_transport_tests.py --server-root <Servidor-pix-candidato> --java-build <java> --android-jar <API34> --json-jar <json-20250517.jar> --jdk <JDK17> --output <pasta-nova>` executa vectors32 + TLS/WSS/TCP45 com backend real .NET em loopback e autenticação/chaves sintéticas. O teste guarda o fixture privado temporário, fecha apenas o processo filho que criou e apaga as credenciais. Confirmou1.620.000 bytes nos dois fluxos, quedas host/convidado/ambos, foreground e stall. A pausa JNI é simulada neste teste; não é gameplay Android.
+`recipes/run_transport_tests.py --server-root <Servidor-pix-candidato> --java-build <java> --android-jar <API34> --json-jar <json-20250517.jar> --jdk <JDK17> --output <pasta-nova>` executa vectors32 + TLS/WSS/TCP46 com backend real .NET em loopback e autenticação/chaves sintéticas. O teste guarda o fixture privado temporário, fecha apenas o processo filho que criou e apaga as credenciais. Confirmou1.620.000 bytes nos dois fluxos, quedas host/convidado/ambos, foreground e stall. A pausa JNI é simulada neste teste; não é gameplay Android.
 
 `cc -Wall -Wextra -Werror -std=c11 -pthread -Inative tests/native_recovery_test.c -o <saida>; <saida>` confirma13 invariantes do controle nativo em host. O patch unificado foi reaplicado sobre os três arquivos originais e reproduziu exatamente os quatro arquivos compilados. Testes de servidor/compatibilidade estão no retorno.
 
