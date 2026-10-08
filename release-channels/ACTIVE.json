@@ -19,7 +19,7 @@
       "version": "R85",
       "directory": "test-up-to-4-players-r85",
       "branch": "fix/station-title-count-r85-20261008",
-      "sourceCommit": null,
+      "sourceCommit": "b7544b0c7e724df41d2bcc6e3d4509e4c74517b0",
       "sourceDirectory": "versions/station-title-count-r85-20261008",
       "apk": "TurboStations-Premium-R85-20261008.apk",
       "apkSHA256": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
@@ -36,7 +36,7 @@
       "installationReceipt": "versions/station-title-count-r85-20261008/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "pending shared-backdrop source snapshot",
+      "sourceCommitStatus": "complete executable snapshot",
       "installationStatus": "exact shared-backdrop APK installed; approved game effect reused unchanged"
     }
   }
