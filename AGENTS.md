@@ -4,7 +4,7 @@ O mantenedor corrigiu a referência: as capas em uso no aplicativo NÃO são as 
 
 # Retorno R79 do servidor: revisão 19 aplicada — 08/10/2026
 
-Leia `docs/server/RETORNO-IMPLEMENTACAO-R79-SINOPSES-E-MULTIPLAYER-20261008.md` e `docs/server/recovery-r79-20261008/`. Servidor publicado `aa0c6fe9644b5aaae10a4ca70fab484a69da0c2d`, fonte candidata `b472d8a653e065cccb00dfb15dbea3d56c03db98`. Retorno recebido sobre `167c214`, preservando a candidata visual Dreamcast R80, seus bytes/recibos e os canais R76/R79. Não foi compilado/instalado APK por este retorno.
+Leia `docs/server/RETORNO-IMPLEMENTACAO-R79-SINOPSES-E-MULTIPLAYER-20261008.md` e `docs/server/recovery-r79-20261008/`. Servidor publicado `a4fd0d73a7eaaf43fafbae1c42e9b83580985433`, fonte candidata `b472d8a653e065cccb00dfb15dbea3d56c03db98`. Retorno recebido sobre `1ef9384`, preservando a candidata visual Dreamcast R80, seus bytes/recibos e os canais R76/R79. Não foi compilado/instalado APK por este retorno.
 
 206 sinopses APLICADAS às18:04:18UTC: catálogo19,3734IDs/3479visíveis/255compatibilidade,3590descrições presentes/144vazias. CAS literal, backup e overrides do importador persistentes. Leitura após varreduras e consulta autenticada/assinada no domínio público18:21:17 confirmaram revisão19/todos3479metadados:200alteraçõesvisíveis+6compatibilidade. Fixture removida,sem sala/download. Catálogo completo3734,lista206alterações e144ausentes entregues. LacunasDreamcast101/CPS1 7/CPS2 5/CPS3 3/FBNeo28;17textoslongos nativos preservados. Não é tradução/revisão factual integral nem aprovação de jogadores. Cache/telas revision19 nos aparelhos não observados pelo Linux.
 

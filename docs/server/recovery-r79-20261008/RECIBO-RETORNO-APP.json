@@ -1,9 +1,9 @@
 {
   "utc": "2026-10-08T18:47:47.282582+00:00",
   "direction": "SERVER_TO_APP",
-  "serverCommit": "aa0c6fe9644b5aaae10a4ca70fab484a69da0c2d",
+  "serverCommit": "a4fd0d73a7eaaf43fafbae1c42e9b83580985433",
   "serverBranch": "docs/station-r79-server-return-20261008",
-  "appParentCommit": "167c214a408e5a573ce0b1b61077104cf6878078",
+  "appParentCommit": "1ef9384478e0f290db556961428d9162cc33d58e",
   "executableSourceChanged": false,
   "apkGenerated": false,
   "phonesChanged": false,
@@ -15,8 +15,8 @@
     {
       "path": "docs/server/RETORNO-IMPLEMENTACAO-R79-SINOPSES-E-MULTIPLAYER-20261008.md",
       "serverPath": "docs/station-android/RETORNO-IMPLEMENTACAO-R79-SINOPSES-E-MULTIPLAYER-20261008.md",
-      "sha256": "a4ce7fb5aaa596a5be741fea81b602d08222a7cb79c9abe9665ed75e7d92a8c0",
-      "sizeBytes": 9870
+      "sha256": "7a1e171615a9d49a10c4dc2452904c2ca1bc8c3ecceeaa052eb68745f1cb0337",
+      "sizeBytes": 10154
     },
     {
       "path": "docs/server/recovery-r79-20261008/CATALOGO-REV19.json",
@@ -57,8 +57,8 @@
     {
       "path": "docs/server/recovery-r79-20261008/RECIBO-RETORNO-SERVIDOR.json",
       "serverPath": "docs/station-android/recovery-r79-20261008/RECIBO-RETORNO-SERVIDOR.json",
-      "sha256": "59b1a992a563b79d0cce9c61d141f0f4cfd1059308743a2b2a359980c536d6bd",
-      "sizeBytes": 4233
+      "sha256": "3acf8d5ef5b60dcfd788d671041fbd85b24f1e1974c30df9cdfe4028b8dd01a8",
+      "sizeBytes": 4264
     },
     {
       "path": "docs/server/recovery-r79-20261008/SINOPSES-APLICADAS-REV19.json",
@@ -72,5 +72,6 @@
       "sha256": "ab47a4269f6cd59076df5b8746b50bbaccf0eee866658c7d2b3a0cde437b5c52",
       "sizeBytes": 121468
     }
-  ]
+  ],
+  "candidateVisualStatus": "archived; future use only after a new maintainer request"
 }
