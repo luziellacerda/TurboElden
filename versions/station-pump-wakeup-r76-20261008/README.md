@@ -17,4 +17,4 @@ A DLL candidata do servidor 6f27c6c continua fora da homologação desta entrega
 
 Samsung A56 atualizado em 08/10/2026 às 11:25:32 UTC por streaming direto. Hash integral do APK no aparelho conferido; UID e data original preservados, sem desinstalação ou limpeza de dados. A entrada oficial abriu a ESActivity. Não houve teste de partida nesta instalação.
 
-Motorola Edge 30 não estava conectado; última instalação comprovada permanece R74. A R76 está pronta para ele, após conectar e sair de qualquer partida.
+Motorola Edge 30 atualizado em 08/10/2026 às 11:44:14 UTC por streaming direto. Hash integral, UID e data original conferidos. Ambos os aparelhos agora têm o mesmo APK R76; não houve teste de partida em dupla nesta instalação.

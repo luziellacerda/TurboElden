@@ -1,6 +1,6 @@
 {
   "version": "R76",
-  "utc": "2026-10-08T11:30:01.950077+00:00",
+  "utc": "2026-10-08T11:45:17.407816+00:00",
   "compiled": true,
   "signed": true,
   "installed": true,
@@ -15,7 +15,8 @@
   "serverCandidateActivated": false,
   "twoDeviceGameplayVerified": false,
   "phones": [
-    "Samsung A56"
+    "Samsung A56",
+    "Motorola Edge 30"
   ],
   "visualR75Included": true,
   "sourceCount": 201,
@@ -29,8 +30,6 @@
     "tlsExecutions": 6,
     "tlsExactBytes": 30817216
   },
-  "pendingPhones": [
-    "Motorola Edge 30 (USB ausente; ultima versao conferida R74)"
-  ],
+  "pendingPhones": [],
   "entryForegroundVerified": true
 }
