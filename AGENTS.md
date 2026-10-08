@@ -6,6 +6,8 @@ Entrega APP → SERVIDOR publicada: app `2a8adce752b7778c90b2e70ecd67d1bc1fc62a9
 
 Pedido posterior: salas de até quatro jogadores apenas em títulos compatíveis. Ler `docs/server/PLANO-SALAS-ATE-4-JOGADORES-20261008.md` e auditoria JSON. É proposta, não suporte implementado: servidor/relay/app ainda limitam a dois; Multitap SNES tem bloqueio id>11 confirmado no core do APK. Não anunciar quatro vagas nem enviar campos novos antes do contrato versionado e da qualificação de controles/transporte. Não alterar R76 por esse documento.
 
+Pedido das salas de até quatro publicado no Servidor-pix: `6d40e26fc132d68ca482421bc29f10cf33d5d699`, branch `docs/station-four-player-rooms-audit-20261008`, documento `docs/station-android/PEDIDO-SALAS-ATE-4-JOGADORES-20261008.md`. Auditoria app `f8e8779737ae2cf3280b371eec4a6efc17f8e605`. É proposta APP → SERVIDOR; quatro jogadores continuam não implementados. O operador deve devolver contrato/capabilities e arquitetura de canais antes de habilitar novas vagas. Recibo local `docs/server/RECIBO-PEDIDO-SALAS-4-JOGADORES-20261008.json`.
+
 ## Histórico anterior
 
 # Retorno efetivo R74 do servidor recebido; R75 visual preservada — 07/10/2026
