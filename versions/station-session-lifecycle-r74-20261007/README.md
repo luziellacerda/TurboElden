@@ -2,7 +2,7 @@
 
 ## Estado
 
-Compilada e assinada com o mesmo certificado. **Não instalada e não homologada em partida real.** Ambos aparelhos continuam na R73 nesta entrega. O operador precisa cadastrar as duas identidades novas do runtime antes da conferência online.
+Compilada, assinada e **instalada nos dois aparelhos por pedido explícito**, com o SHA integral conferido em cada um. Não homologada em partida real. O cadastro R74 pelo servidor ainda não foi confirmado. Recibos em `INSTALLATION.json` e `evidence/installation-*-r74.json`.
 
 - APK local: `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Premium-R74-20261007.apk`
 - SHA-256: `e56896f28b16645653bfd28311cd0a8a9a5458e6d443849916a4dede6dc7fafe`; `2122907720` bytes.

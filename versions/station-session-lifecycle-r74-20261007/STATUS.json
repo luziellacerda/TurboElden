@@ -3,7 +3,7 @@
   "branch": "fix/station-r74-session-lifecycle-20261007",
   "base": "R73",
   "compiled": true,
-  "installed": false,
+  "installed": true,
   "stable": false,
   "androidGameplay": false,
   "serverActivationVerified": false,
@@ -43,7 +43,20 @@
       "recoveryProtocol": "station-stream.v2"
     }
   ],
-  "installationBlockedBy": "New runtime identities must be activated by server operator before online acceptance; no active game may be interrupted",
-  "currentPhones": "Both last verified R73; no R74 installation performed",
-  "linuxDeployed": false
+  "installationBlockedBy": null,
+  "currentPhones": "Samsung A56 and Motorola Edge 30 verified R74; installed by explicit request before new registry confirmation",
+  "linuxDeployed": false,
+  "installations": {
+    "samsung": {
+      "model": "SM-A566E",
+      "completedUTC": "2026-10-08T00:31:19.637993+00:00",
+      "sha256": "e56896f28b16645653bfd28311cd0a8a9a5458e6d443849916a4dede6dc7fafe"
+    },
+    "motorola": {
+      "model": "motorola edge 30",
+      "completedUTC": "2026-10-08T00:30:49.949930+00:00",
+      "sha256": "e56896f28b16645653bfd28311cd0a8a9a5458e6d443849916a4dede6dc7fafe"
+    }
+  },
+  "onlineAcceptancePending": "Effective R74 registry confirmation and two-device gameplay; never bypass engine identity"
 }

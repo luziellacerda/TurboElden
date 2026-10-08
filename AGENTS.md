@@ -1,3 +1,11 @@
+# R74 instalada nos dois aparelhos — 07/10/2026
+
+Pedido explícito do mantenedor para instalar antes da confirmação do novo registro. Samsung A56 em `2026-10-08T00:31:19.637993+00:00` e Motorola Edge 30 em `2026-10-08T00:30:49.949930+00:00`: SHA integral `e56896f28b16645653bfd28311cd0a8a9a5458e6d443849916a4dede6dc7fafe` conferido. UID e data original preservados; envio direto, sem APK extra, desinstalação, limpeza de dados ou ajustes de aparelho. Mantenedor saiu do jogo Samsung; nenhum emulador ativo foi identificado no início de cada instalação.
+
+Fonte executável continua557014b4ff5ec5c3c0162847d922c0587f68b0e9; APK/runtime e segurança não foram recompilados nem alterados. Leia `versions/station-session-lifecycle-r74-20261007/INSTALLATION.json`. Entrada oficial solicitada; não afirmar autologin, gameplay ou retomada apenas pelo sucesso da instalação. Último retorno real do servidor continua815ceaca. Pedido8d48252 é nosso handoff; novo registro rs4/runtime804b2acfea4c ainda precisa confirmação. Não reinstalar por mero cadastro nem iniciar sala sem identidade compatível; não alegar estabilidade.
+
+## Histórico anterior
+
 # R74 candidata — ciclo de vida, ANR e latência — 07/10/2026
 
 Entrega publicada: app `557014b4ff5ec5c3c0162847d922c0587f68b0e9`; pedido APP → SERVIDOR `8d48252fb7e91af83b6138afa411d5c2607edcc8`, branch `docs/station-r74-session-lifecycle-20261007`, documento `docs/station-android/ENTREGA-APP-R74-LIFECYCLE-LATENCIA-20261007.md`. Recibo em `docs/server/RECIBO-ENTREGA-R74-LIFECYCLE-20261007.json`. É nosso pedido completo, não resposta, ativação ou implantação Linux. Não confundir com o último retorno real 815ceaca. O commit executável permanece 557014b; acréscimo posterior apenas documental.
