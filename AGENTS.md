@@ -1,3 +1,15 @@
+# R79 Corrigir bootstrap das salas e recuperar sinopses Dreamcast — 08/10/2026
+
+Leia `versions/station-room-bootstrap-r79-20261008/README.md`, STATUS, handoff e recibos. Falha R78 confirmada no Motorola: `StationHttp.exchange:59` rejeita localmente `POST /v1/station/online/multiplayer/command` porque a rota faltava no allowlist; o bootstrap abortava antes de apresentar o snapshot social e a capa dependia desse snapshot. R79 permite somente esse POST (8.192 bytes), separa a consulta opcional da presença e carrega capa/título/plataforma do catálogo local. Não atribuir essa consulta ausente ao servidor.
+
+Motorola recebeu R79 em 08/10 às 15:12:38 UTC; SHA integral `c2aeee4443dedc2862b29dde1f972574bc25464d6993abf01f34d43531558f0a` conferido. UID/data/licença preservados, sem APK extra, mesmo certificado. Abriu ESActivity sem login; sinopse de Bust-A-Move 4 do Dreamcast visível, em espanhol conforme XML de origem. Battletoads em Criar sala mostrou capa/nome/plataforma/avaliação, indicador Online e aviso de ativação pendente; recibo `evidence/physical-check.json`. Nenhuma sala ou partida foi iniciada nessa conferência. Samsung não foi atualizado neste passo e permanece R78. APK final mantido em E: por autorização anterior devido à falta de espaço em G:; não apagar backups.
+
+Dreamcast: tela atual mostra 243 jogos; export usado na R78 tinha só sete sistemas e não incluía Dreamcast. R79 oferece fallback de descrição para 461 títulos distintos do XML local, por plataforma/título completo com normalização limitada de caixa/espaço; cinco nomes conflitantes excluídos. Não é catálogo vivo auditado, tradução integral nem prova de quantidade de jogadores. Retorno R78 entregou os 243 IDs de Dreamcast na revisão 18; cruzamento R79 encontrou 142 nomes exatos e 101 ausentes. Ver evidence/dreamcast-revision18-audit.json, pesquisar lacunas sem declarar cobertura completa.
+
+Último retorno real `af58034` recebido antes da publicação, revisão 18; produção v2. R77/R78 bloquearam novas salas sem perfis, INCLUSIVE duas pessoas. R79 corrige apresentação/consulta, mantém runtime/cores/engines R77 e requisitos de aprovação; não anunciar somente três/quatro como pendentes, nem renomear engine para usar cadastro rs4. Entrega Git documental não ativa Linux. 209 Java, duas fontes alteradas; 44 checks de rota (22 baseline/22 fix), 29 descoberta controlada, cinco guardas e 4.156 lookup/precedência; carrossel R78 reproduzido byte a byte. Três entradas do APK mudam, 13.223/59 vídeos preservados. Não declarar gameplay por esses testes.
+
+## Histórico anterior
+
 # R78 instalada nos dois aparelhos por pedido explícito — 08/10/2026
 
 O mantenedor pediu instalar nos dois após receber o aviso de que a ativação online R77/R78 continua pendente. R78 instalada diretamente no Motorola Edge 30 às 14:41:44 UTC e no Samsung A56 às 14:44:57 UTC; SHA integral `e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5` conferido em ambos. UID, data original de instalação e diretório de dados preservados. Sem desinstalar, limpar dados, alterar configurações ou deixar APK extra no telefone. Não havia Activity de emulador aberta na instalação.
