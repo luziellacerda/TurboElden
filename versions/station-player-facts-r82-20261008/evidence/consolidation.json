@@ -1331,6 +1331,12 @@
   },
   "sourceCount": 210,
   "previousChannel": "test-up-to-4-players-r81",
-  "cleanupPending": true,
-  "serverChanged": false
+  "cleanupPending": false,
+  "serverChanged": false,
+  "canonicalApkCount": 2,
+  "removed": [
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\test-up-to-4-players-r81\\TurboStations-Premium-R81-20261008.apk",
+    "E:\\ESTUDO APK\\work\\station-player-facts-r82-20261008\\package\\TurboStations-Premium-R82-20261008.apk"
+  ],
+  "previousSourceDirectoryPreserved": true
 }

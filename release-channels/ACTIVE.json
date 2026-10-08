@@ -19,7 +19,7 @@
       "version": "R82",
       "directory": "test-up-to-4-players-r82",
       "branch": "fix/station-player-facts-r82-20261008",
-      "sourceCommit": null,
+      "sourceCommit": "fbd2c32d0b5009684eebd60bead458d6ebad0c06",
       "sourceDirectory": "versions/station-player-facts-r82-20261008",
       "apk": "TurboStations-Premium-R82-20261008.apk",
       "apkSHA256": "c760e3379dc78302a74ed46d99e1ae5d0836295d37fafe3c17b954871192d1bc",
@@ -34,7 +34,6 @@
         "motorola-edge-30"
       ],
       "installationReceipt": "versions/station-player-facts-r82-20261008/INSTALLATION.json",
-      "sourceCommitStatus": "pending",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false
     }

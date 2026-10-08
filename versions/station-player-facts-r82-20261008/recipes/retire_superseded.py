@@ -1,4 +1,4 @@
-"""Retire only the verified R81 backup and duplicate E: APK after R82 reproduction."""
+"""Retire only the verified obsolete R81 APK and duplicate E: APK; keep all older sources and build artifacts."""
 from pathlib import Path
 import hashlib,json,shutil,subprocess
 ROOT=Path(__file__).resolve().parents[1];REPO=ROOT.parents[1]
@@ -31,10 +31,13 @@ def main():
     # Historical R81 sources must be committed, not only present in a working folder.
     result=subprocess.run(['git','-c','safe.directory='+REPO.as_posix(),'cat-file','-e','HEAD:versions/station-online-readiness-r81-20261008/JAVA-SOURCE-MANIFEST.json'],cwd=REPO,capture_output=True)
     assert result.returncode==0
-    shutil.rmtree(resolved);temp.unlink()
+    old_apk=resolved/'TurboStations-Premium-R81-20261008.apk'
+    assert old_apk.resolve().parent==resolved and old_apk.is_file() and not old_apk.is_symlink()
+    assert sha(old_apk)==package['baseSHA256']
+    old_apk.unlink();temp.unlink()
     expected={BACKUP/c['directory']/c['apk'] for c in active['channels'].values()}
     assert set(BACKUP.rglob('*.apk'))==expected
-    receipt.update(cleanupPending=False,canonicalApkCount=2,removed=[str(resolved),str(temp)])
+    receipt.update(cleanupPending=False,canonicalApkCount=2,removed=[str(old_apk),str(temp)],previousSourceDirectoryPreserved=True)
     (ROOT/'evidence/consolidation.json').write_text(json.dumps(receipt,indent=2)+'\n','utf8')
-    print('R81 backup and exact duplicate R82 APK retired; two canonical installers remain.')
+    print('Only obsolete R81 APK and exact duplicate R82 APK retired; older sources preserved, two canonical installers remain.')
 if __name__=='__main__':main()
