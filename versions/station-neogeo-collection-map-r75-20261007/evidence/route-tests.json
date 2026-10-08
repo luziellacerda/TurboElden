@@ -1,0 +1,83 @@
+{
+  "utc": "2026-10-08T00:48:46.287298+00:00",
+  "success": true,
+  "scope": "Compare exact R71/R75 media routing with independent server UTF-8 fixtures.\n\nNo Android, decoder, network, game or APK is run. The production folder/video\nrouting functions are extracted verbatim; only their in-memory GUI data is\nadapted to a host process. All compiler outputs and logs stay on E:.\n",
+  "sourceSHA256": {
+    "baseHeader": "10daa6b42d46d7bc1f099e705d9fa258af8c1a43a0ef6a0a7d4071cacbfe64f9",
+    "candidateHeader": "5ca0f4f114037e605b698067b34d01cb6f0aef2ba4c3d223117801d8a71a693b",
+    "folders": "71fa0864f7833c1e2cf29eac8c7a0bf97ff15115625fd55789819a69d23b1944",
+    "video": "901d01341f3c316e02ca5b07cc278f5bc0864cff9ba39da7ce52030888261cc6",
+    "systems": "2d0e351bed93dd3f26548f6b92157f232b81a3df9586cd65c0900f1ce1df3cf5",
+    "catalog": "ab719e7345f74afbe38ec0a96d9897efb82fe4c4343908229e34f3f29db74acf",
+    "mapping": "daa147fbd4a8ea1864419c8d6fafe81122814a3910c22ff8d05272841b7f6405"
+  },
+  "testSourceSHA256": "60a62efded38c7df4d75041c526cb7289570c3023b2551286532b40ddfca6989",
+  "recipeSHA256": "77500555e0f6569ba93618b9b568f524543d896e8e45b530131168ea8ad4a153",
+  "compilerSHA256": "986af49c2d1eefeac324f724ff54597753d1053927fa5d58a37a457f578e1cf8",
+  "independentCatalogCommit": "112d6b03d6ce00ccb340ed400806791f0fe7263d",
+  "independentCatalogPath": "docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "independentCatalogSHA256": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e",
+  "independentNeoFixtures": 6,
+  "changedLiterals": 5,
+  "productionFolderVideoSHA256": "afbd890e6fdffc7667fabf3a43ebb94a628ea43e14684e6c33a6bd8ff5123599",
+  "productionVideoAssetSHA256": "47eae82c1f0933c4edb09d3c6f2af97eabcc66dc9d62e1f43269acaaad4f5958",
+  "results": [
+    {
+      "label": "baseline",
+      "headerSHA256": "10daa6b42d46d7bc1f099e705d9fa258af8c1a43a0ef6a0a7d4071cacbfe64f9",
+      "exitCode": 1,
+      "checks": 150,
+      "failures": 51,
+      "neoFailures": 51,
+      "otherFailures": 0,
+      "compilerCommand": [
+        "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-finput-charset=UTF-8",
+        "-fexec-charset=UTF-8",
+        "-I",
+        "E:\\ESTUDO APK\\work\\station-neogeo-collection-map-r75-20261007\\tests\\baseline",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-neogeo-collection-map-r75-20261007\\tests\\collection_routes.cpp",
+        "-o",
+        "E:\\ESTUDO APK\\work\\station-neogeo-collection-map-r75-20261007\\tests\\baseline\\routes.exe"
+      ],
+      "compilerLogSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runLogSHA256": "a28b6feab44a19a7250c004af3831d20e8f5cd9be97906ad4513c0c3f801c1e2"
+    },
+    {
+      "label": "candidate",
+      "headerSHA256": "5ca0f4f114037e605b698067b34d01cb6f0aef2ba4c3d223117801d8a71a693b",
+      "exitCode": 0,
+      "checks": 150,
+      "failures": 0,
+      "neoFailures": 0,
+      "otherFailures": 0,
+      "compilerCommand": [
+        "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-finput-charset=UTF-8",
+        "-fexec-charset=UTF-8",
+        "-I",
+        "E:\\ESTUDO APK\\work\\station-neogeo-collection-map-r75-20261007\\tests\\candidate",
+        "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-neogeo-collection-map-r75-20261007\\tests\\collection_routes.cpp",
+        "-o",
+        "E:\\ESTUDO APK\\work\\station-neogeo-collection-map-r75-20261007\\tests\\candidate\\routes.exe"
+      ],
+      "compilerLogSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runLogSHA256": "9f765d7ca755a422fb3ab29a220352dd5cee4f72d23473cb4945c29b01958741"
+    }
+  ],
+  "fallbackRoutingExecuted": true,
+  "mainPlatformVideoPreserved": true,
+  "cdPolicyPreserved": true,
+  "allGamesR71Preserved": true,
+  "androidExecuted": false,
+  "decoderExecuted": false,
+  "apkBuilt": false
+}

@@ -1,0 +1,99 @@
+{
+  "source": "server-published-catalog-tsv",
+  "commit": "112d6b03d6ce00ccb340ed400806791f0fe7263d",
+  "path": "docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "sha256": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e",
+  "bindings": [
+    {
+      "key": "snes-topgear",
+      "matches": [
+        {
+          "platform": "snes",
+          "folderPath": "## TOP GEAR ##",
+          "games": 3
+        }
+      ]
+    },
+    {
+      "key": "neogeo-artoffighting",
+      "matches": [
+        {
+          "platform": "neogeo",
+          "folderPath": "# 0 - ART OF FIGTHERS COLEÇÃO #",
+          "games": 2
+        }
+      ]
+    },
+    {
+      "key": "snes-bomberman",
+      "matches": [
+        {
+          "platform": "snes",
+          "folderPath": "## BOMBER MAN ##",
+          "games": 3
+        }
+      ]
+    },
+    {
+      "key": "snes-donkeykong",
+      "matches": [
+        {
+          "platform": "snes",
+          "folderPath": "## DONKEY KONG ##",
+          "games": 3
+        }
+      ]
+    },
+    {
+      "key": "neogeo-fatalfury",
+      "matches": [
+        {
+          "platform": "neogeo",
+          "folderPath": "# 4 - FATAL FURY COLEÇÃO #",
+          "games": 4
+        }
+      ]
+    },
+    {
+      "key": "neogeo-metalslug",
+      "matches": [
+        {
+          "platform": "neogeo",
+          "folderPath": "# 1 - METAL SLUG COLEÇÃO #",
+          "games": 9
+        }
+      ]
+    },
+    {
+      "key": "neogeo-samuraishodown",
+      "matches": [
+        {
+          "platform": "neogeo",
+          "folderPath": "# 2 - SAMURAI SHODOWN COLEÇÃO #",
+          "games": 6
+        }
+      ]
+    },
+    {
+      "key": "neogeo-kofhacks",
+      "matches": [
+        {
+          "platform": "neogeo",
+          "folderPath": "# 5 - HACKS #",
+          "games": 14
+        }
+      ]
+    },
+    {
+      "key": "neogeo-kof",
+      "matches": [
+        {
+          "platform": "neogeo",
+          "folderPath": "# 3 - THE KING OF FIGTHERS COLEÇÃO #",
+          "games": 26
+        }
+      ]
+    }
+  ],
+  "deviceObserved": false
+}

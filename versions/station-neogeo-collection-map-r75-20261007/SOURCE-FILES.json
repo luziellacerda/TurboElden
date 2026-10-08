@@ -1,0 +1,80 @@
+{
+  "version": "R75",
+  "files": [
+    {
+      "path": "evidence/carousel-build-r75.json",
+      "bytes": 59729,
+      "sha256": "e55001da0b995e9326aa376b1423eb76de04af40ddd7b6c98da8d13816c140a7"
+    },
+    {
+      "path": "evidence/fixture-provenance.json",
+      "bytes": 932,
+      "sha256": "0edd2ca6304f7b2b32ae6ac830309276dda49df1c5fb099061ecc3a8acb6a846"
+    },
+    {
+      "path": "evidence/package.json",
+      "bytes": 8879,
+      "sha256": "3f2ffef13db796c3e9af44b53f407b8653b13e9c0624cc277178addbb00b168d"
+    },
+    {
+      "path": "evidence/route-tests.json",
+      "bytes": 4291,
+      "sha256": "1114d72ce2d56f05c35d752cd6b95b6ada2106fa4afcb9a3d8867a36e2d316fa"
+    },
+    {
+      "path": "native/collection_video_policy.h",
+      "bytes": 2736,
+      "sha256": "5ca0f4f114037e605b698067b34d01cb6f0aef2ba4c3d223117801d8a71a693b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3419,
+      "sha256": "df9746a09bb29d7c9e51a1ebaae3a5bfc1d1c8823301afbcf793a391295e777d"
+    },
+    {
+      "path": "recipes/build_carousel.py",
+      "bytes": 13295,
+      "sha256": "b687e061e869f312c25f9f0ebb6273291c4b7af22146e47a0e5d378987a920ca"
+    },
+    {
+      "path": "recipes/install_verified.py",
+      "bytes": 4379,
+      "sha256": "639531e6fc1b0056653f280a2abb7c59b12bad7c926f38194eba80fb23b75fda"
+    },
+    {
+      "path": "recipes/package_r75.py",
+      "bytes": 8611,
+      "sha256": "bd928933f00e07a449dc60e553352949f8055d72eff00d1a918c0a51c1f55b75"
+    },
+    {
+      "path": "recipes/publish_research.py",
+      "bytes": 6071,
+      "sha256": "07191edc564076066079ad2f9207674f4fa9551273cb44e69acc5136a7d7b88a"
+    },
+    {
+      "path": "recipes/run_tests.py",
+      "bytes": 7213,
+      "sha256": "77500555e0f6569ba93618b9b568f524543d896e8e45b530131168ea8ad4a153"
+    },
+    {
+      "path": "STATUS.json",
+      "bytes": 1001,
+      "sha256": "9c9aa5d2e9436ea8851d51b5c60cd5ad00b0dd91f64b3ca6722224d65a36ef02"
+    },
+    {
+      "path": "tests/collection_routes.cpp",
+      "bytes": 7006,
+      "sha256": "60a62efded38c7df4d75041c526cb7289570c3023b2551286532b40ddfca6989"
+    },
+    {
+      "path": "tests/fixtures/catalog-bindings-r67.json",
+      "bytes": 2180,
+      "sha256": "ab719e7345f74afbe38ec0a96d9897efb82fe4c4343908229e34f3f29db74acf"
+    },
+    {
+      "path": "tests/fixtures/media-mapping-r67.json",
+      "bytes": 3720,
+      "sha256": "daa147fbd4a8ea1864419c8d6fafe81122814a3910c22ff8d05272841b7f6405"
+    }
+  ]
+}

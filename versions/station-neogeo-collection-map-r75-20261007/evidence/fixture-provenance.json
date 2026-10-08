@@ -1,0 +1,15 @@
+{
+  "source": "server-published catalog captured in R67; independent of C++ definitions",
+  "serverCommit": "112d6b03d6ce00ccb340ed400806791f0fe7263d",
+  "serverPath": "docs/station-android/biblioteca-neogeocd-20261005/catalogo-completo.tsv",
+  "serverTSV_SHA256": "3dae0cfa3877fba31b9a347b58795fe0df95333aea628b9ea8be597b7ccfed6e",
+  "catalogFixtureSHA256": "ab719e7345f74afbe38ec0a96d9897efb82fe4c4343908229e34f3f29db74acf",
+  "mediaMappingSHA256": "daa147fbd4a8ea1864419c8d6fafe81122814a3910c22ff8d05272841b7f6405",
+  "priorHeaderSHA256": "10daa6b42d46d7bc1f099e705d9fa258af8c1a43a0ef6a0a7d4071cacbfe64f9",
+  "headerSHA256": "5ca0f4f114037e605b698067b34d01cb6f0aef2ba4c3d223117801d8a71a693b",
+  "replacementCount": 5,
+  "substitution": "UTF-8 mojibake COLE\u00c3\u2021\u00c3\u0192O -> C++ universal escape COLE\\u00c7\\u00c3O",
+  "catalogMutated": false,
+  "deviceObserved": false,
+  "nativeLogicChanged": false
+}

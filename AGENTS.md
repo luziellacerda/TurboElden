@@ -1,3 +1,13 @@
+# R75 candidata — vídeos Neo Geo; pesquisa R74 preservada — 07/10/2026
+
+Leia `versions/station-neogeo-collection-map-r75-20261007/README.md`, STATUS e recibos. APK `1ab4fa3770570832ea5ff2e9b0ce4f8a26e0e24e210ad7652f4c96647fecad32`, com 2.122.907.752 bytes, em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Premium-R75-20261007.apk`. **Compilada e assinada; não instalada.** Ambos os aparelhos permanecem na R74; estavam jogando e depois saíram da USB. Não encerrar partidas para atualizar.
+
+Corrige apenas cinco ocorrências corrompidas de `COLEÇÃO` no mapa de vídeos; os seis MP4 de Neo Geo já existiam. Carrossel `3c2e22bc94f3432280e2b08c2f26ab33508cd1278ee9bd750b48d45c35105a8b`; 13.224 entradas de conteúdo preservadas, incluindo 59 MP4 totais e 58 do carrossel. DEX, runtime `804b2acfea4c…`, engines, manifesto e controles permanecem idênticos. Não precisa de outro cadastro por causa da R75; usa os IDs rs4 da R74. A base nativa R71 foi reproduzida byte a byte antes da correção. Das 150 verificações independentes, 51 falham na R71 e nenhuma na R75. Regressões adicionais: 3.444 verificações de rotas/posters, 66 de cantos, 3.584 de navegação e 199.592 de política do decoder. Sem conferência visual no aparelho nem afirmação de estabilidade geral.
+
+O mantenedor relatou grande melhora e menos travamentos na R74. Leia `docs/server/PESQUISA-ESTABILIDADE-R74-20261007.md`: pesquisa em fontes oficiais e comparação com o código, com tarefas do app e do servidor separadas; não é retorno do operador nem implantação. Último retorno lido: `815ceaca`; nosso `8d48252` é um pedido. Não mudar timeouts, presets ou engine por hipótese. Compilar em E: e guardar o APK final em G:. Preservar identidade, dados e saves; não publicar APKs, mídia, chaves ou logs pessoais.
+
+## Histórico anterior
+
 # R74 instalada nos dois aparelhos — 07/10/2026
 
 Pedido explícito do mantenedor para instalar antes da confirmação do novo registro. Samsung A56 em `2026-10-08T00:31:19.637993+00:00` e Motorola Edge 30 em `2026-10-08T00:30:49.949930+00:00`: SHA integral `e56896f28b16645653bfd28311cd0a8a9a5458e6d443849916a4dede6dc7fafe` conferido. UID e data original preservados; envio direto, sem APK extra, desinstalação, limpeza de dados ou ajustes de aparelho. Mantenedor saiu do jogo Samsung; nenhum emulador ativo foi identificado no início de cada instalação.
