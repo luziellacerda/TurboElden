@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-08T15:14:56.671858+00:00",
+  "direction": "SERVER_TO_APP",
+  "serverReturnCommit": "af58034595614098ea4df4d959e50947670c080f",
+  "serverReturnBranch": "docs/station-r78-server-review-20261008",
+  "appBaseCommit": "768f7ca42fe62d67e93f4c8fcf762bf9e7eb4fce",
+  "appExecutableCommitPreserved": "ba145fff4bcf2c905ac6eb62916d7e854ec31b09",
+  "mirrorFiles": {
+    "docs/server/RETORNO-LEITURA-HANDOFF-R78-SINOPSES-20261008.md": {
+      "sourcePath": "docs/station-android/RETORNO-LEITURA-HANDOFF-R78-SINOPSES-20261008.md",
+      "sha256": "d344a8fd08b788b2f35d902d2def9bcdd0e58405b6834297c9f7df26970319ed"
+    },
+    "docs/server/recovery-r78-20261008/comparar-sinopses-r78.py": {
+      "sourcePath": "docs/station-android/recovery-r78-20261008/comparar-sinopses-r78.py",
+      "sha256": "92dc4487b91704c3f9023cd9e84006b38efecb20e042cf192e5c9314d49e97c3"
+    },
+    "docs/server/recovery-r78-20261008/COMPARACAO-CATALOGO-REV18.json": {
+      "sourcePath": "docs/station-android/recovery-r78-20261008/COMPARACAO-CATALOGO-REV18.json",
+      "sha256": "d2f486534492aab679ef57cfd478ef275271145dd9b6eecbdc5669acc6fb4a9c"
+    },
+    "docs/server/recovery-r78-20261008/CATALOGO-NOVOS-IDS-REV18.json": {
+      "sourcePath": "docs/station-android/recovery-r78-20261008/CATALOGO-NOVOS-IDS-REV18.json",
+      "sha256": "da6c87cb4f1ccf83e31cf16e79b6a51221af119404bf8629f68358ffa3e5a12e"
+    },
+    "docs/server/recovery-r78-20261008/SINOPSES-AUSENTES-REV18.json": {
+      "sourcePath": "docs/station-android/recovery-r78-20261008/SINOPSES-AUSENTES-REV18.json",
+      "sha256": "cf94d0feb5c86b84e38fb22dde5ba85a2ebc308bee80beb46131c62f383796a3"
+    },
+    "docs/server/recovery-r78-20261008/CAS-PROPOSTAS-R78-REV18.json": {
+      "sourcePath": "docs/station-android/recovery-r78-20261008/CAS-PROPOSTAS-R78-REV18.json",
+      "sha256": "9317f6713e9f579e56714f8662bd47c6923b72da022778185bdb1911a9a7c501"
+    },
+    "docs/server/recovery-r78-20261008/INSTALACAO-R78-RECIBOS-PCAPK.json": {
+      "sourcePath": "docs/station-android/recovery-r78-20261008/INSTALACAO-R78-RECIBOS-PCAPK.json",
+      "sha256": "083f07d9e58d866e2e81bdee2c12ebdb69e47173a5b90da83ecd119f59c8c663"
+    },
+    "docs/server/recovery-r78-20261008/RECIBO-REVISAO-R78.json": {
+      "sourcePath": "docs/station-android/recovery-r78-20261008/RECIBO-REVISAO-R78.json",
+      "sha256": "6186ec833c04c68372ce3fab278acb76b309f41644a484d60d4f723b6f0920e7"
+    }
+  },
+  "agentsSha256": "2098054bf148a71dad5eb8992d0ca4f8b4014ed3978798c57a412542f7a9346c",
+  "serverCatalogRevisionObserved": 18,
+  "newCatalogIdsDelivered": 1267,
+  "newIdsWithoutSynopsisAndFallback": 286,
+  "serverProposalsMatchingObservedCas": 64,
+  "serverProposalsApplied": 0,
+  "serverChangedByReview": false,
+  "androidCodeChanged": false,
+  "apkChanged": false,
+  "androidInstalledByReview": false,
+  "r78OnBothPhonesAccordingToPcReceipts": true,
+  "inheritedR77OnlineQualificationPending": true
+}
