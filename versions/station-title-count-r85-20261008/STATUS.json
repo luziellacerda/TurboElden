@@ -11,13 +11,13 @@
   "heroBottomFraction": 0.905,
   "heroWidthFromR84Preserved": true,
   "installedRibbonUnchanged": true,
-  "finalPhysicalDisplayVerified": false,
+  "finalPhysicalDisplayVerified": true,
   "systemsAndCollectionsGeometryUnchangedFromR84": true,
   "gameOnlyDiagonalCornerGradient": true,
   "robotIncreasePercent": 30,
   "primaryActionCenteredWithMetadataRight": true,
   "downloadRed": true,
-  "installationPending": "Motorola USB debugging offline; final APK not installed",
   "apkSHA256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
-  "readyForInstallation": true
+  "readyForInstallation": true,
+  "installedMotorola": true
 }

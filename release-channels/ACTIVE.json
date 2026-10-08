@@ -27,15 +27,17 @@
       "protocol": "station-stream.v3",
       "status": "experimental; server activation and exact per-game approved profiles required including two-player rooms",
       "fourPhoneGameplayQualified": false,
-      "installed": false,
+      "installed": true,
       "runtimeCoresEnginesUnchangedFromR79": true,
       "archivedDreamcastEffectIncluded": false,
-      "installedDevices": [],
+      "installedDevices": [
+        "Motorola Edge 30"
+      ],
       "installationReceipt": "versions/station-title-count-r85-20261008/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
       "sourceCommitStatus": "complete",
-      "installationStatus": "pending USB debugging online; last verified phone has earlier R85 candidate"
+      "installationStatus": "Final APK installed and SHA256 verified on Motorola; authenticated entry and game selection observed"
     }
   }
 }

@@ -17,3 +17,5 @@ Durante a conferência da primeira candidata R85, a pasta apareceu mas o número
 Degradê da seleção de jogos: dois cantos superiores pretos com transição diagonal até transparência. Duas tiras estáticas de cinco vértices, antes das capas; sem novo temporizador, textura ou processamento fora da tela aberta. Sistemas e coleções mantêm o degradê anterior.
 
 Último ajuste:630asserts adicionais do corpo real da geometria da ação, cinco proporções de tela e zero a cinco bonecos. A renderização final no Android depende de acesso USB; consulte INSTALLATION.
+
+Instalação posterior: R85 final instalada e SHA integral conferido no Motorola em08/10/2026 às21:55:36UTC. Entrada semlogin, sistemas/coleções e seleção de jogos observados; ClayFighter mostrou Baixar vermelho. Recibos INSTALLATION e evidence/physical-check.json substituem as pendências anteriores. Samsung não atualizado; nenhum gameplay ou aprovação estética do usuário alegados.

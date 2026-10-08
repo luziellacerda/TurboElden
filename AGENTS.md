@@ -1,3 +1,11 @@
+# R85 final instalada e conferida no Motorola — 08/10/2026
+
+Instalação solicitada após retorno da USB concluída às21:55:36UTC. SHA integral19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0 noMotorola Edge30; assinatura original, UID/data/saves/licença preservados, sem APK extra e sem alteração de configuração. Este recibo substitui a pendência anterior de USB/candidatasR85. Samsung não atualizado.
+
+Abertura semlogin observada. Sistemas e coleções conferidos; na seleção de jogos, cabeçalho lupa/avatar/nome maior, contador1/644→3/644 junto ao título, robô acima do console, degradê diagonal e Jogar próximo do centro/estrelasàdireita. ClayFighter exibiu Baixar vermelho. Capturas privadas fora doGit. Não foi iniciado download, sala ou jogo; sem aprovação visual final do mantenedor nem gameplay. Consulte versions/station-title-count-r85-20261008/INSTALLATION.json e evidence/physical-check.json. Fonte executável8592255dec80150a4082cfb1f6b1c20b953d910f permanece idêntica; sórecibos atualizados.
+
+## Histórico anterior
+
 # R85 final preparada — seleção de jogos — 08/10/2026
 
 Canal corrente R76 referência2p e R85 experimentalaté4p. Leia release-channels/ACTIVE.json e versions/station-title-count-r85-20261008/README.md, STATUS e INSTALLATION. Último pedido limita TODAS as alterações visuais à seleção de jogos; sistemas, coleções e outros menus preservam a R84. Cabeçalho lupa → avatar → nome sobre a primeira miniatura; fonte do usuário igual à altura medida do contador; robô acima do console ampliado30%; capa principal .040h–.905h, largura R84; pasta 1 / X jogos junto ao título. Baixar vermelho, Jogar próximo do centro, estrelas/bonecos à direita. Dois cantos superiores pretos em degradê diagonal até transparente, só depois do loading. Não alterar faixa INSTALADO.

@@ -1,13 +1,18 @@
 {
   "version": "R85",
   "apkSHA256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
-  "installedDevices": [],
-  "finalInstallationConfirmed": false,
-  "reason": "Motorola debugging offline despite reconnection and PC transport restart",
-  "lastConfirmedMotorolaAPK": "4906c83dede6f3fe791944c3fb8d319a5f54c564c169f2a76cc06e1c3cd66ff7",
+  "installedDevices": [
+    "Motorola Edge 30"
+  ],
+  "finalInstallationConfirmed": true,
+  "lastConfirmedMotorolaAPK": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
   "priorCandidateReceipt": "evidence/installation-motorola-r85-before-scope-gradient.json",
   "failedAttemptReceipt": "evidence/installation-attempt-motorola-r85.json",
   "samsungUpdated": false,
   "gameplayVerified": false,
-  "finalPhysicalDisplayVerified": false
+  "finalPhysicalDisplayVerified": true,
+  "receipt": "evidence/installation-motorola-r85.json",
+  "completedUTC": "2026-10-08T21:55:36.414933+00:00",
+  "visualCheck": "evidence/physical-check.json",
+  "dataPreserved": true
 }
