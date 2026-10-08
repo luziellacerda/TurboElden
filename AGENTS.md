@@ -1,3 +1,21 @@
+# R87 pronta — LEDs e consoles, instalação pendente
+
+Fonte completa em versions/station-platform-led-r87-20261008. Base R86, 213 Java; somente classes35.dex e libturbo_carousel.so mudam. Estrelas acima do título30%menores. Corrige detecção laranja Dreamcast após analisar18Wheeler REAL do Samsung; referências antigas brancas não usadas. Perfis PS1/GameCube/WiiU/Switch compartilham o GLSL existente. Oito hardwares adicionais, mantendo layout de sinopse e11recursos anteriores. Não alterar degradê,INSTALADO,fontes,emuladores ou online.
+
+APK a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0,2136310292bytes, assinatura original. Testes PC mostraram movimento nas5referências e captura real Dreamcast; centro preservado. Não comprovam renderização/desempenho no telefone. R87 NÃO instalada: USB desapareceu após captura; pedido de reconexão pendente. Samsung eMotorola permanecemR86, Samsung abertura autenticada e capaDreamcast observadas. Não alegar R87 instalada pelo reciboR86.
+
+Retorno servidor9502c02e43cf375640b8f99de281a1efe9eb5358 lido, SERVER-REVIEW.md. Operador informa v3ativo21:07:53UTC,1816perfis;17adicionais não publicados. Não requer novoAPK para ativação. Não implantarLinux,não alterar motores/identidades por atualização visual,não repetirhandoff.
+
+Use somente canal completo ACTIVE, backup único R76/R87, históricoGit preservado. Git apenas fontes/documentos; artes,capturas,APK,ROM,BIOS,licenças ficam fora. Finalizar reprodução/recibos antes de retirar APK R86; instalar R87 somente comUSB autorizada e sem partida ativa.
+
+## Histórico anterior
+
+# R86 também instalada no Samsung — prioridade cumprida
+
+08/10/2026 23:20:25 UTC, Samsung A56 atualizado diretamente da R78 para a mesma R86 abaixo, SHA integral 7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4 conferido. UID/dados/assinatura preservados. Abriu plataformas sem pedir login, usuário visível. Nenhum gameplay iniciado. Motorola continua R86.
+
+Novos pedidos em andamento: estrelas 30% menores mantendo acima do nome; mapear LEDs nas CAPAS REAIS do telefone para Dreamcast (usuário alertou que imagem local do HD é outra), PS1, GameCube, Wii U e Switch, mesmo motor; adicionar hardware dos sistemas ausentes na seleção. Samsung deve receber R86 primeiro (feito), depois trabalho novo. Novo retorno do servidor 9502c02, HANDOFF-UNICO-FECHAMENTO-ONLINE-1A4-STATION-20261008.md, em análise; leitura não autoriza implantação nem restauração de fontes R81 sobre R86.
+
 # R86 instalada no Motorola — 08/10/2026
 
 Fonte atual completa: versions/station-online-cover-led-r86-20261008, 213 Java. Consulte release-channels/ACTIVE.json, README, STATUS e INSTALLATION. APK 7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4, 2127901540 bytes, instalado às 23:09:15 UTC, hash integral conferido. Dados/UID/assinatura preservados. USB desconectou após instalação: visual final e abertura autenticada não observados. Samsung não atualizado.

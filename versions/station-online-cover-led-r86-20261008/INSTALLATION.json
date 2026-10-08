@@ -44,7 +44,49 @@
         "--user",
         "0"
       ]
+    },
+    {
+      "version": "R86",
+      "deviceLabel": "samsung",
+      "model": "SM-A566E",
+      "package": "org.turboramastation.frontend",
+      "startedUTC": "2026-10-08T23:18:52.054948+00:00",
+      "completedUTC": "2026-10-08T23:20:25.483893+00:00",
+      "previousAPK_SHA256": "e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5",
+      "apkSHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
+      "deviceAPK_SHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
+      "apkBytes": 2127901540,
+      "installPerformed": true,
+      "installSuccess": true,
+      "uidPreserved": true,
+      "originalInstallTimestampPreserved": true,
+      "dataDirectoryPreserved": true,
+      "uninstalled": false,
+      "dataCleared": false,
+      "deviceSettingsChanged": false,
+      "activeEmulatorBeforeInstall": false,
+      "preInstallAppActivities": [
+        "org.emulationstation.frontend.ESActivity"
+      ],
+      "directStreaming": true,
+      "extraAPKCopiedToPhone": false,
+      "officialEntryRequested": true,
+      "launchVerified": true,
+      "authenticatedEntryVerified": true,
+      "physicalDisplayVerified": false,
+      "serverRegistryActivationVerified": false,
+      "twoDeviceGameplayVerified": false,
+      "inheritedR77OnlineQualificationStillRequired": true,
+      "serverChanged": false,
+      "installCommand": [
+        "install",
+        "--streaming",
+        "--no-incremental",
+        "-r",
+        "--user",
+        "0"
+      ]
     }
   ],
-  "physicalCheckPending": "USB disconnected after successful installation; visual opening not observed. Samsung not updated."
+  "physicalCheckPending": "Samsung opened platforms with authenticated user; Dreamcast game cover inspection pending."
 }

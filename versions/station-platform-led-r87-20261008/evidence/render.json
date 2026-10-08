@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "scope": "PC GLES rendering; not phone performance or gameplay",
+  "checks": [
+    {
+      "platform": "dreamcast",
+      "model": 4,
+      "sha256": "8c72cfa024188179b92590f45ed67357be115d7dab2a2da63438a71027c5ac7b",
+      "animatedPixels": 4685,
+      "centerChanged": 0
+    },
+    {
+      "platform": "gamecube",
+      "model": 5,
+      "sha256": "09ae56296ccedf151237a271445ea98da94ea50af2186951e04301b417010e5d",
+      "animatedPixels": 2657,
+      "centerChanged": 0
+    },
+    {
+      "platform": "wiiu",
+      "model": 6,
+      "sha256": "b9139779e69a4082c4e034b33f46ac8bc61c21006ce464e81bdb1026d9811aa1",
+      "animatedPixels": 3863,
+      "centerChanged": 0
+    },
+    {
+      "platform": "switch",
+      "model": 7,
+      "sha256": "61dfc3c3414313ccf692789a9b482e117c13401be467ec6fea4ba9dc16fa84fc",
+      "animatedPixels": 2677,
+      "centerChanged": 0
+    },
+    {
+      "platform": "psx",
+      "model": 8,
+      "sha256": "af468870d179fe760ac227e7370182c79bf9be6598f1683ee1abb495b44a35b7",
+      "animatedPixels": 1334,
+      "centerChanged": 0
+    },
+    {
+      "platform": "dreamcast-phone-observed",
+      "source": "private Samsung screenshot, analytical crop only",
+      "animatedPixels": 4400
+    }
+  ]
+}

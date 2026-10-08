@@ -12,7 +12,7 @@ WORK = Path(r'E:\ESTUDO APK\work\station-online-cover-led-r86-20261008')
 ADB = r'G:\Android\Sdk\platform-tools\adb.exe'
 PACKAGE = 'org.turboramastation.frontend'
 EXPECTED = '7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4'
-PREVIOUS = ('f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147',)
+PREVIOUS = ('f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147', 'e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5')
 ALLOWED = {'org.emulationstation.frontend.ESActivity',
            'org.emulationstation.frontend.auth.LoginActivity',
            'org.emulationstation.frontend.netplay.StationRoomsActivity'}

@@ -1,0 +1,34 @@
+{
+  "version": "R87",
+  "baseVersion": "R86",
+  "apkSHA256": "a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0",
+  "apkBytes": 2136310292,
+  "compiled": true,
+  "installed": false,
+  "sourceCount": 213,
+  "sharedCarouselLighting": true,
+  "dreamcastActualPhoneCoverAnalyzed": true,
+  "starScale": 0.7,
+  "ledProfilesAdded": [
+    "gamecube",
+    "wiiu",
+    "switch",
+    "psx"
+  ],
+  "hardwareAdded": [
+    "gamecube",
+    "wiiu",
+    "switch",
+    "psx",
+    "wii",
+    "saturn",
+    "xbox360",
+    "fbneo"
+  ],
+  "serverChanged": false,
+  "runtimeCoresEnginesChanged": false,
+  "gameplayVerified": false,
+  "physicalDisplayVerified": false,
+  "backupReproduced": true,
+  "blocker": "Samsung disconnected from USB after R86 screenshot; R87 not installed"
+}

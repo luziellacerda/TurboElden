@@ -1,0 +1,90 @@
+[
+  {
+    "key": "gamecube",
+    "origin": "Built-in image generation; illustrative hardware, not an archival photograph",
+    "originalSHA256": "9d73f8be275f2a84444af2295e0deece67910257aa7e4c3eddd17d310d275963",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaSHA256": "f7d54c8ca6c31503da57f69ad16ec45df8c2615c8d54fe1efdd9bdf1e4fae59a",
+    "alphaPreserved": true
+  },
+  {
+    "key": "wiiu",
+    "origin": "Built-in image generation; illustrative hardware, not an archival photograph",
+    "originalSHA256": "5222e26ab97e4bd94472351f0cfe37736ce45819d3a072e04342059f5afa1d9d",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaSHA256": "e30b0869e5ac51f6aec4dbab31417aa1b40bb97e4e444c667bcca540983107f7",
+    "alphaPreserved": true
+  },
+  {
+    "key": "switch",
+    "origin": "Built-in image generation; illustrative hardware, not an archival photograph",
+    "originalSHA256": "0900ca62f5082f04e24499df6803fd029bbd69ec664d3f8872632b34397223f8",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaSHA256": "549c07392e0dd00aaac310868b39fe7a11018e71e2c0339e9639de30cf3439e8",
+    "alphaPreserved": true
+  },
+  {
+    "key": "psx",
+    "origin": "Built-in image generation; illustrative hardware, not an archival photograph",
+    "originalSHA256": "2284703c75eb99a30dc3a94b9f14fcfc01d5c43b70d5627d9f54950f018650c5",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaSHA256": "e57fa6d959b2d9f4cffc14439eb564e77aeeceb442a37bf5ec4d878baf9120cf",
+    "alphaPreserved": true
+  },
+  {
+    "key": "wii",
+    "origin": "Built-in image generation; illustrative hardware, not an archival photograph",
+    "originalSHA256": "02087e1c121e9aad588d7400daba0eed1b43aee06a03e7bbdbb70fd08ec627fe",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaSHA256": "4f632a03ae32f020349b55fdbf1b71dbf30ca0a571930f2609d50816d5303a13",
+    "alphaPreserved": true
+  },
+  {
+    "key": "saturn",
+    "origin": "Built-in image generation; illustrative hardware, not an archival photograph",
+    "originalSHA256": "7c25b8284fb6066d12fa54107c04c92123d39dfbd9d5168be0abcfa62586cc2d",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaSHA256": "229411153f87f98af1ddd1c3387de21f6256e19a7b7c60197c480b391a6b20f1",
+    "alphaPreserved": true
+  },
+  {
+    "key": "xbox360",
+    "origin": "Built-in image generation; illustrative hardware, not an archival photograph",
+    "originalSHA256": "25f3bd2bb991b909b794d313122a66dc9250ae091e9ee9cb6612e4a2422b0bb2",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaSHA256": "b8bcfc4a06a8f0f5d38e3f867f3b831befd646aef3174e96162856bdd50b12ba",
+    "alphaPreserved": true
+  },
+  {
+    "key": "fbneo",
+    "origin": "Built-in image generation; illustrative hardware, not an archival photograph",
+    "originalSHA256": "490f008730f9c356673550164cf389dd8d793957b9a16b5a5d79dd640dd96a75",
+    "textureSize": [
+      512,
+      512
+    ],
+    "rgbaSHA256": "f41aeea170ed23c0dbef0ebfd7976f51b90ff96998f58fd2ab17e569be9f18a0",
+    "alphaPreserved": true
+  }
+]

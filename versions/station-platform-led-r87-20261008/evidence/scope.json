@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checks": [
+    "Java/nativo GLSL identico",
+    "Cabecalho GLSL identico",
+    "Somente escala das estrelas na sinopse",
+    "Preservado native_space.h",
+    "Preservado native_carousel.cpp",
+    "Preservado native_formation.h",
+    "Ciclo de vida e temporizadores online preservados",
+    "Cadencia online preservada",
+    "Alias hardware gamecube",
+    "Alias hardware wiiu",
+    "Alias hardware switch",
+    "Alias hardware psx",
+    "Alias hardware wii",
+    "Alias hardware saturn",
+    "Alias hardware xbox360",
+    "Alias hardware fbneo",
+    "Cliente online e autenticacao byte identicos"
+  ],
+  "checksCount": 17
+}
