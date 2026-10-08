@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": 75,
+  "method": "Android clang C++17 static_assert on actual layout header across five screen sizes",
+  "covers": [
+    "bounds",
+    "gaps",
+    "secondary symmetry"
+  ],
+  "physicalPlayerCountsVerified": false
+}
