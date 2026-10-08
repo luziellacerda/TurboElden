@@ -2,6 +2,8 @@
 
 Leia `versions/station-pump-wakeup-r76-20261008/README.md`, STATUS, evidências e `HANDOFF-APP-R76-PARA-SERVIDOR-20261008.md`. APK `d7145db3511a4056b16fdde10e4c07709a16b7f445596801b3535c1b28b06a51`, DEX35 `c03ea2f4aa30c5e32654c575115583f72815b9701c16791c4f94c6ade753f2ff`. Somente StationRecoveryTunnel Java alterado; sinal preservado no empty/finally e falha antiga não invalida Remote novo. R75 visual incluída, runtime/rs4/certificado/dados preservados. Cadastro R74 ativo conforme servidor ed9ca9f; não pede novo engine nem restart. Testes locais: 1.206 regressões, 101 verificações de sessão/42 guardas, 1.466 verificações do pump e seis execuções TLS reais com 30.817.216 bytes exatos. Samsung A56 instalado às 11:25:32 UTC em 08/10/2026: hash integral, UID e data original conferidos, entrada oficial chegou à ESActivity. Motorola ausente da USB; última versão comprovada R74. Sem gameplay físico prolongado; consultar recibos individuais. Fonte deve ser recompilada pelo manifesto das 201 fontes, não restaurar outras Activities. DLL do servidor 6f27 permanece candidata sem qualificação completa; nenhum serviço Linux alterado.
 
+Entrega APP → SERVIDOR publicada: app `2a8adce752b7778c90b2e70ecd67d1bc1fc62a9d`; servidor `a9f7f41b243f62e7ff5c3240d65eb7704034184c`, branch `docs/station-r76-pump-wakeup-20261008`, documento `docs/station-android/ENTREGA-APP-R76-PUMP-WAKEUP-20261008.md`. Recibo `docs/server/RECIBO-ENTREGA-R76-PUMP-WAKEUP-20261008.json`. É nossa entrega, não resposta nem deploy; commit executável permanece 2a8adce. Checkout e índice do clone servidor preservados.
+
 ## Histórico anterior
 
 # Retorno efetivo R74 do servidor recebido; R75 visual preservada — 07/10/2026
