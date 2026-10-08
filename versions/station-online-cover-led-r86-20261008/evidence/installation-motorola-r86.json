@@ -1,0 +1,42 @@
+{
+  "version": "R86",
+  "deviceLabel": "motorola",
+  "model": "motorola edge 30",
+  "package": "org.turboramastation.frontend",
+  "startedUTC": "2026-10-08T23:07:56.313308+00:00",
+  "completedUTC": "2026-10-08T23:09:15.686679+00:00",
+  "previousAPK_SHA256": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
+  "apkSHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
+  "deviceAPK_SHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
+  "apkBytes": 2127901540,
+  "installPerformed": true,
+  "installSuccess": true,
+  "uidPreserved": true,
+  "originalInstallTimestampPreserved": true,
+  "dataDirectoryPreserved": true,
+  "uninstalled": false,
+  "dataCleared": false,
+  "deviceSettingsChanged": false,
+  "activeEmulatorBeforeInstall": false,
+  "preInstallAppActivities": [
+    "org.emulationstation.frontend.ESActivity"
+  ],
+  "directStreaming": true,
+  "extraAPKCopiedToPhone": false,
+  "officialEntryRequested": true,
+  "launchVerified": false,
+  "authenticatedEntryVerified": false,
+  "physicalDisplayVerified": false,
+  "serverRegistryActivationVerified": false,
+  "twoDeviceGameplayVerified": false,
+  "inheritedR77OnlineQualificationStillRequired": true,
+  "serverChanged": false,
+  "installCommand": [
+    "install",
+    "--streaming",
+    "--no-incremental",
+    "-r",
+    "--user",
+    "0"
+  ]
+}

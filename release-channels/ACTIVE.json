@@ -16,14 +16,14 @@
       "sourceCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e"
     },
     "test-4p": {
-      "version": "R85",
-      "directory": "test-up-to-4-players-r85",
-      "branch": "fix/station-title-count-r85-20261008",
-      "sourceCommit": "b7544b0c7e724df41d2bcc6e3d4509e4c74517b0",
-      "sourceDirectory": "versions/station-title-count-r85-20261008",
-      "apk": "TurboStations-Premium-R85-20261008.apk",
-      "apkSHA256": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
-      "javaSourceCount": 210,
+      "version": "R86",
+      "directory": "test-up-to-4-players-r86",
+      "branch": "fix/station-online-cover-led-r86-20261008",
+      "sourceCommit": null,
+      "sourceDirectory": "versions/station-online-cover-led-r86-20261008",
+      "apk": "TurboStations-Premium-R86-20261008.apk",
+      "apkSHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
+      "javaSourceCount": 213,
       "protocol": "station-stream.v3",
       "status": "experimental; server activation and exact per-game approved profiles required including two-player rooms",
       "fourPhoneGameplayQualified": false,
@@ -31,13 +31,15 @@
       "runtimeCoresEnginesUnchangedFromR79": true,
       "archivedDreamcastEffectIncluded": false,
       "installedDevices": [
-        "Motorola Edge 30"
+        "motorola edge 30"
       ],
-      "installationReceipt": "versions/station-title-count-r85-20261008/INSTALLATION.json",
+      "installationReceipt": "versions/station-online-cover-led-r86-20261008/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "complete executable snapshot",
-      "installationStatus": "exact shared-backdrop APK installed; approved game effect reused unchanged"
+      "sourceCommitStatus": "pending",
+      "installationStatus": "Exact R86 APK installed and full hash verified on Motorola; USB disconnected before visual check",
+      "sharedCarouselLighting": true,
+      "newDreamcastOrangeFrameIncluded": true
     }
   }
 }

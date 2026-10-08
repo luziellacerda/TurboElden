@@ -1,0 +1,29 @@
+{
+  "version": "R86",
+  "baseVersion": "R85",
+  "apkSHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
+  "apkBytes": 2127901540,
+  "compiled": true,
+  "installed": true,
+  "sourceCount": 213,
+  "sharedCarouselLighting": true,
+  "newDreamcastOrangeFrame": true,
+  "consolesAdded": [
+    "dreamcast",
+    "cps1",
+    "cps2",
+    "cps3"
+  ],
+  "starsAboveGameName": true,
+  "localPlayerCountHidden": true,
+  "downloadLabelScaleIncreasePercent": 30,
+  "downloadLabelBold": true,
+  "serverChanged": false,
+  "runtimeCoresEnginesChanged": false,
+  "gameplayVerified": false,
+  "installedDevices": [
+    "motorola edge 30"
+  ],
+  "physicalDisplayVerified": false,
+  "backupReproduced": true
+}

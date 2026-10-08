@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "scope": "PC ANGLE shader rendering, not Android performance",
+  "sourceSHA256": "8c72cfa024188179b92590f45ed67357be115d7dab2a2da63438a71027c5ac7b",
+  "reference": "User supplied BANG! Gunship Elite orange chassis",
+  "checks": [
+    {
+      "size": [
+        1024,
+        1536
+      ],
+      "animatedPixels": 37814,
+      "centerArtworkAnimatedPixels": 0
+    },
+    {
+      "size": [
+        262,
+        393
+      ],
+      "animatedPixels": 2395,
+      "centerArtworkAnimatedPixels": 0
+    }
+  ]
+}

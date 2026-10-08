@@ -1,3 +1,15 @@
+# R86 instalada no Motorola — 08/10/2026
+
+Fonte atual completa: versions/station-online-cover-led-r86-20261008, 213 Java. Consulte release-channels/ACTIVE.json, README, STATUS e INSTALLATION. APK 7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4, 2127901540 bytes, instalado às 23:09:15 UTC, hash integral conferido. Dados/UID/assinatura preservados. USB desconectou após instalação: visual final e abertura autenticada não observados. Samsung não atualizado.
+
+Pedidos implementados: estrelas acima do nome na seleção de jogos; BAIXAR 30% maior e negrito; jogadores somente online, removidos da ação local. Online usa capa principal com largura proporcional da seleção, ajustada ao espaço de diálogos, com o MESMO GLSL/carrossel existente. Nada de AGSL/máscara alternativa. Novo perfil Dreamcast laranja somente adapta regiões/cor/detecção da referência BANG! enviada; efeito R80 antigo permanece arquivado. Hardware Dreamcast/CPS1/CPS2/CPS3 adicionado como ilustrações transparentes, usando o mesmo layout/rolagem de sinopse Nintendo. Preservar degradê R85, INSTALADO, fontes de título/contador e demais telas.
+
+Somente classes35.dex e libturbo_carousel.so mudaram. 13224 entradas e 59 vídeos preservados; cliente/runtime/cores/engines/manifesto/assinatura inalterados. GLSL idêntico Java/nativo, compile/link GLES conferido no Adreno 642L em prova isolada; 77 guardas de escopo, 60 checks e 4 guardas Java. Reprodução do backup Java/carrossel idêntica. Não são gameplay, prova de desempenho prolongado nem aprovação visual.
+
+Usar canal completo R86, nunca sobrepor Activities históricas. Git apenas código/recibos; imagens, capturas e ativos privados só no backup. Manter instaladores R76/R86 e histórico de fontes. Sem mudança no servidor ou novo handoff por UI.
+
+## Histórico anterior — substituído pela R86 acima
+
 # R85 compartilhada instalada; próximos pedidos de capas online/Dreamcast
 
 Em08/10/2026 às22:34:16UTC, Motorola atualizado para APK f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147,2123644492bytes. Hash integral conferido, dados/UID/assinatura preservados. Samsung não atualizado. A função do degradê aprovado pelo usuário na43e439 foi reutilizada sem alteração nas plataformas e coleções. Somente fundo dessas telas mudou. Nenhum teste de gameplay ou conferência física final das três telas alegado. Backup recompilou Java/carrossel idênticos;127guardas deescopo.
