@@ -1,4 +1,8 @@
-# Preparação visual Dreamcast — 08/10/2026
+# Efeito Dreamcast guardado, sem integração — 08/10/2026
+
+O mantenedor corrigiu a referência: as capas em uso no aplicativo NÃO são as 26 artes locais brancas empregadas no LED R80. Em seguida pediu guardar esse efeito pronto como backup para uso futuro. `release-channels/PENDING-VISUAL.json` agora registra `archived-for-future-use`, `integrateAutomatically:false`. Não incorporar esse perfil ao próximo APK nem tratá-lo como correção das capas atuais. Preservar como referência no backup único em `effects/Dreamcast-LED-estilo-TURBORAMA-R80.zip`, com fontes/entradas de compilação, biblioteca e prévia. Os dois instaladores continuam R76/R79. A contagem de 243 capas Dreamcast vem do índice R18 entregue pelo servidor, não de uma nova leitura autenticada do telefone.
+
+## Preparação anterior, substituída pelo arquivamento acima
 
 Pedido posterior do mantenedor: mapear as capas Dreamcast e aplicar o LED que percorre as luzes como no SNES, enquanto aguarda o servidor. Implementado e compilado em `versions/station-dreamcast-led-r80-20261008`; ler README, recibos e `release-channels/PENDING-VISUAL.json`. Perfil dedicado à moldura Dreamcast, somente capa selecionada da lista de jogos. 26 artes locais/52 representações verificadas por ANGLE; não equivale às 243 capas remotas nem à conferência no Android. Movimento e saída dos perfis anteriores preservados, política térmica intacta. Biblioteca candidata `bfd8601f1c44e80dac0f30c345ab02c40a4f971e3ce206eb98b12afc117e1f3e`, base R79 reproduzida. Não foi gerado/instalado APK nem alterado servidor. Incorporar à próxima atualização do canal de teste; instaladores atuais permanecem R76/R79, sem terceiro APK.
 

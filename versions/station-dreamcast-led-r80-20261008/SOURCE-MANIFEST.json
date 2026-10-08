@@ -16,11 +16,15 @@
     "native/magazine_shader.h": "9f03ee940951714c6a3ff4da047418dd90c3eeb28f80287f41e62b1783daa017",
     "native/native_magazine.h": "abf25e0462c6f5b11b2fdb1c43a2e6343bee62a945a99b6b253219fd8e4a6eb7",
     "native/premium-magazine-led-android.glsl": "d9dc4fd2068a233d0c27a2ec300bf56754dbd916d7c6f95ffac5d1552e50d5cf",
-    "README.md": "11af6976e9bb07057fd17cd31fcaae0b72f922effd352fb3b79938d9c37aaeb3",
+    "README.md": "2a5627436cf7778f8bbe5d4b3d0934bcf44eb3b94d6ef4cbec6351b8b82ebf6f",
+    "recipes/archive_effect.py": "57d47448e95212e84ac0e0c08f3a6bbec35e8f5853e68f488ae56c36e0d25773",
     "recipes/build.py": "727ce7e3d30229f9582cb8f95637cf889cc3d7848eb633fa3835abe1a80cdfa0",
     "recipes/prepare.py": "a473b3448f392629d1ee1fe197e30005fda51dfb7e9d44cc9e3ce3f2f771c737",
     "tests/angle_gles2.py": "3b9ca149ae0fd165bf826c53542d3e1d8ac8f1aacdad4a3abb118c1e40de2fa7",
     "tests/render_dreamcast_preview.py": "0e0ce828f7ffc51315e4462a0a76da7835be9c3a44243fe65fe36bbeded0714b",
-    "tests/test_dreamcast_angle.py": "6fc738b929ca1eca453fbd523968371070e1571f953609f3775e4804d9c7d576"
-  }
+    "tests/test_dreamcast_angle.py": "6fc738b929ca1eca453fbd523968371070e1571f953609f3775e4804d9c7d576",
+    "evidence/archive.json": "1006a72650513238e2382d9adbba5911ef9bd0cc698f725f163cbd875f9e96dc"
+  },
+  "status": "archived-for-future-use",
+  "integrateAutomatically": false
 }

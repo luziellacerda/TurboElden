@@ -1,4 +1,6 @@
-# Dreamcast — LED nas capas, preparado para a próxima atualização
+# Dreamcast — backup de efeito para uso futuro
+
+**Estado posterior confirmado pelo mantenedor:** as capas do aplicativo são diferentes desta referência. O usuário pediu guardar o efeito pronto como backup para quando decidir usar esse estilo. Arquivado; não incorporar automaticamente ao próximo APK. As medições abaixo validam somente as 26 artes locais usadas na preparação.
 
 Pedido do mantenedor: mapear a arte das capas do Dreamcast e aplicar o mesmo movimento LED usado nos jogos do Super Nintendo enquanto o servidor prepara o multiplayer.
 
@@ -6,7 +8,7 @@ Pedido do mantenedor: mapear a arte das capas do Dreamcast e aplicar o mesmo mov
 
 O perfil Dreamcast foi implementado e a biblioteca ARM64 foi compilada. Não foi gerado nem instalado outro APK nesta etapa. Os dois instaladores atuais continuam R76 (referência de dois jogadores) e R79 (teste de até quatro), no backup único indicado por `release-channels/ACTIVE.json`.
 
-Esta alteração deve ser incorporada à próxima atualização derivada das fontes completas do canal `test-4p`. Não sobrescrever os APKs existentes nem recuperar receitas antigas para montá-la. A dependência de ativação/perfis multiplayer v3 continua conforme o handoff R79; o efeito não altera a conexão.
+Este perfil é uma referência para uso futuro mediante novo pedido e conferência das capas. Não sobrescrever os APKs existentes nem recuperar receitas antigas para montá-lo. A dependência de ativação/perfis multiplayer v3 continua conforme o handoff R79; o efeito não altera a conexão.
 
 ## Mapeamento e comportamento
 
