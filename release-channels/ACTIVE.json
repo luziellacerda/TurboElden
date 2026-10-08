@@ -19,7 +19,7 @@
       "version": "R85",
       "directory": "test-up-to-4-players-r85",
       "branch": "fix/station-title-count-r85-20261008",
-      "sourceCommit": null,
+      "sourceCommit": "8592255dec80150a4082cfb1f6b1c20b953d910f",
       "sourceDirectory": "versions/station-title-count-r85-20261008",
       "apk": "TurboStations-Premium-R85-20261008.apk",
       "apkSHA256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
@@ -31,10 +31,11 @@
       "runtimeCoresEnginesUnchangedFromR79": true,
       "archivedDreamcastEffectIncluded": false,
       "installedDevices": [],
-      "installationReceipt": null,
+      "installationReceipt": "versions/station-title-count-r85-20261008/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "pending"
+      "sourceCommitStatus": "complete",
+      "installationStatus": "pending USB debugging online; last verified phone has earlier R85 candidate"
     }
   }
 }
