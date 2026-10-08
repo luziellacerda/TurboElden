@@ -184,7 +184,8 @@ static void updateSystemInfo(void*p){
   memcpy(infoActionCount,countLabel,strlen(countLabel)+1);memcpy(infoActionPlayers,players,strlen(players)+1);
   // One measured line: title, five font spaces, folder and visible game count.
   const float rowHeight=h*.076f,icon=h*.039f;
-  const float countWidth=nativeInfoTextWidth(infoListCountText,countLabel,stationGameMetadataScale);
+  const float countScale=stationGameMetadataScale/1.5f;
+  const float countWidth=nativeInfoTextWidth(infoListCountText,countLabel,countScale);
   const float gap=nativeInfoTextWidth(infoTitle,"     ",stationGameMetadataScale);
   const float inner=nativeInfoTextWidth(infoTitle," ",stationGameMetadataScale);
   const float available=w*.815f-left,reserved=gap+icon+inner+countWidth;
@@ -193,7 +194,7 @@ static void updateSystemInfo(void*p){
   float folderX=left+titleWidth+gap;
   infoListFolder={folderX,infoViewport.y+(rowHeight-icon)*.5f,icon,icon};
   infoListCountViewport={folderX+icon+inner,infoViewport.y,countWidth+.5f,rowHeight};
-  fitGameTitleOneLine(infoListCountText,countLabel,infoListCountViewport,stationGameMetadataScale);
+  fitGameTitleOneLine(infoListCountText,countLabel,infoListCountViewport,countScale);
   float advance=h*.093f;infoViewport.y+=advance;infoViewport.h-=advance;
   if(infoGameLayout.photo){infoGameLayout.console.y+=advance;infoGameLayout.console.h-=advance;}
   infoGameLayout.text=infoViewport;

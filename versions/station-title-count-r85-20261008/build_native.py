@@ -10,7 +10,7 @@ def main():
     current={p.relative_to(WORK/'carousel-inputs').as_posix():sha(p) for p in (WORK/'carousel-inputs').rglob('*') if p.is_file()}
     assert set(original)==set(current)
     changed=sorted(n for n in current if current[n]!=original[n])
-    assert changed==['d0/'+n for n in ['native_formation.h','native_game_actions.h','native_info.h','native_lottie_gear.h','native_profile_name.h','native_search_download.h','native_skin.h','native_space.h','station_bottom_action_layout.h','station_collection_settings_layout.h']]
+    assert changed==['d0/'+n for n in ['native_carousel.cpp','native_formation.h','native_game_actions.h','native_info.h','native_lottie_gear.h','native_profile_name.h','native_search_download.h','native_skin.h','native_space.h','station_bottom_action_layout.h','station_collection_settings_layout.h']]
     spec=json.loads((BASE/'carousel-command.json').read_text())
     assert sha(Path(spec['command'][0]))==spec['compilerSHA256']
     output=WORK/'native';output.mkdir();temp=output/'temp';temp.mkdir()

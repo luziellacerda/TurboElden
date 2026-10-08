@@ -100,7 +100,8 @@ static void layoutSkin(void*p){
  place((B*)p+0x1470,w*.848f+actionLabelInset(h*.059f),stationScreenTopbarActionY(h),w*.127f-actionLabelInset(h*.059f)-h*.009f,h*.059f,.62f,0);
  place((B*)p+0x15a0,w*.718f+actionLabelInset(h*.059f),stationScreenTopbarActionY(h),w*.118f-actionLabelInset(h*.059f)-h*.009f,h*.059f,.62f,0);
  float avatarX=systemsMode?w*.055f:contentLeft(p)+h*.059f+w*.012f;
- bounds(p,0x1420,avatarX,h*.008f,systemsMode?w*.17f:w*.706f-avatarX,h*(systemsMode?.066f:.058f));
+ if(systemsMode)bounds(p,0x1420,avatarX,h*.008f,w*.17f,h*.066f);
+ else bounds(p,0x1420,0,0,0,0); // Hidden account has no touch target.
  void*profile=at<void*>(p,0x1468);
  float nameX=systemsMode?w*.055f+h*.066f+w*.012f:avatarX+h*.058f+w*.012f;
  if(profile)place(profile,nameX,h*(systemsMode?.018f:.012f),systemsMode?w*.115f:w*.706f-nameX,h*.05f,.72f,0);
@@ -168,7 +169,12 @@ static void rectHook(float x,float y,float w,float h,unsigned c,unsigned d,bool 
  }
  if(gui&&skinInfo){
   float width=at<float>(gui,0x54),height=at<float>(gui,0x58);
-  if(caller==0x228168){float edge=stationScreenTopbarBottom(height),start=systemsMode?0:contentLeft(gui)-width*.012f;rect(start,0,width-start,edge,0x080C09f5);rect(start,edge,width-start,1.5f,0x28E65870);return;}
+  if(caller==0x228168){
+   float edge=stationScreenTopbarBottom(height),start=systemsMode?0:contentLeft(gui)-width*.012f;
+   if(systemsMode)rect(start,0,width-start,edge,0x080C09f5);
+   else fn<void(*)(float,float,float,float,unsigned,unsigned,bool,int,int)>(0x2e2c38)(start,0,width-start,edge,0x080C0900u,0x080C09ffu,false,4,5);
+   rect(start,edge,width-start,1.5f,0x28E65870);return;
+  }
   if(caller==0x228190)return;
   if(caller==0x228270||caller==0x2282c8){y=stationScreenTopbarBottom(height);h=1.5f;if(!systemsMode){x=contentLeft(gui)-width*.012f;w=width-x;}}
  }
@@ -190,9 +196,17 @@ static void infoSkinHook(void*p){skinInfo=true;fn<V>(0x2280e8)(p);skinInfo=false
 static void topSkinHook(void*p,void*matrix){
  bool priorTop=skinTop;int priorIndex=skinTopIndex;void*priorOwner=skinTopOwner;
  skinTop=true;skinTopIndex=0;skinTopOwner=p;
+ B profileLoading=at<B>(p,0x1461);
+ if(!systemsMode)at<B>(p,0x1461)=0; // Suppress only this draw's profile loading arc.
  fn<void(*)(void*,void*)>(0x22ea88)(p,matrix);
+ at<B>(p,0x1461)=profileLoading;
  skinTopOwner=priorOwner;skinTopIndex=priorIndex;skinTop=priorTop;
 }
+// Verified ProfileAvatar::draw(float,float,float,float), original PLT slot 0x3c16a0.
+ static void drawProfileAvatarHook(void*avatar,float x,float y,float radius,float alpha){
+  if(skinTop&&skinTopOwner&&!systemsMode&&avatar==(B*)skinTopOwner+0x1430)return;
+  fn<void(*)(void*,float,float,float,float)>(0x23e270)(avatar,x,y,radius,alpha);
+ }
 // Native geometry for the primary platform action; no textures, player or timer.
 // The original action rectangle is also its touch target, set by layoutSkin.
 static void openButtonFill(float x,float y,float w,float h,unsigned top,unsigned bottom){

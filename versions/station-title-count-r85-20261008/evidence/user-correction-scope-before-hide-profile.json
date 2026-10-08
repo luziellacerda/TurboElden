@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "changedOnly": [
+    "d0/native_info.h",
+    "d0/native_profile_name.h",
+    "d0/native_space.h"
+  ],
+  "allOtherInputFilesByteIdentical": true,
+  "usernamePreviousScaleRestored": true,
+  "counterScale": 1.05,
+  "gameTitleScale": 1.575,
+  "originalBackdropPreserved": true,
+  "upperLeftOnlyAfterLoading": true,
+  "nativeSHA256": {
+    "d0/native_info.h": "338241b86396c49bc7adb4a28c3a6d6bcd1ea1db62ff98020c7b8236d98815d4",
+    "d0/native_profile_name.h": "26d956d57c50d1627b261142dba4a35f2a1bf5843163a2af4e29ef8e38c10747",
+    "d0/native_space.h": "53f925d6636a7e5f3d84de3e99bc0fbd539616316e381d915cf15885746dcb76"
+  },
+  "physicalDisplayVerified": false
+}

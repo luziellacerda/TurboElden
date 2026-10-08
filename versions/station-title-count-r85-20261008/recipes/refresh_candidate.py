@@ -9,7 +9,7 @@ def sha(p):
 def read(p):return json.loads(p.read_text())
 def write(p,v):p.write_text(json.dumps(v,indent=2)+'\n')
 package=read(ROOT/'evidence/package.json');apk=DEST/'TurboStations-Premium-R85-20261008.apk'
-assert sha(apk)=='b8a153802c5c9e564679d726a6074b96307705a0e1677dfd4c8abd6677497ef2'
+assert sha(apk)=='43e439567bff11e652eb4a94b3f14bc1e79be61fb131a6a061bda62319dc7dc0'
 for rel in ['carousel-inputs/'+n for n in read(ROOT/'evidence/native-build.json')['changedSources']]+['carousel-inputs/d0/station_compact_topbar.h','carousel-command.json']:
  shutil.copyfile(WORK/rel,DEST/rel)
 shutil.copyfile(WORK/'native/libturbo_carousel.so',DEST/'compiled/libturbo_carousel.so')

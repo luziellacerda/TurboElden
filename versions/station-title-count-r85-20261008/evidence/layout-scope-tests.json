@@ -1,12 +1,22 @@
 {
   "passed": true,
-  "checks": 81,
+  "checks": 127,
   "scope": "source guards and geometry only",
   "systemsTopbarByteIdenticalToR84": true,
-  "systemsGradientBodyUnchanged": true,
-  "gameCornerDrawCalls": 2,
-  "gameCornerVertices": 10,
+  "sharedBackdropAllCarousels": true,
+  "loadingBackgroundUnchanged": true,
+  "gameBackdropDrawCalls": 1,
+  "gameBackdropVertices": 754,
+  "geometryCached": true,
+  "broadSmoothAlphaRamp": true,
+  "opaqueBoundaryAlignedToLogoB": true,
+  "fadeEndsTransparentAtRightEdge": true,
+  "foregroundTextUnchanged": true,
+  "profileHiddenOnlyInGames": true,
+  "barFadesLeftToRightOpaque": true,
   "newTimer": false,
+  "usernameEnlargementReverted": true,
+  "gameCountSmaller": true,
   "physicalDisplayVerified": false,
-  "sourceSHA256": "9cbd70533b7f82fc07af68a75052f21671ce927a7dc313437915390d7204994c"
+  "sourceSHA256": "14a1b8ea53fdbd003e3cf521eb5e8d0b69c8ce719ad65a6090373ca9588b77d3"
 }

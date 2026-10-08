@@ -2,10 +2,10 @@
   "version": "R85",
   "verified": true,
   "backupDirectory": "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\test-up-to-4-players-r85",
-  "apkSHA256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
+  "apkSHA256": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
   "verifiedFiles": {
     "carousel-command.json": {
-      "sha256": "bba043549bf67e3f92c51dacd3fd3fd7772b9d977d7308b1b973c55fd41f87ed",
+      "sha256": "8b49e33aae5ea3a6ad283195a4814f8151275a3a4262b7feb3fb143405096d82",
       "bytes": 1557
     },
     "java-build-receipt.json": {
@@ -17,8 +17,8 @@
       "bytes": 32802
     },
     "TurboStations-Premium-R85-20261008.apk": {
-      "sha256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
-      "bytes": 2123645796
+      "sha256": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
+      "bytes": 2123644492
     },
     "compiled/classes28.dex": {
       "sha256": "4696ad8c0be296e3a191b906b135d8393450e12a6de926cf26216e6fcb6e8c9c",
@@ -29,8 +29,8 @@
       "bytes": 516760
     },
     "compiled/libturbo_carousel.so": {
-      "sha256": "50f88d5323f56f865d54d0da1c99d1f94d45d1805b9e39171abb9d440b452516",
-      "bytes": 142662440
+      "sha256": "c53514aca43f1d3870b12cdc82bc9f9c187226dcc31ff0a7770af8791c8ed430",
+      "bytes": 142663744
     },
     "java/netplay-src/org/emulationstation/frontend/netplay/NetplayPaths.java": {
       "sha256": "e1cfc916a17eaaabadbcd821c2483469b99e0057944e2f2118fad064187e6a67",
@@ -905,8 +905,8 @@
       "bytes": 16935
     },
     "carousel-inputs/d0/native_carousel.cpp": {
-      "sha256": "ae1255f4b19824e7838ddca76a2fa946863dd2289e9580d23d460e2b285ef8ca",
-      "bytes": 29807
+      "sha256": "738e03685deaa9e184a2357fffaac3a92b079ca3e8692ec8d3f5f2b1e7357cd0",
+      "bytes": 30404
     },
     "carousel-inputs/d0/native_console.h": {
       "sha256": "ea38ab513788ae0bd5207b17648894214e4e84a15d4fcd12e4451bd891bce79d",
@@ -925,8 +925,8 @@
       "bytes": 6296
     },
     "carousel-inputs/d0/native_info.h": {
-      "sha256": "6c12005429f5ccf5f3e3ecb605efbafcf0e6a6cd3ae0974ad20534dd586f7751",
-      "bytes": 23220
+      "sha256": "338241b86396c49bc7adb4a28c3a6d6bcd1ea1db62ff98020c7b8236d98815d4",
+      "bytes": 23249
     },
     "carousel-inputs/d0/native_installed_tag.h": {
       "sha256": "e2f279f76d837591533c942b9fa63c3cbd2b28a5d8d238922c6cd907157ee085",
@@ -961,8 +961,8 @@
       "bytes": 3707
     },
     "carousel-inputs/d0/native_profile_name.h": {
-      "sha256": "7ad498248d5540a0528607df09a528483bf2cf0a6750d289ad38f26beb69de92",
-      "bytes": 5263
+      "sha256": "26d956d57c50d1627b261142dba4a35f2a1bf5843163a2af4e29ef8e38c10747",
+      "bytes": 4972
     },
     "carousel-inputs/d0/native_search_download.h": {
       "sha256": "7ef7d92ff5746454d076b69a674a77a33e480f1ac7fc3293fdaa3144a6c03e88",
@@ -977,12 +977,12 @@
       "bytes": 8074
     },
     "carousel-inputs/d0/native_skin.h": {
-      "sha256": "79e26a206a99b2ecaab2a39a7935a2ebccddb825d95539adf8f03a4dc08584b6",
-      "bytes": 15400
+      "sha256": "4bef8e660fc2755289ebb50d785dc958517ce2164b4827b97c1484f291712bc8",
+      "bytes": 16125
     },
     "carousel-inputs/d0/native_space.h": {
-      "sha256": "006d1cd6f6bb78c45e25e5820a08841ecd7088ee33c560692aaafbd3fa53d914",
-      "bytes": 2362
+      "sha256": "612468ef600fffc2b60d0fd62fca797d86be615c2ef18c1ec0fd9df732e9280b",
+      "bytes": 2303
     },
     "carousel-inputs/d0/native_space3d.h": {
       "sha256": "f547260331ccc7fbeb3a070a1042734c82695ab6ec3484717be72c4c24e64b4d",

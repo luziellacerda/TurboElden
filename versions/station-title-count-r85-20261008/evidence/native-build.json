@@ -9,12 +9,12 @@
     "d0/installed_art_r48.h": "ccc58c7196850819a7a331e4ed3dd7ea7f761f4f9686652f4f24b2891a1b64b0",
     "d0/lottie_gear3_data.h": "30835b92c137c25fba4d95fb9f027b66df055f5fe3edb50399de3d489e1bd4f3",
     "d0/magazine_shader.h": "309ff6c7ea0270b02108622b5b1c20cfc96bff446b89f5bd8e76c4b76dbdb037",
-    "d0/native_carousel.cpp": "ae1255f4b19824e7838ddca76a2fa946863dd2289e9580d23d460e2b285ef8ca",
+    "d0/native_carousel.cpp": "738e03685deaa9e184a2357fffaac3a92b079ca3e8692ec8d3f5f2b1e7357cd0",
     "d0/native_console.h": "ea38ab513788ae0bd5207b17648894214e4e84a15d4fcd12e4451bd891bce79d",
     "d0/native_folders.h": "71fa0864f7833c1e2cf29eac8c7a0bf97ff15115625fd55789819a69d23b1944",
     "d0/native_formation.h": "8346f40804e983b4b8377d19da4d2e4dc0c58f9a8f1eb5e7b4a837d2e67d4d26",
     "d0/native_game_actions.h": "8acc6770bc253df2eb9aaa9127f686d6ff6df48e3b4979dee23a01fa6de11b34",
-    "d0/native_info.h": "6c12005429f5ccf5f3e3ecb605efbafcf0e6a6cd3ae0974ad20534dd586f7751",
+    "d0/native_info.h": "338241b86396c49bc7adb4a28c3a6d6bcd1ea1db62ff98020c7b8236d98815d4",
     "d0/native_installed_tag.h": "e2f279f76d837591533c942b9fa63c3cbd2b28a5d8d238922c6cd907157ee085",
     "d0/native_lottie_gear.h": "61819caae6df6f1b6c34f5bd8db445aa87d623f2494877104a2655b6b1503e46",
     "d0/native_magazine.h": "50fe001ac12bc592d672ac5c3889395d20aa65dfd6143082af84502a163e9fd8",
@@ -23,12 +23,12 @@
     "d0/native_netplay.h": "355605d71eeadfe80a3adf8520801c3b1ecc31f2d665e6c2c797104562f38640",
     "d0/native_online_robot.h": "d95f553b3d7ccea2b8cfc935ca03e93d86ea65af997970d708f96715e1cd3f39",
     "d0/native_players_evidence.h": "1844bc6a1b1d21316df1662d1416ae309784a248ee68b05b7798e0970a75a992",
-    "d0/native_profile_name.h": "7ad498248d5540a0528607df09a528483bf2cf0a6750d289ad38f26beb69de92",
+    "d0/native_profile_name.h": "26d956d57c50d1627b261142dba4a35f2a1bf5843163a2af4e29ef8e38c10747",
     "d0/native_search_download.h": "7ef7d92ff5746454d076b69a674a77a33e480f1ac7fc3293fdaa3144a6c03e88",
     "d0/native_search_state.h": "b602d20be19eb0827c85eb552c1bf963d3fea4149b32b4dceef28d5103376b43",
     "d0/native_settings.h": "1d70ee6836e3438187e6a0c9c001230a9fe41365778e392a620dc2994c04119f",
-    "d0/native_skin.h": "79e26a206a99b2ecaab2a39a7935a2ebccddb825d95539adf8f03a4dc08584b6",
-    "d0/native_space.h": "006d1cd6f6bb78c45e25e5820a08841ecd7088ee33c560692aaafbd3fa53d914",
+    "d0/native_skin.h": "4bef8e660fc2755289ebb50d785dc958517ce2164b4827b97c1484f291712bc8",
+    "d0/native_space.h": "612468ef600fffc2b60d0fd62fca797d86be615c2ef18c1ec0fd9df732e9280b",
     "d0/native_space3d.h": "f547260331ccc7fbeb3a070a1042734c82695ab6ec3484717be72c4c24e64b4d",
     "d0/native_system_video720.h": "901d01341f3c316e02ca5b07cc278f5bc0864cff9ba39da7ce52030888261cc6",
     "d0/native_theme_preferences.h": "0962ee380632e372bcc5fe876eeb21d472cdf59544840ab92a4bd39b514ee9cc",
@@ -117,6 +117,7 @@
     "d8/collection_previews.o": "dbe54d993453a37197317d23c11fb438ccb792d21edf82906abb2a73f1027937"
   },
   "changedSources": [
+    "d0/native_carousel.cpp",
     "d0/native_formation.h",
     "d0/native_game_actions.h",
     "d0/native_info.h",
@@ -128,6 +129,6 @@
     "d0/station_bottom_action_layout.h",
     "d0/station_collection_settings_layout.h"
   ],
-  "carouselSHA256": "50f88d5323f56f865d54d0da1c99d1f94d45d1805b9e39171abb9d440b452516",
+  "carouselSHA256": "c53514aca43f1d3870b12cdc82bc9f9c187226dcc31ff0a7770af8791c8ed430",
   "compilerSHA256": "1c7792ef6df195b6af5919071a9ca7850bcb850153f02bed9c7d642e266c4ff3"
 }

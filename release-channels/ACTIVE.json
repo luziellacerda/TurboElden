@@ -19,10 +19,10 @@
       "version": "R85",
       "directory": "test-up-to-4-players-r85",
       "branch": "fix/station-title-count-r85-20261008",
-      "sourceCommit": "8592255dec80150a4082cfb1f6b1c20b953d910f",
+      "sourceCommit": null,
       "sourceDirectory": "versions/station-title-count-r85-20261008",
       "apk": "TurboStations-Premium-R85-20261008.apk",
-      "apkSHA256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
+      "apkSHA256": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
       "javaSourceCount": 210,
       "protocol": "station-stream.v3",
       "status": "experimental; server activation and exact per-game approved profiles required including two-player rooms",
@@ -36,8 +36,8 @@
       "installationReceipt": "versions/station-title-count-r85-20261008/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "complete",
-      "installationStatus": "Final APK installed and SHA256 verified on Motorola; authenticated entry and game selection observed"
+      "sourceCommitStatus": "pending shared-backdrop source snapshot",
+      "installationStatus": "exact shared-backdrop APK installed; approved game effect reused unchanged"
     }
   }
 }

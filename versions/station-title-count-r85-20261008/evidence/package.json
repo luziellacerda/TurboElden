@@ -1,16 +1,16 @@
 {
   "version": "R85",
-  "utc": "2026-10-08T21:48:36.595237+00:00",
+  "utc": "2026-10-08T22:31:51.544157+00:00",
   "temporaryApk": "E:\\ESTUDO APK\\work\\station-title-count-r85-20261008\\package\\TurboStations-Premium-R85-20261008.apk",
-  "sha256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
-  "bytes": 2123645796,
-  "baseSHA256": "b8a153802c5c9e564679d726a6074b96307705a0e1677dfd4c8abd6677497ef2",
+  "sha256": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
+  "bytes": 2123644492,
+  "baseSHA256": "43e439567bff11e652eb4a94b3f14bc1e79be61fb131a6a061bda62319dc7dc0",
   "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
   "changes": [
     "lib/arm64-v8a/libturbo_carousel.so"
   ],
   "changedEntrySHA256": {
-    "lib/arm64-v8a/libturbo_carousel.so": "50f88d5323f56f865d54d0da1c99d1f94d45d1805b9e39171abb9d440b452516"
+    "lib/arm64-v8a/libturbo_carousel.so": "c53514aca43f1d3870b12cdc82bc9f9c187226dcc31ff0a7770af8791c8ed430"
   },
   "preservedEntries": 13225,
   "totalVideos": 59,
@@ -77,7 +77,7 @@
   },
   "protectedEntries": {
     "AndroidManifest.xml": "3a821dccd8a9853acd345f106614ec955bbf66b681b7690f907348569e8bef0d",
-    "lib/arm64-v8a/libturbo_carousel.so": "50f88d5323f56f865d54d0da1c99d1f94d45d1805b9e39171abb9d440b452516",
+    "lib/arm64-v8a/libturbo_carousel.so": "c53514aca43f1d3870b12cdc82bc9f9c187226dcc31ff0a7770af8791c8ed430",
     "lib/arm64-v8a/libstation_bsnes.so": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
     "lib/arm64-v8a/libstation_clownmdemu.so": "109b62ac11b2f59572de0666bcb02b3701676896b91cb32529bbe5c5032b6b69",
     "lib/arm64-v8a/libstation_retroarch.so": "351cee4540e916468a504788911e4c5fcb4fe141e3b544b1b1255d32e1d04a26",
@@ -86,7 +86,7 @@
   "allPackageEntriesVerified": true,
   "alignment16KiB": true,
   "javaReceiptSHA256": "563ff15c8bef6c7efaed89e314e1e7c31eb14247492e85c624f27abef36ca6bd",
-  "recipeSHA256": "83d3f95fcc2b8c30c0dfbabaa24beb465bf2be52dd1b2ee80fc22915d8b396e4",
+  "recipeSHA256": "97d7ad2b3c3dbf8a818e42fda9fd8ce2fa4d2fb9ed5b261b8dacfbbfdcc1f037",
   "runtimeCoresEnginesUnchangedFromR84": true,
   "archivedDreamcastEffectIncluded": false,
   "serverV3ActivationStillRequired": true,

@@ -4,7 +4,7 @@ import copy,datetime,hashlib,json,os,re,shutil,struct,subprocess,zipfile
 ROOT=Path(__file__).resolve().parent.parent
 WORK=Path(r'E:\ESTUDO APK\work\station-title-count-r85-20261008')
 BASE=Path(r'G:\BAKUP SISTEMA APP 03-10-2026\ATUAL-2P-E-TESTE-4P-20261008\test-up-to-4-players-r85\TurboStations-Premium-R85-20261008.apk')
-BASE_SHA='b8a153802c5c9e564679d726a6074b96307705a0e1677dfd4c8abd6677497ef2'
+BASE_SHA='43e439567bff11e652eb4a94b3f14bc1e79be61fb131a6a061bda62319dc7dc0'
 CERT='7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825'
 KEY=Path(r'C:\Users\Admin\.android\debug.keystore')
 def need(ok,message):

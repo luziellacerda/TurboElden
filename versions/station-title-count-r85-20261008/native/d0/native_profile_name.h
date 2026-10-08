@@ -16,19 +16,13 @@ static void applyStationProfileName(void*text){
  float w=at<float>(gui,0x54),h=at<float>(gui,0x58);
  float avatarX=systemsMode?w*.055f:contentLeft(gui)+h*.059f+w*.012f;
  float nameX=systemsMode?w*.055f+h*.066f+w*.012f:avatarX+h*.058f+w*.012f;
- StationInfoRect area{nameX,h*(systemsMode?.018f:.012f),systemsMode?w*.115f:w*.706f-nameX,h*(systemsMode?.05f:.060f)};
+ StationInfoRect area{nameX,h*(systemsMode?.018f:.012f),systemsMode?w*.115f:w*.706f-nameX,h*.05f};
  static void*owner;static float oldW,oldH,textW,textH,profileScale=.72f;static bool oldSystems,oldFolder;
  bool geometryReset=owner==text&&(absolute(at<float>(text,0x54)-textW)>.25f||absolute(at<float>(text,0x58)-textH)>.25f);
  if(changed||owner!=text||oldW!=w||oldH!=h||oldSystems!=systemsMode||oldFolder!=folderMode||geometryReset){
   owner=text;oldW=w;oldH=h;oldSystems=systemsMode;oldFolder=folderMode;
-  nativeInfoTextWidth(text,*name?name:"JOGADOR",1.f);
-  // Match actual rendered line height, even when the profile uses a different
-  // native font size. Keep font size fixed; abbreviate only overlong names.
-  profileScale=.72f;
-  if(!systemsMode&&infoListCountText){
-   float natural=at<float>(text,0x58),reference=at<float>(infoListCountText,0x58)*stationGameMetadataScale;
-   if(natural>0&&reference>0)profileScale=reference/natural;
-  }
+  float desired=nativeInfoTextWidth(text,*name?name:"JOGADOR",.72f);
+  profileScale=!systemsMode&&desired>area.w?.72f*area.w/desired:.72f;if(profileScale<.46f)profileScale=.46f;
   fitGameTitleOneLine(text,*name?name:"JOGADOR",area,profileScale);
   const char*rendered=strData((B*)text+0xd0);U bytes=strlen(rendered);if(bytes>=sizeof(display))return;
   memcpy(display,rendered,bytes+1);textW=at<float>(text,0x54);textH=at<float>(text,0x58);

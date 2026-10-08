@@ -1,18 +1,15 @@
 {
   "version": "R85",
-  "apkSHA256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
+  "apkSHA256": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
   "installedDevices": [
     "Motorola Edge 30"
   ],
   "finalInstallationConfirmed": true,
-  "lastConfirmedMotorolaAPK": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
-  "priorCandidateReceipt": "evidence/installation-motorola-r85-before-scope-gradient.json",
-  "failedAttemptReceipt": "evidence/installation-attempt-motorola-r85.json",
+  "lastConfirmedMotorolaAPK": "f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147",
   "samsungUpdated": false,
   "gameplayVerified": false,
-  "finalPhysicalDisplayVerified": true,
+  "finalPhysicalDisplayVerified": false,
   "receipt": "evidence/installation-motorola-r85.json",
-  "completedUTC": "2026-10-08T21:55:36.414933+00:00",
-  "visualCheck": "evidence/physical-check.json",
+  "completedUTC": "2026-10-08T22:34:16.685104+00:00",
   "dataPreserved": true
 }

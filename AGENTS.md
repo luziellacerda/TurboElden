@@ -1,3 +1,47 @@
+# R85 compartilhada instalada; próximos pedidos de capas online/Dreamcast
+
+Em08/10/2026 às22:34:16UTC, Motorola atualizado para APK f54767823c32736514b25140872082f7dbb35bd55e02ad443e4ac0bfbb45f147,2123644492bytes. Hash integral conferido, dados/UID/assinatura preservados. Samsung não atualizado. A função do degradê aprovado pelo usuário na43e439 foi reutilizada sem alteração nas plataformas e coleções. Somente fundo dessas telas mudou. Nenhum teste de gameplay ou conferência física final das três telas alegado. Backup recompilou Java/carrossel idênticos;127guardas deescopo.
+
+O usuário aprovou o efeito: preto até diagonal da letra B de TURBORAMA, depois suaviza até transparência total na borda direita. Não restaurar tentativas anteriores. Somente na seleção de jogos: perfil oculto, contador menor, robô30%,Baixarvermelho,ação/estrelas e geometria aprovados. Sistemas/coleções preservam o restante.
+
+Pedidos novos AINDA NÃO implementados nestaR85: capa grande da tela online com mesma largura da seleção, LEDs conforme plataforma; novas capas Dreamcast com novo efeito. Foi perguntado ao usuário o caminho das capas novas; aguardando. Não reutilizar automaticamente o efeito DreamcastR80 arquivado: ele mapeia26artes antigas emG:/TURBORAMA/RetroBat/roms/dreamcast/media/images e usuário já informou que não eram as capas doapp. Usar nova arte realmente fornecida. Ler código StationCreateGameCard/StationFlowPanel/StationRoomsActivity e perfis nativos native_magazine.h/premium-magazine-led-android.glsl; preservar protocolos/motores/sessões. Próxima implementação deve partir desta fonte completa, nunca sobreporActivitiesantigas.
+
+## Histórico anterior
+
+# R85 — degradê final alinhado à letra B — instalado em 08/10/2026
+
+Pedido mais recente substitui as tentativas anteriores: preto total até a diagonal da letra B de TURBORAMA na capa; a partir dela, transparência gradual por toda a largura restante, até a borda direita. Não restaurar a faixa estreita nem a limitação antiga à região da capa. O efeito é desenhado no fundo, antes de capas e textos. Geometria em cache, sem novo temporizador. Apenas seleção de jogos; sistemas e coleções permanecem como estavam.
+
+APK atual: 43e439567bff11e652eb4a94b3f14bc1e79be61fb131a6a061bda62319dc7dc0, 2123644356 bytes. Instalado no Motorola Edge 30 às 22:28:38 UTC, hash integral conferido, assinatura e dados/UID preservados. Samsung não atualizado. Battletoads observado na seleção: fundo com transição ampla e suave, perfil oculto, contador menor, robô acima do console, faixa INSTALADO preservada. Sem aprovação estética final do usuário nem teste de gameplay. Não repetir instalação por rótulo R85; selecionar o hash de ACTIVE.
+
+Mantidos os outros pedidos: nome/avatar ocultos só na seleção de jogos; contador 1,05 e título 1,575; robô 30% maior, Baixar vermelho, ação perto do centro e estrelas à direita; capa e INSTALADO preservados. Barra superior transparente à esquerda e opaca à direita. Só libturbo_carousel.so mudou; 210 Java, 59 vídeos, motores, controles e assinatura preservados. 127 guardas de escopo, 630 asserts de geometria; backup reproduziu Java/carrossel byte idênticos.
+
+Fontes e recibos em versions/station-title-count-r85-20261008; canais R76/R85 em release-channels/ACTIVE.json. Preservar um backup completo e os dois instaladores, sem duplicatas temporárias. Git apenas código/documentos; nunca APK, mídia, BIOS, licença ou captura pessoal. Sem alteração no servidor ou novo handoff por UI.
+
+## Histórico anterior — superado pelo hash acima
+
+# R85 diagonal corrigida — instalada no Motorola às22:19:48UTC
+
+A última correção supersede o degradê horizontal f0987cc3 e os demais registros abaixo. APK atual f4bcd0a6879e53c2dc434dba29bda26c8a49001a4ddca6b36d10a647f359e1d4,2123644284bytes. Hash integral conferido no Motorola, dados/UID/assinatura preservados. Samsung não atualizado.
+
+Pedido exato: diagonal DA LUPA ATÉ O CANTO INFERIOR ESQUERDO, preto do lado esquerdo; não escurecer a sinopse. native_space.h usa geometria emcache e opacidade zero na área da sinopse; somente seleção de jogos. Lateral esquerda preta preservada. Perfil/nome ocultos somente na seleção de jogos; contador menor1,05/título1,575, robô30%,Baixarvermelho,ação/estrelas e capa/INSTALADO preservados. Barra superior existente transparente àesquerda e opacaàdireita. Sistemas/coleções sem alteração.
+
+112guardas deescopo/geometria,630assertsdebotão; Java/carrossel do backup reproduzidos idênticos. Sólibturbo_carousel.so mudou;210Java,59vídeos,motores/controles/assinatura preservados. Abertura semlogin e sistemas/coleções observados. Ao conferir os jogos, telefone apareceu com menu de partida aberto: nenhum encerramento foi feito, e foi pedido ao usuário voltar àseleção ou conferir pessoalmente. Não afirmar conferência visual final da diagonal nem gameplay. ConsulteINSTALLATION/evidence/physical-check.json; recibosbefore-*sãohistóricos.
+
+Backup único deve manterR76+R85atuais; Git somentefontes/recibos, nuncaAPK/mídia/BIOS/licenças/capturaspessoais. Sem mudança de servidor, nova ativação ou handoff porestaUI.
+
+## Histórico anterior — superado pelo hash acima
+
+# R85 corrigida e instalada no Motorola — 08/10/2026 22:12:17 UTC
+
+Fonte atual em versions/station-title-count-r85-20261008; APK f0987cc3ba846ed2b4f632d64d41ed799d4ffad29190e18915498992b2f69354,2123645268bytes. Hash integral conferido no Motorola; UID/data/saves/licença preservados. Samsung não atualizado. Este registro substitui todas as candidatas R85 anteriores abaixo.
+
+Pedidos finais somente na seleção de jogos: ocultar nome/avatar/área de toque do perfil; contador menor1,05, título1,575 preservado; lateral esquerda da capa totalmente preta com degradê único contínuo até transparente à direita, removendo os polígonos diagonais anteriores; barra superior existente transparente à esquerda e opaca à direita. Robô30%maior acima do console, Baixarvermelho, textoação próximo do centro, estrelasàdireita, geometria de capa e faixa INSTALADO mantidos. Sistemas/coleções preservados. Não restaurar o nome maior ou o degradê diagonal antigo por causa dos registros históricos.
+
+Conferência física: sistemas/coleções mantêm perfil; jogo sem perfil, contador1/644→3/644, lateral preta, transição contínua, Baixarvermelho. Não iniciou partida/sala/download; sem aprovação estética final. 52guardas deescopo,630assertsgeométricos; backup reproduziu Java/carrossel idênticos. Apenaslibturbo_carousel.so mudou;210Java,59vídeos,motores/assinatura preservados. Sem alteração de servidor ou nova homologação online. Publicar código/recibos, nunca capturas pessoais, mídia,APK/BIOS/licenças. Backup único mantémR76+R85 atuais; preservar fontes históricas.
+
+## Histórico anterior (não selecionar candidatos pelo rótulo R85)
+
 # R85 final instalada e conferida no Motorola — 08/10/2026
 
 Instalação solicitada após retorno da USB concluída às21:55:36UTC. SHA integral19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0 noMotorola Edge30; assinatura original, UID/data/saves/licença preservados, sem APK extra e sem alteração de configuração. Este recibo substitui a pendência anterior de USB/candidatasR85. Samsung não atualizado.
