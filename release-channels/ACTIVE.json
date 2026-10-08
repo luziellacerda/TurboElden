@@ -16,16 +16,21 @@
       "sourceCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e"
     },
     "test-4p": {
-      "version": "R79",
-      "directory": "test-up-to-4-players-r79",
-      "branch": "fix/station-room-bootstrap-r79-20261008",
-      "sourceCommit": "b377db3981c96374fbe5591700db91dfbe297994",
-      "apk": "TurboStations-Premium-R79-20261008.apk",
-      "apkSHA256": "c2aeee4443dedc2862b29dde1f972574bc25464d6993abf01f34d43531558f0a",
+      "version": "R81",
+      "directory": "test-up-to-4-players-r81",
+      "branch": "fix/station-online-readiness-r81-20261008",
+      "sourceCommit": null,
+      "sourceCommitStatus": "pending-source-commit",
+      "sourceDirectory": "versions/station-online-readiness-r81-20261008",
+      "apk": "TurboStations-Premium-R81-20261008.apk",
+      "apkSHA256": "85fac8f51daa3a370eabb14d98832f75c2f30ff81422c549538ee715627032c6",
       "javaSourceCount": 209,
       "protocol": "station-stream.v3",
       "status": "experimental; server activation and exact per-game approved profiles required including two-player rooms",
-      "fourPhoneGameplayQualified": false
+      "fourPhoneGameplayQualified": false,
+      "installed": false,
+      "runtimeCoresEnginesUnchangedFromR79": true,
+      "archivedDreamcastEffectIncluded": false
     }
   }
 }

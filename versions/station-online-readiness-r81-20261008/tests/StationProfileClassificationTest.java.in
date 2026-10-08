@@ -1,0 +1,111 @@
+package org.emulationstation.frontend.netplay;
+import java.io.IOException;
+import java.lang.reflect.*;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.util.*;
+import org.json.*;
+
+/** Synthetic contract fixtures only; none qualifies a real game or approves a profile. */
+final class StationProfileClassificationTest {
+    static int checks;
+    interface Action {void run()throws Exception;}
+    static void check(boolean value,String why){checks++;if(!value)throw new AssertionError(why);}
+    static void rejects(Action action,String why)throws Exception{checks++;try{action.run();}catch(Exception expected){return;}throw new AssertionError("Accepted "+why);}
+    static final String ITEM="fixture-item",HASH=repeat('a'),CORE=repeat('b'),RUNTIME=repeat('c');
+    static String repeat(char c){char[] chars=new char[64];Arrays.fill(chars,c);return new String(chars);}
+    static JSONObject copy(JSONObject value){return new JSONObject(value.toString());}
+    static JSONObject engine(String platform){return new JSONObject().put("platform",platform).put("engineId","fixture-engine").put("coreSha256",CORE).put("runtimeSha256",RUNTIME).put("options","");}
+    static JSONObject profile(String platform,String controller,int max,int[] counts,String id)throws Exception{
+        int[] devices;String options="";
+        switch(controller){
+            case "standard-2p-v1":devices=new int[]{1,1};break;
+            case "snes-multitap-port2-v1":devices=new int[]{1,257,1,1,1};break;
+            case "megadrive-sega-teamplayer-v1":devices=new int[]{1,1,1,1,1,1,1,1};options="clownmdemu_input_protocol = \"sega\"\n";break;
+            case "megadrive-ea-4way-v1":devices=new int[]{1,1,1,1};options="clownmdemu_input_protocol = \"ea\"\n";break;
+            default:throw new AssertionError(controller);
+        }
+        String hash=StationOnlineGame.hex(MessageDigest.getInstance("SHA-256").digest(StationMultiplayerProfile.canonical(controller,devices,options).getBytes(StandardCharsets.UTF_8)));
+        return new JSONObject().put("approved",true).put("itemId",ITEM).put("contentSha256",HASH).put("platform",platform).put("engineId","fixture-engine").put("coreSha256",CORE).put("runtimeSha256",RUNTIME).put("profileId",id).put("profileSha256",hash).put("controllerProfile",controller).put("mode",max==1?"single-player":"simultaneous").put("maximumPlayers",max).put("allowedPlayerCounts",new JSONArray(counts));
+    }
+    static JSONObject snapshot(JSONObject...profiles){return new JSONObject().put("multiplayerVersion",3).put("capability","station-multiplayer.v3").put("profiles",new JSONArray(Arrays.asList(profiles)));}
+    // Reflection lets the identical suite compile against R79 and reproduce its runtime failure first.
+    @SuppressWarnings("unchecked") static List<StationMultiplayerProfile> classifications(JSONObject value,JSONObject engine)throws Exception{
+        try{return (List<StationMultiplayerProfile>)StationMultiplayerProfile.class.getDeclaredMethod("classifications",JSONObject.class,String.class,JSONObject.class).invoke(null,value,ITEM,engine);}
+        catch(InvocationTargetException e){Throwable cause=e.getCause();if(cause instanceof Exception)throw (Exception)cause;throw e;}
+    }
+    static JSONObject room(StationMultiplayerProfile p,int capacity,int count)throws Exception{
+        JSONArray roster=new JSONArray();for(int n=1;n<=count;n++)roster.put(new JSONObject().put("peerId","p"+n).put("slot",n).put("ready",true));
+        return p.fields(new JSONObject()).put("roomId","fixture-room").put("platform",p.platform).put("mode",p.mode).put("controllerProfile",p.controllerProfile).put("maximumPlayers",p.maximumPlayers).put("allowedPlayerCounts",new JSONArray(p.allowed)).put("hostId","p1").put("transport","relay-wss-v3").put("recoveryProtocol","station-stream.v3").put("capacity",capacity).put("roster",roster).put("state","waiting");
+    }
+    public static void main(String[] args)throws Exception{
+        JSONObject eng=engine("snes"),solo=profile("snes","standard-2p-v1",1,new int[]{},"solo"),multi=profile("snes","standard-2p-v1",2,new int[]{2},"multi");
+        JSONObject mixed=snapshot(solo,multi);
+        try{check(StationMultiplayerProfile.choices(mixed,ITEM,eng).size()==1,"one launchable mode");}
+        catch(Exception e){throw new AssertionError("REGRESSION: valid solo classification aborts multiplayer choices",e);}
+        for(JSONObject value:new JSONObject[]{mixed,snapshot(multi,solo)}){
+            check(classifications(value,eng).size()==2,"both exact classifications retained");
+            check(StationMultiplayerProfile.choices(value,ITEM,eng).get(0).profileId.equals("multi"),"solo omitted from launch choices regardless of order");
+            check(StationMultiplayerProfile.find(value,ITEM,eng).profileId.equals("multi"),"solo does not make implicit multiplayer selection ambiguous");
+            check(StationMultiplayerProfile.find(value,ITEM,eng,"multi").permits(2),"explicit multiplayer allowed");
+            rejects(()->StationMultiplayerProfile.find(value,ITEM,eng,"solo"),"explicit solo cannot launch");
+        }
+        StationMultiplayerProfile one=classifications(snapshot(solo),eng).get(0);
+        check(one.maximumPlayers==1&&one.allowed.length==0,"server format maximum1 empty counts");
+        for(int n=0;n<=5;n++)check(!one.permits(n),"solo permits no seats "+n);
+        check(StationMultiplayerProfile.choices(snapshot(solo),ITEM,eng).isEmpty(),"solo only has zero launch choices");
+        rejects(()->StationMultiplayerProfile.find(snapshot(solo),ITEM,eng),"solo only cannot select launch");
+        StationGamePlayerInfo info=StationGamePlayerInfo.fromVerifiedProfile(true,one.maximumPlayers,one.allowed,one.mode,one.controllerProfile);
+        check(info.singlePlayerConfirmed&&!info.onlineApproved&&info.capacityLabel.equals("1 jogador"),"confirmed single presentation");
+        for(int capacity=1;capacity<=4;capacity++){final int n=capacity;rejects(()->one.verify(room(one,n,1)),"solo rejects room "+n);}
+        rejects(()->classifications(mixed,eng).clear(),"classification list immutable");
+        rejects(()->StationMultiplayerProfile.choices(mixed,ITEM,eng).clear(),"choices immutable");
+        JSONObject another=copy(multi).put("profileId","another-mode").put("mode","alternating");
+        rejects(()->StationMultiplayerProfile.find(snapshot(solo,multi,another),ITEM,eng),"multiple launch modes remain ambiguous");
+        check(StationMultiplayerProfile.find(snapshot(solo,multi,another),ITEM,eng,"another-mode").mode.equals("alternating"),"explicit mode preserved");
+        rejects(()->StationMultiplayerProfile.find(snapshot(solo,multi,multi),ITEM,eng,"multi"),"duplicate selected profile rejected");
+        for(String controller:new String[]{"standard-2p-v1","snes-multitap-port2-v1","megadrive-sega-teamplayer-v1","megadrive-ea-4way-v1"}){
+            String platform=controller.startsWith("megadrive")?"megadrive":"snes";JSONObject e=engine(platform);int max=controller.equals("standard-2p-v1")?2:4;
+            JSONObject p=profile(platform,controller,max,max==2?new int[]{2}:new int[]{2,3,4},"known");
+            StationMultiplayerProfile parsed=StationMultiplayerProfile.find(snapshot(p),ITEM,e);
+            check(parsed.maximumPlayers==max,"known controller unchanged "+controller);
+            for(int n=2;n<=max;n++){parsed.verify(room(parsed,n,n));check(parsed.permits(n),"multiplayer room valid "+n);}
+            JSONObject single=profile(platform,controller,1,new int[]{},"known-solo");
+            check(classifications(snapshot(single),e).get(0).maximumPlayers==1,"known controller exact hash works as classification "+controller);
+            for(String key:new String[]{"contentSha256","coreSha256","runtimeSha256","profileSha256"})for(String bad:new String[]{"",HASH.toUpperCase(),HASH.substring(1),repeat('z')}){
+                JSONObject broken=copy(single).put(key,bad);rejects(()->classifications(snapshot(broken),e),"solo bad hash "+key);
+            }
+        }
+        for(String key:new String[]{"contentSha256","coreSha256","runtimeSha256","profileSha256","profileId","controllerProfile","mode","allowedPlayerCounts","maximumPlayers","platform"}){
+            JSONObject broken=copy(solo);broken.remove(key);rejects(()->classifications(snapshot(broken),eng),"missing solo field "+key);
+        }
+        for(Object max:new Object[]{0,5,"1",1.5,true,JSONObject.NULL}){JSONObject broken=copy(solo).put("maximumPlayers",max);rejects(()->classifications(snapshot(broken),eng),"invalid maximum "+max);}
+        for(JSONArray counts:new JSONArray[]{new JSONArray().put(1),new JSONArray().put(2),new JSONArray().put("2"),new JSONArray().put(2.5)}){
+            JSONObject broken=copy(solo).put("allowedPlayerCounts",counts);rejects(()->classifications(snapshot(broken),eng),"solo never has counts");
+        }
+        for(JSONArray counts:new JSONArray[]{new JSONArray(),new JSONArray().put(1),new JSONArray().put(2).put(2),new JSONArray().put("2"),new JSONArray().put(2.5)}){
+            JSONObject broken=copy(multi).put("allowedPlayerCounts",counts);rejects(()->classifications(snapshot(broken),eng),"malformed multiplayer counts");
+        }
+        for(String key:new String[]{"coreSha256","runtimeSha256","platform"}){JSONObject broken=copy(solo).put(key,key.equals("platform")?"megadrive":HASH);rejects(()->classifications(snapshot(broken),eng),"exact engine identity "+key);}
+        rejects(()->classifications(snapshot(copy(solo).put("profileSha256",HASH)),eng),"canonical controller SHA still required");
+        rejects(()->classifications(snapshot(copy(solo).put("controllerProfile","unknown")),eng),"unknown controller not inferred for solo");
+        rejects(()->StationMultiplayerProfile.choices(snapshot(copy(solo).put("allowedPlayerCounts",new JSONArray().put(2)),multi),ITEM,eng),"malformed solo not silently skipped");
+        for(Object approved:new Object[]{false,"true",JSONObject.NULL}){
+            JSONObject unapproved=copy(solo).put("approved",approved);
+            check(classifications(snapshot(unapproved),eng).isEmpty(),"approval must be boolean true");
+            check(StationMultiplayerProfile.choices(snapshot(unapproved,multi),ITEM,eng).size()==1,"unapproved does not authorize or obstruct valid mode");
+        }
+        check(classifications(snapshot(copy(solo).put("itemId","other-item")),eng).isEmpty(),"exact item filter");
+        check(classifications(snapshot(copy(solo).put("engineId","other-engine")),eng).isEmpty(),"exact engine filter");
+        rejects(()->classifications(snapshot(solo).put("multiplayerVersion",2),eng),"version2 rejected");
+        rejects(()->classifications(snapshot(solo).put("capability","other"),eng),"capability required");
+        rejects(()->classifications(snapshot(solo).put("profiles",JSONObject.NULL),eng),"malformed profiles rejected");
+        System.out.println(new JSONObject().put("checks",checks).put("passed",true));
+    }
+}
+
+/** Only utility/error definitions used by the actual profile class; no network or ROM fixtures. */
+final class StationOnlineGame {
+    static final class Unavailable extends IOException {Unavailable(String message){super(message);}}
+    static String hex(byte[] bytes){StringBuilder result=new StringBuilder();for(byte b:bytes)result.append(String.format(Locale.ROOT,"%02x",b&255));return result.toString();}
+}
