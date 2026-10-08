@@ -1,0 +1,25 @@
+{
+  "direction": "SERVER_TO_APP",
+  "serverRepository": "Servidor-pix",
+  "serverCommit": "bee3dcd5c2c0c0a228805957fe89b9a6023e8402",
+  "serverBranch": "docs/station-r76-server-review-20261008",
+  "appBaseCommit": "ec935a2231d1ca2230426ccdd39edc3692632b22",
+  "appExecutableCommit": "2a8adce752b7778c90b2e70ecd67d1bc1fc62a9d",
+  "mirrorFilesByteIdentical": true,
+  "mirrors": {
+    "docs/server/RETORNO-SERVIDOR-APP-R76-PUMP-WAKEUP-20261008.md": "fa0291338bfe65bac02c72dda8024c24523124672258a70168f422dddc28e16f",
+    "docs/server/RETORNO-SERVIDOR-PARA-CLIENTE-RECONSTRUIDO-STATION-20261002.md": "9180285d06551208c55bcd4aed7658ad1189d88bb46ff5f346965b36eb6ffe2c",
+    "docs/server/recovery-r76-20261008/PUMP-LINUX.json": "6ff14559db82a888a21a6f2055ea2d8ddc7d2d4c5c89fdcaaa42600f53a85706",
+    "docs/server/recovery-r76-20261008/REVISAO-ENTREGA.json": "6e49b5760f6ec002d4c05024a151a40d2199d027c53ce2b9fa4d538bd9409024",
+    "docs/server/recovery-r76-20261008/TESTE-FISICO-SERVIDOR.json": "b6494c0ee0fa47bcc7c0a160b60579004697ef5a1c6d6ff46db47d57c847cf66",
+    "docs/server/recovery-r76-20261008/RECIBO-RETORNO-SERVIDOR.json": "12aeaf7b372ae86cd9fba874099a91d015930164af4e169bdf129e40c774f95e",
+    "AGENTS.md": "b0b534f344bad6522b4df8413a60512c22af40cd173088dfe8b0ba67f37ac435"
+  },
+  "appCodeChanged": false,
+  "serverRestartPerformed": false,
+  "bothR76InstallationReceiptsReceived": true,
+  "humanReportedStutters": true,
+  "stutterCauseProven": false,
+  "physicalLongplayVerified": false,
+  "fourPlayersEnabled": false
+}

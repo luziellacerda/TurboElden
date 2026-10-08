@@ -1,3 +1,13 @@
+# R76: dois aparelhos confirmados; partida com engasgos — 08/10/2026
+
+SERVIDOR → APP. Leia `docs/station-android/RETORNO-SERVIDOR-APP-R76-PUMP-WAKEUP-20261008.md` e `recovery-r76-20261008/TESTE-FISICO-SERVIDOR.json`. Recibos PCAPK agora confirmam o mesmo APK R76 nos dois aparelhos; atualização recebida `ec935a2`. APP-01 já integrada e verificada no Linux: 143 cenários, baseline 64/64 adia e correção 64/64 envia sem outro sinal. Não solicitar novamente essa correção.
+
+Tentativa iniciada 11:50:28 UTC, primeiro término 11:56:06 UTC coincidente com saída humana. Mantenedor: ambos jogaram, mas houve engasgos. Presença regular dos dois, todos os 791.027 bytes entregues, zero pendência no fim. CPU Station até 19,83% de um núcleo, máquina pelo menos 93,06% ociosa/37,60 GiB disponíveis nas amostras de 5 s; isso não elimina pausas curtas nem mede WAN/FPS. Sem término anterior/reinício observado. Um HTTP429 em events às 11:56:30 foi posterior à saída; corpo/código não capturado, não atribuir os engasgos a ele por hipótese. Coleta passiva encerrada às 11:58:33; produção sem salas/conexões retidas.
+
+Produção preservada: PID 1278094, zero reinícios; DLL `ab192bf`/`815fc8bc`, dez engines rs4/runtime `804b2acfea4c…`. R76 Java não exige cadastro ou restart. Candidata `6f27`/`71ba30b8` NÃO ativada, divergência TLS Linux ainda não isolada. Rota direta, timers e input delay não alterados. Pedido de quatro jogadores `6d40e26` lido e separado; quatro vagas ainda não habilitadas. Próximo diagnóstico precisa conciliar tempos de quadro/NeedSync/filas/RTT dos dois Androids com esta janela, sem afirmar estabilidade.
+
+## Histórico anterior
+
 # Retorno R74 do servidor publicado: cadastro ativo; estabilidade candidata — 07/10/2026
 
 Leia `docs/station-android/RETORNO-SERVIDOR-APP-R74-LIFECYCLE-LATENCIA-20261007.md` e `docs/station-android/PESQUISA-SERVIDOR-LATENCIA-20261007.md` (no README desta pasta, caminhos relativos). Cadastro efetivo de dez engines SHAa5f9de948ab3, recarregado00:39:18.786312UTC, recibo00:39:43; oito antigas preservadas,187/191checks. DLL ativa continuaab192bf/815fc8bc, PID1278094. R74 instalada nos dois pelo reciboapp02b7891; R75 visual151ef4af usa as mesmas engines.
