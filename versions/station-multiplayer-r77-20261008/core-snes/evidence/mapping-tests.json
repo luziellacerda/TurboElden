@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-08T12:24:59.101553+00:00",
+  "baselineWrapperSHA256": "90bfb5826f9e2e85a05d11137eeeebdbc05359b7eba3632d4296e87c5dae007a",
+  "patchedWrapperSHA256": "e0d95df5f51a215457a9dc693d1797450e1e41179b96229b04c738a0277fa3c7",
+  "multitapSHA256": "f294c21171175e5b87d548dd48143bccb7253b812274a1c8dce8a2be69610968",
+  "inputEnumsSHA256": "6c8b54bf61c1144787eb9c35df9d947889d9ebbf3ea84f123c50371f39207bf2",
+  "extractedCallbackSHA256": {
+    "Baseline": "f2d6dcbf3c7f64b47f55dc27c8320c9361ade77b719fa4fd69fc9b6818fe115f",
+    "Fixed": "07ec40ee108a35ae49a9d99f619f1f1a5260076654e0494e1f0f8d37e5b65736"
+  },
+  "generatedTestSHA256": "74c31e5476166775cbc5cf531934e6ecde0bfb127d4f35a6f11c20cc7821044e",
+  "recipeSHA256": "7a6d09d7ba992d1e7d4f3f0387c4b51521c86ca3439bb7e62886536964c61064",
+  "metrics": {
+    "checks": 6609,
+    "isolatedButtons": 60,
+    "baselineBlockedButtons": 36,
+    "serialScans": 128,
+    "androidExecuted": false,
+    "romUsed": false
+  },
+  "compiler": [
+    "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-IE:\\ESTUDO APK\\work\\station-netplay-20261004\\upstream\\libretro--bsnes-mercury-79d7f9de218b\\target-libretro",
+    "E:\\ESTUDO APK\\work\\station-multiplayer-r77-20261008\\snes\\tests\\input_test.cpp",
+    "-o",
+    "E:\\ESTUDO APK\\work\\station-multiplayer-r77-20261008\\snes\\tests\\input_test.exe"
+  ],
+  "realCode": [
+    "inputPoll and conversion helpers from baseline/patched wrapper",
+    "Multitap::data and latch from pinned source",
+    "pinned libretro.h",
+    "Input::Device and JoypadID enums"
+  ],
+  "models": [
+    "SNES IO select bit",
+    "frontend callback input states",
+    "controller fields and virtual interface"
+  ],
+  "limitations": [
+    "No ROM, Android execution, multiplayer network or physical controllers",
+    "Existing mouse/lightgun forwarding preserved, existing upstream TODO not fixed"
+  ]
+}

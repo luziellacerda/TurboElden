@@ -1,0 +1,40 @@
+{
+  "originalSHA256": "804b2acfea4c6d615bf40dba30e1777015098bf7375d0745db8d117555eb2516",
+  "rebuiltSHA256": "09a6e58d785a8fd3872656cd659c448c5fb34cb8d876c57e398945e8faeaf22d",
+  "identicalWholeFile": false,
+  "identicalOutsideBuildId": true,
+  "differentByteCount": 20,
+  "excludedRegion": {
+    "section": ".note.gnu.build-id",
+    "descriptorOffset": 736,
+    "length": 20
+  },
+  "originalBuildId": "1790fea70e7faa832264a8cf448582f24fbc1b0a",
+  "rebuiltBuildId": "2acef5866b6a6475179c6dd08ef2a860be3c03f8",
+  "sectionSHA256": {
+    "": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".note.android.ident": "5b94e0c04fec0aac34b2a4cc4cf9ae93283286bf0f87c2287a4af17e1dee13aa",
+    ".dynsym": "435c6f921ab4a2cf3e8ded80d8b6259374e38240c6400f878e2476e353afb831",
+    ".gnu.version": "b20ca13f051c09cb68098656a61dfd364adb3b8e96f17a082c850cd415bcf2b4",
+    ".gnu.version_r": "91d9d09e6680a44c645ffade87d7805956c8b34a95233e8d3a18b8443c7261fc",
+    ".gnu.hash": "ba78fabe6510232e2aa787608bb1b010ef925c69354292094e26eb23cac720b4",
+    ".dynstr": "2ae0b5870eb9b8782a7933b4579b1334d848c3228f0ae7d4af00e78cd9e2699a",
+    ".rela.dyn": "797a9a415bcaffa983e234d70f4b25bc4151de67457fbd046dd21f5d6d55822a",
+    ".rela.plt": "76e2106abbd6ce235d17c8323c2adf7dffe9a1e46cb47d6adc2fb3e9d8f018e7",
+    ".rodata": "202aad59621f4fc123effac059e55a2bc8dee171693ce651822f03cf26c48edd",
+    ".eh_frame_hdr": "0af49c66a5ed31bb7a80ff8dc3a0c07d24a82cc4e5572a540de5ceccf720d807",
+    ".eh_frame": "3ce020b7dd767d461f07c3ce553b7ba50ac3fea94dbd91039c44a562a6003334",
+    ".text": "5a9c9eedec029f38d0765a7b576ad9a5598036246538040037f413c5e482efe1",
+    ".plt": "a6727c07c4bbafeeac7410610f0792820856894bfea0651394c0b205333d91b9",
+    ".data.rel.ro": "1b161c402ce8997ff90f418cf26a496e8ba4c0423593228d3f4953b4f96037bb",
+    ".fini_array": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+    ".init_array": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+    ".dynamic": "27cac1ec5b138d02fa4707b3d38018ac41abfc310890f13501b822e81a84d8f8",
+    ".got": "cfc335996cfae29fdf14fd2db7ea853366d350a5d387aa3c322616e81dacd56b",
+    ".got.plt": "16f7c9e58317ce1f8d6eba8e2c6a3ce7af10f52b6b5f7ade7f475a14c3d87097",
+    ".data": "a7a4b594f0f8937e56f2ec8eb7358e7745edf17ce679824c981b1ceb55244f23",
+    ".comment": "cf5c0cce1be59c6548888613ea0f93ef0985563ebf02256926628515e2ba86ad",
+    ".shstrtab": "7515746a081fb2338b095dc4e941853f89706f144fb95e5d7b14062571170b45"
+  },
+  "qualification": "Whole-file identity is not claimed when the build-id differs. All other bytes, including ELF code/data/layout/relocations, must match."
+}

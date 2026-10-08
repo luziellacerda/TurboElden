@@ -1,0 +1,58 @@
+{
+  "base": {
+    "retroArchCommit": "69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576",
+    "runtimeSHA256": "804b2acfea4c6d615bf40dba30e1777015098bf7375d0745db8d117555eb2516",
+    "source": "E:\\R74fixed\\RetroArch-69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576"
+  },
+  "protocols": ["station-stream.v2", "station-stream.v3"],
+  "primaryReferences": [
+    "https://docs.libretro.com/guides/netplay-multiple-controllers/",
+    "https://docs.libretro.com/development/retroarch/netplay/",
+    "https://github.com/libretro/RetroArch/blob/69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576/network/netplay/netplay_frontend.c"
+  ],
+  "class": "org.emulationstation.frontend.netplay.StationRetroActivity",
+  "newStaticNativeMethods": {
+    "stationMultiplayerConfigure": {
+      "signature": "(IIIZ)Z",
+      "arguments": ["localSlot", "expectedDeviceMask", "participantCount", "host"],
+      "when": "After System.loadLibrary and before NativeActivity super.onCreate; signed immutable launch only.",
+      "reject": "Invalid slot/mask/count or a native Activity already owns the runtime."
+    },
+    "stationMultiplayerBind": {
+      "signature": "(II)Z",
+      "arguments": ["localTcpSourcePort", "remoteSlot"],
+      "when": "Host only, after NativeActivity creation and Socket.bind(127.0.0.1, 0), before connect to the native host. Each guest has its own persistent local TCP socket.",
+      "reject": "Duplicate slot/port, local slot, slot outside signed mask, missing staged launch or more than three bindings."
+    },
+    "stationMultiplayerUnbind": {
+      "signature": "(II)Z",
+      "arguments": ["localTcpSourcePort", "remoteSlot"],
+      "when": "Only release an unclaimed reservation after a failed initial local connect. Accepted native TCP sockets retain the mapping across WSS epochs.",
+      "reject": "Reservation already claimed by a native accepted fd or wrong port/slot."
+    }
+  },
+  "controllerRequirements": {
+    "slots": "Zero-based controller ports 0..3, not native client indices or TCP accept order.",
+    "mask": "Exactly participantCount distinct bits within 0x0f, including localSlot; count 2..4.",
+    "configuration": "Each participant requests only its signed controller bit; no sharing or slave flag. Android touch remains on the first local pad; upstream maps it to the requested network device.",
+    "coreProfile": "Java must configure the same qualified per-title input profile on all peers, including a corrected SNES multitap core where required. This runtime alone does not make a two-player title support four players."
+  },
+  "recoveryRequirements": {
+    "oneCoordinator": "Java aggregates every channel and peer against one room epoch before issuing native resume.",
+    "quorum": "Native self PLAYING; connected_players client bitmap and client_devices union exactly equal the signed roster; host each active fd maps to its signed slot; guest has the host connection active.",
+    "drain": "Every active native send buffer is flushed and empty before ready is returned. Java still owns relay ACK/replay/credit and collective barrier.",
+    "staleConfirmation": "V3 captures a native request revision before polling; a concurrent epoch, wait or visibility change rejects confirmation from the earlier request.",
+    "lifecycle": "Configure is consumed once at NativeActivity creation. Only final owner release after thread join clears it. Android onStop and WSS reconnect do not clear it.",
+    "allocationFailure": "Accepted source port is claimed only after both native socket buffers are allocated. A failure consumes no signed slot and reports native recovery failure in v3. Rejected claims release both buffers before closing the incoming fd.",
+    "v2": "Original two-player readiness predicate, protocol bytes, timers and latency presets remain unchanged. Runtime identity still changes: never reuse the rs4 runtime hash for this new binary."
+  },
+  "validationScope": {
+    "nativeTests": "Production C header and readiness/poll/peer-validation functions extracted into a Windows harness with real mutexes and 64 real concurrent epoch changes; RetroArch arrays, sync/flush and getpeername are fixtures.",
+    "doesNotProve": ["Android execution", "emulated gameplay", "three/four physical devices", "TLS relay interoperability", "production deployment"],
+    "results": "tests/native-result.json and E:\\R77native\\tests\\result.json",
+    "buildResults": "E:\\R77native\\baseline\\result.json and E:\\R77native\\candidate\\result.json",
+    "reproducibility": "Historical baseline __DATE__ is pinned through SOURCE_DATE_EPOCH=1791331200. Candidate uses 1791417600. The baseline differs from R74 only in the 20-byte GNU build-id descriptor at file offset 736. Every other file byte is identical, including all code/data/layout/relocations. Candidate build independently recomputes that bounded comparison and refuses any other difference. Whole-file identity is not claimed; no build-id was patched. See baseline-comparison.json."
+  },
+  "productionChanged": false,
+  "installed": false
+}

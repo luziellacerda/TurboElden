@@ -1,3 +1,11 @@
+# R77 candidata: salas de 2 a 4 jogadores
+
+[Implementação, pesquisa e limites](versions/station-multiplayer-r77-20261008/README.md) · [Handoff para o servidor](versions/station-multiplayer-r77-20261008/HANDOFF-APP-R77-PARA-SERVIDOR-20261008.md).
+
+APK compilado/assinado, ainda não instalado. Ambos aparelhos permanecem na R76. Capacidade por jogo/modo, posições P1–P4 e textos antes da confirmação implementados. Registro v3, aprovação dos perfis e gameplay físico ainda pendentes. A pesquisa percorreu 2.467 IDs; não equivale a todas as informações factuais verificadas.
+
+## Histórico anterior
+
 # R66 instalada no Samsung A56
 
 SHA integral no aparelho conferido: `e4397fd743c410ea060f17446706d9475b5568caad379e1a6df37672c60398d1`, dados preservados. A BIOS correta já estava no APK; R66 corrige sua preparação automática.66 testes locais passaram; abertura de jogo CD no Android ainda aguarda o aparelho desbloqueado. [Recibo da instalação e publicação ao servidor](docs/server/RECIBO-R66-BIOS-INSTALADA-SAMSUNG-20261007.json).

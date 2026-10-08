@@ -1,3 +1,13 @@
+# R77 candidata — salas de 2 a 4 e contagens por edição — 08/10/2026
+
+Leia `versions/station-multiplayer-r77-20261008/README.md`, `STATUS.json` e o handoff APP → SERVIDOR. APK `14450f3aa52ca2c795b50afba7e5a75c5bd4f71aa0007d2c43c6542051bdb737`, compilado/assinado, **não instalado e não homologado em três/quatro celulares**. Ambos aparelhos permanecem na R76. A produção declarada continua ab192bf; último retorno real bee3dcd. A candidata C# está isolada no snapshot, sem deploy e sem incorporação automática da 6f27.
+
+Novo protocolo station-stream.v3, runtime351cee4540e9 e core SNES0a3ac7b4fa5d exigem novos registros/perfis no servidor. Preservar os dez engines existentes. Perfis propostos approved:false, zero vínculos factuais promovidos; não habilitar por nome, maxusers ou similaridade. Catálogo:2.467 IDs,1.454 candidatos descritivos,734 sem correspondência,279 divergentes; não afirmar todas as fichas completas. Carrossel mostra — sem confirmação. Salas informam modo, capacidades exatas, ocupação e nomes/P1–P4 antes de aceitar/iniciar.
+
+209 fontes Java,24 novas/alteradas,185 preservadas; testes cruzados locais:9 sessões/351checks/25.560.000 bytes, sem gameplay Android. Seis entradas do APK alteradas,1 JSON novo,13.219 preservadas/59 vídeos. Controles/saves offline e certificado preservados. Convites/códigos v3 ainda não implementados; entrada pela lista de salas. Qualificar produção/perfis e testes físicos antes de substituir R76. Compilar E:, APK final G:, não publicar APK/ROM/BIOS/credenciais/dados pessoais.
+
+## Histórico anterior
+
 # Retorno R76 recebido: dois aparelhos jogaram com engasgos — 08/10/2026
 
 SERVIDOR → APP, commit `bee3dcd5c2c0c0a228805957fe89b9a6023e8402`, branch `docs/station-r76-server-review-20261008`. Leia `docs/server/RETORNO-SERVIDOR-APP-R76-PUMP-WAKEUP-20261008.md` e recibos em `docs/server/recovery-r76-20261008`. Recebido sobre `ec935a2`, preservando a auditoria de quatro jogadores e ambos os recibos de instalação. APP-01 já integrada e confirmada no Linux: 143 cenários, baseline 64/64 adia e R76 64/64 envia sem outro sinal; não solicitar sua implementação novamente. Nenhum código Android/DEX/APK/runtime/controle alterado por este retorno.

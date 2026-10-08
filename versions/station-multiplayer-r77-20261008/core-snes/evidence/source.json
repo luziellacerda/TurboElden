@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-08T12:27:48.926338+00:00",
+  "upstreamCommit": "79d7f9de218b6ffa65a80bbdc5828532bc239232",
+  "upstreamUrl": "https://github.com/libretro/bsnes-mercury/archive/79d7f9de218b6ffa65a80bbdc5828532bc239232.zip",
+  "archiveSHA256": "c7392855556c20c164d1a9793a23664fddfaee369939cd24bb21e59d861ec428",
+  "patchSHA256": "69f07c900cab4e4562257bc1e9954e9b358444f24156228405164abbd982c934",
+  "baselineWrapperSHA256": "90bfb5826f9e2e85a05d11137eeeebdbc05359b7eba3632d4296e87c5dae007a",
+  "patchedWrapperSHA256": "e0d95df5f51a215457a9dc693d1797450e1e41179b96229b04c738a0277fa3c7",
+  "archiveFilesVerified": 1197,
+  "changedSourceFiles": [
+    "target-libretro/libretro.cpp"
+  ],
+  "recipeSHA256": "8f7a8767abc16b6630e2652c207fbea2451c7df8b705d7db358383d14e97773a",
+  "originalSourceModified": false
+}

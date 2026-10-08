@@ -1,0 +1,39 @@
+{
+  "baseRuntimeSHA256": "804b2acfea4c6d615bf40dba30e1777015098bf7375d0745db8d117555eb2516",
+  "upstreamCommit": "69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576",
+  "files": {
+    "frontend/drivers/station_multiplayer.h": {
+      "beforeSHA256": null,
+      "afterSHA256": "51978c54a614a2076852d68cea5611d7192a6c9e7fbc5da6168ac5b7e8c194c3"
+    },
+    "frontend/drivers/station_recovery.h": {
+      "beforeSHA256": "74b47b943216f1c50204c17a75a6d9d9fcfe9e1170652973f126a43bc9e5f728",
+      "afterSHA256": "daa15e061698c5a59fe8fdd40cf46d0931fd590889363750b5d3a06fc6533f11"
+    },
+    "frontend/drivers/platform_unix.c": {
+      "beforeSHA256": "afa4ca0b7df504e556f8d83c9c097f70ab06884361211136520fc089135e5ab8",
+      "afterSHA256": "baa00df315ba604e1ac5612e2186a685c27b843c20bcaea2f27c6a4036f7e7db"
+    },
+    "network/netplay/netplay_frontend.c": {
+      "beforeSHA256": "b1d0f5ddea0c1fb2d675fd08b73503fd80b03c71a6a60c8dea7084a96950d4fe",
+      "afterSHA256": "369840e6634659ccd3315e30a394d939a18107f89a8d7218bfaf2148dac9afd8"
+    },
+    "runloop.c": {
+      "beforeSHA256": "e577f9d59e7d557e858277e2beb2141c13d845397177d77fb5748ab44c5f9e30",
+      "afterSHA256": "13179287191fe00a76c6d35ddc75374388543b2c05607b14dc8c6efef135a012"
+    }
+  },
+  "protocols": [
+    "station-stream.v2",
+    "station-stream.v3"
+  ],
+  "jniMethods": [
+    "stationRecoveryControl",
+    "stationRecoveryStatus",
+    "stationRecoveryStalled",
+    "stationRequestQuit",
+    "stationMultiplayerConfigure",
+    "stationMultiplayerBind",
+    "stationMultiplayerUnbind"
+  ]
+}

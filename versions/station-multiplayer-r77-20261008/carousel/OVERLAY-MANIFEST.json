@@ -1,0 +1,10 @@
+{
+  "base": "R75",
+  "baseNativeInfoSHA256": "415ba5efad249d273a5fa388a746d4597cbe9006fc56e47da0d04e58752e6e1f",
+  "scope": "Display-only player metadata binding; all ratings, geometry, videos and controls unchanged.",
+  "sources": {
+    "native_info.h": "ca2699815af30fbfc38c17040a6fcf67717e8110f727c92d979bd71a7256d2f6",
+    "native_players_evidence.h": "6fdc2bd1b21c3078d00c23a74bb357fe5dab64cd5f8223b7cf774ebadcee7d6d",
+    "station_catalog_player_label.h": "53e8398df4d728c735a629604d9cd072d9448fe72374021a7e52a55f7ce5184d"
+  }
+}

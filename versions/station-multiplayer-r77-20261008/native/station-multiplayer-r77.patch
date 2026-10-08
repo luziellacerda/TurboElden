@@ -1,0 +1,455 @@
+--- a/frontend/drivers/station_multiplayer.h
++++ b/frontend/drivers/station_multiplayer.h
+@@ -0,0 +1,188 @@
++#ifndef STATION_MULTIPLAYER_H
++#define STATION_MULTIPLAYER_H
++#include <stdbool.h>
++#include <stdint.h>
++#include <string.h>
++#include <pthread.h>
++
++/* Station v3 only. Slots are zero-based controller ports, not RetroArch client
++ * numbers or accept order. The signed Java launch selects the immutable roster. */
++struct station_multiplayer_binding
++{
++   unsigned port, slot;
++   int fd;
++   bool used, claimed;
++};
++struct station_multiplayer_profile
++{
++   bool configured, host;
++   unsigned local_slot, count;
++   uint32_t devices;
++};
++static pthread_mutex_t station_multiplayer_mutex = PTHREAD_MUTEX_INITIALIZER;
++static struct station_multiplayer_profile station_multiplayer_pending;
++static struct station_multiplayer_profile station_multiplayer_profile;
++static struct station_multiplayer_binding station_multiplayer_bindings[3];
++static bool station_multiplayer_launched, station_multiplayer_enabled;
++
++static unsigned station_multiplayer_popcount(uint32_t value)
++{
++   unsigned result=0;
++   while(value){result+=value&1U;value>>=1;}
++   return result;
++}
++static bool station_multiplayer_configure(unsigned local_slot, uint32_t devices,
++      unsigned count, bool host)
++{
++   bool accepted=false;
++   if(local_slot>=4 || !devices || (devices&~UINT32_C(15)) ||
++      count<2 || count>4 || station_multiplayer_popcount(devices)!=count ||
++      !(devices&(UINT32_C(1)<<local_slot)))return false;
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   if(!station_multiplayer_launched)
++   {
++      station_multiplayer_pending.configured=true;
++      station_multiplayer_pending.local_slot=local_slot;
++      station_multiplayer_pending.devices=devices;
++      station_multiplayer_pending.count=count;
++      station_multiplayer_pending.host=host;
++      accepted=true;
++   }
++   pthread_mutex_unlock(&station_multiplayer_mutex);
++   return accepted;
++}
++/* Consume staged configuration once; reconnection never invokes this. */
++static void station_multiplayer_begin_launch(void)
++{
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   station_multiplayer_profile=station_multiplayer_pending;
++   memset(&station_multiplayer_pending,0,sizeof(station_multiplayer_pending));
++   memset(station_multiplayer_bindings,0,sizeof(station_multiplayer_bindings));
++   station_multiplayer_launched=true;station_multiplayer_enabled=false;
++   pthread_mutex_unlock(&station_multiplayer_mutex);
++}
++static void station_multiplayer_end_launch(void)
++{
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   memset(&station_multiplayer_pending,0,sizeof(station_multiplayer_pending));
++   memset(&station_multiplayer_profile,0,sizeof(station_multiplayer_profile));
++   memset(station_multiplayer_bindings,0,sizeof(station_multiplayer_bindings));
++   station_multiplayer_launched=false;station_multiplayer_enabled=false;
++   pthread_mutex_unlock(&station_multiplayer_mutex);
++}
++static bool station_multiplayer_enable(bool host)
++{
++   bool accepted;
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   accepted=station_multiplayer_launched && station_multiplayer_profile.configured &&
++      station_multiplayer_profile.host==host;
++   station_multiplayer_enabled=accepted;
++   pthread_mutex_unlock(&station_multiplayer_mutex);
++   return accepted;
++}
++static bool station_multiplayer_active(void)
++{
++   bool value;pthread_mutex_lock(&station_multiplayer_mutex);
++   value=station_multiplayer_enabled;pthread_mutex_unlock(&station_multiplayer_mutex);
++   return value;
++}
++/* Register the socket's already-bound ephemeral source port before connect().
++ * This does not trust a nickname, PLAY request or connection arrival order. */
++static bool station_multiplayer_bind(unsigned port,unsigned remote_slot)
++{
++   unsigned i,free_index=3;bool accepted=false;
++   if(port<1024 || port>65535 || remote_slot>=4)return false;
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   if(!station_multiplayer_launched || !station_multiplayer_profile.configured ||
++      !station_multiplayer_profile.host || remote_slot==station_multiplayer_profile.local_slot ||
++      !(station_multiplayer_profile.devices&(UINT32_C(1)<<remote_slot)))goto done;
++   for(i=0;i<3;i++)
++   {
++      struct station_multiplayer_binding *b=&station_multiplayer_bindings[i];
++      if(!b->used){if(free_index==3)free_index=i;continue;}
++      if(b->port==port || b->slot==remote_slot)goto done;
++   }
++   if(free_index<3)
++   {
++      struct station_multiplayer_binding *b=&station_multiplayer_bindings[free_index];
++      b->used=true;b->claimed=false;b->port=port;b->slot=remote_slot;b->fd=-1;
++      accepted=true;
++   }
++done:
++   pthread_mutex_unlock(&station_multiplayer_mutex);return accepted;
++}
++/* Only an unaccepted connect attempt can release its registration. The native
++ * TCP socket and its assignment survive every WSS replacement/room epoch. */
++static bool station_multiplayer_unbind(unsigned port,unsigned remote_slot)
++{
++   unsigned i;bool accepted=false;
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   for(i=0;i<3;i++)
++   {
++      struct station_multiplayer_binding *b=&station_multiplayer_bindings[i];
++      if(b->used && !b->claimed && b->port==port && b->slot==remote_slot)
++      {memset(b,0,sizeof(*b));accepted=true;break;}
++   }
++   pthread_mutex_unlock(&station_multiplayer_mutex);return accepted;
++}
++static bool station_multiplayer_claim(unsigned port,int fd)
++{
++   unsigned i;bool accepted=false;
++   if(fd<0)return false;
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   if(!station_multiplayer_enabled || !station_multiplayer_profile.host)goto done;
++   for(i=0;i<3;i++)if(station_multiplayer_bindings[i].claimed && station_multiplayer_bindings[i].fd==fd)goto done;
++   for(i=0;i<3;i++)
++   {
++      struct station_multiplayer_binding *b=&station_multiplayer_bindings[i];
++      if(b->used && !b->claimed && b->port==port)
++      {b->claimed=true;b->fd=fd;accepted=true;break;}
++   }
++done:
++   pthread_mutex_unlock(&station_multiplayer_mutex);return accepted;
++}
++static uint32_t station_multiplayer_fd_devices(int fd)
++{
++   unsigned i;uint32_t result=0;
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   if(station_multiplayer_enabled)
++   {
++      if(fd<0)result=UINT32_C(1)<<station_multiplayer_profile.local_slot;
++      else for(i=0;i<3;i++)
++      {
++         struct station_multiplayer_binding *b=&station_multiplayer_bindings[i];
++         if(b->used && b->claimed && b->fd==fd){result=UINT32_C(1)<<b->slot;break;}
++      }
++   }
++   pthread_mutex_unlock(&station_multiplayer_mutex);return result;
++}
++static bool station_multiplayer_authorize_play(int fd,uint32_t devices,
++      unsigned share_mode,bool slave)
++{
++   uint32_t expected=station_multiplayer_fd_devices(fd);
++   return expected && devices==expected && !share_mode && !slave;
++}
++/* The caller gathers this snapshot on the emulation thread. connected_players
++ * is a client BITMAP; controller ownership is client_devices[client]. */
++static bool station_multiplayer_roster_ready(bool host,uint32_t self_devices,
++      uint32_t connected_players,const uint32_t *client_devices,unsigned length)
++{
++   struct station_multiplayer_profile p;uint32_t union_devices=0;unsigned i,seen=0;
++   pthread_mutex_lock(&station_multiplayer_mutex);
++   p=station_multiplayer_profile;
++   if(!station_multiplayer_enabled)p.configured=false;
++   pthread_mutex_unlock(&station_multiplayer_mutex);
++   if(!p.configured || p.host!=host || length>32 || !client_devices ||
++      self_devices!=(UINT32_C(1)<<p.local_slot) ||
++      station_multiplayer_popcount(connected_players)!=p.count)return false;
++   for(i=0;i<length;i++)
++   {
++      uint32_t devices=client_devices[i];
++      if(!(connected_players&(UINT32_C(1)<<i)))
++      {if(devices)return false;continue;}
++      if(!devices || (devices&(devices-1)) || (devices&~p.devices) || (devices&union_devices))return false;
++      union_devices|=devices;seen++;
++   }
++   return seen==p.count && union_devices==p.devices;
++}
++#endif
+--- a/frontend/drivers/station_recovery.h
++++ b/frontend/drivers/station_recovery.h
+@@ -3,6 +3,7 @@
+ #include <stdbool.h>
+ #include <stdint.h>
+ #include <pthread.h>
++#include "station_multiplayer.h"
+ 
+ /* Android Station-only state. JNI requests; only the emulation thread confirms.
+  * This header is compiled in RetroArch's Android griffin translation unit. */
+@@ -12,6 +13,7 @@
+ static bool station_recovery_connected, station_recovery_failed;
+ static bool station_recovery_stalled;
+ static int64_t station_recovery_epoch, station_recovery_confirmed_epoch;
++static uint64_t station_recovery_revision;
+ /* Only at NativeActivity creation, never on a transport epoch/reconnect. */
+ static void station_recovery_reset(void)
+ {
+@@ -25,6 +27,7 @@
+    station_recovery_stalled = false;
+    station_recovery_epoch = 0;
+    station_recovery_confirmed_epoch = -1;
++   station_recovery_revision = 0;
+    pthread_mutex_unlock(&station_recovery_mutex);
+ }
+ static void station_recovery_configure(bool enabled)
+@@ -46,6 +49,8 @@
+    {
+       if(epoch!=station_recovery_epoch || wait!=station_recovery_wait)
+          station_recovery_confirmed_epoch=-1;
++      if(epoch!=station_recovery_epoch || wait!=station_recovery_wait || visible!=station_recovery_visible)
++         station_recovery_revision++;
+       station_recovery_epoch=epoch; station_recovery_wait=wait;
+       if(wait)station_recovery_stalled=false;
+       station_recovery_visible=visible;
+@@ -63,6 +68,24 @@
+    pthread_mutex_lock(&station_recovery_mutex);
+    station_recovery_confirmed_epoch=station_recovery_epoch;
+    station_recovery_confirmed_wait=wait; station_recovery_connected=connected;
++   pthread_mutex_unlock(&station_recovery_mutex);
++}
++/* v3 confirmation is tied to the request observed before polling. An epoch or
++ * visibility change during the poll cannot be acknowledged by stale work. */
++static uint64_t station_recovery_token(void)
++{
++   uint64_t token;pthread_mutex_lock(&station_recovery_mutex);
++   token=station_recovery_revision;pthread_mutex_unlock(&station_recovery_mutex);
++   return token;
++}
++static void station_recovery_confirm_token(uint64_t token,bool wait,bool connected)
++{
++   pthread_mutex_lock(&station_recovery_mutex);
++   if(token==station_recovery_revision && wait==station_recovery_wait)
++   {
++      station_recovery_confirmed_epoch=station_recovery_epoch;
++      station_recovery_confirmed_wait=wait;station_recovery_connected=connected;
++   }
+    pthread_mutex_unlock(&station_recovery_mutex);
+ }
+ static void station_recovery_fail(void)
+--- a/frontend/drivers/platform_unix.c
++++ b/frontend/drivers/platform_unix.c
+@@ -143,6 +143,7 @@
+    {
+       station_activity_owner = NULL;
+       station_activity_app = NULL;
++      station_multiplayer_end_launch();
+    }
+    pthread_mutex_unlock(&station_activity_mutex);
+ }
+@@ -605,6 +606,7 @@
+    /* Reset before the worker/Java transport can receive the new epoch.
+     * configure() below changes only enabled: reconnect must never reset it. */
+    station_recovery_reset();
++   station_multiplayer_begin_launch();
+    activity->instance = android_app_create(activity,
+          savedState, savedStateSize);
+    pthread_mutex_lock(&station_activity_mutex);
+@@ -718,6 +720,21 @@
+ { (void)env;(void)type;return station_recovery_status(); }
+ JNIEXPORT jboolean JNICALL Java_org_emulationstation_frontend_netplay_StationRetroActivity_stationRecoveryStalled(JNIEnv *env,jclass type)
+ { (void)env;(void)type;return station_recovery_is_stalled(); }
++/* Configure is staged before NativeActivity.onCreate and consumed once there.
++ * All methods return false without mutating the running profile on rejection. */
++JNIEXPORT jboolean JNICALL Java_org_emulationstation_frontend_netplay_StationRetroActivity_stationMultiplayerConfigure(JNIEnv *env,jclass type,jint slot,jint devices,jint count,jboolean host)
++{
++   bool accepted=false;(void)env;(void)type;
++   pthread_mutex_lock(&station_activity_mutex);
++   if(!station_activity_owner)
++      accepted=station_multiplayer_configure((unsigned)slot,(uint32_t)devices,(unsigned)count,host==JNI_TRUE);
++   pthread_mutex_unlock(&station_activity_mutex);
++   return accepted?JNI_TRUE:JNI_FALSE;
++}
++JNIEXPORT jboolean JNICALL Java_org_emulationstation_frontend_netplay_StationRetroActivity_stationMultiplayerBind(JNIEnv *env,jclass type,jint port,jint slot)
++{ (void)env;(void)type;return station_multiplayer_bind((unsigned)port,(unsigned)slot)?JNI_TRUE:JNI_FALSE; }
++JNIEXPORT jboolean JNICALL Java_org_emulationstation_frontend_netplay_StationRetroActivity_stationMultiplayerUnbind(JNIEnv *env,jclass type,jint port,jint slot)
++{ (void)env;(void)type;return station_multiplayer_unbind((unsigned)port,(unsigned)slot)?JNI_TRUE:JNI_FALSE; }
+ /* Instance method; Java calls this on its UI thread after a human exit. */
+ JNIEXPORT jboolean JNICALL Java_org_emulationstation_frontend_netplay_StationRetroActivity_stationRequestQuit(JNIEnv *env,jobject activity)
+ {
+@@ -1634,7 +1651,11 @@
+       CALL_OBJ_METHOD_PARAM(env,jstr,obj,android_app->getStringExtra,
+             (*env)->NewStringUTF(env,"STATION_RECOVERY_PROTOCOL"));
+       if(jstr) { const char *value=(*env)->GetStringUTFChars(env,jstr,0);
+-         station_recovery_configure(args->station_netplay_role!=0 && value && !strcmp(value,"station-stream.v2"));
++         bool multiplayer=value && !strcmp(value,"station-stream.v3");
++         station_recovery_configure(multiplayer || (args->station_netplay_role!=0 && value && !strcmp(value,"station-stream.v2")));
++         if(multiplayer && (args->station_netplay_role==0 ||
++               !station_multiplayer_enable(args->station_netplay_role==1)))
++            station_recovery_fail();
+          if(value)(*env)->ReleaseStringUTFChars(env,jstr,value); }
+    }
+ 
+--- a/network/netplay/netplay_frontend.c
++++ b/network/netplay/netplay_frontend.c
+@@ -3662,6 +3662,29 @@
+  *
+  * Returns: pointer to connection object.
+  */
++#ifdef ANDROID
++static bool station_multiplayer_accept_fd(int fd)
++{
++   struct sockaddr_storage peer;socklen_t length=sizeof(peer);unsigned port=0;
++   if(getpeername(fd,(struct sockaddr*)&peer,&length)!=0)return false;
++   if(peer.ss_family==AF_INET)
++   {
++      struct sockaddr_in *v4=(struct sockaddr_in*)&peer;
++      if(ntohl(v4->sin_addr.s_addr)!=UINT32_C(0x7f000001))return false;
++      port=ntohs(v4->sin_port);
++   }
++#ifdef HAVE_INET6
++   else if(peer.ss_family==AF_INET6)
++   {
++      static const unsigned char loopback[16]={0,0,0,0,0,0,0,0,0,0,0xff,0xff,127,0,0,1};
++      struct sockaddr_in6 *v6=(struct sockaddr_in6*)&peer;
++      if(memcmp(&v6->sin6_addr,loopback,sizeof(loopback))!=0)return false;
++      port=ntohs(v6->sin6_port);
++   }
++#endif
++   return port && station_multiplayer_claim(port,fd);
++}
++#endif
+ static struct netplay_connection *allocate_connection(netplay_t *netplay)
+ {
+    size_t i;
+@@ -3800,6 +3823,9 @@
+          connection = allocate_connection(netplay);
+          if (!connection)
+          {
++#ifdef ANDROID
++            if(station_multiplayer_active())station_recovery_fail();
++#endif
+             socket_close(new_fd);
+             goto process;
+          }
+@@ -3813,10 +3839,24 @@
+          {
+             netplay_deinit_socket_buffer(&connection->send_packet_buffer);
+             netplay_deinit_socket_buffer(&connection->recv_packet_buffer);
++#ifdef ANDROID
++            if(station_multiplayer_active())station_recovery_fail();
++#endif
+             socket_close(new_fd);
+             goto process;
+          }
+ 
++#ifdef ANDROID
++         /* Claim only after all fallible allocation succeeds. A rejected fd
++          * never becomes active, and a failed allocation consumes no slot. */
++         if(station_multiplayer_active() && !station_multiplayer_accept_fd(new_fd))
++         {
++            netplay_deinit_socket_buffer(&connection->send_packet_buffer);
++            netplay_deinit_socket_buffer(&connection->recv_packet_buffer);
++            socket_close(new_fd);
++            goto process;
++         }
++#endif
+          /* Set it up */
+          connection->flags |= NETPLAY_CONN_FLAG_ACTIVE;
+          connection->fd     = new_fd;
+@@ -4833,6 +4873,21 @@
+             mode       = ntohl(*in_payload);
+             devices    = mode & 0xFFFF;
+             share_mode = (mode >> 16) & 0xFF;
++#ifdef ANDROID
++            if(station_multiplayer_active() &&
++                  !station_multiplayer_authorize_play(connection?connection->fd:-1,
++                     devices,share_mode,(mode&NETPLAY_CMD_PLAY_BIT_SLAVE)!=0))
++            {
++               if(connection)
++               {
++                  uint32_t reason=htonl(NETPLAY_CMD_MODE_REFUSED_REASON_NOT_AVAILABLE);
++                  netplay_send_raw_cmd(netplay,connection,NETPLAY_CMD_MODE_REFUSED,&reason,sizeof(reason));
++                  netplay_hangup(netplay,connection);
++               }
++               else station_recovery_fail();
++               return;
++            }
++#endif
+ 
+             /* Fix our share mode */
+             if (share_mode)
+@@ -8964,6 +9019,25 @@
+  * false if we're stalled or paused
+  **/
+ #ifdef ANDROID
++static bool station_netplay_multiplayer_ready(netplay_t *np)
++{
++   size_t i;uint32_t active_players=UINT32_C(1);
++   if(np->self_mode!=NETPLAY_CONNECTION_PLAYING ||
++         !station_multiplayer_roster_ready(np->is_server,np->self_devices,
++            np->connected_players,np->client_devices,MAX_CLIENTS))return false;
++   if(!np->is_server)
++      return np->connections_size==1 &&
++         (np->connections[0].flags&NETPLAY_CONN_FLAG_ACTIVE)!=0;
++   for(i=0;i<np->connections_size;i++)
++   {
++      struct netplay_connection *connection=&np->connections[i];
++      if(!(connection->flags&NETPLAY_CONN_FLAG_ACTIVE))continue;
++      if(i+1>=MAX_CLIENTS || connection->mode!=NETPLAY_CONNECTION_PLAYING ||
++            np->client_devices[i+1]!=station_multiplayer_fd_devices(connection->fd))return false;
++      active_players|=UINT32_C(1)<<(i+1);
++   }
++   return active_players==np->connected_players;
++}
+ bool station_netplay_recovery_poll(void)
+ {
+    netplay_t *np=networking_driver_st.data;
+@@ -8988,6 +9062,8 @@
+       }
+       if (pending) return false;
+    }
++   if(station_multiplayer_active())
++      return np->modus==NETPLAY_MODUS_INPUT_FRAME_SYNC && station_netplay_multiplayer_ready(np);
+    return np->modus==NETPLAY_MODUS_INPUT_FRAME_SYNC &&
+       (np->is_server?np->connected_players>1:np->self_mode==NETPLAY_CONNECTION_PLAYING);
+ }
+--- a/runloop.c
++++ b/runloop.c
+@@ -7372,12 +7372,22 @@
+ #if defined(ANDROID) && defined(HAVE_NETWORKING)
+    if(station_recovery_waiting())
+    {
++      uint64_t token=station_recovery_token();
+       bool connected=station_netplay_recovery_poll();
+-      station_recovery_confirm(true,connected);
++      if(station_multiplayer_active())station_recovery_confirm_token(token,true,connected);
++      else station_recovery_confirm(true,connected);
+       /* No retro_run, rollback replay, audio generation or cached-frame rendering. */
+       retro_sleep(50);return 0;
+    }
+-   if(station_recovery_active())station_recovery_confirm(false,true);
++   if(station_recovery_active())
++   {
++      if(station_multiplayer_active())
++      {
++         uint64_t token=station_recovery_token();
++         station_recovery_confirm_token(token,false,true);
++      }
++      else station_recovery_confirm(false,true);
++   }
+ #endif
+ #ifdef HAVE_THREADS
+    if (runloop_st->flags & RUNLOOP_FLAG_AUTOSAVE)

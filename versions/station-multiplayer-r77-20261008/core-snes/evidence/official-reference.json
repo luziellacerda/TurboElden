@@ -1,0 +1,7 @@
+{
+  "repository": "libretro/bsnes-libretro",
+  "commit": "05439f96121d2b9d7ad7a5fc1f29d7eebdcc8c43",
+  "url": "https://raw.githubusercontent.com/libretro/bsnes-libretro/05439f96121d2b9d7ad7a5fc1f29d7eebdcc8c43/bsnes/target-libretro/program.cpp",
+  "sha256": "de9c899a67582b068e812ec348cf925b751478054c898cbde4a69581648c4a75",
+  "basis": "pollInputDevices SuperMultitap: libretro_port += input / 12; libretro_id = joypad_mapping[input % 12]; RETRO_DEVICE_JOYPAD,index0. Mercury button order verified locally differs from this newer core."
+}

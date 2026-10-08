@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-08T12:27:50.080922+00:00",
+  "stage": "candidate",
+  "upstreamCommit": "79d7f9de218b6ffa65a80bbdc5828532bc239232",
+  "sourceWrapperSHA256": "e0d95df5f51a215457a9dc693d1797450e1e41179b96229b04c738a0277fa3c7",
+  "command": [
+    "E:\\TurboEdenEngine\\android-ndk-r28c\\ndk-build.cmd",
+    "-C",
+    "E:/R77Snes/source/target-libretro",
+    "APP_BUILD_SCRIPT=E:/R77Snes/source/target-libretro/jni/Android.mk",
+    "PROFILE=performance",
+    "APP_ABI=arm64-v8a",
+    "APP_PLATFORM=android-26",
+    "NDK_OUT=E:/R77Snes/candidate/obj",
+    "NDK_LIBS_OUT=E:/R77Snes/candidate/lib",
+    "-j4",
+    "V=1"
+  ],
+  "sha256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+  "bytes": 1791648,
+  "symbolsSHA256": "2de62c06e7bbc40df65d2ac73427bebac2c0d21aa13a2a494cf4dd29df95c16d",
+  "ndkInstalledSHA256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+  "recipeSHA256": "6e54c38784bc20372f6a095bbd8a982fd7835e5a4a77fb5e7352d6ecf96b0743",
+  "textSHA256": "b7a0755c21e99de4265c2d46a1b5a9f3551bf230d7f4ae0395ad4fb7692bd584",
+  "baselineTextSHA256": "39842459f92e713df725b8894c84a39e14e768529d7f5e678b25fafc566737fe",
+  "textEqualsInstalledBaseline": false,
+  "loadAlignment": 16384,
+  "architecture": "AArch64",
+  "androidExecuted": false,
+  "gameplayValidated": false
+}
