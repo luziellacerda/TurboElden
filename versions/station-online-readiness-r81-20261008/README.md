@@ -2,6 +2,8 @@
 
 APK completo compilado e assinado, ainda não instalado. Substitui a R79 no canal experimental; a referência R76 de dois jogadores permanece preservada. A fonte parte das **209 classes Java completas** do backup canônico R79. As fontes usadas nesta compilação estão integralmente em `java/`, com `JAVA-SOURCE-MANIFEST.json`.
 
+Entrega ao servidor publicada: [`2cd3571`](https://github.com/luziellacerda/Servidor-pix/blob/2cd3571919f54126f2bfe9576864a8d8329b9db3/docs/station-android/FECHAMENTO-APP-R81-ATIVACAO-20261008.md). Ver `PUBLICATION.json`. Checkout/índice do servidor preservados; nenhum serviço implantado. Após consolidar e retirar o instalador R79, a reprodução direta pelo backup gerou DEX e carrossel idênticos (`evidence/backup-reproduction.json`).
+
 ## Correções comprovadas
 
 - O contrato do servidor `b472d8a` admite classificações individuais (`maximumPlayers:1`, `allowedPlayerCounts:[]`). A R79 rejeitava esse perfil e abortava a lista, inclusive quando existia outro modo multiplayer válido do mesmo jogo. R81 separa **classificação exibida** de **autorização para criar/entrar/iniciar salas**. Individual aparece como “1 jogador”, com explicação própria, e não concede vagas. A seleção multiplayer continua exata, aprovada e vinculada a conteúdo/motor/controle.
