@@ -1,0 +1,362 @@
+--- R73/netplay-src\org\emulationstation\frontend\netplay\StationGameSession.java
++++ R74/netplay-src\org\emulationstation\frontend\netplay\StationGameSession.java
+@@ -1,5 +1,8 @@
+ package org.emulationstation.frontend.netplay;
+ import android.content.Context;
++import android.content.Intent;
++import java.util.UUID;
++import java.util.concurrent.atomic.AtomicBoolean;
+ import android.app.Activity;
+ import org.emulationstation.frontend.auth.StationTaskNavigation;
+ import android.os.*;
+@@ -9,11 +12,14 @@
+ 
+ /** Main-process authority. v2 retains membership in background; only event 4 is human leave. */
+ final class StationGameSession {
+-    static final String EXTRA="station.sessionEvents";
++    static final String EXTRA="station.sessionEvents",ANCHOR_EXTRA="station.sessionAnchor";
++    private static final StationSessionRegistry<StationGameSession> anchors=new StationSessionRegistry<>();
++    private final String anchorId=UUID.randomUUID().toString();
++    private final AtomicBoolean ticketScheduled=new AtomicBoolean();
+     private final Context app;private final int taskId;private final String room;private final JSONObject binding;
+     private final boolean recovery;
+     private final ScheduledExecutorService worker=Executors.newSingleThreadScheduledExecutor();
+-    private volatile boolean visible,closed,listening,failed;private boolean acknowledged,humanLeft;private ExecutorService departure;
++    private volatile boolean visible,closed,listening,failed;private boolean acknowledged,humanLeft,lifecycleReleased;private ExecutorService departure;
+     private volatile StationApi.Cancellation pending;private volatile ResultReceiver reply;
+     private ScheduledFuture<?> heartbeat;
+     private StationGameSession(Context app,String room,JSONObject binding){this.app=app.getApplicationContext();taskId=app instanceof Activity?((Activity)app).getTaskId():-1;this.room=room;this.binding=binding;recovery=binding!=null&&"station-stream.v2".equals(binding.optString("recoveryProtocol"));}
+@@ -22,15 +28,57 @@
+         JSONObject bound=new JSONObject();for(String key:new String[]{"roomId","engineId","coreSha256","runtimeSha256","contentSha256","optionsSha256","recoveryProtocol","generation"})if(room.has(key))bound.put(key,room.get(key));
+         return createOwner(new StationGameSession(context,room.getString("roomId"),bound));
+     }catch(Exception error){throw new IllegalArgumentException("Invalid Station recovery binding",error);}}
++    static Intent attach(Context context,JSONObject room,Intent intent){
++        StationGameSession owner=null;
++        try{JSONObject bound=new JSONObject();for(String key:new String[]{"roomId","engineId","coreSha256","runtimeSha256","contentSha256","optionsSha256","recoveryProtocol","generation"})if(room.has(key))bound.put(key,room.get(key));
++            owner=new StationGameSession(context,room.getString("roomId"),bound);
++            ResultReceiver callback=createOwner(owner);
++            anchors.put(owner.anchorId,owner.room,owner.anchorGeneration(),owner);
++            return intent.putExtra(EXTRA,callback).putExtra(ANCHOR_EXTRA,owner.anchorId);
++        }catch(Exception error){if(owner!=null)owner.anchorEnded();throw new IllegalArgumentException("Invalid Station session binding",error);}
++    }
++    /** Result identity lives in the caller so an early native-process crash cannot strand a launch. */
++    static final class LaunchReturn {
++        private static final int FIRST_REQUEST=0x5354;
++        private int nextRequest=FIRST_REQUEST,request=-1;private String key,room;private long generation=-1;
++        boolean pending(){return key!=null;}
++        int prepare(Intent intent,String room,long generation){
++            if(pending()||nextRequest==Integer.MAX_VALUE)throw new IllegalStateException("Native result already pending");
++            String key=intent==null?null:intent.getStringExtra(ANCHOR_EXTRA);
++            if(anchorOwner(key,room,generation)==null)throw new IllegalArgumentException("Missing native result identity");
++            this.key=key;this.room=room;this.generation=generation;request=nextRequest++;return request;
++        }
++        Bundle save(){Bundle saved=new Bundle();saved.putInt("next",nextRequest);if(pending()){saved.putInt("request",request);saved.putString("key",key);saved.putString("room",room);saved.putLong("generation",generation);}return saved;}
++        void restore(Bundle saved){
++            if(saved==null)return;int next=saved.getInt("next",FIRST_REQUEST);if(next>=FIRST_REQUEST)nextRequest=next;
++            String candidate=saved.getString("key"),r=saved.getString("room");int code=saved.getInt("request",-1);long g=saved.getLong("generation",-1);
++            if(candidate!=null&&candidate.matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")&&r!=null&&r.matches("[0-9a-f]{32}")&&g>=0&&code>=FIRST_REQUEST&&code<nextRequest){key=candidate;room=r;generation=g;request=code;}
++        }
++        boolean completed(int requestCode){if(!pending()||requestCode!=request)return false;release();return true;}
++        void abort(Intent intent){if(pending()&&intent!=null&&key.equals(intent.getStringExtra(ANCHOR_EXTRA)))release();}
++        private void release(){try{StationGameSession owner=anchorOwner(key,room,generation);if(owner!=null)owner.anchorEnded();}finally{key=null;room=null;generation=-1;request=-1;}}
++    }
++    private long anchorGeneration(){return recovery?binding.optLong("generation",-1):0;}
++    static StationGameSession anchorOwner(String key,String room,long generation){return anchors.find(key,room,generation);}
++    static void discardLaunch(Intent intent,String room,long generation){if(intent==null)return;String key=intent.getStringExtra(ANCHOR_EXTRA);StationGameSession owner=anchors.find(key,room,generation);if(owner!=null){anchors.remove(key,owner);owner.closed=true;owner.pause();owner.worker.shutdown();}}
++    // Binding loss is local lifecycle, never a remote leave/recovery-failed command.
++    // Event 4 remains accepted after this cleanup so cross-Binder delivery order is harmless.
++    synchronized void anchorEnded(){anchors.remove(anchorId,this);if(!closed){lifecycleReleased=true;closed=true;visible=false;StationTaskNavigation.gameEnded(this);pause();reply=null;worker.shutdown();}}
+     private static ResultReceiver createOwner(StationGameSession owner){return StationSessionChannel.transport(new ResultReceiver(new Handler(Looper.getMainLooper())){
+         @Override protected void onReceiveResult(int event,Bundle data){owner.event(event,data);}
+     });}
+     private synchronized void event(int event,Bundle data){
+         // A terminal recovery panel can still emit one later human exit.
+         if(event==4){
+-            if(humanLeft)return;humanLeft=true;StationTaskNavigation.gameEnded(this);closed=true;visible=false;pause();reply=null;worker.shutdown();
++            if(humanLeft)return;humanLeft=true;anchors.remove(anchorId,this);StationTaskNavigation.gameEnded(this);closed=true;visible=false;pause();reply=null;worker.shutdown();
+             departure=Executors.newSingleThreadExecutor();
+             departure.execute(()->{try{StationOnlineClient c=new StationOnlineClient(app);JSONObject snapshot=c.call(StationOnlineClient.command("heartbeat"),false,new StationApi.Cancellation());JSONObject r=snapshot.optJSONObject("room");if(r!=null&&room.equals(r.optString("roomId")))c.call(StationOnlineClient.command("leave"),false,new StationApi.Cancellation());}catch(Exception ignored){}finally{departure.shutdown();}});
++            return;
++        }
++        if(event==6&&recovery&&!failed&&!humanLeft&&(!closed||lifecycleReleased)){
++            anchors.remove(anchorId,this);StationTaskNavigation.gameEnded(this);failed=true;visible=false;lifecycleReleased=false;pause();reply=null;
++            ExecutorService terminal=worker.isShutdown()?Executors.newSingleThreadExecutor():worker;
++            terminal.execute(()->{try{new StationOnlineClient(app).call(StationOnlineClient.command("recovery-failed").put("roomId",room).put("generation",binding.getLong("generation")),false,new StationApi.Cancellation());}catch(Exception ignored){}finally{terminal.shutdown();}});
+             return;
+         }
+         if(closed||failed)return;
+@@ -38,10 +86,10 @@
+             if(heartbeat==null)heartbeat=worker.scheduleWithFixedDelay(this::sync,0,20,TimeUnit.SECONDS);
+         }else if(event==2){visible=false;if(!recovery)pause();}
+         else if(event==3){listening=true;if(visible)worker.execute(this::sync);}
+-        else if(event==5&&recovery&&!failed)worker.execute(this::ticket);
+-        else if(event==6&&recovery&&!failed){StationTaskNavigation.gameEnded(this);failed=true;visible=false;pause();reply=null;worker.execute(()->{
+-            try{new StationOnlineClient(app).call(StationOnlineClient.command("recovery-failed").put("roomId",room).put("generation",binding.getLong("generation")),false,new StationApi.Cancellation());}catch(Exception ignored){}finally{worker.shutdown();}
+-        });}
++        else if(event==5&&recovery&&!failed&&ticketScheduled.compareAndSet(false,true)){
++            try{worker.execute(()->{try{ticket();}finally{ticketScheduled.set(false);}});}catch(RejectedExecutionException closedWorker){ticketScheduled.set(false);}
++        }
++
+     }
+     private void pause(){if(heartbeat!=null){heartbeat.cancel(true);heartbeat=null;}if(pending!=null)pending.cancel();}
+     private void ticket(){
+@@ -74,7 +122,7 @@
+             if(!recovery&&!cancel.cancelled()&&error instanceof StationApi.Failure&&((StationApi.Failure)error).sessionDenied())notice("O servidor não confirmou o acesso à sala. Encerre a partida e confira sua licença.");
+         }finally{pending=null;}
+     }
+-    private synchronized void roomEnded(){StationTaskNavigation.gameEnded(this);closed=true;pause();reply=null;worker.shutdown();}
++    private synchronized void roomEnded(){anchors.remove(anchorId,this);StationTaskNavigation.gameEnded(this);closed=true;pause();reply=null;worker.shutdown();}
+     private void send(int event,Bundle value){ResultReceiver target=reply;if(target!=null&&!closed)target.send(event,value);}
+     private void notice(String message){if(visible){Bundle value=new Bundle();value.putString("message",message);send(100,value);}}
+ }
+--- R73/netplay-src\org\emulationstation\frontend\netplay\StationRetroActivity.java
++++ R74/netplay-src\org\emulationstation\frontend\netplay\StationRetroActivity.java
+@@ -15,6 +15,9 @@
+ /** Dedicated :station_netplay process: upstream RetroArch owns video, audio, touch and gamepads. */
+ public final class StationRetroActivity extends NativeActivity {
+     private StationRelayTunnel relay;private boolean relayPaused;
++    private StationSessionLink sessionLink;private boolean ownerReady,transportStarted,quitRequested;
++    private String ownerFailure;
++    public native boolean stationRequestQuit();
+     private StationRecoveryTunnel recovery;private boolean humanExit,recoveryWaiting=true,recoverySynchronizing,recoveryLost;private volatile boolean nativeLoaded;
+     private Dialog recoveryDialog;private android.widget.LinearLayout recoveryPanel;private android.widget.TextView recoveryText;private android.widget.ProgressBar recoveryProgress;
+     public static native void stationRecoveryControl(long epoch,boolean pause,boolean visible);
+@@ -38,7 +41,7 @@
+                     @Override public boolean nativeStalled(){if(!nativeLoaded)return false;try{return stationRecoveryStalled();}catch(LinkageError error){return false;}}
+                     @Override public void unrecoverable(String category){runOnUiThread(()->{if(sessionFinished||recoveryLost)return;recoveryLost=true;recoveryReason=category;recoveryWaiting=true;android.util.Log.w("StationRooms","game stage=recovery-unrecoverable category="+category);if(sessionEvents!=null)sessionEvents.send(6,null);drawRecovery();});}
+                 });
+-                launch.put("address","127.0.0.1").put("port",recovery.localPort());recovery.start();
++                launch.put("address","127.0.0.1").put("port",recovery.localPort());
+             }else if(launch.has("relayTicket")){
+                 relay=new StationRelayTunnel(StationRelayTls.endpoint(),launch.getString("relayTicket"),launch.optString("relayRequestProof",null),host,launch.getInt("port"),StationRelayTls.create(),new StationRelayTunnel.Listener(){
+                     @Override public void ready(){runOnUiThread(()->{
+@@ -57,24 +60,34 @@
+                         if(visible)notice(pendingNotice);
+                     });}
+                 });
+-                launch.put("address","127.0.0.1").put("port",relay.localPort());relay.start();
++                launch.put("address","127.0.0.1").put("port",relay.localPort());
+             }
++            sessionLink=new StationSessionLink(this,getIntent().getStringExtra(StationGameSession.ANCHOR_EXTRA),roomId,launch.optLong("generation",0),new StationSessionLink.Listener(){
++                @Override public void ready(){if(sessionFinished||isFinishing()||isDestroyed())return;ownerReady=true;ownerFailure=null;android.util.Log.i("StationRooms","game stage=session-owner-bound");if(visible)startSessionOwner();}
++                @Override public void unavailable(String category){if(sessionFinished||isFinishing()||isDestroyed())return;ownerReady=false;ownerFailure=category;recoveryWaiting=true;android.util.Log.w("StationRooms","game stage=session-owner-wait category="+category);if(recovery!=null&&transportStarted)recovery.visible(false);drawRecovery();}
++            });
+             Intent i=getIntent();i.putExtra("ROM",launch.getString("rom"));i.putExtra("LIBRETRO",launch.getString("core"));i.putExtra("CONFIGFILE",launch.getString("config"));i.putExtra("USED","false");i.putExtra("APK",getApplicationInfo().sourceDir);i.putExtra("DATADIR",getFilesDir().toString());i.putExtra("SDCARD",getFilesDir().toString());i.putExtra("EXTERNAL",getFilesDir().toString());
+             i.putExtra("STATION_NETPLAY_ROLE",launch.getString("role"));i.putExtra("STATION_NETPLAY_ADDRESS",launch.getString("address"));i.putExtra("STATION_NETPLAY_PORT",String.valueOf(launch.getInt("port")));
+             i.putExtra("STATION_RECOVERY_PROTOCOL",launch.optString("recoveryProtocol",""));
+         }catch(Exception error){android.util.Log.e("StationRooms","game stage=launch-failed type="+error.getClass().getSimpleName());if(recovery!=null)recovery.close();if(relay!=null)relay.close();super.onCreate(state);Toast.makeText(this,"Não foi possível preparar a partida. Volte à sala e tente novamente.",Toast.LENGTH_LONG).show();finish();return;}
+         try{super.onCreate(state);if(recovery!=null){System.loadLibrary("station_retroarch");stationRecoveryStatus();stationRecoveryStalled();android.util.Log.i("StationRooms","game stage=native-hooks-loaded");}}catch(RuntimeException|LinkageError error){android.util.Log.e("StationRooms","game stage=native-start-failed type="+error.getClass().getSimpleName());if(recovery!=null)recovery.close();if(relay!=null)relay.close();Toast.makeText(this,"O motor do jogo não iniciou. Volte às salas para tentar novamente.",Toast.LENGTH_LONG).show();finish();return;}
+-        nativeLoaded=true;if(recovery!=null)installRecoveryPanel();
++        nativeLoaded=true;if(recovery!=null)installRecoveryPanel();if(sessionLink!=null)sessionLink.bind();
+         if(Build.VERSION.SDK_INT>=33)backRegistration=Back33.register(this);getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);getWindow().getDecorView().setSystemUiVisibility(5894);installOnlineMenuButton();
+     }
+-    @Override protected void onStart(){super.onStart();if(sessionFinished)return;visible=true;if(relayPaused){notice("A partida online foi encerrada ao sair do aplicativo. Volte às salas para jogar novamente.");}if(pendingNotice!=null)notice(pendingNotice);if(sessionEvents!=null){Bundle data=new Bundle();data.putParcelable("reply",StationSessionChannel.transport(new ResultReceiver(new Handler(Looper.getMainLooper())){@Override protected void onReceiveResult(int code,Bundle value){
+-        if(sessionFinished||value==null)return;
+-        if(recovery!=null&&code==101){try{recovery.provide(value.getString("ticket"),value.getString("proof"),value.getInt("windowBytes"));}catch(Exception error){recovery.reject();}}
+-        else if(recovery!=null&&code==102){if(value.getBoolean("terminal"))recovery.reject();else recovery.unavailable();}
+-        else if(visible&&code==100)notice(value.getString("message","Confira a conexão da sala."));
+-    }}));sessionEvents.send(1,data);if(host&&listening&&(relay==null||relay.available()))sessionEvents.send(3,null);}if(recovery!=null){recovery.visible(true);drawRecovery();}}
++    @Override protected void onStart(){super.onStart();if(sessionFinished)return;visible=true;if(relayPaused){notice("A partida online foi encerrada ao sair do aplicativo. Volte às salas para jogar novamente.");}if(pendingNotice!=null)notice(pendingNotice);if(ownerReady)startSessionOwner();else drawRecovery();}
++    private void startSessionOwner(){
++        if(!ownerReady||!visible||sessionFinished)return;
++        if(sessionEvents!=null){Bundle data=new Bundle();data.putParcelable("reply",StationSessionChannel.transport(new ResultReceiver(new Handler(Looper.getMainLooper())){@Override protected void onReceiveResult(int code,Bundle value){
++            if(sessionFinished||value==null)return;
++            if(recovery!=null&&code==101){try{recovery.provide(value.getString("ticket"),value.getString("proof"),value.getInt("windowBytes"));}catch(Exception error){recovery.reject();}}
++            else if(recovery!=null&&code==102){if(value.getBoolean("terminal"))recovery.reject();else recovery.unavailable();}
++            else if(visible&&code==100)notice(value.getString("message","Confira a conexão da sala."));
++        }}));sessionEvents.send(1,data);if(host&&listening&&(relay==null||relay.available()))sessionEvents.send(3,null);}
++        if(!transportStarted){transportStarted=true;if(recovery!=null)recovery.start();if(relay!=null)relay.start();}
++        if(recovery!=null){recovery.visible(true);drawRecovery();}
++    }
+     public void onNetplayListening(){android.util.Log.i("StationRooms","game stage=native-listening role="+(host?"host":"client"));if(recovery!=null){recovery.listening();return;}if(relay!=null){relay.listening();return;}if(sessionFinished)return;listening=true;if(host&&visible&&sessionEvents!=null)sessionEvents.send(3,null);}
+-    @Override protected void onStop(){android.util.Log.i("StationRooms","game stage=activity-stop finishing="+isFinishing());visible=false;if(recovery!=null){recovery.visible(false);drawRecovery();}if(relay!=null){relayPaused=true;relay.close();}if(sessionEvents!=null)sessionEvents.send(2,null);super.onStop();}
++    @Override protected void onStop(){android.util.Log.i("StationRooms","game stage=activity-stop finishing="+isFinishing());visible=false;if(recovery!=null){if(transportStarted)recovery.visible(false);drawRecovery();}if(relay!=null){relayPaused=true;relay.close();}if(sessionEvents!=null)sessionEvents.send(2,null);super.onStop();}
+     private boolean notified;private void notice(String text){if(!notified&&!isFinishing()){notified=true;new AlertDialog.Builder(this).setTitle("LZ GAMES • Conexão").setMessage(text).setPositiveButton("Entendi",null).show();}}
+     public void onRetroArchExit(){StationRetroLaunch.clearSecret(this,roomId);runOnUiThread(this::finish);}
+     private volatile boolean sessionFinished;
+@@ -87,7 +100,7 @@
+         android.util.Log.i("StationRooms","game stage=session-ended");
+     }
+     @Override public void finish(){closeSession();super.finish();}
+-    @Override protected void onDestroy(){dismissRecoveryPanel();if(Build.VERSION.SDK_INT>=33&&backRegistration!=null)Back33.unregister(this,backRegistration);if(exitDialog!=null)exitDialog.dismiss();closeSession();super.onDestroy();}
++    @Override protected void onDestroy(){dismissRecoveryPanel();if(sessionLink!=null){sessionLink.close();sessionLink=null;}if(Build.VERSION.SDK_INT>=33&&backRegistration!=null)Back33.unregister(this,backRegistration);if(exitDialog!=null)exitDialog.dismiss();closeSession();super.onDestroy();}
+     @Override public void onBackPressed(){showExitMenu();}
+     @Override public boolean dispatchKeyEvent(KeyEvent event){
+         if(event.getKeyCode()==KeyEvent.KEYCODE_BACK){
+@@ -113,7 +126,14 @@
+         exitDialog.setOnDismissListener(d->{exitDialog=null;if(!isFinishing())getWindow().getDecorView().setSystemUiVisibility(5894);});
+         exitDialog.show();android.util.Log.i("StationRooms","game stage=exit-menu");
+     }
+-    private void confirmExit(){new AlertDialog.Builder(this).setTitle("Sair da partida?").setMessage("Isso encerra sua participação e avisa o outro jogador.").setNegativeButton("Continuar",null).setPositiveButton("Sair da partida",(dialog,which)->{humanExit=true;finish();}).show();}
++    private void confirmExit(){new AlertDialog.Builder(this).setTitle("Sair da partida?").setMessage("Isso encerra sua participação e avisa o outro jogador.").setNegativeButton("Continuar",null).setPositiveButton("Sair da partida",(dialog,which)->requestHumanExit()).show();}
++    private void requestHumanExit(){
++        if(quitRequested)return;quitRequested=true;humanExit=true;
++        // Notify the main authority before native teardown, which may end this private process.
++        closeSession();
++        if(nativeLoaded)try{if(stationRequestQuit())return;}catch(LinkageError error){android.util.Log.e("StationRooms","game stage=quit-hook-failed");}
++        finish();
++    }
+     private void installRecoveryPanel(){
+         // NativeActivity renders EGL into its own window. Waiting needs a separate application
+         // window; adding a View to the native window can leave it invisible below the EGL frame.
+@@ -140,7 +160,7 @@
+     private void drawRecovery(){
+         if(!visible||!recoveryWaiting||sessionFinished||isFinishing()||isDestroyed()){dismissRecoveryPanel();return;}
+         if(recoveryDialog==null)createRecoveryPanel();
+-        recoveryText.setText(recoveryLost?("AUTHORITY".equals(recoveryReason)?"O servidor não autorizou a retomada. Confira seu acesso; você pode sair da partida.":"Não foi possível recuperar o estado desta partida. Você pode sair e iniciar outra sala."):recoverySynchronizing?"Sincronizando a partida…":"Aguardando conexão…");
++        recoveryText.setText(!ownerReady?(ownerFailure==null?"Preparando a conexão da partida…":"Aguardando o serviço da partida…"):recoveryLost?("AUTHORITY".equals(recoveryReason)?"O servidor não autorizou a retomada. Confira seu acesso; você pode sair da partida.":"Não foi possível recuperar o estado desta partida. Você pode sair e iniciar outra sala."):recoverySynchronizing?"Sincronizando a partida…":"Aguardando conexão…");
+         recoveryProgress.setVisibility(recoveryLost?View.GONE:View.VISIBLE);
+         if(!recoveryDialog.isShowing()){
+             recoveryDialog.show();Window window=recoveryDialog.getWindow();
+--- R73/netplay-src\org\emulationstation\frontend\netplay\StationRoomsActivity.java
++++ R74/netplay-src\org\emulationstation\frontend\netplay\StationRoomsActivity.java
+@@ -24,6 +24,7 @@
+     private final Set<StationApi.Cancellation> requests=Collections.synchronizedSet(new HashSet<>());
+     private volatile boolean active;private boolean busy,launching;private volatile int epoch,page;
+     private Intent pendingNavigation;
++    private final StationGameSession.LaunchReturn nativeReturn=new StationGameSession.LaunchReturn();
+     private String selectedItem,launchKey="";private boolean returningFromGame,returningRecovery;private volatile StationOnlineClient client;private StationOnlineGame prepared;
+     private TextView status,title,subtitle,connection,peerTitle,roomTitle,chatTitle;private EditText nickname,chat;
+     private ScrollView peerScroll,roomScroll,chatScroll;private LinearLayout leftPanel,middlePanel,rightPanel;private boolean narrow;private ImageView heroCover;private StationLobbyIcon heroSymbol;private TextView gamePlatform;private android.graphics.Bitmap heroBitmap;private int paintedMessages;private String paintedRoom="";
+@@ -40,7 +41,7 @@
+     private Future<?> polling;private long painted=-1;private int paintedPage=-1;
+     private StationHyperspaceView hyperspace;private StationGameRatingView headerRating;private TextView headerPlayers;private JSONObject headerMetadata;private String heroRequestId="";private int heroEpoch=-1;
+     private final int green=0xff56dea2,white=0xffedf2f4,muted=0xff9aaab2;
+-    @Override public void onCreate(Bundle saved){super.onCreate(saved);StationTaskNavigation.arrived(this);selectedItem=getIntent().getStringExtra("station.itemId");returningFromGame=saved!=null&&saved.getBoolean("returning");returningRecovery=saved!=null&&saved.getBoolean("returningRecovery");artwork=new StationRoomArtwork(this);build();}
++    @Override public void onCreate(Bundle saved){super.onCreate(saved);nativeReturn.restore(saved==null?null:saved.getBundle("station.nativeReturn"));StationTaskNavigation.arrived(this);selectedItem=getIntent().getStringExtra("station.itemId");returningFromGame=saved!=null&&saved.getBoolean("returning");returningRecovery=saved!=null&&saved.getBoolean("returningRecovery");artwork=new StationRoomArtwork(this);build();}
+     @Override protected void onNewIntent(Intent intent){
+         super.onNewIntent(intent);setIntent(intent);StationTaskNavigation.arrived(this);
+         pendingNavigation=intent;if(active)applyPendingNavigation(state.get());
+@@ -55,7 +56,13 @@
+         String peer=incoming.getStringExtra("station.peerId");
+         if(peer!=null&&!peer.isEmpty()){openConversation(peer,roster.resolveName(snapshot,peer));}
+     }
+-    @Override public void onSaveInstanceState(Bundle out){out.putBoolean("returning",returningFromGame);out.putBoolean("returningRecovery",returningRecovery);super.onSaveInstanceState(out);}
++    @Override public void onSaveInstanceState(Bundle out){out.putBoolean("returning",returningFromGame);out.putBoolean("returningRecovery",returningRecovery);out.putBundle("station.nativeReturn",nativeReturn.save());super.onSaveInstanceState(out);}
++    @Override protected void onActivityResult(int requestCode,int resultCode,Intent data){
++        super.onActivityResult(requestCode,resultCode,data);
++        // RESULT_CANCELED also covers a native-process crash before Service ATTACH.
++        // The exact recorded launch is cleaned locally; result codes never authorize Leave.
++        if(nativeReturn.completed(requestCode))android.util.Log.i("StationRooms","game stage=native-activity-returned");
++    }
+     private int dp(float x){return(int)(getResources().getDisplayMetrics().density*x+.5f);}
+     private GradientDrawable bg(int color,int rim){GradientDrawable d=new GradientDrawable();d.setColor(color);d.setCornerRadius(dp(14));d.setStroke(dp(1),rim);return d;}
+     private LinearLayout vertical(){LinearLayout v=new LinearLayout(this);v.setOrientation(1);return v;}
+@@ -587,10 +594,10 @@
+         });
+         codeDialog.setOnDismissListener(d->{confirmationPlayers=null;confirmStart=null;});displayCodePanel();updateStartState();
+     }
+-    private void launch(JSONObject room,JSONObject snapshot){String key=StationLaunchPolicy.key(room);if(launching||key.equals(launchKey))return;launchKey=key;launching=true;int generation=epoch;StationApi.Cancellation cancel=new StationApi.Cancellation();requests.add(cancel);status.setText("Conectando a partida online…");android.util.Log.i("StationRooms","launch stage=prepare room="+room.optString("roomId")+" generation="+room.optLong("generation")+" host="+snapshot.optString("selfId").equals(room.optString("hostId")));
++    private void launch(JSONObject room,JSONObject snapshot){String key=StationLaunchPolicy.key(room);if(launching||nativeReturn.pending()||key.equals(launchKey))return;launchKey=key;launching=true;int generation=epoch;StationApi.Cancellation cancel=new StationApi.Cancellation();requests.add(cancel);status.setText("Conectando a partida online…");android.util.Log.i("StationRooms","launch stage=prepare room="+room.optString("roomId")+" generation="+room.optLong("generation")+" host="+snapshot.optString("selfId").equals(room.optString("hostId")));
+         commands.execute(()->{try{StationOnlineGame game=prepared;if(game==null)game=StationOnlineGame.prepare(this,client,room.getString("itemId"),snapshot,cancel);JSONObject gameRoom=room;
+             if("relay-wss-v1".equals(room.optString("transport"))||"relay-wss-v2".equals(room.optString("transport"))){JSONObject ticketRequest=StationOnlineClient.command("relay-ticket").put("roomId",room.getString("roomId"));if("relay-wss-v2".equals(room.optString("transport")))game.fields(ticketRequest).put("generation",room.getLong("generation"));JSONObject connection=client.call(ticketRequest,false,cancel);gameRoom=connection.getJSONObject("room");android.util.Log.i("StationRooms","launch stage=relay-ticket-received");}
+-            game.verifyRoom(gameRoom);String file=StationRetroLaunch.prepare(this,game,gameRoom,snapshot,cancel);runOnUiThread(()->{if(active&&generation==epoch){returningFromGame=true;returningRecovery="relay-wss-v2".equals(room.optString("transport"));try{android.util.Log.i("StationRooms","launch stage=activity");startActivity(new Intent(this,StationRetroActivity.class).putExtra("station.launch",file).putExtra(StationGameSession.EXTRA,StationGameSession.create(this,room)));}catch(RuntimeException e){returningFromGame=false;StationRetroLaunch.discard(this,file);launchFailure(e,generation);}}else StationRetroLaunch.discard(this,file);});}catch(Exception e){launchFailure(e,generation);}finally{requests.remove(cancel);}});
++            game.verifyRoom(gameRoom);String file=StationRetroLaunch.prepare(this,game,gameRoom,snapshot,cancel);runOnUiThread(()->{if(active&&generation==epoch){returningFromGame=true;returningRecovery="relay-wss-v2".equals(room.optString("transport"));Intent nativeIntent=null;try{nativeIntent=StationGameSession.attach(this,room,new Intent(this,StationRetroActivity.class).putExtra("station.launch",file));android.util.Log.i("StationRooms","launch stage=activity");startActivityForResult(nativeIntent,nativeReturn.prepare(nativeIntent,room.optString("roomId"),"station-stream.v2".equals(room.optString("recoveryProtocol"))?room.optLong("generation",-1):0));}catch(RuntimeException e){StationGameSession.discardLaunch(nativeIntent,room.optString("roomId"),"station-stream.v2".equals(room.optString("recoveryProtocol"))?room.optLong("generation",-1):0);nativeReturn.abort(nativeIntent);returningFromGame=false;StationRetroLaunch.discard(this,file);launchFailure(e,generation);}}else StationRetroLaunch.discard(this,file);});}catch(Exception e){launchFailure(e,generation);}finally{requests.remove(cancel);}});
+     }
+     private void launchFailure(Throwable error,int generation){
+         recordFailure(error);
+--- R73/netplay-src\org\emulationstation\frontend\netplay\StationSessionLink.java
++++ R74/netplay-src\org\emulationstation\frontend\netplay\StationSessionLink.java
+@@ -0,0 +1,39 @@
++package org.emulationstation.frontend.netplay;
++import android.app.Activity;
++import android.content.*;
++import android.os.*;
++
++/** Real Messenger IPC; no local-Binder cast across :station_netplay/main processes. */
++final class StationSessionLink implements AutoCloseable {
++    interface Listener{void ready();void unavailable(String category);}
++    private final Activity activity;private final String key,room;private final long generation;private final Listener listener;
++    private final Handler handler=new Handler(Looper.getMainLooper(),this::receive);
++    private final Messenger replies=new Messenger(handler);
++    private Messenger service;private Connection connection;private boolean closed,ready;private int attempt;
++    StationSessionLink(Activity activity,String key,String room,long generation,Listener listener){if(key==null||room==null||generation<0)throw new IllegalArgumentException("Missing session identity");this.activity=activity;this.key=key;this.room=room;this.generation=generation;this.listener=listener;}
++    void bind(){
++        if(closed||connection!=null)return;
++        Connection next=new Connection(++attempt);connection=next;next.bound=true;
++        try{boolean accepted=activity.bindService(new Intent(activity,StationSessionService.class),next,Context.BIND_AUTO_CREATE|Context.BIND_IMPORTANT);if(!accepted){connection=null;unbind(next);listener.unavailable("BIND_UNAVAILABLE");}}
++        catch(RuntimeException error){connection=null;unbind(next);listener.unavailable("BIND_FAILED");}
++    }
++    private Bundle identity(){Bundle data=new Bundle();data.putString("session",key);data.putString("room",room);data.putLong("generation",generation);data.putInt("attempt",attempt);return data;}
++    private void send(int what)throws RemoteException{if(service==null)throw new RemoteException("Session service unavailable");Message request=Message.obtain(null,what);request.replyTo=replies;request.setData(identity());service.send(request);}
++    private boolean receive(Message message){
++        if(closed||connection==null||!connection.bound||service==null||message.sendingUid!=android.os.Process.myUid())return true;
++        Bundle data=message.getData();if(!key.equals(data.getString("session"))||!room.equals(data.getString("room"))||generation!=data.getLong("generation",-1)||attempt!=data.getInt("attempt",-1))return true;
++        if(message.what==StationSessionService.ATTACHED){if(!ready){ready=true;listener.ready();}}
++        else if(message.what==StationSessionService.REJECTED){ready=false;listener.unavailable("SESSION_IDENTITY");}
++        return true;
++    }
++    private void unbind(Connection target){if(target==null||!target.bound)return;target.bound=false;try{activity.unbindService(target);}catch(IllegalArgumentException ignored){}}
++    private final class Connection implements ServiceConnection {
++        final int number;boolean bound;Connection(int number){this.number=number;}
++        private boolean current(){return !closed&&connection==this&&number==attempt;}
++        @Override public void onServiceConnected(ComponentName name,IBinder binder){if(!current())return;service=new Messenger(binder);try{send(StationSessionService.ATTACH);}catch(RemoteException error){ready=false;listener.unavailable("BINDER_UNAVAILABLE");}}
++        @Override public void onServiceDisconnected(ComponentName name){if(!current())return;service=null;ready=false;listener.unavailable("BINDER_DISCONNECTED");/* Keep binding: Android may reconnect it. */}
++        @Override public void onBindingDied(ComponentName name){if(!current())return;service=null;ready=false;connection=null;unbind(this);listener.unavailable("BINDING_DIED");bind();}
++        @Override public void onNullBinding(ComponentName name){if(!current())return;service=null;ready=false;connection=null;unbind(this);listener.unavailable("NULL_BINDING");}
++    }
++    @Override public void close(){if(closed)return;closed=true;ready=false;try{send(StationSessionService.DETACH);}catch(RemoteException ignored){}Connection old=connection;connection=null;service=null;unbind(old);handler.removeCallbacksAndMessages(null);}
++}
+--- R73/netplay-src\org\emulationstation\frontend\netplay\StationSessionRegistry.java
++++ R74/netplay-src\org\emulationstation\frontend\netplay\StationSessionRegistry.java
+@@ -0,0 +1,16 @@
++package org.emulationstation.frontend.netplay;
++import java.util.HashMap;
++import java.util.Map;
++
++/** One live launch identity in the main process; never a second authentication authority. */
++final class StationSessionRegistry<T> {
++    private static final class Entry<T>{final String room;final long generation;final T owner;Entry(String r,long g,T o){room=r;generation=g;owner=o;}}
++    private final Map<String,Entry<T>> entries=new HashMap<>();
++    synchronized void put(String key,String room,long generation,T owner){
++        if(key==null||!key.matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")||room==null||!room.matches("[0-9a-f]{32}")||generation<0||owner==null||!entries.isEmpty())throw new IllegalArgumentException("Invalid session identity");
++        entries.put(key,new Entry<T>(room,generation,owner));
++    }
++    synchronized T find(String key,String room,long generation){Entry<T> e=entries.get(key);return e!=null&&e.generation==generation&&e.room.equals(room)?e.owner:null;}
++    synchronized void remove(String key,T owner){Entry<T> e=entries.get(key);if(e!=null&&e.owner==owner)entries.remove(key);}
++    synchronized int size(){return entries.size();}
++}
+--- R73/netplay-src\org\emulationstation\frontend\netplay\StationSessionService.java
++++ R74/netplay-src\org\emulationstation\frontend\netplay\StationSessionService.java
+@@ -0,0 +1,41 @@
++package org.emulationstation.frontend.netplay;
++import android.app.Service;
++import android.content.Intent;
++import android.os.*;
++import java.util.*;
++
++/** Private bound service: the foreground native client keeps its HTTP owner executable. */
++public final class StationSessionService extends Service {
++    static final int ATTACH=1,DETACH=2,ATTACHED=3,REJECTED=4;
++    private final Handler handler=new Handler(Looper.getMainLooper(),this::receive);
++    private final Messenger endpoint=new Messenger(handler);
++    private final Map<IBinder,Claim> clients=new HashMap<>();
++    private final Map<String,IBinder> sessions=new HashMap<>();
++    private final class Claim implements IBinder.DeathRecipient {
++        final String key;final StationGameSession owner;final IBinder client;
++        Claim(String key,StationGameSession owner,IBinder client){this.key=key;this.owner=owner;this.client=client;}
++        @Override public void binderDied(){handler.post(()->release(client,true));}
++    }
++    @Override public IBinder onBind(Intent intent){return endpoint.getBinder();}
++    private boolean receive(Message message){
++        // Messenger preserves the Binder sender UID in sendingUid; Handler.getCallingUid does not.
++        if(message.sendingUid!=android.os.Process.myUid()||message.replyTo==null)return true;
++        Bundle data=message.getData();String key=data.getString("session"),room=data.getString("room");long generation=data.getLong("generation",-1);int attempt=data.getInt("attempt",-1);
++        IBinder peer=message.replyTo.getBinder();
++        if(message.what==DETACH){Claim claim=clients.get(peer);if(claim!=null&&claim.key.equals(key))release(peer,true);return true;}
++        if(message.what!=ATTACH||attempt<1)return true;
++        StationGameSession owner=StationGameSession.anchorOwner(key,room,generation);
++        IBinder existing=sessions.get(key);Claim same=clients.get(peer);
++        if(owner==null||(existing!=null&&!existing.equals(peer))||(same!=null&&(same.owner!=owner||!same.key.equals(key)))){reply(message,REJECTED,data);return true;}
++        if(same==null){Claim claim=new Claim(key,owner,peer);try{peer.linkToDeath(claim,0);}catch(RemoteException dead){owner.anchorEnded();return true;}clients.put(peer,claim);sessions.put(key,peer);}
++        reply(message,ATTACHED,data);return true;
++    }
++    private void reply(Message request,int what,Bundle data){
++        Message response=Message.obtain(null,what);Bundle value=new Bundle();value.putString("session",data.getString("session"));value.putString("room",data.getString("room"));value.putLong("generation",data.getLong("generation",-1));value.putInt("attempt",data.getInt("attempt",-1));response.setData(value);
++        try{request.replyTo.send(response);}catch(RemoteException gone){release(request.replyTo.getBinder(),true);}
++    }
++    private void release(IBinder peer,boolean ended){Claim claim=clients.remove(peer);if(claim==null)return;sessions.remove(claim.key);try{peer.unlinkToDeath(claim,0);}catch(NoSuchElementException alreadyGone){}if(ended)claim.owner.anchorEnded();}
++    private void releaseAll(){for(IBinder peer:new ArrayList<>(clients.keySet()))release(peer,true);}
++    @Override public boolean onUnbind(Intent intent){releaseAll();return false;}
++    @Override public void onDestroy(){releaseAll();handler.removeCallbacksAndMessages(null);super.onDestroy();}
++}

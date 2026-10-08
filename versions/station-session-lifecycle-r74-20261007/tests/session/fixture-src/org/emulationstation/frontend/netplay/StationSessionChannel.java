@@ -1,0 +1,1 @@
+package org.emulationstation.frontend.netplay;import android.os.*;public class StationSessionChannel{static ResultReceiver transport(ResultReceiver r){return r;}static ResultReceiver read(Bundle b,String k){return (ResultReceiver)b.get(k);}}

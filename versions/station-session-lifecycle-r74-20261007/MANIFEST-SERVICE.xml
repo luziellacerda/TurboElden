@@ -1,0 +1,1 @@
+<service android:name="org.emulationstation.frontend.netplay.StationSessionService" android:exported="false" />

@@ -1,0 +1,26 @@
+{
+  "scope": "Test exact R73/R74 wait fragments with a modeled Android input queue.\nTwelve seconds are simulated; this is not a real Android ANR or gameplay test.\n",
+  "testRecipeSHA256": "76c4634f0bd4b11b1a73a623364c9bfedf5152c9f548efb95fe0d6349c339c1a",
+  "results": [
+    {
+      "label": "baseline",
+      "sourceSHA256": "90690f1b50710fe23cf58141542856ce252674429f0b9d792553b2547d458945",
+      "waitFragmentSHA256": "2145d3d686bf0e7859fdadd2be19f50067a026ce3dfc4196180e07b845c91885",
+      "pollFragmentSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "FAIL input line31 pending==0 pending=2400 acked=0"
+    },
+    {
+      "label": "candidate",
+      "sourceSHA256": "e577f9d59e7d557e858277e2beb2141c13d845397177d77fb5748ab44c5f9e30",
+      "waitFragmentSHA256": "2145d3d686bf0e7859fdadd2be19f50067a026ce3dfc4196180e07b845c91885",
+      "pollFragmentSHA256": "85a914dc721f9b0eee90ad7f3cd96797023233e6ec800ce32d2be0fdc4e48a5e",
+      "exitCode": 0,
+      "stdout": "PASS modeled 12s recovery wait: ACK2400, no gameframes; human quit handled; normal frame unchanged",
+      "stderr": ""
+    }
+  ],
+  "androidTested": false,
+  "realGameFramesTested": false
+}

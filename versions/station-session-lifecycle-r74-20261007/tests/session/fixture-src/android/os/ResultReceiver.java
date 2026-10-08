@@ -1,0 +1,1 @@
+package android.os;public class ResultReceiver implements Parcelable{private final Handler h;public ResultReceiver(Handler h){this.h=h;}protected void onReceiveResult(int c,Bundle b){}public void send(int c,Bundle b){h.post(()->onReceiveResult(c,b));}}

@@ -1,0 +1,7 @@
+package org.emulationstation.frontend.netplay;
+public final class StationSessionRegistryTest{
+ private static int checks;private static void yes(boolean v){checks++;if(!v)throw new AssertionError("registry check "+checks);}
+ private static void bad(Runnable r){boolean thrown=false;try{r.run();}catch(IllegalArgumentException e){thrown=true;}yes(thrown);}
+ public static void main(String[] args){StationSessionRegistry<Object> r=new StationSessionRegistry<>();Object a=new Object(),b=new Object();String key="12345678-1234-1234-1234-123456789abc",room="0123456789abcdef0123456789abcdef";
+ yes(r.size()==0);r.put(key,room,3,a);yes(r.size()==1);yes(r.find(key,room,3)==a);yes(r.find(key,room,4)==null);yes(r.find(key,"1123456789abcdef0123456789abcdef",3)==null);yes(r.find("missing",room,3)==null);yes(r.find(null,room,3)==null);yes(r.find(key,null,3)==null);bad(()->r.put(key,room,3,b));bad(()->r.put("12345678-1234-1234-1234-123456789abd",room,3,b));yes(r.find(key,room,3)==a);r.remove(key,b);yes(r.find(key,room,3)==a);r.remove(key,a);yes(r.size()==0);r.remove(key,a);yes(r.size()==0);r.put(key,room,4,b);yes(r.find(key,room,3)==null);yes(r.find(key,room,4)==b);bad(()->r.put(null,room,3,a));bad(()->r.put("x",room,3,a));bad(()->r.put("12345678-1234-1234-1234-123456789abd",null,3,a));bad(()->r.put("12345678-1234-1234-1234-123456789abd","x",3,a));bad(()->r.put("12345678-1234-1234-1234-123456789abd",room,-1,a));bad(()->r.put("12345678-1234-1234-1234-123456789abd",room,0,null));System.out.println("StationSessionRegistryTest: "+checks+" checks passed");}
+}

@@ -1,0 +1,113 @@
+{
+  "scope": "Host tests using extracted native functions and real Windows threads.\n\nAndroid's Looper and core cleanup are modeled. SRW locks/condition variables\nexecute the actual lock/join ordering. No emulator, ROM, socket or device runs.\n",
+  "testRecipeSHA256": "27d5af8117d96b1532e8ce86695ac23ece2f642470ebe2c08baae76894e2049c",
+  "deltaManifestSHA256": "9fc687d3c7030475a5dc1e74c32601a7294c6581adce3cd69c6c770933c2a9cf",
+  "extractedFunctionHashes": {
+    "baseline": {
+      "android_app_free": "382f528bba685be325019287d84bbff2eaf9159dbfa05dd7447738cb8aba655c",
+      "android_app_set_activity_state": "08bd1ced138e515460f475c6c9e2a1dcf24d631de2e8be3d217561dfcf09108c"
+    },
+    "candidate": {
+      "android_app_request_quit": "3b7bdb29c3321e8aacbc6c79683730ac2b59c555a2a7575720f54da41216a769",
+      "android_app_free": "7077e4addcbe0d74eea685715f30069adb1b88a3c4bd6264f987423b18d0d4aa",
+      "android_app_set_activity_state": "2735d461b2ae0499660e154e7d00fa2a9495b994f7e710023bb7ed35df265759",
+      "android_run_events": "e3e0c33a34bcaef56dee829b5c0b32fba74bd1b2df03a3214a723841237eb403",
+      "stationRequestQuit": "b49f386fb11a483a7bf1214f41605dde24f56b45a59f1c68210ebc50e5b1ec50",
+      "station_activity_reserve": "db7eb220c10b4af7fbfabd65c8a5e04a237d47760223c72af0f8ef4542433a13",
+      "station_activity_release": "965ef0924ba983004054b53d026367c272f2ecaacaf7b77c28c50ffa656abb87"
+    }
+  },
+  "results": [
+    {
+      "label": "baseline",
+      "mode": "free",
+      "expectedDeadlockReproduced": true
+    },
+    {
+      "label": "baseline",
+      "mode": "join",
+      "expectedDeadlockReproduced": true
+    },
+    {
+      "label": "baseline",
+      "mode": "completed-state",
+      "expectedDeadlockReproduced": true
+    },
+    {
+      "label": "baseline",
+      "mode": "reset",
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "FAIL reset line99 !station_recovery_failed"
+    },
+    {
+      "label": "candidate",
+      "mode": "free",
+      "passed": true,
+      "stdout": "entered free\nPASS checks=2"
+    },
+    {
+      "label": "candidate",
+      "mode": "completed-state",
+      "passed": true,
+      "stdout": "entered completed-state\nPASS checks=1"
+    },
+    {
+      "label": "candidate",
+      "mode": "repeat",
+      "passed": true,
+      "stdout": "PASS checks=401"
+    },
+    {
+      "label": "candidate",
+      "mode": "initial-window",
+      "passed": true,
+      "stdout": "PASS checks=4"
+    },
+    {
+      "label": "candidate",
+      "mode": "late-state",
+      "passed": true,
+      "stdout": "PASS checks=1"
+    },
+    {
+      "label": "candidate",
+      "mode": "ended-quit",
+      "passed": true,
+      "stdout": "PASS checks=4"
+    },
+    {
+      "label": "candidate",
+      "mode": "worker-complete",
+      "passed": true,
+      "stdout": "PASS checks=2"
+    },
+    {
+      "label": "candidate",
+      "mode": "jni-identity",
+      "passed": true,
+      "stdout": "PASS checks=6"
+    },
+    {
+      "label": "candidate",
+      "mode": "reserve-overlap",
+      "passed": true,
+      "stdout": "PASS checks=7"
+    },
+    {
+      "label": "candidate",
+      "mode": "reset",
+      "exitCode": 0,
+      "stdout": "PASS reset checks=12",
+      "stderr": ""
+    }
+  ],
+  "baseImmutable": true,
+  "realAndroidTested": false,
+  "networkTested": false,
+  "extraGuards": [
+    "legacy shell hooks removed",
+    "reset before thread creation",
+    "R73 network pump unchanged"
+  ]
+}

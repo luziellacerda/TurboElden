@@ -1,3 +1,27 @@
+# R74 candidata — ciclo de vida, ANR e latência — 07/10/2026
+
+Leia `versions/station-session-lifecycle-r74-20261007/README.md`, STATUS e o handoff APP → SERVIDOR. APK `e56896f28b16645653bfd28311cd0a8a9a5458e6d443849916a4dede6dc7fafe`; runtime `804b2acfea4c6d615bf40dba30e1777015098bf7375d0745db8d117555eb2516`. Compilada e assinada, **não instalada nem estável**. Ambos aparelhos ainda R73. Exatamente quatro entradas alteradas e 13.221 preservadas. Mesma assinatura, cores, controles, mídia e motores offline.
+
+Validação: 201 fontes Java; 1.206 verificações históricas em execução separada de 101 verificações de sessão e 42 guardas; três probes nativos. Testes locais não substituem Android físico nem partida real em dupla.
+
+A pesquisa oficial confirma o catch-up do motor. A reprodução local demonstra uma marca Station persistente que gerava NeedSync13 depois de o catch-up terminar. A correção remove apenas essa escalada. ANRs físicos R73 apontaram fila de entrada Android sem confirmação durante espera; R74 consome os eventos sem avançar quadros. A primeira queda, anterior e distinta, ocorreu depois de o Android congelar a autoridade HTTP; serviço privado vinculado mantém sua dependência do processo do jogo. O resultado da Activity limpa lançamento órfão, e o JNI de saída/reserva/locks corrige encerramento. Nenhum temporizador foi removido por tentativa.
+
+RTT mediano de 122 ms no Samsung e 359 ms no Motorola não prova lentidão exclusiva do serviço. Pedido ao operador contém janela 23:49:45–23:53:18 UTC, primeira queda/epochs e medições DATA/PONG, filas, SendAsync, GC, TCP e proxy. Último servidor lido: 815ceaca; R73 já ativa com oito engines. R74 requer duas adições rs4/runtime804b2acfea4c preservando as oito. Não reutilizar IDs antigos nem contornar validações.
+
+Não implantar Linux nem reiniciar com partidas retidas. O operador coordena a ativação. Antes de instalar, confirmar ausência de partida ou pedir saída humana; preservar jogos, licença, saves e assinatura. Não afirmar gameplay R74 validado.
+
+## Histórico anterior
+
+# R73 — queda diagnosticada e cadastro confirmado — 07/10/2026
+
+Leia `docs/server/ANALISE-APP-R73-QUEDA-CONVIDADO-20261007.md`. Cruzamento com retorno SERVIDOR→APP `815ceaca49baa0feb1e2d61726c0346ddad2bd37`, branch `fix/station-r73-engine-registry-20261007`: registro R73 ativo 23:13:54 UTC, oito engines, SHA266de762; DLL ab192bf preservada. Não repetir pendência antiga de cadastro nem reinstalar por esse motivo. Ambos aparelhos continuam APK b23ff3d1 R73, hash integral conferido.
+
+Primeira queda provada: convidado deixa heartbeat HTTP às23:22:02; Android registra congelamento do processo principal às23:22:14.382, mantendo processo do motor/PONG; servidor fecha AUTH_HEARTBEAT_MISSING às23:23:10.719 (68387ms sem presença). Proprietário HTTP/tickets está no processo principal sem Service vinculado. Corrigir ciclo de vida no app, preservando autenticação e separação do carrossel. Reabertura seguinte é problema distinto: novos tickets aceitos, mas motor reutilizado não registra nova inicialização. Há riscos de mutex/join e estado estático; pilha atual indisponível sem root, causa nativa exata ainda não provada. Não desligar timers/validações indiscriminadamente.
+
+Esta etapa foi somente diagnóstico/documentação local. Nenhum runtime/APK/servidor/ajuste de telefone alterado, nenhuma partida interrompida. Logs privados em E:station-r73-disconnect-analysis-20261007, fora do Git. Servidor registra relato do mantenedor de ambos jogando antes da queda; recuperação/estabilidade não homologadas. Preparação de correção deve conciliar fontes exatas R73 e testar também saída/reabertura, além da presença durante jogo.
+
+## Histórico anterior
+
 # R73 instalada nos dois aparelhos — 07/10/2026
 
 Pedido explícito do mantenedor para instalar agora, antes da confirmação do cadastro. Samsung A56 às23:11:17UTC; Motorola Edge30 às23:12:57UTC; ambos SHA integral b23ff3d1e319ee050e6eb867e2643a5f66661da481dd2e3a4e50089d1604f077 verificado. UID/data original preservados; sem emulação ativa, limpeza/desinstalação/ajustes ou APK extra; envio direto. Recibos em versions/station-recovery-handshake-r73-20261007/evidence/installation-*-r73.json. Fonte executável5657dce permanece; somente receita de instalação/documentação acrescidas. Samsung abriu entrada oficial com keyguard; não afirmar login/gameplay. Registro online ainda não confirmado (último retorno c1e44a;1b26b34c é nosso pedido). Rejeição prévia de instalação foi revista após código comprovar limite em StationOnlineGame.prepare, preservando login/catálogo e validação dos motores; usuário solicitou instalação imediata. Não iniciar partidas até cadastro efetivo, não afirmar estabilidade/correção física sem teste.

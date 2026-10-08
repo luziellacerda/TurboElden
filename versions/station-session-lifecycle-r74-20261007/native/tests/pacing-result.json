@@ -1,0 +1,56 @@
+{
+  "scope": "Extract real R73 pacing/stall functions and Java recovery tick/lost methods.\nThe native structs, clock, peer input and Java socket/listener are test models.\nNo emulator, Android device, real socket, relay server or gameplay is exercised.\n",
+  "testRecipeSHA256": "ac5f477725cccbb09ab8765577278e740349ac168f15c45d96b1cd04b1601adb",
+  "results": [
+    {
+      "label": "baseline",
+      "frontendSHA256": "3dea62f27a197f2f4fa7c689a0ed09bbe8840ff1e00bf74edb299a2f40d40afa",
+      "native": {
+        "catchups": 200,
+        "stickyFlagsAfterCatchup": 200,
+        "postFrameCalls": 200,
+        "nativeFlagForJava": true,
+        "nativeFailurePreserved": true
+      },
+      "java": "PASS actual Java tick: stale=true SYNC13=1; actual lost(): pause preserved, offsets unchanged, no SYNC13"
+    },
+    {
+      "label": "candidate",
+      "frontendSHA256": "b1d0f5ddea0c1fb2d675fd08b73503fd80b03c71a6a60c8dea7084a96950d4fe",
+      "native": {
+        "catchups": 200,
+        "stickyFlagsAfterCatchup": 0,
+        "postFrameCalls": 200,
+        "nativeFlagForJava": false,
+        "nativeFailurePreserved": true
+      },
+      "java": "PASS actual Java tick: stale=false SYNC13=0; actual lost(): pause preserved, offsets unchanged, no SYNC13"
+    }
+  ],
+  "fragments": [
+    {
+      "label": "baseline",
+      "stallSHA256": "67b2faa9abf11931b3aa96dabc2d31ea1e347e282b456c3ed09003a35e8d1bef",
+      "unstallSHA256": "5fea744bc76ecc35a599144965ac0ff75b0583eedeb3ffe59c260bcaa1f4e457",
+      "preframeSHA256": "d816fd45dcfe5ba97774fc6e44ee63578ab07affad0ec08c3d80cb9dcf45f464",
+      "recoveryPollSHA256": "d3a42419124dda592fea217088ed4e4687bf63718f657299ac8d73ad9fa41e12"
+    },
+    {
+      "label": "candidate",
+      "stallSHA256": "67b2faa9abf11931b3aa96dabc2d31ea1e347e282b456c3ed09003a35e8d1bef",
+      "unstallSHA256": "5fea744bc76ecc35a599144965ac0ff75b0583eedeb3ffe59c260bcaa1f4e457",
+      "preframeSHA256": "f3e02f34c4fd25eb6249c47a87ae48cd3755961b11a7c582307357fd79f67be9",
+      "recoveryPollSHA256": "d3a42419124dda592fea217088ed4e4687bf63718f657299ac8d73ad9fa41e12"
+    }
+  ],
+  "r73HeaderSHA256": "40cb8f2a75cd31cc530b41e853cce31524dd32ddc82a95313a328f358383108a",
+  "javaSourceSHA256": "8af5ceb585498512ff9ff4e1409a46ee2ed9dca9ee66bcb0c43bc11fa7817896",
+  "javaTickSHA256": "c3ca609da5a332787c1b3afae33ac085b348707407ee0713a1bb36b0809776de",
+  "javaLostSHA256": "9cfe3ec5fe57a57cb5b70ecee1bd3d6fe874233602699f70a49f282013dd0904",
+  "onlyRemovedBlockSHA256": "2e1ef59175f12ffd6de30068ee8deaa640cb7ad5ae8bf1ff4937a98aac56dcd0",
+  "removedLines": 3,
+  "realGameplay": false,
+  "androidExecuted": false,
+  "serverExecuted": false,
+  "officialReference": "https://docs.libretro.com/development/retroarch/netplay/"
+}
