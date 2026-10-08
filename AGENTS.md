@@ -1,3 +1,17 @@
+# Retorno efetivo R74 do servidor recebido; R75 visual preservada — 07/10/2026
+
+SERVIDOR → APP, commit `ed9ca9fdcc16f3b9f86792d43ed01d5812a9f1d8`, branch `docs/station-r74-server-stability-return-20261007` (Servidor-pix). Leia `docs/server/RETORNO-SERVIDOR-APP-R74-LIFECYCLE-LATENCIA-20261007.md`, pesquisa de latência e recibos em `docs/server/recovery-r74-20261007`. Este é o retorno do operador; os pedidos `8d48252`/`7ad4fb05` abaixo continuam sendo APP → SERVIDOR.
+
+Cadastro R74 realmente ativo: dez engines, oito anteriores preservadas, SHA `a5f9de948ab3fcf15b2657061d540dcbbafda98e1dd7a68137e617b58a894843`, recarga `2026-10-08T00:39:18.786312Z`, PID 1278094. DLL ativa permanece `ab192bf`/`815fc8bc`; 187 checks isolados e 191 HTTPS/WSS do cadastro passaram. Não repetir a pendência de oito engines. R75 visual usa os mesmos IDs rs4/runtime `804b2acfea4c…` e não precisa de outro registro.
+
+SRV-01/02/03 implementados na candidata servidor `6f27c6c`/DLL `71ba30b8`, .NET 8.0.31: primeira causa antes de Detach, Close pelo escritor único, métricas limitadas. 91+589+88 checks locais; fixtures TLS com tracing passaram, mas sem logging houve timeout do handshake, inclusive imediato. Divergência ainda não isolada: DLL NÃO ativada, qualificação sombra/pública pendente. Não declarar a candidata em produção nem atribuir essa falha isolada ao telefone.
+
+**Próxima implementação do PCAPK: APP-01.** O Linux repetiu a receita exata nas fontes R74: 1.764 verificações, baseline 64/64 espera outro sinal, candidato 64/64 envia sem novo tick. Corrigir sinal perdido de `pumpPending` sobre R74/R75 atual, preservando escritor único, testar erro/rejeição do executor/fechamento/substituição de transporte/ACK/crédito/reconexão e suítes TLS/WSS/TCP/sessão antes do novo DEX/APK. O candidato ainda existe só na fixture; este retorno não muda código Android, runtime, APK ou presets. EXP-01 segue como teste A/B proposto. Preservar mudanças visuais R75, assinatura, UID, licença, jogos, saves e todos os demais módulos.
+
+Jogatina R74 observada 00:41:31–00:44:31: heartbeats dos dois e 385.806 bytes entregues antes da saída humana, sem marcador de falta de presença ou reinício. Não é homologação prolongada. Não abrir rota direta por hipótese: certificado da origem tem pin diferente; entrada externa não comprovada. Não reiniciar servidor com sessões retidas em RAM. Histórico abaixo não identifica o último retorno do servidor.
+
+## Histórico anterior
+
 # R75 candidata — vídeos Neo Geo; pesquisa R74 preservada — 07/10/2026
 
 Leia `versions/station-neogeo-collection-map-r75-20261007/README.md`, STATUS e recibos. APK `1ab4fa3770570832ea5ff2e9b0ce4f8a26e0e24e210ad7652f4c96647fecad32`, com 2.122.907.752 bytes, em `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Premium-R75-20261007.apk`. **Compilada e assinada; não instalada.** Ambos os aparelhos permanecem na R74; estavam jogando e depois saíram da USB. Não encerrar partidas para atualizar.
