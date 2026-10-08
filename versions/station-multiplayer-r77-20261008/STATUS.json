@@ -38,5 +38,9 @@
     "Exact game/mode/controller qualification on Android with 2, 3 and 4 devices",
     "Catalogue remaining factual evidence, synopsis and rating gaps",
     "v3 room invitation/code feature is not implemented; room-list join only"
-  ]
+  ],
+  "appSourceCommit": "ba4fee556ec0010bbde1287746c68a2882cd1e39",
+  "serverDeliveryCommit": "6c52830f121ff5f3fae403c64a49ace11153cc0e",
+  "serverDeliveryBranch": "docs/station-r77-multiplayer-candidate-20261008",
+  "serverDeliveryUrl": "https://github.com/luziellacerda/Servidor-pix/blob/6c52830f121ff5f3fae403c64a49ace11153cc0e/docs/station-android/ENTREGA-APP-R77-MULTIPLAYER-20261008.md"
 }

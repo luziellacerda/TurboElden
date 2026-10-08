@@ -1,5 +1,7 @@
 # R77 candidata — salas de 2 a 4 e contagens por edição — 08/10/2026
 
+Entrega APP → SERVIDOR publicada: `6c52830f121ff5f3fae403c64a49ace11153cc0e`, ramo `docs/station-r77-multiplayer-candidate-20261008`. [Documento exato](https://github.com/luziellacerda/Servidor-pix/blob/6c52830f121ff5f3fae403c64a49ace11153cc0e/docs/station-android/ENTREGA-APP-R77-MULTIPLAYER-20261008.md). Fonte executável do app `ba4fee556ec0010bbde1287746c68a2882cd1e39`. São 143 arquivos documentais/fontes candidatas; checkout e índice do clone servidor preservados. É nosso envio, não resposta, ativação ou deploy.
+
 Leia `versions/station-multiplayer-r77-20261008/README.md`, `STATUS.json` e o handoff APP → SERVIDOR. APK `14450f3aa52ca2c795b50afba7e5a75c5bd4f71aa0007d2c43c6542051bdb737`, compilado/assinado, **não instalado e não homologado em três/quatro celulares**. Ambos aparelhos permanecem na R76. A produção declarada continua ab192bf; último retorno real bee3dcd. A candidata C# está isolada no snapshot, sem deploy e sem incorporação automática da 6f27.
 
 Novo protocolo station-stream.v3, runtime351cee4540e9 e core SNES0a3ac7b4fa5d exigem novos registros/perfis no servidor. Preservar os dez engines existentes. Perfis propostos approved:false, zero vínculos factuais promovidos; não habilitar por nome, maxusers ou similaridade. Catálogo:2.467 IDs,1.454 candidatos descritivos,734 sem correspondência,279 divergentes; não afirmar todas as fichas completas. Carrossel mostra — sem confirmação. Salas informam modo, capacidades exatas, ocupação e nomes/P1–P4 antes de aceitar/iniciar.

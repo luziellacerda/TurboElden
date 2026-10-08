@@ -1,5 +1,7 @@
 # R77 — salas de 2 a 4 jogadores e informação por edição
 
+Entrega APP → SERVIDOR publicada: `6c52830f121ff5f3fae403c64a49ace11153cc0e`, ramo `docs/station-r77-multiplayer-candidate-20261008`. [Documento exato](https://github.com/luziellacerda/Servidor-pix/blob/6c52830f121ff5f3fae403c64a49ace11153cc0e/docs/station-android/ENTREGA-APP-R77-MULTIPLAYER-20261008.md). Fonte executável do app `ba4fee556ec0010bbde1287746c68a2882cd1e39`. São 143 arquivos documentais/fontes candidatas; checkout e índice do clone servidor preservados. É nosso envio, não resposta, ativação ou deploy.
+
 ## Estado desta entrega
 
 Candidata de implementação, sobre a R76 instalada. Não é atualização de produção nem homologação de partidas em três/quatro aparelhos. O APK final, seus hashes e as verificações finais ficam nos recibos desta versão. Nenhum Linux, serviço ou telefone foi alterado nesta etapa.
