@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "backupRoot": "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008",
+  "automaticLatestFileSelectionAllowed": false,
+  "historicalOverlayRecipesAreArchived": true,
+  "channels": {
+    "stable-2p": {
+      "version": "R76",
+      "directory": "stable-2-players-r76",
+      "branch": "release/station-stable-2p-r76-20261008",
+      "apk": "TurboStations-Premium-R76-20261008.apk",
+      "apkSHA256": "d7145db3511a4056b16fdde10e4c07709a16b7f445596801b3535c1b28b06a51",
+      "javaSourceCount": 201,
+      "protocol": "station-stream.v2",
+      "status": "user-designated two-player reference; prior stutters remain documented",
+      "sourceCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e"
+    },
+    "test-4p": {
+      "version": "R79",
+      "directory": "test-up-to-4-players-r79",
+      "branch": "fix/station-room-bootstrap-r79-20261008",
+      "sourceCommit": "b377db3981c96374fbe5591700db91dfbe297994",
+      "apk": "TurboStations-Premium-R79-20261008.apk",
+      "apkSHA256": "c2aeee4443dedc2862b29dde1f972574bc25464d6993abf01f34d43531558f0a",
+      "javaSourceCount": 209,
+      "protocol": "station-stream.v3",
+      "status": "experimental; server activation and exact per-game approved profiles required including two-player rooms",
+      "fourPhoneGameplayQualified": false
+    }
+  }
+}

@@ -1,3 +1,15 @@
+# Canais atuais e backup único — 08/10/2026
+
+O mantenedor determinou manter somente dois instaladores: R76 como referência estável de dois jogadores e R79 como teste para até quatro. Ele confirmou limpar APKs antigos/temporários, preservando histórico de fontes no Git. Leia `release-channels/ACTIVE.json` e `release-channels/README.md` antes de qualquer compilação ou instalação.
+
+Backup definitivo: `G:\BAKUP SISTEMA APP 03-10-2026\ATUAL-2P-E-TESTE-4P-20261008`, com dois canais. Os APKs antigos, inclusive cópias E: R78/R79, foram removidos depois de conferir os backups. Caminhos históricos em recibos/receitas não são mais entradas atuais. Não pesquisar a maior revisão nem restaurar Activities de versões anteriores. Use as fontes completas congeladas do canal escolhido e `release-channels/rebuild_verified.py`: R76 201 Java e R79 209 Java; DEX e carrossel de ambos reproduzidos byte a byte a partir do backup. Novas mudanças devem partir desse conjunto e gerar novo manifesto.
+
+Git: ramo estável `release/station-stable-2p-r76-20261008`, fonte `a81c7fde61c6d048b4cea4c746052bd7304e600e`; ramo teste `fix/station-room-bootstrap-r79-20261008`, fonte executável reconciliada `b377db3981c96374fbe5591700db91dfbe297994`. Handoff R79 publicado no servidor `706f47ff06659feb777d3c4c999b645cb5c3a1ff`, ramo `docs/station-r79-room-bootstrap-20261008`. É nossa entrega, não deploy. Último retorno real `af58034`; produção v2, integração v3 ainda pendente inclusive para novas salas de duas pessoas no app R79. Não confundir R78, que já herda v3, com a referência R76.
+
+R79 instalada e conferida somente no Motorola; Samsung permanece R78. Nenhum telefone foi alterado na organização/limpeza. Estável é a referência escolhida pelo mantenedor, sem alegar ausência total de engasgos. Quatro aparelhos ainda não homologados. Licenças, jogos, saves, ferramentas e chave de assinatura preservados.
+
+## Histórico anterior
+
 # R79 Corrigir bootstrap das salas e recuperar sinopses Dreamcast — 08/10/2026
 
 Leia `versions/station-room-bootstrap-r79-20261008/README.md`, STATUS, handoff e recibos. Falha R78 confirmada no Motorola: `StationHttp.exchange:59` rejeita localmente `POST /v1/station/online/multiplayer/command` porque a rota faltava no allowlist; o bootstrap abortava antes de apresentar o snapshot social e a capa dependia desse snapshot. R79 permite somente esse POST (8.192 bytes), separa a consulta opcional da presença e carrega capa/título/plataforma do catálogo local. Não atribuir essa consulta ausente ao servidor.
