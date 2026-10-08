@@ -21,3 +21,7 @@ Para uma alteração futura, partir de uma cópia de trabalho desse canal, regis
 Backup inclui os APKs exatos, fontes Java completas, fontes e dependências do carrossel, fontes nativas dos motores, histórico Git e recibos. APKs, objetos, mídia e arquivos locais de assinatura não são enviados ao Git. A chave original e o backup privado preexistente de assinatura permanecem em seus locais protegidos.
 
 Nova conferência R79: no Motorola, capa/nome/plataforma/avaliação de Battletoads e estado Online visíveis; sinopse de Bust-A-Move 4 visível. Cruzamento com revisão 18: 142/243 nomes Dreamcast encontram fallback, 101 permanecem pendentes. Não declarar cobertura integral nem gameplay multiplayer corrigido por essa conferência.
+
+## Conferência final
+
+Backup local conferido, com dois instaladores. As 201/209 fontes Java e ambos os carrosséis foram recompilados a partir das entradas consolidadas e produziram os mesmos DEX/bibliotecas das versões preservadas. Histórico antigo conserva também seis tags anotadas em referências locais arquivadas; não são canais de instalação nem foram publicadas automaticamente. A limpeza removeu 61 APKs anteriores/duplicados e saídas temporárias, preservando os módulos oficiais necessários dos emuladores.
