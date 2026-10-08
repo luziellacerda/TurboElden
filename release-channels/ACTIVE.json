@@ -16,14 +16,14 @@
       "sourceCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e"
     },
     "test-4p": {
-      "version": "R81",
-      "directory": "test-up-to-4-players-r81",
-      "branch": "fix/station-online-readiness-r81-20261008",
-      "sourceCommit": "759d7ab4d479bbb9dca0426ad286ca1b4f0ce1e0",
-      "sourceDirectory": "versions/station-online-readiness-r81-20261008",
-      "apk": "TurboStations-Premium-R81-20261008.apk",
-      "apkSHA256": "85fac8f51daa3a370eabb14d98832f75c2f30ff81422c549538ee715627032c6",
-      "javaSourceCount": 209,
+      "version": "R82",
+      "directory": "test-up-to-4-players-r82",
+      "branch": "fix/station-player-facts-r82-20261008",
+      "sourceCommit": null,
+      "sourceDirectory": "versions/station-player-facts-r82-20261008",
+      "apk": "TurboStations-Premium-R82-20261008.apk",
+      "apkSHA256": "c760e3379dc78302a74ed46d99e1ae5d0836295d37fafe3c17b954871192d1bc",
+      "javaSourceCount": 210,
       "protocol": "station-stream.v3",
       "status": "experimental; server activation and exact per-game approved profiles required including two-player rooms",
       "fourPhoneGameplayQualified": false,
@@ -33,7 +33,10 @@
       "installedDevices": [
         "motorola-edge-30"
       ],
-      "installationReceipt": "versions/station-online-readiness-r81-20261008/INSTALLATION.json"
+      "installationReceipt": "versions/station-player-facts-r82-20261008/INSTALLATION.json",
+      "sourceCommitStatus": "pending",
+      "descriptiveEditionsReviewed": 5,
+      "onlineApprovalChanged": false
     }
   }
 }

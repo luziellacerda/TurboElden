@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-08",
+  "sources": {
+    "sb2": {
+      "label": "Hudson · manual Super Bomberman 2 (USA), Playing a Battle Game, pp. 8–9",
+      "url": "https://www.videogamemanual.com/snes/Super%20Bomberman%202%20(USA).pdf",
+      "kind": "original-publisher-manual-third-party-archive"
+    },
+    "sb3": {
+      "label": "Hudson · manual Super Bomberman 3 (Europe), pp. 5, 8–9",
+      "url": "https://www.retrogames.cz/manualy/SNES/Super_Bomberman_3_-_SNES_-_Manual.pdf",
+      "kind": "original-publisher-manual-third-party-archive"
+    },
+    "hero": {
+      "label": "Nintendo · Bomberman Hero, campo Players: 1",
+      "url": "https://www.nintendo.com/en-gb/Games/Nintendo-64/Bomberman-Hero-276445.html",
+      "kind": "official-publisher-product-page"
+    },
+    "dc": {
+      "label": "Sega · manual Bomberman Online, pp. 4, 14–16",
+      "url": "https://www.digitpress.com/library/manuals/dreamcast/bomberman_online.pdf",
+      "kind": "original-publisher-manual-third-party-archive"
+    },
+    "mana": {
+      "label": "Nintendo · manual Secret of Mana, seção 12, PDF p. 15",
+      "url": "https://www.nintendo.com/es-es/games/oms/snes-classic/manuals/secret-of-mana/manual.pdf",
+      "kind": "official-publisher-hosted-manual"
+    },
+    "vikings": {
+      "label": "Interplay · manual The Lost Vikings (Genesis), seção Two or Three Player Game, p. 16",
+      "url": "https://manualzz.com/doc/22466256/sega-genesis--the-lost-vikings-video-game-instruction-manual",
+      "kind": "original-publisher-manual-transcription-third-party-archive"
+    },
+    "mega": {
+      "label": "Sega · manual Mega Bomberman (EU), seleção de modo, pp. 18–19",
+      "url": "https://www.scribd.com/document/695933057/Mega-Bomberman-MD-EU-cart-Manual",
+      "kind": "original-publisher-manual-transcription-third-party-archive"
+    },
+    "battletoads": {
+      "label": "Tradewest · manual Battletoads in Battlemaniacs, Controlling the Action, p. 6",
+      "url": "https://www.retrogames.cz/manualy/SNES/Battletoads_in_Battlemaniacs_-_SNES_-_Manual.pdf",
+      "kind": "original-publisher-manual-third-party-archive"
+    }
+  },
+  "records": [
+    {
+      "itemId": "station_df50d575815ab105084a79d68e0c8fb3",
+      "name": "Super Bomberman 2",
+      "platform": "snes",
+      "artifactSHA256": "0a4b4a783a7faf6ada3e1326ecf85de77e8c2a171659b42a78a1fae43f806ca6",
+      "itemRevision": 4,
+      "maximum": 4,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Campanha: 1. Batalha: até 4 simultâneos; Multitap para 3–4.",
+      "modes": [
+        {
+          "name": "Normal Game",
+          "style": "single-player",
+          "humanCountsDocumentedForOriginal": [
+            1
+          ],
+          "condition": ""
+        },
+        {
+          "name": "Battle / Single Match",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "condition": "Slots MAN/COM/OFF; Multitap para 3–4 humanos."
+        }
+      ],
+      "sourceIds": [
+        "sb2"
+      ],
+      "binding": "Edição declarada pelo catálogo; conteúdo do aparelho e funcionamento online não verificados.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "station_46fe7356ab5cc63a1438f720b9c7ce2d",
+      "name": "Super Bomberman 3",
+      "platform": "snes",
+      "artifactSHA256": "3c665283c14f050b60fe9693b12e437288bcd4aa3e56ef25106d503c44e0fda5",
+      "itemRevision": 4,
+      "maximum": 5,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Campanha: 1–2. Batalha: até 5 simultâneos; Multitap acima de 2. Quatro é subconjunto, não máximo original.",
+      "modes": [
+        {
+          "name": "Normal Game",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            1,
+            2
+          ],
+          "condition": ""
+        },
+        {
+          "name": "Battle / Single Match",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "condition": "Multitap acima de 2; selecionar slots humanos no jogo."
+        }
+      ],
+      "sourceIds": [
+        "sb3"
+      ],
+      "binding": "Edição declarada pelo catálogo; conteúdo do aparelho e funcionamento online não verificados.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "station_3f28d41c9e666e0080106eda728e89da",
+      "name": "Bomberman Hero",
+      "platform": "n64",
+      "artifactSHA256": "5a16f9cd6bca90e57eac14e57e20ecb4fb32b5d00e9583807e7b5f8189d040c6",
+      "itemRevision": 5,
+      "maximum": 1,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Individual: 1 jogador.",
+      "modes": [
+        {
+          "name": "Adventure",
+          "style": "single-player",
+          "humanCountsDocumentedForOriginal": [
+            1
+          ],
+          "condition": ""
+        }
+      ],
+      "sourceIds": [
+        "hero"
+      ],
+      "binding": "Edição declarada pelo catálogo; conteúdo do aparelho e funcionamento online não verificados.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "station_3f0267d082d3d99218768e6f4088960b",
+      "name": "Bomberman Online",
+      "platform": "dreamcast",
+      "artifactSHA256": "7fc8fae68d69f98a0285f05b77369946e5926f9afdb805d67f539beaa01642d9",
+      "itemRevision": 15,
+      "maximum": 4,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Campanha: 1. Batalha local: até 4. O antigo modo de rede é separado.",
+      "modes": [
+        {
+          "name": "Normal Game",
+          "style": "single-player",
+          "humanCountsDocumentedForOriginal": [
+            1
+          ],
+          "condition": ""
+        },
+        {
+          "name": "Battle Game local",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "condition": "Um controle por humano; não é comprovação do antigo serviço de rede nem do netplay do app."
+        }
+      ],
+      "sourceIds": [
+        "dc"
+      ],
+      "binding": "Edição declarada pelo catálogo; conteúdo do aparelho e funcionamento online não verificados.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "cbd83be3e89456758ad7c165907abd12",
+      "name": "The Lost Vikings",
+      "platform": "megadrive",
+      "artifactSHA256": "e092a55144d116b333273a02375f140ba8cbbeeb208ac3473ea79f146f2027a6",
+      "itemRevision": 4,
+      "maximum": 3,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Mega Drive: até 3 cooperativos; Sega Team Player para o terceiro. Não transferir a regra para SNES.",
+      "modes": [
+        {
+          "name": "Cooperativo",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            1,
+            2,
+            3
+          ],
+          "condition": "3 exige Sega Team Player; configurar OPTIONS / PLAYER."
+        }
+      ],
+      "sourceIds": [
+        "vikings"
+      ],
+      "binding": "Edição declarada pelo catálogo; conteúdo do aparelho e funcionamento online não verificados.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "9e5a873d6b384b8277568b297d3b8030",
+      "name": "Mega Bomberman",
+      "platform": "megadrive",
+      "artifactSHA256": "f5e2549d92901b3ee4ffc6b53e08ea508ab10871df4710c8ca4c0fdab7a80814",
+      "itemRevision": 4,
+      "maximum": 4,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Campanha: 1. Batalha: até 4; adaptador/controles precisam ser configurados.",
+      "modes": [
+        {
+          "name": "Normal Game",
+          "style": "single-player",
+          "humanCountsDocumentedForOriginal": [
+            1
+          ],
+          "condition": ""
+        },
+        {
+          "name": "Battle Game / Normal",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "condition": ""
+        }
+      ],
+      "sourceIds": [
+        "mega"
+      ],
+      "binding": "Manual europeu descreve o original Mega Drive; catálogo declara edição USA. Divergências regionais e conteúdo exato ainda não qualificados.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "station_7da80d23885a72cc56464834711b85a5",
+      "name": "Secret of Mana",
+      "platform": "snesbr",
+      "artifactSHA256": "4cc065671af8d511de06b3e6ccdb08ec70ef3cd4bfcc42d30092c07ddc808f3b",
+      "itemRevision": 4,
+      "maximum": 3,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Original SNES: até 3 cooperativos, após entrada dos aliados. Variante PT-BR não homologada.",
+      "modes": [
+        {
+          "name": "Aventura cooperativa",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            1,
+            2,
+            3
+          ],
+          "condition": "Jogadores adicionais dependem dos aliados já disponíveis e Multitap."
+        }
+      ],
+      "sourceIds": [
+        "mana"
+      ],
+      "binding": "Referência do original SNES; variante snesbr/header/tradução do catálogo não verificada por gameplay.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "826da6daebe9edbebffb3721f83abf12",
+      "name": "Battletoads in Battlemaniacs (USA)",
+      "platform": "snes",
+      "artifactSHA256": "cd3a1292fdb5953ca414dd6a74ac0aa1886b2d132fce4c804e79d5e25ea029f6",
+      "itemRevision": 4,
+      "maximum": 2,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Original SNES: 1 ou 2; modo A/B muda o dano entre parceiros. Tradução não homologada.",
+      "modes": [
+        {
+          "name": "Individual",
+          "style": "single-player",
+          "humanCountsDocumentedForOriginal": [
+            1
+          ],
+          "condition": ""
+        },
+        {
+          "name": "2 Players A/B",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            2
+          ],
+          "condition": "A/B altera fogo amigo, não adiciona terceiro jogador."
+        }
+      ],
+      "sourceIds": [
+        "battletoads"
+      ],
+      "binding": "Referência do original; o artefato é tradução/header ou diverge da região do título. Não é qualificação de bytes.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "station_f1d9d06767f9a63592011424048bd181",
+      "name": "Battletoads in Battlemaniacs",
+      "platform": "snesbr",
+      "artifactSHA256": "05f82bc40155293779a3fbe7c377d894f1d124bee5a973d58ab515ac1f7db01d",
+      "itemRevision": 4,
+      "maximum": 2,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Original SNES: 1 ou 2; modo A/B muda o dano entre parceiros. Tradução não homologada.",
+      "modes": [
+        {
+          "name": "Individual",
+          "style": "single-player",
+          "humanCountsDocumentedForOriginal": [
+            1
+          ],
+          "condition": ""
+        },
+        {
+          "name": "2 Players A/B",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            2
+          ],
+          "condition": "A/B altera fogo amigo, não adiciona terceiro jogador."
+        }
+      ],
+      "sourceIds": [
+        "battletoads"
+      ],
+      "binding": "Referência do original; o artefato é tradução/header ou diverge da região do título. Não é qualificação de bytes.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    },
+    {
+      "itemId": "station_80b7594ba22922d87fb43d720ba8be5a",
+      "name": "Super Bomberman 2 (PT-BR)",
+      "platform": "snesbr",
+      "artifactSHA256": "b0393ca82b92d38bbb37f199d10016f7a06746ac128bb653216b4110027ea75f",
+      "itemRevision": 4,
+      "maximum": 4,
+      "maximumScope": "original-game-local-play",
+      "modeSummary": "Original: campanha 1; batalha até 4. Tradução PT-BR não homologada.",
+      "modes": [
+        {
+          "name": "Normal Game",
+          "style": "single-player",
+          "humanCountsDocumentedForOriginal": [
+            1
+          ],
+          "condition": ""
+        },
+        {
+          "name": "Battle / Single Match",
+          "style": "simultaneous",
+          "humanCountsDocumentedForOriginal": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "condition": "Original usa Multitap para 3–4; tradução ainda requer conferência."
+        }
+      ],
+      "sourceIds": [
+        "sb2"
+      ],
+      "binding": "Referência do original USA; tradução PT-BR do catálogo não testada. Não é evidência de conteúdo exato.",
+      "onlineApproved": false,
+      "deviceGameplayVerified": false
+    }
+  ],
+  "scope": "original-game-descriptive-facts; never online authorization"
+}

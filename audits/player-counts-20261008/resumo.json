@@ -1,0 +1,55 @@
+{
+  "catalogRevision": 19,
+  "catalogExportUTC": "2026-10-08T18:14:45.617498+00:00",
+  "rows": 3734,
+  "visibleRows": 3479,
+  "compatibilityRows": 255,
+  "groupsByMaximum": {
+    "2": 1755,
+    "3": 49,
+    "4": 287,
+    "pendente": 436,
+    "1": 891,
+    "5+": 61
+  },
+  "statusCounts": {
+    "fonte-tecnica": 83,
+    "concordante": 2188,
+    "divergente": 140,
+    "catalogo": 762,
+    "sem-dado": 296,
+    "manual": 10
+  },
+  "platforms": {
+    "cps1": 36,
+    "cps2": 64,
+    "cps3": 11,
+    "dreamcast": 243,
+    "fbneo": 913,
+    "megadrive": 887,
+    "megadrivebr": 94,
+    "n64": 157,
+    "neogeo": 189,
+    "neogeocd": 50,
+    "snes": 644,
+    "snesbr": 191
+  },
+  "crossedWithExternalSource": 2421,
+  "conflictingVisibleRows": 141,
+  "allRowsAccountedFor": true,
+  "allModesVerified": false,
+  "onlineSeatsAuthorized": 0,
+  "inputs": {
+    "catalog": "ad2e4e65c6145fe077cca2f7577b5abb317dc7ccb941a781037fd1907e7ee0f2",
+    "historicalDatResearch": "ab5d4fa1de9cc169bbbdb50f2ee3efd0607ea5a738236093a61e804b551eac0d",
+    "fbneoExtract": "c5bab7b01eb81a5a6cbfbc1b8515b196c7a60ad69de0d668ac0b87ad9d6cfedc",
+    "manualReview": "88eb8fb8249526e3a4a7b02b33aa04b74e4ad32dd6f61cb7c428c364d3b24ac0"
+  },
+  "limits": [
+    "Export integral revisão19, não nova consulta autenticada ao telefone/servidor.",
+    "Um máximo 4 não prova que o modo aceita exatamente 3, nem que é simultâneo.",
+    "Concordância de bancos não substitui manual ou prova de edição/modo.",
+    "Contagem original pode superar o limite de quatro do app.",
+    "Traduções/hacks não herdam homologação online do jogo original."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-08",
+  "files": [
+    {
+      "file": "build_audit.py",
+      "sha256": "1154bee94b5b96393c8a57a8b183ef0b51ecd3a169c2bbe6ce60a1d20e80afbc",
+      "bytes": 8989
+    },
+    {
+      "file": "catalogo-cruzado.json",
+      "sha256": "80dc32923814ad282c70f53997152e295fc77d832a2318e90318b669b1034716",
+      "bytes": 4902794
+    },
+    {
+      "file": "curate_manuals.py",
+      "sha256": "b3bec09a7f2b884ab3be30760ff6f710fe85bc13ad18fc3c29557695a7b69e5e",
+      "bytes": 6359
+    },
+    {
+      "file": "diagnostico.json",
+      "sha256": "25bc16fe2ccce030c67de32c1ace61162c1be5d720f1ae28bb6bd788fed34151",
+      "bytes": 2658
+    },
+    {
+      "file": "divergencias.json",
+      "sha256": "50280084867ddde3bcab439ff3982ffa854a2e763b12a5eb2a55fbf2f09108ab",
+      "bytes": 209327
+    },
+    {
+      "file": "download-source-manifest.json",
+      "sha256": "4200a0ec808d02d66ac6d576c747075364bced49c84cb57cadb94c24993b0091",
+      "bytes": 1001
+    },
+    {
+      "file": "extract_fbneo.py",
+      "sha256": "e7c9a63c6dc8cebc4ebfd289521038ecc2222bbd5cc5b8a4298c2593000bb5f7",
+      "bytes": 2496
+    },
+    {
+      "file": "fetch_sources.py",
+      "sha256": "d61f2673fe3332de42e9b13656c9b88669b3e3fd256747e0c4989622fbb2751c",
+      "bytes": 1289
+    },
+    {
+      "file": "fontes-cruzadas.json",
+      "sha256": "276fa254672674d79e9a3aaf08a13f2e86bf8358a85679f9e7d251aa80731c24",
+      "bytes": 505535
+    },
+    {
+      "file": "jogadores.html",
+      "sha256": "ab87378052cd68d7a0e86c9c9e43bd8163cda599d60d8104a02d7659a5371b34",
+      "bytes": 3827047
+    },
+    {
+      "file": "lista-jogadores.txt",
+      "sha256": "7516c11df1a058f2490c56584737d8be0957ae88b45476ef2fcb0c963ee26047",
+      "bytes": 463441
+    },
+    {
+      "file": "manual-review.json",
+      "sha256": "88eb8fb8249526e3a4a7b02b33aa04b74e4ad32dd6f61cb7c428c364d3b24ac0",
+      "bytes": 13735
+    },
+    {
+      "file": "report-template.html",
+      "sha256": "93d540fedb054a6e425279405ebbe3b38d012cb0cdfc7c37044ebd5df1dbb8a2",
+      "bytes": 9177
+    },
+    {
+      "file": "report-verification.json",
+      "sha256": "0ddff7823c169ae3ed9decd29fda2a69d0d0ff8b585dbe1a3272366b7d5f5a24",
+      "bytes": 133
+    },
+    {
+      "file": "resumo.json",
+      "sha256": "f4c2afcc943db41c2d35edadade5fee19c836cc7ef2e6ff456e34b31b91c539f",
+      "bytes": 1676
+    },
+    {
+      "file": "verification.json",
+      "sha256": "797b9d901c8e9dbb9e9efb9524e537a6bc2961f881be1e54be3482bce789e910",
+      "bytes": 256
+    },
+    {
+      "file": "verify_audit.py",
+      "sha256": "0881e6fd5c205bb77827ddfed8158acbd8bbe1c6d9cbdcc8cbe7379eaf7e3f58",
+      "bytes": 2857
+    },
+    {
+      "file": "verify_report.cjs",
+      "sha256": "1e1810ca3a1da65dfff1f5d85675059bc5c97a7de1aa516651e375aed939c078",
+      "bytes": 2474
+    }
+  ],
+  "containsApkRomBiosPersonalLogs": false,
+  "changesAppOrAdmission": false
+}

@@ -1,3 +1,13 @@
+# R82 instalada no Motorola — 08/10/2026, 20:22:18 UTC
+
+Pedido de atualização para teste cumprido. SHA integral c760e3379dc78302a74ed46d99e1ae5d0836295d37fafe3c17b954871192d1bc conferido no Motorola Edge30; dados/UID preservados, sem partida ativa, sem cópia extra do APK no aparelho. ESActivity/carrossel aberto com sessão observados. Samsung não conectado, não atualizado. A quantidade de jogadores na tela específica ainda precisa de conferência física; não declarar todo o catálogo correto.
+
+Leia `versions/station-player-facts-r82-20261008/README.md`, STATUS e INSTALLATION. R82 parte das 209 fontes completas R81 e adiciona uma classe descritiva (210 totais). Só classes28/35.dex mudam; 13.224 entradas/59 vídeos e motores preservados. Cinco edições documentadas: Super Bomberman2 (4), Super Bomberman3 (5 no original; máximo4 no app), Bomberman Hero (1), Bomberman Online Dreamcast (4 local), The Lost Vikings MegaDrive (3). Não aplicar automaticamente a traduções/hacks/edições divergentes. Exibição separa jogo original de admissão online e mantém fatos mesmo com erro da consulta. Nenhum perfil aprovado/segurança alterado. Auditoria em `audits/player-counts-20261008/`: 3734 IDs/3479visíveis/255compatibilidade; candidatos e conflitos não são qualificações. 60 testes/4 guardas isolados; DEX/carrossel reproduzidos do backup. Nenhum gameplay nem ativação do servidor demonstrados. Não gerar novo handoff de servidor por essa alteração visual/descritiva.
+
+Canais atuais `release-channels/ACTIVE.json`: R76 estável escolhida pelo mantenedor, R82 experimental. Fontes históricas preservadas no Git; usar somente canal completo selecionado para reprodução. Efeito DreamcastR80 continua arquivado.
+
+## Histórico anterior
+
 # R81 instalada no Motorola — 08/10/2026, 19:32:55 UTC
 
 Pedido explícito de instalação cumprido: Motorola Edge30 atualizado diretamente por USB para R81; SHA integral85fac8f51daa3a370eabb14d98832f75c2f30ff81422c549538ee715627032c6 conferido no telefone. UID/data original/diretório preservados, sem limpeza, sem APK extra ou alteração de configuração. Sem partida ativa na atualização. Abriu ESActivity e aparelho desbloqueado observados por ADB. Samsung não estava conectado e permanece no último reciboR78. Recibos em versions/station-online-readiness-r81-20261008/INSTALLATION.json e evidence/installation-motorola-r81.json. Não confundir campos installed:false históricos da compilação/entrega com este recibo posterior. Nenhum gameplay ou ativação do servidor foi validado por esta instalação; não criar outro handoff por ela.

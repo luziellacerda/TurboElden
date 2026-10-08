@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-08",
+  "request": "Conferir Bomberman exibindo dois e cruzar lista de jogos para um, dois, três e quatro jogadores.",
+  "physicalObservation": {
+    "device": "Motorola Edge 30",
+    "versionFromPreviousVerifiedInstall": "R81",
+    "screen": "Jogar online / Criar sala",
+    "game": "Super Bomberman 3",
+    "playersText": "Jogadores a confirmar",
+    "icon": "desenho fixo de duas pessoas",
+    "numericTwoReproduced": false,
+    "visibleServiceMessage": "O servidor não encontrou o recurso solicitado para esta ação.",
+    "interaction": "Captura somente; nenhuma navegação, sala, partida ou mudança de dados.",
+    "privateScreenshotPublished": false
+  },
+  "codeFindings": [
+    {
+      "file": "versions/station-online-readiness-r81-20261008/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "line": 138,
+      "finding": "O ícone StationSocialIcon(1) é fixo; não recebe a capacidade. O texto ao lado é independente."
+    },
+    {
+      "file": "versions/station-online-readiness-r81-20261008/java/netplay-src/org/emulationstation/frontend/netplay/StationSocialIcon.java",
+      "line": 43,
+      "finding": "PEOPLE desenha duas silhuetas. A contagem visual de silhuetas não é a quantidade suportada pelo jogo."
+    },
+    {
+      "file": "versions/station-online-readiness-r81-20261008/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "line": 651,
+      "finding": "O cabeçalho online consulta classifications e exibe contagens dos perfis assinados disponíveis. Sem perfil fica pendente; a capacidade histórica do jogo não libera vagas."
+    },
+    {
+      "file": "versions/station-online-readiness-r81-20261008/java/client/src/java/org/emulationstation/frontend/station/StationCatalogPlayerEvidence.java",
+      "finding": "O carrossel usa evidência exata por ID/revisão/hash; desconhecido é travessão. O asset player-evidence-v1.json da base contém zero registros revisados. A auditoria anterior não entregou classificação factual integral dos jogos."
+    }
+  ],
+  "manualConclusions": {
+    "superBomberman2": "Normal: um; Battle: até quatro, Multitap para três/quatro.",
+    "superBomberman3": "Normal: um/dois; Battle: até cinco, Multitap acima de dois.",
+    "fourPlayerAppLimit": "É limite do aplicativo, não altera o máximo original do jogo."
+  },
+  "scope": {
+    "catalogRevisionAudited": 19,
+    "apkChanged": false,
+    "productionChanged": false,
+    "onlineApprovalChanged": false,
+    "newServerHandoffCreated": false,
+    "allGamesFactuallyQualified": false,
+    "fourDeviceGameplayClaimed": false
+  }
+}
