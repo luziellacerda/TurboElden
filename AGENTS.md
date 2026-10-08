@@ -1,3 +1,15 @@
+# R78 candidata — sinopses e retorno R77 recebido — 08/10/2026
+
+Leia `versions/station-synopses-r78-20261008/README.md`, `STATUS.json`, `BUILD-RESULT.md` e o handoff. APK R78 `e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5`, 2.123.356.860 bytes, compilado/assinado e não instalado. Verificado e mantido pronto em E: por escolha expressa posterior do mantenedor: `E:\ESTUDO APK\work\station-synopses-r78-20261008\package-01\TurboStations-Premium-R78-20261008.apk`; G: tinha apenas268MB livres, nenhum APK antigo foi apagado. Aparelhos continuam R76.
+
+Catálogo publicado revisão14:2467IDs/2212visíveis com prosa; seis aliases recuperados por descritor exato,17continuações XML e14revisões editoriais; cinco textos curtos preservados por evidência insuficiente. Não declarar revisão factual integral, catálogo vivo lido ou conferência visual física. Seletor nativo corrige vazio/espaços/placeholder/título; prose nova do servidor prevalece. Overwrites editoriais somente ID/plataforma/texto anterior exato, incluindo forma paginada. R39XML não contém sinopses.
+
+Biblioteca carrossel `f13c09dcd74aa21aabaf5d966324975de555840f7e6d754bf1aa79d29f50f16a`; base R77 reproduzida byte a byte. Apenas uma entrada substituída,13.225 preservadas,59vídeos idênticos. Java/DEX/runtime/cores/engines e política térmica preservados.40.242 checks estruturais,37.076 seleção/paginação e regressões locais documentados; não são teste em aparelho.64 propostas documentais CAS para servidor;17sinopses longas ficam no fallback nativo. `metadata.description` permanece limitado a2.000unidades UTF-16: servidor não deve publicar textos maiores nesse campo.
+
+Novo retorno real SERVIDOR→APP `ae77b9cca7fc881771bdb809a308e40bafaad1c5`, ramo `docs/station-r77-handoff-review-20261008`, copiado em `versions/station-synopses-r78-20261008/docs/server/`. Somente revisão documental; produção ainda v2. Ativar v3 com os perfis propostos atuais bloquearia novas salas v2/v3. Exige perfis exatos aprovados inclusive legados, publicação validada/assinada de contentSha256 e qualificação. IDs v3 não entram no EngineRegistryFile legado. Não anunciar v3 liberado, gameplay3/4homologado ou instalar R78 por consequência desta revisão. R78 não exige novos IDs de motor pelo ajuste de texto; herda as dependências online R77. Nenhum Linux ou telefone alterado nesta etapa.
+
+## Histórico anterior
+
 # R77 candidata — salas de 2 a 4 e contagens por edição — 08/10/2026
 
 Entrega APP → SERVIDOR publicada: `6c52830f121ff5f3fae403c64a49ace11153cc0e`, ramo `docs/station-r77-multiplayer-candidate-20261008`. [Documento exato](https://github.com/luziellacerda/Servidor-pix/blob/6c52830f121ff5f3fae403c64a49ace11153cc0e/docs/station-android/ENTREGA-APP-R77-MULTIPLAYER-20261008.md). Fonte executável do app `ba4fee556ec0010bbde1287746c68a2882cd1e39`. São 143 arquivos documentais/fontes candidatas; checkout e índice do clone servidor preservados. É nosso envio, não resposta, ativação ou deploy.
