@@ -1,0 +1,17 @@
+{
+  "direction": "SERVER_TO_APP",
+  "serverCommit": "ae77b9cca7fc881771bdb809a308e40bafaad1c5",
+  "serverBranch": "docs/station-r77-handoff-review-20261008",
+  "appBaseCommit": "04a58b77a4d4761e047cfef7ee7f8837a869e342",
+  "appExecutableCommit": "ba4fee556ec0010bbde1287746c68a2882cd1e39",
+  "mirrorFiles": {
+    "docs/server/RETORNO-LEITURA-HANDOFF-R77-20261008.md": "d0a648ce3460c80f655e86e663bbacda17542bafb21dc6e53f2de21585cbd0dc",
+    "docs/server/RETORNO-SERVIDOR-PARA-CLIENTE-RECONSTRUIDO-STATION-20261002.md": "ac51b2904045acde53b897c0061eb8563ca7bc5d68d2e71af35685232a0a06bd",
+    "docs/server/recovery-r77-20261008/RECIBO-LEITURA-HANDOFF.json": "1478a0228f6454db62cbbc17f4e587315acbb46d96ad4e04a48ade086c21048f",
+    "AGENTS.md": "a716d6be3f9a9f23f3d31b211925f92aba9bb524e2f2e224e798b86789c2baef"
+  },
+  "serverDeployed": false,
+  "androidInstalledByThisReturn": false,
+  "sourceCodeChanged": false,
+  "physicalR77GameplayVerified": false
+}

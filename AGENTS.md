@@ -1,3 +1,11 @@
+# R77: leitura do operador recebida; integração ainda pendente — 08/10/2026
+
+SERVIDOR → APP `ae77b9cca7fc881771bdb809a308e40bafaad1c5`, branch `docs/station-r77-handoff-review-20261008`. Ler `docs/server/RETORNO-LEITURA-HANDOFF-R77-20261008.md` e `docs/server/recovery-r77-20261008/RECIBO-LEITURA-HANDOFF.json`. O operador conferiu 142 arquivos da entrega, 75 arquivos do manifesto C# e hashes de 23 recibos PCAPK. Esta etapa não recompilou nem ativou a candidata; não confundir o retorno com qualificação TLS/Android ou deploy.
+
+Produção observada mantém ab192bf/815fc8bc, PID 1278094, zero reinícios e protocolo v2. R77 ainda não instalada pelo recibo; os dois últimos APKs comprovados são R76. Ativar v3 exige gate legado e perfis standard-2p-v1 aprovados para conservar novas salas v2; os perfis entregues ainda estão approved:false. Os IDs v3 pertencem ao cadastro multiplayer, enquanto EngineRegistryFile legado conserva dez engines v2 e rejeita protocolo v3. O modelo StationLibrary da candidata não publica contentSha256: integrar o campo no catálogo assinado; asset factual vazio continua mostrando —. Convites/códigos v3 e validação física permanecem pendentes. Nenhum código Android, APK, runtime, controle ou serviço alterado por este recebimento.
+
+## Histórico anterior
+
 # R77 candidata — salas de 2 a 4 e contagens por edição — 08/10/2026
 
 Entrega APP → SERVIDOR publicada: `6c52830f121ff5f3fae403c64a49ace11153cc0e`, ramo `docs/station-r77-multiplayer-candidate-20261008`. [Documento exato](https://github.com/luziellacerda/Servidor-pix/blob/6c52830f121ff5f3fae403c64a49ace11153cc0e/docs/station-android/ENTREGA-APP-R77-MULTIPLAYER-20261008.md). Fonte executável do app `ba4fee556ec0010bbde1287746c68a2882cd1e39`. São 143 arquivos documentais/fontes candidatas; checkout e índice do clone servidor preservados. É nosso envio, não resposta, ativação ou deploy.
