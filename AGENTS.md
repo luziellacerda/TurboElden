@@ -6,6 +6,8 @@ Corrige apenas cinco ocorrências corrompidas de `COLEÇÃO` no mapa de vídeos;
 
 O mantenedor relatou grande melhora e menos travamentos na R74. Leia `docs/server/PESQUISA-ESTABILIDADE-R74-20261007.md`: pesquisa em fontes oficiais e comparação com o código, com tarefas do app e do servidor separadas; não é retorno do operador nem implantação. Último retorno lido: `815ceaca`; nosso `8d48252` é um pedido. Não mudar timeouts, presets ou engine por hipótese. Compilar em E: e guardar o APK final em G:. Preservar identidade, dados e saves; não publicar APKs, mídia, chaves ou logs pessoais.
 
+Pesquisa publicada APP → SERVIDOR: branch `docs/station-r74-stability-research-20261007`, commit `7ad4fb05a69d8f95030f029f3670333a0c7bd6c2`, documento `docs/station-android/PEDIDO-ESTABILIDADE-R74-PESQUISA-20261007.md`. Fonte app `f3f2cc9d63fe4261921b07754d3f1255b5e31484`. É nosso pedido, não retorno. APP-01 reproduz perda de sinal imediato na fila em 64/64 casos; candidato isolado corrige 64/64, com 1.764 verificações. Ainda não integra o APK. Servidor deve responder SRV-01/02/03; EXP-01 é ensaio proposto, não preset aplicado. Não confundir a correção visual R75 com mudança de engine.
+
 ## Histórico anterior
 
 # R74 instalada nos dois aparelhos — 07/10/2026
