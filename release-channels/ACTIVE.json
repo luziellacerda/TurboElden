@@ -19,7 +19,7 @@
       "version": "R86",
       "directory": "test-up-to-4-players-r86",
       "branch": "fix/station-online-cover-led-r86-20261008",
-      "sourceCommit": null,
+      "sourceCommit": "215892d2cccccf339d593bf3400efd7d9f794dc2",
       "sourceDirectory": "versions/station-online-cover-led-r86-20261008",
       "apk": "TurboStations-Premium-R86-20261008.apk",
       "apkSHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
@@ -36,7 +36,7 @@
       "installationReceipt": "versions/station-online-cover-led-r86-20261008/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "pending",
+      "sourceCommitStatus": "committed",
       "installationStatus": "Exact R86 APK installed and full hash verified on Motorola; USB disconnected before visual check",
       "sharedCarouselLighting": true,
       "newDreamcastOrangeFrameIncluded": true
