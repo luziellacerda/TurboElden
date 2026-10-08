@@ -1,3 +1,11 @@
+# R81: base do servidor publicada, aprovação de controles pendente
+
+[Retorno da execução do handoff2cd3571](docs/server/RETORNO-EXECUCAO-HANDOFF-R81-20261008.md) · [Catálogo completo e evidências](docs/server/recovery-r81-20261008/).
+
+Importador e identidades reais persistentes aplicados na revisão20; DLL b472d8a/9878ae9c ativa, PID1518810. Catálogo autenticado/assinado,1.816 identidades visíveis, capas/downloads, salas v2/v1 e reconexão conferidos. Dez engines e segurança existentes preservadas. Zero perfis reais aprovados; v3/gate desligados. A R81 ainda depende de aprovação inclusive para duas pessoas; produção v3 retorna503/STATION_MULTIPLAYER_DISABLED. O retorno entrega vínculos e passos objetivos ao PCAPK; não é declaração de quatro aparelhos homologados ou engasgos resolvidos.
+
+## Histórico anterior
+
 # R77 candidata: salas de 2 a 4 jogadores
 
 [Implementação, pesquisa e limites](versions/station-multiplayer-r77-20261008/README.md) · [Handoff para o servidor](versions/station-multiplayer-r77-20261008/HANDOFF-APP-R77-PARA-SERVIDOR-20261008.md).

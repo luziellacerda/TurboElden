@@ -1,0 +1,17 @@
+{
+  "direction": "SERVIDOR -> APP",
+  "serverReturnCommit": "ef1308d15f20fa4914406d1c910675222375f78d",
+  "serverReturnBranch": "docs/station-r81-server-return-20261008",
+  "receivedAppHandoff": "2cd3571919f54126f2bfe9576864a8d8329b9db3",
+  "sourceOfActiveDll": "b472d8a653e065cccb00dfb15dbea3d56c03db98",
+  "activeDllSha256": "9878ae9caea55bb6834745caa3a60140616d3e0a5f2ea71055fe9e9df813fe51",
+  "activePid": 1518810,
+  "catalogRevision": 20,
+  "multiplayerEnabled": false,
+  "approvedProfiles": 0,
+  "appParentPreserved": "471321ca89c3d28f4c52739c74793be444762cc7",
+  "androidCodeChanged": false,
+  "apkBuilt": false,
+  "phoneInstalled": false,
+  "physicalGameplayQualified": false
+}
