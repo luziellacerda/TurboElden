@@ -1,7 +1,7 @@
 {
   "version": "R81",
-  "utc": "2026-10-08T19:20:08.048028+00:00",
-  "phase": "backup-verified-before-cleanup",
+  "utc": "2026-10-08T19:22:01.769717+00:00",
+  "phase": "complete",
   "backupDirectory": "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\test-up-to-4-players-r81",
   "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\test-up-to-4-players-r81\\TurboStations-Premium-R81-20261008.apk",
   "apkSHA256": "85fac8f51daa3a370eabb14d98832f75c2f30ff81422c549538ee715627032c6",
@@ -1366,7 +1366,10 @@
   "recipeSHA256": "3493e45bb1a26468031be65f16aea763acaaf0e7a8ce49e76d79905c452e4725",
   "packageReceiptSHA256": "5ed33b2c017b7440c1dfefda2d59c0332800743cacfe53798e99c578a2bdd263",
   "newChannelCompleteBeforeCleanup": true,
-  "removed": [],
+  "removed": [
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\test-up-to-4-players-r79",
+    "E:\\ESTUDO APK\\work\\station-online-readiness-r81-20261008\\package\\TurboStations-Premium-R81-20261008.apk"
+  ],
   "installed": false,
   "compiledDuringConsolidation": false,
   "serverChanged": false,
@@ -3969,8 +3972,14 @@
     "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\release-channels\\PENDING-VISUAL.json": "4cdc2f890c74030f26447cbc56336f3ef1ec76fc57bf4a0f5b7723e1090e77b8",
     "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\release-channels\\PENDING-VISUAL.json": "4cdc2f890c74030f26447cbc56336f3ef1ec76fc57bf4a0f5b7723e1090e77b8"
   },
-  "cleanupPending": true,
-  "backupApkCount": 3,
+  "cleanupPending": false,
+  "backupApkCount": 2,
   "activeInstallerCount": 2,
-  "temporaryApkPreserved": "E:\\ESTUDO APK\\work\\station-online-readiness-r81-20261008\\package\\TurboStations-Premium-R81-20261008.apk"
+  "passed": true,
+  "canonicalApkCount": 2,
+  "canonicalApks": [
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\stable-2-players-r76\\TurboStations-Premium-R76-20261008.apk",
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\test-up-to-4-players-r81\\TurboStations-Premium-R81-20261008.apk"
+  ],
+  "buildInputsManifestSHA256": "a6b53ae77807147606c1690fa5336cd7af0c08f7cf3e352be3f4b5164e78a473"
 }

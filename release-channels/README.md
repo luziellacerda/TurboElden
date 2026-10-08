@@ -32,7 +32,3 @@ O APK R81 ainda não foi instalado. Últimas instalações comprovadas: Motorola
 Na conferência anterior da R79 no Motorola, capa/nome/plataforma/avaliação de Battletoads e estado Online estavam visíveis, assim como a sinopse de Bust-A-Move 4. Isso não demonstra a ativação das novas salas.
 
 O recibo `versions/station-online-readiness-r81-20261008/evidence/consolidation.json` registra a substituição do canal, a preservação da referência R76 e do efeito arquivado e a remoção das duas cópias aposentadas após verificar o backup completo.
-
-## Limpeza pendente
-
-A R81 foi copiada e verificada. A pasta R79 e o APK temporário R81 em E: estão preservados enquanto a autorização para removê-los é resolvida. ACTIVE.json seleciona R76/R81; há temporariamente três APKs no backup. O recibo de consolidação registra esta pendência.
