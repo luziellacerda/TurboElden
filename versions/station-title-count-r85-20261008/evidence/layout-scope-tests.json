@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": 81,
+  "scope": "source guards and geometry only",
+  "systemsTopbarByteIdenticalToR84": true,
+  "systemsGradientBodyUnchanged": true,
+  "gameCornerDrawCalls": 2,
+  "gameCornerVertices": 10,
+  "newTimer": false,
+  "physicalDisplayVerified": false,
+  "sourceSHA256": "9cbd70533b7f82fc07af68a75052f21671ce927a7dc313437915390d7204994c"
+}

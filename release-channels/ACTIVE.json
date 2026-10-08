@@ -16,27 +16,25 @@
       "sourceCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e"
     },
     "test-4p": {
-      "version": "R84",
-      "directory": "test-up-to-4-players-r84",
-      "branch": "fix/station-game-layout-r84-20261008",
-      "sourceCommit": "493d1c00b444c63936d354f944db1825b48e6f92",
-      "sourceDirectory": "versions/station-game-layout-r84-20261008",
-      "apk": "TurboStations-Premium-R84-20261008.apk",
-      "apkSHA256": "3dd465fba8681b8de2cf32b2d87d24c1dcc478a7b6c38be4c5d4d1716bcb9495",
+      "version": "R85",
+      "directory": "test-up-to-4-players-r85",
+      "branch": "fix/station-title-count-r85-20261008",
+      "sourceCommit": null,
+      "sourceDirectory": "versions/station-title-count-r85-20261008",
+      "apk": "TurboStations-Premium-R85-20261008.apk",
+      "apkSHA256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
       "javaSourceCount": 210,
       "protocol": "station-stream.v3",
       "status": "experimental; server activation and exact per-game approved profiles required including two-player rooms",
       "fourPhoneGameplayQualified": false,
-      "installed": true,
+      "installed": false,
       "runtimeCoresEnginesUnchangedFromR79": true,
       "archivedDreamcastEffectIncluded": false,
-      "installedDevices": [
-        "Motorola Edge 30"
-      ],
-      "installationReceipt": "versions/station-game-layout-r84-20261008/INSTALLATION.json",
+      "installedDevices": [],
+      "installationReceipt": null,
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "committed"
+      "sourceCommitStatus": "pending"
     }
   }
 }

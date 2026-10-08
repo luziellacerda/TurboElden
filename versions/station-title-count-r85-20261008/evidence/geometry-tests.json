@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "compileTimeAssertions": 75,
+  "viewports": [
+    [
+      2400,
+      1080
+    ],
+    [
+      2340,
+      1080
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      2560,
+      1600
+    ]
+  ],
+  "scope": "existing action row bounds, gaps and equal secondary sizes",
+  "physicalApproval": false
+}

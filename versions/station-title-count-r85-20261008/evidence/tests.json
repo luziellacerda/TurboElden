@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "checks": 60,
+  "integrationGuards": 4,
+  "scope": "descriptive facts, bindings, immutable publication, source-only UI guards; no Android gameplay",
+  "factsSHA256": "87bcc7fd294f20b7e41d650b47b9f4792064d4689f9e21156d85a32501500cf2"
+}

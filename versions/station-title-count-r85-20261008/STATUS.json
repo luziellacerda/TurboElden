@@ -1,0 +1,23 @@
+{
+  "version": "R85",
+  "baseVersion": "R84",
+  "javaUnchanged": true,
+  "scope": "game selection only: search/avatar/name header, profile matches counter font, robot enlarged 30%, diagonal corner gradient, red download and centered action/right rating",
+  "gameplayVerified": false,
+  "serverChanged": false,
+  "compiled": true,
+  "heroTopFraction": 0.04,
+  "heroHeightFraction": 0.865,
+  "heroBottomFraction": 0.905,
+  "heroWidthFromR84Preserved": true,
+  "installedRibbonUnchanged": true,
+  "finalPhysicalDisplayVerified": false,
+  "systemsAndCollectionsGeometryUnchangedFromR84": true,
+  "gameOnlyDiagonalCornerGradient": true,
+  "robotIncreasePercent": 30,
+  "primaryActionCenteredWithMetadataRight": true,
+  "downloadRed": true,
+  "installationPending": "Motorola USB debugging offline; final APK not installed",
+  "apkSHA256": "19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0",
+  "readyForInstallation": true
+}

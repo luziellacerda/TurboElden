@@ -1,3 +1,15 @@
+# R85 final preparada — seleção de jogos — 08/10/2026
+
+Canal corrente R76 referência2p e R85 experimentalaté4p. Leia release-channels/ACTIVE.json e versions/station-title-count-r85-20261008/README.md, STATUS e INSTALLATION. Último pedido limita TODAS as alterações visuais à seleção de jogos; sistemas, coleções e outros menus preservam a R84. Cabeçalho lupa → avatar → nome sobre a primeira miniatura; fonte do usuário igual à altura medida do contador; robô acima do console ampliado30%; capa principal .040h–.905h, largura R84; pasta 1 / X jogos junto ao título. Baixar vermelho, Jogar próximo do centro, estrelas/bonecos à direita. Dois cantos superiores pretos em degradê diagonal até transparente, só depois do loading. Não alterar faixa INSTALADO.
+
+APK final SHA19212c8bcff669a5e0abd40ea7f74d20bb932d987a1947052a09e605c1929ab0,2123645796bytes. Dez cabeçalhos nativos alterados;210Java idênticos àR84,13225entradas/59vídeos/manifesto/motores/assinatura preservados.60checksJava/4guardas,75asserts anteriores,81guardasdeescopo e630asserts do botão são isolados. Não representam conferência final física nem gameplay.
+
+ATENÇÃO: final NÃO confirmado instalado. Motorola ficou offline durante streaming da candidata b8a1538; mesmo após usuário reconectar/reativar depuração e reinício do transporte no PC permanece offline. Último hash integral confirmado noMotorola4906c83dede6f3fe791944c3fb8d319a5f54c564c169f2a76cc06e1c3cd66ff7 é candidata R85 ANTERIOR ao escopo/degradê/fonte/robô/botão finais. Não confundir rótuloR85 com APK idêntico. Usar install_verified.py somente quando online/autorizado e sem emulador aberto, preservar UID/dados/licença e verificar hash. Samsung não atualizado. Capturas intermediárias privadas não aprovam o visual final.
+
+Publicar apenas código/documentos; mídia/ROM/BIOS/APK/logs privados fora do Git. Backup único conserva fontes completas e dois instaladores R76/R85; selecione pelo ACTIVE, nunca por data nem overlay antigo. Nenhum servidor ou motor foi alterado; não criar handoff por UI. Efeito Dreamcast segue arquivado. Qualificação online herdada permanece.
+
+## Histórico anterior
+
 # R84 instalada no Motorola — 08/10/2026
 
 Canal corrente `release-channels/ACTIVE.json`: R76 referência estável2p e R84 testeaté4p. Leia `versions/station-game-layout-r84-20261008/README.md`, STATUS e INSTALLATION. R84 preserva os210Java daR83, altera somente carrossel: capa de jogos15%mais larga mantendo altura, botãoJogar acompanha largura, cinco secundários simétricos, fundo preto inferior desce para .914h. R83 herdada move contador para perto da lupa e desenha1–5silhuetas conforme fatos revisados; atualização por geração em memória corrige rótulo desatualizado. Sistemas/coleções não alterados.

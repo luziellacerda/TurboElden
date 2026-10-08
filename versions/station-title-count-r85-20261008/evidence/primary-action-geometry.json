@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "compileTimeAssertions": 630,
+  "viewports": 5,
+  "playerIconCounts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "scope": "layout only, not Android rendering",
+  "sourceSHA256": "cca983aeea517a989692039243abf9b0d34cae29c4e14b37f7fa4542288b318f"
+}
