@@ -10,6 +10,18 @@ Dreamcast: tela atual mostra 243 jogos; export usado na R78 tinha só sete siste
 
 ## Histórico anterior
 
+# Retorno R78 recebido: catálogo R18 e instalação nos dois — 08/10/2026
+
+SERVIDOR → APP, commit `af58034595614098ea4df4d959e50947670c080f`, branch `docs/station-r78-server-review-20261008`. Leia `docs/server/RETORNO-LEITURA-HANDOFF-R78-SINOPSES-20261008.md` e `docs/server/recovery-r78-20261008/`. Recebido sobre `768f7ca`, preservando os recibos R78 nos dois aparelhos e o congelamento executável `ba145fff`. Este retorno altera somente documentos e metadados de comparação no Git.
+
+O servidor leu o índice efetivo configurado no processo: revisão 18, 3.734 IDs, 3.479 visíveis, 255 de compatibilidade. A R78 cobre o export R14 com 2.467 IDs. Há 1.267 IDs novos em Dreamcast/CPS1/CPS2/CPS3/FBNeo, sem remoções ou mudanças nos campos comparados dos 2.467 comuns. Servidor: 3.399 descrições presentes, 335 vazias; 49 antigas com fallback R78, 286 novas sem sinopse/fallback, incluindo todos os 243 Dreamcast. Os JSONs entregam todos os IDs novos, nomes, plataformas, coverId, descritores e metadados, sem caminhos privados. Não é resposta autenticada fresca nem observação de cache do Android; não declarar o catálogo R14 como catálogo vivo completo.
+
+64 propostas CAS coincidem literalmente na coleta R18; nenhuma aplicada em produção. Nova incorporação deve repetir CAS na escrita, preservar dados e avançar revisão pelo fluxo atual. Os 17 textos acima de 2.000 UTF-16 continuam apenas no nativo. A leitura Java atual já pede `catalog?metadata=1`, que inclui metadata.description; vincular capa pelo coverId do item e manter prosa nova válida do servidor prioritária. Preparar sinopses dos 286 IDs novos somente mediante evidência; não herdar por nome aproximado. S.P.Y. permanece uma classificação separada: existem dois IDs neogeo/fbneo com pacotes diferentes, e os drivers oficiais indicam hardware Konami.
+
+O adendo `768f7ca` confirma R78 instalada em Motorola às 14:41:44 UTC e Samsung às 14:44:57 UTC, mesmo APK `e6c6609d`, UID/data/diretório preservados. Os installed:false históricos foram superados. Aparência, entrada autenticada e gameplay ainda não conferidos por esses recibos. Servidor segue PID 1278094 / zero reinícios / v2 / dez engines R74/R76; nenhuma DLL ou índice alterados nesta revisão. R78 herda as dependências R77/v3: perfis exatos aprovados inclusive legados, contentSha256 validado/assinado, convites e qualificação ainda pendentes. Instalação não ativa online v3. Preservar engines v2; IDs v3 pertencem aos perfis separados. Candidata 6f27 não ativada, engasgos R76 ainda sem causa comprovada.
+
+## Histórico anterior
+
 # R78 instalada nos dois aparelhos por pedido explícito — 08/10/2026
 
 O mantenedor pediu instalar nos dois após receber o aviso de que a ativação online R77/R78 continua pendente. R78 instalada diretamente no Motorola Edge 30 às 14:41:44 UTC e no Samsung A56 às 14:44:57 UTC; SHA integral `e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5` conferido em ambos. UID, data original de instalação e diretório de dados preservados. Sem desinstalar, limpar dados, alterar configurações ou deixar APK extra no telefone. Não havia Activity de emulador aberta na instalação.
