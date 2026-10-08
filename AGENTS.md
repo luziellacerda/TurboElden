@@ -1,3 +1,13 @@
+# R84 instalada no Motorola — 08/10/2026
+
+Canal corrente `release-channels/ACTIVE.json`: R76 referência estável2p e R84 testeaté4p. Leia `versions/station-game-layout-r84-20261008/README.md`, STATUS e INSTALLATION. R84 preserva os210Java daR83, altera somente carrossel: capa de jogos15%mais larga mantendo altura, botãoJogar acompanha largura, cinco secundários simétricos, fundo preto inferior desce para .914h. R83 herdada move contador para perto da lupa e desenha1–5silhuetas conforme fatos revisados; atualização por geração em memória corrige rótulo desatualizado. Sistemas/coleções não alterados.
+
+APK SHA3dd465fba8681b8de2cf32b2d87d24c1dcc478a7b6c38be4c5d4d1716bcb9495, instalado20:50:08UTC noMotorola e hash integral conferido. Entrada semlogin observada. SuperBomberman3 mostra5bonequinhos após pasta/contagem, capa alargada e faixa preta/ações alinhadas. Busca funcionou. Não são5vagas online: originalaté5; appmáximo4, qualificação do servidor continua. Samsung ausente/não atualizado. Sem partida/sala iniciada, dados/UID preservados.60checksJava/4guardas e75asserts geometria; Java/carrossel reproduzidos byteidênticos do backup. MotoúltimaR84; não selecionar APK antigo por histórico.
+
+Git deve conter apenas código/documentos; nativeR83 tem cabeçalhos de mídia locais IGNORADOS, não adicionar à força. R84 congela só4cabeçalhos alterados. Backup privado conserva entradas completas. Preservar histórico de fontes; limpeza somente dos APKs obsoletos identificados e duplicatas temporárias. Nenhum servidor/motor alterado; não gerar novo handoff por essa mudança visual. DreamcastR80 continua arquivado.
+
+## Histórico anterior
+
 # R82 instalada no Motorola — 08/10/2026, 20:22:18 UTC
 
 Pedido de atualização para teste cumprido. SHA integral c760e3379dc78302a74ed46d99e1ae5d0836295d37fafe3c17b954871192d1bc conferido no Motorola Edge30; dados/UID preservados, sem partida ativa, sem cópia extra do APK no aparelho. ESActivity/carrossel aberto com sessão observados. Samsung não conectado, não atualizado. A quantidade de jogadores na tela específica ainda precisa de conferência física; não declarar todo o catálogo correto.
