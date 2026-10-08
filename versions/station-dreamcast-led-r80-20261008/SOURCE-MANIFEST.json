@@ -1,0 +1,26 @@
+{
+  "version": "R80-preparation",
+  "utc": "2026-10-08T18:38:18.236073+00:00",
+  "baseVersion": "R79",
+  "baseApkSHA256": "c2aeee4443dedc2862b29dde1f972574bc25464d6993abf01f34d43531558f0a",
+  "compiled": true,
+  "apkGenerated": false,
+  "installed": false,
+  "files": {
+    ".gitattributes": "eebe2b4a5dfe892eb9fcee8b9e507ed20e3082629b0a44fedd98c744ec44f309",
+    "evidence/angle-visual-validation.json": "9c6486d5d31fd13c0a760b53a211fd505f692e0cbc52f049a0b9ff6ba5f72288",
+    "evidence/animated-preview.json": "5936335463a76178cd6144a800d336fd3e032d8e9b20ca3fc3ce581b29bf3e2d",
+    "evidence/build.json": "6c05e3ce822fe63d49d5487a9b6415d98bdb2582a4db0325d32f0382ed0054fc",
+    "evidence/source-changes.json": "5188ad6ebaba63be6e57ba40a9f920be9b4a38f7d4db644ad04bbc36693b0c06",
+    "native/dreamcast_led.glsl": "4831a8c7623d473d3231ff32f9d45495e55f790c1f84fe767ae8046b5ae72778",
+    "native/magazine_shader.h": "9f03ee940951714c6a3ff4da047418dd90c3eeb28f80287f41e62b1783daa017",
+    "native/native_magazine.h": "abf25e0462c6f5b11b2fdb1c43a2e6343bee62a945a99b6b253219fd8e4a6eb7",
+    "native/premium-magazine-led-android.glsl": "d9dc4fd2068a233d0c27a2ec300bf56754dbd916d7c6f95ffac5d1552e50d5cf",
+    "README.md": "11af6976e9bb07057fd17cd31fcaae0b72f922effd352fb3b79938d9c37aaeb3",
+    "recipes/build.py": "727ce7e3d30229f9582cb8f95637cf889cc3d7848eb633fa3835abe1a80cdfa0",
+    "recipes/prepare.py": "a473b3448f392629d1ee1fe197e30005fda51dfb7e9d44cc9e3ce3f2f771c737",
+    "tests/angle_gles2.py": "3b9ca149ae0fd165bf826c53542d3e1d8ac8f1aacdad4a3abb118c1e40de2fa7",
+    "tests/render_dreamcast_preview.py": "0e0ce828f7ffc51315e4462a0a76da7835be9c3a44243fe65fe36bbeded0714b",
+    "tests/test_dreamcast_angle.py": "6fc738b929ca1eca453fbd523968371070e1571f953609f3775e4804d9c7d576"
+  }
+}

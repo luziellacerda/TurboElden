@@ -1,0 +1,1090 @@
+{
+  "passed": true,
+  "environment": "Windows ANGLE; ES2 context requested, GLSL100 shaders. Actual context version is recorded below.",
+  "private_media_kept_local": true,
+  "source_image": "G:\\TURBORAMA\\RetroBat\\roms\\dreamcast\\media\\images\\Sonic Adventure 2 (Europe) (En,Ja,Fr,De,Es).png",
+  "source_sha256": "e3df771a3aea4a914fcb56ba77f491d753f77d21ef4bac69369a2115e148050d",
+  "candidate_shader": "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-dreamcast-led-r80-20261008\\native\\premium-magazine-led-android.glsl",
+  "shader_sha256": "d9dc4fd2068a233d0c27a2ec300bf56754dbd916d7c6f95ffac5d1552e50d5cf",
+  "script_sha256": "0e0ce828f7ffc51315e4462a0a76da7835be9c3a44243fe65fe36bbeded0714b",
+  "output": "E:\\ESTUDO APK\\work\\station-dreamcast-led-r80-20261008\\visual-tests\\preview-20261008-153612\\sonic-adventure-2-dreamcast-led.webp",
+  "output_file_sha256": "43db6271f70f0674c51d5af849b24cfa97de2b3a50137fd072bcfe9299041a5a",
+  "bytes": 1628028,
+  "size": [
+    262,
+    393
+  ],
+  "frames": 105,
+  "frame_count_uniform": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    64,
+    66,
+    68,
+    70,
+    72,
+    74,
+    76,
+    78,
+    80,
+    82,
+    84,
+    86,
+    88,
+    90,
+    92,
+    94,
+    96,
+    98,
+    100,
+    102,
+    104,
+    106,
+    108,
+    110,
+    112,
+    114,
+    116,
+    118,
+    120,
+    122,
+    124,
+    126,
+    128,
+    130,
+    132,
+    134,
+    136,
+    138,
+    140,
+    142,
+    144,
+    146,
+    148,
+    150,
+    152,
+    154,
+    156,
+    158,
+    160,
+    162,
+    164,
+    166,
+    168,
+    170,
+    172,
+    174,
+    176,
+    178,
+    180,
+    182,
+    184,
+    186,
+    188,
+    190,
+    192,
+    194,
+    196,
+    198,
+    200,
+    202,
+    204,
+    206,
+    208
+  ],
+  "duration_ms": 3500,
+  "frame_durations_ms": [
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33,
+    33,
+    34,
+    33
+  ],
+  "gpu_readback_frame_sha256": [
+    "af402921b56386005df2289cfdcda84af37eae02c6854174e45ecf164df9b5e4",
+    "2622204d291b5adffce039db457557c2a73dab6ff585e68c5c9199ea2d0a7135",
+    "736d0df6daedbeb8dd7bc61b478a354302c8759777876ddbff4c387f7592f9f8",
+    "e49151250c8972f88ecdf8c5814cee6063e1ad3611bf5840f8d88327169bffae",
+    "d9902452efbf80477d4786895072db5b61df1a228c2764bb3b71e82652ea715e",
+    "1ba90bafcc3e7a58937dd08b696f79e80b18de78b070a14685072a0eb1b529c7",
+    "54f336029bdfbb3a755a4f32b89a2189cd934d2fc3c5dbc13133a5036cbc053c",
+    "18cc2d6ca66f092316e0230eee8b69356a9aa9845af1e2470ce2c086a677d807",
+    "5c12acd5dbf06c6c6c1bc0fc9964e06831392bd8aa515f2dcd0ad2a485a999de",
+    "f004fbf969b015f990581405e8c996dbe476a95e5c5630a58d4f4a46fcd6eb4b",
+    "97c78d37832340a33c4208c8cf83e5781ba2f5d71ee0ec1cdd86dda8411e273e",
+    "7fd5498dc29a5cf9d75400d3192bbcb02f765398bc0ba6925d991a5f87fdd614",
+    "8d24e566b30f6b9987fca800cb96e940f9d033aa936d22ce2c8b9141179ca4f5",
+    "31541ab3991ce62597253381c4b272cb075e8ffaadfb6c1d872b90c9af323f03",
+    "9bb932a0f2e0f58543266e2c16bc0e915a3da6db559b39389b34f96fc14ec79e",
+    "55b7aab39e317f70bfcd5731b79f803e97299389b59b4cc6c1e7520ab8d1ae57",
+    "cb5d9b3ad5b5556ca839b130b279040eecc1ecc731f6f0221b353904612ce2d5",
+    "f76a1e118b391c9749f57a8f52f40641a4fe8dfffd17bcefaa9ee4a99eb91c13",
+    "4fadd0df91a9db984696f6561e6fa92f06a273156fd2dc8b3b93250c04c46575",
+    "c7ae43b7ba55b249d918528e781228884e77477dbc1585ff89af547d12f3b2a6",
+    "70596856c6880a8b82d41d63aa0674a81c16326bcdb17993c8481df1da5b88bf",
+    "82305529637ac745d85b8021c685d2f54773149f58297c1cc1d8422c92d49283",
+    "33d0f87f9a43ed74f3892d129e10823e38a5600dc194ea9a8fbcd02d4aa465cc",
+    "07413df640805c81864dbc566bee18a89c0c213a7736919f58f477df9b7cf607",
+    "0e05470cfd175cac9039712516955c832180e0bb0d1c55dabcc78d31fe319d18",
+    "0e7da10618831e6c7d04af2269e80283c2c23d9fe3ba09e234268c87161ab014",
+    "cdd1e13643f502b7c0ec2e276613224bc15dade4822dad3d2d1be68c1bafe353",
+    "c899d2ac00717a1f437d7eaf58ef34f83557119be701a2cb67a8046876df8eda",
+    "e2773170e8dc63a56b9ca5b4e545e0339453656b62824d9c1a64611cf7448d1b",
+    "7092054be59f45f5cea6fdae9662283529e305a03078404435c8281125002b67",
+    "baa4f0fdba828526ecc09418e5c8cdc8b0c60d71ae41ea73e9bbf5280eea933e",
+    "b96b5253ea647efe44d28bd00a24e810bf51a23c428222975e80499b599d0413",
+    "0720b4ce18883008cfd83f04d8d8f42def1c8edf358243307d8bb118b2bf6646",
+    "34ac59f8d1dd723f8cf69cca6607c7851fcaeab09caca87a090de6d0d50c118b",
+    "50b2b5c4ecad90110f7af8add454851d795228c109c072b04e8399ab63be58e4",
+    "327c433bf533f54c91060f1be32fe4803367cd9d92dcee06ce0a5016046f714a",
+    "d9230160dad1db1eec765bb8e3e244fc41c6efb97007c0e55b83c7441825c9de",
+    "2df5de0d377816354d5844fc705f63928595c0f36ae4aec464f53dad87c1b8e2",
+    "426768349b50f957ae3a51267dfabfac94fdc864e855003739030d3a5b0d288c",
+    "2c2493a8b340c0fcb85833c27e3d4d16f6f9ff1cc42f41d2abd7b0fc9ada0f34",
+    "7b332bb9561311f6f9f252abc6f2a98e2e9a9c68abf1279bea1ca959a00c046e",
+    "e35143efbf4328467df53715da8bad2b4f85348648b0ded39fe8021979795386",
+    "d11db464eb98b7232d05786befefcd88afdc385b24000dd37ea10e0317108f9b",
+    "1a63f02f622e488dd982e2fc906a115f3bf7d179cb869451d19b13472f84a7e1",
+    "6253fba0e91e6db7ff591c40f6abc8a7ba33ddb91a4fcd3da60d320c8458af1e",
+    "b5e95260a0599a1a3f04837e7280f7c23430334e6cc10142e0aaf45ad19ccb52",
+    "13988980c22d3aab744b7679f45392989b74c6b1c9280f25f7d6a8b3f48bf02f",
+    "7004acd0780ab544392616330116f7844e0b6aedbbd7045bb2be0ced79e02f80",
+    "bd61e75a25d35fcebcfca871002fbe7a98e1edb9c99d8540d102e71f1e0ef3fa",
+    "42b163c2cdb8acedb509981f2b5194803429b6f33341877efa8d358d17c7fed5",
+    "a81aa1594adb1dee8713a824979044328f55b47382d45b50d7053b26537861c0",
+    "af16fdb85eab27c2e048856c5f534527b87ce93a38c3d0ede01d74c0b39853e9",
+    "7f350f10ddfa7b1a1b211e11f3aa594965f724eba3437ffb7fe075e5a81012e2",
+    "76d6986f6d58dc302a9f39b74b3a21fedbb2a5f1f56596c1a9b509c946938a04",
+    "ccfd89e63d090c2dc229a4ef888694ec1d16da69631e5fa812ed99a39ebe6793",
+    "3c3d82974e38d438ce839cd632197424b9f9f49514bd08a0c478975df554f1fe",
+    "57268ba1a56cc2b7341549e602be9b04691ca8516e47b03e6ba6005a0d625ebe",
+    "ffdeac44645f5bc0f3b88c1a406fd718638979022c1671b304b7ae576e82b24c",
+    "49603cf172d845f3301fc74b2bd9afd742538031b6db565db2a7b2e1ede25865",
+    "bba6dc83a476d4898368081ca41e313127ae3ae6cd86617f887bf70b03edadac",
+    "adcbc0322b9a40aa5420ee4b5a47350a4385efbc869093cb68c7e4977997fb4e",
+    "a31d3c8246fda58572c557b9228f49f1d80f0f5d98d9fe13dd3a618dd885b2cb",
+    "c5dde463359b92d112882e0952ea041f7fe89641f96773fb5488b8b5ae5553e9",
+    "07458d8894a9943f5a6494286c9339d527763d3e336a4c138c10a2f08798ceba",
+    "4fd8d167fd198ff1145301d54b9f73d0f7e35e7c950efbb7fa52d58976f84929",
+    "fa49179802ce09244acfa263365cb9c7bcbca8b1fac2adc28ffe4211554762a9",
+    "6de728b1ce5c4ac7e7d710c70dbb0d4ad7fca98eaaf133661d6a17dff3dddf55",
+    "fdab1a9c2d969930e78ca80fd51df8bf045da5b945fa743e981e30c77691b9a9",
+    "aeed61776ab0c0d276734156dd326281b764fb2f3a7e533bd13589c5065af100",
+    "00f459743da8a320acf4eedad96390fcf6aee7217889e53cce3f921f7c803858",
+    "1e69ecc295580252b8a4fbb78d0318f565240f48e9972e901eb019882f2743ba",
+    "3079d44153abfd1f842f06d66f2c98f4e755db0faff3ff2b1fecae1712abf96d",
+    "31e68add1ebd4e941e3e9f9991c3cb178e39d645f4f8aff383f126e6ddb5c48a",
+    "b9b7b14846d81ff81c045861131b93ff716ff459c643ff6dfa942f7e53b5a111",
+    "2024c5f9dbce72c79723fc339881c09470e8704a5e67c12d38b1c7f47dd48f82",
+    "feb2b3ba35b7f387ade6a737d615288618b48b7804766c4f1bdc1ebda2b976e4",
+    "58dcb75da2778c54e4b82856a1a1c8444111acd5d1f4d8cc823c57f927def507",
+    "2dde7c75b318f2aa4e58436e14e64803581e17b3821501846e9ae24d67b2b12d",
+    "25c1f24864784a9d467c8b6ec75003019d429e58ffdfff74d4647d92aeeb7cdc",
+    "3b5b85074c0bca6abeb0da3ac8ddf044a15dc6e90a5310229e6899586582c41a",
+    "1095f074b44b6a0c14edabc155408c7d2ecf091eb9ea369127806984512be45b",
+    "6c6216fff3ff8a77006572a263a38cdd29137c401b7ebffd2a332e4a8f02476b",
+    "05ecef4f258dada60ca927cc5c1bb666297bedcbeeed275b4d3baacf72f9eefc",
+    "541988205ed4d966d35ceb02da237fa7f7edbb38a206a594ed9fe61d2b982d91",
+    "779402416b2094a3505be95e523b0c66d27ac3fc30e64cf9c27a610f971b8884",
+    "cc535c3ee72a618c308d14e49a4e5f75a6a0161076c6edf914ac12eecd0d4a0f",
+    "2ce191025fc8eab1ad809c9a2fbda17f8085d744d22c69c8da5a44fd708432cd",
+    "045cf142f75c3120816d452a169510f5f89cf32ee617320179bfc627289b999d",
+    "2a58263926f555465d066ee99b4a9bf6e2be22a32a22cb996c3dadf954ac4bb2",
+    "3a383f1e7f7f68fab8e179e8f10a59c206f9de673c835230b1bb3340ed5d2263",
+    "b903126b0a9c142bd4954d4fbd0cfcf50d08aa20f94bb8a8491ecfee7092dc14",
+    "674215d46b62f43ac0d44e13b722691aa33a61049eeeabe65acd8d2740c18a3c",
+    "1ab5376b7a67f8e643f7cd85a5424f6999c0ae0b5d27e0bee1f990a830f23cda",
+    "6e4a21b89447e118af1c64c72cb06207f0d1b7469ad6817042f44624224e69a9",
+    "4f1c2886755763137351fadb3b6ae86160685e27493184c7d9ac8c77ad5ab0d9",
+    "ad10ada7bd4c19d6cac648fd29395571a8c7b6ef507c38f5ba8c8453e8cf3257",
+    "7c626590785fbb2eeeb60f196b7f5f4b871607447106ec876940497514cfc656",
+    "273641aefb2841c11c24bac5e1864ccace3449ae6ad8f0399ce922602eeb649a",
+    "56f10fb4c990a3f249acc71ae77f84a45539e562d84ee59566590f4b5edda65c",
+    "0d174c0ba1fd6102c5e3d3e2d05f766b1a9eec26cbf5b6c4a52b6451e9c3dfce",
+    "56ed8a7882b654c127b2259b52563c5c6c1f6ac31d50dfdc3d8c453fc2a99aea",
+    "756fa5b40125297385c2d253c9994f027aa95a16da9d84b1807abf0b5625e1cb",
+    "95ae4e907b7a8730506bf3e4a1f48bc5344917a804346bde192fb9e7d13750d5",
+    "c8e634759f1e7bb911adafa9dcf3dc1d6af96733d11be87b40d1dcac505b2e85",
+    "6f7ab839df2d628d91eab04c333e4cd6de9d57eb053d49409a36f1acb9ccd3e4"
+  ],
+  "decoded_frame_sha256": [
+    "af402921b56386005df2289cfdcda84af37eae02c6854174e45ecf164df9b5e4",
+    "2622204d291b5adffce039db457557c2a73dab6ff585e68c5c9199ea2d0a7135",
+    "736d0df6daedbeb8dd7bc61b478a354302c8759777876ddbff4c387f7592f9f8",
+    "e49151250c8972f88ecdf8c5814cee6063e1ad3611bf5840f8d88327169bffae",
+    "d9902452efbf80477d4786895072db5b61df1a228c2764bb3b71e82652ea715e",
+    "1ba90bafcc3e7a58937dd08b696f79e80b18de78b070a14685072a0eb1b529c7",
+    "54f336029bdfbb3a755a4f32b89a2189cd934d2fc3c5dbc13133a5036cbc053c",
+    "18cc2d6ca66f092316e0230eee8b69356a9aa9845af1e2470ce2c086a677d807",
+    "5c12acd5dbf06c6c6c1bc0fc9964e06831392bd8aa515f2dcd0ad2a485a999de",
+    "f004fbf969b015f990581405e8c996dbe476a95e5c5630a58d4f4a46fcd6eb4b",
+    "97c78d37832340a33c4208c8cf83e5781ba2f5d71ee0ec1cdd86dda8411e273e",
+    "7fd5498dc29a5cf9d75400d3192bbcb02f765398bc0ba6925d991a5f87fdd614",
+    "8d24e566b30f6b9987fca800cb96e940f9d033aa936d22ce2c8b9141179ca4f5",
+    "31541ab3991ce62597253381c4b272cb075e8ffaadfb6c1d872b90c9af323f03",
+    "9bb932a0f2e0f58543266e2c16bc0e915a3da6db559b39389b34f96fc14ec79e",
+    "55b7aab39e317f70bfcd5731b79f803e97299389b59b4cc6c1e7520ab8d1ae57",
+    "cb5d9b3ad5b5556ca839b130b279040eecc1ecc731f6f0221b353904612ce2d5",
+    "f76a1e118b391c9749f57a8f52f40641a4fe8dfffd17bcefaa9ee4a99eb91c13",
+    "4fadd0df91a9db984696f6561e6fa92f06a273156fd2dc8b3b93250c04c46575",
+    "c7ae43b7ba55b249d918528e781228884e77477dbc1585ff89af547d12f3b2a6",
+    "70596856c6880a8b82d41d63aa0674a81c16326bcdb17993c8481df1da5b88bf",
+    "82305529637ac745d85b8021c685d2f54773149f58297c1cc1d8422c92d49283",
+    "33d0f87f9a43ed74f3892d129e10823e38a5600dc194ea9a8fbcd02d4aa465cc",
+    "07413df640805c81864dbc566bee18a89c0c213a7736919f58f477df9b7cf607",
+    "0e05470cfd175cac9039712516955c832180e0bb0d1c55dabcc78d31fe319d18",
+    "0e7da10618831e6c7d04af2269e80283c2c23d9fe3ba09e234268c87161ab014",
+    "cdd1e13643f502b7c0ec2e276613224bc15dade4822dad3d2d1be68c1bafe353",
+    "c899d2ac00717a1f437d7eaf58ef34f83557119be701a2cb67a8046876df8eda",
+    "e2773170e8dc63a56b9ca5b4e545e0339453656b62824d9c1a64611cf7448d1b",
+    "7092054be59f45f5cea6fdae9662283529e305a03078404435c8281125002b67",
+    "baa4f0fdba828526ecc09418e5c8cdc8b0c60d71ae41ea73e9bbf5280eea933e",
+    "b96b5253ea647efe44d28bd00a24e810bf51a23c428222975e80499b599d0413",
+    "0720b4ce18883008cfd83f04d8d8f42def1c8edf358243307d8bb118b2bf6646",
+    "34ac59f8d1dd723f8cf69cca6607c7851fcaeab09caca87a090de6d0d50c118b",
+    "50b2b5c4ecad90110f7af8add454851d795228c109c072b04e8399ab63be58e4",
+    "327c433bf533f54c91060f1be32fe4803367cd9d92dcee06ce0a5016046f714a",
+    "d9230160dad1db1eec765bb8e3e244fc41c6efb97007c0e55b83c7441825c9de",
+    "2df5de0d377816354d5844fc705f63928595c0f36ae4aec464f53dad87c1b8e2",
+    "426768349b50f957ae3a51267dfabfac94fdc864e855003739030d3a5b0d288c",
+    "2c2493a8b340c0fcb85833c27e3d4d16f6f9ff1cc42f41d2abd7b0fc9ada0f34",
+    "7b332bb9561311f6f9f252abc6f2a98e2e9a9c68abf1279bea1ca959a00c046e",
+    "e35143efbf4328467df53715da8bad2b4f85348648b0ded39fe8021979795386",
+    "d11db464eb98b7232d05786befefcd88afdc385b24000dd37ea10e0317108f9b",
+    "1a63f02f622e488dd982e2fc906a115f3bf7d179cb869451d19b13472f84a7e1",
+    "6253fba0e91e6db7ff591c40f6abc8a7ba33ddb91a4fcd3da60d320c8458af1e",
+    "b5e95260a0599a1a3f04837e7280f7c23430334e6cc10142e0aaf45ad19ccb52",
+    "13988980c22d3aab744b7679f45392989b74c6b1c9280f25f7d6a8b3f48bf02f",
+    "7004acd0780ab544392616330116f7844e0b6aedbbd7045bb2be0ced79e02f80",
+    "bd61e75a25d35fcebcfca871002fbe7a98e1edb9c99d8540d102e71f1e0ef3fa",
+    "42b163c2cdb8acedb509981f2b5194803429b6f33341877efa8d358d17c7fed5",
+    "a81aa1594adb1dee8713a824979044328f55b47382d45b50d7053b26537861c0",
+    "af16fdb85eab27c2e048856c5f534527b87ce93a38c3d0ede01d74c0b39853e9",
+    "7f350f10ddfa7b1a1b211e11f3aa594965f724eba3437ffb7fe075e5a81012e2",
+    "76d6986f6d58dc302a9f39b74b3a21fedbb2a5f1f56596c1a9b509c946938a04",
+    "ccfd89e63d090c2dc229a4ef888694ec1d16da69631e5fa812ed99a39ebe6793",
+    "3c3d82974e38d438ce839cd632197424b9f9f49514bd08a0c478975df554f1fe",
+    "57268ba1a56cc2b7341549e602be9b04691ca8516e47b03e6ba6005a0d625ebe",
+    "ffdeac44645f5bc0f3b88c1a406fd718638979022c1671b304b7ae576e82b24c",
+    "49603cf172d845f3301fc74b2bd9afd742538031b6db565db2a7b2e1ede25865",
+    "bba6dc83a476d4898368081ca41e313127ae3ae6cd86617f887bf70b03edadac",
+    "adcbc0322b9a40aa5420ee4b5a47350a4385efbc869093cb68c7e4977997fb4e",
+    "a31d3c8246fda58572c557b9228f49f1d80f0f5d98d9fe13dd3a618dd885b2cb",
+    "c5dde463359b92d112882e0952ea041f7fe89641f96773fb5488b8b5ae5553e9",
+    "07458d8894a9943f5a6494286c9339d527763d3e336a4c138c10a2f08798ceba",
+    "4fd8d167fd198ff1145301d54b9f73d0f7e35e7c950efbb7fa52d58976f84929",
+    "fa49179802ce09244acfa263365cb9c7bcbca8b1fac2adc28ffe4211554762a9",
+    "6de728b1ce5c4ac7e7d710c70dbb0d4ad7fca98eaaf133661d6a17dff3dddf55",
+    "fdab1a9c2d969930e78ca80fd51df8bf045da5b945fa743e981e30c77691b9a9",
+    "aeed61776ab0c0d276734156dd326281b764fb2f3a7e533bd13589c5065af100",
+    "00f459743da8a320acf4eedad96390fcf6aee7217889e53cce3f921f7c803858",
+    "1e69ecc295580252b8a4fbb78d0318f565240f48e9972e901eb019882f2743ba",
+    "3079d44153abfd1f842f06d66f2c98f4e755db0faff3ff2b1fecae1712abf96d",
+    "31e68add1ebd4e941e3e9f9991c3cb178e39d645f4f8aff383f126e6ddb5c48a",
+    "b9b7b14846d81ff81c045861131b93ff716ff459c643ff6dfa942f7e53b5a111",
+    "2024c5f9dbce72c79723fc339881c09470e8704a5e67c12d38b1c7f47dd48f82",
+    "feb2b3ba35b7f387ade6a737d615288618b48b7804766c4f1bdc1ebda2b976e4",
+    "58dcb75da2778c54e4b82856a1a1c8444111acd5d1f4d8cc823c57f927def507",
+    "2dde7c75b318f2aa4e58436e14e64803581e17b3821501846e9ae24d67b2b12d",
+    "25c1f24864784a9d467c8b6ec75003019d429e58ffdfff74d4647d92aeeb7cdc",
+    "3b5b85074c0bca6abeb0da3ac8ddf044a15dc6e90a5310229e6899586582c41a",
+    "1095f074b44b6a0c14edabc155408c7d2ecf091eb9ea369127806984512be45b",
+    "6c6216fff3ff8a77006572a263a38cdd29137c401b7ebffd2a332e4a8f02476b",
+    "05ecef4f258dada60ca927cc5c1bb666297bedcbeeed275b4d3baacf72f9eefc",
+    "541988205ed4d966d35ceb02da237fa7f7edbb38a206a594ed9fe61d2b982d91",
+    "779402416b2094a3505be95e523b0c66d27ac3fc30e64cf9c27a610f971b8884",
+    "cc535c3ee72a618c308d14e49a4e5f75a6a0161076c6edf914ac12eecd0d4a0f",
+    "2ce191025fc8eab1ad809c9a2fbda17f8085d744d22c69c8da5a44fd708432cd",
+    "045cf142f75c3120816d452a169510f5f89cf32ee617320179bfc627289b999d",
+    "2a58263926f555465d066ee99b4a9bf6e2be22a32a22cb996c3dadf954ac4bb2",
+    "3a383f1e7f7f68fab8e179e8f10a59c206f9de673c835230b1bb3340ed5d2263",
+    "b903126b0a9c142bd4954d4fbd0cfcf50d08aa20f94bb8a8491ecfee7092dc14",
+    "674215d46b62f43ac0d44e13b722691aa33a61049eeeabe65acd8d2740c18a3c",
+    "1ab5376b7a67f8e643f7cd85a5424f6999c0ae0b5d27e0bee1f990a830f23cda",
+    "6e4a21b89447e118af1c64c72cb06207f0d1b7469ad6817042f44624224e69a9",
+    "4f1c2886755763137351fadb3b6ae86160685e27493184c7d9ac8c77ad5ab0d9",
+    "ad10ada7bd4c19d6cac648fd29395571a8c7b6ef507c38f5ba8c8453e8cf3257",
+    "7c626590785fbb2eeeb60f196b7f5f4b871607447106ec876940497514cfc656",
+    "273641aefb2841c11c24bac5e1864ccace3449ae6ad8f0399ce922602eeb649a",
+    "56f10fb4c990a3f249acc71ae77f84a45539e562d84ee59566590f4b5edda65c",
+    "0d174c0ba1fd6102c5e3d3e2d05f766b1a9eec26cbf5b6c4a52b6451e9c3dfce",
+    "56ed8a7882b654c127b2259b52563c5c6c1f6ac31d50dfdc3d8c453fc2a99aea",
+    "756fa5b40125297385c2d253c9994f027aa95a16da9d84b1807abf0b5625e1cb",
+    "95ae4e907b7a8730506bf3e4a1f48bc5344917a804346bde192fb9e7d13750d5",
+    "c8e634759f1e7bb911adafa9dcf3dc1d6af96733d11be87b40d1dcac505b2e85",
+    "6f7ab839df2d628d91eab04c333e4cd6de9d57eb053d49409a36f1acb9ccd3e4"
+  ],
+  "lossless_decoded_pixels_equal_gpu_readbacks": true,
+  "source_unchanged": true,
+  "shader_unchanged": true,
+  "GL": {
+    "compile": [
+      {
+        "name": "R80 actual Dreamcast preview GLES100",
+        "stages": [
+          {
+            "stage": "vertex",
+            "sha256": "91d3ade0c407252971d405746887a7089cbca5c4b8c15873a9affee80717ab09",
+            "passed": true,
+            "log": ""
+          },
+          {
+            "stage": "fragment",
+            "sha256": "37a36c0a4ba435aa580a22121cc113fd9ecee39c43cdd370984875e1e50cbe91",
+            "passed": true,
+            "log": ""
+          }
+        ],
+        "linked": true,
+        "log": "(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(72,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(156,1): warning X4000: use of potentially uninitialized variable (f_region)\n\n\n"
+      }
+    ],
+    "gl_errors": [
+      {
+        "operation": "initialize",
+        "errors": []
+      },
+      {
+        "operation": "compile R80 actual Dreamcast preview GLES100",
+        "errors": []
+      },
+      {
+        "operation": "upload (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f0 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f2 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f4 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f6 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f8 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f10 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f12 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f14 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f16 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f18 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f20 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f22 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f24 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f26 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f28 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f30 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f32 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f34 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f36 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f38 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f40 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f42 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f44 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f46 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f48 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f50 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f52 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f54 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f56 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f58 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f60 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f62 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f64 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f66 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f68 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f70 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f72 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f74 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f76 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f78 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f80 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f82 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f84 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f86 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f88 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f90 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f92 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f94 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f96 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f98 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f100 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f102 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f104 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f106 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f108 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f110 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f112 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f114 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f116 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f118 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f120 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f122 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f124 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f126 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f128 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f130 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f132 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f134 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f136 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f138 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f140 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f142 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f144 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f146 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f148 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f150 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f152 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f154 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f156 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f158 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f160 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f162 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f164 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f166 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f168 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f170 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f172 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f174 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f176 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f178 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f180 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f182 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f184 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f186 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f188 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f190 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f192 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f194 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f196 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f198 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f200 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f202 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f204 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f206 (262, 393)",
+        "errors": []
+      },
+      {
+        "operation": "draw/read 3 f208 (262, 393)",
+        "errors": []
+      }
+    ],
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 SUPER (0x00001F06) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.16.1074)",
+    "version": "OpenGL ES 3.0 (ANGLE 2.1 git hash: unknown hash)",
+    "gl_extensions": [
+      "GL_AMD_performance_monitor",
+      "GL_ANGLE_base_vertex_base_instance_shader_builtin",
+      "GL_ANGLE_blob_cache",
+      "GL_ANGLE_client_arrays",
+      "GL_ANGLE_clip_cull_distance",
+      "GL_ANGLE_copy_texture_3d",
+      "GL_ANGLE_depth_texture",
+      "GL_ANGLE_framebuffer_blit",
+      "GL_ANGLE_framebuffer_multisample",
+      "GL_ANGLE_get_serialized_context_string",
+      "GL_ANGLE_get_tex_level_parameter",
+      "GL_ANGLE_instanced_arrays",
+      "GL_ANGLE_lossy_etc_decode",
+      "GL_ANGLE_memory_size",
+      "GL_ANGLE_multiview_multisample",
+      "GL_ANGLE_pack_reverse_row_order",
+      "GL_ANGLE_polygon_mode",
+      "GL_ANGLE_program_binary_readiness_query",
+      "GL_ANGLE_program_cache_control",
+      "GL_ANGLE_provoking_vertex",
+      "GL_ANGLE_renderability_validation",
+      "GL_ANGLE_request_extension",
+      "GL_ANGLE_robust_client_memory",
+      "GL_ANGLE_shader_pixel_local_storage",
+      "GL_ANGLE_shader_pixel_local_storage_coherent",
+      "GL_ANGLE_stencil_texturing",
+      "GL_ANGLE_texture_compression_dxt3",
+      "GL_ANGLE_texture_compression_dxt5",
+      "GL_ANGLE_texture_multisample",
+      "GL_ANGLE_texture_usage",
+      "GL_ANGLE_translated_shader_source",
+      "GL_APPLE_clip_distance",
+      "GL_ARM_rgba8",
+      "GL_CHROMIUM_bind_generates_resource",
+      "GL_CHROMIUM_bind_uniform_location",
+      "GL_CHROMIUM_copy_compressed_texture",
+      "GL_CHROMIUM_copy_texture",
+      "GL_CHROMIUM_lose_context",
+      "GL_EXT_EGL_image_external_wrap_modes",
+      "GL_EXT_base_instance",
+      "GL_EXT_blend_func_extended",
+      "GL_EXT_blend_minmax",
+      "GL_EXT_clip_control",
+      "GL_EXT_clip_cull_distance",
+      "GL_EXT_color_buffer_float",
+      "GL_EXT_color_buffer_half_float",
+      "GL_EXT_conservative_depth",
+      "GL_EXT_debug_label",
+      "GL_EXT_debug_marker",
+      "GL_EXT_depth_clamp",
+      "GL_EXT_discard_framebuffer",
+      "GL_EXT_disjoint_timer_query",
+      "GL_EXT_draw_buffers",
+      "GL_EXT_draw_buffers_indexed",
+      "GL_EXT_draw_elements_base_vertex",
+      "GL_EXT_float_blend",
+      "GL_EXT_frag_depth",
+      "GL_EXT_instanced_arrays",
+      "GL_EXT_map_buffer_range",
+      "GL_EXT_occlusion_query_boolean",
+      "GL_EXT_polygon_offset_clamp",
+      "GL_EXT_read_format_bgra",
+      "GL_EXT_render_snorm",
+      "GL_EXT_robustness",
+      "GL_EXT_sRGB",
+      "GL_EXT_shader_texture_lod",
+      "GL_EXT_texture_border_clamp",
+      "GL_EXT_texture_compression_bptc",
+      "GL_EXT_texture_compression_dxt1",
+      "GL_EXT_texture_compression_rgtc",
+      "GL_EXT_texture_compression_s3tc_srgb",
+      "GL_EXT_texture_filter_anisotropic",
+      "GL_EXT_texture_format_BGRA8888",
+      "GL_EXT_texture_mirror_clamp_to_edge",
+      "GL_EXT_texture_norm16",
+      "GL_EXT_texture_rg",
+      "GL_EXT_texture_storage",
+      "GL_EXT_texture_type_2_10_10_10_REV",
+      "GL_EXT_unpack_subimage",
+      "GL_KHR_debug",
+      "GL_KHR_parallel_shader_compile",
+      "GL_KHR_robustness",
+      "GL_NV_EGL_stream_consumer_external",
+      "GL_NV_fence",
+      "GL_NV_framebuffer_blit",
+      "GL_NV_pack_subimage",
+      "GL_NV_pixel_buffer_object",
+      "GL_NV_shader_noperspective_interpolation",
+      "GL_OES_EGL_image",
+      "GL_OES_EGL_image_external",
+      "GL_OES_EGL_image_external_essl3",
+      "GL_OES_compressed_EAC_R11_signed_texture",
+      "GL_OES_compressed_EAC_R11_unsigned_texture",
+      "GL_OES_compressed_EAC_RG11_signed_texture",
+      "GL_OES_compressed_EAC_RG11_unsigned_texture",
+      "GL_OES_compressed_ETC2_RGB8_texture",
+      "GL_OES_compressed_ETC2_RGBA8_texture",
+      "GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture",
+      "GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture",
+      "GL_OES_compressed_ETC2_sRGB8_alpha8_texture",
+      "GL_OES_compressed_ETC2_sRGB8_texture",
+      "GL_OES_depth24",
+      "GL_OES_depth32",
+      "GL_OES_draw_buffers_indexed",
+      "GL_OES_draw_elements_base_vertex",
+      "GL_OES_element_index_uint",
+      "GL_OES_fbo_render_mipmap",
+      "GL_OES_get_program_binary",
+      "GL_OES_mapbuffer",
+      "GL_OES_packed_depth_stencil",
+      "GL_OES_required_internalformat",
+      "GL_OES_rgb8_rgba8",
+      "GL_OES_sample_variables",
+      "GL_OES_shader_multisample_interpolation",
+      "GL_OES_standard_derivatives",
+      "GL_OES_surfaceless_context",
+      "GL_OES_texture_border_clamp",
+      "GL_OES_texture_float",
+      "GL_OES_texture_float_linear",
+      "GL_OES_texture_half_float",
+      "GL_OES_texture_half_float_linear",
+      "GL_OES_texture_npot",
+      "GL_OES_texture_stencil8",
+      "GL_OES_texture_storage_multisample_2d_array",
+      "GL_OES_vertex_array_object",
+      "GL_OVR_multiview",
+      "GL_OVR_multiview2",
+      "GL_WEBGL_video_texture"
+    ],
+    "egl_extensions": [
+      "EGL_EXT_create_context_robustness",
+      "EGL_ANGLE_d3d_share_handle_client_buffer",
+      "EGL_ANGLE_d3d_texture_client_buffer",
+      "EGL_ANGLE_surface_d3d_texture_2d_share_handle",
+      "EGL_ANGLE_query_surface_pointer",
+      "EGL_ANGLE_window_fixed_size",
+      "EGL_ANGLE_keyed_mutex",
+      "EGL_ANGLE_surface_orientation",
+      "EGL_ANGLE_direct_composition",
+      "EGL_NV_post_sub_buffer",
+      "EGL_KHR_create_context",
+      "EGL_KHR_image",
+      "EGL_KHR_image_base",
+      "EGL_KHR_gl_texture_2D_image",
+      "EGL_KHR_gl_texture_cubemap_image",
+      "EGL_KHR_gl_renderbuffer_image",
+      "EGL_KHR_get_all_proc_addresses",
+      "EGL_KHR_stream",
+      "EGL_KHR_stream_consumer_gltexture",
+      "EGL_NV_stream_consumer_gltexture_yuv",
+      "EGL_ANGLE_stream_producer_d3d_texture",
+      "EGL_ANGLE_create_context_webgl_compatibility",
+      "EGL_CHROMIUM_create_context_bind_generates_resource",
+      "EGL_CHROMIUM_sync_control",
+      "EGL_EXT_pixel_format_float",
+      "EGL_KHR_surfaceless_context",
+      "EGL_ANGLE_display_texture_share_group",
+      "EGL_ANGLE_display_semaphore_share_group",
+      "EGL_ANGLE_create_context_client_arrays",
+      "EGL_ANGLE_program_cache_control",
+      "EGL_ANGLE_robust_resource_initialization",
+      "EGL_ANGLE_create_context_extensions_enabled",
+      "EGL_ANDROID_blob_cache",
+      "EGL_ANDROID_recordable",
+      "EGL_ANGLE_image_d3d11_texture",
+      "EGL_ANGLE_create_context_backwards_compatible",
+      "EGL_KHR_no_config_context",
+      "EGL_KHR_create_context_no_error",
+      "EGL_KHR_reusable_sync",
+      "EGL_ANGLE_memory_usage_report"
+    ],
+    "egl_version": [
+      1,
+      5
+    ]
+  },
+  "limitations": [
+    "This is a PC ANGLE preview, not an Android screen recording or hardware performance measurement.",
+    "One local cover is used. The image and animation are private local media and are not added to Git.",
+    "ANGLE can report a newer compatible context despite requesting ES2; see GL.version."
+  ]
+}

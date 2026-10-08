@@ -1,0 +1,19 @@
+{
+  "version": "R80",
+  "utc": "2026-10-08T18:35:11.002848+00:00",
+  "compiled": true,
+  "baselineReproduced": true,
+  "hashes": {
+    "baseline": "b77f5c06effe7750f526ef06b8515c7eb4954437495f65e4d5bec25c1bd36808",
+    "dreamcast": "bfd8601f1c44e80dac0f30c345ab02c40a4f971e3ce206eb98b12afc117e1f3e"
+  },
+  "baseVersion": "R79",
+  "recipeSHA256": "727ce7e3d30229f9582cb8f95637cf889cc3d7848eb633fa3835abe1a80cdfa0",
+  "changes": {
+    "premium-magazine-led-android.glsl": "d9dc4fd2068a233d0c27a2ec300bf56754dbd916d7c6f95ffac5d1552e50d5cf",
+    "magazine_shader.h": "9f03ee940951714c6a3ff4da047418dd90c3eeb28f80287f41e62b1783daa017",
+    "native_magazine.h": "abf25e0462c6f5b11b2fdb1c43a2e6343bee62a945a99b6b253219fd8e4a6eb7"
+  },
+  "installed": false,
+  "androidVisualVerified": false
+}

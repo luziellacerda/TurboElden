@@ -1,3 +1,7 @@
+# Preparação visual Dreamcast — 08/10/2026
+
+Pedido posterior do mantenedor: mapear as capas Dreamcast e aplicar o LED que percorre as luzes como no SNES, enquanto aguarda o servidor. Implementado e compilado em `versions/station-dreamcast-led-r80-20261008`; ler README, recibos e `release-channels/PENDING-VISUAL.json`. Perfil dedicado à moldura Dreamcast, somente capa selecionada da lista de jogos. 26 artes locais/52 representações verificadas por ANGLE; não equivale às 243 capas remotas nem à conferência no Android. Movimento e saída dos perfis anteriores preservados, política térmica intacta. Biblioteca candidata `bfd8601f1c44e80dac0f30c345ab02c40a4f971e3ce206eb98b12afc117e1f3e`, base R79 reproduzida. Não foi gerado/instalado APK nem alterado servidor. Incorporar à próxima atualização do canal de teste; instaladores atuais permanecem R76/R79, sem terceiro APK.
+
 # Canais atuais e backup único — 08/10/2026
 
 O mantenedor determinou manter somente dois instaladores: R76 como referência estável de dois jogadores e R79 como teste para até quatro. Ele confirmou limpar APKs antigos/temporários, preservando histórico de fontes no Git. Leia `release-channels/ACTIVE.json` e `release-channels/README.md` antes de qualquer compilação ou instalação.

@@ -12,6 +12,8 @@ O histórico R78 já estava publicado antes da R79. Não confundir R78 com a ref
 
 ## Próxima alteração
 
+Preparação visual posterior: `PENDING-VISUAL.json` registra o LED Dreamcast compilado em `versions/station-dreamcast-led-r80-20261008`. Incorporar essa alteração à próxima atualização do canal de teste. Não há APK R80 nem instalação desta alteração; os dois instaladores abaixo continuam R76/R79.
+
 Leia `ACTIVE.json`, escolha explicitamente um canal e use suas fontes completas congeladas. Não selecionar APK por data, procurar a versão com maior número ou recuperar uma Activity de outra revisão.
 
 `rebuild_verified.py` verifica o APK, os 201/209 Java e as dependências do carrossel; com `--build both --output <pasta nova em E:>`, reproduz o DEX e a biblioteca e exige hashes idênticos. Não usa receitas de sobreposição de versões antigas. Ferramentas JDK/SDK/NDK instaladas e chave original foram preservadas; não apagar como temporários.

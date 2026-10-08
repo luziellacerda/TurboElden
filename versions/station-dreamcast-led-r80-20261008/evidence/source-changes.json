@@ -1,0 +1,18 @@
+{
+  "baseChannel": "test-4p",
+  "baseVersion": "R79",
+  "targetVersion": "R80",
+  "sourceBase": {
+    "premium-magazine-led-android.glsl": "a7736d47a3d77584b336b4c5421c5e7d697618b1c3a40ed8d71677ea239b63be",
+    "magazine_shader.h": "309ff6c7ea0270b02108622b5b1c20cfc96bff446b89f5bd8e76c4b76dbdb037",
+    "native_magazine.h": "50fe001ac12bc592d672ac5c3889395d20aa65dfd6143082af84502a163e9fd8"
+  },
+  "sourceChanges": {
+    "premium-magazine-led-android.glsl": "d9dc4fd2068a233d0c27a2ec300bf56754dbd916d7c6f95ffac5d1552e50d5cf",
+    "magazine_shader.h": "9f03ee940951714c6a3ff4da047418dd90c3eeb28f80287f41e62b1783daa017",
+    "native_magazine.h": "abf25e0462c6f5b11b2fdb1c43a2e6343bee62a945a99b6b253219fd8e4a6eb7"
+  },
+  "noJavaRuntimeCoreManifestChanges": true,
+  "menuFramePolicyChanged": false,
+  "platformAndCollectionVideoEffectsAdded": false
+}

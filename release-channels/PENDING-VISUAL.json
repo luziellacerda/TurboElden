@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "change": "Dreamcast cover LED",
+  "versionLabel": "R80-preparation",
+  "baseChannel": "test-4p",
+  "baseVersion": "R79",
+  "sourceDirectory": "versions/station-dreamcast-led-r80-20261008",
+  "nativeCompiled": true,
+  "nativeSHA256": "bfd8601f1c44e80dac0f30c345ab02c40a4f971e3ce206eb98b12afc117e1f3e",
+  "apkGenerated": false,
+  "installed": false,
+  "existingReleaseChannelsChanged": false,
+  "serverChangesRequiredForVisualEffect": false,
+  "serverMultiplayerV3DependencyResolved": false
+}
