@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-08T18:47:47.282582+00:00",
+  "direction": "SERVER_TO_APP",
+  "serverCommit": "aa0c6fe9644b5aaae10a4ca70fab484a69da0c2d",
+  "serverBranch": "docs/station-r79-server-return-20261008",
+  "appParentCommit": "167c214a408e5a573ce0b1b61077104cf6878078",
+  "executableSourceChanged": false,
+  "apkGenerated": false,
+  "phonesChanged": false,
+  "candidateVisualPreserved": true,
+  "catalogRevision": 19,
+  "descriptionsApplied": 206,
+  "v3Deployed": false,
+  "files": [
+    {
+      "path": "docs/server/RETORNO-IMPLEMENTACAO-R79-SINOPSES-E-MULTIPLAYER-20261008.md",
+      "serverPath": "docs/station-android/RETORNO-IMPLEMENTACAO-R79-SINOPSES-E-MULTIPLAYER-20261008.md",
+      "sha256": "a4ce7fb5aaa596a5be741fea81b602d08222a7cb79c9abe9665ed75e7d92a8c0",
+      "sizeBytes": 9870
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/CATALOGO-REV19.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/CATALOGO-REV19.json",
+      "sha256": "ad2e4e65c6145fe077cca2f7577b5abb317dc7ccb941a781037fd1907e7ee0f2",
+      "sizeBytes": 5400811
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/CONTENT-IDENTITY-EXEMPLO.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/CONTENT-IDENTITY-EXEMPLO.json",
+      "sha256": "dab7c3093d826ad0d2c17cb7a8586be6099c5a10bba3193aaf1b5a95e43cbf52",
+      "sizeBytes": 394
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/CONTRATO-CANDIDATO-V3.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/CONTRATO-CANDIDATO-V3.json",
+      "sha256": "f3cf52584ceffc401f20955b688b70b832ee826a1454ab2a00db1efe4d3d1fc9",
+      "sizeBytes": 7851
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/QUALIFICACAO-CANDIDATA.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/QUALIFICACAO-CANDIDATA.json",
+      "sha256": "fbf83a608542b89a7726e769caea2b575886a61fd3d59c634dec7e21856447dc",
+      "sizeBytes": 5822
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/RECIBO-APLICACAO-REV19.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/RECIBO-APLICACAO-REV19.json",
+      "sha256": "e0a0d2ea530c5dd12e677cddf3cc21604b6a8bd85392dab380ec3f3b255e2716",
+      "sizeBytes": 11247
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/RECIBO-CATALOGO-ASSINADO-REV19.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/RECIBO-CATALOGO-ASSINADO-REV19.json",
+      "sha256": "d58326d6fe724c7a2c918d3737b24f7a2de6d3c94281f4f05c6b7c3e7c98c551",
+      "sizeBytes": 564
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/RECIBO-RETORNO-SERVIDOR.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/RECIBO-RETORNO-SERVIDOR.json",
+      "sha256": "59b1a992a563b79d0cce9c61d141f0f4cfd1059308743a2b2a359980c536d6bd",
+      "sizeBytes": 4233
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/SINOPSES-APLICADAS-REV19.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/SINOPSES-APLICADAS-REV19.json",
+      "sha256": "615772ecef0cbaad2dae775e06a51741d3965562fe352a08c695bd22a65481f4",
+      "sizeBytes": 247538
+    },
+    {
+      "path": "docs/server/recovery-r79-20261008/SINOPSES-AUSENTES-REV19.json",
+      "serverPath": "docs/station-android/recovery-r79-20261008/SINOPSES-AUSENTES-REV19.json",
+      "sha256": "ab47a4269f6cd59076df5b8746b50bbaccf0eee866658c7d2b3a0cde437b5c52",
+      "sizeBytes": 121468
+    }
+  ]
+}
