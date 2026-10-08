@@ -1,3 +1,9 @@
+# R81 instalada no Motorola — 08/10/2026, 19:32:55 UTC
+
+Pedido explícito de instalação cumprido: Motorola Edge30 atualizado diretamente por USB para R81; SHA integral85fac8f51daa3a370eabb14d98832f75c2f30ff81422c549538ee715627032c6 conferido no telefone. UID/data original/diretório preservados, sem limpeza, sem APK extra ou alteração de configuração. Sem partida ativa na atualização. Abriu ESActivity e aparelho desbloqueado observados por ADB. Samsung não estava conectado e permanece no último reciboR78. Recibos em versions/station-online-readiness-r81-20261008/INSTALLATION.json e evidence/installation-motorola-r81.json. Não confundir campos installed:false históricos da compilação/entrega com este recibo posterior. Nenhum gameplay ou ativação do servidor foi validado por esta instalação; não criar outro handoff por ela.
+
+## Histórico anterior
+
 # R81 — cliente completo para concluir ativação — 08/10/2026
 
 Entrega única ao servidor publicada em `2cd3571919f54126f2bfe9576864a8d8329b9db3`, branch `docs/station-r81-activation-final-20261008`, documento `docs/station-android/FECHAMENTO-APP-R81-ATIVACAO-20261008.md`:19 arquivos com ferramenta,testes,manifestos exatosR76/R81,hashes canônicos e registros dos pilotos. É entrega APP→SERVIDOR, não ativação. Fonte executávelR81 `759d7ab4d479bbb9dca0426ad286ca1b4f0ce1e0`; entrega inicial completa `ad07c24dcded0f17933e19f45b7ffaafbce314a0`, branch app `fix/station-online-readiness-r81-20261008`. Backup R81 recompilado após aposentadoria R79: DEX/carrossel byte idênticos, recibo `evidence/backup-reproduction.json`. Apenas2APKs no backup, R76/R81; temporárioAPK E removido após hash. Próximo passo é o operador executar o fechamento e publicar evidência ativa/partida; não gerar outro APK por mero cadastro nem repetir documentos de leitura. Monitor antigo R74 já está pausado.

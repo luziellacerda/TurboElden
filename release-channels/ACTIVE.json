@@ -27,9 +27,13 @@
       "protocol": "station-stream.v3",
       "status": "experimental; server activation and exact per-game approved profiles required including two-player rooms",
       "fourPhoneGameplayQualified": false,
-      "installed": false,
+      "installed": true,
       "runtimeCoresEnginesUnchangedFromR79": true,
-      "archivedDreamcastEffectIncluded": false
+      "archivedDreamcastEffectIncluded": false,
+      "installedDevices": [
+        "motorola-edge-30"
+      ],
+      "installationReceipt": "versions/station-online-readiness-r81-20261008/INSTALLATION.json"
     }
   }
 }

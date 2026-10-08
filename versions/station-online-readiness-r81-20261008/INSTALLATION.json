@@ -1,0 +1,16 @@
+{
+  "version": "R81",
+  "apkSHA256": "85fac8f51daa3a370eabb14d98832f75c2f30ff81422c549538ee715627032c6",
+  "motorola": {
+    "installed": true,
+    "verifiedSHA256": true,
+    "completedUTC": "2026-10-08T19:32:55.134097+00:00",
+    "platformActivityVerified": true
+  },
+  "samsung": {
+    "r81Installed": false,
+    "lastVerifiedVersion": "R78"
+  },
+  "serverActivationVerified": false,
+  "gameplayVerified": false
+}
