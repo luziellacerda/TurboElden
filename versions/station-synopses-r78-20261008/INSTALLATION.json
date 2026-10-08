@@ -1,0 +1,36 @@
+{
+  "version": "R78",
+  "recordedUTC": "2026-10-08T14:46:34.052562+00:00",
+  "state": "installed-on-two-devices-at-explicit-user-request",
+  "apkSHA256": "e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5",
+  "devices": [
+    {
+      "device": "motorola",
+      "model": "motorola edge 30",
+      "completedUTC": "2026-10-08T14:41:44.187424+00:00",
+      "receipt": "evidence/installation-motorola-r78.json",
+      "receiptSHA256": "82da2c8d467de406278947e5bcee2343273bc2ea4b4c9920ddead36c80c5a835",
+      "installedAPK_SHA256": "e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5"
+    },
+    {
+      "device": "samsung",
+      "model": "SM-A566E",
+      "completedUTC": "2026-10-08T14:44:57.449046+00:00",
+      "receipt": "evidence/installation-samsung-r78.json",
+      "receiptSHA256": "1c2c3b924860fad0cfe1f456a55c61664a8835295f1f4762388d12f451da4023",
+      "installedAPK_SHA256": "e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5"
+    }
+  ],
+  "sourceCommit": "ba145fff4bcf2c905ac6eb62916d7e854ec31b09",
+  "dataCleared": false,
+  "extraAPKCopiedToPhone": false,
+  "deviceSettingsChanged": false,
+  "physicalDisplayVerified": false,
+  "authenticatedOpeningVerified": false,
+  "gameplayVerified": false,
+  "serverActivationVerified": false,
+  "serverChanged": false,
+  "inheritedR77OnlineQualificationStillRequired": true,
+  "sourceFreezeFilesUnchanged": true,
+  "note": "This later installation record supersedes the historical not-installed state in the immutable source/build snapshot. Both official entries were requested; Motorola USB was removed before checking foreground, and Samsung had no resumed Station Activity in the observation."
+}

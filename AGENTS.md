@@ -1,3 +1,13 @@
+# R78 instalada nos dois aparelhos por pedido explícito — 08/10/2026
+
+O mantenedor pediu instalar nos dois após receber o aviso de que a ativação online R77/R78 continua pendente. R78 instalada diretamente no Motorola Edge 30 às 14:41:44 UTC e no Samsung A56 às 14:44:57 UTC; SHA integral `e6c6609df32bf419954083297eadbafa75f13328a1516594cc010044b2eb62a5` conferido em ambos. UID, data original de instalação e diretório de dados preservados. Sem desinstalar, limpar dados, alterar configurações ou deixar APK extra no telefone. Não havia Activity de emulador aberta na instalação.
+
+Leia `versions/station-synopses-r78-20261008/INSTALLATION.json` e os dois recibos `evidence/installation-*-r78.json`. São posteriores ao congelamento executável `ba145fff`; os campos históricos `installed:false` de STATUS/BUILD-RESULT/package descrevem a geração anterior ao pedido, e não a situação atual dos aparelhos. Fonte, APK, engine e manifesto congelados não foram modificados por esta instalação. Receita direta em `recipes/install_verified.py`.
+
+Entrada oficial solicitada nos dois; abertura autenticada, aparência e gameplay não confirmados nesta etapa. Motorola saiu da USB antes da observação da tela, e o Samsung não mostrava Activity Station retomada na observação. Não afirmar falha nem sucesso de login por isso. Nenhum servidor foi alterado. As dependências de perfis/catálogo/capabilities e qualificação v3 do retorno `ae77b9c` continuam; instalação não significa liberação das salas de três/quatro pessoas.
+
+## Estado anterior à instalação
+
 # R78 candidata — sinopses e retorno R77 recebido — 08/10/2026
 
 Fonte executável R78 publicada: `ba145fff4bcf2c905ac6eb62916d7e854ec31b09`, ramo `fix/station-synopses-r78-20261008`. Entrega APP → SERVIDOR: `525f03735cbec194e942c91417d38a4d799c8910`, ramo `docs/station-r78-synopses-20261008`, [handoff exato](https://github.com/luziellacerda/Servidor-pix/blob/525f03735cbec194e942c91417d38a4d799c8910/docs/station-android/ENTREGA-APP-R78-SINOPSES-20261008.md). São 48 documentos/fontes; checkout e índice do clone servidor preservados, nenhum deploy. Recibo posterior em `versions/station-synopses-r78-20261008/PUBLICATION.json`; `SOURCE-FILES.json` registra o congelamento do commit executável anterior ao recibo.
