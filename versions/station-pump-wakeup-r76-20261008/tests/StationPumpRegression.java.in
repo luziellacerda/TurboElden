@@ -1,0 +1,208 @@
+package org.emulationstation.frontend.netplay;
+
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.*;
+
+/* Deterministic host test: generated methods are from the real sources, not a
+ * hand-written approximation. WebSocket and native state are explicitly modeled. */
+abstract class PumpBase implements AutoCloseable {
+    final Object gate=new Object();
+    final TestExecutor writes=new TestExecutor();
+    final AtomicBoolean closed=new AtomicBoolean(),pumpPending=new AtomicBoolean(),pumpRequested=new AtomicBoolean();
+    final StationRecoveryWire.Bytes tx=new StationRecoveryWire.Bytes(32768),rx=new StationRecoveryWire.Bytes(32768);
+    final Listener listener=new Listener();
+    volatile Remote remote=new Remote();
+    boolean terminal=false,welcome=true,foreground=true;
+    long state=2,epoch=1,ackSent=0,pauseSent=-1,cursor=0,accepted=0,readySent=-1;
+    final long started=System.nanoTime();long pingSent=started;
+    final AtomicInteger lostCalls=new AtomicInteger(),sendActive=new AtomicInteger(),sendPeak=new AtomicInteger(),queueChecks=new AtomicInteger();
+    final List<Remote> allRemotes=Collections.synchronizedList(new ArrayList<>());
+    volatile Throwable failure;
+    volatile CountDownLatch emptyReached,emptyRelease;
+    final AtomicBoolean holdEmpty=new AtomicBoolean();
+    PumpBase(){allRemotes.add(remote);}
+    abstract void signal();
+    abstract void produce(byte[] bytes)throws Exception;
+    final class Listener {volatile long status;long nativeStatus(){return status;}}
+    final class Remote {
+        final List<StationRecoveryWire> frames=Collections.synchronizedList(new ArrayList<>());
+        volatile boolean open=true,failSend;volatile long queued;
+        volatile CountDownLatch sendReached,sendRelease,queueReached;
+        boolean isOpen(){return open;}
+        long queuedBytes(){queueChecks.incrementAndGet();if(queueReached!=null)queueReached.countDown();return queued;}
+        void send(byte[] bytes)throws Exception {
+            int active=sendActive.incrementAndGet();sendPeak.accumulateAndGet(active,Math::max);
+            try {
+                if(sendReached!=null){sendReached.countDown();if(!sendRelease.await(5,TimeUnit.SECONDS))throw new AssertionError("send release timeout");}
+                if(failSend)throw new IOException("synthetic transport send failure");
+                if(!open)throw new IOException("synthetic closed transport");
+                frames.add(StationRecoveryWire.decode(ByteBuffer.wrap(bytes)));
+            }finally{sendActive.decrementAndGet();}
+        }
+    }
+    static long queued(PumpBase.Remote r){return r.queuedBytes();}
+    void fatal(String reason){synchronized(gate){terminal=true;failure=new IOException(reason);}}
+    void lost(Remote old){synchronized(gate){if(remote!=old||closed.get()||terminal)return;lostCalls.incrementAndGet();remote=null;welcome=false;old.open=false;}}
+    Remote replaceAndWelcome(long serverAccepted)throws Exception {
+        Remote next=new Remote();allRemotes.add(next);
+        synchronized(gate){remote=next;welcome=true;accepted=serverAccepted;cursor=accepted;ackSent=-1;readySent=-1;}
+        signal();return next;
+    }
+    void armEmpty(){emptyReached=new CountDownLatch(1);emptyRelease=new CountDownLatch(1);holdEmpty.set(true);}
+    void probeEmpty()throws InterruptedException {if(holdEmpty.compareAndSet(true,false)){emptyReached.countDown();if(!emptyRelease.await(5,TimeUnit.SECONDS))throw new AssertionError("empty release timeout");}}
+    void barrier()throws Exception {writes.delegate.submit(()->{}).get(5,TimeUnit.SECONDS);}
+    void idle()throws Exception {
+        long until=System.nanoTime()+TimeUnit.SECONDS.toNanos(5);
+        while(System.nanoTime()<until){barrier();if(!pumpPending.get()){barrier();if(!pumpPending.get())return;}Thread.yield();}
+        throw new AssertionError("writer did not become idle");
+    }
+    List<StationRecoveryWire> data(Remote r){List<StationRecoveryWire> result=new ArrayList<>();synchronized(r.frames){for(StationRecoveryWire f:r.frames)if(f.type==3)result.add(f);}return result;}
+    List<StationRecoveryWire> type(Remote r,int type){List<StationRecoveryWire> result=new ArrayList<>();synchronized(r.frames){for(StationRecoveryWire f:r.frames)if(f.type==type)result.add(f);}return result;}
+    void awaitFrames(Remote r,int type,int count)throws Exception {
+        long until=System.nanoTime()+TimeUnit.SECONDS.toNanos(5);
+        while(System.nanoTime()<until){if(type(r,type).size()>=count)return;Thread.sleep(1);}
+        throw new AssertionError("missing frame type "+type+" count "+count);
+    }
+    @Override public void close()throws Exception {
+        closed.set(true);if(emptyRelease!=null)emptyRelease.countDown();
+        for(Remote r:allRemotes)if(r.sendRelease!=null)r.sendRelease.countDown();
+        writes.shutdownNow();if(!writes.awaitTermination(5,TimeUnit.SECONDS))throw new AssertionError("writer shutdown timeout");
+    }
+}
+
+final class TestExecutor extends AbstractExecutorService {
+    final ExecutorService delegate=Executors.newSingleThreadExecutor();
+    final AtomicInteger submitted=new AtomicInteger(),running=new AtomicInteger(),peak=new AtomicInteger();
+    volatile boolean reject;
+    volatile CountDownLatch rejectReached,rejectRelease;
+    @Override public void execute(Runnable task){submitted.incrementAndGet();if(reject){if(rejectReached!=null){rejectReached.countDown();try{if(!rejectRelease.await(5,TimeUnit.SECONDS))throw new AssertionError("rejection release timeout");}catch(InterruptedException e){Thread.currentThread().interrupt();throw new RejectedExecutionException(e);}}throw new RejectedExecutionException("synthetic rejection");}delegate.execute(()->{int active=running.incrementAndGet();peak.accumulateAndGet(active,Math::max);try{task.run();}finally{running.decrementAndGet();}});}
+    @Override public void shutdown(){delegate.shutdown();}
+    @Override public List<Runnable> shutdownNow(){return delegate.shutdownNow();}
+    @Override public boolean isShutdown(){return delegate.isShutdown();}
+    @Override public boolean isTerminated(){return delegate.isTerminated();}
+    @Override public boolean awaitTermination(long value,TimeUnit unit)throws InterruptedException{return delegate.awaitTermination(value,unit);}
+}
+
+@GENERATED_CLASSES@
+
+public final class StationPumpRegression {
+    static int checks,baselineDeferred,fixedImmediate,cases;
+    static final byte[] DATA={3,17,0,90,127};
+    static void check(boolean condition,String label){checks++;if(!condition)throw new AssertionError(label);}
+    static void await(CountDownLatch latch,String label)throws Exception {check(latch.await(5,TimeUnit.SECONDS),label);}
+    static void verifySingle(PumpBase p,PumpBase.Remote r)throws Exception {
+        p.idle();List<StationRecoveryWire> frames=p.data(r);check(frames.size()==1,"one DATA frame");
+        StationRecoveryWire f=frames.get(0);check(f.offset==0&&f.value==0,"TSR2 DATA offset/header");check(Arrays.equals(f.data,DATA),"DATA bytes exact");
+        check(p.tx.delivered==0,"no fabricated delivery ACK");check(p.tx.next==DATA.length&&p.cursor==DATA.length,"retained offsets exact");
+        check(Arrays.equals(p.tx.read(0),DATA),"unacknowledged bytes retained");check(p.sendPeak.get()==1&&p.writes.peak.get()==1,"one writer/send at a time");
+    }
+    static void emptyRace(boolean fixed)throws Exception {
+        try(PumpBase p=fixed?new FixedPump():new BaselinePump()) {
+            p.armEmpty();p.signal();await(p.emptyReached,"empty decision reached");check(p.pumpPending.get(),"old writer owns queue");
+            p.produce(DATA);check(p.data(p.remote).isEmpty(),"no send before releasing controlled writer");p.emptyRelease.countDown();
+            if(fixed){p.awaitFrames(p.remote,3,1);fixedImmediate++;}
+            else {p.idle();check(p.data(p.remote).isEmpty(),"baseline deferred despite pending bytes");baselineDeferred++;p.signal();p.awaitFrames(p.remote,3,1);}
+            verifySingle(p,p.remote);cases++;
+        }
+    }
+    static void normalAndIdle()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            p.signal();p.idle();int submitted=p.writes.submitted.get();p.barrier();p.barrier();check(p.writes.submitted.get()==submitted,"idle queue never resubmits itself");
+            p.produce(DATA);p.awaitFrames(p.remote,3,1);verifySingle(p,p.remote);cases++;
+        }
+    }
+    static void rejection()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            p.writes.reject=true;p.produce(DATA);check(!p.pumpPending.get(),"rejection releases writer ownership");check(p.pumpRequested.get(),"rejection retains request");check(p.cursor==0&&p.tx.next==DATA.length,"rejected data not consumed");check(p.writes.submitted.get()==1,"no recursive rejection loop");
+            p.writes.reject=false;p.signal();p.awaitFrames(p.remote,3,1);verifySingle(p,p.remote);cases++;
+        }
+        try(PumpBase p=new FixedPump()) {
+            p.writes.shutdown();p.produce(DATA);check(!p.pumpPending.get(),"shutdown rejection releases ownership");check(p.writes.submitted.get()==1,"shutdown never spins");check(p.cursor==0,"shutdown does not consume bytes");cases++;
+        }
+    }
+    static void closeDuringEmpty()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            p.armEmpty();p.signal();await(p.emptyReached,"close fixture empty");p.produce(DATA);p.closed.set(true);p.emptyRelease.countDown();p.idle();
+            check(p.data(p.remote).isEmpty(),"close blocks queued send");check(p.writes.submitted.get()==1,"close does not resubmit");p.signal();check(p.writes.submitted.get()==1,"post-close signal ignored");check(!p.pumpPending.get(),"close releases ownership");cases++;
+        }
+    }
+    static void concurrentRejection()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            p.writes.reject=true;p.writes.rejectReached=new CountDownLatch(1);p.writes.rejectRelease=new CountDownLatch(1);
+            ExecutorService producer=Executors.newSingleThreadExecutor();
+            Future<?> first=producer.submit(()->{try{p.produce(DATA);}catch(Exception e){throw new RuntimeException(e);}});
+            await(p.writes.rejectReached,"rejection holds first submit");p.produce(DATA);check(p.pumpRequested.get()&&p.pumpPending.get(),"second request coalesced during rejected submission");
+            p.writes.rejectRelease.countDown();first.get(5,TimeUnit.SECONDS);producer.shutdown();check(producer.awaitTermination(5,TimeUnit.SECONDS),"rejection producer complete");
+            check(!p.pumpPending.get()&&p.pumpRequested.get(),"rejected concurrent requests remain pending without ownership");check(p.writes.submitted.get()==1&&p.cursor==0,"rejection neither spins nor consumes DATA");
+            p.writes.reject=false;p.signal();p.awaitFrames(p.remote,3,1);p.idle();check(p.data(p.remote).size()==1&&p.data(p.remote).get(0).data.length==2*DATA.length,"next successful submit sends both retained requests");check(p.sendPeak.get()==1,"rejection recovery remains single writer");cases++;
+        }
+    }
+    static void sendFailureAndReconnect()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            PumpBase.Remote old=p.remote;old.failSend=true;p.produce(DATA);p.idle();check(p.remote==null&&!p.welcome,"failed active transport detached");check(p.lostCalls.get()==1,"single detach");check(p.tx.delivered==0,"failed send never fabricates ACK");
+            PumpBase.Remote next=p.replaceAndWelcome(0);p.awaitFrames(next,3,1);verifySingle(p,next);check(p.data(old).isEmpty(),"failed transport has no DATA");cases++;
+        }
+    }
+    static void replacementDuringSend()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            PumpBase.Remote old=p.remote;old.sendReached=new CountDownLatch(1);old.sendRelease=new CountDownLatch(1);old.failSend=true;
+            p.produce(DATA);await(old.sendReached,"old send entered");PumpBase.Remote next=p.replaceAndWelcome(0);old.sendRelease.countDown();
+            p.awaitFrames(next,3,1);verifySingle(p,next);check(p.remote==next&&p.welcome,"old failure preserves replacement transport");check(p.lostCalls.get()==0,"old failure cannot detach new transport");cases++;
+        }
+    }
+    static void ackRace()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            p.armEmpty();p.signal();await(p.emptyReached,"ACK empty boundary");
+            synchronized(p.gate){p.rx.append(0,DATA);p.rx.confirm(DATA.length);}p.signal();p.emptyRelease.countDown();p.awaitFrames(p.remote,4,1);p.idle();
+            check(p.type(p.remote,4).get(0).offset==DATA.length,"concurrent delivered ACK sent immediately");check(p.data(p.remote).isEmpty(),"ACK has no invented DATA");check(p.rx.credit()==p.rx.capacity(),"RX credit restored");cases++;
+        }
+    }
+    static void creditAndReplay()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            byte[] first=new byte[16384],second=new byte[16384];Arrays.fill(first,(byte)1);Arrays.fill(second,(byte)2);p.produce(first);p.produce(second);p.awaitFrames(p.remote,3,2);p.idle();
+            check(p.tx.credit()==0&&p.tx.pending()==32768,"bounded full window");boolean denied=false;try{p.produce(DATA);}catch(IOException e){denied=true;}check(denied,"full window refuses overflow");
+            synchronized(p.gate){p.accepted=32768;p.tx.confirm(16384);}p.signal();p.idle();check(p.tx.credit()==16384,"real confirm restores exact credit");
+            p.produce(DATA);p.awaitFrames(p.remote,3,3);p.idle();check(p.data(p.remote).get(2).offset==32768,"new data uses next absolute offset");
+            PumpBase.Remote next=p.replaceAndWelcome(32768);p.awaitFrames(next,3,1);p.idle();check(p.data(next).size()==1&&p.data(next).get(0).offset==32768,"WELCOME resumes only unaccepted suffix");check(Arrays.equals(p.data(next).get(0).data,DATA),"resumed suffix exact");check(p.tx.delivered==16384,"accepted is not delivered credit");cases++;
+        }
+    }
+    static void backpressureAndClose()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            p.remote.queued=65537;p.remote.queueReached=new CountDownLatch(1);p.produce(DATA);await(p.remote.queueReached,"socket pressure reached");
+            check(p.data(p.remote).isEmpty()&&p.cursor==0,"socket pressure does not consume DATA");check(p.writes.submitted.get()==1,"pressure preserves one writer task");
+            p.remote.queued=0;p.signal();p.awaitFrames(p.remote,3,1);verifySingle(p,p.remote);cases++;
+        }
+        try(PumpBase p=new FixedPump()) {
+            p.remote.queued=65537;p.remote.queueReached=new CountDownLatch(1);p.produce(DATA);await(p.remote.queueReached,"pressure before close");p.close();check(p.data(p.remote).isEmpty(),"close interrupts pressured writer without data");check(!p.pumpPending.get(),"pressured writer ownership released");cases++;
+        }
+    }
+    static void readyAndTerminal()throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            p.state=1;p.listener.status=(p.epoch<<3)|3;p.pauseSent=p.epoch;p.produce(DATA);p.awaitFrames(p.remote,3,1);p.idle();check(p.type(p.remote,8).isEmpty(),"READY waits for accepted TX");
+            synchronized(p.gate){p.accepted=p.tx.next;}p.signal();p.awaitFrames(p.remote,8,1);p.idle();check(p.type(p.remote,8).get(0).value==DATA.length,"READY carries exact accepted frontier");p.signal();p.idle();check(p.type(p.remote,8).size()==1,"READY coalesced for same frontier");cases++;
+        }
+        try(PumpBase p=new FixedPump()) {
+            p.terminal=true;p.produce(DATA);p.idle();check(p.remote.frames.isEmpty(),"terminal forbids sends");check(p.writes.submitted.get()==1,"terminal exits without spin");check(p.tx.next==DATA.length&&p.cursor==0,"terminal data retained");cases++;
+        }
+    }
+    static void concurrentProducers(boolean atEmptyBoundary)throws Exception {
+        try(PumpBase p=new FixedPump()) {
+            if(atEmptyBoundary){p.armEmpty();p.signal();await(p.emptyReached,"producer burst holds empty boundary");}
+            ExecutorService producers=Executors.newFixedThreadPool(8);List<Future<?>> tasks=new ArrayList<>();
+            for(int i=0;i<256;i++){final byte v=(byte)i;tasks.add(producers.submit(()->{try{p.produce(new byte[]{v});}catch(Exception e){throw new RuntimeException(e);}}));}
+            for(Future<?> t:tasks)t.get(5,TimeUnit.SECONDS);producers.shutdown();check(producers.awaitTermination(5,TimeUnit.SECONDS),"producer completion");
+            if(atEmptyBoundary){check(p.cursor==0&&p.tx.next==256,"burst fully queued before releasing old writer");p.emptyRelease.countDown();}
+            p.awaitFrames(p.remote,3,1);p.idle();
+            byte[] expected=p.tx.read(0);ByteArrayOutputStream actual=new ByteArrayOutputStream();long offset=0;for(StationRecoveryWire f:p.data(p.remote)){check(f.offset==offset,"concurrent contiguous offsets");actual.write(f.data);offset+=f.data.length;}
+            check(offset==256&&p.cursor==256,"all concurrent bytes consumed exactly once");check(Arrays.equals(actual.toByteArray(),expected),"concurrent order matches real bounded buffer");check(p.sendPeak.get()==1&&p.writes.peak.get()==1,"concurrent producers retain single writer");cases++;
+        }
+    }
+    public static void main(String[] args)throws Exception {
+        for(int i=0;i<64;i++){emptyRace(false);emptyRace(true);}
+        normalAndIdle();rejection();concurrentRejection();closeDuringEmpty();sendFailureAndReconnect();replacementDuringSend();ackRace();creditAndReplay();backpressureAndClose();readyAndTerminal();concurrentProducers(false);concurrentProducers(true);
+        System.out.println("{\"checks\":"+checks+",\"cases\":"+cases+",\"baselineDeferred\":"+baselineDeferred+",\"fixedImmediate\":"+fixedImmediate+",\"networkUsed\":false,\"phoneUsed\":false}");
+    }
+}
