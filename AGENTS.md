@@ -1,5 +1,7 @@
 # R74 candidata — ciclo de vida, ANR e latência — 07/10/2026
 
+Entrega publicada: app `557014b4ff5ec5c3c0162847d922c0587f68b0e9`; pedido APP → SERVIDOR `8d48252fb7e91af83b6138afa411d5c2607edcc8`, branch `docs/station-r74-session-lifecycle-20261007`, documento `docs/station-android/ENTREGA-APP-R74-LIFECYCLE-LATENCIA-20261007.md`. Recibo em `docs/server/RECIBO-ENTREGA-R74-LIFECYCLE-20261007.json`. É nosso pedido completo, não resposta, ativação ou implantação Linux. Não confundir com o último retorno real 815ceaca. O commit executável permanece 557014b; acréscimo posterior apenas documental.
+
 Leia `versions/station-session-lifecycle-r74-20261007/README.md`, STATUS e o handoff APP → SERVIDOR. APK `e56896f28b16645653bfd28311cd0a8a9a5458e6d443849916a4dede6dc7fafe`; runtime `804b2acfea4c6d615bf40dba30e1777015098bf7375d0745db8d117555eb2516`. Compilada e assinada, **não instalada nem estável**. Ambos aparelhos ainda R73. Exatamente quatro entradas alteradas e 13.221 preservadas. Mesma assinatura, cores, controles, mídia e motores offline.
 
 Validação: 201 fontes Java; 1.206 verificações históricas em execução separada de 101 verificações de sessão e 42 guardas; três probes nativos. Testes locais não substituem Android físico nem partida real em dupla.
