@@ -19,7 +19,7 @@
       "version": "R84",
       "directory": "test-up-to-4-players-r84",
       "branch": "fix/station-game-layout-r84-20261008",
-      "sourceCommit": null,
+      "sourceCommit": "493d1c00b444c63936d354f944db1825b48e6f92",
       "sourceDirectory": "versions/station-game-layout-r84-20261008",
       "apk": "TurboStations-Premium-R84-20261008.apk",
       "apkSHA256": "3dd465fba8681b8de2cf32b2d87d24c1dcc478a7b6c38be4c5d4d1716bcb9495",
@@ -36,7 +36,7 @@
       "installationReceipt": "versions/station-game-layout-r84-20261008/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "pending"
+      "sourceCommitStatus": "committed"
     }
   }
 }
