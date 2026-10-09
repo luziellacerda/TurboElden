@@ -11,7 +11,7 @@ def git(*args):
  p=subprocess.run(['git','-c','safe.directory='+REPO.as_posix(),*args],cwd=REPO,capture_output=True)
  assert p.returncode==0,p.stderr.decode('utf8','replace');return p.stdout.decode('utf8','replace').strip()
 active=read(REPO/'release-channels/ACTIVE.json');assert active==read(BACKUP/'release-channels/ACTIVE.json')
-assert active['channels']['test-4p']['version']=='R95' and not read(ROOT/'INSTALLATION.json')['installed']
+assert active['channels']['test-4p']['version']=='R95' and read(ROOT/'INSTALLATION.json')['installed']
 repro=read(ROOT/'evidence/backup-reproduction.json');assert repro['javaReproduced'] and repro['carouselReproduced']
 for channel in active['channels'].values():assert sha(BACKUP/channel['directory']/channel['apk'])==channel['apkSHA256']
 previous=BACKUP/'test-up-to-4-players-r94/TurboStations-Premium-R94-20261009.apk'
@@ -31,7 +31,7 @@ shutil.copytree(ROOT/'evidence',maintenance/'evidence',dirs_exist_ok=True)
 (BACKUP/'LEIA-ME.md').write_text('''# Backup completo — R76 e R95 pronta
 
 As fontes e os dois canais selecionados estão em `release-channels/ACTIVE.json`.
-R76 é a referência de dois jogadores. R95 é a candidata com o mapa GameCube corrigido e escolhas online integradas; ainda NÃO instalada, pois o Samsung saiu da USB antes da transferência. O Samsung permanece R94 e o Motorola R86.
+R76 é a referência de dois jogadores. R95 é a candidata com o mapa GameCube corrigido e escolhas online integradas; foi instalada no Samsung A56 e Motorola Edge 30 com hash integral conferido e dados preservados.
 
 O instalador R94 está temporariamente preservado até a R95 ser instalada e conferida. Nenhum APK foi apagado nesta etapa. O histórico completo atualizado está em `TurboElden-completo-20261008.bundle`. Os canais incluem fontes e entradas de reprodução; o backup R95 recompilou Java e carrossel idênticos.
 
@@ -39,6 +39,6 @@ Use os caminhos e hashes de ACTIVE, sem selecionar fontes por data. `BUILD-INPUT
 ''','utf8')
 for n,v in read(BACKUP/'BUILD-INPUTS-VERIFIED.json')['files'].items():assert sha(BACKUP/n)==v['sha256'],n
 files={p.relative_to(BACKUP).as_posix():dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(BACKUP.rglob('*')) if p.is_file() and p.name!='BACKUP-COMPLETE.json'}
-report=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),complete=True,gitBundleVerified=True,appCommit=current,sourceCommit=active['channels']['test-4p']['sourceCommit'],installers=len(list(BACKUP.rglob('*.apk'))),selectedInstallers=2,pendingRetirement=[previous.relative_to(BACKUP).as_posix()],candidateInstalled=False,allCurrentAndArchivedGitRefsPreserved=True,javaAndCarouselReproduced=True,files=files)
+report=dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),complete=True,gitBundleVerified=True,appCommit=current,sourceCommit=active['channels']['test-4p']['sourceCommit'],installers=len(list(BACKUP.rglob('*.apk'))),selectedInstallers=2,pendingRetirement=[previous.relative_to(BACKUP).as_posix()],candidateInstalled=True,allCurrentAndArchivedGitRefsPreserved=True,javaAndCarouselReproduced=True,files=files)
 (BACKUP/'BACKUP-COMPLETE.json').write_text(json.dumps(report,indent=2)+'\n','utf8')
 print(json.dumps({k:v for k,v in report.items() if k!='files'}))
