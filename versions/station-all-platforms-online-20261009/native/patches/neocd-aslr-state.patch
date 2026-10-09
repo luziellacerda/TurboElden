@@ -1,0 +1,33 @@
+--- a/src/neogeocd.cpp
++++ b/src/neogeocd.cpp
+@@ -299,10 +299,28 @@
+     HleBios::saveState(out);
+ 
+     // M68K
+-    out << m68ki_cpu;
++    // Host addresses vary with ASLR and cannot be part of a shared state CRC.
++    // restoreState reconstructs the cycle tables and callbacks locally.
++    m68ki_cpu_core stateCpu = m68ki_cpu;
++    stateCpu.cyc_instruction = nullptr;
++    stateCpu.cyc_exception = nullptr;
++    stateCpu.int_ack_callback = nullptr;
++    stateCpu.bkpt_ack_callback = nullptr;
++    stateCpu.reset_instr_callback = nullptr;
++    stateCpu.cmpild_instr_callback = nullptr;
++    stateCpu.rte_instr_callback = nullptr;
++    stateCpu.tas_instr_callback = nullptr;
++    stateCpu.illg_instr_callback = nullptr;
++    stateCpu.pc_changed_callback = nullptr;
++    stateCpu.set_fc_callback = nullptr;
++    stateCpu.instr_hook_callback = nullptr;
++    out << stateCpu;
+ 
+     // Z80
+-    out << Z80;
++    Z80_Regs stateZ80 = Z80;
++    stateZ80.daisy = nullptr;
++    stateZ80.irq_callback = nullptr;
++    out << stateZ80;
+ 
+     // Timers
+     out << timers;

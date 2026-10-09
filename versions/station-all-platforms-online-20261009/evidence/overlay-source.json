@@ -1,0 +1,10 @@
+{
+  "url": "https://github.com/libretro/common-overlays",
+  "commit": "42c21b99889468a8e77fd7f002229ec16e2f9fa2",
+  "archiveSHA256": "9b59b3078845ee5ff3685fc5f89c291b2963fb9511c3e02627e26dee7cfa8ef9",
+  "changes": [
+    "Unique Station namespace",
+    "Fast-forward buttons disabled in online controls",
+    "Archived N64 layout omitted"
+  ]
+}
