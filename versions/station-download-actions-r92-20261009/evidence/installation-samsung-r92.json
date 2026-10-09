@@ -1,0 +1,42 @@
+{
+  "version": "R92",
+  "deviceLabel": "samsung",
+  "model": "SM-A566E",
+  "package": "org.turboramastation.frontend",
+  "startedUTC": "2026-10-09T15:07:18.590421+00:00",
+  "completedUTC": "2026-10-09T15:08:54.436423+00:00",
+  "previousAPK_SHA256": "af02c36dc143f1e82a683f86f4fa45240952eb621ed8da388298b82bf9436d1c",
+  "apkSHA256": "fd33af6e82d36c19986ff30f0f1f4b93b4b09614c9e141e9a93f70db110f6086",
+  "deviceAPK_SHA256": "fd33af6e82d36c19986ff30f0f1f4b93b4b09614c9e141e9a93f70db110f6086",
+  "apkBytes": 2136321416,
+  "installPerformed": true,
+  "installSuccess": true,
+  "uidPreserved": true,
+  "originalInstallTimestampPreserved": true,
+  "dataDirectoryPreserved": true,
+  "uninstalled": false,
+  "dataCleared": false,
+  "deviceSettingsChanged": false,
+  "activeEmulatorBeforeInstall": false,
+  "preInstallAppActivities": [
+    "org.emulationstation.frontend.ESActivity"
+  ],
+  "directStreaming": true,
+  "extraAPKCopiedToPhone": false,
+  "officialEntryRequested": true,
+  "launchVerified": false,
+  "authenticatedEntryVerified": false,
+  "physicalDisplayVerified": false,
+  "serverRegistryActivationVerified": false,
+  "twoDeviceGameplayVerified": false,
+  "inheritedR77OnlineQualificationStillRequired": true,
+  "serverChanged": false,
+  "installCommand": [
+    "install",
+    "--streaming",
+    "--no-incremental",
+    "-r",
+    "--user",
+    "0"
+  ]
+}

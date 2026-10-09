@@ -1,3 +1,9 @@
+# R92 instalada no Samsung — botões da central lado a lado
+
+Fonte completa versions/station-download-actions-r92-20261009. Mudança única emStationDownloadPanel.java: Pausar/Continuar eCancelar horizontais,104×34dp cada,8dp entreeles. APK fd33af6e82d36c19986ff30f0f1f4b93b4b09614c9e141e9a93f70db110f6086, hash integral eUID/dados preservados. Somenteclasses28.dex mudou; online/nativo/LEDs/vídeos/assinatura intactos. Backup Java/carrossel idêntico. Não foram executados novos testes de comportamento. Visual físico final ainda não observado; MotorolaR86. R91vídeos remotos/entrega26909e31 preservados, ativação do servidor não confirmada. Nenhum handoff novo por layout.
+
+## Histórico anterior
+
 # R91 instalada no Samsung — 09/10/2026 13:40 UTC
 
 Fonte completa versions/station-remote-media-r91-20261009, 220 Java. DOWNLOADS maior como Plataformas; cancelamento remove linha imediatamente. APK af02c36dc143f1e82a683f86f4fa45240952eb621ed8da388298b82bf9436d1c, hash integral e UID/dados preservados. Motorola permanece R86. Testes: 645 downloads,45 mídia,20 servidor; backup Java/carrossel idêntico. Mantenedor confirmou que R91 deu certo; central com download ativo observada. Corte físico de rede não testado.

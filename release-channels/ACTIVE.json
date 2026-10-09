@@ -16,13 +16,13 @@
       "sourceCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e"
     },
     "test-4p": {
-      "version": "R91",
-      "directory": "test-up-to-4-players-r91",
-      "branch": "fix/station-remote-media-r91-20261009",
-      "sourceCommit": "4276a5fa0af77a106bca2cab67116a34efe83501",
-      "sourceDirectory": "versions/station-remote-media-r91-20261009",
-      "apk": "TurboStations-Premium-R91-20261009.apk",
-      "apkSHA256": "af02c36dc143f1e82a683f86f4fa45240952eb621ed8da388298b82bf9436d1c",
+      "version": "R92",
+      "directory": "test-up-to-4-players-r92",
+      "branch": "fix/station-download-actions-r92-20261009",
+      "sourceCommit": null,
+      "sourceDirectory": "versions/station-download-actions-r92-20261009",
+      "apk": "TurboStations-Premium-R92-20261009.apk",
+      "apkSHA256": "fd33af6e82d36c19986ff30f0f1f4b93b4b09614c9e141e9a93f70db110f6086",
       "javaSourceCount": 220,
       "protocol": "station-stream.v3",
       "status": "experimental; exact approved online profiles required; server v3 activation reported in 9502c02; no four-phone gameplay qualification",
@@ -33,11 +33,11 @@
       "installedDevices": [
         "Samsung A56"
       ],
-      "installationReceipt": "versions/station-remote-media-r91-20261009/INSTALLATION.json",
+      "installationReceipt": "versions/station-download-actions-r92-20261009/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "committed",
-      "installationStatus": "Samsung R91 installed with full SHA verified; Motorola remains R86",
+      "sourceCommitStatus": "pending",
+      "installationStatus": "Samsung R92 installed with full SHA verified; Motorola remains R86",
       "sharedCarouselLighting": true,
       "newDreamcastOrangeFrameIncluded": true,
       "starsScale": 0.7,
@@ -63,7 +63,8 @@
       "remoteMediaServerDeployed": false,
       "embeddedVideosRetained": true,
       "userConfirmedDownloadsCorrection": true,
-      "remoteMediaServerCommit": "26909e31bc6bea8097988e0359f7f563b4050cda"
+      "remoteMediaServerCommit": "26909e31bc6bea8097988e0359f7f563b4050cda",
+      "downloadActionsSideBySide": true
     }
   }
 }
