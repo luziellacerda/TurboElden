@@ -1,0 +1,23 @@
+{
+  "branch": "feat/station-carousel-media-r91-20261009",
+  "commit": "26909e31bc6bea8097988e0359f7f563b4050cda",
+  "baseCommit": "2b04f591eb10ad76efc3b630ded4fff9ef2c2a27",
+  "appSourceCommit": "4276a5fa0af77a106bca2cab67116a34efe83501",
+  "handoff": "docs/station-android/ENTREGA-VIDEOS-REMOTOS-R91-20261009.md",
+  "serverDeployed": false,
+  "checkoutAndIndexPreserved": true,
+  "privateMediaPackage": "G:\\BAKUP SISTEMA APP 03-10-2026\\ATUAL-2P-E-TESTE-4P-20261008\\maintenance\\r91-server-media\\station-carousel-media-202610092.zip",
+  "privateMediaPackageSHA256": "74c99f7013a972c06bd3ef3dd53d5bf6542b038b06d8045356a73ac6ef9b0052",
+  "published": true,
+  "files": {
+    "src/TurboRamaSuiteOnlineServer/StationCarouselMedia.cs": "56d6a4aa3c838ce9e75db42752db2c9f9a203f7a4d1c4219e088abee63766642",
+    "src/TurboRamaSuiteOnlineServer/StationEndpoints.cs": "6be3ea2f7fa55ff1176c22fcda67a6d9018ce377601427d9c174b7488fba1e24",
+    "docs/station-android/carousel-media-r91-20261009/publish_media.py": "4b1db1fb4c57bccd6fe64e00fd42c915ee979e5548137abff8f23949d153ba6e",
+    "docs/station-android/carousel-media-r91-20261009/media-manifest.json": "827dfe47fbd446bccd1fe715f97dd1b0d89e7ce6317a809f0f318ef198b77e83",
+    "docs/station-android/carousel-media-r91-20261009/server-media-tests.json": "092a5814c7aefc75a1ecb72385faa2266b9e0953981be70d3cc5a1659e8f3433",
+    "docs/station-android/carousel-media-r91-20261009/StationMediaServerTests.cs": "3de02c46514c1916135e7598bd318e78eb09c2259fd11d9fbf996a624f131c46",
+    "docs/station-android/carousel-media-r91-20261009/StationMedia.Tests.csproj": "427ec1ae7cde3473166aeb722cde437c059a3a9300094cb166974a944504153d",
+    "docs/station-android/ENTREGA-VIDEOS-REMOTOS-R91-20261009.md": "2852f1323d2eb3c22747176d0b6f954900b97ad4b7f8e803edf904812fb7372f"
+  },
+  "productionActivated": false
+}

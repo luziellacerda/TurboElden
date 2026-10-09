@@ -6,7 +6,7 @@ Base exata: R90 fonte `58839537f28be3fbf17d012dd764b1431db4acd6`, recibo `1cb887
 
 - O botão ao lado de Plataformas passa a dizer **DOWNLOADS**, com largura, altura e escala de fonte iguais às do vizinho. O espaço da busca é ajustado apenas quando o botão está visível.
 - Cancelar remove imediatamente a linha e o contador. A tentativa interna permanece identificada até a transferência terminar de cancelar, evitando que dois gravadores concorram no mesmo jogo. Erros permanentes também oferecem Cancelar.
-- Aviso antigo, progresso, pausa, espera pela internet e persistência da fila continuam. O mantenedor confirmou a abertura da central R90; o visual e o cancelamento R91 ainda aguardam sua conferência física.
+- Aviso antigo, progresso, pausa, espera pela internet e persistência da fila continuam. O mantenedor confirmou a abertura da central R90; o mantenedor confirmou depois que a R91 deu certo. A central com transferência ativa também foi observada por captura privada; o agente não cancelou o download.
 
 ## Vídeos e capas
 
@@ -27,3 +27,5 @@ O servidor foi implementado em código aditivo baseado em `2b04f591eb10ad76efc3b
 APK SHA-256: `af02c36dc143f1e82a683f86f4fa45240952eb621ed8da388298b82bf9436d1c`.
 
 Git contém somente fontes e recibos. Mídia, APK, licenças e capturas privadas ficam fora. Canal ativo e instalador estão no backup único indicado em `release-channels/ACTIVE.json`.
+
+Entrega ao servidor publicada: [26909e31](https://github.com/luziellacerda/Servidor-pix/commit/26909e31bc6bea8097988e0359f7f563b4050cda). Ativação em produção pendente do operador.

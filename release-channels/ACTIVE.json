@@ -61,7 +61,9 @@
       "starsLoweredHeightFraction": 0.02,
       "remoteMediaClientReady": true,
       "remoteMediaServerDeployed": false,
-      "embeddedVideosRetained": true
+      "embeddedVideosRetained": true,
+      "userConfirmedDownloadsCorrection": true,
+      "remoteMediaServerCommit": "26909e31bc6bea8097988e0359f7f563b4050cda"
     }
   }
 }

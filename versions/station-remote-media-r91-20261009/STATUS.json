@@ -7,7 +7,7 @@
   "backupJavaReproduced": true,
   "backupCarouselReproduced": true,
   "installed": true,
-  "physicalDownloadPanelVerified": false,
+  "physicalDownloadPanelVerified": true,
   "physicalNetworkCutVerified": false,
   "downloadChecks": 645,
   "mediaChecks": 45,
@@ -18,5 +18,8 @@
   "embeddedVideosRetained": true,
   "remoteCarouselFiles": 58,
   "remoteVideoBytes": 109503389,
-  "onlineEngineChanged": false
+  "onlineEngineChanged": false,
+  "userConfirmedDownloadsCorrection": true,
+  "serverSourcePublished": true,
+  "serverCommit": "26909e31bc6bea8097988e0359f7f563b4050cda"
 }
