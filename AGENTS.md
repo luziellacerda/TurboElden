@@ -1,3 +1,9 @@
+# R93 instalada no Samsung — LEDs GameCube baseados no SNES
+
+Fonte completa versions/station-gamecube-led-r93-20261009. Mesmo motor/relógio/ganho/halo SNES; GameCube roxo com curva de luz SNES adaptada R↔G, aro do selo e separador rodapé mapeados.39capas locais medidas e WindWaker real conferida antes. APK e64931292c6c223595943c3f7c608710763d988f2a428db3248247d02d4007b1, hash/UID/dados preservados. SóshaderJava/classes35.dex e2fontesGLSL/carrossel mudam;220Java,emuladores,motores,30fps,downloadsR92 intactos. Backup Java/carrossel idêntico. Aprovação visual física após atualização ainda pendente; não alegar redução térmica ou gameplay. MotorolaR86. Sem novo handoff/alteração de servidor; R91remotemídia26909e31 ainda não confirmada ativa.
+
+## Histórico anterior
+
 # R92 instalada no Samsung — botões da central lado a lado
 
 Fonte completa versions/station-download-actions-r92-20261009. Mudança única emStationDownloadPanel.java: Pausar/Continuar eCancelar horizontais,104×34dp cada,8dp entreeles. APK fd33af6e82d36c19986ff30f0f1f4b93b4b09614c9e141e9a93f70db110f6086, hash integral eUID/dados preservados. Somenteclasses28.dex mudou; online/nativo/LEDs/vídeos/assinatura intactos. Backup Java/carrossel idêntico. Não foram executados novos testes de comportamento. Visual físico final ainda não observado; MotorolaR86. R91vídeos remotos/entrega26909e31 preservados, ativação do servidor não confirmada. Nenhum handoff novo por layout.
