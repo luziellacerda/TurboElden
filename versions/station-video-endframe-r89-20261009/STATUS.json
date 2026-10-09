@@ -5,9 +5,11 @@
   "apkSHA256": "76954ddc6b33358098201520e855168889c68aa3a206b9606e54b5ac7097bd7f",
   "backupJavaReproduced": true,
   "backupCarouselReproduced": true,
-  "installed": false,
+  "installed": true,
   "physicalFrameHoldVerified": false,
   "LEDsPreserved": true,
   "serverChanged": false,
-  "scope": "Two-frame early hold and ratings position only; download center is a separate pending release."
+  "scope": "Two-frame early hold and ratings position only; download center is a separate pending release.",
+  "authenticatedCatalogObserved": true,
+  "starPositionApprovedByUser": false
 }

@@ -1,3 +1,9 @@
+# R89 instalada no Samsung — 09/10/2026 13:04 UTC
+
+APK76954ddc6b33358098201520e855168889c68aa3a206b9606e54b5ac7097bd7f, hash integral/UID/dados conferidos; carrossel GameCube observado sem login. Não alegar verificação física do quadro final/posição das estrelas ou desempenho. Modelo publicado. R90 com central de downloads ainda em preparação, não confundir com R89.
+
+## Histórico anterior
+
 # R89 — modelo atual publicado antes da tela de downloads
 
 Fonte faf7e3e915a041812a72eb9a894c6d2f7dd34329, branch fix/station-video-endframe-r89-20261009. Ler versions/station-video-endframe-r89-20261009/README.md e STATUS.json. Vídeo uma passagem, quadro dois antes do final; estrelas descem até2% da altura sem mudar tamanho. LEDs/menu30fps/emuladores/online preservados. Backup Java/carrossel reproduzidos idênticos. APK76954ddc pronto, NÃO instalado: USB ausente. Samsung aindaR88corrigida.
