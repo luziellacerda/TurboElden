@@ -1,5 +1,15 @@
 {
   "version": "R96",
-  "installed": false,
-  "reason": "No Android device was visible through USB after packaging."
+  "installed": true,
+  "devices": [
+    {
+      "model": "Samsung Galaxy A56",
+      "result": "Success",
+      "apkSHA256Verified": true
+    }
+  ],
+  "apkSHA256": "64a71268b77196ef2f3c064eb0a1d24e1ef75cc3be9f4bcd9cfcb064ce6d5f24",
+  "preservedApplicationData": true,
+  "physicalControllerTested": false,
+  "note": "BSP-D3 was not connected as an Android input device during the installation receipt."
 }

@@ -4,7 +4,12 @@
   "scope": "bluetooth-controls-only",
   "compiled": true,
   "packaged": true,
-  "installed": false,
+  "installed": true,
+  "installedDevices": [
+    "Samsung Galaxy A56"
+  ],
+  "installedApkSHA256Verified": true,
+  "physicalControllerTested": false,
   "apkSHA256": "64a71268b77196ef2f3c064eb0a1d24e1ef75cc3be9f4bcd9cfcb064ce6d5f24",
   "classes35SHA256": "2142f052e8d927469c47b509d6f1213ca7e458b2dcfeefc06e9d7639188bf651",
   "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
