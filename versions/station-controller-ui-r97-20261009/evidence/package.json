@@ -1,0 +1,15 @@
+{
+  "version": "R97",
+  "baseSHA256": "64a71268b77196ef2f3c064eb0a1d24e1ef75cc3be9f4bcd9cfcb064ce6d5f24",
+  "sha256": "d0f6456e6ff08dca57f0e5b3525c6b8cea67200e3f84c60175c20c09ad453a10",
+  "bytes": 2135662791,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changes": [
+    "lib/arm64-v8a/libturbo_carousel.so",
+    "classes35.dex"
+  ],
+  "allEntriesVerified": true,
+  "entries": 13447,
+  "installed": false,
+  "utc": "2026-10-09T17:51:38.611474+00:00"
+}

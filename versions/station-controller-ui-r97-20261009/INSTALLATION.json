@@ -1,0 +1,14 @@
+{
+  "version": "R97",
+  "installed": true,
+  "device": "Samsung Galaxy A56",
+  "method": "adb install --no-incremental -r -t",
+  "result": "Success",
+  "apkSHA256": "d0f6456e6ff08dca57f0e5b3525c6b8cea67200e3f84c60175c20c09ad453a10",
+  "installedSHA256Verified": true,
+  "uninstalledOrClearedData": false,
+  "controllerDetectedBeforeInstall": "Xbox Wireless Controller (BSP-D3 mode RB+HOME)",
+  "visualVerification": "pending-unlock",
+  "gameplayTested": false,
+  "unidentifiedTransparentOnlineModal": "pending-identification"
+}

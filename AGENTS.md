@@ -1,3 +1,9 @@
+# R97 no Samsung — barra original com Bluetooth
+
+Pedido atual: foco nos controles, sem ler handoffs. Manter o visual original do carrossel com gamepad; esconder somente controles virtuais dentro do jogo. Fonte versions/station-controller-ui-r97-20261009, base integral R96. R97 altera apenas a apresentação durante render do GuiStore (sem mudar estado de entrada) e remove fundo/borda externa de Sua sala/Estou pronto. APK d0f6456e6ff08dca57f0e5b3525c6b8cea67200e3f84c60175c20c09ad453a10 instalado diretamente no Samsung A56; hash conferido. Ver INSTALLATION.json para estado da conferência física. Emuladores/autoconfig/perfis R96 intactos. BSP-D3 foi reconhecido como gamepad em RB+HOME, nome Xbox Wireless Controller 045e:02e0; antes aparecia como TOUCHSCREEN. Não afirmar que X+HOME funcionou neste aparelho. Relato adicional de modal transparente online ainda sem tela identificada. Nenhuma alteração no servidor.
+
+## Histórico anterior
+
 # R95 instalada nos dois aparelhos — conferência física pendente
 
 Motorola Edge 30 e Samsung A56 atualizados diretamente para R95. APK 5c03e013ff01fd1bf1eaacebc25bf5640b7b9094428e843b3f320b75fa4cf431 conferido integralmente nos dois; UID, data original e diretório de dados preservados, sem desinstalar, limpar dados ou copiar APK extra. Motorola abriu StationRoomsActivity; Samsung confirmou instalação/hash, mas a tela estava apagada na observação final. Aprovação visual do efeito GameCube e gameplay em dupla ainda pendentes. R94 de segurança permanece temporariamente até essa conferência. Consulte versions/station-snes-light-maps-r95-20261009/INSTALLATION.json.
