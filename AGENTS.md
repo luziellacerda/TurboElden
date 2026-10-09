@@ -1,3 +1,11 @@
+# R91 instalada no Samsung — 09/10/2026 13:40 UTC
+
+Fonte completa versions/station-remote-media-r91-20261009, 220 Java. DOWNLOADS maior como Plataformas; cancelamento remove linha imediatamente. APK af02c36dc143f1e82a683f86f4fa45240952eb621ed8da388298b82bf9436d1c, hash integral e UID/dados preservados. Motorola permanece R86. Testes: 645 downloads,45 mídia,20 servidor; backup Java/carrossel idêntico. R90 central confirmada pelo mantenedor; visual/cancelamento físicos R91 pendentes.
+
+Cliente de vídeo remoto com cache offline implementado; servidor aditivo preparado sobre2b04f591. Consultar README/STATUS/SERVER-DELIVERY. NÃO implantado. Manter58vídeos embutidos até ativação e cache confirmados; abertura separada. Capas preservam cache remoto existente. Sem redução de APK/temperatura alegada. LEDs,30fps,vídeos/estrelasuma passagem,motores/licenças/saves preservados. Não sobrepor fontes antigas/retorno5p209Java sobreesta220Java. Publicar sócódigo/recibos,nenhumAPK/mídia/dadopessoal. Operador coordena implantação inicial; atualizações futuras de arquivos dispensam reinício.
+
+## Histórico anterior
+
 # R90 instalada no Samsung — 09/10/2026 13:15 UTC
 
 Fonte completa: versions/station-download-center-r90-20261009. APK a796e3b65fe929f99c6923d7d5959254c5e0cdecf999cb343886a0b73a907a56, hash integral/UID/dados preservados. Central adicional ao lado de Plataformas, fila persistente, pausa/cancelamento e espera de rede. 641 checks locais; backup Java/carrossel reproduzido idêntico. Conferência física da central/corte de internet ainda pendente. Motorola permanece R86. Vídeos R89/LEDs/motores/online preservados.
