@@ -3,7 +3,7 @@
   "sourceCount": 212,
   "completeSignedAPK": false,
   "installed": false,
-  "serverCandidateDeployed": false,
+  "serverCandidateDeployed": true,
   "productionPreserved": true,
   "peerAndroidGameplayQualified": false,
   "allRequestedPlatformsOnlineComplete": false,
@@ -13,5 +13,8 @@
     "wiiu-local-netplay",
     "switch-game-mode"
   ],
-  "portableCueIdentity": true
+  "portableCueIdentity": true,
+  "serverSidePublicationComplete": true,
+  "catalogRevision": 27,
+  "serverProfileCount": 5176
 }

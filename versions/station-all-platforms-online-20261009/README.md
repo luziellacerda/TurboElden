@@ -1,6 +1,6 @@
 # Station — candidata de integração de plataformas
 
-Leia `../../docs/server/HANDOFF-ONLINE-PLATAFORMAS-STATION-20261009.md` para o estado integral. Backup anterior publicado nos dois repositórios; código desta candidata está isolado. Produção e canais anteriores não foram trocados.
+Leia `../../docs/server/HANDOFF-ONLINE-PLATAFORMAS-STATION-20261009.md` para o estado integral. Backup anterior publicado nos dois repositórios; código desta candidata está isolado. Servidor publicado com catálogo27/perfis5176. Canais e instalações dos celulares permanecem anteriores; o APK completo ainda precisa ser montado no PCAPK.
 
 212 Java e DEX compilados, quatro novos cores com fonte/licença e patches, runtime de cinco preservado. N64 e NeoCD passaram na transferência de estado em dois processos. Gameplay Android e APK completo assinado pendentes; Dreamcast quatro, Dolphin Station e Wii U ainda precisam de integração nativa. Não anunciar todas as plataformas prontas.
 
