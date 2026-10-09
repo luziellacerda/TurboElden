@@ -1,3 +1,11 @@
+# R89 — modelo atual publicado antes da tela de downloads
+
+Fonte faf7e3e915a041812a72eb9a894c6d2f7dd34329, branch fix/station-video-endframe-r89-20261009. Ler versions/station-video-endframe-r89-20261009/README.md e STATUS.json. Vídeo uma passagem, quadro dois antes do final; estrelas descem até2% da altura sem mudar tamanho. LEDs/menu30fps/emuladores/online preservados. Backup Java/carrossel reproduzidos idênticos. APK76954ddc pronto, NÃO instalado: USB ausente. Samsung aindaR88corrigida.
+
+Novo pedido separado R90: aviso adicional ao lado dePlataformas abre lista de downloads, capas/nomes/progresso/tempo/velocidade/pausa/cancelamento, espera por reconexão; manter aviso antigo. Não declarar implementado/instalado até recibos. Não publicarAPK/mídia/dados pessoais.
+
+## Histórico anterior
+
 # R88 corrigida — LEDs preservados, menu30fps e reprodução única
 
 Canal completo versions/station-single-pass-r88-20261009. BaseR87,214Java. Samsung atualizado diretamente, hash integral e UID/dados preservados; consulte STATUS,INSTALLATION e release-channels/ACTIVE.json. Motorola permaneceR86.

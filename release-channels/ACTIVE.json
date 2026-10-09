@@ -16,28 +16,26 @@
       "sourceCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e"
     },
     "test-4p": {
-      "version": "R88",
-      "directory": "test-up-to-4-players-r88",
-      "branch": "fix/station-single-pass-r88-20261009",
-      "sourceCommit": "16e83405350442b634edbd468bd3778b376a149a",
-      "sourceDirectory": "versions/station-single-pass-r88-20261009",
-      "apk": "TurboStations-Premium-R88-20261009.apk",
-      "apkSHA256": "ace762fc0aeb389b28279c1f7061a1210d65398fd1f7f230b4c60645d0ac3c1b",
-      "javaSourceCount": 214,
+      "version": "R89",
+      "directory": "test-up-to-4-players-r89",
+      "branch": "fix/station-video-endframe-r89-20261009",
+      "sourceCommit": "faf7e3e915a041812a72eb9a894c6d2f7dd34329",
+      "sourceDirectory": "versions/station-video-endframe-r89-20261009",
+      "apk": "TurboStations-Premium-R89-20261009.apk",
+      "apkSHA256": "76954ddc6b33358098201520e855168889c68aa3a206b9606e54b5ac7097bd7f",
+      "javaSourceCount": 215,
       "protocol": "station-stream.v3",
       "status": "experimental; exact approved online profiles required; server v3 activation reported in 9502c02; no four-phone gameplay qualification",
       "fourPhoneGameplayQualified": false,
-      "installed": true,
+      "installed": false,
       "runtimeCoresEnginesUnchangedFromR79": true,
       "archivedDreamcastEffectIncluded": false,
-      "installedDevices": [
-        "SM-A566E"
-      ],
-      "installationReceipt": "versions/station-single-pass-r88-20261009/INSTALLATION.json",
+      "installedDevices": [],
+      "installationReceipt": null,
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
       "sourceCommitStatus": "committed",
-      "installationStatus": "Corrected R88 with R87 LEDs restored installed and full hash verified on Samsung; Motorola last R86. No gameplay in this test.",
+      "installationStatus": "Samsung still on corrected R88; USB absent at R89 packaging",
       "sharedCarouselLighting": true,
       "newDreamcastOrangeFrameIncluded": true,
       "starsScale": 0.7,
@@ -56,7 +54,9 @@
       "coverLEDsEnabled": true,
       "menuFPS": 30,
       "videoPlaysOnce": true,
-      "ratingPlaysOnce": true
+      "ratingPlaysOnce": true,
+      "holdFramesBeforeLast": 2,
+      "starsLoweredHeightFraction": 0.02
     }
   }
 }
