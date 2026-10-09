@@ -1,0 +1,620 @@
+{
+  "coordinateSpace": [
+    1024,
+    1536
+  ],
+  "imageCount": 39,
+  "regions": {
+    "upper_left": [
+      10,
+      10,
+      110,
+      185
+    ],
+    "upper_right": [
+      917,
+      10,
+      1005,
+      185
+    ],
+    "shoulder_left": [
+      0,
+      219,
+      62,
+      420
+    ],
+    "shoulder_right": [
+      959,
+      219,
+      1024,
+      420
+    ],
+    "middle_left": [
+      0,
+      515,
+      58,
+      755
+    ],
+    "middle_right": [
+      967,
+      515,
+      1024,
+      755
+    ],
+    "lower_left": [
+      0,
+      994,
+      40,
+      1320
+    ],
+    "lower_right": [
+      980,
+      994,
+      1024,
+      1320
+    ],
+    "bottom_left": [
+      0,
+      1369,
+      100,
+      1535
+    ],
+    "bottom_right": [
+      923,
+      1369,
+      1024,
+      1535
+    ],
+    "badge": [
+      709,
+      1090,
+      999,
+      1387
+    ],
+    "separator": [
+      460,
+      1410,
+      493,
+      1508
+    ],
+    "cloud": [
+      126,
+      1410,
+      230,
+      1500
+    ],
+    "folder": [
+      507,
+      1420,
+      598,
+      1500
+    ],
+    "stars": [
+      797,
+      1143,
+      921,
+      1201
+    ],
+    "badge_text": [
+      773,
+      1204,
+      948,
+      1311
+    ],
+    "download_text": [
+      244,
+      1425,
+      445,
+      1490
+    ],
+    "install_text": [
+      605,
+      1426,
+      801,
+      1489
+    ],
+    "shield": [
+      802,
+      1410,
+      879,
+      1503
+    ]
+  },
+  "minMaxAcrossImages": {
+    "upper_left": {
+      "purple": [
+        7327,
+        7831
+      ],
+      "purpleBeyondMask": [
+        4447,
+        4894
+      ],
+      "strongPurple": [
+        3052,
+        3345
+      ],
+      "strongBeyondMask": [
+        775,
+        957
+      ],
+      "white": [
+        338,
+        515
+      ],
+      "whiteInsideMask": [
+        181,
+        344
+      ]
+    },
+    "upper_right": {
+      "purple": [
+        7581,
+        8167
+      ],
+      "purpleBeyondMask": [
+        4497,
+        5083
+      ],
+      "strongPurple": [
+        2842,
+        3291
+      ],
+      "strongBeyondMask": [
+        700,
+        941
+      ],
+      "white": [
+        112,
+        166
+      ],
+      "whiteInsideMask": [
+        0,
+        10
+      ]
+    },
+    "shoulder_left": {
+      "purple": [
+        7492,
+        8400
+      ],
+      "purpleBeyondMask": [
+        4106,
+        4741
+      ],
+      "strongPurple": [
+        2395,
+        2830
+      ],
+      "strongBeyondMask": [
+        189,
+        389
+      ],
+      "white": [
+        243,
+        370
+      ],
+      "whiteInsideMask": [
+        236,
+        364
+      ]
+    },
+    "shoulder_right": {
+      "purple": [
+        7662,
+        8225
+      ],
+      "purpleBeyondMask": [
+        4478,
+        4926
+      ],
+      "strongPurple": [
+        2764,
+        3234
+      ],
+      "strongBeyondMask": [
+        540,
+        736
+      ],
+      "white": [
+        283,
+        425
+      ],
+      "whiteInsideMask": [
+        270,
+        408
+      ]
+    },
+    "middle_left": {
+      "purple": [
+        7727,
+        8307
+      ],
+      "purpleBeyondMask": [
+        4603,
+        5328
+      ],
+      "strongPurple": [
+        2610,
+        3148
+      ],
+      "strongBeyondMask": [
+        516,
+        926
+      ],
+      "white": [
+        404,
+        595
+      ],
+      "whiteInsideMask": [
+        375,
+        563
+      ]
+    },
+    "middle_right": {
+      "purple": [
+        8504,
+        9458
+      ],
+      "purpleBeyondMask": [
+        5136,
+        5866
+      ],
+      "strongPurple": [
+        3238,
+        3576
+      ],
+      "strongBeyondMask": [
+        770,
+        1125
+      ],
+      "white": [
+        388,
+        584
+      ],
+      "whiteInsideMask": [
+        374,
+        560
+      ]
+    },
+    "lower_left": {
+      "purple": [
+        4104,
+        5356
+      ],
+      "purpleBeyondMask": [
+        2256,
+        3470
+      ],
+      "strongPurple": [
+        1319,
+        1649
+      ],
+      "strongBeyondMask": [
+        456,
+        738
+      ],
+      "white": [
+        0,
+        44
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "lower_right": {
+      "purple": [
+        4803,
+        5435
+      ],
+      "purpleBeyondMask": [
+        1753,
+        2160
+      ],
+      "strongPurple": [
+        1489,
+        1832
+      ],
+      "strongBeyondMask": [
+        67,
+        237
+      ],
+      "white": [
+        94,
+        112
+      ],
+      "whiteInsideMask": [
+        87,
+        107
+      ]
+    },
+    "bottom_left": {
+      "purple": [
+        5692,
+        6304
+      ],
+      "purpleBeyondMask": [
+        2893,
+        3498
+      ],
+      "strongPurple": [
+        2123,
+        2343
+      ],
+      "strongBeyondMask": [
+        110,
+        271
+      ],
+      "white": [
+        23,
+        75
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "bottom_right": {
+      "purple": [
+        5932,
+        6369
+      ],
+      "purpleBeyondMask": [
+        3126,
+        3546
+      ],
+      "strongPurple": [
+        2120,
+        2341
+      ],
+      "strongBeyondMask": [
+        156,
+        264
+      ],
+      "white": [
+        14,
+        34
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "badge": {
+      "purple": [
+        22022,
+        34146
+      ],
+      "purpleBeyondMask": [
+        6167,
+        15459
+      ],
+      "strongPurple": [
+        13357,
+        16585
+      ],
+      "strongBeyondMask": [
+        1237,
+        2458
+      ],
+      "white": [
+        9607,
+        11124
+      ],
+      "whiteInsideMask": [
+        1088,
+        1263
+      ]
+    },
+    "separator": {
+      "purple": [
+        1392,
+        1586
+      ],
+      "purpleBeyondMask": [
+        572,
+        751
+      ],
+      "strongPurple": [
+        273,
+        316
+      ],
+      "strongBeyondMask": [
+        0,
+        2
+      ],
+      "white": [
+        0,
+        0
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "cloud": {
+      "purple": [
+        0,
+        0
+      ],
+      "purpleBeyondMask": [
+        0,
+        0
+      ],
+      "strongPurple": [
+        0,
+        0
+      ],
+      "strongBeyondMask": [
+        0,
+        0
+      ],
+      "white": [
+        1688,
+        1729
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "folder": {
+      "purple": [
+        0,
+        0
+      ],
+      "purpleBeyondMask": [
+        0,
+        0
+      ],
+      "strongPurple": [
+        0,
+        0
+      ],
+      "strongBeyondMask": [
+        0,
+        0
+      ],
+      "white": [
+        2940,
+        2985
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "stars": {
+      "purple": [
+        96,
+        200
+      ],
+      "purpleBeyondMask": [
+        96,
+        200
+      ],
+      "strongPurple": [
+        0,
+        14
+      ],
+      "strongBeyondMask": [
+        0,
+        14
+      ],
+      "white": [
+        1386,
+        1423
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "badge_text": {
+      "purple": [
+        14,
+        50
+      ],
+      "purpleBeyondMask": [
+        13,
+        47
+      ],
+      "strongPurple": [
+        1,
+        4
+      ],
+      "strongBeyondMask": [
+        0,
+        1
+      ],
+      "white": [
+        6461,
+        6768
+      ],
+      "whiteInsideMask": [
+        0,
+        2
+      ]
+    },
+    "download_text": {
+      "purple": [
+        0,
+        2
+      ],
+      "purpleBeyondMask": [
+        0,
+        2
+      ],
+      "strongPurple": [
+        0,
+        0
+      ],
+      "strongBeyondMask": [
+        0,
+        0
+      ],
+      "white": [
+        3337,
+        3482
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "install_text": {
+      "purple": [
+        1,
+        6
+      ],
+      "purpleBeyondMask": [
+        1,
+        6
+      ],
+      "strongPurple": [
+        0,
+        0
+      ],
+      "strongBeyondMask": [
+        0,
+        0
+      ],
+      "white": [
+        3036,
+        3210
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    },
+    "shield": {
+      "purple": [
+        0,
+        0
+      ],
+      "purpleBeyondMask": [
+        0,
+        0
+      ],
+      "strongPurple": [
+        0,
+        0
+      ],
+      "strongBeyondMask": [
+        0,
+        0
+      ],
+      "white": [
+        1429,
+        1463
+      ],
+      "whiteInsideMask": [
+        0,
+        0
+      ]
+    }
+  },
+  "scope": "39 original local GameCube PNGs, geometric color overlap before mask expansion; source media remains private."
+}

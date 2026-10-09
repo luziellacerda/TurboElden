@@ -1,0 +1,27 @@
+{
+  "version": "R95",
+  "compiled": true,
+  "packaged": true,
+  "apkSHA256": "5c03e013ff01fd1bf1eaacebc25bf5640b7b9094428e843b3f320b75fa4cf431",
+  "installed": false,
+  "backupJavaReproduced": true,
+  "backupCarouselReproduced": true,
+  "physicalLEDApproval": false,
+  "changedJava": [
+    "StationCoverLightingShader.java",
+    "StationRoomsActivity.java"
+  ],
+  "changedAPKEntries": [
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "serverChanged": false,
+  "onlineProtocolChanged": false,
+  "onlineMaximumUnchanged": 4,
+  "menuFPS": 30,
+  "renderSchedulingUnchanged": true,
+  "sharedSNESLightCurve": true,
+  "gamecubeEmissionMapCorrected": true,
+  "inlineMatchModeChoice": true,
+  "finalConfirmationWithoutOuterCard": true
+}

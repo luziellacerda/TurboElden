@@ -1,3 +1,9 @@
+# R95 pronta; aguardando USB do Samsung — mapa GameCube e modos online integrados
+
+Fonte completa versions/station-snes-light-maps-r95-20261009. A R94 tinha os mesmos coeficientes SNES, mas deixava parte do halo GameCube fora da máscara. R95 corrige áreas emissoras/rodapé e compartilha snesLight; preserva SNES, relógio/ganho e 30fps. Switch segmentado mapeado sobre referência real. Modos/capacidades/explicações integrados sem caixa cinza; confirmação final sem moldura externa. Limite online atual permanece4, cinco não anunciado como disponível. APK 5c03e013ff01fd1bf1eaacebc25bf5640b7b9094428e843b3f320b75fa4cf431. NÃO instalada: a USB desapareceu antes da atualização começar. Samsung permaneceR94, nenhuma partida interrompida. Pedido de reconexão já enviado; não repetir pergunta sem necessidade. A receita install_verified.py aceita R94→R95. Manter APK R94 até R95 instalada e conferida; cleanup fica pendente. Backup Java/carrossel reproduzido. 220 Java; emuladores, vídeos e downloads preservados. MotorolaR86. Não afirmar aprovação visual, redução térmica ou gameplay. Nenhuma alteração/implantação de servidor.
+
+## Histórico anterior
+
 # R94 instalada no Samsung — efeito SNES compartilhado
 
 Também incorpora Criar sala sem ScrollView/moldura interna, capa limitada pela altura, ações lado a lado e nome online sem caixa. Os callbacks e o contrato de criação permanecem intactos. Conferência visual desse novo layout ainda pendente.

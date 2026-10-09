@@ -1,0 +1,15 @@
+{
+  "sourceSHA256": "51a6f8f37b2dc809393db42911d8fd5bb00abc403e6e67799fa65a0961d07170",
+  "scope": "StationRoomsActivity presentation and selected-profile consistency",
+  "descriptionChecks": 24,
+  "selectionBindingChecks": 14,
+  "sourceGuards": 10,
+  "result": "passed",
+  "physicalUIVerified": false,
+  "fivePlayerSupportAdded": false,
+  "contractProfilesEnginesUnchanged": true,
+  "limitations": [
+    "Extracted production methods with synthetic profile fixtures; not full Activity interaction or gameplay.",
+    "Current signed profile parser still rejects capacities above four."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "reference": "Pokemon Cafe Mix, real Samsung capture, screenshot rather than original cached cover",
+  "captureSHA256": "4fe5ea084c8740610f0648280d2cfc4c16565a9793686c89cb591d150fe92380",
+  "crop": [
+    58,
+    43,
+    765,
+    977
+  ],
+  "sourcePixelEncoding": "8-bit RGBA",
+  "normalizedMap": [
+    1024,
+    1536
+  ],
+  "mapSHA256": "6c6ed5361c2f765269c271ca5409d70a40209bad333f86660ebdf42336ee8e3c",
+  "regions": {
+    "upper-left": {
+      "oldMapColoredPixels": 1002,
+      "newMapColoredPixels": 5258
+    },
+    "upper-right": {
+      "oldMapColoredPixels": 1528,
+      "newMapColoredPixels": 4881
+    },
+    "middle-left": {
+      "oldMapColoredPixels": 396,
+      "newMapColoredPixels": 3073
+    },
+    "middle-right": {
+      "oldMapColoredPixels": 764,
+      "newMapColoredPixels": 2373
+    },
+    "lower-left": {
+      "oldMapColoredPixels": 68,
+      "newMapColoredPixels": 2504
+    },
+    "lower-right": {
+      "oldMapColoredPixels": 0,
+      "newMapColoredPixels": 2410
+    },
+    "badge": {
+      "oldMapColoredPixels": 114,
+      "newMapColoredPixels": 13432
+    },
+    "footer": {
+      "oldMapColoredPixels": 0,
+      "newMapColoredPixels": 483
+    }
+  },
+  "scope": "Colored-pixel overlap inside measured geometry; not a claim of catalogue completeness or brightness measured from pristine artwork",
+  "snesBeforeAfterMaximumByteDelta": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "switchIsolatedChangedPixelsAcrossFrames": 2658,
+  "compilerRenderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2060 SUPER (0x00001F06) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.16.1074)",
+  "visualApprovalOnPhone": false
+}
