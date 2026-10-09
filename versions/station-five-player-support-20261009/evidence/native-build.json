@@ -1,0 +1,21 @@
+{
+  "compiled": true,
+  "maximumPlayers": 5,
+  "upstreamCommit": "69a4f0ea1e8aaf442ae4858f2e7f2b31a1776576",
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "runtimeBytes": 10673944,
+  "architecture": "AArch64",
+  "minAPI": 26,
+  "minimumLoadAlignment": 16384,
+  "baseVersion": "R77 inherited by R81",
+  "sourceFiles": 11149,
+  "sourceManifestSHA256": "63049a133ed0a761133f4ffc36ce642870dc699e103a5a73ab0b7683a6d90f47",
+  "ndkRevision": "28.2.13676358",
+  "buildLogSHA256": "b2626b12cadcf93b02247884f776d6cc213c3183af7e56f2f2e1ed736ff78c2f",
+  "androidExecuted": false,
+  "apkBuilt": false,
+  "installed": false,
+  "fivePhoneGameplayVerified": false,
+  "correspondingSourceArchiveSHA256": "b8f7649a5edacbe9e913d5e50f66482c0aa082fbd2237f5fd7800d00723b735a",
+  "correspondingSourceArchiveBytes": 71606249
+}

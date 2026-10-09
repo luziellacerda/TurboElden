@@ -1,0 +1,13 @@
+{
+  "checks": 166,
+  "passed": true,
+  "utc": "2026-10-09T12:48:56.708213+00:00",
+  "jsonJarSHA256": "3ea61b2a06e31edf1c91134fe9106b0ebb16628be169f3db75bc7a2b06b45796",
+  "recipeSHA256": "a59e0004f96b25cb6964d4ab35690637e04c32b20bccbeca0b016c271dec4fd0",
+  "sourceSHA256": {
+    "StationMultiplayerProfile.java": "74f577810b4a8c9f1eb1ef6b9db401748597c1217f2b32a83b6c5f03a647f1d3",
+    "StationGamePlayerInfo.java": "5a6ec413762008caec14cdc5be521d792231252e35c86f54f85d8b6517171608"
+  },
+  "fixtureSHA256": "8f9359d312f816cce562d10f8c4252f6b398006da8c39a6d541b80dd38dfa34b",
+  "physicalAndroidGameplayVerified": false
+}

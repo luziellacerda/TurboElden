@@ -60,3 +60,8 @@ versions/station-synopses-r78-20261008/** -text
 
 # R79 exact source, catalogue reference and receipt bytes.
 versions/station-room-bootstrap-r79-20261008/** -text
+
+# Preserve the exact compiled inputs and delivery hashes on Linux and Windows.
+versions/station-five-player-support-20261009/** -text whitespace=cr-at-eol
+docs/server/online-1a5-20261009/** -text
+docs/server/online-1a5-20261009/*.tsv whitespace=-blank-at-eol

@@ -1,0 +1,25 @@
+--- a/target-libretro/libretro.cpp
++++ b/target-libretro/libretro.cpp
+@@ -221,13 +221,20 @@
+   }
+ 
+   int16_t inputPoll(unsigned port, unsigned device, unsigned id) override {
+-    if(id > 11) return 0;
++    unsigned retro_device = snes_to_retro(device);
++    if (device == (unsigned)SuperFamicom::Input::Device::Multitap) {
++      // Mercury encodes the adapter pad as id / 12. Libretro uses a port per pad.
++      if (id >= 4 * 12) return 0;
++      port += id / 12;
++      id %= 12;
++      retro_device = RETRO_DEVICE_JOYPAD;
++    } else if (id > 11) return 0;
+     if (!input_polled)
+     {
+       pinput_poll();
+       input_polled=true;
+     }
+-    return pinput_state(port, snes_to_retro(device), 0, snes_to_retro(device, id));
++    return pinput_state(port, retro_device, 0, snes_to_retro(device, id));
+   }
+ 
+   void saveRequest(unsigned id, string p) override {

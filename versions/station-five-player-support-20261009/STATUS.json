@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "version": "station-five-player-support-20261009",
+  "base": "R81",
+  "javaCompiled": true,
+  "sourceCount": 209,
+  "roomsDexCompiled": true,
+  "runtimeCompiled": true,
+  "maximumPlayers": 5,
+  "serverApplied": true,
+  "serverProfiles": 3672,
+  "serverProfilesSHA256": "244d98e76c4b5cc00f1af75abebe595688d1700cef6d2f8bc777dc84c3b388ad",
+  "fullSignedApkBuilt": false,
+  "installed": false,
+  "physicalFivePhoneGameplayVerified": false,
+  "gameplaySpectatorImplemented": false,
+  "readOnlyRoomDetailsImplemented": true,
+  "originalDataChannelsAndSigningIdentityPreserved": true,
+  "nextProductionAction": "Package exact private complete R81 base with delivered DEX/runtime/manifest and original certificate, then update phones preserving data.",
+  "handoff": "docs/server/HANDOFF-COMPLETO-ONLINE-ATE-5-STATION-20261009.md"
+}
