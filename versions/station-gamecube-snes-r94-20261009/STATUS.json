@@ -1,0 +1,31 @@
+{
+  "version": "R94",
+  "compiled": true,
+  "packaged": true,
+  "apkSHA256": "1aacf46a1e98fc21642363cab959ef40931517bb303706e35af485680bd2486e",
+  "installed": true,
+  "backupJavaReproduced": true,
+  "backupCarouselReproduced": true,
+  "physicalLEDApproval": false,
+  "changedJava": [
+    "StationCoverLightingShader.java",
+    "StationCreateGameCard.java",
+    "StationRoomsActivity.java"
+  ],
+  "changedAPKEntries": [
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "serverChanged": false,
+  "onlineProtocolChanged": false,
+  "menuFPS": 30,
+  "renderSchedulingUnchanged": true,
+  "profiles": [
+    "GameCube: same SNES color input",
+    "Switch: red",
+    "PS1: white"
+  ],
+  "sharedSNESLightCurve": true,
+  "createRoomUnifiedViewport": true,
+  "onlineNameWithoutBox": true
+}

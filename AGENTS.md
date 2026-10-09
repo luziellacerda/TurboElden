@@ -1,3 +1,11 @@
+# R94 instalada no Samsung — efeito SNES compartilhado
+
+Também incorpora Criar sala sem ScrollView/moldura interna, capa limitada pela altura, ações lado a lado e nome online sem caixa. Os callbacks e o contrato de criação permanecem intactos. Conferência visual desse novo layout ainda pendente.
+
+Fonte completa versions/station-gamecube-snes-r94-20261009. GameCube usa a mesma cor real de laserConfigs/Super Nintendo, Switch vermelho, PS1 branco. Mesmos cálculos de intensidade/halo/velocidade/núcleo do SNES; apenas mapas e leitura das cores da arte são adaptados. A R93 foi rejeitada visualmente pelo mantenedor. Não afirmar aprovação visual da R94, ganho térmico ou gameplay. APK 1aacf46a1e98fc21642363cab959ef40931517bb303706e35af485680bd2486e. Hash/UID/dados preservados; backup Java/carrossel idêntico. 220 Java, emuladores, 30fps, vídeos e downloads preservados. MotorolaR86. Sem novo handoff/alteração de servidor.
+
+## Histórico anterior
+
 # R93 instalada no Samsung — LEDs GameCube baseados no SNES
 
 Fonte completa versions/station-gamecube-led-r93-20261009. Mesmo motor/relógio/ganho/halo SNES; GameCube roxo com curva de luz SNES adaptada R↔G, aro do selo e separador rodapé mapeados.39capas locais medidas e WindWaker real conferida antes. APK e64931292c6c223595943c3f7c608710763d988f2a428db3248247d02d4007b1, hash/UID/dados preservados. SóshaderJava/classes35.dex e2fontesGLSL/carrossel mudam;220Java,emuladores,motores,30fps,downloadsR92 intactos. Backup Java/carrossel idêntico. Aprovação visual física após atualização ainda pendente; não alegar redução térmica ou gameplay. MotorolaR86. Sem novo handoff/alteração de servidor; R91remotemídia26909e31 ainda não confirmada ativa.
