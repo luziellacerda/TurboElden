@@ -1,3 +1,11 @@
+# R90 instalada no Samsung — 09/10/2026 13:15 UTC
+
+Fonte completa: versions/station-download-center-r90-20261009. APK a796e3b65fe929f99c6923d7d5959254c5e0cdecf999cb343886a0b73a907a56, hash integral/UID/dados preservados. Central adicional ao lado de Plataformas, fila persistente, pausa/cancelamento e espera de rede. 641 checks locais; backup Java/carrossel reproduzido idêntico. Conferência física da central/corte de internet ainda pendente. Motorola permanece R86. Vídeos R89/LEDs/motores/online preservados.
+
+Novo pedido autorizado: vídeos e capas atualizáveis pelo servidor com cache offline, em fase seguinte R91. Não declarar servidor implantado nem remover mídia embutida sem caminho de primeiro acesso e migração conferidos. Git apenas fontes/documentos, nenhum APK/mídia/licença/captura privada.
+
+## Histórico anterior
+
 # R89 instalada no Samsung — 09/10/2026 13:04 UTC
 
 APK76954ddc6b33358098201520e855168889c68aa3a206b9606e54b5ac7097bd7f, hash integral/UID/dados conferidos; carrossel GameCube observado sem login. Não alegar verificação física do quadro final/posição das estrelas ou desempenho. Modelo publicado. R90 com central de downloads ainda em preparação, não confundir com R89.
