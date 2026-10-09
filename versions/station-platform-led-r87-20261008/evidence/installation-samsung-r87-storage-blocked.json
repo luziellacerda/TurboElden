@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-09T11:26:33.867871+00:00",
+  "versionRequested": "R87",
+  "deviceModel": "Samsung A56",
+  "installed": false,
+  "error": "INSTALL_FAILED_INSUFFICIENT_STORAGE: Failed to override installation location",
+  "availableDataGiB": 3.9,
+  "installedAPK_SHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
+  "previousR86Intact": true,
+  "dataCleared": false,
+  "uninstalled": false,
+  "extraAPKCopied": false,
+  "userActionRequired": "Free storage on the device before retrying",
+  "attempts": 2
+}

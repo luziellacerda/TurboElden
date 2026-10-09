@@ -1,12 +1,49 @@
 {
   "version": "R87",
-  "installed": false,
+  "installed": true,
   "apkSHA256": "a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0",
-  "devices": [],
-  "reason": "No authorized USB device currently visible",
-  "lastConfirmedInstalledVersion": "R86",
-  "r86InstalledDevices": [
-    "Samsung A56",
-    "Motorola Edge 30"
-  ]
+  "devices": [
+    {
+      "version": "R87",
+      "deviceLabel": "samsung",
+      "model": "SM-A566E",
+      "package": "org.turboramastation.frontend",
+      "startedUTC": "2026-10-09T11:28:28.610102+00:00",
+      "completedUTC": "2026-10-09T11:30:10.796738+00:00",
+      "previousAPK_SHA256": "7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4",
+      "apkSHA256": "a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0",
+      "deviceAPK_SHA256": "a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0",
+      "apkBytes": 2136310292,
+      "installPerformed": true,
+      "installSuccess": true,
+      "uidPreserved": true,
+      "originalInstallTimestampPreserved": true,
+      "dataDirectoryPreserved": true,
+      "uninstalled": false,
+      "dataCleared": false,
+      "deviceSettingsChanged": false,
+      "activeEmulatorBeforeInstall": false,
+      "preInstallAppActivities": [],
+      "directStreaming": true,
+      "extraAPKCopiedToPhone": false,
+      "officialEntryRequested": true,
+      "launchVerified": false,
+      "authenticatedEntryVerified": false,
+      "physicalDisplayVerified": false,
+      "serverRegistryActivationVerified": false,
+      "twoDeviceGameplayVerified": false,
+      "inheritedR77OnlineQualificationStillRequired": true,
+      "serverChanged": false,
+      "installCommand": [
+        "install",
+        "--streaming",
+        "--no-incremental",
+        "-r",
+        "--user",
+        "0"
+      ],
+      "postInstallDisplay": "Charging screen observed; authenticated opening and final visual not verified"
+    }
+  ],
+  "motorolaLastConfirmedVersion": "R86"
 }

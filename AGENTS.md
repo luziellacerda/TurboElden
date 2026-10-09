@@ -1,3 +1,9 @@
+# R87 instalada no Samsung — recibo mais recente
+
+2026-10-09T11:30:10.796738+00:00: instalação direta autorizada concluída no Samsung A56, SHA integral a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0 conferido. UID, instalação original, dados, saves e licença preservados; sem APK extra no telefone. Nenhum emulador ativo na atualização. Entrada oficial solicitada; aprovação visual e gameplay não alegados. Motorola permanece R86. Fonte executável e032f77e2518e40a9c2c130b812b21f1cc08803a inalterada. Consulte INSTALLATION.json e evidence/installation-samsung-r87.json.
+
+## Histórico anterior
+
 # R87 pronta — LEDs e consoles, instalação pendente
 
 Fonte completa em versions/station-platform-led-r87-20261008. Base R86, 213 Java; somente classes35.dex e libturbo_carousel.so mudam. Estrelas acima do título30%menores. Corrige detecção laranja Dreamcast após analisar18Wheeler REAL do Samsung; referências antigas brancas não usadas. Perfis PS1/GameCube/WiiU/Switch compartilham o GLSL existente. Oito hardwares adicionais, mantendo layout de sinopse e11recursos anteriores. Não alterar degradê,INSTALADO,fontes,emuladores ou online.

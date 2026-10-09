@@ -4,7 +4,7 @@
   "apkSHA256": "a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0",
   "apkBytes": 2136310292,
   "compiled": true,
-  "installed": false,
+  "installed": true,
   "sourceCount": 213,
   "sharedCarouselLighting": true,
   "dreamcastActualPhoneCoverAnalyzed": true,
@@ -30,5 +30,8 @@
   "gameplayVerified": false,
   "physicalDisplayVerified": false,
   "backupReproduced": true,
-  "blocker": "Samsung disconnected from USB after R86 screenshot; R87 not installed"
+  "installedDevices": [
+    "SM-A566E"
+  ],
+  "installationCompletedUTC": "2026-10-09T11:30:10.796738+00:00"
 }
