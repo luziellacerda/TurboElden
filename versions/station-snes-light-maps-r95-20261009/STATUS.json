@@ -3,7 +3,7 @@
   "compiled": true,
   "packaged": true,
   "apkSHA256": "5c03e013ff01fd1bf1eaacebc25bf5640b7b9094428e843b3f320b75fa4cf431",
-  "installed": false,
+  "installed": true,
   "backupJavaReproduced": true,
   "backupCarouselReproduced": true,
   "physicalLEDApproval": false,
@@ -23,5 +23,10 @@
   "sharedSNESLightCurve": true,
   "gamecubeEmissionMapCorrected": true,
   "inlineMatchModeChoice": true,
-  "finalConfirmationWithoutOuterCard": true
+  "finalConfirmationWithoutOuterCard": true,
+  "installedDevices": [
+    "Motorola Edge 30",
+    "Samsung A56"
+  ],
+  "twoDeviceGameplayVerified": false
 }

@@ -1,3 +1,9 @@
+# R95 instalada nos dois aparelhos — conferência física pendente
+
+Motorola Edge 30 e Samsung A56 atualizados diretamente para R95. APK 5c03e013ff01fd1bf1eaacebc25bf5640b7b9094428e843b3f320b75fa4cf431 conferido integralmente nos dois; UID, data original e diretório de dados preservados, sem desinstalar, limpar dados ou copiar APK extra. Motorola abriu StationRoomsActivity; Samsung confirmou instalação/hash, mas a tela estava apagada na observação final. Aprovação visual do efeito GameCube e gameplay em dupla ainda pendentes. R94 de segurança permanece temporariamente até essa conferência. Consulte versions/station-snes-light-maps-r95-20261009/INSTALLATION.json.
+
+## Histórico anterior
+
 # R95 pronta; aguardando USB do Samsung — mapa GameCube e modos online integrados
 
 Fonte completa versions/station-snes-light-maps-r95-20261009. A R94 tinha os mesmos coeficientes SNES, mas deixava parte do halo GameCube fora da máscara. R95 corrige áreas emissoras/rodapé e compartilha snesLight; preserva SNES, relógio/ganho e 30fps. Switch segmentado mapeado sobre referência real. Modos/capacidades/explicações integrados sem caixa cinza; confirmação final sem moldura externa. Limite online atual permanece4, cinco não anunciado como disponível. APK 5c03e013ff01fd1bf1eaacebc25bf5640b7b9094428e843b3f320b75fa4cf431. NÃO instalada: a USB desapareceu antes da atualização começar. Samsung permaneceR94, nenhuma partida interrompida. Pedido de reconexão já enviado; não repetir pergunta sem necessidade. A receita install_verified.py aceita R94→R95. Manter APK R94 até R95 instalada e conferida; cleanup fica pendente. Backup Java/carrossel reproduzido. 220 Java; emuladores, vídeos e downloads preservados. MotorolaR86. Não afirmar aprovação visual, redução térmica ou gameplay. Nenhuma alteração/implantação de servidor.

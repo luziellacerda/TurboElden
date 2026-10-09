@@ -12,7 +12,10 @@ WORK = Path(r'E:\ESTUDO APK\work\station-snes-light-maps-r95-20261009')
 ADB = r'G:\Android\Sdk\platform-tools\adb.exe'
 PACKAGE = 'org.turboramastation.frontend'
 EXPECTED = json.loads((ROOT / 'evidence/package.json').read_text('utf8'))['sha256']
-PREVIOUS = ('1aacf46a1e98fc21642363cab959ef40931517bb303706e35af485680bd2486e',)
+PREVIOUS = (
+    '1aacf46a1e98fc21642363cab959ef40931517bb303706e35af485680bd2486e',  # Samsung R94
+    '7b730f4f0ddc892909f0a69ca79618ca79ddcc501a0e682cbd09604d67fdd9b4',  # Motorola R86
+)
 ALLOWED = {'org.emulationstation.frontend.ESActivity',
            'org.emulationstation.frontend.auth.LoginActivity',
            'org.emulationstation.frontend.netplay.StationRoomsActivity'}
@@ -78,7 +81,7 @@ def main():
     require(run('get-state').strip() == 'device', 'Explicit device must be authorized and connected')
     before = identity()
     previous = installed_hash()
-    require(previous in (*PREVIOUS, EXPECTED), 'Installed version differs from verified R87/R95; inspect before updating')
+    require(previous in (*PREVIOUS, EXPECTED), 'Installed version differs from the verified R86/R94/R95 set; inspect before updating')
     model = run('shell', 'getprop', 'ro.product.model').strip()
     require(('motorola' in model.lower() if args.device_label == 'motorola' else model.startswith('SM-A56')), 'Device label/model mismatch')
     foreground = activity_preflight()
