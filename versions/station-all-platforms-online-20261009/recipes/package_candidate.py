@@ -30,7 +30,7 @@ def main():
     if os.name=='nt':need(args.work.drive.upper()=='E:','Use E: for production build output')
     java=json.loads((ROOT/'evidence/java-build.json').read_text())
     native=json.loads((ROOT/'evidence/native-build.json').read_text())
-    need(java['compiled'] and java['sourceCount']==211 and native['compiled'],'Complete compiled inputs required')
+    need(java['compiled'] and java['sourceCount']==212 and native['compiled'],'Complete compiled inputs required')
     for name,digest in java['sourceHashes'].items():need(sha(ROOT/'java'/name)==digest,'Source drift: '+name)
     changes={'classes35.dex':ROOT/'compiled/rooms.dex',
         'lib/arm64-v8a/libstation_retroarch.so':ROOT/'native/libstation_retroarch.so',
@@ -53,6 +53,8 @@ def main():
     need(json.loads((ROOT/'evidence/profile-tests.json').read_text())['passed'],'Player classification checks required')
     need(json.loads((ROOT.parent/'station-five-player-support-20261009/native/tests/native-result.json').read_text())['passed'],'Unchanged runtime ownership checks required')
     need(json.loads((ROOT/'evidence/bios-tests.json').read_text())['passed'],'Firmware isolation checks required')
+    identity=json.loads((ROOT/'evidence/content-identity-tests.json').read_text())
+    need(identity['passed'] and identity['sourceSHA256']==sha(ROOT/'java/netplay-src/org/emulationstation/frontend/netplay/StationContentIdentity.java'),'Portable CUE identity checks required')
     env=dict(os.environ)
     for name in ('STATION_KS_PASS','STATION_KEY_PASS'):need(bool(env.get(name)),'Original private signing environment required')
     need(shutil.disk_usage(args.work.parent).free>args.base_apk.stat().st_size*3+268435456,'Package/alignment/signing free space required')

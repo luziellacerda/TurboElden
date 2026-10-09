@@ -45,7 +45,7 @@ final class StationOnlineGame {
         if("station-stream.v3".equals(engine.optString("recoveryProtocol"))){
             JSONObject fresh=client.profileSnapshot(itemId,cancel);
             StationMultiplayerProfile p=StationMultiplayerProfile.find(fresh,itemId,engine,profileId);
-            File rom=installedRom(itemId);String hash=sha(rom,cancel);
+            File rom=installedRom(itemId);String hash=StationContentIdentity.identity(rom,cancel);
             if(!p.contentSha256.equals(hash))throw new Unavailable("A edição instalada não corresponde ao jogo catalogado para esta sala.");
             File core=new File(context.getApplicationInfo().nativeLibraryDir,engine.getString("library"));File runtime=new File(context.getApplicationInfo().nativeLibraryDir,"libstation_retroarch.so");
             if(!sha(core,cancel).equals(p.coreSha256)||!sha(runtime,cancel).equals(p.runtimeSha256))throw new Unavailable("Atualize o aplicativo para usar o motor aprovado desta sala.");

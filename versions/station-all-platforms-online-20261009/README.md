@@ -2,11 +2,12 @@
 
 Leia `../../docs/server/HANDOFF-ONLINE-PLATAFORMAS-STATION-20261009.md` para o estado integral. Backup anterior publicado nos dois repositórios; código desta candidata está isolado. Produção e canais anteriores não foram trocados.
 
-211 Java e DEX compilados, quatro novos cores com fonte/licença e patches, runtime de cinco preservado. N64 e NeoCD passaram na transferência de estado em dois processos. Gameplay Android e APK completo assinado pendentes; Dreamcast quatro, Dolphin Station e Wii U ainda precisam de integração nativa. Não anunciar todas as plataformas prontas.
+212 Java e DEX compilados, quatro novos cores com fonte/licença e patches, runtime de cinco preservado. N64 e NeoCD passaram na transferência de estado em dois processos. Gameplay Android e APK completo assinado pendentes; Dreamcast quatro, Dolphin Station e Wii U ainda precisam de integração nativa. Não anunciar todas as plataformas prontas.
 
 ## Receitas
 
 - `recipes/build_java.py`: JDK17/API34/D8 explícitos; mantém client DEX byte idêntico.
+- `recipes/test_content_identity.py`: 10 verificações Java/Python da identidade CUE com suas faixas.
 - `recipes/test_profiles.py`: 200 verificações do parser/presentação/portas.
 - `tests/StationOnlineBiosTest.java.in`: 21 verificações reais do preparador de BIOS; compile com os dois jars da compilação e API34.
 - `recipes/build_cores.py`: NDK r28c, fontes fixadas e patch NeoCD; resultados privados em diretório novo.

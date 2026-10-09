@@ -22,7 +22,7 @@ def main():
     assert sha(args.android_jar)==baseline['inputs']['androidJar']
     assert sha(args.d8_jar)==baseline['inputs']['d8Jar']
     sources={p.relative_to(ROOT/'java').as_posix():sha(p) for p in sorted((ROOT/'java').rglob('*.java'))}
-    assert len(sources)==211 and set(baseline['sourceHashes']).issubset(sources)
+    assert len(sources)==212 and set(baseline['sourceHashes']).issubset(sources)
     args.work.mkdir(parents=True,exist_ok=False)
     suffix='.exe' if os.name=='nt' else ''
     tools={name:args.jdk/(name+suffix) for name in ('java','javac')}

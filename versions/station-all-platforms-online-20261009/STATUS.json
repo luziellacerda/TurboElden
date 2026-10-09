@@ -1,11 +1,17 @@
 {
   "candidateCompiled": true,
-  "sourceCount": 211,
+  "sourceCount": 212,
   "completeSignedAPK": false,
   "installed": false,
   "serverCandidateDeployed": false,
   "productionPreserved": true,
   "peerAndroidGameplayQualified": false,
   "allRequestedPlatformsOnlineComplete": false,
-  "pendingNativeIntegration": ["dreamcast-four-peers", "dolphin-station-enet", "wiiu-local-netplay", "switch-game-mode"]
+  "pendingNativeIntegration": [
+    "dreamcast-four-peers",
+    "dolphin-station-enet",
+    "wiiu-local-netplay",
+    "switch-game-mode"
+  ],
+  "portableCueIdentity": true
 }
