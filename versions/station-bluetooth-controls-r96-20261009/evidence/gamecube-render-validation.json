@@ -1,0 +1,239 @@
+{
+  "scope": "Isolated GENERAL GLES2 shader render of actual GameCube artwork and CPU activation probes; not phone performance/visual acceptance",
+  "sourceShaderSHA256": "a485bf4bb6645c4917a3834e945b78b4d0abffb5b9a73fb6ebf0df6e5f2218df",
+  "baselineShaderSHA256": "f5b05f482cc1157285bc2eee1b92da9bcad078412260943d0642af17aa8f79bc",
+  "referenceSHA256": "f362a87c2c9bc9d4c3cad6aae7dabdb95302fcaa99b6342dc98b0b2ef50ca7aa",
+  "color": "#A855F7",
+  "renderedFrames": [
+    12,
+    60,
+    70,
+    122,
+    180
+  ],
+  "textureAndOutputSize": [
+    262,
+    393
+  ],
+  "signature262x393": [
+    {
+      "asset": "Blood Rayne.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Bloody Roar - Primal Fury (Europe).png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Bloody Roar - Primal Fury.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Disney's PK Out of the Shadows.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Harry Potter and the Chamber of Secrets.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Luigi's Mansion (Europe) (En,Fr,De,Es,It).png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Luigi's Mansion.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Mario Kart - Double Dash!! (Europe) (En,Fr,De,Es,It).png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Mario Kart - Double Dash!!.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Mario Party 7 (Europe) (En,Fr,De,Es,It).png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Mario Party 7.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Mario Sunshine.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Metroid Prime.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "need for speed underground 2.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Paper Mario The Thousand Year Door.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Phantasy Star Online Episode I & II.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Pikmin 2.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Prince of Persia -Two Thrones.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Ratatouille.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Resident Evil - Code - Veronica X.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Resident Evil 4.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Sonic Heroes.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Sonic_Adventure_2.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Spartan - Total Warrior.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Star Fox - Assault.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Super Smash Bros. Melee (Europe) (En,Fr,De,Es,It).png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Super Smash Bros. Melee.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "Terminator 3 - The Redemption.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "The Incredibles 1.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "The Incredibles Rise Of The Underminer.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "The Legend of Zelda Four Swords Adventures.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "the Legend of Zelda, The - The Wind Waker (Europe) (En,Fr,De,Es,It).png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "the Legend of Zelda, The - The Wind Waker.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "the Legend of Zelda, The - Twilight Princess (Europe) (En,Fr,De,Es,It).png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "the Legend of Zelda, The - Twilight Princess.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "The Simpsons Hit & Run.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "true crime new york city.png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "True Crime Streets of LA (BR).png",
+      "enabled": 1.0
+    },
+    {
+      "asset": "XIII.png",
+      "enabled": 1.0
+    }
+  ],
+  "centralArtMaximumByteDelta": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "checks": {
+    "middle_left": {
+      "beforeColdMeanRGB": 41.76,
+      "afterColdMeanRGB": 18.86,
+      "afterPassingLightMeanRGB": 91.673,
+      "passingToColdRatio": 4.861,
+      "passingFrame": 122,
+      "coldFrame": 60
+    },
+    "middle_right": {
+      "beforeColdMeanRGB": 45.3,
+      "afterColdMeanRGB": 18.493,
+      "afterPassingLightMeanRGB": 100.46,
+      "passingToColdRatio": 5.432,
+      "passingFrame": 122,
+      "coldFrame": 60
+    },
+    "cloud": {
+      "beforeColdMeanRGB": 56.891,
+      "afterColdMeanRGB": 30.498,
+      "afterPassingLightMeanRGB": 81.655,
+      "passingToColdRatio": 2.677,
+      "passingFrame": 12,
+      "coldFrame": 70
+    },
+    "folder": {
+      "beforeColdMeanRGB": 134.589,
+      "afterColdMeanRGB": 53.061,
+      "afterPassingLightMeanRGB": 176.05,
+      "passingToColdRatio": 3.318,
+      "passingFrame": 12,
+      "coldFrame": 70
+    },
+    "badge_upper_rim_tail": {
+      "beforeColdMeanRGB": 65.189,
+      "afterColdMeanRGB": 40.739,
+      "afterPassingLightMeanRGB": 135.317,
+      "passingToColdRatio": 3.322,
+      "passingFrame": 60,
+      "coldFrame": 122
+    },
+    "badge_stars": {
+      "maximumRegionByteDelta": 0,
+      "maximumWhiteGlyphByteDelta": 0,
+      "whitePixelCount": 104
+    },
+    "badge_words": {
+      "maximumRegionByteDelta": 1,
+      "maximumWhiteGlyphByteDelta": 0,
+      "whitePixelCount": 544
+    }
+  },
+  "compiled": true,
+  "linked": true,
+  "snesClockGainFunctionAndSwitchUnchanged": true,
+  "assertionRefinement": "Initial rectangular stars ROI included the neighboring violet rim. Exact three star discs and neutral text glyphs are unchanged; no source change was needed."
+}

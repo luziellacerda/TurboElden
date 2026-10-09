@@ -1,0 +1,68 @@
+"""Keep the two authorized installers; refresh the complete local Git backup."""
+from pathlib import Path
+import argparse,datetime,hashlib,json,os,shutil,subprocess
+ROOT=Path(__file__).resolve().parent.parent;REPO=ROOT.parents[1]
+BACKUP=Path(r'G:\BAKUP SISTEMA APP 03-10-2026\ATUAL-2P-E-TESTE-4P-20261008')
+WORK=Path(r'E:\ESTUDO APK\work\station-snes-light-maps-r95-20261009')
+def sha(p):
+    with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def read(p):return json.loads(p.read_text('utf8'))
+def write(p,v):p.write_text(json.dumps(v,indent=2)+'\n','utf8')
+def git(*args):
+    p=subprocess.run(['git','-c','safe.directory='+REPO.as_posix(),*args],cwd=REPO,capture_output=True)
+    assert p.returncode==0,p.stderr.decode('utf8','replace');return p.stdout.decode('utf8','replace').strip()
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--bundle',action='store_true');args=parser.parse_args()
+    active=read(REPO/'release-channels/ACTIVE.json');assert active==read(BACKUP/'release-channels/ACTIVE.json')
+    assert [active['channels'][k]['version'] for k in ['stable-2p','test-4p']]==['R76','R95']
+    expected=[]
+    for c in active['channels'].values():
+        p=BACKUP/c['directory']/c['apk'];assert sha(p)==c['apkSHA256'];expected.append(p)
+    result=read(ROOT/'evidence/backup-reproduction.json');assert result['javaReproduced'] and result['carouselReproduced']
+    install=read(ROOT/'INSTALLATION.json');assert install['apkSHA256']==active['channels']['test-4p']['apkSHA256'] and install['installed']
+    candidates=[
+        (BACKUP/'test-up-to-4-players-r94/TurboStations-Premium-R94-20261009.apk','1aacf46a1e98fc21642363cab959ef40931517bb303706e35af485680bd2486e'),
+        (WORK/'package/TurboStations-Premium-R95-20261009.apk',active['channels']['test-4p']['apkSHA256'])]
+    candidates.append((WORK/'package-before-identity-check/TurboStations-Premium-R95-20261009.apk','ae97883282f6bf31d271fce9a04a14cf5d9d5c4b0724862b823c54364f6f1c26'))
+    if not args.bundle:
+        removed=[]
+        for p,h in candidates:
+            if not p.exists():continue
+            resolved=p.resolve();assert resolved.is_relative_to(BACKUP.resolve()) or resolved.is_relative_to(WORK.resolve())
+            assert p not in expected and p.suffix=='.apk' and sha(p)==h
+            size=p.stat().st_size;p.unlink();removed.append(dict(path=str(p),sha256=h,bytes=size))
+        assert set(BACKUP.rglob('*.apk'))==set(expected)
+        write(ROOT/'evidence/installer-cleanup.json',dict(verifiedBeforeRemoval=True,removed=removed,retainedInstallers=2,sourceHistoryPreserved=True))
+        print(json.dumps({'removedCopies':len(removed),'bytesFreed':sum(x['bytes'] for x in removed)}));return
+    assert set(BACKUP.rglob('*.apk'))==set(expected)
+    assert not git('status','--porcelain=v1'),'Commit all final receipts first'
+    current=git('rev-parse','HEAD');assert git('rev-parse','refs/heads/fix/station-snes-light-maps-r95-20261009')==current
+    output=WORK/'final-archive';output.mkdir(exist_ok=True);bundle=output/'TurboElden-completo-r95.bundle';assert not bundle.exists()
+    git('bundle','create',str(bundle),'--all');git('bundle','verify',str(bundle))
+    target=BACKUP/'TurboElden-completo-20261008.bundle';temporary=target.with_suffix('.bundle.new');assert not temporary.exists()
+    shutil.copyfile(bundle,temporary);assert sha(bundle)==sha(temporary);os.replace(temporary,target)
+    assert bundle.resolve().parent==output.resolve();bundle.unlink()
+    for p in (REPO/'release-channels').iterdir():
+        if p.is_file():shutil.copyfile(p,BACKUP/'release-channels'/p.name)
+    maintenance=BACKUP/'maintenance/r95-final-delivery-20261009';maintenance.mkdir(exist_ok=True)
+    for n in ['README.md','STATUS.json','INSTALLATION.json','JAVA-SOURCE-MANIFEST.json']:
+        shutil.copyfile(ROOT/n,maintenance/n)
+    shutil.copytree(ROOT/'evidence',maintenance/'evidence',dirs_exist_ok=True)
+    (BACKUP/'LEIA-ME.md').write_text('''# Backup completo — R76 e R95 corrigida
+
+Os dois instaladores selecionados estão em `release-channels/ACTIVE.json`.
+
+- R76: referência de dois jogadores escolhida pelo mantenedor.
+- R95: Mapa GameCube e Switch segmentado corrigidos; escolha integrada dos modos e confirmação sem moldura; demais recursos R94 preservados, servidor de vídeos ainda não confirmado ativo. Instalada no Samsung. Motorola permaneceR86. Não altera a qualificação online nem os emuladores.
+
+Cada canal inclui fontes completas, entradas e receita de reprodução. O histórico completo está em `TurboElden-completo-20261008.bundle`. Use `release-channels/rebuild_verified.py` para recompilar um canal explícito. Ferramentas SDK/JDK/NDK e chave protegida continuam nos caminhos existentes.
+
+O hash atual correto está em ACTIVE; não escolher versões pela data. Recibos em `maintenance/r95-final-delivery-20261009`. Diretórios históricos de fonte e efeitos são arquivos; não selecioná-los como versão atual.
+
+`BUILD-INPUTS-VERIFIED.json` valida entradas atuais; `BACKUP-COMPLETE.json` indexa o conjunto. Licenças, jogos e saves não foram removidos.
+''','utf8')
+    for n,v in read(BACKUP/'BUILD-INPUTS-VERIFIED.json')['files'].items():assert sha(BACKUP/n)==v['sha256'],n
+    files={p.relative_to(BACKUP).as_posix():dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(BACKUP.rglob('*')) if p.is_file() and p.name!='BACKUP-COMPLETE.json'}
+    write(BACKUP/'BACKUP-COMPLETE.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),complete=True,gitBundleVerified=True,appCommit=current,sourceCommit=active['channels']['test-4p']['sourceCommit'],installers=2,allCurrentAndArchivedGitRefsPreserved=True,javaAndCarouselReproducedForBothChannels=True,r95Reproduction='versions/'+ROOT.name+'/evidence/backup-reproduction.json',files=files))
+    print(json.dumps({'complete':True,'appCommit':current,'installers':2,'filesVerified':len(files)}))
+if __name__=='__main__':main()
