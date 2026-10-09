@@ -16,14 +16,14 @@
       "sourceCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e"
     },
     "test-4p": {
-      "version": "R87",
-      "directory": "test-up-to-4-players-r87",
-      "branch": "fix/station-platform-led-r87-20261008",
-      "sourceCommit": "e032f77e2518e40a9c2c130b812b21f1cc08803a",
-      "sourceDirectory": "versions/station-platform-led-r87-20261008",
-      "apk": "TurboStations-Premium-R87-20261008.apk",
-      "apkSHA256": "a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0",
-      "javaSourceCount": 213,
+      "version": "R88",
+      "directory": "test-up-to-4-players-r88",
+      "branch": "fix/station-single-pass-r88-20261009",
+      "sourceCommit": null,
+      "sourceDirectory": "versions/station-single-pass-r88-20261009",
+      "apk": "TurboStations-Premium-R88-20261009.apk",
+      "apkSHA256": "ace762fc0aeb389b28279c1f7061a1210d65398fd1f7f230b4c60645d0ac3c1b",
+      "javaSourceCount": 214,
       "protocol": "station-stream.v3",
       "status": "experimental; exact approved online profiles required; server v3 activation reported in 9502c02; no four-phone gameplay qualification",
       "fourPhoneGameplayQualified": false,
@@ -33,11 +33,11 @@
       "installedDevices": [
         "SM-A566E"
       ],
-      "installationReceipt": "versions/station-platform-led-r87-20261008/INSTALLATION.json",
+      "installationReceipt": "versions/station-single-pass-r88-20261009/INSTALLATION.json",
       "descriptiveEditionsReviewed": 5,
       "onlineApprovalChanged": false,
-      "sourceCommitStatus": "committed",
-      "installationStatus": "R87 directly installed on Samsung A56 and full hash verified; original UID/data preserved. Motorola last confirmed R86.",
+      "sourceCommitStatus": "pending",
+      "installationStatus": "Corrected R88 with R87 LEDs restored installed and full hash verified on Samsung; Motorola last R86. No gameplay in this test.",
       "sharedCarouselLighting": true,
       "newDreamcastOrangeFrameIncluded": true,
       "starsScale": 0.7,
@@ -52,7 +52,11 @@
         "switch",
         "psx"
       ],
-      "hardwareTextures": 19
+      "hardwareTextures": 19,
+      "coverLEDsEnabled": true,
+      "menuFPS": 30,
+      "videoPlaysOnce": true,
+      "ratingPlaysOnce": true
     }
   }
 }

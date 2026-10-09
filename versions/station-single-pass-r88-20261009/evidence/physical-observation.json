@@ -1,0 +1,40 @@
+{
+  "version": "R88",
+  "apkSHA256": "ace762fc0aeb389b28279c1f7061a1210d65398fd1f7f230b4c60645d0ac3c1b",
+  "device": "Samsung A56",
+  "durationSeconds": 60.993418500060216,
+  "startedSelection": "Battletoads",
+  "endedSelection": "Boogerman",
+  "cpuPercentOneCore": 28.987,
+  "rendererCPUPercentOneCore": 19.527,
+  "gpuFrequencyRawMedian": 1152000,
+  "gpuInternalSensorRangeC": [
+    53.0,
+    58.0
+  ],
+  "currentHALTemperaturesC": {
+    "AP": 42.6,
+    "BAT": 34.5,
+    "PA": 40.3,
+    "SKIN": 38.9,
+    "SUBBAT": 0.0,
+    "USB": 35.0
+  },
+  "thermalStatus": 0,
+  "frameCadence": {
+    "frames": 127,
+    "span_s": 4.198963828,
+    "fps": 30.007403054961493,
+    "median_ms": 33.3225975,
+    "maximum_ms": 50.148594,
+    "first_present_ns": 7243649219802,
+    "last_present_ns": 7247848183630
+  },
+  "coverLEDsVisuallyObserved": true,
+  "finalRatingStarsVisuallyObserved": true,
+  "validFixedSelectionComparison": false,
+  "thermalImprovementProven": false,
+  "limitation": "Selection changed during the measurement. No before/after savings or temperature improvement claimed. Captures/logs remain private.",
+  "gameplayStartedByAgent": false,
+  "onlineGameplayVerified": false
+}

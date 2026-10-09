@@ -1,0 +1,29 @@
+{
+  "version": "R88",
+  "baseVersion": "R87",
+  "apkSHA256": "ace762fc0aeb389b28279c1f7061a1210d65398fd1f7f230b4c60645d0ac3c1b",
+  "apkBytes": 2136298172,
+  "compiled": true,
+  "installed": true,
+  "sourceCount": 214,
+  "menuFPS": 30,
+  "videoPlaysOnce": true,
+  "ratingPlaysOnce": true,
+  "coverLEDsEnabled": true,
+  "ledSourcesIdenticalToR87": true,
+  "layoutChanged": false,
+  "serverChanged": false,
+  "runtimeCoresEnginesChanged": false,
+  "gameplayVerified": false,
+  "physicalDisplayVerified": true,
+  "backupReproduced": true,
+  "installedDevices": [
+    "SM-A566E"
+  ],
+  "installationCompletedUTC": "2026-10-09T12:30:38.356536+00:00",
+  "thermalImprovementProven": false,
+  "rejectedNoLEDTrialReplaced": true,
+  "rejectedTrialMeasurementsNotFinalEvidence": true,
+  "physicalMenuFPS": 30.007403054961493,
+  "validFixedSelectionThermalComparison": false
+}

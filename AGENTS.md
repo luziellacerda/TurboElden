@@ -1,3 +1,13 @@
+# R88 corrigida — LEDs preservados, menu30fps e reprodução única
+
+Canal completo versions/station-single-pass-r88-20261009. BaseR87,214Java. Samsung atualizado diretamente, hash integral e UID/dados preservados; consulte STATUS,INSTALLATION e release-channels/ACTIVE.json. Motorola permaneceR86.
+
+CORREÇÃO EXPRESSA DO MANTENEDOR: manter os LEDs. A preliminar33b0563e semLED foi um erro de interpretação e foi substituída. Código native_magazine/StationOnlineCoverView/StationCoverLightingShader idêntico àR87, conferido porhash. Não removerLEDnem restaurar a preliminar. Alterações autorizadas: menu30fps (sem25fps), vídeo uma vez por seleção/libera decodificador/mantém imagem final, estrelas uma passagem. Layout/degradê/faixa/fontes/console/emuladores/online preservados.
+
+1011asserções nativas e24guardas; Java/carrossel do backup reproduzidos byteidênticos. Somente classes35.dex/carrossel mudam;13224entradas e59MP4preservados. Testesnão são gameplay/estabilidade. R88corrigida observada na seleção comLEDs e estrelasfinalizadas;30,007fps. Amostra térmica invalidada para comparação fixa porque seleção mudou deBattletoads paraBoogerman. Não alegar redução de aquecimento. Medições da preliminar ficam no histórico privado e NÃOprovam consumo/temperatura da versão corrigida. Sem novocadastroou alteração de servidor. Git apenasfontes/documentos; nuncaAPK,BIOS,ROM,capturasprivadas/licenças.
+
+## Histórico anterior
+
 # R87 instalada no Samsung — recibo mais recente
 
 2026-10-09T11:30:10.796738+00:00: instalação direta autorizada concluída no Samsung A56, SHA integral a1ed3cd980b8810dab70f417cc97f9ac397b5071b7e21d74ad1b315804abc5f0 conferido. UID, instalação original, dados, saves e licença preservados; sem APK extra no telefone. Nenhum emulador ativo na atualização. Entrada oficial solicitada; aprovação visual e gameplay não alegados. Motorola permanece R86. Fonte executável e032f77e2518e40a9c2c130b812b21f1cc08803a inalterada. Consulte INSTALLATION.json e evidence/installation-samsung-r87.json.

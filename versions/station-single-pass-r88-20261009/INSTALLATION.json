@@ -1,0 +1,52 @@
+{
+  "version": "R88",
+  "installed": true,
+  "apkSHA256": "ace762fc0aeb389b28279c1f7061a1210d65398fd1f7f230b4c60645d0ac3c1b",
+  "devices": [
+    {
+      "version": "R88",
+      "deviceLabel": "samsung",
+      "model": "SM-A566E",
+      "package": "org.turboramastation.frontend",
+      "startedUTC": "2026-10-09T12:29:07.211377+00:00",
+      "completedUTC": "2026-10-09T12:30:38.356536+00:00",
+      "previousAPK_SHA256": "33b0563ef1f679f5632702706a5b77a669a7646d5b00b84cd82199e12aab345d",
+      "apkSHA256": "ace762fc0aeb389b28279c1f7061a1210d65398fd1f7f230b4c60645d0ac3c1b",
+      "deviceAPK_SHA256": "ace762fc0aeb389b28279c1f7061a1210d65398fd1f7f230b4c60645d0ac3c1b",
+      "apkBytes": 2136298172,
+      "installPerformed": true,
+      "installSuccess": true,
+      "uidPreserved": true,
+      "originalInstallTimestampPreserved": true,
+      "dataDirectoryPreserved": true,
+      "uninstalled": false,
+      "dataCleared": false,
+      "deviceSettingsChanged": false,
+      "activeEmulatorBeforeInstall": false,
+      "preInstallAppActivities": [
+        "org.emulationstation.frontend.ESActivity"
+      ],
+      "directStreaming": true,
+      "extraAPKCopiedToPhone": false,
+      "officialEntryRequested": true,
+      "launchVerified": true,
+      "authenticatedEntryVerified": false,
+      "physicalDisplayVerified": true,
+      "serverRegistryActivationVerified": false,
+      "twoDeviceGameplayVerified": false,
+      "inheritedR77OnlineQualificationStillRequired": true,
+      "serverChanged": false,
+      "installCommand": [
+        "install",
+        "--streaming",
+        "--no-incremental",
+        "-r",
+        "--user",
+        "0"
+      ],
+      "postInstallDisplay": "Game selection with original animated LEDs and completed rating stars observed; approximately30fps. Selection changed from Battletoads to Boogerman during measurement."
+    }
+  ],
+  "motorolaLastConfirmedVersion": "R86",
+  "replacesRejectedNoLEDTrial": true
+}
