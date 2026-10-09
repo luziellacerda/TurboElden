@@ -1,3 +1,15 @@
+# R99 pronta — retorno servidor integrado; USB ausente
+
+Pedido atual do mantenedor: ler o retorno do servidor e deixar o app pronto. A proibição anterior de ler handoffs foi revogada por esse pedido explícito. Fonte completa `versions/station-server-integration-r99-20261009`, 224 Java. Ler README/STATUS e recibos antes de continuar. APK final em G:, SHA f124847e6f16b8b4b79afe48a79cbb1a66190f6e9a8494e480b78a4618791955; não instalado. Dez motores entregues conferidos com servidor9f3739b; runtime81b3daa38fb9. Cinco jogadores integrados e limites antigos de roster/iniciar corrigidos. R98 modal/controle preservados; 30fps/LEDs/vídeos/downloads/offline preservados. Dreamcast/GameCube/Wii/WiiU ainda sem adaptadores online; Switch catálogo atual solo. Não declarar todas plataformas concluídas nem gameplay/BSP-D3 validado. Nenhum aparelho na USB; não interromper partidas. Fontes R98 locais permanecem preservadas.
+
+## Histórico anterior
+
+# R98 candidata preparada; controle online ainda precisa gameplay
+
+Fonte versions/station-online-input-r98-20261009. APK em E:, não instalado, SHA556fc80a4f5d403ac16a31a18390b156b99cbddce1d2e1a9c5540d0cd0538a77. Confirmação final opaca sem borda; perfil Xbox/BSP-D3 adaptado somente aos códigos Android confirmados via InputDevice.hasKeys no A56; ocultação touch com gamepad. Apenas classes35.dex mudou.221 fontesJava. Pesquisa oficial Android/Libretro documentada noREADME. Não afirmar controle funcionando, gameplay ou template corrigido: usuário ainda precisa deixar falha online aberta (as leituras foram carrossel/jogo offline). Pedido atual é controles/modal, NÃO ler handoffs/servidor. R97 continua no Samsung; Motorola instalação pendente. Não apagar dados nem interromper partidas.
+
+## Estado anterior
+
 # R97 no Samsung — barra original com Bluetooth
 
 Pedido atual: foco nos controles, sem ler handoffs. Manter o visual original do carrossel com gamepad; esconder somente controles virtuais dentro do jogo. Fonte versions/station-controller-ui-r97-20261009, base integral R96. R97 altera apenas a apresentação durante render do GuiStore (sem mudar estado de entrada) e remove fundo/borda externa de Sua sala/Estou pronto. APK d0f6456e6ff08dca57f0e5b3525c6b8cea67200e3f84c60175c20c09ad453a10 instalado diretamente no Samsung A56; hash conferido. Ver INSTALLATION.json para estado da conferência física. Emuladores/autoconfig/perfis R96 intactos. BSP-D3 foi reconhecido como gamepad em RB+HOME, nome Xbox Wireless Controller 045e:02e0; antes aparecia como TOUCHSCREEN. Não afirmar que X+HOME funcionou neste aparelho. Relato adicional de modal transparente online ainda sem tela identificada. Nenhuma alteração no servidor.

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "checks": 18,
+  "physicalGameplayVerified": false,
+  "skipped": 3,
+  "skipReason": "Windows user lacks symbolic-link creation privilege; production link checks retained"
+}

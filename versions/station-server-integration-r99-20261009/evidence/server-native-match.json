@@ -1,0 +1,40 @@
+{
+  "serverCommit": "9f3739baba135354aa17c62de137090a801ea532",
+  "engineMatches": [
+    "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+    "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+    "pcsx-c8816799-psx-v3-81b3daa38fb9",
+    "neocd-b1e04c73-aslr1-v3-81b3daa38fb9",
+    "parallel-3be1f437-n64-v3-81b3daa38fb9",
+    "fbneo-95153da1-neogeo-v3-81b3daa38fb9",
+    "fbneo-95153da1-fbneo-v3-81b3daa38fb9",
+    "fbneo-95153da1-cps1-v3-81b3daa38fb9",
+    "fbneo-95153da1-cps2-v3-81b3daa38fb9",
+    "fbneo-95153da1-cps3-v3-81b3daa38fb9"
+  ],
+  "count": 10,
+  "elf": {
+    "libstation_online_fbneo.so": {
+      "sha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "minimumLoadAlignment": 16384
+    },
+    "libstation_online_n64.so": {
+      "sha256": "09555f50df2767f078217058648420970024993603217bc9a29066032a8cad9d",
+      "minimumLoadAlignment": 16384
+    },
+    "libstation_online_neocd.so": {
+      "sha256": "78a35bc9a9435238d74125e77ae8f8d249ba59e90f07d43f43c84ad5ddc68870",
+      "minimumLoadAlignment": 16384
+    },
+    "libstation_online_pcsx.so": {
+      "sha256": "4de0afbd3bb113a4b9927b5b250860194b485f278d1dced81501dc6555fa18a8",
+      "minimumLoadAlignment": 16384
+    },
+    "libstation_retroarch.so": {
+      "sha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "minimumLoadAlignment": 16384
+    }
+  },
+  "productionAccessIndependentlyVerified": false,
+  "physicalGameplayVerified": false
+}

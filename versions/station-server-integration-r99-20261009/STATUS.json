@@ -1,0 +1,42 @@
+{
+  "version": "R99",
+  "apkBuilt": true,
+  "installed": false,
+  "sha256": "f124847e6f16b8b4b79afe48a79cbb1a66190f6e9a8494e480b78a4618791955",
+  "bytes": 2218245512,
+  "sourceCount": 224,
+  "serverCommit": "9f3739baba135354aa17c62de137090a801ea532",
+  "clientReturnCommit": "2f435700c68b530e8d4542c0ed1db32824024bf2",
+  "readyForDeviceTesting": [
+    "snes",
+    "megadrive",
+    "n64",
+    "psx",
+    "neogeo",
+    "neogeocd",
+    "fbneo",
+    "cps1",
+    "cps2",
+    "cps3"
+  ],
+  "remainingNativeAdapters": [
+    "dreamcast",
+    "gamecube",
+    "wii",
+    "wiiu"
+  ],
+  "switchCurrentCatalogSolo": true,
+  "allPlatformsOnlineComplete": false,
+  "controllerPhysicalFixVerified": false,
+  "physicalGameplayVerified": false,
+  "checks": {
+    "profiles": 200,
+    "contentIdentity": 12,
+    "roomFive": 51,
+    "catalogIdentity": 9,
+    "bios": 18,
+    "biosSkippedWindowsPrivilege": 3,
+    "native": 1181,
+    "nativeGuards": 12
+  }
+}

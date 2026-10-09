@@ -1,0 +1,20 @@
+{
+  "base": "R98",
+  "server": "9f3739b",
+  "clientReturn": "2f435700c68b530e8d4542c0ed1db32824024bf2",
+  "changedJava": [
+    "java\\client\\src\\java\\org\\emulationstation\\frontend\\station\\StationCatalog.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationContentIdentity.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationGamePlayerInfo.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationMultiplayerProfile.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationMultiplayerSession.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationOnlineBios.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationOnlineClient.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationOnlineGame.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationOnlinePlatformPolicy.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRetroActivity.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRetroLaunch.java",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationRoomsActivity.java"
+  ],
+  "sourceCount": 224
+}

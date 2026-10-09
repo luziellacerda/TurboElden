@@ -1,0 +1,30 @@
+{
+  "scope": "Execute extracted production C with real host mutexes/threads.\n\nRetroArch connection arrays, getpeername, sync and flush are bounded fixtures.\nNo Android, emulated frames, ROM, TLS or multiplayer gameplay is claimed.\n",
+  "passed": true,
+  "stdout": "PASS native-multiplayer checks=1181",
+  "sourceManifestSHA256": "52123e02d63656bcd9975bc0917e1ed97c6f3b0f3309575ccf361c825f280462",
+  "sourceSHA256": "275c7b3d3f7731ad8802307d009d9a927dff6814a69811290b21362f1a1f7827",
+  "extractedFunctions": {
+    "station_multiplayer_accept_fd": "14656d454eec9ebb53d2b35ddbd43481c332aa66b5af0e21db7036206089f25d",
+    "station_netplay_multiplayer_ready": "993b70599f1b632fdce63099d072615a84068083ca4ec2219660c35a4cf3f860",
+    "station_netplay_recovery_poll": "22d3964c4e8de7522ca3b1e2a63edbdbec95208d955c1f9e4283fdd24a9a1bce"
+  },
+  "guards": [
+    "typed v3 protocol",
+    "configuration consumed before native thread",
+    "mapping cleared at final release",
+    "onStop preserves TCP mappings",
+    "PLAY validates actual fd",
+    "v3 accepts only registered local peer",
+    "slot claim follows all socket allocations",
+    "slot claim precedes native activation",
+    "v3 allocation failures report native failure",
+    "rejected slot releases both buffers",
+    "native poll never executes core",
+    "legacy predicate unchanged"
+  ],
+  "androidExecuted": false,
+  "gameplayTested": false,
+  "TLSNetworkTested": false,
+  "realHostMutexThreads": true
+}
