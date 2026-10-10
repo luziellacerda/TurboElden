@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+compiled*/
+*.apk
+*.log
+frontend/build/
+**/.verify-*/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.img
+evidence/physical/
+evidence/test-fixture-rerun/
+recipes/measure_motorola_*.py

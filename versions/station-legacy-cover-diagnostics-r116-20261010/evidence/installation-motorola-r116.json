@@ -1,0 +1,47 @@
+{
+  "version": "R116-candidate",
+  "deviceModel": "Motorola Edge30",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R116-20261010.apk",
+  "apkSHA256": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+  "apkBytes": 2218343816,
+  "installedAPKHashMatchesPackage": true,
+  "dataPreserved": true,
+  "firstInstallTime": "2026-10-06 17:12:33",
+  "updateTime": "2026-10-10 19:45:48",
+  "firstOpen": {
+    "preindex": {
+      "entries": 2266,
+      "accepted": 2264,
+      "rejected": 0,
+      "canonicalMissing": 1422,
+      "legacyDirect": 0,
+      "legacyMissed": 1422,
+      "elapsedMs": 1569
+    },
+    "warm": {
+      "total": 3685,
+      "already": 491,
+      "downloaded": 64,
+      "stopped": true,
+      "elapsedMs": 15231
+    },
+    "published": 3685,
+    "warmCovers": 2327,
+    "backgroundScheduled": 1358,
+    "legacyDirectoryPresent": false
+  },
+  "snesList": {
+    "at500Ms": "hero, texts and 5 thumbnails visible",
+    "sixthThumbnailVisibleByMs": 2500,
+    "selectionChangedAfterSwipeByMs": 550,
+    "ledPreserved": true,
+    "fatalObserved": false,
+    "anrObserved": false
+  },
+  "onlineFirstFrameVerified": false,
+  "onlineVerificationBlocker": "The online Activity is not exported, the app is not debuggable and the frontend did not accept the attempted ADB taps.",
+  "containsScreenshots": false,
+  "containsDeviceSerial": false,
+  "containsPersonalOrSessionData": false,
+  "gameplayVerified": false
+}

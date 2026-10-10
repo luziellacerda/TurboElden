@@ -74,5 +74,34 @@
       ],
       "inlineMatchModeChoice": true
     }
+  },
+  "currentCandidate": {
+    "version": "R116",
+    "branch": "fix/station-cover-sequential-r116-20261010",
+    "sourceDirectory": "versions/station-legacy-cover-diagnostics-r116-20261010",
+    "apk": "TurboStations-Premium-R116-20261010.apk",
+    "apkSHA256": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+    "apkBytes": 2218343816,
+    "javaSourceCount": 226,
+    "installed": true,
+    "installedDevices": [
+      "Motorola Edge30",
+      "Samsung A56"
+    ],
+    "fullAPKHashVerifiedOnBoth": true,
+    "sourceJavaComplete": true,
+    "nativeSnapshotComplete": false,
+    "menuFPS": 30,
+    "coverLEDsEnabled": true,
+    "bundledVideosUsed": true,
+    "sharedCoverIoAndJavaDecodeQueue": true,
+    "visibleCoverPriority": true,
+    "backgroundCoverCacheSequential": true,
+    "promotedStable": false,
+    "onlineFirstFrameVerified": false,
+    "gameplayVerified": false,
+    "thermalImprovementVerified": false,
+    "detailedChanges": "versions/station-legacy-cover-diagnostics-r116-20261010/ALTERACOES-DETALHADAS.md",
+    "status": "candidate installed on both phones; source checks and partial physical verification recorded"
   }
 }

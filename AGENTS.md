@@ -1,3 +1,35 @@
+# R116 instalada nos dois aparelhos — fonte atual para publicação em 10/10/2026
+
+Pedido atual: publicar esta versão no TurboElden com documentação detalhada. Fonte integrada em `versions/station-legacy-cover-diagnostics-r116-20261010`; ler `README.md`, `ALTERACOES-DETALHADAS.md`, `STATUS.json` e os recibos em `evidence/`. APK SHA256 `3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1`, 2.218.343.816 bytes, instalado e hash integral conferido no Motorola Edge30 e Samsung A56. Dados e instalação original preservados. R116 sucede R115, sobre a linha R99 restaurada; R100 continua rejeitada. Não usar o histórico abaixo para escolher APK/fonte atual.
+
+R116 unifica IO de capas e decode Java em uma fila com prioridade visível, conclusão sequencial persistente do cache, promoção do hero online, retomada de lifecycle e limpeza de retries da central. Preserva o código nativo R115, LEDs, 30fps dos menus, vídeos locais e motores. Janela física Motorola: capa/textos/cinco miniaturas em500ms, sexta até2,5s, swipe respondeu em cerca de550ms; não prova causalidade exclusiva do congelamento nem redução térmica. Primeiro quadro online, retorno da sala, offline/429 e gameplay R116 ainda não validados fisicamente. Samsung tem recibo de instalação/hash; abertura foi solicitada, sem conferência visual alegada.
+
+Publicar somente fontes, receitas, testes, manifestos, atribuições e recibos agregados. Não incluir PNG/capturas, APK, ROM, BIOS, logs pessoais, chaves, fixtures geradas ou receitas com serial privado. Java completo226fontes. Snapshot nativo parcial; receita principal usa APK privado R115 exato, SDK/JDK/LLVM e chave local. `JAVA-SOURCE-MANIFEST-R115.json` é a base exata local da receita, dispensando outra pasta-fonte. Não implantar servidor por consequência desta publicação, não promover a estável sem pedido e evidência, não alterar histórico/branches alheios. Os canais R76/R95 em `ACTIVE.json` são referências históricas; `currentCandidate` identifica a R116.
+
+## Histórico anterior
+
+# Reversão solicitada em 10/10/2026 — R99 é a base atual; R100 retirada
+
+O mantenedor mandou voltar à versão imediatamente anterior porque as últimas mudanças ficaram erradas. Suspender a auditoria de consumo e retirar o modo leve R100. Usar a fonte completa `versions/station-server-integration-r99-20261009` e o APK original `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Premium-R99-20261009.apk`, SHA256 `f124847e6f16b8b4b79afe48a79cbb1a66190f6e9a8494e480b78a4618791955`, conferido nesta reversão. R100 permanece apenas como histórico rejeitado, não como base para novos builds. Não reintroduzir suas duas classes, alterações de renderização ou botão MODO LEVE.
+
+A R99 foi restaurada no Motorola Edge 30 em 10/10/2026 às 13:13 UTC: instalação direta retornou `Success`, SHA integral do APK instalado conferiu `f124847e...`, UID/data original/diretório de dados preservados. Substituiu a R100 `83195c8c...`; nenhuma desinstalação ou limpeza. Recibo: `versions/station-server-integration-r99-20261009/RESTORATION-20261010.json`. Abertura autenticada nas plataformas observada. O mantenedor mandou atualizar e seguir com a auditoria de consumo em sequência; a auditoria foi retomada sobre a R99, sem alterações funcionais. O HEAD local está em R97 e R98/R99/R100 estão em pastas locais; `reset HEAD~1` voltaria à revisão errada e não representa a R99. O registro antigo `release-channels/ACTIVE.json` ainda descreve R95; não o usar para escolher o alvo desta reversão.
+
+Auditoria de menus R99 concluída em 10/10/2026: ler `versions/station-server-integration-r99-20261009/CONSUMPTION-20261010.md` e JSON antes de otimizar. GPU próxima de 100%/8–11 FPS nas telas com capa e efeito; forte candidato gráfico, não atribuição isolada comprovada ao LED. Configurações ~63% de um núcleo, redesenho 30 FPS; segundo plano ~0,6% de um núcleo. Vídeos encerrados liberam decoder e SDL anterior para no online nas amostras. Sem gameplay/download ativo medidos, sem otimizações aplicadas. Música LIGADA e manter tela ligada=0 restaurados. Não reintroduzir R100 nem remover LEDs por consequência da auditoria.
+
+## Estado anterior
+
+# R99 pronta — retorno servidor integrado; USB ausente
+
+Pedido atual do mantenedor: ler o retorno do servidor e deixar o app pronto. A proibição anterior de ler handoffs foi revogada por esse pedido explícito. Fonte completa `versions/station-server-integration-r99-20261009`, 224 Java. Ler README/STATUS e recibos antes de continuar. APK final em G:, SHA f124847e6f16b8b4b79afe48a79cbb1a66190f6e9a8494e480b78a4618791955; não instalado. Dez motores entregues conferidos com servidor9f3739b; runtime81b3daa38fb9. Cinco jogadores integrados e limites antigos de roster/iniciar corrigidos. R98 modal/controle preservados; 30fps/LEDs/vídeos/downloads/offline preservados. Dreamcast/GameCube/Wii/WiiU ainda sem adaptadores online; Switch catálogo atual solo. Não declarar todas plataformas concluídas nem gameplay/BSP-D3 validado. Nenhum aparelho na USB; não interromper partidas. Fontes R98 locais permanecem preservadas.
+
+## Histórico anterior
+
+# R98 candidata preparada; controle online ainda precisa gameplay
+
+Fonte versions/station-online-input-r98-20261009. APK em E:, não instalado, SHA556fc80a4f5d403ac16a31a18390b156b99cbddce1d2e1a9c5540d0cd0538a77. Confirmação final opaca sem borda; perfil Xbox/BSP-D3 adaptado somente aos códigos Android confirmados via InputDevice.hasKeys no A56; ocultação touch com gamepad. Apenas classes35.dex mudou.221 fontesJava. Pesquisa oficial Android/Libretro documentada noREADME. Não afirmar controle funcionando, gameplay ou template corrigido: usuário ainda precisa deixar falha online aberta (as leituras foram carrossel/jogo offline). Pedido atual é controles/modal, NÃO ler handoffs/servidor. R97 continua no Samsung; Motorola instalação pendente. Não apagar dados nem interromper partidas.
+
+## Estado anterior
+
 # R97 no Samsung — barra original com Bluetooth
 
 Pedido atual: foco nos controles, sem ler handoffs. Manter o visual original do carrossel com gamepad; esconder somente controles virtuais dentro do jogo. Fonte versions/station-controller-ui-r97-20261009, base integral R96. R97 altera apenas a apresentação durante render do GuiStore (sem mudar estado de entrada) e remove fundo/borda externa de Sua sala/Estou pronto. APK d0f6456e6ff08dca57f0e5b3525c6b8cea67200e3f84c60175c20c09ad453a10 instalado diretamente no Samsung A56; hash conferido. Ver INSTALLATION.json para estado da conferência física. Emuladores/autoconfig/perfis R96 intactos. BSP-D3 foi reconhecido como gamepad em RB+HOME, nome Xbox Wireless Controller 045e:02e0; antes aparecia como TOUCHSCREEN. Não afirmar que X+HOME funcionou neste aparelho. Relato adicional de modal transparente online ainda sem tela identificada. Nenhuma alteração no servidor.

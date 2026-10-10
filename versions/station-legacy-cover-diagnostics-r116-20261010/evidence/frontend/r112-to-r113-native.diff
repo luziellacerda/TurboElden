@@ -1,0 +1,102 @@
+--- R112/station_frontend.cpp
++++ R113/station_frontend.cpp
+@@ -7,6 +7,8 @@
+ #include "station_transfer_rate.hpp"
+ #include "station_profile_bridge.h"
+ #include "station_profile_state.hpp"
++#include "station_cover_warmstart.hpp"
++#include "station_catalog_row.hpp"
+ #include <jni.h>
+ #include <dlfcn.h>
+ #include <algorithm>
+@@ -40,7 +42,7 @@
+ station::ProfileName profileName;
+ struct Inbox {
+  std::mutex mutex;std::atomic<bool> changed{false};
+- bool hasCatalog=false;std::vector<Item> catalog;std::map<std::string,std::string> folderPaths;
++ bool hasCatalog=false;std::vector<Item> catalog;std::map<std::string,std::string> folderPaths;std::map<std::string,uint64_t> revisions;
+  std::map<std::string,CoverResult> covers;std::map<std::string,Job> jobs;
+  std::map<std::string,station::TransferRate> rates;
+  std::string error;
+@@ -48,6 +50,7 @@
+ struct State {
+  Catalog* owner=nullptr;bool pending=false;
+  std::map<std::string,std::string> folderPaths,pendingFolders;uint64_t folderRevision=0;
++ std::map<std::string,uint64_t> revisions,pendingRevisions;
+  std::vector<Item> catalog;
+  std::map<std::string,Job> jobs;
+  std::string progressSelection;
+@@ -99,13 +102,13 @@
+ }
+ void drain(Catalog* catalog){
+  if(!owned(catalog)||!inbox.changed.load(std::memory_order_acquire))return;
+- bool hasCatalog=false;std::vector<Item> next;std::map<std::string,std::string> folders;
++ bool hasCatalog=false;std::vector<Item> next;std::map<std::string,std::string> folders;std::map<std::string,uint64_t> revisions;
+  std::map<std::string,CoverResult> covers;std::map<std::string,Job> jobs;std::string failure;
+  {std::lock_guard<std::mutex> lock(inbox.mutex);
+-  hasCatalog=inbox.hasCatalog;inbox.hasCatalog=false;if(hasCatalog){next.swap(inbox.catalog);folders.swap(inbox.folderPaths);}
++  hasCatalog=inbox.hasCatalog;inbox.hasCatalog=false;if(hasCatalog){next.swap(inbox.catalog);folders.swap(inbox.folderPaths);revisions.swap(inbox.revisions);}
+   covers.swap(inbox.covers);jobs.swap(inbox.jobs);failure.swap(inbox.error);inbox.changed.store(false,std::memory_order_release);
+  }
+- if(hasCatalog){station::resetCoverPublication(state.covers,state.coverRetry,catalog->items,state.nextCoverSweep);catalog->unusedPending=std::move(next);state.pendingFolders=std::move(folders);state.pending=true;catalog->error.clear();__android_log_print(4,"StationNative","Catalog received items=%zu",catalog->unusedPending.size());}
++ if(hasCatalog){station::resetCoverPublication(state.covers,state.coverRetry,catalog->items,state.nextCoverSweep);catalog->unusedPending=std::move(next);state.pendingFolders=std::move(folders);state.pendingRevisions=std::move(revisions);state.pending=true;catalog->error.clear();__android_log_print(4,"StationNative","Catalog received items=%zu",catalog->unusedPending.size());}
+  bool modified=false;
+  for(auto& pair:covers){state.covers.erase(pair.first);Item* item=find(catalog,pair.first);if(!item)continue;
+   CoverResult& result=pair.second;item->coverPending=false;modified=true;
+@@ -125,12 +128,22 @@
+ }
+ bool apply(Catalog* catalog){
+  if(!owned(catalog)||!state.pending||active()||(catalog->engineState[0]&1))return false;
++ std::map<std::string,const Item*> oldItems;for(const auto& item:catalog->items)oldItems.emplace(item.id,&item);
++ size_t preservedCovers=0;
+  for(auto& item:catalog->unusedPending){auto found=state.jobs.find(item.id);if(found==state.jobs.end())continue;
+   const Job& job=found->second;
+   if(job.result==1&&!job.launch.empty()){item.localPath=job.launch;item.fileName=job.launch.substr(job.launch.find_last_of('/')+1);item.installed=true;}
+   else if(job.result==2){item.localPath.clear();item.fileName.clear();item.installed=false;}
+  }
+- catalog->items.swap(catalog->unusedPending);catalog->unusedPending.clear();state.folderPaths.swap(state.pendingFolders);state.pendingFolders.clear();++state.folderRevision;state.pending=false;__android_log_print(4,"StationNative","Catalog applied items=%zu",catalog->items.size());
++ for(auto& item:catalog->unusedPending){
++  if(item.coverReady||!item.coverPath.empty())continue;
++  auto old=oldItems.find(item.id);if(old==oldItems.end())continue;
++  auto oldRevision=state.revisions.find(item.id),nextRevision=state.pendingRevisions.find(item.id);
++  if(oldRevision==state.revisions.end()||nextRevision==state.pendingRevisions.end())continue;
++  const Item& previous=*old->second;
++  if(station::preserveWarmCover(previous,oldRevision->second,item,nextRevision->second))++preservedCovers;
++ }
++ catalog->items.swap(catalog->unusedPending);catalog->unusedPending.clear();state.folderPaths.swap(state.pendingFolders);state.pendingFolders.clear();state.revisions.swap(state.pendingRevisions);state.pendingRevisions.clear();++state.folderRevision;state.pending=false;__android_log_print(4,"StationNative","Catalog applied items=%zu preservedCovers=%zu",catalog->items.size(),preservedCovers);
+  catalog->priorities.clear();state.coverPlan.clear();state.nextCoverSweep=0;state.covers.clear();state.coverRetry.clear();state.jobs.clear();state.progressSelection.clear();
+  catalog->state=2;catalog->error.clear();preparationCommitted=true;changed(catalog);return true;
+ }
+@@ -163,25 +176,21 @@
+ API void Java_org_emulationstation_frontend_station_StationFrontend_publishCatalog(JNIEnv* env,jclass,jobjectArray rows,jbyteArray name){
+  try{
+   if(!rows||env->GetArrayLength(rows)>4096)throw std::runtime_error("Catalog limit");
+-  std::vector<Item> items;std::set<std::string> seen;std::map<std::string,std::string> folders;
++  std::vector<Item> items;std::set<std::string> seen;std::map<std::string,std::string> folders;std::map<std::string,uint64_t> revisions;
+   for(jsize i=0;i<env->GetArrayLength(rows);++i){
+    auto input=static_cast<jbyteArray>(env->GetObjectArrayElement(rows,i));std::string row;
+-   try{row=bytes(env,input,16384);}catch(...){if(input)env->DeleteLocalRef(input);throw;}env->DeleteLocalRef(input);
+-   std::string fields[6];size_t offset=0;
+-   for(auto& field:fields){size_t end=row.find('\0',offset);if(end==std::string::npos)throw std::runtime_error("Incomplete native catalog row");field=row.substr(offset,end-offset);offset=end+1;}
+-   std::string folderPath;
+-   if(offset<row.size()){size_t end=row.find('\0',offset);if(end==std::string::npos)throw std::runtime_error("Incomplete collection path");folderPath=row.substr(offset,end-offset);offset=end+1;}
+-   std::string description;
+-   if(offset<row.size()){size_t end=row.find('\0',offset);if(end==std::string::npos||end-offset>8000)throw std::runtime_error("Invalid description");description=row.substr(offset,end-offset);offset=end+1;}
++   try{row=bytes(env,input,24576);}catch(...){if(input)env->DeleteLocalRef(input);throw;}env->DeleteLocalRef(input);
++   station::NativeCatalogRow parsed=station::parseNativeCatalogRow(row);auto& fields=parsed.fields;
++   std::string& folderPath=parsed.folderPath;std::string& description=parsed.description;
+    if(!station::validCollectionPath(folderPath))throw std::runtime_error("Invalid collection path");
+    if(!folderPath.empty())folders.emplace(fields[0],std::move(folderPath));
+-   if(offset!=row.size()||!idValid(fields[0])||!idValid(fields[4])||!seen.insert(fields[0]).second)throw std::runtime_error("Invalid catalog identity");
+-   Item item;item.id=fields[0];item.name=fields[1];item.platform=fields[2];item.folder=fields[3];item.coverId=fields[4];item.localPath=fields[5];item.unusedGameUrl=station::synopsisPages(description);
++   if(!idValid(fields[0])||!idValid(fields[4])||!seen.insert(fields[0]).second)throw std::runtime_error("Invalid catalog identity");
++   Item item;item.id=fields[0];item.name=fields[1];item.platform=fields[2];item.folder=fields[3];item.coverId=fields[4];item.localPath=fields[5];item.unusedGameUrl=station::synopsisPages(description);item.coverPath=std::move(parsed.coverPath);item.coverReady=!item.coverPath.empty();revisions.emplace(item.id,parsed.coverRevision);
+    item.installed=!item.localPath.empty();if(item.installed)item.fileName=item.localPath.substr(item.localPath.find_last_of('/')+1);items.push_back(std::move(item));
+   }
+   std::string display=bytes(env,name,1024);std::lock_guard<std::mutex> lock(inbox.mutex);
+   station::discardPreviousCoverResults(inbox.covers);
+-  inbox.catalog=std::move(items);inbox.folderPaths=std::move(folders);profileName.publish(std::move(display));inbox.hasCatalog=true;inbox.changed.store(true,std::memory_order_release);
++  inbox.catalog=std::move(items);inbox.folderPaths=std::move(folders);inbox.revisions=std::move(revisions);profileName.publish(std::move(display));inbox.hasCatalog=true;inbox.changed.store(true,std::memory_order_release);
+  }catch(const std::exception& failure){error(env,failure.what());}
+ }
+ API void Java_org_emulationstation_frontend_station_StationFrontend_publishCoverResult(JNIEnv* env,jclass,jstring id,jbyteArray path,jint result,jlong retryMillis){

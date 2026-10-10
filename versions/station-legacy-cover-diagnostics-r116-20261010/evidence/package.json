@@ -1,0 +1,93 @@
+{
+  "version": "R116-candidate",
+  "sourceBaseVersion": "R115",
+  "baseAPK": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R115-20261010.apk",
+  "baseSHA256": "290b9e237c8ad158aac443ce5c11959004f7a28ab4844c4c3453721a288f0dcc",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R116-20261010.apk",
+  "sha256": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+  "bytes": 2218343816,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changes": [
+    "classes28.dex",
+    "classes35.dex"
+  ],
+  "allOtherEntriesByteIdentical": true,
+  "changedJavaFromR115": [
+    "client/src/java/org/emulationstation/frontend/station/ExistingCoverCache.java",
+    "client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+    "client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomArtwork.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "javaSourceCount": 226,
+  "javaTests": [
+    "PASS 20 resource bundle marker checks",
+    "PASS 54 cover warm-start checks; ledger-symlink=unsupported; legacy-direct=executed; preindex4096Ms=2177",
+    "PASS 23 aggregate legacy-cover diagnostics checks",
+    "PASS 72 one-lane cover prefetch checks"
+  ],
+  "nativeWarmPathTest": "PASS 26 native warm-cover checks",
+  "legacyDiagnostics": {
+    "aggregateOnly": true,
+    "containsIdsOrPaths": false,
+    "canonicalMissingIsNotLegacyProof": true
+  },
+  "coverWarmup": {
+    "networkConcurrency": 1,
+    "maximumRemoteAttemptsPerLaunch": 64,
+    "wallBudgetSeconds": 20,
+    "persistedSuccessesAreNotRedownloaded": true
+  },
+  "coverCompletion": {
+    "postPublication": true,
+    "networkConcurrency": 1,
+    "visiblePreemptsBackground": true,
+    "atomicExactCoverIdRevision": true,
+    "lifecycleBound": true,
+    "terminalPassResults": [
+      "offline",
+      "401",
+      "403",
+      "404"
+    ],
+    "rateLimitRetriesPerPass": 1
+  },
+  "coverConsumers": {
+    "carousel": "one-lane",
+    "online": "one-lane",
+    "downloadPanelArtwork": "one-lane",
+    "gameDownloadExecutorChanged": false
+  },
+  "warmRoots": [
+    "/data/data/org.turboramastation.frontend/no_backup/",
+    "/data/user/0/org.turboramastation.frontend/no_backup/"
+  ],
+  "publication": {
+    "privateFullMap": true,
+    "visibleWindow": 9,
+    "revealIntervalMs": 80,
+    "heroImmediate": true
+  },
+  "led": {
+    "baseCoverVisibleWhilePending": true,
+    "prewarmSameCarouselContext": true,
+    "incrementalRowsPerFrame": 4,
+    "atomicCommit": true,
+    "qualityChanged": false
+  },
+  "classes28DexSHA256": "9ed018fcef4eb01fd4ef7d609a93cda592ce2b56792f772f62bc71277db79566",
+  "classes35DexSHA256": "f48bdfaa466f031cff8a5bf127764218f01d111fb01e9e8ad22764feb3394d0d",
+  "frontendSHA256": "3c9d6bfba6ef08ad4909c6e1338c7a2ccd5cf46f9bf0c9bf895910093d3c8b1e",
+  "carouselSHA256": "8b774382c71b18100fb2e70bd9d553307cabe615fcb6aaecc3047bb612d4b3a5",
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "signatureV2V3Passed": true,
+  "zipAlignment16KiBPassed": true,
+  "installed": true,
+  "physicalVerified": true,
+  "physicalVerificationScope": "First launch and SNES carousel/list progressive loading on Motorola Edge30.",
+  "onlineFirstFrameVerified": false,
+  "installationReceipt": "evidence/installation-motorola-r116.json",
+  "utc": "2026-10-10T22:43:33.850036+00:00"
+}

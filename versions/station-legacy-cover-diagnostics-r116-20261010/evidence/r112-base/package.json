@@ -1,0 +1,65 @@
+{
+  "version": "R112-candidate",
+  "sourceBaseVersion": "R111",
+  "resourceInstallerOrigin": {
+    "commit": "97938400d3fa82d5d1564445c36fc70328add1c4",
+    "physicalR111FirstPostUpdate": {
+      "restored": 199,
+      "elapsedSecondsBeforePixelFormat": 7.918
+    },
+    "physicalR111SecondLaunch": {
+      "restored": 0,
+      "elapsedSecondsBeforePixelFormat": 0.434
+    }
+  },
+  "baseAPK": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R111-20261010.apk",
+  "baseSHA256": "4c4bfdf6a171b24792fc61735e9d5c5da27e0875287961ab03143a8a19fe83d2",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R112-20261010.apk",
+  "sha256": "17e2748766a4fe82a043406e392ff3bd4c0b7a55d03e353b7925ebfbdc3f9775",
+  "bytes": 2218278280,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changes": [
+    "classes28.dex"
+  ],
+  "allOtherEntriesByteIdentical": true,
+  "allOtherEntryCount": 13547,
+  "entries": 13548,
+  "javaSourceCount": 226,
+  "changedJavaFromR111": [
+    "client/src/java/org/emulationstation/frontend/AssetInstaller.java",
+    "client/src/java/org/emulationstation/frontend/station/StationResourceBundle.java"
+  ],
+  "unchangedJavaFromR111Count": 224,
+  "classes28DexSHA256": "ac4a031959ed38853af902dd627a401ceceadc0d5df338240583acd5512b1d02",
+  "classes35DexSHA256": "66aa99d7d9c4ddcb4ececf3b9c5a95c03125310cc67646a8d6d4c99126b19f51",
+  "resourceBundleId": "resources-sha256:b2725c79238a1da67ab1d485cb86dd7875b618ad5fb4b63a7f0acb829a02a9ee",
+  "resourceManifestSHA256": "b2725c79238a1da67ab1d485cb86dd7875b618ad5fb4b63a7f0acb829a02a9ee",
+  "resourceFileCount": 199,
+  "resourceBytes": 81660567,
+  "resourcePolicyTest": "PASS 20 resource bundle marker checks",
+  "legacyNumericMarkerMigratesWithoutReplacement": true,
+  "currentMarkerRepairsMissingOrEmptyOnly": true,
+  "freshInstallCopiesAllPackagedResources": true,
+  "changedBundleReplacesPackagedPaths": true,
+  "userAdditionsPreserved": true,
+  "carouselBinarySHA256": "56a03756f1cf2877f863e496db26ed8da5cfc7d6c5f063a71d53b9085559d74a",
+  "carouselBinaryByteIdenticalToR111": true,
+  "frontendBinarySHA256": "ce2282dd627783011648ee67bdb1f2998c28edd9b96d5f2d917235621ef46958",
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "robotJavaSHA256": "deb59b9105c78765a5aa14dea7ec64ef37032490c578b5ec713481b302f24186",
+  "robotJavaByteIdenticalToR111": true,
+  "robotLoop": "infinite only while visible and focused",
+  "coverStoreJavaSHA256": "51143b85353e2108aca544a3719803d19e1121893ee02457ebb6608876a4c4f2",
+  "remoteCoverPipelineByteIdenticalToR111": true,
+  "packagedSystemVideoCount": 58,
+  "carouselVideoSource": "APK assets only through AssetManager.openFd",
+  "remoteCarouselClassesCompiledButInert": true,
+  "runtimeStationCarouselMediaReferencesOutsideOwnClass": 0,
+  "nativeR111Preserved": true,
+  "signatureV2V3Passed": true,
+  "zipAlignment16KiBPassed": true,
+  "installed": false,
+  "physicalStartupVerified": false,
+  "gameplayVerified": false,
+  "utc": "2026-10-10T20:00:53.314377+00:00"
+}

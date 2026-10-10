@@ -1,0 +1,32 @@
+{
+  "passed": 20,
+  "checks": [
+    "R112 base APK SHA-256 equals the final R111 candidate",
+    "resource manifest contains 199 files",
+    "resource manifest totals 81660567 bytes",
+    "resource manifest SHA-256 is b2725c79238a1da67ab1d485cb86dd7875b618ad5fb4b63a7f0acb829a02a9ee",
+    "Python manifest implementation passed",
+    "PowerShell manifest implementation passed",
+    "fresh install copies the complete packaged bundle",
+    "current marker preserves non-empty packaged resources",
+    "current marker repairs an empty packaged resource",
+    "current marker repairs a missing packaged resource",
+    "complete current bundle performs zero recopy",
+    "legacy numeric marker performs zero full recopy and migrates",
+    "changed stable bundle id replaces packaged paths",
+    "user additions survive current, legacy and changed modes",
+    "BIOS install remains replaceExisting=false",
+    "compiled AssetInstaller contains no getPackageInfo or lastUpdateTime",
+    "compiled marker is written after StationBundledFiles.install returns",
+    "only classes28.dex differs from R111",
+    "13547 other APK entries are byte-identical to R111",
+    "APK signature v2/v3 and 16 KiB alignment passed"
+  ],
+  "discardedManifestValues": {
+    "cd82bd243e00ed700fe0996dabda152664f76c9b8b657e4ccf9fc1d5d2bf3156": "ambiguous PowerShell ordering/join; not the declared ordinal LF algorithm",
+    "9436d3a502dc40930ccffc2623f66c4e82a3a7f652bcae8b6bbd61753b9e2994": "literal backslash+n separator; not byte LF"
+  },
+  "finalManifestSerialization": "ordinal FullName|Length|lowercase-content-sha256; UTF-8; byte LF between lines; no final LF",
+  "resourcePolicyTest": "PASS 20 resource bundle marker checks",
+  "physicalTestPending": true
+}

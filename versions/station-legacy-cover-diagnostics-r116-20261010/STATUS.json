@@ -1,0 +1,230 @@
+{
+  "version": "R116-candidate",
+  "base": "R115",
+  "state": "installed-both-devices-ready-for-publication-physical-validation-partial",
+  "compiled": true,
+  "signed": true,
+  "installed": true,
+  "published": false,
+  "promotedStable": false,
+  "source": "versions/station-legacy-cover-diagnostics-r116-20261010",
+  "externalBuild": "E:\\ESTUDO APK\\work\\station-legacy-cover-diagnostics-r116-20261010\\compiled-final",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R116-20261010.apk",
+  "apkSHA256": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+  "apkBytes": 2218343816,
+  "baseApk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R115-20261010.apk",
+  "baseApkSHA256": "290b9e237c8ad158aac443ce5c11959004f7a28ab4844c4c3453721a288f0dcc",
+  "changedAPKEntries": [
+    "classes28.dex",
+    "classes35.dex"
+  ],
+  "preservedNativeHashes": {
+    "libstation_frontend.so": "3c9d6bfba6ef08ad4909c6e1338c7a2ccd5cf46f9bf0c9bf895910093d3c8b1e",
+    "libturbo_carousel.so": "8b774382c71b18100fb2e70bd9d553307cabe615fcb6aaecc3047bb612d4b3a5",
+    "libstation_retroarch.so": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc"
+  },
+  "changedJavaFromR115": [
+    "client/src/java/org/emulationstation/frontend/station/ExistingCoverCache.java",
+    "client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+    "client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomArtwork.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "javaSourceCount": 226,
+  "legacyCache": {
+    "exactRevisionRequired": true,
+    "allowedExtensions": [
+      "png",
+      "jpg",
+      "jpeg",
+      "webp",
+      "gif"
+    ],
+    "aggregateDiagnosticsOnly": true,
+    "canonicalMissingIsNotLegacyProof": true,
+    "acceptedRoots": [
+      "/data/data/org.turboramastation.frontend/no_backup/",
+      "/data/user/0/org.turboramastation.frontend/no_backup/"
+    ]
+  },
+  "coverQueue": {
+    "globalIoAndDecodeConcurrency": 1,
+    "visiblePreemptsPrefetch": true,
+    "heroPromotesPendingThumbnail": true,
+    "catalogBackgroundPlanRetained": true,
+    "onlineWorkAllowedWhileCarouselPaused": true,
+    "deferredNativeRebasedAfterPublication": true,
+    "downloadPanelArtworkIntegrated": true,
+    "downloadPanelDelayedCallbacksCancelled": true,
+    "gameDownloadExecutorChanged": false,
+    "rateLimitRetriesPerPass": 1,
+    "terminalPassResults": [
+      "offline",
+      "transient",
+      "401",
+      "403",
+      "404"
+    ],
+    "optionalPlanMaximumItems": 4096,
+    "executorQueueCapacity": 9,
+    "catalogQuiesceTimeoutMs": 5000,
+    "javaBitmapDecodeOnSharedWorker": true,
+    "nativeDecodeAndGLRunOnJavaWorker": false
+  },
+  "tests": {
+    "allJavaCompile": "PASS 226 production sources plus 4 fixtures",
+    "coverQueue": "PASS 72 one-lane cover prefetch checks",
+    "legacyDiagnostics": "PASS 23 aggregate legacy-cover diagnostics checks",
+    "resourceBundle": "PASS 20 resource bundle marker checks",
+    "warmStart": "PASS 54 cover warm-start checks; legacy-direct=executed",
+    "manifest": "PASS 226 sources, exactly 7 changed from R115",
+    "buildRecipeSyntax": "PASS",
+    "reviewP0": 0,
+    "reviewP1": 0,
+    "nativeWarmPath": "PASS 26 native warm-cover checks; inherited implementation preserved"
+  },
+  "r115PhysicalEvidence": {
+    "canonicalMissing": 1505,
+    "legacyDirect": 0,
+    "legacyMissed": 1505,
+    "initialAlreadyWarm": 329,
+    "initialDownloaded": 64,
+    "publishedWarm": 2199,
+    "shaderPrewarmTotalMs": 15231,
+    "fieldPrewarmMs": 8848,
+    "onlineLedReadyMs": 7058
+  },
+  "qualityChanged": false,
+  "nativeChanged": false,
+  "serverChanged": false,
+  "installation": {
+    "deviceModel": "Motorola Edge30",
+    "dataPreserved": true,
+    "firstInstallTime": "2026-10-06 17:12:33",
+    "updateTime": "2026-10-10 20:02:32",
+    "installedAPKHashMatchesPackage": true,
+    "firstR116UpdateTimeDevice": "2026-10-10 19:45:48",
+    "timeBasis": "device-local, no UTC conversion asserted"
+  },
+  "r116PhysicalEvidence": {
+    "firstOpen": {
+      "preindexEntries": 2266,
+      "preindexAccepted": 2264,
+      "preindexRejected": 0,
+      "canonicalMissing": 1422,
+      "legacyDirect": 0,
+      "legacyMissed": 1422,
+      "preindexElapsedMs": 1569,
+      "warmTotal": 3685,
+      "warmAlready": 491,
+      "warmDownloaded": 64,
+      "warmStopped": true,
+      "warmElapsedMs": 15231,
+      "published": 3685,
+      "warmCovers": 2327,
+      "backgroundScheduled": 1358,
+      "legacyDirectoryPresent": false
+    },
+    "snesList": {
+      "at500Ms": "hero, texts and 5 thumbnails visible",
+      "sixthThumbnailVisibleByMs": 2500,
+      "selectionChangedAfterSwipeByMs": 550,
+      "ledPreserved": true,
+      "fatalObserved": false,
+      "anrObserved": false
+    },
+    "onlineFirstFrameVerified": false,
+    "onlineVerificationBlocker": "The online Activity is not exported, the app is not debuggable and the frontend did not accept the attempted ADB taps.",
+    "samsung": {
+      "gameplayVerified": false,
+      "launcherStartAccepted": true,
+      "installedHashVerified": true,
+      "progressiveLoadingMeasured": false
+    }
+  },
+  "physicalVerified": true,
+  "physicalVerificationScope": "First launch and SNES carousel/list progressive loading on Motorola Edge30; package hash and preserved installation/data confirmed on Motorola and Samsung.",
+  "gameplayVerified": false,
+  "remainingRisk": "Online first frame, lifecycle races, closing download panel during decode, offline and rate-limit behavior remain physically unverified. The measured Motorola had no legacy cover directory; real legacy reuse was not exercised. No R116 gameplay or controlled thermal comparison.",
+  "publication": {
+    "containsAPK": false,
+    "published": false,
+    "containsMedia": false,
+    "state": "ready-for-publication",
+    "baseAPKRemainsPrivateDependency": true,
+    "nativeSnapshotComplete": false,
+    "detailedChanges": "ALTERACOES-DETALHADAS.md",
+    "branch": "fix/station-cover-sequential-r116-20261010",
+    "containsPrivateLogs": false
+  },
+  "functionalBase": "R99",
+  "rejectedBaseNotUsed": "R100",
+  "inheritedFeatures": {
+    "exactPersistentCoverProofs": true,
+    "nativePublicationWindow": 9,
+    "initialCoverWarmWallBudgetSeconds": 20,
+    "packagedResourceBytes": 81660567,
+    "packagedResourceFiles": 199,
+    "menuFPS": 30,
+    "onlineBackground": "static PSP-style waves, rasterized on size change",
+    "nativeRevealIntervalMs": 80,
+    "baseCoverVisibleWhileLedPending": true,
+    "carouselRemoteVideoSyncActive": false,
+    "coverPreindex": true,
+    "contentBasedResourceMarker": true,
+    "shaderOptimizations": "R103-R106 support bounds, conditional reads, vertex classification with automatic direct fallback",
+    "incrementalLedRowsPerFrame": 4,
+    "textAndLayoutCache": "R101/R102 guarded by owner, text, dimensions, selection and revision",
+    "localCarouselVideos": 58,
+    "selectedCoverImmediate": true,
+    "emulatorFPSRuleChanged": false,
+    "initialCoverWarmMaximumRemoteAttempts": 64,
+    "onlineLedFieldFormat": "RGBA8",
+    "nativeLedFieldFormat": "RGBA16F",
+    "robotAnimation": "loop while visible and focused"
+  },
+  "installedDevices": [
+    {
+      "installedAPKHashMatchesPackage": true,
+      "hash": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+      "firstR116UpdateTimeDevice": "2026-10-10 19:45:48",
+      "uninstall": false,
+      "timeBasis": "device-local, no UTC conversion asserted",
+      "launcherStart": "accepted",
+      "lastUpdateTimeDevice": "2026-10-10 20:02:32",
+      "originalInstallationTimePreserved": true,
+      "gameplayVerified": false,
+      "reinstallationReceipt": "evidence/reinstallation-motorola-r116.json",
+      "extraAPKCopiedToSharedStorage": false,
+      "firstInstallTimeDevice": "2026-10-06 17:12:33",
+      "model": "Motorola Edge30",
+      "receipt": "evidence/installation-motorola-r116.json",
+      "dataCleared": false,
+      "dataPreserved": true
+    },
+    {
+      "installedAPKHashMatchesPackage": true,
+      "hash": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+      "launcherStart": "accepted",
+      "uninstall": false,
+      "timeBasis": "device-local, no UTC conversion asserted",
+      "lastUpdateTimeDevice": "2026-10-10 20:21:43",
+      "originalInstallationTimePreserved": true,
+      "gameplayVerified": false,
+      "extraAPKCopiedToSharedStorage": false,
+      "firstInstallTimeDevice": "2026-10-03 16:17:03",
+      "model": "Samsung A56 SM-A566E",
+      "receipt": "evidence/installation-samsung-r116.json",
+      "dataCleared": false,
+      "dataPreserved": true
+    }
+  ],
+  "causality": {
+    "codeContentionConfirmed": true,
+    "relation": "Independent artwork IO/decode competed with cover publication and LED preparation; R115 divided publication/LED, R116 unifies cover admission and visible priority.",
+    "physicalExclusiveCauseProven": false
+  },
+  "thermalImprovementMeasured": false
+}

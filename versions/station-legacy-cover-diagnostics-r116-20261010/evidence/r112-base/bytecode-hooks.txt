@@ -1,0 +1,261 @@
+Compiled from "AssetInstaller.java"
+public final class org.emulationstation.frontend.AssetInstaller {
+  private static final java.lang.String TAG;
+
+  private org.emulationstation.frontend.AssetInstaller();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static synchronized void installIfNeeded(android.content.Context, java.io.File);
+    Code:
+       0: aload_1
+       1: invokevirtual #7                  // Method java/io/File.toPath:()Ljava/nio/file/Path;
+       4: invokestatic  #13                 // Method org/emulationstation/frontend/station/StationStorage.prepareRoot:(Ljava/nio/file/Path;)Ljava/nio/file/Path;
+       7: astore_2
+       8: aload_0
+       9: invokevirtual #19                 // Method android/content/Context.getAssets:()Landroid/content/res/AssetManager;
+      12: astore_3
+      13: new           #25                 // class org/emulationstation/frontend/AssetInstaller$1
+      16: dup
+      17: aload_3
+      18: invokespecial #27                 // Method org/emulationstation/frontend/AssetInstaller$1."<init>":(Landroid/content/res/AssetManager;)V
+      21: astore        4
+      23: aload         4
+      25: ldc           #30                 // String bios
+      27: aload_2
+      28: ldc           #32                 // String .emulationstation/bios
+      30: invokeinterface #34,  2           // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+      35: iconst_0
+      36: invokestatic  #40                 // Method org/emulationstation/frontend/station/StationBundledFiles.install:(Lorg/emulationstation/frontend/station/StationBundledFiles$Source;Ljava/lang/String;Ljava/nio/file/Path;Z)I
+      39: istore        5
+      41: aload_2
+      42: ldc           #46                 // String .emulationstation/resources
+      44: invokeinterface #34,  2           // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+      49: astore        6
+      51: aload         4
+      53: aload         6
+      55: invokestatic  #48                 // Method org/emulationstation/frontend/station/StationResourceBundle.install:(Lorg/emulationstation/frontend/station/StationBundledFiles$Source;Ljava/nio/file/Path;)I
+      58: istore        7
+      60: ldc           #55                 // String EmulationStation
+      62: new           #57                 // class java/lang/StringBuilder
+      65: dup
+      66: invokespecial #59                 // Method java/lang/StringBuilder."<init>":()V
+      69: ldc           #60                 // String Packaged resources ready: restored=
+      71: invokevirtual #62                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      74: iload         7
+      76: invokevirtual #66                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      79: ldc           #69                 // String  bios=
+      81: invokevirtual #62                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      84: iload         5
+      86: invokevirtual #66                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+      89: invokevirtual #71                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      92: invokestatic  #75                 // Method android/util/Log.i:(Ljava/lang/String;Ljava/lang/String;)I
+      95: pop
+      96: goto          131
+      99: astore_2
+     100: ldc           #55                 // String EmulationStation
+     102: new           #57                 // class java/lang/StringBuilder
+     105: dup
+     106: invokespecial #59                 // Method java/lang/StringBuilder."<init>":()V
+     109: ldc           #83                 // String Could not prepare packaged resources:
+     111: invokevirtual #62                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     114: aload_2
+     115: invokevirtual #85                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+     118: invokevirtual #89                 // Method java/lang/Class.getSimpleName:()Ljava/lang/String;
+     121: invokevirtual #62                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     124: invokevirtual #71                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     127: invokestatic  #94                 // Method android/util/Log.e:(Ljava/lang/String;Ljava/lang/String;)I
+     130: pop
+     131: return
+    Exception table:
+       from    to  target type
+           0    96    99   Class java/lang/Exception
+}
+Compiled from "StationResourceBundle.java"
+public final class org.emulationstation.frontend.station.StationResourceBundle {
+  public static final java.lang.String BUNDLE_ID;
+
+  private static final java.lang.String MARKER_NAME;
+
+  private static final int MAX_MARKER_BYTES;
+
+  private org.emulationstation.frontend.station.StationResourceBundle();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static int install(org.emulationstation.frontend.station.StationBundledFiles$Source, java.nio.file.Path) throws java.io.IOException;
+    Code:
+       0: aload_1
+       1: ldc           #9                  // String .installed-version
+       3: invokeinterface #11,  2           // InterfaceMethod java/nio/file/Path.resolve:(Ljava/lang/String;)Ljava/nio/file/Path;
+       8: astore_2
+       9: aload_2
+      10: invokestatic  #17                 // Method readMarker:(Ljava/nio/file/Path;)Ljava/lang/String;
+      13: astore_3
+      14: aload_3
+      15: ifnull        34
+      18: ldc           #21                 // String resources-sha256:b2725c79238a1da67ab1d485cb86dd7875b618ad5fb4b63a7f0acb829a02a9ee
+      20: aload_3
+      21: invokevirtual #23                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      24: ifne          38
+      27: aload_3
+      28: invokestatic  #29                 // Method legacyTimestamp:(Ljava/lang/String;)Z
+      31: ifne          38
+      34: iconst_1
+      35: goto          39
+      38: iconst_0
+      39: istore        4
+      41: aload_0
+      42: ldc           #33                 // String resources
+      44: aload_1
+      45: iload         4
+      47: invokestatic  #35                 // Method org/emulationstation/frontend/station/StationBundledFiles.install:(Lorg/emulationstation/frontend/station/StationBundledFiles$Source;Ljava/lang/String;Ljava/nio/file/Path;Z)I
+      50: istore        5
+      52: aload_1
+      53: aload_2
+      54: invokestatic  #41                 // Method writeMarker:(Ljava/nio/file/Path;Ljava/nio/file/Path;)V
+      57: iload         5
+      59: ireturn
+
+  static boolean legacyTimestamp(java.lang.String);
+    Code:
+       0: aload_0
+       1: ifnull        11
+       4: aload_0
+       5: invokevirtual #45                 // Method java/lang/String.isEmpty:()Z
+       8: ifeq          13
+      11: iconst_0
+      12: ireturn
+      13: iconst_0
+      14: istore_1
+      15: iload_1
+      16: aload_0
+      17: invokevirtual #49                 // Method java/lang/String.length:()I
+      20: if_icmpge     51
+      23: aload_0
+      24: iload_1
+      25: invokevirtual #53                 // Method java/lang/String.charAt:(I)C
+      28: bipush        48
+      30: if_icmplt     43
+      33: aload_0
+      34: iload_1
+      35: invokevirtual #53                 // Method java/lang/String.charAt:(I)C
+      38: bipush        57
+      40: if_icmple     45
+      43: iconst_0
+      44: ireturn
+      45: iinc          1, 1
+      48: goto          15
+      51: iconst_1
+      52: ireturn
+
+  static java.lang.String readMarker(java.nio.file.Path) throws java.io.IOException;
+    Code:
+       0: aload_0
+       1: iconst_1
+       2: anewarray     #57                 // class java/nio/file/LinkOption
+       5: dup
+       6: iconst_0
+       7: getstatic     #59                 // Field java/nio/file/LinkOption.NOFOLLOW_LINKS:Ljava/nio/file/LinkOption;
+      10: aastore
+      11: invokestatic  #63                 // Method java/nio/file/Files.isRegularFile:(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+      14: ifne          19
+      17: aconst_null
+      18: areturn
+      19: aload_0
+      20: invokestatic  #69                 // Method java/nio/file/Files.size:(Ljava/nio/file/Path;)J
+      23: lstore_1
+      24: lload_1
+      25: lconst_0
+      26: lcmp
+      27: ifle          38
+      30: lload_1
+      31: ldc2_w        #73                 // long 256l
+      34: lcmp
+      35: ifle          40
+      38: aconst_null
+      39: areturn
+      40: new           #24                 // class java/lang/String
+      43: dup
+      44: aload_0
+      45: invokestatic  #75                 // Method java/nio/file/Files.readAllBytes:(Ljava/nio/file/Path;)[B
+      48: getstatic     #79                 // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+      51: invokespecial #85                 // Method java/lang/String."<init>":([BLjava/nio/charset/Charset;)V
+      54: invokevirtual #88                 // Method java/lang/String.trim:()Ljava/lang/String;
+      57: areturn
+
+  private static void writeMarker(java.nio.file.Path, java.nio.file.Path) throws java.io.IOException;
+    Code:
+       0: aload_0
+       1: invokestatic  #92                 // Method org/emulationstation/frontend/station/StationInstaller.directory:(Ljava/nio/file/Path;)Ljava/nio/file/Path;
+       4: pop
+       5: aload_0
+       6: ldc           #98                 // String .station-resource-marker-
+       8: ldc           #100                // String .tmp
+      10: iconst_0
+      11: anewarray     #102                // class java/nio/file/attribute/FileAttribute
+      14: invokestatic  #104                // Method java/nio/file/Files.createTempFile:(Ljava/nio/file/Path;Ljava/lang/String;Ljava/lang/String;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/file/Path;
+      17: astore_2
+      18: aload_2
+      19: ldc           #21                 // String resources-sha256:b2725c79238a1da67ab1d485cb86dd7875b618ad5fb4b63a7f0acb829a02a9ee
+      21: getstatic     #79                 // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+      24: invokevirtual #108                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+      27: iconst_2
+      28: anewarray     #112                // class java/nio/file/OpenOption
+      31: dup
+      32: iconst_0
+      33: getstatic     #114                // Field java/nio/file/StandardOpenOption.WRITE:Ljava/nio/file/StandardOpenOption;
+      36: aastore
+      37: dup
+      38: iconst_1
+      39: getstatic     #120                // Field java/nio/file/StandardOpenOption.TRUNCATE_EXISTING:Ljava/nio/file/StandardOpenOption;
+      42: aastore
+      43: invokestatic  #123                // Method java/nio/file/Files.write:(Ljava/nio/file/Path;[B[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path;
+      46: pop
+      47: aload_2
+      48: aload_1
+      49: iconst_2
+      50: anewarray     #127                // class java/nio/file/CopyOption
+      53: dup
+      54: iconst_0
+      55: getstatic     #129                // Field java/nio/file/StandardCopyOption.ATOMIC_MOVE:Ljava/nio/file/StandardCopyOption;
+      58: aastore
+      59: dup
+      60: iconst_1
+      61: getstatic     #135                // Field java/nio/file/StandardCopyOption.REPLACE_EXISTING:Ljava/nio/file/StandardCopyOption;
+      64: aastore
+      65: invokestatic  #138                // Method java/nio/file/Files.move:(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
+      68: pop
+      69: goto          89
+      72: astore_3
+      73: aload_2
+      74: aload_1
+      75: iconst_1
+      76: anewarray     #127                // class java/nio/file/CopyOption
+      79: dup
+      80: iconst_0
+      81: getstatic     #135                // Field java/nio/file/StandardCopyOption.REPLACE_EXISTING:Ljava/nio/file/StandardCopyOption;
+      84: aastore
+      85: invokestatic  #138                // Method java/nio/file/Files.move:(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
+      88: pop
+      89: aload_2
+      90: invokestatic  #144                // Method java/nio/file/Files.deleteIfExists:(Ljava/nio/file/Path;)Z
+      93: pop
+      94: goto          107
+      97: astore        4
+      99: aload_2
+     100: invokestatic  #144                // Method java/nio/file/Files.deleteIfExists:(Ljava/nio/file/Path;)Z
+     103: pop
+     104: aload         4
+     106: athrow
+     107: return
+    Exception table:
+       from    to  target type
+          47    69    72   Class java/nio/file/AtomicMoveNotSupportedException
+          18    89    97   any
+          97    99    97   any
+}

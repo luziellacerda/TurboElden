@@ -1,0 +1,168 @@
+{
+  "version": "R113-candidate",
+  "sourceBase": "R112 / reproducible R102 frontend source",
+  "baseFrontendSO": "ce2282dd627783011648ee67bdb1f2998c28edd9b96d5f2d917235621ef46958",
+  "baselineSourceSHA256": "5f77d82d902dbe17bcba7870cd12e61b3bd44000caa395be4fede783512768bc",
+  "baselineRecompiledSHA256": "ce2282dd627783011648ee67bdb1f2998c28edd9b96d5f2d917235621ef46958",
+  "r113FrontendSHA256": "aec571fb83fcb1ab459ec1a3b32083efac4ba125a0a56209cf3f47475a0758bb",
+  "profileTest": "PASS 21 profile checks; 9849 concurrent snapshots; 20000 changed and 20000 identical publications",
+  "warmCoverParserAndRefreshTest": "PASS 23 native warm-cover checks",
+  "exportsExactlyPreserved": true,
+  "exportCount": 36,
+  "itemAbiBytes": 232,
+  "coverPathOffset": 200,
+  "coverReadyOffset": 225,
+  "maximumPageSize": 16384,
+  "target": "aarch64-linux-android26",
+  "files": {
+    "station_frontend.cpp": {
+      "bytes": 30140,
+      "sha256": "f1315afa437a92102599714d7263a465f6b295c6f2f07272656cb686616a3547"
+    },
+    "station_catalog_abi.hpp": {
+      "bytes": 1766,
+      "sha256": "0251380f0638a6c3b332d0e91c0bf2d19746e08ee650163f312c985a4f104c35"
+    },
+    "station_catalog_row.hpp": {
+      "bytes": 1693,
+      "sha256": "be971e626ae45e745e1bf182699def4ce58349d7c62ab3dcd80438e5f85fe7cb"
+    },
+    "station_cover_warmstart.hpp": {
+      "bytes": 1975,
+      "sha256": "a17e6b9d8360874c2dc026bd50e452b63ea7395cb6863cb3373cae183666e9f9"
+    },
+    "tests/warm_cover_test.cpp": {
+      "bytes": 4358,
+      "sha256": "43dbf7a077a73683ab083248ed76b5f727c9578de453afaf70f1de9819ba5123"
+    },
+    "tests/profile_name_test.cpp": {
+      "bytes": 3867,
+      "sha256": "164fb31bfed3589ba0189a100ad6a411647556b5cd64d587597378f13bda83c9"
+    },
+    "tests/bridge_header_c_test.c": {
+      "bytes": 193,
+      "sha256": "8d67c46238c09840442e02ee13fa6038a9af3c38907e1862b59eb9b7bd2ec49d"
+    },
+    "libstation_frontend.so": {
+      "bytes": 3027528,
+      "sha256": "aec571fb83fcb1ab459ec1a3b32083efac4ba125a0a56209cf3f47475a0758bb"
+    },
+    "libstation_frontend-r112-baseline.so": {
+      "bytes": 3016144,
+      "sha256": "ce2282dd627783011648ee67bdb1f2998c28edd9b96d5f2d917235621ef46958"
+    }
+  },
+  "commands": [
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang.exe",
+      "-x",
+      "c",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsyntax-only",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-cover-warmstart-r113-20261010\\frontend\\tests\\bridge_header_c_test.c"
+    ],
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-cover-warmstart-r113-20261010\\frontend\\tests\\profile_name_test.cpp",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\profile_name_test.exe"
+    ],
+    [
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\profile_name_test.exe"
+    ],
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-cover-warmstart-r113-20261010\\frontend",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-cover-warmstart-r113-20261010\\frontend\\tests\\warm_cover_test.cpp",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\warm_cover_test.exe"
+    ],
+    [
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\warm_cover_test.exe"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe",
+      "--target=aarch64-linux-android26",
+      "-std=c++17",
+      "-shared",
+      "-fPIC",
+      "-O2",
+      "-Wl,-z,max-page-size=16384",
+      "-Wl,--no-undefined",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wno-return-type-c-linkage",
+      "-static-libstdc++",
+      "-Wl,--exclude-libs,ALL",
+      "-I",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-cover-warmstart-r113-20261010\\frontend",
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\baseline-source\\station_frontend.cpp",
+      "-ldl",
+      "-llog",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\libstation_frontend-r112-baseline.so"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe",
+      "--target=aarch64-linux-android26",
+      "-std=c++17",
+      "-shared",
+      "-fPIC",
+      "-O2",
+      "-Wl,-z,max-page-size=16384",
+      "-Wl,--no-undefined",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wno-return-type-c-linkage",
+      "-static-libstdc++",
+      "-Wl,--exclude-libs,ALL",
+      "-I",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-cover-warmstart-r113-20261010\\frontend",
+      "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-cover-warmstart-r113-20261010\\frontend\\station_frontend.cpp",
+      "-ldl",
+      "-llog",
+      "-o",
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\libstation_frontend.so"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-nm.exe",
+      "--defined-only",
+      "--dynamic",
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\compiled-final\\libstation_frontend-r112.so"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-nm.exe",
+      "--defined-only",
+      "--dynamic",
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\libstation_frontend.so"
+    ],
+    [
+      "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-readelf.exe",
+      "-lW",
+      "E:\\ESTUDO APK\\work\\station-cover-warmstart-r113-20261010\\native-build\\libstation_frontend.so"
+    ]
+  ],
+  "apkPackaged": true,
+  "installed": false,
+  "serverChanged": false,
+  "packagedAPK": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R113-20261010.apk",
+  "packagedFrontendSHA256": "aec571fb83fcb1ab459ec1a3b32083efac4ba125a0a56209cf3f47475a0758bb"
+}
