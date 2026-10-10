@@ -36,6 +36,10 @@
     "requiresServerOptionalPagination": true,
     "signedApkBuilt": false,
     "installed": false,
-    "physicalGameplayVerified": false
+    "physicalGameplayVerified": false,
+    "serverDeployed": true,
+    "serverSourceCommit": "7eb0e009d40ce01db86aea9c489937e9bd2fd00a",
+    "serverDllSHA256": "2c0d034476969cbed58b519b744e841111373f89a4bcd6abb9cd14543abcde35",
+    "serverDeployedUTC": "2026-10-10T21:49:22.368044+00:00"
   }
 }
