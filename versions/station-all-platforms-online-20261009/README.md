@@ -1,3 +1,7 @@
+## Catálogo33: capas atuais do site
+
+36 capas corrigidas (PS2/PSP/Wii/WiiU),42 conferidas pela API pública. DEX inalterados. Buscar novamente o catálogo assinado; cache por coverId+item.revision. Não reaproveitar capas antigas nem limpar saves/dados. Origem, exceções e recibo no mesmo handoff do servidor.
+
 ## Catálogo 32: PSP e Sega 32X
 
 Dados publicados; mapping e parser desta compilação conferidos com os 45 jogos reais. Capas/downloads seguem o contrato assinado. DEX inalterados. Consulte o mesmo handoff e os recibos de integração/limpeza; não executar operadores ou receitas por caminhos intermediários removidos.

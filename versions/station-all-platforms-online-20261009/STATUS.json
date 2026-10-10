@@ -17,7 +17,7 @@
   ],
   "portableCueIdentity": true,
   "serverSidePublicationComplete": true,
-  "catalogRevision": 32,
+  "catalogRevision": 33,
   "serverProfileCount": 5176,
   "configuredServerPlatformCount": 17,
   "serverPublicationStatus": "applied-and-authenticated-public-api-verified",
@@ -48,6 +48,10 @@
     "sega32x": 36,
     "compiledParserPassed": true,
     "JavaOrDEXChanged": false,
-    "physicalAndroidGameplayQualified": false
+    "physicalAndroidGameplayQualified": false,
+    "coverCorrection": "capas-site-ps2-psp-wii-wiiu-20261010.json",
+    "catalogRevision": 33,
+    "hostedCoversReplaced": 36,
+    "publicCoversVerified": 42
   }
 }
