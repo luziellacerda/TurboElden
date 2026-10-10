@@ -17,7 +17,7 @@
   ],
   "portableCueIdentity": true,
   "serverSidePublicationComplete": true,
-  "catalogRevision": 31,
+  "catalogRevision": 32,
   "serverProfileCount": 5176,
   "configuredServerPlatformCount": 17,
   "serverPublicationStatus": "applied-and-authenticated-public-api-verified",
@@ -41,5 +41,13 @@
     "serverSourceCommit": "7eb0e009d40ce01db86aea9c489937e9bd2fd00a",
     "serverDllSHA256": "2c0d034476969cbed58b519b744e841111373f89a4bcd6abb9cd14543abcde35",
     "serverDeployedUTC": "2026-10-10T21:49:22.368044+00:00"
+  },
+  "catalogDataIntegration": {
+    "receipt": "sega32x-psp-publicados-20261010.json",
+    "psp": 9,
+    "sega32x": 36,
+    "compiledParserPassed": true,
+    "JavaOrDEXChanged": false,
+    "physicalAndroidGameplayQualified": false
   }
 }

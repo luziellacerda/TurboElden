@@ -1,3 +1,7 @@
+## Catálogo 32: PSP e Sega 32X
+
+Dados publicados; mapping e parser desta compilação conferidos com os 45 jogos reais. Capas/downloads seguem o contrato assinado. DEX inalterados. Consulte o mesmo handoff e os recibos de integração/limpeza; não executar operadores ou receitas por caminhos intermediários removidos.
+
 # Station — candidata de integração de plataformas
 
 Leia `../../docs/server/HANDOFF-ONLINE-PLATAFORMAS-STATION-20261009.md` para o estado integral. Backup anterior publicado nos dois repositórios; código desta candidata está isolado. Servidor publicado com catálogo31/perfis5176 e 17 plataformas, incluindo PS2/Saturn; veja o recibo atual no mesmo handoff. Canais e instalações dos celulares permanecem anteriores; o APK completo ainda precisa ser montado no PCAPK.
