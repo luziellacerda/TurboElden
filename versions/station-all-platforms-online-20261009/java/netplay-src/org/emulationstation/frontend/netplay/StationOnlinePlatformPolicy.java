@@ -13,6 +13,7 @@ final class StationOnlinePlatformPolicy {
             case "neo-geo":return "neogeo";
             case "neo-geo-cd":return "neogeocd";
             case "nintendo-64":case "nintendo-64--br":return "n64";
+            case "ps2br":return "ps2";
             default:return folder;
         }
     }

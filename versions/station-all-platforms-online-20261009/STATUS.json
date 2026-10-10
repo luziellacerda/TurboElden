@@ -11,10 +11,14 @@
     "dreamcast-four-peers",
     "dolphin-station-enet",
     "wiiu-local-netplay",
-    "switch-game-mode"
+    "switch-game-mode",
+    "ps2-station-netplay",
+    "saturn-station-netplay"
   ],
   "portableCueIdentity": true,
   "serverSidePublicationComplete": true,
-  "catalogRevision": 27,
-  "serverProfileCount": 5176
+  "catalogRevision": 31,
+  "serverProfileCount": 5176,
+  "configuredServerPlatformCount": 17,
+  "serverPublicationStatus": "applied-and-authenticated-public-api-verified"
 }

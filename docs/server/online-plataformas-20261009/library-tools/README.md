@@ -1,11 +1,11 @@
-# Importador automático Station — fonte da publicação de 10/10/2026
+# Importador Station: publicação PS2/Saturn de 10/10/2026
 
-Snapshot completo do scanner e dependências Python desta entrega. A produção já está aplicada; consulte o handoff e o relatório `ps2-switch-publicados-20261010.json`. Não reaplicar operadores históricos ou copiar a configuração privada do servidor para o APK.
+Fonte completa da release ativa; o mesmo handoff contém o recibo atual. Não repetir operadores datados ou levar a configuração privada para o APK.
 
-O scanner usa Python 3/Pillow e a configuração privada indicada pela unidade systemd. PS2 e Switch usam a opção explícita `rawStorage:readonly-hardlink`, `artifactMode:single-rom` e `copyRawOnce:true`. A origem e o armazenamento precisam estar no mesmo volume. A unidade deve executar como root e ter escrita nas duas pastas de origem e no armazenamento protegido; a API mantém seu acesso de leitura. Arquivo publicado vira root/0444. Substituir a ROM pelo nome com um arquivo novo preserva downloads anteriores.
+SNES usa `catalogSeed:station-catalog-seed.json`. Saturn usa `artifactMode:cue-disc`, `copyRawOnce:true`, `rawStorage:readonly-hardlink`, `normalizeDiscArchives:true` e `artifactDirectory` no mesmo volume das ROMs. PS2 e Switch mantêm seus arquivos raw. A unidade root precisa escrever nas origens congeladas; a API lê os artefatos protegidos. CHD estável passa a root/0444 e usa um inode, sem copiar o corpo. Trocar ROM significa substituir o nome por um arquivo novo.
 
-Novos jogos são reconhecidos depois de duas observações estáveis e idade mínima de 20 segundos. Arte deve ficar em `media/revista` com o nome exato da ROM, ou ser vinculada pelo seed. JPEG RGB 480×720 conforme é preservado byte a byte. Metadados vêm de XML/seed/overrides; capas não são escolhidas por proximidade textual.
+Saturn ZIP/7z/RAR deve conter um CUE único, ou declarar `launchPath`, e todas as faixas. O servidor extrai uma vez durante a importação, prepara ZIP completo com compressão DEFLATE, identidade `cue-set-v1` e caminhos corretos. O original é preservado. A extração e os hashes não são repetidos em cada download. Arquivo incompleto permanece pendente.
 
-Registros de identidades, perfis e modos preparados usados na qualificação precisam respeitar o `outputDirectory` da instância. A primeira sombra recusou um arquivo de modos fora da sua própria pasta e foi revertida antes da publicação; a qualificação final usa uma cópia local e preserva o registro de produção.
+Publicação requer duas observações estáveis e idade mínima de 20 segundos. Capas exatas ficam em `media/revista`; o seed fornece associações por título normalizado. XML e overrides têm prioridade. JPEG RGB 480×720 conforme é preservado byte a byte. Perfis anteriores são preservados, inclusive recusas reais. Os testes usam arquivos sintéticos e não comprovam emulação.
 
-`tests/test_readonly_raw.py` verifica inode, permissões, escritor aberto, origem substituída, symlink, aliases graváveis, outro volume e cópia padrão. São testes de armazenamento do servidor; não são emulação ou gameplay Android. O lote HTTP usa uma licença sintética própria, que foi removida.
+`cadastrar-motor-online-station.py install` aceita os 17 sistemas, verifica core/runtime reais e configurações explícitas dos controles; publicação exige administração local e recarrega por dados, sem recompilar/reiniciar o servidor. Registros de identidades, perfis e modos da sombra devem estar dentro do seu outputDirectory.
