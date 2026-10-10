@@ -4,6 +4,10 @@ Leia `../../docs/server/HANDOFF-ONLINE-PLATAFORMAS-STATION-20261009.md` para o e
 
 212 Java e DEX compilados, quatro novos cores com fonte/licença e patches, runtime de cinco preservado. N64 e NeoCD passaram na transferência de estado em dois processos. Gameplay Android e APK completo assinado pendentes; Dreamcast quatro, Dolphin Station, Wii U, Switch, PS2 e Saturn ainda precisam de integração nativa no APK. Não anunciar todas as plataformas prontas.
 
+## Sinopses na sala
+
+`StationRoomsActivity` mostra `metadata.description` do catálogo assinado, pelo itemId, em Criar sala e Sua sala (quatro linhas, toque para a íntegra). A lista de outras salas mostra duas linhas e Ver detalhes inclui o texto completo. Os avisos do perfil ficam em Como jogar; limites, posições e confirmação continuam junto dos controles. Sem chamadas HTTP extras. Fallback explícito quando o texto ainda não foi cadastrado. Java/D8 compilados; a publicação do APK e a conferência visual nos celulares pertencem ao PCAPK. O mesmo handoff e `roomPresentation` do contrato descrevem a integração.
+
 ## Receitas
 
 - `recipes/build_java.py`: JDK17/API34/D8 explícitos; mantém client DEX byte idêntico.

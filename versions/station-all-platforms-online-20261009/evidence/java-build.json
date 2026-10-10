@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-10T19:09:55.456870+00:00",
+  "utc": "2026-10-10T20:32:21.175853+00:00",
   "compiled": true,
   "sourceCount": 212,
   "sourceHashes": {
@@ -208,7 +208,7 @@
     "netplay-src/org/emulationstation/frontend/netplay/StationRoomRoster.java": "96092704f62532b337570b32c9c996618a5193552b9519b1b5e42e82218b0c4a",
     "netplay-src/org/emulationstation/frontend/netplay/StationRoomStartState.java": "2a883a22b5cec0a10fcf8b523d79bd518a956ab9195efe0a398a6fc8cf24b82c",
     "netplay-src/org/emulationstation/frontend/netplay/StationRoomState.java": "3569a17e3b3134b0388d5a3231dad9f269461fa5b35566fd5195be21018ac5f9",
-    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": "00833d73a5fbc98ce1504eccea9421800e072ff7091cf7d44c9ecf18ec421cf5",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": "f51c362ae61f778c9c37cebf84ba8d78d33e043ae3e91cebff1379137c884332",
     "netplay-src/org/emulationstation/frontend/netplay/StationSessionChannel.java": "678037ceb5f34245c2a5a816727e0c3f81c10d9b6703fecb8a0041267b137ac8",
     "netplay-src/org/emulationstation/frontend/netplay/StationSessionLink.java": "2cdf6807d6d96e6265f8719a40ea75b3b81680d2b033dd985181c2094e89eb1c",
     "netplay-src/org/emulationstation/frontend/netplay/StationSessionRegistry.java": "53834181e95328483d498348e51269c325851451bea4bbab3cb135689a705ba5",
@@ -236,7 +236,7 @@
   "recipeSHA256": "ca3395e21210ec89087f11220363b131684b97845e89382a4fcd473e2835a6d2",
   "baseVersion": "R81",
   "clientDexSHA256": "e7207a89517b168cc476e30a823bed3a1b6ad57339e1042f08a4660184543d63",
-  "roomsDexSHA256": "04eb0fe853c6e485c69e69a18ee9b1551b3fc7422d6189fff9f431cabb655462",
+  "roomsDexSHA256": "4c7c0fb655b640187c048beaccca272ad87d27fbd090a42f891a0e127d11348c",
   "apkBuilt": false,
   "installed": false,
   "fivePhoneGameplayVerified": false

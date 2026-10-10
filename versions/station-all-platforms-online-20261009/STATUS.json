@@ -20,5 +20,12 @@
   "catalogRevision": 31,
   "serverProfileCount": 5176,
   "configuredServerPlatformCount": 17,
-  "serverPublicationStatus": "applied-and-authenticated-public-api-verified"
+  "serverPublicationStatus": "applied-and-authenticated-public-api-verified",
+  "roomSynopsisPresentation": {
+    "javaCompiled": true,
+    "serverDataAlreadyAvailable": true,
+    "signedApkBuilt": false,
+    "installed": false,
+    "physicalUIVerified": false
+  }
 }

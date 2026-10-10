@@ -29,6 +29,7 @@ public final class StationRoomsActivity extends Activity {
     private TextView status,title,subtitle,connection,peerTitle,roomTitle,chatTitle;private EditText nickname,chat;
     private ScrollView peerScroll,roomScroll,chatScroll;private LinearLayout leftPanel,middlePanel,rightPanel;private boolean narrow;private ImageView heroCover;private StationLobbyIcon heroSymbol;private TextView gamePlatform;private android.graphics.Bitmap heroBitmap;private int paintedMessages;private String paintedRoom="";
     private EditText playerSearch;private StationRoomArtwork artwork;private boolean creating;private Button choose;private TextView createMessage;
+    private TextView createSynopsis,ownRoomSynopsis;private String createHelpItem="",createHelp="";
     private int section;private String conversationPeer="",conversationName="",lastMessageId="";
     private LinearLayout createPanel,chatActions;private StationCreateGameCard createCard, ownRoomCard;private String ownRoomCoverItem="";private TextView createGame,chatHint,createInfo;private Button navRooms,navPeople,navCreate,navChat,inviteNavigation;
     private final java.util.Map<String,String> drafts=new java.util.HashMap<>();
@@ -152,10 +153,11 @@ public final class StationRoomsActivity extends Activity {
         LinearLayout createActions=createCard.actions;
         bold(text(createActions,"NOVA PARTIDA",10,green));
         createGame=text(createActions,"Jogo não selecionado",20,white);bold(createGame);
-        createInfo=text(createActions,StationGamePlayerInfo.pending().detail,12,muted);createInfo.setLineSpacing(dp(2),1);
-        text(createActions,"A quantidade de jogadores depende do jogo e do modo aprovado. Todos precisam da mesma edição instalada.",12,muted);
+        createSynopsis=addSynopsis(createActions,null);
+        createInfo=text(createActions,StationGamePlayerInfo.pending().capacityLabel,11,green);
         choose=button(createActions,"Escolher jogo",()->chooseGame(),false);navigationIcon(choose,0);compactCreateAction(choose);
         create=button(createActions,"Criar sala",()->createRoom(),true);navigationIcon(create,2);compactCreateAction(create);create.setEnabled(false);createMessage=text(createActions,"",12,muted);createMessage.setVisibility(View.GONE);createMessage.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
+        Button createHelpButton=button(createActions,"Como jogar",()->showCreateHelp(),false);compactCreateAction(createHelpButton);
         chatTitle=text(rightPanel,"Suas conversas",17,white);bold(chatTitle);chatHint=text(rightPanel,"Selecione uma pessoa ou entre em uma sala",11,muted);
         inboxNotice=text(rightPanel,"",12,green);inboxNotice.setVisibility(View.GONE);inboxNotice.setPadding(0,dp(8),0,dp(8));inboxNotice.setOnClickListener(v->{if(!pendingPeer.isEmpty())openConversation(pendingPeer,pendingName);});
         chatActions=row();rightPanel.addView(chatActions,new LinearLayout.LayoutParams(-1,-2));messages=vertical();chatScroll=scroll(rightPanel,messages);chatScroll.setVerticalScrollBarEnabled(true);
@@ -302,6 +304,36 @@ public final class StationRoomsActivity extends Activity {
     private void showCreateMessage(String message,boolean error){
         createMessage.setText(message);createMessage.setTextColor(error?0xfff4b0a2:green);createMessage.setVisibility(message.isEmpty()?View.GONE:View.VISIBLE);
     }
+    /** Descriptions come from the verified catalog cache, never the control profile. */
+    private String synopsisText(String itemId){
+        if(itemId==null||itemId.isEmpty())return "Escolha um jogo para ver a sinopse.";
+        StationCoordinator.Library library=client==null?null:client.app.coordinator.current();
+        StationCatalog.Item item=library==null?null:library.catalog.find(itemId);
+        if(item==null)return "Sinopse indisponível no momento.";
+        String description=item.description.trim();
+        return description.isEmpty()?"Sinopse ainda não cadastrada.":description;
+    }
+    private TextView addSynopsis(LinearLayout parent,final String fixedItem){
+        text(parent,"SINOPSE · toque para ler",9,green);
+        TextView synopsis=text(parent,synopsisText(fixedItem==null?selectedItem:fixedItem),12,muted);
+        synopsis.setLineSpacing(dp(2),1);synopsis.setMaxLines(4);synopsis.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        synopsis.setContentDescription("Sinopse do jogo. Toque para ler o texto completo.");
+        synopsis.setOnClickListener(v->{
+            String item=fixedItem==null?selectedItem:fixedItem;if(item==null||item.isEmpty())return;
+            String name=client==null?"Jogo":client.name(item);
+            new AlertDialog.Builder(this).setTitle("Sinopse · "+name).setMessage(synopsisText(item)).setPositiveButton("Fechar",(dialog,which)->dialog.dismiss()).show();
+        });
+        return synopsis;
+    }
+    private void refreshSynopses(){
+        if(createSynopsis!=null)createSynopsis.setText(synopsisText(selectedItem));
+        if(ownRoomSynopsis!=null)ownRoomSynopsis.setText(synopsisText(ownRoomCoverItem));
+    }
+    private void showCreateHelp(){
+        String help=selectedItem!=null&&selectedItem.equals(createHelpItem)&&!createHelp.isEmpty()?createHelp:StationGamePlayerInfo.pending().detail;
+        new AlertDialog.Builder(this).setTitle("Como jogar").setMessage(help+"\n\nTodos precisam da mesma edição do jogo instalada.").setPositiveButton("Fechar",(dialog,which)->dialog.dismiss()).show();
+    }
+    private String roomDetails(JSONObject r){return synopsisText(r==null?null:r.optString("itemId"))+"\n\n"+roomExplanation(r);}
     private static StationGamePlayerInfo profileInfo(StationMultiplayerProfile p){return StationGamePlayerInfo.fromVerifiedProfile(true,p.maximumPlayers,p.allowed,p.mode,p.controllerProfile).withHelp(p.modeTitle,p.instructions,p.sources);}
     private static StationGamePlayerInfo roomGameInfo(JSONObject r){
         if(r==null||!"station-stream.v3".equals(r.optString("recoveryProtocol")))return StationGamePlayerInfo.pending();
@@ -423,7 +455,7 @@ public final class StationRoomsActivity extends Activity {
         roster.observe(snapshot);if(inviteNavigation!=null)inviteNavigation.setVisibility(client!=null&&client.multiplayerEnabled?View.GONE:View.VISIBLE);
         create.setEnabled(!busy&&!launching&&room()==null);setConnection("Online",true);status.setText(feedback.text(snapshot,busy));
         loadHero();
-        int ry=roomScroll.getScrollY(),py=peerScroll.getScrollY();if(ownRoomCard!=null)ownRoomCard.setCover(null);ownRoomCard=null;ownRoomCoverItem="";rooms.removeAllViews();start=null;roomReadiness=null;renderPlayers(snapshot);refreshPlayerSheet();
+        int ry=roomScroll.getScrollY(),py=peerScroll.getScrollY();if(ownRoomCard!=null)ownRoomCard.setCover(null);ownRoomCard=null;ownRoomSynopsis=null;ownRoomCoverItem="";rooms.removeAllViews();start=null;roomReadiness=null;renderPlayers(snapshot);refreshPlayerSheet();
         JSONObject mine=snapshot.optJSONObject("room");String self=snapshot.optString("selfId");roomTitle.setText("SALAS  ·  "+snapshot.optInt("totalRooms"));
         JSONArray inv=snapshot.optJSONArray("invites");if(inv!=null)for(int i=0;i<inv.length();i++){JSONObject v=inv.optJSONObject(i);if(v==null)continue;LinearLayout c=roomCoverCard(rooms,v.optString("itemId"));bold(text(c,"CONVITE RECEBIDO",10,green));text(c,nickname(snapshot,v.optString("fromPeerId"))+"  ·  "+client.name(v.optString("itemId")),14,white);button(c,"Aceitar e entrar",()->{conversationPeer="";join(v.optString("roomId"),v.optString("itemId"));},true);button(c,"Agora não",()->command("dismiss-invite","text",v.optString("inviteId")),false);}
         JSONArray requests=snapshot.optJSONArray("joinRequests");if(requests!=null)for(int i=0;i<requests.length();i++){JSONObject r=requests.optJSONObject(i);if(r==null)continue;LinearLayout c=card(rooms);bold(text(c,"PEDIDO PARA JOGAR",10,green));text(c,nickname(snapshot,r.optString("fromPeerId")),15,white);button(c,"Aceitar pedido",()->socialAction("accept-request",null,r.optString("requestId")),true);button(c,"Recusar",()->socialAction("dismiss-request",null,r.optString("requestId")),false);}
@@ -438,6 +470,7 @@ public final class StationRoomsActivity extends Activity {
             StationActionButton exit=new StationActionButton(this,"Sair",StationActionButton.DANGER,StationSocialIcon.EXIT);
             heading.addView(exit,new LinearLayout.LayoutParams(dp(88),dp(48)));exit.setContentDescription("Sair da sala atual");exit.setEnabled(!busy&&!launching);exit.setOnClickListener(v->command("leave",null,null));
             TextView game=text(current,client.name(mine.optString("itemId")),19,white);bold(game);game.setMaxLines(2);game.setEllipsize(android.text.TextUtils.TruncateAt.END);
+            ownRoomSynopsis=addSynopsis(current,ownRoomCoverItem);
             text(current,roomInfo(mine,self).summary,12,green);
             LinearLayout participants=vertical();current.addView(participants,new LinearLayout.LayoutParams(-1,-2));renderParticipants(participants,snapshot);
             JSONArray rd=mine.optJSONArray("ready");
@@ -449,6 +482,7 @@ public final class StationRoomsActivity extends Activity {
                 ready.setContentDescription(isReady?"Desmarcar sua confirmação":"Confirmar que você está pronto para jogar");
                 if(self.equals(mine.optString("hostId")))start=roomAction(primary,"Iniciar",StationSocialIcon.PLAY,StationActionButton.PRIMARY,()->startDialog());
             }
+            Button help=button(current,"Como jogar",()->new AlertDialog.Builder(this).setTitle("Como jogar").setMessage(roomExplanation(mine)).setPositiveButton("Fechar",(dialog,which)->dialog.dismiss()).show(),false);compactCreateAction(help);
             LinearLayout secondary=actionLine(current);
             roomAction(secondary,"Conversa",StationSocialIcon.CHAT,StationActionButton.SECONDARY,()->openConversation("",""));
             if(!"station-stream.v3".equals(mine.optString("recoveryProtocol"))&&StationPlayerModel.shareable(snapshot))roomAction(secondary,"Convidar",StationSocialIcon.CODE,StationActionButton.SECONDARY,()->showRoomCode());
@@ -456,7 +490,7 @@ public final class StationRoomsActivity extends Activity {
 
         }
         JSONArray all=snapshot.optJSONArray("rooms");int count=0;
-        for(int i=0;all!=null&&i<all.length();i++){JSONObject r=all.optJSONObject(i);if(r==null||mine!=null&&mine.optString("roomId").equals(r.optString("roomId")))continue;count++;LinearLayout c=roomCoverCard(rooms,r.optString("itemId"));bold(text(c,client.name(r.optString("itemId")),15,white));text(c,nickname(snapshot,r.optString("hostId"))+"  ·  "+roomInfo(r,self).summary,12,muted);StationGamePlayerInfo.RoomInfo seats=roomInfo(r,self);boolean available="station-stream.v3".equals(r.optString("recoveryProtocol"))?seats.confirmed&&seats.acceptingPlayers&&seats.vacancies>0:"waiting".equals(r.optString("state"))&&r.optInt("players")<r.optInt("capacity",r.optInt("maximumPlayers",2));if(available){boolean social=!"station-stream.v3".equals(r.optString("recoveryProtocol"))&&StationSocial.supports(snapshot,"join-request-v1");Button b=button(c,StationSocial.requested(snapshot,r.optString("roomId"))?"Pedido enviado":social?"Pedir para jogar":"Entrar na sala",()->{if(social)action(cancel->client.call(StationOnlineClient.command("request-join").put("roomId",r.getString("roomId")),false,cancel));else join(r.optString("roomId"),r.optString("itemId"));},true);b.setEnabled(!busy&&!StationSocial.requested(snapshot,r.optString("roomId")));}else text(c,"Partida em andamento ou sala completa",12,muted);button(c,"Ver detalhes",()->new AlertDialog.Builder(this).setTitle("Detalhes da sala").setMessage(roomExplanation(r)).setPositiveButton("Fechar",(dialog,which)->dialog.dismiss()).show(),false);}
+        for(int i=0;all!=null&&i<all.length();i++){JSONObject r=all.optJSONObject(i);if(r==null||mine!=null&&mine.optString("roomId").equals(r.optString("roomId")))continue;count++;LinearLayout c=roomCoverCard(rooms,r.optString("itemId"));bold(text(c,client.name(r.optString("itemId")),15,white));TextView synopsis=text(c,synopsisText(r.optString("itemId")),12,muted);synopsis.setMaxLines(2);synopsis.setEllipsize(android.text.TextUtils.TruncateAt.END);text(c,nickname(snapshot,r.optString("hostId"))+"  ·  "+roomInfo(r,self).summary,12,muted);StationGamePlayerInfo.RoomInfo seats=roomInfo(r,self);boolean available="station-stream.v3".equals(r.optString("recoveryProtocol"))?seats.confirmed&&seats.acceptingPlayers&&seats.vacancies>0:"waiting".equals(r.optString("state"))&&r.optInt("players")<r.optInt("capacity",r.optInt("maximumPlayers",2));if(available){boolean social=!"station-stream.v3".equals(r.optString("recoveryProtocol"))&&StationSocial.supports(snapshot,"join-request-v1");Button b=button(c,StationSocial.requested(snapshot,r.optString("roomId"))?"Pedido enviado":social?"Pedir para jogar":"Entrar na sala",()->{if(social)action(cancel->client.call(StationOnlineClient.command("request-join").put("roomId",r.getString("roomId")),false,cancel));else join(r.optString("roomId"),r.optString("itemId"));},true);b.setEnabled(!busy&&!StationSocial.requested(snapshot,r.optString("roomId")));}else text(c,"Partida em andamento ou sala completa",12,muted);button(c,"Ver detalhes",()->new AlertDialog.Builder(this).setTitle("Detalhes da sala").setMessage(roomDetails(r)).setPositiveButton("Fechar",(dialog,which)->dialog.dismiss()).show(),false);}
         if(count==0&&mine==null&&(inv==null||inv.length()==0))empty(rooms,"+","Ainda não há salas aqui","Crie a primeira sala ou procure pessoas online para combinar uma partida.");
         if(snapshot.optInt("page")>0)button(rooms,"← Página anterior",()->page(-1),false);if(!snapshot.isNull("nextPage"))button(rooms,"Mais salas →",()->page(1),false);
         JSONArray direct=snapshot.optJSONArray("directMessages");if(direct!=null)for(int i=0;i<direct.length();i++){JSONObject m=direct.optJSONObject(i);if(m==null||!self.equals(m.optString("toPeerId")))continue;String mid=m.optString("messageId");if(!seenMessages.contains(mid)&&!conversationPeer.equals(m.optString("fromPeerId"))){pendingPeer=m.optString("fromPeerId");pendingName=m.optString("nickname","Jogador");}seenMessages.add(mid);while(seenMessages.size()>128)seenMessages.remove(seenMessages.iterator().next());}
@@ -631,17 +665,18 @@ public final class StationRoomsActivity extends Activity {
         if(createGame!=null){createGame.setText(selectedItem==null?"Jogo não selecionado":client==null?"Carregando jogo…":client.name(selectedItem));createCard.setGameName(createGame.getText().toString());}
     }
     private void loadHero(){
+        refreshSynopses();
         JSONObject ownRoom=room();final String target=section==2||ownRoom==null?selectedItem:ownRoom.optString("itemId",selectedItem);
         if(client==null||target==null||target.isEmpty())return;
         if(target.equals(heroRequestId)&&heroEpoch==epoch){loadHeroProfile(target);return;}
         heroRequestId=target;heroEpoch=epoch;final int generation=epoch;
-        headerRating.setRating(-1);headerPlayers.setText("Jogadores a confirmar");if(createInfo!=null)createInfo.setText(StationGamePlayerInfo.pending().detail);gamePlatform.setText("");clearHeroCover();heroSymbol.setVisibility(View.VISIBLE);
+        headerRating.setRating(-1);headerPlayers.setText("Jogadores a confirmar");if(createInfo!=null)createInfo.setText(StationGamePlayerInfo.pending().capacityLabel);createHelpItem=target;createHelp=StationGamePlayerInfo.pending().detail;gamePlatform.setText("");clearHeroCover();heroSymbol.setVisibility(View.VISIBLE);
         artwork.load(target,1024,bitmap->{if(active&&generation==epoch&&target.equals(heroRequestId)&&!isDestroyed()){heroBitmap=bitmap;bindHeroCover();heroSymbol.setVisibility(bitmap==null?View.VISIBLE:View.GONE);}});
         commands.execute(()->{
             try{
                 StationAndroid app=StationAndroid.get(this);StationCoordinator.Library library=app.coordinator.current();StationCatalog.Item item=library==null?null:library.catalog.find(target);if(item==null)return;
                 String name=item.name,platform=item.platform;
-                runOnUiThread(()->{if(active&&generation==epoch&&target.equals(heroRequestId)){subtitle.setText(name);gamePlatform.setText(platform);}});
+                runOnUiThread(()->{if(active&&generation==epoch&&target.equals(heroRequestId)){subtitle.setText(name);gamePlatform.setText(platform);refreshSynopses();}});
                 if(headerMetadata==null)try(java.io.InputStream in=getAssets().open("station-ui-r43/game-metadata.json")){headerMetadata=new JSONObject(new String(StationOnlineGame.read(in,512*1024),java.nio.charset.StandardCharsets.UTF_8));}
                 final StationHeaderMetadata details=StationHeaderMetadata.lookup(headerMetadata,item.itemId,item.players);
                 runOnUiThread(()->{if(active&&generation==epoch&&target.equals(heroRequestId)){headerRating.setRating(details.rating);}});
@@ -659,8 +694,8 @@ public final class StationRoomsActivity extends Activity {
                     for(StationMultiplayerProfile p:profiles){StationGamePlayerInfo info=profileInfo(p);if(detail.length()>0)detail.append("\n");if(info.singlePlayerConfirmed)counts.add(1);for(int count:p.allowed)counts.add(count);detail.append(info.detail);}
                     brief.setLength(0);for(int count:counts){if(brief.length()>0)brief.append(", ");brief.append(count);}if(brief.length()>0)brief.append(counts.size()==1&&counts.contains(1)?" jogador":" jogadores").append(profiles.size()>1?" · "+profiles.size()+" modos":"");
                     final String b=brief.length()==0?StationGamePlayerInfo.pending().capacityLabel:brief.toString(),d=detail.length()==0?StationGamePlayerInfo.pending().detail:detail.toString();
-                    runOnUiThread(()->{if(active&&generation==epoch&&target.equals(heroRequestId)){headerPlayers.setText(b);headerPlayers.setContentDescription(b);if(createInfo!=null)createInfo.setText(d);}});
-                }catch(Exception unavailable){if(!check.cancelled())recordFailure(unavailable);runOnUiThread(()->{if(active&&generation==epoch&&target.equals(heroRequestId)&&createInfo!=null)createInfo.setText(StationOnlineClient.message(unavailable));});}
+                    runOnUiThread(()->{if(active&&generation==epoch&&target.equals(heroRequestId)){headerPlayers.setText(b);headerPlayers.setContentDescription(b);if(createInfo!=null)createInfo.setText(b);createHelpItem=target;createHelp=d;}});
+                }catch(Exception unavailable){if(!check.cancelled())recordFailure(unavailable);runOnUiThread(()->{if(active&&generation==epoch&&target.equals(heroRequestId)){if(createInfo!=null)createInfo.setText("Modo online indisponível");createHelpItem=target;createHelp=StationOnlineClient.message(unavailable);}});}
                 finally{requests.remove(check);}
         });
     }
