@@ -102,6 +102,10 @@
     "gameplayVerified": false,
     "thermalImprovementVerified": false,
     "detailedChanges": "versions/station-legacy-cover-diagnostics-r116-20261010/ALTERACOES-DETALHADAS.md",
-    "status": "candidate installed on both phones; source checks and partial physical verification recorded"
+    "status": "candidate installed on both phones; source checks and partial physical verification recorded",
+    "sourceCommit": "cc8ab9371d878cff0be859edbc522fe290a9d2fa",
+    "sourceCommitStatus": "published-remote-confirmed",
+    "branchURL": "https://github.com/luziellacerda/TurboElden/tree/fix/station-cover-sequential-r116-20261010",
+    "publicationReceipt": "versions/station-legacy-cover-diagnostics-r116-20261010/evidence/publication.json"
   }
 }
