@@ -13,7 +13,7 @@ final class StationOnlineClient {
     JSONObject multiplayer(JSONObject request,StationApi.Cancellation cancel)throws Exception {
         StationApi.Session session=null;
         try(StationSessions.Lease lease=app.sessions.acquire(cancel)){
-            session=lease.session;JSONObject result=app.api.multiplayer(session,request.put("clientMaximumPlayers",5),cancel);
+            session=lease.session;JSONObject result=app.api.multiplayer(session,request.put("clientMaximumPlayers",5).put("page",page).put("roomPageSize",32),cancel);
             JSONObject ticket=result.optJSONObject("ticket");
             if(ticket!=null)ticket.put("requestProof",app.api.multiplayerRelayRequestProof(session,ticket.getString("ticket")));
             acceptMultiplayer(result);multiplayerEnabled=true;return result;
@@ -35,7 +35,17 @@ final class StationOnlineClient {
             if(social!=null)socialSnapshot=social;
         }
         if(socialSnapshot==null)throw new java.io.IOException("Social snapshot unavailable");
+        JSONObject out=presentation(socialSnapshot,multiplayerSnapshot,multiplayerEnabled,page);
+        // A local presentation revision never becomes an authority/request proof.
+        JSONObject visible=new JSONObject(out.toString());
+        for(String k:new String[]{"revision","serverTimeMs","serverTime","serverUtc","requestId"})visible.remove(k);
+        String key=visible.toString()+"/"+page;if(!key.equals(presentationKey)){presentationKey=key;combinedRevision++;}
+        out.put("revision",combinedRevision).put("page",page);return out;
+    }
+    static JSONObject presentation(JSONObject socialSnapshot,JSONObject multiplayerSnapshot,boolean multiplayerEnabled,int page)throws Exception {
         JSONObject out=new JSONObject(socialSnapshot.toString());
+        out.put("peerPage",socialSnapshot.optInt("page")).put("nextPeerPage",socialSnapshot.opt(socialSnapshot.has("nextPeerPage")?"nextPeerPage":"nextPage"));
+        out.put("roomPage",socialSnapshot.optInt("page")).put("nextRoomPage",socialSnapshot.opt(socialSnapshot.has("nextRoomPage")?"nextRoomPage":"nextPage"));
         if(multiplayerEnabled&&multiplayerSnapshot!=null){
             JSONObject mp=multiplayerSnapshot;if(!out.getString("selfId").equals(mp.getString("selfId")))throw new java.io.IOException("Multiplayer identity mismatch");String[] fields={"multiplayerVersion","capability","profiles","classification","profileCount","maximumPlayers","clientMaximumPlayers"};
             for(String k:fields)if(mp.has(k))out.put(k,mp.get(k));
@@ -47,18 +57,27 @@ final class StationOnlineClient {
                 JSONObject mine=mp.optJSONObject("room");JSONArray ours=mine==null?null:mine.optJSONArray("members");for(int i=0;ours!=null&&i<ours.length();i++)members.add(ours.optString(i));
                 JSONArray peers=out.optJSONArray("peers");for(int i=0;peers!=null&&i<peers.length();i++){JSONObject peer=peers.optJSONObject(i);if(peer!=null&&members.contains(peer.optString("peerId"))&&("online".equals(peer.optString("status"))||"in-room".equals(peer.optString("status"))))peer.put("status","in-room");}
                 JSONObject own=mp.optJSONObject("room");out.put("messages",own==null?new JSONArray():own.optJSONArray("messages"));
-                out.put("nextPage",JSONObject.NULL);
+                out.put("roomPage",mp.optInt("page")).put("nextRoomPage",mp.opt("nextPage"));
                 out.put("transports",new JSONArray().put("relay-wss-v3"));
                 JSONArray socialCaps=new JSONArray();JSONArray old=out.optJSONArray("socialCapabilities");
                 for(int i=0;old!=null&&i<old.length();i++)if(!"join-request-v1".equals(old.optString(i)))socialCaps.put(old.get(i));
                 out.put("socialCapabilities",socialCaps);out.put("roomCapabilities",new JSONArray());
             }
         }
-        // A local presentation revision never becomes an authority/request proof.
-        JSONObject visible=new JSONObject(out.toString());
-        for(String k:new String[]{"revision","serverTimeMs","serverTime","serverUtc","requestId"})visible.remove(k);
-        String key=visible.toString()+"/"+page;if(!key.equals(presentationKey)){presentationKey=key;combinedRevision++;}
-        out.put("revision",combinedRevision).put("page",page);return out;
+        return out.put("page",page);
+    }
+    // Retry read-only presence/events after transient network failures. Authority,
+    // identity and signature failures remain terminal and commands are not replayed.
+    static long pollRetryDelay(Throwable error,int failures) {
+        long delay=1000L<<Math.min(3,Math.max(0,failures-1));
+        if(error instanceof StationApi.Failure){StationApi.Failure e=(StationApi.Failure)error;
+            if("STATION_ONLINE_POLL_EXISTS".equals(e.code))return 1000;
+            if("STATION_ONLINE_DISABLED".equals(e.code)||"STATION_MULTIPLAYER_DISABLED".equals(e.code)||"STATION_DISABLED".equals(e.code))return -1;
+            if(e.status==408||e.status==429||e.status==500||e.status==502||e.status==503||e.status==504)return Math.max(delay,Math.min(60000,Math.max(0,e.retryAfterMillis)));
+            return -1;
+        }
+        if(error instanceof StationApi.Offline||error instanceof java.net.SocketTimeoutException||error instanceof java.net.SocketException)return delay;
+        return -1;
     }
     JSONObject pollMultiplayer(StationApi.Cancellation cancel)throws Exception {multiplayer(command("snapshot"),cancel);return compose(null);}
     synchronized JSONObject multiplayerRoom(String id)throws Exception {

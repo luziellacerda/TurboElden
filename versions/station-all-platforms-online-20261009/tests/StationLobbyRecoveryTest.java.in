@@ -1,0 +1,52 @@
+package org.emulationstation.frontend.netplay;
+import org.emulationstation.frontend.station.StationApi;
+import org.json.*;
+import java.lang.reflect.Constructor;
+public final class StationLobbyRecoveryTest {
+    static int checks;
+    static void check(boolean ok,String name){checks++;if(!ok)throw new AssertionError(name);}
+    static StationApi.Failure failure(int status,String code,long retry)throws Exception {
+        Constructor<StationApi.Failure> c=StationApi.Failure.class.getDeclaredConstructor(int.class,String.class,long.class);c.setAccessible(true);return c.newInstance(status,code,retry);
+    }
+    public static void main(String[] args)throws Exception {
+        JSONObject social=new JSONObject().put("selfId","p1").put("instance","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa").put("revision",4)
+            .put("page",0).put("nextPage",1).put("totalPeers",201).put("room",JSONObject.NULL).put("rooms",new JSONArray())
+            .put("peers",new JSONArray().put(new JSONObject().put("peerId","p1").put("status","online"))).put("socialCapabilities",new JSONArray().put("join-request-v1").put("direct-chat-v1"));
+        JSONObject mp=new JSONObject().put("selfId","p1").put("multiplayerVersion",3).put("page",2).put("nextPage",3).put("totalRooms",100).put("room",JSONObject.NULL)
+            .put("rooms",new JSONArray().put(new JSONObject().put("roomId","synthetic-room").put("members",new JSONArray().put("p1"))));
+        String originalSocial=social.toString(),originalMp=mp.toString();
+        JSONObject combined=StationOnlineClient.presentation(social,mp,true,2);
+        check(combined.getInt("nextPeerPage")==1,"all 201 people remain navigable with v3 enabled");
+        check(combined.getInt("nextRoomPage")==3,"room pagination has its own cursor");
+        check(combined.getInt("peerPage")==0&&combined.getInt("roomPage")==2,"cached lists keep their real source pages");
+        check(combined.getInt("page")==2,"requested presentation page retained");
+        check(combined.getJSONArray("peers").getJSONObject(0).getString("status").equals("in-room"),"verified roster overlays online presence");
+        check(originalSocial.equals(social.toString())&&originalMp.equals(mp.toString()),"merge never mutates signed source snapshots");
+        check(combined.getJSONArray("socialCapabilities").length()==1,"unsupported v3 join-request action stays hidden");
+        mp.put("page",3).put("nextPage",JSONObject.NULL);
+        combined=StationOnlineClient.presentation(social,mp,true,3);
+        check(combined.isNull("nextRoomPage")&&combined.getInt("nextPeerPage")==1,"last room page does not hide more people");
+        JSONObject legacy=new JSONObject(social.toString()).put("room",new JSONObject().put("roomId","legacy"));
+        combined=StationOnlineClient.presentation(legacy,mp,true,0);
+        check(combined.getJSONObject("room").getString("roomId").equals("legacy")&&combined.getInt("nextRoomPage")==1,"existing legacy room and cursor survive optional v3 discovery");
+        check(StationOnlineClient.presentation(social,null,false,0).getInt("nextRoomPage")==1,"legacy-only pagination preserved");
+        JSONObject split=new JSONObject(social.toString()).put("nextPeerPage",JSONObject.NULL).put("nextRoomPage",2);
+        JSONObject splitResult=StationOnlineClient.presentation(split,null,false,0);
+        check(splitResult.isNull("nextPeerPage")&&splitResult.getInt("nextRoomPage")==2,"server's explicit people and room cursors override legacy combined cursor");
+        boolean rejected=false;try{StationOnlineClient.presentation(social,new JSONObject(mp.toString()).put("selfId","different"),true,0);}catch(java.io.IOException e){rejected=true;}
+        check(rejected,"mismatched signed identities remain terminal");
+        for(int status:new int[]{408,429,500,502,503,504})check(StationOnlineClient.pollRetryDelay(failure(status,"SYNTHETIC_TRANSIENT",0),1)==1000,"transient read failure retries "+status);
+        for(int status:new int[]{400,401,403,404,409,413})check(StationOnlineClient.pollRetryDelay(failure(status,"SYNTHETIC_TERMINAL",0),1)==-1,"authority or invalid request cannot be replayed "+status);
+        for(String code:new String[]{"STATION_DISABLED","STATION_ONLINE_DISABLED","STATION_MULTIPLAYER_DISABLED"})check(StationOnlineClient.pollRetryDelay(failure(503,code,0),1)==-1,"disabled service remains explicit "+code);
+        check(StationOnlineClient.pollRetryDelay(failure(429,"STATION_ONLINE_POLL_EXISTS",60000),9)==1000,"one outstanding long poll backs off normally");
+        check(StationOnlineClient.pollRetryDelay(failure(429,"SYNTHETIC_BUSY",15000),1)==15000,"read-only polling respects Retry-After");
+        check(StationOnlineClient.pollRetryDelay(failure(429,"SYNTHETIC_BUSY",Long.MAX_VALUE),1)==60000,"retry wait stays bounded");
+        check(StationOnlineClient.pollRetryDelay(new java.net.SocketTimeoutException(),1)==1000,"socket timeout remains recoverable");
+        check(StationOnlineClient.pollRetryDelay(new java.net.SocketException(),4)==8000,"repeated network failures back off");
+        check(StationOnlineClient.pollRetryDelay(new StationApi.Offline(),99)==8000,"offline retries do not spin");
+        check(StationOnlineClient.pollRetryDelay(new java.io.IOException("signature mismatch"),1)==-1,"unverified or malformed responses stay terminal");
+        check(StationOnlineClient.pollRetryDelay(new javax.net.ssl.SSLHandshakeException("identity"),1)==-1,"TLS identity failures stay terminal");
+        check(StationOnlineClient.pollRetryDelay(new java.io.InterruptedIOException("cancelled"),1)==-1,"explicit cancellation stops polling");
+        System.out.println(new JSONObject().put("passed",true).put("checks",checks).put("scope","actual Java presentation and retry policy, no Android UI or WAN gameplay"));
+    }
+}

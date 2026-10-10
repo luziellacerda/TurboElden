@@ -1,6 +1,13 @@
 {
-  "baseVersion": "R81",
-  "sources": {
+  "checks": 36,
+  "scope": "actual Java presentation and retry policy, no Android UI or WAN gameplay",
+  "passed": true,
+  "utc": "2026-10-10T21:37:20.145061+00:00",
+  "jsonJarSHA256": "3ea61b2a06e31edf1c91134fe9106b0ebb16628be169f3db75bc7a2b06b45796",
+  "recipeSHA256": "53720853c5e53a6922589170f414841f0e4a338e550bc6fbdd1712d04cf6c4d1",
+  "fixtureSHA256": "9e1c54035d221bc66907f952b5b2775b1e8c8024eb95a71b7c190a2534565c94",
+  "roomsJarSHA256": "d0708d1ca25957f851f1009499da9ba4e952a93e3ed8643b541fb656fc3bb55c",
+  "sourceHashes": {
     "client/src/java/org/emulationstation/frontend/AssetInstaller.java": "d3539b66cbc434e819b59d1fa614f3eb47c8b7c3d8b51c92284bc6dacbe0ccee",
     "client/src/java/org/emulationstation/frontend/DownloadService.java": "49b2994e4a213e861cfcef5ce0e353789f7f88928fec5f8b7e3b8ceb6f594c5f",
     "client/src/java/org/emulationstation/frontend/auth/LoginActivity.java": "71072d9f6a0621a9eeb04d9784dd27eb2f05e78c5da18d95254e0be13c86d57c",
@@ -213,5 +220,6 @@
     "netplay-src/org/emulationstation/frontend/netplay/StationSessionService.java": "fb8857ab4b0bbd9507764c9a6e1b4a48eccddd25a7bff36ad406cd9a800b641a",
     "netplay-src/org/emulationstation/frontend/netplay/StationSocial.java": "c0a8b36cf544cfb5b6bbb1c0a2becfb617f282f57992b3f99f859cf40e254be2",
     "netplay-src/org/emulationstation/frontend/netplay/StationSocialIcon.java": "19ff1286d4f021df60b29075c9db848d68183f76312430b2ef5b1a8b97b2c44c"
-  }
+  },
+  "physicalAndroidGameplayVerified": false
 }

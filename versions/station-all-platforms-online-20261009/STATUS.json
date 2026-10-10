@@ -27,5 +27,15 @@
     "signedApkBuilt": false,
     "installed": false,
     "physicalUIVerified": false
+  },
+  "endpointReview": {
+    "sourceCompiled": true,
+    "lobbyRecoveryChecks": 36,
+    "separatePeopleAndRoomCursors": true,
+    "readOnlyPollingRetries": true,
+    "requiresServerOptionalPagination": true,
+    "signedApkBuilt": false,
+    "installed": false,
+    "physicalGameplayVerified": false
   }
 }

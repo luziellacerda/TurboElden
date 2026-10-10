@@ -19,3 +19,9 @@ Leia `../../docs/server/HANDOFF-ONLINE-PLATAFORMAS-STATION-20261009.md` para o e
 - `recipes/package_candidate.py`: base completa R81 privada e assinatura original; acrescenta motores/controles/licenças, preserva todas as outras entradas. Não instala nem altera canais.
 
 Usar Python 3.12+, saídas novas e, no PCAPK, E:. As bibliotecas já compiladas estão em `native/`; os arquivos de fonte correspondentes e licenças acompanham a entrega. Nenhuma BIOS proprietária ou ROM acompanha o pacote.
+
+## Revisão de endpoints e lobby — 10/10/2026
+
+Este mesmo pacote incorpora correções da navegação de pessoas/salas, páginas de 32 salas e retomada das consultas após falhas transitórias. Publicar o servidor corrigido antes do APK: novos comandos incluem `page` e `roomPageSize`. A autoridade, os controles, os jogos e o Client DEX anterior continuam vinculados aos recibos existentes. Consultas e heartbeat usam recuo de 1–8 segundos e respeitam Retry-After até 60 segundos; falhas de acesso, TLS, assinatura e JSON não são repetidas. Ações de jogo não recebem repetição automática.
+
+`recipes/test_lobby_recovery.py` verifica a implementação Java compilada com 36 casos; usa os mesmos inputs fixados da compilação completa. APK completo, instalação e gameplay físico continuam pendentes no PCAPK. Consultar o mesmo handoff e `server-integration-contract.json`.

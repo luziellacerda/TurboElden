@@ -192,7 +192,7 @@ public final class StationRoomsActivity extends Activity {
     private void navigationIcon(Button button,int kind){((StationActionButton)button).setActionIcon(kind);}
     @Override protected void onResume(){super.onResume();if(hyperspace!=null)hyperspace.setResumed(true);if(headerRating!=null)headerRating.setResumed(true);}
     @Override protected void onPause(){if(hyperspace!=null)hyperspace.setResumed(false);if(headerRating!=null)headerRating.setResumed(false);super.onPause();}
-    private void navigate(int next){section=next;roomLayout(room()!=null);if(client!=null&&state.get()!=null){painted=-1;paint(state.get());}}
+    private void navigate(int next){boolean reset=section!=next&&(next==0||next==1)&&page!=0;section=next;if(reset){page=0;if(client!=null){client.page=0;if(!busy)action(cancel->client.call(StationOnlineClient.command("heartbeat"),false,cancel));}}roomLayout(room()!=null);if(client!=null&&state.get()!=null){painted=-1;paint(state.get());}}
     private static final class GameChoice {final StationCatalog.Item item;GameChoice(StationCatalog.Item i){item=i;}@Override public String toString(){return item.name+"  ·  "+item.platform;}}
     private final class GameChoiceAdapter extends ArrayAdapter<GameChoice>{
         GameChoiceAdapter(java.util.List<GameChoice> choices){super(StationRoomsActivity.this,android.R.layout.simple_list_item_1,choices);}
@@ -243,12 +243,17 @@ public final class StationRoomsActivity extends Activity {
                 if(returningFromGame&&returningRecovery){JSONObject lost=current.optJSONObject("room");if(lost!=null&&"relay-wss-v2".equals(lost.optString("transport")))current=client.call(StationOnlineClient.command("recovery-failed").put("roomId",lost.getString("roomId")).put("generation",lost.getLong("generation")),false,cancel);returningFromGame=false;returningRecovery=false;}
                 // Present the verified social snapshot before probing optional v3 support.
                 deliver(current,generation);beginMultiplayerDiscovery(client,generation);
-                long heartbeat=SystemClock.elapsedRealtime();
+                long heartbeat=SystemClock.elapsedRealtime();int pollFailures=0;
                 while(active&&epoch==generation&&!Thread.currentThread().isInterrupted()){
                     JSONObject latest=state.get();if(latest!=null)current=latest;
-                    if(SystemClock.elapsedRealtime()-heartbeat>=20000){current=client.call(StationOnlineClient.command("heartbeat"),false,cancel);heartbeat=SystemClock.elapsedRealtime();deliver(current,generation);}
-                    try{current=client.events(current,page,cancel);deliver(current,generation);}
-                    catch(StationApi.Failure e){if(!e.code.equals("STATION_ONLINE_POLL_EXISTS"))throw e;Thread.sleep(1000);cancel.check();}
+                    try{
+                        if(SystemClock.elapsedRealtime()-heartbeat>=20000){current=client.call(StationOnlineClient.command("heartbeat"),false,cancel);heartbeat=SystemClock.elapsedRealtime();deliver(current,generation);}
+                        current=client.events(current,page,cancel);deliver(current,generation);pollFailures=0;
+                    }catch(Exception e){
+                        cancel.check();long delay=StationOnlineClient.pollRetryDelay(e,++pollFailures);if(delay<0)throw e;
+                        runOnUiThread(()->{if(active&&epoch==generation){setConnection("Reconectando",false);status.setText("A conexão oscilou. Tentando atualizar as salas…");}});
+                        Thread.sleep(delay);cancel.check();
+                    }
                 }
             }catch(Exception e){if(!cancel.cancelled()){runOnUiThread(()->{if(active&&epoch==generation)setConnection("Reconectar",false);});failure(e,generation);}}finally{requests.remove(cancel);}
         });
@@ -461,7 +466,7 @@ public final class StationRoomsActivity extends Activity {
         JSONArray requests=snapshot.optJSONArray("joinRequests");if(requests!=null)for(int i=0;i<requests.length();i++){JSONObject r=requests.optJSONObject(i);if(r==null)continue;LinearLayout c=card(rooms);bold(text(c,"PEDIDO PARA JOGAR",10,green));text(c,nickname(snapshot,r.optString("fromPeerId")),15,white);button(c,"Aceitar pedido",()->socialAction("accept-request",null,r.optString("requestId")),true);button(c,"Recusar",()->socialAction("dismiss-request",null,r.optString("requestId")),false);}
         if(mine!=null){
             ownRoomCoverItem=mine.optString("itemId");ownRoomCard=new StationCreateGameCard(this,true);
-            boolean more=(inv!=null&&inv.length()>0)||(requests!=null&&requests.length()>0)||snapshot.optInt("page")>0||!snapshot.isNull("nextPage");
+            boolean more=(inv!=null&&inv.length()>0)||(requests!=null&&requests.length()>0)||snapshot.optInt("page")>0||!snapshot.isNull("nextRoomPage");
             JSONArray availableRooms=snapshot.optJSONArray("rooms");for(int ri=0;availableRooms!=null&&ri<availableRooms.length();ri++){JSONObject other=availableRooms.optJSONObject(ri);if(other!=null&&!mine.optString("roomId").equals(other.optString("roomId")))more=true;}
             rooms.addView(ownRoomCard,new LinearLayout.LayoutParams(-1,more?-2:-1));ownRoomCard.setGameName(client.name(ownRoomCoverItem));bindHeroCover();
             LinearLayout current=ownRoomCard.actions;
@@ -489,10 +494,10 @@ public final class StationRoomsActivity extends Activity {
             if(StationLaunchPolicy.eligible(mine,self.equals(mine.optString("hostId")))){if(!launching&&StationLaunchPolicy.key(mine).equals(launchKey))roomAction(actionLine(current),"Abrir partida",StationSocialIcon.PLAY,StationActionButton.PRIMARY,()->{launchKey="";launch(mine,snapshot);});else launch(mine,snapshot);}
 
         }
-        JSONArray all=snapshot.optJSONArray("rooms");int count=0;
+        JSONArray all=snapshot.optInt("roomPage",page)==page?snapshot.optJSONArray("rooms"):null;int count=0;
         for(int i=0;all!=null&&i<all.length();i++){JSONObject r=all.optJSONObject(i);if(r==null||mine!=null&&mine.optString("roomId").equals(r.optString("roomId")))continue;count++;LinearLayout c=roomCoverCard(rooms,r.optString("itemId"));bold(text(c,client.name(r.optString("itemId")),15,white));TextView synopsis=text(c,synopsisText(r.optString("itemId")),12,muted);synopsis.setMaxLines(2);synopsis.setEllipsize(android.text.TextUtils.TruncateAt.END);text(c,nickname(snapshot,r.optString("hostId"))+"  ·  "+roomInfo(r,self).summary,12,muted);StationGamePlayerInfo.RoomInfo seats=roomInfo(r,self);boolean available="station-stream.v3".equals(r.optString("recoveryProtocol"))?seats.confirmed&&seats.acceptingPlayers&&seats.vacancies>0:"waiting".equals(r.optString("state"))&&r.optInt("players")<r.optInt("capacity",r.optInt("maximumPlayers",2));if(available){boolean social=!"station-stream.v3".equals(r.optString("recoveryProtocol"))&&StationSocial.supports(snapshot,"join-request-v1");Button b=button(c,StationSocial.requested(snapshot,r.optString("roomId"))?"Pedido enviado":social?"Pedir para jogar":"Entrar na sala",()->{if(social)action(cancel->client.call(StationOnlineClient.command("request-join").put("roomId",r.getString("roomId")),false,cancel));else join(r.optString("roomId"),r.optString("itemId"));},true);b.setEnabled(!busy&&!StationSocial.requested(snapshot,r.optString("roomId")));}else text(c,"Partida em andamento ou sala completa",12,muted);button(c,"Ver detalhes",()->new AlertDialog.Builder(this).setTitle("Detalhes da sala").setMessage(roomDetails(r)).setPositiveButton("Fechar",(dialog,which)->dialog.dismiss()).show(),false);}
-        if(count==0&&mine==null&&(inv==null||inv.length()==0))empty(rooms,"+","Ainda não há salas aqui","Crie a primeira sala ou procure pessoas online para combinar uma partida.");
-        if(snapshot.optInt("page")>0)button(rooms,"← Página anterior",()->page(-1),false);if(!snapshot.isNull("nextPage"))button(rooms,"Mais salas →",()->page(1),false);
+        if(snapshot.optInt("roomPage",page)!=page)empty(rooms,"…","Consultando salas desta página…","A lista será atualizada assim que o servidor responder.");else if(count==0&&mine==null&&(inv==null||inv.length()==0))empty(rooms,"+","Ainda não há salas aqui","Crie a primeira sala ou procure pessoas online para combinar uma partida.");
+        if(snapshot.optInt("roomPage",page)==page){if(page>0)button(rooms,"← Página anterior",()->page(-1),false);if(!snapshot.isNull("nextRoomPage"))button(rooms,"Mais salas →",()->page(1),false);}
         JSONArray direct=snapshot.optJSONArray("directMessages");if(direct!=null)for(int i=0;i<direct.length();i++){JSONObject m=direct.optJSONObject(i);if(m==null||!self.equals(m.optString("toPeerId")))continue;String mid=m.optString("messageId");if(!seenMessages.contains(mid)&&!conversationPeer.equals(m.optString("fromPeerId"))){pendingPeer=m.optString("fromPeerId");pendingName=m.optString("nickname","Jogador");}seenMessages.add(mid);while(seenMessages.size()>128)seenMessages.remove(seenMessages.iterator().next());}
         renderConversation(snapshot);updateStartState();roomLayout(mine!=null);peerScroll.post(()->peerScroll.scrollTo(0,py));roomScroll.post(()->roomScroll.scrollTo(0,ry));
     }
@@ -517,7 +522,7 @@ public final class StationRoomsActivity extends Activity {
 
     /** Forty-eight dp touch targets without nested cards, avatars or per-row buttons. */
     private void renderPlayers(JSONObject snapshot){
-        peers.removeAllViews();JSONArray list=snapshot.optJSONArray("peers");String self=snapshot.optString("selfId");
+        peers.removeAllViews();if(snapshot.optInt("peerPage",page)!=page){text(peers,"Consultando jogadores desta página…",12,muted);return;}JSONArray list=snapshot.optJSONArray("peers");String self=snapshot.optString("selfId");
         String filter=playerSearch.getText().toString().trim().toLowerCase(java.util.Locale.ROOT);int shown=0;
         peerTitle.setText("ONLINE  ·  "+snapshot.optInt("totalPeers"));
         if(list!=null)for(int i=0;i<list.length();i++){
@@ -536,7 +541,7 @@ public final class StationRoomsActivity extends Activity {
         }
         if(shown==0){TextView empty=text(peers,filter.isEmpty()?"Nenhum jogador nesta página.":"Nenhum nome encontrado nesta página.",12,muted);empty.setPadding(dp(8),dp(18),dp(8),dp(18));}
         if(snapshot.optInt("page")>0)button(peers,"← Página anterior",()->page(-1),false);
-        if(!snapshot.isNull("nextPage"))button(peers,"Próxima página →",()->page(1),false);
+        if(!snapshot.isNull("nextPeerPage"))button(peers,"Próxima página →",()->page(1),false);
     }
     private void closeSheets(){if(playerSheet!=null){playerSheet.dismiss();playerSheet=null;}if(codeDialog!=null){codeDialog.dismiss();codeDialog=null;}inspectedPeer="";inspectedName="";peerFeedback="";}
     private void showPlayer(String id,String name){
@@ -701,7 +706,7 @@ public final class StationRoomsActivity extends Activity {
     }
     private static boolean contains(JSONArray a,String id){if(a!=null)for(int i=0;i<a.length();i++)if(id.equals(a.optString(i)))return true;return false;}
     private static JSONObject findRoom(JSONObject snapshot,String rid){JSONArray a=snapshot.optJSONArray("rooms");if(a!=null)for(int i=0;i<a.length();i++){JSONObject r=a.optJSONObject(i);if(r!=null&&rid.equals(r.optString("roomId")))return r;}return null;}
-    private void page(int delta){if(busy||client==null)return;page=Math.max(0,Math.min(40,page+delta));client.page=page;action(cancel->client.call(StationOnlineClient.command("heartbeat"),false,cancel));}
+    private void page(int delta){if(busy||client==null)return;page=Math.max(0,Math.min(40,page+delta));client.page=page;action(cancel->section==0&&client.multiplayerEnabled?client.pollMultiplayer(cancel):client.call(StationOnlineClient.command("heartbeat"),false,cancel));}
     private static String roomConfirmationKey(JSONObject snapshot){JSONObject room=snapshot==null?null:snapshot.optJSONObject("room");return room==null?"":snapshot.optString("instance")+"/"+room.optString("roomId")+"/"+room.optString("itemId")+"/"+room.optLong("generation")+"/"+room.optString("profileId")+"/"+room.optString("profileSha256")+"/"+room.optInt("capacity")+"/"+String.valueOf(room.optJSONArray("roster"));}
     private void updateStartState(){
         JSONObject snapshot=state.get();String reason=StationRoomStartState.reason(snapshot);
