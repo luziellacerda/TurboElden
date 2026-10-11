@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "passed": true,
+  "checks": 24,
+  "testKind": "JVM with a real waiting/terminated Java owner thread; no Android/native execution",
+  "sources": [
+    {
+      "file": "java/org/emulationstation/frontend/netplay/StationPsxExitGate.java",
+      "sha256": "784e9d33cd06ac45659d17371266332592bac296bbf11680f3a585218eb501cd"
+    },
+    {
+      "file": "tests/StationPsxExitGateProbe.java",
+      "sha256": "7f21b2c1901af56a64ba7619f3bf88b1956ad4d22d3f14222af1f9cd0fcdcecf"
+    }
+  ],
+  "confirmed": [
+    "cleared SDL global does not permit retirement while captured thread alive",
+    "NEW thread is not completed",
+    "human required",
+    "transport and Binder cleanup required",
+    "exact private process required",
+    "human cancel before any owner may finish after cleanup"
+  ],
+  "limits": [
+    "Activity lifecycle and Android killProcess not physically exercised",
+    "Root Session performs actual transport/Binder cleanup before publishing completion"
+  ]
+}

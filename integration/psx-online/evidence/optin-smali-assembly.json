@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "passed": true,
+  "scope": "Assembled the 2 modified classes in an isolated DEX, with exact inverse bytes verified separately",
+  "classCount": 2,
+  "classes": [
+    "org.libsdl.app.SDLActivity",
+    "org.emulationstation.frontend.station.StationComponentFactory"
+  ],
+  "dexSha256": "324fab7039d9d48ac92210b834526787106195eea7611d359afae2da54e7449e",
+  "onlyProcess": "org.turboramastation.frontend:station_psx_online",
+  "apkChanged": false,
+  "limits": [
+    "Not a productive DEX partition; root must merge into exact partitions",
+    "No Activity/device execution"
+  ]
+}

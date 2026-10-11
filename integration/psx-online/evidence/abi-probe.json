@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 1,
+  "scope": "PSX original SDL owner exact ABI, no execution or patch",
+  "ownerSha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+  "checks": 80,
+  "passed": true,
+  "binding": {
+    "eventStackOffset": "0x2c0",
+    "coreStackOffset": "0x300",
+    "coreFromEvent": "0x40",
+    "pauseCoreOffset": "0x68a",
+    "runningCoreOffset": "0x74a",
+    "originalCoreGlobal": "0x3cf338",
+    "manualActionGlobal": "0x3c7b18",
+    "menuRowsGlobal": "0x3cf2d0",
+    "rowBytes": 56,
+    "rowActionOffset": 0,
+    "rowEnabledOffset": 32,
+    "checkpointReturnPC": "0x2ae600",
+    "restoreReturnPC": "0x2ae61c",
+    "maximumPorts": 2,
+    "standardPadBits": "0x3fff"
+  },
+  "calls": {
+    "events": {
+      "site": "0x2abe48",
+      "target": "0x39e290"
+    },
+    "preGateCounter": {
+      "site": "0x2ae5fc",
+      "target": "0x3a46a0"
+    },
+    "coreRun": {
+      "site": "0x2ae610",
+      "target": "0x3a4330"
+    },
+    "postCoreCounter": {
+      "site": "0x2ae618",
+      "target": "0x3a46a0"
+    },
+    "audio": {
+      "site": "0x2aeac4",
+      "target": "0x3a47b0"
+    },
+    "video": {
+      "site": "0x2aec5c",
+      "target": "0x3a47d0"
+    },
+    "stateSize": {
+      "site": "0x2add78",
+      "target": "0x3a4380"
+    },
+    "manualSave": {
+      "site": "0x2addac",
+      "target": "0x3a4390"
+    },
+    "manualLoad": {
+      "site": "0x2b081c",
+      "target": "0x3a43a0"
+    },
+    "pacing": {
+      "site": "0x2b142c",
+      "target": "0x39e310"
+    },
+    "swap": {
+      "site": "0x2b1444",
+      "target": "0x39e340"
+    },
+    "homeSaves": {
+      "site": "0x2a99d4",
+      "target": "0x39e050"
+    },
+    "homeEnvironment": {
+      "site": "0x2a9f20",
+      "target": "0x39e050"
+    }
+  },
+  "relocations": {
+    "SDL_PollEvent": "0x3bf7f8",
+    "SDL_GetPerformanceCounter": "0x3c2a00",
+    "dlsym": "0x3c2cc0",
+    "_ZN5Utils10FileSystem11getHomePathEv": "0x3bf6d8"
+  },
+  "resolvedSymbols": {
+    "0x2bcfc8": "retro_set_environment",
+    "0x2bcfe0": "retro_set_video_refresh",
+    "0x2bcff8": "retro_set_audio_sample",
+    "0x2bd010": "retro_set_audio_sample_batch",
+    "0x2bd028": "retro_set_input_poll",
+    "0x2bd040": "retro_set_input_state",
+    "0x2bd058": "retro_init",
+    "0x2bd070": "retro_deinit",
+    "0x2bd088": "retro_get_system_info",
+    "0x2bd0a0": "retro_get_system_av_info",
+    "0x2bd0b8": "retro_load_game",
+    "0x2bd0d0": "retro_unload_game",
+    "0x2bd0e8": "retro_run",
+    "0x2bd100": "retro_reset",
+    "0x2bd118": "retro_get_memory_data",
+    "0x2bd130": "retro_get_memory_size",
+    "0x2bd148": "retro_api_version",
+    "0x2bd160": "retro_set_controller_port_device",
+    "0x2bd178": "retro_serialize_size",
+    "0x2bd190": "retro_serialize",
+    "0x2bd1a8": "retro_unserialize"
+  },
+  "limits": [
+    "No Android/core/gameplay execution",
+    "No emulator binary or APK patched",
+    "No CPU/GPU pause ACK validated in a physical emulator",
+    "Hash/ABI guards do not prove deterministic gameplay"
+  ],
+  "results": [
+    {
+      "name": "ownerIntegralSha",
+      "passed": true
+    },
+    {
+      "name": "word:0x2a99c4",
+      "passed": true
+    },
+    {
+      "name": "word:0x2a9ed4",
+      "passed": true
+    },
+    {
+      "name": "word:0x2a9edc",
+      "passed": true
+    },
+    {
+      "name": "word:0x2a9ef0",
+      "passed": true
+    },
+    {
+      "name": "word:0x2a9ef8",
+      "passed": true
+    },
+    {
+      "name": "word:0x2a9f04",
+      "passed": true
+    },
+    {
+      "name": "word:0x2a9f0c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2aa148",
+      "passed": true
+    },
+    {
+      "name": "word:0x2aa14c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2abe44",
+      "passed": true
+    },
+    {
+      "name": "word:0x2abe48",
+      "passed": true
+    },
+    {
+      "name": "word:0x2ac450",
+      "passed": true
+    },
+    {
+      "name": "word:0x2ac454",
+      "passed": true
+    },
+    {
+      "name": "word:0x2adc38",
+      "passed": true
+    },
+    {
+      "name": "word:0x2adc44",
+      "passed": true
+    },
+    {
+      "name": "word:0x2add08",
+      "passed": true
+    },
+    {
+      "name": "word:0x2add0c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2add64",
+      "passed": true
+    },
+    {
+      "name": "word:0x2add68",
+      "passed": true
+    },
+    {
+      "name": "word:0x2ae5fc",
+      "passed": true
+    },
+    {
+      "name": "word:0x2ae600",
+      "passed": true
+    },
+    {
+      "name": "word:0x2ae608",
+      "passed": true
+    },
+    {
+      "name": "word:0x2ae60c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2ae610",
+      "passed": true
+    },
+    {
+      "name": "word:0x2ae618",
+      "passed": true
+    },
+    {
+      "name": "word:0x2b142c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2b1444",
+      "passed": true
+    },
+    {
+      "name": "word:0x2b3424",
+      "passed": true
+    },
+    {
+      "name": "word:0x2b4fdc",
+      "passed": true
+    },
+    {
+      "name": "word:0x2b6308",
+      "passed": true
+    },
+    {
+      "name": "word:0x2b630c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2bb250",
+      "passed": true
+    },
+    {
+      "name": "word:0x2bb25c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2bb26c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2bb340",
+      "passed": true
+    },
+    {
+      "name": "word:0x2bcf9c",
+      "passed": true
+    },
+    {
+      "name": "word:0x2bcfa0",
+      "passed": true
+    },
+    {
+      "name": "word:0x2be414",
+      "passed": true
+    },
+    {
+      "name": "word:0x2be420",
+      "passed": true
+    },
+    {
+      "name": "word:0x2be424",
+      "passed": true
+    },
+    {
+      "name": "BL:events",
+      "passed": true
+    },
+    {
+      "name": "BL:preGateCounter",
+      "passed": true
+    },
+    {
+      "name": "BL:coreRun",
+      "passed": true
+    },
+    {
+      "name": "BL:postCoreCounter",
+      "passed": true
+    },
+    {
+      "name": "BL:audio",
+      "passed": true
+    },
+    {
+      "name": "BL:video",
+      "passed": true
+    },
+    {
+      "name": "BL:stateSize",
+      "passed": true
+    },
+    {
+      "name": "BL:manualSave",
+      "passed": true
+    },
+    {
+      "name": "BL:manualLoad",
+      "passed": true
+    },
+    {
+      "name": "BL:pacing",
+      "passed": true
+    },
+    {
+      "name": "BL:swap",
+      "passed": true
+    },
+    {
+      "name": "BL:homeSaves",
+      "passed": true
+    },
+    {
+      "name": "BL:homeEnvironment",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bcfc8:retro_set_environment",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bcfe0:retro_set_video_refresh",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bcff8:retro_set_audio_sample",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd010:retro_set_audio_sample_batch",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd028:retro_set_input_poll",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd040:retro_set_input_state",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd058:retro_init",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd070:retro_deinit",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd088:retro_get_system_info",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd0a0:retro_get_system_av_info",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd0b8:retro_load_game",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd0d0:retro_unload_game",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd0e8:retro_run",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd100:retro_reset",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd118:retro_get_memory_data",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd130:retro_get_memory_size",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd148:retro_api_version",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd160:retro_set_controller_port_device",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd178:retro_serialize_size",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd190:retro_serialize",
+      "passed": true
+    },
+    {
+      "name": "resolvedSymbol:0x2bd1a8:retro_unserialize",
+      "passed": true
+    },
+    {
+      "name": "GOT:SDL_PollEvent",
+      "passed": true
+    },
+    {
+      "name": "GOT:SDL_GetPerformanceCounter",
+      "passed": true
+    },
+    {
+      "name": "GOT:dlsym",
+      "passed": true
+    },
+    {
+      "name": "GOT:_ZN5Utils10FileSystem11getHomePathEv",
+      "passed": true
+    },
+    {
+      "name": "environmentShutdown7",
+      "passed": true
+    }
+  ]
+}

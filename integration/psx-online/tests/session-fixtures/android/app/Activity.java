@@ -1,0 +1,2 @@
+// Test fixture only. Never included in the application.
+package android.app; import android.content.*; public class Activity extends Context { public static final int RESULT_OK=-1;public int result,finishCount;private final Intent intent=new Intent();public Intent getIntent(){return intent;} public void runOnUiThread(Runnable r){r.run();}public boolean isFinishing(){return false;}public boolean hasWindowFocus(){return true;}public void onWindowFocusChanged(boolean f){}public void setResult(int r){result=r;}public void finish(){finishCount++;} }

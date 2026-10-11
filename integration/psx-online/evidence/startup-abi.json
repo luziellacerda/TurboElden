@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "scope": "Exact current normal owner startup disassembly and donor assets",
+  "ownerSha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+  "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+  "symbols": {
+    "PlayerRun": "0x2a9718",
+    "AndroidBridgeInit": "0x3721b4",
+    "SettingsInstance": "0x288a24",
+    "RendererInit": "0x2e1b70",
+    "ResourceManagerResourcePath": "0x35ae6c"
+  },
+  "startupCalls": {
+    "audioInit": "0x2ab0f8",
+    "audioOpen": "0x2ab1c8",
+    "gamepadHelperCall": "0x2ab49c",
+    "gamepadInit": "0x2b6ea4",
+    "gamepadOpen": "0x2a7cc8",
+    "FontGet": "0x2ab934"
+  },
+  "assets": [
+    {
+      "asset": "resources/sst_medium_condensed.ttf",
+      "bytes": 479776,
+      "sha256": "cdc99f42f1d69bf8b798ec9d09c4979b574242d7f77aee775322dc286f7681f4",
+      "required": true
+    },
+    {
+      "asset": "resources/game_controller_db.txt",
+      "bytes": 522804,
+      "sha256": "41646d3ac9b4547889712f6f59511b1325298aa4f9aed246e73f594af0516710",
+      "startupUsageConfirmed": false
+    }
+  ],
+  "settingsWhitelist": [
+    "Player1Controller",
+    "Player2Controller"
+  ],
+  "applicationDexSha256": "7c7bc77016bf758b5b7c3efa13d439dca272aaf37c1967dae806eb9e25e66d07",
+  "yuzuApplicationEarlyReturnProcess": ":station_netplay",
+  "yuzuInitializationWouldRunInNewProcess": true,
+  "offlineAltered": false,
+  "physicalTest": false,
+  "presentationBoolRead": {
+    "key": "LibretroStretch",
+    "callsite": "0x2a9cfc",
+    "rodata": "0xccf63",
+    "emulationOption": false
+  },
+  "ownerThreadCallback": "onOwnerThreadStarted",
+  "humanExitCompletion": "human positive AND transport/Binder closed AND captured actual owner Thread.TERMINATED AND exact private process"
+}

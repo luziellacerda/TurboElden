@@ -1,0 +1,87 @@
+{
+  "scope": "Final current owner/session source only; no APK or physical gameplay proof",
+  "sources": [
+    {
+      "file": "native/StationPsxOwner.cpp",
+      "bytes": 22247,
+      "sha256": "93f64655982dbd34664eb5e4b5d6f96bc6c597a35e8bd2ff3f2d0593dde272a5"
+    },
+    {
+      "file": "native/StationPsxOwner.hpp",
+      "bytes": 2191,
+      "sha256": "03ad1dd8d1e651a019fbaaa6c11b02d73b9ef1d52f56c0b4ee3f130f83d0a90c"
+    },
+    {
+      "file": "recipe/build_owner.py",
+      "bytes": 2275,
+      "sha256": "28bea7cf8eb0c2a078fd542220596306cf10055e5884fab94e0d8955e87117c8"
+    },
+    {
+      "file": "recipe/run_owner_probe.py",
+      "bytes": 3096,
+      "sha256": "c4895fc553d67031c86f5a4a12f8552e52af9949e4f76a20193bb177dbdbd767"
+    },
+    {
+      "file": "recipe/probe_owner_abi.py",
+      "bytes": 7594,
+      "sha256": "f1893e0f72da940101b71c7b0f441b774ec560ebed9443098f89bc7dd20881bd"
+    },
+    {
+      "file": "tests/owner_probe.cpp",
+      "bytes": 15501,
+      "sha256": "6e0c848c0f7b9a48d0cac211608f6165be2230c3b8cbc0692074fc58b0c1a397"
+    },
+    {
+      "file": "tests/StationPsxSessionProbe.java",
+      "bytes": 16734,
+      "sha256": "8cae7420fae2c89c23dd2431825a7c2369b06ad0aaacc2c373bfccb33edd7640"
+    },
+    {
+      "file": "tests/StationPsxEndpointProbe.java",
+      "bytes": 15624,
+      "sha256": "b6e62383510310d7ffdd0890418d5df4e166f08ed75508a0fcc22f6321d6b9a9"
+    },
+    {
+      "file": "tests/run_session_probe.py",
+      "bytes": 2452,
+      "sha256": "3e9961e9ecc7bde01038678639cc35df396170742ed3903f0b5897fc61ad7d28"
+    },
+    {
+      "file": "tests/run_endpoint_probe.py",
+      "bytes": 2890,
+      "sha256": "aee5128dd832f72a3fdf8b947c387ba6c7a9bf64c2c5f91eababa6785a4c6088"
+    },
+    {
+      "file": "java/org/emulationstation/frontend/netplay/StationPsxLaunch.java",
+      "bytes": 17491,
+      "sha256": "e2f9d2fd68ca8978eb1b9483d18ffc0fd7cd9499a12c31bcd4bde991a2d7a349"
+    },
+    {
+      "file": "java/org/emulationstation/frontend/netplay/StationPsxSession.java",
+      "bytes": 16017,
+      "sha256": "73fdcb47ad0472dd0f4a398020e647af8da5f82b4ab3af78dbbbb457be29288b"
+    },
+    {
+      "file": "java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+      "bytes": 7352,
+      "sha256": "2b8fcbf368e38362e9f46701534471172ae388c1e163b2bb99f765a438ca7da2"
+    },
+    {
+      "file": "java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java",
+      "bytes": 26176,
+      "sha256": "63222e1586e4398dbb6c51d2ca4ba99893b63e454f588acec2c9296bd9869559"
+    }
+  ],
+  "proofs": {
+    "abiChecks": 80,
+    "ownerChecks": 16090,
+    "realAdapterMockRunReturns": 513,
+    "sessionLaunchChecks": 61,
+    "psxEndpointChecks": 186,
+    "dolphinTcpRegressionChecks": 470
+  },
+  "offlineFilesChanged": false,
+  "phoneOperated": false,
+  "serverChanged": false,
+  "physicalGameplayValidated": false
+}

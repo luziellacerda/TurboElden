@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "passed": true,
+  "scope": "Compile/link/ELF/JNI opt-in PSX entry only",
+  "target": "arm64-v8a",
+  "api": 28,
+  "standard": "C++20",
+  "optimization": "O2",
+  "loadAlignment": [
+    16384,
+    16384,
+    16384,
+    16384
+  ],
+  "neededLibraries": [
+    "libc++_shared.so",
+    "libc.so",
+    "libdl.so",
+    "libm.so"
+  ],
+  "sources": [
+    {
+      "file": "StationPsxEntry.cpp",
+      "bytes": 17835,
+      "sha256": "901c0fff549c02f88da79e4144de478ba59d9a833a944a6dca1fb93c43db86ed"
+    },
+    {
+      "file": "StationPsxOwner.cpp",
+      "bytes": 22247,
+      "sha256": "93f64655982dbd34664eb5e4b5d6f96bc6c597a35e8bd2ff3f2d0593dde272a5"
+    },
+    {
+      "file": "StationPsxProtocol.cpp",
+      "bytes": 29094,
+      "sha256": "01e4d93dce252e543930ce5feb76062da482dd354d6db9b404699aee17190625"
+    },
+    {
+      "file": "StationPsxSha256.cpp",
+      "bytes": 2670,
+      "sha256": "0459d697ed286705b2fc9c11aa6204aed54e1e05840fd448d8d06e48d491cd3c"
+    },
+    {
+      "file": "StationPsxIdentity.cpp",
+      "bytes": 36809,
+      "sha256": "c66fafe8f3dc8c0e017176a89af264865de32bee228d8d70b26c74ec2f2265a6"
+    },
+    {
+      "file": "StationPsxOwner.hpp",
+      "bytes": 2191,
+      "sha256": "03ad1dd8d1e651a019fbaaa6c11b02d73b9ef1d52f56c0b4ee3f130f83d0a90c"
+    },
+    {
+      "file": "StationPsxProtocol.hpp",
+      "bytes": 4827,
+      "sha256": "ad168ec6e6d4a1e9de374b5db3e7e6aebb6dff858b9b372968b6fc19a29abcba"
+    },
+    {
+      "file": "PsxPinnedOptions.h",
+      "bytes": 4957,
+      "sha256": "a7538301ae7d93b0b815d6536300035745135cf3dd15eb333d1711a0e633b193"
+    },
+    {
+      "file": "StationPsxBridge.java",
+      "bytes": 2672,
+      "sha256": "d4a52a90ba9f6ff5eb3e8e220b417d171df7f2115cd17467e3b1b57aa4967260"
+    }
+  ],
+  "binary": {
+    "file": "libstation_psx_online.so",
+    "bytes": 239232,
+    "sha256": "f9d762e9fe82b5346b65d29d356d6cb93776a983eb4bf9a9e25ab73388b1eb4f"
+  },
+  "jniMethods": [
+    "nativeAuthorizeHumanExit",
+    "nativeControl",
+    "nativeCopied",
+    "nativeDeliver",
+    "nativeFail",
+    "nativeFailure",
+    "nativeHumanExitAuthorized",
+    "nativePreparationFailed",
+    "nativePrepare",
+    "nativeReleaseReceipt",
+    "nativeRequestState",
+    "nativeResume",
+    "nativeStatus",
+    "nativeTakeCommit",
+    "nativeTakeOutgoing"
+  ],
+  "usesGenuineNormalOwnerRun": true,
+  "offlineElfModified": false,
+  "rendererInputReplaced": false,
+  "limits": [
+    "No Android activity, controller or ROM executed",
+    "No physical synchronization, performance or thermal validation",
+    "No productive APK modified or installed"
+  ],
+  "productiveIdentityEmbedded": true
+}

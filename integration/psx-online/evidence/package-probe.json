@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "cases": 6,
+  "scope": "Synthetic classic-ZIP/package primitives and closed payload set only",
+  "sourceSha256": "1d8c07e825fd28da68381a5e3b41cc9e6191cb6669ece1ff8f9a98624855f7a1",
+  "testSourceSha256": "dbf244305ff30d22342aabe2504e7d574feb9155deee3568d5e537ec9be920db",
+  "realRuntimeFreezeValidated": false,
+  "realApkAssembled": false,
+  "signedApkVerified": false,
+  "phoneOperated": false,
+  "physicalGameplayValidated": false
+}

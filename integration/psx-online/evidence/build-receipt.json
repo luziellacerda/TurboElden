@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "scope": "Standalone original SDL owner adapter compilation, no APK/phone/ROM execution",
+  "abi": "arm64-v8a",
+  "api": 28,
+  "flags": [
+    "C++20",
+    "O2",
+    "PIC",
+    "shared",
+    "preserve-frame-pointer",
+    "disable-sibling-calls",
+    "warnings-as-errors",
+    "16KiB-page-alignment",
+    "RELRO",
+    "NOW",
+    "no-undefined"
+  ],
+  "sources": [
+    {
+      "file": "StationPsxOwner.cpp",
+      "bytes": 22247,
+      "sha256": "93f64655982dbd34664eb5e4b5d6f96bc6c597a35e8bd2ff3f2d0593dde272a5"
+    },
+    {
+      "file": "StationPsxProtocol.cpp",
+      "bytes": 29094,
+      "sha256": "01e4d93dce252e543930ce5feb76062da482dd354d6db9b404699aee17190625"
+    },
+    {
+      "file": "StationPsxSha256.cpp",
+      "bytes": 2670,
+      "sha256": "0459d697ed286705b2fc9c11aa6204aed54e1e05840fd448d8d06e48d491cd3c"
+    },
+    {
+      "file": "StationPsxOwner.hpp",
+      "bytes": 2191,
+      "sha256": "03ad1dd8d1e651a019fbaaa6c11b02d73b9ef1d52f56c0b4ee3f130f83d0a90c"
+    },
+    {
+      "file": "PsxPinnedOptions.h",
+      "bytes": 4957,
+      "sha256": "a7538301ae7d93b0b815d6536300035745135cf3dd15eb333d1711a0e633b193"
+    },
+    {
+      "file": "StationPsxProtocol.hpp",
+      "bytes": 4827,
+      "sha256": "ad168ec6e6d4a1e9de374b5db3e7e6aebb6dff858b9b372968b6fc19a29abcba"
+    }
+  ],
+  "output": {
+    "file": "libstation_psx_owner.so",
+    "bytes": 170424,
+    "sha256": "30005e296cbe062c98c1f1aaed4593fad746cb2474d34657e0aa2d7175209308"
+  },
+  "passed": true,
+  "limits": [
+    "No Android process or game executed",
+    "No productive APK, offline owner/core or route changed",
+    "Compilation does not prove physical synchronization, controller input or thermal behavior"
+  ]
+}

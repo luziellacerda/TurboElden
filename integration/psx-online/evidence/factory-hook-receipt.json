@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "donorClasses28Sha256": "4d8e479f445396fa052bee5f7489a5748abdbfdccc9db4c7d035c8f2d0c646fa",
+  "donorSmaliSha256": "786d7e2a6a9ded6ef4e116791c67b9b70809f4c62a147b790ae2595e3c92d47c",
+  "patchedSmaliSha256": "0cc72f8ca9a6ba2a87b80ef48e6137642f0b19e7b16e1b39c370f01a4be1b270",
+  "changedMethod": "instantiateApplication(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;",
+  "onlyProcess": "org.turboramastation.frontend:station_psx_online",
+  "onlyApi": ">=28",
+  "selectedApplication": "org.emulationstation.frontend.netplay.StationPsxApplication",
+  "originalManifestUnchanged": true,
+  "inverseByteIdentical": true,
+  "otherProcessesUnchanged": true,
+  "authenticationUnchanged": true
+}

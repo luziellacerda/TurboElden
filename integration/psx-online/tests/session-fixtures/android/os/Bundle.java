@@ -1,0 +1,2 @@
+// Test fixture only. Never included in the application.
+package android.os; import java.util.*; public class Bundle { final Map<String,Object> v=new HashMap<>();public void putString(String k,String x){v.put(k,x);}public void putLong(String k,long x){v.put(k,x);}public void putParcelable(String k,Object x){v.put(k,x);}public String getString(String k){return (String)v.get(k);}public long getLong(String k){return ((Number)v.get(k)).longValue();}public boolean getBoolean(String k){return Boolean.TRUE.equals(v.get(k));} }

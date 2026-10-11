@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "scope": "host-only fake SDL/core with real Session; no Android/ROM",
+  "checks": 16090,
+  "realAdapterCheckpointRuns": 513,
+  "flags": [
+    "C++20",
+    "O2",
+    "Wall",
+    "Wextra",
+    "Werror",
+    "host-fixture-only",
+    "-I<protocol>",
+    "-I<pinned-options>"
+  ],
+  "sources": [
+    {
+      "file": "owner_probe.cpp",
+      "bytes": 15501,
+      "sha256": "6e0c848c0f7b9a48d0cac211608f6165be2230c3b8cbc0692074fc58b0c1a397"
+    },
+    {
+      "file": "StationPsxProtocol.cpp",
+      "bytes": 29094,
+      "sha256": "01e4d93dce252e543930ce5feb76062da482dd354d6db9b404699aee17190625"
+    },
+    {
+      "file": "StationPsxSha256.cpp",
+      "bytes": 2670,
+      "sha256": "0459d697ed286705b2fc9c11aa6204aed54e1e05840fd448d8d06e48d491cd3c"
+    },
+    {
+      "file": "StationPsxOwner.cpp",
+      "bytes": 22247,
+      "sha256": "93f64655982dbd34664eb5e4b5d6f96bc6c597a35e8bd2ff3f2d0593dde272a5"
+    },
+    {
+      "file": "StationPsxOwner.hpp",
+      "bytes": 2191,
+      "sha256": "03ad1dd8d1e651a019fbaaa6c11b02d73b9ef1d52f56c0b4ee3f130f83d0a90c"
+    },
+    {
+      "file": "StationPsxProtocol.hpp",
+      "bytes": 4827,
+      "sha256": "ad168ec6e6d4a1e9de374b5db3e7e6aebb6dff858b9b372968b6fc19a29abcba"
+    },
+    {
+      "file": "PsxPinnedOptions.h",
+      "bytes": 4957,
+      "sha256": "a7538301ae7d93b0b815d6536300035745135cf3dd15eb333d1711a0e633b193"
+    }
+  ],
+  "coverage": [
+    "exact 10 dlsym hook return PCs and missing/moved rejects",
+    "59 compiled V2 options defaults plus valid pinned overrides",
+    "factory only actual loaded owner checkpoint",
+    "actual wrapper input sample/lease/rawrun/complete sequence",
+    "delay0 regression and productive signed delay4",
+    "first four neutral synchronized inputs and N+4 original poll",
+    "future-input pause, exact current-frame snapshot and post-Ready prime",
+    "wrong-thread and wrong-size state denied before raw decoder",
+    "manual native save/load/exit disabled before effects",
+    "local menu pause separated from network pause",
+    "sticky core failure clears lease without executed commit",
+    "explicit human owner exit only"
+  ],
+  "limitations": [
+    "Mock SDL/rawcore on host, no Android or ROM",
+    "No physical controller, gameplay, performance or heat measurement",
+    "Does not prove nested original core decoder memory safety",
+    "No original ELF, productive APK or offline route was patched"
+  ]
+}

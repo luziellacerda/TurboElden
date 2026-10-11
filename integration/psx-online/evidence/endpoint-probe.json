@@ -1,0 +1,25 @@
+{
+  "result": "passed",
+  "tests": {
+    "StationDolphinEndpointProbe": "PASS checks=470 elapsedMs=794",
+    "StationPsxEndpointProbe": "PASS PSX endpoint checks=186 isolated_fixture_only=true"
+  },
+  "classpath": {
+    "sha256": "44cfdeed223caf6ff47b607d8460137cf80428299c602b97b2e8923b47eaa61b"
+  },
+  "sources": {
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerEndpoint.java": "4e1836a8abd9c3e63475981a0b1af426edaa9533d6190c9309df2e5fb429ab96",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java": "63222e1586e4398dbb6c51d2ca4ba99893b63e454f588acec2c9296bd9869559",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxEndpoint.java": "d1f9eb7a2d295f11e20c030dda24b8cbe553422534ecc0bf629b358b2b8a1ed5",
+    "integration/psx-online/tests/StationPsxEndpointProbe.java": "b6e62383510310d7ffdd0890418d5df4e166f08ed75508a0fcc22f6321d6b9a9",
+    "integration/psx-online/tests/fixtures/org/emulationstation/frontend/netplay/StationPsxBridge.java": "ebb3ba9f4ddf28ef6adfc66595d96b2b2823d9efc4e38a223083ea7cf7a1def9",
+    "versions/station-dolphin-online-r126-20261011/tests/StationDolphinEndpointProbe.java": "89c52e6364c631cdff47b4631ec86e51362a12376e7c8eb3105f9d56d95816d2",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java": "2b8fcbf368e38362e9f46701534471172ae388c1e163b2bb99f765a438ca7da2",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerWire.java": "318e6daa0f0ce483c9c7458ee33f918085ad4f1d9c1f2e4319895b3df7dba3c0",
+    "versions/station-dolphin-online-r126-20261011/tests/fixtures/org/emulationstation/frontend/netplay/StationRelayTls.java": "bb513d744af633e86a0117c3e49d07eb9ef3a2196d379c7ee9ab989e4fdc50ed",
+    "versions/station-dolphin-online-r126-20261011/tests/fixtures/org/json/JSONArray.java": "ffdf62259401c65e596e88f7565e2f74b5350518e05fbf8528b356227efd4a9d",
+    "versions/station-dolphin-online-r126-20261011/tests/fixtures/org/json/JSONObject.java": "08992a1b2f150e2c02f8bafad6ff8e71d345fdedff24b4ed430014612878fd9e"
+  },
+  "physicalGameplayValidated": false,
+  "fixtureShipped": false
+}

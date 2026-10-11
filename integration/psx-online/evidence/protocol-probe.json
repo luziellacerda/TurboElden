@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "generatedUtc": "2026-10-11T11:25:59.603637+00:00",
+  "isolatedComponentOnly": true,
+  "emulatorOrApkBuilt": false,
+  "physicalGameplay": false,
+  "target": "aarch64-linux-android24",
+  "wire": "PXL1",
+  "maxSlots": 2,
+  "standardPadMask": "0x3fff",
+  "candidateInputDelay": 4,
+  "sourceSha256": {
+    "StationPsxProtocol.cpp": "01e4d93dce252e543930ce5feb76062da482dd354d6db9b404699aee17190625",
+    "StationPsxSha256.cpp": "0459d697ed286705b2fc9c11aa6204aed54e1e05840fd448d8d06e48d491cd3c",
+    "StationPsxProtocol.hpp": "ad168ec6e6d4a1e9de374b5db3e7e6aebb6dff858b9b372968b6fc19a29abcba",
+    "protocol_probe.cpp": "8422cdd5f91e32ba25556d0d38d0a56974926e012aac91fc04ee40722391a004"
+  },
+  "compilerSha256": "986af49c2d1eefeac324f724ff54597753d1053927fa5d58a37a457f578e1cf8",
+  "compilerVersion": "clang version 22.1.8 (https://github.com/llvm/llvm-project ca7933e47d3a3451d81e72ac174dcb5aa28b59d1)",
+  "sdkLibcxxArchiveSha256": "b1c84d1d415719a8620dd5ab8022227955d120f09905147709014476425f248f",
+  "sdkLibcxxModulesJsonSha256": "d312ced1274d9534a46f5857b0ed86782d09951ae8bb1c9922d44c8164f2ba32",
+  "hostProbe": {
+    "result": "network_simulation delay0_rtt50_host=30 delay4_rtt50_host=120 delay4_rtt50_guest=119 delay4_rtt150_host=60 durationMs=2000\nchecks=202798; result=passed; synthetic_owner_only=true",
+    "sha256": "a23ac9e9419344d6a9b6fc6b33df3d75a6aace2f1185b1a82f458cb4f760c5a2",
+    "bytes": 369152
+  },
+  "archive": {
+    "path": "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\libstation_psx_protocol.a",
+    "sha256": "1c121315ab388ba989cb191e283ec673551d0f98b53aa367d9631c3a30e35eba",
+    "bytes": 120942
+  },
+  "objectSha256": {
+    "StationPsxProtocol.o": "162b5bd2418cdaea530e54dc0a53ed6e6bca56f4a7e64f9744e85818239f81b6",
+    "StationPsxSha256.o": "b0d75e9aef5c2041062107d47414139254be424ae71edd8e50abfeab00d341a2"
+  },
+  "elfHeaders": {
+    "StationPsxProtocol.o": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00\n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              REL (Relocatable file)\n  Machine:                           AArch64\n  Version:                           0x1\n  Entry point address:               0x0\n  Start of program headers:          0 (bytes into file)\n  Start of section headers:          88912 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           0 (bytes)\n  Number of program headers:         0\n  Size of section headers:           64 (bytes)\n  Number of section headers:         240\n  Section header string table index: 1",
+    "StationPsxSha256.o": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00\n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              REL (Relocatable file)\n  Machine:                           AArch64\n  Version:                           0x1\n  Entry point address:               0x0\n  Start of program headers:          0 (bytes into file)\n  Start of section headers:          4408 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           0 (bytes)\n  Number of program headers:         0\n  Size of section headers:           64 (bytes)\n  Number of section headers:         21\n  Section header string table index: 1"
+  },
+  "commands": [
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+      "-std=c++20",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\source-alias\\StationPsxProtocol.cpp",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\source-alias\\StationPsxSha256.cpp",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\source-alias\\protocol_probe.cpp",
+      "-o",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\protocol_probe.exe"
+    ],
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+      "--target=aarch64-linux-android24",
+      "--sysroot=E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot",
+      "-resource-dir=E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\19",
+      "-nostdinc++",
+      "-isystem",
+      "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\sdk\\android-arm64\\include\\c++\\v1",
+      "-std=c++20",
+      "-fPIC",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\source-alias\\StationPsxProtocol.cpp",
+      "-o",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\StationPsxProtocol.o"
+    ],
+    [
+      "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+      "--target=aarch64-linux-android24",
+      "--sysroot=E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot",
+      "-resource-dir=E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\lib\\clang\\19",
+      "-nostdinc++",
+      "-isystem",
+      "E:\\ESTUDO APK\\work\\station-hud-lzgames-20261003\\sdk\\android-arm64\\include\\c++\\v1",
+      "-std=c++20",
+      "-fPIC",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\source-alias\\StationPsxSha256.cpp",
+      "-o",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\StationPsxSha256.o"
+    ],
+    [
+      "C:\\Program Files\\LLVM\\bin\\llvm-ar.exe",
+      "rcs",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\libstation_psx_protocol.a",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\StationPsxProtocol.o",
+      "G:\\StationNormalOwnersR127\\psx\\protocol\\build\\StationPsxSha256.o"
+    ]
+  ],
+  "limits": [
+    "Synthetic owner tests do not execute original PSX core/SDL/JNI or two phones",
+    "Static objects do not validate the linked owner shared library or Android alignment",
+    "No server registry or signed production state asserted",
+    "State size/SHA is checked but nested core decoder memory safety is unproven",
+    "Lockstep is not rollback; pipeline4 throughput depends on actual network latency"
+  ]
+}

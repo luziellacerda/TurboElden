@@ -1,0 +1,6 @@
+<!-- Add only to the candidate, preserving all original Activities. -->
+<activity android:name="org.emulationstation.frontend.netplay.StationPsxOnlineActivity"
+    android:exported="false" android:process=":station_psx_online"
+    android:launchMode="singleTask" android:screenOrientation="sensorLandscape"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|navigation"
+    android:excludeFromRecents="true" android:hardwareAccelerated="true" />

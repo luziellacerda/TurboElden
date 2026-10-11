@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "donorClasses6Sha256": "f19dd92662fd066611c0e9feefd5c814bc06110f27fda50c2b3a63565965ba95",
+  "donorSmaliSha256": "ba8023df8f9d7bff74be26f7bbef90c01b91b5feeb0332ec646634e3eb3ece85",
+  "patchedSmaliSha256": "d8e84ab5399bfcbe8e09699814dbb82ba634258654ff72eceedcb6fe68ea93fd",
+  "changedMethods": [
+    "handleNativeState()V",
+    "onDestroy()V"
+  ],
+  "optInClass": "org.emulationstation.frontend.netplay.StationPsxOnlineActivity",
+  "offlineReadyUnchanged": true,
+  "offlineDestroyUnchanged": true,
+  "inverseByteIdentical": true,
+  "notPackaged": true
+}

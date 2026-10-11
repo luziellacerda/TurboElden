@@ -1,0 +1,2 @@
+// Test fixture only. Never included in the application.
+package android.app;import android.content.*;import android.view.*;public class Dialog implements DialogInterface{private final Window w=new Window();public Dialog(Activity a){}public void requestWindowFeature(int n){}public void setContentView(Object o){}public void setCancelable(boolean b){}public void show(){}public Window getWindow(){return w;}public void dismiss(){} }

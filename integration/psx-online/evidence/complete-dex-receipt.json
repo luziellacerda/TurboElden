@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "passed": true,
+  "scope": "Complete classes6/classes28 decoded from exact R126 APK, opt-in hooks only, assembled and every other class compared byte-identical decoded source",
+  "outputs": [
+    {
+      "partition": "classes6.dex",
+      "bytes": 96344,
+      "sha256": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+      "donorSha256": "f19dd92662fd066611c0e9feefd5c814bc06110f27fda50c2b3a63565965ba95",
+      "classCount": 50,
+      "decodedUnchangedClasses": 49,
+      "changedClasses": [
+        "org.libsdl.app.SDLActivity"
+      ],
+      "changedMethods": [
+        "handleNativeState",
+        "onDestroy"
+      ],
+      "onlyNewActivity": "org.emulationstation.frontend.netplay.StationPsxOnlineActivity",
+      "inverseOriginalClassByteIdentical": true
+    },
+    {
+      "partition": "classes28.dex",
+      "bytes": 304476,
+      "sha256": "5966ef8405701fa946c60fe6d922726cd74c27783a4cb76d240dfa4bc324de9d",
+      "donorSha256": "4d8e479f445396fa052bee5f7489a5748abdbfdccc9db4c7d035c8f2d0c646fa",
+      "classCount": 271,
+      "decodedUnchangedClasses": 270,
+      "changedClasses": [
+        "org.emulationstation.frontend.station.StationComponentFactory"
+      ],
+      "changedMethods": [
+        "instantiateApplication"
+      ],
+      "onlyNewActivity": "org.emulationstation.frontend.netplay.StationPsxOnlineActivity",
+      "inverseOriginalClassByteIdentical": true
+    }
+  ],
+  "classSetPreserved": true,
+  "otherProcessesUnchanged": true,
+  "apkChanged": false,
+  "signatureChanged": false,
+  "limits": [
+    "Reassembly may change DEX ordering/indices; outputs are complete donor partitions, not byte-identical DEX",
+    "No Android process or game executed",
+    "Root must merge new PSX Java separately, never duplicate class definitions"
+  ]
+}

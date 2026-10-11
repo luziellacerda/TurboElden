@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "scope": "Exact normal LibretroPlayer/LibretroCore source search; separate from ABI adapter implementation",
+  "ownerElf": {
+    "entry": "lib/arm64-v8a/libmain.so",
+    "bytes": 4588272,
+    "sha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+    "buildId": "85d35de71785a8d28be24d502dd08cd5cef6461d",
+    "androidApi": 26,
+    "androidNdk": "r30",
+    "androidBuild": "16248370",
+    "debugSections": [],
+    "symtab": false,
+    "gnuDebuglink": false,
+    "originalSourceRootExists": false,
+    "sourceRootAssociation": "ELF assertion paths establish this original frontend project; exact Player translation-unit path is not embedded"
+  },
+  "originalSourceRootExists": false,
+  "exactOriginalOwnerRecovered": false,
+  "normalCoreSourceCommit": "ff81ed17a15241d2f3730cdd7585b38e172532ca",
+  "searchedSymbols": [
+    "LibretroPlayer",
+    "LibretroCore",
+    "needsFreshProcess",
+    "lastRunStats"
+  ],
+  "githubApiCodeSearch": [
+    {
+      "query": "filename:LibretroPlayer.cpp",
+      "url": "https://api.github.com/search/code?q=filename%3ALibretroPlayer.cpp&per_page=100",
+      "total": 0,
+      "incomplete": false
+    },
+    {
+      "query": "\"isLibretroCommand\"",
+      "url": "https://api.github.com/search/code?q=%22isLibretroCommand%22&per_page=100",
+      "total": 0,
+      "incomplete": false
+    },
+    {
+      "query": "\"needsFreshProcess\" language:C++",
+      "url": "https://api.github.com/search/code?q=%22needsFreshProcess%22+language%3AC%2B%2B&per_page=100",
+      "total": 0,
+      "incomplete": false
+    },
+    {
+      "query": "\"lastRunStats\" \"Libretro\"",
+      "url": "https://api.github.com/search/code?q=%22lastRunStats%22+%22Libretro%22&per_page=100",
+      "total": 0,
+      "incomplete": false
+    },
+    {
+      "query": "LibretroPlayer language:C++",
+      "url": "https://api.github.com/search/code?q=LibretroPlayer+language:C%2B%2B&per_page=100",
+      "total": 7,
+      "incomplete": false,
+      "repositories": [
+        "jbreitweiser/gdRetroPlayer",
+        "MahmoudQawry/Classic-Era-by-Moudie-Netplay",
+        "RetroNest-Cores/RetroNest-Project"
+      ],
+      "exactOriginalOwnerRecovered": false
+    }
+  ],
+  "repositoryScans": [
+    {
+      "repository": "luziellacerda/TurboramaEmulationStation",
+      "uniqueSourceBuildBlobsScanned": 15180,
+      "matchingDefinitions": 0,
+      "readErrors": 0
+    },
+    {
+      "repository": "luziellacerda/Backup-Instaladores-Compiladores-Turborama",
+      "uniqueSourceBuildBlobsScanned": 691,
+      "matchingDefinitions": 0,
+      "readErrors": 0
+    }
+  ],
+  "localPrivateReceiptSha256": "d39a323dc79eccaec3e4a5d8d4e01e4e49688fa0171f605016860d13a581d694",
+  "alternativeImplemented": "Strict hash-pinned private-process ABI adapter of the actual shipped normal owner/core; no source recovery claim"
+}
