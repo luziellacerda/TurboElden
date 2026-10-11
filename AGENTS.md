@@ -1,3 +1,13 @@
+# R131 — owners Sony internos em composição
+
+Pedido humano atual supersede a rota externa R130: PS3/PS4 devem estar dentro do mesmo APK, exclusivamente offline, com preparação automática. Fonte em integration/sony-internal; ler README/STATUS e contratos. Firmware PS3 em assets e material comum do importador PKG PS4 foram especificamente autorizados para o APK local; nenhum byte desses inputs entra no Git. Não instalar apps externos nem manter downloader/wizard obrigatório. A presença do asset não comprova importação ou gameplay.
+
+Base real R130 d227b0af17600bf99ec097857bf182f6e7989f8ddc3b68b63e17c81f69eb30ad. Todos39DEX/resources/carousel/vídeos/LEDs/economia/cache/controles e cores dos demais emuladores preservados por hash. NovoDEX40, assets privados e duas Activities singleTask em processos próprios, factory delegada. PS4 SDL3 em classloader filho próprio e libs privadas para evitar colisão SDL/libc++/libe. Renovar apenas os quatro IDs já existentes por bundle compartilhado; não criar onlineSony nem mudar opções/perfis/cores/transporte. Publicar recibos finais fora da árvore das fontes produtivas, em versions/station-sony-internal-r131-20261011/evidence.
+
+Um backup completo em F e árvore temporária atual G:/StationNormalOwnersR127/sony-internal. R130 ainda é instalação/candidato comprovado até assinatura/conferência/promoção. Não interromper jogos/downloads nem limpar dados/trocar assinatura. Neste pedido o servidor continua somente leitura, sem novo handoff/deploy/restart por consequência.
+
+## Histórico R130
+
 # R130 — configurações compactas e loop somente na plataforma em destaque
 
 Implementação atual em integration/local-sony-demos/recipe, continuando sobre o donor R128 exato. R129 Final-Modal é a instalação anterior comprovada; não escolher APK por data. R130 muda somente CONFIGURAÇÕES, painel/preferências de efeitos, loop do vídeo principal e remove confirmação redundante de Jogar Sony. Com loop/Sem loop são persistentes, somente systemsMode&&!folderMode e um decoder reutilizado; coleções seguem single-pass. Desligar vídeos/economia/foreground/retirada de slots prevalecem. Preservar LEDs, cache/preload,30fps, emuladores, controles, licenças/jogos/saves e validações online.

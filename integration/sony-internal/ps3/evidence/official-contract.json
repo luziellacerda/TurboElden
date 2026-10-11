@@ -1,0 +1,1662 @@
+{
+  "schema": "station.sony.ps3.official-contract.v1",
+  "officialAPK": {
+    "sha256": "c5a58fb056ae333b8bd6ed69e6bfacdd1e5bf7e0ac2134456a0622bd94a3e466",
+    "bytes": 40122859,
+    "versionName": "2.43",
+    "versionCode": 43
+  },
+  "nativeLibraries": [
+    {
+      "entry": "lib/arm64-v8a/libe.so",
+      "bytes": 63807464,
+      "sha256": "5d8fb9b0c2e849df795be50ae767e4443617d7b6af7a9dd2970a21b022e278f3",
+      "elfMachine": 183,
+      "soname": "libe.so",
+      "dtNeeded": [
+        "libandroid.so",
+        "libz.so",
+        "libc.so",
+        "libvulkan.so",
+        "libOpenSLES.so",
+        "liblog.so",
+        "libm.so",
+        "libdl.so"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libfile_redirect_hook.so",
+      "bytes": 4152,
+      "sha256": "f9eb4b29ff765677d7da7f7cd43e3d229bb805229184711223bfbb9286e53e99",
+      "elfMachine": 183,
+      "soname": "libfile_redirect_hook.so",
+      "dtNeeded": [
+        "libhook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libgsl_alloc_hook.so",
+      "bytes": 4464,
+      "sha256": "6f08f828946f6f9728d0c00419541aa827bfbcd2bdf610e145ab7a2561acc1c9",
+      "elfMachine": 183,
+      "soname": "libgsl_alloc_hook.so",
+      "dtNeeded": [
+        "libhook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libhardware_ProcessorInfo.so",
+      "bytes": 256720,
+      "sha256": "c063fa372009bdf177b50449f3ec31d7319dfe5f40d5e99f0f652da4610e760a",
+      "elfMachine": 183,
+      "soname": "libhardware_ProcessorInfo.so",
+      "dtNeeded": [
+        "libvulkan.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libhook_impl.so",
+      "bytes": 278080,
+      "sha256": "da054d8d54e46a07c6c64207073899031b4f5a7688b77417bfc812c0ae9c72ea",
+      "elfMachine": 183,
+      "soname": "libhook_impl.so",
+      "dtNeeded": [
+        "liblog.so",
+        "libandroid.so",
+        "libdl.so",
+        "libm.so",
+        "libc.so"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/liblang_System.so",
+      "bytes": 4280,
+      "sha256": "5caf4ce1216f910f2fb290b6887c44afc05882bca830a28089925dc70f02d3eb",
+      "elfMachine": 183,
+      "soname": "liblang_System.so",
+      "dtNeeded": [
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libmain_hook.so",
+      "bytes": 4368,
+      "sha256": "71361a99dcdcd375686376f4819b2f2fa2656a540bb1c2161bce99de74b13a0c",
+      "elfMachine": 183,
+      "soname": "libmain_hook.so",
+      "dtNeeded": [
+        "libhook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ]
+    }
+  ],
+  "configurationAssets": [
+    {
+      "entry": "assets/config/config.yml",
+      "bytes": 8368,
+      "sha256": "9f8d19c0673e592743e244fb85d95d0e4c40de59345eda26470321aadf21e87c"
+    },
+    {
+      "entry": "assets/licenses.html",
+      "bytes": 2940,
+      "sha256": "0791e5870c2aa2920515fd91a964f292d1a72c6354f10c31f7380d31f72767c0"
+    }
+  ],
+  "dex": {
+    "sha256": "7fddde22d1665c15c6eba4302fc376a7cbacb35db20197425c9f32b688915128",
+    "bytes": 9183788,
+    "jniClasses": [
+      {
+        "class": "Laenu/aps3e/Emulator$CheatInfo;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65536
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "NOT_FOUND",
+            "type": "J",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "TYPE_U16",
+            "type": "I",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "TYPE_U32",
+            "type": "I",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "TYPE_U64",
+            "type": "I",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "TYPE_U8",
+            "type": "I",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "addr",
+            "type": "J",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "type",
+            "type": "I",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$CheatInfo;",
+            "name": "value",
+            "type": "J",
+            "accessFlags": 0
+          }
+        ]
+      },
+      {
+        "class": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65536
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+            "name": "description",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+            "name": "icon_path",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+            "name": "name",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+            "name": "timestamp",
+            "type": "J",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+            "name": "type",
+            "type": "B",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+            "name": "unlocked",
+            "type": "Z",
+            "accessFlags": 0
+          }
+        ]
+      },
+      {
+        "class": "Laenu/aps3e/Emulator$GameTrophyInfo;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65536
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo;",
+            "name": "game_name",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyInfo;",
+            "name": "trophies",
+            "type": "[Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+            "accessFlags": 0
+          }
+        ]
+      },
+      {
+        "class": "Laenu/aps3e/Emulator$GameTrophyManager;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyManager;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65536
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyManager;",
+            "name": "get_or_init",
+            "descriptor": "()Laenu/aps3e/Emulator$GameTrophyManager;",
+            "accessFlags": 8
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyManager;",
+            "name": "find",
+            "descriptor": "(Ljava/lang/String;)Laenu/aps3e/Emulator$GameTrophyInfo;",
+            "accessFlags": 0
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyManager;",
+            "name": "instance",
+            "type": "Laenu/aps3e/Emulator$GameTrophyManager;",
+            "accessFlags": 8
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$GameTrophyManager;",
+            "name": "trophy_list",
+            "type": "Ljava/util/List;",
+            "accessFlags": 0
+          }
+        ]
+      },
+      {
+        "class": "Laenu/aps3e/Emulator$MetaInfo;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "from_json",
+            "descriptor": "(Lorg/json/JSONObject;)Laenu/aps3e/Emulator$MetaInfo;",
+            "accessFlags": 8
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "to_json",
+            "descriptor": "(Laenu/aps3e/Emulator$MetaInfo;)Lorg/json/JSONObject;",
+            "accessFlags": 8
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "_parse_sound_format",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "_space",
+            "descriptor": "(I)Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "get_support_resolution",
+            "descriptor": "()Ljava/util/List;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "print_resolution",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "toString",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 1
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "category",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "dec_key_fd",
+            "type": "I",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "decrypt",
+            "type": "Z",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "eboot_path",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "icon",
+            "type": "[B",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "iso_fd",
+            "type": "I",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "iso_uri",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "name",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "resolution",
+            "type": "I",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "serial",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "sound_format",
+            "type": "I",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$MetaInfo;",
+            "name": "version",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          }
+        ]
+      },
+      {
+        "class": "Laenu/aps3e/Emulator$PatchManager$PatchInfo;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager$PatchInfo;",
+            "name": "<init>",
+            "descriptor": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+            "accessFlags": 65537
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager$PatchInfo;",
+            "name": "game_name",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager$PatchInfo;",
+            "name": "game_serial",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager$PatchInfo;",
+            "name": "game_version",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager$PatchInfo;",
+            "name": "id",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager$PatchInfo;",
+            "name": "isEnabled",
+            "type": "Z",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager$PatchInfo;",
+            "name": "name",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 1
+          }
+        ]
+      },
+      {
+        "class": "Laenu/aps3e/Emulator$PatchManager;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65536
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "add",
+            "descriptor": "(Ljava/util/List;Laenu/aps3e/Emulator$PatchManager$PatchInfo;)V",
+            "accessFlags": 10
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "getAllLocalPatches",
+            "descriptor": "()Ljava/util/List;",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "getEnabledLocalPatches",
+            "descriptor": "()Ljava/util/Map;",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "getPatchesForGame",
+            "descriptor": "(Ljava/lang/String;Ljava/util/List;Ljava/util/Map;)Ljava/util/List;",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "loadEnabledPatches",
+            "descriptor": "(Ljava/lang/String;)Ljava/util/Map;",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "parseAllPatches",
+            "descriptor": "(Ljava/lang/String;)Ljava/util/List;",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "updatePatchStatus",
+            "descriptor": "(Laenu/aps3e/Emulator$PatchManager$PatchInfo;ZLaenu/emulator/Emulator$Config;)V",
+            "accessFlags": 9
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_all",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_allowed_values",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_anchors",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_author",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_config_values",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_enabled",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_games",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_group",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_max",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_min",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_notes",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_patch",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_patch_version",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_type",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_value",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator$PatchManager;",
+            "name": "k_version",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 24
+          }
+        ]
+      },
+      {
+        "class": "Laenu/emulator/Emulator;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "boot",
+            "descriptor": "()V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "change_surface",
+            "descriptor": "(II)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "is_paused",
+            "descriptor": "()Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "is_running",
+            "descriptor": "()Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "key_event",
+            "descriptor": "(IZI)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "pause",
+            "descriptor": "()V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "quit",
+            "descriptor": "()V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "resume",
+            "descriptor": "()V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "setup_game_path",
+            "descriptor": "(Laenu/emulator/Emulator$Path;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "setup_game_path",
+            "descriptor": "(Ljava/lang/String;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "setup_surface",
+            "descriptor": "(Landroid/view/Surface;)V",
+            "accessFlags": 257
+          }
+        ],
+        "methods": [
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "boot",
+            "descriptor": "()V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "change_surface",
+            "descriptor": "(II)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "is_paused",
+            "descriptor": "()Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "is_running",
+            "descriptor": "()Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "key_event",
+            "descriptor": "(IZI)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "pause",
+            "descriptor": "()V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "quit",
+            "descriptor": "()V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "resume",
+            "descriptor": "()V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "setup_game_path",
+            "descriptor": "(Laenu/emulator/Emulator$Path;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "setup_game_path",
+            "descriptor": "(Ljava/lang/String;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "setup_surface",
+            "descriptor": "(Landroid/view/Surface;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/emulator/Emulator;",
+            "name": "support_custom_driver",
+            "descriptor": "()Z",
+            "accessFlags": 1
+          }
+        ],
+        "fields": []
+      },
+      {
+        "class": "Laenu/aps3e/Emulator;",
+        "super": "Laenu/emulator/Emulator;",
+        "nativeMethods": [
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "trophy_info_from_dir",
+            "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Laenu/aps3e/Emulator$GameTrophyInfo;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "camera_frame",
+            "descriptor": "([BIII)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "generate_config_xml",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "generate_java_string_arr",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "generate_strings_xml",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_cheat",
+            "descriptor": "(Laenu/aps3e/Emulator$CheatInfo;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_cpu_core_count",
+            "descriptor": "()I",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_cpu_max_mhz",
+            "descriptor": "(I)I",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_cpu_name",
+            "descriptor": "(I)Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_native_llvm_cpu_list",
+            "descriptor": "()[Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_support_llvm_cpu_list",
+            "descriptor": "()[Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_vulkan_physical_dev_list",
+            "descriptor": "()[Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "install_edat",
+            "descriptor": "(I)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "install_firmware",
+            "descriptor": "(I)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "install_pkg",
+            "descriptor": "(I)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "meta_info_from_dir",
+            "descriptor": "(Ljava/lang/String;)Laenu/aps3e/Emulator$MetaInfo;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "meta_info_from_iso",
+            "descriptor": "(IILjava/lang/String;)Laenu/aps3e/Emulator$MetaInfo;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "precompile_ppu_cache",
+            "descriptor": "(I)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "precompile_ppu_cache",
+            "descriptor": "(Ljava/lang/String;)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "search_memory",
+            "descriptor": "(Laenu/aps3e/Emulator$CheatInfo;)[Laenu/aps3e/Emulator$CheatInfo;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "set_cheat",
+            "descriptor": "(Laenu/aps3e/Emulator$CheatInfo;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "setup_game_id",
+            "descriptor": "(Ljava/lang/String;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "simple_device_info",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 257
+          }
+        ],
+        "methods": [
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "-$$Nest$mtrophy_info_from_dir",
+            "descriptor": "(Laenu/aps3e/Emulator;Ljava/lang/String;Ljava/lang/String;)Laenu/aps3e/Emulator$GameTrophyInfo;",
+            "accessFlags": 4168
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "<clinit>",
+            "descriptor": "()V",
+            "accessFlags": 65544
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "load_library",
+            "descriptor": "()V",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "setup_preload_env",
+            "descriptor": "(Laenu/aps3e/Application;)V",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "trophy_info_from_dir",
+            "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Laenu/aps3e/Emulator$GameTrophyInfo;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "camera_frame",
+            "descriptor": "([BIII)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "generate_config_xml",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "generate_java_string_arr",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "generate_strings_xml",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_cheat",
+            "descriptor": "(Laenu/aps3e/Emulator$CheatInfo;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_cpu_core_count",
+            "descriptor": "()I",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_cpu_max_mhz",
+            "descriptor": "(I)I",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_cpu_name",
+            "descriptor": "(I)Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_native_llvm_cpu_list",
+            "descriptor": "()[Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_support_llvm_cpu_list",
+            "descriptor": "()[Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get_vulkan_physical_dev_list",
+            "descriptor": "()[Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "install_edat",
+            "descriptor": "(I)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "install_firmware",
+            "descriptor": "(I)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "install_pkg",
+            "descriptor": "(I)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "install_rap",
+            "descriptor": "(ILjava/lang/String;)Z",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "key_event",
+            "descriptor": "(IZ)V",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "meta_info_from_dir",
+            "descriptor": "(Ljava/lang/String;)Laenu/aps3e/Emulator$MetaInfo;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "meta_info_from_iso",
+            "descriptor": "(IILjava/lang/String;)Laenu/aps3e/Emulator$MetaInfo;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "precompile_ppu_cache",
+            "descriptor": "(I)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "precompile_ppu_cache",
+            "descriptor": "(Ljava/lang/String;)Z",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "search_memory",
+            "descriptor": "(Laenu/aps3e/Emulator$CheatInfo;)[Laenu/aps3e/Emulator$CheatInfo;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "set_cheat",
+            "descriptor": "(Laenu/aps3e/Emulator$CheatInfo;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "set_env",
+            "descriptor": "(Ljava/lang/String;Ljava/lang/String;)V",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "setup_game_id",
+            "descriptor": "(Ljava/lang/String;)V",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "simple_device_info",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 257
+          },
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "support_custom_driver",
+            "descriptor": "()Z",
+            "accessFlags": 1
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/aps3e/Emulator;",
+            "name": "get",
+            "type": "Laenu/aps3e/Emulator;",
+            "accessFlags": 9
+          }
+        ]
+      },
+      {
+        "class": "Laenu/emulator/Emulator$BootException;",
+        "super": "Ljava/lang/Exception;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/emulator/Emulator$BootException;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          }
+        ],
+        "fields": []
+      },
+      {
+        "class": "Laenu/emulator/Emulator$Config;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_close_config",
+            "descriptor": "(J)Ljava/lang/String;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_close_config_file",
+            "descriptor": "(JLjava/lang/String;)V",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_list_children",
+            "descriptor": "(JLjava/lang/String;)[Ljava/lang/String;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_load_config_entry",
+            "descriptor": "(JLjava/lang/String;)Ljava/lang/String;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_load_config_entry_ty_arr",
+            "descriptor": "(JLjava/lang/String;)[Ljava/lang/String;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_open_config",
+            "descriptor": "(Ljava/lang/String;)J",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_open_config_file",
+            "descriptor": "(Ljava/lang/String;)J",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_save_config_entry",
+            "descriptor": "(JLjava/lang/String;Ljava/lang/String;)V",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_save_config_entry_ty_arr",
+            "descriptor": "(JLjava/lang/String;[Ljava/lang/String;)V",
+            "accessFlags": 258
+          }
+        ],
+        "methods": [
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_close_config",
+            "descriptor": "(J)Ljava/lang/String;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_close_config_file",
+            "descriptor": "(JLjava/lang/String;)V",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_list_children",
+            "descriptor": "(JLjava/lang/String;)[Ljava/lang/String;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_load_config_entry",
+            "descriptor": "(JLjava/lang/String;)Ljava/lang/String;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_load_config_entry_ty_arr",
+            "descriptor": "(JLjava/lang/String;)[Ljava/lang/String;",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_open_config",
+            "descriptor": "(Ljava/lang/String;)J",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_open_config_file",
+            "descriptor": "(Ljava/lang/String;)J",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_save_config_entry",
+            "descriptor": "(JLjava/lang/String;Ljava/lang/String;)V",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "native_save_config_entry_ty_arr",
+            "descriptor": "(JLjava/lang/String;[Ljava/lang/String;)V",
+            "accessFlags": 258
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "open_config_file",
+            "descriptor": "(Ljava/lang/String;)Laenu/emulator/Emulator$Config;",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "open_config_from_string",
+            "descriptor": "(Ljava/lang/String;)Laenu/emulator/Emulator$Config;",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "close_config",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "close_config_file",
+            "descriptor": "()V",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "list_children",
+            "descriptor": "(Ljava/lang/String;)[Ljava/lang/String;",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "load_config_entry",
+            "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "load_config_entry_ty_arr",
+            "descriptor": "(Ljava/lang/String;)[Ljava/lang/String;",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "save_config_entry",
+            "descriptor": "(Ljava/lang/String;Ljava/lang/String;)V",
+            "accessFlags": 1
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "save_config_entry_ty_arr",
+            "descriptor": "(Ljava/lang/String;[Ljava/lang/String;)V",
+            "accessFlags": 1
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "config_path",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Config;",
+            "name": "n_handle",
+            "type": "J",
+            "accessFlags": 2
+          }
+        ]
+      },
+      {
+        "class": "Laenu/emulator/Emulator$ConfigFileException;",
+        "super": "Ljava/lang/Exception;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/emulator/Emulator$ConfigFileException;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          }
+        ],
+        "fields": []
+      },
+      {
+        "class": "Laenu/emulator/Emulator$Path;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Laenu/emulator/Emulator$Path;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Path;",
+            "name": "from",
+            "descriptor": "(Ljava/lang/String;II)Laenu/emulator/Emulator$Path;",
+            "accessFlags": 9
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Laenu/emulator/Emulator$Path;",
+            "name": "dec_key_fd",
+            "type": "I",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Path;",
+            "name": "fd",
+            "type": "I",
+            "accessFlags": 0
+          },
+          {
+            "owner": "Laenu/emulator/Emulator$Path;",
+            "name": "uri",
+            "type": "Ljava/lang/String;",
+            "accessFlags": 0
+          }
+        ]
+      },
+      {
+        "class": "Laenu/hardware/ProcessorInfo;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [
+          {
+            "owner": "Laenu/hardware/ProcessorInfo;",
+            "name": "gpu_get_physical_device_name_vk",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 265
+          }
+        ],
+        "methods": [
+          {
+            "owner": "Laenu/hardware/ProcessorInfo;",
+            "name": "<clinit>",
+            "descriptor": "()V",
+            "accessFlags": 65544
+          },
+          {
+            "owner": "Laenu/hardware/ProcessorInfo;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          },
+          {
+            "owner": "Laenu/hardware/ProcessorInfo;",
+            "name": "gpu_get_physical_device_name_vk",
+            "descriptor": "()Ljava/lang/String;",
+            "accessFlags": 265
+          }
+        ],
+        "fields": []
+      },
+      {
+        "class": "Laenu/lang/System;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [
+          {
+            "owner": "Laenu/lang/System;",
+            "name": "setenv",
+            "descriptor": "(Ljava/lang/String;Ljava/lang/String;Z)V",
+            "accessFlags": 265
+          }
+        ],
+        "methods": [
+          {
+            "owner": "Laenu/lang/System;",
+            "name": "<clinit>",
+            "descriptor": "()V",
+            "accessFlags": 65544
+          },
+          {
+            "owner": "Laenu/lang/System;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          },
+          {
+            "owner": "Laenu/lang/System;",
+            "name": "setenv",
+            "descriptor": "(Ljava/lang/String;Ljava/lang/String;)V",
+            "accessFlags": 9
+          },
+          {
+            "owner": "Laenu/lang/System;",
+            "name": "setenv",
+            "descriptor": "(Ljava/lang/String;Ljava/lang/String;Z)V",
+            "accessFlags": 265
+          }
+        ],
+        "fields": []
+      },
+      {
+        "class": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+        "super": "Ljava/lang/Object;",
+        "nativeMethods": [],
+        "methods": [
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "<init>",
+            "descriptor": "()V",
+            "accessFlags": 65537
+          }
+        ],
+        "fields": [
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "circle",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 7
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "cross",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 6
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "d",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 4
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "l",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 1
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "l1",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 17
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "l2",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 18
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "l3",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 19
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "lsd",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 12
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "lsl",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 9
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "lsr",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 11
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "lsu",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 10
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "ps",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 25
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "r",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 3
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "r1",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 20
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "r2",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 21
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "r3",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 22
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "rsd",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 16
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "rsl",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 13
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "rsr",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 15
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "rsu",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 14
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "select",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 24
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "square",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 5
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "start",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 23
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "triangle",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 8
+          },
+          {
+            "owner": "Lorg/vita3k/emulator/overlay/InputOverlay$ControlId;",
+            "name": "u",
+            "type": "I",
+            "accessFlags": 25,
+            "constantValue": 2
+          }
+        ]
+      }
+    ]
+  },
+  "operation": "read-only inspection; no build or gameplay proof"
+}
