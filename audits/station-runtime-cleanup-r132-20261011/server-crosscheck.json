@@ -1,0 +1,785 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-10-11",
+  "generatedUTC": "2026-10-11T20:34:19.411248+00:00",
+  "scope": "Read-only crosscheck of the three latest genuine server returns and current R131 final receipts; proposed R132 identities intentionally pending.",
+  "serverMutationPerformed": false,
+  "remoteProductionProbed": false,
+  "phoneOperated": false,
+  "testsExecuted": false,
+  "fetch": {
+    "completed": true,
+    "refspec": "+refs/heads/*:refs/remotes/origin/*",
+    "cloneExisting": true,
+    "commandScopedSafeDirectory": true,
+    "checkoutChanged": false,
+    "branchBefore": "docs/station-r67-recovery-implementation-20261007",
+    "headBefore": "6c5f5cf33cf3ee9930066d52a55fa3357de75c13",
+    "worktreeChangesBefore": [],
+    "latestRemoteRefs": {
+      "refs/remotes/origin/feat/station-online-all-platforms-20261009": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "refs/remotes/origin/feat/station-ps2-saturn-server-20261010": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "refs/remotes/origin/feat/station-r128-aplicado-20261011": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861"
+    },
+    "headAfter": "6c5f5cf33cf3ee9930066d52a55fa3357de75c13",
+    "branchAfter": "docs/station-r67-recovery-implementation-20261007",
+    "worktreeChangesAfter": []
+  },
+  "instructionsRead": [
+    {
+      "path": "AGENTS.md",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "9675212d1b5ecc213a7b64f607c014e14646272b689ca6e40d7ae4e4b3e3aeeb"
+    },
+    {
+      "path": "docs/station-android/AGENTS.md",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "64c675bc358c787045aebb482124fd85757cf5f67c38d0cd82dfd2a52b6810e3"
+    }
+  ],
+  "latestGenuineReturns": [
+    {
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "branch": "feat/station-r128-aplicado-20261011",
+      "codePreparedCommit": "310c6654769e9f602c9a9ad9ed1da6212d85e531",
+      "document": "docs/station-android/online-plataformas-20261009/r128-retorno-servidor-20261011.json",
+      "documentSha256": "13ec0dda1a8bc938c8453ee1b3b707699fb6738c70034828fc37cdca1ddae9c9",
+      "recordedAt": "2026-10-11T17:14:46.614963+00:00",
+      "revisionReviewed": "R129",
+      "appSourceReviewed": "cf623c7c5cf34d4aa59ad278dc98fa6d7a50721b",
+      "apkReviewed": "89dd543986fdcb0c4b7ea53e82de87907f3b41ee0fe892479d8a63f52e4b7df0",
+      "status": "administrative-prepared-covers-in-progress-native-authentication-pending",
+      "relevant": {
+        "scriptsEffectivePublicationConfirmed": false,
+        "newFinalEnginesActivated": false,
+        "privateKitReceived": false,
+        "actualAndroidInstallationValidated": false,
+        "physicalGameplayValidated": false,
+        "nativeAdministrativeAuthenticationRequired": true,
+        "apiRestarted": false,
+        "ps3Ps4Online": false
+      },
+      "administrativeScriptSha256": {
+        "cadastrar-motor-online-station.py": "a3c81e0c379984d6b7736f79ce963c73a3f3250883f6304a32b5c6cfda73a096",
+        "station_online_profiles.py": "3d5d5b5563e2a6825ab9e798da80313cdbf2640522bc4dfd6b47e25c7f69eae1"
+      },
+      "testsReported": {
+        "methods": 68,
+        "passed": true,
+        "groups": [
+          {
+            "name": "test_explicit_engine_modes.py",
+            "passed": true,
+            "methods": 24
+          },
+          {
+            "name": "test_scoped_mode_merge.py",
+            "passed": true,
+            "methods": 16
+          },
+          {
+            "name": "test_operator_candidate_transaction.py",
+            "passed": true,
+            "methods": 20
+          },
+          {
+            "name": "test_private_artifact_kit.py",
+            "passed": true,
+            "methods": 8
+          }
+        ],
+        "receiptRevision": "R129",
+        "executedOnLinux": true,
+        "historicalDeliveredReceiptsPreserved": true,
+        "publicOperatorSealsChecked": 18,
+        "canonicalProfilesGeneratedFromFinalRuntime": true
+      },
+      "caveat": "68 methods reported by the server as executed with R129 receipts; isolated administration tests do not prove protected publication, native mode approval or Android gameplay."
+    },
+    {
+      "commit": "141b488d6ad7fd3d2c8e74e76c1a004f1cb257fc",
+      "branch": "backup/station-antes-r128-capas-20261011",
+      "document": "docs/station-android/online-plataformas-20261009/capas-site-ps2-psp-wii-wiiu-20261010.json",
+      "documentSha256": "524a355a40ac4bbd73dceddf09f6d577a067fcd1dc12f281475c3b47191205e0",
+      "result": {
+        "status": "applied",
+        "appliedAt": "2026-10-10T23:38:41.105858+00:00",
+        "previousRevision": 32,
+        "catalogRevision": 33,
+        "indexedItems": 3940,
+        "visibleItems": 3685,
+        "pid": 2136303,
+        "dllSha256": "2c0d034476969cbed58b519b744e841111373f89a4bcd6abb9cd14543abcde35",
+        "productionRestarted": false,
+        "coversReplaced": 36,
+        "replacedByPlatform": {
+          "wii": 6,
+          "wiiu": 1,
+          "ps2": 25,
+          "psp": 4
+        },
+        "inspectedGames": 42,
+        "immutableRomIdsPreserved": true,
+        "coverIdsPreserved": true,
+        "artifactDescriptorsPreserved": true,
+        "metadataPreserved": true,
+        "gameFilesCopied": 0,
+        "compiledResolution": [
+          480,
+          720
+        ],
+        "physicalAndroidVisualTest": false
+      },
+      "unmatchedCurrentCoversPreserved": 6,
+      "preservation": {
+        "realLicenses": true,
+        "databaseSchema": true,
+        "existingConfigurations": true,
+        "otherServices": true,
+        "onlineProfiles": true,
+        "onlineEngines": true,
+        "onlineModes": true
+      },
+      "serverSandboxIsNotPhoneSandbox": true
+    },
+    {
+      "commit": "5f9c019b6c87429f5cff2602701b29859acb1089",
+      "branch": "backup/station-antes-capas-site-20261010",
+      "document": "docs/station-android/online-plataformas-20261009/sega32x-psp-publicados-20261010.json",
+      "documentSha256": "1da6ebd8bd5f59c1706a73b9396634876e6a8f0a3c527a5b6a38f585cd076a7b",
+      "result": {
+        "status": "applied",
+        "utc": "2026-10-10T22:40:20.495314+00:00",
+        "catalogRevision": 32,
+        "indexedItems": 3940,
+        "visibleItems": 3685,
+        "compatibilityAliases": 255,
+        "pid": 2136303,
+        "nRestarts": 0,
+        "apiRestarted": false,
+        "dllSha256": "2c0d034476969cbed58b519b744e841111373f89a4bcd6abb9cd14543abcde35",
+        "sourceCommit": "7eb0e009d40ce01db86aea9c489937e9bd2fd00a",
+        "onlinePlatformsPreserved": 17,
+        "nativeGameplayQualified": false,
+        "metadataPlayersAreNotOnlineSeatProof": true
+      },
+      "preservation": {
+        "realLicenses": true,
+        "databaseSchema": true,
+        "existingConfigurations": true,
+        "otherServices": true,
+        "onlineProfiles": true,
+        "onlineEngines": true,
+        "onlineModes": true
+      },
+      "sega32xItems": 36,
+      "pspItems": 9
+    }
+  ],
+  "notServerResponses": [
+    {
+      "commit": "c433052ce12c662355dac81c9d9c106b5f283bb1",
+      "role": "APP-to-SERVER R129 binding"
+    },
+    {
+      "commit": "7b8c0a7e68b1b0bac5fdcebec62233611533394b",
+      "role": "APP-to-SERVER original R128 delivery"
+    },
+    {
+      "commit": "5696ed9bed01fdfa8cbd3414197c2eea4f3fc898",
+      "role": "superseded APP-to-SERVER R127 procedure"
+    }
+  ],
+  "exactContract": {
+    "document": "docs/station-android/online-plataformas-20261009/server-integration-contract.json",
+    "documentSha256": "e777c3b8c9f40b40e5eae9046359a96e8562a5299359cb5e54f5be7a27033be6",
+    "wire": {
+      "protocol": "station-stream.v3",
+      "binaryMagic": "TSR3",
+      "headerBytes": 24,
+      "integerEncoding": "signed-int64-big-endian",
+      "maximumDataBytes": 16384,
+      "windowBytes": 262144,
+      "topology": "host-star",
+      "hostLinks": "one duplex link per guest",
+      "maximumIndependentPlayers": 5,
+      "commandPath": "/v1/station/online/multiplayer/command",
+      "commandMethod": "POST",
+      "relayPath": "/v1/station/online/multiplayer/relay"
+    },
+    "presencePrerequisite": {
+      "path": "/v1/station/online/command",
+      "method": "POST",
+      "action": "enter",
+      "before": "all v3 multiplayer commands including capabilities",
+      "authentication": "existing device-bound bearer/request proof",
+      "leaving": "offline through the same presence API"
+    },
+    "clientCapacityDeclaration": {
+      "field": "clientMaximumPlayers",
+      "value": "actual native runtime capability; five-player candidate declares 5",
+      "legacyOmittedValue": 4,
+      "allowedRange": [
+        2,
+        5
+      ]
+    },
+    "engineEnrollment": {
+      "protectedLocalAdministration": true,
+      "serverRebuildRequired": false,
+      "serverRestartRequired": false,
+      "profileConfigurationFieldOrder": [
+        "schemaVersion",
+        "controllerProfile",
+        "devices",
+        "coreOptions"
+      ],
+      "profileConfigurationEncoding": "UTF-8 compact JSON, no BOM/newline, Unicode unescaped, SHA-256 lowercase hex",
+      "contentIdentity": "exact existing contentSha256; cue-set-v1 and wiiu-set-v1 preserved",
+      "reloadWithinSeconds": 10,
+      "manifestSchema": {
+        "schemaVersion": 1,
+        "requiredEngineFields": [
+          "engineId",
+          "platform",
+          "library",
+          "runtimeLibrary",
+          "coreSha256",
+          "runtimeSha256",
+          "extensions",
+          "options",
+          "launchReady",
+          "recoveryProtocol",
+          "maximumPlayers",
+          "controllerProfiles"
+        ],
+        "requiredControllerFields": [
+          "controllerProfile",
+          "maximumPlayers",
+          "configuration"
+        ],
+        "requiredConfigurationFields": [
+          "schemaVersion",
+          "controllerProfile",
+          "devices",
+          "coreOptions"
+        ]
+      }
+    },
+    "platformPolicy": {
+      "serverReady": "server transport and trusted enrollment implemented, independent from installed APK",
+      "onlineAvailable": "this exact game has an approved native-engine/content/controller binding",
+      "maximumPlayers": "platform ceiling; select an allowedPlayerCounts entry of the exact profile"
+    },
+    "eventsPollingPolicy": {
+      "path": "/v1/station/online/events",
+      "method": "POST",
+      "maximumConcurrentPendingPollsPerLicenseAndDevice": 1,
+      "serverWaitSeconds": 10,
+      "overlapError": "STATION_ONLINE_POLL_EXISTS",
+      "overlapHTTPStatus": 429,
+      "retryAfterSeconds": 1,
+      "clientRequirement": "Serialize polling; settle previous requests/cancellation before replacing a polling worker. Handle returned error code and Retry-After.",
+      "handlerDeadlineSeconds": 15,
+      "idleWaitPreviouslyValid": true,
+      "transientReadOnlyRetry": {
+        "operations": [
+          "presence heartbeat",
+          "events",
+          "multiplayer snapshot"
+        ],
+        "httpStatuses": [
+          408,
+          429,
+          500,
+          502,
+          503,
+          504
+        ],
+        "networkExceptions": [
+          "StationApi.Offline",
+          "SocketTimeoutException",
+          "SocketException"
+        ],
+        "backoffMillis": [
+          1000,
+          2000,
+          4000,
+          8000
+        ],
+        "maximumRetryAfterMillis": 60000,
+        "overlapBackoffMillis": 1000,
+        "explicitCancellationStopsImmediately": true,
+        "terminal": [
+          "401/403 or other non-transient statuses",
+          "disabled Station service",
+          "TLS/identity/signature/JSON failure"
+        ],
+        "mutateCommandAutomaticallyReplayed": false
+      }
+    },
+    "roomPagination": {
+      "path": "/v1/station/online/multiplayer/command",
+      "requestFields": {
+        "page": {
+          "default": 0,
+          "minimum": 0,
+          "maximum": 40
+        },
+        "roomPageSize": {
+          "default": 100,
+          "allowed": [
+            32,
+            100
+          ]
+        }
+      },
+      "optional": true,
+      "backwardCompatibleDefault": true,
+      "candidatePageSize": 32,
+      "responseFields": [
+        "page",
+        "roomPageSize",
+        "nextPage",
+        "totalRooms",
+        "rooms",
+        "room"
+      ],
+      "nextPage": "next zero-based page or null after the last visible room",
+      "totalRooms": "visible filtered rooms before pagination",
+      "ownRoom": "independent from the requested room page, even an empty page",
+      "invalidRequest": {
+        "httpStatus": 400,
+        "code": "STATION_MULTIPLAYER_PAGE_INVALID"
+      },
+      "social": {
+        "path": "/v1/station/online/command and /v1/station/online/events",
+        "pageSize": 100,
+        "nextPeerPage": "next page of visible people",
+        "nextRoomPage": "next page of visible legacy rooms",
+        "legacyNextPageRetained": true
+      },
+      "presentation": {
+        "peerPage": "social snapshot page",
+        "nextPeerPage": "social nextPeerPage, legacy nextPage fallback",
+        "roomPage": "selected room snapshot page",
+        "nextRoomPage": "v3 nextPage or legacy nextRoomPage",
+        "navigation": "reset to page zero when switching people/rooms; fetch requested room page immediately; show loading while source page differs",
+        "authority": "composed revision is local presentation only; never use as a request proof",
+        "presence": "server reports v3 room membership independently of the visible page"
+      }
+    },
+    "covers": {
+      "catalogRevision": 33,
+      "dimensions": [
+        480,
+        720
+      ],
+      "format": "JPEG",
+      "cacheKey": "coverId + item.revision",
+      "pending2255BindingCoverPreparationIsNotPublished": true,
+      "unknownOrAmbiguousCoverIsNotReplaced": true
+    },
+    "roomSynopsis": "signed catalog.items[].metadata.description, lookup by itemId; cached read, no request per room",
+    "sonyPlatformSynopsis": "local platform fiche, separate from signed game catalog; two DEMO synopses stay local",
+    "sonyOnlineEnabled": false
+  },
+  "currentApp": {
+    "revision": "R131",
+    "sourceCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981",
+    "apkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+    "apkBytes": 2711825423,
+    "runtimeReceipt": "versions/station-sony-internal-r131-20261011/evidence/runtime-final.json",
+    "runtimeReceiptSha256": "533020f8dd464fb2361eb6ef0957b00d5ae2b5aa9d6a00c3451066fc117dba06",
+    "packageReceipt": "versions/station-sony-internal-r131-20261011/evidence/package-final.json",
+    "packageReceiptSha256": "d3467bc551e967866e5fd4f1dd1abfd4cce39907e2e716577fb0fe7544420b39",
+    "existing39DexByteIdentical": true,
+    "policyComparison": [
+      {
+        "platform": "psx",
+        "currentR131": {
+          "engineId": "pcsx-rearmed-ff81ed17-player-v3-7c182b392814",
+          "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+          "runtimeSha256": "7c182b3928147af569e642d4b1951eedf60358018d8e03908e15169afbd563d9",
+          "library": "libpcsx_rearmed_libretro_android.so",
+          "runtimeLibrary": "libstation_psx_online.so",
+          "maximumPlayers": 2,
+          "recoveryProtocol": "station-stream.v3",
+          "controllerProfiles": [
+            "standard-2p-v1"
+          ]
+        },
+        "reviewedR129": {
+          "engineId": "pcsx-rearmed-ff81ed17-player-v3-f31f0a3dbfc9",
+          "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+          "runtimeSha256": "f31f0a3dbfc90163e1d12591facb26e66380a02e4c53ae92274ae7ebc01c4597"
+        },
+        "policyAndDependenciesByteValuesEqual": {
+          "coreSha256": true,
+          "library": true,
+          "runtimeLibrary": true,
+          "options": true,
+          "dependencySha256": true,
+          "extensions": true,
+          "maximumPlayers": true,
+          "controllerProfiles": true,
+          "recoveryProtocol": true,
+          "contentIdentityByExtension": true
+        },
+        "canonicalControllerSha256": "81c0e2323a37130dbdbdb9c2efefca8837a9bb6e7169304b4e5731b2ec56290a",
+        "runtimeAndEngineIdChanged": true,
+        "currentR131ServerEnrollmentConfirmed": false,
+        "r132FinalEngineId": null,
+        "r132FinalRuntimeSha256": null,
+        "r132IdentityStatus": "pending-final-compilation-receipt; never reuse R129/R131 identities"
+      },
+      {
+        "platform": "n64",
+        "currentR131": {
+          "engineId": "mupen64plus-ae-33bf7021-n64-v3-cf3c21e161fa",
+          "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+          "runtimeSha256": "cf3c21e161fac06c094fabfbf7e349280b5e86eed89258296f85baca576602eb",
+          "library": "libstation_mupen64plus_core.so",
+          "runtimeLibrary": "libstation_mupen64plus_runtime.so",
+          "maximumPlayers": 4,
+          "recoveryProtocol": "station-stream.v3",
+          "controllerProfiles": [
+            "direct-four-ports-v1"
+          ]
+        },
+        "reviewedR129": {
+          "engineId": "mupen64plus-ae-33bf7021-n64-v3-6868eddfca6c",
+          "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+          "runtimeSha256": "6868eddfca6c5380b8191fe9c5ad7671faa3ffb1a0215c0fcc9b73236e685ef8"
+        },
+        "policyAndDependenciesByteValuesEqual": {
+          "coreSha256": true,
+          "library": true,
+          "runtimeLibrary": true,
+          "options": true,
+          "dependencySha256": true,
+          "extensions": true,
+          "maximumPlayers": true,
+          "controllerProfiles": true,
+          "recoveryProtocol": true,
+          "contentIdentityByExtension": true
+        },
+        "canonicalControllerSha256": "2966309729f8a19c03b564f0178f263170e1843172f6719002f35fb54e313f9c",
+        "runtimeAndEngineIdChanged": true,
+        "currentR131ServerEnrollmentConfirmed": false,
+        "r132FinalEngineId": null,
+        "r132FinalRuntimeSha256": null,
+        "r132IdentityStatus": "pending-final-compilation-receipt; never reuse R129/R131 identities"
+      },
+      {
+        "platform": "gamecube",
+        "currentR131": {
+          "engineId": "dolphin-5102a033-gamecube-v3-cdfd3b17ee2b",
+          "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+          "runtimeSha256": "cdfd3b17ee2b6c2108c47394e1a5c94a716b481ad594830b4593c618902088c5",
+          "library": "libstation_dolphin_online.so",
+          "runtimeLibrary": "libstation_dolphin_runtime.so",
+          "maximumPlayers": 4,
+          "recoveryProtocol": "station-stream.v3",
+          "controllerProfiles": [
+            "dolphin-gamecube-four-ports-v1"
+          ]
+        },
+        "reviewedR129": {
+          "engineId": "dolphin-5102a033-gamecube-v3-9765756f70fd",
+          "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+          "runtimeSha256": "9765756f70fda14d8103ce7ab7055a4e0fd92e1ed0edef09930ed38e013d9031"
+        },
+        "policyAndDependenciesByteValuesEqual": {
+          "coreSha256": true,
+          "library": true,
+          "runtimeLibrary": true,
+          "options": true,
+          "dependencySha256": true,
+          "extensions": true,
+          "maximumPlayers": true,
+          "controllerProfiles": true,
+          "recoveryProtocol": true,
+          "contentIdentityByExtension": true
+        },
+        "canonicalControllerSha256": "89dc579c37afab7731a2d7322ab7fcf70ed0afa86ba7e491a605c45cd5443fc1",
+        "runtimeAndEngineIdChanged": true,
+        "currentR131ServerEnrollmentConfirmed": false,
+        "r132FinalEngineId": null,
+        "r132FinalRuntimeSha256": null,
+        "r132IdentityStatus": "pending-final-compilation-receipt; never reuse R129/R131 identities"
+      },
+      {
+        "platform": "wii",
+        "currentR131": {
+          "engineId": "dolphin-5102a033-wii-v3-cdfd3b17ee2b",
+          "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+          "runtimeSha256": "cdfd3b17ee2b6c2108c47394e1a5c94a716b481ad594830b4593c618902088c5",
+          "library": "libstation_dolphin_online.so",
+          "runtimeLibrary": "libstation_dolphin_runtime.so",
+          "maximumPlayers": 4,
+          "recoveryProtocol": "station-stream.v3",
+          "controllerProfiles": [
+            "dolphin-wii-remotes-four-v1"
+          ]
+        },
+        "reviewedR129": {
+          "engineId": "dolphin-5102a033-wii-v3-9765756f70fd",
+          "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+          "runtimeSha256": "9765756f70fda14d8103ce7ab7055a4e0fd92e1ed0edef09930ed38e013d9031"
+        },
+        "policyAndDependenciesByteValuesEqual": {
+          "coreSha256": true,
+          "library": true,
+          "runtimeLibrary": true,
+          "options": true,
+          "dependencySha256": true,
+          "extensions": true,
+          "maximumPlayers": true,
+          "controllerProfiles": true,
+          "recoveryProtocol": true,
+          "contentIdentityByExtension": true
+        },
+        "canonicalControllerSha256": "cf3b214d63ce324a82b331fc96a95c6f35e8cc1c7b6bc2bcd659cf35743ceaed",
+        "runtimeAndEngineIdChanged": true,
+        "currentR131ServerEnrollmentConfirmed": false,
+        "r132FinalEngineId": null,
+        "r132FinalRuntimeSha256": null,
+        "r132IdentityStatus": "pending-final-compilation-receipt; never reuse R129/R131 identities"
+      }
+    ],
+    "administrativeReceiptSeal": {
+      "publicRuntimeSha256": "533020f8dd464fb2361eb6ef0957b00d5ae2b5aa9d6a00c3451066fc117dba06",
+      "packageIdentityReceiptSha256": "7df6fe4ad140ff8e5cb21146e07a77345c02878500c69a1d8167f5aeccc52cc0",
+      "runtimePublicProvenanceOriginalSha256": "7df6fe4ad140ff8e5cb21146e07a77345c02878500c69a1d8167f5aeccc52cc0",
+      "originalPrivateProvenanceSealMatches": true,
+      "sanitizedPublicPairDirectlyConsumableByExistingOperatorHelpers": false,
+      "generatorGuardSource": {
+        "path": "docs/station-android/r128/operator/build_incoming_manifest.py",
+        "line": 64
+      },
+      "extractorGuardSource": {
+        "path": "docs/station-android/r128/operator/extract_private_server_artifacts.py",
+        "line": 42
+      },
+      "resolution": "Use the unchanged exact private runtime/package receipt pair alongside the private R132 binary kit, hash sealed to the public provenance. Alternatively prepare a separate explicitly derived administrative pair with its own public SHA seals and provenance before final delivery; do not rewrite the original identity seal or bypass helper validation."
+    },
+    "noAdmissionTransportOrCorePolicyChangeForR132Proposed": true,
+    "r132FinalApkSha256": null,
+    "r132FinalSourceCommit": null,
+    "r132State": "not-finalized; bind only final verified R132 receipts"
+  },
+  "sourceEvidence": [
+    {
+      "path": "docs/station-android/online-plataformas-20261009/library-tools/atualizar-biblioteca-station.py",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "7f6e9ebb6e1ccc71c184e7d3e07cac856f1c0ceee4e281e272061406619e36bd",
+      "line": 572,
+      "conclusion": "Effective scanner reads registry/engineManifest/preparedModes and imports station_online_profiles.prepare on each one-shot execution; native script deployment is separate from C# JSON hot reload."
+    },
+    {
+      "path": "src/TurboRamaSuiteOnlineServer/StationOnlineRegistration.cs",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "ecd82e636ddbf8d50a7f2b0a03d9e7250e99064aa57ca78376d85c1270f758de",
+      "line": 12,
+      "conclusion": "Legacy EngineRegistryFile is loaded at startup, accepts recoveryProtocol null/v2; not enrollment authority for these four v3 engines."
+    },
+    {
+      "path": "src/TurboRamaSuiteOnlineServer/StationOnlineRegistration.cs",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "ecd82e636ddbf8d50a7f2b0a03d9e7250e99064aa57ca78376d85c1270f758de",
+      "line": 25,
+      "conclusion": "Effective v3 requires MultiplayerEnabled and recovery; configuration status must be observed by the operator."
+    },
+    {
+      "path": "src/TurboRamaSuiteOnlineServer/StationOnlineRegistration.cs",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "ecd82e636ddbf8d50a7f2b0a03d9e7250e99064aa57ca78376d85c1270f758de",
+      "line": 31,
+      "conclusion": "V3 uses the active profile registry and hosted profile monitor."
+    },
+    {
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerProfileMonitor.cs",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "a9533df2f88d8ca04eb0491892d0cedfb4a407b73c05d40e2fb36b04d1ffc728",
+      "line": 20,
+      "conclusion": "Bounded file read and whole validation before immutable profile replacement; changed-during-read and invalid data retain last good registry."
+    },
+    {
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerProfileMonitor.cs",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "a9533df2f88d8ca04eb0491892d0cedfb4a407b73c05d40e2fb36b04d1ffc728",
+      "line": 55,
+      "conclusion": "V3 data hot reload within ten seconds without rebuilding or restarting API."
+    },
+    {
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayer.cs",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "a58c3e1226300c8e19afd3dcedc3cb68ae560bb8a08e8e417eea3e9c4889f101",
+      "line": 98,
+      "conclusion": "Existing rooms retain their frozen records, links and recovery windows."
+    },
+    {
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayer.cs",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "a58c3e1226300c8e19afd3dcedc3cb68ae560bb8a08e8e417eea3e9c4889f101",
+      "line": 126,
+      "conclusion": "Exact item/content/engine/core/runtime/profile and approved allowedPlayerCounts required, plus current catalog match."
+    },
+    {
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerEndpoints.cs",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "cc610e2f8473bbe997af5a3b3b64f4825253ca8a3bf2e5049a12737986cb32f2",
+      "line": 35,
+      "conclusion": "Fresh response is signed and bound to license/device/session/requestId; do not accept cache/PONG/HTTP200 as enrollment proof."
+    },
+    {
+      "path": "docs/station-android/online-plataformas-20261009/library-tools/station_online_profiles.py",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "3d5d5b5563e2a6825ab9e798da80313cdbf2640522bc4dfd6b47e25c7f69eae1",
+      "line": 153,
+      "conclusion": "New engine requires a prepared edition/mode explicitly scoped to that exact engine; unknown future imports are not approved by generic fallback."
+    },
+    {
+      "path": "docs/station-android/online-plataformas-20261009/library-tools/cadastrar-motor-online-station.py",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "a3c81e0c379984d6b7736f79ce963c73a3f3250883f6304a32b5c6cfda73a096",
+      "line": 75,
+      "conclusion": "New modes append to exact original prefix and scope only incoming engines."
+    },
+    {
+      "path": "docs/station-android/online-plataformas-20261009/library-tools/cadastrar-motor-online-station.py",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "a3c81e0c379984d6b7736f79ce963c73a3f3250883f6304a32b5c6cfda73a096",
+      "line": 87,
+      "conclusion": "Preparation verifies six distinct real library bytes, immutable engine IDs and existing profiles before candidate seals."
+    },
+    {
+      "path": "docs/station-android/online-plataformas-20261009/library-tools/cadastrar-motor-online-station.py",
+      "commit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+      "sha256": "a3c81e0c379984d6b7736f79ce963c73a3f3250883f6304a32b5c6cfda73a096",
+      "line": 115,
+      "conclusion": "Apply authenticates native administration, verifies protected paths/baselines under scan.lock and candidate seals; publishes modes/engines then profiles; exact-byte rollback on failure."
+    }
+  ],
+  "exactGaps": [
+    {
+      "id": "SERVER-01",
+      "owner": "server operator",
+      "status": "open",
+      "evidence": "a6b return scriptsEffectivePublicationConfirmed=false and nativeAdministrativeAuthenticationRequired=true",
+      "action": "Authenticate only in the native Linux administrative window and publish/verify scripts at effective scanner library-tools; do not forge PKEXEC_UID."
+    },
+    {
+      "id": "DELIVERY-01",
+      "owner": "app producer",
+      "status": "awaiting-R132-final-build",
+      "evidence": "a6b binds cf623c7/R129, while current verified R131 binds 8503c2e and three changed runtime hashes; R132 shared carousel/loading overlay will require fresh markers.",
+      "action": "Deliver one final R132 source/package/runtime/canonical/compilation receipt set and six exact libraries via private kit; never enroll R129/R131 as R132."
+    },
+    {
+      "id": "SERVER-02",
+      "owner": "server operator",
+      "status": "open",
+      "evidence": "a6b privateKitReceived=false, newFinalEnginesActivated=false",
+      "action": "Confirm private receipt of six libraries extracted from the full final signed R132 APK and hash each against final receipts. Git has no binary kit."
+    },
+    {
+      "id": "DELIVERY-02",
+      "owner": "app producer",
+      "status": "confirmed-public-serialization-seal-mismatch",
+      "evidence": "R131 public runtime SHA 533020f8dd464fb2361eb6ef0957b00d5ae2b5aa9d6a00c3451066fc117dba06 differs from package.identityReceiptSha256 7df6fe4ad140ff8e5cb21146e07a77345c02878500c69a1d8167f5aeccc52cc0. The latter equals publicReceiptProvenance.originalPrivateReceiptSha256. Existing build/extraction helpers correctly reject the transformed pair.",
+      "action": "Before publishing the unified R132 delivery, provide a helper-consumable exact receipt pair: preferably the unchanged original private runtime/package receipts in the private kit, verified against public provenance. A separately generated administrative pair must carry distinct seals/provenance, never repurpose the original build identity seal. Do not disable or relax the comparison."
+    },
+    {
+      "id": "MODES-01",
+      "owner": "server operator/reviewer",
+      "status": "open",
+      "evidence": "Server pending list requires approved native modes per edition and PSX HLE evidence; generic historical controllers do not equal dolphin-* native controllers.",
+      "action": "Preserve old modes and migrate only exact N64/GC/Wii approvals; use explicit edition/content/mode ledger for remaining native modes. PSX needs HLE compatibility and two simultaneous standard ports, HTTPS reviewEvidence, allowed[2]. Refuse rather than fabricate unknown bindings."
+    },
+    {
+      "id": "SERVER-03",
+      "owner": "server operator/app consumer",
+      "status": "open",
+      "evidence": "No fresh signed R131 or R132 capabilities/snapshot nor protected apply/ten-second reload matrix appears in these returns.",
+      "action": "Return one observed active release/DLL/PID/time/featureflag plus registry hashes/revisions and signed fresh result per exact final engine/profile; Android gameplay remains a separate physical test."
+    },
+    {
+      "id": "DOC-01",
+      "owner": "app documentation",
+      "status": "stale-pointer-observed-only",
+      "evidence": "Current release-channels/ONLINE-SYSTEMS.json lastObservedServerReturn still names 310c665/R128, while actual current same response is a6b/R129.",
+      "action": "Update the public pointer only when preparing the unified final R132 delivery, without claiming activation."
+    },
+    {
+      "id": "SANDBOX-01",
+      "owner": "owner audit",
+      "status": "not-proved-deletable",
+      "evidence": "141b/5f9 server sandbox describes isolated Linux scanner permission tests, not the user-reported recreated Motorola storage folder.",
+      "action": "Keep phone sandbox audit separate; server sandbox receipts do not authorize deleting emulator working storage."
+    }
+  ],
+  "unifiedR132OperatorProcedure": [
+    {
+      "step": 1,
+      "title": "Finalize and freeze the only R132 delivery",
+      "action": "Complete R132 compile/sign/preservation/identity checks first; bind final source/APK/markers and four regenerated IDs. Use the four fixed controller canonicals and unchanged cores/options/capacities above.",
+      "expected": "runtime-final.json + package-final.json + canonical receipt + full source/compilation/preservation receipts; exact private original receipt pair for current helpers or a separately sealed administrative pair, with original provenance retained; PS3/PS4 offline; no secrets/binaries in Git"
+    },
+    {
+      "step": 2,
+      "title": "Observe production and install the exact administrative scripts",
+      "action": "Resolve active configuration/ExecStart, scanner Type=oneshot, actual module.__file__ and library-tools. Human operator pauses only new scanner timer dispatches, lets current scanner finish, publishes the verified module/operator, verifies a fresh Python process and restores timer. Record native authorization, hashes and active API release/DLL/PID/flags; no API restart.",
+      "requiredScriptSha256": {
+        "cadastrar-motor-online-station.py": "a3c81e0c379984d6b7736f79ce963c73a3f3250883f6304a32b5c6cfda73a096",
+        "station_online_profiles.py": "3d5d5b5563e2a6825ab9e798da80313cdbf2640522bc4dfd6b47e25c7f69eae1"
+      },
+      "requiredHelperSha256": {
+        "build_incoming_manifest.py": "362bcae9d8915f7f43aac4c48d06b35bdf57efc88d6acb9199aa06e3a0231426",
+        "extract_private_server_artifacts.py": "27053b843d763adcf570e859b2c8658e216dbf6f80963b600fa5326958f70ef4",
+        "merge_scoped_modes.py": "ddac598ca1671e6d682b626866a3b1984eb88c5ff7d677c7b4cd563a6a677783"
+      }
+    },
+    {
+      "step": 3,
+      "title": "Generate manifest and obtain the private kit once",
+      "commands": [
+        "python3 \"$TOOLS/build_incoming_manifest.py\" --runtime-receipt \"$DELIVERY/runtime-final.json\" --package-receipt \"$DELIVERY/package-final.json\" --output \"$PREPARATION/incoming-engine-manifest.json\" --profile-receipt \"$PREPARATION/profile-canonical-receipt.json\"",
+        "python3 \"$TOOLS/extract_private_server_artifacts.py\" --apk \"$APK_FINAL\" --package-receipt \"$DELIVERY/package-final.json\" --runtime-receipt \"$DELIVERY/runtime-final.json\" --output \"$KIT_PRIVADO_ATUAL\""
+      ],
+      "expected": "DELIVERY contains the helper-consumable byte-exact receipt pair, not a sanitized file whose SHA differs from its original identity seal. Extractor checks complete APK SHA/bytes, identity seal, signature/alignment receipt, six core/runtime bytes and all dependencies; copies only six libraries. Operator confirms actual private receipt, never infer from Git."
+    },
+    {
+      "step": 4,
+      "title": "Review exact modes against the current catalog",
+      "command": "python3 \"$TOOLS/merge_scoped_modes.py\" --catalog \"$CATALOG\" --profiles \"$PROFILES\" --modes \"$MODES\" --runtime-receipt \"$DELIVERY/runtime-final.json\" --profiles-module \"$PROFILES_MODULE\" --decisions \"$REVIEW_LEDGER\" --output \"$PREPARATION/prepared-modes-merged.json\" --audit-json \"$PREPARATION/scoped-mode-audit.json\"",
+      "expected": "Exact old prefix preserved. Native controller/content/core/canonical match for migration, explicit PSX HLE evidence. One accepted/refused edition/mode matrix; no invented item/hash/capacity."
+    },
+    {
+      "step": 5,
+      "title": "Apply one sealed candidate through native administration",
+      "command": "pkexec python3 \"$SERVER_OPERATOR\" install --config \"$CONFIG\" --incoming \"$PREPARATION/incoming-engine-manifest.json\" --artifacts \"$ARTIFACTS\" --mode-additions \"$PREPARATION/prepared-modes-merged.json\" --output \"$CANDIDATE\"",
+      "expected": "Fresh candidate directory; active catalog/profile/engine/mode baselines revalidated under scan.lock. Existing records retained; modes/engines then profiles atomic publication and exact rollback. Reprepare if baseline changed, no permissive override."
+    },
+    {
+      "step": 6,
+      "title": "Confirm ten-second v3 reload and exact signed capabilities",
+      "action": "After presence enter using the existing authenticated session, request fresh POST /v1/station/online/multiplayer/command capabilities/snapshot for real itemId and a new requestId. Validate envelope signature and license/device/session/request binding, multiplayerVersion3/capability/instance/revision and exact item/content/engine/core/runtime/controller/profile/mode/counts.",
+      "expected": "One matrix with fresh signed evidence per final system and negative tests of unknown content/engine/profile/count; protected apply receipt + current hashes/revisions + reload observed without API restart. Do not query legacy snapshot.engines or invent GETsnapshot."
+    },
+    {
+      "step": 7,
+      "title": "Test only new rooms after activation",
+      "action": "Install the already compiled exact R132 if needed, re-enter current session and create new approved rooms. Verify roster/unique native slots/generation/host-star links and real start/COMMIT, recovery and human exit on phones.",
+      "expected": "Separate physical gameplay/controller/latency/thermal findings. Data enrollment alone requires no APK rebuild and proves no gameplay stability."
+    }
+  ],
+  "operatorVariablePolicy": "All shell variables are recipe placeholders resolved from the active private configuration and final delivery; not credentials or invented production paths.",
+  "auditLimitations": [
+    "Only fetched Git source and delivered public receipts were examined; no active Linux endpoint, filesystem, API process or phone was operated.",
+    "Latest returned applied catalog remains revision33; new artwork batch is preparation only until a real applied receipt.",
+    "R132 final IDs/hashes cannot be supplied before actual final build. These nulls are explicit pending identity, not placeholder engines to register.",
+    "The historical signed server/sample/parser checks and 68 isolated administrative methods do not validate new Android engines or real gameplay."
+  ]
+}

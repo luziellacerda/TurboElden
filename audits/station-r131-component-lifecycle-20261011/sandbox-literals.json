@@ -1,0 +1,69 @@
+{
+  "scope": "DEX string pool and standard lib/*.so literals only; no private Sony assets read; literal presence is not a caller or directory-creation proof",
+  "matches": [
+    {
+      "entry": "lib/arm64-v8a/libyuzu-android.so",
+      "matchingLiterals": [
+        "_ZN6Common2FS15IsPathSandboxedERKNSt6__ndk14__fs10filesystem4pathES6_"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libturbo_carousel.so",
+      "matchingLiterals": [
+        "megadrive|streetsofrageiisandbox",
+        "megadrive|streetsofrage2syndicatewarssandbox",
+        "megadrive|streetsofrage2sandbox",
+        "megadrive|dicktracysandbox",
+        "megadrive|aliensoldiersandbox"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libemucore_16k.so",
+      "matchingLiterals": [
+        "SDL_GetSandbox"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libemucore_4k.so",
+      "matchingLiterals": [
+        "SDL_GetSandbox"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libVita3K.so",
+      "matchingLiterals": [
+        "SDL_GetSandbox"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libSDL3.so",
+      "matchingLiterals": [
+        "SDL_GetSandbox",
+        "SDL_GetSandbox.sandbox_initialized.llvm.9703342571547369710"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libxemu.so",
+      "matchingLiterals": [
+        "-sandbox support is not enabled in this QEMU binary",
+        "sandbox",
+        "object_create_pre_sandbox"
+      ]
+    },
+    {
+      "entry": "lib/arm64-v8a/libMAME4droid.so",
+      "matchingLiterals": [
+        "Sandbox PCI PC (430HX)",
+        "Sandbox PCI PC (430HX, Socket 7 CPU)",
+        "Sandbox PCI PC (430TX)",
+        "Sandbox PCI/AGP PC (440BX)"
+      ]
+    },
+    {
+      "entry": "classes36.dex",
+      "matchingLiterals": [
+        "TokenSandBoxInert"
+      ]
+    }
+  ]
+}

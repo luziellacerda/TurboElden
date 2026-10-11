@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-10-11",
+  "scope": "Leitura dos owners ativos R131 e seus inputs herdados; nenhum telefone operado, arquivo apagado ou motor modificado por esta auditoria.",
+  "installedApkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "installedExecutableSourceCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981",
+  "checkpointCommit": "8a199d025e9eb338f1973f8e2f8ca975862cdef5",
+  "authority": {
+    "sourceFreeze": "versions/station-sony-internal-r131-20261011/evidence/source-freeze-public.json",
+    "currentRuntime": "versions/station-sony-internal-r131-20261011/evidence/runtime-final.json",
+    "packageProof": "versions/station-sony-internal-r131-20261011/evidence/package-final.json",
+    "all39PreexistingDexRetained": true,
+    "currentCarouselSha256": "45e8131c0fc59f5c4627950c3aaed7b05dee1b519704d173698d5f56644fb806",
+    "sourceSelectionByFolderDate": false,
+    "runtimeIdentityRecipesInherited": [
+      "integration/psx-online/recipe/build_runtime_identity.py",
+      "versions/station-dolphin-online-r126-20261011/recipe/build_runtime_identity.py",
+      "versions/station-mupen-online-r125-20261011/recipes/build_runtime_identity.py"
+    ],
+    "auditedSonySourcesMatchCurrentRuntimeMap": true,
+    "auditedSonySourceCountMatched": 11
+  },
+  "reportedSandbox": {
+    "humanReport": "Pasta no Motorola, na raiz onde ficam os jogos; após apagar, volta a aparecer.",
+    "absolutePathConfirmed": false,
+    "creatorConfirmed": false,
+    "contentsCaptured": false,
+    "rootReportedSharedSearch": "Não encontrada em /EmulationStation/roms e /Roms até profundidade 3; o mantenedor informou que a apaga, portanto a ausência nessa janela não prova que nunca exista.",
+    "phoneProbePerformedByThisAudit": false,
+    "literalInFiveOwnerSources": false,
+    "literalInCurrent40Dex": false,
+    "nativeLiteralClassification": {
+      "sonyPs3": "LLVM SandboxVectorizer; sem caminho de pasta compartilhada correspondente.",
+      "sonyPs4": "APIs guest sceKernelIsInSandbox/sceKernelSandboxPath, SDL_GetSandbox e WebKit; símbolos não comprovam criação de uma pasta Android chamada sandbox.",
+      "otherNative": "Yuzu IsPathSandboxed, SDL_GetSandbox, QEMU sandbox e nomes de hacks Mega Drive; nenhuma correspondência de caminho compartilhado encontrada pela varredura de literais.",
+      "sourceOrBinarySubstringAbsenceDoesNotProveNoDynamicPath": true
+    },
+    "deletionAuthorizedByThisAudit": false,
+    "neededNextEvidence": [
+      "Caminho absoluto e nomes/tamanhos dos conteúdos quando a pasta reaparecer.",
+      "Sequência de telas ou motor que precede a criação; distinguir catálogo recebido, importação de jogo e preparação de owner.",
+      "Identificar o escritor e suas referências antes de impedir a criação ou remover qualquer conteúdo."
+    ]
+  },
+  "owners": [
+    {
+      "owner": "Sony dispatcher/factory",
+      "source": "integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyComponentFactory.java",
+      "methods": {
+        "instantiateApplication": 48,
+        "instantiateActivity": 60
+      },
+      "trigger": "Somente Activity Sony solicitada; a inicialização principal e demais owners são delegados à factory anterior.",
+      "worker": "StationSonyLaunchActivity.onCreate cria um único StationSonyDispatch e o encerra em onDestroy.",
+      "legacyBoundary": "O corpo onCreate externo R130 não é instanciado para o leaf StationSonyOfflineActivity; a factory cria StationSonyLaunchActivity. A classe R130 ainda fornece openSettings estático usado pelo JNI do carrossel, portanto não é uma classe inteira comprovadamente morta.",
+      "newBackgroundServiceOrAutostart": false,
+      "storageCreated": []
+    },
+    {
+      "owner": "Sony assets compartilhados",
+      "source": "integration/sony-internal/composition/java/org/emulationstation/frontend/sony/StationSonyAssets.java",
+      "methods": {
+        "prepare": 62,
+        "nativeLoadPlan": 156,
+        "nativeOrder": 165,
+        "parse": 251,
+        "stage": 291
+      },
+      "storage": "no_backup/station-sony/<system>/<moduleId>",
+      "triggerAndFrequency": "Primeiro prepare do owner privado por processo verifica todos os artefatos declarados, copia somente ausentes/inválidos e memoriza PREPARED por sistema+manifesto. Novo processo privado volta a verificar os arquivos.",
+      "requiredContents": "Bibliotecas nativas privadas, owner.dex/contratos e assets declarados pelo módulo; PS3 PUP e material do importador PS4 são inputs locais autorizados e não estão neste recibo.",
+      "temporaryContents": ".locks e .station-part durante staging com trava exclusiva, hash/tamanho e promoção atômica.",
+      "alreadyBoundedCleanup": "A operação remove seu .station-part em finally; não há loop periódico de staging.",
+      "safeBroadDeletion": false
+    },
+    {
+      "owner": "PS3",
+      "sources": [
+        "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Bootstrap.java",
+        "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Firmware.java"
+      ],
+      "methods": {
+        "Ps3Bootstrap.prepare": 37,
+        "Ps3Firmware.ensure": 17
+      },
+      "storage": "no_backup/station-sony/ps3/userdata",
+      "triggerAndFrequency": "Owner worker ao abrir configurações/jogo. Bootstrap sincronizado prepara uma vez por processo. Firmware ensure consulta marcador, recibo e presença de SPRX; importa somente se a prova da versão instalada não existe.",
+      "requiredContents": [
+        "config/dev_flash",
+        "config/dev_flash2",
+        "config/dev_flash3",
+        "config/dev_hdd0",
+        "config/dev_hdd1",
+        "config/custom_cfg",
+        "config/Icons/ui",
+        "firmware/installed.json",
+        "config/config.yml"
+      ],
+      "possibleCaches": [
+        "cache",
+        "logs",
+        "font",
+        "drivers"
+      ],
+      "logsEnabledByBootstrap": false,
+      "deletingCacheRequiresNativeContractAndOwnerIdle": true,
+      "safeBroadDeletion": false,
+      "reason": "Firmware, configurações e dados/saves precisam permanecer. Os nomes cache/logs não provam que todo conteúdo possa ser apagado durante emulação."
+    },
+    {
+      "owner": "PS4 Bionic",
+      "source": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "methods": {
+        "onCreate": 45,
+        "prepareAndRun": 78,
+        "closeSession": 176,
+        "finishOwner": 188
+      },
+      "triggerAndFrequency": "Uma execução por owner privado, protegida por AtomicBoolean; worker apenas ao solicitar configuração/jogo. Áudio/controle/sockets começam depois da importação de jogo real; aguarda Surface por mutex, sem busy loop.",
+      "requiredStorage": [
+        "code_cache/ps4-owner",
+        "files/ps4/native-runtime",
+        "files/ps4/storage",
+        "files/ps4/storage/xdg",
+        "files/ps4/storage/shader-cache/mesa",
+        "files/ps4/games/<fingerprint>"
+      ],
+      "sessionStorage": "files/ps4/storage/s/<random>/c e /a",
+      "cleanup": "closeSession fecha sockets/threads e exclui seus endpoints, tenta session.delete não recursivo; uma sobra inesperada não é apagada indiscriminadamente.",
+      "pkgs": "Ps4Game.prepare valida o conteúdo, reutiliza .station-pkg.json com eboot/SFO válidos, extrai PKG real para staging privado e promove atomicamente. O fingerprint incorpora identidade URI/stat/conteúdo; imports de edições anteriores podem permanecer, mas não são automaticamente lixo.",
+      "failedTransactionCleanup": "Ps4Game.prepare finally remove somente staging criado pela mesma operação.",
+      "safeBroadDeletion": false
+    },
+    {
+      "owner": "Nintendo 64 normal no online",
+      "sources": [
+        "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Activity.java",
+        "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Launch.java"
+      ],
+      "methods": {
+        "StationN64Activity.prepareAssets": 41,
+        "StationN64Activity.copyMissing": 45,
+        "StationN64Activity.onDestroy": 40
+      },
+      "storage": "no_backup/station-online/launch-n64-<UUID>.json e diretório retornado pelo N64Bootstrap.files do owner normal preservado.",
+      "triggerAndFrequency": "Preparação única de cada lançamento. Percorre mupen64plus_data, copia somente ausentes, verifica ROM/headers/MD5 e dependências; não é worker periódico do carrossel.",
+      "requiredContents": "Assets/dados originais Mupen, ROM do usuário e descriptor autorizado para GameActivity/CoreService em :n64core.",
+      "cleanup": "Descriptor é consumido/removido; lançamento cancelado descarta descriptor e encerra executor.",
+      "normalBootstrapExactSourceLocationNotSelectedFromHistoricalFolder": true,
+      "safeBroadDeletion": false
+    },
+    {
+      "owner": "GameCube/Wii Dolphin normal no online",
+      "source": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinLaunch.java",
+      "methods": {
+        "consume": 69,
+        "discard": 84,
+        "privateUser": 125,
+        "prepareInputs": 130
+      },
+      "storage": "no_backup/station-online/dolphin/<roomId>/<generation>/User",
+      "normalPreferencesReadOnlySource": "getExternalFilesDir(null)/Dolphin",
+      "triggerAndFrequency": "Uma preparação por sessão: copia somente INIs de apresentação/controle, com limites de arquivos/bytes. Dolphin normal usa renderer/input próprios em processo :dolphin.",
+      "requiredContents": "User privado isola opções/saves de sessão dos dados normais, além do descriptor launch-dolphin e pointer dolphin-pending.",
+      "cleanup": "consume/discard limpa descriptor e pointer; não foi encontrado apagamento recursivo dos Users por geração nas fontes de lançamento/sessão analisadas.",
+      "orphanCandidate": "Users antigos apenas após provar geração encerrada, nenhum owner/recovery ativo e política explícita para saves da sessão.",
+      "safeBroadDeletion": false
+    },
+    {
+      "owner": "PSX LibretroPlayer normal no online",
+      "sources": [
+        "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxLaunch.java",
+        "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java",
+        "integration/psx-online/native/StationPsxEntry.cpp"
+      ],
+      "methods": {
+        "freshHome": 152,
+        "preparePresentation": 159,
+        "humanExit": 146,
+        "finishHumanCleanup": 155,
+        "SDL_main": 181
+      },
+      "storage": "files/station-psx-online/launch-psx-<UUID>/home/.emulationstation",
+      "triggerAndFrequency": "Um HOME novo por lançamento autorizado; copia fonte exata 479776 bytes e somente preferências de controle/display. BIOS HLE, dois pads Standard e options seguem o perfil aprovado.",
+      "requiredContents": [
+        "bios",
+        "saves",
+        "core-options",
+        "resources/sst_medium_condensed.ttf",
+        "es_settings.cfg"
+      ],
+      "cleanup": "Descriptor é consumido ou descartado. Saída humana espera owner/IO/Binder antes de finalizar PID. Fontes analisadas não removem recursivamente o HOME privado depois.",
+      "orphanCandidate": "HOME antigo sem descriptor/owner/sessão atual pode acumular a fonte e saves; deve separar recursos regeneráveis e saves antes de limpeza.",
+      "normalPlayerSourceGap": "Fonte exata LibretroPlayer/libmain ainda não localizada; ABI/hash e adapter atual são conhecidos. Não inferir limpeza do owner original sem fonte.",
+      "safeBroadDeletion": false
+    }
+  ],
+  "ps4RuntimeCandidate": {
+    "callSite": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java:99",
+    "implementation": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Runtime.java:16",
+    "target": "no_backup/ps4-runtime/runtime-5b33842c8c7d",
+    "archiveFileCount": 397,
+    "extractedBytes": 110780385,
+    "stagedArchiveBytes": 110834547,
+    "work": "Primeira abertura verifica/extrai os 397 arquivos; toda nova abertura do owner verifica size+SHA dos 397 e setReadOnly, mesmo com .verified válido. O path retornado é descartado pelo Java.",
+    "continuousPerFrameWork": false,
+    "executedDuringMainCarouselWithoutSonyOwner": false,
+    "contents": "Host GLIBC, X11/Vortek/probes e notices/certificado; nenhum path shader/font/LSFG encontrado no manifesto desses 397 arquivos.",
+    "nativeBinarySha256": "5159ebdf1aa34713217e3598a0c084aa04ce59d623152fdbab501d293957c06a",
+    "nativeBinaryBytes": 85157224,
+    "nativeLoadProof": {
+      "privateLoadPlanSelectsOnlyBionicArtifacts": true,
+      "allNativeLibrariesAndPkgInitializationPrecedeRuntimeExtraction": true,
+      "elfNeeded": [
+        "libandroid.so",
+        "liblog.so",
+        "libdl.so",
+        "libz.so",
+        "libOpenSLES.so",
+        "libGLESv1_CM.so",
+        "libGLESv2.so",
+        "libm.so",
+        "libc++_shared.so",
+        "libc.so"
+      ],
+      "jniRunSymbol": "Java_com_bachatas4_android_runtime_process_NativeRuntimeBridge_run",
+      "jniRunAddress": "0x2b7a5e0",
+      "jniRunDirectCoreCall": "0x2b7ad04 calls BachataNativeMain through PLT",
+      "coreMainSymbol": "_Z17BachataNativeMainiPPc",
+      "coreMainAddress": "0x37ca4f0",
+      "runInterface": "JNI receives Surface, argv, environment and cwd; converts arrays, applies setenv/chdir and calls the Bionic core in the same process.",
+      "extractedRootPassedInArgvEnvironmentOrCwd": false,
+      "extractedRuntimeRootLiteralInExactNativeBinary": false,
+      "initialLoadedNativeRuntimeDependsOnExtractedGlibcElf": false,
+      "allPossibleGameplayFileReadsProvenIndependent": false
+    },
+    "upstream": {
+      "repository": "https://github.com/zenithblue-oss/shadps4-arm64",
+      "pinnedCommit": "be6bc2e9c60799e071dd2fafa6216e8d80ec619c",
+      "treeCompleteNotTruncated": true,
+      "androidSourceFilesInPinnedTree": 0,
+      "exactNativeRuntimeBridgeCppSourceLocated": false,
+      "readFiles": [
+        "src/main.cpp",
+        "src/common/path_util.cpp",
+        "runtime/scripts/install-host-jnilibs.mjs",
+        "NOTICE.android-runtime.md",
+        "runtime/tests/android-direct-launch-source.test.mjs"
+      ],
+      "oldHostRoute": "install-host-jnilibs describes libbachata_host_loader/GLIBC execution through ProcessBuilder. The current Station Bionic JNI route does not invoke that launcher.",
+      "gap": "The public pinned tree references Android wrappers in tests/NOTICE but omits android/BachataS4. Native interface/ELF evidence excludes a GLIBC load dependency, but does not by itself prove every native file read during real gameplay."
+    },
+    "candidateConclusion": "Preparação extra sem consumidor Java explícito, separada da rota ELF Bionic; candidata a remoção/gating após fechar o contrato nativo ou qualificação instrumentada de jogo real. Não tratar retorno ignorado sozinho como prova.",
+    "safeRemovalProvenByThisAudit": false,
+    "modifiedByThisAudit": false
+  },
+  "cleanupDecision": {
+    "onDeviceDirectoriesProvenSafeToDeleteNow": [],
+    "deletionsPerformed": [],
+    "existingSafeTransactionCleanup": [
+      "StationSonyAssets .station-part under exclusive lock/finally",
+      "Ps4Game own failed .staging transaction",
+      "Ps4Runtime own failed .staging transaction",
+      "Consumed/discarded online launch descriptors",
+      "PS4 closed session socket endpoints"
+    ],
+    "notTrash": [
+      "PS3 firmware/dev_flash/userdata",
+      "PS4 imported games and storage",
+      "Normal emulator BIOS/configuration/saves",
+      "Current Dolphin/PSX online session workspace",
+      "Historical Git source inputs still pinned by current recipe"
+    ],
+    "preserveCpuAndRenderPolicies": true,
+    "noEvidenceSonyBackgroundOwnerRunsDuringPlatformCarousel": true,
+    "thermalOrGameplayMeasurementPerformed": false,
+    "nextImplementationBoundaries": "Obter path/creator real de sandbox; limpar só resíduos explicitamente próprios, sem writer/owner ativo, sem retirar saves/firmware e com backup. Qualquer alteração PS4 GLIBC exige evidência adicional; estas fichas R132 não a implementam."
+  },
+  "sourceSha256": {
+    "integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyComponentFactory.java": "db7086e5ee9f00680f61f29fb1a7b8331906d8eb4d48b4cf205a2006878ab29a",
+    "integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyLaunchActivity.java": "6765dad71deb2964f6a406d06efdb039e5af394e2ef8708a5e481b7c0b12ee69",
+    "integration/sony-internal/composition/java/org/emulationstation/frontend/sony/StationSonyAssets.java": "cd760fe0bcf187b1dd146ce381a2c8a7e1f3e1d02341b99c13ab4cc1b975d153",
+    "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Application.java": "6b588b3de321094e008ca65cb4cfd1c33fb613617e8e20f488b5c4789a18c8b7",
+    "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Bootstrap.java": "f628e0d938a547ec1cb1474bf5f3b32ce2c8f21fad25037900bdaec8636e7ea8",
+    "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Firmware.java": "13651fc5f22089380c9e117c755d60770464e4baf2d6b24cabeeae90fdceac6a",
+    "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Application.java": "9a57e8df1236851a4129719fbb4b31ea9cf537f8c29c45604d4a467d14a1aace",
+    "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java": "1401c1a71c926d373e77ddff96f943ef50f3831cfbb2b8fd810e93221693a1e0",
+    "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Runtime.java": "187d1ef052ea8c5f0c3dd089ec5fe3a5ad9bffa1b20629a7f3530c14c51c8d1c",
+    "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Game.java": "60dd6a971036c7e40ca06360bdd9855e05d90cc1529781e4d1cb3a65b323a877",
+    "integration/sony-internal/ps4/child-java/org/emulationstation/ps4child/Ps4NativeEntry.java": "38f4e6b20003bffb049d70873491fcb531a49d9a1a19e97ffd84f69fed1c9245",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxLaunch.java": "e2f9d2fd68ca8978eb1b9483d18ffc0fd7cd9499a12c31bcd4bde991a2d7a349",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java": "73fdcb47ad0472dd0f4a398020e647af8da5f82b4ab3af78dbbbb457be29288b",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxOnlineActivity.java": "482a7d14c7bda8d5cd2ad93ed248b6e314ff600fda4c49196b7f342e752ceecf",
+    "integration/psx-online/native/StationPsxEntry.cpp": "901c0fff549c02f88da79e4144de478ba59d9a833a944a6dca1fb93c43db86ed",
+    "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Activity.java": "8d050153c82821b2b5119b8a0d53e836a67c3535224d6267a7ac5c9a6023d0a5",
+    "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Launch.java": "767747b5f7a2b24926b8224ed174748258eb547ed32b4d5099cde6d57e8dd7e1",
+    "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinLaunch.java": "37b467bebb1ea3bfaab9ed4e1c3cfad0eace48c1f65d182dd195fa22f45d5278",
+    "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinSession.java": "dc9e16fe10ffa87250fa2351ab60b6a628771ba3559a5f88dd4b8e936633cab7",
+    "integration/local-sony-demos/recipe/patch_sony_settings.py": "7f59494fa49bce072dda0733dbecd07081a7b6207d4d5fa918ad69ce0fd9edaf",
+    "integration/local-sony-demos/recipe/patch_sony_activity.py": "4408ffdb86cc25ca5f1da6c42394c74e7b478b0c4f7a02d4033a1fdd823eddb7"
+  }
+}

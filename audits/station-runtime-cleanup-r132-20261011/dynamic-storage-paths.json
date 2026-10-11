@@ -1,0 +1,127 @@
+{
+  "schema": "station.audit.storage.derivation.v1",
+  "revisionInspected": "R131",
+  "executableSourceCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981",
+  "apkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "scope": "Read-only APK, DEX, native symbol disassembly and retained source inspection; no phone execution or filesystem deletion",
+  "rootDerivation": [
+    {
+      "component": "ESActivity.getHomeDir",
+      "actualDex": "classes5.dex",
+      "calls": ["android.os.Environment.getExternalStorageDirectory", "java.io.File.<init>"],
+      "literal": "EmulationStation",
+      "result": "<Android external storage>/EmulationStation",
+      "proof": "Actual DEX method and literal; getArguments/getStorageRoot consume this method"
+    },
+    {
+      "component": "CatalogService::getRomsRoot",
+      "actualLibrary": "lib/arm64-v8a/libmain.so",
+      "librarySha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+      "symbol": "_ZN14CatalogService11getRomsRootEv",
+      "symbolAddress": "0x188830",
+      "callAddress": "0x188854",
+      "calledSymbol": "_ZN5Utils10FileSystem11getHomePathEv",
+      "appendLiteralAddress": "0xc0c72",
+      "appendLiteral": "/roms",
+      "result": "<native home>/roms",
+      "proof": "Actual APK AArch64 disassembly and mapped ELF literal, not a guessed URL-derived root"
+    },
+    {
+      "component": "StationCatalog_refresh -> StationFrontend.configure -> prepareStorage",
+      "source": "versions/station-video-room-footer-r124-20261011/frontend/station_frontend.cpp",
+      "sourceLines": [274, 276, 277],
+      "derivation": "Resolve the exact CatalogService::getRomsRoot export, pass its result through JNI; Java canonicalizes the supplied absolute root",
+      "catalogMayOverrideRoot": false,
+      "proof": "Native bridge source and actual DEX configure/prepareStorage calls"
+    },
+    {
+      "component": "StationInstaller",
+      "derivation": "<roms root>/.station-v2/<fixed supported platform>/<item id>/install-*/content/<authorized launch entry>",
+      "platformSource": "StationPlatforms fixed supported map",
+      "remoteUrlHostUsedAsFolder": false,
+      "commitPolicy": "Owned generation plus private receipt/pointer; uncommitted generation cleanup only",
+      "containsUserGamesOrResumeState": true
+    }
+  ],
+  "retainedNativeConfiguration": {
+    "actualSymbol": "_ZN10SystemData13getConfigPathEb",
+    "address": "0x167ba8",
+    "callsNativeHome": true,
+    "configurationLiteral": "/.emulationstation/es_systems.cfg",
+    "configurationLiteralFileOffset": "0xca707",
+    "packagedEsSystemsXmlEntryFound": false,
+    "examplePathLiteral": "<path>~/roms/nes</path>",
+    "exampleLiteralFileOffset": "0xd38e4",
+    "loadSystemCallsNativeHomeAndGetGenericPath": true,
+    "phoneConfigurationContentsInspectedByThisAudit": false,
+    "maintainerAuditReceivedQualifiedLegacySwitchPath": true,
+    "legacySwitchRelativePathReported": "SAMBOX-Vfull/sistema/roms/switch",
+    "nextEvidenceNeeded": "Observe an exact recreation event after removal while preserving games and config. Current device cfg evidence was read by the parent audit; no device cfg, serial or personal path is copied here."
+  },
+  "limitedCreators": [
+    {"component": "PlatformAssets.install", "root": "Context.getFilesDir()/turbo-game-covers", "source": "Actual classes27.dex install calls and retained PlatformAssets source", "createsExternalRomsSandbox": false},
+    {"component": "AssetInstaller.installIfNeeded", "root": "<home>/.emulationstation/bios and resources", "source": "code/frontend/AssetInstaller.java", "sourceIsHistoricalRatherThanSoleCurrentDexProof": true},
+    {"component": "StationLocalSonyDemos.append", "root": "<canonical supplied roms root>/ps3 and /ps4 only", "source": "integration/local-sony-demos/java/org/emulationstation/frontend/station/StationLocalSonyDemos.java", "fixedFolderNames": ["ps3", "ps4"], "doesNotContainRealGames": true},
+    {"component": "StationStats_init", "root": "TelemetryService::dir() derived from native home", "source": "Retained Station frontend finite local stats initialization", "remoteTelemetryAdded": false, "directoryCreationIsRequiredByLocalHistory": true}
+  ],
+  "sandboxAttribution": {
+    "userReportsDeletedDirectoryReappears": true,
+    "recreationEventObservedByThisAudit": false,
+    "exactPhonePathReceivedByThisAudit": false,
+    "literalExternalSandboxCreatorFound": false,
+    "nonSonyPackagedTextAssetPathFound": false,
+    "urlHostnameFallbackInStationPlatformsFound": false,
+    "creatorConfirmed": false,
+    "fixed": false,
+    "safeToDeleteStationTransactionalRoot": false,
+    "limitation": "Native path derivation is confirmed; a recreated directory was not observed. Do not infer its creator or remove user games/saves/resume state from literal matches or retained class names."
+  },
+  "legacySamboxAttribution": {
+    "relativePath": "SAMBOX-Vfull/sistema/roms/switch",
+    "creatorConfirmedFromActualDex": true,
+    "actualDex": "classes8.dex",
+    "callChain": ["ESActivity.getArguments / installResources", "TurboEdenBridge.prepare(File home)", "SwitchConfigPatcher.apply(File home)"],
+    "creationCondition": "Switch system is absent from parsed es_systems.cfg; the patcher adds a system entry and creates the legacy ROM directory",
+    "existingSwitchCondition": "An existing Switch system receives setCommand only in this patcher; this branch does not rewrite its path or directly create that ROM directory",
+    "instructionEvidence": {
+      "existingSwitchConditionalBranchPc": 161,
+      "legacyRelativePathConstStringPc": 183,
+      "fileConstructorPc": 185,
+      "filesCreateDirectoriesPc": 194,
+      "pathXmlInsertPc": 203
+    },
+    "evidence": "sambox-creator-dex.json",
+    "nativeConstructorCreatesLegacyRomDirectoryConfirmed": false,
+    "recreationAfterOnlyDirectoryDeletionObserved": false,
+    "fixedByThisAudit": false,
+    "safeRepair": "Replace the obsolete Switch-config generator and migrate only the exact known legacy path without deleting games, saves, firmware, user-custom paths or transaction/resume state. A runtime recreation event must be distinguished from the proven first-create branch."
+  },
+  "nativeSystemDirectoryCreation": {
+    "librarySha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+    "constructorAddress": "0x164664",
+    "constructorDirectCreateDirectoryOrMkdir": false,
+    "populateFolderDirectCreateDirectoryOrMkdir": false,
+    "getGamelistPath": {
+      "symbol": "_ZNK10SystemData15getGamelistPathEb",
+      "address": "0x168394",
+      "existingRomGamelistIsReturnedWithoutDirectoryCreation": true,
+      "missingRomGamelistFallback": "<native home>/.emulationstation/gamelists/<system name>/gamelist.xml",
+      "createDirectoryInstructionAddress": "0x16852c",
+      "creationCondition": "forWrite=true; only the parent of the fallback gamelist is created",
+      "literalAddresses": {"/gamelist.xml": "0xcf150", "/.emulationstation/gamelists/": "0xccb10", "/etc/emulationstation/gamelists/": "0xc8719"}
+    },
+    "updateGamelist": {
+      "symbol": "_Z14updateGamelistP10SystemData",
+      "address": "0x16c01c",
+      "callsGetGamelistPathForWriteAddress": "0x16c860",
+      "createDirectoryInstructionAddress": "0x16c878",
+      "createsParentOfReturnedGamelist": true
+    },
+    "evidence": "native-directory-call-sites.json",
+    "limitation": "Direct AArch64 calls and constant-path derivation only; indirect calls and future device events are not proved absent. No claim that the native constructor recreated the reported directory."
+  },
+  "productionSourcesChanged": false,
+  "phoneOperated": false,
+  "serverOperated": false,
+  "privateLogsOrCredentialsIncluded": false
+}

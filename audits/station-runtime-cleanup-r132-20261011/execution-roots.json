@@ -1,0 +1,646 @@
+{
+  "schema": "station.runtime-cleanup.execution-roots.v1",
+  "auditBaseRevision": "R131",
+  "plannedConsumerRevision": "R132",
+  "sourceCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981",
+  "apkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "apkBytes": 2711825423,
+  "actualManifestSha256": "575eacce86828aa332dbc7cae6d37e31d25a7891cb20d83bb936bf40e33659e1",
+  "artifactScope": {
+    "assembly": "G:/StationNormalOwnersR127/sony-internal/correction/assembly",
+    "freezePayloads": 305,
+    "DEX39FromR130Preserved": true,
+    "pointersWereCompared": 3,
+    "fullApkDigestRecomputed": true
+  },
+  "counts": {
+    "activity": 97,
+    "activity-alias": 0,
+    "service": 14,
+    "receiver": 1,
+    "provider": 20,
+    "DEX": 40,
+    "definedClasses": 51578,
+    "duplicateDefinedClassDescriptors": 0,
+    "manifestMetadataRows": 43,
+    "targetedDexMethods": 728,
+    "manifestComponentsMissingDexDefinition": 0
+  },
+  "method": [
+    "Read current binary AndroidManifest and DEX class definitions",
+    "Read targeted current DEX instructions with instruction-boundary checks",
+    "Read current composition recipes and inherited Java inputs",
+    "Read-only strings from standard native libraries and non-Sony packaged configs",
+    "Compare exact artifact/pointer/source-freeze evidence"
+  ],
+  "runtimeMeasurementPerformed": false,
+  "phoneOperatedByThisAudit": false,
+  "serverContactedByThisAudit": false,
+  "productiveSourceChanged": false,
+  "compilationOrTestsRun": false,
+  "limitations": [
+    "Static reachability is incomplete across native callbacks/reflection/resources and runtime server catalog",
+    "No CPU/temperature/gameplay/heap/thread measurement",
+    "No exact recreated sandbox path or creator syscall was observed by this audit",
+    "No class or data directory is approved for blanket deletion"
+  ],
+  "findings": [
+    {
+      "id": "ROOT-01",
+      "confidence": "confirmed-current-APK",
+      "classification": "required-owner-dispatch",
+      "finding": "There are 40 DEX and 51,578 distinct defined class descriptors, with no duplicate defined descriptors. Every manifest component has a DEX definition. Historical source folders are not evidence of simultaneous runtime instances.",
+      "removalSafe": false,
+      "action": "Keep owner and JNI definitions; remove a class only after its Java/native/manifest/reflection callers are replaced or proved unreachable."
+    },
+    {
+      "id": "ROOT-02",
+      "confidence": "confirmed-current-APK-branches",
+      "classification": "startup-work-candidate",
+      "finding": "The Application remains YuzuApplication in the main process. Its onCreate executes guards for each system and returns early when a guard selects an emulator process. The main branch subsequently invokes PlatformAssets.install, BootstrapAssets.installKeys, Freedreno config, driver/input initialization and NativeLibrary device information. The guards do not initialize every emulator. PSX is intercepted by classes28's factory, and Sony has minimal private Applications.",
+      "removalSafe": false,
+      "action": "Measure main-process cold-start work separately. A later lazy Switch bootstrap must preserve original Application globals, driver/input readiness and Switch launch, including provider-first startup. This audit makes no temperature or CPU percentage claim."
+    },
+    {
+      "id": "ROOT-03",
+      "confidence": "confirmed-current-APK-and-source",
+      "classification": "old-implementation-diverted-required-component-name",
+      "finding": "StationSonyOfflineActivity is declared and referenced by the native carousel, but StationSonyComponentFactory substitutes StationSonyLaunchActivity when Android instantiates that name. The old external implementation therefore is not the ordinary R131 Sony launch path. Its presence is not evidence that an external emulator runs alongside the internal owner.",
+      "removalSafe": false,
+      "action": "If consolidating, replace the existing implementation under its compatible component name or patch every native caller and manifest together. Do not simply delete the declaration/class name."
+    },
+    {
+      "id": "ROOT-04",
+      "confidence": "confirmed-current-bytecode-and-native-literals",
+      "classification": "legacy-path-still-referenced",
+      "finding": "StationNetplayActivity is referenced in the native carousel. Its bytecode still constructs StationDolphinNetplayActivity. These are separate from StationRoomsActivity's current native-owner dispatch. Neither route is proved globally unreachable merely because the Rooms path does not use it.",
+      "removalSafe": false,
+      "action": "Retain pending exact native callsite and menu-option migration. A class-name literal is a possible reference, not proof that it is executing."
+    },
+    {
+      "id": "ROOT-05",
+      "confidence": "confirmed-source-and-current-lifecycle-bytecode",
+      "classification": "functional-background-work",
+      "finding": "StationRoomsActivity stops artwork, polling, graphic listeners and pending UI requests onStop, then closes artwork and executor queues onDestroy. DownloadService stops itself when ACTIVE becomes empty and returns START_NOT_STICKY. StationSessionService is bound and releases anchors on unbind/destroy. No BOOT_COMPLETED receiver exists; the only receiver is the DUMP-protected profile installer.",
+      "removalSafe": false,
+      "action": "Keep download resume, room membership and Binder ownership. Investigate a leak only with an unfinished task/anchor or resumed-state contradiction, rather than removing all services."
+    },
+    {
+      "id": "ROOT-06",
+      "confidence": "confirmed-current-manifest",
+      "classification": "process-startup-providers",
+      "finding": "The package declares 20 providers, including 10 namespaced startup providers. Initializers include lifecycle, emoji/profile installation and the Wii U OkHttp platform initializer. They are process roots when the corresponding process is created, not 20 continuously running workers.",
+      "removalSafe": false,
+      "action": "Changing initializers needs an owner-by-owner dependency review. File/DocumentProviders and namespace SDK copies support distinct emulator imports and settings."
+    },
+    {
+      "id": "ROOT-07",
+      "confidence": "confirmed-source",
+      "classification": "retained-session-directory-candidate",
+      "finding": "StationPsxLaunch creates files/station-psx-online/<launch>/home for every launch and writes presentation resources/settings there. Its consume/discard delete only the launch descriptor. Human-exit cleanup closes transport/Binder/native owner but does not remove the home. This proves no per-home retention cleanup in the audited launch/exit paths, not that the directory contains disposable data.",
+      "removalSafe": false,
+      "action": "Separate presentation cache from saves. Only remove an exact app-owned completed launch after owner/descriptor/transport completion and preserve/migrate saves. Do not sweep active, pending or unknown homes."
+    },
+    {
+      "id": "ROOT-08",
+      "confidence": "confirmed-source",
+      "classification": "intentional-persistent-data",
+      "finding": "Retro online directories retain per-room saves/states and shared BIOS/autoconfig/overlays. Overlay preparation reads and compares packaged data before skipping identical writes. PS3 userdata includes firmware and saves. PS4 module/runtime and shader/cache paths are validated and reused; session IPC is closed at native-run return. These private directories are functional, not inherently obsolete sandboxes.",
+      "removalSafe": false,
+      "action": "Optimize verified shared preparation/cache only with identity- and lifecycle-aware reuse. Keep firmware, games, saves, shader cache, current native assets and pending transfer transactions."
+    },
+    {
+      "id": "ROOT-09",
+      "confidence": "confirmed-search-negative-with-bounded-scope",
+      "classification": "sandbox-creator-not-yet-proven",
+      "finding": "No Java DEX literal sandbox, no packaged template/path roms/sandbox, no packedprobe/testroots marker and no path-like sandbox value were found in standard libraries, DEX or non-Sony packaged text assets. Native sandbox matches are QEMU options, SDL APIs, Yuzu filesystem symbols and game metadata. Remote catalog and deleted-device directory evidence were not read in this subtask.",
+      "removalSafe": false,
+      "action": "Capture the exact recreated path and creation window, then trace the native-supplied ROM root and runtime catalog/publication. Do not attribute it to a library just because it contains the word sandbox."
+    },
+    {
+      "id": "ROOT-10",
+      "confidence": "confirmed-source",
+      "classification": "transactional-storage-required",
+      "finding": "StationInstaller confines game generations under roms/.station-v2/<verified platform>/<item>/<install generation>/content and deletes only uncommitted failed generations. StationPublication skips unsupported platforms, StationPlatforms.resolve uses a fixed mapping, and StationFrontend prepares the application-supplied root; these paths do not derive a new root folder from a remote hostname.",
+      "removalSafe": false,
+      "action": "Preserve .station-v2, private install receipts and download staging. Orphan-generation cleanup needs a complete receipt/queue reachability set and must exclude active transactions and last committed generation."
+    }
+  ],
+  "executionRoutes": [
+    {
+      "scope": "main launcher",
+      "root": "LoginActivity MAIN/LAUNCHER -> ESActivity",
+      "process": "main",
+      "owner": "Station frontend + native carousel",
+      "status": "declared-and-called",
+      "preserve": [
+        "authentication",
+        "catalogue",
+        "downloads",
+        "graphics lifecycle",
+        "original Switch Application globals"
+      ]
+    },
+    {
+      "scope": "normal SNES / Mega Drive",
+      "root": "com.imagine.BaseActivity / com.mdimagn.BaseActivity",
+      "process": ":snes / :megadrive",
+      "status": "separate-manifest-owners-with-bootstrap-guards"
+    },
+    {
+      "scope": "normal Nintendo 64",
+      "root": "N64EntryActivity -> Mupen GameActivity/CoreService",
+      "process": ":n64 / :n64core",
+      "status": "required-Activity-and-service-family"
+    },
+    {
+      "scope": "normal GameCube/Wii",
+      "root": "DolphinEntryActivity -> official Dolphin EmulationActivity",
+      "process": ":dolphin",
+      "status": "required-native-owner"
+    },
+    {
+      "scope": "normal Dreamcast/Atomiswave/Naomi",
+      "root": "com.flycast.emulator.NativeGLActivity",
+      "process": ":flycast",
+      "status": "required-native-owner"
+    },
+    {
+      "scope": "normal PS2",
+      "root": "com.armsx2.*",
+      "process": ":ps2",
+      "status": "required-native-owner-and-settings"
+    },
+    {
+      "scope": "normal PSP",
+      "root": "org.ppsspp.ppsspp.PpssppActivity",
+      "process": ":psp",
+      "status": "required-native-owner-and-result-proxies"
+    },
+    {
+      "scope": "normal Wii U",
+      "root": "WiiUEntryActivity -> info.cemu.cemu.*",
+      "process": ":wiiu",
+      "status": "required-native-owner-and-documents"
+    },
+    {
+      "scope": "normal Xbox 360",
+      "root": "Xbox360EntryActivity/Xbox360GameEntryActivity -> xendroid.compose.*",
+      "process": ":xbox360 / :xbox360emu",
+      "status": "required-native-owner",
+      "note": "MainAliveService has only constructor/onBind bytecode; no poll/start worker is proved by its declaration."
+    },
+    {
+      "scope": "normal PS Vita",
+      "root": "VitaEntryActivity -> org.vita3k.emulator.*",
+      "process": ":psvita",
+      "status": "required-native-owner-and-install-service"
+    },
+    {
+      "scope": "normal Saturn",
+      "root": "SaturnActivity",
+      "process": ":saturn",
+      "status": "required-native-owner"
+    },
+    {
+      "scope": "normal Xbox",
+      "root": "XboxEntryActivity -> com.izzy2lost.x1box.*",
+      "process": ":xbox / :xboxemu",
+      "status": "required-native-owner-and-setup-library"
+    },
+    {
+      "scope": "normal MAME/arcade",
+      "root": "MameEntryActivity -> com.seleuco.mame4droid.MAME4droid",
+      "process": ":mame",
+      "status": "required-native-owner-and-input-preferences"
+    },
+    {
+      "scope": "normal Switch",
+      "root": "org.yuzu.yuzu_emu.activities.EmulationActivity",
+      "process": "main",
+      "status": "required-native-owner; App initialization must not be removed wholesale"
+    },
+    {
+      "scope": "normal PS3/PS4",
+      "root": "StationSonyOfflineActivity component name -> Sony factory substitute -> StationSonyLaunchActivity -> Ps3Activity/Ps4Activity",
+      "process": "main dispatcher -> :station_ps3 / :station_ps4",
+      "status": "internal-offline-owner-on-demand"
+    },
+    {
+      "scope": "online Nintendo 64",
+      "root": "StationRoomsActivity -> StationN64Activity -> Mupen GameActivity/CoreService",
+      "process": "main -> :n64core",
+      "status": "current-system-native-backend"
+    },
+    {
+      "scope": "online GameCube/Wii",
+      "root": "StationRoomsActivity -> StationDolphinActivity -> StationDolphinOnlineActivity -> official Dolphin EmulationActivity",
+      "process": "main -> :dolphin",
+      "status": "current-system-native-backend"
+    },
+    {
+      "scope": "online PSX",
+      "root": "StationRoomsActivity -> StationPsxOnlineActivity -> SDL normal LibretroPlayer owner + station_psx_online adapter",
+      "process": ":station_psx_online",
+      "status": "current-system-owner; minimal private Application"
+    },
+    {
+      "scope": "online SNES/Mega Drive/Neo Geo CD/FBNeo/CPS",
+      "root": "StationRoomsActivity -> StationRetroActivity",
+      "process": ":station_netplay",
+      "status": "still-selected-online-engine; removal-would-break-supported-paths"
+    },
+    {
+      "scope": "online PS2/Saturn/Geolith",
+      "root": "policy/engine readiness gate",
+      "status": "automatic-integration-disabled-or-engine-launchReady-false",
+      "note": "Readiness gating does not make the corresponding normal emulator removable."
+    }
+  ],
+  "backgroundRoots": [
+    {
+      "owner": "StationDownloadUi",
+      "activation": "ESActivity resumed/window focused + error notice",
+      "release": "pause/stop/destroy",
+      "timer": "none; event-driven"
+    },
+    {
+      "owner": "StationControllerPresence",
+      "activation": "official Dolphin EmulationActivity resumed",
+      "release": "pause/stop/destroy",
+      "timer": "InputManager/layout callbacks, not polling all emulators"
+    },
+    {
+      "owner": "DownloadService",
+      "activation": "active download/preparation jobs only",
+      "release": "ACTIVE empty -> stopSelf; destruction releases wake lock",
+      "timer": "notification throttling; six-hour bounded wake acquisition for specific busy phases",
+      "review": "Verify an awaiting-authorization job cannot remain busy without productive work; no observed leak asserted."
+    },
+    {
+      "owner": "StationPresence",
+      "activation": "eligible foreground screen; excluded auth, Rooms and station_netplay",
+      "release": "foreground false/cancellation/generation gates",
+      "timer": "heartbeat 20 s, blocking events, retries while active",
+      "purpose": "online status/invites while app is open"
+    },
+    {
+      "owner": "StationGameSession + StationSessionService",
+      "activation": "one verified room launch/anchor",
+      "release": "human leave/anchor teardown/unbind",
+      "timer": "session heartbeat 20 s",
+      "purpose": "session authority remains alive while native emulator is foreground"
+    },
+    {
+      "owner": "StationRoomsActivity",
+      "activation": "onStart",
+      "release": "onStop polling/artwork/requests; onDestroy workers",
+      "timer": "multiplayer poll lifecycle-owned"
+    },
+    {
+      "owner": "PSX/Dolphin sessions and MultiplayerTunnel",
+      "activation": "native online session only",
+      "release": "human-authorized cleanup/closed transport",
+      "timer": "native status 50 ms; tunnel control 250 ms",
+      "purpose": "synchronization and recovery, not a carousel task"
+    },
+    {
+      "owner": "StationFrontend catalog refresh",
+      "activation": "configured and foreground, authorized, no active download/cover requests",
+      "release": "foreground/catalog cancellation gates",
+      "timer": "initial 5 s, subsequent 60 s"
+    },
+    {
+      "owner": "StationSinglePassVideo720",
+      "activation": "native video open for visible foreground cell",
+      "release": "stopAll/lifecycle/player release",
+      "timer": "one lazy HandlerThread and active watchdog; no idle watchdog after completed/stopped sessions",
+      "note": "R130 adds optional principal-cell looping; preserve that option and single-pass collection behavior."
+    },
+    {
+      "owner": "PS3/PS4 internal owners",
+      "activation": "explicit Sony launch/settings/prepare action in a private process",
+      "release": "owner shutdown/native return; process retirement guards",
+      "timer": "no automatic carousel extraction/JNI/firmware task"
+    }
+  ],
+  "safeCleanupNow": {
+    "provedUnusedProductiveClasses": [],
+    "provedDisposableDeviceDirectories": [],
+    "historicalCodePresenceAloneAuthorizesDeletion": false,
+    "mustPreserve": [
+      "saves",
+      "games",
+      "licenses/authentication",
+      "firmware",
+      "current verified modules",
+      "install receipts",
+      "pending/paused download queues",
+      "active session/Binder/transport ownership",
+      "retained stable donor required by reconstruction"
+    ]
+  },
+  "engineReadinessFromActualPackage": [
+    {
+      "platform": "snes",
+      "engineId": "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+      "launchReady": true
+    },
+    {
+      "platform": "megadrive",
+      "engineId": "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+      "launchReady": true
+    },
+    {
+      "platform": "neogeo",
+      "engineId": "geolith-19402493-mp5-81b3daa38fb9",
+      "launchReady": false
+    },
+    {
+      "platform": "psx",
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-7c182b392814",
+      "backend": "psx-player-station-v1",
+      "launchReady": true,
+      "maximumPlayers": 2
+    },
+    {
+      "platform": "neogeocd",
+      "engineId": "neocd-b1e04c73-aslr1-v3-81b3daa38fb9",
+      "launchReady": true,
+      "maximumPlayers": 2
+    },
+    {
+      "platform": "n64",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-cf3c21e161fa",
+      "backend": "mupen64plus-ae-station-v1",
+      "launchReady": true,
+      "maximumPlayers": 4
+    },
+    {
+      "platform": "neogeo",
+      "engineId": "fbneo-95153da1-neogeo-v3-81b3daa38fb9",
+      "launchReady": true,
+      "maximumPlayers": 2
+    },
+    {
+      "platform": "fbneo",
+      "engineId": "fbneo-95153da1-fbneo-v3-81b3daa38fb9",
+      "launchReady": true,
+      "maximumPlayers": 2
+    },
+    {
+      "platform": "cps1",
+      "engineId": "fbneo-95153da1-cps1-v3-81b3daa38fb9",
+      "launchReady": true,
+      "maximumPlayers": 2
+    },
+    {
+      "platform": "cps2",
+      "engineId": "fbneo-95153da1-cps2-v3-81b3daa38fb9",
+      "launchReady": true,
+      "maximumPlayers": 2
+    },
+    {
+      "platform": "cps3",
+      "engineId": "fbneo-95153da1-cps3-v3-81b3daa38fb9",
+      "launchReady": true,
+      "maximumPlayers": 2
+    },
+    {
+      "platform": "gamecube",
+      "engineId": "dolphin-5102a033-gamecube-v3-cdfd3b17ee2b",
+      "backend": "dolphin-station-v1",
+      "launchReady": true,
+      "maximumPlayers": 4
+    },
+    {
+      "platform": "wii",
+      "engineId": "dolphin-5102a033-wii-v3-cdfd3b17ee2b",
+      "backend": "dolphin-station-v1",
+      "launchReady": true,
+      "maximumPlayers": 4
+    }
+  ],
+  "sourceAndEvidenceReferences": [
+    {
+      "path": "audits/station-r131-component-lifecycle-20261011/package-components.json",
+      "sha256": "2cca10fbe7ba6c42d0bf588d9d5e33d95756ad59d037e5f3ca6da3e76d740c4d",
+      "meaning": "All current manifest components, actual DEX definitions and engine manifest"
+    },
+    {
+      "path": "audits/station-r131-component-lifecycle-20261011/startup-roots.json",
+      "sha256": "2e1353f683fb9bec5d59e49068c2a7d9395d084273802cb1c9921d9c02f5171b",
+      "meaning": "Actual manifest metadata and 728 targeted DEX method bodies; direct references, constants and selected branches"
+    },
+    {
+      "path": "audits/station-r131-component-lifecycle-20261011/sandbox-literals.json",
+      "sha256": "a28b48498568ea9360aafd3ad7b93fba5512eacf39be94c456410be733d510fb",
+      "meaning": "DEX/native sandbox string search; presence is not a creator proof"
+    },
+    {
+      "path": "audits/station-r131-component-lifecycle-20261011/packaged-config-search.json",
+      "sha256": "8726ca7e31c0a73b3054daa2084ab1a85e8d35639c3228c8b6680485512fdf29",
+      "meaning": "Non-Sony XML/JSON/config asset token and path search"
+    },
+    {
+      "path": "audits/station-r131-component-lifecycle-20261011/native-class-literals.json",
+      "sha256": "5bd1566f659a579bc898683a526b7acdb24efc544cf1e8f9b9f1dd58e847bdfd",
+      "meaning": "Native references to existing online and Sony bridge class names"
+    },
+    {
+      "path": "audits/station-r131-component-lifecycle-20261011/fixture-markers.json",
+      "sha256": "5ab26263c29e8d039f5cdafae7bfe88083cc8c36a943cb86a77ededc9d74a40e",
+      "meaning": "No packedprobe/testroots marker in standard native libraries or DEX"
+    },
+    {
+      "path": "integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyComponentFactory.java",
+      "sha256": "db7086e5ee9f00680f61f29fb1a7b8331906d8eb4d48b4cf205a2006878ab29a",
+      "meaning": "Sony process-specific Application and replacement of the external Activity implementation"
+    },
+    {
+      "path": "integration/psx-online/recipe/patch_factory_optin.py",
+      "sha256": "9338c89536c03af1ab19037038ab2a0147b1c1c60cc588d431670246b6a3dd8b",
+      "meaning": "Actual classes28 Application factory opt-in for private PSX, absent from the original R124 Java input"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "sha256": "cbe080a2f7b9d99c4ce36f7ba19e6a292f92e29ba2117623af14a2863eda3fb1",
+      "meaning": "Current online dispatch and Activity lifecycle",
+      "lines": [
+        454,
+        456,
+        1091,
+        1102
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/DownloadService.java",
+      "sha256": "137feba21320b9cda6df61a5168c862099f46c6c41ea0aee079c896126fe9bf3",
+      "meaning": "Event-driven foreground service, idle stop and active-job wake lock",
+      "lines": [
+        17,
+        56
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadUi.java",
+      "sha256": "1f874035ea6d097c422460036a3a9e3bb2229f70e1348a60e0d52d3d4f27c465",
+      "meaning": "Notices owned only by foreground ESActivity",
+      "lines": [
+        76,
+        101
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationControllerPresence.java",
+      "sha256": "536a4a65ee9d4ccb15771b1d4f4a9403fd28b6ecec54d8ab2fc99f1fdf0fe2ec",
+      "meaning": "Input callbacks active only in actual Dolphin EmulationActivity",
+      "lines": [
+        46,
+        95
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSessionService.java",
+      "sha256": "fb8857ab4b0bbd9507764c9a6e1b4a48eccddd25a7bff36ad406cd9a800b641a",
+      "meaning": "Private bound session owner and Binder release"
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java",
+      "sha256": "0f4032baae452d5203adf2f845c1e9830c8e1132b99dfffa7ec0b4b758f37017",
+      "meaning": "Per-session heartbeat and explicit human leave, not a generic idle loop",
+      "lines": [
+        17,
+        108
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationPresence.java",
+      "sha256": "1328f2353c6bde0d6ffde7d861511eda15af861f01dc471d7de16bc813ded83c",
+      "meaning": "Foreground social presence and its eligibility/cancellation gates",
+      "lines": [
+        24,
+        49
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "sha256": "059ebe29d30e62203bd048d54421757c220a0055440b6ae03f50dabce62070fd",
+      "meaning": "Storage root, bounded queues and foreground-gated catalog polling",
+      "lines": [
+        45,
+        100
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+      "sha256": "1b61d8764dfbfdaeab817cc2e81b7f160b773c30fb4771f19f34d963e84d2559",
+      "meaning": "Transaction directories, failed-install cleanup and preservation of old committed generations",
+      "lines": [
+        35,
+        84
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+      "sha256": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757",
+      "meaning": "Fixed verified mapping; no remote URL hostname converted into arbitrary platform folder",
+      "lines": [
+        95,
+        107
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationPublication.java",
+      "sha256": "d6972d792c18e377cfda161d156b3e3cb279f36a3f420e5b53a72cb86316799e",
+      "meaning": "Unsupported platform accounting without arbitrary fallback mapping",
+      "lines": [
+        15,
+        22
+      ]
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxLaunch.java",
+      "sha256": "e2f9d2fd68ca8978eb1b9483d18ffc0fd7cd9499a12c31bcd4bde991a2d7a349",
+      "meaning": "Fresh per-launch HOME and consumed/discarded descriptor; home is not deleted by discard",
+      "lines": [
+        49,
+        89,
+        145,
+        169
+      ]
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java",
+      "sha256": "73fdcb47ad0472dd0f4a398020e647af8da5f82b4ab3af78dbbbb457be29288b",
+      "meaning": "Human-authorized exit closes transport/Binder and preserves no-auto-kill rule",
+      "lines": [
+        149,
+        165
+      ]
+    },
+    {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java",
+      "sha256": "6552e3e58bd0ca4423a0d5358d6e76e0cf8ffccef04ae67c549c37974259dbdc",
+      "meaning": "Shared overlays/autoconfig, per-room saves/states and secret clearing",
+      "lines": [
+        21,
+        27,
+        71,
+        82
+      ]
+    },
+    {
+      "path": "integration/sony-internal/composition/java/org/emulationstation/frontend/sony/StationSonyAssets.java",
+      "sha256": "cd760fe0bcf187b1dd146ce381a2c8a7e1f3e1d02341b99c13ab4cc1b975d153",
+      "meaning": "Verified module extraction cached in-process and exact private paths",
+      "lines": [
+        61,
+        81,
+        265,
+        328
+      ]
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Application.java",
+      "sha256": "6b588b3de321094e008ca65cb4cfd1c33fb613617e8e20f488b5c4789a18c8b7",
+      "meaning": "PS3 Application does no extraction/JNI/firmware work"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Bootstrap.java",
+      "sha256": "f628e0d938a547ec1cb1474bf5f3b32ce2c8f21fad25037900bdaec8636e7ea8",
+      "meaning": "PS3 owner singleton and persistent userdata paths"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Application.java",
+      "sha256": "9a57e8df1236851a4129719fbb4b31ea9cf537f8c29c45604d4a467d14a1aace",
+      "meaning": "Minimal PS4 Application"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Runtime.java",
+      "sha256": "187d1ef052ea8c5f0c3dd089ec5fe3a5ad9bffa1b20629a7f3530c14c51c8d1c",
+      "meaning": "397-file runtime extraction or validation; staging cleanup",
+      "lines": [
+        17,
+        77,
+        96,
+        103
+      ]
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "sha256": "1401c1a71c926d373e77ddff96f943ef50f3831cfbb2b8fd810e93221693a1e0",
+      "meaning": "On-demand native preparation and per-game IPC session",
+      "lines": [
+        81,
+        118,
+        175,
+        192,
+        224,
+        228
+      ]
+    }
+  ],
+  "privateMaterialIncluded": false,
+  "tokensPersonalIdsLogsOrScreenshotsIncluded": false
+}

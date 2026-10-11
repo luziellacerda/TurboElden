@@ -1,0 +1,107 @@
+{
+  "schema": "station.audit.native.directory-calls.v1",
+  "librarySha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+  "calls": [
+    {
+      "symbol": "0000000000160430 <_Z22verifyHomeFolderExistsv>:",
+      "instruction": "1604c0: 9408f6e8     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "0000000000168394 <_ZNK10SystemData15getGamelistPathEb>:",
+      "instruction": "16852c: 9408d6cd     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "000000000016c01c <_Z14updateGamelistP10SystemData>:",
+      "instruction": "16c878: 9408c5fa     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "0000000000173848 <_ZN17SystemScreenSaverC2EP6Window>:",
+      "instruction": "173914: 9408a9d3     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "000000000017796c <_ZN23CollectionSystemManagerC2EP6Window>:",
+      "instruction": "177efc: 94089859     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "0000000000189fac <_ZN14CatalogService18getMissingFirmwareERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE>:",
+      "instruction": "18a084: 94084ff7     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "0000000000189fac <_ZN14CatalogService18getMissingFirmwareERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE>:",
+      "instruction": "18a164: 94084fbf     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "0000000000189fac <_ZN14CatalogService18getMissingFirmwareERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE>:",
+      "instruction": "18a350: 94084f44     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000001940a0 <_ZN14CatalogService19receiveFreshCatalogERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE>:",
+      "instruction": "19419c: 940827b1     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "000000000019ec30 <_ZNK11SaveManager12createBackupERNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE>:",
+      "instruction": "19edb8: 9407fcaa     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "000000000019f660 <_ZNK11SaveManager13restoreBackupERKNS_6BackupERNSt6__ndk112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE>:",
+      "instruction": "19f7d8: 9407fa22     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000001a6a6c <_ZN12LocalProfile16writePrivateFileERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_>:",
+      "instruction": "1a6aac: 9407dd6d     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000001afab0 <_ZN16TelemetryService10exportLogsERNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE>:",
+      "instruction": "1afb80: 9407b938     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "000000000023f638 <_Z13getSaveAsPathRK19ScraperSearchParamsRKNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEESA_>:",
+      "instruction": "23f77c: 94057a39     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "000000000023f638 <_Z13getSaveAsPathRK19ScraperSearchParamsRKNSt6__ndk112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEESA_>:",
+      "instruction": "23f7d8: 94057a22     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "0000000000248938 <_ZN30TheGamesDBJSONRequestResources12saveResourceEP7HttpReqRNSt6__ndk113unordered_mapIiNS2_12basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEENS2_4hashIiEENS2_8equal_toIiEENS7_INS2_4pairIKiS9_EEEEEERKS9_SL_>:",
+      "instruction": "2489ac: 940555ad     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000002a5db8 <_ZN11CoreOptions15saveDefinitionsERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_RKNS0_6vectorINS_6OptionENS4_ISA_EEEE>:",
+      "instruction": "2a6428: 9403df0e     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000002a8b18 <_ZN14LibretroPlayer11resolveCoreERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_>:",
+      "instruction": "2a8eec: 9403d45d     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000002a9718 <_ZN14LibretroPlayer3runERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_>:",
+      "instruction": "2a9bb0: 9403d12c     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000002a9718 <_ZN14LibretroPlayer3runERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES8_>:",
+      "instruction": "2a9bb8: 9403d12a     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000002bdcb0 <_ZN12LibretroCore8loadGameERKNSt6__ndk112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERS6_>:",
+      "instruction": "2bde6c: 9403807d     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "00000000002d45b4 <_ZN14VideoComponentC2EP6Window>:",
+      "instruction": "2d46b0: 9403266c     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "000000000036e624 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE>:",
+      "instruction": "36e688: 9400ddba     \tbl\t0x3a5d70 <mkdir@plt>"
+    },
+    {
+      "symbol": "000000000036e624 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE>:",
+      "instruction": "36e6f8: 9400be5a     \tbl\t0x39e060 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE@plt>"
+    },
+    {
+      "symbol": "000000000036e624 <_ZN5Utils10FileSystem15createDirectoryERKNSt6__ndk112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE>:",
+      "instruction": "36e714: 9400dd97     \tbl\t0x3a5d70 <mkdir@plt>"
+    }
+  ],
+  "scope": "Direct BL calls in actual retained libmain.so; indirect/reflection/native child calls not excluded"
+}

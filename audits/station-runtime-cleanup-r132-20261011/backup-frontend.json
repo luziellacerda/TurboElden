@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "auditDate": "2026-10-11",
+  "scope": "Existing R131 backup, inherited frontend/render/media lifecycle and a separate R132 loading recipe",
+  "checkpointCommit": "8a199d025e9eb338f1973f8e2f8ca975862cdef5",
+  "currentExecutableSourceCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981",
+  "currentApkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "currentApkBytes": 2711825423,
+  "publicEvidenceContainsPrivatePathsOrPersonalLogs": false,
+  "backup": {
+    "reference": "sole-local-backup",
+    "inputMap": "desenvolvimento/reconstrucao-atual/sony-internal/INPUT-MAP-R131.json",
+    "currentPointer": "desenvolvimento/ATUAL.json",
+    "sourceFreezeSha256": "3e04f4123bcb07fcd1783c7de1fc8d94bfeecaa8707bdb63d4b2f83cbaf6ec72",
+    "runtimeIdentitySha256": "7df6fe4ad140ff8e5cb21146e07a77345c02878500c69a1d8167f5aeccc52cc0",
+    "canonicalInputCount": 333,
+    "existingSoleBackupInputCount": 9,
+    "productiveSourceInputCount": 364,
+    "frozenPayloadCount": 305,
+    "compileSourceVariantCount": 8,
+    "completeInheritedJavaCount": 206,
+    "completeInheritedTransformCount": 50,
+    "nativeToolchainInputCount": 6,
+    "firmwareBackupCopies": 1,
+    "originalReceiptsRewritten": false,
+    "criticalIntegrityCheck": {
+      "uniqueFilesHashed": 714,
+      "bytesHashed": 6380033121,
+      "shaOrSizeErrors": 0,
+      "coverage": "All mapped inputs plus current signed APK, immediate R130 donor, existing signing dependency and Git bundle",
+      "compileVariantsNormalizedToGitWithoutOtherChanges": 8,
+      "compileVariantErrors": 0,
+      "fullInventoryMetadataRowsChecked": 71372,
+      "metadataErrors": 0,
+      "fullInventoryRehashedThisAudit": false,
+      "bundleContainsCheckpointCommit": true
+    },
+    "exactRebuildExecuted": false,
+    "fullSignedApkReassembled": false,
+    "backupModifiedByThisAuditOrRecipe": false
+  },
+  "activeHistoricalDependencies": {
+    "classification": "Required inputs, not obsolete because of their revision names",
+    "sourceGroups": [
+      {"repoRoot": "integration/local-sony-demos", "productiveInputs": 15},
+      {"repoRoot": "integration/ps3-ps4-offline", "productiveInputs": 12},
+      {"repoRoot": "integration/psx-online", "productiveInputs": 37},
+      {"repoRoot": "integration/sony-internal", "productiveInputs": 49},
+      {"repoRoot": "versions/station-video-room-footer-r124-20261011", "productiveInputs": 235},
+      {"repoRoot": "versions/station-mupen-online-r125-20261011", "productiveInputs": 6},
+      {"repoRoot": "versions/station-dolphin-online-r126-20261011", "productiveInputs": 9},
+      {"repoRoot": "versions/station-game-menu-controller-audit-r120-20261010", "productiveInputs": 1}
+    ],
+    "traces": [
+      {
+        "consumer": "integration/psx-online/recipe/compile_java.py::sources",
+        "dependency": "R124 Java manifest plus R125/R126/current overlays",
+        "reason": "Loads and verifies inherited effective Java source bytes; compilation does not consist only of the newest Java files"
+      },
+      {
+        "consumer": "integration/psx-online/recipe/assemble_apk.py::current_sources",
+        "dependency": "Effective Java source inventory and inherited transformations",
+        "reason": "Source/fingerprint verification remains active during assembly"
+      },
+      {
+        "consumer": "integration/sony-internal/recipe/build_runtime_identity.py::dependency_source_map",
+        "dependency": "PSX and R126 identity recipes plus R120 component factory recipe",
+        "reason": "Productive transformation fingerprints include these inherited recipes"
+      },
+      {
+        "consumer": "integration/local-sony-demos/recipe/build_demo_payloads.py",
+        "dependency": "R124 native dependency stages and private media objects",
+        "reason": "The generated R130 carousel overlays these inherited headers and media objects"
+      }
+    ],
+    "donorPolicy": {
+      "immediateR130SignedDonorRequired": true,
+      "r128ParentRequiredForR130Reproduction": true,
+      "privateMediaAndToolchainInputsRequired": true,
+      "keyBytesReadOrRepublished": false,
+      "deleteOldDependenciesByDatePermitted": false
+    }
+  },
+  "processingFindings": [
+    {
+      "id": "FRONTEND-01",
+      "severity": "confirmed-startup-block",
+      "source": "versions/station-video-room-footer-r124-20261011/native/d0/native_magazine.h",
+      "line": 69,
+      "measuredOperation": "prewarmMagazinePrograms: synchronous CompileShader/LinkProgram and completion checks on SDL/GL",
+      "measuredMilliseconds": 17046,
+      "measurement": {
+        "currentRevision": "R131",
+        "catalogRows": 3685,
+        "coverPreindexMilliseconds": 945,
+        "coverWarmMilliseconds": 48,
+        "coversAlreadyLocal": 3685,
+        "coversDownloaded": 0,
+        "platformGroupingMilliseconds": 1,
+        "firstVideoDecoderStartedAfterShaderPreparation": true
+      },
+      "history": {
+        "prewarmPublishedAtR116Commit": "cc8ab9371d878cff0be859edbc522fe290a9d2fa",
+        "effectsEnabledGateAddedAtR117Commit": "129ee9db892a327f720df8ae4f8e8a5ffab3f7ee",
+        "phaseZeroDeferralAddedAtR118Commit": "3a72119a69b5da6b4f326f053a13ddebae5a7f69",
+        "presentBeforeR130Loop": true,
+        "r129ToR130MagazineShaderChanged": false,
+        "r130LoopWasProvenCause": false
+      },
+      "correction": "Prepare the same existing programs after a black loading draw in the same SDL/GL context. Hold GuiStore phase0 and 100% until catalog publication and graphics preparation have completed, then retain the original welcome, cover-readiness and entry sequence. A catalog failure uses the original intro transition after its error frame, without claiming 100%",
+      "recipe": "integration/startup-cleanup-r132/recipe/patch_loading.py",
+      "helper": "integration/startup-cleanup-r132/recipe/r132_startup_loading.h",
+      "movesCostToFirstGameCover": false,
+      "totalDriverCompileTimeReductionProven": false,
+      "binaryProgramCacheImplemented": false,
+      "fallback": "One real failed preparation attempt may complete with the original R104/R106/base-art fallback; no endless loading retry is introduced",
+      "physicalCorrectionValidated": false
+    },
+    {
+      "id": "FRONTEND-02",
+      "classification": "bounded-active-rendering-preserved",
+      "sources": [
+        "versions/station-video-room-footer-r124-20261011/native/d0/native_menu_power.h",
+        "versions/station-video-room-footer-r124-20261011/native/d0/station_menu_frame_policy.h",
+        "versions/station-video-room-footer-r124-20261011/native/d0/native_space.h",
+        "versions/station-video-room-footer-r124-20261011/native/d0/native_space3d.h"
+      ],
+      "facts": [
+        "GuiStore uses the existing 30fps monotonic schedule with sleeping SDL_Delay; it does not impose 30fps on emulator execution",
+        "Loading returns through a black surface before cloud, wave, avatar, icon or decorative post-render work",
+        "Cloud field is 320x180 at 15Hz and reused on intervening menu frames",
+        "Waves use three strips with 32 segments each and no image/FBO generation",
+        "Background-off avoids both cloud and wave draw paths; graphics preferences are read through an atomic snapshot without per-frame JNI or storage IO"
+      ],
+      "residualCost": "The visible menu still renders at 30fps even for a static scene; a lower or event-driven cadence requires separate animation/input measurements and was not changed here",
+      "thermalMeasurementPerformedByThisAudit": false
+    },
+    {
+      "id": "FRONTEND-03",
+      "classification": "video-owner-lifecycle-bounded",
+      "source": "integration/local-sony-demos/recipe/patch_video_loop.py",
+      "facts": [
+        "Only the focused platform requests loop and the selected preference must allow it",
+        "One active decoder is retained; loop seeks and restarts the same MediaPlayer, Surface and decoder without reopening the asset",
+        "Collections retain the existing single-pass/end-frame hold behaviour",
+        "Preparation/openFd runs on the video worker through prepareAsync",
+        "Hidden/paused/stopped/destroyed frontend tears down active sessions; the watchdog runs only for active decoding"
+      ],
+      "unprovenMeasurementCandidates": [
+        "HandlerThread first-use getLooper wait",
+        "Synchronous Surface/SurfaceTexture release latency on the calling thread",
+        "One-time poster texture uploads before the first decoder"
+      ],
+      "hiddenLoopLeakFoundInReadSource": false,
+      "theseCandidatesProveMeasured17046msCause": false,
+      "videoLoopRemovedOrChangedByLoadingRecipe": false
+    },
+    {
+      "id": "FRONTEND-04",
+      "classification": "cache-and-network-work-bounded",
+      "sources": [
+        "versions/station-video-room-footer-r124-20261011/frontend/station_frontend.cpp",
+        "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java"
+      ],
+      "facts": [
+        "Catalogue/network work remains on bounded workers; an unchanged revision/display name is not republished",
+        "Only cache misses enter sequential cover warm-up; local covers do not download again each menu entry",
+        "Cover decode/publication uses bounded queues, selected-cover priority and foreground cancellation",
+        "The observed startup had every cover local and downloaded zero covers",
+        "User-requested downloads keep their foreground-service ownership and delayed network retry/cancel behaviour"
+      ],
+      "idleWaitingThreadsProveCpuConsumption": false,
+      "downloadServiceShouldBeKilledForCpu": false,
+      "catalogOrCacheOrDownloadContractChangedByLoadingRecipe": false
+    },
+    {
+      "id": "FRONTEND-05",
+      "classification": "visible-effects-lifecycle-bounded",
+      "facts": [
+        "Robot/Lottie work follows visible menu draws rather than independent hidden-menu timers; frozen icons retain their current frame",
+        "Theme frame textures are bounded and decoded/uploaded only when the frame changes",
+        "Online wave callbacks are removed on detach/focus loss/disabled effects",
+        "Online LED GPU requests are coalesced and gated by attachment, visibility, focus, bitmap readiness and the effect preference"
+      ],
+      "unprovenMeasurementCandidates": [
+        "SharedPreferences.commit in the native theme setter can briefly block on a human theme change, not continuously",
+        "Shader creation after an online GL context loss needs its own measured timing; no new physical online timing is claimed"
+      ],
+      "allEffectsOrLedQualityReducedByLoadingRecipe": false
+    }
+  ],
+  "cleanupAssessment": {
+    "deletedFiles": 0,
+    "productiveInputRemoved": false,
+    "scope": "Historical untracked working trees only after an exact backup/inventory and dependency check; no phone data or functional source is removed by this audit",
+    "findings": [
+      "The inspected historical untracked version-tree files matched their sole-backup relative-path contents; no backed file had a changed digest",
+      "None of those historical untracked version-tree files appeared in the R131 productiveInputMap",
+      "Ten generated __pycache__ files were not represented in the source backup; these are disposable generated Python cache, not productive sources",
+      "The small .r116-validation-final work directory was not in the current productiveInputMap or source backup; disposal still requires checking for any unique evidence to retain",
+      "A newly written R131 component-lifecycle audit belongs to the current parallel audit and must be retained"
+    ],
+    "candidateHistoricalFamilies": [
+      "proposed-station-illustration-terminal-r108",
+      "station-cover-preindex-r114",
+      "station-cover-warmstart-r113",
+      "station-native-cover-field-proposed",
+      "station-online-input-r98",
+      "station-performance-mode-r100",
+      "station-render-cache-r101",
+      "station-render-classifier-r105",
+      "station-render-kernel-r104",
+      "station-render-local-video-r111",
+      "station-render-native-r110",
+      "station-render-online-ambient-patch",
+      "station-render-online-field-r107",
+      "station-render-online-r106",
+      "station-render-online-r109",
+      "station-render-online-static-r108",
+      "station-render-precision-r102",
+      "station-render-support-r103",
+      "station-server-integration-r99",
+      "station-smooth-preload-r115",
+      "station-startup-resources-r112",
+      "station-video-retained-fastpath"
+    ],
+    "conditionsBeforeRemoval": [
+      "Resolve and verify every exact absolute deletion target stays within the intended workspace",
+      "Recheck the current effective-source manifests, pipeline references and backup digests before mutation",
+      "Retain R124/R125/R126/R120 active inputs, R128/R130 donors, private media, toolchain, current frozen payloads, original receipts and the existing signing dependency",
+      "Keep historical sources in Git and the sole verified backup; do not select a donor or code by timestamp",
+      "Do not remove current parallel audit output or create another full snapshot"
+    ],
+    "deletingPcHistoricalTreesReducesPhoneCpu": false
+  },
+  "validation": {
+    "loadingRecipePureInMemoryCheck": true,
+    "sourceInverseByteExact": true,
+    "introAbiAndGotRelocationPinned": true,
+    "cplusplusCompilationExecuted": false,
+    "apkCompilationOrSigningExecuted": false,
+    "phoneOperatedByThisAudit": false,
+    "gitCommitOrPushExecutedByThisAudit": false,
+    "backupOrPrivateInputsChanged": false
+  }
+}

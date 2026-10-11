@@ -1,0 +1,277 @@
+{
+  "schema": "station.audit.sambox.methods.v1",
+  "apkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "scope": "Exact DEX8 static calls/path constants only; no phone state or private keys",
+  "methods": [
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/TurboEdenBridge;",
+      "method": "<init>",
+      "protoIndex": 40,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/lang/Object;-><init>"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/TurboEdenBridge;",
+      "method": "prepare",
+      "protoIndex": 41,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->apply",
+        "Landroid/util/Log;->i",
+        "Landroid/util/Log;->e"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        "EmulationStation"
+      ],
+      "classInstructionReferences": [],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "<init>",
+      "protoIndex": 40,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/lang/Object;-><init>"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "configureSettings",
+      "protoIndex": 43,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/io/File;-><init>",
+        "Ljava/io/File;->isFile",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->readText",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->setStringSetting",
+        "Ljava/lang/String;->equals",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->writeAtomically"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        ".emulationstation/es_settings.cfg"
+      ],
+      "classInstructionReferences": [
+        "Ljava/io/File;"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "copyAssetDirectory",
+      "protoIndex": 42,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Landroid/content/res/AssetManager;->list",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->copyAssetFile",
+        "Ljava/io/File;->isDirectory",
+        "Ljava/io/File;->mkdirs",
+        "Ljava/lang/StringBuilder;-><init>",
+        "Ljava/lang/StringBuilder;->append",
+        "Ljava/lang/StringBuilder;->toString",
+        "Ljava/io/IOException;-><init>",
+        "Ljava/lang/String;->isEmpty",
+        "Ljava/lang/String;->equals",
+        "Ljava/lang/String;->indexOf",
+        "Ljava/io/File;-><init>",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->copyAssetDirectory"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [
+        "Ljava/io/IOException;",
+        "Ljava/lang/StringBuilder;",
+        "Ljava/io/File;"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "copyAssetFile",
+      "protoIndex": 42,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/io/File;->getParentFile",
+        "Ljava/io/File;->isDirectory",
+        "Ljava/io/File;->mkdirs",
+        "Ljava/lang/StringBuilder;-><init>",
+        "Ljava/lang/StringBuilder;->append",
+        "Ljava/lang/StringBuilder;->toString",
+        "Ljava/io/IOException;-><init>",
+        "Ljava/io/File;->getName",
+        "Ljava/io/File;-><init>",
+        "Landroid/content/res/AssetManager;->open",
+        "Ljava/io/FileOutputStream;-><init>",
+        "Ljava/io/InputStream;->read",
+        "Ljava/io/FileOutputStream;->write",
+        "Ljava/io/FileOutputStream;->getFD",
+        "Ljava/io/FileDescriptor;->sync",
+        "Ljava/io/FileOutputStream;->close",
+        "Ljava/io/InputStream;->close",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->moveAtomically",
+        "Ljava/lang/Throwable;->addSuppressed"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        ".tmp"
+      ],
+      "classInstructionReferences": [
+        "Ljava/io/IOException;",
+        "Ljava/lang/StringBuilder;",
+        "Ljava/io/File;",
+        "Ljava/io/FileOutputStream;",
+        "[B"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "moveAtomically",
+      "protoIndex": 44,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/io/File;->toPath",
+        "Ljava/nio/file/Files;->move"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [
+        "[Ljava/nio/file/CopyOption;"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "prepare",
+      "protoIndex": 41,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/io/File;-><init>",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->readText",
+        "Ljava/lang/String;->trim",
+        "Ljava/lang/String;->equals",
+        "Landroid/content/Context;->getAssets",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->copyAssetDirectory",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->writeAtomically",
+        "Landroid/util/Log;->i",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->configureSettings",
+        "Landroid/util/Log;->e"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        "EmulationStation",
+        ".emulationstation/themes/TURBORAMA-ANDROID"
+      ],
+      "classInstructionReferences": [
+        "Ljava/io/File;"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "readText",
+      "protoIndex": 12,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/io/File;->isFile",
+        "Ljava/io/File;->toPath",
+        "Ljava/nio/file/Files;->readAllBytes",
+        "Ljava/lang/String;-><init>"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [
+        "Ljava/lang/String;"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "setStringSetting",
+      "protoIndex": 15,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/util/regex/Pattern;->quote",
+        "Ljava/lang/StringBuilder;-><init>",
+        "Ljava/lang/StringBuilder;->append",
+        "Ljava/lang/StringBuilder;->toString",
+        "Ljava/util/regex/Pattern;->compile",
+        "Ljava/util/regex/Pattern;->matcher",
+        "Ljava/util/regex/Matcher;->find",
+        "Ljava/util/regex/Matcher;->group",
+        "Ljava/util/regex/Matcher;->quoteReplacement",
+        "Ljava/util/regex/Matcher;->replaceFirst",
+        "Ljava/lang/String;->endsWith",
+        "Ljava/lang/String;->length",
+        "Ljava/lang/String;->substring",
+        "Ljava/util/regex/Matcher;->start",
+        "Ljava/util/regex/Matcher;->end"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [
+        "Ljava/lang/StringBuilder;"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/theme/ThemeInstaller;",
+      "method": "writeAtomically",
+      "protoIndex": 45,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/io/File;->getParentFile",
+        "Ljava/io/File;->isDirectory",
+        "Ljava/io/File;->mkdirs",
+        "Ljava/lang/StringBuilder;-><init>",
+        "Ljava/lang/StringBuilder;->append",
+        "Ljava/lang/StringBuilder;->toString",
+        "Ljava/io/IOException;-><init>",
+        "Ljava/io/File;->getName",
+        "Ljava/io/File;-><init>",
+        "Ljava/io/FileOutputStream;-><init>",
+        "Ljava/lang/String;->getBytes",
+        "Ljava/io/FileOutputStream;->write",
+        "Ljava/io/FileOutputStream;->getFD",
+        "Ljava/io/FileDescriptor;->sync",
+        "Ljava/io/FileOutputStream;->close",
+        "Lorg/emulationstation/frontend/theme/ThemeInstaller;->moveAtomically",
+        "Ljava/lang/Throwable;->addSuppressed"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        ".tmp"
+      ],
+      "classInstructionReferences": [
+        "Ljava/io/IOException;",
+        "Ljava/lang/StringBuilder;",
+        "Ljava/io/File;",
+        "Ljava/io/FileOutputStream;"
+      ],
+      "selectedControlFlow": []
+    }
+  ]
+}

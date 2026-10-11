@@ -1,0 +1,54 @@
+[
+  {
+    "entry": "lib/arm64-v8a/libturbo_carousel.so",
+    "classLiteral": "StationNetplayActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libturbo_carousel.so",
+    "classLiteral": "StationSonyOfflineActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libturbo_carousel.so",
+    "classLiteral": "StationFrontend"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_frontend.so",
+    "classLiteral": "StationFrontend"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+    "classLiteral": "StationNetplayActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+    "classLiteral": "StationDolphinNetplayActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+    "classLiteral": "StationSonyOfflineActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+    "classLiteral": "StationNetplayActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+    "classLiteral": "StationDolphinNetplayActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+    "classLiteral": "StationSonyOfflineActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_psx_online.so",
+    "classLiteral": "StationNetplayActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_psx_online.so",
+    "classLiteral": "StationDolphinNetplayActivity"
+  },
+  {
+    "entry": "lib/arm64-v8a/libstation_psx_online.so",
+    "classLiteral": "StationSonyOfflineActivity"
+  }
+]

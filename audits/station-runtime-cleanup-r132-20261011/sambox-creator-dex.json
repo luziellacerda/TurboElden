@@ -1,0 +1,1252 @@
+{
+  "schema": "station.audit.sambox.creator.v1",
+  "apkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "methods": [
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;",
+      "method": "<init>",
+      "protoIndex": 40,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/lang/Object;-><init>"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;",
+      "method": "add",
+      "protoIndex": 50,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Lorg/w3c/dom/Document;->createElement",
+        "Lorg/w3c/dom/Element;->setTextContent",
+        "Lorg/w3c/dom/Element;->appendChild"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;",
+      "method": "apply",
+      "protoIndex": 12,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/io/File;-><init>",
+        "Ljava/io/File;->toPath",
+        "Ljava/nio/file/Path;->getParent",
+        "Ljava/nio/file/Files;->createDirectories",
+        "Ljava/nio/file/Files;->exists",
+        "Ljava/nio/file/Files;->readAllBytes",
+        "Ljava/lang/String;-><init>",
+        "Ljava/lang/String;->toUpperCase",
+        "Ljava/lang/String;->contains",
+        "Ljava/io/IOException;-><init>",
+        "Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance",
+        "Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder",
+        "Ljavax/xml/parsers/DocumentBuilder;->parse",
+        "Ljavax/xml/parsers/DocumentBuilder;->newDocument",
+        "Lorg/w3c/dom/Document;->getDocumentElement",
+        "Lorg/w3c/dom/Document;->createElement",
+        "Lorg/w3c/dom/Element;->getTagName",
+        "Ljava/lang/String;->equals",
+        "Lorg/w3c/dom/Document;->appendChild",
+        "Lorg/w3c/dom/Element;->getElementsByTagName",
+        "Lorg/w3c/dom/NodeList;->getLength",
+        "Lorg/w3c/dom/NodeList;->item",
+        "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->isSwitchSystem",
+        "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->setCommand",
+        "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add",
+        "Ljava/io/File;->getAbsolutePath",
+        "Lorg/w3c/dom/Element;->appendChild",
+        "Ljava/io/File;->getParentFile",
+        "Ljava/nio/file/Files;->copy",
+        "Ljavax/xml/transform/TransformerFactory;->newInstance",
+        "Ljavax/xml/transform/TransformerFactory;->newTransformer",
+        "Ljavax/xml/transform/Transformer;->setOutputProperty",
+        "Ljavax/xml/transform/dom/DOMSource;-><init>",
+        "Ljava/nio/file/Path;->toFile",
+        "Ljavax/xml/transform/stream/StreamResult;-><init>",
+        "Ljavax/xml/transform/Transformer;->transform",
+        "Ljava/nio/file/Files;->move",
+        "Ljava/nio/file/Files;->deleteIfExists",
+        "Ljava/lang/StringBuilder;-><init>",
+        "Ljava/lang/StringBuilder;->append",
+        "Ljava/lang/StringBuilder;->toString"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        ".emulationstation/es_systems.cfg",
+        "switch",
+        "Nintendo Switch",
+        "SAMBOX-Vfull/sistema/roms/switch",
+        "android: package=org.emulationstation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1",
+        "es_systems.cfg.pre-turboeden.bak",
+        "es_systems.cfg.turboeden.tmp",
+        "Switch configurado para TurboEden ("
+      ],
+      "classInstructionReferences": [
+        "Ljava/io/File;",
+        "[Ljava/nio/file/attribute/FileAttribute;",
+        "[Ljava/nio/file/LinkOption;",
+        "Ljava/lang/String;",
+        "Ljava/io/IOException;",
+        "Lorg/w3c/dom/Element;",
+        "[Ljava/nio/file/CopyOption;",
+        "Ljavax/xml/transform/dom/DOMSource;",
+        "Ljavax/xml/transform/stream/StreamResult;",
+        "Ljava/lang/StringBuilder;"
+      ],
+      "selectedControlFlow": [
+        {
+          "pc": 2,
+          "constString": ".emulationstation/es_systems.cfg",
+          "register": 1
+        },
+        {
+          "pc": 4,
+          "invokeRegisterWords": [
+            "0x3070",
+            "0x5",
+            "0x1e0"
+          ]
+        },
+        {
+          "pc": 4,
+          "invoke": "Ljava/io/File;-><init>"
+        },
+        {
+          "pc": 7,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0xc",
+            "0x0"
+          ]
+        },
+        {
+          "pc": 7,
+          "invoke": "Ljava/io/File;->toPath"
+        },
+        {
+          "pc": 11,
+          "invokeRegisterWords": [
+            "0x1072",
+            "0x33",
+            "0x1"
+          ]
+        },
+        {
+          "pc": 11,
+          "invoke": "Ljava/nio/file/Path;->getParent"
+        },
+        {
+          "pc": 16,
+          "conditionalOpcode": "0x38",
+          "targetPc": 27
+        },
+        {
+          "pc": 18,
+          "invokeRegisterWords": [
+            "0x1072",
+            "0x33",
+            "0x1"
+          ]
+        },
+        {
+          "pc": 18,
+          "invoke": "Ljava/nio/file/Path;->getParent"
+        },
+        {
+          "pc": 24,
+          "invokeRegisterWords": [
+            "0x2071",
+            "0x2e",
+            "0x42"
+          ]
+        },
+        {
+          "pc": 24,
+          "invoke": "Ljava/nio/file/Files;->createDirectories"
+        },
+        {
+          "pc": 29,
+          "invokeRegisterWords": [
+            "0x2071",
+            "0x30",
+            "0x21"
+          ]
+        },
+        {
+          "pc": 29,
+          "invoke": "Ljava/nio/file/Files;->exists"
+        },
+        {
+          "pc": 33,
+          "conditionalOpcode": "0x38",
+          "targetPc": 69
+        },
+        {
+          "pc": 37,
+          "invokeRegisterWords": [
+            "0x1071",
+            "0x32",
+            "0x1"
+          ]
+        },
+        {
+          "pc": 37,
+          "invoke": "Ljava/nio/file/Files;->readAllBytes"
+        },
+        {
+          "pc": 43,
+          "invokeRegisterWords": [
+            "0x3070",
+            "0x17",
+            "0x654"
+          ]
+        },
+        {
+          "pc": 43,
+          "invoke": "Ljava/lang/String;-><init>"
+        },
+        {
+          "pc": 48,
+          "invokeRegisterWords": [
+            "0x206e",
+            "0x24",
+            "0x54"
+          ]
+        },
+        {
+          "pc": 48,
+          "invoke": "Ljava/lang/String;->toUpperCase"
+        },
+        {
+          "pc": 52,
+          "constString": "<!DOCTYPE",
+          "register": 5
+        },
+        {
+          "pc": 54,
+          "invokeRegisterWords": [
+            "0x206e",
+            "0x18",
+            "0x54"
+          ]
+        },
+        {
+          "pc": 54,
+          "invoke": "Ljava/lang/String;->contains"
+        },
+        {
+          "pc": 58,
+          "conditionalOpcode": "0x39",
+          "targetPc": 61
+        },
+        {
+          "pc": 63,
+          "constString": "DOCTYPE n\u00e3o \u00e9 permitido em es_systems.cfg",
+          "register": 0
+        },
+        {
+          "pc": 65,
+          "invokeRegisterWords": [
+            "0x2070",
+            "0x13",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 65,
+          "invoke": "Ljava/io/IOException;-><init>"
+        },
+        {
+          "pc": 69,
+          "invokeRegisterWords": [
+            "0x71",
+            "0x42",
+            "0x0"
+          ]
+        },
+        {
+          "pc": 69,
+          "invoke": "Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance"
+        },
+        {
+          "pc": 73,
+          "conditionalOpcode": "0x38",
+          "targetPc": 84
+        },
+        {
+          "pc": 75,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0x41",
+            "0x4"
+          ]
+        },
+        {
+          "pc": 75,
+          "invoke": "Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder"
+        },
+        {
+          "pc": 79,
+          "invokeRegisterWords": [
+            "0x206e",
+            "0x40",
+            "0x4"
+          ]
+        },
+        {
+          "pc": 79,
+          "invoke": "Ljavax/xml/parsers/DocumentBuilder;->parse"
+        },
+        {
+          "pc": 84,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0x41",
+            "0x4"
+          ]
+        },
+        {
+          "pc": 84,
+          "invoke": "Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder"
+        },
+        {
+          "pc": 88,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0x3f",
+            "0x4"
+          ]
+        },
+        {
+          "pc": 88,
+          "invoke": "Ljavax/xml/parsers/DocumentBuilder;->newDocument"
+        },
+        {
+          "pc": 92,
+          "constString": "systemList",
+          "register": 5
+        },
+        {
+          "pc": 94,
+          "conditionalOpcode": "0x38",
+          "targetPc": 101
+        },
+        {
+          "pc": 96,
+          "invokeRegisterWords": [
+            "0x1072",
+            "0x5c",
+            "0x4"
+          ]
+        },
+        {
+          "pc": 96,
+          "invoke": "Lorg/w3c/dom/Document;->getDocumentElement"
+        },
+        {
+          "pc": 101,
+          "invokeRegisterWords": [
+            "0x2072",
+            "0x5b",
+            "0x54"
+          ]
+        },
+        {
+          "pc": 101,
+          "invoke": "Lorg/w3c/dom/Document;->createElement"
+        },
+        {
+          "pc": 105,
+          "invokeRegisterWords": [
+            "0x1072",
+            "0x61",
+            "0x6"
+          ]
+        },
+        {
+          "pc": 105,
+          "invoke": "Lorg/w3c/dom/Element;->getTagName"
+        },
+        {
+          "pc": 109,
+          "invokeRegisterWords": [
+            "0x206e",
+            "0x1a",
+            "0x75"
+          ]
+        },
+        {
+          "pc": 109,
+          "invoke": "Ljava/lang/String;->equals"
+        },
+        {
+          "pc": 113,
+          "conditionalOpcode": "0x38",
+          "targetPc": 376
+        },
+        {
+          "pc": 115,
+          "conditionalOpcode": "0x39",
+          "targetPc": 120
+        },
+        {
+          "pc": 117,
+          "invokeRegisterWords": [
+            "0x2072",
+            "0x5a",
+            "0x64"
+          ]
+        },
+        {
+          "pc": 117,
+          "invoke": "Lorg/w3c/dom/Document;->appendChild"
+        },
+        {
+          "pc": 120,
+          "constString": "system",
+          "register": 5
+        },
+        {
+          "pc": 122,
+          "invokeRegisterWords": [
+            "0x2072",
+            "0x60",
+            "0x56"
+          ]
+        },
+        {
+          "pc": 122,
+          "invoke": "Lorg/w3c/dom/Element;->getElementsByTagName"
+        },
+        {
+          "pc": 129,
+          "invokeRegisterWords": [
+            "0x1072",
+            "0x6a",
+            "0x7"
+          ]
+        },
+        {
+          "pc": 129,
+          "invoke": "Lorg/w3c/dom/NodeList;->getLength"
+        },
+        {
+          "pc": 134,
+          "conditionalOpcode": "0x35",
+          "targetPc": 161
+        },
+        {
+          "pc": 136,
+          "invokeRegisterWords": [
+            "0x2072",
+            "0x6b",
+            "0x87"
+          ]
+        },
+        {
+          "pc": 136,
+          "invoke": "Lorg/w3c/dom/NodeList;->item"
+        },
+        {
+          "pc": 142,
+          "invokeRegisterWords": [
+            "0x1071",
+            "0x4d",
+            "0xb"
+          ]
+        },
+        {
+          "pc": 142,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->isSwitchSystem"
+        },
+        {
+          "pc": 146,
+          "conditionalOpcode": "0x39",
+          "targetPc": 149
+        },
+        {
+          "pc": 149,
+          "invokeRegisterWords": [
+            "0x2071",
+            "0x4e",
+            "0xb4"
+          ]
+        },
+        {
+          "pc": 149,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->setCommand"
+        },
+        {
+          "pc": 153,
+          "conditionalOpcode": "0x38",
+          "targetPc": 157
+        },
+        {
+          "pc": 161,
+          "conditionalOpcode": "0x39",
+          "targetPc": 235
+        },
+        {
+          "pc": 163,
+          "invokeRegisterWords": [
+            "0x2072",
+            "0x5b",
+            "0x54"
+          ]
+        },
+        {
+          "pc": 163,
+          "invoke": "Lorg/w3c/dom/Document;->createElement"
+        },
+        {
+          "pc": 167,
+          "constString": "name",
+          "register": 7
+        },
+        {
+          "pc": 169,
+          "constString": "switch",
+          "register": 8
+        },
+        {
+          "pc": 171,
+          "invokeRegisterWords": [
+            "0x4071",
+            "0x4a",
+            "0x8754"
+          ]
+        },
+        {
+          "pc": 171,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add"
+        },
+        {
+          "pc": 174,
+          "constString": "fullname",
+          "register": 7
+        },
+        {
+          "pc": 176,
+          "constString": "Nintendo Switch",
+          "register": 9
+        },
+        {
+          "pc": 178,
+          "invokeRegisterWords": [
+            "0x4071",
+            "0x4a",
+            "0x9754"
+          ]
+        },
+        {
+          "pc": 178,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add"
+        },
+        {
+          "pc": 183,
+          "constString": "SAMBOX-Vfull/sistema/roms/switch",
+          "register": 9
+        },
+        {
+          "pc": 185,
+          "invokeRegisterWords": [
+            "0x3070",
+            "0x5",
+            "0x9e7"
+          ]
+        },
+        {
+          "pc": 185,
+          "invoke": "Ljava/io/File;-><init>"
+        },
+        {
+          "pc": 188,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0xc",
+            "0x7"
+          ]
+        },
+        {
+          "pc": 188,
+          "invoke": "Ljava/io/File;->toPath"
+        },
+        {
+          "pc": 194,
+          "invokeRegisterWords": [
+            "0x2071",
+            "0x2e",
+            "0x9e"
+          ]
+        },
+        {
+          "pc": 194,
+          "invoke": "Ljava/nio/file/Files;->createDirectories"
+        },
+        {
+          "pc": 197,
+          "constString": "path",
+          "register": 14
+        },
+        {
+          "pc": 199,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0x6",
+            "0x7"
+          ]
+        },
+        {
+          "pc": 199,
+          "invoke": "Ljava/io/File;->getAbsolutePath"
+        },
+        {
+          "pc": 203,
+          "invokeRegisterWords": [
+            "0x4071",
+            "0x4a",
+            "0x7e54"
+          ]
+        },
+        {
+          "pc": 203,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add"
+        },
+        {
+          "pc": 206,
+          "constString": "extension",
+          "register": 14
+        },
+        {
+          "pc": 208,
+          "constString": ".nsp .xci .nca .nro",
+          "register": 7
+        },
+        {
+          "pc": 210,
+          "invokeRegisterWords": [
+            "0x4071",
+            "0x4a",
+            "0x7e54"
+          ]
+        },
+        {
+          "pc": 210,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add"
+        },
+        {
+          "pc": 213,
+          "constString": "command",
+          "register": 14
+        },
+        {
+          "pc": 215,
+          "constString": "android: package=org.emulationstation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1",
+          "register": 7
+        },
+        {
+          "pc": 217,
+          "invokeRegisterWords": [
+            "0x4071",
+            "0x4a",
+            "0x7e54"
+          ]
+        },
+        {
+          "pc": 217,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add"
+        },
+        {
+          "pc": 220,
+          "constString": "platform",
+          "register": 14
+        },
+        {
+          "pc": 222,
+          "invokeRegisterWords": [
+            "0x4071",
+            "0x4a",
+            "0x8e54"
+          ]
+        },
+        {
+          "pc": 222,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add"
+        },
+        {
+          "pc": 225,
+          "constString": "theme",
+          "register": 14
+        },
+        {
+          "pc": 227,
+          "invokeRegisterWords": [
+            "0x4071",
+            "0x4a",
+            "0x8e54"
+          ]
+        },
+        {
+          "pc": 227,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add"
+        },
+        {
+          "pc": 230,
+          "invokeRegisterWords": [
+            "0x2072",
+            "0x5d",
+            "0x56"
+          ]
+        },
+        {
+          "pc": 230,
+          "invoke": "Lorg/w3c/dom/Element;->appendChild"
+        },
+        {
+          "pc": 235,
+          "conditionalOpcode": "0x39",
+          "targetPc": 240
+        },
+        {
+          "pc": 237,
+          "constString": "j\u00e1 configurado",
+          "register": 14
+        },
+        {
+          "pc": 239,
+          "returnOpcode": "0x11"
+        },
+        {
+          "pc": 240,
+          "conditionalOpcode": "0x38",
+          "targetPc": 270
+        },
+        {
+          "pc": 244,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0x8",
+            "0x0"
+          ]
+        },
+        {
+          "pc": 244,
+          "invoke": "Ljava/io/File;->getParentFile"
+        },
+        {
+          "pc": 248,
+          "constString": "es_systems.cfg.pre-turboeden.bak",
+          "register": 5
+        },
+        {
+          "pc": 250,
+          "invokeRegisterWords": [
+            "0x3070",
+            "0x5",
+            "0x52e"
+          ]
+        },
+        {
+          "pc": 250,
+          "invoke": "Ljava/io/File;-><init>"
+        },
+        {
+          "pc": 253,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0xc",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 253,
+          "invoke": "Ljava/io/File;->toPath"
+        },
+        {
+          "pc": 259,
+          "invokeRegisterWords": [
+            "0x2071",
+            "0x30",
+            "0x2e"
+          ]
+        },
+        {
+          "pc": 259,
+          "invoke": "Ljava/nio/file/Files;->exists"
+        },
+        {
+          "pc": 263,
+          "conditionalOpcode": "0x39",
+          "targetPc": 270
+        },
+        {
+          "pc": 267,
+          "invokeRegisterWords": [
+            "0x3071",
+            "0x2d",
+            "0x2e1"
+          ]
+        },
+        {
+          "pc": 267,
+          "invoke": "Ljava/nio/file/Files;->copy"
+        },
+        {
+          "pc": 272,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0x8",
+            "0x0"
+          ]
+        },
+        {
+          "pc": 272,
+          "invoke": "Ljava/io/File;->getParentFile"
+        },
+        {
+          "pc": 276,
+          "constString": "es_systems.cfg.turboeden.tmp",
+          "register": 2
+        },
+        {
+          "pc": 278,
+          "invokeRegisterWords": [
+            "0x3070",
+            "0x5",
+            "0x20e"
+          ]
+        },
+        {
+          "pc": 278,
+          "invoke": "Ljava/io/File;-><init>"
+        },
+        {
+          "pc": 281,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0xc",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 281,
+          "invoke": "Ljava/io/File;->toPath"
+        },
+        {
+          "pc": 285,
+          "invokeRegisterWords": [
+            "0x71",
+            "0x45",
+            "0x0"
+          ]
+        },
+        {
+          "pc": 285,
+          "invoke": "Ljavax/xml/transform/TransformerFactory;->newInstance"
+        },
+        {
+          "pc": 289,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0x46",
+            "0x0"
+          ]
+        },
+        {
+          "pc": 289,
+          "invoke": "Ljavax/xml/transform/TransformerFactory;->newTransformer"
+        },
+        {
+          "pc": 293,
+          "constString": "indent",
+          "register": 2
+        },
+        {
+          "pc": 295,
+          "constString": "yes",
+          "register": 5
+        },
+        {
+          "pc": 297,
+          "invokeRegisterWords": [
+            "0x306e",
+            "0x43",
+            "0x520"
+          ]
+        },
+        {
+          "pc": 297,
+          "invoke": "Ljavax/xml/transform/Transformer;->setOutputProperty"
+        },
+        {
+          "pc": 300,
+          "constString": "encoding",
+          "register": 2
+        },
+        {
+          "pc": 302,
+          "constString": "UTF-8",
+          "register": 5
+        },
+        {
+          "pc": 304,
+          "invokeRegisterWords": [
+            "0x306e",
+            "0x43",
+            "0x520"
+          ]
+        },
+        {
+          "pc": 304,
+          "invoke": "Ljavax/xml/transform/Transformer;->setOutputProperty"
+        },
+        {
+          "pc": 309,
+          "invokeRegisterWords": [
+            "0x2070",
+            "0x47",
+            "0x42"
+          ]
+        },
+        {
+          "pc": 309,
+          "invoke": "Ljavax/xml/transform/dom/DOMSource;-><init>"
+        },
+        {
+          "pc": 314,
+          "invokeRegisterWords": [
+            "0x1072",
+            "0x34",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 314,
+          "invoke": "Ljava/nio/file/Path;->toFile"
+        },
+        {
+          "pc": 318,
+          "invokeRegisterWords": [
+            "0x2070",
+            "0x48",
+            "0x54"
+          ]
+        },
+        {
+          "pc": 318,
+          "invoke": "Ljavax/xml/transform/stream/StreamResult;-><init>"
+        },
+        {
+          "pc": 321,
+          "invokeRegisterWords": [
+            "0x306e",
+            "0x44",
+            "0x420"
+          ]
+        },
+        {
+          "pc": 321,
+          "invoke": "Ljavax/xml/transform/Transformer;->transform"
+        },
+        {
+          "pc": 335,
+          "invokeRegisterWords": [
+            "0x3071",
+            "0x31",
+            "0x1e"
+          ]
+        },
+        {
+          "pc": 335,
+          "invoke": "Ljava/nio/file/Files;->move"
+        },
+        {
+          "pc": 345,
+          "invokeRegisterWords": [
+            "0x3071",
+            "0x31",
+            "0x1e"
+          ]
+        },
+        {
+          "pc": 345,
+          "invoke": "Ljava/nio/file/Files;->move"
+        },
+        {
+          "pc": 348,
+          "invokeRegisterWords": [
+            "0x1071",
+            "0x2f",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 348,
+          "invoke": "Ljava/nio/file/Files;->deleteIfExists"
+        },
+        {
+          "pc": 353,
+          "constString": "Switch configurado para TurboEden (",
+          "register": 0
+        },
+        {
+          "pc": 355,
+          "invokeRegisterWords": [
+            "0x2070",
+            "0x27",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 355,
+          "invoke": "Ljava/lang/StringBuilder;-><init>"
+        },
+        {
+          "pc": 358,
+          "invokeRegisterWords": [
+            "0x206e",
+            "0x28",
+            "0xae"
+          ]
+        },
+        {
+          "pc": 358,
+          "invoke": "Ljava/lang/StringBuilder;->append"
+        },
+        {
+          "pc": 361,
+          "constString": " sistema(s))",
+          "register": 0
+        },
+        {
+          "pc": 363,
+          "invokeRegisterWords": [
+            "0x206e",
+            "0x2a",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 363,
+          "invoke": "Ljava/lang/StringBuilder;->append"
+        },
+        {
+          "pc": 366,
+          "invokeRegisterWords": [
+            "0x106e",
+            "0x2b",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 366,
+          "invoke": "Ljava/lang/StringBuilder;->toString"
+        },
+        {
+          "pc": 370,
+          "returnOpcode": "0x11"
+        },
+        {
+          "pc": 372,
+          "invokeRegisterWords": [
+            "0x1071",
+            "0x2f",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 372,
+          "invoke": "Ljava/nio/file/Files;->deleteIfExists"
+        },
+        {
+          "pc": 378,
+          "constString": "Raiz inesperada em es_systems.cfg",
+          "register": 0
+        },
+        {
+          "pc": 380,
+          "invokeRegisterWords": [
+            "0x2070",
+            "0x13",
+            "0xe"
+          ]
+        },
+        {
+          "pc": 380,
+          "invoke": "Ljava/io/IOException;-><init>"
+        }
+      ]
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;",
+      "method": "childText",
+      "protoIndex": 17,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Lorg/w3c/dom/Element;->getChildNodes",
+        "Lorg/w3c/dom/NodeList;->getLength",
+        "Lorg/w3c/dom/NodeList;->item",
+        "Lorg/w3c/dom/Node;->getNodeName",
+        "Ljava/lang/String;->equals",
+        "Lorg/w3c/dom/Node;->getTextContent",
+        "Ljava/lang/String;->trim"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [
+        "Lorg/w3c/dom/Element;"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;",
+      "method": "isSwitchSystem",
+      "protoIndex": 62,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->childText",
+        "Ljava/lang/String;->toLowerCase",
+        "Ljava/lang/String;->replace",
+        "Ljava/lang/String;->equals",
+        "Ljava/lang/String;->equalsIgnoreCase"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        "switch",
+        "nintendoswitch",
+        "nintendo switch"
+      ],
+      "classInstructionReferences": [],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;",
+      "method": "setCommand",
+      "protoIndex": 61,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Lorg/w3c/dom/Element;->getChildNodes",
+        "Lorg/w3c/dom/NodeList;->getLength",
+        "Lorg/w3c/dom/NodeList;->item",
+        "Lorg/w3c/dom/Node;->getNodeName",
+        "Ljava/lang/String;->equals",
+        "Lorg/w3c/dom/Element;->removeChild",
+        "Lorg/w3c/dom/Element;->getTextContent",
+        "Ljava/lang/String;->trim",
+        "Lorg/w3c/dom/Element;->getAttributes",
+        "Lorg/w3c/dom/NamedNodeMap;->getLength",
+        "Lorg/w3c/dom/NamedNodeMap;->item",
+        "Lorg/w3c/dom/Element;->removeAttributeNode",
+        "Lorg/w3c/dom/Element;->setTextContent",
+        "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->add"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        "android: package=org.emulationstation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+      ],
+      "classInstructionReferences": [
+        "Lorg/w3c/dom/Element;",
+        "Lorg/w3c/dom/Attr;"
+      ],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/TurboEdenBridge;",
+      "method": "<init>",
+      "protoIndex": 40,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Ljava/lang/Object;-><init>"
+      ],
+      "selectedClassAndLibraryLiterals": [],
+      "classInstructionReferences": [],
+      "selectedControlFlow": []
+    },
+    {
+      "dex": "classes8.dex",
+      "class": "Lorg/emulationstation/frontend/switchengine/TurboEdenBridge;",
+      "method": "prepare",
+      "protoIndex": 41,
+      "native": false,
+      "code": true,
+      "directCalls": [
+        "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->apply",
+        "Landroid/util/Log;->i",
+        "Landroid/util/Log;->e"
+      ],
+      "selectedClassAndLibraryLiterals": [
+        "EmulationStation"
+      ],
+      "classInstructionReferences": [],
+      "selectedControlFlow": [
+        {
+          "pc": 0,
+          "constString": "EmulationStation",
+          "register": 1
+        },
+        {
+          "pc": 2,
+          "invokeRegisterWords": [
+            "0x1071",
+            "0x4b",
+            "0x2"
+          ]
+        },
+        {
+          "pc": 2,
+          "invoke": "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;->apply"
+        },
+        {
+          "pc": 6,
+          "invokeRegisterWords": [
+            "0x2071",
+            "0x4",
+            "0x21"
+          ]
+        },
+        {
+          "pc": 6,
+          "invoke": "Landroid/util/Log;->i"
+        },
+        {
+          "pc": 11,
+          "constString": "Falha ao configurar TurboEden",
+          "register": 0
+        },
+        {
+          "pc": 13,
+          "invokeRegisterWords": [
+            "0x3071",
+            "0x3",
+            "0x201"
+          ]
+        },
+        {
+          "pc": 13,
+          "invoke": "Landroid/util/Log;->e"
+        },
+        {
+          "pc": 16,
+          "returnOpcode": "0xe"
+        }
+      ]
+    }
+  ],
+  "phoneStateOrSecretsIncluded": false
+}

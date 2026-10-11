@@ -1,0 +1,442 @@
+{
+  "scope": "non-Sony packaged text assets only, no remote catalog fetched",
+  "matchingEntryNames": [],
+  "textMatches": [
+    {
+      "entry": "assets/turbo-game-info/3ds.xml",
+      "bytes": 47489,
+      "sha256": "0f58fd9dcac45532e742d92f4da6eacc4467662553b676f42eb557004abce6bd",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/arcade.xml",
+      "bytes": 23951,
+      "sha256": "d743efd48157288dc66a569b6bb50cce08ee427a464cccf795f2fdcb8dfe86c7",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/atomiswave.xml",
+      "bytes": 22531,
+      "sha256": "1dabe2702191de83c779682b88ff93f6e1b1928fa1ab4541ca84ed06c65f69fa",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/cps1.xml",
+      "bytes": 28924,
+      "sha256": "9e9f04a580a0788cdac1928b73a692b24d9be0726ce67adf8e330d57742fe5b1",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/cps2.xml",
+      "bytes": 25711,
+      "sha256": "af5fd90e8686b1d8df14f07545790d1215dd850bcf38d90121a93533a1b5574b",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/cps3.xml",
+      "bytes": 6510,
+      "sha256": "ac67c49a6fd5196e0c6b324485a9b4f8e074484489c2ff432adac3dac90fecc9",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/dreamcast.xml",
+      "bytes": 45153,
+      "sha256": "36d6806e464438751b0302cd32b60983f82ad271b4c1ca369048855e5d19c166",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/fbneo.xml",
+      "bytes": 85930,
+      "sha256": "2c8875a86a645cda8c971fc96c3e7e066594ba6b50654acc4b57e49f320a207b",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/gameboy-color.xml",
+      "bytes": 487057,
+      "sha256": "bfd269cf91effcad02f6ba3290f48646179a27a76943888311061b9ac3797728",
+      "literalTokens": [
+        "sandbox",
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/gamegear.xml",
+      "bytes": 307708,
+      "sha256": "6930a9567be1ceafa39f1106299a1fc8377301742ec9c39a6603948a89abceb1",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/gba.xml",
+      "bytes": 129987,
+      "sha256": "160803cb93670ee3a534bb0fc3af0fb8f8536361d7e5aad71c0552e9bd7f2a2e",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/jaguar.xml",
+      "bytes": 54920,
+      "sha256": "e1848d4a2f732a9ee702e41c7fe2b5effcdd09f2918067f1f900cea3626dcf6d",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/mame.xml",
+      "bytes": 1610510,
+      "sha256": "4a32086a9e6d77024302506f469b7b742ff62316e67db59ac591c3916ce2404f",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/master-system.xml",
+      "bytes": 343592,
+      "sha256": "0bb1c2e901336444f0d5a85dc9b49cd157a4bbf478de9a278045bf772b32d694",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/megadrive-br.xml",
+      "bytes": 91832,
+      "sha256": "cc25436e521e1bbddc1a262e65f0149ea1653f5c8532d14238db909595140b70",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/megadrive.xml",
+      "bytes": 948851,
+      "sha256": "c8a7988b47681f9d2786ff68c9b127d18d980238c410e0239fd710363733f610",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/neo-geo-cd.xml",
+      "bytes": 23254,
+      "sha256": "e46c9ff6988f57b414f8614538198bed561c84d0bb6cca0ef510915dc1cc9aa0",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/neo-geo.xml",
+      "bytes": 139940,
+      "sha256": "152ee34a47bbc8da17ae571f21b5132d66588db2361eff9c3d172f02c529538d",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/nintendinho.xml",
+      "bytes": 811032,
+      "sha256": "022fc8af68bf71c80e5dee3337aeabfb9e37f115a0d1ca238efb6665b765805e",
+      "literalTokens": [
+        "sandbox",
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/nintendo-64-br.xml",
+      "bytes": 28573,
+      "sha256": "647edb92a675a8e606b65465129046472951e495e972b8e5108427ef9917c419",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/nintendo-64.xml",
+      "bytes": 179045,
+      "sha256": "3460c808e9cd7e67aa1a4ea788bf8aca939cf947de6824fc9b86b0250ec8817d",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/nintendo-ds.xml",
+      "bytes": 19517,
+      "sha256": "8820a6fcd9b258d7cdf48bae8129b35bd5b4e93290c00a1a85ee291e2f4b1ce4",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/pc-engine-cd.xml",
+      "bytes": 3232,
+      "sha256": "981977601a24532aca403f34d5d6a92a1314513e30259320c2b68b88b594d721",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/pc-engine.xml",
+      "bytes": 74125,
+      "sha256": "71c74634343e1df918b25e71db99f8a88594e041fcd4a3870d8e58aa7aaf363c",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/playstation-1.xml",
+      "bytes": 146021,
+      "sha256": "32d2094f5580d92b09b98c2639d842aa3c29e06c3a0ed04e085528247b276f3a",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/playstation-2-br.xml",
+      "bytes": 278330,
+      "sha256": "879181da44531daac6a4a2fdb2531da7ce15e4ddb89f3ffcb79377d1b1817064",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/playstation-2.xml",
+      "bytes": 85631,
+      "sha256": "eb0641b490fcc18ccd2370afe8d64057d9874ccda07a92d79c02c867681a3101",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/psp.xml",
+      "bytes": 72289,
+      "sha256": "64d6391b94e6b63c7980216e0f4c23dc1419d7282633532ae5a1ecf0ca8eb362",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/sega32x.xml",
+      "bytes": 42316,
+      "sha256": "3bd5b806c0b5f317e70b47161aea411141af9c724c426d655c59f262561fbdfb",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/super-nintendo-br.xml",
+      "bytes": 244349,
+      "sha256": "933ca15c69166022517e3f9ece6c02c3c72f6bbb524fec77d05b9eb96b189b8b",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/super-nintendo.xml",
+      "bytes": 961287,
+      "sha256": "5a6ff1a6a75584a4186ee1797e345c852d2597fc2d00c10c781974aa88c9fc12",
+      "literalTokens": [
+        "sandbox",
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/supergrafx.xml",
+      "bytes": 7136,
+      "sha256": "f8ce1608ed3d0d98d2d6ecad018f11ecb3d24afcb6fb2a6bd147e3b99359bb6c",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/switch.xml",
+      "bytes": 151989,
+      "sha256": "4f2caf85e285c79258177ef7d4ef21c6a7eeff3437f9029cb4ce0f98e9e1ef03",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/turbo-game-info/wii.xml",
+      "bytes": 15264,
+      "sha256": "5481d78541c44bca2164e75e6fffac5a8a07a92da55107f3ba6c92ac0dc9318c",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/saturn-leds/catalog-change.json",
+      "bytes": 1947,
+      "sha256": "a9805c74368b2432e708f765eaba77d15a9a63d7089bd2685c831302e7006973",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/platform-refresh/local-setup-provenance.json",
+      "bytes": 1087,
+      "sha256": "0c35a166492a0cd91f4716dd9bf8a05b1d6446dd1303f71a1615eee3d356bef6",
+      "literalTokens": [
+        "sambox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/022fc8af68bf71c80e5dee3337aeabfb9e37f115a0d1ca238efb6665b765805e.xml",
+      "bytes": 656508,
+      "sha256": "c61c97fc1368ca254c53671b1a649b1670e7aae5b98423b14eae3ff2caad3d23",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/237f3c70b3fa1d3a5f0ea67f5a7b6981ecaf4b7916c43bcbe87b3c6078ae7e03.xml",
+      "bytes": 730742,
+      "sha256": "b636bbc5ce669a8f6e3e3eb613adf3bbba4bb469efc7eb4bf3a7e016f7382beb",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/37f7c6f63efad8a90bf721de03763154c1e86f5b02a154208a176b322b8dc414.xml",
+      "bytes": 583616,
+      "sha256": "d56aa05358f0d5bbba4050b6881b0d29ecaf397460268a4e0a877d6a759d34fb",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/49cf17c021e2cc4cb46f14b3c1c681ca1e303764b765d6e7203fd4e71138e3ae.xml",
+      "bytes": 30841,
+      "sha256": "7e9da4bf11d5ad8e61684128ba63164bcb24c4417d50419bea4fcd1ef0d9256f",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/5a6ff1a6a75584a4186ee1797e345c852d2597fc2d00c10c781974aa88c9fc12.xml",
+      "bytes": 793400,
+      "sha256": "1ffc5fec299767774ccf6a7e67774e8b9fb30c7b90c4e861df9ba328a0ed4eef",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/733b6ef4c642d171ca71edf23f6426bb4e2720899888740c6660aa826a90e3cc.xml",
+      "bytes": 778853,
+      "sha256": "4e9195c0312a46ca5726888b12111fbc58edfbad1068aedea8142540d5ef3619",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/9dbf0f39da2ea38c8d41f862309a7fcd74734f73036ac79334eee70b2d35e87f.xml",
+      "bytes": 906065,
+      "sha256": "6e7a802b193d9f9899b14b9fdeb88ff5b218112834083294db1fd92f02e87c49",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/a8d6d99988bcf0ab2d83db4286b443cdf74727f56401c788ee03a1458903f0d3.xml",
+      "bytes": 1020580,
+      "sha256": "8ed9af96ff4f10095aae2a9caf87172d973e2293c45abe92cf61bcbccd356967",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/ae7e0b37cfbd60378b93d401620539044cd7714b2102eeaebc11bd60de99f0d0.xml",
+      "bytes": 531211,
+      "sha256": "23ecc8155fee12dab602b0c85b082f6c653859aaba7f98797771454280c1bd8d",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xml/bfd269cf91effcad02f6ba3290f48646179a27a76943888311061b9ac3797728.xml",
+      "bytes": 391303,
+      "sha256": "f95fc261a5180cda90782dfef3eada5268888135b3915aa2e4dab9154d6fd8df",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/megadrive.xml",
+      "bytes": 742975,
+      "sha256": "0fa2b0804d511c1442628dfb2f18fa714c99301ded44b548434c8a91e2e379e4",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    },
+    {
+      "entry": "assets/station-metadata/xbox360.xml",
+      "bytes": 1727022,
+      "sha256": "78d653a6f29999212b879d64c0e23066850699cea869b2a7f806dfc8e369a985",
+      "literalTokens": [
+        "sandbox"
+      ],
+      "pathLikeSandboxValues": []
+    }
+  ],
+  "privateMaterialIncluded": false
+}
