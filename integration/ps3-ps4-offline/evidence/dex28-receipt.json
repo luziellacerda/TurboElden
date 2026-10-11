@@ -1,0 +1,13 @@
+{
+  "donorSha256": "5966ef8405701fa946c60fe6d922726cd74c27783a4cb76d240dfa4bc324de9d",
+  "sha256": "b01b0c9ca4d60dd5e257831cd7fb158ba5622039c990294896624b6a479128e4",
+  "classCount": 271,
+  "unchangedClasses": 270,
+  "changedType": "Lorg/emulationstation/frontend/station/StationPlatforms;",
+  "changedMethods": [
+    "<clinit>"
+  ],
+  "exactSourceInverse": true,
+  "actualAssembledDexOtherClassesVerified": true,
+  "factoryPreserved": true
+}

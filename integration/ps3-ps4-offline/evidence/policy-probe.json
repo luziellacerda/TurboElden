@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": 37,
+  "scope": "Policy execution on local JVM, not Android gameplay",
+  "probeSha256": "a137507adad60adf12cfe88333e55aa4fbc3c3fa66bcee4bac92b50b18d33e18",
+  "policySha256": "960da6dfdf66bef5925164db87712412da8b49586bd1705488967236465bf21f",
+  "apkProduced": false,
+  "phoneOperated": false
+}

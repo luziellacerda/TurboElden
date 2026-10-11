@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "baseApkSha256": "a350878cca5c1a65c51e79ac13e9e38c2053d76e5404edb515ad1ddd650c3038",
+  "sourceSha256": {
+    "java/org/emulationstation/frontend/offline/StationSonyOfflineActivity.java": "e7701a030ed54a16dabdd7e66fb8cc785112722ebc747fc686e12d0ba16a5d88",
+    "java/org/emulationstation/frontend/offline/StationSonyOfflinePolicy.java": "960da6dfdf66bef5925164db87712412da8b49586bd1705488967236465bf21f",
+    "native/offline_routes.h": "085b5a630aa4a6e18673bebd69c9bd82609259ba1e842c579ffeb894ff3ffadb",
+    "recipe/assemble_apk.py": "bcce272cf5052075982cee8e1d60dbe3be88e5f92f023d583320e12eae4ebdc8",
+    "recipe/build_offline_payloads.py": "ebbd5346914c44056f7043dad8dedc61c5d27474a8d4d3ebb5776165bacaeeae",
+    "recipe/build_runtime_identity.py": "db4775fa0c55dea8c0d3ab44667a9425c8ccf69d4767401fac48fe8997f365ed",
+    "recipe/patch_manifest.py": "83320c1f2d78ce22385e685c5ccde0d8eb589608e422e14fb646ea8783d73eef",
+    "recipe/patch_native.py": "4dbeade73fa89f9beee5ed6f0bc2853c68406e29c82d0441c488ac0a37d2d41f",
+    "recipe/patch_platforms.py": "e4cf6ce90f0aac0a1ee63f8db76488382f1a30debc4cca605bbe2f8c657d4977",
+    "recipe/pipeline_common.py": "3c00b49e07052ff8dc0301fbbe0b3e7ff926d084f2da7db3e125097fd9e7b8ec",
+    "recipe/verify_final.py": "4dea6f40b38e75aba934cd32e712629b7ae0c8661569888272fbfad375b5d6fb",
+    "catalog-platforms.json": "122bd2099e22522d9a83def708bc829ee095081425a5bf7269d5703a45232299"
+  },
+  "payloads": {
+    "AndroidManifest.xml": {
+      "sha256": "acda0e4404e29764a32fb3452b69899dc4501b63100376620a7e41a2ad85ff31",
+      "bytes": 63880
+    },
+    "classes28.dex": {
+      "sha256": "b01b0c9ca4d60dd5e257831cd7fb158ba5622039c990294896624b6a479128e4",
+      "bytes": 304840
+    },
+    "classes39.dex": {
+      "sha256": "9d27e997cb62897a5a0448fc5100235e2840531a195ec3fd71a1a25dedd088a7",
+      "bytes": 18204
+    },
+    "libturbo_carousel.so": {
+      "sha256": "0d76a7a15cedd8d9e74c3824b77b2d0cbbd26067c503d0770fc97ad5e374dc2b",
+      "bytes": 155323376
+    }
+  },
+  "externalEmulatorsEmbedded": false,
+  "offlineOnly": true,
+  "existingOnlineCodePreserved": true,
+  "sharedManifestAndDexRequireNewRuntimeIdentities": true,
+  "apkProduced": false,
+  "signed": false,
+  "installed": false,
+  "physicalGameplayVerified": false
+}

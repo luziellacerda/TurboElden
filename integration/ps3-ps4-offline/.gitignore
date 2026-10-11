@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.apk
+*.dex
+*.so
+*.o
+*.jar
+*.log
+build/

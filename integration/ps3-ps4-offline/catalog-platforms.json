@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "scope": "offline-only; catalogue mapping is not online engine approval",
+  "platforms": [
+    {
+      "label": "Playstation 3",
+      "folder": "ps3",
+      "aliases": ["Playstation 3", "PlayStation 3", "PlayStation3", "playstation3", "playstation-3", "ps3"]
+    },
+    {
+      "label": "Playstation 4",
+      "folder": "ps4",
+      "aliases": ["Playstation 4", "PlayStation 4", "PlayStation4", "playstation4", "playstation-4", "ps4"]
+    }
+  ],
+  "noOnlineEngineAdded": true,
+  "noGamesOrCompatibilityInvented": true
+}

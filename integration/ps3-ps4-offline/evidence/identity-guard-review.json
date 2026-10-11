@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "revision": "R128",
+  "scope": "Small isolated mocked offline receipt/CLI guard verification; no APK, native compilation, signing or phone access",
+  "testedAtUtc": "2026-10-11T12:49:45.313171+00:00",
+  "passed": true,
+  "checks": 10,
+  "cases": [
+    {
+      "case": "exact_sources_and_four_outputs_accepted",
+      "passed": true
+    },
+    {
+      "case": "changed_source_rejected",
+      "passed": true
+    },
+    {
+      "case": "changed_payload_rejected",
+      "passed": true
+    },
+    {
+      "case": "wrong_payload_byte_count_rejected",
+      "passed": true
+    },
+    {
+      "case": "missing_offline_output_rejected",
+      "passed": true
+    },
+    {
+      "case": "nonoffline_receipt_rejected",
+      "passed": true
+    },
+    {
+      "case": "cli_consumes_required_receipt_and_delegates_guarded_sources",
+      "passed": true
+    },
+    {
+      "case": "source_change_before_fingerprint_recheck_rejected",
+      "passed": true
+    },
+    {
+      "case": "payload_change_before_fingerprint_recheck_rejected",
+      "passed": true
+    },
+    {
+      "case": "missing_required_offline_receipt_rejected",
+      "passed": true
+    }
+  ],
+  "reviewedWrapperSha256": {
+    "pipeline_common.py": "3c00b49e07052ff8dc0301fbbe0b3e7ff926d084f2da7db3e125097fd9e7b8ec",
+    "build_runtime_identity.py": "db4775fa0c55dea8c0d3ab44667a9425c8ccf69d4767401fac48fe8997f365ed",
+    "assemble_apk.py": "bcce272cf5052075982cee8e1d60dbe3be88e5f92f023d583320e12eae4ebdc8",
+    "verify_final.py": "4dea6f40b38e75aba934cd32e712629b7ae0c8661569888272fbfad375b5d6fb"
+  },
+  "productiveSourcesModified": false,
+  "reviewedSourcesUnchangedDuringVerification": true,
+  "apkOpened": false,
+  "apkBuilt": false,
+  "phoneOperated": false,
+  "serverChanged": false,
+  "temporaryFixturesCleaned": true,
+  "compiledOfflineReceiptRequired": true,
+  "existingOnlineEngineRecordsNotExtended": true
+}

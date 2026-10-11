@@ -1,0 +1,175 @@
+{
+  "schema": "turbo-offline-upstream-inspection.v1",
+  "scope": "Static audit of two authorized official Android release APKs; offline only",
+  "auditedAtUtc": "2026-10-11",
+  "gameplayValidated": false,
+  "phoneInstalled": false,
+  "sharedR127ModulesChanged": false,
+  "artifacts": [
+    {
+      "system": "ps3",
+      "project": "aPS3e",
+      "repo": "https://github.com/aenu1/aps3e",
+      "release": "https://github.com/aenu1/aps3e/releases/tag/2.43",
+      "download": "https://github.com/aenu1/aps3e/releases/download/2.43/2.43.apk",
+      "publishedAtUtc": "2026-10-05T09:08:05Z",
+      "localFilename": "aps3e-2.43.apk",
+      "bytes": 40122859,
+      "apiPublishedSha256": "c5a58fb056ae333b8bd6ed69e6bfacdd1e5bf7e0ac2134456a0622bd94a3e466",
+      "actualSha256": "c5a58fb056ae333b8bd6ed69e6bfacdd1e5bf7e0ac2134456a0622bd94a3e466",
+      "sha256Matches": true,
+      "signatureVerified": true,
+      "signatureSchemeV2": true,
+      "signingCertificateSha256": "7acaebec9e121cf269d2654a40423463456dd3bde8219a4d1359bf38138690ca",
+      "package": "aenu.aps3e",
+      "versionName": "2.43",
+      "versionCode": 43,
+      "minSdk": 28,
+      "targetSdk": 36,
+      "abis": [
+        "arm64-v8a"
+      ],
+      "launcher": "aenu.aps3e.QuickStartActivity",
+      "directActivity": "aenu.aps3e.EmulatorActivity",
+      "exported": true,
+      "process": ":emu",
+      "launchMode": "singleTask",
+      "action": "aenu.intent.action.APS3E",
+      "actualReadExtras": [
+        "iso_uri",
+        "game_dir",
+        "meta_info"
+      ],
+      "externalLaunch": {
+        "preferredExtra": "iso_uri",
+        "extraType": "String",
+        "value": "content URI for the user-selected valid PS3 ISO",
+        "readGrant": "Intent data and ClipData contain the same URI; FLAG_GRANT_READ_URI_PERMISSION; temporary receiver-task lifetime grant",
+        "alternateExtra": "game_dir",
+        "alternateValue": "Actual emulator-accessible extracted PS3 game directory path",
+        "notRead": [
+          "Intent.data as game-selection input"
+        ],
+        "doNotSend": [
+          "internal serialized meta_info",
+          "both iso_uri and game_dir together"
+        ],
+        "resultProtocol": "No setResult or external return protocol found; do not infer gameplay result from Activity dispatch",
+        "onNewIntentOverride": false,
+        "alreadyRunningLimit": "singleTask may route new launch to the existing emulator instance; no audited external replace-game contract"
+      },
+      "prerequisites": [
+        "Install user-provided PS3 firmware inside emulator",
+        "Provide valid ISO or extracted game; encrypted content requires its own key setup",
+        "Do not treat PKG as directly bootable ISO"
+      ],
+      "dex": {
+        "entry": "classes.dex",
+        "bytes": 9183788,
+        "sha256": "7fddde22d1665c15c6eba4302fc376a7cbacb35db20197425c9f32b688915128"
+      },
+      "sourceCommit": "b5ae1af50d5e2f3b705506e7380a4504e086840b",
+      "sourceActivity": "https://github.com/aenu1/aps3e/blob/b5ae1af50d5e2f3b705506e7380a4504e086840b/app/src/main/java/aenu/aps3e/EmulatorActivity.java",
+      "limits": [
+        "Experimental mobile compatibility/performance",
+        "A56/Edge30 gameplay and thermals not validated",
+        "External native emulator package; no engine embedded into TurboStations by this audit"
+      ]
+    },
+    {
+      "system": "ps4",
+      "project": "Bachata S4",
+      "repo": "https://github.com/JICA98/Bachata-S4",
+      "release": "https://github.com/JICA98/Bachata-S4/releases/tag/v0.2.4",
+      "download": "https://github.com/JICA98/Bachata-S4/releases/download/v0.2.4/bachatas4-0.2.4-release.apk",
+      "publishedAtUtc": "2026-09-30T19:28:09Z",
+      "releaseCommit": "30669bb40cca1da3960562a81361d2b24975d630",
+      "localFilename": "bachatas4-0.2.4-release.apk",
+      "bytes": 207779222,
+      "apiPublishedSha256": "4077b0d0b80e354c71eff1ce2c003f122449ac266eb27a6ac26744d3f9809a08",
+      "actualSha256": "4077b0d0b80e354c71eff1ce2c003f122449ac266eb27a6ac26744d3f9809a08",
+      "sha256Matches": true,
+      "signatureVerified": true,
+      "signatureSchemeV2": true,
+      "signingCertificateSha256": "a1d6e9aa7b3ff5ae3354f082b133b4d37b156be8aeaf704b0bfaaaee625761ee",
+      "package": "com.bachatas4.android.github",
+      "versionName": "0.2.4",
+      "versionCode": 26100114,
+      "minSdk": 31,
+      "targetSdk": 37,
+      "abis": [
+        "arm64-v8a"
+      ],
+      "launcher": "com.bachatas4.android.MainActivity",
+      "launcherExported": true,
+      "directActivity": "com.bachatas4.android.DirectLaunchActivity",
+      "exported": true,
+      "directIntentFilter": false,
+      "externalLaunch": {
+        "componentPackage": "com.bachatas4.android.github",
+        "componentClass": "com.bachatas4.android.DirectLaunchActivity",
+        "extra": "game_id",
+        "extraType": "String",
+        "idRegex": "^[A-Z]{4}[0-9]{5}$",
+        "idSource": "Verified title ID from actual game/package metadata; do not invent from a display title",
+        "repositoryLookup": "SELECT * FROM games WHERE id = ?",
+        "validation": "Imported game must exist and its id must equal trimmed supplied game_id",
+        "notRead": [
+          "Intent.data",
+          "game path",
+          "URI as a boot input"
+        ],
+        "missingImportError": "Imported game <id> was not found",
+        "resultProtocol": "No external return protocol audited"
+      },
+      "import": {
+        "activity": "com.bachatas4.android.MainActivity",
+        "action": "android.intent.action.VIEW",
+        "mime": "application/x-pkg",
+        "contentUriReadGrant": true,
+        "alternateMime": "application/octet-stream with content scheme and .pkg/.PKG suffix",
+        "boot": false,
+        "note": "PKG import/setup and direct title-ID launch are separate operations"
+      },
+      "prerequisites": [
+        "Initial runtime setup inside emulator",
+        "Compatible GPU/Vulkan driver",
+        "User-provided game must already be imported for title-ID direct launch"
+      ],
+      "dex": {
+        "entry": "classes.dex",
+        "bytes": 4918952,
+        "sha256": "0b33b62b7663370587fbcf1b14fdb54ba97990d9e7e205f50c8cbf976be56052"
+      },
+      "maintainedCoreSource": "https://github.com/zenithblue-oss/shadps4-arm64",
+      "frontendSourceAvailability": "Current public maintained source tree did not contain the advertised Android frontend; launch contract verified from exact official release APK rather than an obsolete fork",
+      "compatibilitySnapshot": {
+        "tested": 9,
+        "ingame": 6,
+        "menus": 1,
+        "boots": 2,
+        "playable": 0,
+        "source": "https://github.com/JICA98/Bachata-S4"
+      },
+      "limits": [
+        "Experimental Android shadPS4/FEX runtime",
+        "Official ingame status is not full-playability assurance",
+        "Recommended recent high-end Snapdragon/Adreno; no A56/Edge30 gameplay validation",
+        "Play Store package/certificate must not be treated as this audited GitHub artifact identity"
+      ]
+    }
+  ],
+  "staticAuditOnly": [
+    "No APK installed",
+    "No game launched",
+    "No BIOS/firmware/ROM/key extracted or bundled",
+    "No server mutation",
+    "No app source mutation",
+    "Only selected DEX classes decoded"
+  ],
+  "androidSources": [
+    "https://developer.android.com/training/secure-file-sharing/share-file",
+    "https://developer.android.com/reference/android/app/Activity",
+    "https://developer.android.com/guide/components/activities/tasks-and-back-stack"
+  ]
+}
