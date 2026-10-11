@@ -167,8 +167,9 @@ def main():
     native_check=native_patch.verify(original_native,artwork_native)
     settings_module=module(ROOT/'recipe/patch_sony_settings.py','sony_settings')
     settings_original=resolved['d0/native_settings.h'].read_bytes()
-    settings_header=settings_module.patch(settings_original)
-    settings_check=settings_module.verify(settings_original,settings_header)
+    artwork_native,settings_header,settings_check=settings_module.patch_settings(artwork_native,settings_original)
+    if not settings_check.get('nativeCppExactInverse') or not settings_check.get('sonyLabelsDrawnOnlyByOpenSettingsModal'):
+        raise ValueError('Sony settings owned labels must be scoped to the open modal')
     (native_out/'native_settings.h').write_bytes(settings_header)
     media_module=module(ROOT/'recipe/sony_media.py','sony_media')
     media=media_module.prepare(a.native_inputs,a.ndk,a.prepared_media or a.out/'sony-media',a.ffmpeg,a.ffprobe,media_root=a.media_root)
@@ -207,7 +208,9 @@ def main():
         'sourceSha256':frozen,'parentSourceSha256':parent_sources,'parentNativeSourceInputs':parent_inputs,
         'payloads':payloads,'nativeBaselineSha256':baseline_native_sha,'baselineNativeByteIdentical':True,
         'preservedParentPayloadSha256':preserved,'offlineOnly':True,'localDisplayOnly':True,
-        'signedCatalogChanged':False,'realDownloadsChanged':False,'graphicsRenderMethodsChanged':False,
+        'signedCatalogChanged':False,'realDownloadsChanged':False,'graphicsRenderMethodsChanged':True,
+        'graphicsRenderChangeScope':'two-new-Sony-settings-owned-label-exclusions-only',
+        'existingCarouselGeometryAndEffectRenderMethodsChanged':False,
         'existingOnlineCodePreserved':True,'sharedDexRequiresNewRuntimeIdentities':True,
         'sonyLocalPlatformVideosAdded':['ps3','ps4'],
         'sonyEmulatorConfigurationMenuAdded':['ps3','ps4'],

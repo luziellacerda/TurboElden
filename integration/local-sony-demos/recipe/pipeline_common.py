@@ -106,8 +106,17 @@ def verify_compilation(parent_receipt_path, parent_payloads, demo_receipt_path, 
     if (demo.get("passed") is not True or demo.get("offlineOnly") is not True or
             demo.get("localDisplayOnly") is not True or demo.get("signedCatalogChanged") is not False or
             demo.get("donorApkSha256") != DONOR_SHA or demo.get("realDownloadsChanged") is not False or
-            demo.get("graphicsRenderMethodsChanged") is not False or demo.get("existingOnlineCodePreserved") is not True):
+            demo.get("graphicsRenderMethodsChanged") is not True or
+            demo.get("graphicsRenderChangeScope") != "two-new-Sony-settings-owned-label-exclusions-only" or
+            demo.get("existingCarouselGeometryAndEffectRenderMethodsChanged") is not False or
+            demo.get("existingOnlineCodePreserved") is not True):
         raise ValueError("Successful local-only demonstration compilation from exact R128 required")
+    native = read(Path(demo_receipt_path).parent / "native-receipt.json")
+    settings = native.get("sonySettingsMenuReceipt", {})
+    if (native.get("sha256") != demo["payloads"]["libturbo_carousel.so"]["sha256"] or
+            settings.get("nativeCppExactInverse") is not True or
+            settings.get("sonyLabelsDrawnOnlyByOpenSettingsModal") is not True):
+        raise ValueError("Compiled Sony modal label guard is missing or binds another native payload")
     if demo.get("sourceSha256") != demo_source_map():
         raise ValueError("Local demonstration sources changed after compilation")
     expected_parent = {name: sha(PARENT / name) for name in PARENT_JAVA}
