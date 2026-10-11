@@ -1,0 +1,5 @@
+# Compilar a R124
+
+Finalize os três manifestos atuais e use `build.py --prepare`, `--compile`, `--package`, nesta ordem. A base obrigatória é a R122 com SHA dc36a8f978aaab9fef507acd2a59281aa52a4827914c2d8d10b93b4b56cfe339; Java e native atuais incluem a R123 e os três deltas R124. Informar JDK17, API34, D8, NDKr28c, inputs privados existentes e ferramentas de assinatura. `--link-private-native-inputs` evita duplicar os45 objetos privados hash conferidos, no mesmo volume. `--native-output` permite uma pasta nova de artefatos nativos em G:, com fontes/staging/recibos em E:.
+
+Não reutilizar native R123, pois o orçamento de vídeo mudou. A chave local deve corresponder ao certificado7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825; fornecer senhas por variáveis de ambiente selecionadas, sem defaults no código. A receita compara todas as entradas do APK com a base, guarda runtime/manifesto/engines e recusa sobrescrever artefatos. Instalação explícita com `recipes/install_r124.py`, telefone autorizado no carrossel e sem jogo/download ativo, update direto sem cópia adicional. As provas isoladas são separadas; não há gameplay automático.

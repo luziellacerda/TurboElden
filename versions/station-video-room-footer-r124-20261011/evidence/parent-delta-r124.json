@@ -1,0 +1,17 @@
+{
+  "sourceParentVersion": "R123",
+  "sourceParentCommit": "76a8e34a1aa202dd277f0a1ed043beb436629209",
+  "parentAPKHash": "0bf964d516fcd1bbe26e3a8995ffc59c3580fd9162bd7e4e6352e01dc7169098",
+  "candidateAPKHash": "aeeb2f8167a442db5a58b990cf6d45b613fab42b1e7a9bbc0bf3214b260420c4",
+  "changedPayloads": [
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "unchangedRecompiledPayloads": [
+    "classes28.dex",
+    "lib/arm64-v8a/libstation_frontend.so"
+  ],
+  "fullR122EntryComparisonPassed": true,
+  "unchangedEntriesTransitivelyMatchR123": true,
+  "nativeRuntimeUnchanged": true
+}

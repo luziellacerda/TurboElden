@@ -1,0 +1,17 @@
+{
+  "version": "R124",
+  "sourceParentCommit": "76a8e34a1aa202dd277f0a1ed043beb436629209",
+  "sourceParent": "R123",
+  "packageBaseline": "R122",
+  "changedProductiveSources": {
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationExitPanel.java": "881d0309c79a14485ac9f8bf848b3b6e55833f638a44e2531b741f6ac8c45ada",
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": "6d9c0e0d0c0f481bde173c2863e4fdb955b4663f3c65fccd09e23edb499f3c0a",
+    "native/d0/native_system_video720.h": "6a5bdc4e6a83e2dd490ee7a52e69bbd02c1ea9433155b3cfb1144dc86d5d0a78"
+  },
+  "javaSources": 234,
+  "nativeInputs": 124,
+  "frontendSources": 12,
+  "allOtherProductiveSourcesByteIdentical": true,
+  "engineRuntimeControllerAuthDownloadGraphicsPoliciesUnchanged": true,
+  "historicalSnapshotsPreserved": true
+}

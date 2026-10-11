@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "Real StationExitPanel source compiled/executed against recording host UI stubs; real source also compiled against Android API34 and unchanged room/client dependencies. No Android pixel rendering, gameplay, native shutdown, networking or saves validation.",
+  "cases": 280,
+  "checks": 8120,
+  "sourceGuards": [
+    "Exit callback remains a single call",
+    "Dismiss before caller-owned exit",
+    "Continue only dismisses",
+    "Create API retained",
+    "Confirm API retained",
+    "Footer is outside text scroll",
+    "Information precedes footer",
+    "No new renderer/network/timer",
+    "No promise of saved progress",
+    "Explicit title and human consequence"
+  ],
+  "javaApi34Compile": true,
+  "sha256": {
+    "exitPanel": "881d0309c79a14485ac9f8bf848b3b6e55833f638a44e2531b741f6ac8c45ada",
+    "recipe": "9e6081bbae3c864ce006c02410ac8825cdafb852c6c776ed09bc4f2886c5e0dc",
+    "androidApi34": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+    "clientJar": "011bce981b609d2cc5cfbad49c386e7f54dea1f560a17fe79bae3a56b3f8f313",
+    "roomsJar": "edb5131dafcaf78310f22d6488f0e9195fd7e347f10820e1b4bd017092c77b18"
+  },
+  "limits": [
+    "Stub tree checks do not reproduce Android measurement or window focus delivery.",
+    "Physical layout, font-scale behavior and successful engine exit remain to be observed.",
+    "Menus owned by other emulator processes are preserved."
+  ]
+}

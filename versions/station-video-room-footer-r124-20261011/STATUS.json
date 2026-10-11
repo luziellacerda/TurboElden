@@ -1,0 +1,52 @@
+{
+  "version": "R124",
+  "source": "versions/station-video-room-footer-r124-20261011",
+  "branch": "fix/station-carousel-diagonal-online-compact-r123-20261011",
+  "state": "installed-opening-and-carousel-observed-menu-validation-pending",
+  "sourceParentVersion": "R123",
+  "sourceParentCommit": "76a8e34a1aa202dd277f0a1ed043beb436629209",
+  "packageBaseVersion": "R122",
+  "packageBaseSHA256": "dc36a8f978aaab9fef507acd2a59281aa52a4827914c2d8d10b93b4b56cfe339",
+  "compiled": true,
+  "signed": true,
+  "installed": true,
+  "published": false,
+  "promotedStable": false,
+  "sourcesFrozen": true,
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R124-20261011.apk",
+  "apkSHA256": "aeeb2f8167a442db5a58b990cf6d45b613fab42b1e7a9bbc0bf3214b260420c4",
+  "apkBytes": 2217098632,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "javaSourceCount": 234,
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "manifestSHA256": "c4e9a6d69497bb928f53b35b49bef86d1b57a0b2b0bd5d0aa1953cfd5d9752a4",
+  "changedAPKEntriesFromR123": [
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "allOtherR123PayloadsAndEntriesPreserved": true,
+  "changedProductiveSourcesFromR123": [
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationExitPanel.java",
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+    "native/d0/native_system_video720.h"
+  ],
+  "menuFPS": 30,
+  "videoDecoders": 1,
+  "videoFrameBudget": "8 normally; visible De lado assets only, capped at13",
+  "allOtherGraphicsLifecycleCacheControlsEnginesAuthDownloadsPreserved": true,
+  "serverChanged": false,
+  "installedDevices": [
+    "Motorola Edge30"
+  ],
+  "installedAPKHashMatchesPackage": true,
+  "dataPreserved": true,
+  "completePhysicalVisualValidation": false,
+  "physicalGameplayValidated": false,
+  "thermalImprovementVerified": false,
+  "buildReceipt": "evidence/build-r124.json",
+  "packageReceipt": "evidence/package-r124.json",
+  "installationReceipt": "evidence/installation-motorola-r124.json",
+  "authenticatedOpeningObserved": true,
+  "carouselTenSmallCellsPhysicallyObserved": true,
+  "physicalObservationReceipt": "evidence/physical-observation-r124.json"
+}

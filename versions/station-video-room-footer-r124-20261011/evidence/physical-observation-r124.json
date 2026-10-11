@@ -1,0 +1,29 @@
+{
+  "version": "R124",
+  "utc": "2026-10-11T05:34:02.835799+00:00",
+  "deviceModel": "Motorola Edge30",
+  "method": "Read-only Activity/current-process log/screenshot observation after direct update",
+  "authenticatedFrontendOpened": true,
+  "loginPromptObserved": false,
+  "observedFrontendActivity": "org.emulationstation.frontend.ESActivity",
+  "observedCarouselStyle": "De lado",
+  "observedSelectedSystem": "Super Nintendo",
+  "largeCellRendered": true,
+  "smallCellsVisible": 10,
+  "smallCellsWithArtwork": 10,
+  "blankSmallCellsObserved": 0,
+  "videoPlaybackOfEverySmallCellVerified": false,
+  "currentProcessFatalObservedInBoundedLog": false,
+  "beforeUpdateOwnRoomFourActionsObservedMidBody": true,
+  "afterUpdateOwnRoomFooterPhysicallyObserved": false,
+  "exitPanelPhysicallyObserved": false,
+  "rawScreenshotsLogsOrPersonalDataPublished": false,
+  "roomCreatedJoinedOrStartedByAgent": false,
+  "physicalGameplayValidated": false,
+  "thermalValidation": false,
+  "limits": [
+    "Single frontend frame verifies rendered cells, not sustained video playback or all transitions.",
+    "Current subsequent room screen was Create room, not Sua sala; no final four-action footer approval claimed.",
+    "Bounded current-process log does not establish absence of ANR or crashes."
+  ]
+}

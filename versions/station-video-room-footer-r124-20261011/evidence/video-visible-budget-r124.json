@@ -1,0 +1,46 @@
+{
+  "version": "R124",
+  "utc": "2026-10-11T05:25:32.320989+00:00",
+  "passed": true,
+  "scope": "Isolated host extraction of actual native frame allocator/budget/trim/poster methods; no physical Android/GL/decoder/gameplay/thermal proof",
+  "baselineSourceCommit": "76a8e34a1aa202dd277f0a1ed043beb436629209",
+  "checks": {
+    "actualAllocatorHostChecks": 746220,
+    "unchangedCriticalVideoMethods": 10
+  },
+  "cause": {
+    "legacyTextureBudget": 8,
+    "drawnCells": 11,
+    "reproducedMissingCells": 3,
+    "legacyReadyCells": 8
+  },
+  "fix": {
+    "minimumTextureBudget": 8,
+    "maximumTextureBudget": 13,
+    "enabledOnlyFor": "De lado plus CELL_EFFECTS",
+    "budgetMatchesUniqueVisibleAssets": true,
+    "pruneNonVisibleLRUOnShrink": true,
+    "liveDecoders": 1,
+    "quality": "720x720 RGB565",
+    "menuFPS": 30,
+    "staticModeOneUploadPerFramePreserved": true,
+    "liveModeExistingPosterAdmissionPreserved": true,
+    "maximumHostObservedTextures": 13,
+    "elevenFrameExtraBytes": 3110400,
+    "maximumTransitionalExtraBytes": 5184000
+  },
+  "assetCoverage": {
+    "systemMappedAssets": 44,
+    "collectionMappedAssets": 14,
+    "packagedPosterAssets": 58,
+    "allMappedAssetsHavePackagedPoster": true,
+    "allMappedVideosPresentInCandidateAPK": true,
+    "candidateAPKHashFromVerifiedPackageReceipt": "0bf964d516fcd1bbe26e3a8995ffc59c3580fd9162bd7e4e6352e01dc7169098",
+    "inspection": "ZIP entry names only; this host probe does not rehash or operate the installed phone"
+  },
+  "sources": {
+    "native/d0/native_system_video720.h": "6a5bdc4e6a83e2dd490ee7a52e69bbd02c1ea9433155b3cfb1144dc86d5d0a78",
+    "privatePolicyMatchesManifest": true,
+    "privateVideoDefinitionsMatchManifest": true
+  }
+}

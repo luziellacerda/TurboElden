@@ -1,0 +1,23 @@
+{
+  "version": "R124",
+  "utc": "2026-10-11T05:28:48.721011+00:00",
+  "directFullAPKComparison": true,
+  "parentAPKHash": "0bf964d516fcd1bbe26e3a8995ffc59c3580fd9162bd7e4e6352e01dc7169098",
+  "candidateAPKHash": "aeeb2f8167a442db5a58b990cf6d45b613fab42b1e7a9bbc0bf3214b260420c4",
+  "allEntryNamesPreserved": true,
+  "changedEntries": [
+    {
+      "entry": "classes35.dex",
+      "parentSHA256": "ccea64e2103946d615c84947ceed46befc9ccd8c508dd20a1364814a286d2de8",
+      "candidateSHA256": "7b1ba22fc598f09ca90fb24548ee8eb729ffcc27daff0ec1882c513b75de9dd3"
+    },
+    {
+      "entry": "lib/arm64-v8a/libturbo_carousel.so",
+      "parentSHA256": "6dfc067a13b53b60d94779dc9372ba2c1c7af9e4a3c8adc64c9a89c541b64c1b",
+      "candidateSHA256": "a3f9c3950827f026f079f3990c32bc498ec11eee85cec218506322f082a1e0f1"
+    }
+  ],
+  "unchangedEntries": 13546,
+  "privateMediaROMsBIOSControlsEnginesRuntimeManifestByteIdentical": true,
+  "physicalGameplayThermalValidation": false
+}

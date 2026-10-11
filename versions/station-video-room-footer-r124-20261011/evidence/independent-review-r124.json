@@ -1,0 +1,82 @@
+{
+  "revision": "R124",
+  "utc": "2026-10-11T05:24:52Z",
+  "result": "No remaining concrete blocker in reviewed presentation scope; source freeze approved",
+  "reviewScope": "Independent read-only source review of final copied StationRoomsActivity and StationExitPanel; no APK build, Android operation or new test run in this review",
+  "sourceSha256": {
+    "StationRoomsActivity.java": "6d9c0e0d0c0f481bde173c2863e4fdb955b4663f3c65fccd09e23edb499f3c0a",
+    "StationExitPanel.java": "881d0309c79a14485ac9f8bf848b3b6e55833f638a44e2531b741f6ac8c45ada",
+    "native_system_video720.h": "6a5bdc4e6a83e2dd490ee7a52e69bbd02c1ea9433155b3cfb1144dc86d5d0a78"
+  },
+  "independentReadGuards": {
+    "unchangedInstalledAuthorityMethods": [
+      "startRoom",
+      "roomConfirmationKey",
+      "action",
+      "command",
+      "failure",
+      "roomControlLayout",
+      "roomAction",
+      "createRoom",
+      "confirmRoomSetup",
+      "prepareRoom",
+      "createVerifiedRoom",
+      "selectRoomMode",
+      "showRoomSetup",
+      "updateRoomSetupEnabled",
+      "join",
+      "joinConfirmed",
+      "launch"
+    ],
+    "unchangedLifecycleReuseMethods": [
+      "roomRowKey",
+      "reconcileRoomRows",
+      "bindHeroCover",
+      "loadHero",
+      "loadHeroProfile",
+      "onStart",
+      "onStop",
+      "onDestroy",
+      "onResume",
+      "onPause",
+      "applyGraphics",
+      "deliver",
+      "connect"
+    ],
+    "unchangedGPUCoverDependencies": [
+      "StationOnlineCoverView.java",
+      "StationCreateGameCard.java",
+      "StationCoverLayout.java",
+      "StationRoomArtwork.java"
+    ],
+    "footerIsOutsideWeightedTextScroll": true,
+    "footerTouchTargetsDp": 48,
+    "shortWindowFallbackUsesExistingOuterScroll": true,
+    "skipResizeWhileReplacementFooterIsEmpty": true,
+    "skipResizeUntilReplacementActionsAreMeasured": true,
+    "sameFinalHeightDoesNotRequestLayout": true,
+    "sourceExitCallbackRemainsSingleHumanInvocation": true,
+    "exitButtonGapDp": 8
+  },
+  "resolvedFindings": [
+    {
+      "issue": "AT_MOST could clip wrapped footer lines on short windows",
+      "finalResolution": "Required card height uses full action boxes plus at least96dp text; existing outer roomScroll permits access when viewport is insufficient"
+    },
+    {
+      "issue": "A recurring snapshot could shrink and reexpand the retained cover between footer clear and replacement measurement",
+      "finalResolution": "updateOwnRoomHeight ignores empty footer and RoomControls whose boxes do not match the replacement children count; prior height remains until final measure"
+    }
+  ],
+  "relatedHostEvidenceRead": {
+    "roomFooter": "Source SHA matched inspected R123 staging receipt; roomReuse32755, layout3203cases/23202checks,61guards, API34 compiled",
+    "exitPanel": "Source SHA matched inspected R123 staging receipt;280cases/8120checks,10guards,API34 compiled",
+    "reviewDoesNotClaimToRerunTheseTests": true
+  },
+  "limits": [
+    "No Android pixel/font-scale/window measurement in this read-only review",
+    "Physical room/gameplay/ANR/thermal stability is not established",
+    "Exit window heights below161dp in stacked fallback were not physically validated",
+    "Only reviewed presentation sources are approved; callback preservation does not prove network or native gameplay stability"
+  ]
+}
