@@ -1,4 +1,4 @@
-"""Build/check one unsigned R129 candidate after both isolated payload compilations.
+"""Build/check one unsigned candidate after scoped payload compilations.
 
 No signing credentials, signing invocation, device operation or release promotion.
 The inherited assembler independently checks every entry and the complete source
@@ -12,7 +12,7 @@ import subprocess
 import sys
 import zipfile
 from pipeline_common import (
-    DONOR_BYTES, DONOR_SHA, MEDIA_ADDITIONS, PARENT, ROOT, assembler, read, sha, verify_compilation,
+    DONOR_BYTES, DONOR_SHA, MEDIA_ADDITIONS, PARENT, ROOT, REVISION, assembler, read, sha, verify_compilation,
 )
 
 
@@ -31,7 +31,7 @@ def check_unsigned(base, assembly):
     freeze = assembly / "source-freeze.json"
     identity = assembly / "identity/runtime-identity.json"
     _, runtime, _, frozen_sha, _ = package.inputs(base, freeze, identity)
-    if (report.get("revision") != "R129" or report.get("signingPerformed") is not False or
+    if (report.get("revision") != REVISION or report.get("signingPerformed") is not False or
             report.get("zipalignPerformed") is not False or
             report.get("unsignedApkSha256") != sha(unsigned) or
             report.get("unsignedApkBytes") != unsigned.stat().st_size or
@@ -45,7 +45,7 @@ def check_unsigned(base, assembly):
             {**report["replacedEntrySha256"], **report["addedEntrySha256"]} != frozen_sha or
             report.get("preservedEntryCount") != len(report["preservedEntrySha256"]) or
             report.get("preservedEntryManifestSha256") != package.digest(package.canonical(report["preservedEntrySha256"]))):
-        raise ValueError("Unsigned receipt is not the closed R129 overlay")
+        raise ValueError("Unsigned receipt is not the closed " + REVISION + " overlay")
     with zipfile.ZipFile(base) as original, zipfile.ZipFile(unsigned) as final:
         original_data = {name for name in package.classic_entries(original) if not package.signature_metadata(name)}
         if (final.comment != original.comment or package.classic_entries(final) != set(expected) or
@@ -64,7 +64,7 @@ def check_unsigned(base, assembly):
     if (sha(unsigned) != report["unsignedApkSha256"] or sha(report_path) != report_sha or
             sha(freeze) != report["freezeSha256"] or sha(identity) != report["identityReceiptSha256"]):
         raise ValueError("Unsigned candidate changed during verification")
-    return {"revision": "R129", "unsignedReadyForSigning": True,
+    return {"revision": REVISION, "unsignedReadyForSigning": True,
             "unsignedApkSha256": report["unsignedApkSha256"], "unsignedApkBytes": report["unsignedApkBytes"],
             "packageReceiptSha256": sha(report_path), "freezeSha256": sha(freeze),
             "identityReceiptSha256": sha(identity), "engineIds": [item["engineId"] for item in runtime["engines"]],
@@ -83,8 +83,8 @@ def build(args):
     if sha(donor) != DONOR_SHA or donor.stat().st_size != DONOR_BYTES:
         raise ValueError("Exact signed R128 donor required")
     baseline = read(PARENT / "evidence/runtime-final.json")
-    # Extract only the two unchanged shared Java partitions. The demonstration
-    # compiler owns DEX28/DEX39, and its native hook comes from the R128 baseline.
+    # DEX35 now contains the scoped video loop change. Only DEX6 remains an
+    # unchanged extracted partition; all other emulator classes stay byte-checked.
     out.mkdir(parents=True)
     kept = out / "preserved-payloads"
     kept.mkdir()
@@ -94,11 +94,11 @@ def build(args):
         for name, checksum in baseline["payloadSha256"].items():
             if package.entry_sha(archive, name) != checksum:
                 raise ValueError("Actual signed R128 donor differs from published shared payload: " + name)
-        for name in ("classes6.dex", "classes35.dex"):
+        for name in ("classes6.dex",):
             with archive.open(name) as source, (kept / name).open("xb") as target:
                 package.stream_copy(source, target)
     final = {"AndroidManifest.xml": args.parent_offline_payloads / "AndroidManifest.xml",
-             "classes6.dex": kept / "classes6.dex", "classes35.dex": kept / "classes35.dex",
+             "classes6.dex": kept / "classes6.dex", "classes35.dex": args.demo_payloads / "classes35.dex",
              "classes28.dex": args.demo_payloads / "classes28.dex",
              "classes39.dex": args.demo_payloads / "classes39.dex",
              "lib/arm64-v8a/libturbo_carousel.so": args.demo_payloads / "libturbo_carousel.so"}
@@ -121,7 +121,7 @@ def build(args):
         library = marker["runtimeLibrary"]
         overlay[package.PREFIX + library] = (identity / "native" / library if kind == "psx" else identity / library)
     if set(overlay) != package.PAYLOADS:
-        raise ValueError("Final R129 overlay requires the existing ten entries and two Sony videos")
+        raise ValueError("Final " + REVISION + " overlay requires the existing ten entries and two Sony videos")
     freeze = out / "source-freeze.json"
     package.freeze_inputs(base, identity / "runtime-identity.json",
                           [name + "=" + str(path.resolve()) for name, path in sorted(overlay.items())], freeze)

@@ -1,3 +1,13 @@
+# Configurações compactas e vídeo principal selecionável — R130
+
+A R130 continua a implementação Sony existente, sobre o mesmo donor R128 fechado. Refina apenas CONFIGURAÇÕES, acrescenta Com loop/Sem loop em EFEITOS GRÁFICOS e remove a confirmação adicional da TurboStations depois de Jogar no PS3/PS4. Guardas de versão/certificado, arquivo legível e recusa de DEMOs permanecem. Preparo e importação exigidos pelos emuladores externos não são certificados como concluídos só pela chamada de abertura.
+
+O loop aplica-se somente ao vídeo em destaque no carrossel principal de plataformas. Coleções continuam com uma passagem, conservando o frame anterior ao fim. Com loop reutiliza o player e o decoder existentes; Sem loop conserva a economia depois do término. Desligar vídeos e a chave geral continuam tendo prioridade. Nenhuma redução térmica foi medida. Consulte [SETTINGS.md](SETTINGS.md) e [VIDEO-LOOP.md](VIDEO-LOOP.md).
+
+DEX28 altera somente StationFrontend e as famílias do painel/preferências de efeitos. DEX35 altera somente a família StationSinglePassVideo720. O conjunto de classes e todas as outras classes são conferidos byte a byte contra o donor real antes e depois da montagem. DEX39 preserva a ponte Sony com os deltas declarados. Cores, controles, capacidades online, LEDs, cache, pré-carregamento e máximo30fps permanecem.
+
+## Histórico R129
+
 # Demonstrações locais PS3 e PS4 — R129
 
 Extensão isolada sobre a R128 assinada `0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc`. Acrescenta duas linhas de apresentação locais ao catálogo entregue ao carrossel, dois vídeos Sony do tema do proprietário e acesso à interface de configuração dos emuladores. Não modifica o catálogo autenticado, jogos reais, perfis online, downloads, renderer do carrossel, demais vídeos, economia, cache ou pré-carregamento.

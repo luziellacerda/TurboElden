@@ -1,4 +1,4 @@
-"""Verify final R129 signature/alignment and every preserved uncompressed APK entry."""
+"""Verify final R130 signature/alignment and every preserved uncompressed APK entry."""
 from pathlib import Path
 from pipeline_common import assembler, load_psx
 
@@ -20,7 +20,14 @@ def main():
                        "sonyLocalPlatformVideosAdded": ["ps3", "ps4"],
                        "sonyEmulatorConfigurationMenuAdded": ["ps3", "ps4"],
                        "signedCatalogChanged": False,
-                       "ps3Ps4PhysicalGameplayValidated": False})
+                       "ps3Ps4PhysicalGameplayValidated": False,
+                       "compactSettingsMenuImplemented": True,
+                       "platformHeroVideoLoopSelectable": True,
+                       "collectionVideoLoopsEnabled": False,
+                       "loopReusesExistingDecoder": True,
+                       "maximumCarouselRenderFPS": 30,
+                       "redundantSonyGameConfirmationRemoved": True,
+                       "thermalImprovementValidated": False})
         module.package.write(path, report)
         return result
 

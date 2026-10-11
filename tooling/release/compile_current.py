@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-2.0-or-later
-"""Resolve, verify or rebuild the explicit current R128 without publishing it.
+"""Resolve and verify the explicit current release without publishing it.
 
 This orchestration is outside the source sets fingerprinted by the runtime.
 There is no signing key, phone operation, checkout change or latest-file search.
@@ -33,7 +33,7 @@ LOGIN = "org.emulationstation.frontend.auth.LoginActivity"
 R128_SOURCE = "3ea94ade312640ab69ca09e4092f60607996ccba"
 CERT = "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825"
 PHASES = ("plan", "preflight", "verify", "rebuild-payloads", "assemble")
-INTEGRATIONS = {"R128": "ps3-ps4-offline", "R129": "local-sony-demos"}
+INTEGRATIONS = {"R128": "ps3-ps4-offline", "R129": "local-sony-demos", "R130": "local-sony-demos"}
 
 
 def require(ok, message):
@@ -98,6 +98,13 @@ def resolve_current(current_path, repo):
     donor = backup / "desenvolvimento/bases-necessarias/TurboStations-Premium-R127-20261011.apk"
     require(base.is_file() and donor.is_file(), "Pinned R126/R127 reproduction donors are missing; no historical fallback is allowed")
     assembly = ASSEMBLY if revision == "R128" else WORK / "local-sony-demos/assembly"
+    if "assemblyPath" in candidate:
+        require(revision == "R130", "Explicit assembly path is scoped to R130")
+        selected = Path(candidate["assemblyPath"]).resolve(strict=True)
+        allowed = {(WORK / "local-sony-demos/assembly").resolve(),
+                   (WORK / "local-sony-demos/assembly-next").resolve()}
+        require(selected in allowed, "Assembly path escaped the reviewed current work tree")
+        assembly = selected
     freeze_name = "INPUTS.json" if revision == "R128" else "source-freeze.json"
     return {"current": candidate, "backup": backup, "apk": apk, "final": final, "integration": integration,
             "tools": tools, "base": base, "donor": donor, "repo": repo,
@@ -184,7 +191,7 @@ def manifest_entry(apk, repo):
 
 def source_guard(context, *, rebuilt=False):
     require(not rebuilt or context["current"]["revision"] == "R128",
-            "R129 reconstruction uses its own build_demo_payloads.py and build_unsigned.py; no R128 rebuild fallback")
+            "R129/R130 reconstruction uses its own build_demo_payloads.py and build_unsigned.py; no R128 rebuild fallback")
     recipe = context["repo"] / ("integration/" + context["integration"] + "/recipe")
     old = list(sys.path)
     try:

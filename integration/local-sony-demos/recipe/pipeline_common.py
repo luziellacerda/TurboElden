@@ -1,4 +1,4 @@
-"""Closed R129 overlay on the exact, frozen R128 offline implementation."""
+"""Closed R130 UI/video overlay on the exact, frozen R128 offline implementation."""
 from pathlib import Path
 import hashlib
 import json
@@ -9,7 +9,7 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 PARENT = ROOT.parent / "ps3-ps4-offline"
 PSX = ROOT.parent / "psx-online"
-REVISION = "R129"
+REVISION = "R130"
 DONOR_SHA = "0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc"
 DONOR_BYTES = 2234617901
 SHARED_ADDITIONS = frozenset(("classes39.dex", "lib/arm64-v8a/libturbo_carousel.so"))
@@ -23,6 +23,7 @@ PARENT_PAYLOADS = {
 }
 DEMO_PAYLOADS = {
     "classes28.dex": "classes28.dex",
+    "classes35.dex": "classes35.dex",
     "classes39.dex": "classes39.dex",
     "libturbo_carousel.so": "lib/arm64-v8a/libturbo_carousel.so",
     "assets/turbo-system-videos/720-ps3.mp4": "assets/turbo-system-videos/720-ps3.mp4",
@@ -64,9 +65,9 @@ def offline_sources():
 
 def demo_source_map():
     result = {}
-    for directory, suffix in (("java", ".java"), ("recipe", ".py")):
+    for directory, suffixes in (("java", (".java",)), ("recipe", (".py", ".java"))):
         for path in sorted((ROOT / directory).rglob("*")):
-            if path.is_file() and path.suffix == suffix:
+            if path.is_file() and path.suffix in suffixes:
                 result[path.relative_to(ROOT).as_posix()] = sha(path)
     for path in sorted(ROOT.glob("*.json")):
         result[path.relative_to(ROOT).as_posix()] = sha(path)
@@ -107,16 +108,68 @@ def verify_compilation(parent_receipt_path, parent_payloads, demo_receipt_path, 
             demo.get("localDisplayOnly") is not True or demo.get("signedCatalogChanged") is not False or
             demo.get("donorApkSha256") != DONOR_SHA or demo.get("realDownloadsChanged") is not False or
             demo.get("graphicsRenderMethodsChanged") is not True or
-            demo.get("graphicsRenderChangeScope") != "two-new-Sony-settings-owned-label-exclusions-only" or
+            demo.get("graphicsRenderChangeScope") != "compact-settings-and-primary-video-loop-only" or
             demo.get("existingCarouselGeometryAndEffectRenderMethodsChanged") is not False or
-            demo.get("existingOnlineCodePreserved") is not True):
+            demo.get("existingOnlineCodePreserved") is not True or
+            demo.get("primaryPlatformVideoLoopCompiled") is not True or
+            demo.get("compactSettingsMenuCompiled") is not True or
+            demo.get("collectionLoopEnabled") is not False):
         raise ValueError("Successful local-only demonstration compilation from exact R128 required")
     native = read(Path(demo_receipt_path).parent / "native-receipt.json")
     settings = native.get("sonySettingsMenuReceipt", {})
     if (native.get("sha256") != demo["payloads"]["libturbo_carousel.so"]["sha256"] or
             settings.get("nativeCppExactInverse") is not True or
-            settings.get("sonyLabelsDrawnOnlyByOpenSettingsModal") is not True):
+            settings.get("sonyLabelsDrawnOnlyByOpenSettingsModal") is not True or
+            settings.get("minimum48DpLogicalTargetsRetained") is not True or
+            settings.get("sonyActionsAboveOptions") is not True or
+            settings.get("colorControlSharesHeader") is not True or
+            settings.get("sonyRowSeparateFromNativeOptionsViewport") is not True or
+            settings.get("ownedCardMatrixRestoredBeforeEveryDraw") is not True or
+            settings.get("cardsDrawnBeforeOwnedLabels") is not True):
         raise ValueError("Compiled Sony modal label guard is missing or binds another native payload")
+    loop = read(Path(demo_receipt_path).parent / "video-loop-receipt.json")
+    loop_native = loop.get("native", {})
+    loop_java = loop.get("java", {})
+    if (loop.get("revision") != REVISION or loop.get("passed") is not True or
+            loop.get("recipeSha256") != sha(ROOT / "recipe" / "patch_video_loop.py") or
+            loop.get("actualDonorClassSetsRetained") is not True or
+            loop.get("unrelatedClassesByteIdentical") is not True or
+            loop.get("compileOnlyClasspathsPackaged") is not False or
+            native.get("primaryPlatformVideoLoopReceipt") != loop_native or
+            native.get("nativeVideoMethodsByteIdentical") is not False or
+            native.get("nativeVideoChangeScope") != "focused-primary-platform-start-scope-only" or
+            loop_native.get("nativeCppExactInverse") is not True or
+            loop_native.get("nativeVideoExactInverse") is not True or
+            loop_native.get("nativeGraphicsHeaderByteIdentical") is not True or
+            loop_native.get("nativeVideoCompletionAndRetirementByteIdentical") is not True or
+            loop_native.get("retireBeforeStartPolicyByteIdentical") is not True or
+            loop_native.get("collectionLoopEnabled") is not False or
+            loop_native.get("decoderCapacityChanged") is not False or
+            loop_native.get("maximumRenderFPSChanged") is not False or
+            loop_native.get("ledCacheAndPreloadChanged") is not False or
+            loop_native.get("graphicsSnapshotABIChanged") is not False or
+            loop_native.get("jniCallsPerFrameAdded") is not False or
+            loop_native.get("preferenceIOPerFrameAdded") is not False or
+            loop_java.get("newJavaTypes") is not False or
+            loop_java.get("newLambdas") is not False or
+            loop_java.get("collectionLoopEnabled") is not False or
+            loop_java.get("originalGraphicsStateAndMaskContractUnchanged") is not True):
+        raise ValueError("Scoped primary-platform loop compilation or its economy guards are missing")
+    for partition, key, receipt_name in (("classes28.dex", "dex28ChangedTypes", "dex28-receipt.json"),
+                                          ("classes35.dex", "dex35ChangedTypes", "dex35-receipt.json")):
+        record = read(Path(demo_receipt_path).parent / receipt_name)
+        if (record.get("sha256") != demo["payloads"][partition]["sha256"] or
+                record.get("exactDonorClassSet") is not True or
+                record.get("allOtherClassesByteIdentical") is not True or
+                record.get("staticInitializersPreserved") is not True or
+                type(record.get("restoredInitializerArrays")) is not int or
+                not 0 <= record["restoredInitializerArrays"] <= record.get("unchangedClasses", -1) or
+                record.get("changedTypes") != loop.get(key) or
+                record.get("unchangedClasses", -1) + len(record.get("changedTypes", [])) != record.get("classCount")):
+            raise ValueError("Actual video DEX preservation receipt is missing: " + partition)
+    if loop.get("payloads") != {name: demo["payloads"][name] for name in
+            ("classes28.dex", "classes35.dex", "libturbo_carousel.so")}:
+        raise ValueError("Loop receipt binds another compiled payload set")
     if demo.get("sourceSha256") != demo_source_map():
         raise ValueError("Local demonstration sources changed after compilation")
     expected_parent = {name: sha(PARENT / name) for name in PARENT_JAVA}
@@ -126,7 +179,7 @@ def verify_compilation(parent_receipt_path, parent_payloads, demo_receipt_path, 
     if demo.get("parentNativeSourceInputs") != expected_native_parent:
         raise ValueError("Demo native hook did not bind exact frozen R128 source inputs")
     if set(demo.get("payloads", {})) != set(DEMO_PAYLOADS):
-        raise ValueError("Exact DEX28/DEX39, Sony native hook and two Sony media additions required")
+        raise ValueError("Exact DEX28/DEX35/DEX39, scoped native hook and two Sony media additions required")
     if (demo.get("nativeBaselineSha256") != parent["payloads"]["libturbo_carousel.so"]["sha256"] or
             demo.get("baselineNativeByteIdentical") is not True):
         raise ValueError("Native demo hook must be based on byte-reproduced R128 carousel")
@@ -139,7 +192,7 @@ def verify_compilation(parent_receipt_path, parent_payloads, demo_receipt_path, 
         if sha(final_payloads[name]) != baseline["payloadSha256"][name]:
             raise ValueError("Unchanged R128 payload differs: " + name)
     if demo.get("preservedParentPayloadSha256") != {
-            name: baseline["payloadSha256"][name] for name in ("AndroidManifest.xml", "classes6.dex", "classes35.dex")}:
+            name: baseline["payloadSha256"][name] for name in ("AndroidManifest.xml", "classes6.dex")}:
         raise ValueError("Demo compilation did not preserve exact parent manifest/shared Java partitions")
     return parent, demo
 
@@ -147,7 +200,7 @@ def verify_compilation(parent_receipt_path, parent_payloads, demo_receipt_path, 
 def assembler():
     module = load_psx("assemble_apk", revision=True)
     module.SHARED |= SHARED_ADDITIONS
-    module.REPLACED |= frozenset(("lib/arm64-v8a/libturbo_carousel.so",))
+    module.REPLACED |= frozenset(("classes35.dex", "lib/arm64-v8a/libturbo_carousel.so"))
     module.ADDED |= frozenset(("classes39.dex",))
     module.ADDED |= MEDIA_ADDITIONS
     module.PAYLOADS = module.REPLACED | module.ADDED

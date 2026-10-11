@@ -1,3 +1,13 @@
+# R130 — configurações compactas e loop somente na plataforma em destaque
+
+Implementação atual em integration/local-sony-demos/recipe, continuando sobre o donor R128 exato. R129 Final-Modal é a instalação anterior comprovada; não escolher APK por data. R130 muda somente CONFIGURAÇÕES, painel/preferências de efeitos, loop do vídeo principal e remove confirmação redundante de Jogar Sony. Com loop/Sem loop são persistentes, somente systemsMode&&!folderMode e um decoder reutilizado; coleções seguem single-pass. Desligar vídeos/economia/foreground/retirada de slots prevalecem. Preservar LEDs, cache/preload,30fps, emuladores, controles, licenças/jogos/saves e validações online.
+
+DEX28 allowlist exata StationFrontend + famílias StationGraphicsPanel/Preferences; DEX35 apenas família StationSinglePassVideo720; class sets e demais classes são byte-conferidos no donor real antes/depois. VerifyScopedPartition.java e AssembleScopedPartition.java entram no congelamento de fontes. O montador preserva os inicializadores estáticos explícitos do donor nas classes fora do escopo, sem normalizar a comparação nem ampliar a allowlist. Native exige inversões exatas, fronteiras de clipping coerentes, alvo48dp e matriz restaurada para cards manuais. Sony segue externo/offline: presença do APK/Welcome não prova firmware, importação nem gameplay. DEMOs83bytes nunca são jogos.
+
+Um backup F e uma árvore G existentes, assinatura original e promoção somente após verificação final. Renovar quatro runtimeIDs por compartilhados alterados, sem tocar cores/opções/perfis/capacidades. Neste pedido, após implementar, APENAS verificar se há retorno novo do servidor; não implementar/publicar handoff nem implantar/reiniciar produção. Não afirmar estabilidade ou redução térmica por guards isolados. Publicar só fontes e recibos agregados, nenhum APK/mídia/firmware/credencial/dado pessoal.
+
+## Histórico R129
+
 # R129 — demonstrações locais Sony e compilação/instalação verificadas
 
 Implementação em integration/local-sony-demos, sobre R128, e ferramentas em tooling/release. Resolver APK pelo CURRENT-LOCAL-ARTIFACTS.json e desenvolvimento/ATUAL.json do backup único; nunca selecionar versões pela data ou restaurar Activities históricas. Ler README e evidence atuais. As seções R128 e anteriores abaixo descrevem entregas históricas e não escolhem o instalador atual.

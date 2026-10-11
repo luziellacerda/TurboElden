@@ -2,7 +2,8 @@
 
 The settings operation reuses the audited package/version/signer guards. Its
 external Intent is a fresh official launcher request, never a file import or a
-game launch. The original game preparation and firmware checks remain intact.
+game launch. Package, signer, hardware, URI and demonstration guards remain.
+Valid games dispatch directly; upstream firmware/import readiness is separate.
 """
 from __future__ import annotations
 import hashlib
@@ -65,7 +66,7 @@ def patch(original:bytes)->bytes:
     private void demonstration(String platform){
         if(closed||isFinishing())return;
         new AlertDialog.Builder(this).setTitle("Demonstração "+("ps3".equals(platform)?"PS3":"PS4"))
-            .setMessage("Este arquivo é apenas um exemplo visual, identificado como DEMO. Não contém um jogo e não será enviado ao emulador. Para jogar, use seu próprio jogo e configure o emulador oficial.")
+            .setMessage("Este arquivo é apenas um exemplo visual, identificado como DEMO. Não contém um jogo e não será enviado ao emulador. Para jogar, use seu próprio jogo.")
             .setPositiveButton("Voltar",(d,w)->finish()).setOnCancelListener(d->finish()).show();
     }
     private static boolean arm64()'''
@@ -80,4 +81,16 @@ def patch(original:bytes)->bytes:
     old='new AlertDialog.Builder(this).setTitle("Jogar offline").setMessage(text)'
     new='new AlertDialog.Builder(this).setTitle("settings".equals(getIntent().getStringExtra("station.operation"))?"Configurar emulador":"Jogar offline").setMessage(text)'
     if text.count(old)!=1:raise ValueError('Original failure-title anchor changed')
-    return text.replace(old,new,1).encode('utf-8')
+    text=text.replace(old,new,1)
+    # The user already selected Jogar. Do not add a second app confirmation or
+    # repeat firmware setup instructions on every valid game launch. Upstream
+    # first-run setup/import remains upstream; signer/URI/DEMO guards stay intact.
+    launch='''        runOnUiThread(()->confirm("PlayStation 3","O jogo abre no aPS3e oficial. Instale o firmware nele antes de jogar. Se já houver uma partida aberta no aPS3e, encerre-a primeiro.","Abrir jogo",target));'''
+    if text.count(launch)!=1:raise ValueError('Exact guarded PS3 game handoff changed')
+    text=text.replace(launch,'        runOnUiThread(()->dispatch(target));',1)
+    launch='''        runOnUiThread(()->confirm("PlayStation 4",pkg?
+            "O pacote será importado pelo Bachata S4 oficial. Depois da importação, escolha o jogo na biblioteca do emulador para jogar.":
+            "Escolha o jogo já importado na biblioteca do Bachata S4 oficial. A abertura direta aqui aceita pacotes PKG.",pkg?"Importar jogo":"Abrir biblioteca",target));'''
+    if text.count(launch)!=1:raise ValueError('Exact guarded PS4 import handoff changed')
+    text=text.replace(launch,'        runOnUiThread(()->dispatch(target));',1)
+    return text.encode('utf-8')
