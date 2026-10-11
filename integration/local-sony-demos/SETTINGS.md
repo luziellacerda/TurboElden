@@ -11,6 +11,8 @@ As ações abrem o emulador oficial para que o usuário escolha suas configuraç
 
 O Intent externo é construído do zero: `ACTION_MAIN`, `CATEGORY_LAUNCHER` e componente explícito. Não inclui URI, MIME, extras, ClipData, grants, importação PKG ou lançamento de jogo. A operação interna `station.operation=settings` é tratada antes da verificação DEMO/arquivo. Se o aplicativo não estiver instalado, a tela oferece sua página oficial mediante toque do usuário. Não há instalação automática nem novos motores online.
 
+Os dois textos Sony pertencem ao modal: recebem a mesma exclusão de desenho automático usada por `settingsEffectsLabel`. Seu desenho manual ocorre somente com configurações abertas. A inversão exata da única alteração em `textRenderHook` é conferida na receita; nenhuma rotina de vídeo, efeitos, emulação ou orçamento de quadros é modificada por essa correção.
+
 JNI ocorre somente ao concluir o toque em uma das ações. A preparação dos guardas usa o Worker existente; o encaminhamento Android é postado na UI, sem esperar pela thread de renderização. Os dois botões usam as primitivas estáticas e a altura mínima existentes. Não há shader, animação, decoder, timer, polling, rede ou loop de fundo novos. O vídeo/música do frontend pausa no encaminhamento, como nos acessos de configuração já existentes.
 
 ## Ligação à compilação

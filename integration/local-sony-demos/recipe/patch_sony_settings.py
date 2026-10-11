@@ -132,7 +132,7 @@ def verify(original:bytes,patched:bytes)->dict:
     }
 
 def patch_settings(native_source:bytes,original_header:bytes)->tuple[bytes,bytes,dict]:
-    """Build adapter: return unchanged .cpp, local override header and flags.
+    """Build adapter: owned text guard, local override header and flags.
 
     Write the header beside the generated .cpp only after the exact R128
     baseline was compiled and compared. Quoted includes select that local
@@ -142,8 +142,18 @@ def patch_settings(native_source:bytes,original_header:bytes)->tuple[bytes,bytes
         raise ValueError('The native source must use its single quoted settings include')
     patched=patch(original_header)
     flags=verify(original_header,patched)
-    flags['nativeCppByteIdentical']=True
-    return native_source,patched,flags
+    old=b'p==settingsEffectsLabel||isStoreUiLabel(p)'
+    new=b'p==settingsEffectsLabel||p==settingsSonyPs3Text||p==settingsSonyPs4Text||isStoreUiLabel(p)'
+    if native_source.count(old)!=1 or new in native_source:
+        raise ValueError('Exact settings owned-label rendering guard required')
+    changed=native_source.replace(old,new,1)
+    if changed.replace(new,old,1)!=native_source:
+        raise ValueError('Unrelated native rendering byte changed')
+    flags['nativeCppByteIdentical']=False
+    flags['nativeCppChange']='two-owned-settings-labels-in-existing-textRenderHook-exclusion'
+    flags['nativeCppExactInverse']=True
+    flags['sonyLabelsDrawnOnlyByOpenSettingsModal']=True
+    return changed,patched,flags
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
