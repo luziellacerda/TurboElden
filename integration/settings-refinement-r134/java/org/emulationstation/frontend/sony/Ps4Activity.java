@@ -244,6 +244,7 @@ public final class Ps4Activity extends Activity implements TextureView.SurfaceTe
     @Override public void onInputDeviceChanged(int deviceId) {updatePhysical();}
     @Override public void onInputDeviceRemoved(int deviceId) {Ps4Control pad=control;if(pad!=null)pad.removed(deviceId);updatePhysical();}
     @Override protected void onDestroy() {
+        settingsLeaving=true;++settingsEpoch;
         if(input!=null)input.unregisterInputDeviceListener(this);
         // A lifecycle callback is not a user request to terminate the native game.
         worker.shutdown();stopper.shutdown();super.onDestroy();
@@ -259,8 +260,11 @@ public final class Ps4Activity extends Activity implements TextureView.SurfaceTe
     private TextView settingsText(String text,int size) {
         TextView v=new TextView(this);v.setText(text);v.setTextSize(size);v.setTextColor(0xffe9eef9);return v;
     }
+    private boolean settingsActive() {
+        return !settingsLeaving&&!stopping.get()&&!isFinishing()&&!isDestroyed()&&!worker.isShutdown();
+    }
     private void showSettings() {
-        if(isFinishing()||stopping.get())return;
+        if(!settingsActive())return;
         layout.removeAllViews();layout.setBackgroundColor(0xff081017);
         LinearLayout page=new LinearLayout(this);page.setOrientation(LinearLayout.VERTICAL);
         page.setPadding(dp(16),dp(10),dp(16),dp(10));layout.addView(page,new FrameLayout.LayoutParams(-1,-1));
@@ -323,14 +327,14 @@ public final class Ps4Activity extends Activity implements TextureView.SurfaceTe
         return setting.documentedDefault;
     }
     private void selectSettingsCategory(int group) {
-        if(settingsLeaving||stopping.get()||settingsBody==null)return;
+        if(!settingsActive()||settingsBody==null)return;
         settingsCategory=group;final int epoch=++settingsEpoch;
         settingsBody.removeAllViews();settingsBody.addView(settingsText("Lendo configuração…",13));
         worker.execute(()->{
             try {
                 JSONObject config=readNativeConfig();
                 runOnUiThread(()->{
-                    if(settingsLeaving||isFinishing()||epoch!=settingsEpoch)return;
+                    if(!settingsActive()||epoch!=settingsEpoch||settingsBody==null)return;
                     settingsBody.removeAllViews();
                     for(Setting setting:SETTINGS)if(setting.group==group)addSetting(config,setting);
                     if(group==2)addTouchSetting();
@@ -350,18 +354,18 @@ public final class Ps4Activity extends Activity implements TextureView.SurfaceTe
             row.setEnabled(false);row.setAlpha(.72f);return;
         }
         row.setOnClickListener(v->{
-            if(settingsLeaving || settingsSaving)return;
+            if(!settingsActive()||settingsSaving)return;
             if(setting.kind==1)saveSettingsEntry(setting,Boolean.valueOf(!((Boolean)current)));
             else {
                 int selected=-1;for(int i=0;i<setting.choices.length;i++)if(setting.choices[i].equals(current))selected=i;
                 new AlertDialog.Builder(this).setTitle(setting.label).setSingleChoiceItems(setting.choices,selected,(dialog,index)->{
-                    if(!settingsLeaving)saveSettingsEntry(setting,setting.choices[index]);dialog.dismiss();
+                    if(settingsActive())saveSettingsEntry(setting,setting.choices[index]);dialog.dismiss();
                 }).setNegativeButton("Cancelar",null).show();
             }
         });
     }
     private void saveSettingsEntry(Setting setting,Object value) {
-        if(settingsLeaving||settingsSaving||stopping.get()||setting.kind==0)return;
+        if(!settingsActive()||settingsSaving||setting.kind==0)return;
         settingsSaving=true;
         settingsMessage.setText("Salvando configuração…");
         worker.execute(()->{
@@ -376,26 +380,26 @@ public final class Ps4Activity extends Activity implements TextureView.SurfaceTe
                 try {output=atomic.startWrite();output.write(bytes);atomic.finishWrite(output);}
                 catch(IOException error){if(output!=null)atomic.failWrite(output);throw error;}
                 runOnUiThread(()->{
+                    if(!settingsActive())return;
                     settingsSaving=false;
-                    if(settingsLeaving||isFinishing())return;
                     settingsMessage.setText("Salvo · alterações valem no próximo jogo");selectSettingsCategory(settingsCategory);
                 });
-            }catch(Exception error){runOnUiThread(()->settingsSaving=false);settingsError("Não foi possível salvar a configuração do PS4.");}
+            }catch(Exception error){runOnUiThread(()->{if(settingsActive())settingsSaving=false;});settingsError("Não foi possível salvar a configuração do PS4.");}
         });
     }
     private void addTouchSetting() {
         final boolean current=getPreferences(MODE_PRIVATE).getBoolean("touch",true);
         Button row=settingsButton("Controles de toque   ·   "+(current?"Ativados":"Desativados"));
         row.setGravity(Gravity.CENTER_VERTICAL|Gravity.LEFT);row.setOnClickListener(v->{
-            if(settingsLeaving || settingsSaving)return;
+            if(!settingsActive()||settingsSaving)return;
             getPreferences(MODE_PRIVATE).edit().putBoolean("touch",!current).apply();selectSettingsCategory(settingsCategory);
         });settingsBody.addView(row,new LinearLayout.LayoutParams(-1,dp(40)));
     }
     private void settingsError(String message) {
-        runOnUiThread(()->{if(!isFinishing()&&settingsMessage!=null)settingsMessage.setText(message);});
+        runOnUiThread(()->{if(settingsActive()&&settingsMessage!=null)settingsMessage.setText(message);});
     }
     private void leaveSettings() {
-        if(settingsLeaving||stopping.get())return;
+        if(!settingsActive())return;
         settingsLeaving=true;++settingsEpoch;
         // Save tasks already in this single FIFO worker complete before the human exit.
         worker.execute(this::finishOwner);

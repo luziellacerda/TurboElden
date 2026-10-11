@@ -16,7 +16,7 @@
   "hostDexPartition": "classes40.dex",
   "newOwnerSourceSha256": {
     "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java": "e880c20753cc8fe0fc794a133cd50f8cbae698a0cf13c7ac379374e709814547",
-    "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java": "12cbc937e0d2110e0fd67c690cc5420cb198a0e77e8090e47a7f25728d78e80d"
+    "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java": "0fc2875f32295acbabcf6a5ee31b923bee61bf56c157996419d7d4415d3dfaf6"
   },
   "preservation": {
     "externalApplicationOrLibrarySettingsFallback": false,
@@ -53,6 +53,8 @@
     "readOnlyNativeFields": 2,
     "rendererAndShaderModeReadOnly": true,
     "settingsBackVisibleDuringInitialPreparation": true,
+    "settingsCallbacksClosedGuardReviewed": true,
+    "settingsWorkerSubmissionAndDestroyUseSameGate": true,
     "shaderResourceEnumDiffersFromOfficialNativeDefaults": true,
     "touchPreference": 1
   },
@@ -79,6 +81,10 @@
     "officialSettingsCatalogEntry": "runtime-settings/shadps4.json",
     "officialSettingsCatalogSha256": "462a342d7f4ef0a6cd1102b3bc1fc0147f7853427a004b0da8da5f75f3f2151e",
     "originalNativeArgvAndRunEnvironmentTextUnchanged": true,
+    "settingsActivityDestroyedCallbacksSuppressed": true,
+    "settingsActiveGuardChecksDestroyedFinishingLeavingAndShutdown": true,
+    "settingsLifecycleCallbackStopsNativeGame": false,
+    "settingsUiEpochInvalidatedBeforeWorkerShutdown": true,
     "persistentBackVisible": true,
     "readOnlyNativeFields": 3,
     "selectedNativeFields": [
