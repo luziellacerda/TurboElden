@@ -9,7 +9,7 @@
   "compiled": true,
   "signed": true,
   "installed": true,
-  "published": false,
+  "published": true,
   "testsExecutedThisRevision": false,
   "physicalVisualValidation": false,
   "thermalValidation": false,
@@ -53,5 +53,7 @@
   "installationReceipt": "evidence/installation-motorola-r118.json",
   "authenticatedCarouselObserved": true,
   "waveBackgroundObserved": true,
-  "postInstallObservation": "evidence/post-install-observation-r118.json"
+  "postInstallObservation": "evidence/post-install-observation-r118.json",
+  "sourceCommit": "3a72119a69b5da6b4f326f053a13ddebae5a7f69",
+  "publicationReceipt": "evidence/publication-r118.json"
 }

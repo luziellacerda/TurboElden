@@ -85,7 +85,7 @@
     "compiled": true,
     "signed": true,
     "installed": true,
-    "published": false,
+    "published": true,
     "javaSourceCount": 230,
     "sourceJavaComplete": true,
     "nativeSnapshotComplete": false,
@@ -110,7 +110,7 @@
     "status": "installed and full APK hash verified on Motorola; visual, thermal and gameplay review pending",
     "detailedChanges": "versions/station-visual-refinement-r118-20261010/ALTERACOES-DETALHADAS.md",
     "packageReceipt": "versions/station-visual-refinement-r118-20261010/evidence/package-r118.json",
-    "sourceCommitStatus": "local-ready-for-commit",
+    "sourceCommitStatus": "published-and-remote-verified",
     "installedDevices": [
       "Motorola Edge30"
     ],
@@ -119,6 +119,9 @@
     "installationReceipt": "versions/station-visual-refinement-r118-20261010/evidence/installation-motorola-r118.json",
     "authenticatedCarouselObserved": true,
     "waveBackgroundObserved": true,
-    "postInstallObservation": "versions/station-visual-refinement-r118-20261010/evidence/post-install-observation-r118.json"
+    "postInstallObservation": "versions/station-visual-refinement-r118-20261010/evidence/post-install-observation-r118.json",
+    "sourceCommit": "3a72119a69b5da6b4f326f053a13ddebae5a7f69",
+    "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-visual-refinement-r118-20261010/versions/station-visual-refinement-r118-20261010",
+    "publicationReceipt": "versions/station-visual-refinement-r118-20261010/evidence/publication-r118.json"
   }
 }
