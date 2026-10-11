@@ -9,7 +9,7 @@
   "compiled": true,
   "signed": true,
   "installed": true,
-  "published": false,
+  "published": true,
   "promotedStable": false,
   "serverChanged": false,
   "physicalGameplayValidated": false,
@@ -51,7 +51,7 @@
     "gpuSourceGuards": 45
   },
   "exitMenusUniversal": false,
-  "sourcePublicationPending": true,
+  "sourcePublicationPending": false,
   "installedDevices": [
     "Motorola Edge30"
   ],
@@ -60,5 +60,8 @@
   "dataPreserved": true,
   "authenticatedFrontendObserved": true,
   "roomScreenObserved": true,
-  "observationReceipt": "evidence/post-install-observation-r121.json"
+  "observationReceipt": "evidence/post-install-observation-r121.json",
+  "sourceCommit": "0ef1513e43f6918956e3e95c674a35b3684504f9",
+  "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-online-room-gpu-reuse-r121-20261011/versions/station-online-room-gpu-reuse-r121-20261011",
+  "publicationReceipt": "evidence/publication-r121.json"
 }

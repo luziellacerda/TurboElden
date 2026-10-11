@@ -85,8 +85,8 @@
     "compiled": true,
     "signed": true,
     "installed": true,
-    "published": false,
-    "sourceCommitStatus": "awaiting-publication",
+    "published": true,
+    "sourceCommitStatus": "remote-verified",
     "javaSourceCount": 232,
     "sourceJavaComplete": true,
     "nativeSnapshotComplete": false,
@@ -137,6 +137,9 @@
     "serializedCoverGLESInitialization": true,
     "exitMenusUniversal": false,
     "flowReview": "versions/station-online-room-gpu-reuse-r121-20261011/REVIEW-ONLINE-FLOW-EXIT-R121.md",
-    "roomScreenObserved": true
+    "roomScreenObserved": true,
+    "sourceCommit": "0ef1513e43f6918956e3e95c674a35b3684504f9",
+    "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-online-room-gpu-reuse-r121-20261011/versions/station-online-room-gpu-reuse-r121-20261011",
+    "publicationReceipt": "versions/station-online-room-gpu-reuse-r121-20261011/evidence/publication-r121.json"
   }
 }
