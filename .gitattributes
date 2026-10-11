@@ -60,3 +60,7 @@ versions/station-synopses-r78-20261008/** -text
 
 # R79 exact source, catalogue reference and receipt bytes.
 versions/station-room-bootstrap-r79-20261008/** -text
+
+# Preserve sealed build and installation receipts byte for byte.
+integration/local-sony-demos/evidence/*.json -text
+docs/server/normal-motors-r128-20261011/** -text

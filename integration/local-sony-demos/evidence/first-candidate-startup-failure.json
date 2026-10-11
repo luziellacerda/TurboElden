@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "revision": "R129",
+  "candidateRole": "superseded-first-attempt",
+  "sourceCommit": "83173d43737efa29e4e8e26309ec06b6e545909a",
+  "apkSha256": "82bea84df62172214eedab6f52440e990ca599af75397cbbaebe800ac0da4279",
+  "apkBytes": 2234638381,
+  "installedOnMotorolaEdge30": true,
+  "installedIntegralApkHashVerified": true,
+  "originalUIDAndDataPreserved": true,
+  "officialFrontendActivityObserved": true,
+  "authenticatedSessionValidated": false,
+  "catalogRendered": false,
+  "localDemonstrationsPhysicallyObserved": false,
+  "physicalObservation": {
+    "startupLoadingReachedPercent": 99,
+    "catalogLoadingFailed": true,
+    "configurationIOExceptionObserved": true,
+    "literalNativeInvalidWarmCoverPathLogClaimed": false
+  },
+  "sourceContractProof": {
+    "validator": "validWarmCoverPath",
+    "externalWarmCoverPathAccepted": false,
+    "firstCandidateDemoCoverUsedExternalPath": true,
+    "acceptedPrivateRootKind": "application-no_backup/station-covers",
+    "sourceContractAndPhysicalObservationAreSeparate": true
+  },
+  "correction": {
+    "sourceCommit": "71b5b50868f1e49befbd7ee342ab5493717c844a",
+    "scope": "local-demo-cover-path-only",
+    "coverPathKind": "no_backup/station-covers/<demoId>.png",
+    "nativeValidatorRelaxed": false,
+    "rendererEconomyAndOnlinePolicyChanged": false,
+    "firstAttemptAcceptedAsFinal": false,
+    "correctedPhysicalCatalogObservationRequired": true
+  },
+  "tracebacksScreenshotsSerialsSessionsOrPngIncluded": false,
+  "generatedDemoSourceOrPngIncluded": false,
+  "serverActivatedByThisEvidence": false,
+  "physicalGameplayValidated": false
+}

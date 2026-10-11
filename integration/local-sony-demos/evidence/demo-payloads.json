@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "donorApkSha256": "0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc",
+  "sourceSha256": {
+    "java/org/emulationstation/frontend/station/StationLocalSonyDemos.java": "ebfe7b90420961a42b97d9c795d78a4eb8b47b77b624b521fe12b14fb6476931",
+    "recipe/assemble_apk.py": "946a39aae210498ebdfdf9c1b1b9659bb34435e945f7ef46b9790dc562bfe282",
+    "recipe/build_demo_payloads.py": "0806dc6dcb12ca1eec6251aa8fb302c130eb11cbb8ceee9d2279fef9ec451994",
+    "recipe/build_runtime_identity.py": "f3467c30e402ce28c565facf750c03d0efc75631595f563dca6a10bc78936fd4",
+    "recipe/build_unsigned.py": "4ce0b4b9041e9d48ada0acfc1fdb20250e784ba0283c5c7611969df3e452b431",
+    "recipe/patch_demo_native.py": "bbe2310465a2881cf9ee3bec810c23d3027857a552a47d39f4d938a16c330038",
+    "recipe/patch_frontend.py": "35bfd5e78ce728ebc51cb4f349c0382557d29ad0bd67f338752501cd0950648c",
+    "recipe/patch_sony_activity.py": "1431296df0b8f9f0af0606fc87836954ee0fe5e04e783f989ceb59dd840b09b9",
+    "recipe/patch_sony_settings.py": "a577a4dc06de7478dbb9066ed3693c52e6af768263d07548675d1991684cc4f1",
+    "recipe/pipeline_common.py": "c05b406f8007c3e52a4705b91ea183c65ecfe1dbec92a13a3ed32c965a9da6ac",
+    "recipe/sony_media.py": "58f8107ba11b2252f2c1d60201d73cb0af84df7f0764085dc02467bb70719ae2",
+    "recipe/verify_final.py": "4b0fb6676db40e493d3b3673da69b4709abc9263ed3fdb60c6f46bd95378fc40"
+  },
+  "parentSourceSha256": {
+    "java/org/emulationstation/frontend/offline/StationSonyOfflineActivity.java": "e7701a030ed54a16dabdd7e66fb8cc785112722ebc747fc686e12d0ba16a5d88",
+    "java/org/emulationstation/frontend/offline/StationSonyOfflinePolicy.java": "960da6dfdf66bef5925164db87712412da8b49586bd1705488967236465bf21f"
+  },
+  "parentNativeSourceInputs": {
+    "java/org/emulationstation/frontend/offline/StationSonyOfflineActivity.java": "e7701a030ed54a16dabdd7e66fb8cc785112722ebc747fc686e12d0ba16a5d88",
+    "java/org/emulationstation/frontend/offline/StationSonyOfflinePolicy.java": "960da6dfdf66bef5925164db87712412da8b49586bd1705488967236465bf21f",
+    "recipe/patch_native.py": "4dbeade73fa89f9beee5ed6f0bc2853c68406e29c82d0441c488ac0a37d2d41f",
+    "native/offline_routes.h": "085b5a630aa4a6e18673bebd69c9bd82609259ba1e842c579ffeb894ff3ffadb"
+  },
+  "payloads": {
+    "classes28.dex": {
+      "sha256": "f682bbbb0575157cf04990e775258d6354d8a1037e84192f30251a954fe879af",
+      "bytes": 305076
+    },
+    "classes39.dex": {
+      "sha256": "4e7177427cb701e229603b7af1d74596a686380af9afb20f2e0e263a8c7fe8f0",
+      "bytes": 31548
+    },
+    "libturbo_carousel.so": {
+      "sha256": "b3d351d2274dc130d5866f4cc7e8ae145c1b9f467dc06f47bdcdc67f476c330f",
+      "bytes": 157402144
+    },
+    "assets/turbo-system-videos/720-ps3.mp4": {
+      "sha256": "d6fb573d754c5a21edc633cf1b3ce61fd4c2f5d2615881178aee9427f8354ff9",
+      "bytes": 394498
+    },
+    "assets/turbo-system-videos/720-ps4.mp4": {
+      "sha256": "4162ed5331876ab0749fc5abe287f419af0b90b980ecafd32947422ee13643ae",
+      "bytes": 392306
+    }
+  },
+  "nativeBaselineSha256": "0d76a7a15cedd8d9e74c3824b77b2d0cbbd26067c503d0770fc97ad5e374dc2b",
+  "baselineNativeByteIdentical": true,
+  "preservedParentPayloadSha256": {
+    "AndroidManifest.xml": "acda0e4404e29764a32fb3452b69899dc4501b63100376620a7e41a2ad85ff31",
+    "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+    "classes35.dex": "585b88564556c9106df0f9ec5a979cdd726824e96dcdc662122717648e227276"
+  },
+  "offlineOnly": true,
+  "localDisplayOnly": true,
+  "signedCatalogChanged": false,
+  "realDownloadsChanged": false,
+  "graphicsRenderMethodsChanged": true,
+  "graphicsRenderChangeScope": "two-new-Sony-settings-owned-label-exclusions-only",
+  "existingCarouselGeometryAndEffectRenderMethodsChanged": false,
+  "existingOnlineCodePreserved": true,
+  "sharedDexRequiresNewRuntimeIdentities": true,
+  "sonyLocalPlatformVideosAdded": [
+    "ps3",
+    "ps4"
+  ],
+  "sonyEmulatorConfigurationMenuAdded": [
+    "ps3",
+    "ps4"
+  ],
+  "apkProduced": false,
+  "signed": false,
+  "installed": false,
+  "physicalValidation": false
+}

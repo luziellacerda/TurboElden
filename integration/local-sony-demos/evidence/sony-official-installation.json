@@ -1,0 +1,48 @@
+{
+  "checkedUTC": "2026-10-11T15:24:42.439245+00:00",
+  "deviceModel": "Motorola Edge 30",
+  "stationSourceCommit": "af3b7e23dea8ffe5b6e83af56513f2ee1bb65dfd",
+  "stationApkSha256": "e7011f0def73160f1cd8ac7c757c9cfec76b3b7bd59da87f3329441b2ad249d9",
+  "emulators": [
+    {
+      "platform": "ps3",
+      "package": "aenu.aps3e",
+      "filename": "aps3e-2.43.apk",
+      "bytes": 40122859,
+      "sha256": "c5a58fb056ae333b8bd6ed69e6bfacdd1e5bf7e0ac2134456a0622bd94a3e466",
+      "certificateSha256": "7acaebec9e121cf269d2654a40423463456dd3bde8219a4d1359bf38138690ca",
+      "version": "2.43",
+      "versionCode": 43,
+      "installed": true,
+      "deviceApkHashMatches": true,
+      "officialSignatureVerified": true,
+      "extraAPKCopyOnPhone": false,
+      "existingEmulatorOverwritten": false,
+      "dataCleared": false,
+      "automaticallyLaunched": false,
+      "firmwareOrGamesInstalled": false
+    },
+    {
+      "platform": "ps4",
+      "package": "com.bachatas4.android.github",
+      "filename": "bachatas4-0.2.4-release.apk",
+      "bytes": 207779222,
+      "sha256": "4077b0d0b80e354c71eff1ce2c003f122449ac266eb27a6ac26744d3f9809a08",
+      "certificateSha256": "a1d6e9aa7b3ff5ae3354f082b133b4d37b156be8aeaf704b0bfaaaee625761ee",
+      "version": "0.2.4",
+      "versionCode": 26100114,
+      "installed": true,
+      "deviceApkHashMatches": true,
+      "officialSignatureVerified": true,
+      "extraAPKCopyOnPhone": false,
+      "existingEmulatorOverwritten": false,
+      "dataCleared": false,
+      "automaticallyLaunched": false,
+      "firmwareOrGamesInstalled": false
+    }
+  ],
+  "offlineOnly": true,
+  "stationGamesSavesLicenseUnchanged": true,
+  "gameplayValidated": false,
+  "personalIdentifiersOrLogsPublished": false
+}

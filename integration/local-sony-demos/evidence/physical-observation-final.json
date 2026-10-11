@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "revision": "R129",
+  "sourceCommit": "cf623c7c5cf34d4aa59ad278dc98fa6d7a50721b",
+  "apkSha256": "89dd543986fdcb0c4b7ea53e82de87907f3b41ee0fe892479d8a63f52e4b7df0",
+  "apkBytes": 2237505749,
+  "deviceModel": "Motorola Edge 30",
+  "checkedUTC": "2026-10-11T15:57:56.766278+00:00",
+  "evidenceScope": "human-observed-final-Sony-interface-and-aggregate-demo-marker-checks",
+  "officialFrontendActivityObserved": true,
+  "catalogPhysicallyObserved": true,
+  "currentCatalogErrorObserved": false,
+  "localDemonstrationsPhysicallyObserved": true,
+  "sonySettingsButtonsPhysicallyObserved": [
+    "ps3",
+    "ps4"
+  ],
+  "sonySystems": [
+    {
+      "platform": "ps3",
+      "platformHeroArtworkObserved": true,
+      "platformThumbnailObserved": true,
+      "platformVideoPosterFrameObserved": true,
+      "platformVideoMotionValidated": false,
+      "gameListDemoCoverObserved": true,
+      "gameListDemoNameObserved": true,
+      "gameListDemoSynopsisAndDemoWarningObserved": true,
+      "gameListOneOfOneCounterObserved": true,
+      "demoMarkerExactConfirmed": true,
+      "demoMarkerBytes": 83
+    },
+    {
+      "platform": "ps4",
+      "platformHeroArtworkObserved": true,
+      "platformThumbnailObserved": true,
+      "platformVideoPosterFrameObserved": true,
+      "platformVideoMotionValidated": false,
+      "gameListDemoCoverObserved": true,
+      "gameListDemoNameObserved": true,
+      "gameListDemoSynopsisAndDemoWarningObserved": true,
+      "gameListOneOfOneCounterObserved": true,
+      "demoMarkerExactConfirmed": true,
+      "demoMarkerBytes": 83
+    }
+  ],
+  "externalSettingsLaunches": [
+    {
+      "platform": "ps3",
+      "launchTriggeredByHumanTap": true,
+      "observedScreen": "aPS3e Welcome",
+      "setupCompleted": false,
+      "permissionPromptAnswered": false
+    },
+    {
+      "platform": "ps4",
+      "launchTriggeredByHumanTap": true,
+      "observedScreen": "Bachata S4 0.2.4 and first-run notification prompt",
+      "setupCompleted": false,
+      "permissionPromptAnswered": false
+    }
+  ],
+  "returnedThroughPublicLoginToOfficialFrontend": true,
+  "sonySettingsLabelsLeakedAfterReturn": false,
+  "sonySettingsModalReturnPhysicallyValidated": true,
+  "sonyPlatformVideoMotionPhysicallyValidated": false,
+  "authenticatedSessionChecked": false,
+  "serverActivationConfirmed": false,
+  "physicalGameplayValidated": false,
+  "thermalImprovementValidated": false,
+  "externalEmulatorFirmwareOrGamesInstalledByThisObservation": false,
+  "containsDeviceOrGameIdentifiers": false,
+  "containsPersonalLogsOrCaptures": false
+}

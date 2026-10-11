@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "sourcePins": {
+    "recipe/sony_media.py": "58f8107ba11b2252f2c1d60201d73cb0af84df7f0764085dc02467bb70719ae2",
+    "headers": {
+      "d0/native_system_video720.h": "6a5bdc4e6a83e2dd490ee7a52e69bbd02c1ea9433155b3cfb1144dc86d5d0a78",
+      "d0/video720_posters.h": "1b2474f0b6793368d28c7826ac1aa83537760ac85b7445f4d142cc861a42529f",
+      "d1/system_video720_assets.h": "2d0e351bed93dd3f26548f6b92157f232b81a3df9586cd65c0900f1ce1df3cf5"
+    },
+    "videos": {
+      "ps3": "d6fb573d754c5a21edc633cf1b3ce61fd4c2f5d2615881178aee9427f8354ff9",
+      "ps4": "4162ed5331876ab0749fc5abe287f419af0b90b980ecafd32947422ee13643ae"
+    },
+    "tools": {
+      "ffmpeg": "57c56e369d5b4873b4d93fc1a1d833cb7cd8bc9325c14b05c34ce60b22842d8a",
+      "ffprobe": "afe05347caaabe479b3c4eae71992b6ec1e11c57266a1d665deb0f9fe9847208",
+      "clang": "7d31c6f6fad98987b6c9d21b800afaa8b3e37f052e94aaddc941d42ff2a35579",
+      "llvm-readelf": "2646e382d8b2559b5c4ae91e9a98e187ed9bd59f23936054d424049ef795ba5e"
+    }
+  },
+  "sourceMedia": {
+    "ps3": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "hevc",
+          "codec_type": "video",
+          "width": 720,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "394498"
+      }
+    },
+    "ps4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "hevc",
+          "codec_type": "video",
+          "width": 720,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "392306"
+      }
+    }
+  },
+  "payloads": {
+    "assets/turbo-system-videos/720-ps3.mp4": {
+      "path": "assets/turbo-system-videos/720-ps3.mp4",
+      "sha256": "d6fb573d754c5a21edc633cf1b3ce61fd4c2f5d2615881178aee9427f8354ff9",
+      "bytes": 394498
+    },
+    "assets/turbo-system-videos/720-ps4.mp4": {
+      "path": "assets/turbo-system-videos/720-ps4.mp4",
+      "sha256": "4162ed5331876ab0749fc5abe287f419af0b90b980ecafd32947422ee13643ae",
+      "bytes": 392306
+    }
+  },
+  "files": {
+    "assets/turbo-system-videos/720-ps3.mp4": {
+      "sha256": "d6fb573d754c5a21edc633cf1b3ce61fd4c2f5d2615881178aee9427f8354ff9",
+      "bytes": 394498
+    },
+    "assets/turbo-system-videos/720-ps4.mp4": {
+      "sha256": "4162ed5331876ab0749fc5abe287f419af0b90b980ecafd32947422ee13643ae",
+      "bytes": 392306
+    },
+    "include/sony_native_system_video720.h": {
+      "sha256": "f88f90d04a0da17ab96d4278f2b77ed60f071dcae715c7709bb840d5198a56e5",
+      "bytes": 23085
+    },
+    "include/sony_system_video720_assets.h": {
+      "sha256": "e2a811ca2b64b6568e60829307b510b08d78d7753f76d6462139ff5dfc72e3f9",
+      "bytes": 2592
+    },
+    "include/sony_video720_posters.h": {
+      "sha256": "38173db0f3b3b591c4fd549ac47cf102c9ec9eeb5b421cc036efd6fd8cf47cfe",
+      "bytes": 8166
+    },
+    "posters/station_video_sony_ps3.rgb565": {
+      "sha256": "351ac16be127192870ae9ce5603329889beda9e83b7017604eb0b1b88ee98fcb",
+      "bytes": 1036800
+    },
+    "posters/station_video_sony_ps4.rgb565": {
+      "sha256": "5ec7e166e76ecc113b8a5f0806b89fa61887d99ca52ab5edfd572095c624f87e",
+      "bytes": 1036800
+    },
+    "sony_video720_posters.o": {
+      "sha256": "7c0ee9e307d211e49c30cb830f7e6495c6436ce97b3b57bc10ff1f80b4ddd549",
+      "bytes": 2074344
+    },
+    "sony_video720_posters.S": {
+      "sha256": "26e0035b464cfe1d29bfcfa66c9ef1f4159fcd2c40f4ede3d6b60206e3797d11",
+      "bytes": 618
+    }
+  },
+  "includeDirectory": "include",
+  "extraObjects": [
+    "sony_video720_posters.o"
+  ],
+  "systemMappingsBefore": 44,
+  "systemMappingsAfter": 46,
+  "posterEntriesBefore": 58,
+  "posterEntriesAfter": 60,
+  "existingMapAndPosterEntriesByteIdentical": true,
+  "nativeVideoMethodsByteIdentical": true,
+  "onlyNativeIncludeChanges": true,
+  "posterFormat": "720x720 RGB565 little-endian, bottom row first",
+  "originalSilentVideoBytesPreserved": true,
+  "sourceFPS": 24,
+  "maximumRenderFPS": 30,
+  "decoderCountChanged": false,
+  "singlePassChanged": false,
+  "stopTwoFramesBeforeEndChanged": false,
+  "graphicsEconomyChanged": false,
+  "textureBudgetChanged": false,
+  "gpuFrameWorkAdded": false,
+  "apkProduced": false,
+  "physicalVisualValidation": false
+}

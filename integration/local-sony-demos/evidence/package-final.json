@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "revision": "R129",
+  "baseApkSha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+  "apkSha256": "89dd543986fdcb0c4b7ea53e82de87907f3b41ee0fe892479d8a63f52e4b7df0",
+  "apkBytes": 2237505749,
+  "freezeSha256": "94b706c31b9293102428cd6726331b5b4131e89cbe5fb8002092c0002ca4db5c",
+  "identityReceiptSha256": "3fbd74d9c196af0d12b019a7049a8682852688bee71c0faa09bf6a685586bd4d",
+  "replacedEntrySha256": {
+    "AndroidManifest.xml": "acda0e4404e29764a32fb3452b69899dc4501b63100376620a7e41a2ad85ff31",
+    "assets/station-online/engines.json": "9211c9e872b0d96dd7b74fc69cdd5e7f6b4327756b0ea92540fd3415aeb97b3e",
+    "classes28.dex": "f682bbbb0575157cf04990e775258d6354d8a1037e84192f30251a954fe879af",
+    "classes35.dex": "585b88564556c9106df0f9ec5a979cdd726824e96dcdc662122717648e227276",
+    "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+    "lib/arm64-v8a/libstation_dolphin_runtime.so": "9765756f70fda14d8103ce7ab7055a4e0fd92e1ed0edef09930ed38e013d9031",
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so": "6868eddfca6c5380b8191fe9c5ad7671faa3ffb1a0215c0fcc9b73236e685ef8",
+    "lib/arm64-v8a/libturbo_carousel.so": "b3d351d2274dc130d5866f4cc7e8ae145c1b9f467dc06f47bdcdc67f476c330f"
+  },
+  "addedEntrySha256": {
+    "assets/turbo-system-videos/720-ps3.mp4": "d6fb573d754c5a21edc633cf1b3ce61fd4c2f5d2615881178aee9427f8354ff9",
+    "assets/turbo-system-videos/720-ps4.mp4": "4162ed5331876ab0749fc5abe287f419af0b90b980ecafd32947422ee13643ae",
+    "classes39.dex": "4e7177427cb701e229603b7af1d74596a686380af9afb20f2e0e263a8c7fe8f0",
+    "lib/arm64-v8a/libstation_psx_online.so": "f31f0a3dbfc90163e1d12591facb26e66380a02e4c53ae92274ae7ebc01c4597"
+  },
+  "preservedEntryCount": 13548,
+  "preservedEntryManifestSha256": "a6a3ee5d945c726f868c01ad2ab9df0033e37b69592b6417866c618bcfb9201f",
+  "signingCertificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "signatureSchemesVerified": [
+    "v2",
+    "v3"
+  ],
+  "zipAlignmentVerifiedBytes": 16384,
+  "classicZip": true,
+  "zip64": false,
+  "verificationTools": {
+    "java": {
+      "path": "F:\\TurboStations-Backup-Completo-20261011\\ferramentas\\jdk17\\bin\\java.exe",
+      "sha256": "1977f302375adbb920d41dac65c7e22eb9c2ed8e1e8d6258964154ff16f14406"
+    },
+    "apksignerJar": {
+      "path": "F:\\TurboStations-Backup-Completo-20261011\\ferramentas\\android-build-tools-35\\lib\\apksigner.jar",
+      "sha256": "00ef9948f843fe395d2440ae3ef41405b8040a6d5d46493bd1902ac0ee6deae7"
+    },
+    "zipalign": {
+      "path": "F:\\TurboStations-Backup-Completo-20261011\\ferramentas\\android-build-tools-35\\zipalign.exe",
+      "sha256": "aa2475ce201962b871fb8daec020da03fd6292c9c1f422cd0fe2e39b20d4f673"
+    }
+  },
+  "engineIds": [
+    "pcsx-rearmed-ff81ed17-player-v3-f31f0a3dbfc9",
+    "mupen64plus-ae-33bf7021-n64-v3-6868eddfca6c",
+    "dolphin-5102a033-gamecube-v3-9765756f70fd",
+    "dolphin-5102a033-wii-v3-9765756f70fd"
+  ],
+  "offlineEmulatorEntriesChanged": false,
+  "n64DolphinCoresAndOptionsPreserved": true,
+  "snesMegadriveEntriesPreserved": true,
+  "installed": false,
+  "serverActivationConfirmed": false,
+  "physicalGameplayValidated": false,
+  "existingOfflineEmulatorLibrariesPreserved": true,
+  "offlineLaunchRoutesAdded": [
+    "ps3",
+    "ps4"
+  ],
+  "externalEmulatorsBundledInStationApk": false,
+  "ps3Ps4OnlineEnabled": false,
+  "localDemonstrationsOnly": true,
+  "sonyLocalPlatformVideosAdded": [
+    "ps3",
+    "ps4"
+  ],
+  "sonyEmulatorConfigurationMenuAdded": [
+    "ps3",
+    "ps4"
+  ],
+  "signedCatalogChanged": false,
+  "ps3Ps4PhysicalGameplayValidated": false,
+  "sourceCommit": "cf623c7c5cf34d4aa59ad278dc98fa6d7a50721b"
+}

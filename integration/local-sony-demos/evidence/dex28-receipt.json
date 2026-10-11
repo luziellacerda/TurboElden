@@ -1,0 +1,22 @@
+{
+  "originalSha256": "b67a44b46d648eb76c5a72ebd485aa65750907772f5fc21964be73366e419dae",
+  "patchedSha256": "d385fae70c73650bdb3354e8cbdfa012b84c3b3c1cf58de03a8a11c7bfa8c0c7",
+  "changedMethods": [
+    ".method public static cover(Ljava/lang/String;)V",
+    ".method private static publishCurrent(Lorg/emulationstation/frontend/station/StationAndroid;)V",
+    ".method public static remove(Ljava/lang/String;)Z",
+    ".method public static start(Ljava/lang/String;)Z"
+  ],
+  "allOtherFrontendMethodsSmaliIdentical": true,
+  "signedCatalogParserChanged": false,
+  "catalogueWarmupAndCacheLogicChanged": false,
+  "downloadImplementationChanged": false,
+  "actualAssembledFrontendVerified": true,
+  "actualSmaliSha256": "426306df90bfa76e4157ab0ed8385b9b3561e9395be6874f77a7f638eb787aad",
+  "donorSha256": "b01b0c9ca4d60dd5e257831cd7fb158ba5622039c990294896624b6a479128e4",
+  "sha256": "f682bbbb0575157cf04990e775258d6354d8a1037e84192f30251a954fe879af",
+  "classCount": 271,
+  "unchangedClasses": 270,
+  "changedType": "Lorg/emulationstation/frontend/station/StationFrontend;",
+  "factoryPreserved": true
+}
