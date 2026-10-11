@@ -107,11 +107,15 @@
     "status": "installed on Motorola; basic carousel/graphics controls observed; full LED timing/thermal/gameplay tests pending",
     "detailedChanges": "versions/station-effects-server-r117-20261010/ALTERACOES-DETALHADAS.md",
     "packageReceipt": "versions/station-effects-server-r117-20261010/evidence/package-r117.json",
-    "sourceCommitStatus": "awaiting-publication",
+    "sourceCommitStatus": "published-and-remote-verified",
     "installedAPKHashMatchesPackage": true,
     "authenticatedCarouselObserved": true,
     "graphicsSmokeCheck": true,
     "installationReceipt": "versions/station-effects-server-r117-20261010/evidence/installation-motorola-r117.json",
-    "physicalSmokeReceipt": "versions/station-effects-server-r117-20261010/evidence/physical-smoke-r117.json"
+    "physicalSmokeReceipt": "versions/station-effects-server-r117-20261010/evidence/physical-smoke-r117.json",
+    "published": true,
+    "sourceCommit": "129ee9db892a327f720df8ae4f8e8a5ffab3f7ee",
+    "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-effects-server-r117-20261010/versions/station-effects-server-r117-20261010",
+    "publicationReceipt": "versions/station-effects-server-r117-20261010/evidence/publication-r117.json"
   }
 }

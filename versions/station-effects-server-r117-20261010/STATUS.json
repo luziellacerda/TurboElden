@@ -20,7 +20,7 @@
   "masterDisablePreservesChoices": true,
   "compiled": true,
   "signed": true,
-  "published": false,
+  "published": true,
   "promotedStable": false,
   "source": "versions/station-effects-server-r117-20261010",
   "branch": "fix/station-effects-server-r117-20261010",
@@ -100,5 +100,8 @@
   ],
   "installedAPKHashMatchesPackage": true,
   "authenticatedCarouselObserved": true,
-  "graphicsSmokeCheck": true
+  "graphicsSmokeCheck": true,
+  "sourceCommit": "129ee9db892a327f720df8ae4f8e8a5ffab3f7ee",
+  "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-effects-server-r117-20261010/versions/station-effects-server-r117-20261010",
+  "publicationReceipt": "evidence/publication-r117.json"
 }

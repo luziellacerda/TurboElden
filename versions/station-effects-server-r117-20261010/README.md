@@ -40,3 +40,7 @@ alinhamento de 16 KiB conferidos. R117 instalada diretamente no Motorola Edge30:
 
 Para testes atuais, use as receitas R117 listadas em ALTERACOES-DETALHADAS.
 Receitas antigas herdadas não substituem o build R117 por manifestos.
+
+## Fonte publicada
+
+Commit de fontes `129ee9db892a327f720df8ae4f8e8a5ffab3f7ee`, branch `fix/station-effects-server-r117-20261010`, recebido e conferido no GitHub. Veja `evidence/publication-r117.json`. O Git contém código/documentos/recibos; o APK e as dependências privadas permanecem locais. Candidato para testes, sem promoção a estável.
