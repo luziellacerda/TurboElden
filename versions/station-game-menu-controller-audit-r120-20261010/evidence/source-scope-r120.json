@@ -1,0 +1,20 @@
+{
+  "version": "R120",
+  "baseVersion": "R119",
+  "nativeChanges": [
+    "d0/native_carousel.cpp",
+    "d0/native_settings.h"
+  ],
+  "javaSourceManifestSHA256": "696453467a9ff0957ab266977158afe02c986364b8496fb3c76c3503b24fbc8a",
+  "nativeInputManifestSHA256": "e431941e92243170eaff3e12595cf2d4640ba97304c012031800fcdabab21c7f",
+  "allAPKPayloadChanges": [
+    "AndroidManifest.xml",
+    "classes28.dex",
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "allOtherAPKEntriesByteIdentical": true,
+  "enginesAndRuntimeUnchanged": true,
+  "gameplayValidated": false,
+  "thermalMeasurementExecuted": false
+}

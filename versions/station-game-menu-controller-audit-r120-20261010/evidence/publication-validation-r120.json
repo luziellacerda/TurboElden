@@ -1,0 +1,303 @@
+{
+  "version": "R120",
+  "scope": "Git index byte audit only; no build/phone/commit/push",
+  "utc": "2026-10-11T02:59:09.453934+00:00",
+  "passed": true,
+  "indexedSnapshotFileCount": 692,
+  "indexSnapshotSHA256": "0b6a8d52701f7ad15a427cfcdea994a0d0e80d3b851e3fa73e3497ada0c919aa",
+  "indexStableDuringAudit": true,
+  "publicSourcesAndRecipePolicyVerified": 324,
+  "publicCounts": {
+    "frontend": 12,
+    "java": 232,
+    "native": 77,
+    "recipe-policy": 3
+  },
+  "allPublicIndexBytesMatchLocalAndManifest": true,
+  "lineEndingsPreserved": true,
+  "publicFilesContainingCRLF": 81,
+  "manifestIndexLocalSHA256": {
+    "JAVA-SOURCE-MANIFEST.json": "696453467a9ff0957ab266977158afe02c986364b8496fb3c76c3503b24fbc8a",
+    "CAROUSEL-INPUT-MANIFEST.json": "e431941e92243170eaff3e12595cf2d4640ba97304c012031800fcdabab21c7f"
+  },
+  "privateIgnoredCount": 46,
+  "privateIgnoredInputs": [
+    {
+      "path": "native/d0/installed_art_asset.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d0/lottie_gear3_data.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/game_infos.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/laser_assets.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/libc.so",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/libdl.so",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/liblog.so",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/local_game_covers.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_action_motion.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_catalog_identity.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_classic.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_dolphin.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_flight.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_flycast.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_laser.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_loading_progress.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_mame.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_mega.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_pause_menu.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_pcecd.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_policy.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_ps2.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_psp.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_psvita.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_retro_music.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_saturn.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_snes.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_system_video.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_wiiu.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_xbox360.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/native_xboxclassic.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/relocations.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/space3d_shaders.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/station_game_lookup.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/system_video720_assets.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/systems.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/video720_policy.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d1/video720_posters.o",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d2/console_assets.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d2/station_future_metadata.h",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d3/collection_previews.o",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d4/lottie_frames.o",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d5/installed_art.o",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d6/collection_previews.o",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d7/collection_previews.o",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    },
+    {
+      "path": "native/d8/collection_previews.o",
+      "localMatchesManifest": true,
+      "ignoredByGit": true,
+      "sameAsR119Baseline": true
+    }
+  ],
+  "exceptions": []
+}

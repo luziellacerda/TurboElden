@@ -1,0 +1,63 @@
+{
+  "version": "R120",
+  "baseVersion": "R119",
+  "baseSourceCommit": "13b21b9dc08adf7b1820fdeb09bec47a810c1ea5",
+  "source": "versions/station-game-menu-controller-audit-r120-20261010",
+  "branch": "fix/station-game-menu-controller-audit-r120-20261010",
+  "state": "installed-source-publication-pending",
+  "compiled": true,
+  "signed": true,
+  "installed": true,
+  "published": false,
+  "physicalGameplayValidated": false,
+  "serverChanged": false,
+  "promotedStable": false,
+  "menuFPS": 30,
+  "defaultBackground": "waves",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R120-20261010.apk",
+  "apkSHA256": "d18c50da17b669373a183ba334e23f356c0521dfb3a2bac69301e8f10b9cbbe1",
+  "apkBytes": 2217065864,
+  "javaSourceCount": 232,
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "packageReceipt": "evidence/package-r120.json",
+  "allOtherEntriesByteIdentical": true,
+  "preservedAPKEntries": 13544,
+  "changedAPKEntries": [
+    "AndroidManifest.xml",
+    "classes28.dex",
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "controllerAutoHideUniversal": false,
+  "switchEngineChanged": false,
+  "thermalImprovementVerified": false,
+  "tests": {
+    "controllerPresence": 68,
+    "componentFactoryJava": 43,
+    "componentFactoryAXML": 1505,
+    "roomMethodGuards": 13,
+    "launchCommands": 146
+  },
+  "testsAreIsolatedNotPhysicalGameplay": true,
+  "inheritedEvidenceIsHistorical": true,
+  "sourcePublicationPending": true,
+  "canonicalPlatformsAudited": 50,
+  "launchAliasesCorrected": [
+    "switch applicationId",
+    "megadrive--br",
+    "super-nintendo--br",
+    "pc-engine-cd"
+  ],
+  "installedDevices": [
+    "Motorola Edge30"
+  ],
+  "installedAPKHashMatchesPackage": true,
+  "dataPreserved": true,
+  "installationReceipt": "evidence/installation-motorola-r120.json",
+  "controllerPhysicalValidation": false,
+  "completeVisualValidation": false,
+  "authenticatedFrontendObserved": true,
+  "onlineRoomANRReported": true,
+  "onlineRoomANRReviewPending": true
+}

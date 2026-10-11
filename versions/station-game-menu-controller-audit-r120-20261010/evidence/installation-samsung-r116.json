@@ -1,0 +1,17 @@
+{
+  "version": "R116-candidate",
+  "deviceModel": "Samsung A56 SM-A566E",
+  "installMode": "adb install -r streamed",
+  "result": "Success",
+  "apkSHA256": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+  "installedAPKHashMatchesPackage": true,
+  "firstInstallTimeDevice": "2026-10-03 16:17:03",
+  "lastUpdateTimeDevice": "2026-10-10 20:21:43",
+  "existingDataDirectoryPreserved": true,
+  "uninstalled": false,
+  "dataCleared": false,
+  "extraAPKCopiedToSharedStorage": false,
+  "freeSpaceBeforeInstall": "8.4 GB",
+  "launcherStart": "accepted",
+  "gameplayVerified": false
+}
