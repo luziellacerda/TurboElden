@@ -8,7 +8,9 @@ Extensão isolada sobre a R128 assinada `0189527c7537845562a2be4be15c0fab976c85f
 - PS4: **DEMO — Corrida neon**, identificador `local-demo-ps4-neon-v1`.
 - Cada amostra tem capa PNG estática identificada como DEMO e sinopse explícita de que não contém jogo. Não anuncia capacidade multiplayer, avaliação ou compatibilidade física.
 
-O caminho raiz é o `romsRoot` efetivo recebido da integração nativa existente. A extensão cria apenas `ps3/DEMO-AventuraOrbital.iso`, `ps4/DEMO-CorridaNeon.pkg` e duas capas `.station-demo-cover-…-v1.png`, sem sobrescrever arquivos existentes. ISO/PKG de demonstração contêm um pequeno marcador textual, não conteúdo de console. Capas são desenhadas uma vez e reutilizadas; não há rede, serviço ou animação nova.
+O caminho raiz dos arquivos de demonstração é o `romsRoot` efetivo recebido da integração nativa existente. Nele, a extensão cria apenas `ps3/DEMO-AventuraOrbital.iso` e `ps4/DEMO-CorridaNeon.pkg`, sem sobrescrever arquivos existentes. ISO/PKG de demonstração contêm um pequeno marcador textual, não conteúdo de console.
+
+As duas capas ficam no diretório privado retornado por `Context.getNoBackupFilesDir()`, em `station-covers/local-demo-ps3-orbital-v1.png` e `station-covers/local-demo-ps4-neon-v1.png`. A raiz canônica deve ser exatamente `/data/data/org.turboramastation.frontend/no_backup` ou `/data/user/0/org.turboramastation.frontend/no_backup`; pasta e arquivos simbólicos são recusados. Esse é o formato legado já aceito por `validWarmCoverPath`, sem relaxar o parser nativo. Capas são desenhadas uma vez e reutilizadas; não há rede, serviço ou animação nova.
 
 ## Guardas
 

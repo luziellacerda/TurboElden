@@ -47,6 +47,7 @@ public final class StationLocalSonyDemos {
         try{
             Path root=Paths.get(suppliedRoot).toRealPath();
             if(!root.isAbsolute()||!Files.isDirectory(root,LinkOption.NOFOLLOW_LINKS))throw new IOException("Invalid demo root");
+            Path covers=privateCoverDirectory(context);
             for(String[] demo:DEMOS){
                 // A real signed item with a colliding ID wins and is never intercepted.
                 if(containsId(rows,demo[0]))continue;
@@ -57,7 +58,7 @@ public final class StationLocalSonyDemos {
                     if(!folder.toRealPath().equals(folder))throw new IOException("Demo folder changed");
                     Path sample=folder.resolve(demo[3]);
                     seed(sample,marker(demo[1]));
-                    Path cover=folder.resolve(".station-demo-cover-"+demo[1]+"-v1.png");
+                    Path cover=covers.resolve(demo[0]+".png");
                     seedCover(cover,demo);
                     String description="DEMONSTRAÇÃO VISUAL — NÃO CONTÉM JOGO.\n\n"+
                         "Este exemplo mostra a plataforma "+demo[2]+" e sua capa na TurboStations. O arquivo é uma amostra identificada, não uma imagem de jogo nem um pacote instalável.\n\n"+
@@ -93,6 +94,20 @@ public final class StationLocalSonyDemos {
     }
     private static byte[] marker(String platform){return ("TURBOSTATIONS-LOCAL-DEMO-V1\nplatform="+platform+
         "\nNOT-A-GAME\nSAMPLE-ONLY-NO-EMULATOR-LAUNCH\n").getBytes(StandardCharsets.US_ASCII);}
+    /** Exact legacy path accepted by the unchanged native validWarmCoverPath. */
+    private static Path privateCoverDirectory(Context context)throws IOException{
+        Path backup=context.getNoBackupFilesDir().toPath();
+        if(Files.isSymbolicLink(backup))throw new IOException("Private demo root is symbolic");
+        backup=backup.toRealPath();String root=backup.toString();
+        if(!root.equals("/data/data/org.turboramastation.frontend/no_backup")&&
+            !root.equals("/data/user/0/org.turboramastation.frontend/no_backup"))
+            throw new IOException("Private demo root is outside the native cover contract");
+        Path covers=backup.resolve("station-covers");
+        if(Files.isSymbolicLink(covers))throw new IOException("Private demo cover folder is symbolic");
+        Files.createDirectories(covers);
+        if(!covers.toRealPath().equals(covers))throw new IOException("Private demo cover folder changed");
+        return covers;
+    }
     private static void seed(Path file,byte[] expected)throws IOException{
         if(Files.isSymbolicLink(file))throw new IOException("Demo file is symbolic");
         if(Files.exists(file,LinkOption.NOFOLLOW_LINKS)){
