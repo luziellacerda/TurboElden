@@ -51,8 +51,9 @@ def container(path,name,payload):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    for key in ('donor','jdk','android-jar','d8-jar','apktool','parent-offline','ndk','native-inputs','out'):
+    for key in ('donor','jdk','android-jar','d8-jar','apktool','parent-offline','ndk','native-inputs','ffmpeg','ffprobe','media-root','out'):
         parser.add_argument('--'+key,type=Path,required=True)
+    parser.add_argument('--prepared-media',type=Path)
     a=parser.parse_args()
     a.donor=a.donor.resolve(strict=True);a.parent_offline=a.parent_offline.resolve(strict=True);a.out=a.out.resolve()
     if a.out.exists() or ROOT in a.out.parents:raise ValueError('Use a new separate output directory')
@@ -162,10 +163,27 @@ def main():
     run(common+includes+[native_source]+objects+tail+['-o',baseline]+last,a.out,'native-r128-baseline')
     if sha(baseline)!=baseline_native_sha:raise ValueError('R128 native baseline not byte identical')
     native_patch=module(ROOT/'recipe/patch_demo_native.py','demo_native')
-    changed_native=native_patch.patch(original_native);native_source.write_bytes(changed_native)
-    native_check=native_patch.verify(original_native,changed_native)
+    artwork_native=native_patch.patch(original_native)
+    native_check=native_patch.verify(original_native,artwork_native)
+    settings_module=module(ROOT/'recipe/patch_sony_settings.py','sony_settings')
+    settings_original=resolved['d0/native_settings.h'].read_bytes()
+    settings_header=settings_module.patch(settings_original)
+    settings_check=settings_module.verify(settings_original,settings_header)
+    (native_out/'native_settings.h').write_bytes(settings_header)
+    media_module=module(ROOT/'recipe/sony_media.py','sony_media')
+    media=media_module.prepare(a.native_inputs,a.ndk,a.prepared_media or a.out/'sony-media',a.ffmpeg,a.ffprobe,media_root=a.media_root)
+    changed_native=media['sourceTransform'](artwork_native)
+    native_source.write_bytes(changed_native)
+    final_includes=['-I',Path(media['includeDirectory']),*includes]
+    final_objects=[*objects,*map(Path,media['extraObjects'])]
+    media_payloads={}
+    for name,record in media['payloads'].items():
+        target=a.out/name;target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(record['path'],target)
+        if sha(target)!=record['sha256'] or target.stat().st_size!=record['bytes']:raise ValueError('Sony media copy differs')
+        media_payloads[name]={'sha256':sha(target),'bytes':target.stat().st_size}
     carousel=a.out/'libturbo_carousel.so'
-    run(common+includes+[native_source]+objects+tail+['-o',carousel]+last,a.out,'native-demo-art')
+    run(common+final_includes+[native_source]+final_objects+tail+['-o',carousel]+last,a.out,'native-demo-art')
     def exports(path):return {line.split()[-1] for line in run([a.ndk/'llvm-nm.exe','--dynamic','--defined-only',path],a.out,path.stem+'-exports').splitlines() if len(line.split())>=3}
     if exports(baseline)!=exports(carousel):raise ValueError('Native public ABI changed')
     headers=run([a.ndk/'llvm-readelf.exe','-lW',carousel],a.out,'native-loads')
@@ -174,19 +192,25 @@ def main():
     if any(sha(path)!=inventory[name] for name,path in resolved.items()):raise ValueError('Native input changed during compilation')
     native_check.update({'nativeBaselineSha256':baseline_native_sha,'baselineNativeByteIdentical':True,
         'sha256':sha(carousel),'exportSetExactlyPreserved':True,'loadAlignment16KiB':True,
-        'productiveInputSha256':inventory,'staticArtworkFallbackSonyOnly':True})
+        'productiveInputSha256':inventory,'staticArtworkFallbackSonyOnly':True,
+        'sonyMediaReceipt':json.loads(Path(media['receiptPath']).read_text(encoding='utf-8')),
+        'sonySettingsMenuReceipt':settings_check,
+        'nativeVideoMethodsByteIdentical':True})
     write(a.out/'native-receipt.json',native_check);baseline.unlink()
 
     if frozen!=source_map():raise ValueError('Demo source changed during build')
     if any(sha(a.parent_offline/name)!=digest for name,digest in parent_inputs.items()):raise ValueError('R128 parent source changed during build')
     payloads={name:{'sha256':sha(a.out/name),'bytes':(a.out/name).stat().st_size}
               for name in ('classes28.dex','classes39.dex','libturbo_carousel.so')}
+    payloads.update(media_payloads)
     receipt={'schemaVersion':1,'passed':True,'donorApkSha256':APK_SHA,
         'sourceSha256':frozen,'parentSourceSha256':parent_sources,'parentNativeSourceInputs':parent_inputs,
         'payloads':payloads,'nativeBaselineSha256':baseline_native_sha,'baselineNativeByteIdentical':True,
         'preservedParentPayloadSha256':preserved,'offlineOnly':True,'localDisplayOnly':True,
         'signedCatalogChanged':False,'realDownloadsChanged':False,'graphicsRenderMethodsChanged':False,
         'existingOnlineCodePreserved':True,'sharedDexRequiresNewRuntimeIdentities':True,
+        'sonyLocalPlatformVideosAdded':['ps3','ps4'],
+        'sonyEmulatorConfigurationMenuAdded':['ps3','ps4'],
         'apkProduced':False,'signed':False,'installed':False,'physicalValidation':False}
     write(a.out/'demo-payloads.json',receipt);print(json.dumps(receipt,indent=2))
 

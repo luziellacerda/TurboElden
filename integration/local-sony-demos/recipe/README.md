@@ -29,7 +29,7 @@ Os diretórios de saída devem ser novos, isolados das fontes. Não altere nenhu
 arquivo Java/Python da integração durante ou depois da compilação.
 
 ```text
-python -B integration/local-sony-demos/recipe/build_demo_payloads.py --donor <APK_R128> --jdk <JDK17> --android-jar <ANDROID_JAR> --d8-jar <D8_JAR> --apktool <APKTOOL_3_0_3_JAR> --parent-offline integration/ps3-ps4-offline --ndk <NDK_BIN> --native-inputs <INPUTS_NATIVOS_R124> --out <DEMO_PAYLOADS>
+python -B integration/local-sony-demos/recipe/build_demo_payloads.py --donor <APK_R128> --jdk <JDK17> --android-jar <ANDROID_JAR> --d8-jar <D8_JAR> --apktool <APKTOOL_3_0_3_JAR> --parent-offline integration/ps3-ps4-offline --ndk <NDK_BIN> --native-inputs <INPUTS_NATIVOS_R124> --ffmpeg <FFMPEG_EXE> --ffprobe <FFPROBE_EXE> --media-root <MIDIAS_SONY> --out <DEMO_PAYLOADS>
 
 python -B integration/local-sony-demos/recipe/build_unsigned.py build --base <APK_R126> --donor <APK_R128> --ndk <NDK_ROOT> --java-receipt <RECIBO_JAVA_PSX> --parent-offline-receipt integration/ps3-ps4-offline/evidence/offline-payloads.json --parent-offline-payloads <PAYLOADS_R128_ORIGINAIS> --demo-receipt <DEMO_PAYLOADS>/demo-payloads.json --demo-payloads <DEMO_PAYLOADS> --out <ASSEMBLY>
 
@@ -41,19 +41,25 @@ python -B integration/local-sony-demos/recipe/build_unsigned.py check-unsigned -
 1. Conferência integral do doador R128 e dos seis payloads compartilhados originais.
 2. Extração apenas dos DEX6/35 preservados para o diretório da montagem.
 3. Conferência dos quatro payloads e fontes congeladas R128 e dos três novos
-   payloads da demonstração, com a prova de reprodução nativa R128.
+   payloads da demonstração e duas mídias Sony, com a prova de reprodução nativa R128.
 4. Renovação somente das quatro identidades existentes PSX/N64/GameCube/Wii.
    Cores, opções, perfis, capacidades e protocolo permanecem idênticos à R128.
 5. Freeze das fontes completas PSX + offline R128 + demonstrações locais.
-6. Montagem dos mesmos dez payloads do overlay R128 sobre a base R126,
+6. Montagem dos dez payloads do overlay e duas adições de vídeo Sony sobre a base R126,
    conferência de todas as entradas preservadas e leitura independente do resultado.
 7. Gravação de `source-freeze.json`, `identity/runtime-identity.json`,
    `unsigned.apk`, `unsigned.package.json` e `pipeline-unsigned.json`.
 
-O overlay modifica DEX28/39 e o fallback de arte Sony no carousel; preserva
+O overlay modifica DEX28/39, o fallback de arte Sony e as duas entradas do menu
+de configuração; acrescenta os vídeos locais PS3/PS4 e seus posters; preserva
 Manifest/DEX6/DEX35. As bibliotecas dos emuladores normais e os demais arquivos
 do APK são comparados byte a byte. PS3/PS4 permanecem **somente offline**;
 demonstrações locais não são jogos nem entradas novas do catálogo assinado.
+
+Ver [mídias Sony](README-MIDIAS-SONY.md) para ferramentas e hashes. `--prepared-media`
+é opcional e aceita apenas uma preparação integral com fontes e arquivos ainda
+idênticos. A [operação de configuração](../SETTINGS.md) abre exclusivamente os
+launchers oficiais, depois das guardas existentes, sem iniciar jogo.
 
 ## Verificação após assinatura pelo finalizador
 

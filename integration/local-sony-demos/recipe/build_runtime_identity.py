@@ -64,6 +64,8 @@ def main():
         if previous["engineId"] == current_engine["engineId"]:
             raise ValueError("Changed shared DEX requires a new engine identity")
     receipt.update({"revision": REVISION, **receipt_pins, "localDemonstrationsOnly": True,
+                    "sonyLocalPlatformVideosAdded": ["ps3", "ps4"],
+                    "sonyEmulatorConfigurationMenuAdded": ["ps3", "ps4"],
                     "signedCatalogChanged": False, "ps3Ps4OnlineEnabled": False})
     module.write(path, receipt)
 

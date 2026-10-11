@@ -13,6 +13,8 @@ REVISION = "R129"
 DONOR_SHA = "0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc"
 DONOR_BYTES = 2234617901
 SHARED_ADDITIONS = frozenset(("classes39.dex", "lib/arm64-v8a/libturbo_carousel.so"))
+MEDIA_ADDITIONS = frozenset(("assets/turbo-system-videos/720-ps3.mp4", "assets/turbo-system-videos/720-ps4.mp4"))
+SHARED_ADDITIONS |= MEDIA_ADDITIONS
 PARENT_PAYLOADS = {
     "AndroidManifest.xml": "AndroidManifest.xml",
     "classes28.dex": "classes28.dex",
@@ -23,6 +25,8 @@ DEMO_PAYLOADS = {
     "classes28.dex": "classes28.dex",
     "classes39.dex": "classes39.dex",
     "libturbo_carousel.so": "lib/arm64-v8a/libturbo_carousel.so",
+    "assets/turbo-system-videos/720-ps3.mp4": "assets/turbo-system-videos/720-ps3.mp4",
+    "assets/turbo-system-videos/720-ps4.mp4": "assets/turbo-system-videos/720-ps4.mp4",
 }
 PARENT_JAVA = (
     "java/org/emulationstation/frontend/offline/StationSonyOfflineActivity.java",
@@ -113,13 +117,13 @@ def verify_compilation(parent_receipt_path, parent_payloads, demo_receipt_path, 
     if demo.get("parentNativeSourceInputs") != expected_native_parent:
         raise ValueError("Demo native hook did not bind exact frozen R128 source inputs")
     if set(demo.get("payloads", {})) != set(DEMO_PAYLOADS):
-        raise ValueError("Only DEX28/DEX39 and the Sony artwork hook may change for demonstrations")
+        raise ValueError("Exact DEX28/DEX39, Sony native hook and two Sony media additions required")
     if (demo.get("nativeBaselineSha256") != parent["payloads"]["libturbo_carousel.so"]["sha256"] or
             demo.get("baselineNativeByteIdentical") is not True):
         raise ValueError("Native demo hook must be based on byte-reproduced R128 carousel")
-    expected_shared = set(baseline["payloadSha256"])
+    expected_shared = set(baseline["payloadSha256"]) | MEDIA_ADDITIONS
     if set(final_payloads) != expected_shared:
-        raise ValueError("Exact six R128 shared payload names required")
+        raise ValueError("Exact six R128 shared names and two Sony media additions required")
     for name, target in DEMO_PAYLOADS.items():
         check_file(final_payloads[target], demo["payloads"][name], name)
     for name in expected_shared - set(DEMO_PAYLOADS.values()):
@@ -136,6 +140,7 @@ def assembler():
     module.SHARED |= SHARED_ADDITIONS
     module.REPLACED |= frozenset(("lib/arm64-v8a/libturbo_carousel.so",))
     module.ADDED |= frozenset(("classes39.dex",))
+    module.ADDED |= MEDIA_ADDITIONS
     module.PAYLOADS = module.REPLACED | module.ADDED
     current = module.current_sources
 

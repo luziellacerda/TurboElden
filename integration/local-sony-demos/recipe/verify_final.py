@@ -17,6 +17,8 @@ def main():
                        "externalEmulatorsBundledInStationApk": False,
                        "ps3Ps4OnlineEnabled": False,
                        "localDemonstrationsOnly": True,
+                       "sonyLocalPlatformVideosAdded": ["ps3", "ps4"],
+                       "sonyEmulatorConfigurationMenuAdded": ["ps3", "ps4"],
                        "signedCatalogChanged": False,
                        "ps3Ps4PhysicalGameplayValidated": False})
         module.package.write(path, report)

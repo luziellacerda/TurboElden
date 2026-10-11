@@ -1,6 +1,6 @@
 # Demonstrações locais PS3 e PS4 — R129
 
-Extensão isolada sobre a R128 assinada `0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc`. Acrescenta duas linhas de apresentação locais ao catálogo entregue ao carrossel, depois da preparação das linhas reais. Não modifica o catálogo autenticado, jogos reais, perfis online, downloads, renderização, vídeos, economia, cache ou pré-carregamento.
+Extensão isolada sobre a R128 assinada `0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc`. Acrescenta duas linhas de apresentação locais ao catálogo entregue ao carrossel, dois vídeos Sony do tema do proprietário e acesso à interface de configuração dos emuladores. Não modifica o catálogo autenticado, jogos reais, perfis online, downloads, renderer do carrossel, demais vídeos, economia, cache ou pré-carregamento.
 
 Estado atual em [evidence/STATUS.json](evidence/STATUS.json), vinculado aos recibos finais corrigidos. A [primeira tentativa R129](evidence/first-candidate-startup-failure.json) foi instalada, mas apresentou falha na configuração do catálogo; não escolhe o instalador atual. A prova do contrato de `validWarmCoverPath` e a observação física de `IOException` estão registradas separadamente. Não foi alegado um log físico literal de caminho inválido. Catálogo, demonstrações e gameplay da correção exigem observação própria.
 
@@ -29,10 +29,11 @@ As duas capas ficam no diretório privado retornado por `Context.getNoBackupFile
 | Payload | Alteração permitida |
 | --- | --- |
 | `classes28.dex` | Somente os quatro métodos `publishCurrent`, `start`, `remove`, `cover` de `StationFrontend`; outras 270 classes, inclusive fábrica PSX, preservadas |
-| `classes39.dex` | Helper local, guarda de demonstração na Activity Sony e política Sony idêntica à R128 |
-| `libturbo_carousel.so` | Fallback de capa somente para célula de plataforma PS3/PS4 sem arte cadastrada; confirma a linha do DEMO exato e usa seu PNG privado persistente durante a reconstrução de `syncModel` |
+| `classes39.dex` | Helper local, guarda de demonstração e operação explícita de configuração na Activity Sony; política Sony idêntica à R128 |
+| `libturbo_carousel.so` | Fallback de capa Sony em `syncModel`, duas opções do menu e mapas/posters Sony adicionais; renderer/motor de vídeo preservados |
+| `assets/turbo-system-videos/720-ps3.mp4`, `720-ps4.mp4` | Dois originais locais silenciosos 720×720/24fps, copiados byte a byte do tema TURBORAMAx |
 
-O fallback nativo não desenha efeitos nem muda rotas. Primeiro reproduz o carousel R128 e exige hash idêntico; depois aplica um delta com inversa exata. Manifesto, `classes6.dex`, `classes35.dex`, motores e opções permanecem os da R128. Marcadores dos motores que incluem DEX/carousel compartilhados precisam ser renovados pelo pipeline R129.
+O fallback de arte não desenha efeitos nem muda rotas de jogos. Primeiro reproduz o carousel R128 e exige hash idêntico; depois aplica deltas delimitados de arte, menu e includes de mídia. Manifesto, `classes6.dex`, `classes35.dex`, motores e opções permanecem os da R128. Marcadores dos motores que incluem DEX/carousel compartilhados precisam ser renovados pelo pipeline R129.
 
 A arte da plataforma usa o caminho privado `no_backup/station-covers/<demoId>.png` sob `/data/user/0/org.turboramastation.frontend`, conferido uma vez por plataforma Sony na montagem de uma lista de sistemas alterada. Requer a linha local do DEMO exato na própria plataforma e preserva arte de sistema já cadastrada. Não depende de `Item.coverPath`, que pertence à janela transitória de capas dos jogos; a revelação, a remoção fora da janela, a residência de texturas e a rotina por frame permanecem intactas.
 
@@ -40,4 +41,4 @@ A arte da plataforma usa o caminho privado `no_backup/station-covers/<demoId>.pn
 
 `recipe/build_demo_payloads.py` exige `--donor`, `--jdk`, `--android-jar`, `--d8-jar`, `--apktool`, `--parent-offline`, `--ndk`, `--native-inputs`, `--out`. O donor é exclusivamente a R128 assinada; `--parent-offline` aponta para `integration/ps3-ps4-offline`; `--native-inputs` reutiliza a árvore privada preservada `reconstrucao/native-inputs`; `--ndk` é o diretório `bin` LLVM. Saída deve ser um diretório novo fora das fontes.
 
-A receita produz os três payloads e `demo-payloads.json`. Confere as 271 classes antes e depois de remontar o DEX real, namespaces de DEX39, política Sony, reprodução nativa R128, exports, alinhamento 16 KiB e congelamento de fontes. Não monta, assina ou instala APK. Não substitui prova de conferência visual ou gameplay.
+A receita produz os três payloads compilados, dois assets de vídeo e `demo-payloads.json`. Confere as 271 classes antes e depois de remontar o DEX real, namespaces de DEX39, política Sony, reprodução nativa R128, exports, alinhamento 16 KiB, mídias/posters e congelamento de fontes. Não monta, assina ou instala APK. Não substitui prova de conferência visual ou gameplay.

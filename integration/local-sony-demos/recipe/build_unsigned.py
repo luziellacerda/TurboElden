@@ -12,7 +12,7 @@ import subprocess
 import sys
 import zipfile
 from pipeline_common import (
-    DONOR_BYTES, DONOR_SHA, PARENT, ROOT, assembler, read, sha, verify_compilation,
+    DONOR_BYTES, DONOR_SHA, MEDIA_ADDITIONS, PARENT, ROOT, assembler, read, sha, verify_compilation,
 )
 
 
@@ -102,6 +102,7 @@ def build(args):
              "classes28.dex": args.demo_payloads / "classes28.dex",
              "classes39.dex": args.demo_payloads / "classes39.dex",
              "lib/arm64-v8a/libturbo_carousel.so": args.demo_payloads / "libturbo_carousel.so"}
+    final.update({name: args.demo_payloads / name for name in MEDIA_ADDITIONS})
     verify_compilation(args.parent_offline_receipt, args.parent_offline_payloads, args.demo_receipt, final)
     identity = out / "identity"
     command = [sys.executable, "-B", str(ROOT / "recipe/build_runtime_identity.py"),
@@ -120,7 +121,7 @@ def build(args):
         library = marker["runtimeLibrary"]
         overlay[package.PREFIX + library] = (identity / "native" / library if kind == "psx" else identity / library)
     if set(overlay) != package.PAYLOADS:
-        raise ValueError("Final R129 overlay must have exactly the existing ten entries")
+        raise ValueError("Final R129 overlay requires the existing ten entries and two Sony videos")
     freeze = out / "source-freeze.json"
     package.freeze_inputs(base, identity / "runtime-identity.json",
                           [name + "=" + str(path.resolve()) for name, path in sorted(overlay.items())], freeze)
