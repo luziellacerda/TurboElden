@@ -1,0 +1,58 @@
+{
+  "schema": "station-dolphin-endpoint-jvm-probe-v1",
+  "recordedUtc": "2026-10-11T06:31:43.310559+00:00",
+  "scope": "Pure JVM and loopback TCP; fake native endpoint and typed JSON/TLS fixture builders, no real server, JNI Dolphin, Android, ROM or gameplay",
+  "checks": 470,
+  "finalCodeRunElapsedMs": 833,
+  "javaVersion": 17,
+  "encoding": "UTF-8",
+  "isolatedParticipants": [
+    2,
+    3,
+    4
+  ],
+  "repeatRuns": [
+    {
+      "checks": 470,
+      "elapsedMs": 833
+    },
+    {
+      "checks": 470,
+      "elapsedMs": 8881
+    },
+    {
+      "checks": 470,
+      "elapsedMs": 8873
+    }
+  ],
+  "unchangedSocketBranches": {
+    "void nativeInput()": true,
+    "void nativeOutput()": true,
+    "Socket connectHost()": true,
+    "Remote WSS implementation unchanged": true
+  },
+  "covered": [
+    "DPL1 one-byte and multi-byte fragmentation plus concatenated frames",
+    "Authenticated source and destination slots",
+    "1392-byte datagram/1400-byte frame bound",
+    "Same ID and bytes on temporary native backpressure",
+    "ACK only after nativeAwaitDelivery reports ENet consumption",
+    "No ACK/close on incomplete frame or bounded native wait",
+    "300 concurrent delivery IDs unique process-wide, no rollover",
+    "Explicit cancellation and bounded staging",
+    "TSR3 credit exhaustion retains a queued or one in-flight bounded frame",
+    "Native endpoint opens no local TCP listener",
+    "Legacy TCP input/output and confirmation unchanged",
+    "Exact 2/3/4 channel roles, sparse signed roster, invalid ticket/mask rejected"
+  ],
+  "sourceSha256": {
+    "java/org/emulationstation/frontend/netplay/StationMultiplayerEndpoint.java": "93f098535e253ef00fdb56e9124b61df695e8c776948dd1ca8ca99f54ed29bed",
+    "java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java": "39391b4ad0fd84d426e55f1ca1a3c9b7de1527378de95c057316e1a716fc2441",
+    "java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java": "647c93b9b3ade6326b2db8e19ef2f14699cb728ec48e1c56bdb6abb99c9f3ae2",
+    "java/org/emulationstation/frontend/netplay/StationDolphinEndpoint.java": "b42634450bd2383051de95ffcff472131b4512aef651202f090a8cc442296058",
+    "tests/StationDolphinEndpointProbe.java": "89c52e6364c631cdff47b4631ec86e51362a12376e7c8eb3105f9d56d95816d2",
+    "tests/run_endpoint_probe.ps1": "44e1418e275268174dce4bcdf4d47c27922e32f01220af2dc00cec34b9d66e79"
+  },
+  "physicalGameplayValidated": false,
+  "productionRegistrationVerified": false
+}

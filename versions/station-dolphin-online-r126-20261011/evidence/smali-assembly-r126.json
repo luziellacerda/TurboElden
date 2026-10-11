@@ -1,0 +1,112 @@
+{
+  "schema": "station-dolphin-smali-assembly-v1",
+  "basePartitionHashes": {
+    "classes10.dex": "74492a53dee0db0990bf761ed011ad0d7f9ec597e95c83913a5e48b834b15d50",
+    "classes12.dex": "e38e2406aa7a5e05e20a08b09c47fecb943cd3a88a4fbbd6df541721a3096884"
+  },
+  "sourceTrees": {
+    "core": [
+      4991,
+      "9d6ae3df381559141c44061dcacbc713e66893e7ab9389d4fe7fe35174299834"
+    ],
+    "bootstrap": [
+      5,
+      "37988f0824ae8a0ffb90fd8c492aa1490f54bf9918777dc39301b4f69fc7f245"
+    ]
+  },
+  "modifiedFiles": [
+    {
+      "partition": "core",
+      "path": "org/dolphinemu/dolphinemu/DolphinApplication.smali",
+      "sourceSha256": "c4f0ea69fb7228fa5b3d366765280fc687d8520c620ec60d3bcbb6d5d10a512b",
+      "patchedSha256": "bf244aa99900eb54c39536761c7f81a8d70b47f91d9a978c58b4cf633e355324"
+    },
+    {
+      "partition": "core",
+      "path": "org/dolphinemu/dolphinemu/features/netplay/NetplaySession.smali",
+      "sourceSha256": "7be37119ba40b5074ddd4c3c332c61b5765b35d64bb64d742551b50d88dd4608",
+      "patchedSha256": "07649ba4bc05a2745a053d7985847a4421a829e61cdb4f5a963317b301d8843f"
+    },
+    {
+      "partition": "core",
+      "path": "org/dolphinemu/dolphinemu/activities/EmulationActivity.smali",
+      "sourceSha256": "bb53abdd5e998b1eb0485954b3cc23a3414e0c333212768f6b8f70dc27fd59da",
+      "patchedSha256": "b6e1eb14795f48f2fe390fbf1a770182d0e4ed676c05dfb7cdb7701576edebe6"
+    },
+    {
+      "partition": "bootstrap",
+      "path": "org/emulationstation/frontend/DolphinBootstrap.smali",
+      "sourceSha256": "8a5d01730c2584190a0a0f969fdfce154f4b7b4e66a066308a4409f0eafb7cbb",
+      "patchedSha256": "e7fb9b43a7b4f9b17a89ba739a1f513ededf3a8e50643a1fed812c212a17d147"
+    },
+    {
+      "partition": "bootstrap",
+      "path": "org/emulationstation/frontend/DolphinEntryActivity.smali",
+      "sourceSha256": "69c53207ed5ce9933dd681c6303daedbcda58f42a365336e084590a8292476b6",
+      "patchedSha256": "72d6688d0d9c1130c8dc4ed9942e96abf6a404245b93adde9eeae9f74c999a88"
+    }
+  ],
+  "copiedSmaliFiles": {
+    "unchangedByteForByte": 4991,
+    "patchedAsPlanned": 5
+  },
+  "artifacts": {
+    "classes10.dex": {
+      "path": "G:\\StationDolphinR126\\stage\\station-classes10-humanback.dex",
+      "bytes": 6357228,
+      "sha256": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c"
+    },
+    "classes12.dex": {
+      "path": "G:\\StationDolphinR126\\stage\\station-classes12.dex",
+      "bytes": 12756,
+      "sha256": "297084c7424ababd5bf31abf3af929b8c6312af34c02f78c24f588fd5584af41"
+    },
+    "classes35.dex": {
+      "path": "G:\\StationDolphinR126\\java-final-3\\classes35.dex",
+      "bytes": 733304,
+      "sha256": "9aaed18186c227ae88834f686dfa55665852f7e105dd9106640160ec38fbed21"
+    }
+  },
+  "tools": {
+    "apktoolJar": "E:\\ESTUDO APK\\TurboRetroEmu-build\\tools\\apktool_3.0.3.jar",
+    "apktoolSha256": "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423",
+    "jdk": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot\\bin"
+  },
+  "dexProbe": {
+    "checks": 15054,
+    "distinctHookDescriptors": 16,
+    "callSites": 20,
+    "physicalGameplayValidated": false
+  },
+  "actualDexHooks": {
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSelector;->directory(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;": 3,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSelector;->libraryName(Landroid/content/Context;)Ljava/lang/String;": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSelector;->rejectOfflineLaunch(Landroid/app/Activity;)Z": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSelector;->skipLegacySaves(Landroid/content/Context;)Z": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->allowClose(Ljava/lang/Object;)Z": 2,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->allowMenuAction(Landroid/app/Activity;I)Z": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->allowSaveState(Landroid/app/Activity;)Z": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onBootGame(Ljava/lang/Object;Ljava/lang/String;)Z": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onConnectionError(Ljava/lang/Object;Ljava/lang/String;)Z": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onConnectionLost(Ljava/lang/Object;)Z": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onGameCreate(Landroid/app/Activity;)V": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onGameDestroy(Landroid/app/Activity;)V": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onGamePause(Landroid/app/Activity;)V": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onGameResume(Landroid/app/Activity;)V": 1,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onMenuAction(Landroid/app/Activity;I)V": 2,
+    "Lorg/emulationstation/frontend/netplay/StationDolphinSession;->onNativeStop(Ljava/lang/Object;)Z": 1
+  },
+  "sourceRecipeHashes": {
+    "recipe/patch_dolphin_smali.py": "5df71fb4d44d6fed1fe91a851ffaee05463607019314e3e0b82d10080fb6aab4",
+    "recipe/DecodeDolphinPartition.java": "d1365cf8cce05fb08c6e04dbcc47e9b154af268637bf0d768c32f851420c2b67",
+    "recipe/AssembleDolphinPartition.java": "f41e1317bf0bf5e5430b47d70e0f8d8cbfc729f87b37c901a1dbe6810090972a",
+    "tests/DolphinDexHookProbe.java": "185fb250b1d85eeef3ad0c32a79935ff1dd2d5aa0fc424f62e983b007ee42bdd",
+    "tests/probe_dolphin_smali.py": "8144ae9a40bdd02070e19a92e1ae7ed87edb2617bd9fcfea1327e3df80dca87d",
+    "tests/record_smali_evidence.py": "33a0e7216be874070c1b6bd78bc95ba9a1cdd3ad0d32cd651630efd6eda964f2"
+  },
+  "donorModified": false,
+  "offlineNativeLibrariesModified": false,
+  "apkBuiltByThisRecipe": false,
+  "physicalGameplayValidated": false,
+  "productionRegistryValidated": false
+}

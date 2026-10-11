@@ -1,0 +1,54 @@
+{
+  "schema": "station-n64-protocol-probe-v1",
+  "recordedUtc": "2026-10-11T06:15:06.115416+00:00",
+  "checks": 282,
+  "elapsedMs": 6319,
+  "javaVersion": 17,
+  "encoding": "UTF-8",
+  "scope": "Pure JVM loopback fixtures, no Android native emulator, no ROM, no remote server, no gameplay",
+  "participantFixtures": [
+    2,
+    3,
+    4
+  ],
+  "sparseMaskFixture": 11,
+  "covered": [
+    "Exact signed roster waiting and cancellation",
+    "Slot spoofing and duplicate link admission rejected",
+    "One-byte frame fragmentation and malformed frame rejection",
+    "Strict UTF-8 save basename and byte budget",
+    "524291-byte fragmented save transfer",
+    "Pinned CPU settings and settings cancellation",
+    "Missing inputs retained without guessed neutral state",
+    "Bounded history with missing peer",
+    "256KiB raw TCP backpressure and cancellation",
+    "64-entry per-peer send queue, FIFO81 responses and no global monitor across send",
+    "Explicit close wakes blocked producers without network failure"
+  ],
+  "sourceSha256": {
+    "java/org/emulationstation/frontend/netplay/StationN64Wire.java": "fa30f4a200bfec71a715f9f0c5ee54e51f27f98e3c8723f191094d6df717ca40",
+    "java/org/emulationstation/frontend/netplay/StationN64Server.java": "39d86015ce89ed34818fb275ab35c963871fc975b4ff16e21f7aa07d68909216",
+    "java/org/emulationstation/frontend/netplay/StationN64Mux.java": "6c3b37e207355063cea92e46c0a8a23056884a765b19c1f053774da6eb82009f",
+    "tests/StationN64ProtocolProbe.java": "97c449f67289e3744ceddb53fe4f4250ef9f066faa46c988db9fea8fbcbf453b",
+    "recipes/patch_mupen_smali.py": "354d0aa5ca7044e04925a7c47920e4f3e4a424be17ddfc13250cfd41318a9a9a",
+    "docs/mupen-smali-hooks.json": "e61cc5ee5887c53a2ebd766f931d168b5ffd6f7c196d17ef2ff215c57776f2fd"
+  },
+  "recipeValidation": {
+    "inputPinsChecked": 7,
+    "bridgeApis": 20,
+    "transformAnchorsInMemory": true,
+    "donorModified": false
+  },
+  "physicalGameplayValidated": false,
+  "productionRegistrationVerified": false,
+  "repeatRuns": [
+    {
+      "checks": 282,
+      "elapsedMs": 6319
+    },
+    {
+      "checks": 282,
+      "elapsedMs": 6724
+    }
+  ]
+}

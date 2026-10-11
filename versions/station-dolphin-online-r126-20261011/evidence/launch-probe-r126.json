@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "checks": 231,
+  "failures": 0,
+  "actualProductionLaunchCompiled": true,
+  "sourceSha256": {
+    "java/org/emulationstation/frontend/netplay/StationDolphinLaunch.java": "37b467bebb1ea3bfaab9ed4e1c3cfad0eace48c1f65d182dd195fa22f45d5278",
+    "tests/StationDolphinLaunchProbe.java": "eee2230329b11dea1dc7822e0e785e367015f534f7dabfb51f1f866d23b441af"
+  },
+  "dependencySha256": {
+    "json-20250517.jar": "3ea61b2a06e31edf1c91134fe9106b0ebb16628be169f3db75bc7a2b06b45796",
+    "android.jar": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+    "rooms.jar": "44cfdeed223caf6ff47b607d8460137cf80428299c602b97b2e8923b47eaa61b",
+    "client.jar": "011bce981b609d2cc5cfbad49c386e7f54dea1f560a17fe79bae3a56b3f8f313"
+  },
+  "scope": [
+    "private-descriptor-validation",
+    "two-to-four-signed-shape-fixtures",
+    "canonical-controller-profile-and-options",
+    "bounded-private-input-copy",
+    "Unicode-input-profile",
+    "cancellation",
+    "atomic-input-replacement"
+  ],
+  "roomAuthenticationVerified": false,
+  "androidApisExecuted": false,
+  "emulatorExecuted": false,
+  "physicalGameplayValidated": false,
+  "apkChanged": false
+}

@@ -1,0 +1,18 @@
+{
+  "commit": "8fae8ce254dfc1344527e05301e43f37dea2df80",
+  "sourceArchiveSha256": "ceffce971676d4cfdf348a082df06fc92a1dca6d95bea892a480d63f200961cb",
+  "patchSha256": "5b59b57711dabdd390bb8dda5e8ea5d309c3e2e4ba2ad877134907617679a1a7",
+  "files": [
+    {
+      "path": "Externals/libadrenotools/src/driver.cpp",
+      "upstreamSha256": "93d0a7b5f741f42e5b728f8eed941f46a3fd9e09e275f33f22c910473ecde6d7",
+      "patchedSha256": "4ba25cb4cc62e2a751ca411bfd5fe5e839fda4cc0545e26c0ac9f9a6020f6fcb"
+    },
+    {
+      "path": "Externals/libadrenotools/src/hook/hook_impl.cpp",
+      "upstreamSha256": "37a2ecb380bf061b267ee5be014e19726655e79118a66123b2eb9acc646ffbe1",
+      "patchedSha256": "816b1c61f4497a8a5aed2b3167752d61d2edbeaaf700050e214f8176ac1130ba"
+    }
+  ],
+  "offlineLibrariesModified": false
+}

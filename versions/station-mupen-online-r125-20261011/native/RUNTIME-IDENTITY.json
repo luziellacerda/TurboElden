@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "baseApkSha256": "aeeb2f8167a442db5a58b990cf6d45b613fab42b1e7a9bbc0bf3214b260420c4",
+  "backend": "mupen64plus-ae-station-v1",
+  "fingerprintSha256": "7b9c6f91d749d3c28746e67a08626cb4e0907989abeed36b704aab86dbe461a5",
+  "runtimeLibrary": "libstation_mupen64plus_runtime.so",
+  "runtimeSha256": "500d48cd10f31590a52418d8417994fa5d80c38eabc4b32b55940c4f11ba8814",
+  "runtimeBytes": 9176,
+  "coreLibrary": "libstation_mupen64plus_core.so",
+  "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+  "coreBytes": 561056,
+  "engine": {
+    "engineId": "mupen64plus-ae-33bf7021-n64-v3-500d48cd10f3",
+    "platform": "n64",
+    "backend": "mupen64plus-ae-station-v1",
+    "library": "libstation_mupen64plus_core.so",
+    "runtimeLibrary": "libstation_mupen64plus_runtime.so",
+    "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+    "runtimeSha256": "500d48cd10f31590a52418d8417994fa5d80c38eabc4b32b55940c4f11ba8814",
+    "dependencySha256": {
+      "libSDL2_net.so": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
+      "libae-bridge.so": "ba5a7582295215f159e197f805dbfe85851aa912462996870f61ccd752ecb360",
+      "libjnidispatch.so": "ddfc6c965bbe366615c000ec1f06552ddf0bb2b4f9d921d0bff8c75b3cb2ca4c",
+      "libmupen64plus-audio-android-fp.so": "79bd6457b4a77364721e98df4946fadde2bc44256b156ae8b361bcf769e03f74",
+      "libmupen64plus-audio-android.so": "a8f8a5f83827a5056fca58bf72dc25951c56cdba568c55773f81efb20f2f0be5",
+      "libmupen64plus-input-android.so": "11783275d71eaa14f3e15eff330a784195fdd98b31ea4c16d23d4691e5f91512",
+      "libmupen64plus-rsp-hle.so": "67d0f74eb35a889c6abbc0ab0503691f45555ca601570911e0435be492bcf189",
+      "libmupen64plus-video-glide64mk2.so": "5c10d28d442ce37cacaba892317319029a0340b4503dd8ac10ff850fdc5e9ce6",
+      "libn64cpp.so": "fa2c06d3c09c0d9a4931fa7cd03a3aba15f6ed7ea990d8e4a37b8a5811867c0d",
+      "liboboe.so": "2d1ab385a0817273cbcd249ce6488b54a7d31dde193a8bf3037bcd901ea2079f",
+      "libsoundtouch.so": "9944e132db1c2362b52cd88b438413d92802847b2174c64ce4dc801a7eaa41e3",
+      "libsoundtouch_fp.so": "5fae9c0a403f01415327b1175ac20460a438184075c8da467dcfea56435a002a"
+    },
+    "extensions": [
+      "z64",
+      "n64",
+      "v64",
+      "rom"
+    ],
+    "overlay": "",
+    "options": "backend=mupen64plus-ae-station-v1\nwire=SN64/1\ncpu=cached-interpreter\nvideo=glide64mk2\nrsp=hle\nrawInput=false\nexpansionPak=true\ncountPerOp=0\ncountPerOpDen=0\nforceAlignmentOfPiDma=0\nrandomizeInterrupt=false\ninputDelay=2\nrollback=false\nsaves=session-only\n",
+    "launchReady": true,
+    "license": "GPL-2.0-or-later",
+    "sourceDirectory": "mupen64plus-ae-33bf7021549d7873e976884370fbd1a8e7333bc7",
+    "recoveryProtocol": "station-stream.v3",
+    "maximumPlayers": 4,
+    "controllerProfiles": [
+      "direct-four-ports-v1"
+    ],
+    "status": "implemented-candidate-peer-gameplay-pending",
+    "contentIdentityByExtension": {
+      "default": "launch-file-v1"
+    }
+  },
+  "enginesAssetSha256": "273ed233e75558cd0bac7750c688e53d940b5bb61f2130ace69b9c3ab281797f",
+  "profileSha256": "2966309729f8a19c03b564f0178f263170e1843172f6719002f35fb54e313f9c",
+  "profileCanonical": "{\"schemaVersion\":1,\"controllerProfile\":\"direct-four-ports-v1\",\"devices\":[1,1,1,1],\"coreOptions\":\"backend=mupen64plus-ae-station-v1\\nwire=SN64/1\\ncpu=cached-interpreter\\nvideo=glide64mk2\\nrsp=hle\\nrawInput=false\\nexpansionPak=true\\ncountPerOp=0\\ncountPerOpDen=0\\nforceAlignmentOfPiDma=0\\nrandomizeInterrupt=false\\ninputDelay=2\\nrollback=false\\nsaves=session-only\\n\"}",
+  "elf": {
+    "machine": "AArch64",
+    "soname": "libstation_mupen64plus_runtime.so",
+    "needed": [
+      "libdl.so",
+      "libc.so"
+    ],
+    "loadAlignments": [
+      16384,
+      16384,
+      16384
+    ]
+  },
+  "preservedUnrelatedEngineCount": 10,
+  "legacyEngineReused": false,
+  "offlineLibrariesChanged": false,
+  "androidPeerGameplayValidated": false,
+  "serverRegistrationConfirmed": false,
+  "isolatedEvidence": {
+    "realNativeGateChecks": 134,
+    "pinnedPatchGuards": 36,
+    "identityGuards": 52,
+    "javaProtocolChecks": 282
+  }
+}

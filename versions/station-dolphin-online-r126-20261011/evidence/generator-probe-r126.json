@@ -1,0 +1,8 @@
+{
+  "checks": 107,
+  "passed": true,
+  "upstreamCloneUnchanged": true,
+  "generatorDeterministic": true,
+  "nativeGamePlay": false,
+  "scope": "pinned generator, stage, JNI names, source gate coverage, dependency/hook receipts"
+}

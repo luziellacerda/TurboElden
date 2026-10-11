@@ -1,0 +1,44 @@
+{
+  "schema": "station-n64-independent-integration-audit-v1",
+  "recordedDateUtc": "2026-10-11",
+  "status": "No remaining concrete blocker found in the reviewed integration",
+  "scope": "Static source, donor API, binary manifest, compiled JVM signatures and isolated protocol/native fixtures; no physical gameplay or production registry validation",
+  "artifacts": {
+    "classes35Sha256": "f23e12f2caa8daab3da8095ca77223060f4271538f9836f6ed60f67af12ac010",
+    "stationMupenCoreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+    "manifestSha256": "cf37f63733c735a967fe98ac2e8f3fa1ac4969f7f7a1e1c4e52d0a933780283c",
+    "smaliRecipeSha256": "354d0aa5ca7044e04925a7c47920e4f3e4a424be17ddfc13250cfd41318a9a9a"
+  },
+  "confirmed": [
+    "All 20 required Bridge hooks have the exact public static JVM descriptors in the compiled Java3 classes; Java4 adds the descriptor-size writer guard without changing their contract",
+    "Seven donor smali inputs are pinned and preserved; the recipe modifies a separate partition",
+    "StationN64Activity is private in the main process; original GameActivity and CoreService remain in :n64core with original attributes",
+    "Manifest patch is reversible to the exact original bytes and preserves existing Activity declarations",
+    "830 bundled mupen64plus_data entries exist in R124; bootstrap copies missing assets without overwriting existing files",
+    "Actual RomHeader(byte[]) exposes crc, name and isValid and normalizes byte order in place; actual GameActivity entry is start()",
+    "Bridge validates the private descriptor before CoreInterface construction and selects the separate core variant only for that verified Station session",
+    "Service and Activity share the existing n64core process; marker propagation includes the private notification PendingIntent",
+    "HTTP owner/result anchoring retains room, generation, attempt and request binding; launch completion does not imply human leave",
+    "GamePrefs and working directories are isolated by verified object identity; no global offline preference or AppData replacement",
+    "Host starts the native emulator after all real TCP registrations, before waiting for native main_run pause acknowledgment; preparation DATA is pumped while paused, avoiding a circular READY wait",
+    "Only a real native pause acknowledgment can qualify for relay READY; initialization alone cannot fake readiness",
+    "Autosave suppression preserves the explicit shutdown chain; automatic shutdown and forceExit are gated before timers or process termination",
+    "Native STOP, reset and advance-frame guards affect only the Station variant; the offline donor remains unchanged",
+    "The pre-plugin registration blocker is fixed in full-5: signed slot selects MEMORY2/raw0 without reading uninitialized Controls; EOF polling no longer spins on recv returning zero",
+    "Descriptor serialization now rejects files exceeding the same 32768-byte bound enforced by the reader"
+  ],
+  "isolatedEvidence": {
+    "javaProtocolChecks": 282,
+    "javaProtocolRepeatRuns": 2,
+    "nativePrePluginRegistrationChecks": 134,
+    "nativeSourceGuards": 36,
+    "javaLoopbackParticipants": [2, 3, 4]
+  },
+  "physicalGameplayValidated": false,
+  "productionRegistrationVerified": false,
+  "limits": [
+    "These checks do not prove Android frame pacing, game compatibility, Bluetooth response or live multiplayer stability",
+    "The new engine identity and exact hashes still require the server contract to admit them before a real session",
+    "Real two-, three- and four-device gameplay remains a separate validation step"
+  ]
+}

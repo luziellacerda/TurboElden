@@ -1,0 +1,28 @@
+{
+  "revision": "R126",
+  "compiled": true,
+  "signed": true,
+  "installed": false,
+  "apkSha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+  "apkBytes": 2233970789,
+  "serverActivationConfirmed": false,
+  "physicalGameplayValidated": false,
+  "physicalControllerValidated": false,
+  "thermalImprovementValidated": false,
+  "promotedStable": false,
+  "normalLibrariesPreserved": true,
+  "menuRenderingAndPerformanceLogicPreserved": true,
+  "realSystemEmulatorOnlineRoutes": {
+    "n64": "Mupen64Plus AE",
+    "gamecube": "Dolphin",
+    "wii": "Dolphin"
+  },
+  "allOtherOnlineRoutesMigrated": false,
+  "engineIds": [
+    "mupen64plus-ae-33bf7021-n64-v3-1aafea201355",
+    "dolphin-5102a033-gamecube-v3-ca43a338d799",
+    "dolphin-5102a033-wii-v3-ca43a338d799"
+  ],
+  "packageReceipt": "evidence/package-final-r126.json",
+  "javaModuleSources": 198
+}

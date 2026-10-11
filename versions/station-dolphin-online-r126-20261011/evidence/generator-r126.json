@@ -1,0 +1,100 @@
+{
+  "upstream": "5102a0339c2177575378107b76541e47cc52122d",
+  "existingCloneUnchanged": true,
+  "patchSha256": "396ebcbc1ea8f549b41bc934d9355e69f9e00e88051876204d863f0e47813c8a",
+  "patchedFiles": [
+    {
+      "path": "Source/Core/Common/CMakeLists.txt",
+      "upstreamSha256": "2e41e60e50adfec8217e317d27921f2ef84f41ff4042d31500370004f0dba244",
+      "patchedSha256": "2f970c43998429ea5530c75e152354d320c16b2370612ce90257e0d9cb94a6bc"
+    },
+    {
+      "path": "Source/Android/jni/CMakeLists.txt",
+      "upstreamSha256": "2673cecc7baeb4247f350a21d8e66b610810c03dbde030c6dee5f8f23fcaf7ce",
+      "patchedSha256": "3eba93c38fdf95bf410442b707f13f5d881ab16ea1de1998136337b4e9ebfc28"
+    },
+    {
+      "path": "Source/Android/jni/AndroidCommon/IDCache.cpp",
+      "upstreamSha256": "9b29a956654630bdd9920f1e3b4a20cb16f2a104043c0d805ce8be6f69c6083e",
+      "patchedSha256": "3f46809d38c1b5d5105e08f76ebc749fe9456bb5b082222595759ef576c7878a"
+    },
+    {
+      "path": "Source/Core/Core/NetPlayClient.h",
+      "upstreamSha256": "dff9e6a099b6dfd1bab58010bf7c14ed61061507a0468f51195b92411458d90d",
+      "patchedSha256": "8d745a2db5dd210ba464da00aa9f3778bb5f83403831974e92a4fc1f3d9de1ee"
+    },
+    {
+      "path": "Source/Core/Core/NetPlayClient.cpp",
+      "upstreamSha256": "34b37b749c37984760e926f575b02e0f38f22315fd557d663d9987b54af81f53",
+      "patchedSha256": "cbbc6a241828224f40efceb405ad830483f1405cb143e24ba85623fe072c7a41"
+    },
+    {
+      "path": "Source/Core/Core/NetPlayServer.h",
+      "upstreamSha256": "fc5083c2a89375d1485a8a228ae8ed356736b70914a934bb470697eee52cf409",
+      "patchedSha256": "1ea42d8a3214a6400037c65007634fb2141581c7ebf974e8894c6285bad3b6e9"
+    },
+    {
+      "path": "Source/Core/Core/NetPlayServer.cpp",
+      "upstreamSha256": "e9db925c059141965a7753a2a797862eff48fd08ecb6b2761e75f7ecfa617ad0",
+      "patchedSha256": "88e3e5998547c3aea4f4c3290a0b67c7fa5d30a0d7fe748395d7b7c8e63cee28"
+    },
+    {
+      "path": "Source/Core/Core/Core.cpp",
+      "upstreamSha256": "bdfaf4b30e62c7e63699ef93b83f257ff70832fd8044a6f487fa11c497171774",
+      "patchedSha256": "c56dce47569411f95a9297a7d51123b18c9f9b5c43207d09bfd2ab7fed0a8ca9"
+    },
+    {
+      "path": "Source/Android/jni/NetPlay/NetPlayUICallbacks.cpp",
+      "upstreamSha256": "8ada05610769583802d591ec394249a4150be9f35623c2ff0a4c24fbad5d5fad",
+      "patchedSha256": "cfdef03af25e140dd3892b94c0f96ea9de71159679d0d558b55b5a8632513eff"
+    },
+    {
+      "path": "Source/Android/jni/MainAndroid.cpp",
+      "upstreamSha256": "310ca84091d32f1370ef7545e11bc14facede315614de98d6dbbd7e150513dfd",
+      "patchedSha256": "272bd5a97dee85ed8190203c100b05733e5c8f70c655559d3191e2657bf7081e"
+    },
+    {
+      "path": "Source/Core/Core/HW/CPU.cpp",
+      "upstreamSha256": "2108e85e32a8e13eba6ca918107981f6ce224212ea82f4d9cf17c61482d068ff",
+      "patchedSha256": "b68d6fcfdcfcfaad48768000e84ce7d13097029a0eaf39dd0905ce4e4ffad48b"
+    },
+    {
+      "path": "Source/Core/DiscIO/VolumeWad.h",
+      "upstreamSha256": "e728b0c1700c71365d5252f1529aef7167176ab83bf90f8a292395834391c358",
+      "patchedSha256": "ae7e3bd05539c90de7523fabefb5ca603c6f14d8b9a62957582d864221d2752b"
+    },
+    {
+      "path": "Source/Core/Core/DSP/DSPCaptureLogger.h",
+      "upstreamSha256": "34633c56ce7211101d9b60070dfbe9f9689fe9f3cebffe8d1136536205146a4c",
+      "patchedSha256": "7af6380adb93d0f9583bcad10043597c6da96ccd129021162f7dc43e849da7a0"
+    },
+    {
+      "path": "CMake/ScmRevGen.cmake",
+      "upstreamSha256": "0b8540309303588257d1660d19711b297b2af22ac77a54029f0b1153923b0db1",
+      "patchedSha256": "63b66cf5da7337e862bf582f35962b9e8947c48d45b6021cded2ff672a39c171"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "upstreamSha256": "9a8e859fc8558c305ed83c4e785724ef555ffc96bf53793e8414c529ee5ba71a",
+      "patchedSha256": "a14de4429faeeb4ae003111fcce12473b8e0a1034f5180717b69a643b712dc3a"
+    }
+  ],
+  "addedFiles": [
+    {
+      "path": "Source/Core/Common/StationDolphinTransport.h",
+      "sha256": "f004314e5c710adaa911ec55a8ffce0854c0be54db393453820df1155b04a082"
+    },
+    {
+      "path": "Source/Core/Common/StationDolphinTransport.cpp",
+      "sha256": "a1cf756191c060d6ee333a7b4de642572616128b2a6106ff7ef42a37fa10b03c"
+    },
+    {
+      "path": "Source/Android/jni/NetPlay/StationDolphinBridge.cpp",
+      "sha256": "a3a22b9de9dd80c773cfa0fb0890126a71ef52a61421892d7a8cf2084c34901e"
+    }
+  ],
+  "modules": 34,
+  "androidModules": 25,
+  "excludedModules": 9,
+  "compiled": false
+}

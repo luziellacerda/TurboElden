@@ -1,0 +1,142 @@
+{
+  "upstream": "5102a0339c2177575378107b76541e47cc52122d",
+  "compiled": true,
+  "androidApi": 24,
+  "abi": "arm64-v8a",
+  "ndk": "28.2.13676358 (r28c)",
+  "clang": "19.0.1",
+  "cmake": "4.4.2",
+  "sourceDateEpoch": 1790576668,
+  "sourcePatchSha256": "396ebcbc1ea8f549b41bc934d9355e69f9e00e88051876204d863f0e47813c8a",
+  "hookPatchSha256": "5b59b57711dabdd390bb8dda5e8ea5d309c3e2e4ba2ad877134907617679a1a7",
+  "nativeSourceSha256": [
+    {
+      "path": "Source/Core/Common/StationDolphinTransport.h",
+      "sha256": "f004314e5c710adaa911ec55a8ffce0854c0be54db393453820df1155b04a082"
+    },
+    {
+      "path": "Source/Core/Common/StationDolphinTransport.cpp",
+      "sha256": "a1cf756191c060d6ee333a7b4de642572616128b2a6106ff7ef42a37fa10b03c"
+    },
+    {
+      "path": "Source/Android/jni/NetPlay/StationDolphinBridge.cpp",
+      "sha256": "a3a22b9de9dd80c773cfa0fb0890126a71ef52a61421892d7a8cf2084c34901e"
+    }
+  ],
+  "libraries": [
+    {
+      "name": "libstation_dolphin_online.so",
+      "bytes": 15781128,
+      "sha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "unstrippedSha256": "92b1951facb9fca6aad644026c47adcc62e09c9b5aca61629aab7e1515a270fe",
+      "soname": "libstation_dolphin_online.so",
+      "needed": [
+        "libOpenSLES.so",
+        "libm.so",
+        "liblog.so",
+        "libEGL.so",
+        "libandroid.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "minLoadAlignment": 16384
+    },
+    {
+      "name": "libstation_dolphin_hook.so",
+      "bytes": 4400,
+      "sha256": "7547dd37533c4352edf7666ef3b5220db08364054578bde7570c388658e0de16",
+      "unstrippedSha256": "bc6c8dbabb277a08bd7b0840fb0943d883751ecb4990f53d264f92c1822314ea",
+      "soname": "libstation_dolphin_hook.so",
+      "needed": [
+        "libstation_dolphin_hook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "minLoadAlignment": 16384
+    },
+    {
+      "name": "libstation_dolphin_hook_impl.so",
+      "bytes": 258824,
+      "sha256": "b3f2973bdccfb877cfc10fcaadd40b69e48af39434cc232d02bfc81a1669e264",
+      "unstrippedSha256": "f1e8105d78ef6f09362494d5de585f7360c3822f48ec0bf28d77cb7660f4d1db",
+      "soname": "libstation_dolphin_hook_impl.so",
+      "needed": [
+        "liblog.so",
+        "libandroid.so",
+        "libdl.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "minLoadAlignment": 16384
+    },
+    {
+      "name": "libstation_dolphin_file_redirect_hook.so",
+      "bytes": 4184,
+      "sha256": "23347bb99e0e73fde1f6deaf1b39d544ab4e4a5cc9e5f2c61c8d9facf5dfe06c",
+      "unstrippedSha256": "f74328bce0a05b5f22bbf9acd42fc564623d0a84eb1fa95386d65137469a07b7",
+      "soname": "libstation_dolphin_file_redirect_hook.so",
+      "needed": [
+        "libstation_dolphin_hook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "minLoadAlignment": 16384
+    },
+    {
+      "name": "libstation_dolphin_gsl_alloc_hook.so",
+      "bytes": 4496,
+      "sha256": "e9254fe5325818c1ef50cf986cd6db9a87d9b3c29c4567cd74e666b512598d02",
+      "unstrippedSha256": "7c24bd2a090c089cf04bc19d733fda9858e50cf53ce008cf5a24d0d874acb0ce",
+      "soname": "libstation_dolphin_gsl_alloc_hook.so",
+      "needed": [
+        "libstation_dolphin_hook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "minLoadAlignment": 16384
+    }
+  ],
+  "nativeBundleSha256": "7a6c6d933ace522408bbd3ab4d699c8122b7a543ebb5ecbde2626509a1e237a6",
+  "jniExports": [
+    "nativeAcknowledgedEpoch",
+    "nativeAuthorizeHumanExit",
+    "nativeAwaitDelivery",
+    "nativeCloseTransport",
+    "nativeConfigure",
+    "nativeConnect",
+    "nativeControl",
+    "nativeDeliver",
+    "nativeDrained",
+    "nativeFail",
+    "nativeFailure",
+    "nativeMapControllers",
+    "nativePauseAtEpoch",
+    "nativePlayerForSlot",
+    "nativeRegisteredSlots",
+    "nativeResumeAtEpoch",
+    "nativeSelectGame",
+    "nativeStartGame",
+    "nativeStatus",
+    "nativeSuspendTransport",
+    "nativeTakeOutgoing"
+  ],
+  "officialNetplayExports": [
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_RunNetPlay",
+    "Java_org_dolphinemu_dolphinemu_features_netplay_NetplaySession_nativeHost",
+    "Java_org_dolphinemu_dolphinemu_features_netplay_NetplaySession_nativeJoin"
+  ],
+  "allLoadSegments16KiB": true,
+  "offlineLibraryReplaced": false,
+  "gameplayVerified": false,
+  "apkPackaged": false,
+  "serverActivated": false
+}

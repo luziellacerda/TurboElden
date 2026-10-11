@@ -1,0 +1,553 @@
+--- a/Source/Core/Common/CMakeLists.txt
++++ b/Source/Core/Common/CMakeLists.txt
+@@ -1,4 +1,6 @@
+ add_library(common
++  StationDolphinTransport.cpp
++  StationDolphinTransport.h
+   Analytics.cpp
+   Analytics.h
+   Assembler/AssemblerShared.cpp
+--- a/Source/Android/jni/CMakeLists.txt
++++ b/Source/Android/jni/CMakeLists.txt
+@@ -31,6 +31,7 @@
+   Input/NumericSetting.cpp
+   Input/NumericSetting.h
+   NetPlay/Netplay.cpp
++  NetPlay/StationDolphinBridge.cpp
+   NetPlay/NetPlayUICallbacks.cpp
+   NetPlay/NetPlayUICallbacks.h
+   MainAndroid.cpp
+@@ -73,3 +74,17 @@
+ set(CPACK_PACKAGE_EXECUTABLES ${CPACK_PACKAGE_EXECUTABLES} main)
+ 
+ add_subdirectory(AndroidCommon)
++
++# Station-only libraries. Original offline libraries are never replaced.
++set_target_properties(main PROPERTIES OUTPUT_NAME station_dolphin_online)
++set_target_properties(main_hook PROPERTIES OUTPUT_NAME station_dolphin_hook)
++set_target_properties(hook_impl PROPERTIES OUTPUT_NAME station_dolphin_hook_impl)
++set_target_properties(file_redirect_hook PROPERTIES OUTPUT_NAME station_dolphin_file_redirect_hook)
++set_target_properties(gsl_alloc_hook PROPERTIES OUTPUT_NAME station_dolphin_gsl_alloc_hook)
++add_dependencies(main main_hook file_redirect_hook gsl_alloc_hook)
++target_link_options(main PRIVATE
++  "-Wl,--wrap=enet_time_get"
++  "-Wl,--wrap=enet_socket_send"
++  "-Wl,--wrap=enet_socket_receive"
++  "-Wl,--wrap=enet_socket_wait"
++)
+--- a/Source/Android/jni/AndroidCommon/IDCache.cpp
++++ b/Source/Android/jni/AndroidCommon/IDCache.cpp
+@@ -820,7 +820,7 @@
+                                                  "(Ljava/lang/String;)Ljava/lang/String;");
+   env->DeleteLocalRef(analytics_class);
+ 
+-  const jclass pair_class = env->FindClass("androidx/core/util/Pair");
++  const jclass pair_class = env->FindClass("tdolphin/core/util/Pair");
+   s_pair_class = reinterpret_cast<jclass>(env->NewGlobalRef(pair_class));
+   s_pair_constructor =
+       env->GetMethodID(s_pair_class, "<init>", "(Ljava/lang/Object;Ljava/lang/Object;)V");
+--- a/Source/Core/Core/NetPlayClient.h
++++ b/Source/Core/Core/NetPlayClient.h
+@@ -125,6 +125,8 @@
+   bool StartGame(const std::string& path);
+   void InvokeStop();
+   bool StopGame();
++  // Station recovery: wake input waits without stopping the NetPlay session.
++  void StationWakeInputWaits();
+   void Stop();
+   bool ChangeGame(const std::string& game);
+   void SendChatMessage(const std::string& msg);
+--- a/Source/Core/Core/NetPlayClient.cpp
++++ b/Source/Core/Core/NetPlayClient.cpp
+@@ -25,6 +25,8 @@
+ #include "Common/CommonTypes.h"
+ #include "Common/Crypto/SHA1.h"
+ #include "Common/ENet.h"
++#include "Common/StationDolphinTransport.h"
++#include "Core/HW/CPU.h"
+ #include "Common/FileUtil.h"
+ #include "Common/Logging/Log.h"
+ #include "Common/MsgHandler.h"
+@@ -80,6 +82,20 @@
+ static NetPlayClient* netplay_client = nullptr;
+ static bool s_si_poll_batching = false;
+ 
++static int StationService(ENetHost* host, ENetEvent* event, enet_uint32 timeout)
++{
++  if (!Common::StationDolphin::Active())
++    return enet_host_service(host, event, timeout);
++  for (;;)
++  {
++    if (!Common::StationDolphin::Active() || Common::StationDolphin::HumanExitAllowed())
++      return 0;
++    const int result = enet_host_service(host, event, 100);
++    if (result != 0)
++      return result;
++  }
++}
++
+ // called from ---GUI--- thread
+ NetPlayClient::~NetPlayClient()
+ {
+@@ -111,6 +127,7 @@
+   }
+   if (m_client)
+   {
++    Common::StationDolphin::Detach(m_client);
+     enet_host_destroy(m_client);
+     m_client = nullptr;
+   }
+@@ -139,6 +156,7 @@
+       return;
+     }
+ 
++    Common::StationDolphin::Attach(m_client, false);
+     m_client->mtu = std::min(m_client->mtu, NetPlay::MAX_ENET_MTU);
+ 
+     ENetAddress addr;
+@@ -158,7 +176,7 @@
+     enet_peer_timeout(m_server, 0, PEER_TIMEOUT.count(), PEER_TIMEOUT.count());
+ 
+     ENetEvent netEvent;
+-    int net = enet_host_service(m_client, &netEvent, 5000);
++    int net = StationService(m_client, &netEvent, 5000);
+     if (net > 0 && netEvent.type == ENET_EVENT_TYPE_CONNECT)
+     {
+       if (Connect())
+@@ -252,7 +270,7 @@
+   // TODO: make this not hang
+   ENetEvent netEvent;
+   int net;
+-  while ((net = enet_host_service(m_client, &netEvent, 5000)) > 0 &&
++  while ((net = StationService(m_client, &netEvent, 5000)) > 0 &&
+          static_cast<int>(netEvent.type) == Common::ENet::SKIPPABLE_EVENT)
+   {
+     // ignore packets from traversal server
+@@ -942,6 +960,12 @@
+ 
+ void NetPlayClient::OnStopGame(sf::Packet& packet)
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_STOP_WITHOUT_HUMAN"))
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    StationWakeInputWaits();
++    return;
++  }
+   INFO_LOG_FMT(NETPLAY, "Game stopped");
+ 
+   StopGame();
+@@ -950,6 +974,12 @@
+ 
+ void NetPlayClient::OnPowerButton()
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_STOP_WITHOUT_HUMAN"))
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    StationWakeInputWaits();
++    return;
++  }
+   InvokeStop();
+   m_dialog->OnMsgPowerButton();
+ }
+@@ -1637,6 +1667,13 @@
+       case ENET_EVENT_TYPE_DISCONNECT:
+         INFO_LOG_FMT(NETPLAY, "enet_host_service: disconnect event");
+ 
++        if (Common::StationDolphin::Active())
++        {
++          Core::System::GetInstance().GetCPU().Break();
++          Common::StationDolphin::Fail("DOLPHIN_ENET_DISCONNECTED");
++          StationWakeInputWaits();
++          break;
++        }
+         m_dialog->OnConnectionLost();
+ 
+         if (m_is_running.IsSet())
+@@ -1667,6 +1704,14 @@
+ 
+   Disconnect();
+   return;
++}
++
++void NetPlayClient::StationWakeInputWaits()
++{
++  m_wait_on_input_event.Set();
++  m_gc_pad_event.Set();
++  m_wii_pad_event.Set();
++  m_first_pad_status_received_event.Set();
+ }
+ 
+ // called from ---GUI--- thread
+@@ -1942,6 +1987,8 @@
+ // called from ---CPU--- thread
+ bool NetPlayClient::GetNetPads(const int pad_nb, const bool batching, GCPadStatus* pad_status)
+ {
++  if (Common::StationDolphin::Suspended())
++    return false;
+   // The interface for this is extremely silly.
+   //
+   // Imagine a physical device that links three GameCubes together
+@@ -1972,7 +2019,7 @@
+   // When here when told to so we don't deadlock in certain situations
+   while (m_wait_on_input)
+   {
+-    if (!m_is_running.IsSet())
++    if (!m_is_running.IsSet() || Common::StationDolphin::Suspended())
+     {
+       return false;
+     }
+@@ -2055,7 +2102,7 @@
+   // other clients to send it to us
+   while (m_pad_buffer[pad_nb].Size() == 0)
+   {
+-    if (!m_is_running.IsSet())
++    if (!m_is_running.IsSet() || Common::StationDolphin::Suspended())
+     {
+       return false;
+     }
+@@ -2106,7 +2153,7 @@
+     // other clients to send it to us
+     while (m_wiimote_buffer[entry.wiimote].Size() == 0)
+     {
+-      if (!m_is_running.IsSet())
++      if (!m_is_running.IsSet() || Common::StationDolphin::Suspended())
+       {
+         return false;
+       }
+@@ -2227,7 +2274,7 @@
+ 
+       while (!m_first_pad_status_received[i])
+       {
+-        if (!m_is_running.IsSet())
++        if (!m_is_running.IsSet() || Common::StationDolphin::Suspended())
+           return;
+ 
+         m_first_pad_status_received_event.Wait();
+@@ -2248,7 +2295,7 @@
+   {
+     while (!m_first_pad_status_received[pad_num])
+     {
+-      if (!m_is_running.IsSet())
++      if (!m_is_running.IsSet() || Common::StationDolphin::Suspended())
+         return;
+ 
+       m_first_pad_status_received_event.Wait();
+@@ -2267,6 +2314,12 @@
+ 
+ void NetPlayClient::InvokeStop()
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_STOP_WITHOUT_HUMAN"))
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    StationWakeInputWaits();
++    return;
++  }
+   m_is_running.Clear();
+ 
+   // stop waiting for input
+@@ -2279,6 +2332,12 @@
+ // called from ---GUI--- thread and ---NETPLAY--- thread (client side)
+ bool NetPlayClient::StopGame()
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_STOP_WITHOUT_HUMAN"))
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    StationWakeInputWaits();
++    return false;
++  }
+   InvokeStop();
+ 
+   NetPlay_Disable();
+@@ -2292,6 +2351,12 @@
+ // called from ---GUI--- thread
+ void NetPlayClient::Stop()
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_STOP_WITHOUT_HUMAN"))
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    StationWakeInputWaits();
++    return;
++  }
+   if (!m_is_running.IsSet())
+     return;
+ 
+@@ -2306,6 +2371,12 @@
+ 
+ void NetPlayClient::RequestStopGame()
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_STOP_WITHOUT_HUMAN"))
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    StationWakeInputWaits();
++    return;
++  }
+   // Tell the server to stop if we have a pad mapped in game.
+   if (LocalPlayerHasControllerMapped())
+     SendStopGamePacket();
+--- a/Source/Core/Core/NetPlayServer.h
++++ b/Source/Core/Core/NetPlayServer.h
+@@ -68,6 +68,8 @@
+   void KickPlayer(PlayerId player);
+ 
+   u16 GetPort() const;
++  PlayerId StationPlayerForSlot(unsigned int slot);
++  unsigned int StationRegisteredSlotMask();
+ 
+   std::unordered_set<std::string> GetInterfaceSet() const;
+   std::string GetInterfaceHost(const std::string& inter) const;
+--- a/Source/Core/Core/NetPlayServer.cpp
++++ b/Source/Core/Core/NetPlayServer.cpp
+@@ -23,6 +23,9 @@
+ 
+ #include "Common/CommonPaths.h"
+ #include "Common/ENet.h"
++#include "Common/StationDolphinTransport.h"
++#include "Core/System.h"
++#include "Core/HW/CPU.h"
+ #include "Common/FileUtil.h"
+ #include "Common/Logging/Log.h"
+ #include "Common/MsgHandler.h"
+@@ -97,6 +100,7 @@
+     if (m_chunked_data_thread.joinable())
+       m_chunked_data_thread.join();
+     m_thread.join();
++    Common::StationDolphin::Detach(m_server);
+     enet_host_destroy(m_server);
+ 
+     if (Common::g_MainNetHost.get() == m_server)
+@@ -151,11 +155,12 @@
+   else
+   {
+     ENetAddress serverAddr;
+-    serverAddr.host = ENET_HOST_ANY;
++    serverAddr.host = Common::StationDolphin::Active() ? htonl(INADDR_LOOPBACK) : ENET_HOST_ANY;
+     serverAddr.port = port;
+     m_server = enet_host_create(&serverAddr, 10, CHANNEL_COUNT, 0, 0);
+     if (m_server != nullptr)
+     {
++      Common::StationDolphin::Attach(m_server, true);
+       m_server->mtu = std::min(m_server->mtu, NetPlay::MAX_ENET_MTU);
+       m_server->intercept = Common::ENet::InterceptCallback;
+     }
+@@ -175,6 +180,29 @@
+       Common::UPnP::TryPortmapping(port);
+ #endif
+   }
++}
++
++PlayerId NetPlayServer::StationPlayerForSlot(unsigned int slot)
++{
++  std::lock_guard guard(m_crit.players);
++  for (const auto& [pid, player] : m_players)
++    if (player.socket && Common::StationDolphin::SlotForAddress(player.socket->address) == slot)
++      return pid;
++  return 0;
++}
++
++unsigned int NetPlayServer::StationRegisteredSlotMask()
++{
++  std::lock_guard guard(m_crit.players);
++  unsigned int mask = 0;
++  for (const auto& [pid, player] : m_players)
++  {
++    const auto slot = player.socket ? Common::StationDolphin::SlotForAddress(player.socket->address) : 0;
++    if (slot == 0 || (mask & (1u << slot)))
++      return 0;
++    mask |= 1u << slot;
++  }
++  return mask;
+ }
+ 
+ static PlayerId* PeerPlayerId(ENetPeer* peer)
+@@ -362,6 +390,12 @@
+       break;
+       case ENET_EVENT_TYPE_DISCONNECT:
+       {
++        if (Common::StationDolphin::Active())
++        {
++          Core::System::GetInstance().GetCPU().Break();
++          Common::StationDolphin::Fail("DOLPHIN_ENET_PEER_LOST");
++          break;
++        }
+         INFO_LOG_FMT(NETPLAY, "enet_host_service: disconnect event");
+ 
+         std::lock_guard lkg(m_crit.game);
+@@ -514,6 +548,12 @@
+ // called from ---NETPLAY--- thread
+ unsigned int NetPlayServer::OnDisconnect(const Client& player)
+ {
++  if (Common::StationDolphin::Active())
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    Common::StationDolphin::Fail("DOLPHIN_ENET_PEER_LOST");
++    return 0;
++  }
+   const PlayerId pid = player.pid;
+ 
+   if (m_is_running)
+@@ -1020,6 +1060,11 @@
+ 
+   case MessageID::StopGame:
+   {
++    if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_REMOTE_STOP_WITHOUT_HUMAN"))
++    {
++      Core::System::GetInstance().GetCPU().Break();
++      break;
++    }
+     if (!m_is_running)
+       break;
+ 
+--- a/Source/Core/Core/Core.cpp
++++ b/Source/Core/Core/Core.cpp
+@@ -2,6 +2,7 @@
+ // SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ #include "Core/Core.h"
++#include "Common/StationDolphinTransport.h"
+ 
+ #include <algorithm>
+ #include <atomic>
+@@ -262,6 +263,11 @@
+ // Called from GUI thread
+ void Stop(Core::System& system)  // - Hammertime!
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_CORE_STOP_WITHOUT_HUMAN"))
++  {
++    system.GetCPU().Break();
++    return;
++  }
+   {
+     std::lock_guard lock(s_core_mutex);
+ 
+--- a/Source/Android/jni/NetPlay/NetPlayUICallbacks.cpp
++++ b/Source/Android/jni/NetPlay/NetPlayUICallbacks.cpp
+@@ -8,6 +8,8 @@
+ #include "Common/TraversalClient.h"
+ #include "Core/Boot/Boot.h"
+ #include "Core/Core.h"
++#include "Common/StationDolphinTransport.h"
++#include "Core/HW/CPU.h"
+ #include "Core/System.h"
+ #include "NetPlayUICallbacks.h"
+ #include "UICommon/GameFile.h"
+@@ -105,6 +107,11 @@
+ 
+ void NetPlayUICallbacks::StopGame()
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_UI_STOP_WITHOUT_HUMAN"))
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    return;
++  }
+   if (m_got_stop_request)
+     return;
+ 
+--- a/Source/Android/jni/MainAndroid.cpp
++++ b/Source/Android/jni/MainAndroid.cpp
+@@ -40,6 +40,8 @@
+ #include "Core/ConfigLoaders/GameConfigLoader.h"
+ #include "Core/ConfigManager.h"
+ #include "Core/Core.h"
++#include "Common/StationDolphinTransport.h"
++#include "Core/HW/CPU.h"
+ #include "Core/DolphinAnalytics.h"
+ #include "Core/HW/DVD/DVDInterface.h"
+ #include "Core/HW/Wiimote.h"
+@@ -253,6 +255,11 @@
+ 
+ JNIEXPORT void JNICALL Java_org_dolphinemu_dolphinemu_NativeLibrary_StopEmulation(JNIEnv*, jclass)
+ {
++  if (Common::StationDolphin::BlockAutomaticStop("DOLPHIN_ANDROID_STOP_WITHOUT_HUMAN"))
++  {
++    Core::System::GetInstance().GetCPU().Break();
++    return;
++  }
+   Core::Stop(Core::System::GetInstance());
+ 
+   // Kick the waiting event
+--- a/Source/Core/Core/HW/CPU.cpp
++++ b/Source/Core/Core/HW/CPU.cpp
+@@ -2,6 +2,7 @@
+ // SPDX-License-Identifier: GPL-2.0-or-later
+ 
+ #include "Core/HW/CPU.h"
++#include "Common/StationDolphinTransport.h"
+ 
+ #include <condition_variable>
+ #include <mutex>
+@@ -116,6 +117,8 @@
+   }
+ 
+   std::unique_lock state_lock(m_state_change_lock);
++  if (m_state == State::Running && Common::StationDolphin::DeferCPURun())
++    SetStateLocked(State::Stepping);
+   while (m_state != State::PowerDown)
+   {
+     m_state_cpu_cvar.wait(state_lock, [this] { return !m_state_paused_and_locked; });
+@@ -315,6 +318,10 @@
+ 
+     RunAdjacentSystems(false);
+   }
++  else if (Common::StationDolphin::DeferCPURun())
++  {
++    RunAdjacentSystems(false);
++  }
+   else if (SetStateLocked(State::Running))
+   {
+     if (!Core::IsCPUThread())
+@@ -391,7 +398,7 @@
+     {
+       m_state_system_request_stepping = false;
+     }
+-    else if (unpause_on_unlock)
++    else if (unpause_on_unlock && !Common::StationDolphin::DeferCPURun())
+     {
+       SetStateLocked(State::Running);
+     }
+--- a/Source/Core/DiscIO/VolumeWad.h
++++ b/Source/Core/DiscIO/VolumeWad.h
+@@ -13,6 +13,7 @@
+ #include "Common/CommonTypes.h"
+ #include "Core/IOS/ES/Formats.h"
+ #include "DiscIO/Volume.h"
++#include "DiscIO/Blob.h"
+ 
+ namespace DiscIO
+ {
+--- a/Source/Core/Core/DSP/DSPCaptureLogger.h
++++ b/Source/Core/Core/DSP/DSPCaptureLogger.h
+@@ -7,6 +7,7 @@
+ #include <string>
+ 
+ #include "Common/CommonTypes.h"
++#include "Common/PcapFile.h"
+ 
+ namespace Common
+ {
+--- a/CMake/ScmRevGen.cmake
++++ b/CMake/ScmRevGen.cmake
+@@ -1,7 +1,12 @@
+ cmake_minimum_required(VERSION 3.13)
+ 
+ # for revision info
+-if(GIT_FOUND)
++if(DOLPHIN_STATION_ONLINE)
++  set(DOLPHIN_WC_REVISION "5102a0339c2177575378107b76541e47cc52122d-station-dpl1-r126")
++  set(DOLPHIN_WC_DESCRIBE "2609-7-station-dpl1-r126")
++  set(DOLPHIN_WC_BRANCH "station-dolphin-online-r126")
++  set(DOLPHIN_WC_COMMITS_AHEAD_MASTER 0)
++elseif(GIT_FOUND)
+   # defines DOLPHIN_WC_REVISION
+   execute_process(WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} COMMAND ${GIT_EXECUTABLE} rev-parse HEAD
+       OUTPUT_VARIABLE DOLPHIN_WC_REVISION
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -800,7 +800,7 @@
+ endif()
+ add_custom_target(
+   dolphin_scmrev
+-  ${CMAKE_COMMAND} -DPROJECT_SOURCE_DIR=${PROJECT_SOURCE_DIR} -DPROJECT_BINARY_DIR=${PROJECT_BINARY_DIR} -DDISTRIBUTOR=${DISTRIBUTOR} -DDOLPHIN_DEFAULT_UPDATE_TRACK=${DOLPHIN_DEFAULT_UPDATE_TRACK} -DGIT_FOUND=${GIT_FOUND} -DGIT_EXECUTABLE=${GIT_EXECUTABLE} -DDOLPHIN_WC_REVISION=${DOLPHIN_WC_REVISION} -DDOLPHIN_WC_DESCRIBE=${DOLPHIN_WC_DESCRIBE} -DDOLPHIN_WC_BRANCH=${DOLPHIN_WC_BRANCH} -DCMAKE_OSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET} -P ${CMAKE_CURRENT_SOURCE_DIR}/CMake/ScmRevGen.cmake
++  ${CMAKE_COMMAND} -DDOLPHIN_STATION_ONLINE=ON -DPROJECT_SOURCE_DIR=${PROJECT_SOURCE_DIR} -DPROJECT_BINARY_DIR=${PROJECT_BINARY_DIR} -DDISTRIBUTOR=${DISTRIBUTOR} -DDOLPHIN_DEFAULT_UPDATE_TRACK=${DOLPHIN_DEFAULT_UPDATE_TRACK} -DGIT_FOUND=${GIT_FOUND} -DGIT_EXECUTABLE=${GIT_EXECUTABLE} -DDOLPHIN_WC_REVISION=${DOLPHIN_WC_REVISION} -DDOLPHIN_WC_DESCRIBE=${DOLPHIN_WC_DESCRIBE} -DDOLPHIN_WC_BRANCH=${DOLPHIN_WC_BRANCH} -DCMAKE_OSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET} -P ${CMAKE_CURRENT_SOURCE_DIR}/CMake/ScmRevGen.cmake
+   BYPRODUCTS "${CMAKE_CURRENT_BINARY_DIR}/Source/Core/Common/scmrev.h" "${CMAKE_CURRENT_BINARY_DIR}/Source/Core/DolphinQt/Info.plist" "${CMAKE_CURRENT_BINARY_DIR}/Source/Core/MacUpdater/Info.plist" "${CMAKE_CURRENT_BINARY_DIR}/Flatpak/org.DolphinEmu.dolphin-emu.metainfo.xml"
+   VERBATIM
+ )

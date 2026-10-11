@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "baseApkSha256": "aeeb2f8167a442db5a58b990cf6d45b613fab42b1e7a9bbc0bf3214b260420c4",
+  "unsignedApkSha256": "6a51c262a7a7b04f882e26889130856b56be4ef44755d0043fbaddc5fc03e598",
+  "unsignedApkBytes": 2215609822,
+  "replacedEntrySha256": {
+    "AndroidManifest.xml": "cf37f63733c735a967fe98ac2e8f3fa1ac4969f7f7a1e1c4e52d0a933780283c",
+    "classes35.dex": "f23e12f2caa8daab3da8095ca77223060f4271538f9836f6ed60f67af12ac010",
+    "classes36.dex": "6e0f7116d156518fad1e65e72f4c204cfacfd9904c4ee2c3110395d56842d707",
+    "assets/station-online/engines.json": "273ed233e75558cd0bac7750c688e53d940b5bb61f2130ace69b9c3ab281797f"
+  },
+  "addedEntrySha256": {
+    "lib/arm64-v8a/libstation_mupen64plus_core.so": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so": "500d48cd10f31590a52418d8417994fa5d80c38eabc4b32b55940c4f11ba8814"
+  },
+  "preservedEntryCount": 13544,
+  "engineId": "mupen64plus-ae-33bf7021-n64-v3-500d48cd10f3",
+  "signingPerformed": false,
+  "zipalignPerformed": false,
+  "installed": false,
+  "androidPeerGameplayValidated": false,
+  "offlineEmulatorEntriesChanged": false,
+  "classicZip": true,
+  "zip64": false
+}

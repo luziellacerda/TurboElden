@@ -1,0 +1,61 @@
+{
+  "schema": "station-dolphin-smali-probe-v1",
+  "checks": 84,
+  "modifiedFiles": [
+    {
+      "partition": "core",
+      "path": "org/dolphinemu/dolphinemu/DolphinApplication.smali",
+      "sourceSha256": "c4f0ea69fb7228fa5b3d366765280fc687d8520c620ec60d3bcbb6d5d10a512b",
+      "patchedSha256": "bf244aa99900eb54c39536761c7f81a8d70b47f91d9a978c58b4cf633e355324"
+    },
+    {
+      "partition": "core",
+      "path": "org/dolphinemu/dolphinemu/features/netplay/NetplaySession.smali",
+      "sourceSha256": "7be37119ba40b5074ddd4c3c332c61b5765b35d64bb64d742551b50d88dd4608",
+      "patchedSha256": "07649ba4bc05a2745a053d7985847a4421a829e61cdb4f5a963317b301d8843f"
+    },
+    {
+      "partition": "core",
+      "path": "org/dolphinemu/dolphinemu/activities/EmulationActivity.smali",
+      "sourceSha256": "bb53abdd5e998b1eb0485954b3cc23a3414e0c333212768f6b8f70dc27fd59da",
+      "patchedSha256": "b6e1eb14795f48f2fe390fbf1a770182d0e4ed676c05dfb7cdb7701576edebe6"
+    },
+    {
+      "partition": "bootstrap",
+      "path": "org/emulationstation/frontend/DolphinBootstrap.smali",
+      "sourceSha256": "8a5d01730c2584190a0a0f969fdfce154f4b7b4e66a066308a4409f0eafb7cbb",
+      "patchedSha256": "e7fb9b43a7b4f9b17a89ba739a1f513ededf3a8e50643a1fed812c212a17d147"
+    },
+    {
+      "partition": "bootstrap",
+      "path": "org/emulationstation/frontend/DolphinEntryActivity.smali",
+      "sourceSha256": "69c53207ed5ce9933dd681c6303daedbcda58f42a365336e084590a8292476b6",
+      "patchedSha256": "72d6688d0d9c1130c8dc4ed9942e96abf6a404245b93adde9eeae9f74c999a88"
+    }
+  ],
+  "requiredPublicStaticApis": {
+    "StationDolphinSelector": [
+      "libraryName",
+      "directory",
+      "skipLegacySaves",
+      "rejectOfflineLaunch"
+    ],
+    "StationDolphinSession": [
+      "onGameCreate",
+      "onGameResume",
+      "onGamePause",
+      "onGameDestroy",
+      "allowMenuAction",
+      "onMenuAction",
+      "allowSaveState",
+      "onBootGame",
+      "onNativeStop",
+      "onConnectionLost",
+      "onConnectionError",
+      "allowClose"
+    ]
+  },
+  "donorModified": false,
+  "scope": "Pinned full source trees, real donor anchors/instruction order, hook declaration checks; independent DEX assembly reported separately",
+  "physicalGameplayValidated": false
+}

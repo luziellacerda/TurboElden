@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "androidPeerPlayValidated": false,
+  "engines": [
+    {
+      "engineId": "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+      "platform": "snes",
+      "library": "libstation_bsnes.so",
+      "coreSha256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "sfc",
+        "smc"
+      ],
+      "overlay": "station-local/snes.cfg",
+      "options": "bsnes_violate_accuracy = \"disabled\"\nbsnes_chip_hle = \"LLE\"\nbsnes_superfx_overclock = \"100%\"\nbsnes_region = \"auto\"\nbsnes_aspect_ratio = \"auto\"\nbsnes_crop_overscan = \"disabled\"\nbsnes_gamma_ramp = \"disabled\"\n",
+      "launchReady": true,
+      "license": "GPL-3.0-or-later",
+      "sourceDirectory": "libretro--bsnes-mercury-79d7f9de218b",
+      "recoveryProtocol": "station-stream.v3"
+    },
+    {
+      "engineId": "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+      "platform": "megadrive",
+      "library": "libstation_clownmdemu.so",
+      "coreSha256": "109b62ac11b2f59572de0666bcb02b3701676896b91cb32529bbe5c5032b6b69",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "bin",
+        "md",
+        "gen"
+      ],
+      "overlay": "station-local/megadrive.cfg",
+      "options": "",
+      "launchReady": true,
+      "license": "AGPL-3.0-or-later",
+      "sourceDirectory": "Clownacy--clownmdemu-libretro-d43c2708b0a3",
+      "recoveryProtocol": "station-stream.v3"
+    },
+    {
+      "engineId": "geolith-19402493-mp5-81b3daa38fb9",
+      "platform": "neogeo",
+      "library": "libstation_geolith.so",
+      "coreSha256": "68ebde3e475d0e86f99bda278cadb85dc7fb32dc560072be017ad257dfd2eb0c",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "neo"
+      ],
+      "overlay": "gamepads/flat/neogeo.cfg",
+      "options": "",
+      "launchReady": false,
+      "license": "BSD-3-Clause",
+      "sourceDirectory": "libretro--geolith-libretro-194024931935"
+    },
+    {
+      "engineId": "pcsx-c8816799-psx-v3-81b3daa38fb9",
+      "platform": "psx",
+      "library": "libstation_online_pcsx.so",
+      "coreSha256": "4de0afbd3bb113a4b9927b5b250860194b485f278d1dced81501dc6555fa18a8",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "pbp",
+        "chd",
+        "cue"
+      ],
+      "overlay": "station-platforms/psx/psx-black.cfg",
+      "options": "pcsx_rearmed_drc = \"enabled\"\npcsx_rearmed_threaded_rendering = \"disabled\"\n",
+      "launchReady": true,
+      "license": "GPL-2.0-or-later",
+      "sourceArchive": "native/sources/pcsx_rearmed-c8816799b50388e61cfe237fe2cdbb7d8175f20a.tar.gz",
+      "recoveryProtocol": "station-stream.v3",
+      "maximumPlayers": 2,
+      "status": "implemented-candidate-peer-gameplay-pending",
+      "contentIdentityByExtension": {
+        "cue": "cue-set-v1",
+        "default": "launch-file-v1"
+      }
+    },
+    {
+      "engineId": "neocd-b1e04c73-aslr1-v3-81b3daa38fb9",
+      "platform": "neogeocd",
+      "library": "libstation_online_neocd.so",
+      "coreSha256": "78a35bc9a9435238d74125e77ae8f8d249ba59e90f07d43f43c84ad5ddc68870",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "chd",
+        "cue"
+      ],
+      "overlay": "gamepads/flat/neogeo.cfg",
+      "options": "",
+      "launchReady": true,
+      "license": "GPL-3.0-or-later",
+      "sourceArchive": "native/sources/neocd_libretro-b1e04c738cb48a1dae0574b8877f6a116d270ca1.tar.gz",
+      "recoveryProtocol": "station-stream.v3",
+      "maximumPlayers": 2,
+      "status": "implemented-candidate-peer-gameplay-pending"
+    },
+    {
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-500d48cd10f3",
+      "platform": "n64",
+      "backend": "mupen64plus-ae-station-v1",
+      "library": "libstation_mupen64plus_core.so",
+      "runtimeLibrary": "libstation_mupen64plus_runtime.so",
+      "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+      "runtimeSha256": "500d48cd10f31590a52418d8417994fa5d80c38eabc4b32b55940c4f11ba8814",
+      "dependencySha256": {
+        "libSDL2_net.so": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
+        "libae-bridge.so": "ba5a7582295215f159e197f805dbfe85851aa912462996870f61ccd752ecb360",
+        "libjnidispatch.so": "ddfc6c965bbe366615c000ec1f06552ddf0bb2b4f9d921d0bff8c75b3cb2ca4c",
+        "libmupen64plus-audio-android-fp.so": "79bd6457b4a77364721e98df4946fadde2bc44256b156ae8b361bcf769e03f74",
+        "libmupen64plus-audio-android.so": "a8f8a5f83827a5056fca58bf72dc25951c56cdba568c55773f81efb20f2f0be5",
+        "libmupen64plus-input-android.so": "11783275d71eaa14f3e15eff330a784195fdd98b31ea4c16d23d4691e5f91512",
+        "libmupen64plus-rsp-hle.so": "67d0f74eb35a889c6abbc0ab0503691f45555ca601570911e0435be492bcf189",
+        "libmupen64plus-video-glide64mk2.so": "5c10d28d442ce37cacaba892317319029a0340b4503dd8ac10ff850fdc5e9ce6",
+        "libn64cpp.so": "fa2c06d3c09c0d9a4931fa7cd03a3aba15f6ed7ea990d8e4a37b8a5811867c0d",
+        "liboboe.so": "2d1ab385a0817273cbcd249ce6488b54a7d31dde193a8bf3037bcd901ea2079f",
+        "libsoundtouch.so": "9944e132db1c2362b52cd88b438413d92802847b2174c64ce4dc801a7eaa41e3",
+        "libsoundtouch_fp.so": "5fae9c0a403f01415327b1175ac20460a438184075c8da467dcfea56435a002a"
+      },
+      "extensions": [
+        "z64",
+        "n64",
+        "v64",
+        "rom"
+      ],
+      "overlay": "",
+      "options": "backend=mupen64plus-ae-station-v1\nwire=SN64/1\ncpu=cached-interpreter\nvideo=glide64mk2\nrsp=hle\nrawInput=false\nexpansionPak=true\ncountPerOp=0\ncountPerOpDen=0\nforceAlignmentOfPiDma=0\nrandomizeInterrupt=false\ninputDelay=2\nrollback=false\nsaves=session-only\n",
+      "launchReady": true,
+      "license": "GPL-2.0-or-later",
+      "sourceDirectory": "mupen64plus-ae-33bf7021549d7873e976884370fbd1a8e7333bc7",
+      "recoveryProtocol": "station-stream.v3",
+      "maximumPlayers": 4,
+      "controllerProfiles": [
+        "direct-four-ports-v1"
+      ],
+      "status": "implemented-candidate-peer-gameplay-pending",
+      "contentIdentityByExtension": {
+        "default": "launch-file-v1"
+      }
+    },
+    {
+      "engineId": "fbneo-95153da1-neogeo-v3-81b3daa38fb9",
+      "platform": "neogeo",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "zip"
+      ],
+      "overlay": "station-platforms/arcade/arcade.cfg",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "license": "LicenseRef-FBNeo",
+      "sourceArchive": "native/sources/FBNeo-95153da1f113c56735bd9a818171f908df628421.tar.gz",
+      "recoveryProtocol": "station-stream.v3",
+      "maximumPlayers": 2,
+      "status": "implemented-candidate-peer-gameplay-pending"
+    },
+    {
+      "engineId": "fbneo-95153da1-fbneo-v3-81b3daa38fb9",
+      "platform": "fbneo",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "zip"
+      ],
+      "overlay": "station-platforms/arcade/arcade.cfg",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "license": "LicenseRef-FBNeo",
+      "sourceArchive": "native/sources/FBNeo-95153da1f113c56735bd9a818171f908df628421.tar.gz",
+      "recoveryProtocol": "station-stream.v3",
+      "maximumPlayers": 2,
+      "status": "implemented-candidate-peer-gameplay-pending"
+    },
+    {
+      "engineId": "fbneo-95153da1-cps1-v3-81b3daa38fb9",
+      "platform": "cps1",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "zip"
+      ],
+      "overlay": "station-platforms/arcade/arcade.cfg",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "license": "LicenseRef-FBNeo",
+      "sourceArchive": "native/sources/FBNeo-95153da1f113c56735bd9a818171f908df628421.tar.gz",
+      "recoveryProtocol": "station-stream.v3",
+      "maximumPlayers": 2,
+      "status": "implemented-candidate-peer-gameplay-pending"
+    },
+    {
+      "engineId": "fbneo-95153da1-cps2-v3-81b3daa38fb9",
+      "platform": "cps2",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "zip"
+      ],
+      "overlay": "station-platforms/arcade/arcade.cfg",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "license": "LicenseRef-FBNeo",
+      "sourceArchive": "native/sources/FBNeo-95153da1f113c56735bd9a818171f908df628421.tar.gz",
+      "recoveryProtocol": "station-stream.v3",
+      "maximumPlayers": 2,
+      "status": "implemented-candidate-peer-gameplay-pending"
+    },
+    {
+      "engineId": "fbneo-95153da1-cps3-v3-81b3daa38fb9",
+      "platform": "cps3",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "extensions": [
+        "zip"
+      ],
+      "overlay": "station-platforms/arcade/arcade.cfg",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "license": "LicenseRef-FBNeo",
+      "sourceArchive": "native/sources/FBNeo-95153da1f113c56735bd9a818171f908df628421.tar.gz",
+      "recoveryProtocol": "station-stream.v3",
+      "maximumPlayers": 2,
+      "status": "implemented-candidate-peer-gameplay-pending"
+    }
+  ],
+  "maximumPlayers": 5,
+  "fivePhoneGameplayValidated": false,
+  "platformPolicies": [
+    {
+      "platform": "snes",
+      "maximumPlayers": 5,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "megadrive",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "n64",
+      "maximumPlayers": 4,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "dreamcast",
+      "maximumPlayers": 4,
+      "automaticRoomIntegrationReady": false,
+      "reason": "A conexão automática do Dreamcast com estas salas ainda precisa ser integrada."
+    },
+    {
+      "platform": "gamecube",
+      "maximumPlayers": 4,
+      "automaticRoomIntegrationReady": false,
+      "reason": "A conexão automática do Dolphin com estas salas ainda precisa ser integrada."
+    },
+    {
+      "platform": "wii",
+      "maximumPlayers": 4,
+      "automaticRoomIntegrationReady": false,
+      "reason": "A conexão automática do Dolphin com estas salas ainda precisa ser integrada."
+    },
+    {
+      "platform": "wiiu",
+      "maximumPlayers": 4,
+      "automaticRoomIntegrationReady": false,
+      "reason": "O modo online local do Wii U ainda precisa ser integrado."
+    },
+    {
+      "platform": "switch",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": false,
+      "reason": "O motor Switch ainda precisa integrar as salas Station; cada edição deve usar seu modo local correto."
+    },
+    {
+      "platform": "neogeo",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "neogeocd",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "psx",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "fbneo",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "cps1",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "cps2",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "cps3",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": true,
+      "reason": ""
+    },
+    {
+      "platform": "ps2",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": false,
+      "reason": "A conexão automática do motor PlayStation 2 com estas salas ainda precisa ser integrada."
+    },
+    {
+      "platform": "saturn",
+      "maximumPlayers": 2,
+      "automaticRoomIntegrationReady": false,
+      "reason": "A conexão automática do motor Sega Saturn com estas salas ainda precisa ser integrada."
+    }
+  ]
+}

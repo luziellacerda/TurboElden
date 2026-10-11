@@ -1,0 +1,46 @@
+{
+  "schema": "station-native-endpoint-contract-v1",
+  "optIn": "new StationMultiplayerSession(verifiedLaunch, listener, StationDolphinEndpoint.factory())",
+  "default": "Existing two-argument Session and ordinary Tunnel constructors retain TCP socket delivery; N64 and RetroArch do not use the native endpoint",
+  "factory": {
+    "arguments": ["authenticatedLocalSlot, one-based", "authenticatedRemoteSlot, one-based"],
+    "hostLinkRemote": "signed guestSlot",
+    "guestLinkRemote": 1,
+    "admission": "Existing exact signed roster mask, linkId, hostSide and ownerSlot checks precede endpoint construction"
+  },
+  "dpl1": {
+    "headerBytes": 8,
+    "magic": "DPL1",
+    "sourceSlotByte": 4,
+    "destinationSlotByte": 5,
+    "payloadLengthBytes": [6, 7],
+    "payloadLengthOrder": "unsigned big endian",
+    "minimumDatagramBytes": 1,
+    "maximumDatagramBytes": 1392,
+    "maximumFrameBytes": 1400,
+    "transport": "Concatenated frames over each authenticated TSR3 byte stream; arbitrary outer DATA fragmentation is allowed"
+  },
+  "native": {
+    "reader": "nativeTakeOutgoing(remoteSlot, 100), null/empty means bounded idle wait",
+    "delivery": "nativeDeliver(remoteSlot, processUniqueDeliveryId, completeFrame)",
+    "retry": "0 retries the identical ID and bytes after a bounded wait; -1 rejects; 1 only queues native bytes",
+    "acknowledgment": "nativeAwaitDelivery(deliveryId, 100) must return true before rx.confirm(frameEndOffset)",
+    "identityLifetime": "Positive AtomicLong allocator shared by all channels and sessions in this process; exhaustion fails without wrap or reuse",
+    "close": "Per-channel endpoint does not close the shared native transport; its owning Activity/session performs the explicit native close"
+  },
+  "barrier": {
+    "pausedPreparation": "Preparation DATA remains independent of RUN and may carry official ENet connection packets while the signed global pause is active",
+    "outgoingReadGuard": "endpointReading excludes READY while native bytes are being removed from a native queue or held waiting for TSR3 credit",
+    "nativeReady": "Existing real nativeStatus pause/drained epoch requirements remain unchanged",
+    "incomingReady": "An incomplete frame or unconsumed native datagram remains unconfirmed in rx and prevents READY",
+    "timeouts": "Bounded idle, delivery and acknowledgment waits never disconnect or close the native session"
+  },
+  "memory": {
+    "outerWindowBytes": 262144,
+    "incomingStagingMaximumBytes": 1400,
+    "outgoingStagingMaximumBytes": 1400,
+    "retention": "Unconfirmed fragmented input remains in the bounded TSR3 receive ring; outgoing bytes remain in its retransmission ring until authenticated ACCEPTED confirms them"
+  },
+  "isolatedProbeChecks": 470,
+  "physicalGameplayValidated": false
+}

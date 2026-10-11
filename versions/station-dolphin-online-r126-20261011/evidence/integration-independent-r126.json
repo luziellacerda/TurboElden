@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "revision": "R126",
+  "scope": "independent read-only unsigned APK content, actual DEX declarations, AXML and frozen source/native receipts",
+  "passed": true,
+  "checks": 303,
+  "baseApkSha256": "a3ed815c01fdb0bd06a3a2485991fe8d19a51c63fee0e9255a45ecd8a9b6d4a5",
+  "unsignedApkSha256": "c8286432438341321e3cf6c2957d43f22cebeed02281bb8cd1a39d3c5ded26c5",
+  "unsignedApkBytes": 2231793378,
+  "preservedEntryCount": 13544,
+  "preservedCategories": {
+    "lib/": 135,
+    "res/": 7193,
+    "assets/": 6168,
+    "classes": 35
+  },
+  "changedEntries": {
+    "AndroidManifest.xml": "0b38352bf9c4b65415377080b6bd52c716587271122a9a8e5bf4610a50ff2e60",
+    "assets/station-online/engines.json": "d80d8c6c7448488b8e11917cfeb0681d50b48b4dd81266b0182c67bd85f91f48",
+    "classes10.dex": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+    "classes12.dex": "297084c7424ababd5bf31abf3af929b8c6312af34c02f78c24f588fd5584af41",
+    "classes35.dex": "9aaed18186c227ae88834f686dfa55665852f7e105dd9106640160ec38fbed21",
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so": "1aafea201355b58909ada9958bbe5bb5407e7ace7eb3848ade7ba04d235becac"
+  },
+  "addedEntries": {
+    "lib/arm64-v8a/libstation_dolphin_online.so": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+    "lib/arm64-v8a/libstation_dolphin_hook.so": "7547dd37533c4352edf7666ef3b5220db08364054578bde7570c388658e0de16",
+    "lib/arm64-v8a/libstation_dolphin_hook_impl.so": "b3f2973bdccfb877cfc10fcaadd40b69e48af39434cc232d02bfc81a1669e264",
+    "lib/arm64-v8a/libstation_dolphin_file_redirect_hook.so": "23347bb99e0e73fde1f6deaf1b39d544ab4e4a5cc9e5f2c61c8d9facf5dfe06c",
+    "lib/arm64-v8a/libstation_dolphin_gsl_alloc_hook.so": "e9254fe5325818c1ef50cf986cd6db9a87d9b3c29c4567cd74e666b512598d02",
+    "lib/arm64-v8a/libstation_dolphin_runtime.so": "ca43a338d7992e2d9ef298387822c860945fbb16dc11dff03ee5b1d1fcd27656"
+  },
+  "removedOldSignatureMetadataCount": 3,
+  "offlineDolphinPreserved": true,
+  "offlineCoreEntriesChanged": false,
+  "n64CoreAndPluginsPreserved": true,
+  "uiLibrariesAndClientDex28Preserved": true,
+  "resourcesAndPrivateMediaPreserved": true,
+  "originalManifestComponentsPreserved": true,
+  "newPrivateAnchors": [
+    "org.emulationstation.frontend.netplay.StationDolphinActivity",
+    "org.emulationstation.frontend.netplay.StationDolphinOnlineActivity"
+  ],
+  "originalDonorSmaliUnchangedCount": 4991,
+  "modifiedDonorSmaliCount": 5,
+  "actualDolphinHookDescriptors": 16,
+  "frozenProbeCallSites": 20,
+  "actualNativeDexDeclarations": 21,
+  "nativeJniNamesMatchPackagedDex": true,
+  "finalJavaSources": 198,
+  "nativeLibraryCount": 5,
+  "nativeBundleSha256": "7a6c6d933ace522408bbd3ab4d699c8122b7a543ebb5ecbde2626509a1e237a6",
+  "coreRunningPathsGuarded": 3,
+  "classicZip": true,
+  "zip64": false,
+  "engineIds": [
+    "mupen64plus-ae-33bf7021-n64-v3-1aafea201355",
+    "dolphin-5102a033-gamecube-v3-ca43a338d799",
+    "dolphin-5102a033-wii-v3-ca43a338d799"
+  ],
+  "unchangedPriorEngineContracts": 10,
+  "signedAndAlignedVerifiedByThisAudit": false,
+  "installedByThisAudit": false,
+  "gameplayVerified": false,
+  "recoveryOnPhonesVerified": false,
+  "serverActivationVerified": false,
+  "findings": [],
+  "limitations": [
+    "ART reflection and actual emulator boot require a phone.",
+    "Two-phone gameplay, attachments and recovery are not proved by package checks.",
+    "Signature and final ZIP alignment are checked separately by the parent agent."
+  ],
+  "actualEngineCoreRuntimeAndDependencyHashesMatch": true,
+  "bothCanonicalSourceFingerprintsEmbedded": true
+}

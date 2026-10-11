@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "baseApkSha256": "aeeb2f8167a442db5a58b990cf6d45b613fab42b1e7a9bbc0bf3214b260420c4",
+  "completeStationCoreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+  "coreLibrary": "libstation_mupen64plus_core.so",
+  "coreBytes": 561056,
+  "dependencySha256": {
+    "libSDL2_net.so": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
+    "libae-bridge.so": "ba5a7582295215f159e197f805dbfe85851aa912462996870f61ccd752ecb360",
+    "libjnidispatch.so": "ddfc6c965bbe366615c000ec1f06552ddf0bb2b4f9d921d0bff8c75b3cb2ca4c",
+    "libmupen64plus-audio-android-fp.so": "79bd6457b4a77364721e98df4946fadde2bc44256b156ae8b361bcf769e03f74",
+    "libmupen64plus-audio-android.so": "a8f8a5f83827a5056fca58bf72dc25951c56cdba568c55773f81efb20f2f0be5",
+    "libmupen64plus-input-android.so": "11783275d71eaa14f3e15eff330a784195fdd98b31ea4c16d23d4691e5f91512",
+    "libmupen64plus-rsp-hle.so": "67d0f74eb35a889c6abbc0ab0503691f45555ca601570911e0435be492bcf189",
+    "libmupen64plus-video-glide64mk2.so": "5c10d28d442ce37cacaba892317319029a0340b4503dd8ac10ff850fdc5e9ce6",
+    "libn64cpp.so": "fa2c06d3c09c0d9a4931fa7cd03a3aba15f6ed7ea990d8e4a37b8a5811867c0d",
+    "liboboe.so": "2d1ab385a0817273cbcd249ce6488b54a7d31dde193a8bf3037bcd901ea2079f",
+    "libsoundtouch.so": "9944e132db1c2362b52cd88b438413d92802847b2174c64ce4dc801a7eaa41e3",
+    "libsoundtouch_fp.so": "5fae9c0a403f01415327b1175ac20460a438184075c8da467dcfea56435a002a"
+  },
+  "dependencies": {
+    "libSDL2_net.so": {
+      "sha256": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
+      "bytes": 15888,
+      "machine": "AArch64",
+      "soname": "libSDL2_net.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libae-bridge.so": {
+      "sha256": "ba5a7582295215f159e197f805dbfe85851aa912462996870f61ccd752ecb360",
+      "bytes": 326424,
+      "machine": "AArch64",
+      "soname": "libae-bridge.so",
+      "needed": [
+        "liblog.so",
+        "libEGL.so",
+        "libandroid.so",
+        "libc.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libjnidispatch.so": {
+      "sha256": "ddfc6c965bbe366615c000ec1f06552ddf0bb2b4f9d921d0bff8c75b3cb2ca4c",
+      "bytes": 165992,
+      "machine": "AArch64",
+      "soname": null,
+      "needed": [
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "loadAlignments": [
+        16384,
+        16384
+      ]
+    },
+    "libmupen64plus-audio-android-fp.so": {
+      "sha256": "79bd6457b4a77364721e98df4946fadde2bc44256b156ae8b361bcf769e03f74",
+      "bytes": 88304,
+      "machine": "AArch64",
+      "soname": "libmupen64plus-audio-android-fp.so",
+      "needed": [
+        "liblog.so",
+        "liboboe.so",
+        "libsoundtouch_fp.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libmupen64plus-audio-android.so": {
+      "sha256": "a8f8a5f83827a5056fca58bf72dc25951c56cdba568c55773f81efb20f2f0be5",
+      "bytes": 88208,
+      "machine": "AArch64",
+      "soname": "libmupen64plus-audio-android.so",
+      "needed": [
+        "liblog.so",
+        "liboboe.so",
+        "libsoundtouch.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libmupen64plus-input-android.so": {
+      "sha256": "11783275d71eaa14f3e15eff330a784195fdd98b31ea4c16d23d4691e5f91512",
+      "bytes": 7920,
+      "machine": "AArch64",
+      "soname": "libmupen64plus-input-android.so",
+      "needed": [
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libmupen64plus-rsp-hle.so": {
+      "sha256": "67d0f74eb35a889c6abbc0ab0503691f45555ca601570911e0435be492bcf189",
+      "bytes": 63832,
+      "machine": "AArch64",
+      "soname": "libmupen64plus-rsp-hle.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libmupen64plus-video-glide64mk2.so": {
+      "sha256": "5c10d28d442ce37cacaba892317319029a0340b4503dd8ac10ff850fdc5e9ce6",
+      "bytes": 712936,
+      "machine": "AArch64",
+      "soname": "libmupen64plus-video-glide64mk2.so",
+      "needed": [
+        "libdl.so",
+        "liblog.so",
+        "libGLESv2.so",
+        "libz.so",
+        "libc.so",
+        "libm.so",
+        "libn64cpp.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libn64cpp.so": {
+      "sha256": "fa2c06d3c09c0d9a4931fa7cd03a3aba15f6ed7ea990d8e4a37b8a5811867c0d",
+      "bytes": 1330832,
+      "machine": "AArch64",
+      "soname": "libn64cpp.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "liboboe.so": {
+      "sha256": "2d1ab385a0817273cbcd249ce6488b54a7d31dde193a8bf3037bcd901ea2079f",
+      "bytes": 259048,
+      "machine": "AArch64",
+      "soname": "liboboe.so",
+      "needed": [
+        "liblog.so",
+        "libOpenSLES.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libsoundtouch.so": {
+      "sha256": "9944e132db1c2362b52cd88b438413d92802847b2174c64ce4dc801a7eaa41e3",
+      "bytes": 91760,
+      "machine": "AArch64",
+      "soname": "libsoundtouch.so",
+      "needed": [
+        "libn64cpp.so",
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    },
+    "libsoundtouch_fp.so": {
+      "sha256": "5fae9c0a403f01415327b1175ac20460a438184075c8da467dcfea56435a002a",
+      "bytes": 89992,
+      "machine": "AArch64",
+      "soname": "libsoundtouch_fp.so",
+      "needed": [
+        "libn64cpp.so",
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ]
+    }
+  },
+  "gameplayValidated": false,
+  "offlineLibrariesReplaced": false
+}

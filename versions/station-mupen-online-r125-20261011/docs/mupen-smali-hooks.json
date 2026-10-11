@@ -1,0 +1,153 @@
+{
+  "schema": "station-mupen-smali-hooks-v1",
+  "bridgeClass": "org.emulationstation.frontend.netplay.StationN64Bridge",
+  "offlineCoreName": "mupen64plus-core",
+  "onlineCoreName": "station_mupen64plus_core",
+  "recipe": "recipes/patch_mupen_smali.py",
+  "upstreamCommit": "33bf7021549d7873e976884370fbd1a8e7333bc7",
+  "integratedSmaliPartition": "classes36.dex",
+  "allHooksMustBePublicStatic": true,
+  "hooks": [
+    {
+      "descriptor": "onCreate(Landroid/app/Activity;)V",
+      "callSite": "GameActivity.onCreate before super and CoreFragment construction",
+      "requiredBehavior": "Validate and consume the private signed/bound launch descriptor before selecting the online core. Offline must return without selecting or changing anything. For Station launches set the upstream NETPLAY_ENABLED extra true and NETPLAY_SERVER false before upstream reads extras; the real host role comes from the descriptor and custom transport. Install lifecycle handling for the Activity and bind the existing Station session owner. A Boolean extra alone must never authorize engine selection."
+    },
+    {
+      "descriptor": "onGamePrefs(Ljava/lang/Object;Landroid/content/Intent;)V",
+      "callSite": "GameActivity.onCreate immediately after construction of GamePrefs",
+      "requiredBehavior": "For a verified Station launch only, configure all game-specific directories under a sanitized session path. GamePrefs.setGameDirs alone is insufficient because flat-data-path preferences redirect SRAM, slots and user saves to the offline root. Preserve touch and physical-controller profiles. Prevent online menu writes from modifying the offline preference instance."
+    },
+    {
+      "descriptor": "onReady(Landroid/app/Activity;Ljava/lang/Object;)Z",
+      "callSite": "GameActivity.onNetplayReady before the original Mupen lobby dialogs",
+      "requiredBehavior": "Return false offline. Return true to consume Station online readiness and avoid the independent Mupen lobby. Prepare and connect on a worker because core initialization and registration perform blocking TCP. The Object is the current CoreFragment. Use connect(registrationId, oneBasedPlayer, videoPlugin, rspPlugin, loopbackAddress, port), check mNetplayInitSuccess, and release GameActivity.start()/CoreFragment.startNetplay only after the verified registration and session start barrier. Android local input remains player 1; Mupen translates it to the signed remote slot."
+    },
+    {
+      "descriptor": "onExit(Landroid/app/Activity;)Z",
+      "callSite": "GameActivity.onExitFinished and finishActivity before normal completion",
+      "requiredBehavior": "Return false offline. For an authorized human online completion, detach callbacks, close transport once, return a result and finish only this Activity without finishAndRemoveTask. For an unexpected internal completion, consume the callback, pause/report the failure and retain the Activity rather than close a room without human authorization. Do not call finishActivity recursively. CoreService.forceExit is also gated by allowShutdown."
+    },
+    {
+      "descriptor": "onResume(Landroid/app/Activity;)V",
+      "callSite": "GameActivity.onResume at entry, before upstream reuses any Activity register",
+      "requiredBehavior": "No operation offline. For the current Station Activity only, update visibility/resume through the Station owner barrier. Do not release native execution before the current network/session barrier. Preserve the original Mupen rendering and controller callbacks."
+    },
+    {
+      "descriptor": "onPause(Landroid/app/Activity;)V",
+      "callSite": "GameActivity.onPause at entry, before upstream reuses p0 as a View",
+      "requiredBehavior": "No operation offline. For the current Station Activity only, suspend presentation/session visibility through the Station owner. Backgrounding is not a human exit and must never request native quit or close the room."
+    },
+    {
+      "descriptor": "onDestroy(Landroid/app/Activity;)V",
+      "callSite": "GameActivity.onDestroy at entry, before upstream reuses p0 as a View",
+      "requiredBehavior": "No operation offline. Detach only callbacks owned by this Activity. Distinguish a configuration change, background/service survival, explicit human exit and failure. Do not infer human exit solely from onDestroy or call forceExit/removeTask."
+    },
+    {
+      "descriptor": "onNewIntent(Landroid/app/Activity;Landroid/content/Intent;)V",
+      "callSite": "GameActivity.onNewIntent immediately after its existing setIntent call",
+      "requiredBehavior": "Verify the retained Station launch marker and exact Activity binding. Authorize only the explicit EXIT_GAME=true action carried by the private immutable PendingIntent constructed by the verified CoreService. FORCE_EXIT_GAME alone, a missing marker or an unrelated Intent must not authorize human exit. Preserve offline behavior and never replace the active JNA library during notification reentry."
+    },
+    {
+      "descriptor": "authorizeHumanExit(Landroid/app/Activity;)V",
+      "callSite": "GameActivity.onExitRequested only when its existing confirmed argument is true",
+      "requiredBehavior": "Record an explicit confirmed human exit only for the current verified Station Activity. A false dialog result, pause, destroy, internal shutdown or failure must not authorize it. Notification EXIT_GAME requires its own verified explicit-action path; FORCE_EXIT_GAME alone is not human authorization."
+    },
+    {
+      "descriptor": "requestHumanExit(Landroid/content/Context;)V",
+      "callSite": "CoreService.shutdownEmulator at entry, guarded by isStationContext and allowShutdown",
+      "requiredBehavior": "This is a classification/notification hook before an already authorized native shutdown. Consult recorded human authorization; never create it from this callback. Offline does not call the hook. Background pause does not call it."
+    },
+    {
+      "descriptor": "allowShutdown(Landroid/content/Context;)Z",
+      "callSite": "CoreService.shutdownEmulator before tryShutdown and CoreService.forceExit before exitGracefully/killProcess",
+      "requiredBehavior": "Return true offline. For the exact verified Station service, return true only after recorded explicit human authorization or human exit. Return false for unexpected internal shutdown, SERVICE_QUIT without such authorization and failure paths; report/pause without arming the upstream 60-second shutdown timer. This predicate must not create human authority."
+    },
+    {
+      "descriptor": "propagate(Landroid/content/Context;Landroid/content/Intent;)V",
+      "callSite": "ActivityHelper.startCoreService before startService/bindService; CoreService.updateNotification before the first private PendingIntent (the following action copies use the same Intent)",
+      "requiredBehavior": "Copy only the verified Station marker and private launch binding from the current GameActivity Intent to the CoreService Intent. The normal ROM metadata and NETPLAY_ENABLED extras remain upstream. Preserve the descriptor across an authorized service/notification reentry without exporting it."
+    },
+    {
+      "descriptor": "onServiceStart(Landroid/content/Context;Landroid/content/Intent;)V",
+      "callSite": "CoreService.onStartCommand before upstream replaces p1 with its Bundle",
+      "requiredBehavior": "Capture the valid descriptor on this CoreService instance before any session-specific directory work. Offline intents remain offline. A null or mismatched restart Intent must not authorize a new session. It must not replace the already selected JNA library for a running session."
+    },
+    {
+      "descriptor": "onServicePrefs(Landroid/content/Context;Ljava/lang/Object;)V",
+      "callSite": "CoreService.onStartCommand after its independent GamePrefs construction and before GameDataManager/makeDirs",
+      "requiredBehavior": "Apply the same validated session directory and preference isolation using the descriptor captured by onServiceStart. Changing only the Activity GamePrefs does not isolate the service. Preserve immutable offline directories and app data."
+    },
+    {
+      "descriptor": "isStationContext(Landroid/content/Context;)Z",
+      "callSite": "CoreService.connectForNetplay, restart, advanceFrame, updateControllerConfig; CoreFragment.restart/restartEmulator using its current CoreService; GameActivity.setPakTypeFromPrompt",
+      "requiredBehavior": "True only for the CoreService instance bound to the validated current Station descriptor; not for an arbitrary Context or an unverified Intent flag."
+    },
+    {
+      "descriptor": "skipAutoSave(Landroid/content/Context;)Z",
+      "callSite": "CoreService.autoSaveState",
+      "requiredBehavior": "True only for verified Station sessions. The patched method preserves explicit shutdownOnFinish by calling shutdownEmulator, but does not generate an offline auto-save. Offline method behavior is unchanged."
+    },
+    {
+      "descriptor": "skipLoadAutoSave(Landroid/content/Context;)Z",
+      "callSite": "CoreService.ServiceHandler before getLatestAutoSave/loadProgress/emuLoadFile",
+      "requiredBehavior": "True only for verified Station sessions. Start from the agreed online state; do not load the offline auto-save. Explicit recovery state loading remains a separate adapter responsibility."
+    },
+    {
+      "descriptor": "skipExternalStorage(Landroid/content/Context;)Z",
+      "callSite": "CoreService.copyGameContentsFromSdCard and copyGameContentsToSdCard",
+      "requiredBehavior": "True only for verified Station sessions. Do not import, overwrite, synchronize or delete the user's offline external saves during an online session."
+    },
+    {
+      "descriptor": "gameDataDir(Ljava/lang/Object;)Ljava/lang/String;",
+      "callSite": "GamePrefs.getGameDataDir before the original AppData root concatenation; GamePrefs.putPakType uses a non-null override as verified-session membership",
+      "requiredBehavior": "Return the isolated canonical session root only for an exact GamePrefs object previously registered by onGamePrefs/onServicePrefs for the verified current Station session. Return null for every offline/unregistered object, including initial constructor calls, so the original getter runs. Do not mutate AppData or the offline root."
+    },
+    {
+      "descriptor": "coreName()Ljava/lang/String;",
+      "callSite": "CoreInterface constructor Native.load and coreAttachPlugin AE bridge loadLibrary",
+      "requiredBehavior": "Return the original offline name unless onCreate already validated the Station descriptor in this process. Both call sites must select the same verified online variant. CoreService owns a static CoreInterface, so onServiceStart alone is too late to select the library. Verify core, bridge, plugins and adapter hashes through the approved engine/profile binding."
+    }
+  ],
+  "addedMupenApi": {
+    "descriptor": "paulscode.android.mupen64plusae.jni.CoreInterface.stationNetplaySetController(II)Z",
+    "behavior": "Same command and registration data as the existing void method, but returns true only when CoreDoCommand returns M64ERR_SUCCESS (0). CoreService uses it only for a verified Station Context and updates mNetplayInitSuccess with its result. The original void method and the non-Station branch remain intact."
+  },
+  "playerNumbering": {
+    "GameActivityConnectParameter": "1 through 4",
+    "nativeRegistrationWirePlayer": "0 through 3",
+    "conversion": "M64CMD_NETPLAY_CONTROL_PLAYER validates 1..4 then subtracts 1 in frontend.c",
+    "localInput": "First mapped local Android controller; native Mupen maps it to the assigned emulated remote controller"
+  },
+  "verifiedGamePrefsFields": {
+    "r4300Emulator": "String; select cached interpreter with value 1 only for Station's isolated GamePrefs",
+    "videoPluginLib": "AppData.VideoPlugin.GLIDE64MK2 for libmupen64plus-video-glide64mk2.so; avoid getPlugin because it may select GLIDE64MK2_EGL based on device capability",
+    "rspPluginLib": "AppData.RspPlugin.HLE for libmupen64plus-rsp-hle.so",
+    "rspHleVideo": "boolean true for the selected RSP HLE variant",
+    "timingFields": "countPerOp, countPerOpDen, forceAlignmentOfPiDma, randomizeInterrupts, disableExpansionPak; NativeConfigFiles writes them to Core cfg. Their agreed values belong in the exact online profile, not guessed per device. Netplay cfg separately forces TlbHack=0 and CountPerScanlineOverride=0."
+  },
+  "onlineOnlyMutationGuards": {
+    "shutdown": "CoreService.shutdownEmulator and forceExit return before upstream shutdown/timer/process kill unless the verified Station owner has explicit human authorization. Offline originals are preserved. A native STOP guard must also require the authorized Station quit flag.",
+    "reset": "CoreService.restart, CoreFragment.restart/restartEmulator return only for their verified Station service; offline prompts and reset stay intact.",
+    "frameAdvance": "CoreService.advanceFrame returns only for its verified Station service.",
+    "pak": "Station GameActivity does not open the pak mutation prompt; isolated GamePrefs.putPakType refuses mutation; CoreService.updateControllerConfig allows the original plug/unplug operation only when the requested PakType equals the isolated current approved type. Controller reconnect remains available.",
+    "upstreamNativeGuards": "Native main_state_load/main_state_save and speed changes already return during netplay. Upstream main_reset and main_advance_one need matching guards in the isolated online core for callers outside these DEX entry points."
+  },
+  "buildNotes": {
+    "input": "Copy/verify the exact integrated AE smali_classes36 from the local existing build; do not rerun the R15 namespace transformation.",
+    "output": "A new disjoint smali tree; the recipe refuses an existing output or an input/output ancestor relationship.",
+    "assembly": "Assemble the modified classes36 partition with the existing apktool/smali tooling. Keep classes37, classes38, all resources and original offline native libraries byte-identical. Compile the new bridge into the current Station Java partition using its existing build recipe.",
+    "dependencies": "AE/JNA class names are preserved; UI/Kotlin dependencies remain under tn64core. The hook descriptors use Android types and Object to avoid changing the relocated UI hierarchy.",
+    "engineActivation": "The room Intent may select this gameplay route only after the complete adapter and matching approved engine/profile identity exist. Do not reuse the paraLLEl engineId/coreSha256 for Mupen AE."
+  },
+  "validationStatus": {
+    "recipeAstParsed": true,
+    "sevenInputSourcePinsChecked": true,
+    "transformAnchorsCheckedInMemory": true,
+    "donorChanged": false,
+    "patchAppliedToBuild": false,
+    "dexAssembled": false,
+    "apkCompiled": false,
+    "physicalGameplayValidated": false
+  }
+}
