@@ -1,0 +1,141 @@
+{
+  "auditType": "static APK/source/ELF comparison; no gameplay, device operation or test execution",
+  "baseR119Commit": "13b21b9dc08adf7b1820fdeb09bec47a810c1ea5",
+  "references": {
+    "stableCemu20260930": {
+      "gitTag": "estavel-2026-09-30-cemu-052",
+      "sha256": "7ce3fab3d2d09c3bddfd002d0b9734e42aa5e27b102f36bb56e77b484e36562b",
+      "bytes": 1063390870,
+      "package": "org.emulationstation.frontend"
+    },
+    "stable2pR76": {
+      "gitCommit": "a81c7fde61c6d048b4cea4c746052bd7304e600e",
+      "sha256": "d7145db3511a4056b16fdde10e4c07709a16b7f445596801b3535c1b28b06a51",
+      "bytes": 2122907380,
+      "package": "org.turboramastation.frontend"
+    },
+    "r119": {
+      "gitCommit": "13b21b9dc08adf7b1820fdeb09bec47a810c1ea5",
+      "sha256": "f5d0e434cb383a7103c77fd1e853b9f4721d283c30941860a21f1831bf6be674",
+      "bytes": 2217049480,
+      "package": "org.turboramastation.frontend"
+    }
+  },
+  "switchLibrary": {
+    "entry": "lib/arm64-v8a/libyuzu-android.so",
+    "sha256AllThree": "c82b35d81aa4b9521a64bf79e7d617fb418df5e9b728b5b228b4860e55d1a72b",
+    "bytesAllThree": 35518648
+  },
+  "r76ToR119": {
+    "dexEntries": 38,
+    "changedDex": [
+      "classes28.dex",
+      "classes35.dex"
+    ],
+    "identicalSwitchDex": [
+      "classes.dex",
+      "classes2.dex",
+      "classes8.dex"
+    ],
+    "identicalResourceEntriesIncludingManifestArsc": 7195,
+    "missingResourceEntries": 0,
+    "addedResourceEntries": 0,
+    "manifestSha256": "3a821dccd8a9853acd345f106614ec955bbf66b681b7690f907348569e8bef0d"
+  },
+  "stableCemuToR119NormalizedDecompilerComparison": {
+    "SwitchConfigPatcher": {
+      "normalizedDecompilerOutputEqual": true,
+      "stableNormalizedSha256": "382d27127db21427ee1469bf0ec7e9369cf24b755c1e3af40682a4dbc1e33a66",
+      "r119NormalizedSha256": "382d27127db21427ee1469bf0ec7e9369cf24b755c1e3af40682a4dbc1e33a66"
+    },
+    "TurboEdenBridge": {
+      "normalizedDecompilerOutputEqual": true,
+      "stableNormalizedSha256": "c3926bb46f09bb3b804a55d00ba29304b1ebecfb796671a24bfd16237c5ad5cf",
+      "r119NormalizedSha256": "c3926bb46f09bb3b804a55d00ba29304b1ebecfb796671a24bfd16237c5ad5cf"
+    },
+    "GameLauncher": {
+      "normalizedDecompilerOutputEqual": true,
+      "stableNormalizedSha256": "d47c6c6dcc59488dbccc17a443ed5a9a9b9ec6515e8987591cf8892c2de9a0d0",
+      "r119NormalizedSha256": "d47c6c6dcc59488dbccc17a443ed5a9a9b9ec6515e8987591cf8892c2de9a0d0"
+    },
+    "EmulationActivity": {
+      "normalizedDecompilerOutputEqual": true,
+      "stableNormalizedSha256": "ffe8f52f9a66943ff0ec744aa80bbc6a6aa77518ab54095540386e78fdf98a02",
+      "r119NormalizedSha256": "ffe8f52f9a66943ff0ec744aa80bbc6a6aa77518ab54095540386e78fdf98a02"
+    },
+    "EmulationFragment": {
+      "normalizedDecompilerOutputEqual": true,
+      "stableNormalizedSha256": "be667514d7064ca44ad5adb3d7697d954645ea3f3f48c2104816f1c63715a14c",
+      "r119NormalizedSha256": "be667514d7064ca44ad5adb3d7697d954645ea3f3f48c2104816f1c63715a14c"
+    },
+    "YuzuApplication": {
+      "normalizedDecompilerOutputEqual": false,
+      "stableNormalizedSha256": "7c73d312ee07b7201823ebb60a1187568227b94554e851dd7be4428d89b680d0",
+      "r119NormalizedSha256": "288c74082a9d0093b79c613712c5449bcf93c06f8c1c7d490a0ce273b1151d3b"
+    }
+  },
+  "verifiedLaunchChain": [
+    "CatalogService.findLaunchCommand reads es_systems.cfg",
+    "SwitchConfigPatcher COMMAND supplies legacy package org.emulationstation.frontend",
+    "AndroidBridge.launchIntent passes IntentSpec.package to GameLauncher without remapping",
+    "GameLauncher.launch calls Intent.setClassName(pkg, cls)",
+    "BootstrapActivity forwards same data URI to EmulationActivity with getPackageName()",
+    "EmulationActivity/EmulationFragment invoke unchanged libyuzu-android.so"
+  ],
+  "defect": {
+    "type": "legacy Android component package does not equal current applicationId",
+    "notProven": "The reported physical failure has not yet been correlated with an ActivityNotFoundException or stale-package launch on the phone."
+  },
+  "correction": {
+    "file": "native/d0/native_carousel.cpp",
+    "function": "gamecubeCommandHook",
+    "aliases": [
+      "Switch",
+      "Nintendo Switch",
+      "nintendoswitch",
+      "nintendo-switch",
+      "nintendo_switch",
+      "nsw",
+      "ns"
+    ],
+    "onlyChangedCommandField": "package=org.turboramastation.frontend",
+    "unchanged": [
+      "class",
+      "action",
+      "ROM_RAW",
+      "mime",
+      "content=1",
+      "Bootstrap",
+      "GameLauncher",
+      "libyuzu-android.so",
+      "Switch quality settings",
+      "controller settings",
+      "graphics economy/30fps/cover queue"
+    ]
+  },
+  "remainingPhysicalEvidence": [
+    "Selected Switch game and its installed launch path/extension",
+    "Effective selected command and target component",
+    "First error after user presses Jogar; no automatic gameplay started"
+  ],
+  "decompilerLimitations": {
+    "completeSmallClasses": [
+      "SwitchConfigPatcher",
+      "TurboEdenBridge",
+      "GameLauncher"
+    ],
+    "warningsAndFallbackIn": [
+      "EmulationActivity",
+      "EmulationFragment"
+    ],
+    "claim": "Equal normalized decompiler output only; not a formal equivalence proof for incomplete methods. R76/R119 Switch DEX byte equality is independent of decompiler warnings."
+  },
+  "physicalConfigEvidence": {
+    "path": "evidence/device-launch-routes-r120.json",
+    "kind": "read-only config captured by parent; no Switch launch/exception correlation",
+    "switchCommandPackage": "org.emulationstation.frontend",
+    "installedApplicationId": "org.turboramastation.frontend",
+    "mismatchConfirmed": true
+  },
+  "originalFallbackEvidence": "evidence/original-launch-profile-table-r120.json"
+}

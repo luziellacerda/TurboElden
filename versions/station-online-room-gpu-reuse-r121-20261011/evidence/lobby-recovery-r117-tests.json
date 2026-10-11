@@ -1,0 +1,20 @@
+{
+  "checks": 54,
+  "scope": "actual patched Java compiled on host; Android UI, WAN and gameplay are not tested",
+  "passed": true,
+  "utc": "2026-10-11T00:38:13.580013+00:00",
+  "recipeSHA256": "1c59dae3b6f193d9e9a56bf30dfacb1e8786665e0d328bf0918db003dbaf0d13",
+  "fixtureSHA256": "d8198deeada33081fb80e25517eaf09f373565384d5e5652f4f1a5a9d94a06e3",
+  "sourceHashes": {
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationOnlineClient.java": "a3c184aff3eabd2aae9d861235fa132eb31fc6d95b4a1ffcb52248fa4724625e",
+    "java\\netplay-src\\org\\emulationstation\\frontend\\netplay\\StationOnlinePlatformPolicy.java": "52335acf09835b4dad0c944d8ad2a19f294da52c6eb771b55204457198887d70",
+    "java\\client\\src\\java\\org\\emulationstation\\frontend\\station\\StationPlatforms.java": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757"
+  },
+  "dependencyHashes": {
+    "json-20250517.jar": "3ea61b2a06e31edf1c91134fe9106b0ebb16628be169f3db75bc7a2b06b45796",
+    "rooms.jar": "accd4f2d4b8f889c8afd687b11cec9c088fe1ab54ee0cb45c330569a1f3a2240",
+    "client.jar": "7a471931c4a8104cc5169666807d267772a7cb3aa5185186721ca91a374edc8a",
+    "android.jar": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad"
+  },
+  "physicalAndroidGameplayVerified": false
+}

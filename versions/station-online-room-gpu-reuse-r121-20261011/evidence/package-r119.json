@@ -1,0 +1,28 @@
+{
+  "version": "R119-candidate",
+  "phase": "package",
+  "utc": "2026-10-11T02:16:07.849818+00:00",
+  "sourceBaseVersion": "R118",
+  "baseSHA256": "960b62397fdff20491a5b842dcab0451fade5d786beb84c40e6a9d91ae456e42",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R119-20261010.apk",
+  "sha256": "f5d0e434cb383a7103c77fd1e853b9f4721d283c30941860a21f1831bf6be674",
+  "bytes": 2217049480,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "signatureV2V3Passed": true,
+  "zipAlignment16KiBPassed": true,
+  "changedEntries": [
+    "classes28.dex",
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13543,
+  "allOtherEntriesByteIdentical": true,
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "compileReceiptSHA256": "47304911a00263eae1592de463e1d918e5debbadbb0e37061eb0f8193979e541",
+  "javaSourceCount": 230,
+  "compiled": true,
+  "signed": true,
+  "installed": false,
+  "physicalVerified": false,
+  "gameplayValidated": false
+}

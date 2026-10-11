@@ -1,0 +1,2655 @@
+{
+  "kind": "per-platform static launch matrix plus explicitly authorized HOST command-selection checks; no gameplay validation",
+  "baseR119Apk": {
+    "sha256": "f5d0e434cb383a7103c77fd1e853b9f4721d283c30941860a21f1831bf6be674",
+    "bytes": 2217049480,
+    "applicationId": "org.turboramastation.frontend"
+  },
+  "StationPlatformsSha256": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757",
+  "canonicalPlatforms": 50,
+  "catalogLookupKeys": 78,
+  "originalProfiles": 43,
+  "references": [
+    "evidence/original-launch-profile-table-r120.json",
+    "evidence/switch-static-audit.json",
+    "evidence/device-launch-routes-r120.json",
+    "tests/launch-command-host-cases.json"
+  ],
+  "abiEvidence": {
+    "itemPlatformOffset": "0x60",
+    "itemFolderOffset": "0x78",
+    "javaPublication": "StationFrontend.java row uses platform.label then platform.folder",
+    "nativePublication": "frontend/station_frontend.cpp assigns Item.platform=fields[2], Item.folder=fields[3]",
+    "originalResolve": "0x18b2a4 passes Item.folder to findLaunchCommand/installed native command hook"
+  },
+  "motorolaExternalCoresReadOnly": {
+    "path": "/storage/emulated/0/EmulationStation/.emulationstation/cores",
+    "result": "No such file or directory",
+    "source": "Parent read-only ADB check; no serial, account data, game paths or ROM names recorded",
+    "familiesWithMissingObservedDependencies": 8,
+    "notEquivalentTo": "incorrect command or proven gameplay failure in every installation"
+  },
+  "hostCheck": {
+    "compiler": "MSVC 14.44.35207 x64 HOST C++17",
+    "checks": 146,
+    "failures": 0,
+    "fallbackCalls": 37,
+    "canonicalFolders": 50,
+    "resolvedCatalogAliasCases": 78,
+    "directAliasCases": 18,
+    "scope": "exact six command functions extracted; UiString/string assign/read and original XML resolver mocked; does not execute original ELF resolver, Android ABI/JNI, GPU, engine or gameplay"
+  },
+  "rows": [
+    {
+      "label": "3ds",
+      "nativeFolder": "3ds",
+      "catalogAliases": [
+        "3ds"
+      ],
+      "originalProfile": {
+        "description": "Nintendo 3DS",
+        "aliases": "3ds nintendo3ds",
+        "core": "citra",
+        "command": "libretro: core=citra_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=azahar_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: azahar",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libazahar_libretro_android.so",
+            "entry": "lib/arm64-v8a/libazahar_libretro_android.so",
+            "bytes": 38142088,
+            "crc32": "d2994c25"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Arcade",
+      "nativeFolder": "arcade",
+      "catalogAliases": [
+        "Arcade",
+        "arcade"
+      ],
+      "originalProfile": {
+        "description": "Arcade",
+        "aliases": "arcade fbneo fba finalburn",
+        "core": "fbneo",
+        "command": "libretro: core=fbneo_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mame4droid_android.so",
+      "binding": {
+        "engine": "MAME4droid Current",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MameBootstrap",
+          "dexEntry": "classes30.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.MameEntryActivity",
+            "dexEntry": "classes30.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.MameEntryActivity",
+              "process": ":mame"
+            }
+          },
+          {
+            "name": "com.seleuco.mame4droid.MAME4droid",
+            "dexEntry": "classes29.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.seleuco.mame4droid.MAME4droid",
+              "process": ":mame"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libMAME4droid.so",
+            "entry": "lib/arm64-v8a/libMAME4droid.so",
+            "bytes": 366992944,
+            "crc32": "f38dc223"
+          },
+          {
+            "requestedName": "libmame4droid-jni.so",
+            "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+            "bytes": 32856,
+            "crc32": "ba6a6baf"
+          }
+        ],
+        "runDispatch": "mameRunHook → MameBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Atomiswave",
+      "nativeFolder": "atomiswave",
+      "catalogAliases": [
+        "Atomiswave",
+        "atomiswave"
+      ],
+      "originalProfile": {
+        "description": "Atomiswave",
+        "aliases": "atomiswave awave naomi naomi2",
+        "core": "flycast",
+        "command": "libretro: core=flycast_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=flycast_libretro_android.so",
+      "binding": {
+        "engine": "Flycast Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.FlycastBootstrap",
+          "dexEntry": "classes14.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.flycast.emulator.NativeGLActivity",
+            "dexEntry": "classes13.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.flycast.emulator.NativeGLActivity",
+              "process": ":flycast"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libflycast.so",
+            "entry": "lib/arm64-v8a/libflycast.so",
+            "bytes": 18610480,
+            "crc32": "1eb61c08"
+          },
+          {
+            "requestedName": "libturbo_flycast.so",
+            "entry": "lib/arm64-v8a/libturbo_flycast.so",
+            "bytes": 15088,
+            "crc32": "bce08ebd"
+          }
+        ],
+        "runDispatch": "flycastRunHook → FlycastBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Dreamcast",
+      "nativeFolder": "dreamcast",
+      "catalogAliases": [
+        "Dreamcast",
+        "dreamcast"
+      ],
+      "originalProfile": {
+        "description": "Dreamcast",
+        "aliases": "dreamcast dc",
+        "core": "flycast",
+        "command": "libretro: core=flycast_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=flycast_libretro_android.so",
+      "binding": {
+        "engine": "Flycast Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.FlycastBootstrap",
+          "dexEntry": "classes14.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.flycast.emulator.NativeGLActivity",
+            "dexEntry": "classes13.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.flycast.emulator.NativeGLActivity",
+              "process": ":flycast"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libflycast.so",
+            "entry": "lib/arm64-v8a/libflycast.so",
+            "bytes": 18610480,
+            "crc32": "1eb61c08"
+          },
+          {
+            "requestedName": "libturbo_flycast.so",
+            "entry": "lib/arm64-v8a/libturbo_flycast.so",
+            "bytes": 15088,
+            "crc32": "bce08ebd"
+          }
+        ],
+        "runDispatch": "flycastRunHook → FlycastBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "GameCube",
+      "nativeFolder": "gamecube",
+      "catalogAliases": [
+        "GameCube",
+        "gamecube"
+      ],
+      "originalProfile": {
+        "description": "GameCube",
+        "aliases": "gamecube gc ngc",
+        "core": "dolphin",
+        "command": "libretro: core=dolphin_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=dolphin_libretro_android.so",
+      "binding": {
+        "engine": "Dolphin Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.DolphinBootstrap",
+          "dexEntry": "classes12.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.DolphinEntryActivity",
+            "dexEntry": "classes12.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.DolphinEntryActivity",
+              "process": ":dolphin"
+            }
+          },
+          {
+            "name": "org.dolphinemu.dolphinemu.activities.EmulationActivity",
+            "dexEntry": "classes10.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.dolphinemu.dolphinemu.activities.EmulationActivity",
+              "process": ":dolphin"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libdolp.so",
+            "entry": "lib/arm64-v8a/libdolp.so",
+            "bytes": 15333048,
+            "crc32": "99e256ba"
+          }
+        ],
+        "runDispatch": "dolphinRunHook → DolphinBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Gameboy",
+      "nativeFolder": "gameboy",
+      "catalogAliases": [
+        "Gameboy",
+        "gb"
+      ],
+      "originalProfile": {
+        "description": "Game Boy",
+        "aliases": "gb gameboy",
+        "core": "gambatte",
+        "command": "libretro: core=gambatte_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=gambatte_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: gambatte",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libgambatte_libretro_android.so",
+            "entry": "lib/arm64-v8a/libgambatte_libretro_android.so",
+            "bytes": 3341912,
+            "crc32": "23597600"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Gameboy Color",
+      "nativeFolder": "gameboy-color",
+      "catalogAliases": [
+        "Gameboy Color",
+        "gbc"
+      ],
+      "originalProfile": {
+        "description": "Game Boy Color",
+        "aliases": "gbc gameboycolor",
+        "core": "gambatte",
+        "command": "libretro: core=gambatte_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=gambatte_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: gambatte",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libgambatte_libretro_android.so",
+            "entry": "lib/arm64-v8a/libgambatte_libretro_android.so",
+            "bytes": 3341912,
+            "crc32": "23597600"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Gba",
+      "nativeFolder": "gba",
+      "catalogAliases": [
+        "Gba",
+        "gba"
+      ],
+      "originalProfile": {
+        "description": "Game Boy Advance",
+        "aliases": "gba gameboyadvance",
+        "core": "mgba",
+        "command": "libretro: core=mgba_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mgba_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: mgba",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmgba_libretro_android.so",
+            "entry": "lib/arm64-v8a/libmgba_libretro_android.so",
+            "bytes": 2472240,
+            "crc32": "9dc9888f"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Master System ",
+      "nativeFolder": "master-system",
+      "catalogAliases": [
+        "Master System ",
+        "mastersystem"
+      ],
+      "originalProfile": {
+        "description": "Master System",
+        "aliases": "mastersystem sms segamastersystem",
+        "core": "genesis_plus_gx",
+        "command": "libretro: core=genesis_plus_gx_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=genesis_plus_gx_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: genesis_plus_gx",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libgenesis_plus_gx_libretro_android.so",
+            "entry": "lib/arm64-v8a/libgenesis_plus_gx_libretro_android.so",
+            "bytes": 11073912,
+            "crc32": "4e16c0be"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [
+        "Canonical label intentionally retains its trailing space from StationPlatforms; original normalized profile is equivalent to classic label route."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "MegaDrive",
+      "nativeFolder": "megadrive",
+      "catalogAliases": [
+        "MegaDrive",
+        "megadrive"
+      ],
+      "originalProfile": {
+        "description": "Mega Drive",
+        "aliases": "megadrive genesis md segagenesis segamegadrive",
+        "core": "genesis_plus_gx",
+        "command": "libretro: core=genesis_plus_gx_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mdemu_station.so",
+      "binding": {
+        "engine": "MD.emu EX+",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MegaBootstrap",
+          "dexEntry": "classes34.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.mdimagn.BaseActivity",
+            "dexEntry": "classes33.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.mdimagn.BaseActivity",
+              "process": ":megadrive"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmdemu_station.so",
+            "entry": "lib/arm64-v8a/libmdemu_station.so",
+            "bytes": 6755552,
+            "crc32": "82f11cf8"
+          }
+        ],
+        "runDispatch": "megaRunHook → MegaBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "MegaDrive - BR",
+      "nativeFolder": "megadrive--br",
+      "catalogAliases": [
+        "MegaDrive - BR",
+        "megadrivebr"
+      ],
+      "originalProfile": null,
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mdemu_station.so",
+      "binding": {
+        "engine": "MD.emu EX+",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MegaBootstrap",
+          "dexEntry": "classes34.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.mdimagn.BaseActivity",
+            "dexEntry": "classes33.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.mdimagn.BaseActivity",
+              "process": ":megadrive"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmdemu_station.so",
+            "entry": "lib/arm64-v8a/libmdemu_station.so",
+            "bytes": 6755552,
+            "crc32": "82f11cf8"
+          }
+        ],
+        "runDispatch": "megaRunHook → MegaBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [
+        "R120 adds exact folder alias before classic/fallback; same MD.emu target as MegaDrive, avoiding unresolved BR profile/extension selection."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Neo Geo",
+      "nativeFolder": "neo-geo",
+      "catalogAliases": [
+        "Neo Geo",
+        "neogeo"
+      ],
+      "originalProfile": {
+        "description": "Neo Geo",
+        "aliases": "neogeo",
+        "core": "fbneo",
+        "command": "libretro: core=fbneo_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mame4droid_android.so",
+      "binding": {
+        "engine": "MAME4droid Current",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MameBootstrap",
+          "dexEntry": "classes30.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.MameEntryActivity",
+            "dexEntry": "classes30.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.MameEntryActivity",
+              "process": ":mame"
+            }
+          },
+          {
+            "name": "com.seleuco.mame4droid.MAME4droid",
+            "dexEntry": "classes29.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.seleuco.mame4droid.MAME4droid",
+              "process": ":mame"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libMAME4droid.so",
+            "entry": "lib/arm64-v8a/libMAME4droid.so",
+            "bytes": 366992944,
+            "crc32": "f38dc223"
+          },
+          {
+            "requestedName": "libmame4droid-jni.so",
+            "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+            "bytes": 32856,
+            "crc32": "ba6a6baf"
+          }
+        ],
+        "runDispatch": "mameRunHook → MameBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Neo Geo CD",
+      "nativeFolder": "neo-geo-cd",
+      "catalogAliases": [
+        "Neo Geo CD",
+        "neogeocd"
+      ],
+      "originalProfile": {
+        "description": "Neo Geo CD",
+        "aliases": "neogeocd neocd ngcd neogeocdz",
+        "core": "neocd",
+        "command": "libretro: core=neocd_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mame4droid_android.so",
+      "binding": {
+        "engine": "MAME4droid Current",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MameBootstrap",
+          "dexEntry": "classes30.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.MameEntryActivity",
+            "dexEntry": "classes30.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.MameEntryActivity",
+              "process": ":mame"
+            }
+          },
+          {
+            "name": "com.seleuco.mame4droid.MAME4droid",
+            "dexEntry": "classes29.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.seleuco.mame4droid.MAME4droid",
+              "process": ":mame"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libMAME4droid.so",
+            "entry": "lib/arm64-v8a/libMAME4droid.so",
+            "bytes": 366992944,
+            "crc32": "f38dc223"
+          },
+          {
+            "requestedName": "libmame4droid-jni.so",
+            "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+            "bytes": 32856,
+            "crc32": "ba6a6baf"
+          }
+        ],
+        "runDispatch": "mameRunHook → MameBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Nintendinho",
+      "nativeFolder": "nintendinho",
+      "catalogAliases": [
+        "Nintendinho",
+        "nes"
+      ],
+      "originalProfile": {
+        "description": "Nintendo Entertainment System",
+        "aliases": "nes famicom fc nintendoentertainmentsystem nintendinho fds famicomdisksystem",
+        "core": "fceumm",
+        "command": "libretro: core=fceumm_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=fceumm_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: fceumm",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libfceumm_libretro_android.so",
+            "entry": "lib/arm64-v8a/libfceumm_libretro_android.so",
+            "bytes": 2878064,
+            "crc32": "da57bcd0"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Nintendo 64",
+      "nativeFolder": "nintendo-64",
+      "catalogAliases": [
+        "Nintendo 64",
+        "n64"
+      ],
+      "originalProfile": {
+        "description": "Nintendo 64",
+        "aliases": "n64 nintendo64",
+        "core": "mupen64plus_next_gles3",
+        "command": "libretro: core=mupen64plus_next_gles3_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mupen64plus_ae_android.so",
+      "binding": {
+        "engine": "Mupen64Plus AE",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.N64Bootstrap",
+          "dexEntry": "classes38.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.N64EntryActivity",
+            "dexEntry": "classes38.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.N64EntryActivity",
+              "process": ":n64"
+            }
+          },
+          {
+            "name": "paulscode.android.mupen64plusae.game.GameActivity",
+            "dexEntry": "classes36.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "paulscode.android.mupen64plusae.game.GameActivity",
+              "process": ":n64core"
+            }
+          },
+          {
+            "name": "paulscode.android.mupen64plusae.jni.CoreService",
+            "dexEntry": "classes36.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "service",
+              "name": "paulscode.android.mupen64plusae.jni.CoreService",
+              "process": ":n64core"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmupen64plus-core.so",
+            "entry": "lib/arm64-v8a/libmupen64plus-core.so",
+            "bytes": 506280,
+            "crc32": "5ad069d3"
+          }
+        ],
+        "runDispatch": "n64RunHook → N64Bootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Nintendo 64 - BR",
+      "nativeFolder": "nintendo-64--br",
+      "catalogAliases": [
+        "Nintendo 64 - BR",
+        "n64br"
+      ],
+      "originalProfile": null,
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mupen64plus_ae_android.so",
+      "binding": {
+        "engine": "Mupen64Plus AE",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.N64Bootstrap",
+          "dexEntry": "classes38.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.N64EntryActivity",
+            "dexEntry": "classes38.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.N64EntryActivity",
+              "process": ":n64"
+            }
+          },
+          {
+            "name": "paulscode.android.mupen64plusae.game.GameActivity",
+            "dexEntry": "classes36.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "paulscode.android.mupen64plusae.game.GameActivity",
+              "process": ":n64core"
+            }
+          },
+          {
+            "name": "paulscode.android.mupen64plusae.jni.CoreService",
+            "dexEntry": "classes36.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "service",
+              "name": "paulscode.android.mupen64plusae.jni.CoreService",
+              "process": ":n64core"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmupen64plus-core.so",
+            "entry": "lib/arm64-v8a/libmupen64plus-core.so",
+            "bytes": 506280,
+            "crc32": "5ad069d3"
+          }
+        ],
+        "runDispatch": "n64RunHook → N64Bootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Nintendo DS",
+      "nativeFolder": "nintendo-ds",
+      "catalogAliases": [
+        "Nintendo DS",
+        "nds"
+      ],
+      "originalProfile": {
+        "description": "Nintendo DS",
+        "aliases": "nds ds nintendods",
+        "core": "melonds",
+        "command": "libretro: core=melonds_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=melonds_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: melonds",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmelonds_libretro_android.so",
+            "present": false
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "dependency-unavailable-in-observed-Motorola",
+      "notes": [
+        "Valid original command. Normal bundled lib entry absent in R119; external cores directory absent in read-only Motorola check. No engine download/launch attempted."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Odyssey 2",
+      "nativeFolder": "odyssey-2",
+      "catalogAliases": [
+        "Odyssey 2",
+        "o2em"
+      ],
+      "originalProfile": {
+        "description": "Odyssey 2",
+        "aliases": "o2em odyssey2 odyssey videopac",
+        "core": "o2em",
+        "command": "libretro: core=o2em_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=o2em_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: o2em",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libo2em_libretro_android.so",
+            "present": false
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "dependency-unavailable-in-observed-Motorola",
+      "notes": [
+        "Valid original command. Normal bundled lib entry absent in R119; external cores directory absent in read-only Motorola check. No engine download/launch attempted."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "PSP",
+      "nativeFolder": "psp",
+      "catalogAliases": [
+        "PSP",
+        "psp"
+      ],
+      "originalProfile": {
+        "description": "PSP",
+        "aliases": "psp playstationportable",
+        "core": "ppsspp",
+        "command": "libretro: core=ppsspp_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=ppsspp_libretro_android.so",
+      "binding": {
+        "engine": "PPSSPP Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.PspBootstrap",
+          "dexEntry": "classes18.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.ppsspp.ppsspp.PpssppActivity",
+            "dexEntry": "classes17.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.ppsspp.ppsspp.PpssppActivity",
+              "process": ":psp"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libppsspp_jni.so",
+            "entry": "lib/arm64-v8a/libppsspp_jni.so",
+            "bytes": 24942512,
+            "crc32": "fa62621d"
+          }
+        ],
+        "runDispatch": "pspRunHook → PspBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Pc Engine",
+      "nativeFolder": "pc-engine",
+      "catalogAliases": [
+        "Pc Engine",
+        "pcengine"
+      ],
+      "originalProfile": {
+        "description": "PC Engine",
+        "aliases": "pcengine pce tg16 turbografx16 turbografx",
+        "core": "mednafen_pce_fast",
+        "command": "libretro: core=mednafen_pce_fast_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=mednafen_pce_fast_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: mednafen_pce_fast",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmednafen_pce_fast_libretro_android.so",
+            "entry": "lib/arm64-v8a/libmednafen_pce_fast_libretro_android.so",
+            "bytes": 3214168,
+            "crc32": "0e040f56"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Pc Engine cd",
+      "nativeFolder": "pc-engine-cd",
+      "catalogAliases": [
+        "Pc Engine cd",
+        "pcenginecd"
+      ],
+      "originalProfile": {
+        "description": "PC Engine CD",
+        "aliases": "pcenginecd tg16cd turbografxcd",
+        "core": "mednafen_pce_fast",
+        "command": "libretro: core=mednafen_pce_fast_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mednafen_pce_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: mednafen_pce",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmednafen_pce_libretro_android.so",
+            "entry": "lib/arm64-v8a/libmednafen_pce_libretro_android.so",
+            "bytes": 4301952,
+            "crc32": "33079b23"
+          }
+        ],
+        "runDispatch": "refreshRunHook → pcePrepare/PlatformAssets.preparePce → original LibretroPlayer::run"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [
+        "R120 adds exact folder alias to accurate mednafen_pce command already used by display label. Fast default did not satisfy pceCdCore predicate."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Playstation 1",
+      "nativeFolder": "psx",
+      "catalogAliases": [
+        "Playstation 1",
+        "psx"
+      ],
+      "originalProfile": {
+        "description": "PlayStation",
+        "aliases": "psx ps1 playstation playstation1 psone",
+        "core": "pcsx_rearmed",
+        "command": "libretro: core=pcsx_rearmed_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=pcsx_rearmed_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: pcsx_rearmed",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libpcsx_rearmed_libretro_android.so",
+            "entry": "lib/arm64-v8a/libpcsx_rearmed_libretro_android.so",
+            "bytes": 1582960,
+            "crc32": "5624f939"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Playstation 2",
+      "nativeFolder": "ps2",
+      "catalogAliases": [
+        "Playstation 2",
+        "ps2"
+      ],
+      "originalProfile": {
+        "description": "PlayStation 2",
+        "aliases": "ps2 playstation2 ps2br playstation2br",
+        "core": "armsx2",
+        "command": "libretro: core=armsx2_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=armsx2_libretro_android.so",
+      "binding": {
+        "engine": "ARMSX2 Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.Ps2Bootstrap",
+          "dexEntry": "classes16.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.armsx2.Main",
+            "dexEntry": "classes15.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.armsx2.Main",
+              "process": ":ps2"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libemucore_16k.so",
+            "entry": "lib/arm64-v8a/libemucore_16k.so",
+            "bytes": 24625560,
+            "crc32": "560e1abe"
+          },
+          {
+            "requestedName": "libemucore_4k.so",
+            "entry": "lib/arm64-v8a/libemucore_4k.so",
+            "bytes": 24626456,
+            "crc32": "a75699a3"
+          }
+        ],
+        "runDispatch": "ps2RunHook (armsx2) → Ps2Bootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Playstation 2 - BR",
+      "nativeFolder": "ps2br",
+      "catalogAliases": [
+        "Playstation 2 - BR",
+        "ps2br"
+      ],
+      "originalProfile": {
+        "description": "PlayStation 2",
+        "aliases": "ps2 playstation2 ps2br playstation2br",
+        "core": "armsx2",
+        "command": "libretro: core=armsx2_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=armsx2_libretro_android.so",
+      "binding": {
+        "engine": "ARMSX2 Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.Ps2Bootstrap",
+          "dexEntry": "classes16.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.armsx2.Main",
+            "dexEntry": "classes15.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.armsx2.Main",
+              "process": ":ps2"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libemucore_16k.so",
+            "entry": "lib/arm64-v8a/libemucore_16k.so",
+            "bytes": 24625560,
+            "crc32": "560e1abe"
+          },
+          {
+            "requestedName": "libemucore_4k.so",
+            "entry": "lib/arm64-v8a/libemucore_4k.so",
+            "bytes": 24626456,
+            "crc32": "a75699a3"
+          }
+        ],
+        "runDispatch": "ps2RunHook (armsx2) → Ps2Bootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Psp - BR",
+      "nativeFolder": "psp",
+      "catalogAliases": [
+        "Psp - BR",
+        "pspbr"
+      ],
+      "originalProfile": {
+        "description": "PSP",
+        "aliases": "psp playstationportable",
+        "core": "ppsspp",
+        "command": "libretro: core=ppsspp_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=ppsspp_libretro_android.so",
+      "binding": {
+        "engine": "PPSSPP Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.PspBootstrap",
+          "dexEntry": "classes18.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.ppsspp.ppsspp.PpssppActivity",
+            "dexEntry": "classes17.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.ppsspp.ppsspp.PpssppActivity",
+              "process": ":psp"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libppsspp_jni.so",
+            "entry": "lib/arm64-v8a/libppsspp_jni.so",
+            "bytes": 24942512,
+            "crc32": "fa62621d"
+          }
+        ],
+        "runDispatch": "pspRunHook → PspBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Psvita",
+      "nativeFolder": "psvita",
+      "catalogAliases": [
+        "Psvita",
+        "psvita"
+      ],
+      "originalProfile": null,
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=vita3k_android.so",
+      "binding": {
+        "engine": "Vita3K Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.VitaBootstrap",
+          "dexEntry": "classes24.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.VitaEntryActivity",
+            "dexEntry": "classes24.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.VitaEntryActivity",
+              "process": ":psvita"
+            }
+          },
+          {
+            "name": "org.vita3k.emulator.Emulator",
+            "dexEntry": "classes23.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.vita3k.emulator.Emulator",
+              "process": ":psvita"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libVita3K.so",
+            "entry": "lib/arm64-v8a/libVita3K.so",
+            "bytes": 28034048,
+            "crc32": "de528de7"
+          }
+        ],
+        "runDispatch": "vitaRunHook → VitaBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Super Nintendo",
+      "nativeFolder": "super-nintendo",
+      "catalogAliases": [
+        "Super Nintendo",
+        "snes"
+      ],
+      "originalProfile": {
+        "description": "Super Nintendo",
+        "aliases": "snes sfc superfamicom supernintendo supernes",
+        "core": "snes9x",
+        "command": "libretro: core=snes9x_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "observed XML command via original findLaunchCommand",
+      "selectedOfflineCommand": "libretro: core=snes9x_libretro_android.so",
+      "binding": {
+        "engine": "Snes9x EX+",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.SnesBootstrap",
+          "dexEntry": "classes32.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.imagine.BaseActivity",
+            "dexEntry": "classes31.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.imagine.BaseActivity",
+              "process": ":snes"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libsnes9x_explus.so",
+            "entry": "lib/arm64-v8a/libsnes9x_explus.so",
+            "bytes": 3802928,
+            "crc32": "a366035d"
+          }
+        ],
+        "runDispatch": "snesRunHook → SnesBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Super Nintendo - BR",
+      "nativeFolder": "super-nintendo--br",
+      "catalogAliases": [
+        "Super Nintendo - BR",
+        "snesbr"
+      ],
+      "originalProfile": null,
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=snes9x_libretro_android.so",
+      "binding": {
+        "engine": "Snes9x EX+",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.SnesBootstrap",
+          "dexEntry": "classes32.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.imagine.BaseActivity",
+            "dexEntry": "classes31.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.imagine.BaseActivity",
+              "process": ":snes"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libsnes9x_explus.so",
+            "entry": "lib/arm64-v8a/libsnes9x_explus.so",
+            "bytes": 3802928,
+            "crc32": "a366035d"
+          }
+        ],
+        "runDispatch": "snesRunHook → SnesBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [
+        "R120 adds exact folder alias before classic/fallback; same Snes9x EX+ target as base SNES, avoiding unresolved BR profile/extension selection."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "Switch",
+      "nativeFolder": "switch",
+      "catalogAliases": [
+        "Switch",
+        "switch"
+      ],
+      "originalProfile": {
+        "description": "Nintendo Switch",
+        "aliases": "switch nintendoswitch nsw ns",
+        "core": "suyu",
+        "command": "libretro: core=suyu_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1",
+      "binding": {
+        "engine": "Yuzu Android (unchanged)",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.yuzu.yuzu_emu.bootstrap.BootstrapActivity",
+            "dexEntry": "classes2.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.yuzu.yuzu_emu.bootstrap.BootstrapActivity",
+              "process": "main (applicationId)"
+            }
+          },
+          {
+            "name": "org.yuzu.yuzu_emu.activities.EmulationActivity",
+            "dexEntry": "classes.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.yuzu.yuzu_emu.activities.EmulationActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libyuzu-android.so",
+            "entry": "lib/arm64-v8a/libyuzu-android.so",
+            "bytes": 35518648,
+            "crc32": "f754bcde"
+          }
+        ],
+        "runDispatch": "AndroidBridge.launchIntent → GameLauncher → BootstrapActivity → EmulationActivity"
+      },
+      "status": "route-package-corrected-in-R120",
+      "notes": [
+        "Existing device XML still has legacy package; native R120 command bypasses that stale first hop. No Switch gameplay result claimed."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "atari2600",
+      "nativeFolder": "atari2600",
+      "catalogAliases": [
+        "atari2600"
+      ],
+      "originalProfile": {
+        "description": "Atari 2600",
+        "aliases": "atari2600 a2600",
+        "core": "stella",
+        "command": "libretro: core=stella_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=stella_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: stella",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libstella_libretro_android.so",
+            "present": false
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "dependency-unavailable-in-observed-Motorola",
+      "notes": [
+        "Valid original command. Normal bundled lib entry absent in R119; external cores directory absent in read-only Motorola check. No engine download/launch attempted."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "atari7800",
+      "nativeFolder": "atari7800",
+      "catalogAliases": [
+        "atari7800"
+      ],
+      "originalProfile": {
+        "description": "Atari 7800",
+        "aliases": "atari7800 a7800",
+        "core": "prosystem",
+        "command": "libretro: core=prosystem_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=prosystem_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: prosystem",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libprosystem_libretro_android.so",
+            "present": false
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "dependency-unavailable-in-observed-Motorola",
+      "notes": [
+        "Valid original command. Normal bundled lib entry absent in R119; external cores directory absent in read-only Motorola check. No engine download/launch attempted."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "colecovision",
+      "nativeFolder": "colecovision",
+      "catalogAliases": [
+        "colecovision"
+      ],
+      "originalProfile": {
+        "description": "ColecoVision",
+        "aliases": "colecovision coleco",
+        "core": "bluemsx",
+        "command": "libretro: core=bluemsx_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=bluemsx_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: bluemsx",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libbluemsx_libretro_android.so",
+            "present": false
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "dependency-unavailable-in-observed-Motorola",
+      "notes": [
+        "Valid original command. Normal bundled lib entry absent in R119; external cores directory absent in read-only Motorola check. No engine download/launch attempted."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "cps1",
+      "nativeFolder": "cps1",
+      "catalogAliases": [
+        "cps1"
+      ],
+      "originalProfile": {
+        "description": "CPS-1",
+        "aliases": "cps1 capcomcps1 cpsi",
+        "core": "fbalpha2012_cps1",
+        "command": "libretro: core=fbalpha2012_cps1_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mame4droid_android.so",
+      "binding": {
+        "engine": "MAME4droid Current",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MameBootstrap",
+          "dexEntry": "classes30.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.MameEntryActivity",
+            "dexEntry": "classes30.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.MameEntryActivity",
+              "process": ":mame"
+            }
+          },
+          {
+            "name": "com.seleuco.mame4droid.MAME4droid",
+            "dexEntry": "classes29.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.seleuco.mame4droid.MAME4droid",
+              "process": ":mame"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libMAME4droid.so",
+            "entry": "lib/arm64-v8a/libMAME4droid.so",
+            "bytes": 366992944,
+            "crc32": "f38dc223"
+          },
+          {
+            "requestedName": "libmame4droid-jni.so",
+            "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+            "bytes": 32856,
+            "crc32": "ba6a6baf"
+          }
+        ],
+        "runDispatch": "mameRunHook → MameBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "cps2",
+      "nativeFolder": "cps2",
+      "catalogAliases": [
+        "cps2"
+      ],
+      "originalProfile": {
+        "description": "CPS-2",
+        "aliases": "cps2 capcomcps2 cpsii",
+        "core": "fbalpha2012_cps2",
+        "command": "libretro: core=fbalpha2012_cps2_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mame4droid_android.so",
+      "binding": {
+        "engine": "MAME4droid Current",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MameBootstrap",
+          "dexEntry": "classes30.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.MameEntryActivity",
+            "dexEntry": "classes30.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.MameEntryActivity",
+              "process": ":mame"
+            }
+          },
+          {
+            "name": "com.seleuco.mame4droid.MAME4droid",
+            "dexEntry": "classes29.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.seleuco.mame4droid.MAME4droid",
+              "process": ":mame"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libMAME4droid.so",
+            "entry": "lib/arm64-v8a/libMAME4droid.so",
+            "bytes": 366992944,
+            "crc32": "f38dc223"
+          },
+          {
+            "requestedName": "libmame4droid-jni.so",
+            "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+            "bytes": 32856,
+            "crc32": "ba6a6baf"
+          }
+        ],
+        "runDispatch": "mameRunHook → MameBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "cps3",
+      "nativeFolder": "cps3",
+      "catalogAliases": [
+        "cps3"
+      ],
+      "originalProfile": {
+        "description": "CPS-3",
+        "aliases": "cps3 capcomcps3 cpsiii",
+        "core": "fbalpha2012_cps3",
+        "command": "libretro: core=fbalpha2012_cps3_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mame4droid_android.so",
+      "binding": {
+        "engine": "MAME4droid Current",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MameBootstrap",
+          "dexEntry": "classes30.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.MameEntryActivity",
+            "dexEntry": "classes30.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.MameEntryActivity",
+              "process": ":mame"
+            }
+          },
+          {
+            "name": "com.seleuco.mame4droid.MAME4droid",
+            "dexEntry": "classes29.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.seleuco.mame4droid.MAME4droid",
+              "process": ":mame"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libMAME4droid.so",
+            "entry": "lib/arm64-v8a/libMAME4droid.so",
+            "bytes": 366992944,
+            "crc32": "f38dc223"
+          },
+          {
+            "requestedName": "libmame4droid-jni.so",
+            "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+            "bytes": 32856,
+            "crc32": "ba6a6baf"
+          }
+        ],
+        "runDispatch": "mameRunHook → MameBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "fbneo",
+      "nativeFolder": "fbneo",
+      "catalogAliases": [
+        "fbneo"
+      ],
+      "originalProfile": {
+        "description": "Arcade",
+        "aliases": "arcade fbneo fba finalburn",
+        "core": "fbneo",
+        "command": "libretro: core=fbneo_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=fbneo_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: fbneo",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libfbneo_libretro_android.so",
+            "present": false
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "dependency-unavailable-in-observed-Motorola",
+      "notes": [
+        "Valid original command. Normal bundled lib entry absent in R119; external cores directory absent in read-only Motorola check. No engine download/launch attempted."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "fds",
+      "nativeFolder": "fds",
+      "catalogAliases": [
+        "fds"
+      ],
+      "originalProfile": {
+        "description": "Nintendo Entertainment System",
+        "aliases": "nes famicom fc nintendoentertainmentsystem nintendinho fds famicomdisksystem",
+        "core": "fceumm",
+        "command": "libretro: core=fceumm_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=fceumm_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: fceumm",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libfceumm_libretro_android.so",
+            "entry": "lib/arm64-v8a/libfceumm_libretro_android.so",
+            "bytes": 2878064,
+            "crc32": "da57bcd0"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "gameandwatch",
+      "nativeFolder": "gameandwatch",
+      "catalogAliases": [
+        "gameandwatch"
+      ],
+      "originalProfile": {
+        "description": "Game & Watch",
+        "aliases": "gameandwatch gw gamewatch",
+        "core": "gw",
+        "command": "libretro: core=gw_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=gw_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: gw",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libgw_libretro_android.so",
+            "present": false
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "dependency-unavailable-in-observed-Motorola",
+      "notes": [
+        "Valid original command. Normal bundled lib entry absent in R119; external cores directory absent in read-only Motorola check. No engine download/launch attempted."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "gamegear",
+      "nativeFolder": "gamegear",
+      "catalogAliases": [
+        "gamegear"
+      ],
+      "originalProfile": {
+        "description": "Game Gear",
+        "aliases": "gamegear gg segagamegear",
+        "core": "genesis_plus_gx",
+        "command": "libretro: core=genesis_plus_gx_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=genesis_plus_gx_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: genesis_plus_gx",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libgenesis_plus_gx_libretro_android.so",
+            "entry": "lib/arm64-v8a/libgenesis_plus_gx_libretro_android.so",
+            "bytes": 11073912,
+            "crc32": "4e16c0be"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "jaguar",
+      "nativeFolder": "jaguar",
+      "catalogAliases": [
+        "jaguar"
+      ],
+      "originalProfile": {
+        "description": "Atari Jaguar",
+        "aliases": "jaguar atarijaguar",
+        "core": "virtualjaguar",
+        "command": "libretro: core=virtualjaguar_libretro_android.so"
+      },
+      "nativeHookFallsThrough": true,
+      "commandOrigin": "original normalized profile fallback (folder, then label)",
+      "selectedOfflineCommand": "libretro: core=virtualjaguar_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: virtualjaguar",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libvirtualjaguar_libretro_android.so",
+            "present": false
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "dependency-unavailable-in-observed-Motorola",
+      "notes": [
+        "Valid original command. Normal bundled lib entry absent in R119; external cores directory absent in read-only Motorola check. No engine download/launch attempted."
+      ],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "mame",
+      "nativeFolder": "mame",
+      "catalogAliases": [
+        "mame"
+      ],
+      "originalProfile": {
+        "description": "MAME",
+        "aliases": "mame mame2003",
+        "core": "mame2003_plus",
+        "command": "libretro: core=mame2003_plus_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mame4droid_android.so",
+      "binding": {
+        "engine": "MAME4droid Current",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.MameBootstrap",
+          "dexEntry": "classes30.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.MameEntryActivity",
+            "dexEntry": "classes30.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.MameEntryActivity",
+              "process": ":mame"
+            }
+          },
+          {
+            "name": "com.seleuco.mame4droid.MAME4droid",
+            "dexEntry": "classes29.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.seleuco.mame4droid.MAME4droid",
+              "process": ":mame"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libMAME4droid.so",
+            "entry": "lib/arm64-v8a/libMAME4droid.so",
+            "bytes": 366992944,
+            "crc32": "f38dc223"
+          },
+          {
+            "requestedName": "libmame4droid-jni.so",
+            "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+            "bytes": 32856,
+            "crc32": "ba6a6baf"
+          }
+        ],
+        "runDispatch": "mameRunHook → MameBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "naomi",
+      "nativeFolder": "naomi",
+      "catalogAliases": [
+        "naomi"
+      ],
+      "originalProfile": {
+        "description": "Atomiswave",
+        "aliases": "atomiswave awave naomi naomi2",
+        "core": "flycast",
+        "command": "libretro: core=flycast_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=flycast_libretro_android.so",
+      "binding": {
+        "engine": "Flycast Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.FlycastBootstrap",
+          "dexEntry": "classes14.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.flycast.emulator.NativeGLActivity",
+            "dexEntry": "classes13.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.flycast.emulator.NativeGLActivity",
+              "process": ":flycast"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libflycast.so",
+            "entry": "lib/arm64-v8a/libflycast.so",
+            "bytes": 18610480,
+            "crc32": "1eb61c08"
+          },
+          {
+            "requestedName": "libturbo_flycast.so",
+            "entry": "lib/arm64-v8a/libturbo_flycast.so",
+            "bytes": 15088,
+            "crc32": "bce08ebd"
+          }
+        ],
+        "runDispatch": "flycastRunHook → FlycastBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "naomi2",
+      "nativeFolder": "naomi2",
+      "catalogAliases": [
+        "naomi2"
+      ],
+      "originalProfile": {
+        "description": "Atomiswave",
+        "aliases": "atomiswave awave naomi naomi2",
+        "core": "flycast",
+        "command": "libretro: core=flycast_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=flycast_libretro_android.so",
+      "binding": {
+        "engine": "Flycast Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.FlycastBootstrap",
+          "dexEntry": "classes14.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "com.flycast.emulator.NativeGLActivity",
+            "dexEntry": "classes13.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.flycast.emulator.NativeGLActivity",
+              "process": ":flycast"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libflycast.so",
+            "entry": "lib/arm64-v8a/libflycast.so",
+            "bytes": 18610480,
+            "crc32": "1eb61c08"
+          },
+          {
+            "requestedName": "libturbo_flycast.so",
+            "entry": "lib/arm64-v8a/libturbo_flycast.so",
+            "bytes": 15088,
+            "crc32": "bce08ebd"
+          }
+        ],
+        "runDispatch": "flycastRunHook → FlycastBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "saturn",
+      "nativeFolder": "saturn",
+      "catalogAliases": [
+        "saturn"
+      ],
+      "originalProfile": {
+        "description": "Saturn",
+        "aliases": "saturn segasaturn ss",
+        "core": "yabasanshiro",
+        "command": "libretro: core=yabasanshiro_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=yabasanshiro_libretro_android.so",
+      "binding": {
+        "engine": "Saturn integrado",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.SaturnBootstrap",
+          "dexEntry": "classes25.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.SaturnActivity",
+            "dexEntry": "classes25.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.SaturnActivity",
+              "process": ":saturn"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libturbo_saturn.so",
+            "entry": "lib/arm64-v8a/libturbo_saturn.so",
+            "bytes": 2632920,
+            "crc32": "681244e3"
+          }
+        ],
+        "runDispatch": "saturnRunHook → SaturnBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "sega32x",
+      "nativeFolder": "sega32x",
+      "catalogAliases": [
+        "sega32x"
+      ],
+      "originalProfile": {
+        "description": "Sega 32X",
+        "aliases": "sega32x 32x",
+        "core": "picodrive",
+        "command": "libretro: core=picodrive_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=picodrive_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: picodrive",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libpicodrive_libretro_android.so",
+            "entry": "lib/arm64-v8a/libpicodrive_libretro_android.so",
+            "bytes": 1621480,
+            "crc32": "e2a83d59"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "supergrafx",
+      "nativeFolder": "supergrafx",
+      "catalogAliases": [
+        "supergrafx"
+      ],
+      "originalProfile": {
+        "description": "SuperGrafx",
+        "aliases": "supergrafx sgx pcenginesupergrafx",
+        "core": "mednafen_supergrafx",
+        "command": "libretro: core=mednafen_supergrafx_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=mednafen_supergrafx_libretro_android.so",
+      "binding": {
+        "engine": "LibretroPlayer: mednafen_supergrafx",
+        "bootstrapClass": null,
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.ESActivity",
+            "dexEntry": "classes5.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.ESActivity",
+              "process": "main (applicationId)"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libmednafen_supergrafx_libretro_android.so",
+            "entry": "lib/arm64-v8a/libmednafen_supergrafx_libretro_android.so",
+            "bytes": 2933456,
+            "crc32": "e8bab1e2"
+          }
+        ],
+        "runDispatch": "run chain fallthrough → original LibretroPlayer::run (0x2a9718)"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "wii",
+      "nativeFolder": "wii",
+      "catalogAliases": [
+        "wii"
+      ],
+      "originalProfile": {
+        "description": "Wii",
+        "aliases": "wii nintendowii",
+        "core": "dolphin",
+        "command": "libretro: core=dolphin_libretro_android.so"
+      },
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=dolphin_libretro_android.so",
+      "binding": {
+        "engine": "Dolphin Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.DolphinBootstrap",
+          "dexEntry": "classes12.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.DolphinEntryActivity",
+            "dexEntry": "classes12.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.DolphinEntryActivity",
+              "process": ":dolphin"
+            }
+          },
+          {
+            "name": "org.dolphinemu.dolphinemu.activities.EmulationActivity",
+            "dexEntry": "classes10.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.dolphinemu.dolphinemu.activities.EmulationActivity",
+              "process": ":dolphin"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libdolp.so",
+            "entry": "lib/arm64-v8a/libdolp.so",
+            "bytes": 15333048,
+            "crc32": "99e256ba"
+          }
+        ],
+        "runDispatch": "dolphinRunHook → DolphinBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "wiiu",
+      "nativeFolder": "wiiu",
+      "catalogAliases": [
+        "wiiu"
+      ],
+      "originalProfile": null,
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=cemu_android.so",
+      "binding": {
+        "engine": "Cemu Android",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.WiiUBootstrap",
+          "dexEntry": "classes20.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.WiiUEntryActivity",
+            "dexEntry": "classes20.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.WiiUEntryActivity",
+              "process": ":wiiu"
+            }
+          },
+          {
+            "name": "info.cemu.cemu.emulation.EmulationActivity",
+            "dexEntry": "classes19.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "info.cemu.cemu.emulation.EmulationActivity",
+              "process": ":wiiu"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libCemuAndroid.so",
+            "entry": "lib/arm64-v8a/libCemuAndroid.so",
+            "bytes": 22075928,
+            "crc32": "61743ea4"
+          }
+        ],
+        "runDispatch": "wiiuRunHook → WiiUBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "xbox",
+      "nativeFolder": "xbox",
+      "catalogAliases": [
+        "xbox"
+      ],
+      "originalProfile": null,
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=x1box_android.so",
+      "binding": {
+        "engine": "x1box/xemu",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.XboxBootstrap",
+          "dexEntry": "classes27.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.XboxEntryActivity",
+            "dexEntry": "classes27.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.XboxEntryActivity",
+              "process": ":xbox"
+            }
+          },
+          {
+            "name": "com.izzy2lost.x1box.MainActivity",
+            "dexEntry": "classes26.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "com.izzy2lost.x1box.MainActivity",
+              "process": ":xboxemu"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libxemu.so",
+            "entry": "lib/arm64-v8a/libxemu.so",
+            "bytes": 38114296,
+            "crc32": "53198fd2"
+          }
+        ],
+        "runDispatch": "xboxClassicRunHook → XboxBootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    },
+    {
+      "label": "xbox360",
+      "nativeFolder": "xbox360",
+      "catalogAliases": [
+        "xbox360"
+      ],
+      "originalProfile": null,
+      "nativeHookFallsThrough": false,
+      "commandOrigin": "R120 native command override",
+      "selectedOfflineCommand": "libretro: core=xendroid_android.so",
+      "binding": {
+        "engine": "Xendroid",
+        "bootstrapClass": {
+          "name": "org.emulationstation.frontend.Xbox360Bootstrap",
+          "dexEntry": "classes22.dex",
+          "presentInApkDex": true,
+          "manifestComponent": null
+        },
+        "activityChain": [
+          {
+            "name": "org.emulationstation.frontend.Xbox360EntryActivity",
+            "dexEntry": "classes22.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.Xbox360EntryActivity",
+              "process": ":xbox360"
+            }
+          },
+          {
+            "name": "org.emulationstation.frontend.Xbox360GameEntryActivity",
+            "dexEntry": "classes22.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "org.emulationstation.frontend.Xbox360GameEntryActivity",
+              "process": ":xbox360emu"
+            }
+          },
+          {
+            "name": "xendroid.compose.EmulatorHostActivity",
+            "dexEntry": "classes21.dex",
+            "presentInApkDex": true,
+            "manifestComponent": {
+              "type": "activity",
+              "name": "xendroid.compose.EmulatorHostActivity",
+              "process": ":xbox360emu"
+            }
+          }
+        ],
+        "libraries": [
+          {
+            "requestedName": "libe.so",
+            "entry": "lib/arm64-v8a/libe.so",
+            "bytes": 24913592,
+            "crc32": "367ca731"
+          }
+        ],
+        "runDispatch": "xbox360RunHook → Xbox360Bootstrap.launch"
+      },
+      "status": "static-route-components-present; gameplay-not-tested",
+      "notes": [],
+      "online": "Room/launch authority is separate and requires the current signed engine/game capability contract; offline command/library presence does not prove launchReady."
+    }
+  ]
+}

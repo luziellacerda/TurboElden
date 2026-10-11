@@ -1,0 +1,10 @@
+{
+  "project": "libretro/retroarch-joypad-autoconfig",
+  "commit": "f3b62b847ed21939b668b897b18bbc1defbaae05",
+  "directory": "android",
+  "license": "GNU General Public License v3.0",
+  "retrieved": "2026-10-09",
+  "customProfiles": [
+    "android/BSP-D3.cfg"
+  ]
+}

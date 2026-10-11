@@ -1,0 +1,38 @@
+{
+  "version": "R121-candidate",
+  "phase": "package",
+  "utc": "2026-10-11T03:20:33.017696+00:00",
+  "sourceBaseVersion": "R120",
+  "baseSHA256": "d18c50da17b669373a183ba334e23f356c0521dfb3a2bac69301e8f10b9cbbe1",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R121-20261011.apk",
+  "sha256": "eadb83cc2b797eed7d6c3cbdcae09fae7fdfbff0004c3b9db791aaadf68113b0",
+  "bytes": 2217065864,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "signatureV2V3Passed": true,
+  "zipAlignment16KiBPassed": true,
+  "changedEntries": [
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "preservedEntries": 13545,
+  "allOtherEntriesByteIdentical": true,
+  "manifestChecks": {
+    "applicationFactory": "org.emulationstation.frontend.station.StationComponentFactory",
+    "originalApplicationPreserved": true,
+    "entireXMLTreeIdentical": true,
+    "manifestPatchApplied": false,
+    "manifestSHA256": "c4e9a6d69497bb928f53b35b49bef86d1b57a0b2b0bd5d0aa1953cfd5d9752a4",
+    "originalApplicationAttribute": "\"org.yuzu.yuzu_emu.YuzuApplication\" (Raw: \"org.yuzu.yuzu_emu.YuzuApplication\")\r"
+  },
+  "manifestPreservedByteIdentical": true,
+  "frontendPreservedByteIdentical": true,
+  "engineRegistryPreservedByteIdentical": true,
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "compileReceiptSHA256": "c1f815e547dbbd6db0b5bb3532f241d6aa8e8d11af6d9b48a295efcbaddaa90c",
+  "javaSourceCount": 232,
+  "compiled": true,
+  "signed": true,
+  "installed": false,
+  "physicalVerified": false,
+  "gameplayValidated": false
+}

@@ -1,0 +1,27 @@
+{
+  "version": "R117",
+  "utc": "2026-10-11T01:02:09.062709+00:00",
+  "deviceModel": "Motorola Edge30",
+  "installedAPKHashMatchesPackage": true,
+  "authenticatedCarouselObserved": true,
+  "quickEffectsButtonObserved": true,
+  "quickMasterDisableBackgroundRemoved": true,
+  "quickMasterReenableObserved": true,
+  "effectsTabOpened": true,
+  "sixIndividualControlsObserved": true,
+  "backgroundChoicesObserved": [
+    "sky",
+    "waves",
+    "off"
+  ],
+  "wavesShownOnNativeCarousel": true,
+  "originalSkyAndActiveEffectsRestored": true,
+  "noGameOrDownloadStarted": true,
+  "initialPreparationCompleted": true,
+  "screenshotsPublished": false,
+  "completeVisualQualification": false,
+  "ledFirstParcelTimeMeasured": false,
+  "thermalMeasured": false,
+  "onlineGameplayTested": false,
+  "scope": "Reversible opening/settings/carousel smoke check; no first-LED timing, prolonged CPU/thermal comparison or online gameplay measurement."
+}

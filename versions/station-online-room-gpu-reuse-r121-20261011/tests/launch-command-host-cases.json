@@ -1,0 +1,983 @@
+{
+  "kind": "HOST command-selection harness using exact extracted functions; mocks do not emulate Android ABI/JNI/runtime",
+  "functions": [
+    {
+      "name": "presentationKeyEqual",
+      "path": "work\\TurboElden-git\\versions\\station-game-menu-controller-audit-r120-20261010\\native\\d0\\native_carousel.cpp",
+      "sourceSha256": "8b935fcaf4fc6674a27ad881a35c3e1c12c8a1c71d301b076a0a78db5dadccb6",
+      "extractedFunctionSha256": "1e45696a04bb3acabf300427cc994c724a690627b5c49db38a3b0bd41480d804"
+    },
+    {
+      "name": "n64PlatformKey",
+      "path": "work\\TurboElden-git\\versions\\station-game-menu-controller-audit-r120-20261010\\native\\d0\\native_n64.h",
+      "sourceSha256": "a3562d758dd63fd7c9e839e5dd46c67f890a29da1dc73002816c5b0e87cc2ce3",
+      "extractedFunctionSha256": "d462086b8f0613e59e4fb479ef357bc638828ae9024e381cfc01ac1f3becc5e4"
+    },
+    {
+      "name": "classicCommandHook",
+      "path": "E:\\ESTUDO APK\\work\\station-carousel-online-ui-r119-20261010\\compiled-final\\native-inputs\\d1\\native_classic.h",
+      "sourceSha256": "2fc3cfcffe53b29a405dc82040e5ab0b08a0c53bed95a7e165aedaa8cdfd64c8",
+      "extractedFunctionSha256": "4546edb93b60af2418f7f429328eafda39b34c70adc542e9912917c431d47569"
+    },
+    {
+      "name": "gamecubeCommandHook",
+      "path": "work\\TurboElden-git\\versions\\station-game-menu-controller-audit-r120-20261010\\native\\d0\\native_carousel.cpp",
+      "sourceSha256": "8b935fcaf4fc6674a27ad881a35c3e1c12c8a1c71d301b076a0a78db5dadccb6",
+      "extractedFunctionSha256": "41a9f4254983d98b735d7627e6e89660e6922441a16178922bf89cf73f4f1415"
+    },
+    {
+      "name": "megaCommandHook",
+      "path": "E:\\ESTUDO APK\\work\\station-carousel-online-ui-r119-20261010\\compiled-final\\native-inputs\\d1\\native_mega.h",
+      "sourceSha256": "045fb8c4c73a479b60c2d6e33697f86d66e80eb055aec92f460081c59853b6a2",
+      "extractedFunctionSha256": "ab553b20b950d577256f154c50efb5a296c54bec9564b160fa69f23c48d02abb"
+    },
+    {
+      "name": "n64CommandHook",
+      "path": "work\\TurboElden-git\\versions\\station-game-menu-controller-audit-r120-20261010\\native\\d0\\native_n64.h",
+      "sourceSha256": "a3562d758dd63fd7c9e839e5dd46c67f890a29da1dc73002816c5b0e87cc2ce3",
+      "extractedFunctionSha256": "68cc83e328d74ce559ae51e6d0a151e23a5b4a76a664cff956b1d19195836c18"
+    }
+  ],
+  "caseCount": 146,
+  "canonicalFolders": 50,
+  "resolvedCatalogAliases": 78,
+  "directAliases": 18,
+  "cases": [
+    {
+      "kind": "canonical-folder",
+      "input": "3ds",
+      "expected": "libretro: core=azahar_libretro_android.so",
+      "label": "3ds"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "arcade",
+      "expected": "libretro: core=mame4droid_android.so",
+      "label": "Arcade"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "atomiswave",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "label": "Atomiswave"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "dreamcast",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "label": "Dreamcast"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "gamecube",
+      "expected": "libretro: core=dolphin_libretro_android.so",
+      "label": "GameCube"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "gameboy",
+      "expected": "libretro: core=gambatte_libretro_android.so",
+      "label": "Gameboy"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "gameboy-color",
+      "expected": "__ORIGINAL_XML__:gameboy-color",
+      "label": "Gameboy Color"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "gba",
+      "expected": "libretro: core=mgba_libretro_android.so",
+      "label": "Gba"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "master-system",
+      "expected": "__ORIGINAL_XML__:master-system",
+      "label": "Master System "
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "megadrive",
+      "expected": "libretro: core=mdemu_station.so",
+      "label": "MegaDrive"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "megadrive--br",
+      "expected": "libretro: core=mdemu_station.so",
+      "label": "MegaDrive - BR"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "neo-geo",
+      "expected": "libretro: core=mame4droid_android.so",
+      "label": "Neo Geo"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "neo-geo-cd",
+      "expected": "libretro: core=mame4droid_android.so",
+      "label": "Neo Geo CD"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "nintendinho",
+      "expected": "libretro: core=fceumm_libretro_android.so",
+      "label": "Nintendinho"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "nintendo-64",
+      "expected": "libretro: core=mupen64plus_ae_android.so",
+      "label": "Nintendo 64"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "nintendo-64--br",
+      "expected": "libretro: core=mupen64plus_ae_android.so",
+      "label": "Nintendo 64 - BR"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "nintendo-ds",
+      "expected": "__ORIGINAL_XML__:nintendo-ds",
+      "label": "Nintendo DS"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "odyssey-2",
+      "expected": "__ORIGINAL_XML__:odyssey-2",
+      "label": "Odyssey 2"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "psp",
+      "expected": "libretro: core=ppsspp_libretro_android.so",
+      "label": "PSP"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "pc-engine",
+      "expected": "__ORIGINAL_XML__:pc-engine",
+      "label": "Pc Engine"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "pc-engine-cd",
+      "expected": "libretro: core=mednafen_pce_libretro_android.so",
+      "label": "Pc Engine cd"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "psx",
+      "expected": "libretro: core=pcsx_rearmed_libretro_android.so",
+      "label": "Playstation 1"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "ps2",
+      "expected": "__ORIGINAL_XML__:ps2",
+      "label": "Playstation 2"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "ps2br",
+      "expected": "__ORIGINAL_XML__:ps2br",
+      "label": "Playstation 2 - BR"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "psp",
+      "expected": "libretro: core=ppsspp_libretro_android.so",
+      "label": "Psp - BR"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "psvita",
+      "expected": "libretro: core=vita3k_android.so",
+      "label": "Psvita"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "super-nintendo",
+      "expected": "__ORIGINAL_XML__:super-nintendo",
+      "label": "Super Nintendo"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "super-nintendo--br",
+      "expected": "libretro: core=snes9x_libretro_android.so",
+      "label": "Super Nintendo - BR"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "switch",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1",
+      "label": "Switch"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "atari2600",
+      "expected": "__ORIGINAL_XML__:atari2600",
+      "label": "atari2600"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "atari7800",
+      "expected": "__ORIGINAL_XML__:atari7800",
+      "label": "atari7800"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "colecovision",
+      "expected": "__ORIGINAL_XML__:colecovision",
+      "label": "colecovision"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "cps1",
+      "expected": "libretro: core=mame4droid_android.so",
+      "label": "cps1"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "cps2",
+      "expected": "libretro: core=mame4droid_android.so",
+      "label": "cps2"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "cps3",
+      "expected": "libretro: core=mame4droid_android.so",
+      "label": "cps3"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "fbneo",
+      "expected": "__ORIGINAL_XML__:fbneo",
+      "label": "fbneo"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "fds",
+      "expected": "libretro: core=fceumm_libretro_android.so",
+      "label": "fds"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "gameandwatch",
+      "expected": "__ORIGINAL_XML__:gameandwatch",
+      "label": "gameandwatch"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "gamegear",
+      "expected": "libretro: core=genesis_plus_gx_libretro_android.so",
+      "label": "gamegear"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "jaguar",
+      "expected": "__ORIGINAL_XML__:jaguar",
+      "label": "jaguar"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "mame",
+      "expected": "libretro: core=mame4droid_android.so",
+      "label": "mame"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "naomi",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "label": "naomi"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "naomi2",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "label": "naomi2"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "saturn",
+      "expected": "libretro: core=yabasanshiro_libretro_android.so",
+      "label": "saturn"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "sega32x",
+      "expected": "libretro: core=picodrive_libretro_android.so",
+      "label": "sega32x"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "supergrafx",
+      "expected": "libretro: core=mednafen_supergrafx_libretro_android.so",
+      "label": "supergrafx"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "wii",
+      "expected": "libretro: core=dolphin_libretro_android.so",
+      "label": "wii"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "wiiu",
+      "expected": "libretro: core=cemu_android.so",
+      "label": "wiiu"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "xbox",
+      "expected": "libretro: core=x1box_android.so",
+      "label": "xbox"
+    },
+    {
+      "kind": "canonical-folder",
+      "input": "xbox360",
+      "expected": "libretro: core=xendroid_android.so",
+      "label": "xbox360"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "3ds",
+      "expected": "libretro: core=azahar_libretro_android.so",
+      "alias": "3ds",
+      "label": "3ds"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "arcade",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "Arcade",
+      "label": "Arcade"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "atomiswave",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "alias": "Atomiswave",
+      "label": "Atomiswave"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "dreamcast",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "alias": "Dreamcast",
+      "label": "Dreamcast"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gamecube",
+      "expected": "libretro: core=dolphin_libretro_android.so",
+      "alias": "GameCube",
+      "label": "GameCube"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gameboy",
+      "expected": "libretro: core=gambatte_libretro_android.so",
+      "alias": "Gameboy",
+      "label": "Gameboy"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gameboy-color",
+      "expected": "__ORIGINAL_XML__:gameboy-color",
+      "alias": "Gameboy Color",
+      "label": "Gameboy Color"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gba",
+      "expected": "libretro: core=mgba_libretro_android.so",
+      "alias": "Gba",
+      "label": "Gba"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "master-system",
+      "expected": "__ORIGINAL_XML__:master-system",
+      "alias": "Master System ",
+      "label": "Master System "
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "megadrive",
+      "expected": "libretro: core=mdemu_station.so",
+      "alias": "MegaDrive",
+      "label": "MegaDrive"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "megadrive--br",
+      "expected": "libretro: core=mdemu_station.so",
+      "alias": "MegaDrive - BR",
+      "label": "MegaDrive - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "neo-geo",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "Neo Geo",
+      "label": "Neo Geo"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "neo-geo-cd",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "Neo Geo CD",
+      "label": "Neo Geo CD"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "nintendinho",
+      "expected": "libretro: core=fceumm_libretro_android.so",
+      "alias": "Nintendinho",
+      "label": "Nintendinho"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "nintendo-64",
+      "expected": "libretro: core=mupen64plus_ae_android.so",
+      "alias": "Nintendo 64",
+      "label": "Nintendo 64"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "nintendo-64--br",
+      "expected": "libretro: core=mupen64plus_ae_android.so",
+      "alias": "Nintendo 64 - BR",
+      "label": "Nintendo 64 - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "nintendo-ds",
+      "expected": "__ORIGINAL_XML__:nintendo-ds",
+      "alias": "Nintendo DS",
+      "label": "Nintendo DS"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "odyssey-2",
+      "expected": "__ORIGINAL_XML__:odyssey-2",
+      "alias": "Odyssey 2",
+      "label": "Odyssey 2"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "psp",
+      "expected": "libretro: core=ppsspp_libretro_android.so",
+      "alias": "PSP",
+      "label": "PSP"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "pc-engine",
+      "expected": "__ORIGINAL_XML__:pc-engine",
+      "alias": "Pc Engine",
+      "label": "Pc Engine"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "pc-engine-cd",
+      "expected": "libretro: core=mednafen_pce_libretro_android.so",
+      "alias": "Pc Engine cd",
+      "label": "Pc Engine cd"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "psx",
+      "expected": "libretro: core=pcsx_rearmed_libretro_android.so",
+      "alias": "Playstation 1",
+      "label": "Playstation 1"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "ps2",
+      "expected": "__ORIGINAL_XML__:ps2",
+      "alias": "Playstation 2",
+      "label": "Playstation 2"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "ps2br",
+      "expected": "__ORIGINAL_XML__:ps2br",
+      "alias": "Playstation 2 - BR",
+      "label": "Playstation 2 - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "psp",
+      "expected": "libretro: core=ppsspp_libretro_android.so",
+      "alias": "Psp - BR",
+      "label": "Psp - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "psvita",
+      "expected": "libretro: core=vita3k_android.so",
+      "alias": "Psvita",
+      "label": "Psvita"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "super-nintendo",
+      "expected": "__ORIGINAL_XML__:super-nintendo",
+      "alias": "Super Nintendo",
+      "label": "Super Nintendo"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "super-nintendo--br",
+      "expected": "libretro: core=snes9x_libretro_android.so",
+      "alias": "Super Nintendo - BR",
+      "label": "Super Nintendo - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "switch",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1",
+      "alias": "Switch",
+      "label": "Switch"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "atari2600",
+      "expected": "__ORIGINAL_XML__:atari2600",
+      "alias": "atari2600",
+      "label": "atari2600"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "atari7800",
+      "expected": "__ORIGINAL_XML__:atari7800",
+      "alias": "atari7800",
+      "label": "atari7800"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "colecovision",
+      "expected": "__ORIGINAL_XML__:colecovision",
+      "alias": "colecovision",
+      "label": "colecovision"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "cps1",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "cps1",
+      "label": "cps1"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "cps2",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "cps2",
+      "label": "cps2"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "cps3",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "cps3",
+      "label": "cps3"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "fbneo",
+      "expected": "__ORIGINAL_XML__:fbneo",
+      "alias": "fbneo",
+      "label": "fbneo"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "fds",
+      "expected": "libretro: core=fceumm_libretro_android.so",
+      "alias": "fds",
+      "label": "fds"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gameandwatch",
+      "expected": "__ORIGINAL_XML__:gameandwatch",
+      "alias": "gameandwatch",
+      "label": "gameandwatch"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gamegear",
+      "expected": "libretro: core=genesis_plus_gx_libretro_android.so",
+      "alias": "gamegear",
+      "label": "gamegear"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "jaguar",
+      "expected": "__ORIGINAL_XML__:jaguar",
+      "alias": "jaguar",
+      "label": "jaguar"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "mame",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "mame",
+      "label": "mame"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "naomi",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "alias": "naomi",
+      "label": "naomi"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "naomi2",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "alias": "naomi2",
+      "label": "naomi2"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "saturn",
+      "expected": "libretro: core=yabasanshiro_libretro_android.so",
+      "alias": "saturn",
+      "label": "saturn"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "sega32x",
+      "expected": "libretro: core=picodrive_libretro_android.so",
+      "alias": "sega32x",
+      "label": "sega32x"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "supergrafx",
+      "expected": "libretro: core=mednafen_supergrafx_libretro_android.so",
+      "alias": "supergrafx",
+      "label": "supergrafx"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "wii",
+      "expected": "libretro: core=dolphin_libretro_android.so",
+      "alias": "wii",
+      "label": "wii"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "wiiu",
+      "expected": "libretro: core=cemu_android.so",
+      "alias": "wiiu",
+      "label": "wiiu"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "xbox",
+      "expected": "libretro: core=x1box_android.so",
+      "alias": "xbox",
+      "label": "xbox"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "xbox360",
+      "expected": "libretro: core=xendroid_android.so",
+      "alias": "xbox360",
+      "label": "xbox360"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "megadrive",
+      "expected": "libretro: core=mdemu_station.so",
+      "alias": "megadrive",
+      "label": "MegaDrive"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "super-nintendo",
+      "expected": "__ORIGINAL_XML__:super-nintendo",
+      "alias": "snes",
+      "label": "Super Nintendo"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "super-nintendo--br",
+      "expected": "libretro: core=snes9x_libretro_android.so",
+      "alias": "snesbr",
+      "label": "Super Nintendo - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gameboy",
+      "expected": "libretro: core=gambatte_libretro_android.so",
+      "alias": "gb",
+      "label": "Gameboy"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gameboy-color",
+      "expected": "__ORIGINAL_XML__:gameboy-color",
+      "alias": "gbc",
+      "label": "Gameboy Color"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gba",
+      "expected": "libretro: core=mgba_libretro_android.so",
+      "alias": "gba",
+      "label": "Gba"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "megadrive--br",
+      "expected": "libretro: core=mdemu_station.so",
+      "alias": "megadrivebr",
+      "label": "MegaDrive - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "arcade",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "arcade",
+      "label": "Arcade"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "atomiswave",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "alias": "atomiswave",
+      "label": "Atomiswave"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "dreamcast",
+      "expected": "libretro: core=flycast_libretro_android.so",
+      "alias": "dreamcast",
+      "label": "Dreamcast"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "master-system",
+      "expected": "__ORIGINAL_XML__:master-system",
+      "alias": "mastersystem",
+      "label": "Master System "
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "nintendo-64",
+      "expected": "libretro: core=mupen64plus_ae_android.so",
+      "alias": "n64",
+      "label": "Nintendo 64"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "nintendo-64--br",
+      "expected": "libretro: core=mupen64plus_ae_android.so",
+      "alias": "n64br",
+      "label": "Nintendo 64 - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "nintendo-ds",
+      "expected": "__ORIGINAL_XML__:nintendo-ds",
+      "alias": "nds",
+      "label": "Nintendo DS"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "neo-geo",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "neogeo",
+      "label": "Neo Geo"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "neo-geo-cd",
+      "expected": "libretro: core=mame4droid_android.so",
+      "alias": "neogeocd",
+      "label": "Neo Geo CD"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "nintendinho",
+      "expected": "libretro: core=fceumm_libretro_android.so",
+      "alias": "nes",
+      "label": "Nintendinho"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "odyssey-2",
+      "expected": "__ORIGINAL_XML__:odyssey-2",
+      "alias": "o2em",
+      "label": "Odyssey 2"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "pc-engine",
+      "expected": "__ORIGINAL_XML__:pc-engine",
+      "alias": "pcengine",
+      "label": "Pc Engine"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "pc-engine-cd",
+      "expected": "libretro: core=mednafen_pce_libretro_android.so",
+      "alias": "pcenginecd",
+      "label": "Pc Engine cd"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "psx",
+      "expected": "libretro: core=pcsx_rearmed_libretro_android.so",
+      "alias": "psx",
+      "label": "Playstation 1"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "switch",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1",
+      "alias": "switch",
+      "label": "Switch"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "gamecube",
+      "expected": "libretro: core=dolphin_libretro_android.so",
+      "alias": "gamecube",
+      "label": "GameCube"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "psp",
+      "expected": "libretro: core=ppsspp_libretro_android.so",
+      "alias": "psp",
+      "label": "PSP"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "psp",
+      "expected": "libretro: core=ppsspp_libretro_android.so",
+      "alias": "pspbr",
+      "label": "Psp - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "ps2",
+      "expected": "__ORIGINAL_XML__:ps2",
+      "alias": "ps2",
+      "label": "Playstation 2"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "ps2br",
+      "expected": "__ORIGINAL_XML__:ps2br",
+      "alias": "ps2br",
+      "label": "Playstation 2 - BR"
+    },
+    {
+      "kind": "resolved-catalog-alias",
+      "input": "psvita",
+      "expected": "libretro: core=vita3k_android.so",
+      "alias": "psvita",
+      "label": "Psvita"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "MegaDrive - BR",
+      "expected": "libretro: core=mdemu_station.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "Super Nintendo - BR",
+      "expected": "libretro: core=snes9x_libretro_android.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "pcenginecd",
+      "expected": "libretro: core=mednafen_pce_libretro_android.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "Pc Engine cd",
+      "expected": "libretro: core=mednafen_pce_libretro_android.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "switch",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "Nintendo Switch",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "nintendoswitch",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "nintendo-switch",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "nintendo_switch",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "nsw",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "ns",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "NS",
+      "expected": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "Nintendo 64 - BR",
+      "expected": "libretro: core=mupen64plus_ae_android.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "n64br",
+      "expected": "libretro: core=mupen64plus_ae_android.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "genesis",
+      "expected": "libretro: core=mdemu_station.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "Super Nintendo",
+      "expected": "libretro: core=snes9x_libretro_android.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "Playstation 1",
+      "expected": "libretro: core=pcsx_rearmed_libretro_android.so"
+    },
+    {
+      "kind": "direct-command-alias",
+      "input": "unmapped-platform",
+      "expected": "__ORIGINAL_XML__:unmapped-platform"
+    }
+  ]
+}
