@@ -1,0 +1,248 @@
+{
+  "schema": 1,
+  "generatedUtc": "2026-10-11T07:29:44.822627+00:00",
+  "readOnly": true,
+  "productiveChanges": false,
+  "sourcePinsSha256": "1628be9d7f451f9a78988be2c9a03ed5184db65edb09e7a0a86a81c7c451460d",
+  "sourceFilesChecked": 30,
+  "buildInputsChecked": 7,
+  "anchorsChecked": 31,
+  "locations": [
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "void EmuSystemTask::start(Window& win)",
+      "lines": [
+        42
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "[&](SuspendCommand&)",
+      "lines": [
+        76
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "EmuSystemTask::SuspendContext EmuSystemTask::suspend()",
+      "lines": [
+        133
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "bool EmuSystemTask::advanceFrames(FrameParams frameParams)",
+      "lines": [
+        376
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "sys.runFrames({this}, videoPtr, audioPtr, frameInfo.advanced);",
+      "lines": [
+        443
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "sys.skipForwardFrames({this}, 20)",
+      "lines": [
+        391
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystem.cc",
+      "anchor": "void EmuSystem::runFrames(",
+      "lines": [
+        571
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystem.cc",
+      "anchor": "runFrame(taskCtx, nullptr, audio);",
+      "lines": [
+        583
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuApp.cc",
+      "anchor": "void EmuApp::mainInitCommon(",
+      "lines": [
+        314
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuApp.cc",
+      "anchor": "void EmuApp::launchSystem(",
+      "lines": [
+        558
+      ]
+    },
+    {
+      "file": "EmuFramework/src/AutosaveManager.cc",
+      "anchor": "bool AutosaveManager::load(",
+      "lines": [
+        56
+      ]
+    },
+    {
+      "file": "EmuFramework/src/AutosaveManager.cc",
+      "anchor": "bool AutosaveManager::save(",
+      "lines": [
+        45
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/Main.cc",
+      "anchor": "void Snes9xSystem::runFrame(",
+      "lines": [
+        310
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/Main.cc",
+      "anchor": "S9xMainLoop();",
+      "lines": [
+        349
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/Main.cc",
+      "anchor": "if(!unfreezeStateFrom(buff))",
+      "lines": [
+        124
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/input.cc",
+      "anchor": "void Snes9xSystem::handleInputAction(",
+      "lines": [
+        36
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/input.cc",
+      "anchor": "S9xSetController(1, CTL_MP5, 1, 2, 3, 4);",
+      "lines": [
+        155
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/AppMeta.cc",
+      "anchor": "const int AppMeta::maxPlayers{5};",
+      "lines": [
+        28
+      ]
+    },
+    {
+      "file": "Snes9x/src/snes9x/snapshot.h",
+      "anchor": "#define SUCCESS",
+      "lines": [
+        18
+      ]
+    },
+    {
+      "file": "Snes9x/src/snes9x/snapshot.h",
+      "anchor": "#define WRONG_FORMAT",
+      "lines": [
+        19
+      ]
+    },
+    {
+      "file": "Snes9x/src/snes9x/snes9x.h",
+      "anchor": "NetPlay = 0;",
+      "lines": [
+        292
+      ]
+    },
+    {
+      "file": "Snes9x/src/snes9x/netplay.cpp",
+      "anchor": "Settings.NetPlay = TRUE;",
+      "lines": [
+        278
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/Main.cc",
+      "anchor": "void MdSystem::runFrame(",
+      "lines": [
+        57
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/Main.cc",
+      "anchor": "state_load(buff.data());",
+      "lines": [
+        105
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/input.cc",
+      "anchor": "void MdSystem::handleInputAction(",
+      "lines": [
+        32
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/input.cc",
+      "anchor": "input.system[0] = SYSTEM_TEAMPLAYER;",
+      "lines": [
+        148
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/input.cc",
+      "anchor": "playerIdxMap[0] = 0;",
+      "lines": [
+        197
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/AppMeta.cc",
+      "anchor": "const int AppMeta::maxPlayers{4};",
+      "lines": [
+        39
+      ]
+    },
+    {
+      "file": "MD.emu/src/genplus-gx/state.cc",
+      "anchor": "memcpy(&inbytes32, buffer, 4);",
+      "lines": [
+        107
+      ]
+    },
+    {
+      "file": "MD.emu/src/genplus-gx/state.cc",
+      "anchor": "memcpy(state.get(), buffer + 4, -inbytes32);",
+      "lines": [
+        125
+      ]
+    },
+    {
+      "file": "MD.emu/src/genplus-gx/state.h",
+      "anchor": "#define load_param(param, size)",
+      "lines": [
+        34
+      ]
+    }
+  ],
+  "apkEntriesChecked": {
+    "lib/arm64-v8a/libsnes9x_explus.so": {
+      "sha256": "3adeeabe25117265cdd10138fc9631c58da7deda533ff0272a89d7e64bb77956",
+      "bytes": 3802928
+    },
+    "lib/arm64-v8a/libmdemu_station.so": {
+      "sha256": "889d18461fc14e765813d7ef197ecfc922786df8f1f961dd82443dd88aecd124",
+      "bytes": 6755552
+    },
+    "onlineEngineIds": [
+      "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+      "clownmdemu-d43c2708-mp5-81b3daa38fb9"
+    ]
+  },
+  "limits": [
+    "Source guards/read-only hashes, not emulator compilation or gameplay",
+    "No server registration/current response checked",
+    "Snapshot defects belong to normal EX+ source, not current bsnes/clown online route"
+  ]
+}

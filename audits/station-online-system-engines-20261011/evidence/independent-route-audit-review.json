@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-document-and-receipt-review",
+  "recordedUtc": "2026-10-11T07:37:04.502365+00:00",
+  "scope": "Independent static review of final public R126 audit documents, already-executed static/JVM receipts, and isolated EX+ source candidate; no new test or emulator execution",
+  "canonicalSystems": 50,
+  "catalogAliases": 78,
+  "classificationCounts": {
+    "no-eligible-online-engine": 35,
+    "real-system-adapter-implemented-physical-pending": 4,
+    "different-core-and-owner": 9,
+    "same-core-family-different-owner": 2
+  },
+  "nativeFamilies": [
+    "gamecube",
+    "n64",
+    "wii"
+  ],
+  "legacyRows": 11,
+  "aliasSelection": {
+    "checks": 342,
+    "aliases": 78,
+    "selectedAliases": 25,
+    "blockedAliases": 53,
+    "recordedUtc": "2026-10-11T07:31:17.7545756Z",
+    "freshApkHash": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+    "auditReceiptHashMatched": true,
+    "sourceAndFixtureHashesMatched": true
+  },
+  "isolatedJvmChecks": {
+    "n64": 282,
+    "profile": 98,
+    "launch": 231,
+    "endpoint": 470
+  },
+  "psxMameCommonBinaryHashesMatchConsolidated": true,
+  "psxMameCommonBinariesCompared": [
+    "libMAME4droid.so",
+    "libmame4droid-jni.so",
+    "libpcsx_rearmed_libretro_android.so",
+    "libstation_online_pcsx.so"
+  ],
+  "normalPsxOwnerCoveredByIndependentProbeOnly": {
+    "bytes": 4588272,
+    "sha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6"
+  },
+  "receiptSourceHashesRechecked": true,
+  "unresolvedDirectDependencyNames": {},
+  "documentClarifications": [
+    "MAME complete donor build recipe not located; public Android.mk compiles JNI only",
+    "DEX entry classes are present, not an Android launch proof",
+    "DT_NEEDED library-name availability is not full Android linker symbol-resolution proof",
+    "Native route count is four catalog rows for three systems and two backends, Mupen and Dolphin"
+  ],
+  "documentsOnlyModified": [
+    "README.md",
+    "remaining-systems/README.md"
+  ],
+  "frozenR126Modified": false,
+  "phonesOperated": false,
+  "serverOperated": false,
+  "gameplayVerified": false,
+  "newTestsRun": false,
+  "allSystemsUseNormalEngineOnline": false,
+  "sources": {
+    "README.md": "56c4152c011a982835c4cedc540922534dc2778e1129b3403e5220c5587070e5",
+    "tests/audit_current_package.py": "89e6862b04eb01d6886abe9583210cd910be8313b44153df5bd85af6a1487af0",
+    "tests/run_current_probes.ps1": "784a550ec8501629d1e53ad35b8611bc38a7f1ce8a8c0b6c3b3b7c38068599e2",
+    "tests/run_system_selection.ps1": "7603a9420a89fe7a52a5821f9757eff9f52669f5a0b0aacf8721b6f7f344d1e2",
+    "tests/StationSystemSelectionProbe.java": "a2a838e72fe5de5bdf9c6ce60371114f50b85edb91b4ed23edc57fc35d33a3fe",
+    "evidence/current-apk-audit.json": "4bef83234fdf4a86cfc9ff8e9da0323fe5f50f5898272dc4da6fd55567ad4cf1",
+    "evidence/native-system-jvm-probes.json": "01dde5dc29ff9f43df9b217241ad8256ec5aaecfebb46ff381258507d1d26004",
+    "evidence/system-selection-jvm.json": "41f91e23936de534bffd420b767d5b7b9ed40a6c8632e5c1765f123a2d500886",
+    "psx-mame/README.md": "71adb3ea95968a940a41d92c5f726d495b5600acafcea82f8be7ed737b2cb512",
+    "psx-mame/source-evidence.json": "529224d94cd1f1ec1651957e404eb54ec16c9f827850d50ed0c69c8ed313d039",
+    "psx-mame/package-abi-evidence.json": "d7c334e1ca4cc45997606fc9290eda9f572f57ce0d79a6edd5d68a6278ed7d48",
+    "remaining-systems/README.md": "87ec6248229d317c9b210373716982a028881c994d8e85108dcb4e427785a192",
+    "remaining-systems/MATRIX.md": "86c57a7b136bfda7ba496c3187903f4027094174aaa0d4714cc88c39b685a863",
+    "remaining-systems/matrix.json": "1644dfe54a65b30c4863174380405018b72910be67f82f980d9b80e1bbdcf468",
+    "snes-megadrive/README.md": "4284a93cf18e83f71626883bb9c902318c6d12f020692855fb2134c1c72b559b",
+    "snes-megadrive/source-pins.json": "1628be9d7f451f9a78988be2c9a03ed5184db65edb09e7a0a86a81c7c451460d",
+    "snes-megadrive/evidence/source-preflight.json": "a8dc0010b7efb4e490b05284d5f2ee0105be8ce526df6e49eb5c63501eb31263",
+    "snes-megadrive/AUDIT-MANIFEST.json": "1efe5a2d294ccda2e3a151ff9b1eced4f97803499720ff92e1e26145b73099e6"
+  },
+  "publicContentsReview": {
+    "scope": "Audit and EX+ candidate directories at review time",
+    "filesExamined": 45,
+    "binaryOrNonTextFilesFound": [],
+    "personalPathOrCredentialMarkersFound": [],
+    "candidateIncludeFlagSanitized": true,
+    "scopeLimitation": "Marker and extension review is not a universal proof that arbitrary text contains no secret; no secret/device data observed in reviewed receipts or source"
+  },
+  "manifestReview": {
+    "audits/station-online-system-engines-20261011/snes-megadrive/AUDIT-MANIFEST.json": {
+      "sha256": "1efe5a2d294ccda2e3a151ff9b1eced4f97803499720ff92e1e26145b73099e6",
+      "files": 7,
+      "mismatches": [],
+      "productiveChanges": false,
+      "binariesIncluded": false
+    },
+    "candidates/station-explus-frame-gate-20261011/CANDIDATE-MANIFEST.json": {
+      "sha256": "292fc20a4c6d40e006f4398f9a6788654df0dfc6ac565c6784c0e39ddaa02483",
+      "files": 12,
+      "mismatches": [],
+      "productiveChanges": false,
+      "binariesIncluded": false
+    }
+  },
+  "exPlusCandidateReview": {
+    "sourceOnly": true,
+    "linkedToOriginalCore": false,
+    "jniImplemented": false,
+    "wssImplemented": false,
+    "inR126Apk": false,
+    "recordedHostChecks": 82297,
+    "recordedAndroidStaticArchiveBytes": 27932,
+    "ownersAreSynthetic": true,
+    "actualCoreExecutionVerified": false,
+    "publishedMdPolicyChanged": false,
+    "sourceAndTestFrozenAgainstReceipts": true,
+    "stateBufferLifetimeExplicit": true,
+    "networkDataReconciliationExplicitlyPending": true,
+    "decoderMdHardeningPending": true,
+    "snesSnapshotSuccessStrictlyOne": true,
+    "candidateSourceSafetyBlockerFound": false,
+    "productiveMigrationReady": false
+  },
+  "candidateSources": {
+    ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+    "CANDIDATE-MANIFEST.json": "292fc20a4c6d40e006f4398f9a6788654df0dfc6ac565c6784c0e39ddaa02483",
+    "evidence/android-gate.json": "4ec84f37505acacea355bdbd089706ccd0d499aba8be0745bf4291e4ae7d57c3",
+    "evidence/gate-probe.json": "c3ccb9a8cbf910c6f3cfa4633f3351ec85bb9e017854f171f808770efc17e7f0",
+    "native/StationExPlusFrameGate.cpp": "f64303dd6eaf7e29f8e24e93c9a2bb87d6ad4568b6e2821c69ce949f9f1c30ba",
+    "native/StationExPlusFrameGate.hpp": "f2555c63d430d69a1df1e94d55ab639d264a07d689740f1df536a731c6651035",
+    "native/StationSnapshotGuard.hpp": "a413c9714b4a2f314cc1a6ba6a4c5094b4eaac3773a49027cc4fa4ee347584d5",
+    "README.md": "3b13093d3fac2b61dbaf5de42d2c498c9c9a134e73ba63599c5a6a91d564b582",
+    "recipe/build_android_gate.py": "11d0b9e3b2d98bfab8313800c3a55202eceaa8d70d77084dbba5545ed10f3445",
+    "recipe/run_probe.py": "86563c8d065ad324185f5c240823ad63952a83cef6bed13e5d2daa9765711d1f",
+    "recipe/source_preflight.py": "7e00737dc9254f62aef5cfe4372791ef287c4728241a2d3fb57f2627e1ffa321",
+    "STATUS.json": "88a2542f0865db98dd2accc9a3047c913f9589ae04afdc214aacb2d6cb75a57b",
+    "tests/frame_gate_probe.cpp": "ea4ebf9f6e9bc152b495ab5e03ab211793917e84005238e78f2539ec60575439"
+  }
+}

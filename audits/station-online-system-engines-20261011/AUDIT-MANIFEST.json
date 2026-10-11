@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "role": "read-only-audit-and-reproducible-probes",
+  "executableChanged": false,
+  "binariesIncluded": false,
+  "files": {
+    ".gitattributes": {
+      "bytes": 29,
+      "sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d"
+    },
+    "evidence/current-apk-audit.json": {
+      "bytes": 117292,
+      "sha256": "4bef83234fdf4a86cfc9ff8e9da0323fe5f50f5898272dc4da6fd55567ad4cf1"
+    },
+    "evidence/independent-route-audit-review.json": {
+      "bytes": 7305,
+      "sha256": "ed65a4de23d97ce882c3d0788d7f386d5ad046acb32a3fffb8b1463667f1d148"
+    },
+    "evidence/native-system-jvm-probes.json": {
+      "bytes": 1471,
+      "sha256": "01dde5dc29ff9f43df9b217241ad8256ec5aaecfebb46ff381258507d1d26004"
+    },
+    "evidence/system-selection-jvm.json": {
+      "bytes": 1375,
+      "sha256": "41f91e23936de534bffd420b767d5b7b9ed40a6c8632e5c1765f123a2d500886"
+    },
+    "psx-mame/package-abi-evidence.json": {
+      "bytes": 5376,
+      "sha256": "d7c334e1ca4cc45997606fc9290eda9f572f57ce0d79a6edd5d68a6278ed7d48"
+    },
+    "psx-mame/probe_psx_package.py": {
+      "bytes": 7836,
+      "sha256": "1b25714a47c47e8ebc1502039cf756a82fe3951dd3b6ba34030006289d9154ce"
+    },
+    "psx-mame/README.md": {
+      "bytes": 12463,
+      "sha256": "71adb3ea95968a940a41d92c5f726d495b5600acafcea82f8be7ed737b2cb512"
+    },
+    "psx-mame/source-evidence.json": {
+      "bytes": 12210,
+      "sha256": "529224d94cd1f1ec1651957e404eb54ec16c9f827850d50ed0c69c8ed313d039"
+    },
+    "README.md": {
+      "bytes": 7528,
+      "sha256": "56c4152c011a982835c4cedc540922534dc2778e1129b3403e5220c5587070e5"
+    },
+    "remaining-systems/build_matrix.py": {
+      "bytes": 17054,
+      "sha256": "a2b72e1ba27bb7d83e85ff653ed6b1011e7b84af4115849996fac20cdee3c302"
+    },
+    "remaining-systems/matrix.json": {
+      "bytes": 211383,
+      "sha256": "1644dfe54a65b30c4863174380405018b72910be67f82f980d9b80e1bbdcf468"
+    },
+    "remaining-systems/MATRIX.md": {
+      "bytes": 11376,
+      "sha256": "86c57a7b136bfda7ba496c3187903f4027094174aaa0d4714cc88c39b685a863"
+    },
+    "remaining-systems/primary-source-fetch.json": {
+      "bytes": 1475,
+      "sha256": "7764e2ee10757a8c90f96945908621a31fe487bde5a49b3403c22e547ceb94fd"
+    },
+    "remaining-systems/README.md": {
+      "bytes": 22673,
+      "sha256": "87ec6248229d317c9b210373716982a028881c994d8e85108dcb4e427785a192"
+    },
+    "snes-megadrive/.gitattributes": {
+      "bytes": 29,
+      "sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d"
+    },
+    "snes-megadrive/AUDIT-MANIFEST.json": {
+      "bytes": 1188,
+      "sha256": "1efe5a2d294ccda2e3a151ff9b1eced4f97803499720ff92e1e26145b73099e6"
+    },
+    "snes-megadrive/evidence/android-gate.json": {
+      "bytes": 2254,
+      "sha256": "4ec84f37505acacea355bdbd089706ccd0d499aba8be0745bf4291e4ae7d57c3"
+    },
+    "snes-megadrive/evidence/gate-probe.json": {
+      "bytes": 1473,
+      "sha256": "c3ccb9a8cbf910c6f3cfa4633f3351ec85bb9e017854f171f808770efc17e7f0"
+    },
+    "snes-megadrive/evidence/source-preflight.json": {
+      "bytes": 5825,
+      "sha256": "a8dc0010b7efb4e490b05284d5f2ee0105be8ce526df6e49eb5c63501eb31263"
+    },
+    "snes-megadrive/README.md": {
+      "bytes": 16268,
+      "sha256": "4284a93cf18e83f71626883bb9c902318c6d12f020692855fb2134c1c72b559b"
+    },
+    "snes-megadrive/source-pins.json": {
+      "bytes": 11349,
+      "sha256": "1628be9d7f451f9a78988be2c9a03ed5184db65edb09e7a0a86a81c7c451460d"
+    },
+    "snes-megadrive/STATUS.json": {
+      "bytes": 1427,
+      "sha256": "88a2542f0865db98dd2accc9a3047c913f9589ae04afdc214aacb2d6cb75a57b"
+    },
+    "STATUS.json": {
+      "bytes": 2583,
+      "sha256": "0cb3a32d000186c323614b94f6f9f2861ba35f032f6bf6cb8e7e7b89c54b03c1"
+    },
+    "tests/audit_current_package.py": {
+      "bytes": 16791,
+      "sha256": "89e6862b04eb01d6886abe9583210cd910be8313b44153df5bd85af6a1487af0"
+    },
+    "tests/fixtures/android/content/Context.java": {
+      "bytes": 338,
+      "sha256": "557dc0b11f20f08a8085935943ba3c71ff8000d40124de3a6cdb84df4a032256"
+    },
+    "tests/fixtures/android/content/res/AssetManager.java": {
+      "bytes": 483,
+      "sha256": "6b4da22f4a9f94acc33e172b2d5765d7c6d2d3bf882741125160ba54e63b93b4"
+    },
+    "tests/run_current_probes.ps1": {
+      "bytes": 4969,
+      "sha256": "784a550ec8501629d1e53ad35b8611bc38a7f1ce8a8c0b6c3b3b7c38068599e2"
+    },
+    "tests/run_system_selection.ps1": {
+      "bytes": 3708,
+      "sha256": "7603a9420a89fe7a52a5821f9757eff9f52669f5a0b0aacf8721b6f7f344d1e2"
+    },
+    "tests/StationSystemSelectionProbe.java": {
+      "bytes": 3542,
+      "sha256": "a2a838e72fe5de5bdf9c6ce60371114f50b85edb91b4ed23edc57fc35d33a3fe"
+    },
+    "tests/validate_public_delivery.py": {
+      "bytes": 3642,
+      "sha256": "cd0c170d06fe3d7f7f30741e3e050c0c507be3770109cb9d18d76c7aa73e76e6"
+    }
+  }
+}

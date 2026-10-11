@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "recordedUtc": "2026-10-11T07:31:17.7545756Z",
+  "kind": "actual-r126-engine-selection-isolated-jvm",
+  "checks": 342,
+  "failures": 0,
+  "elapsedMs": 181,
+  "aliases": 78,
+  "selectedAliases": 25,
+  "blockedAliases": 53,
+  "apkSha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+  "auditReceiptSha256": "4bef83234fdf4a86cfc9ff8e9da0323fe5f50f5898272dc4da6fd55567ad4cf1",
+  "roomsJarSha256": "44cfdeed223caf6ff47b607d8460137cf80428299c602b97b2e8923b47eaa61b",
+  "clientJarSha256": "011bce981b609d2cc5cfbad49c386e7f54dea1f560a17fe79bae3a56b3f8f313",
+  "androidApiJarSha256": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+  "jsonJarSha256": "3ea61b2a06e31edf1c91134fe9106b0ebb16628be169f3db75bc7a2b06b45796",
+  "assetSha256": "d80d8c6c7448488b8e11917cfeb0681d50b48b4dd81266b0182c67bd85f91f48",
+  "sourceSha256": "a2a838e72fe5de5bdf9c6ce60371114f50b85edb91b4ed23edc57fc35d33a3fe",
+  "fixtureSha256": [
+    "557dc0b11f20f08a8085935943ba3c71ff8000d40124de3a6cdb84df4a032256",
+    "6b4da22f4a9f94acc33e172b2d5765d7c6d2d3bf882741125160ba54e63b93b4"
+  ],
+  "contextFixtureOnly": true,
+  "actualCompiledSelectionInvoked": true,
+  "nativeCoreExecuted": false,
+  "androidExecuted": false,
+  "serverAuthenticated": false,
+  "physicalGameplayValidated": false,
+  "apkChanged": false
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-10-11",
+  "kind": "all-system-read-only-online-engine-audit",
+  "executableBaseCommit": "4878e4d4a31de597f9258cc1614d1c25202d76ae",
+  "currentApk": {
+    "version": "R126",
+    "sha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+    "bytes": 2233970789,
+    "changedByThisAudit": false,
+    "installedByThisAudit": false,
+    "promotedStable": false
+  },
+  "coverage": {
+    "canonicalCatalogRows": 50,
+    "acceptedAliases": 78,
+    "realSystemAdapterRows": 4,
+    "realSystemFamilies": 3,
+    "realSystemBackends": 2,
+    "legacyOnlineRows": 11,
+    "blockedWithoutEligibleEngineRows": 35,
+    "normalFallbackLibrariesMissingInApk": 8,
+    "actualCompiledSelectionChecks": 342,
+    "universalNativeOnlineMigrationComplete": false
+  },
+  "realSystemAdapters": {
+    "n64": "implemented-in-r126-physical-gameplay-pending",
+    "gamecube": "implemented-in-r126-physical-gameplay-pending",
+    "wii": "implemented-in-r126-physical-gameplay-pending"
+  },
+  "evidence": {
+    "currentPackage": "evidence/current-apk-audit.json",
+    "actualSelection": "evidence/system-selection-jvm.json",
+    "currentJvmProbes": "evidence/native-system-jvm-probes.json",
+    "matrix": "remaining-systems/MATRIX.md",
+    "independentReview": "evidence/independent-route-audit-review.json"
+  },
+  "implementationDependencies": [
+    "Exact normal LibretroPlayer C++ source and reproducible build not located in accessible searched history and backups.",
+    "Complete MAME core build recipe not located; published Android.mk builds JNI only.",
+    "SNES and MD normal source/build are available; synthetic candidate is not linked to either emulator and is not an APK adapter.",
+    "Remaining systems require protocol-specific adapters and verified game/edition/mode profiles; ports and network exports alone are not eligibility."
+  ],
+  "validationPending": [
+    "Fresh authenticated v3 server registrations and exact profiles for R126 native adapters.",
+    "Installation and physical gameplay with the real native adapters.",
+    "Physical controller, connection recovery, latency and thermal measurements."
+  ],
+  "lastRealServerCodeExamined": "141b488d6ad7fd3d2c8e74e76c1a004f1cb257fc",
+  "ourR126ServerDeliveryIsNotActivation": "6e3a7fac6f728ec30a57bf4f4d42f00fdd1c1534",
+  "phoneConnectedDuringRecordedInventory": false,
+  "serverDeployedOrRestarted": false,
+  "signedServerStateCaptured": false,
+  "physicalGameplayValidated": false,
+  "offlineEnginesModified": false,
+  "renderEconomyUiVideosLedOrMenuFpsModified": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "generatedUtc": "2026-10-11T07:31:24.131437+00:00",
+  "status": "isolated-primitives-only-not-migrated",
+  "candidateOnly": true,
+  "productiveR126Changes": false,
+  "sourceNormalPinned": true,
+  "apkOfflineLibrariesVerified": true,
+  "hostSyntheticChecks": 82297,
+  "androidStaticPrimitiveBuilt": true,
+  "actualSnes9xOrGenesisPlusGxExecution": false,
+  "jniOrWssHooks": false,
+  "normalSnapshotApisExposedToNetwork": false,
+  "nativeProfilesRegistered": false,
+  "serverProductionVerified": false,
+  "physicalGameplayOrThermalMeasured": false,
+  "offlinePolicyMaximumPreserved": {
+    "snes": 5,
+    "megadrive": 2
+  },
+  "sourceAudit": "audits/station-online-system-engines-20261011/snes-megadrive/README.md",
+  "candidate": "candidates/station-explus-frame-gate-20261011",
+  "limitations": [
+    "FrameGate owner is bound by first native checkpoint: real worker hook must enforce actual owner",
+    "Synthetic callback/complete probes do not prove real core consumed state/frame",
+    "Raw MD envelope guard is not full decoder bounds hardening",
+    "No link/NativeActivity/JNI/WSS/descriptor/storage/profile/engine registration integration",
+    "No production route switched; offline source/libraries and consumption preservation unchanged",
+    "Pending DATA/ID reconciliation across paused epoch changes not implemented; queue invalidation is domain-model only"
+  ]
+}

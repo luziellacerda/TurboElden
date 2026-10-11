@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "recordedUtc": "2026-10-11T07:21:28.9042270Z",
+  "kind": "fresh-isolated-jvm-r126-system-probes",
+  "roomsJarSha256": "44cfdeed223caf6ff47b607d8460137cf80428299c602b97b2e8923b47eaa61b",
+  "clientJarSha256": "011bce981b609d2cc5cfbad49c386e7f54dea1f560a17fe79bae3a56b3f8f313",
+  "androidApiJarSha256": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+  "jsonJarSha256": "3ea61b2a06e31edf1c91134fe9106b0ebb16628be169f3db75bc7a2b06b45796",
+  "probes": [
+    {
+      "failures": 0,
+      "elapsedMs": 5959,
+      "sourceSha256": "97c449f67289e3744ceddb53fe4f4250ef9f066faa46c988db9fea8fbcbf453b",
+      "checks": 282,
+      "name": "n64"
+    },
+    {
+      "failures": 0,
+      "elapsedMs": 131,
+      "sourceSha256": "1d565333896e79657ad73873af4648ee6956db3cd98063405810711c3448a312",
+      "checks": 98,
+      "name": "profile"
+    },
+    {
+      "failures": 0,
+      "elapsedMs": 329,
+      "sourceSha256": "eee2230329b11dea1dc7822e0e785e367015f534f7dabfb51f1f866d23b441af",
+      "checks": 231,
+      "name": "launch"
+    },
+    {
+      "failures": 0,
+      "elapsedMs": 1925,
+      "sourceSha256": "89c52e6364c631cdff47b4631ec86e51362a12376e7c8eb3105f9d56d95816d2",
+      "checks": 470,
+      "name": "endpoint"
+    }
+  ],
+  "nativeCoreExecuted": false,
+  "androidExecuted": false,
+  "signedServerStateCaptured": false,
+  "physicalGameplayValidated": false,
+  "apkChanged": false
+}

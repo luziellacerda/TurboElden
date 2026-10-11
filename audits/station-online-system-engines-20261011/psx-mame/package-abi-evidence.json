@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "scope": "R126 packaged PSX normal owner ABI and MAME library provenance, read-only",
+  "passed": true,
+  "checks": 40,
+  "inputs": {
+    "libmain.so": {
+      "bytes": 4588272,
+      "sha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6"
+    },
+    "libpcsx_rearmed_libretro_android.so": {
+      "bytes": 1582960,
+      "sha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9"
+    },
+    "libstation_online_pcsx.so": {
+      "bytes": 1547280,
+      "sha256": "4de0afbd3bb113a4b9927b5b250860194b485f278d1dced81501dc6555fa18a8"
+    },
+    "libMAME4droid.so": {
+      "bytes": 366992944,
+      "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71"
+    },
+    "libmame4droid-jni.so": {
+      "bytes": 32856,
+      "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108"
+    }
+  },
+  "normalPsx": {
+    "sourceRevisionInCore": "ff81ed1",
+    "libraryVersion": "r26 ff81ed1",
+    "frontendSourceLocated": false,
+    "frontendOwner": "LibretroPlayer::run",
+    "maximumInputPortsObserved": 2,
+    "calls": {
+      "events": "0x2abe48",
+      "coreRun": "0x2ae610",
+      "audio": "0x2aeac4",
+      "videoUpload": "0x2aec5c",
+      "stateSize": "0x2add78",
+      "stateSave": "0x2addac",
+      "stateLoad": "0x2b081c",
+      "pacing": "0x2b142c",
+      "swap": "0x2b1444"
+    }
+  },
+  "onlinePsx": {
+    "engineId": "pcsx-c8816799-psx-v3-81b3daa38fb9",
+    "core": "libstation_online_pcsx.so",
+    "differentNormalCore": true
+  },
+  "limits": [
+    "No emulator or Android process executed",
+    "No patch or adapter installed",
+    "Binary ABI guards are specific to these exact hashes",
+    "No determinism, multiplayer, CPU pause ACK, gameplay, or performance claim",
+    "No ROM, BIOS, credentials, serials, device logs, or extracted binaries included"
+  ],
+  "results": [
+    {
+      "name": "entry-size:libmain.so",
+      "passed": true
+    },
+    {
+      "name": "entry-sha256:libmain.so",
+      "passed": true
+    },
+    {
+      "name": "entry-size:libpcsx_rearmed_libretro_android.so",
+      "passed": true
+    },
+    {
+      "name": "entry-sha256:libpcsx_rearmed_libretro_android.so",
+      "passed": true
+    },
+    {
+      "name": "entry-size:libstation_online_pcsx.so",
+      "passed": true
+    },
+    {
+      "name": "entry-sha256:libstation_online_pcsx.so",
+      "passed": true
+    },
+    {
+      "name": "entry-size:libMAME4droid.so",
+      "passed": true
+    },
+    {
+      "name": "entry-sha256:libMAME4droid.so",
+      "passed": true
+    },
+    {
+      "name": "entry-size:libmame4droid-jni.so",
+      "passed": true
+    },
+    {
+      "name": "entry-sha256:libmame4droid-jni.so",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_run",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_serialize_size",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_serialize",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_unserialize",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_load_game",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_set_input_poll",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_set_input_state",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_set_video_refresh",
+      "passed": true
+    },
+    {
+      "name": "normal-core-export:retro_set_audio_sample_batch",
+      "passed": true
+    },
+    {
+      "name": "normal-version-string",
+      "passed": true
+    },
+    {
+      "name": "normal-library-name",
+      "passed": true
+    },
+    {
+      "name": "online-normal-cores-differ",
+      "passed": true
+    },
+    {
+      "name": "normal-player-run-symbol",
+      "passed": true
+    },
+    {
+      "name": "normal-core-run-symbol",
+      "passed": true
+    },
+    {
+      "name": "core-run-dispatch-and-loaded-check",
+      "passed": true
+    },
+    {
+      "name": "player-pause-gate-and-core-run",
+      "passed": true
+    },
+    {
+      "name": "input-port-zero-one-only",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:events",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:coreRun",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:audio",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:videoUpload",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:stateSize",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:stateSave",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:stateLoad",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:pacing",
+      "passed": true
+    },
+    {
+      "name": "normal-owner-call:swap",
+      "passed": true
+    },
+    {
+      "name": "psx-single-online-descriptor",
+      "passed": true
+    },
+    {
+      "name": "psx-online-core-exact",
+      "passed": true
+    },
+    {
+      "name": "psx-online-library-exact",
+      "passed": true
+    },
+    {
+      "name": "online-abi-exists",
+      "passed": true
+    }
+  ]
+}

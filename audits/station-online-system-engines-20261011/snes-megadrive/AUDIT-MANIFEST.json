@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "generatedUtc": "2026-10-11T07:33:46.091243+00:00",
+  "role": "source-audit",
+  "productiveChanges": false,
+  "binariesIncluded": false,
+  "files": {
+    ".gitattributes": {
+      "sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+      "bytes": 29
+    },
+    "evidence/android-gate.json": {
+      "sha256": "4ec84f37505acacea355bdbd089706ccd0d499aba8be0745bf4291e4ae7d57c3",
+      "bytes": 2254
+    },
+    "evidence/gate-probe.json": {
+      "sha256": "c3ccb9a8cbf910c6f3cfa4633f3351ec85bb9e017854f171f808770efc17e7f0",
+      "bytes": 1473
+    },
+    "evidence/source-preflight.json": {
+      "sha256": "a8dc0010b7efb4e490b05284d5f2ee0105be8ce526df6e49eb5c63501eb31263",
+      "bytes": 5825
+    },
+    "README.md": {
+      "sha256": "4284a93cf18e83f71626883bb9c902318c6d12f020692855fb2134c1c72b559b",
+      "bytes": 16268
+    },
+    "source-pins.json": {
+      "sha256": "1628be9d7f451f9a78988be2c9a03ed5184db65edb09e7a0a86a81c7c451460d",
+      "bytes": 11349
+    },
+    "STATUS.json": {
+      "sha256": "88a2542f0865db98dd2accc9a3047c913f9589ae04afdc214aacb2d6cb75a57b",
+      "bytes": 1427
+    }
+  }
+}

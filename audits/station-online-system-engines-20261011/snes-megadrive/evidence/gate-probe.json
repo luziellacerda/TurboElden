@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "generatedUtc": "2026-10-11T07:25:36.356443+00:00",
+  "candidateOnly": true,
+  "packagedIntoR126": false,
+  "emulatorGameplay": false,
+  "androidRuntimeOrJNIOrWss": false,
+  "compiler": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+  "compilerVersion": "clang version 22.1.8 (https://github.com/llvm/llvm-project ca7933e47d3a3451d81e72ac174dcb5aa28b59d1)",
+  "flags": [
+    "-std=c++20",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-I<native-source>"
+  ],
+  "results": {
+    "checks": 82297,
+    "fixture": "synthetic-owner-not-emulator-gameplay",
+    "window": 32,
+    "gateBytes": 3288
+  },
+  "sourceSha256": {
+    "native/StationExPlusFrameGate.hpp": "f2555c63d430d69a1df1e94d55ab639d264a07d689740f1df536a731c6651035",
+    "native/StationExPlusFrameGate.cpp": "f64303dd6eaf7e29f8e24e93c9a2bb87d6ad4568b6e2821c69ce949f9f1c30ba",
+    "native/StationSnapshotGuard.hpp": "a413c9714b4a2f314cc1a6ba6a4c5094b4eaac3773a49027cc4fa4ee347584d5",
+    "tests/frame_gate_probe.cpp": "ea4ebf9f6e9bc152b495ab5e03ab211793917e84005238e78f2539ec60575439"
+  },
+  "localExecutableSha256": "3e35205e0ecdc7985573a7599d94ecddaa4691b1a37a39a53e7c4e293d48d1cf",
+  "limits": [
+    "Synthetic owner only; no ROM/core execution",
+    "No JNI/native lifecycle/storage hooks",
+    "No WSS v3 endpoint or delivery parser",
+    "No signed new engine profile/server registration",
+    "No Android/gameplay/thermal measurement"
+  ]
+}

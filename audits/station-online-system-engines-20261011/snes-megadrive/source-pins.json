@@ -1,0 +1,392 @@
+{
+  "schema": 1,
+  "generatedUtc": "2026-10-11T07:29:44.546700+00:00",
+  "sourceRole": "normal-current-HUD-not-productive-online",
+  "upstreamCommit": "1c12fac5ce49badaadff2e2f210dcc30b89f4943",
+  "upstreamArchiveSha256": "c6494137f2dc680eaec5b802089503e1d8301da16d5226a368072f19b77c80ff",
+  "sourceFiles": {
+    "Snes9x/CMakeLists.txt": {
+      "sha256": "59d41d406617ffc4898a55ae945cf2cc3d45e0c45bc332aca61322da0a4e4d4e",
+      "bytes": 562
+    },
+    "Snes9x/src/CMakeLists.txt": {
+      "sha256": "1b51587c226650349b112c4701b7a59de1667eb2a15ad78b0197087072db843b",
+      "bytes": 1168
+    },
+    "Snes9x/src/main/Main.cc": {
+      "sha256": "e5c383b1e7afde387c4e88c68ea667f21c972cc887614e02e8d3a6c0c9298f38",
+      "bytes": 10227
+    },
+    "Snes9x/src/main/input.cc": {
+      "sha256": "94d4641f6dde6e6bd426218eb46e7dd5152ad11fdfc3a0816b084f24f9eff36b",
+      "bytes": 10661
+    },
+    "Snes9x/src/main/system.ccm": {
+      "sha256": "8265c83d460e6bb79aff43f569ee74c24d4cfa0a6dc20f0203fc814549ac46eb",
+      "bytes": 7920
+    },
+    "Snes9x/src/main/AppMeta.cc": {
+      "sha256": "24ced0ff7813eacdb49100d1ee21e41ac1339ffc2f31260ce0868755af6ae68e",
+      "bytes": 8116
+    },
+    "Snes9x/src/snes9x/snes9x.h": {
+      "sha256": "0cbf313f7231ef3ba6861ff9a234decfe90efe296e89a7077a36f66dd3e5e190",
+      "bytes": 9999
+    },
+    "Snes9x/src/snes9x/netplay.cpp": {
+      "sha256": "34cb76cfe2255c7afdc4287dd081fa9c88650e67eef06cc7c3e13e96b56116b8",
+      "bytes": 28258
+    },
+    "Snes9x/src/snes9x/netplay.h": {
+      "sha256": "e0ba5ca502e013bc205008e4da7667b7b3221b87331c924bbedca59b795b9340",
+      "bytes": 5403
+    },
+    "Snes9x/src/snes9x/snapshot.cpp": {
+      "sha256": "4afc09e488e6cad1912aa272638d08dbad74447c8e5044485f0fd4f2d1370028",
+      "bytes": 62749
+    },
+    "Snes9x/src/snes9x/snapshot.h": {
+      "sha256": "98eb02a5eb31338f2602d851037bf0f8b15d2408364753442f5fa8d71d8b2b28",
+      "bytes": 1404
+    },
+    "Snes9x/src/snes9x/srtcemu.cpp": {
+      "sha256": "099a8072b565fb0e1ac713471fb8a734e9f068699ec913c9c90de67e6f692bdf",
+      "bytes": 6047
+    },
+    "Snes9x/src/snes9x/spc7110emu.cpp": {
+      "sha256": "bff9d8ec39712bae5054d4910c7fa01d96e2eba8122fc890704c458777de07a8",
+      "bytes": 17668
+    },
+    "MD.emu/CMakeLists.txt": {
+      "sha256": "1f58e0618691a3311ea15b9523afc7de3a3354ed6777915d0ddcb7e13bb340c4",
+      "bytes": 937
+    },
+    "MD.emu/src/CMakeLists.txt": {
+      "sha256": "d94bf2bee727a26389027d3ed16f465f84de7b3a0aa8fb497825f6a250fbc57a",
+      "bytes": 1336
+    },
+    "MD.emu/src/main/Main.cc": {
+      "sha256": "a882e405c8daf7b77b546bd68469667019f4169b6885aac2ce09b598c7d39321",
+      "bytes": 10046
+    },
+    "MD.emu/src/main/input.cc": {
+      "sha256": "04ad19eb815f7ccd9bfc3e75a5649a09402c18ac7bb0e535e394b25cd1db1433",
+      "bytes": 5644
+    },
+    "MD.emu/src/main/system.ccm": {
+      "sha256": "99d9470078811f0a79c4f076bac2ed47e3b715d747f430f50ab81febcea5feec",
+      "bytes": 6618
+    },
+    "MD.emu/src/main/AppMeta.cc": {
+      "sha256": "f7ab632590d4d42bd3a1e6bfe1c087af00ed9680a9fd7d2741ddfcb262c9544c",
+      "bytes": 7595
+    },
+    "MD.emu/src/genplus-gx/state.cc": {
+      "sha256": "b095c19295d9acdc500dc438453b226f4ce0ef56b161ce0af939a030075b9890",
+      "bytes": 12081
+    },
+    "MD.emu/src/genplus-gx/state.h": {
+      "sha256": "74f9c49105a7e77d5a070031baee67d46a377fb5cc3def495e9444869e0a487b",
+      "bytes": 1600
+    },
+    "MD.emu/src/genplus-gx/input_hw/input.h": {
+      "sha256": "d070a9c3cc7f555338ac9e9380bd444a425108f48461f83d2c23859615ec5844",
+      "bytes": 5346
+    },
+    "EmuFramework/src/EmuSystemTask.cc": {
+      "sha256": "f789aca24ad98f372e04c4092edd134d7ca709813ed305fcf8e18830fdc01e1d",
+      "bytes": 13713
+    },
+    "EmuFramework/src/EmuSystem.cc": {
+      "sha256": "0b9c043332500f2f33fe87cf79c9da6ea7c1f14a50444cab69a75ec655c12372",
+      "bytes": 15473
+    },
+    "EmuFramework/src/EmuInput.cc": {
+      "sha256": "2f7b4c92cc26bc3e3409e222df3f6f8fc19f9f90edf37ff8f6f26ec6a06deb4b",
+      "bytes": 18889
+    },
+    "EmuFramework/src/EmuApp.cc": {
+      "sha256": "939a2a0d92f76ad36347737e05f7dd7c3fa8432491eb6cdfb2264d0d2512aec1",
+      "bytes": 40669
+    },
+    "EmuFramework/src/AutosaveManager.cc": {
+      "sha256": "4d4145619ae01eebc7e140a6ecba616c778f4010f856a7b35fecefbbca7b02f0",
+      "bytes": 6450
+    },
+    "EmuFramework/src/gui/StationHudView.cc": {
+      "sha256": "6e0550346b3d80d67f4237bf356654cb893dfa7ed631b449a0d3be09b35537ab",
+      "bytes": 21466
+    },
+    "EmuFramework/include/emuframework/EmuSystemTask.hh": {
+      "sha256": "ab1bcb0a7fbf3f71929eebd53d0ea4d4627dac22daff022dbc80a3ac13e54724",
+      "bytes": 4995
+    },
+    "imagine/src/base/android/Application.cc": {
+      "sha256": "7e2f37041095e91a7cd7f1492baa93799079cb36ad29439801a8379c787046ff",
+      "bytes": 27589
+    }
+  },
+  "buildInputs": {
+    "station-arm64.cmake": {
+      "sha256": "db2e693b1de9fd820dde651c599389f240d27936bff299cc5a6faa5d5549131c",
+      "bytes": 2111
+    },
+    "sdk/android-arm64/lib/libc++.a": {
+      "sha256": "b1c84d1d415719a8620dd5ab8022227955d120f09905147709014476425f248f",
+      "bytes": 2598908
+    },
+    "sdk/android-arm64/lib/libc++abi.a": {
+      "sha256": "b98c7e62c4008dbe3197e3c30ef5afa2fd9a0c6084ec26ea119b0e20d0da02eb",
+      "bytes": 755470
+    },
+    "sdk/android-arm64/lib/libc++.modules.json": {
+      "sha256": "d312ced1274d9534a46f5857b0ed86782d09951ae8bb1c9922d44c8164f2ba32",
+      "bytes": 575
+    },
+    "sdk/android-arm64/lib/libimagine.a": {
+      "sha256": "60348bed0d211f23c0a3bfebf08250e8f278fd3ed4c9c490c287013eb12bf681",
+      "bytes": 5702938
+    },
+    "sdk/android-arm64/lib/libemuframework.a": {
+      "sha256": "8bae1c7b604d254a87c24f2e945231873a6b4977de26f8ebd6f7e0fc6152cff8",
+      "bytes": 9370472
+    },
+    "sdk/android-arm64/lib/libmednafen_common.a": {
+      "sha256": "1433d03f11836ae90689d4936c255928c3d2318f855db70dfa9885bf4389d09e",
+      "bytes": 3812660
+    }
+  },
+  "offlineLibraries": {
+    "libsnes9x_explus.so": {
+      "sha256": "3adeeabe25117265cdd10138fc9631c58da7deda533ff0272a89d7e64bb77956",
+      "bytes": 3802928
+    },
+    "libmdemu_station.so": {
+      "sha256": "889d18461fc14e765813d7ef197ecfc922786df8f1f961dd82443dd88aecd124",
+      "bytes": 6755552
+    }
+  },
+  "currentOnlineEngineIds": [
+    "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+    "clownmdemu-d43c2708-mp5-81b3daa38fb9"
+  ],
+  "anchors": [
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "void EmuSystemTask::start(Window& win)",
+      "lines": [
+        42
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "[&](SuspendCommand&)",
+      "lines": [
+        76
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "EmuSystemTask::SuspendContext EmuSystemTask::suspend()",
+      "lines": [
+        133
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "bool EmuSystemTask::advanceFrames(FrameParams frameParams)",
+      "lines": [
+        376
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "sys.runFrames({this}, videoPtr, audioPtr, frameInfo.advanced);",
+      "lines": [
+        443
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystemTask.cc",
+      "anchor": "sys.skipForwardFrames({this}, 20)",
+      "lines": [
+        391
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystem.cc",
+      "anchor": "void EmuSystem::runFrames(",
+      "lines": [
+        571
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuSystem.cc",
+      "anchor": "runFrame(taskCtx, nullptr, audio);",
+      "lines": [
+        583
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuApp.cc",
+      "anchor": "void EmuApp::mainInitCommon(",
+      "lines": [
+        314
+      ]
+    },
+    {
+      "file": "EmuFramework/src/EmuApp.cc",
+      "anchor": "void EmuApp::launchSystem(",
+      "lines": [
+        558
+      ]
+    },
+    {
+      "file": "EmuFramework/src/AutosaveManager.cc",
+      "anchor": "bool AutosaveManager::load(",
+      "lines": [
+        56
+      ]
+    },
+    {
+      "file": "EmuFramework/src/AutosaveManager.cc",
+      "anchor": "bool AutosaveManager::save(",
+      "lines": [
+        45
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/Main.cc",
+      "anchor": "void Snes9xSystem::runFrame(",
+      "lines": [
+        310
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/Main.cc",
+      "anchor": "S9xMainLoop();",
+      "lines": [
+        349
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/Main.cc",
+      "anchor": "if(!unfreezeStateFrom(buff))",
+      "lines": [
+        124
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/input.cc",
+      "anchor": "void Snes9xSystem::handleInputAction(",
+      "lines": [
+        36
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/input.cc",
+      "anchor": "S9xSetController(1, CTL_MP5, 1, 2, 3, 4);",
+      "lines": [
+        155
+      ]
+    },
+    {
+      "file": "Snes9x/src/main/AppMeta.cc",
+      "anchor": "const int AppMeta::maxPlayers{5};",
+      "lines": [
+        28
+      ]
+    },
+    {
+      "file": "Snes9x/src/snes9x/snapshot.h",
+      "anchor": "#define SUCCESS",
+      "lines": [
+        18
+      ]
+    },
+    {
+      "file": "Snes9x/src/snes9x/snapshot.h",
+      "anchor": "#define WRONG_FORMAT",
+      "lines": [
+        19
+      ]
+    },
+    {
+      "file": "Snes9x/src/snes9x/snes9x.h",
+      "anchor": "NetPlay = 0;",
+      "lines": [
+        292
+      ]
+    },
+    {
+      "file": "Snes9x/src/snes9x/netplay.cpp",
+      "anchor": "Settings.NetPlay = TRUE;",
+      "lines": [
+        278
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/Main.cc",
+      "anchor": "void MdSystem::runFrame(",
+      "lines": [
+        57
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/Main.cc",
+      "anchor": "state_load(buff.data());",
+      "lines": [
+        105
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/input.cc",
+      "anchor": "void MdSystem::handleInputAction(",
+      "lines": [
+        32
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/input.cc",
+      "anchor": "input.system[0] = SYSTEM_TEAMPLAYER;",
+      "lines": [
+        148
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/input.cc",
+      "anchor": "playerIdxMap[0] = 0;",
+      "lines": [
+        197
+      ]
+    },
+    {
+      "file": "MD.emu/src/main/AppMeta.cc",
+      "anchor": "const int AppMeta::maxPlayers{4};",
+      "lines": [
+        39
+      ]
+    },
+    {
+      "file": "MD.emu/src/genplus-gx/state.cc",
+      "anchor": "memcpy(&inbytes32, buffer, 4);",
+      "lines": [
+        107
+      ]
+    },
+    {
+      "file": "MD.emu/src/genplus-gx/state.cc",
+      "anchor": "memcpy(state.get(), buffer + 4, -inbytes32);",
+      "lines": [
+        125
+      ]
+    },
+    {
+      "file": "MD.emu/src/genplus-gx/state.h",
+      "anchor": "#define load_param(param, size)",
+      "lines": [
+        34
+      ]
+    }
+  ]
+}

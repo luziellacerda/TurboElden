@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-10-11",
+  "artifact": "TurboStations Premium R126",
+  "artifactSha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+  "productionModified": false,
+  "adapterImplemented": false,
+  "normalPsx": {
+    "owner": "LibretroPlayer::run",
+    "core": "PCSX-ReARMed",
+    "version": "r26 ff81ed1",
+    "upstreamCommit": "ff81ed17a15241d2f3730cdd7585b38e172532ca",
+    "upstreamCommitEvidence": "Short revision is embedded in exact packaged retro_get_system_info; local historical provenance records full commit",
+    "ownerSourceLocated": false,
+    "observedInputPorts": [
+      0,
+      1
+    ],
+    "sourceAvailability": {
+      "readOnlyGitSearch": [
+        {
+          "repository": "TurboElden-git",
+          "head": "4878e4d4a31de597f9258cc1614d1c25202d76ae",
+          "ownerNamedPathsInLocalHistory": 0,
+          "uniqueNativeSourceBlobsInLocalHistory": 687,
+          "ownerDefinitionMatchesInThoseBlobs": 0,
+          "nativeHistoryBlobReadErrors": 0
+        },
+        {
+          "repository": "TurboRetroEmu",
+          "head": "89e8e0848a73587e0cfd30fe7535e5dce82303af",
+          "nativeSourcePathsAtHead": 0,
+          "ownerNamedPathsInLocalHistory": 0,
+          "uniqueNativeSourceBlobsInLocalHistory": 0,
+          "ownerDefinitionMatchesInThoseBlobs": 0,
+          "nativeHistoryBlobReadErrors": 0
+        },
+        {
+          "repository": "TurboRetroEmu-funcional",
+          "head": "cd1a7f2dbca5ed09702eab3cd61c587364e34a38",
+          "nativeSourcePathsAtHead": 0,
+          "ownerNamedPathsInLocalHistory": 0,
+          "uniqueNativeSourceBlobsInLocalHistory": 0,
+          "ownerDefinitionMatchesInThoseBlobs": 0,
+          "nativeHistoryBlobReadErrors": 0
+        }
+      ],
+      "priorSearch": {
+        "date": "2026-09-28",
+        "volumes": 9,
+        "archiveCandidates": 441,
+        "archivesRead": 440,
+        "frontendCppLocated": false
+      },
+      "freshDiskSearch": "Scoped native-source filename and declaration searches in existing work directories found no LibretroPlayer/LibretroCore owner definitions",
+      "limits": [
+        "Local Git objects only; no fetch or checkout changes",
+        "Prior wider search had inaccessible system directories and a partial clone with missing objects",
+        "No universal absence claim; paths with unrelated access errors excluded",
+        "Available PCSX core source is not the missing Android LibretroPlayer frontend source"
+      ]
+    },
+    "normalCoreProvenance": {
+      "url": "https://buildbot.libretro.com/nightly/android/latest/arm64-v8a/pcsx_rearmed_libretro_android.so.zip",
+      "archiveBytes": 531728,
+      "archiveSha256": "0aaeaaa185631d28108391ff1a7dc4525d18bcf25cff826fbb2e0da63df31c87",
+      "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+      "historicalUrlMutable": true
+    },
+    "onlineSourceCommit": "c8816799b50388e61cfe237fe2cdbb7d8175f20a",
+    "classification": "same-core-family/different-revision-and-owner"
+  },
+  "normalMame": {
+    "appVersion": "1.41.2",
+    "baseVersion": "0.289",
+    "exactDonorApkSha256": "b2e05497f4c7b8b0d5ac84a4755569050f60a4c9c69c7e219f6783bd9c5bb2ad",
+    "donorCoreMatchesR126": true,
+    "donorJniMatchesR126": true,
+    "officialRepository": "https://github.com/seleuco/MAME4droid-Current",
+    "officialCommit": "9df33ca197df96d8e206740b94fc54be4e379550",
+    "officialBaseRepository": "https://github.com/mamedev/mame",
+    "officialBaseCommit": "f34f02505e32c1993c6a782b6814232cbfc74e36",
+    "baseTag": "mame0289",
+    "reproducibleExactDonorNativeBuildLocated": false,
+    "officialRepositoryIsPortOverlay": true,
+    "androidMkBuildsOnlyJniShim": true,
+    "ndkVersionDeclared": "28.2.13676358",
+    "baseSdkCompile": 37,
+    "protocolVersion": 14,
+    "networkPeersInInspectedImplementation": 2,
+    "assignedNetworkInputPorts": [
+      0,
+      1
+    ],
+    "packetInterface": {
+      "receive": "netplay_t::read_pkt_data",
+      "send": "netplay_t::send_pkt_data"
+    },
+    "realFrameIntegration": "myosd_netplay_input_update; scheduler-boundary deferred state load",
+    "automaticDisconnectOrUnsafeProgress": [
+      {
+        "source": "src/osd/myosd/netplay/myosd_netplay.cpp",
+        "lines": [
+          971,
+          972,
+          975,
+          976
+        ],
+        "condition": "10-second peer-pause network silence",
+        "effect": "has_connection=0 and hangup"
+      },
+      {
+        "source": "src/osd/myosd/netplay/skt_netplay.cpp",
+        "lines": [
+          486,
+          499
+        ],
+        "condition": "send failure beyond 4000 ms",
+        "effect": "has_connection=0"
+      },
+      {
+        "source": "src/osd/myosd/netplay/myosd_netplay.cpp",
+        "lines": [
+          1069,
+          1077
+        ],
+        "condition": "hard rollback stall beyond 1500 iterations",
+        "effect": "breaks stalled wait despite unresolved peer"
+      }
+    ],
+    "exactSourceRebuildClaim": false,
+    "stationV3AdapterReady": false,
+    "sourceFiles": [
+      {
+        "path": "src/osd/myosd/netplay/netplay.h",
+        "bytes": 39277,
+        "sha256": "048290e5bb6d0292f894f108e68ef7b7e79db0f02a95cb4646304a6ba7920b44",
+        "observedRelevantLines": [
+          81,
+          127,
+          130,
+          133,
+          175,
+          176,
+          236,
+          239,
+          312,
+          313,
+          316,
+          318,
+          361,
+          396,
+          397,
+          404,
+          407,
+          485,
+          559,
+          567,
+          568,
+          581,
+          582
+        ]
+      },
+      {
+        "path": "src/osd/myosd/netplay/myosd_netplay.cpp",
+        "bytes": 103302,
+        "sha256": "699f11d02f7b374698389eef7f565663723c5e48055c10a59a6fbe408fe0e794",
+        "observedRelevantLines": [
+          140,
+          257,
+          260,
+          268,
+          270,
+          273,
+          306,
+          358,
+          433,
+          435,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          452,
+          472,
+          473,
+          474,
+          475,
+          485,
+          486,
+          496,
+          544,
+          557,
+          564,
+          580,
+          658,
+          659,
+          661,
+          663,
+          664,
+          666,
+          751,
+          755,
+          756,
+          762,
+          766,
+          790,
+          791,
+          793
+        ]
+      },
+      {
+        "path": "src/osd/myosd/netplay/skt_netplay.cpp",
+        "bytes": 44503,
+        "sha256": "a6fae85a0d5f41d25804f68dd951e788cdf1d1c322d71d073307131d50b356f7",
+        "observedRelevantLines": [
+          8,
+          16,
+          81,
+          82,
+          119,
+          120,
+          123,
+          233,
+          254,
+          269,
+          286,
+          341,
+          370,
+          374,
+          380,
+          386,
+          445,
+          449,
+          470,
+          483,
+          486,
+          499,
+          657,
+          728,
+          741,
+          751
+        ]
+      },
+      {
+        "path": "src/osd/myosd/netplay/myosd_netplay.h",
+        "bytes": 4983,
+        "sha256": "183abdf3e08147150c9240fb3bf800f40c2dea669bf1e642bf22bbacaec2456f",
+        "observedRelevantLines": []
+      },
+      {
+        "path": "android-MAME4droid/app/build.gradle",
+        "bytes": 2205,
+        "sha256": "20eab0f5cff664d22e95fc69da95723529bc2ead4ba48c254981a1f4b1b0a3fc",
+        "observedRelevantLines": [
+          6,
+          8,
+          21,
+          31
+        ]
+      },
+      {
+        "path": "android-MAME4droid/app/src/main/jni/Android.mk",
+        "bytes": 1304,
+        "sha256": "fa5e242f3fe134cf73d71fb2b97cd3cf5a7684823629e709d810736d563aa154",
+        "observedRelevantLines": [
+          22,
+          34
+        ]
+      },
+      {
+        "path": "src/osd/myosd/netplay/netplay.cpp",
+        "bytes": 173233,
+        "sha256": "34816fff9c22d38fae8e7d52bf937f072c033252cd7f7870709cbfb8071f16fb"
+      },
+      {
+        "path": "src/osd/myosd/netplay/skt_netplay.h",
+        "bytes": 3121,
+        "sha256": "a75fc62ec90fffae6a46e985741ae4254843e58d3efb04f2a78ec6dcdef91aea",
+        "observedRelevantLines": [
+          28,
+          34,
+          36
+        ]
+      },
+      {
+        "path": "howtobuild.txt",
+        "bytes": 118,
+        "sha256": "a71206c1f8659be24fc43fb07666ac304c44269ca8ec46a14359bc07c38d2429",
+        "observedRelevantLines": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  "matrix": [
+    {
+      "system": "PlayStation/PSX",
+      "normal": "LibretroPlayer + PCSX-ReARMed ff81ed1",
+      "online": "StationRetroActivity + PCSX-ReARMed c8816799",
+      "classification": "same-core-family/different-revision-and-owner",
+      "normalEngineUsedOnline": false,
+      "maxDescriptorPlayers": 2,
+      "blocker": "Exact frontend execution-loop source/recipe not located"
+    },
+    {
+      "system": "CPS1",
+      "normal": "MAME4droid 1.41.2 / MAME 0.289",
+      "online": "StationRetroActivity + FBNeo 95153da1",
+      "classification": "different-core-family-and-owner",
+      "normalEngineUsedOnline": false,
+      "maxDescriptorPlayers": 2,
+      "blocker": "Actual MAME Station-v3 transport, CPU epoch barrier, recovery and complete core build required"
+    },
+    {
+      "system": "CPS2",
+      "normal": "MAME4droid 1.41.2 / MAME 0.289",
+      "online": "StationRetroActivity + FBNeo 95153da1",
+      "classification": "different-core-family-and-owner",
+      "normalEngineUsedOnline": false,
+      "maxDescriptorPlayers": 2,
+      "blocker": "Actual MAME Station-v3 transport, CPU epoch barrier, recovery and complete core build required"
+    },
+    {
+      "system": "CPS3",
+      "normal": "MAME4droid 1.41.2 / MAME 0.289",
+      "online": "StationRetroActivity + FBNeo 95153da1",
+      "classification": "different-core-family-and-owner",
+      "normalEngineUsedOnline": false,
+      "maxDescriptorPlayers": 2,
+      "blocker": "Actual MAME Station-v3 transport, CPU epoch barrier, recovery and complete core build required"
+    },
+    {
+      "system": "Neo Geo AES/MVS cartridges",
+      "normal": "MAME4droid 1.41.2 / MAME 0.289",
+      "online": "StationRetroActivity + FBNeo 95153da1 for ZIP",
+      "classification": "different-core-family-and-owner",
+      "normalEngineUsedOnline": false,
+      "maxDescriptorPlayers": 2,
+      "blocker": "Actual MAME Station-v3 adapter; ROM-set/driver/BIOS/state compatibility needs new identity"
+    },
+    {
+      "system": "Neo Geo CD",
+      "normal": "MAME4droid 1.41.2 / MAME 0.289",
+      "online": "StationRetroActivity + NeoCD b1e04c73",
+      "classification": "different-core-family-and-owner",
+      "normalEngineUsedOnline": false,
+      "maxDescriptorPlayers": 2,
+      "blocker": "Actual MAME Station-v3 adapter and disc/driver/content identity required"
+    },
+    {
+      "system": "MAME/Arcade",
+      "normal": "MAME4droid 1.41.2 / MAME 0.289",
+      "online": "No generic MAME platform descriptor in packaged engines.json",
+      "classification": "missing-online-descriptor",
+      "normalEngineUsedOnline": false,
+      "maxDescriptorPlayers": null,
+      "blocker": "Driver-by-driver eligibility, actual core bridge and registry/profile needed"
+    }
+  ],
+  "limits": [
+    "Read-only package/ABI inspection and exact public source review",
+    "40 ABI/provenance checks, not gameplay or determinism proof",
+    "No new native adapter, productive binary, device, server, registry or Git mutation",
+    "FBNeo system itself is a separate normal route and is owned by the parallel broader-family audit",
+    "MAME has local multi-controller support but inspected native netplay implementation has two peers; does not prove every driver's multiplayer or savestate support"
+  ]
+}

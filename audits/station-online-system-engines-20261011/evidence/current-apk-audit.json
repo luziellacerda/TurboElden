@@ -1,0 +1,3859 @@
+{
+  "schemaVersion": 1,
+  "recordedUtc": "2026-10-11T07:19:38.018208+00:00",
+  "kind": "read-only-current-apk-system-route-audit",
+  "checks": 51818,
+  "failures": 0,
+  "apkSha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+  "apkBytes": 2233970789,
+  "canonicalSystems": 50,
+  "catalogAliases": 78,
+  "enginesAssetSha256": "d80d8c6c7448488b8e11917cfeb0681d50b48b4dd81266b0182c67bd85f91f48",
+  "classificationCounts": {
+    "no-eligible-online-engine": 35,
+    "real-system-adapter-implemented-physical-pending": 4,
+    "different-core-and-owner": 9,
+    "same-core-family-different-owner": 2
+  },
+  "rows": [
+    {
+      "label": "3ds",
+      "folder": "3ds",
+      "onlinePlatform": "3ds",
+      "aliases": [
+        "3ds"
+      ],
+      "normalEngine": "LibretroPlayer: azahar",
+      "normalCommand": "libretro: core=azahar_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "azahar_libretro.so",
+          "needed": [
+            "liblog.so",
+            "libm.so",
+            "libdl.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libazahar_libretro_android.so",
+          "bytes": 38142088,
+          "sha256": "62ca4d7f75951b4352eb4429f174c343d54cbfdb725f4d3c6fb5cd5e7dfccfae",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Arcade",
+      "folder": "arcade",
+      "onlinePlatform": "arcade",
+      "aliases": [
+        "Arcade",
+        "arcade"
+      ],
+      "normalEngine": "MAME4droid Current",
+      "normalCommand": "libretro: core=mame4droid_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.MameEntryActivity",
+          "dexEntry": "classes30.dex",
+          "originalProcess": ":mame"
+        },
+        {
+          "class": "com.seleuco.mame4droid.MAME4droid",
+          "dexEntry": "classes29.dex",
+          "originalProcess": ":mame"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libMAME4droid.so",
+          "needed": [
+            "libc.so",
+            "libdl.so",
+            "libm.so",
+            "libandroid.so",
+            "liblog.so",
+            "libEGL.so",
+            "libGLESv1_CM.so",
+            "libGLESv3.so",
+            "libOpenSLES.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libMAME4droid.so",
+          "bytes": 366992944,
+          "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmame4droid-jni.so",
+          "needed": [
+            "libdl.so",
+            "liblog.so",
+            "libc.so",
+            "libm.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+          "bytes": 32856,
+          "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Atomiswave",
+      "folder": "atomiswave",
+      "onlinePlatform": "atomiswave",
+      "aliases": [
+        "Atomiswave",
+        "atomiswave"
+      ],
+      "normalEngine": "Flycast Android",
+      "normalCommand": "libretro: core=flycast_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "com.flycast.emulator.NativeGLActivity",
+          "dexEntry": "classes13.dex",
+          "originalProcess": ":flycast"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libflycast.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libOpenSLES.so",
+            "libz.so",
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libflycast.so",
+          "bytes": 18610480,
+          "sha256": "31b628b3a53f08a4c489417ee7def9cd064c086431c0a7e94189198eff6504e0",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libturbo_flycast.so",
+          "needed": [
+            "libdl.so",
+            "libc.so",
+            "liblog.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libturbo_flycast.so",
+          "bytes": 15088,
+          "sha256": "bcd15ed32df785cdc6f5ee8afada182cb82a4e961fead8a2e26d17dbeb231d6c",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Dreamcast",
+      "folder": "dreamcast",
+      "onlinePlatform": "dreamcast",
+      "aliases": [
+        "Dreamcast",
+        "dreamcast"
+      ],
+      "normalEngine": "Flycast Android",
+      "normalCommand": "libretro: core=flycast_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "com.flycast.emulator.NativeGLActivity",
+          "dexEntry": "classes13.dex",
+          "originalProcess": ":flycast"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libflycast.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libOpenSLES.so",
+            "libz.so",
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libflycast.so",
+          "bytes": 18610480,
+          "sha256": "31b628b3a53f08a4c489417ee7def9cd064c086431c0a7e94189198eff6504e0",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libturbo_flycast.so",
+          "needed": [
+            "libdl.so",
+            "libc.so",
+            "liblog.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libturbo_flycast.so",
+          "bytes": 15088,
+          "sha256": "bcd15ed32df785cdc6f5ee8afada182cb82a4e961fead8a2e26d17dbeb231d6c",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "GameCube",
+      "folder": "gamecube",
+      "onlinePlatform": "gamecube",
+      "aliases": [
+        "GameCube",
+        "gamecube"
+      ],
+      "normalEngine": "Dolphin Android",
+      "normalCommand": "libretro: core=dolphin_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.DolphinEntryActivity",
+          "dexEntry": "classes12.dex",
+          "originalProcess": ":dolphin"
+        },
+        {
+          "class": "org.dolphinemu.dolphinemu.activities.EmulationActivity",
+          "dexEntry": "classes10.dex",
+          "originalProcess": ":dolphin"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libdolp.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libOpenSLES.so",
+            "libEGL.so",
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libdolp.so",
+          "bytes": 15333048,
+          "sha256": "a436ab9d34e3e5895e3a5459cc140ce1832299fc492d47f04e7d6ba07d248c1d",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "dolphin-5102a033-gamecube-v3-ca43a338d799",
+        "backend": "dolphin-station-v1",
+        "library": "libstation_dolphin_online.so",
+        "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+        "runtimeSha256": "ca43a338d7992e2d9ef298387822c860945fbb16dc11dff03ee5b1d1fcd27656",
+        "anchor": "StationDolphinActivity"
+      },
+      "classification": "real-system-adapter-implemented-physical-pending",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Gameboy",
+      "folder": "gameboy",
+      "onlinePlatform": "gameboy",
+      "aliases": [
+        "Gameboy",
+        "gb"
+      ],
+      "normalEngine": "LibretroPlayer: gambatte",
+      "normalCommand": "libretro: core=gambatte_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libgambatte_libretro_android.so",
+          "bytes": 3341912,
+          "sha256": "fbd8fb0a85ff019b178a7c2fa37039cc437df2a9a9a2f459e099605f96ce1b78",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Gameboy Color",
+      "folder": "gameboy-color",
+      "onlinePlatform": "gameboy-color",
+      "aliases": [
+        "Gameboy Color",
+        "gbc"
+      ],
+      "normalEngine": "LibretroPlayer: gambatte",
+      "normalCommand": "libretro: core=gambatte_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libgambatte_libretro_android.so",
+          "bytes": 3341912,
+          "sha256": "fbd8fb0a85ff019b178a7c2fa37039cc437df2a9a9a2f459e099605f96ce1b78",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Gba",
+      "folder": "gba",
+      "onlinePlatform": "gba",
+      "aliases": [
+        "Gba",
+        "gba"
+      ],
+      "normalEngine": "LibretroPlayer: mgba",
+      "normalCommand": "libretro: core=mgba_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "mgba_libretro.so",
+          "needed": [
+            "libm.so",
+            "libdl.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmgba_libretro_android.so",
+          "bytes": 2472240,
+          "sha256": "b5a6ed40ede735ea7f1d56916f4ceed8c2aabe4d481fe3383ae2b5e5485b6545",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Master System ",
+      "folder": "master-system",
+      "onlinePlatform": "master-system",
+      "aliases": [
+        "Master System ",
+        "mastersystem"
+      ],
+      "normalEngine": "LibretroPlayer: genesis_plus_gx",
+      "normalCommand": "libretro: core=genesis_plus_gx_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libgenesis_plus_gx_libretro_android.so",
+          "bytes": 11073912,
+          "sha256": "ef8ca1df538d5904707edd083d19df1927da767f1be5425624f61c527bc2b71a",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "MegaDrive",
+      "folder": "megadrive",
+      "onlinePlatform": "megadrive",
+      "aliases": [
+        "MegaDrive",
+        "megadrive"
+      ],
+      "normalEngine": "MD.emu EX+",
+      "normalCommand": "libretro: core=mdemu_station.so",
+      "normalActivityChain": [
+        {
+          "class": "com.mdimagn.BaseActivity",
+          "dexEntry": "classes33.dex",
+          "originalProcess": ":megadrive"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmain.so",
+          "needed": [
+            "libm.so",
+            "libEGL.so",
+            "libandroid.so",
+            "libOpenSLES.so",
+            "libGLESv2.so",
+            "libz.so",
+            "libjnigraphics.so",
+            "libdl.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmdemu_station.so",
+          "bytes": 6755552,
+          "sha256": "889d18461fc14e765813d7ef197ecfc922786df8f1f961dd82443dd88aecd124",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_clownmdemu.so",
+        "coreSha256": "109b62ac11b2f59572de0666bcb02b3701676896b91cb32529bbe5c5032b6b69",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "MegaDrive - BR",
+      "folder": "megadrive--br",
+      "onlinePlatform": "megadrive",
+      "aliases": [
+        "MegaDrive - BR",
+        "megadrivebr"
+      ],
+      "normalEngine": "MD.emu EX+",
+      "normalCommand": "libretro: core=mdemu_station.so",
+      "normalActivityChain": [
+        {
+          "class": "com.mdimagn.BaseActivity",
+          "dexEntry": "classes33.dex",
+          "originalProcess": ":megadrive"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmain.so",
+          "needed": [
+            "libm.so",
+            "libEGL.so",
+            "libandroid.so",
+            "libOpenSLES.so",
+            "libGLESv2.so",
+            "libz.so",
+            "libjnigraphics.so",
+            "libdl.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmdemu_station.so",
+          "bytes": 6755552,
+          "sha256": "889d18461fc14e765813d7ef197ecfc922786df8f1f961dd82443dd88aecd124",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_clownmdemu.so",
+        "coreSha256": "109b62ac11b2f59572de0666bcb02b3701676896b91cb32529bbe5c5032b6b69",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Neo Geo",
+      "folder": "neo-geo",
+      "onlinePlatform": "neogeo",
+      "aliases": [
+        "Neo Geo",
+        "neogeo"
+      ],
+      "normalEngine": "MAME4droid Current",
+      "normalCommand": "libretro: core=mame4droid_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.MameEntryActivity",
+          "dexEntry": "classes30.dex",
+          "originalProcess": ":mame"
+        },
+        {
+          "class": "com.seleuco.mame4droid.MAME4droid",
+          "dexEntry": "classes29.dex",
+          "originalProcess": ":mame"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libMAME4droid.so",
+          "needed": [
+            "libc.so",
+            "libdl.so",
+            "libm.so",
+            "libandroid.so",
+            "liblog.so",
+            "libEGL.so",
+            "libGLESv1_CM.so",
+            "libGLESv3.so",
+            "libOpenSLES.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libMAME4droid.so",
+          "bytes": 366992944,
+          "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmame4droid-jni.so",
+          "needed": [
+            "libdl.so",
+            "liblog.so",
+            "libc.so",
+            "libm.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+          "bytes": 32856,
+          "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "fbneo-95153da1-neogeo-v3-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_online_fbneo.so",
+        "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Neo Geo CD",
+      "folder": "neo-geo-cd",
+      "onlinePlatform": "neogeocd",
+      "aliases": [
+        "Neo Geo CD",
+        "neogeocd"
+      ],
+      "normalEngine": "MAME4droid Current",
+      "normalCommand": "libretro: core=mame4droid_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.MameEntryActivity",
+          "dexEntry": "classes30.dex",
+          "originalProcess": ":mame"
+        },
+        {
+          "class": "com.seleuco.mame4droid.MAME4droid",
+          "dexEntry": "classes29.dex",
+          "originalProcess": ":mame"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libMAME4droid.so",
+          "needed": [
+            "libc.so",
+            "libdl.so",
+            "libm.so",
+            "libandroid.so",
+            "liblog.so",
+            "libEGL.so",
+            "libGLESv1_CM.so",
+            "libGLESv3.so",
+            "libOpenSLES.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libMAME4droid.so",
+          "bytes": 366992944,
+          "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmame4droid-jni.so",
+          "needed": [
+            "libdl.so",
+            "liblog.so",
+            "libc.so",
+            "libm.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+          "bytes": 32856,
+          "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "neocd-b1e04c73-aslr1-v3-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_online_neocd.so",
+        "coreSha256": "78a35bc9a9435238d74125e77ae8f8d249ba59e90f07d43f43c84ad5ddc68870",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Nintendinho",
+      "folder": "nintendinho",
+      "onlinePlatform": "nintendinho",
+      "aliases": [
+        "Nintendinho",
+        "nes"
+      ],
+      "normalEngine": "LibretroPlayer: fceumm",
+      "normalCommand": "libretro: core=fceumm_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libfceumm_libretro_android.so",
+          "bytes": 2878064,
+          "sha256": "38659530f800032ed6ed46ea0cdf167a38326e0ecd9afa09a3c08130020d85af",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Nintendo 64",
+      "folder": "nintendo-64",
+      "onlinePlatform": "n64",
+      "aliases": [
+        "Nintendo 64",
+        "n64"
+      ],
+      "normalEngine": "Mupen64Plus AE",
+      "normalCommand": "libretro: core=mupen64plus_ae_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.N64EntryActivity",
+          "dexEntry": "classes38.dex",
+          "originalProcess": ":n64"
+        },
+        {
+          "class": "paulscode.android.mupen64plusae.game.GameActivity",
+          "dexEntry": "classes36.dex",
+          "originalProcess": ":n64core"
+        },
+        {
+          "class": "paulscode.android.mupen64plusae.jni.CoreService",
+          "dexEntry": "classes36.dex",
+          "originalProcess": ":n64core"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            4096,
+            4096,
+            4096
+          ],
+          "soname": "libmupen64plus-core.so",
+          "needed": [
+            "libSDL2_net.so",
+            "libz.so",
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmupen64plus-core.so",
+          "bytes": 506280,
+          "sha256": "390d204cf75cb36198670b058820db4313b6ab6d9c0302bb66b3401654cddea0",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "mupen64plus-ae-33bf7021-n64-v3-1aafea201355",
+        "backend": "mupen64plus-ae-station-v1",
+        "library": "libstation_mupen64plus_core.so",
+        "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+        "runtimeSha256": "1aafea201355b58909ada9958bbe5bb5407e7ace7eb3848ade7ba04d235becac",
+        "anchor": "StationN64Activity"
+      },
+      "classification": "real-system-adapter-implemented-physical-pending",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Nintendo 64 - BR",
+      "folder": "nintendo-64--br",
+      "onlinePlatform": "n64",
+      "aliases": [
+        "Nintendo 64 - BR",
+        "n64br"
+      ],
+      "normalEngine": "Mupen64Plus AE",
+      "normalCommand": "libretro: core=mupen64plus_ae_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.N64EntryActivity",
+          "dexEntry": "classes38.dex",
+          "originalProcess": ":n64"
+        },
+        {
+          "class": "paulscode.android.mupen64plusae.game.GameActivity",
+          "dexEntry": "classes36.dex",
+          "originalProcess": ":n64core"
+        },
+        {
+          "class": "paulscode.android.mupen64plusae.jni.CoreService",
+          "dexEntry": "classes36.dex",
+          "originalProcess": ":n64core"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            4096,
+            4096,
+            4096
+          ],
+          "soname": "libmupen64plus-core.so",
+          "needed": [
+            "libSDL2_net.so",
+            "libz.so",
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmupen64plus-core.so",
+          "bytes": 506280,
+          "sha256": "390d204cf75cb36198670b058820db4313b6ab6d9c0302bb66b3401654cddea0",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "mupen64plus-ae-33bf7021-n64-v3-1aafea201355",
+        "backend": "mupen64plus-ae-station-v1",
+        "library": "libstation_mupen64plus_core.so",
+        "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+        "runtimeSha256": "1aafea201355b58909ada9958bbe5bb5407e7ace7eb3848ade7ba04d235becac",
+        "anchor": "StationN64Activity"
+      },
+      "classification": "real-system-adapter-implemented-physical-pending",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Nintendo DS",
+      "folder": "nintendo-ds",
+      "onlinePlatform": "nintendo-ds",
+      "aliases": [
+        "Nintendo DS",
+        "nds"
+      ],
+      "normalEngine": "LibretroPlayer: melonds",
+      "normalCommand": "libretro: core=melonds_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "entry": "lib/arm64-v8a/libmelonds_libretro_android.so",
+          "present": false
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Odyssey 2",
+      "folder": "odyssey-2",
+      "onlinePlatform": "odyssey-2",
+      "aliases": [
+        "Odyssey 2",
+        "o2em"
+      ],
+      "normalEngine": "LibretroPlayer: o2em",
+      "normalCommand": "libretro: core=o2em_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "entry": "lib/arm64-v8a/libo2em_libretro_android.so",
+          "present": false
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "PSP",
+      "folder": "psp",
+      "onlinePlatform": "psp",
+      "aliases": [
+        "PSP",
+        "psp"
+      ],
+      "normalEngine": "PPSSPP Android",
+      "normalCommand": "libretro: core=ppsspp_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.ppsspp.ppsspp.PpssppActivity",
+          "dexEntry": "classes17.dex",
+          "originalProcess": ":psp"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libppsspp_jni.so",
+          "needed": [
+            "libandroid.so",
+            "libGLESv2.so",
+            "libEGL.so",
+            "libdl.so",
+            "liblog.so",
+            "libOpenSLES.so",
+            "libm.so",
+            "libpsc_shared.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libppsspp_jni.so",
+          "bytes": 24942512,
+          "sha256": "cd699e1733dfeb1de099f21d8560c09d9919b48a6fae6dc79cc956e1bea6dd28",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Pc Engine",
+      "folder": "pc-engine",
+      "onlinePlatform": "pc-engine",
+      "aliases": [
+        "Pc Engine",
+        "pcengine"
+      ],
+      "normalEngine": "LibretroPlayer: mednafen_pce_fast",
+      "normalCommand": "libretro: core=mednafen_pce_fast_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmednafen_pce_fast_libretro_android.so",
+          "bytes": 3214168,
+          "sha256": "ffc291edc40220dd2269091cffd45cc8e7fe93ad3d2bc8e35bbeda20a7686e4d",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Pc Engine cd",
+      "folder": "pc-engine-cd",
+      "onlinePlatform": "pc-engine-cd",
+      "aliases": [
+        "Pc Engine cd",
+        "pcenginecd"
+      ],
+      "normalEngine": "LibretroPlayer: mednafen_pce",
+      "normalCommand": "libretro: core=mednafen_pce_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmednafen_pce_libretro_android.so",
+          "bytes": 4301952,
+          "sha256": "58f773d7c3d9cd4bc678151fd91718381699832958a16e77eb0412f2a5d68e18",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Playstation 1",
+      "folder": "psx",
+      "onlinePlatform": "psx",
+      "aliases": [
+        "Playstation 1",
+        "psx"
+      ],
+      "normalEngine": "LibretroPlayer: pcsx_rearmed",
+      "normalCommand": "libretro: core=pcsx_rearmed_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libz.so",
+            "liblog.so",
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libpcsx_rearmed_libretro_android.so",
+          "bytes": 1582960,
+          "sha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "pcsx-c8816799-psx-v3-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_online_pcsx.so",
+        "coreSha256": "4de0afbd3bb113a4b9927b5b250860194b485f278d1dced81501dc6555fa18a8",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "same-core-family-different-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Playstation 2",
+      "folder": "ps2",
+      "onlinePlatform": "ps2",
+      "aliases": [
+        "Playstation 2",
+        "ps2"
+      ],
+      "normalEngine": "ARMSX2 Android",
+      "normalCommand": "libretro: core=armsx2_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "com.armsx2.Main",
+          "dexEntry": "classes15.dex",
+          "originalProcess": ":ps2"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            65536,
+            16384,
+            16384
+          ],
+          "soname": "libemucore_16k.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libGLESv1_CM.so",
+            "libGLESv2.so",
+            "liblibrashader_capi.so",
+            "libdl.so",
+            "libOpenSLES.so",
+            "libz.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libemucore_16k.so",
+          "bytes": 24625560,
+          "sha256": "1dd6c1068517101c598b5e398fb36b93051737f3671ed921bef3ed7a09a1faac",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            65536,
+            16384,
+            16384
+          ],
+          "soname": "libemucore_4k.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libGLESv1_CM.so",
+            "libGLESv2.so",
+            "liblibrashader_capi.so",
+            "libdl.so",
+            "libOpenSLES.so",
+            "libz.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libemucore_4k.so",
+          "bytes": 24626456,
+          "sha256": "421a122c64cf7aa46cff8f7fa5e3addfd32caa15674610ee5c2d37ae6265a7f6",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Playstation 2 - BR",
+      "folder": "ps2br",
+      "onlinePlatform": "ps2",
+      "aliases": [
+        "Playstation 2 - BR",
+        "ps2br"
+      ],
+      "normalEngine": "ARMSX2 Android",
+      "normalCommand": "libretro: core=armsx2_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "com.armsx2.Main",
+          "dexEntry": "classes15.dex",
+          "originalProcess": ":ps2"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            65536,
+            16384,
+            16384
+          ],
+          "soname": "libemucore_16k.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libGLESv1_CM.so",
+            "libGLESv2.so",
+            "liblibrashader_capi.so",
+            "libdl.so",
+            "libOpenSLES.so",
+            "libz.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libemucore_16k.so",
+          "bytes": 24625560,
+          "sha256": "1dd6c1068517101c598b5e398fb36b93051737f3671ed921bef3ed7a09a1faac",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            65536,
+            16384,
+            16384
+          ],
+          "soname": "libemucore_4k.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libGLESv1_CM.so",
+            "libGLESv2.so",
+            "liblibrashader_capi.so",
+            "libdl.so",
+            "libOpenSLES.so",
+            "libz.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libemucore_4k.so",
+          "bytes": 24626456,
+          "sha256": "421a122c64cf7aa46cff8f7fa5e3addfd32caa15674610ee5c2d37ae6265a7f6",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Psp - BR",
+      "folder": "psp",
+      "onlinePlatform": "psp",
+      "aliases": [
+        "Psp - BR",
+        "pspbr"
+      ],
+      "normalEngine": "PPSSPP Android",
+      "normalCommand": "libretro: core=ppsspp_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.ppsspp.ppsspp.PpssppActivity",
+          "dexEntry": "classes17.dex",
+          "originalProcess": ":psp"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libppsspp_jni.so",
+          "needed": [
+            "libandroid.so",
+            "libGLESv2.so",
+            "libEGL.so",
+            "libdl.so",
+            "liblog.so",
+            "libOpenSLES.so",
+            "libm.so",
+            "libpsc_shared.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libppsspp_jni.so",
+          "bytes": 24942512,
+          "sha256": "cd699e1733dfeb1de099f21d8560c09d9919b48a6fae6dc79cc956e1bea6dd28",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Psvita",
+      "folder": "psvita",
+      "onlinePlatform": "psvita",
+      "aliases": [
+        "Psvita",
+        "psvita"
+      ],
+      "normalEngine": "Vita3K Android",
+      "normalCommand": "libretro: core=vita3k_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.VitaEntryActivity",
+          "dexEntry": "classes24.dex",
+          "originalProcess": ":psvita"
+        },
+        {
+          "class": "org.vita3k.emulator.Emulator",
+          "dexEntry": "classes23.dex",
+          "originalProcess": ":psvita"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libVita3K.so",
+          "needed": [
+            "libandroid.so",
+            "libm.so",
+            "libOpenSLES.so",
+            "libdl.so",
+            "liblog.so",
+            "libGLESv1_CM.so",
+            "libGLESv2.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libVita3K.so",
+          "bytes": 28034048,
+          "sha256": "a133ff7e5397ae09d863e9583c37a5070024f0bc226630ae4a1fc40e77fed8db",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Super Nintendo",
+      "folder": "super-nintendo",
+      "onlinePlatform": "snes",
+      "aliases": [
+        "Super Nintendo",
+        "snes"
+      ],
+      "normalEngine": "Snes9x EX+",
+      "normalCommand": "libretro: core=snes9x_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "com.imagine.BaseActivity",
+          "dexEntry": "classes31.dex",
+          "originalProcess": ":snes"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmain.so",
+          "needed": [
+            "libEGL.so",
+            "libandroid.so",
+            "libOpenSLES.so",
+            "libGLESv2.so",
+            "libz.so",
+            "libjnigraphics.so",
+            "libm.so",
+            "libdl.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libsnes9x_explus.so",
+          "bytes": 3802928,
+          "sha256": "3adeeabe25117265cdd10138fc9631c58da7deda533ff0272a89d7e64bb77956",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_bsnes.so",
+        "coreSha256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Super Nintendo - BR",
+      "folder": "super-nintendo--br",
+      "onlinePlatform": "snes",
+      "aliases": [
+        "Super Nintendo - BR",
+        "snesbr"
+      ],
+      "normalEngine": "Snes9x EX+",
+      "normalCommand": "libretro: core=snes9x_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "com.imagine.BaseActivity",
+          "dexEntry": "classes31.dex",
+          "originalProcess": ":snes"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmain.so",
+          "needed": [
+            "libEGL.so",
+            "libandroid.so",
+            "libOpenSLES.so",
+            "libGLESv2.so",
+            "libz.so",
+            "libjnigraphics.so",
+            "libm.so",
+            "libdl.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libsnes9x_explus.so",
+          "bytes": 3802928,
+          "sha256": "3adeeabe25117265cdd10138fc9631c58da7deda533ff0272a89d7e64bb77956",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_bsnes.so",
+        "coreSha256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "Switch",
+      "folder": "switch",
+      "onlinePlatform": "switch",
+      "aliases": [
+        "Switch",
+        "switch"
+      ],
+      "normalEngine": "Yuzu Android (unchanged)",
+      "normalCommand": "android: package=org.turboramastation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1",
+      "normalActivityChain": [
+        {
+          "class": "org.yuzu.yuzu_emu.bootstrap.BootstrapActivity",
+          "dexEntry": "classes2.dex",
+          "originalProcess": "main (applicationId)"
+        },
+        {
+          "class": "org.yuzu.yuzu_emu.activities.EmulationActivity",
+          "dexEntry": "classes.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libyuzu-android.so",
+          "needed": [
+            "libandroid.so",
+            "libcamera2ndk.so",
+            "libEGL.so",
+            "libjnigraphics.so",
+            "liblog.so",
+            "libm.so",
+            "libOpenSLES.so",
+            "libdl.so",
+            "libmediandk.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libyuzu-android.so",
+          "bytes": 35518648,
+          "sha256": "c82b35d81aa4b9521a64bf79e7d617fb418df5e9b728b5b228b4860e55d1a72b",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "atari2600",
+      "folder": "atari2600",
+      "onlinePlatform": "atari2600",
+      "aliases": [
+        "atari2600"
+      ],
+      "normalEngine": "LibretroPlayer: stella",
+      "normalCommand": "libretro: core=stella_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "entry": "lib/arm64-v8a/libstella_libretro_android.so",
+          "present": false
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "atari7800",
+      "folder": "atari7800",
+      "onlinePlatform": "atari7800",
+      "aliases": [
+        "atari7800"
+      ],
+      "normalEngine": "LibretroPlayer: prosystem",
+      "normalCommand": "libretro: core=prosystem_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "entry": "lib/arm64-v8a/libprosystem_libretro_android.so",
+          "present": false
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "colecovision",
+      "folder": "colecovision",
+      "onlinePlatform": "colecovision",
+      "aliases": [
+        "colecovision"
+      ],
+      "normalEngine": "LibretroPlayer: bluemsx",
+      "normalCommand": "libretro: core=bluemsx_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "entry": "lib/arm64-v8a/libbluemsx_libretro_android.so",
+          "present": false
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "cps1",
+      "folder": "cps1",
+      "onlinePlatform": "cps1",
+      "aliases": [
+        "cps1"
+      ],
+      "normalEngine": "MAME4droid Current",
+      "normalCommand": "libretro: core=mame4droid_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.MameEntryActivity",
+          "dexEntry": "classes30.dex",
+          "originalProcess": ":mame"
+        },
+        {
+          "class": "com.seleuco.mame4droid.MAME4droid",
+          "dexEntry": "classes29.dex",
+          "originalProcess": ":mame"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libMAME4droid.so",
+          "needed": [
+            "libc.so",
+            "libdl.so",
+            "libm.so",
+            "libandroid.so",
+            "liblog.so",
+            "libEGL.so",
+            "libGLESv1_CM.so",
+            "libGLESv3.so",
+            "libOpenSLES.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libMAME4droid.so",
+          "bytes": 366992944,
+          "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmame4droid-jni.so",
+          "needed": [
+            "libdl.so",
+            "liblog.so",
+            "libc.so",
+            "libm.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+          "bytes": 32856,
+          "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "fbneo-95153da1-cps1-v3-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_online_fbneo.so",
+        "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "cps2",
+      "folder": "cps2",
+      "onlinePlatform": "cps2",
+      "aliases": [
+        "cps2"
+      ],
+      "normalEngine": "MAME4droid Current",
+      "normalCommand": "libretro: core=mame4droid_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.MameEntryActivity",
+          "dexEntry": "classes30.dex",
+          "originalProcess": ":mame"
+        },
+        {
+          "class": "com.seleuco.mame4droid.MAME4droid",
+          "dexEntry": "classes29.dex",
+          "originalProcess": ":mame"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libMAME4droid.so",
+          "needed": [
+            "libc.so",
+            "libdl.so",
+            "libm.so",
+            "libandroid.so",
+            "liblog.so",
+            "libEGL.so",
+            "libGLESv1_CM.so",
+            "libGLESv3.so",
+            "libOpenSLES.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libMAME4droid.so",
+          "bytes": 366992944,
+          "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmame4droid-jni.so",
+          "needed": [
+            "libdl.so",
+            "liblog.so",
+            "libc.so",
+            "libm.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+          "bytes": 32856,
+          "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "fbneo-95153da1-cps2-v3-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_online_fbneo.so",
+        "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "cps3",
+      "folder": "cps3",
+      "onlinePlatform": "cps3",
+      "aliases": [
+        "cps3"
+      ],
+      "normalEngine": "MAME4droid Current",
+      "normalCommand": "libretro: core=mame4droid_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.MameEntryActivity",
+          "dexEntry": "classes30.dex",
+          "originalProcess": ":mame"
+        },
+        {
+          "class": "com.seleuco.mame4droid.MAME4droid",
+          "dexEntry": "classes29.dex",
+          "originalProcess": ":mame"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libMAME4droid.so",
+          "needed": [
+            "libc.so",
+            "libdl.so",
+            "libm.so",
+            "libandroid.so",
+            "liblog.so",
+            "libEGL.so",
+            "libGLESv1_CM.so",
+            "libGLESv3.so",
+            "libOpenSLES.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libMAME4droid.so",
+          "bytes": 366992944,
+          "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmame4droid-jni.so",
+          "needed": [
+            "libdl.so",
+            "liblog.so",
+            "libc.so",
+            "libm.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+          "bytes": 32856,
+          "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "fbneo-95153da1-cps3-v3-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_online_fbneo.so",
+        "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "different-core-and-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "fbneo",
+      "folder": "fbneo",
+      "onlinePlatform": "fbneo",
+      "aliases": [
+        "fbneo"
+      ],
+      "normalEngine": "LibretroPlayer: fbneo",
+      "normalCommand": "libretro: core=fbneo_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "entry": "lib/arm64-v8a/libfbneo_libretro_android.so",
+          "present": false
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "fbneo-95153da1-fbneo-v3-81b3daa38fb9",
+        "backend": "retroarch",
+        "library": "libstation_online_fbneo.so",
+        "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+        "runtimeSha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+        "anchor": "StationRetroActivity"
+      },
+      "classification": "same-core-family-different-owner",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "fds",
+      "folder": "fds",
+      "onlinePlatform": "fds",
+      "aliases": [
+        "fds"
+      ],
+      "normalEngine": "LibretroPlayer: fceumm",
+      "normalCommand": "libretro: core=fceumm_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libfceumm_libretro_android.so",
+          "bytes": 2878064,
+          "sha256": "38659530f800032ed6ed46ea0cdf167a38326e0ecd9afa09a3c08130020d85af",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "gameandwatch",
+      "folder": "gameandwatch",
+      "onlinePlatform": "gameandwatch",
+      "aliases": [
+        "gameandwatch"
+      ],
+      "normalEngine": "LibretroPlayer: gw",
+      "normalCommand": "libretro: core=gw_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "entry": "lib/arm64-v8a/libgw_libretro_android.so",
+          "present": false
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "gamegear",
+      "folder": "gamegear",
+      "onlinePlatform": "gamegear",
+      "aliases": [
+        "gamegear"
+      ],
+      "normalEngine": "LibretroPlayer: genesis_plus_gx",
+      "normalCommand": "libretro: core=genesis_plus_gx_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libgenesis_plus_gx_libretro_android.so",
+          "bytes": 11073912,
+          "sha256": "ef8ca1df538d5904707edd083d19df1927da767f1be5425624f61c527bc2b71a",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "jaguar",
+      "folder": "jaguar",
+      "onlinePlatform": "jaguar",
+      "aliases": [
+        "jaguar"
+      ],
+      "normalEngine": "LibretroPlayer: virtualjaguar",
+      "normalCommand": "libretro: core=virtualjaguar_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "entry": "lib/arm64-v8a/libvirtualjaguar_libretro_android.so",
+          "present": false
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "mame",
+      "folder": "mame",
+      "onlinePlatform": "mame",
+      "aliases": [
+        "mame"
+      ],
+      "normalEngine": "MAME4droid Current",
+      "normalCommand": "libretro: core=mame4droid_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.MameEntryActivity",
+          "dexEntry": "classes30.dex",
+          "originalProcess": ":mame"
+        },
+        {
+          "class": "com.seleuco.mame4droid.MAME4droid",
+          "dexEntry": "classes29.dex",
+          "originalProcess": ":mame"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libMAME4droid.so",
+          "needed": [
+            "libc.so",
+            "libdl.so",
+            "libm.so",
+            "libandroid.so",
+            "liblog.so",
+            "libEGL.so",
+            "libGLESv1_CM.so",
+            "libGLESv3.so",
+            "libOpenSLES.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libMAME4droid.so",
+          "bytes": 366992944,
+          "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libmame4droid-jni.so",
+          "needed": [
+            "libdl.so",
+            "liblog.so",
+            "libc.so",
+            "libm.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+          "bytes": 32856,
+          "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "naomi",
+      "folder": "naomi",
+      "onlinePlatform": "naomi",
+      "aliases": [
+        "naomi"
+      ],
+      "normalEngine": "Flycast Android",
+      "normalCommand": "libretro: core=flycast_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "com.flycast.emulator.NativeGLActivity",
+          "dexEntry": "classes13.dex",
+          "originalProcess": ":flycast"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libflycast.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libOpenSLES.so",
+            "libz.so",
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libflycast.so",
+          "bytes": 18610480,
+          "sha256": "31b628b3a53f08a4c489417ee7def9cd064c086431c0a7e94189198eff6504e0",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libturbo_flycast.so",
+          "needed": [
+            "libdl.so",
+            "libc.so",
+            "liblog.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libturbo_flycast.so",
+          "bytes": 15088,
+          "sha256": "bcd15ed32df785cdc6f5ee8afada182cb82a4e961fead8a2e26d17dbeb231d6c",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "naomi2",
+      "folder": "naomi2",
+      "onlinePlatform": "naomi2",
+      "aliases": [
+        "naomi2"
+      ],
+      "normalEngine": "Flycast Android",
+      "normalCommand": "libretro: core=flycast_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "com.flycast.emulator.NativeGLActivity",
+          "dexEntry": "classes13.dex",
+          "originalProcess": ":flycast"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libflycast.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libOpenSLES.so",
+            "libz.so",
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libflycast.so",
+          "bytes": 18610480,
+          "sha256": "31b628b3a53f08a4c489417ee7def9cd064c086431c0a7e94189198eff6504e0",
+          "unresolvedNeeded": []
+        },
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libturbo_flycast.so",
+          "needed": [
+            "libdl.so",
+            "libc.so",
+            "liblog.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libturbo_flycast.so",
+          "bytes": 15088,
+          "sha256": "bcd15ed32df785cdc6f5ee8afada182cb82a4e961fead8a2e26d17dbeb231d6c",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "saturn",
+      "folder": "saturn",
+      "onlinePlatform": "saturn",
+      "aliases": [
+        "saturn"
+      ],
+      "normalEngine": "Saturn integrado",
+      "normalCommand": "libretro: core=yabasanshiro_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.SaturnActivity",
+          "dexEntry": "classes25.dex",
+          "originalProcess": ":saturn"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libturbo_saturn.so",
+          "needed": [
+            "liblog.so",
+            "libjnigraphics.so",
+            "libOpenSLES.so",
+            "libandroid.so",
+            "libGLESv3.so",
+            "libEGL.so",
+            "libz.so",
+            "libm.so",
+            "libdl.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libturbo_saturn.so",
+          "bytes": 2632920,
+          "sha256": "8455e15daaed8b0f8d788b42727a5026df25578bb92b205542246685784064fe",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "sega32x",
+      "folder": "sega32x",
+      "onlinePlatform": "sega32x",
+      "aliases": [
+        "sega32x"
+      ],
+      "normalEngine": "LibretroPlayer: picodrive",
+      "normalCommand": "libretro: core=picodrive_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "liblog.so",
+            "libz.so",
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libpicodrive_libretro_android.so",
+          "bytes": 1621480,
+          "sha256": "92d28b94fd9381a9dea670e57d58a0f3252a99d0ffde8d310add41f81f90a4fd",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "supergrafx",
+      "folder": "supergrafx",
+      "onlinePlatform": "supergrafx",
+      "aliases": [
+        "supergrafx"
+      ],
+      "normalEngine": "LibretroPlayer: mednafen_supergrafx",
+      "normalCommand": "libretro: core=mednafen_supergrafx_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.ESActivity",
+          "dexEntry": "classes5.dex",
+          "originalProcess": "main (applicationId)"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libretro.so",
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libmednafen_supergrafx_libretro_android.so",
+          "bytes": 2933456,
+          "sha256": "c57e72045da588cf87c48b09cee25527930d17dd9640f2d26f8f680b002bb4c9",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "wii",
+      "folder": "wii",
+      "onlinePlatform": "wii",
+      "aliases": [
+        "wii"
+      ],
+      "normalEngine": "Dolphin Android",
+      "normalCommand": "libretro: core=dolphin_libretro_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.DolphinEntryActivity",
+          "dexEntry": "classes12.dex",
+          "originalProcess": ":dolphin"
+        },
+        {
+          "class": "org.dolphinemu.dolphinemu.activities.EmulationActivity",
+          "dexEntry": "classes10.dex",
+          "originalProcess": ":dolphin"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libdolp.so",
+          "needed": [
+            "libandroid.so",
+            "liblog.so",
+            "libOpenSLES.so",
+            "libEGL.so",
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libdolp.so",
+          "bytes": 15333048,
+          "sha256": "a436ab9d34e3e5895e3a5459cc140ce1832299fc492d47f04e7d6ba07d248c1d",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": {
+        "engineId": "dolphin-5102a033-wii-v3-ca43a338d799",
+        "backend": "dolphin-station-v1",
+        "library": "libstation_dolphin_online.so",
+        "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+        "runtimeSha256": "ca43a338d7992e2d9ef298387822c860945fbb16dc11dff03ee5b1d1fcd27656",
+        "anchor": "StationDolphinActivity"
+      },
+      "classification": "real-system-adapter-implemented-physical-pending",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "wiiu",
+      "folder": "wiiu",
+      "onlinePlatform": "wiiu",
+      "aliases": [
+        "wiiu"
+      ],
+      "normalEngine": "Cemu Android",
+      "normalCommand": "libretro: core=cemu_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.WiiUEntryActivity",
+          "dexEntry": "classes20.dex",
+          "originalProcess": ":wiiu"
+        },
+        {
+          "class": "info.cemu.cemu.emulation.EmulationActivity",
+          "dexEntry": "classes19.dex",
+          "originalProcess": ":wiiu"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libCemuAndroid.so",
+          "needed": [
+            "libandroid.so",
+            "libOpenSLES.so",
+            "liblog.so",
+            "libdl.so",
+            "libm.so",
+            "libwuc_shared.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libCemuAndroid.so",
+          "bytes": 22075928,
+          "sha256": "8c8c321307705f71a6c6f58b7c1e0830f172c3093c8a5de4fc8b3d1ee56c5c0d",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "xbox",
+      "folder": "xbox",
+      "onlinePlatform": "xbox",
+      "aliases": [
+        "xbox"
+      ],
+      "normalEngine": "x1box/xemu",
+      "normalCommand": "libretro: core=x1box_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.XboxEntryActivity",
+          "dexEntry": "classes27.dex",
+          "originalProcess": ":xbox"
+        },
+        {
+          "class": "com.izzy2lost.x1box.MainActivity",
+          "dexEntry": "classes26.dex",
+          "originalProcess": ":xboxemu"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libxemu.so",
+          "needed": [
+            "liblog.so",
+            "libandroid.so",
+            "libEGL.so",
+            "libGLESv3.so",
+            "libz.so",
+            "libSDL3.so",
+            "libdl.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libxemu.so",
+          "bytes": 38114296,
+          "sha256": "3dc13e2b0a96794eed0815b701c5098e3d812f49bc7a1bc059cd1e6f1cfd4d08",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    },
+    {
+      "label": "xbox360",
+      "folder": "xbox360",
+      "onlinePlatform": "xbox360",
+      "aliases": [
+        "xbox360"
+      ],
+      "normalEngine": "Xendroid",
+      "normalCommand": "libretro: core=xendroid_android.so",
+      "normalActivityChain": [
+        {
+          "class": "org.emulationstation.frontend.Xbox360EntryActivity",
+          "dexEntry": "classes22.dex",
+          "originalProcess": ":xbox360"
+        },
+        {
+          "class": "org.emulationstation.frontend.Xbox360GameEntryActivity",
+          "dexEntry": "classes22.dex",
+          "originalProcess": ":xbox360emu"
+        },
+        {
+          "class": "xendroid.compose.EmulatorHostActivity",
+          "dexEntry": "classes21.dex",
+          "originalProcess": ":xbox360emu"
+        }
+      ],
+      "normalLibraries": [
+        {
+          "machine": 183,
+          "loadAlignments": [
+            16384,
+            16384,
+            16384
+          ],
+          "soname": "libe.so",
+          "needed": [
+            "libandroid.so",
+            "libdl.so",
+            "liblog.so",
+            "libvulkan.so",
+            "libOpenSLES.so",
+            "libaaudio.so",
+            "libz.so",
+            "libm.so",
+            "libc.so"
+          ],
+          "stationBridgeExports": [],
+          "entry": "lib/arm64-v8a/libe.so",
+          "bytes": 24913592,
+          "sha256": "b47b09c8a65aba7e49fb27faafbaa88c99c3836b6d634817e8df33be9e5bb71c",
+          "unresolvedNeeded": []
+        }
+      ],
+      "onlineEngine": null,
+      "classification": "no-eligible-online-engine",
+      "signedGameProfileAndServerActivationVerified": false,
+      "physicalGameplayVerified": false
+    }
+  ],
+  "libraries": {
+    "lib/arm64-v8a/libstation_bsnes.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_bsnes.so",
+      "bytes": 1791648,
+      "sha256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_retroarch.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretroarch-activity.so",
+      "needed": [
+        "libandroid.so",
+        "libEGL.so",
+        "libGLESv2.so",
+        "liblog.so",
+        "libdl.so",
+        "libOpenSLES.so",
+        "libz.so",
+        "libc.so",
+        "libm.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_retroarch.so",
+      "bytes": 10673944,
+      "sha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_clownmdemu.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "clownmdemu_libretro.so",
+      "needed": [
+        "libz.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_clownmdemu.so",
+      "bytes": 926416,
+      "sha256": "109b62ac11b2f59572de0666bcb02b3701676896b91cb32529bbe5c5032b6b69",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_online_pcsx.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libz.so",
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_online_pcsx.so",
+      "bytes": 1547280,
+      "sha256": "4de0afbd3bb113a4b9927b5b250860194b485f278d1dced81501dc6555fa18a8",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_online_neocd.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_online_neocd.so",
+      "bytes": 1551584,
+      "sha256": "78a35bc9a9435238d74125e77ae8f8d249ba59e90f07d43f43c84ad5ddc68870",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_mupen64plus_core.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libstation_mupen64plus_core.so",
+      "needed": [
+        "libSDL2_net.so",
+        "libz.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [
+        "StationMupenConfigure",
+        "StationMupenControl",
+        "StationMupenRequestQuit",
+        "StationMupenStalled",
+        "StationMupenStatus"
+      ],
+      "entry": "lib/arm64-v8a/libstation_mupen64plus_core.so",
+      "bytes": 561056,
+      "sha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libstation_mupen64plus_runtime.so",
+      "needed": [
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [
+        "StationMupenRuntimeIdentity",
+        "StationMupenRuntimeManifest"
+      ],
+      "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+      "bytes": 39992,
+      "sha256": "1aafea201355b58909ada9958bbe5bb5407e7ace7eb3848ade7ba04d235becac",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libSDL2_net.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libSDL2_net.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libSDL2_net.so",
+      "bytes": 15888,
+      "sha256": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libae-bridge.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libae-bridge.so",
+      "needed": [
+        "liblog.so",
+        "libEGL.so",
+        "libandroid.so",
+        "libc.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libae-bridge.so",
+      "bytes": 326424,
+      "sha256": "ba5a7582295215f159e197f805dbfe85851aa912462996870f61ccd752ecb360",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libjnidispatch.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384
+      ],
+      "soname": null,
+      "needed": [
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libjnidispatch.so",
+      "bytes": 165992,
+      "sha256": "ddfc6c965bbe366615c000ec1f06552ddf0bb2b4f9d921d0bff8c75b3cb2ca4c",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmupen64plus-audio-android-fp.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libmupen64plus-audio-android-fp.so",
+      "needed": [
+        "liblog.so",
+        "liboboe.so",
+        "libsoundtouch_fp.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmupen64plus-audio-android-fp.so",
+      "bytes": 88304,
+      "sha256": "79bd6457b4a77364721e98df4946fadde2bc44256b156ae8b361bcf769e03f74",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmupen64plus-audio-android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libmupen64plus-audio-android.so",
+      "needed": [
+        "liblog.so",
+        "liboboe.so",
+        "libsoundtouch.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmupen64plus-audio-android.so",
+      "bytes": 88208,
+      "sha256": "a8f8a5f83827a5056fca58bf72dc25951c56cdba568c55773f81efb20f2f0be5",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmupen64plus-input-android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libmupen64plus-input-android.so",
+      "needed": [
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmupen64plus-input-android.so",
+      "bytes": 7920,
+      "sha256": "11783275d71eaa14f3e15eff330a784195fdd98b31ea4c16d23d4691e5f91512",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmupen64plus-rsp-hle.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libmupen64plus-rsp-hle.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmupen64plus-rsp-hle.so",
+      "bytes": 63832,
+      "sha256": "67d0f74eb35a889c6abbc0ab0503691f45555ca601570911e0435be492bcf189",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmupen64plus-video-glide64mk2.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libmupen64plus-video-glide64mk2.so",
+      "needed": [
+        "libdl.so",
+        "liblog.so",
+        "libGLESv2.so",
+        "libz.so",
+        "libc.so",
+        "libm.so",
+        "libn64cpp.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmupen64plus-video-glide64mk2.so",
+      "bytes": 712936,
+      "sha256": "5c10d28d442ce37cacaba892317319029a0340b4503dd8ac10ff850fdc5e9ce6",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libn64cpp.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libn64cpp.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libn64cpp.so",
+      "bytes": 1330832,
+      "sha256": "fa2c06d3c09c0d9a4931fa7cd03a3aba15f6ed7ea990d8e4a37b8a5811867c0d",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/liboboe.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "liboboe.so",
+      "needed": [
+        "liblog.so",
+        "libOpenSLES.so",
+        "libm.so",
+        "libn64cpp.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/liboboe.so",
+      "bytes": 259048,
+      "sha256": "2d1ab385a0817273cbcd249ce6488b54a7d31dde193a8bf3037bcd901ea2079f",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libsoundtouch.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libsoundtouch.so",
+      "needed": [
+        "libn64cpp.so",
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libsoundtouch.so",
+      "bytes": 91760,
+      "sha256": "9944e132db1c2362b52cd88b438413d92802847b2174c64ce4dc801a7eaa41e3",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libsoundtouch_fp.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libsoundtouch_fp.so",
+      "needed": [
+        "libn64cpp.so",
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libsoundtouch_fp.so",
+      "bytes": 89992,
+      "sha256": "5fae9c0a403f01415327b1175ac20460a438184075c8da467dcfea56435a002a",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_online_fbneo.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_online_fbneo.so",
+      "bytes": 72223816,
+      "sha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_dolphin_online.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libstation_dolphin_online.so",
+      "needed": [
+        "libOpenSLES.so",
+        "libm.so",
+        "liblog.so",
+        "libEGL.so",
+        "libandroid.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeAcknowledgedEpoch",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeAuthorizeHumanExit",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeAwaitDelivery",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeCloseTransport",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeConfigure",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeConnect",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeControl",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeDeliver",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeDrained",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeFail",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeFailure",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeMapControllers",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativePauseAtEpoch",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativePlayerForSlot",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeRegisteredSlots",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeResumeAtEpoch",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeSelectGame",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeStartGame",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeStatus",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeSuspendTransport",
+        "Java_org_emulationstation_frontend_netplay_StationDolphinBridge_nativeTakeOutgoing"
+      ],
+      "entry": "lib/arm64-v8a/libstation_dolphin_online.so",
+      "bytes": 15781128,
+      "sha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_dolphin_runtime.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libstation_dolphin_runtime.so",
+      "needed": [
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+      "bytes": 50904,
+      "sha256": "ca43a338d7992e2d9ef298387822c860945fbb16dc11dff03ee5b1d1fcd27656",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_dolphin_file_redirect_hook.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384
+      ],
+      "soname": "libstation_dolphin_file_redirect_hook.so",
+      "needed": [
+        "libstation_dolphin_hook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_dolphin_file_redirect_hook.so",
+      "bytes": 4184,
+      "sha256": "23347bb99e0e73fde1f6deaf1b39d544ab4e4a5cc9e5f2c61c8d9facf5dfe06c",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_dolphin_gsl_alloc_hook.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384
+      ],
+      "soname": "libstation_dolphin_gsl_alloc_hook.so",
+      "needed": [
+        "libstation_dolphin_hook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_dolphin_gsl_alloc_hook.so",
+      "bytes": 4496,
+      "sha256": "e9254fe5325818c1ef50cf986cd6db9a87d9b3c29c4567cd74e666b512598d02",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_dolphin_hook.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384
+      ],
+      "soname": "libstation_dolphin_hook.so",
+      "needed": [
+        "libstation_dolphin_hook_impl.so",
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_dolphin_hook.so",
+      "bytes": 4400,
+      "sha256": "7547dd37533c4352edf7666ef3b5220db08364054578bde7570c388658e0de16",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libstation_dolphin_hook_impl.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libstation_dolphin_hook_impl.so",
+      "needed": [
+        "liblog.so",
+        "libandroid.so",
+        "libdl.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libstation_dolphin_hook_impl.so",
+      "bytes": 258824,
+      "sha256": "b3f2973bdccfb877cfc10fcaadd40b69e48af39434cc232d02bfc81a1669e264",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libazahar_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "azahar_libretro.so",
+      "needed": [
+        "liblog.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libazahar_libretro_android.so",
+      "bytes": 38142088,
+      "sha256": "62ca4d7f75951b4352eb4429f174c343d54cbfdb725f4d3c6fb5cd5e7dfccfae",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libMAME4droid.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libMAME4droid.so",
+      "needed": [
+        "libc.so",
+        "libdl.so",
+        "libm.so",
+        "libandroid.so",
+        "liblog.so",
+        "libEGL.so",
+        "libGLESv1_CM.so",
+        "libGLESv3.so",
+        "libOpenSLES.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libMAME4droid.so",
+      "bytes": 366992944,
+      "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmame4droid-jni.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libmame4droid-jni.so",
+      "needed": [
+        "libdl.so",
+        "liblog.so",
+        "libc.so",
+        "libm.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmame4droid-jni.so",
+      "bytes": 32856,
+      "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libflycast.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libflycast.so",
+      "needed": [
+        "libandroid.so",
+        "liblog.so",
+        "libOpenSLES.so",
+        "libz.so",
+        "libdl.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libflycast.so",
+      "bytes": 18610480,
+      "sha256": "31b628b3a53f08a4c489417ee7def9cd064c086431c0a7e94189198eff6504e0",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libturbo_flycast.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libturbo_flycast.so",
+      "needed": [
+        "libdl.so",
+        "libc.so",
+        "liblog.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libturbo_flycast.so",
+      "bytes": 15088,
+      "sha256": "bcd15ed32df785cdc6f5ee8afada182cb82a4e961fead8a2e26d17dbeb231d6c",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libdolp.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libdolp.so",
+      "needed": [
+        "libandroid.so",
+        "liblog.so",
+        "libOpenSLES.so",
+        "libEGL.so",
+        "libdl.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libdolp.so",
+      "bytes": 15333048,
+      "sha256": "a436ab9d34e3e5895e3a5459cc140ce1832299fc492d47f04e7d6ba07d248c1d",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libgambatte_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libgambatte_libretro_android.so",
+      "bytes": 3341912,
+      "sha256": "fbd8fb0a85ff019b178a7c2fa37039cc437df2a9a9a2f459e099605f96ce1b78",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmgba_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "mgba_libretro.so",
+      "needed": [
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmgba_libretro_android.so",
+      "bytes": 2472240,
+      "sha256": "b5a6ed40ede735ea7f1d56916f4ceed8c2aabe4d481fe3383ae2b5e5485b6545",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libgenesis_plus_gx_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libgenesis_plus_gx_libretro_android.so",
+      "bytes": 11073912,
+      "sha256": "ef8ca1df538d5904707edd083d19df1927da767f1be5425624f61c527bc2b71a",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmdemu_station.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libmain.so",
+      "needed": [
+        "libm.so",
+        "libEGL.so",
+        "libandroid.so",
+        "libOpenSLES.so",
+        "libGLESv2.so",
+        "libz.so",
+        "libjnigraphics.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmdemu_station.so",
+      "bytes": 6755552,
+      "sha256": "889d18461fc14e765813d7ef197ecfc922786df8f1f961dd82443dd88aecd124",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libfceumm_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libfceumm_libretro_android.so",
+      "bytes": 2878064,
+      "sha256": "38659530f800032ed6ed46ea0cdf167a38326e0ecd9afa09a3c08130020d85af",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmupen64plus-core.so": {
+      "machine": 183,
+      "loadAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "soname": "libmupen64plus-core.so",
+      "needed": [
+        "libSDL2_net.so",
+        "libz.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmupen64plus-core.so",
+      "bytes": 506280,
+      "sha256": "390d204cf75cb36198670b058820db4313b6ab6d9c0302bb66b3401654cddea0",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libppsspp_jni.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libppsspp_jni.so",
+      "needed": [
+        "libandroid.so",
+        "libGLESv2.so",
+        "libEGL.so",
+        "libdl.so",
+        "liblog.so",
+        "libOpenSLES.so",
+        "libm.so",
+        "libpsc_shared.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libppsspp_jni.so",
+      "bytes": 24942512,
+      "sha256": "cd699e1733dfeb1de099f21d8560c09d9919b48a6fae6dc79cc956e1bea6dd28",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmednafen_pce_fast_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmednafen_pce_fast_libretro_android.so",
+      "bytes": 3214168,
+      "sha256": "ffc291edc40220dd2269091cffd45cc8e7fe93ad3d2bc8e35bbeda20a7686e4d",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmednafen_pce_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmednafen_pce_libretro_android.so",
+      "bytes": 4301952,
+      "sha256": "58f773d7c3d9cd4bc678151fd91718381699832958a16e77eb0412f2a5d68e18",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libpcsx_rearmed_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libz.so",
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libpcsx_rearmed_libretro_android.so",
+      "bytes": 1582960,
+      "sha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libemucore_16k.so": {
+      "machine": 183,
+      "loadAlignments": [
+        65536,
+        16384,
+        16384
+      ],
+      "soname": "libemucore_16k.so",
+      "needed": [
+        "libandroid.so",
+        "liblog.so",
+        "libGLESv1_CM.so",
+        "libGLESv2.so",
+        "liblibrashader_capi.so",
+        "libdl.so",
+        "libOpenSLES.so",
+        "libz.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libemucore_16k.so",
+      "bytes": 24625560,
+      "sha256": "1dd6c1068517101c598b5e398fb36b93051737f3671ed921bef3ed7a09a1faac",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libemucore_4k.so": {
+      "machine": 183,
+      "loadAlignments": [
+        65536,
+        16384,
+        16384
+      ],
+      "soname": "libemucore_4k.so",
+      "needed": [
+        "libandroid.so",
+        "liblog.so",
+        "libGLESv1_CM.so",
+        "libGLESv2.so",
+        "liblibrashader_capi.so",
+        "libdl.so",
+        "libOpenSLES.so",
+        "libz.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libemucore_4k.so",
+      "bytes": 24626456,
+      "sha256": "421a122c64cf7aa46cff8f7fa5e3addfd32caa15674610ee5c2d37ae6265a7f6",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libVita3K.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libVita3K.so",
+      "needed": [
+        "libandroid.so",
+        "libm.so",
+        "libOpenSLES.so",
+        "libdl.so",
+        "liblog.so",
+        "libGLESv1_CM.so",
+        "libGLESv2.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libVita3K.so",
+      "bytes": 28034048,
+      "sha256": "a133ff7e5397ae09d863e9583c37a5070024f0bc226630ae4a1fc40e77fed8db",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libsnes9x_explus.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libmain.so",
+      "needed": [
+        "libEGL.so",
+        "libandroid.so",
+        "libOpenSLES.so",
+        "libGLESv2.so",
+        "libz.so",
+        "libjnigraphics.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libsnes9x_explus.so",
+      "bytes": 3802928,
+      "sha256": "3adeeabe25117265cdd10138fc9631c58da7deda533ff0272a89d7e64bb77956",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libyuzu-android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libyuzu-android.so",
+      "needed": [
+        "libandroid.so",
+        "libcamera2ndk.so",
+        "libEGL.so",
+        "libjnigraphics.so",
+        "liblog.so",
+        "libm.so",
+        "libOpenSLES.so",
+        "libdl.so",
+        "libmediandk.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libyuzu-android.so",
+      "bytes": 35518648,
+      "sha256": "c82b35d81aa4b9521a64bf79e7d617fb418df5e9b728b5b228b4860e55d1a72b",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libturbo_saturn.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libturbo_saturn.so",
+      "needed": [
+        "liblog.so",
+        "libjnigraphics.so",
+        "libOpenSLES.so",
+        "libandroid.so",
+        "libGLESv3.so",
+        "libEGL.so",
+        "libz.so",
+        "libm.so",
+        "libdl.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libturbo_saturn.so",
+      "bytes": 2632920,
+      "sha256": "8455e15daaed8b0f8d788b42727a5026df25578bb92b205542246685784064fe",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libpicodrive_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "liblog.so",
+        "libz.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libpicodrive_libretro_android.so",
+      "bytes": 1621480,
+      "sha256": "92d28b94fd9381a9dea670e57d58a0f3252a99d0ffde8d310add41f81f90a4fd",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libmednafen_supergrafx_libretro_android.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libretro.so",
+      "needed": [
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libmednafen_supergrafx_libretro_android.so",
+      "bytes": 2933456,
+      "sha256": "c57e72045da588cf87c48b09cee25527930d17dd9640f2d26f8f680b002bb4c9",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libCemuAndroid.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libCemuAndroid.so",
+      "needed": [
+        "libandroid.so",
+        "libOpenSLES.so",
+        "liblog.so",
+        "libdl.so",
+        "libm.so",
+        "libwuc_shared.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libCemuAndroid.so",
+      "bytes": 22075928,
+      "sha256": "8c8c321307705f71a6c6f58b7c1e0830f172c3093c8a5de4fc8b3d1ee56c5c0d",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libxemu.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libxemu.so",
+      "needed": [
+        "liblog.so",
+        "libandroid.so",
+        "libEGL.so",
+        "libGLESv3.so",
+        "libz.so",
+        "libSDL3.so",
+        "libdl.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libxemu.so",
+      "bytes": 38114296,
+      "sha256": "3dc13e2b0a96794eed0815b701c5098e3d812f49bc7a1bc059cd1e6f1cfd4d08",
+      "unresolvedNeeded": []
+    },
+    "lib/arm64-v8a/libe.so": {
+      "machine": 183,
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "soname": "libe.so",
+      "needed": [
+        "libandroid.so",
+        "libdl.so",
+        "liblog.so",
+        "libvulkan.so",
+        "libOpenSLES.so",
+        "libaaudio.so",
+        "libz.so",
+        "libm.so",
+        "libc.so"
+      ],
+      "stationBridgeExports": [],
+      "entry": "lib/arm64-v8a/libe.so",
+      "bytes": 24913592,
+      "sha256": "b47b09c8a65aba7e49fb27faafbaa88c99c3836b6d634817e8df33be9e5bb71c",
+      "unresolvedNeeded": []
+    }
+  },
+  "sources": {
+    "versions/station-game-menu-controller-audit-r120-20261010/evidence/launch-matrix-r120.json": "f557a9b8e5b052fabc9f216d1736b5c0cbecc3dd278659a8fff2a7e61e1749a8",
+    "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java": "d189afec71d1bd1a564c80850cc2fc844e67aea1ea63af6666be420e7a3d2f67",
+    "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationOnlineGame.java": "dc35236cf42e2659656799f23bfaeabafe00df46eb59ef41cda773781e0b86c6",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlinePlatformPolicy.java": "52335acf09835b4dad0c944d8ad2a19f294da52c6eb771b55204457198887d70"
+  },
+  "apkChanged": false,
+  "phonesOperated": false,
+  "serverOperated": false,
+  "allSystemsUseNormalEngineOnline": false,
+  "physicalGameplayVerified": false,
+  "limitations": [
+    "DEX declarations and ELF hashes prove package contents, not game execution.",
+    "Normal launch-command bodies were tested in the separate R120 host receipt and preserved through R126.",
+    "No fresh signed server profile or Android netplay was captured.",
+    "Missing fallback cores and unintegrated systems are findings, not automatic core replacements."
+  ]
+}

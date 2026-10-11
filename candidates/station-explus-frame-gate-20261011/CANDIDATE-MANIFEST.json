@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "generatedUtc": "2026-10-11T07:33:46.081340+00:00",
+  "role": "isolated-candidate-primitives",
+  "productiveChanges": false,
+  "binariesIncluded": false,
+  "files": {
+    ".gitattributes": {
+      "sha256": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+      "bytes": 29
+    },
+    "evidence/android-gate.json": {
+      "sha256": "4ec84f37505acacea355bdbd089706ccd0d499aba8be0745bf4291e4ae7d57c3",
+      "bytes": 2254
+    },
+    "evidence/gate-probe.json": {
+      "sha256": "c3ccb9a8cbf910c6f3cfa4633f3351ec85bb9e017854f171f808770efc17e7f0",
+      "bytes": 1473
+    },
+    "native/StationExPlusFrameGate.cpp": {
+      "sha256": "f64303dd6eaf7e29f8e24e93c9a2bb87d6ad4568b6e2821c69ce949f9f1c30ba",
+      "bytes": 10428
+    },
+    "native/StationExPlusFrameGate.hpp": {
+      "sha256": "f2555c63d430d69a1df1e94d55ab639d264a07d689740f1df536a731c6651035",
+      "bytes": 4495
+    },
+    "native/StationSnapshotGuard.hpp": {
+      "sha256": "a413c9714b4a2f314cc1a6ba6a4c5094b4eaac3773a49027cc4fa4ee347584d5",
+      "bytes": 2611
+    },
+    "README.md": {
+      "sha256": "3b13093d3fac2b61dbaf5de42d2c498c9c9a134e73ba63599c5a6a91d564b582",
+      "bytes": 5064
+    },
+    "recipe/build_android_gate.py": {
+      "sha256": "11d0b9e3b2d98bfab8313800c3a55202eceaa8d70d77084dbba5545ed10f3445",
+      "bytes": 3124
+    },
+    "recipe/run_probe.py": {
+      "sha256": "86563c8d065ad324185f5c240823ad63952a83cef6bed13e5d2daa9765711d1f",
+      "bytes": 2523
+    },
+    "recipe/source_preflight.py": {
+      "sha256": "7e00737dc9254f62aef5cfe4372791ef287c4728241a2d3fb57f2627e1ffa321",
+      "bytes": 3671
+    },
+    "STATUS.json": {
+      "sha256": "88a2542f0865db98dd2accc9a3047c913f9589ae04afdc214aacb2d6cb75a57b",
+      "bytes": 1427
+    },
+    "tests/frame_gate_probe.cpp": {
+      "sha256": "ea4ebf9f6e9bc152b495ab5e03ab211793917e84005238e78f2539ec60575439",
+      "bytes": 17107
+    }
+  }
+}
