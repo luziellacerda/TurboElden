@@ -2,6 +2,8 @@
 
 Fonte executável Sony corrigida: `8503c2e32d7487d3bb31397ba9533dc7e1bfe981`, em `integration/sony-internal`. Base exata R130: `d227b0af17600bf99ec097857bf182f6e7989f8ddc3b68b63e17c81f69eb30ad`. Esta pasta registra a entrega compilada e assinada; não escolhe instalador pela data e não substitui os recibos de instalação física.
 
+A entrega foi publicada na branch [fix/station-sony-internal-r131-20261011](https://github.com/luziellacerda/TurboElden/tree/fix/station-sony-internal-r131-20261011), no commit [6eac24f3](https://github.com/luziellacerda/TurboElden/tree/6eac24f3fec024e7ff451c16f7d8a3056ca5e49a/versions/station-sony-internal-r131-20261011), que contém a fonte executável corrigida `8503c2e3`. A referência remota e a inclusão dessa fonte foram conferidas; `STATUS.json` registra a observação desse commit publicado.
+
 ## Resultado compilado
 
 APK R131 corrigido: `0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175`, **2.711.825.423 bytes**. O instalador atual está no backup local, fora do Git. Certificado original `7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825`, assinaturas v2/v3 e alinhamento ZIP de 16 KiB conferidos pela receita final.

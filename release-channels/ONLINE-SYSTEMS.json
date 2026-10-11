@@ -197,10 +197,10 @@
         }
       }
     ],
-    "publishedExecutableSourceVerified": false,
+    "publishedExecutableSourceVerified": true,
     "publicationBranch": "fix/station-sony-internal-r131-20261011",
-    "sourceRemoteCommit": null,
-    "publicationStatus": "prepared-local-awaiting-publication",
+    "sourceRemoteCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981",
+    "publicationStatus": "published-source-and-physical-receipts",
     "compactSettingsMenuImplemented": true,
     "platformHeroVideoLoopSelectable": true,
     "collectionVideoLoopsEnabled": false,
@@ -241,7 +241,8 @@
     "sonyBootstrapPhysicalLimitations": [
       "Prepared screens are observed guarded code postconditions; sandbox private files were not read independently.",
       "No valid PS3 ISO or PS4 PKG was launched in this verification; no gameplay, title compatibility or controller result is claimed."
-    ]
+    ],
+    "publicationCommit": "6eac24f3fec024e7ff451c16f7d8a3056ca5e49a"
   },
   "completedImplementation": {
     "n64": {
