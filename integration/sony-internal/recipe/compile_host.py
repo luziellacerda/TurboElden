@@ -47,7 +47,7 @@ def run(command, output, label):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("base", "assets-receipt", "bridge-jar", "jdk", "android-jar", "d8-jar", "out"):
+    for name in ("base", "assets-receipt", "bridge-jar", "jdk", "android-jar", "lambda-stubs", "d8-jar", "out"):
         parser.add_argument("--"+name, type=Path, required=True)
     args = parser.parse_args()
     if sha(args.base) != BASE_SHA:
@@ -75,8 +75,15 @@ def main():
     # --release 8 exposes Java SE 8 boot APIs, including ClassLoader methods
     # absent from Android. Use the actual Android SDK as the bootstrap API;
     # Station's bridge contains only compile-time app classes, never boot APIs.
+    # Android SDK supplies compile-only lambda signatures for javac. D8 consumes
+    # the invocation sites; these stubs are never an input/program dependency.
+    with zipfile.ZipFile(args.lambda_stubs) as archive:
+        stubs = {name for name in archive.namelist() if name.endswith('.class')}
+        if not stubs or any(not name.startswith('java/lang/invoke/') for name in stubs):
+            raise ValueError('Only Android SDK compiler lambda stubs are allowed')
+    boot = os.pathsep.join(map(str, (args.lambda_stubs, args.android_jar)))
     run([args.jdk/"bin/javac.exe", "-encoding", "UTF-8", "-source", "8", "-target", "8",
-        "-bootclasspath", args.android_jar, "-proc:none", "-cp", args.bridge_jar,
+        "-bootclasspath", boot, "-proc:none", "-cp", args.bridge_jar,
         "-d", classes, *sources.values(), generated], args.out, "javac")
     jar = args.out/"sony-host.jar"
     with zipfile.ZipFile(jar, "w", zipfile.ZIP_STORED) as archive:
@@ -105,10 +112,12 @@ def main():
     receipt = {"schema": "station.sony.internal.host.v1", "passed": True,
         "baseApkSha256": BASE_SHA, "sourceSha256": pins,
         "assetReceiptSha256": sha(args.assets_receipt), "generatedSourceSha256": sha(generated),
-        "compileOnlyClasspathSha256": {"bridge.jar": sha(args.bridge_jar), "android.jar": sha(args.android_jar)},
+        "compileOnlyClasspathSha256": {"bridge.jar": sha(args.bridge_jar), "android.jar": sha(args.android_jar),
+            "core-lambda-stubs.jar": sha(args.lambda_stubs)},
         "javaApiPolicy": "android-sdk-bootclasspath-only",
         "javaSourceLevel": 8, "javaTargetLevel": 8,
         "androidBootClasspathSha256": sha(args.android_jar),
+        "androidCompilerLambdaStubsSha256": sha(args.lambda_stubs), "compilerLambdaStubsPackaged": False,
         "compileOnlyClassesPackaged": False, "newTypes": sorted(new_types),
         "preservedDexSha256": preserved, "payload": {"name": "classes40.dex", "path": str(result),
             "bytes": result.stat().st_size, "sha256": sha(result)},
