@@ -1,20 +1,12 @@
-# Fonte candidata atual — R116
+# Fonte candidata atual — R126
 
-`ACTIVE.json.currentCandidate` identifica a R119 instalada no Motorola Edge30
-e Samsung A56, com hash integral conferido em ambos. A fonte está em
-`versions/station-legacy-cover-diagnostics-r116-20261010` e a explicação completa
-em `ALTERACOES-DETALHADAS.md` nessa pasta.
+`ACTIVE.json.currentCandidate` identifica a R126 compilada, assinada e conferida, ainda não instalada e sem promoção a estável. Fonte atual: `versions/station-dolphin-online-r126-20261011`, commit `efd9878df3e87ecf22d8fbddeddd30baccb8d3dc`. Última instalação comprovada: R124.
 
-A R116 reúne a linha de otimizações de carregamento e renderização posterior
-à R99 e a fila sequencial de capas. Seu estado continua candidato: os testes
-de fonte e a conferência física da lista no Motorola estão registrados;
-gameplay, primeiro quadro online e ganho térmico prolongado não estão provados.
-Java completo e receitas estão publicados, mas a reconstrução do APK requer
-o APK privado R115 exato, ferramentas locais e a assinatura original.
+A [entrega N64](N64-ONLINE.md) reúne a fonte real Mupen64Plus AE, a identidade integrada R126 e suas evidências. O [índice dos motores](ONLINE-SYSTEMS.json) registra a continuidade de um sistema por vez: PSX é o próximo; SNES e Mega Drive ficam preservados a pedido do mantenedor. Não criar snapshots ou APKs adicionais para organizar o Git; atualizar os apontadores e manter o único backup completo em F:.
 
-Os canais `stable-2p`/R76 e `test-4p`/R95 permanecem referências históricas
-identificadas por hash. O bloco abaixo descreve um estado anterior do backup;
-não seleciona a versão atual por data nem autoriza sobrepor fontes antigas.
+Gameplay e ativação efetiva do servidor para esses novos motores ainda exigem confirmação. A compilação não substitui essas provas.
+
+Os canais `stable-2p`/R76 e `test-4p`/R95 permanecem referências históricas identificadas por hash. O bloco abaixo descreve um estado anterior do backup em G:; ele foi substituído pelo backup único em F: e não seleciona a base atual por data nem autoriza sobrepor fontes antigas.
 
 ## Histórico dos canais — R76 e R87
 

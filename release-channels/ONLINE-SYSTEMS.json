@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "updatedDate": "2026-10-11",
+  "policy": "one-system-at-a-time; one-current-development-base; no-additional-apk-snapshots",
+  "currentSourceCommit": "efd9878df3e87ecf22d8fbddeddd30baccb8d3dc",
+  "currentSourceDirectory": "versions/station-dolphin-online-r126-20261011",
+  "currentPackage": {
+    "revision": "R126",
+    "sha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+    "compiled": true,
+    "signedAndVerified": true,
+    "installed": false,
+    "promotedStable": false
+  },
+  "completedImplementation": {
+    "n64": {
+      "normalEmulator": "Mupen64Plus AE",
+      "onlineEmulator": "Mupen64Plus AE",
+      "usesStationRetroActivity": false,
+      "implementationDirectory": "versions/station-mupen-online-r125-20261011",
+      "integratedSourceDirectory": "versions/station-dolphin-online-r126-20261011",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-1aafea201355",
+      "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+      "runtimeSha256": "1aafea201355b58909ada9958bbe5bb5407e7ace7eb3848ade7ba04d235becac",
+      "recoveryProtocol": "station-stream.v3",
+      "controllerProfile": "direct-four-ports-v1",
+      "maximumPlayers": 4,
+      "playersRequireExactApprovedGameMode": true,
+      "javaProtocolChecks": 282,
+      "nativeRegistrationChecks": 134,
+      "offlineCoreAndPluginsPreserved": true,
+      "menuConsumptionLogicPreserved": true,
+      "serverActivationConfirmed": false,
+      "physicalGameplayValidated": false,
+      "documentation": "release-channels/N64-ONLINE.md"
+    }
+  },
+  "nextSystem": "psx",
+  "preserveAtMaintainerRequest": ["snes", "megadrive"],
+  "preserveReason": "maintainer-reported-working; no-additional-migration-or-stability-claim",
+  "remainingAudit": "audits/station-online-system-engines-20261011/README.md",
+  "serverDelivery": {
+    "repository": "luziellacerda/Servidor-pix",
+    "branch": "docs/station-r126-real-emulators-20261011",
+    "commit": "6e3a7fac6f728ec30a57bf4f4d42f00fdd1c1534",
+    "isAppDeliveryNotServerResponse": true
+  },
+  "apkUploaded": false,
+  "privateDataUploaded": false
+}

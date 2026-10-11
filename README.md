@@ -1,3 +1,13 @@
+# TurboStations — fonte atual e emuladores online
+
+A fonte candidata atual é a **R126**, no [commit executável publicado](https://github.com/luziellacerda/TurboElden/commit/efd9878df3e87ecf22d8fbddeddd30baccb8d3dc). Compilação, assinatura e preservação do pacote foram conferidas. Ela ainda não foi instalada nem promovida a estável; a última instalação comprovada permanece R124.
+
+**Nintendo 64:** integração do Mupen64Plus AE real concluída no código. [Entrega N64 e evidências](release-channels/N64-ONLINE.md) · [Índice dos motores](release-channels/ONLINE-SYSTEMS.json) · [Fonte atual e receitas](versions/station-dolphin-online-r126-20261011/README.md).
+
+O próximo motor é PlayStation/PSX. O mantenedor informou que SNES e Mega Drive funcionam e pediu mantê-los como estão. A sequência é um sistema por vez, conservando uma única base atual e o backup completo em F:. Os documentos abaixo são históricos; não selecionam outra base ou instalador. APKs, jogos, BIOS, saves, licenças e chaves não são publicados.
+
+## Histórico anterior
+
 # R77 candidata: salas de 2 a 4 jogadores
 
 [Implementação, pesquisa e limites](versions/station-multiplayer-r77-20261008/README.md) · [Handoff para o servidor](versions/station-multiplayer-r77-20261008/HANDOFF-APP-R77-PARA-SERVIDOR-20261008.md).
