@@ -85,8 +85,8 @@
     "compiled": true,
     "signed": true,
     "installed": true,
-    "published": false,
-    "sourceCommitStatus": "publication-pending",
+    "published": true,
+    "sourceCommitStatus": "published-and-remote-verified",
     "javaSourceCount": 232,
     "sourceJavaComplete": true,
     "nativeSnapshotComplete": false,
@@ -129,6 +129,8 @@
     "packageReceipt": "versions/station-game-menu-controller-audit-r120-20261010/evidence/package-r120.json",
     "installationReceipt": "versions/station-game-menu-controller-audit-r120-20261010/evidence/installation-motorola-r120.json",
     "onlineRoomANRReported": true,
-    "onlineRoomANRReviewPending": true
+    "onlineRoomANRReviewPending": true,
+    "sourceCommit": "e56ae2d75b036de1fdb1d565ca68a2eda3c2c271",
+    "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-game-menu-controller-audit-r120-20261010/versions/station-game-menu-controller-audit-r120-20261010"
   }
 }

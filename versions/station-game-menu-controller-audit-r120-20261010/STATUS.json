@@ -4,11 +4,11 @@
   "baseSourceCommit": "13b21b9dc08adf7b1820fdeb09bec47a810c1ea5",
   "source": "versions/station-game-menu-controller-audit-r120-20261010",
   "branch": "fix/station-game-menu-controller-audit-r120-20261010",
-  "state": "installed-source-publication-pending",
+  "state": "published-installed-known-online-anr",
   "compiled": true,
   "signed": true,
   "installed": true,
-  "published": false,
+  "published": true,
   "physicalGameplayValidated": false,
   "serverChanged": false,
   "promotedStable": false,
@@ -41,7 +41,7 @@
   },
   "testsAreIsolatedNotPhysicalGameplay": true,
   "inheritedEvidenceIsHistorical": true,
-  "sourcePublicationPending": true,
+  "sourcePublicationPending": false,
   "canonicalPlatformsAudited": 50,
   "launchAliasesCorrected": [
     "switch applicationId",
@@ -59,5 +59,7 @@
   "completeVisualValidation": false,
   "authenticatedFrontendObserved": true,
   "onlineRoomANRReported": true,
-  "onlineRoomANRReviewPending": true
+  "onlineRoomANRReviewPending": true,
+  "sourceCommit": "e56ae2d75b036de1fdb1d565ca68a2eda3c2c271",
+  "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-game-menu-controller-audit-r120-20261010/versions/station-game-menu-controller-audit-r120-20261010"
 }
