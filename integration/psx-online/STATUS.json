@@ -28,8 +28,12 @@
   "n64DolphinCoresAndOptionsPreserved": true,
   "sharedBundleRuntimeIdentityRenewed": true,
   "completeBackupCount": 1,
-  "sourcesPublished": false,
-  "serverDeliveryPublished": false,
+  "sourcesPublished": true,
+  "serverDeliveryPublished": true,
   "apkUploaded": false,
-  "privateDataUploaded": false
+  "privateDataUploaded": false,
+  "sourceCommit": "50eefa3eb40f0987b9dc6001e1d10ed2ad81a77c",
+  "sourceBranch": "fix/station-psx-real-owner-r127-20261011",
+  "serverDeliveryCommit": "5696ed9bed01fdfa8cbd3414197c2eea4f3fc898",
+  "serverDeliveryBranch": "docs/station-psx-real-r127-20261011"
 }

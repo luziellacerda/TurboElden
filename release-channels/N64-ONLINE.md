@@ -1,3 +1,11 @@
+# N64 no pacote atual R127
+
+A implementação Mupen64Plus AE publicada em `efd9878` continua preservada. A [integração PSX R127](../integration/psx-online/README.md) renovou o marcador do pacote compartilhado, sem alterar core, plugins, controles ou opções N64.
+
+Identidades para **R127**: engine `mupen64plus-ae-33bf7021-n64-v3-9536fbd2a7d2`, core `fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8`, runtime `9536fbd2a7d23713d1280a22276856924420dea9920bb557e0dda7117e5b3025`. [Índice e estados atuais](ONLINE-SYSTEMS.json). Cadastro/instalação/gameplay R127 não confirmados. IDs anteriores abaixo identificam seus APKs históricos.
+
+## Entrega anterior R126
+
 # Nintendo 64 online — entrega de código concluída
 
 A integração usa **Mupen64Plus AE real**, com GameActivity, CoreService, renderizador, áudio, menus e controles próprios. A rota não abre StationRetroActivity. A implementação foi compilada, assinada e conferida; ativação efetiva do servidor e partida em aparelhos continuam sem confirmação.

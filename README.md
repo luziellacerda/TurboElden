@@ -1,10 +1,14 @@
 # TurboStations — fonte atual e emuladores online
 
-A fonte candidata atual é a **R126**, no [commit executável publicado](https://github.com/luziellacerda/TurboElden/commit/efd9878df3e87ecf22d8fbddeddd30baccb8d3dc). Compilação, assinatura e preservação do pacote foram conferidas. Ela ainda não foi instalada nem promovida a estável; a última instalação comprovada permanece R124.
+A candidata atual é **R127**, com [fonte executável publicada](https://github.com/luziellacerda/TurboElden/commit/50eefa3eb40f0987b9dc6001e1d10ed2ad81a77c). O APK foi compilado, assinado com o certificado original e conferido integralmente. Ainda não foi instalado nem promovido a estável; a última instalação comprovada permanece R124.
 
-**Nintendo 64:** integração do Mupen64Plus AE real concluída no código. [Entrega N64 e evidências](release-channels/N64-ONLINE.md) · [Índice dos motores](release-channels/ONLINE-SYSTEMS.json) · [Fonte atual e receitas](versions/station-dolphin-online-r126-20261011/README.md).
+**PlayStation:** [integração real do LibretroPlayer/PCSX-ReARMed normal, receitas e limites](integration/psx-online/README.md). Duas portas Standard, HLE e aprovação por edição/modo. A rota PSX não abre StationRetroActivity. Fontes originais exatas do Player não foram localizadas; a integração usa seu binário normal preservado, com ABI e hashes exatos.
 
-O próximo motor é PlayStation/PSX. O mantenedor informou que SNES e Mega Drive funcionam e pediu mantê-los como estão. A sequência é um sistema por vez, conservando uma única base atual e o backup completo em F:. Os documentos abaixo são históricos; não selecionam outra base ou instalador. APKs, jogos, BIOS, saves, licenças e chaves não são publicados.
+**N64/GameCube/Wii:** integrações Mupen64Plus AE/Dolphin mantidas; cores, controles e políticas preservados. Os marcadores do pacote compartilhado receberam as identidades R127. [Índice atual dos motores](release-channels/ONLINE-SYSTEMS.json) · [Entrega N64 e histórico](release-channels/N64-ONLINE.md).
+
+[Entrega única publicada ao servidor](https://github.com/luziellacerda/Servidor-pix/blob/5696ed9bed01fdfa8cbd3414197c2eea4f3fc898/docs/station-android/r127/ENTREGA-APP-R127-PSX-REAL-20261011.md): quatro registros finais e perfil PSX exato. Publicação do pedido não confirma ativação ou gameplay.
+
+SNES e Mega Drive foram preservados a pedido do mantenedor. Menus, vídeos, LEDs, cache/preload, 30 fps de apresentação e opções de economia não foram redesenhados nesta integração. Um sistema por vez e um backup completo em F:. Os blocos abaixo são históricos, não selecionam outro instalador. APKs, jogos, BIOS, saves, licenças e chaves ficam fora do Git.
 
 ## Histórico anterior
 

@@ -2,15 +2,16 @@
   "schemaVersion": 1,
   "updatedDate": "2026-10-11",
   "policy": "one-system-at-a-time; one-current-development-base; no-additional-apk-snapshots",
-  "currentSourceCommit": "efd9878df3e87ecf22d8fbddeddd30baccb8d3dc",
-  "currentSourceDirectory": "versions/station-dolphin-online-r126-20261011",
+  "currentSourceCommit": "50eefa3eb40f0987b9dc6001e1d10ed2ad81a77c",
+  "currentSourceDirectory": "integration/psx-online",
   "currentPackage": {
-    "revision": "R126",
-    "sha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
+    "revision": "R127",
+    "sha256": "a350878cca5c1a65c51e79ac13e9e38c2053d76e5404edb515ad1ddd650c3038",
     "compiled": true,
     "signedAndVerified": true,
     "installed": false,
-    "promotedStable": false
+    "promotedStable": false,
+    "bytes": 2235617465
   },
   "completedImplementation": {
     "n64": {
@@ -18,10 +19,10 @@
       "onlineEmulator": "Mupen64Plus AE",
       "usesStationRetroActivity": false,
       "implementationDirectory": "versions/station-mupen-online-r125-20261011",
-      "integratedSourceDirectory": "versions/station-dolphin-online-r126-20261011",
-      "engineId": "mupen64plus-ae-33bf7021-n64-v3-1aafea201355",
+      "integratedSourceDirectory": "integration/psx-online",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-9536fbd2a7d2",
       "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
-      "runtimeSha256": "1aafea201355b58909ada9958bbe5bb5407e7ace7eb3848ade7ba04d235becac",
+      "runtimeSha256": "9536fbd2a7d23713d1280a22276856924420dea9920bb557e0dda7117e5b3025",
       "recoveryProtocol": "station-stream.v3",
       "controllerProfile": "direct-four-ports-v1",
       "maximumPlayers": 4,
@@ -32,19 +33,81 @@
       "menuConsumptionLogicPreserved": true,
       "serverActivationConfirmed": false,
       "physicalGameplayValidated": false,
-      "documentation": "release-channels/N64-ONLINE.md"
+      "documentation": "release-channels/N64-ONLINE.md",
+      "sharedBundleIdentityRenewedWithoutCorePolicyChange": true
+    },
+    "gamecube": {
+      "normalEmulator": "Dolphin",
+      "onlineEmulator": "Dolphin",
+      "usesStationRetroActivity": false,
+      "implementationDirectory": "versions/station-dolphin-online-r126-20261011",
+      "integratedSourceDirectory": "integration/psx-online",
+      "engineId": "dolphin-5102a033-gamecube-v3-a206aed4b7bb",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "runtimeSha256": "a206aed4b7bb491fb010deefde537742b1c95b0f7779f53a25a7a75e0edaf787",
+      "recoveryProtocol": "station-stream.v3",
+      "controllerProfile": "dolphin-gamecube-four-ports-v1",
+      "maximumPlayers": 4,
+      "playersRequireExactApprovedGameMode": true,
+      "sharedBundleIdentityRenewedWithoutCorePolicyChange": true,
+      "serverActivationConfirmed": false,
+      "physicalGameplayValidated": false
+    },
+    "wii": {
+      "normalEmulator": "Dolphin",
+      "onlineEmulator": "Dolphin",
+      "usesStationRetroActivity": false,
+      "implementationDirectory": "versions/station-dolphin-online-r126-20261011",
+      "integratedSourceDirectory": "integration/psx-online",
+      "engineId": "dolphin-5102a033-wii-v3-a206aed4b7bb",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "runtimeSha256": "a206aed4b7bb491fb010deefde537742b1c95b0f7779f53a25a7a75e0edaf787",
+      "recoveryProtocol": "station-stream.v3",
+      "controllerProfile": "dolphin-wii-remotes-four-v1",
+      "maximumPlayers": 4,
+      "playersRequireExactApprovedGameMode": true,
+      "sharedBundleIdentityRenewedWithoutCorePolicyChange": true,
+      "serverActivationConfirmed": false,
+      "physicalGameplayValidated": false
+    },
+    "psx": {
+      "normalEmulator": "Original LibretroPlayer + normal PCSX-ReARMed",
+      "onlineEmulator": "Original LibretroPlayer + normal PCSX-ReARMed through pinned private-process ABI adapter",
+      "usesStationRetroActivity": false,
+      "implementationDirectory": "integration/psx-online",
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-f9d762e9fe82",
+      "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+      "runtimeSha256": "f9d762e9fe82b5346b65d29d356d6cb93776a983eb4bf9a9e25ab73388b1eb4f",
+      "recoveryProtocol": "station-stream.v3",
+      "controllerProfile": "standard-2p-v1",
+      "profileSha256": "81c0e2323a37130dbdbdb9c2efefca8837a9bb6e7169304b4e5731b2ec56290a",
+      "optionsSha256": "8c1e81460dc19b6e8d151ec6231c9092000b4946e6f084222cb40d3aab2e66a9",
+      "maximumPlayers": 2,
+      "playersRequireExactApprovedGameMode": true,
+      "minimumAndroidApi": 28,
+      "originalOwnerSourceRecovered": false,
+      "offlineCoreAndOwnerPreserved": true,
+      "menuConsumptionLogicPreserved": true,
+      "serverActivationConfirmed": false,
+      "physicalGameplayValidated": false,
+      "documentation": "integration/psx-online/README.md"
     }
   },
-  "nextSystem": "psx",
-  "preserveAtMaintainerRequest": ["snes", "megadrive"],
+  "nextSystem": "remaining-unmigrated-systems",
+  "preserveAtMaintainerRequest": [
+    "snes",
+    "megadrive"
+  ],
   "preserveReason": "maintainer-reported-working; no-additional-migration-or-stability-claim",
   "remainingAudit": "audits/station-online-system-engines-20261011/README.md",
   "serverDelivery": {
     "repository": "luziellacerda/Servidor-pix",
-    "branch": "docs/station-r126-real-emulators-20261011",
-    "commit": "6e3a7fac6f728ec30a57bf4f4d42f00fdd1c1534",
+    "branch": "docs/station-psx-real-r127-20261011",
+    "commit": "5696ed9bed01fdfa8cbd3414197c2eea4f3fc898",
+    "document": "docs/station-android/r127/ENTREGA-APP-R127-PSX-REAL-20261011.md",
     "isAppDeliveryNotServerResponse": true
   },
   "apkUploaded": false,
-  "privateDataUploaded": false
+  "privateDataUploaded": false,
+  "remainingSystemsMigrated": false
 }
