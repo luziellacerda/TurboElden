@@ -83,14 +83,14 @@
     "compiled": true,
     "signed": true,
     "installed": true,
-    "published": false,
+    "published": true,
     "promotedStable": false,
     "gameplayVerified": false,
     "physicalVisualApproval": false,
     "thermalImprovementVerified": false,
     "authenticatedFrontendObserved": true,
     "roomScreenObserved": false,
-    "sourceCommitStatus": "awaiting-publication",
+    "sourceCommitStatus": "remote-verified",
     "detailedChanges": "versions/station-carousel-diagonal-online-compact-r123-20261011/ALTERACOES-DETALHADAS.md",
     "status": "installed-menus-and-ten-covers-observed",
     "fullRoomWorkflowValidated": false,
@@ -105,6 +105,9 @@
     "installationReceipt": "versions/station-carousel-diagonal-online-compact-r123-20261011/evidence/installation-motorola-r123.json",
     "sideStyleNeighborImagesObserved": 10,
     "compactGraphicsPanelObserved": false,
-    "physicalMenuReceipt": "versions/station-carousel-diagonal-online-compact-r123-20261011/evidence/physical-menu-r123.json"
+    "physicalMenuReceipt": "versions/station-carousel-diagonal-online-compact-r123-20261011/evidence/physical-menu-r123.json",
+    "sourceCommit": "1237c642e65e47bbd665cd4f47e5e40eec693350",
+    "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-carousel-diagonal-online-compact-r123-20261011/versions/station-carousel-diagonal-online-compact-r123-20261011",
+    "publicationReceipt": "versions/station-carousel-diagonal-online-compact-r123-20261011/evidence/publication-r123.json"
   }
 }

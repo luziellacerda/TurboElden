@@ -8,7 +8,7 @@
   "compiled": true,
   "signed": true,
   "installed": true,
-  "published": false,
+  "published": true,
   "promotedStable": false,
   "serverChanged": false,
   "physicalGameplayValidated": false,
@@ -56,5 +56,9 @@
   "authenticatedFrontendObserved": true,
   "sideStyleNeighborImagesObserved": 10,
   "compactGraphicsPanelObserved": false,
-  "physicalMenuReceipt": "evidence/physical-menu-r123.json"
+  "physicalMenuReceipt": "evidence/physical-menu-r123.json",
+  "sourcePublicationPending": false,
+  "sourceCommit": "1237c642e65e47bbd665cd4f47e5e40eec693350",
+  "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-carousel-diagonal-online-compact-r123-20261011/versions/station-carousel-diagonal-online-compact-r123-20261011",
+  "publicationReceipt": "evidence/publication-r123.json"
 }
