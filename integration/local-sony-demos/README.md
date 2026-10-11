@@ -2,6 +2,8 @@
 
 Extensão isolada sobre a R128 assinada `0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc`. Acrescenta duas linhas de apresentação locais ao catálogo entregue ao carrossel, depois da preparação das linhas reais. Não modifica o catálogo autenticado, jogos reais, perfis online, downloads, renderização, vídeos, economia, cache ou pré-carregamento.
 
+Estado atual em [evidence/STATUS.json](evidence/STATUS.json), vinculado aos recibos finais corrigidos. A [primeira tentativa R129](evidence/first-candidate-startup-failure.json) foi instalada, mas apresentou falha na configuração do catálogo; não escolhe o instalador atual. A prova do contrato de `validWarmCoverPath` e a observação física de `IOException` estão registradas separadamente. Não foi alegado um log físico literal de caminho inválido. Catálogo, demonstrações e gameplay da correção exigem observação própria.
+
 ## O que aparece
 
 - PS3: **DEMO — Aventura orbital**, identificador `local-demo-ps3-orbital-v1`.
@@ -28,9 +30,11 @@ As duas capas ficam no diretório privado retornado por `Context.getNoBackupFile
 | --- | --- |
 | `classes28.dex` | Somente os quatro métodos `publishCurrent`, `start`, `remove`, `cover` de `StationFrontend`; outras 270 classes, inclusive fábrica PSX, preservadas |
 | `classes39.dex` | Helper local, guarda de demonstração na Activity Sony e política Sony idêntica à R128 |
-| `libturbo_carousel.so` | Fallback de capa somente para célula de plataforma PS3/PS4 sem arte cadastrada; lê a primeira capa local da própria plataforma durante `syncModel` |
+| `libturbo_carousel.so` | Fallback de capa somente para célula de plataforma PS3/PS4 sem arte cadastrada; confirma a linha do DEMO exato e usa seu PNG privado persistente durante a reconstrução de `syncModel` |
 
 O fallback nativo não desenha efeitos nem muda rotas. Primeiro reproduz o carousel R128 e exige hash idêntico; depois aplica um delta com inversa exata. Manifesto, `classes6.dex`, `classes35.dex`, motores e opções permanecem os da R128. Marcadores dos motores que incluem DEX/carousel compartilhados precisam ser renovados pelo pipeline R129.
+
+A arte da plataforma usa o caminho privado `no_backup/station-covers/<demoId>.png` sob `/data/user/0/org.turboramastation.frontend`, conferido uma vez por plataforma Sony na montagem de uma lista de sistemas alterada. Requer a linha local do DEMO exato na própria plataforma e preserva arte de sistema já cadastrada. Não depende de `Item.coverPath`, que pertence à janela transitória de capas dos jogos; a revelação, a remoção fora da janela, a residência de texturas e a rotina por frame permanecem intactas.
 
 ## Compilação isolada
 
