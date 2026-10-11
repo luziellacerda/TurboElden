@@ -169,13 +169,13 @@ def idle_snapshot(adb, *, retry_history_tasks=None, deadline=None):
 
 
 def local_preflight(context):
-    """Verify the explicit current bytes/signature/entry and R131 source bindings."""
+    """Verify the explicit current bytes/signature/entry and scoped source bindings."""
     current, apk, final, tools = context["current"], context["apk"], context["final"], context["tools"]
     require(apk.stat().st_size == current["bytes"] and release.sha(apk) == current["sha256"], "Actual installer differs from CURRENT")
-    if current["revision"] == "R131":
-        # New internal Sony owners require their actual compilation/asset/source
-        # guards against release.R131_SOURCE and its exact correction assembly
-        # before any phone operation, not merely a signed APK receipt.
+    if current["revision"] in ("R131", "R132", "R133"):
+        # Internal owners and subsequent scoped overlays require their actual
+        # compilation/asset/source guards and exact reviewed assembly before
+        # any phone operation, not merely a signed APK receipt.
         release.source_guard(context)
     for name, recorded in final.get("verificationTools", {}).items():
         table = {"java": tools / "jdk17/bin/java.exe", "apksignerJar": tools / "android-build-tools-35/lib/apksigner.jar",

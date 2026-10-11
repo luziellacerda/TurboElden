@@ -8,6 +8,10 @@ Executar na raiz do repositório. O ponteiro local deve concordar com `CURRENT-L
 
 R131 exige `assemblyPath` explícito `G:/StationNormalOwnersR127/sony-internal/correction/assembly`, donor R130 exato no `desenvolvimento` do backup único, `source-freeze.json` na raiz dessa assembly e `identity/runtime-identity.json`. Os três ponteiros devem concordar também nos hashes do freeze e da identidade. A receita R131 confere as fontes, as cinco compilações/preparações privadas, os 305 payloads, os módulos Sony e os quatro IDs existentes renovados. Os APKs R126/R127 não são escolhidos como base da R131.
 
+R132 preserva seus guards específicos: donor R131 corrigido, assembly `G:/StationNormalOwnersR127/startup-cleanup-r132/assembly`, sete substituições/zero adições e somente DEX8/SwitchConfigPatcher dentro de sua allowlist. A evidência final está em `versions/station-startup-cleanup-r132-20261011/evidence/package-final.json`; as fontes congeladas e os recibos privados continuam necessários.
+
+R133 usa `integration/console-panel-r133`, donor R132 exato SHA `47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20`, assembly exclusiva `G:/StationNormalOwnersR127/console-panel-r133/assembly` e evidência `versions/station-console-mode-completion-r133-20261011/evidence/package-final.json`. Exige cinco substituições/zero adições, os 40 DEX e a biblioteca frontend preservados, escopo único `console-hardware-panel-psp-ps3-ps4` e vínculos integrais de freeze, compilação nativa, payloads e quatro IDs finais. As fotografias de PSP/PS3/PS4 usam o painel existente; esta revisão não habilita online Sony. Sem os três ponteiros concordantes e recibos finais, R133 é recusada.
+
 ```powershell
 $stationRepo = (Resolve-Path .).Path
 $stationCurrent = Join-Path (Split-Path $stationRepo -Parent) 'CURRENT-LOCAL-ARTIFACTS.json'
@@ -33,6 +37,8 @@ R129 **não** usa a reconstrução R128 por fallback. Sua sequência própria é
 Consultar `--help` dessas receitas para seus argumentos explícitos. Não apontar a R129 à assembly, freeze ou identidade da R128.
 
 R131 também recusa reconstrução/assembly pelo caminho R128 deste utilitário. A sequência própria em `integration/sony-internal/recipe` usa preparação privada de assets, host novo, Manifest fechado, identidade sobre o R130 e assembly/verify final específicos. `plan`/`preflight`/`verify` e a instalação somente verificam essas saídas; não compilam firmware/owners nem invocam emuladores externos. Temporários de verificação R131 ficam em `G:/StationNormalOwnersR127/sony-internal/correction/assembly/release-temp`, escolhidos pelo contexto R131.
+
+R132/R133 também usam suas receitas próprias, sem fallback para R128. Para R133, `build_native.py` reproduz primeiro o carousel R132 byte exato e aplica o overlay de imagens; `build_runtime_identity.py` renova os quatro marcadores mantendo cores/opções/perfis; `assemble_apk.py` fecha cinco substituições; `verify_final.py` confere todas as entradas. O `finalize_verified.py` recusa promoção R133 fora desse escopo. `compile_current.py` permite somente `plan`/`preflight`/`verify` para essas revisões. A instalação recebe o candidato apenas depois da promoção verificada e atualização explícita dos três ponteiros. Temporários R133 ficam na própria assembly em `release-temp`.
 
 ## Assinar e promover
 

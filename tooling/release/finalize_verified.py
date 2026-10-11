@@ -51,6 +51,40 @@ def load(path):
     spec.loader.exec_module(module)
     return module
 
+def scoped_final_guard(receipt, identity, package):
+    """R133 promotions accept only the closed console overlay's final proof."""
+    runtime = json.loads(Path(identity).read_text(encoding="utf-8"))
+    if runtime.get("revision") != "R133":
+        return
+    require(receipt.get("revision") == "R133" and
+            receipt.get("sourceCommit") == runtime["sourceCommit"] and
+            receipt.get("baseApkSha256") == "47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20" and
+            receipt.get("replacementCount") == 5 and receipt.get("additionCount") == 0 and
+            set(receipt.get("replacedEntrySha256", {})) == package.REPLACED and
+            receipt.get("addedEntrySha256") == {} and
+            receipt.get("approvedScopes") == runtime["approvedScopes"] == ["console-hardware-panel-psp-ps3-ps4"] and
+            receipt.get("nativeReceiptSha256") == runtime["nativeReceiptSha256"] and
+            receipt.get("existing40DexByteIdentical") is True and
+            receipt.get("dexClassSetsPreserved") is True and
+            receipt.get("frontendLibraryByteIdentical") is True and
+            receipt.get("completeAggregateEntryHashMaps") is True and
+            receipt.get("manifestByteIdentical") is True and
+            receipt.get("resourcesAndSonyAssetsByteIdentical") is True and
+            receipt.get("offlineEmulatorEntriesChanged") is False and
+            receipt.get("offlineEmulatorLibraryEntriesChanged") is False and
+            receipt.get("controllerProfilesUnchanged") is True and
+            receipt.get("protocolAndTransportUnchanged") is True and
+            receipt.get("ps3Ps4OfflineOnly") is True and receipt.get("ps3Ps4OnlineEnabled") is False and
+            receipt.get("verificationScope") == "original-signature-16KiB-and-every-entry-with-five-closed-replacements",
+            "R133 final promotion lacks the exact five-entry console-only scope")
+    dex = {"classes.dex", *["classes" + str(n) + ".dex" for n in range(2, 41)]}
+    preserved = receipt.get("preservedEntrySha256", {})
+    require(len(preserved) == receipt.get("preservedEntryCount") and dex <= set(preserved) and
+            all(preserved[name] == runtime["payloadSha256"][name] for name in dex) and
+            preserved.get("lib/arm64-v8a/libstation_frontend.so") == "4e7ad58e1e8f8a284654120c27280eed8c124ad5301a9e87d769e41f100d8d0d" and
+            receipt.get("engineIds") == [row["engineId"] for row in runtime["engines"]],
+            "R133 final promotion differs from preserved DEX/frontend or final engine identities")
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("base", "freeze", "identity", "recipe", "assembly", "final", "key", "tools"):
@@ -106,6 +140,7 @@ def main():
              "--apk", signed, "--freeze", args.freeze, "--identity-receipt", args.identity, "--receipt", verification,
              "--java", java, "--apksigner-jar", signer, "--zipalign", align], env)
         receipt = json.loads(verification.read_text(encoding="utf-8"))
+    scoped_final_guard(receipt, args.identity, package)
     package.inputs(args.base, args.freeze, args.identity)
     # Never replace an installer with another identity, including after retry.
     if args.final.exists():

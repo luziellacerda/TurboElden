@@ -42,10 +42,19 @@ R132_SWITCH_TYPES = ["Lorg/emulationstation/frontend/switchengine/SwitchConfigPa
 R132_REPLACED = frozenset({"classes8.dex", "assets/station-online/engines.json", *[
     "lib/arm64-v8a/" + name for name in ("libturbo_carousel.so", "libstation_frontend.so",
     "libstation_psx_online.so", "libstation_mupen64plus_runtime.so", "libstation_dolphin_runtime.so")]})
+R133_ASSEMBLY = WORK / "console-panel-r133/assembly"
+R133_FINAL = "versions/station-console-mode-completion-r133-20261011/evidence/package-final.json"
+R133_BASE_SHA = "47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20"
+R133_FRONTEND_SHA = "4e7ad58e1e8f8a284654120c27280eed8c124ad5301a9e87d769e41f100d8d0d"
+R133_SCOPES = ["console-hardware-panel-psp-ps3-ps4"]
+R133_DEX = frozenset({"classes.dex", *["classes" + str(n) + ".dex" for n in range(2, 41)]})
+R133_REPLACED = frozenset({"assets/station-online/engines.json", *[
+    "lib/arm64-v8a/" + name for name in ("libturbo_carousel.so", "libstation_psx_online.so",
+    "libstation_mupen64plus_runtime.so", "libstation_dolphin_runtime.so")]})
 CERT = "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825"
 PHASES = ("plan", "preflight", "verify", "rebuild-payloads", "assemble")
 INTEGRATIONS = {"R128": "ps3-ps4-offline", "R129": "local-sony-demos", "R130": "local-sony-demos",
-                "R131": "sony-internal", "R132": "startup-cleanup-r132"}
+                "R131": "sony-internal", "R132": "startup-cleanup-r132", "R133": "console-panel-r133"}
 
 
 def require(ok, message):
@@ -88,9 +97,9 @@ def resolve_current(current_path, repo):
         require(candidate["sourceCommit"] == R128_SOURCE, "Current executable source differs from the reviewed R128")
     elif revision == "R131":
         require(candidate["sourceCommit"] == R131_SOURCE, "Current executable source differs from the reviewed R131")
-    elif revision == "R132":
+    elif revision in ("R132", "R133"):
         require(re.fullmatch(r"[0-9a-f]{40}", candidate["sourceCommit"]),
-                "R132 requires the exact complete final source commit, not a pending label")
+                revision + " requires the exact complete final source commit, not a pending label")
     backup = Path(current["singleCompleteBackup"]).resolve(strict=True)
     mirror = read(backup / "CURRENT-LOCAL-ARTIFACTS.json")["currentDevelopmentCandidate"]
     for name in ("revision", "apk", "sha256", "bytes", "sourceCommit"):
@@ -101,7 +110,7 @@ def resolve_current(current_path, repo):
     apk = Path(candidate["apk"]).resolve(strict=True)
     require(apk.parent == backup / "desenvolvimento", "Current APK must be the explicit development installer in the sole backup")
     integration = INTEGRATIONS[revision]
-    final_path = repo / (R132_FINAL if revision == "R132" else R131_FINAL if revision == "R131" else
+    final_path = repo / (R133_FINAL if revision == "R133" else R132_FINAL if revision == "R132" else R131_FINAL if revision == "R131" else
                          "integration/" + integration + "/evidence/package-final.json")
     final = read(final_path)
     require(final["revision"] == candidate["revision"], "Package evidence revision differs")
@@ -113,6 +122,55 @@ def resolve_current(current_path, repo):
     if revision != "R128":
         require(final.get("sourceCommit") == candidate["sourceCommit"], "New integration evidence does not bind the current executable source")
     tools = backup / "ferramentas"
+    if revision == "R133":
+        require(final.get("baseApkSha256") == R133_BASE_SHA and
+                final.get("replacementCount") == 5 and final.get("additionCount") == 0 and
+                final.get("existing40DexByteIdentical") is True and final.get("dexClassSetsPreserved") is True and
+                final.get("frontendLibraryByteIdentical") is True and
+                final.get("completeAggregateEntryHashMaps") is True and
+                final.get("noGameSaveLicenseFilesMovedOrDeleted") is True and
+                final.get("manifestByteIdentical") is True and
+                final.get("resourcesAndSonyAssetsByteIdentical") is True and
+                final.get("shaderCodeAndEffectsPreserved") is True and
+                final.get("videoBytesAndLoopPolicyPreserved") is True and
+                final.get("controllerProfilesUnchanged") is True and
+                final.get("protocolAndTransportUnchanged") is True and
+                final.get("ps3Ps4OfflineOnly") is True and final.get("ps3Ps4OnlineEnabled") is False and
+                final.get("offlineEmulatorEntriesChanged") is False and
+                final.get("offlineEmulatorLibraryEntriesChanged") is False and
+                final.get("n64DolphinCoresAndOptionsPreserved") is True and
+                final.get("snesMegadriveEntriesPreserved") is True and
+                final.get("approvedScopes") == R133_SCOPES and
+                final.get("verificationScope") == "original-signature-16KiB-and-every-entry-with-five-closed-replacements" and
+                set(final.get("replacedEntrySha256", {})) == R133_REPLACED and
+                final.get("addedEntrySha256") == {},
+                "R133 final evidence differs from the reviewed console-only, Sony-offline scope")
+        require(final.get("signatureSchemesVerified") == ["v2", "v3"] and
+                final.get("zipAlignmentVerifiedBytes") == 16384,
+                "R133 final signature/alignment differs")
+        preserved = final.get("preservedEntrySha256", {})
+        require(isinstance(preserved, dict) and len(preserved) == final.get("preservedEntryCount") and
+                R133_DEX <= set(preserved) and
+                preserved.get("lib/arm64-v8a/libstation_frontend.so") == R133_FRONTEND_SHA,
+                "R133 final preserved map lacks all 40 DEX or the unchanged frontend")
+        require("assemblyPath" in candidate, "R133 requires its exact reviewed assembly path")
+        assembly = Path(candidate["assemblyPath"]).resolve(strict=True)
+        require(assembly == R133_ASSEMBLY.resolve(strict=True),
+                "R133 assembly path escaped the reviewed console-panel work tree")
+        require(all("assemblyPath" in row and Path(row["assemblyPath"]).resolve(strict=True) == assembly
+                    for row in (mirror, actual)), "R133 current pointers disagree on the reviewed assembly")
+        base = backup / "desenvolvimento/TurboStations-Premium-R132-20261011.apk"
+        require(base.is_file(), "Exact signed R132 donor is missing; no historical fallback is allowed")
+        freeze, identity = assembly / "source-freeze.json", assembly / "identity/runtime-identity.json"
+        for name, expected in (("sourceFreezeSha256", final["freezeSha256"]),
+                               ("runtimeIdentityReceiptSha256", final["identityReceiptSha256"])):
+            require(candidate.get(name) == actual.get(name) == mirror.get(name) == expected,
+                    "R133 current pointers differ from the final source binding: " + name)
+        context = {"current": candidate, "backup": backup, "apk": apk, "final": final,
+                   "integration": integration, "tools": tools, "base": base, "donor": base,
+                   "repo": repo, "freeze": freeze, "identity": identity}
+        source_guard(context)
+        return context
     if revision == "R132":
         require(final.get("baseApkSha256") == R132_BASE_SHA and
                 final.get("existing39OtherDexByteIdentical") is True and
@@ -209,7 +267,8 @@ def resolve_current(current_path, repo):
 
 def env_for_tools(context=None):
     revision = context["current"]["revision"] if context is not None else None
-    temporary = (R132_ASSEMBLY / "release-temp" if revision == "R132" else
+    temporary = (R133_ASSEMBLY / "release-temp" if revision == "R133" else
+                 R132_ASSEMBLY / "release-temp" if revision == "R132" else
                  R131_ASSEMBLY / "release-temp" if revision == "R131" else TEMP)
     within(temporary, WORK).mkdir(parents=True, exist_ok=True)
     return {**os.environ, "TMP": str(temporary), "TEMP": str(temporary),
@@ -292,6 +351,38 @@ def source_guard(context, *, rebuilt=False):
     require(not rebuilt or context["current"]["revision"] == "R128",
             "Later integrations require their reviewed reconstruction recipes; no R128 rebuild fallback")
     recipe = context["repo"] / ("integration/" + context["integration"] + "/recipe")
+    if context["current"]["revision"] == "R133":
+        identity, freeze = context["identity"], context["freeze"]
+        old = list(sys.path)
+        try:
+            sys.path.insert(0, str(recipe))
+            wrapper = load(recipe / "assemble_apk.py", "release_r133_assembly")
+            frozen, runtime, paths, expected, _ = wrapper.inputs(context["base"], freeze, identity)
+            require(runtime["sourceCommit"] == frozen["sourceCommit"] == context["current"]["sourceCommit"],
+                    "R133 runtime/freeze does not bind the exact current executable source")
+            require(set(paths) == R133_REPLACED and expected == context["final"]["replacedEntrySha256"] and
+                    context["final"]["addedEntrySha256"] == {},
+                    "R133 five replacements differ from the reviewed current installer")
+            require([row["engineId"] for row in runtime["engines"]] == context["final"]["engineIds"],
+                    "R133 engine identities differ from the reviewed current installer")
+            require(runtime["approvedScopes"] == context["final"]["approvedScopes"] == R133_SCOPES and
+                    runtime["nativeReceiptSha256"] == context["final"]["nativeReceiptSha256"] and
+                    runtime["existing40DexByteIdentical"] is True and runtime["dexClassSetsPreserved"] is True and
+                    runtime["frontendLibraryByteIdentical"] is True and
+                    runtime["n64DolphinCoreAndOptionsUnchanged"] is True and
+                    runtime["snesMegadriveEntriesUnchanged"] is True and
+                    runtime["ps3Ps4OfflineOnly"] is True and runtime["ps3Ps4OnlineEnabled"] is False,
+                    "R133 native source binding or preserved runtime scope differs")
+            require(all(context["final"]["preservedEntrySha256"][name] == runtime["payloadSha256"][name]
+                        for name in R133_DEX) and
+                    runtime["payloadSha256"]["lib/arm64-v8a/libstation_frontend.so"] == R133_FRONTEND_SHA,
+                    "R133 final DEX/frontend hashes differ from the original source-bound payloads")
+            require(sha(freeze) == context["final"]["freezeSha256"] and
+                    sha(identity) == context["final"]["identityReceiptSha256"],
+                    "R133 current freeze/identity receipt differs")
+            return wrapper, identity, freeze
+        finally:
+            sys.path[:] = old
     if context["current"]["revision"] == "R132":
         identity, freeze = context["identity"], context["freeze"]
         old = list(sys.path)
@@ -405,7 +496,7 @@ def rebuild_payloads(context, timeout):
                     "Incomplete or differing " + phase + " output in the sole work tree; no silent overwrite/reuse")
             reused.append(phase)
             continue
-        run([tools / "python314/python.exe", runner, "--phase", phase], timeout=timeout, env=env_for_tools())
+        run([tools / "python314/python.exe", "-B", runner, "--phase", phase], timeout=timeout, env=env_for_tools())
         require(all((output / name).is_file() and sha(output / name) == digest for name, digest in expected[phase].items()),
                 "Rebuilt current payload differs in phase: " + phase)
     payloads = {"AndroidManifest.xml": REBUILD / "offline/AndroidManifest.xml",
@@ -420,7 +511,7 @@ def rebuild_payloads(context, timeout):
     identity = REBUILD / "identity/runtime-identity.json"
     recipe = context["repo"] / "integration/ps3-ps4-offline/recipe/assemble_apk.py"
     if not freeze.exists():
-        command = [tools / "python314/python.exe", recipe, "--base", context["base"], "--freeze", freeze,
+        command = [tools / "python314/python.exe", "-B", recipe, "--base", context["base"], "--freeze", freeze,
                    "--identity-receipt", identity, "--write-freeze"]
         for name, path in payloads.items():
             command.extend(("--payload", name + "=" + str(path)))
@@ -444,7 +535,7 @@ def main():
             "Building requires explicit --allow-build; plan/verify never compile")
     context = resolve_current(args.current.resolve(strict=True), args.repo.resolve(strict=True))
     require(context["current"]["revision"] == "R128" or args.phase not in ("rebuild-payloads", "assemble"),
-            "R129/R130/R131/R132 build uses its own reviewed integration recipes; no R128 fallback")
+            "R129/R130/R131/R132/R133 build uses its own reviewed integration recipes; no R128 fallback")
     report = {"schemaVersion": 1, "revision": context["current"]["revision"], "phase": args.phase,
               "recordedUTC": datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "sourceCommit": context["current"]["sourceCommit"], "apkSha256": context["current"]["sha256"],
@@ -478,7 +569,7 @@ def main():
             require(shutil.disk_usage(WORK).free >= context["current"]["bytes"] + 512 * 1024 * 1024,
                     "Insufficient space for one unsigned build; current/backup are preserved")
             tools = context["tools"]
-            run([tools / "python314/python.exe", context["repo"] / "integration/ps3-ps4-offline/recipe/assemble_apk.py",
+            run([tools / "python314/python.exe", "-B", context["repo"] / "integration/ps3-ps4-offline/recipe/assemble_apk.py",
                  "--base", context["base"], "--freeze", freeze, "--identity-receipt", identity, "--out", output],
                 timeout=args.timeout_seconds, env=env_for_tools())
             source_guard(context, rebuilt=True)

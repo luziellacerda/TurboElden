@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "revision": "R133",
+  "integration": "integration/console-panel-r133",
+  "phase": "signed-and-verified-installation-pending",
+  "sourceCommit": "5966a8ad23ae9040c570d359b999c8a31de904b4",
+  "apkSha256": "945f7ded35e551d638135a05140c32218eb38277d10eaf21e3f83087d71da112",
+  "apkBytes": 2714971151,
+  "buildIdentityPending": false,
+  "compiled": true,
+  "signedAndVerified": true,
+  "installed": false,
+  "serverActivationConfirmed": false,
+  "physicalGameplayValidated": false,
+  "physicalVisualValidated": false,
+  "physicalThermalValidated": false,
+  "parentRevision": "R132",
+  "parentSourceCommit": "56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1",
+  "parentApkSha256": "47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20",
+  "parentApkBytes": 2711825423,
+  "approvedScopes": [
+    "console-hardware-panel-psp-ps3-ps4"
+  ],
+  "compositionRequired": {
+    "replacementCount": 5,
+    "additionCount": 0,
+    "all40DexByteIdentical": true,
+    "frontendLibraryByteIdentical": true,
+    "manifestResourcesSonyAssetsByteIdentical": true,
+    "coresOptionsControllersTransportUnchanged": true,
+    "videoLedEconomyLoadingPreserved": true,
+    "finalPackageProofPending": false,
+    "preservedEntryCount": 13855
+  },
+  "independentOverlayReview": {
+    "cppExactInverse": true,
+    "consumerExactInverse": true,
+    "aliasesExactInverse": true,
+    "original19ArtDeclarationsAndRowsByteIdentical": true,
+    "originalAliases": 69,
+    "addedAliases": 7,
+    "newArtIndices": {
+      "psp": 19,
+      "ps3": 20,
+      "ps4": 21
+    },
+    "officialPhotoRgbaPreviewHashesChecked": true,
+    "artReceiptSha256": "c9acd052c578225ca78a9c7d188810a14e18a5ff93bda07462f7996870c8fd6f",
+    "sameNintendoPanelContextCacheAndLayout": true,
+    "rawRgbaAdditionalBytes": 3145728,
+    "nominalGpuBytesPerVisitedNewFamily": 1048576,
+    "additionalShaderTimerDecoderThreadCount": 0,
+    "firstAlphaScanAndTextureUploadRemain": true,
+    "driverMemoryOrThermalMeasured": false
+  },
+  "online": {
+    "identitiesPendingFinalBuild": false,
+    "maximumPlayersUnchanged": {
+      "psx": 2,
+      "n64": 4,
+      "gamecube": 4,
+      "wii": 4
+    },
+    "unknownOrUnreviewedGamesApproved": false,
+    "ps3Ps4OfflineOnly": true,
+    "matrixReference": "audits/station-r132-online-mode-completion-20261011/summary.json",
+    "matrixAppliesToParentR132Identities": true,
+    "r133FinalModeBindingPending": true,
+    "lastRealServerReturnCommit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+    "lastRealServerReturnReviewedKitRevision": "R129",
+    "lastRealServerReturnPrivateKitReceived": false,
+    "lastRealServerReturnNewFinalEnginesActivated": false,
+    "lastRealServerReturnCoversPublished": false,
+    "nativeOperatorAuthenticationAndSealedCandidateRequired": true,
+    "freshSignedV3CapabilitiesPending": true,
+    "sanitizedPublicReceiptPairDeployable": false,
+    "uniqueFinalServerDeliveryPublished": false,
+    "fourExistingIdsRenewed": [
+      "psx",
+      "n64",
+      "gamecube",
+      "wii"
+    ],
+    "engines": [
+      {
+        "platform": "psx",
+        "engineId": "pcsx-rearmed-ff81ed17-player-v3-42e4ca5f2acc",
+        "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+        "runtimeSha256": "42e4ca5f2acc86f7b9c15584bb0f583b9fe07d24c88f955eebd0bcbde30f03d4",
+        "maximumPlayers": 2,
+        "controllerProfiles": [
+          "standard-2p-v1"
+        ]
+      },
+      {
+        "platform": "n64",
+        "engineId": "mupen64plus-ae-33bf7021-n64-v3-6dd47d4e0092",
+        "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+        "runtimeSha256": "6dd47d4e00923f27e71523cdfa6c9d3d37d45f0d5ab9cb00225acbfeed45987b",
+        "maximumPlayers": 4,
+        "controllerProfiles": [
+          "direct-four-ports-v1"
+        ]
+      },
+      {
+        "platform": "gamecube",
+        "engineId": "dolphin-5102a033-gamecube-v3-5912af1feeef",
+        "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+        "runtimeSha256": "5912af1feeef31abd75095b169b919a6737637c6d070a6b7f69cdfccf5f74737",
+        "maximumPlayers": 4,
+        "controllerProfiles": [
+          "dolphin-gamecube-four-ports-v1"
+        ]
+      },
+      {
+        "platform": "wii",
+        "engineId": "dolphin-5102a033-wii-v3-5912af1feeef",
+        "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+        "runtimeSha256": "5912af1feeef31abd75095b169b919a6737637c6d070a6b7f69cdfccf5f74737",
+        "maximumPlayers": 4,
+        "controllerProfiles": [
+          "dolphin-wii-remotes-four-v1"
+        ]
+      }
+    ]
+  },
+  "currentPointerChangedByThisPreparation": false,
+  "phoneOperatedByThisPreparation": false,
+  "additionalCompleteBackupCreated": false,
+  "productivelyFrozenParentSourcesChanged": false,
+  "sourceFreezeSha256": "66eca3d4c8cbe74cfcd2e3c8f8ede6908c1da1e6df94c0d9ff0b494ab27bc877",
+  "identityReceiptSha256": "d1eb9bfe78be4c513daedde1ff1f624f653b5353db5a64b8a07d9df213dfb34e",
+  "signingCertificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "signatureSchemesVerified": [
+    "v2",
+    "v3"
+  ],
+  "zipAlignmentVerifiedBytes": 16384,
+  "publicEvidenceIndex": "evidence/PUBLIC-EVIDENCE.json"
+}
