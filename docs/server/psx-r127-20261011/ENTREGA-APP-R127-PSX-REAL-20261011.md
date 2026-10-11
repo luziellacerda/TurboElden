@@ -1,3 +1,9 @@
+# R128 — cadastro atual consolidado
+
+O procedimento administrativo desta entrega R127 é histórico e foi substituído por [handoff único R128](../normal-motors-r128-20261011/HANDOFF-UNICO-MOTORES-ONLINE-R128-20261011.md). Não usar o JSON legado OnlineEngine/EngineRegistryFile para cadastrar os motores v3. Cores e política PSX permanecem os mesmos, mas os IDs do pacote R128 são novos por vínculo ao bundle compartilhado.
+
+## Histórico R127
+
 # R127 — PlayStation com o emulador normal: entrega APP → SERVIDOR
 
 Esta é a entrega do app, não uma resposta do servidor nem confirmação de implantação. Fonte executável [50eefa3eb40f0987b9dc6001e1d10ed2ad81a77c](https://github.com/luziellacerda/TurboElden/commit/50eefa3eb40f0987b9dc6001e1d10ed2ad81a77c), branch `fix/station-psx-real-owner-r127-20261011`, diretório `integration/psx-online`. O APK R127 está compilado, assinado e integralmente verificado: SHA256 `a350878cca5c1a65c51e79ac13e9e38c2053d76e5404edb515ad1ddd650c3038`, 2.235.617.465 bytes. Não foi instalado; cadastro efetivo e gameplay físico não foram confirmados.

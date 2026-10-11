@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "updatedDate": "2026-10-11",
   "policy": "one-system-at-a-time; one-current-development-base; no-additional-apk-snapshots",
-  "currentSourceCommit": "50eefa3eb40f0987b9dc6001e1d10ed2ad81a77c",
-  "currentSourceDirectory": "integration/psx-online",
+  "currentSourceCommit": "3ea94ade312640ab69ca09e4092f60607996ccba",
+  "currentSourceDirectory": "integration/ps3-ps4-offline",
   "currentPackage": {
-    "revision": "R127",
-    "sha256": "a350878cca5c1a65c51e79ac13e9e38c2053d76e5404edb515ad1ddd650c3038",
+    "revision": "R128",
+    "sha256": "0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc",
     "compiled": true,
     "signedAndVerified": true,
     "installed": false,
     "promotedStable": false,
-    "bytes": 2235617465
+    "bytes": 2234617901
   },
   "completedImplementation": {
     "n64": {
@@ -19,10 +19,10 @@
       "onlineEmulator": "Mupen64Plus AE",
       "usesStationRetroActivity": false,
       "implementationDirectory": "versions/station-mupen-online-r125-20261011",
-      "integratedSourceDirectory": "integration/psx-online",
-      "engineId": "mupen64plus-ae-33bf7021-n64-v3-9536fbd2a7d2",
+      "integratedSourceDirectory": "integration/ps3-ps4-offline",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-bceb1e9a55af",
       "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
-      "runtimeSha256": "9536fbd2a7d23713d1280a22276856924420dea9920bb557e0dda7117e5b3025",
+      "runtimeSha256": "bceb1e9a55af41c2363b518ee09c1e45d171b7ba2f6a5a5628ea24553cc126bd",
       "recoveryProtocol": "station-stream.v3",
       "controllerProfile": "direct-four-ports-v1",
       "maximumPlayers": 4,
@@ -41,10 +41,10 @@
       "onlineEmulator": "Dolphin",
       "usesStationRetroActivity": false,
       "implementationDirectory": "versions/station-dolphin-online-r126-20261011",
-      "integratedSourceDirectory": "integration/psx-online",
-      "engineId": "dolphin-5102a033-gamecube-v3-a206aed4b7bb",
+      "integratedSourceDirectory": "integration/ps3-ps4-offline",
+      "engineId": "dolphin-5102a033-gamecube-v3-ff6109c31583",
       "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
-      "runtimeSha256": "a206aed4b7bb491fb010deefde537742b1c95b0f7779f53a25a7a75e0edaf787",
+      "runtimeSha256": "ff6109c31583368928f796094cf3429e86471f71336ecfe0373ad55af433ad3d",
       "recoveryProtocol": "station-stream.v3",
       "controllerProfile": "dolphin-gamecube-four-ports-v1",
       "maximumPlayers": 4,
@@ -58,10 +58,10 @@
       "onlineEmulator": "Dolphin",
       "usesStationRetroActivity": false,
       "implementationDirectory": "versions/station-dolphin-online-r126-20261011",
-      "integratedSourceDirectory": "integration/psx-online",
-      "engineId": "dolphin-5102a033-wii-v3-a206aed4b7bb",
+      "integratedSourceDirectory": "integration/ps3-ps4-offline",
+      "engineId": "dolphin-5102a033-wii-v3-ff6109c31583",
       "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
-      "runtimeSha256": "a206aed4b7bb491fb010deefde537742b1c95b0f7779f53a25a7a75e0edaf787",
+      "runtimeSha256": "ff6109c31583368928f796094cf3429e86471f71336ecfe0373ad55af433ad3d",
       "recoveryProtocol": "station-stream.v3",
       "controllerProfile": "dolphin-wii-remotes-four-v1",
       "maximumPlayers": 4,
@@ -75,9 +75,9 @@
       "onlineEmulator": "Original LibretroPlayer + normal PCSX-ReARMed through pinned private-process ABI adapter",
       "usesStationRetroActivity": false,
       "implementationDirectory": "integration/psx-online",
-      "engineId": "pcsx-rearmed-ff81ed17-player-v3-f9d762e9fe82",
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-bdd07e7085ca",
       "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
-      "runtimeSha256": "f9d762e9fe82b5346b65d29d356d6cb93776a983eb4bf9a9e25ab73388b1eb4f",
+      "runtimeSha256": "bdd07e7085caa79cb8e041e4f943869812f59639650c559dac8afb9f3392e9c5",
       "recoveryProtocol": "station-stream.v3",
       "controllerProfile": "standard-2p-v1",
       "profileSha256": "81c0e2323a37130dbdbdb9c2efefca8837a9bb6e7169304b4e5731b2ec56290a",
@@ -90,7 +90,8 @@
       "menuConsumptionLogicPreserved": true,
       "serverActivationConfirmed": false,
       "physicalGameplayValidated": false,
-      "documentation": "integration/psx-online/README.md"
+      "documentation": "integration/psx-online/README.md",
+      "integratedSourceDirectory": "integration/ps3-ps4-offline"
     }
   },
   "nextSystem": "remaining-unmigrated-systems",
@@ -109,5 +110,24 @@
   },
   "apkUploaded": false,
   "privateDataUploaded": false,
-  "remainingSystemsMigrated": false
+  "remainingSystemsMigrated": false,
+  "offlineAdditions": {
+    "ps3": {
+      "externalAndroidEmulator": true,
+      "onlineEnabled": false,
+      "physicalGameplayValidated": false
+    },
+    "ps4": {
+      "externalAndroidEmulator": true,
+      "onlineEnabled": false,
+      "physicalGameplayValidated": false
+    }
+  },
+  "currentServerDelivery": {
+    "commit": "7b8c0a7e68b1b0bac5fdcebec62233611533394b",
+    "branch": "docs/station-online-normal-motors-r128-20261011",
+    "document": "docs/station-android/r128/HANDOFF-UNICO-MOTORES-ONLINE-R128-20261011.md",
+    "activationConfirmed": false,
+    "legacyRegistrationProcedureSuperseded": true
+  }
 }

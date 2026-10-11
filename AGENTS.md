@@ -1,3 +1,17 @@
+# R128 — PS3 e PS4 offline e cadastro v3 consolidado
+
+Fonte executável 3ea94ade312640ab69ca09e4092f60607996ccba, diretório integration/ps3-ps4-offline, sobre integration/psx-online e bases R124/R126/R127 preservadas. APK candidato 0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc, 2234617901bytes; assinatura original v2/v3, 16KiB e 13548 entradas preservadas conferidas. Não instalado, servidor não ativado, gameplay não validado; última instalação comprovada R124.
+
+PS3 usa aPS3e2.43 externo, ISO por URI; PS4 usa Bachata S4 0.2.4 externo, importação PKG/biblioteca. Somente offline; não criar engines/perfis/salas PS3/PS4. Emuladores oficiais não estão embutidos no APK Station, firmware/jogos não são distribuídos. Contratos/certificados/versões reais em integration/ps3-ps4-offline/evidence. Ler README/STATUS e recibos finais antes de usar outputs intermediários.
+
+Motores online N64/GameCube/Wii/PSX preservam os cores/perfis/opções reais; os quatro IDs atuais estão em release-channels/ONLINE-SYSTEMS.json. Shared Manifest/DEX/carousel requerem marcadores renovados R128; não cadastrar IDs R127 para este pacote. SNES/Mega Drive preservados por ordem humana. Não alterar economia/render/UI/vídeos/cache/preload/LED/30fps por causa desta integração. Não declarar migração universal de outros sistemas.
+
+Handoff único APP→SERVIDOR 7b8c0a7e68b1b0bac5fdcebec62233611533394b, branch docs/station-online-normal-motors-r128-20261011. O procedimento R127 5696ed9 está supersedido: usar autoOnlineProfiles/StationMultiplayer v3, manifesto completo, modos explicitamente escopados e confirmação assinada de /v1/station/online/multiplayer/command; não EngineRegistryFile legado nem snapshot.engines antigo. Código Python administrativo deve ir ao library-tools efetivo do scanner oneshot; dados C# têm hotreload10s. Não implantar/reiniciar produção por conta própria. Preservar registros/salas antigos; servidor deve devolver uma matriz única de aprovados/recusados e prova fresca.
+
+Um backup completo em F:/TurboStations-Backup-Completo-20261011; candidata atual desenvolvimento/TurboStations-Premium-R128-20261011.apk. R127 é donor necessário guardado em bases-necessarias; não apagar inputs de reprodução. Publicar apenas fontes/docs/recibos agregados. Binários/APKs/jogos/BIOS/chaves/logs pessoais ficam locais. As seções seguintes são históricas.
+
+## Histórico anterior
+
 # R127 — PSX real integrado e publicado em 11/10/2026
 
 Fonte executável 50eefa3eb40f0987b9dc6001e1d10ed2ad81a77c, diretório atual integration/psx-online, branch publicada fix/station-psx-real-owner-r127-20261011. Ler README/STATUS, evidence/runtime-final.json, package-final.json, java-final.json e release-channels/ONLINE-SYSTEMS.json. APK R127 a350878cca5c1a65c51e79ac13e9e38c2053d76e5404edb515ad1ddd650c3038, 2235617465 bytes, assinado/conferido v2/v3 e16KiB; não instalado, cadastro e gameplay não confirmados. Última instalação comprovada R124. Não restaurar Activity/empacotador de versões antigas.

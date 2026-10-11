@@ -1,3 +1,9 @@
+# R128 — montagem atual
+
+A implementação PSX abaixo permanece congelada. A montagem atual e seus quatro IDs estão em [overlay R128](../ps3-ps4-offline/README.md), que adiciona apenas PS3/PS4 offline. Usar os recibos R128 para o pacote atual; os hashes abaixo descrevem a R127 histórica.
+
+## Implementação PSX R127 preservada
+
 # PlayStation online com o emulador normal
 
 Esta integração reutiliza o **LibretroPlayer original e o PCSX-ReARMed normal**. A entrada PSX online tem processo privado, autorização Station e transporte próprio PXL1 sobre `station-stream.v3`. Renderer, eventos SDL e controles pertencem ao Player original; esta rota PSX não abre StationRetroActivity nem cria um segundo loop de emulação.
