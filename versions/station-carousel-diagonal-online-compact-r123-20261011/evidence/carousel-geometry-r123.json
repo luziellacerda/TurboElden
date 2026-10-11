@@ -1,0 +1,55 @@
+{
+  "version": "R123",
+  "utc": "2026-10-11T04:59:44.827688+00:00",
+  "passed": true,
+  "scope": "isolated host geometry and actual preference class; no Android/GPU/gameplay/thermal measurement",
+  "checks": {
+    "geometry": 81435,
+    "preferences": 64,
+    "preservationGuards": 16,
+    "oneTimeNativeBridge": 512
+  },
+  "nativeBridgeLink": {
+    "aarch64Android26": true,
+    "nostdlib": true,
+    "noUndefinedSymbols": true,
+    "noCxaGuardSymbols": true,
+    "method": "real native_graphics.h plus independent dlopen/dlsym host stubs; resolved-once and missing-symbol fallback cases"
+  },
+  "model": {
+    "type": "2D affine Diagonal plus homogeneous Y perspective",
+    "diagonalDegrees": 7.5,
+    "lateralDegrees": 45,
+    "lateralFocalWidth": 1.2,
+    "noNewShaders": true,
+    "additionalSideNeighbors": 4,
+    "neighbors": {
+      "Reta": 6,
+      "Diagonal": 6,
+      "De lado": 10
+    },
+    "sidePriorityBudget": 13,
+    "fit": "projected bounds fill ten forward side slots; Reta/Diagonal exact previous geometry",
+    "default": "CURRENT=0",
+    "displayChoices": [
+      "Reta",
+      "Diagonal",
+      "De lado"
+    ],
+    "maskGate": "CELL_EFFECTS=16 and master effective mask"
+  },
+  "sources": {
+    "native/d0/station_carousel_geometry.h": "48c1ff80d974c4e123818be1301425e422182c925f5f8ae435f82d0ce2a624d3",
+    "native/d0/native_formation.h": "070cd1288c573f508aa25c227db504d7e4eb1eba12a369a18968f02dc63c012e",
+    "native/d0/native_system_video720.h": "d9905e91b46c8b7439d5f95b3283406c125097fc31501d242651695172478994",
+    "native/d0/installed_art_r48.h": "c6007805e678d06e6929d2019110a951c92f38499c255b679baf8a879e1315d7",
+    "native/d0/native_graphics.h": "fb266e78ad9daffdf3742b0e3967bfbec7124930997afabc1a8a241cb6cd703d",
+    "native/d0/native_carousel.cpp": "97315bc41c9ea6ab6b7c4673c45352fb0422139cc70f2cd4e545d260b42598fb",
+    "frontend/station_frontend.cpp": "603f63e33bfcbb0c81b88f37213999cc0d874d140fa224591fae72737679eefd",
+    "frontend/station_cover_plan.hpp": "82a89e8cfe7417b107ee600269a745199ad3eb9a1510c7f03634a06285f3bf42",
+    "java/client/src/java/org/emulationstation/frontend/station/StationCarouselStylePreferences.java": "6a113b744e7b0f6d756d42890e99de1b4c26efadc6f75d15b470442ba716333c",
+    "java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java": "059ebe29d30e62203bd048d54421757c220a0055440b6ae03f50dabce62070fd",
+    "java/client/src/java/org/emulationstation/frontend/station/StationGraphicsPanel.java": "7b8483c4775e2f1c2c543f74308be153a4b5b601d1edde3f00881721d0e96654",
+    "tests/verify_carousel_diagonal_r123.py": "f3c5f230f4c82c968c6a55423c3c73ce48f9f48ac4b45c68cb91ac5e11b36560"
+  }
+}

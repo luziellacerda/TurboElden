@@ -1,0 +1,18 @@
+{
+  "kind": "static-source-comparison-not-gameplay",
+  "checks": {
+    "roomSetupContext": true,
+    "clearRoomSetup": true,
+    "createRoom": true,
+    "confirmRoomSetup": true,
+    "createVerifiedRoom": true,
+    "join": true,
+    "joinConfirmed": true,
+    "command": true,
+    "sendChat": true,
+    "paint": true,
+    "loadHero": true,
+    "renderHeroPlayerInfo": true,
+    "all_online_commands_exact": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "version": "R123",
+  "utc": "2026-10-11T05:03:44.888368+00:00",
+  "request": "Reverse side-cover facing and add four neighbors",
+  "sideNeighbors": 10,
+  "otherStyleNeighbors": 6,
+  "sidePriorityBudget": 13,
+  "otherPriorityBudget": 9,
+  "forwardPresentationWrap": true,
+  "duplicateItemsPrevented": true,
+  "heroDimensionsPreserved": true,
+  "additionalOriginalCoverDrawsMaximum": 4,
+  "newDecoderShaderWorkerTimer": false,
+  "thermalOrGameplayValidated": false,
+  "sources": {
+    "native/d0/station_carousel_geometry.h": "48c1ff80d974c4e123818be1301425e422182c925f5f8ae435f82d0ce2a624d3",
+    "native/d0/native_formation.h": "070cd1288c573f508aa25c227db504d7e4eb1eba12a369a18968f02dc63c012e",
+    "native/d0/native_carousel.cpp": "97315bc41c9ea6ab6b7c4673c45352fb0422139cc70f2cd4e545d260b42598fb",
+    "frontend/station_frontend.cpp": "603f63e33bfcbb0c81b88f37213999cc0d874d140fa224591fae72737679eefd",
+    "frontend/station_cover_plan.hpp": "82a89e8cfe7417b107ee600269a745199ad3eb9a1510c7f03634a06285f3bf42"
+  },
+  "independentNativeProofCases": 10544,
+  "independentNativeProofChecks": 297138,
+  "finalNativeProofCases": 19328,
+  "finalNativeProofChecks": 572308,
+  "proofs": [
+    "evidence/carousel-ten-covers-r123.json",
+    "evidence/side-cover-plan-r123.json",
+    "evidence/carousel-geometry-r123.json"
+  ],
+  "rawPhoneLogsScreenshotsSessionsPublished": false
+}

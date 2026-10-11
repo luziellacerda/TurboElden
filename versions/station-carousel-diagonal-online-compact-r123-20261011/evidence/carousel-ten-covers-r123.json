@@ -1,0 +1,44 @@
+{
+  "version": "R123",
+  "utc": "2026-10-11T05:02:47.505645+00:00",
+  "passed": true,
+  "scope": "isolated host actual native coverSlot/flowFormationHook/prioritizeHook/hitCover; original renderer stub follows preserved ELF descending offsets five or six, negative then positive, hero once; sixth-offset boundary uses collapse displacement zero, not native collapse trajectory; no real phone/GPU/thermal measurement",
+  "cases": 19328,
+  "checks": 572308,
+  "visible": {
+    "sideNeighbors": 10,
+    "flatDiagonalNeighbors": 6,
+    "example17of23Content": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "exampleOrder": "logical forward display slots; does not assert native paint order",
+    "wrap": "De lado forward display only, each catalog position at most once",
+    "sideBudget": 13,
+    "otherBudget": 9
+  },
+  "preservation": {
+    "defaultSlotFieldsExactR122": true,
+    "originalFlowCalledOnce": true,
+    "animationRestoredAfterSnap": true,
+    "legacySixthOffsetRepaintAtCollapseBoundaryPreserved": true,
+    "wrappedCenterPickingActualHitCover": true,
+    "priorityChangesOnlyWhenIndicesOrBudgetOrCatalogChange": true,
+    "noNewShaderDecoderQueueWorkerOrFrameLoop": true
+  },
+  "sources": {
+    "native/d0/native_carousel.cpp": "97315bc41c9ea6ab6b7c4673c45352fb0422139cc70f2cd4e545d260b42598fb",
+    "native/d0/native_formation.h": "070cd1288c573f508aa25c227db504d7e4eb1eba12a369a18968f02dc63c012e",
+    "native/d0/station_carousel_geometry.h": "48c1ff80d974c4e123818be1301425e422182c925f5f8ae435f82d0ce2a624d3",
+    "tests/verify_carousel_ten_r123.py": "0e859d13b931c6c933f265730e4f51e7d7860d5ab44158c3599dafce174c63d8"
+  }
+}

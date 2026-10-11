@@ -1,0 +1,51 @@
+{
+  "version": "R121",
+  "capturedFromVersion": "R120-final",
+  "deviceClass": "Motorola Edge30",
+  "rawLogsPublished": false,
+  "error": "Input dispatching timed out",
+  "waitMillis": 5002,
+  "activity": "StationRoomsActivity",
+  "screen": "Sua sala",
+  "mainThread": [
+    "DrawFrameTask::drawFrame",
+    "HardwareRenderer.nSyncAndDrawFrame",
+    "ThreadedRenderer.draw",
+    "ViewRootImpl.performDraw"
+  ],
+  "renderThread": [
+    "Adreno mutex wait",
+    "GrGLProgramBuilder::CreateProgram"
+  ],
+  "coverWorkersAtCapture": [
+    "glCompileShader -> stage/link/init",
+    "glLinkProgram -> initFieldCache/init"
+  ],
+  "beforeFinalInstallation": {
+    "similarANR": true,
+    "mainWait": "HWUI draw",
+    "renderWait": "Adreno mutex/program creation",
+    "coverWorkersCompiling": 1,
+    "nativeCrashSeparate": true,
+    "nativeCrashAfterFinalInstall": false
+  },
+  "sourceFinding": "paint rebuilt own-room card and TextureView for snapshot changes; worker close is asynchronous",
+  "HTTPOnMainCaptured": false,
+  "componentFactoryOnStack": false,
+  "driverMutexOwnerIdentified": false,
+  "deadlockProven": false,
+  "soleCauseProven": false,
+  "gameplayStartedInCapture": false,
+  "targetedChange": [
+    "keep card/TextureView attached for same room and game",
+    "update roster/actions without restarting artwork",
+    "coordinate EGL init and teardown only in cover worker threads"
+  ],
+  "LEDQualityReduction": false,
+  "menuFPSChange": false,
+  "physicalResolutionVerified": false,
+  "officialSources": [
+    "https://developer.android.com/topic/performance/anrs/diagnose-and-fix-anrs",
+    "https://developer.android.com/reference/android/view/TextureView.SurfaceTextureListener"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "compiler": "MSVC 14.44.35207 x64 HOST C++17",
+  "checks": 146,
+  "failures": 0,
+  "fallbackCalls": 37,
+  "canonicalFolders": 50,
+  "resolvedCatalogAliasCases": 78,
+  "directAliasCases": 18,
+  "scope": "exact six command functions extracted; UiString/string assign/read and original XML resolver mocked; does not execute original ELF resolver, Android ABI/JNI, GPU, engine or gameplay"
+}

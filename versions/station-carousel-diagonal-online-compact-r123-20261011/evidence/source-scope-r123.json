@@ -1,0 +1,38 @@
+{
+  "version": "R123",
+  "baseVersion": "R122",
+  "javaSources": 234,
+  "nativeInputs": 124,
+  "frontendSources": 12,
+  "changedJava": [
+    "client/src/java/org/emulationstation/frontend/station/StationCarouselStylePreferences.java",
+    "client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "client/src/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationActionButton.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "changedNative": [
+    "d0/installed_art_r48.h",
+    "d0/native_carousel.cpp",
+    "d0/native_formation.h",
+    "d0/native_graphics.h",
+    "d0/native_system_video720.h",
+    "d0/station_carousel_geometry.h"
+  ],
+  "changedFrontend": [
+    "station_cover_plan.hpp",
+    "station_frontend.cpp"
+  ],
+  "addedJava": [
+    "client/src/java/org/emulationstation/frontend/station/StationCarouselStylePreferences.java"
+  ],
+  "javaManifestSHA256": "edf10c627fcdb891b30be3fc28ac7f91159580d670d4f9ea962ae4e1c22a7c2a",
+  "nativeManifestSHA256": "304e976557c5f38316f92ab5fece2164f31a0772afce4d1380be626a1b161755",
+  "frontendManifestSHA256": "6ddfef31be0a5e7b5134a97ec13b9510aaf2d190f27aff85df4176cc59e54ece",
+  "allOtherExistingJavaByteIdentical": true,
+  "allOtherNativeInputsByteIdentical": true,
+  "allOtherFrontendSourcesByteIdentical": true,
+  "originalFactoryDelegationPreserved": true,
+  "runtimeAndEngineChanges": false,
+  "sourcePublicationContainsPrivateInputs": false
+}

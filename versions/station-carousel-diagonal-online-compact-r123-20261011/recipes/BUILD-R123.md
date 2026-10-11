@@ -1,0 +1,5 @@
+# Receita R123
+
+Instalada no Motorola, com SHA integral e dados preservados.
+
+Base R122 SHA256dc36a8f978aaab9fef507acd2a59281aa52a4827914c2d8d10b93b4b56cfe339. Prepare → compile → package sequenciais. Fontes/inputs congelados; privados locais hash conferidos. Esta revisão recompila Java e as duas bibliotecas UI integralmente. --link-private-native-inputs evita copiar 243.606.630 bytes de inputs privados inalterados, usando hardlinks no mesmo volume; verifica identidade/hashes dos originais e do estágio antes/depois da compilação e montagem, sem alterar originais. Não combinar com --reuse-native-build. Exatamente quatro payloads UI; manifesto/runtime/registry/engines/assets intactos. Assinatura original v2/v3 e alinhamento16KiB. O APK e a compilação R123 anteriores são preservados; o novo APK tem sufixo 10Capas. A verificação das bibliotecas da base usa um temporário separado no volume de montagem, sem duplicar essas bibliotecas grandes em E:. A receita não opera telefones nem inicia partidas.

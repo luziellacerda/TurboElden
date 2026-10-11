@@ -1,0 +1,55 @@
+{
+  "revision": "R121",
+  "scope": "host-only presentation arithmetic and source guards",
+  "status": "PASS",
+  "geometryChecks": 145604,
+  "geometryCases": 9828,
+  "sourceGuardChecks": 23,
+  "guards": [
+    "cards do not size from display height",
+    "flow does not size from display height",
+    "own-room hero remains viewport gated",
+    "room lists use compact thumbnail",
+    "existing card interface retained",
+    "artwork still uses original bitmap",
+    "flow still owns scroll content",
+    "no new decode renderer network or timer",
+    "exit callback occurs only once",
+    "human exit still follows dialog dismissal",
+    "cancel resume dismisses only",
+    "create signature preserved",
+    "confirmation accepts original callback",
+    "shared focusable semantic buttons",
+    "touch targets remain 48dp",
+    "large-font menu has stacked fallback",
+    "pause native vector bounds retained",
+    "pause font and original y retained",
+    "pause row x-height ABI named correctly",
+    "pause text remains after icon",
+    "pause enabled action IDs retained",
+    "pause draw hooks do not request exit or save",
+    "compiled real geometry passes"
+  ],
+  "sha256": {
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationCoverLayout.java": "7cfc3636abd03bb66f370703c99a34e50b5c24c9844507259ea007bf8162a80f",
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationCreateGameCard.java": "fa5b41819909f140987d6a05780dc950bfe9d05b571764865b1c4db4c09f3328",
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationFlowPanel.java": "a1997af783ac46b43712542cce08608ce95db9a18693ce78b56e1644988d0fca",
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationExitPanel.java": "9ed5f6dbc5a75f81562abad6060318ab9c98ffa013988a2091198390903d8c2e",
+    "native/d1/native_pause_menu.h": "c558212caf3d228365702001837c1fa380d3e996befcad8a41a20459c3d6dc17",
+    "tests/StationCoverLayoutR121Test.java": "6e2fb4ff0761f415ad7ab8b90a427389b7fbdb9c908bb7446e130efa008f51dc",
+    "tests/verify_room_presentation_r121.py": "a44b6877ab06ebc6719d7581fc0d3b95e1525ad99281e7ff8a6772e431dc23cc"
+  },
+  "pauseAbiEvidence": {
+    "drawRectCaller": "0x2afe3c",
+    "rowXY": "ldp s0,s1,[row,#0x24]",
+    "rowWidthHeight": "ldp s2,s3,[row,#0x2c]",
+    "buildTextCacheCaller": "0x2bc1c8",
+    "meaning": "0x30 is row height, not width; old 0.88 alignment already followed the icon"
+  },
+  "limitations": [
+    "No Android layout/rendering executed",
+    "No gamepad, gameplay or network session exercised",
+    "No GPU/CPU or temperature measurement",
+    "OEM exit menus remain with their original owners"
+  ]
+}

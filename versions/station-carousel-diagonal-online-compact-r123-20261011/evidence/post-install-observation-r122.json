@@ -1,0 +1,26 @@
+{
+  "version": "R122",
+  "utc": "2026-10-11T03:52:07.020092+00:00",
+  "device": "Motorola Edge30",
+  "installedHashMatches": true,
+  "observedScreen": "Sua sala",
+  "foregroundActivity": "StationRoomsActivity",
+  "authenticatedFrontendObserved": true,
+  "gameCoverAndRoomRosterVisible": true,
+  "nicknameBelowOnlineTitleWithoutCardObserved": true,
+  "startAndLeaveSideBySideObserved": true,
+  "currentProcessFatalObservedInCapturedWindow": false,
+  "downloadFailureWarningPhysicallyTested": false,
+  "waveThemeTogglePhysicallyTested": false,
+  "completeVisualValidation": false,
+  "fullRoomWorkflowValidated": false,
+  "onlineANRResolvedPhysically": false,
+  "physicalGameplayValidated": false,
+  "thermalImprovementVerified": false,
+  "screenshotsAndRawLogsPrivate": true,
+  "limitations": [
+    "Only read-only observation of existing screens; no gameplay started.",
+    "User requested further compact room controls and sidebar refinement, continued separately.",
+    "Absence of a fatal line in this window does not demonstrate ANR resolution."
+  ]
+}

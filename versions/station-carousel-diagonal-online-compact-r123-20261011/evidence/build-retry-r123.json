@@ -1,0 +1,14 @@
+{
+  "version": "R123",
+  "firstFullBuildPassed": false,
+  "detectedBeforePackaging": true,
+  "failure": "New carousel-style getter dynamically initialized a local static and required unavailable C++ guard symbols in the existing nostdlib carousel build.",
+  "correction": "Explicit POD once-only getter initialization, preserving original compiler and linker flags.",
+  "failedJavaAliasHashesMatchedPreparedInputs": 234,
+  "failedNativeInputHashesMatchedPreparedInputs": 124,
+  "failedWorkContainsOnlyGeneratedBuildAndVerifiedInputCopies": true,
+  "privateBaselinePreservedOutsideFailedWork": true,
+  "failedAPKInstalledOrPublished": false,
+  "rawCompilerLogsPublished": false,
+  "fullRetryRequired": true
+}

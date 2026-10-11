@@ -1,0 +1,21 @@
+{
+  "version": "R122",
+  "utc": "2026-10-11T03:31:25.134027+00:00",
+  "passed": true,
+  "javaStateAndLifecycleChecks": 34,
+  "nativePaletteChecks": 16,
+  "sourceSHA256": {
+    "native/d0/native_space.h": "d3297d51c445a603321675b70c1b8016fdc8563597a6c78d2ddaa482d8f392c1",
+    "native/d0/native_settings.h": "7d7e4d388319594d7bfc934105d1d09c75af09a3887f4b1f8bb1dcf14d9b3abb",
+    "java/client/src/java/org/emulationstation/frontend/station/StationWaveBackground.java": "fa038decbe408ca4d05c873f2aad4553b2bde8bc091ee162cda3e9881483c5cd",
+    "tests/verify_wave_theme_r122.py": "38dd175eb021a211d506a4ef488433584b449ce10080ff42a0c9387d4cf30702"
+  },
+  "existingAppearancePreference": "station_appearance/theme",
+  "newPreference": false,
+  "limits": [
+    "Host-only Android stubs; not visual rendering on a phone.",
+    "Native palette helpers are extracted verbatim; not a complete GLES renderer.",
+    "No physical, thermal or gameplay validation."
+  ],
+  "realAndroidApi34JavaCompilationPassed": true
+}

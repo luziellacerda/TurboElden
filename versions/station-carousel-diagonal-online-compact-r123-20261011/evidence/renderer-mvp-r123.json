@@ -1,0 +1,51 @@
+{
+  "version": "R123",
+  "status": "PASS",
+  "verifiedAtUtc": "2026-10-11T04:43:28.518229+00:00",
+  "source": "Preserved R122 APK lib/arm64-v8a/libmain.so",
+  "elfSha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+  "elfBytes": 4588272,
+  "drawStrip": {
+    "address": "0x2e5470",
+    "bytes": 320,
+    "symbol": "_ZN8Renderer18drawTriangleStripsEPKNS_6VertexEjNS_5Blend6FactorES4_",
+    "codeSha256": "9d31095bde488e0edc038577aa430d218ed2be5a6774414eb743c90ac5337dc2",
+    "directExternalCalls": [
+      "glVertexAttribPointer@plt",
+      "glVertexAttribPointer@plt",
+      "glVertexAttribPointer@plt",
+      "glBufferData@plt",
+      "glBlendFunc@plt",
+      "glDrawArrays@plt"
+    ],
+    "internalErrorCheckAddress": "0x2e4de0",
+    "indirectCalls": 0
+  },
+  "errorCheck": {
+    "address": "0x2e4de0",
+    "bytes": 276,
+    "codeSha256": "972d616c3dc064212a43d2a594c02b43a7d1e40fb1ad066cd99c332b56486f82",
+    "directGlCalls": [
+      "glGetError@plt"
+    ],
+    "changesGlProgramOrUniform": false
+  },
+  "matrixSetters": {
+    "address": "0x2e55b0",
+    "bytes": 296,
+    "codeSha256": "09f34f9ba851206bb8310845078b9620b8d50736ba0c1719da9751706b841d50",
+    "uniformWriteObservedOutsideStrip": true
+  },
+  "drawChangesProgram": false,
+  "drawChangesMvp": false,
+  "nativeMvpUniform": "u_mvp",
+  "nativeVertexShaderMvpObserved": true,
+  "objdumpSha256": "453c285f7add2e6eb17de727354c4c7dde5a8986867aa68e4cbfc6e5ecdc3cd4",
+  "recipeSha256": "46cb0d42702e593b88606b774006171468f49da526de2a887c6040e890adcc92",
+  "limits": [
+    "Static analysis of the exact preserved ELF; not execution on a GPU or telephone.",
+    "Error-check helper has logging/unwind branches; its only direct GL call is glGetError.",
+    "This proves the scope of Renderer::drawTriangleStrips, not arbitrary external shaders or drivers.",
+    "Binary and disassembly files remain private and are not included in Git."
+  ]
+}

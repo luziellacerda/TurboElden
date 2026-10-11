@@ -1,0 +1,56 @@
+{
+  "version": "R123",
+  "utc": "2026-10-11T04:27:19.932087+00:00",
+  "previousAPK": {
+    "sha256": "804726a2fa4f4601f57df61d7b096ad3916c3ae09140314b41594dee017e1c7f",
+    "bytes": 2217098632,
+    "installedOn": "Motorola Edge30",
+    "fullInstalledHashConfirmed": true
+  },
+  "previousSourceSHA256": {
+    "netplay-src/org/emulationstation/frontend/netplay/StationActionButton.java": "865e09572dd99597d4d728ac662638017be427815183c4cd536fe3e13631cc01",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": "780a0bfa3580fc761ad1289bdf36f84dbf53188afd28065030806fe576a0ef44"
+  },
+  "physicalScreenObserved": "Sua sala / waiting for another player",
+  "initialVisualRejectedByMaintainer": true,
+  "observedIssues": [
+    "Filled sidebar navigation faces",
+    "Repeated game heading inside the room",
+    "Repeated invitation message",
+    "Mode option padding lost after background replacement",
+    "Weighted brief summary left unnecessary blank space"
+  ],
+  "dexInspection": {
+    "dexFiles": 38,
+    "classDefinitions": 51323,
+    "roomsAndActionButtonEachDefinedOnce": true,
+    "classes35SHA256": "e892722f8d9961fc2caa4d052ead17dfb87bb072af98b630d66e00d6655835c2",
+    "matchesCompiledPayload": true
+  },
+  "sidebarPixelMatchedDisabledDrawableFill": "0xff142033",
+  "actualViewEnabledStateEstablished": false,
+  "revisionScope": "Online presentation, compact graphics settings, and a third selectable De lado perspective style; existing Reta/Diagonal, master/economy gates, runtime, media, controllers, and network behavior preserved",
+  "replacementCompiled": true,
+  "replacementInstalled": true,
+  "replacementPhysicallyObserved": true,
+  "gameplayOrThermalValidation": false,
+  "containsRawScreenshotLogsDeviceSerialSessionOrUserNames": false,
+  "initialReceiptsPreserved": {
+    "initial-build-r123.json": "c864855b7ce632961ca255225aac7ea85c770525206e49737dbf19244f044d06",
+    "initial-package-r123.json": "1373b6f483d2b6629f5c89ed629880a50a910ce4d8afd992509f97c58362ac68",
+    "initial-installation-motorola-r123.json": "4188ae465a59dee14eeef81c1d99c5fa86154ec0f504fe4f4e81071f3173a643"
+  },
+  "initialTwoJavaRevisionScope": "Only two Java presentation files; R123 carousel geometry and all runtime/media/controller/network behavior preserved",
+  "extraMenuPhysicallyObserved": "Graphics effects settings",
+  "extraMenuIssue": "Oversized polygon cards and controls in environment, carousel and effects groups",
+  "measuredLandscapeDP": {
+    "width": 960,
+    "height": 432,
+    "densityDPI": 400
+  },
+  "replacementAPKHash": "0bf964d516fcd1bbe26e3a8995ffc59c3580fd9162bd7e4e6352e01dc7169098",
+  "laterRequest": "Reverse side-facing and add four visible neighbors",
+  "laterSideNeighbors": 10,
+  "physicalObservationReceipt": "evidence/physical-menu-r123.json",
+  "previousSixSideCorrectedAPKHash": "7113844ab882a138915bb1a3c7ea58ebc6e6c824116593cd3661a8d6e5212b8f"
+}

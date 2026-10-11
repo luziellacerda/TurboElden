@@ -1,0 +1,17 @@
+{
+  "kind": "read-only-config-not-gameplay",
+  "systems": [
+    {
+      "name": "switch",
+      "fullname": "Nintendo Switch",
+      "command": "android: package=org.emulationstation.frontend class=org.yuzu.yuzu_emu.bootstrap.BootstrapActivity action=android.intent.action.VIEW data=\"%ROM_RAW%\" mime=application/octet-stream content=1",
+      "extension": ".nsp .xci .nca .nro"
+    },
+    {
+      "name": "super-nintendo",
+      "fullname": "Super Nintendo",
+      "command": "libretro: core=snes9x_libretro_android.so",
+      "extension": ".smc .SMC .sfc .SFC .fig .FIG .swc .SWC .bs .BS .zip .ZIP "
+    }
+  ]
+}

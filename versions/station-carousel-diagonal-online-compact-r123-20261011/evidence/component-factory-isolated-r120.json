@@ -1,0 +1,32 @@
+{
+  "version": "R120",
+  "scope": "Isolated host API stubs and exact R119 AXML; no phone/gameplay",
+  "utc": "2026-10-11T02:42:52.900794+00:00",
+  "passed": true,
+  "java": {
+    "checks": 43,
+    "result": "PASS 43 checks (real factory/presence; host API stubs; no Android/gameplay)",
+    "sourceSHA256": {
+      "StationComponentFactory.java": "1a85e021044a909a24feede20bdf80d7b4531cbf1eb4284d720a868acaff7a38",
+      "StationControllerPresence.java": "536a4a65ee9d4ccb15771b1d4f4a9403fd28b6ecec54d8ab2fc99f1fdf0fe2ec"
+    },
+    "fixtureSHA256": "9c1d29baefc7af39c0b047bcb80b52480a15108f7c6968cffb07aa80621b50e0",
+    "reusedAndroidStubRecipeSHA256": "9d1d411f443e239abae6a1d363ce7ec3aa31a41225369129234bd40054fe2753",
+    "realFactoryAndPresenceCompiledUnmodified": true
+  },
+  "manifest": {
+    "checks": 1505,
+    "baseAPK_SHA256": "f5d0e434cb383a7103c77fd1e853b9f4721d283c30941860a21f1831bf6be674",
+    "originalManifestSHA256": "3a821dccd8a9853acd345f106614ec955bbf66b681b7690f907348569e8bef0d",
+    "patchedManifestSHA256": "c4e9a6d69497bb928f53b35b49bef86d1b57a0b2b0bd5d0aa1953cfd5d9752a4",
+    "manifestBytesDelta": 132,
+    "independentBinaryReverseIdentityPassed": true,
+    "allOtherXMLTreeLinesIdentical": true,
+    "onlyApplicationFactoryAttributeChanged": true,
+    "patchSHA256": "dd29e3ad8f2b019a40c522f25ce08148b5b34b777a451b3eecabd8aad2c700c6"
+  },
+  "totalChecks": 1548,
+  "recipeSHA256": "e7a94d07cbdaeb5f68357b360fde48d9f149fe424a185bbaecd1225f46da7a3d",
+  "aaptSHA256": "2a9bd1798d3841c7592d995c87fd1fb92397cdb700f076c51b9e9e722f9eb82c",
+  "temporaryStubsExcludedFromProductionSourcesAndAPK": true
+}

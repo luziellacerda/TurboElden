@@ -1,0 +1,30 @@
+{
+  "version": "R123",
+  "utc": "2026-10-11T04:57:31.462163+00:00",
+  "passed": true,
+  "scope": "Isolated actual C++ planner/prioritize body; no Android/GPU/network/gameplay/thermal measurement",
+  "checks": {
+    "cases": 19901,
+    "actualCppChecks": 164661,
+    "frontendPreservationGuards": 1
+  },
+  "budget": {
+    "default": 9,
+    "sideWithEffectiveCellEffects": 13,
+    "maximum": 13,
+    "rebuildOnBudgetChangeWithIdenticalPriorities": true
+  },
+  "preserved": [
+    "single cover queue",
+    "retry/backoff",
+    "warm reveal timing",
+    "warm cache window",
+    "lifecycle",
+    "ownership"
+  ],
+  "sources": {
+    "frontend/station_frontend.cpp": "603f63e33bfcbb0c81b88f37213999cc0d874d140fa224591fae72737679eefd",
+    "frontend/station_cover_plan.hpp": "82a89e8cfe7417b107ee600269a745199ad3eb9a1510c7f03634a06285f3bf42",
+    "tests/verify_side_cover_plan_r123.py": "6ee542fd01ba0d9104ea048c83149c1de3126cd813220756fef7b55a9b7d1f51"
+  }
+}

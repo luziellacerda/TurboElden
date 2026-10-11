@@ -1,0 +1,301 @@
+{
+  "schema": "station-readonly-flow-exit-audit.v1",
+  "revision": "R121",
+  "timeUtc": "2026-10-11T03:16:06.218885+00:00",
+  "mode": "readonly source and existing private evidence; no tests, no Android or server operation",
+  "baseline": "R120 final",
+  "unchangedAuthorityFiles": 22,
+  "authorityFilesIdentical": true,
+  "roomMethodsCompared": 14,
+  "roomMethodsIdentical": true,
+  "sources": [
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java",
+      "sha256": "a3c184aff3eabd2aae9d861235fa132eb31fc6d95b4a1ffcb52248fa4724625e",
+      "bytes": 18486,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineGame.java",
+      "sha256": "88915e3d218013f8da2491531b29bf3c1e5be0c2bd830854aaecaa9fea459d5d",
+      "bytes": 13018,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java",
+      "sha256": "6552e3e58bd0ca4423a0d5358d6e76e0cf8ffccef04ae67c549c37974259dbdc",
+      "bytes": 12178,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java",
+      "sha256": "0f4032baae452d5203adf2f845c1e9830c8e1132b99dfffa7ec0b4b758f37017",
+      "bytes": 16352,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationSessionService.java",
+      "sha256": "fb8857ab4b0bbd9507764c9a6e1b4a48eccddd25a7bff36ad406cd9a800b641a",
+      "bytes": 3397,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationSessionLink.java",
+      "sha256": "2cdf6807d6d96e6265f8719a40ea75b3b81680d2b033dd985181c2094e89eb1c",
+      "bytes": 4149,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomState.java",
+      "sha256": "3569a17e3b3134b0388d5a3231dad9f269461fa5b35566fd5195be21018ac5f9",
+      "bytes": 936,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomStartState.java",
+      "sha256": "2b63338a3042e97cab99e967c997dd5bf10ca7b595170aabdf9d5cc88783d1ce",
+      "bytes": 3308,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomCreation.java",
+      "sha256": "104b87d5717839fd56c93327d7f108b44406e0e86768ffed5922f0877e1b4578",
+      "bytes": 837,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationLaunchPolicy.java",
+      "sha256": "462a154bfdc5308432d7fffe2c5378ddec35398622158276f76bf0b20a441754",
+      "bytes": 1149,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+      "sha256": "56ae015bbb92c548f656affcd4d92f93868f5a3326ce54cb9ab7cbda2892834f",
+      "bytes": 6110,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java",
+      "sha256": "c117815045ad93c6736d4618cf71c3e4226faace620054acecfd64e7eb393961",
+      "bytes": 18821,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRecoveryTunnel.java",
+      "sha256": "442c50840a280d4a5605e32a06873fa14a879285a959a6f2a0b5231e2204ede9",
+      "bytes": 17049,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java",
+      "sha256": "9845e639b93223188dd0b3b6f4389ce80c72f9397380e52a30f4b1f4ca9f2104",
+      "bytes": 7027,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomRoster.java",
+      "sha256": "46b27325570c1dcd5f11edfe6b88bf7783041bc0b6e50d7b10badcbd3e8843b9",
+      "bytes": 9300,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomArtwork.java",
+      "sha256": "8afccc580b866cfa8edfd36d042dccfce96a8572f47e078b5a0b46d8f53e6860",
+      "bytes": 4923,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomLeaveIntent.java",
+      "sha256": "28f776b5f3130fcd0910f3a9b4b649b93fc0a3ece5466f229a4d703c982d99fc",
+      "bytes": 2414,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationAndroidControllerProfile.java",
+      "sha256": "9c0f7e4c64f3d7e02f8dda31f5a0e2fb0c12edcabc452d515c3c08e05e4bfbd2",
+      "bytes": 3673,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+      "sha256": "f70ad339cff8bc168c46ec400cd90b145fcb7a81834c2ae23e38ebeb9e923f67",
+      "bytes": 31611,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/client/src/java/org/emulationstation/frontend/station/StationHttp.java",
+      "sha256": "9f897c3d30465f9bc77b4d71d02a051746788b7a9aade4b8e0a25ba3ef8a4460",
+      "bytes": 9883,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/client/src/java/org/emulationstation/frontend/station/StationSessions.java",
+      "sha256": "dbd8810253b74d9a5c00493115292a175d963a40a113e3113246eb3386178ec2",
+      "bytes": 3170,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/client/src/java/org/emulationstation/frontend/station/StationAndroid.java",
+      "sha256": "ce102c7b18189929bddb6dd8895661c5ad26814da2d4988774482b8ca1532d76",
+      "bytes": 5382,
+      "identicalToR120": true
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "sha256": "f43ae9586bf1575e2c613c73f6028e1447a94e8f5634753ae512af8088d78b0a",
+      "bytes": 119673,
+      "identicalToR120": false
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineCoverView.java",
+      "sha256": "2da2bbee3e9497a301ed81a2110b72872872d9d63b7f6c161fbaa0c7615bd151",
+      "bytes": 31714,
+      "identicalToR120": false
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationCreateGameCard.java",
+      "sha256": "fa5b41819909f140987d6a05780dc950bfe9d05b571764865b1c4db4c09f3328",
+      "bytes": 4862,
+      "identicalToR120": false
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationCoverLayout.java",
+      "sha256": "7cfc3636abd03bb66f370703c99a34e50b5c24c9844507259ea007bf8162a80f",
+      "bytes": 2321,
+      "identicalToR120": false
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationExitPanel.java",
+      "sha256": "9ed5f6dbc5a75f81562abad6060318ab9c98ffa013988a2091198390903d8c2e",
+      "bytes": 5075,
+      "identicalToR120": false
+    },
+    {
+      "path": "java/netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+      "sha256": "31ca6cf7108270c424129327cd8605ff8f140db3e2925d1a536d1027cb155787",
+      "bytes": 24297,
+      "identicalToR120": false
+    },
+    {
+      "path": "native/d1/native_pause_menu.h",
+      "sha256": "c558212caf3d228365702001837c1fa380d3e996befcad8a41a20459c3d6dc17",
+      "bytes": 4854,
+      "identicalToR120": false
+    },
+    {
+      "path": "native/d0/native_skin.h",
+      "sha256": "0db3942ca17c58f5ae118707be3c978fd9e7faf0e47262b2abd7316574b8ddbf",
+      "bytes": 16582,
+      "identicalToR120": true
+    },
+    {
+      "path": "native/d0/native_carousel.cpp",
+      "sha256": "8b935fcaf4fc6674a27ad881a35c3e1c12c8a1c71d301b076a0a78db5dadccb6",
+      "bytes": 37683,
+      "identicalToR120": true
+    }
+  ],
+  "methods": [
+    {
+      "declaration": "private void chooseGame()",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "c5fc38a442a0e3da95408a9913f63ddd7c3c5f0d7759b61096266547f169d6ce"
+    },
+    {
+      "declaration": "private void action(Work work,Runnable completed)",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "17228489b9dfe0b269a5358cbcc92fe5b765133e247edb1f568307c7fb71807e"
+    },
+    {
+      "declaration": "private void createRoom()",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "855cc8e6bcc332f15023be10739a5f6a57f985a313d8230032398d9cf037b3ac"
+    },
+    {
+      "declaration": "private static boolean sameRoomSetupProfile(",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "355d38c1eb13b13ba73a0b434af635d49c5bbd5c2fbfef43325c5828f47a7d9e"
+    },
+    {
+      "declaration": "private void prepareRoom(",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "2f67ad02bc0e4a01f36ab758ec197ee06921f1e5aa1eba732cf04090875cd1ad"
+    },
+    {
+      "declaration": "private void createVerifiedRoom(",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "e4e14f13ca04e6333f4e001b7104224c6b974e0c6ed68feb5572564f88e248db"
+    },
+    {
+      "declaration": "private void join(",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "d705a2c2edbd7034eba81929c52f25ddc6e373841f9651f509feaec174dcce57"
+    },
+    {
+      "declaration": "private void joinConfirmed(",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "4bd8bfda5bc71da0894735b3905b88ed25c60df86fe0072adc67d5466a76ca36"
+    },
+    {
+      "declaration": "private void command(",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "6be79c07d32f2849dcef7fb3eb982764b5abc42cf02841204d650276027018a1"
+    },
+    {
+      "declaration": "private void startDialog()",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "f7b0969833ba5e6988f859e9020fa340a53dc63b37798e01f81c6a6ffb2839e5"
+    },
+    {
+      "declaration": "private void launch(",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "de5178130b769dff2908da0af2c7d4276d98339a8bae2735b29ad09e08f23bed"
+    },
+    {
+      "declaration": "private void exitRooms()",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "6c7397e5c7d722bddcfe1817d36e675fbeac64e2555711decb5d5fc51ad7aeae"
+    },
+    {
+      "declaration": "private void updateStartState()",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "62caefe4466632aa6682a38c1d746bab9ee1b950776c97c01b61dd22111a22a2"
+    },
+    {
+      "declaration": "private JSONObject readPoll(",
+      "identicalNormalizedTextToR120": true,
+      "sha256Utf8LF": "45904a7625744344b99be8b795330d7b01c444876c826d72c355771ca567aaf7"
+    }
+  ],
+  "physicalEvidence": {
+    "inputAnrLocal": "2026-10-10T23:57:32-03:00",
+    "inputAnrUtc": "2026-10-11T02:57:32Z",
+    "inputWaitMs": 5002,
+    "uiThreadName": "SDLActivity",
+    "uiStack": "HardwareRenderer.nSyncAndDrawFrame → DrawFrameTask::drawFrame → pthread_cond_wait",
+    "renderStack": "GrGLProgramBuilder::CreateProgram → Adreno mutex wait",
+    "coverWorkersSampled": 2,
+    "coverWorkerCalls": [
+      "glCompileShader",
+      "glLinkProgram"
+    ],
+    "httpStackThread": "pool-5-thread-1 (events worker)",
+    "previousNativeCrashLocal": "2026-10-10T23:54:07.998-03:00",
+    "previousNativeCrashThread": "VulkanWorker",
+    "previousNativeCrashSeparated": true,
+    "singleCauseOrDeadlockProven": false
+  },
+  "limits": [
+    "Existing stacks are a single physical sample on R120, not R121 gameplay",
+    "No full upstream emulator exit-owner sources in this snapshot",
+    "UI inherited bounded file I/O/library loading/cancellation retained; cover HandlerThread startup wait removed in final R121"
+  ],
+  "finalGpuLifecycleRead": {
+    "handlerPublishedOnWorker": true,
+    "getLooperCalledOnUi": false,
+    "initTeardownGateOnlyOnWorkers": true,
+    "displayTerminateRequiresInitialized": true,
+    "physicalValidationPerformed": false
+  }
+}
