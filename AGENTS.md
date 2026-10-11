@@ -1,3 +1,18 @@
+# R133 — consoles no painel e classificação online por edição/modo
+
+Fonte executável5966a8ad23ae9040c570d359b999c8a31de904b4, integration/console-panel-r133. APK945f7ded35e551d638135a05140c32218eb38277d10eaf21e3f83087d71da112,2714971151bytes, mesma assinatura originalv2/v3/16KiB. Ler versions/station-console-mode-completion-r133-20261011/README.md, STATUS.json e recibos completos; resolver exclusivamente pelos três ponteiros CURRENT/ATUAL. R132 é donor e a cadeia R131/R130 segue necessária para reconstrução, não escolher receitas/APKs históricos por data.
+
+Cinco substituições,zero adições,13855 entradas preservadas. Todos40DEX, frontend, Manifest/resources, firmware/material Sony local, motores, cores/opções/perfis/controles, transporte/autenticação, vídeos/loop/30fps/LEDs/cache/loading/economia permanecem exatos. Acrescentadas só três fotos estáticas PSP/PS3/PS4 no motor original de console Nintendo;19famílias anteriores byte exatas. Foto não cria online. PS3/PS4 exclusivamente offline. O custo nominal adicional não comprova temperatura/performance física.
+
+Instalação R133 comprovada no MotorolaEdge30 em11/10/2026 às21:41:18.825876UTC, SHA integral/UID/data preservados; frontend oficial observado21:41:21.187453UTC. Nenhuma autenticação/gameplay/visual final/térmica/ativação do servidor validada. Não interromper jogo/download, trocar assinatura, limpar dados ou reinstalar por mero cadastro.
+
+Matriz integral3940 registros (3685visíveis/255aliases) e fontes documentais em audits/station-r132-online-mode-completion-20261011. Capacidade textual/histórica genérica não é aprovação da edição+conteúdo+owner+modo. Ledger específico conserva5176perfis/321modos originais e acrescenta somente modos documentados aceitos pelos validadores oficiais. PSX exige revisão HLE por edição e o perfil atual limita duas portas padrão; não importar Multitap/analógico automaticamente. Salas recusadas não devem ter validação retirada para simular completude.
+
+Kit privado localR133 contém seis bibliotecas, originais exatos dos recibos/engines e o perfil canônico PSX; públicos sanitizados não são par de implantação. Entrega única HANDOFF-APP-R133-PARA-SERVIDOR-20261011.md concilia a6b58e9 real com kit final e ledger. Esse retorno ainda referenciaR129: kit não recebido/ativação não confirmada/covers.published=false/administração nativa requerida. Consumir contrato atualv3 e resposta assinada fresca do multiplayer, não snapshot.engines/registryv2 antigo. Não implantar ou reiniciar Linux por consequência.
+
+Um backup completo único F:/TurboStations-Backup-Completo-20261011 e árvore temporária G:/StationNormalOwnersR127/console-panel-r133. Fontes/recibos/documentação públicos; APKs/bibliotecas/mídias/ROMs/BIOS/material Sony/chaves/identidades pessoais privados. Expansão documental do ledger não altera APK. Guardar inputs necessários, sem outros snapshots completos.
+
+## Histórico R132
 # R132 — referência atual após auditoria e reparo inicial
 
 Fonte executável56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1, integration/startup-cleanup-r132; final47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20/2711825423bytes. Selecionar pelo CURRENT-LOCAL-ARTIFACTS e recibos em versions/station-startup-cleanup-r132-20261011, nunca por data/receita histórica. R131 corrigida0273 é donor; R130d227 segue necessário à reprodução do donor. Não alterar fontes congeladas por recibos posteriores.
