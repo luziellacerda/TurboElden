@@ -1,0 +1,40 @@
+{
+  "common": [
+    "--base",
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R118-20261010.apk",
+    "--work",
+    "E:\\ESTUDO APK\\work\\station-carousel-online-ui-r119-20261010",
+    "--output",
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R119-20261010.apk",
+    "--package-work",
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\r119-build-temp",
+    "--jdk",
+    "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot\\bin",
+    "--android-jar",
+    "G:\\Android\\Sdk\\platforms\\android-34\\android.jar",
+    "--d8-jar",
+    "G:\\Android\\Sdk\\build-tools\\34.0.0\\lib\\d8.jar",
+    "--ndk",
+    "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin",
+    "--native-inputs",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-09-28\\turboramaemutestes-apk-e-estudo-apk-work\\work\\TurboElden-git\\versions\\station-visual-refinement-r118-20261010\\native"
+  ],
+  "packageOnly": [
+    "--zipalign",
+    "E:\\ESTUDO APK\\TurboRetroEmu-build\\android-build-tools\\35.0.0\\android-15\\zipalign.exe",
+    "--apksigner",
+    "E:\\ESTUDO APK\\TurboRetroEmu-build\\android-build-tools\\35.0.0\\android-15\\lib\\apksigner.jar",
+    "--keystore",
+    "C:\\Users\\Admin\\.android\\debug.keystore",
+    "--key-alias",
+    "androiddebugkey",
+    "--ks-pass-env",
+    "STATION_KS_PASS",
+    "--key-pass-env",
+    "STATION_KEY_PASS"
+  ],
+  "signingPasswordsIncluded": false,
+  "prepareCompileDoNotSign": true,
+  "requireFinalizedJavaAndNativeManifests": true,
+  "baseSHA256": "960b62397fdff20491a5b842dcab0451fade5d786beb84c40e6a9d91ae456e42"
+}

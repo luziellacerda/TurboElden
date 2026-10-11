@@ -1,0 +1,25 @@
+{
+  "version": "R117",
+  "passed": true,
+  "utc": "2026-10-11T00:47:14.677096+00:00",
+  "result": "PASS 2435 executed graphics-settings gesture lifecycle checks",
+  "productionFunctions": [
+    "requestSettingsClose",
+    "settingsClosedHook"
+  ],
+  "productionFragment": "settingsBackOwner changed: gesture reset and owner assignment",
+  "gesture": "StationThemeToggleGesture included from production header",
+  "scenarios": [
+    "200 close-before-UP/reopen/new-pointer trials",
+    "original close alone",
+    "already-closed window",
+    "owner change",
+    "same owner retains current gesture"
+  ],
+  "sourceSHA256": {
+    "native/d0/native_settings.h": "8a6efea2c0f287d1f433462f6f2c8ef9966d05bceff25050a1f3b035c4ddd579",
+    "native/d0/station_theme_switch_state.h": "fb6faf66318a769d7d6b730f8bdb16065400a3677210c4899eb70d238aa2a87e"
+  },
+  "scope": "host regression with only clock/GuiStore callbacks stubbed; no Android visual, thermal or gameplay proof",
+  "physicalValidation": false
+}

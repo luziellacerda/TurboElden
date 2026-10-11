@@ -1,0 +1,29 @@
+{
+  "version": "R118",
+  "utc": "2026-10-11T01:26:35.150393+00:00",
+  "baseVersion": "R117",
+  "javaSources": 230,
+  "nativeInputs": 123,
+  "changedJavaSources": [
+    "client/src/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+    "client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationCoverLightingShader.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineCoverView.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "changedNativeInputs": [
+    "d0/magazine_shader.h",
+    "d0/native_carousel.cpp",
+    "d0/native_graphics.h",
+    "d0/native_graphics_ui.h",
+    "d0/native_lottie_gear.h",
+    "d0/native_magazine_field.h",
+    "d0/native_settings.h",
+    "d0/native_skin.h",
+    "d0/native_space.h",
+    "d0/premium-magazine-led-android.glsl"
+  ],
+  "unchangedPrivateInputHashes": true,
+  "testsExecuted": false,
+  "physicalOrThermalValidation": false
+}

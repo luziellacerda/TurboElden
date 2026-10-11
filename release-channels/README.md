@@ -1,6 +1,6 @@
 # Fonte candidata atual — R116
 
-`ACTIVE.json.currentCandidate` identifica a R116 instalada no Motorola Edge30
+`ACTIVE.json.currentCandidate` identifica a R119 instalada no Motorola Edge30
 e Samsung A56, com hash integral conferido em ambos. A fonte está em
 `versions/station-legacy-cover-diagnostics-r116-20261010` e a explicação completa
 em `ALTERACOES-DETALHADAS.md` nessa pasta.

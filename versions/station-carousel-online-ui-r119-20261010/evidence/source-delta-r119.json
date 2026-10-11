@@ -1,0 +1,20 @@
+{
+  "version": "R119",
+  "base": "R118",
+  "javaSources": 230,
+  "nativeInputs": 123,
+  "changedJava": [
+    "client/src/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationActionButton.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "changedNative": [
+    "d0/native_carousel.cpp",
+    "d0/native_settings.h"
+  ],
+  "frontendUnchanged": true,
+  "runtimeCoreAssetsUnchanged": true,
+  "testsExecuted": false
+}

@@ -1,0 +1,59 @@
+{
+  "version": "R119",
+  "baseVersion": "R118",
+  "baseSourceCommit": "3a72119a69b5da6b4f326f053a13ddebae5a7f69",
+  "source": "versions/station-carousel-online-ui-r119-20261010",
+  "branch": "fix/station-carousel-online-ui-r119-20261010",
+  "state": "installed-hash-verified-on-motorola",
+  "compiled": true,
+  "signed": true,
+  "installed": true,
+  "published": false,
+  "testsExecutedThisRevision": false,
+  "physicalVisualValidation": false,
+  "thermalValidation": false,
+  "gameplayValidation": false,
+  "serverChanged": false,
+  "promotedStable": false,
+  "menuFPS": 30,
+  "defaultBackground": "waves",
+  "javaSourceCount": 230,
+  "nativeInputCount": 123,
+  "sourceManifestsFinalized": true,
+  "changedJava": [
+    "client/src/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationActionButton.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "changedNative": [
+    "d0/native_carousel.cpp",
+    "d0/native_settings.h"
+  ],
+  "frontendUnchanged": true,
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "visibleCoverPriorityBudget": 9,
+  "onlineMenuDriver": "null",
+  "nativeInputPreserved": true,
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R119-20261010.apk",
+  "apkSHA256": "f5d0e434cb383a7103c77fd1e853b9f4721d283c30941860a21f1831bf6be674",
+  "apkBytes": 2217049480,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "signatureV2V3Passed": true,
+  "zipAlignment16KiBPassed": true,
+  "changedAPKEntries": [
+    "classes28.dex",
+    "classes35.dex",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "allOtherEntriesByteIdentical": true,
+  "installedDevices": [
+    "Motorola Edge30"
+  ],
+  "installedAPKHashMatchesPackage": true,
+  "dataPreserved": true,
+  "installationReceipt": "versions/station-carousel-online-ui-r119-20261010/evidence/installation-motorola-r119.json",
+  "launchRequested": true,
+  "sourceCommitStatus": "prepared-for-publication"
+}
