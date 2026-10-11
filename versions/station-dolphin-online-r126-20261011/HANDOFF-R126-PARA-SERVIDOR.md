@@ -6,9 +6,13 @@ A R126 implementa a conexão Station `station-stream.v3` e mantém o gameplay no
 
 **Ação do servidor:** cadastrar exatamente os três registros abaixo, associar cada edição/modo real aos perfis de controles correspondentes e confirmar a resposta assinada v3. O operador de cadastro já existe no código examinado. Não é necessária uma nova API pública nem um reinício para publicar os perfis v3 nesta implementação.
 
-APK final `TurboStations-Premium-R126-20261011.apk`: **SHA-256 `f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d`, 2.233.970.789 bytes**. Assinatura v2/v3 com o certificado original e alinhamento 16 KiB verificados pelas ferramentas reais; 13.544 entradas preservadas por hash. Recibo: [package-final-r126.json](evidence/package-final-r126.json). A referência do commit executável está no recibo de publicação desta versão. Esta entrega não confirma instalação, ativação em produção nem gameplay físico. O APK não é publicado no Git.
+Fonte executável publicada: [`efd9878df3e87ecf22d8fbddeddd30baccb8d3dc`](https://github.com/luziellacerda/TurboElden/commit/efd9878df3e87ecf22d8fbddeddd30baccb8d3dc), branch `fix/station-carousel-diagonal-online-compact-r123-20261011`. Os dois deltas R125/R126 estão nesse commit; o alvo atual é o APK integrado R126.
+
+APK final `TurboStations-Premium-R126-20261011.apk`: **SHA-256 `f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d`, 2.233.970.789 bytes**. Assinatura v2/v3 com o certificado original e alinhamento 16 KiB verificados pelas ferramentas reais; 13.544 entradas preservadas por hash. Recibo: [package-final-r126.json](evidence/package-final-r126.json). Esta entrega não confirma instalação, ativação em produção nem gameplay físico. O APK não é publicado no Git.
 
 Base examinada do servidor: `141b488d6ad7fd3d2c8e74e76c1a004f1cb257fc`; a existência de código no Git não comprova a versão do processo ativo.
+
+Entrega APP → SERVIDOR publicada: [`6e3a7fac6f728ec30a57bf4f4d42f00fdd1c1534`](https://github.com/luziellacerda/Servidor-pix/blob/6e3a7fac6f728ec30a57bf4f4d42f00fdd1c1534/docs/station-android/ENTREGA-APP-R126-EMULADORES-PROPRIOS-20261011.md), branch `docs/station-r126-real-emulators-20261011`. Inclui o JSON dos três registros. O checkout foi preservado e a publicação usou validação estrita de objetos reais. Nenhum serviço foi implantado/reiniciado. Esse commit é nosso pedido técnico, não um retorno de ativação do operador.
 
 ## 2. Identidades finais, sem aliases
 

@@ -83,7 +83,7 @@
     "compiled": true,
     "signed": true,
     "installed": false,
-    "published": false,
+    "published": true,
     "promotedStable": false,
     "apk": "TurboStations-Premium-R126-20261011.apk",
     "apkSHA256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
@@ -101,6 +101,8 @@
       "gamecube",
       "wii"
     ],
-    "allOtherOnlineRoutesMigrated": false
+    "allOtherOnlineRoutesMigrated": false,
+    "sourceCommit": "efd9878df3e87ecf22d8fbddeddd30baccb8d3dc",
+    "sourceURL": "https://github.com/luziellacerda/TurboElden/commit/efd9878df3e87ecf22d8fbddeddd30baccb8d3dc"
   }
 }
