@@ -17,3 +17,7 @@ Leia ALTERACOES-DETALHADAS.md, REVIEW-ONLINE-MENU-R119.md e STATUS.json para cau
 Receita build.py com argumentos explícitos recipes/build-r119-arguments.json, fases prepare/compile/package. Exige APK R118 SHA256 `960b62397fdff20491a5b842dcab0451fade5d786beb84c40e6a9d91ae456e42`, SDK/JDK/NDK identificados e objetos privados R118 conferidos por hash. Compilação em E:, montagem/final em G:. Chave local aceita somente com certificado idêntico.
 
 Git não contém APK, jogos, BIOS, imagens privadas, chaves ou capturas. Nenhum teste novo executado nesta revisão. Compilação não comprova gameplay, aparência completa ou redução térmica. Recibos históricos herdados não são resultados R119. Sem alteração do servidor ou promoção a estável.
+
+## Entrega confirmada
+
+Instalada diretamente no Motorola Edge30, SHA integral e dados preservados. Usuário confirmou capas carregando; captura da lista SNES em Clay Fighter mostra hero e seis miniaturas completas. Painel Efeitos gráficos observado em duas colunas. Fonte publicada `13b21b9dc08adf7b1820fdeb09bec47a810c1ea5`, remoto conferido. Gameplay online e medida térmica não executados nesta revisão.

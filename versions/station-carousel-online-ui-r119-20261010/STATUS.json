@@ -4,11 +4,11 @@
   "baseSourceCommit": "3a72119a69b5da6b4f326f053a13ddebae5a7f69",
   "source": "versions/station-carousel-online-ui-r119-20261010",
   "branch": "fix/station-carousel-online-ui-r119-20261010",
-  "state": "installed-hash-verified-on-motorola",
+  "state": "published-installed-cover-window-confirmed",
   "compiled": true,
   "signed": true,
   "installed": true,
-  "published": false,
+  "published": true,
   "testsExecutedThisRevision": false,
   "physicalVisualValidation": false,
   "thermalValidation": false,
@@ -55,5 +55,12 @@
   "dataPreserved": true,
   "installationReceipt": "versions/station-carousel-online-ui-r119-20261010/evidence/installation-motorola-r119.json",
   "launchRequested": true,
-  "sourceCommitStatus": "prepared-for-publication"
+  "sourceCommitStatus": "published-and-remote-verified",
+  "sourceCommit": "13b21b9dc08adf7b1820fdeb09bec47a810c1ea5",
+  "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-carousel-online-ui-r119-20261010/versions/station-carousel-online-ui-r119-20261010",
+  "authenticatedFrontendObserved": true,
+  "graphicsSettingsLayoutObserved": true,
+  "visibleSixThumbnailWindowConfirmed": true,
+  "userConfirmedCoversLoadingCorrectly": true,
+  "postInstallObservation": "versions/station-carousel-online-ui-r119-20261010/evidence/post-install-observation-r119.json"
 }
