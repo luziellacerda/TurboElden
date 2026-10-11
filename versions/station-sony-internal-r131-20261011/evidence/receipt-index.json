@@ -1,0 +1,85 @@
+{
+  "originalPrivateReceiptHashesAreNotHashesOfPublicSanitizedCopies": true,
+  "packageAndCompilationReceiptsRetainTheirOriginalStage": true,
+  "physicalEvidenceSupersedesOnlyItsExplicitStage": true,
+  "physicalStateEvidence": [
+    "installation.json",
+    "physical-bootstrap.json"
+  ],
+  "receiptPolicy": "Hash-only aggregates; paths are logical references. Private origin SHA values do not refer to sanitized public copies. First physical failure applies only to its pinned earlier APK.",
+  "receipts": [
+    {
+      "bytes": 1719188,
+      "file": "unsigned-package.json",
+      "sha256": "90a5231a93c482f819a3472053bad78c5dfeca4f15df3d963a37bb32b41238be"
+    },
+    {
+      "bytes": 117776,
+      "file": "runtime-final.json",
+      "sha256": "533020f8dd464fb2361eb6ef0957b00d5ae2b5aa9d6a00c3451066fc117dba06"
+    },
+    {
+      "bytes": 99152,
+      "file": "source-freeze-public.json",
+      "sha256": "3a0c25cc00816d6b25db4e20f5dd432cdbf419a2b66965fdbc128d03fa594f26"
+    },
+    {
+      "bytes": 15996,
+      "file": "host-compilation.json",
+      "sha256": "8fc4f54b7ad448efadd451978a0a92bc4d74d376f76bdd7f0b4c127ef68be256"
+    },
+    {
+      "bytes": 248618,
+      "file": "assets-prepared.json",
+      "sha256": "73094a0c0f711519b70da65bb16f6753e14d44851771507376c3d63690eeec1d"
+    },
+    {
+      "bytes": 1532,
+      "file": "ps3-jni.json",
+      "sha256": "787ad47ca3af51929bd2a28ae02b249cdce19a7d74b12b8edc3d108a1998e264"
+    },
+    {
+      "bytes": 1488,
+      "file": "manifest-final.json",
+      "sha256": "56dd184b8eacf9d4d3dbbd4d5ecc1d33fb44f44d048cdc51f2f6c039a3a104dd"
+    },
+    {
+      "bytes": 14345,
+      "file": "ps4-owner-derivation.json",
+      "sha256": "014fdcf2289c75d392ed15b8a5d5c365dc21862e2e831e17890f35a3dbc98ec9"
+    },
+    {
+      "bytes": 1327,
+      "file": "ps4-derived.json",
+      "sha256": "6cf0a8580040b8a42eb16ce19280630bc46d2065276785c650fb74a5e903913b"
+    },
+    {
+      "bytes": 1720834,
+      "file": "package-final.json",
+      "sha256": "d3467bc551e967866e5fd4f1dd1abfd4cce39907e2e716577fb0fe7544420b39"
+    },
+    {
+      "bytes": 12613,
+      "file": "release-scope.json",
+      "sha256": "69213204b68942ebf4d31f7b9019b804b96efb3accb09b9e14a6ddf158aa07e2"
+    },
+    {
+      "bytes": 1056,
+      "file": "first-bootstrap-failure.json",
+      "sha256": "962fda53b560bb32098c3146bddba48de82f25c0e01e7f0bea783a3ff866cd42"
+    },
+    {
+      "bytes": 688,
+      "file": "installation.json",
+      "sha256": "d9ae7e72157ce4d25bbb658c80a56b83664e926d7efb01862fb99ef5b7dc9c06"
+    },
+    {
+      "bytes": 2765,
+      "file": "physical-bootstrap.json",
+      "sha256": "924770f3b5a255d0dab92698789d2e9e5bf0a4b379aee9b8b3a0980185c2d164"
+    }
+  ],
+  "revision": "R131",
+  "schema": "station.sony.r131.public-receipt-index.v1",
+  "sourceCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981"
+}

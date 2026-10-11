@@ -4,7 +4,9 @@ Estes utilitários ficam fora das receitas produtivas congeladas. Não alteram m
 
 ## Conferir o instalador atual
 
-Executar na raiz do repositório. O ponteiro local deve concordar com `CURRENT-LOCAL-ARTIFACTS.json` do backup único, `desenvolvimento/ATUAL.json` e a evidência final da integração correspondente. R128 usa `integration/ps3-ps4-offline`; R129 usa `integration/local-sony-demos`. Uma revisão desconhecida é recusada.
+Executar na raiz do repositório. O ponteiro local deve concordar com `CURRENT-LOCAL-ARTIFACTS.json` do backup único, `desenvolvimento/ATUAL.json` e a evidência final da integração correspondente. R128 usa `integration/ps3-ps4-offline`; R129/R130 usam `integration/local-sony-demos`. R131 usa `integration/sony-internal`, com a evidência final fora das fontes produtivas em `versions/station-sony-internal-r131-20261011/evidence/package-final.json`. Uma revisão desconhecida é recusada.
+
+R131 exige `assemblyPath` explícito `G:/StationNormalOwnersR127/sony-internal/correction/assembly`, donor R130 exato no `desenvolvimento` do backup único, `source-freeze.json` na raiz dessa assembly e `identity/runtime-identity.json`. Os três ponteiros devem concordar também nos hashes do freeze e da identidade. A receita R131 confere as fontes, as cinco compilações/preparações privadas, os 305 payloads, os módulos Sony e os quatro IDs existentes renovados. Os APKs R126/R127 não são escolhidos como base da R131.
 
 ```powershell
 $stationRepo = (Resolve-Path .).Path
@@ -29,6 +31,8 @@ R129 **não** usa a reconstrução R128 por fallback. Sua sequência própria é
 4. `tooling/release/finalize_verified.py`, com a receita dessa integração, `source-freeze.json` e `identity/runtime-identity.json`.
 
 Consultar `--help` dessas receitas para seus argumentos explícitos. Não apontar a R129 à assembly, freeze ou identidade da R128.
+
+R131 também recusa reconstrução/assembly pelo caminho R128 deste utilitário. A sequência própria em `integration/sony-internal/recipe` usa preparação privada de assets, host novo, Manifest fechado, identidade sobre o R130 e assembly/verify final específicos. `plan`/`preflight`/`verify` e a instalação somente verificam essas saídas; não compilam firmware/owners nem invocam emuladores externos. Temporários de verificação R131 ficam em `G:/StationNormalOwnersR127/sony-internal/correction/assembly/release-temp`, escolhidos pelo contexto R131.
 
 ## Assinar e promover
 

@@ -169,16 +169,21 @@ def idle_snapshot(adb, *, retry_history_tasks=None, deadline=None):
 
 
 def local_preflight(context):
-    """Verify actual current bytes/signature/official entry for R128 or R129."""
+    """Verify the explicit current bytes/signature/entry and R131 source bindings."""
     current, apk, final, tools = context["current"], context["apk"], context["final"], context["tools"]
     require(apk.stat().st_size == current["bytes"] and release.sha(apk) == current["sha256"], "Actual installer differs from CURRENT")
+    if current["revision"] == "R131":
+        # New internal Sony owners require their actual compilation/asset/source
+        # guards against release.R131_SOURCE and its exact correction assembly
+        # before any phone operation, not merely a signed APK receipt.
+        release.source_guard(context)
     for name, recorded in final.get("verificationTools", {}).items():
         table = {"java": tools / "jdk17/bin/java.exe", "apksignerJar": tools / "android-build-tools-35/lib/apksigner.jar",
                  "zipalign": tools / "android-build-tools-35/zipalign.exe"}
         require(name in table and release.sha(table[name]) == recorded["sha256"], "Verification tool differs from final evidence: " + name)
     entry = release.manifest_entry(apk, context["repo"])
     stdout, _ = release.run([tools / "jdk17/bin/java.exe", "-jar", tools / "android-build-tools-35/lib/apksigner.jar",
-                             "verify", "--verbose", "--print-certs", apk], timeout=900, env=release.env_for_tools())
+                             "verify", "--verbose", "--print-certs", apk], timeout=900, env=release.env_for_tools(context))
     signer = re.search(r"^Signer #1 certificate SHA-256 digest: ([0-9a-fA-F]{64})\s*$", stdout, re.M)
     require(signer and signer.group(1).lower() == release.CERT, "Actual installer certificate differs from the original app")
     require(not re.search(r"^Signer #[2-9]\d* certificate", stdout, re.M), "Unexpected additional signer")

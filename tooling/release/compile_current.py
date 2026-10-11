@@ -31,9 +31,13 @@ TEMP = WORK / "offline-emulators/release-temp"
 PACKAGE = "org.turboramastation.frontend"
 LOGIN = "org.emulationstation.frontend.auth.LoginActivity"
 R128_SOURCE = "3ea94ade312640ab69ca09e4092f60607996ccba"
+R131_SOURCE = "8503c2e32d7487d3bb31397ba9533dc7e1bfe981"
+R131_ASSEMBLY = WORK / "sony-internal/correction/assembly"
+R131_FINAL = "versions/station-sony-internal-r131-20261011/evidence/package-final.json"
 CERT = "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825"
 PHASES = ("plan", "preflight", "verify", "rebuild-payloads", "assemble")
-INTEGRATIONS = {"R128": "ps3-ps4-offline", "R129": "local-sony-demos", "R130": "local-sony-demos"}
+INTEGRATIONS = {"R128": "ps3-ps4-offline", "R129": "local-sony-demos", "R130": "local-sony-demos",
+                "R131": "sony-internal"}
 
 
 def require(ok, message):
@@ -74,6 +78,8 @@ def resolve_current(current_path, repo):
     require(revision in INTEGRATIONS, "No explicitly reviewed integration for the requested revision")
     if revision == "R128":
         require(candidate["sourceCommit"] == R128_SOURCE, "Current executable source differs from the reviewed R128")
+    elif revision == "R131":
+        require(candidate["sourceCommit"] == R131_SOURCE, "Current executable source differs from the reviewed R131")
     backup = Path(current["singleCompleteBackup"]).resolve(strict=True)
     mirror = read(backup / "CURRENT-LOCAL-ARTIFACTS.json")["currentDevelopmentCandidate"]
     for name in ("revision", "apk", "sha256", "bytes", "sourceCommit"):
@@ -84,7 +90,9 @@ def resolve_current(current_path, repo):
     apk = Path(candidate["apk"]).resolve(strict=True)
     require(apk.parent == backup / "desenvolvimento", "Current APK must be the explicit development installer in the sole backup")
     integration = INTEGRATIONS[revision]
-    final = read(repo / ("integration/" + integration + "/evidence/package-final.json"))
+    final_path = repo / (R131_FINAL if revision == "R131" else
+                         "integration/" + integration + "/evidence/package-final.json")
+    final = read(final_path)
     require(final["revision"] == candidate["revision"], "Package evidence revision differs")
     require(final["apkSha256"] == candidate["sha256"] and final["apkBytes"] == candidate["bytes"],
             "Current APK identity differs from final package evidence")
@@ -94,6 +102,35 @@ def resolve_current(current_path, repo):
     if revision != "R128":
         require(final.get("sourceCommit") == candidate["sourceCommit"], "New integration evidence does not bind the current executable source")
     tools = backup / "ferramentas"
+    if revision == "R131":
+        require(final.get("internalSonyOwnersAdded") is True and
+                final.get("existing39DexByteIdentical") is True and
+                final.get("existingResourcesAndCarouselByteIdentical") is True and
+                final.get("ps3Ps4OfflineOnly") is True and
+                final.get("ps3Ps4OnlineEnabled") is False and
+                final.get("sonyNativeLibrariesModified") is False and
+                final.get("externalSonyEmulatorInvoked") is False,
+                "R131 final evidence differs from the reviewed internal-Sony/offline-only scope")
+        require(final.get("signatureSchemesVerified") == ["v2", "v3"] and
+                final.get("zipAlignmentVerifiedBytes") == 16384,
+                "R131 final evidence lacks the original signature/alignment contract")
+        require("assemblyPath" in candidate, "R131 requires its explicit reviewed assembly path")
+        assembly = Path(candidate["assemblyPath"]).resolve(strict=True)
+        require(assembly == R131_ASSEMBLY.resolve(strict=True),
+                "R131 assembly path escaped the reviewed internal-Sony work tree")
+        require(all("assemblyPath" in row and Path(row["assemblyPath"]).resolve(strict=True) == assembly
+                    for row in (mirror, actual)), "R131 current pointers disagree on the reviewed assembly")
+        base = backup / "desenvolvimento/TurboStations-Premium-R130-20261011.apk"
+        require(base.is_file(), "Exact R130 reproduction donor is missing; no historical fallback is allowed")
+        freeze = assembly / "source-freeze.json"
+        identity = assembly / "identity/runtime-identity.json"
+        for name, expected in (("sourceFreezeSha256", final["freezeSha256"]),
+                               ("runtimeIdentityReceiptSha256", final["identityReceiptSha256"])):
+            require(candidate.get(name) == actual.get(name) == mirror.get(name) == expected,
+                    "R131 current pointers differ from the final source binding: " + name)
+        return {"current": candidate, "backup": backup, "apk": apk, "final": final,
+                "integration": integration, "tools": tools, "base": base, "donor": base,
+                "repo": repo, "freeze": freeze, "identity": identity}
     base = backup / "desenvolvimento/bases-necessarias/TurboStations-Premium-R126-20261011.apk"
     donor = backup / "desenvolvimento/bases-necessarias/TurboStations-Premium-R127-20261011.apk"
     require(base.is_file() and donor.is_file(), "Pinned R126/R127 reproduction donors are missing; no historical fallback is allowed")
@@ -111,10 +148,11 @@ def resolve_current(current_path, repo):
             "freeze": assembly / freeze_name, "identity": assembly / "identity/runtime-identity.json"}
 
 
-def env_for_tools():
-    within(TEMP, WORK).mkdir(parents=True, exist_ok=True)
-    return {**os.environ, "TMP": str(TEMP), "TEMP": str(TEMP),
-            "JAVA_TOOL_OPTIONS": "-Djava.io.tmpdir=" + str(TEMP), "PYTHONDONTWRITEBYTECODE": "1"}
+def env_for_tools(context=None):
+    temporary = R131_ASSEMBLY / "release-temp" if context is not None and context["current"]["revision"] == "R131" else TEMP
+    within(temporary, WORK).mkdir(parents=True, exist_ok=True)
+    return {**os.environ, "TMP": str(temporary), "TEMP": str(temporary),
+            "JAVA_TOOL_OPTIONS": "-Djava.io.tmpdir=" + str(temporary), "PYTHONDONTWRITEBYTECODE": "1"}
 
 
 def run(command, *, timeout=300, env=None):
@@ -191,8 +229,25 @@ def manifest_entry(apk, repo):
 
 def source_guard(context, *, rebuilt=False):
     require(not rebuilt or context["current"]["revision"] == "R128",
-            "R129/R130 reconstruction uses its own build_demo_payloads.py and build_unsigned.py; no R128 rebuild fallback")
+            "Later integrations require their reviewed reconstruction recipes; no R128 rebuild fallback")
     recipe = context["repo"] / ("integration/" + context["integration"] + "/recipe")
+    if context["current"]["revision"] == "R131":
+        identity, freeze = context["identity"], context["freeze"]
+        wrapper = load(recipe / "assemble_apk.py", "release_r131_assembly")
+        assembler = wrapper.assembler(identity)
+        frozen, runtime, paths, expected, _ = assembler.inputs(context["base"], freeze, identity)
+        require(runtime["sourceCommit"] == context["current"]["sourceCommit"],
+                "R131 runtime identity does not bind the current executable source")
+        require(expected == {**context["final"]["replacedEntrySha256"], **context["final"]["addedEntrySha256"]},
+                "R131 productive payloads differ from the reviewed current installer")
+        require([row["engineId"] for row in runtime["engines"]] == context["final"]["engineIds"],
+                "R131 productive engine identities differ from the reviewed current installer")
+        require(runtime["sonyModules"] == context["final"]["sonyModules"],
+                "R131 internal module identities differ from final package evidence")
+        require(sha(freeze) == context["final"]["freezeSha256"] and
+                sha(identity) == context["final"]["identityReceiptSha256"],
+                "R131 current freeze/identity receipt differs")
+        return assembler, identity, freeze
     old = list(sys.path)
     try:
         sys.path.insert(0, str(recipe))
@@ -223,7 +278,7 @@ def preflight(context):
     source_guard(context)
     entry = manifest_entry(apk, context["repo"])
     stdout, _ = run([tools / "jdk17/bin/java.exe", "-jar", tools / "android-build-tools-35/lib/apksigner.jar",
-                     "verify", "--verbose", "--print-certs", apk], timeout=900, env=env_for_tools())
+                     "verify", "--verbose", "--print-certs", apk], timeout=900, env=env_for_tools(context))
     signer = re.search(r"^Signer #1 certificate SHA-256 digest: ([0-9a-fA-F]{64})\s*$", stdout, re.M)
     require(signer and signer.group(1).lower() == CERT, "Actual current APK signer differs")
     require(not re.search(r"^Signer #[2-9]\d* certificate", stdout, re.M), "Unexpected additional APK signer")
@@ -299,7 +354,7 @@ def main():
             "Building requires explicit --allow-build; plan/verify never compile")
     context = resolve_current(args.current.resolve(strict=True), args.repo.resolve(strict=True))
     require(context["current"]["revision"] == "R128" or args.phase not in ("rebuild-payloads", "assemble"),
-            "R129 build uses its reviewed integration/local-sony-demos/recipe/build_demo_payloads.py and build_unsigned.py; no R128 fallback")
+            "R129/R130/R131 build uses its own reviewed integration recipes; no R128 fallback")
     report = {"schemaVersion": 1, "revision": context["current"]["revision"], "phase": args.phase,
               "recordedUTC": datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "sourceCommit": context["current"]["sourceCommit"], "apkSha256": context["current"]["sha256"],

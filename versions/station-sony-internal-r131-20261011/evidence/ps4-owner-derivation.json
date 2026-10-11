@@ -1,0 +1,506 @@
+{
+  "androidBootClasspathSha256": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+  "javaApiPolicy": "android-sdk-bootclasspath-only",
+  "javaSourceLevel": 8,
+  "javaTargetLevel": 8,
+  "nativeLibrariesModified": false,
+  "nativeRegistration": [
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(ILjava/lang/String;)V",
+      "name": "nativeAddTouch",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()Z",
+      "name": "nativeAllowRecreateActivity",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()I",
+      "name": "nativeCheckSDLThreadCounter",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "nativeCleanupMainThread",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(Z)V",
+      "name": "nativeFocusChanged",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+      "name": "nativeGetHint",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(Ljava/lang/String;Z)Z",
+      "name": "nativeGetHintBoolean",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()Ljava/lang/String;",
+      "name": "nativeGetVersion",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "nativeInitMainThread",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "nativeLowMemory",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "nativePause",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(IZ)V",
+      "name": "nativePermissionResult",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "nativeQuit",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "nativeResume",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)I",
+      "name": "nativeRunMain",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "nativeSendQuit",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(I)V",
+      "name": "nativeSetNaturalOrientation",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(IIIIFF)V",
+      "name": "nativeSetScreenResolution",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(Ljava/lang/String;Ljava/lang/String;)V",
+      "name": "nativeSetenv",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "nativeSetupJNI",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(FFF)V",
+      "name": "onNativeAccel",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeClipboardChanged",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(Z)V",
+      "name": "onNativeDarkModeChanged",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(Ljava/lang/String;)V",
+      "name": "onNativeDropFile",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(I[Ljava/lang/String;I)V",
+      "name": "onNativeFileDialog",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(IIII)V",
+      "name": "onNativeInsetsChanged",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(I)V",
+      "name": "onNativeKeyDown",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(I)V",
+      "name": "onNativeKeyUp",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeKeyboardFocusLost",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeLocaleChanged",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(IIFFZ)V",
+      "name": "onNativeMouse",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(IIIIFFF)V",
+      "name": "onNativePen",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativePinchEnd",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativePinchStart",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(F)V",
+      "name": "onNativePinchUpdate",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeResize",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(I)V",
+      "name": "onNativeRotationChanged",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeScreenKeyboardHidden",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeScreenKeyboardShown",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()Z",
+      "name": "onNativeSoftReturnKey",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeSurfaceChanged",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeSurfaceCreated",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "()V",
+      "name": "onNativeSurfaceDestroyed",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLActivity",
+      "descriptor": "(IIIFFF)V",
+      "name": "onNativeTouch",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLInputConnection",
+      "descriptor": "(Ljava/lang/String;I)V",
+      "name": "nativeCommitText",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLInputConnection",
+      "descriptor": "(C)V",
+      "name": "nativeGenerateScancodeForUnichar",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLAudioManager",
+      "descriptor": "(ZLjava/lang/String;I)V",
+      "name": "nativeAddAudioDevice",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLAudioManager",
+      "descriptor": "(ZI)V",
+      "name": "nativeRemoveAudioDevice",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLAudioManager",
+      "descriptor": "()V",
+      "name": "nativeSetupJNI",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(ILjava/lang/String;)V",
+      "name": "nativeAddHaptic",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(ILjava/lang/String;Ljava/lang/String;IIIIIIZZZZ)V",
+      "name": "nativeAddJoystick",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(I)V",
+      "name": "nativeRemoveHaptic",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(I)V",
+      "name": "nativeRemoveJoystick",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "()V",
+      "name": "nativeSetupJNI",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(IIII)V",
+      "name": "onNativeHat",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(IIF)V",
+      "name": "onNativeJoy",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(IIJFFF)V",
+      "name": "onNativeJoySensor",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(III)Z",
+      "name": "onNativePadDown",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.SDLControllerManager",
+      "descriptor": "(III)Z",
+      "name": "onNativePadUp",
+      "static": true
+    },
+    {
+      "class": "org.libsdl.app.HIDDeviceManager",
+      "descriptor": "()V",
+      "name": "HIDDeviceRegisterCallback",
+      "static": false
+    },
+    {
+      "class": "org.libsdl.app.HIDDeviceManager",
+      "descriptor": "()V",
+      "name": "HIDDeviceReleaseCallback",
+      "static": false
+    },
+    {
+      "class": "org.libsdl.app.HIDDeviceManager",
+      "descriptor": "(ILjava/lang/String;IILjava/lang/String;ILjava/lang/String;Ljava/lang/String;IIIIZ)V",
+      "name": "HIDDeviceConnected",
+      "static": false
+    },
+    {
+      "class": "org.libsdl.app.HIDDeviceManager",
+      "descriptor": "(I)V",
+      "name": "HIDDeviceDisconnected",
+      "static": false
+    },
+    {
+      "class": "org.libsdl.app.HIDDeviceManager",
+      "descriptor": "(I[B)V",
+      "name": "HIDDeviceInputReport",
+      "static": false
+    },
+    {
+      "class": "org.libsdl.app.HIDDeviceManager",
+      "descriptor": "(I)V",
+      "name": "HIDDeviceOpenPending",
+      "static": false
+    },
+    {
+      "class": "org.libsdl.app.HIDDeviceManager",
+      "descriptor": "(IZ)V",
+      "name": "HIDDeviceOpenResult",
+      "static": false
+    },
+    {
+      "class": "org.libsdl.app.HIDDeviceManager",
+      "descriptor": "(I[B)V",
+      "name": "HIDDeviceReportResponse",
+      "static": false
+    }
+  ],
+  "ownerDexSha256": "b1afb8666ee71816a9c8f0a4b59b05ccb34671216748354df5504e02c3db9357",
+  "phoneOperation": false,
+  "pkgMaterialIncluded": true,
+  "pkgMaterialSha256": "b1ec813741bf74e81fc87c5944d5a0d3c7a835a48e61b16b6bf93d82b9d0e308",
+  "publicReceiptProvenance": {
+    "absolutePathsReplacedWithLogicalReferences": true,
+    "binaryFirmwarePkgMaterialGameMediaPersonalLogsIncluded": false,
+    "hashMapsPreserved": true,
+    "originalPrivateReceiptSha256": "087908712f6e5eb1f52df7ab870d98af9d83549a2b6e3dac75543b295c7e7afb",
+    "originalReceiptRole": "ps4/corrected/owner-derivation.json"
+  },
+  "recipeSha256": "96fc3cf862a01f7ee14497b2df0b713e137eb37448b8afcce4ce98e48aa0461b",
+  "schemaVersion": 1,
+  "sourceApkSha256": "4077b0d0b80e354c71eff1ce2c003f122449ac266eb27a6ac26744d3f9809a08",
+  "sourceDexSha256": "0b33b62b7663370587fbcf1b14fdb54ba97990d9e7e205f50c8cbf976be56052",
+  "sourceFiles": [
+    {
+      "path": "child-java/com/bachatas4/android/runtime/pkg/PkgExtractor.java",
+      "sha256": "8bfc3ef448b0b5491ef1baa3e1c3464f60472cff1bc60f8b7cff0b612f213dee"
+    },
+    {
+      "path": "child-java/com/bachatas4/android/runtime/pkg/PkgExtractResult.java",
+      "sha256": "22f82b1aba26aa6a73d8b438cbc682950cd8ded7861a09b1aa81e71e0fb2d228"
+    },
+    {
+      "path": "child-java/com/bachatas4/android/runtime/pkg/PkgProbeResult.java",
+      "sha256": "2f1d638503230a6240f0d7fc7a2eaba66a03d83f4a79af4ee1c90f26b7c38bad"
+    },
+    {
+      "path": "child-java/com/bachatas4/android/runtime/pkg/PkgProgressListener.java",
+      "sha256": "cd67004ed459068353f98f9425b62b4e04b502c41426e1815479b63ba6a86504"
+    },
+    {
+      "path": "child-java/com/bachatas4/android/runtime/pkg/PkgRsa.java",
+      "sha256": "8806ea16377f4ef18bab1aa71651143a2d086414100af344a02decba18d46293"
+    },
+    {
+      "path": "child-java/com/bachatas4/android/runtime/pkg/PkgStatus.java",
+      "sha256": "a07f477f1e638b9201f90e0aeb8d26bbb1a6f81eec93a14bc7b503edda4186de"
+    },
+    {
+      "path": "child-java/com/bachatas4/android/runtime/process/NativeRuntimeBridge.java",
+      "sha256": "60ff3d8a59eb646317a07da15e36269b5670785d838eada30c3460837066fed4"
+    },
+    {
+      "path": "child-java/org/emulationstation/ps4child/Ps4NativeEntry.java",
+      "sha256": "38f4e6b20003bffb049d70873491fcb531a49d9a1a19e97ffd84f69fed1c9245"
+    },
+    {
+      "path": "child-java/org/libsdl/app/HIDDeviceManager.java",
+      "sha256": "799690ee44066e382f34a99ed7631aae558269d0e0064c817518c88ac4f18b10"
+    },
+    {
+      "path": "child-java/org/libsdl/app/SDLActivity.java",
+      "sha256": "82f8abbaa09c86596367c2ab21964064993c7a098f27b22cf84051c342d5e554"
+    },
+    {
+      "path": "child-java/org/libsdl/app/SDLAudioManager.java",
+      "sha256": "e6e6c16c0b37557dfe6150cd7666b05c9321d931ea185dfc3bffc830be7b5aad"
+    },
+    {
+      "path": "child-java/org/libsdl/app/SDLControllerManager.java",
+      "sha256": "ff017a4381070ff167af34b9662df3e3cf759e394a046aa73cf852ea6bf54e44"
+    },
+    {
+      "path": "child-java/org/libsdl/app/SDLInputConnection.java",
+      "sha256": "db7cbb6b132542a6e6625471a341a682b0720403515cc7884a659024d5e3ef26"
+    }
+  ],
+  "toolchain": [
+    {
+      "role": "javac",
+      "sha256": "9c71eee841aeebb723bfc2cceca7d72c6c1988fb679402f4123aa4d0e86aa549"
+    },
+    {
+      "role": "java",
+      "sha256": "1977f302375adbb920d41dac65c7e22eb9c2ed8e1e8d6258964154ff16f14406"
+    },
+    {
+      "role": "androidJar",
+      "sha256": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad"
+    },
+    {
+      "role": "d8Jar",
+      "sha256": "305622ad00535684534eb8f742cbf5e628a9abc09d8ea4d39d1babb95bf0cee5"
+    },
+    {
+      "role": "apktoolJar",
+      "sha256": "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423"
+    },
+    {
+      "role": "decoderSource",
+      "sha256": "d42ed8f2cac30362568388b8a2e43eb6f7b531564a324c8860a21aa7b681a5ae"
+    }
+  ]
+}

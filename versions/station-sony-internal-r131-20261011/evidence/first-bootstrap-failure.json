@@ -1,0 +1,24 @@
+{
+  "schema": "station.sony.r131.first-bootstrap-failure.v1",
+  "revision": "R131",
+  "sourceCommit": "03bf7654e48745dd3c15239b1a509f4cabc52f3c",
+  "apkSha256": "2149f31e6e268b4fde644dcd5cc604874afdff002c53f9d5f41655682a99d427",
+  "apkBytes": 2711825423,
+  "physicalDeviceClass": {
+    "model": "Motorola Edge 30",
+    "androidMajor": 14
+  },
+  "ps3AutomaticPreparedStateObserved": true,
+  "ps3GameplayValidated": false,
+  "ps4BootstrapPassed": false,
+  "ps4Failure": {
+    "exceptionType": "java.lang.NoSuchMethodError",
+    "stage": "classloader-construction-before-native-JNI-bootstrap",
+    "cause": "host-compilation-resolved-Java-SE-ClassLoader-API-unavailable-on-Android",
+    "correctiveSourceCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981",
+    "correctiveScope": "synchronized-instance-classloader-dispatch-and-Android-boot-compiler-environment"
+  },
+  "appliesOnlyToPinnedFirstCandidate": true,
+  "doesNotCertifyCorrectedCandidateBootstrapOrGameplay": true,
+  "personalIdentifiersSessionsLogsFirmwareKeysOrFullOldEntryMapsIncluded": false
+}

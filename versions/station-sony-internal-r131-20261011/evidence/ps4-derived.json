@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "bytes": 12296,
+      "derivationReceiptSha256": "087908712f6e5eb1f52df7ab870d98af9d83549a2b6e3dac75543b295c7e7afb",
+      "file": "private-work:ps4/corrected/owner.dex",
+      "path": "upstream/derived/owner.dex",
+      "sha256": "b1afb8666ee71816a9c8f0a4b59b05ccb34671216748354df5504e02c3db9357",
+      "sourceApkSha256": "4077b0d0b80e354c71eff1ce2c003f122449ac266eb27a6ac26744d3f9809a08"
+    },
+    {
+      "bytes": 2384,
+      "derivationReceiptSha256": "087908712f6e5eb1f52df7ab870d98af9d83549a2b6e3dac75543b295c7e7afb",
+      "file": "private-work:ps4/corrected/pkg-rsa.bin",
+      "path": "upstream/derived/pkg-rsa.bin",
+      "sha256": "b1ec813741bf74e81fc87c5944d5a0d3c7a835a48e61b16b6bf93d82b9d0e308",
+      "sourceApkSha256": "4077b0d0b80e354c71eff1ce2c003f122449ac266eb27a6ac26744d3f9809a08"
+    }
+  ],
+  "publicReceiptProvenance": {
+    "absolutePathsReplacedWithLogicalReferences": true,
+    "binaryFirmwarePkgMaterialGameMediaPersonalLogsIncluded": false,
+    "hashMapsPreserved": true,
+    "originalPrivateReceiptSha256": "a019f5f5d872e4d4de88364fe94c529e55ab88a97d9ad0604989bb5d1c370be4",
+    "originalReceiptRole": "ps4/corrected/derived.json"
+  },
+  "schema": "station.sony.ps4.derived.v1",
+  "sourceApkSha256": "4077b0d0b80e354c71eff1ce2c003f122449ac266eb27a6ac26744d3f9809a08"
+}

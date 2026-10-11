@@ -1,0 +1,57 @@
+{
+  "classes": [
+    {
+      "class": "Laenu/aps3e/Emulator;",
+      "nativeMethods": 23
+    },
+    {
+      "class": "Laenu/emulator/Emulator$Config;",
+      "nativeMethods": 9
+    },
+    {
+      "class": "Laenu/emulator/Emulator;",
+      "nativeMethods": 11
+    },
+    {
+      "class": "Laenu/hardware/ProcessorInfo;",
+      "nativeMethods": 1
+    },
+    {
+      "class": "Laenu/lang/System;",
+      "nativeMethods": 1
+    },
+    {
+      "class": "Laenu/aps3e/Emulator$CheatInfo;",
+      "fields": 8
+    },
+    {
+      "class": "Laenu/aps3e/Emulator$GameTrophyInfo$TrophyInfo;",
+      "fields": 6
+    },
+    {
+      "class": "Laenu/aps3e/Emulator$GameTrophyInfo;",
+      "fields": 2
+    },
+    {
+      "class": "Laenu/aps3e/Emulator$MetaInfo;",
+      "fields": 12
+    },
+    {
+      "class": "Laenu/emulator/Emulator$Path;",
+      "fields": 3
+    }
+  ],
+  "dexSha256": "f3dddbea9c8fcb80e3ecc6f6a255fe5b77a2f3572d4fdf657e31a4ebd6576a10",
+  "gameplayProof": false,
+  "nativeAbiMatchesOfficial": true,
+  "nativeLibrariesRecompiled": false,
+  "officialContractSha256": "36d155d7cb1d918f4b4d3a8297eed34f64e3047deec94fae65335931188d70ad",
+  "publicReceiptProvenance": {
+    "absolutePathsReplacedWithLogicalReferences": true,
+    "binaryFirmwarePkgMaterialGameMediaPersonalLogsIncluded": false,
+    "hashMapsPreserved": true,
+    "originalPrivateReceiptSha256": "02277929072dc0f1a5091a53f3a55e9b812281e9ce7666154360a80e928b4515",
+    "originalReceiptRole": "correction/ps3-jni.json"
+  },
+  "schema": "station.sony.ps3.compiled-jni.v1"
+}

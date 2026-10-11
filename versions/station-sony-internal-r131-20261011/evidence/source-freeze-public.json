@@ -1,0 +1,1541 @@
+{
+  "baseApkSha256": "d227b0af17600bf99ec097857bf182f6e7989f8ddc3b68b63e17c81f69eb30ad",
+  "identityReceiptSha256": "7df6fe4ad140ff8e5cb21146e07a77345c02878500c69a1d8167f5aeccc52cc0",
+  "payloads": {
+    "AndroidManifest.xml": {
+      "bytes": 64716,
+      "path": "private-work:payloads/AndroidManifest.xml",
+      "sha256": "575eacce86828aa332dbc7cae6d37e31d25a7891cb20d83bb936bf40e33659e1"
+    },
+    "assets/sony/ps3/module.json": {
+      "bytes": 20710,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/module.json",
+      "sha256": "6cbdace8781af84c114474a2c77972124e5aa1707463866d00d5800692062cdc"
+    },
+    "assets/sony/ps3/native/libe.so": {
+      "bytes": 63807464,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/native/libe.so",
+      "sha256": "5d8fb9b0c2e849df795be50ae767e4443617d7b6af7a9dd2970a21b022e278f3"
+    },
+    "assets/sony/ps3/native/libfile_redirect_hook.so": {
+      "bytes": 4152,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/native/libfile_redirect_hook.so",
+      "sha256": "f9eb4b29ff765677d7da7f7cd43e3d229bb805229184711223bfbb9286e53e99"
+    },
+    "assets/sony/ps3/native/libgsl_alloc_hook.so": {
+      "bytes": 4464,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/native/libgsl_alloc_hook.so",
+      "sha256": "6f08f828946f6f9728d0c00419541aa827bfbcd2bdf610e145ab7a2561acc1c9"
+    },
+    "assets/sony/ps3/native/libhardware_ProcessorInfo.so": {
+      "bytes": 256720,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/native/libhardware_ProcessorInfo.so",
+      "sha256": "c063fa372009bdf177b50449f3ec31d7319dfe5f40d5e99f0f652da4610e760a"
+    },
+    "assets/sony/ps3/native/libhook_impl.so": {
+      "bytes": 278080,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/native/libhook_impl.so",
+      "sha256": "da054d8d54e46a07c6c64207073899031b4f5a7688b77417bfc812c0ae9c72ea"
+    },
+    "assets/sony/ps3/native/liblang_System.so": {
+      "bytes": 4280,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/native/liblang_System.so",
+      "sha256": "5caf4ce1216f910f2fb290b6887c44afc05882bca830a28089925dc70f02d3eb"
+    },
+    "assets/sony/ps3/native/libmain_hook.so": {
+      "bytes": 4368,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/native/libmain_hook.so",
+      "sha256": "71361a99dcdcd375686376f4819b2f2fa2656a540bb1c2161bce99de74b13a0c"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/L1.png": {
+      "bytes": 2829,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/L1.png",
+      "sha256": "92824ae86fd374061bc617d1686b842362cc141cf4ca90db990e45e9a9fb68f9"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/L2.png": {
+      "bytes": 2224,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/L2.png",
+      "sha256": "676682dba46ee939b0296456f1f7605af0bf96498fde340b70324607b03f7293"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/R1.png": {
+      "bytes": 2704,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/R1.png",
+      "sha256": "527e16673185894752fb05de42b0ffb17e17f553a7d3719a28ac5a5468789964"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/R2.png": {
+      "bytes": 2569,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/R2.png",
+      "sha256": "4680e800c71cdddbf8fb448c5e6141b683b6387f2fb63ae15a9d8ee7a37720b8"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/circle.png": {
+      "bytes": 4307,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/circle.png",
+      "sha256": "6dba6e1ec9f923aa90ea47c9cb1fbb3a4bc265f65c57ab5d028a3660d42244dd"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/cross.png": {
+      "bytes": 3560,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/cross.png",
+      "sha256": "278d5566fa54100a6403a9cf98393a51827a215c3bed22c2f58173bad619c622"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/dpad.png": {
+      "bytes": 3474,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/dpad.png",
+      "sha256": "3c549f2fda13136b9c641aa7469548d4bb28fc7b03de59a002300826f263f8e8"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/dpad_down.png": {
+      "bytes": 3618,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/dpad_down.png",
+      "sha256": "d02a641b0371104b8220497cc3f85172206df4b14c66d562915cc8ecb8dc6ae1"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/dpad_left.png": {
+      "bytes": 3641,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/dpad_left.png",
+      "sha256": "c73e1bfe482e09644780c2bd872539c55c95e0a303d0c5bfd0d98122a77c2ccf"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/dpad_right.png": {
+      "bytes": 3706,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/dpad_right.png",
+      "sha256": "da5bfca9604bfd3efc6b785582aa89efd668c0f082d864aa6be857d0bba5835e"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/dpad_up.png": {
+      "bytes": 3655,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/dpad_up.png",
+      "sha256": "905faf2ee2eb408f94a6c8c9efebc003589fe8b37dac88ac403a29f5b4294121"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/fade_bottom.png": {
+      "bytes": 43214,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/fade_bottom.png",
+      "sha256": "2bc304ff223fb0990318a9cf0cc74df03aad6db30f4aaf32458b6af5462ad178"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/fade_top.png": {
+      "bytes": 43606,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/fade_top.png",
+      "sha256": "9b92b1c610cbb2efe76ecb777cf18e3156e5de8aa3d3eb8665142f30ee95783c"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/bug-solid.png": {
+      "bytes": 5035,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/bug-solid.png",
+      "sha256": "b788b089525d46e18ee4cea8ce1e57a7615d14faedad0cf3ac7c209840c93a56"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/circle-left-solid.png": {
+      "bytes": 8599,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/circle-left-solid.png",
+      "sha256": "8d8a2a389e2a10ceb25d9fb99ee55a42d0ed654e300dda57e3d8c266212b3478"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/display-solid.png": {
+      "bytes": 2151,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/display-solid.png",
+      "sha256": "8c5a6f7180cb11acffc6a97b43de7629d833d8c4281d884b249f28b2e6704eab"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/floppy-disk-solid.png": {
+      "bytes": 3989,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/floppy-disk-solid.png",
+      "sha256": "c255519660f0a6dc70b8cc1c56999a28affcbd3fe960331fdb71f8e00f4a6f84"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/gamepad-solid.png": {
+      "bytes": 4391,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/gamepad-solid.png",
+      "sha256": "0775c7b5194f85f359fb327496a9d5e466e703bc3741aa0970d68f2d56dea2b0"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/gauge-solid.png": {
+      "bytes": 5601,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/gauge-solid.png",
+      "sha256": "ef50b217e241f3e2653f3c260eb623a4fd4793d2f4730d9e240159c5d1f3c8ef"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/headphones-solid.png": {
+      "bytes": 4024,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/headphones-solid.png",
+      "sha256": "046c534ba12c07dbdef9b3543569fdd51ffc47978411306257a0b9023d13b2c8"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/home.png": {
+      "bytes": 2700,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/home.png",
+      "sha256": "d707034b5bcb40c1cff25b58711f792bf8db0172597a5e4d14a06960ff9672c6"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/maximize-solid.png": {
+      "bytes": 5722,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/maximize-solid.png",
+      "sha256": "9d6c1d40a6283f16c66450c7099ef8b7ea8a32c2428551d0897a2c8b71c059f6"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/play-button-arrowhead.png": {
+      "bytes": 3665,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/play-button-arrowhead.png",
+      "sha256": "6e0913808b42c1a877b7880531e04bc08fa48e4944fbc14880b587527360440a"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/power-off-solid.png": {
+      "bytes": 8210,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/power-off-solid.png",
+      "sha256": "1271962ea3552dd6eafc0259fbbd5f0a6c5d9c026ce6cfa28c72ed116e08990c"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/rotate-left-solid.png": {
+      "bytes": 8216,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/rotate-left-solid.png",
+      "sha256": "2f1f74c40e012476c469410b5db46656158d5f9454fcab4f5e1e11a90552b5bd"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/screenshot.png": {
+      "bytes": 3609,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/screenshot.png",
+      "sha256": "9a359935a553e24887cd6e23c634df4ff8b3cd0f3d32495f382128410c6c4d76"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/settings.png": {
+      "bytes": 6000,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/settings.png",
+      "sha256": "ecdef53af5b7c0a5a47f7381340b5edc5606e1cbe610e02c1e0ccdbc8b7474ae"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/sliders-solid.png": {
+      "bytes": 3845,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/sliders-solid.png",
+      "sha256": "cc39196b135eb76867bb53341630b6d55829eb6fa295671e5d3ccc51836bf9a4"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/trophy-solid.png": {
+      "bytes": 7133,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/trophy-solid.png",
+      "sha256": "ca522ae4f38b0721003e11084b1e4019139ff8415a977145448e14bb5dfe56f1"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/user-group-solid.png": {
+      "bytes": 7090,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/user-group-solid.png",
+      "sha256": "0c0fd3aa33a87a293e907680073d4b6cf166d28e6d520fd427f20cb30236d277"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/256/video-camera.png": {
+      "bytes": 2215,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/256/video-camera.png",
+      "sha256": "f06b32184fa8e2f9a402decfd57bdb56655c39b6724f835d9ec38eaeba600696"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/bug-solid.png": {
+      "bytes": 618,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/bug-solid.png",
+      "sha256": "f006c5677442c8b6afc9b13c0b64ace8f5b80a8320271c2ee1d0a6b57c4681f9"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/circle-left-solid.png": {
+      "bytes": 497,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/circle-left-solid.png",
+      "sha256": "1499410a60875ea2a05c42eae43b74ffa5f239873fc4b074a9e6920eccc85a2d"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/display-solid.png": {
+      "bytes": 360,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/display-solid.png",
+      "sha256": "ae444a7988f06f6b57541557bb5021f450bfd0df1e560bff75ae7f083daccaf6"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/floppy-disk-solid.png": {
+      "bytes": 561,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/floppy-disk-solid.png",
+      "sha256": "ac6529b4b0815697757cdc249bdbcec5f260f6b82b6e0854b7a86f9ff4fc0282"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/gamepad-solid.png": {
+      "bytes": 472,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/gamepad-solid.png",
+      "sha256": "3ca5d90ef20a7dbc541c2a7ed6d46fc43acf2374973e60db14f2f8bac13533e0"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/gauge-solid.png": {
+      "bytes": 473,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/gauge-solid.png",
+      "sha256": "db6d89e312db403eb6bc153c8798e17e8aa2158aa926923631a18db8904b265d"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/headphones-solid.png": {
+      "bytes": 489,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/headphones-solid.png",
+      "sha256": "000a7ef811b5a2a02f1fb857a6c2390dcd24d4791e260998102bd75a3651b16e"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/home.png": {
+      "bytes": 384,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/home.png",
+      "sha256": "96bb9f3ec79b906f430608cba2155eba6f9fd9208c2126c7d7ecb44c6de34d58"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/maximize-solid.png": {
+      "bytes": 721,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/maximize-solid.png",
+      "sha256": "efbf9eb4cc652ae5157a256b6b2d0ef7e8b8402155a2ac17322dc07a0115df42"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/play-button-arrowhead.png": {
+      "bytes": 509,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/play-button-arrowhead.png",
+      "sha256": "2bcc75bd170ebffd1e2fa21e2a2d81feb68c24a7c345fed1d1f2eb4885a7581b"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/power-off-solid.png": {
+      "bytes": 702,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/power-off-solid.png",
+      "sha256": "bf4e9d3e7d060d5c912f1ec4efc0a35fd2c4c30b06789adaf5b19cd11f32eea7"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/rotate-left-solid.png": {
+      "bytes": 672,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/rotate-left-solid.png",
+      "sha256": "cf3cc1405345039bc64a979fb3b30d588dffc35db948ffd506755779077b175c"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/screenshot.png": {
+      "bytes": 447,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/screenshot.png",
+      "sha256": "61a70f6f23de65a0a14fabc20f6ad7d5166db6ebf176b2331e2a43838358d76b"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/settings.png": {
+      "bytes": 587,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/settings.png",
+      "sha256": "30278a4b40c637804ce659e8d48d3fb2721c1c59f8530d4be194b4b69128af67"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/sliders-solid.png": {
+      "bytes": 332,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/sliders-solid.png",
+      "sha256": "aee7d38eb11983cb383f82c13aba647278bc9f31736854c92dfebbce8ab4f809"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/trophy-solid.png": {
+      "bytes": 668,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/trophy-solid.png",
+      "sha256": "d32414356d814d93ef66cbbe5eadfd95c38d3997d3179b929a238b6e97a974ce"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/user-group-solid.png": {
+      "bytes": 659,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/user-group-solid.png",
+      "sha256": "f4f7d9063496bec514492efc3803da336aa116aed36b2310dae2ddd242873818"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/home/32/video-camera.png": {
+      "bytes": 354,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/home/32/video-camera.png",
+      "sha256": "5c5fdccb717c22e05a3cd5109d25efb8ecb30733bedfb4652897895d6fa5c48e"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/left_stick.png": {
+      "bytes": 3888,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/left_stick.png",
+      "sha256": "60b492becfd8edeaf4a742af60a43662bf261ab903aa675e482fb0918af9dd0c"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/loading.png": {
+      "bytes": 366947,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/loading.png",
+      "sha256": "ca15d454e202ccb724009bc690e805d5ca239c17ee3976858ed9a4a6485ef411"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/new.png": {
+      "bytes": 19960,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/new.png",
+      "sha256": "dc9ae08ce9fab285b05ef9f6da112beaeb4ffe2ddc36b33e0a3b199db044037d"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/right_stick.png": {
+      "bytes": 4178,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/right_stick.png",
+      "sha256": "f6446b9739d3288ac8d5cda49b4fffdf5b073ac8e6f9283c5dfae96a9158e39c"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/save.png": {
+      "bytes": 26456,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/save.png",
+      "sha256": "a00a679c3063e69af276cd90ad073a7e083df02c6183debaa8206c62a499e4fd"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/select.png": {
+      "bytes": 1813,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/select.png",
+      "sha256": "f2bcfa02e5af3e17413f5d447ab983699ec5ab046a0ff721a33b2943f15e4125"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/spinner-24.png": {
+      "bytes": 34763,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/spinner-24.png",
+      "sha256": "5d12b6280cfe6fe866af4eab0dc60082615a55045db265d792296ae88e0e694f"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/square.png": {
+      "bytes": 3385,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/square.png",
+      "sha256": "a788c6e574d26e379df24c49b9e029df2ce8531f98540cfc3c22386b60c82060"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/start.png": {
+      "bytes": 2606,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/start.png",
+      "sha256": "da3f4d2bd9bf21a335c17e62a5d8d4be5e3429ce0e4209c03ac7067b64b2a79e"
+    },
+    "assets/sony/ps3/upstream/Icons/ui/triangle.png": {
+      "bytes": 3784,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/Icons/ui/triangle.png",
+      "sha256": "c1c72ea20124291316361254f5ed2f0afbfcca6d9bc5158486f148df76bdea07"
+    },
+    "assets/sony/ps3/upstream/PS3UPDAT.PUP": {
+      "bytes": 206197916,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/PS3UPDAT.PUP",
+      "sha256": "158471fd834f8ea8036136b6aab43cd86c7ba73d79ca30e0af3c0fe0001cf365"
+    },
+    "assets/sony/ps3/upstream/config/config.yml": {
+      "bytes": 8368,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/config/config.yml",
+      "sha256": "9f8d19c0673e592743e244fb85d95d0e4c40de59345eda26470321aadf21e87c"
+    },
+    "assets/sony/ps3/upstream/licenses.html": {
+      "bytes": 2940,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/licenses.html",
+      "sha256": "0791e5870c2aa2920515fd91a964f292d1a72c6354f10c31f7380d31f72767c0"
+    },
+    "assets/sony/ps3/upstream/patch.yml": {
+      "bytes": 908727,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps3/upstream/patch.yml",
+      "sha256": "6d093cb9b147b4c24e5862137cde724f81b1f484c948718594925b69e3f83d2b"
+    },
+    "assets/sony/ps4/module.json": {
+      "bytes": 84611,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/module.json",
+      "sha256": "4b23febf422c09ecf363dc4e8b56a832ddb89512f41e7230f24f9cb5a5322b3e"
+    },
+    "assets/sony/ps4/native/libXss.so": {
+      "bytes": 67616,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libXss.so",
+      "sha256": "f8f95c98751ff9d9d1d0244a9106e7e89dba76dab3ceff7ef4a7a72c7640365b"
+    },
+    "assets/sony/ps4/native/libandroidx.graphics.path.so": {
+      "bytes": 10096,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libandroidx.graphics.path.so",
+      "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6"
+    },
+    "assets/sony/ps4/native/libbachata_custom_vulkan.so": {
+      "bytes": 51728,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libbachata_custom_vulkan.so",
+      "sha256": "e6c4ec061bbb34990ecc76326740311c371b24c6d2face37fcd31d7fb2adfb61"
+    },
+    "assets/sony/ps4/native/libbachata_host_loader.so": {
+      "bytes": 201208,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libbachata_host_loader.so",
+      "sha256": "e9d9a01ac27c4369980023a7b20817aa4c158a8bd797c9883bd20386f126e578"
+    },
+    "assets/sony/ps4/native/libbachata_lsfg_assets.so": {
+      "bytes": 70584,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libbachata_lsfg_assets.so",
+      "sha256": "fa91963161361220e8dd35159fb4b17677f4d51a95dcf22c31b3ccac33038a23"
+    },
+    "assets/sony/ps4/native/libbachata_native_runtime.so": {
+      "bytes": 85157224,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libbachata_native_runtime.so",
+      "sha256": "5159ebdf1aa34713217e3598a0c084aa04ce59d623152fdbab501d293957c06a"
+    },
+    "assets/sony/ps4/native/libbachata_patch_domain.so": {
+      "bytes": 1404080,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libbachata_patch_domain.so",
+      "sha256": "3c283a0a1bada853d050c25e2c89532760b70795a4a43587ee8e9a9d73af148e"
+    },
+    "assets/sony/ps4/native/libbachata_pkg.so": {
+      "bytes": 166360,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libbachata_pkg.so",
+      "sha256": "9e28ee2bc4b4909634a34402e3aa79c03300ed99327eb79c09e080a1995dc0ff"
+    },
+    "assets/sony/ps4/native/libbachata_xserver.so": {
+      "bytes": 47488,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libbachata_xserver.so",
+      "sha256": "c93437a9df5b3dd4f79a242ca5e748adf172b53a3a75e05aaafc50c84aa1e60c"
+    },
+    "assets/sony/ps4/native/libc++_shared.so": {
+      "bytes": 1423696,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libc++_shared.so",
+      "sha256": "8fed70ee5cf18534beebe28b525af8e422d08de3a241ccd3db7856f47048eda0"
+    },
+    "assets/sony/ps4/native/libdatastore_shared_counter.so": {
+      "bytes": 7784,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libdatastore_shared_counter.so",
+      "sha256": "178f89a2c6c9234ddf980dd4cd1f3616186a46b2b932aafa6707abd04c5fd76a"
+    },
+    "assets/sony/ps4/native/libfile_redirect_hook.so": {
+      "bytes": 4080,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libfile_redirect_hook.so",
+      "sha256": "88eced08d2196b9f575530f7a720f4cc41f7fee021a0cc96cf0d7224cac44458"
+    },
+    "assets/sony/ps4/native/libgsl_alloc_hook.so": {
+      "bytes": 4376,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libgsl_alloc_hook.so",
+      "sha256": "aa9e70dc46e299bacfaa79565a3b25ac1f2118ac057b9b402b56bce19fedf628"
+    },
+    "assets/sony/ps4/native/libhook_impl.so": {
+      "bytes": 38408,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libhook_impl.so",
+      "sha256": "d0eb5fbdd9c72d3f78fc12487cbc1bc2028fb394c65550cf3d56aa33b0316e4c"
+    },
+    "assets/sony/ps4/native/libmain_hook.so": {
+      "bytes": 4296,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libmain_hook.so",
+      "sha256": "1ad4ba5f4544a30c67948a129be07c977d515e25e3989fc4f1ba0c9cfffb49c5"
+    },
+    "assets/sony/ps4/native/libxkbcommon.so": {
+      "bytes": 330336,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/native/libxkbcommon.so",
+      "sha256": "92bb8e3f914924f0975c9f529196ec74fbb56e1e6433a3920bf1c462dddbb410"
+    },
+    "assets/sony/ps4/upstream/derived/owner.dex": {
+      "bytes": 12296,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/derived/owner.dex",
+      "sha256": "b1afb8666ee71816a9c8f0a4b59b05ccb34671216748354df5504e02c3db9357"
+    },
+    "assets/sony/ps4/upstream/derived/pkg-rsa.bin": {
+      "bytes": 2384,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/derived/pkg-rsa.bin",
+      "sha256": "b1ec813741bf74e81fc87c5944d5a0d3c7a835a48e61b16b6bf93d82b9d0e308"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-panvk-g615-NOTICE.txt": {
+      "bytes": 3424,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-panvk-g615-NOTICE.txt",
+      "sha256": "4623d089f86e5cbb9cc01179bedb494eeb88ee980204e8091cc23ef0129f6bb0"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-turnip-25.3.0-r11-NOTICE.txt": {
+      "bytes": 1774,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-turnip-25.3.0-r11-NOTICE.txt",
+      "sha256": "5d33bef73f4fffd4c00e024047f9de2f14bd93e76e3ef4c98754c1ff39b2573b"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-turnip-26.1.0-NOTICE.txt": {
+      "bytes": 1600,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-turnip-26.1.0-NOTICE.txt",
+      "sha256": "6488409f1914cb632ac31b34258302b2b30d80f40f132be42bf5448cb2dc3a44"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-turnip-26.3.0-r5-NOTICE.txt": {
+      "bytes": 1573,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-turnip-26.3.0-r5-NOTICE.txt",
+      "sha256": "7c3729bfca7d5a99abb07a9e28da70d099b1fdc825a415a17addede80ea97f40"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-turnip-gen8-NOTICE.txt": {
+      "bytes": 1593,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-turnip-gen8-NOTICE.txt",
+      "sha256": "de89ce2b200d1e32e3034a31f98d2818ff225546ec79eef3d43cc84bb2816911"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-turnip-gen8-v36-NOTICE.txt": {
+      "bytes": 1574,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-turnip-gen8-v36-NOTICE.txt",
+      "sha256": "2e486c3196c8a8d257219e7c72747d6f957750538063d8d77dfa2ad5f80cc647"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-turnip-mojo-25.0-NOTICE.txt": {
+      "bytes": 1603,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-turnip-mojo-25.0-NOTICE.txt",
+      "sha256": "5c94d9d9010829ab1115bf1ff3913c9fa7a01522cba059186ab000cf10b61d43"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-turnip-vauzi-3.8-bionic-NOTICE.txt": {
+      "bytes": 1843,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-turnip-vauzi-3.8-bionic-NOTICE.txt",
+      "sha256": "2d5aceb43a943f56b3ed210cb1b58bd2142f023d9aafb18b8e877fd136da6782"
+    },
+    "assets/sony/ps4/upstream/licenses/mesa-turnip-vauzi-7xx-glibc-NOTICE.txt": {
+      "bytes": 1721,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/mesa-turnip-vauzi-7xx-glibc-NOTICE.txt",
+      "sha256": "db49ae736134b372f137f088010d0dfdd5b7c008095692dde1d0c8b7b3e3b1a8"
+    },
+    "assets/sony/ps4/upstream/licenses/panvk-kbase/GPL-2.0.txt": {
+      "bytes": 17338,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/panvk-kbase/GPL-2.0.txt",
+      "sha256": "72fcdac353cdab21519279dde94d2d5cb1412c6aa4344ac9639fbdbd972f3b21"
+    },
+    "assets/sony/ps4/upstream/licenses/panvk-kbase/Linux-syscall-note.txt": {
+      "bytes": 1256,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/panvk-kbase/Linux-syscall-note.txt",
+      "sha256": "6f50152f11537db548d774314dedfea823ae4493bec54542865d71d1d6f3e695"
+    },
+    "assets/sony/ps4/upstream/licenses/panvk-kbase/MIT.txt": {
+      "bytes": 1220,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/panvk-kbase/MIT.txt",
+      "sha256": "c1b07dde7a5abd4538a09090876e5309991a284e657311100815eed234cfed4a"
+    },
+    "assets/sony/ps4/upstream/licenses/panvk-kbase/Mesa-MIT.txt": {
+      "bytes": 1372,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/panvk-kbase/Mesa-MIT.txt",
+      "sha256": "323c587d0ccf10e376f8bf9a7f31fb4ca6078105194b42e0b1e0ee2bc9bde71f"
+    },
+    "assets/sony/ps4/upstream/licenses/panvk-kbase/Mesa-SGI-B-2.0.txt": {
+      "bytes": 1822,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/panvk-kbase/Mesa-SGI-B-2.0.txt",
+      "sha256": "686bf035a1fd22076416fd3b90370ac67771e884bf57f55693d51f8ce7c710a7"
+    },
+    "assets/sony/ps4/upstream/licenses/panvk-kbase/NOTICE.md": {
+      "bytes": 3943,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/panvk-kbase/NOTICE.md",
+      "sha256": "7035ed803e22d7f0c44a547f0d2c93349cd3081ceaf95bb6949189ecf009ca24"
+    },
+    "assets/sony/ps4/upstream/licenses/panvk-kbase/bcn_layer-MIT.txt": {
+      "bytes": 1071,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/licenses/panvk-kbase/bcn_layer-MIT.txt",
+      "sha256": "673a24ac11db730be175df3fdff976162c875b49cea11c90197fc6fcbd4c532e"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/BlazeRush.xml": {
+      "bytes": 1217,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/BlazeRush.xml",
+      "sha256": "c23ee03660b17176e00b8251ede7ea8161577e19fdaabac9b9a5525fe553a99e"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Bloodborne.xml": {
+      "bytes": 289033,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Bloodborne.xml",
+      "sha256": "f96b4f858b6e4155fc1ebca1642e9c041e1a43bd6f2cc3e2e2b6925a84f918bf"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/BlueRider.xml": {
+      "bytes": 406,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/BlueRider.xml",
+      "sha256": "913033139f75ddca43bf7d4f061e203c393ce244b1cd402c75738f5f248067a9"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/BurnoutParadiseRemastered.xml": {
+      "bytes": 1096,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/BurnoutParadiseRemastered.xml",
+      "sha256": "2cecb3cefcd22ab5df7b19ae8bc11f56b03208416b03377a9065b0021b55678f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Catherine_FullBody.xml": {
+      "bytes": 950,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Catherine_FullBody.xml",
+      "sha256": "cb850d8edfe525c298c2ea854f1ec3e1555a043cd721810041687f9ba0e92c08"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/DarkSoulsIII-Orbis.xml": {
+      "bytes": 1891,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/DarkSoulsIII-Orbis.xml",
+      "sha256": "35917bb046188540f31dc3d0ca9740c09762d1daad2d1f7b031ebf14663671b7"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/DeadNation.xml": {
+      "bytes": 1600,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/DeadNation.xml",
+      "sha256": "8117572fcf23bf1a56ba2cf14a833df0874eab77abb770c79e66a8a6541a60c3"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Driveclub.xml": {
+      "bytes": 25760,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Driveclub.xml",
+      "sha256": "e57589cb1df6c8d5cc427b38765e0a878196f58b6d50cc4dde248ec6ef374877"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/EA_SPORTS_UFC_4.xml": {
+      "bytes": 10875,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/EA_SPORTS_UFC_4.xml",
+      "sha256": "b7bcb5075d328cf3b405c22d5ac316a08f506eec89af053f021e0b789bc6f2b8"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GeometryWarsDimensions.xml": {
+      "bytes": 1492,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GeometryWarsDimensions.xml",
+      "sha256": "97a3fd79d9f0c6aa9c34ad9c34dd4843c49b0aaa34708354296ea0a5078c6897"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/God_of_War_III_Remastered.xml": {
+      "bytes": 1307,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/God_of_War_III_Remastered.xml",
+      "sha256": "b8f3a36694be5fda6b7ba16e9abe648f4c12ba98276a73d84dee65dd8f2fff0f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/God_of_War_III_Remastered_Optional.xml": {
+      "bytes": 7542,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/God_of_War_III_Remastered_Optional.xml",
+      "sha256": "dc5f0ee03a2f29c612630247be7894ffe69085e15eb705766c16d003004f25fe"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GranTurismoSport.xml": {
+      "bytes": 662,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GranTurismoSport.xml",
+      "sha256": "888050c88186e1765fc88ca3cc696b3df81fac41527a86b1dff2cf07480be999"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GrandTheftAutoV.xml": {
+      "bytes": 813,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GrandTheftAutoV.xml",
+      "sha256": "3b860c12d25e6c58c87edaaf9fc2fe63f20ff813c75ae2321d537d200e912b70"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GravityRush2.xml": {
+      "bytes": 7807,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GravityRush2.xml",
+      "sha256": "0bbc6d161929412da65c167fad6e211b3f7cb12ec08eaf2f55be280aed4f6aea"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GravityRush2_MovieCallback.xml": {
+      "bytes": 550,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GravityRush2_MovieCallback.xml",
+      "sha256": "1b7b00d11b67a94d242241a76cb7008aef963377c1b1975df0a3a0be0a27b847"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GravityRush2_Resolution540.xml": {
+      "bytes": 6876,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GravityRush2_Resolution540.xml",
+      "sha256": "5dadf5cd433de851f4592a22949f84931955d2d5e5f55342aec87793a45f5714"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GravityRush2_Resolution720.xml": {
+      "bytes": 6845,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/GravityRush2_Resolution720.xml",
+      "sha256": "db62688c418ba00dc9b947dd71de1841a92119cee3beb04def210e1cb1cbc2c5"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/HatsuneMiku_ProjectDIVAFutureTone.xml": {
+      "bytes": 627,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/HatsuneMiku_ProjectDIVAFutureTone.xml",
+      "sha256": "336db2c0c8966f1e698d2a72e87554912ff9aab2db1f732eb797f12d4d943784"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/HorizonZeroDawn.xml": {
+      "bytes": 10148,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/HorizonZeroDawn.xml",
+      "sha256": "cfb51ddd1e409b2b58b7e0934f1862dde1958f252d78e6ae4880d5dc9a1dc27f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/InfamousFirstLight.xml": {
+      "bytes": 8011,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/InfamousFirstLight.xml",
+      "sha256": "40c2e7cc1521f09f585d95e7d4df713078bd1c0cedb5a248798fb339a1cb6f7d"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/InfamousSecondSon.xml": {
+      "bytes": 7387,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/InfamousSecondSon.xml",
+      "sha256": "017c77c30d5e0a35ff48d4233ebf9b162490fdfb87dad1e2202550d6ef5f3008"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/InfamousSecondSon_Experimental.xml": {
+      "bytes": 3928,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/InfamousSecondSon_Experimental.xml",
+      "sha256": "04eaed05f5a820b60f9171627567c500b37c168610fa26e2794d89dba688cd58"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/InfamousSecondSon_Plus_01_00.xml": {
+      "bytes": 4153,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/InfamousSecondSon_Plus_01_00.xml",
+      "sha256": "e6c0d03ca46f4257e6a869ba0a10f6b884962a808a100fa922b70e29eab120b3"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Journey.xml": {
+      "bytes": 1485,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Journey.xml",
+      "sha256": "702aafa8f5ea3d8466fd1513739f6f9091f7df1874c68116cc2fdab590858203"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Knack.xml": {
+      "bytes": 1817,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Knack.xml",
+      "sha256": "aa95718c10c48ab273fea2363b4434115cc56a6056f61ad737d92265759d889c"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/LEGODimensions.xml": {
+      "bytes": 2092,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/LEGODimensions.xml",
+      "sha256": "61d783c8550d2c3b0f422211b4e56a3acf5ea19f49b28b377aaa284ebf9c9d54"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/LittleBigPlanet3.xml": {
+      "bytes": 564,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/LittleBigPlanet3.xml",
+      "sha256": "81ad03b1469c0635cf339d8fd857e0e3a67ae5ac992deaa0c3d7dc841a928bb3"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/MetaphorRefantazio.xml": {
+      "bytes": 2638,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/MetaphorRefantazio.xml",
+      "sha256": "64683ee7be55e28b8ab8b63da7f53fe4e56daed921eeb68bd21b3fa14716ee46"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/MinecraftDungeons.xml": {
+      "bytes": 3077,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/MinecraftDungeons.xml",
+      "sha256": "cd731839b0c872549166685a54bb15d77f7d020d6ff76a9470a1ce0f2ac62d62"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/NHL19.xml": {
+      "bytes": 10113,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/NHL19.xml",
+      "sha256": "4060622bd00d1ba9733b5d5439c685b321f2bf3b45a771594fda92b5e9f7033c"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/NatsukiChronicles.xml": {
+      "bytes": 1253,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/NatsukiChronicles.xml",
+      "sha256": "29e97846f2cde007c8e633313ba9cca0723e3a7f02bc0b3e4aa4dae78ff1b2e0"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/PT.xml": {
+      "bytes": 2201,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/PT.xml",
+      "sha256": "d6992bf66dd8a8f16469cd66e77a7c6978a63130b45d0c77a0eddf249758c256"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Persona3_DancingInMoonlight.xml": {
+      "bytes": 3736,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Persona3_DancingInMoonlight.xml",
+      "sha256": "3480f124fda6a13a255ce973bf1708497f00e13d951d70a43a99eef98758bf61"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Persona4_DancingAllNight.xml": {
+      "bytes": 4698,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Persona4_DancingAllNight.xml",
+      "sha256": "27549c374e10b3c250acf545a03827eda30d2314d9f6228e1e3c0b7e04fc1de6"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Persona5_DancingInStarlight.xml": {
+      "bytes": 3736,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Persona5_DancingInStarlight.xml",
+      "sha256": "9af69faa0f5f17cd10e66169b70ddd0d99290a6042523713ff55d1942a246a83"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Persona5_Royal.xml": {
+      "bytes": 1144,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Persona5_Royal.xml",
+      "sha256": "0b72533587a8e0d0cb0fab9b6c8e04948648193aac322c741e836abb92909faf"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Ratchet_and_Clank.xml": {
+      "bytes": 1783,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Ratchet_and_Clank.xml",
+      "sha256": "53d10d74f833e877a1f57d44bd7a0772c82010a2986cdaf1fd2ca2e73673fa72"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Ratchet_and_Clank_Plus_Optional.xml": {
+      "bytes": 1272,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Ratchet_and_Clank_Plus_Optional.xml",
+      "sha256": "06eae88233ea03360c2d36e6d077e2566928952241873c1688d95927e6076d63"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/SakuraWars.xml": {
+      "bytes": 9133,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/SakuraWars.xml",
+      "sha256": "ce7186a1197c2f66a41c142bfbec4d70a9ca25fab152d9f75e9deb15ab0f5285"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/SotC.xml": {
+      "bytes": 2026,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/SotC.xml",
+      "sha256": "0c72bde70f25b4a4cc44eee03a2c1997be6e17857d0bf253d970d5cb08a7d21c"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheLastGuardian.xml": {
+      "bytes": 2622,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheLastGuardian.xml",
+      "sha256": "359a670c5a7272228f2c350a2c9e2f39c689305061840474c9ccaaa0f0cf1f62"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheLastOfUsRemastered.xml": {
+      "bytes": 1299,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheLastOfUsRemastered.xml",
+      "sha256": "f10dd384971ef7ce52192664789efccee850c81c86ab0bc516f046ab09167147"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheLastOfUsRemastered_CUSA00552_Performance.xml": {
+      "bytes": 3124,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheLastOfUsRemastered_CUSA00552_Performance.xml",
+      "sha256": "53db4dae813b66dff388103b0b94e1dc6d6a4d8a61ddd0013778e287ddef8055"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheLastOfUsRemastered_Erickmendes22_Performance.xml": {
+      "bytes": 2738,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheLastOfUsRemastered_Erickmendes22_Performance.xml",
+      "sha256": "597b93e37abd1a38db7b0812c70fc2178f2b85fba8d0a6a66cfdcf234fd50c94"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheOrder1886.xml": {
+      "bytes": 2714,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheOrder1886.xml",
+      "sha256": "b45c64e37ca87b779c2183a00709d9b1408c57e1904f8981e7bfd1e2a4fbeeae"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheOrder1886_Performance.xml": {
+      "bytes": 2112,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheOrder1886_Performance.xml",
+      "sha256": "fdb9c7a2b2cdb59d6c0b5a74507c37b7e8be4af2d7be8319e4155a253cfd94c2"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheQuarry.xml": {
+      "bytes": 5848,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheQuarry.xml",
+      "sha256": "2cd0aa37a666dfa43dded7b07727a2c9db457aa735a9c766912eb26e374f8585"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheWitcher3.xml": {
+      "bytes": 884,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/TheWitcher3.xml",
+      "sha256": "7702a1fd6965caac9a4c86b56216c4a1cd02fb6313b866717264cea728a28251"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Uncharted_NathanDrakeCollection_Resolution.xml": {
+      "bytes": 17737,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Uncharted_NathanDrakeCollection_Resolution.xml",
+      "sha256": "898c46ce7d6343ccbee72263da2021e9ff06da6180f38bea90daab7f903dc68d"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/UntilDawn.xml": {
+      "bytes": 2643,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/UntilDawn.xml",
+      "sha256": "976627cb6cbcedf95fc8244840df4660920481c6eef7d41dc6bf317a82b88bcf"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Windjammers2.xml": {
+      "bytes": 1225,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/Windjammers2.xml",
+      "sha256": "cf31ecd78697f048066fe3d5502294766262971e98668a49851b1bde9cd1aefb"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/YokusIslandExpress.xml": {
+      "bytes": 1265,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/PATCHES/YokusIslandExpress.xml",
+      "sha256": "e48c5edb889ae38b5875df62107c3011bfc11a9211a90180b8112ca3a05cf93f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/manifest-v1.json": {
+      "bytes": 856473,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/manifest-v1.json",
+      "sha256": "79a964ed18e78d22f70147c568587ee2c99c40bff7f8a58b501e584b4ae184b1"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00003.json": {
+      "bytes": 877,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00003.json",
+      "sha256": "0851480f9a169969b64636581ea4086053e7d7ad02d9c69062f247ae82533870"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00004.json": {
+      "bytes": 917,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00004.json",
+      "sha256": "467d86154e0bd9117101d9769bea5f2a9a3e07d605b2b5956a45cffec5537279"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00006.json": {
+      "bytes": 663,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00006.json",
+      "sha256": "6c04b7a731aef96eacc92342baf3814d01d985ee4fb7c1c2bf9d5688a8402a5a"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00035.json": {
+      "bytes": 2081,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00035.json",
+      "sha256": "9c4be2bdbb2baba6b74c134c7b630505d1a545d0a6282f3f6974cde9de29444b"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00063.json": {
+      "bytes": 513,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00063.json",
+      "sha256": "be1f1f6a388a68c2fb814b9de394b999dd567a0fc91459faaf6b55fc40a803c1"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00064.json": {
+      "bytes": 877,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00064.json",
+      "sha256": "93ea3fdc37423ee3b6662e45e673dfaaf988a55d299783bc1ed990f07ae34ac4"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00066.json": {
+      "bytes": 877,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00066.json",
+      "sha256": "0b4fe5ea41d77f5c1fe47361c1c8f0ebe2f73f5491069703bfd56f041665e26d"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00070.json": {
+      "bytes": 2081,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00070.json",
+      "sha256": "64ebeaae2b0df23003660f2b65c0eb3eefae8613e77cfbe124c80cb252a027f4"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00076.json": {
+      "bytes": 2081,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00076.json",
+      "sha256": "19e60219bd420247d220d6c21a7619c81d8a9602908153e8aab113bba577d23a"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00093.json": {
+      "bytes": 877,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00093.json",
+      "sha256": "e0453a476800a99b7422b6bde508180891b57c481192ad0fc29810605cae15b4"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00100.json": {
+      "bytes": 2081,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00100.json",
+      "sha256": "6b9fa85905b51804990f970ad24853754b09f74ea31bd38330c7ec911658542d"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00176.json": {
+      "bytes": 570,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00176.json",
+      "sha256": "519923421ec89d1c1f43a71b66fa21ade64c9e1c22e8145a7e711562cd98cc85"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00194.json": {
+      "bytes": 389,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00194.json",
+      "sha256": "93d49e494654bc34215e3ec6b62d427a67175894074c81d52f44d91395bdcc7f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00207.json": {
+      "bytes": 3671,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00207.json",
+      "sha256": "57695dbb6e15fdc12e62d1b7e4f8283b17a249b9e1226c99159accfc7fc25327"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00208.json": {
+      "bytes": 3671,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00208.json",
+      "sha256": "2e36f9a76dc7d17fd893920c4332c8c0f9c9478f57e96c0bb55157b458225575"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00223.json": {
+      "bytes": 917,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00223.json",
+      "sha256": "a58c4fcb4eb29b944a25d97fdf2ee4ff962480cac58d1a8fe14146f9769bb002"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00299.json": {
+      "bytes": 3671,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00299.json",
+      "sha256": "942f7f4a1e75b434f3a80dbba0e8dda5f7b6dd4952886afa0b11e41f53273a5e"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00305.json": {
+      "bytes": 917,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00305.json",
+      "sha256": "7fa9202d824d835e886d1c29eab4b3e809daccea4d4acf53a380792535862ce8"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00309.json": {
+      "bytes": 917,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00309.json",
+      "sha256": "281c2980ba09ac7c6ffd7140d28071266f61c898f1ca0252612700ae9bc07949"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00359.json": {
+      "bytes": 389,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00359.json",
+      "sha256": "c2444ed563ad4cfcfada074b2cc1866934a6dd19773ea9f27fef2373cb350e0a"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00411.json": {
+      "bytes": 397,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00411.json",
+      "sha256": "4040d49f979e3bf6184e5484628480ab256b898021f3f55c9640863e036cfed5"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00419.json": {
+      "bytes": 397,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00419.json",
+      "sha256": "fe8b7137e8c1bca87074edbdca55b8a9638d676872475bf68e3faea373610939"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00473.json": {
+      "bytes": 513,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00473.json",
+      "sha256": "71eefa1b3c0e46b84c4247cc202109bebd15a509aeb0e719d74d264d9e3c3b03"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00547.json": {
+      "bytes": 632,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00547.json",
+      "sha256": "6764851440443615927c83940da9bf17d2b5fd4d2d45d4dd5b374eec2f5daece"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00552.json": {
+      "bytes": 1510,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00552.json",
+      "sha256": "9de1f926ee49e02bc1bbd14582bcf8fdd001f56e431c3f48558964f4c5f1c24c"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00556.json": {
+      "bytes": 596,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00556.json",
+      "sha256": "a14bdcc3beebd222418bea37d47cd375a9683198e43a5ca3a6ccb98f56aa93c9"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00557.json": {
+      "bytes": 596,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00557.json",
+      "sha256": "2779f58ca91016417b4fc9e863baa20e18f00a5597b7519d58553691fdc7c174"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00559.json": {
+      "bytes": 596,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00559.json",
+      "sha256": "08da0d46d4dbca6bcb6eec984c8fbcc1096b9eaa99d325ce733dfe80b113dd53"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00575.json": {
+      "bytes": 919,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00575.json",
+      "sha256": "ae56a100030e9683b34dd27cd9aec2ea7a71a73b364d802c5d296a3e1375b544"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00670.json": {
+      "bytes": 2081,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00670.json",
+      "sha256": "ad1e938b19801eace0333e26c195c7f357b2bdd359fdab64ede2fdfbabbe46d1"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00693.json": {
+      "bytes": 513,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00693.json",
+      "sha256": "a077669879a88929fcfa2372e996af343d22a63001b7be5eb231c21a9501f5e9"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00694.json": {
+      "bytes": 940,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00694.json",
+      "sha256": "cc238b1b75682a232cb02e7e5eb5a6feae7a38f99ee494549dfc89b5313a82ae"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00755.json": {
+      "bytes": 1000,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00755.json",
+      "sha256": "15732e33ce2236cec499c57ddfcab55b2689e9861f9383c158b3f3ce5be86b64"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00762.json": {
+      "bytes": 513,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00762.json",
+      "sha256": "6ef7510994cd3b4402f5cc5a61e699a39e2ff76404f8d55d16a435f15f36a08e"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00785.json": {
+      "bytes": 2081,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00785.json",
+      "sha256": "805da24d3d51446a9f7e751b31dcc138579e69cc793fe0f19b8bf7ec8f8a33ff"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00810.json": {
+      "bytes": 513,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00810.json",
+      "sha256": "a59c3fa43cc646dba49412841c9ebcb4fdb673663e4cdfd26e8361cc174cc528"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00879.json": {
+      "bytes": 877,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00879.json",
+      "sha256": "e6da0014b9e136321964e513a384758020e5cf88ff51488125dbbd6cd534aa2a"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00880.json": {
+      "bytes": 397,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00880.json",
+      "sha256": "8e9d0c15538f695fff2bfcea9bcebb344cb763d9e888baae28ae276dca5e2092"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00897.json": {
+      "bytes": 919,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00897.json",
+      "sha256": "080eaef2252b9870afa5c222da4331cd8ad7ca3677e8d6ef1323ee7298c3e050"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00900.json": {
+      "bytes": 2927,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00900.json",
+      "sha256": "988aab8328d8e266f6e7b9e86e7928a1c84a472e2b4605549479c2064cf22753"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00902.json": {
+      "bytes": 389,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00902.json",
+      "sha256": "3b7aa9111259481cbc32ac42aa5c16094412eed1cc3c2b03ada3583e47d5b279"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00935.json": {
+      "bytes": 394,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00935.json",
+      "sha256": "683d4c58533b50dfde6a6b763dbf4666ad9fdc1a1d733416d0617f1eebecc6fc"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00996.json": {
+      "bytes": 919,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA00996.json",
+      "sha256": "108170c1d6ad85f803b396a4b5144a5393135acbc7e6188be389e49c726f0fc4"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01021.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01021.json",
+      "sha256": "39ed7ae6727343a0116fbf44754907194a283a8f83f30d0737c5040f4d05029e"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01047.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01047.json",
+      "sha256": "559401e00cdede3398edc8287905ee43db2e009766681f49b90180ef88627851"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01064.json": {
+      "bytes": 919,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01064.json",
+      "sha256": "ae66167908537bd2b9c54bc4984e1a0c9a2e999ef3758bfe700e31d998260571"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01073.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01073.json",
+      "sha256": "941491cc88487952da246de07b42e7361c4d00123d1763cb2c6cc79ed2fa468e"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01127.json": {
+      "bytes": 635,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01127.json",
+      "sha256": "15ebc233d2188125f217f1f2a619136611103cf231b5406949fe2b3a902d2392"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01176.json": {
+      "bytes": 394,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01176.json",
+      "sha256": "895a9859fe3f5350c8fa01dd8a11572c134c260be9b853545b6906d107669e93"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01363.json": {
+      "bytes": 3671,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01363.json",
+      "sha256": "75a1cb89b8e7e5e0f063a4eb1e5c343524521df133ff0a8a94493c2a64a8da47"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01399.json": {
+      "bytes": 2427,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01399.json",
+      "sha256": "ea206e1fadcc92e3adcc8820f6f3acda9a0d1cca2d9e1d8557907f1aaed5c319"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01623.json": {
+      "bytes": 4061,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01623.json",
+      "sha256": "97ec283511bf925903b0c7b6594f1cb8e0850e8041eb12150253b92c9a792530"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01686.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01686.json",
+      "sha256": "b4ac0e2c2deac286bb9f3aead4dc0f9bdea8c542fdcdfa250e6f723ccef5cd8a"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01715.json": {
+      "bytes": 4061,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01715.json",
+      "sha256": "2cc86ca6f579c3df59d9b8daadcd3f2af321af85a9ed7c614dc40affc14623d2"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01913.json": {
+      "bytes": 389,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01913.json",
+      "sha256": "28d4ad81f88bb03acd2e9c5c9f7a2153105327ee1f61b569604b7c43bde6c447"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01928.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01928.json",
+      "sha256": "301a4c58fceb1bca96037c1fab6d491bf5f6711fe7695a21eaa08aab5081e0b3"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01967.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA01967.json",
+      "sha256": "0c4f2b3ee28619f67f498d9cb7b67b3c9fe97cb72d45ce5038ad8fd79a3b6153"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02020.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02020.json",
+      "sha256": "97adbe752ef4fcf4255ab2f3d8cde42a5d0014b3372df88f0fb1672e0d6f12b0"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02168.json": {
+      "bytes": 527,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02168.json",
+      "sha256": "08d8409f51d07eab175160ed13d17d3560d1d6f8acf0325bce25091074fa0f38"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02320.json": {
+      "bytes": 2427,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02320.json",
+      "sha256": "7f3948383ec97ee56976ff3f682972ed97c49496168c0a8d52a9055f7a51e2ea"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02343.json": {
+      "bytes": 2427,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02343.json",
+      "sha256": "2ae1d55a50d70e1dd4a07bb1f2eec63e1128cabcc9e85c9a845dde5d2ab803ad"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02344.json": {
+      "bytes": 2427,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02344.json",
+      "sha256": "6ace5232671f373ba23704b6035e271f0f374f551de504a89e35b7679ad6417c"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02636.json": {
+      "bytes": 389,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02636.json",
+      "sha256": "ff6a708c6545b2a5ffe0a0a282c2ff9c837c1a77a3d8bf182f94d4f28f9fbfdf"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02826.json": {
+      "bytes": 2427,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA02826.json",
+      "sha256": "e35bb87f577ef8eb0dd6b5437dfdf941067b5d0b40b91b5ea81a8a6313a0b326"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03014.json": {
+      "bytes": 3671,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03014.json",
+      "sha256": "7268cae6555e7944ac72574950317138f2673e923910f89731c33cec327e68ff"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03023.json": {
+      "bytes": 3671,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03023.json",
+      "sha256": "df14b666fa5d07f855463cdc2a534b6f4d24d0a34bb9ea8147ff0bacd00d0347"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03173.json": {
+      "bytes": 3671,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03173.json",
+      "sha256": "387fbc2a75647e7e1e8cea8df474314bbec9868dede4283e2aa3eedb43ca87ea"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03187.json": {
+      "bytes": 946,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03187.json",
+      "sha256": "72d8e1db7b6b367a9fb057eb9a5c3b5e4216468e3ad9062ab52c7244fc698104"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03365.json": {
+      "bytes": 961,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03365.json",
+      "sha256": "533c438a222ed184f943d0e23d4eef9110ff6cb04666be54f2eb99467f9e7fac"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03388.json": {
+      "bytes": 961,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03388.json",
+      "sha256": "41336e911621de11c9bb6fd1940703a10972a59a1efbd6c75fd0eab808bdc89b"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03627.json": {
+      "bytes": 996,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03627.json",
+      "sha256": "e29d46f10de78cc64bbd22e19bfd84a8d7f68a08b4838def6680ad15aa4e8f12"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03694.json": {
+      "bytes": 1940,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03694.json",
+      "sha256": "f919fc43297019af87a959343084ec7b85bcd34bdc1b9b86b3b5b457babc4500"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03745.json": {
+      "bytes": 996,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03745.json",
+      "sha256": "6ea41236a79daaa6b0618c5bbe463ff0902969323025eddffd529c5606103dca"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03828.json": {
+      "bytes": 417,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA03828.json",
+      "sha256": "7b128d2680961e35df3e05a7ccf39d86b5576ca1eab9ad41779442b6d805d563"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA04934.json": {
+      "bytes": 632,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA04934.json",
+      "sha256": "f218eea63a07e6d17ef834ddd3918702be71d5685f7e55081b43c8154e642d26"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA04935.json": {
+      "bytes": 632,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA04935.json",
+      "sha256": "8bf7b17dac9b789e7568f566ebd30e8d6d4f8f79156db2dd289ade79c0c5e043"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA04936.json": {
+      "bytes": 996,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA04936.json",
+      "sha256": "70a94362e14fdbf94b9d12d20ba0f4bb95215f4b0887cee0e0eb94a169788e38"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA04943.json": {
+      "bytes": 632,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA04943.json",
+      "sha256": "81a21b22652789596fa924ac9aa4fdd455895a4b95f1850370bbfbb6cfc30ef0"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05030.json": {
+      "bytes": 417,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05030.json",
+      "sha256": "24c1cdc6081dafbb0dc7830a36a2444f5fbdcedaeb9fe25e8ee9091774eb8b72"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05152.json": {
+      "bytes": 996,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05152.json",
+      "sha256": "eca732228b7f77e17bbe22b46fdb4187b01a2fd685b9c7beb935b302f3af0658"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05571.json": {
+      "bytes": 392,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05571.json",
+      "sha256": "746ad9002ca49fee1d7092db354746c438854aa964fd1bbe1008d4d2e475281b"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05572.json": {
+      "bytes": 392,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05572.json",
+      "sha256": "b0c0dbee410b9ff7ef82d3432aa1f4377511f41dae16bca320b5c09a8ac27313"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05573.json": {
+      "bytes": 392,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05573.json",
+      "sha256": "3b1dbf733439780b837d177dbe4fbf76d9a90fdf96e355427fd8a4b5830c947d"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05574.json": {
+      "bytes": 392,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05574.json",
+      "sha256": "f37cf6fb48bd1a5754d73d304a2632bf9f1409c9bd0ebc0d3ba7f3c21f1d6a98"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05644.json": {
+      "bytes": 392,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05644.json",
+      "sha256": "a5d696be40c74169613adb6d94a3e71c6f6de60ef98499f7b57a5359c39dc8ba"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05653.json": {
+      "bytes": 389,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05653.json",
+      "sha256": "ff4770b381c3c509475756c59ecc36945d07bf4fa556daa29ec7a907ddf5d018"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05661.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05661.json",
+      "sha256": "a6a4f635b46a7257d47466e611897441a5b0d87c1da18f290bddd97fa705f533"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05682.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05682.json",
+      "sha256": "6db5e09abf32cdd2fc5b806776c9d834c7a4aad703f9900ef71c3c9d5574ef96"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05725.json": {
+      "bytes": 392,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA05725.json",
+      "sha256": "ba401f44a4b0a6e6f35cd9786900306b71d89727616181296d0c56a1bba7f753"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA06093.json": {
+      "bytes": 417,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA06093.json",
+      "sha256": "070ac52e4a56e1097da025ff5ce4d19a3892cb3dd0a171d7a86ceb3702b88011"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA06211.json": {
+      "bytes": 417,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA06211.json",
+      "sha256": "eacaa0298832e89f3ff42b98230b406d8c08ceb0981cb90fbf94141207179bd2"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07319.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07319.json",
+      "sha256": "21721fb91bdd90ed04d6dd8675a32679da55b813908971393e904de782aeb1be"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07320.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07320.json",
+      "sha256": "90d04aeb6a3f5bcc7a3117cfac997c910206b93a00b7b15dbd2b8a42b374620f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07326.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07326.json",
+      "sha256": "f8e93ea5b11a97c1e68b0003cbb46eb79921a666db2275a2b26bf7bc3f9a5af7"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07339.json": {
+      "bytes": 961,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07339.json",
+      "sha256": "493cad2522ef8450e43e83e19a84606fad94553f79e7a4b3f7aff1ea7123976f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07350.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07350.json",
+      "sha256": "a35cbe1b05376d31683cad578ba73333a09aa9f8714105bee1c9ee5f0e9c6d7c"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07762.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07762.json",
+      "sha256": "7238faa2a9fc3840d6f51b27e88237587685cea8b872c3bb4ca898459dfd2e07"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07798.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA07798.json",
+      "sha256": "d5edbbc48eef110c86929eba5d90c9937371016074310cf641844b431335abaa"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08026.json": {
+      "bytes": 417,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08026.json",
+      "sha256": "3ccbf3e89bf5d593a81c5bc857377672e19dc2df061e304f6e7212b019eb3511"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08034.json": {
+      "bytes": 534,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08034.json",
+      "sha256": "f69eaac3e556d31f2d614b5ee126d92a75c88eccfec254412113993da74a098e"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08053.json": {
+      "bytes": 417,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08053.json",
+      "sha256": "82f7b96a8a995e13d6e20dca846c60f9333ee1200bc432190333d9e55de32aaf"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08804.json": {
+      "bytes": 534,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08804.json",
+      "sha256": "0b2a0993351d85bf4916f299f49565c4beecfe24be04d074349d0769f047b4f8"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08809.json": {
+      "bytes": 534,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA08809.json",
+      "sha256": "67e086a081b0b273492743e739a59bec6a05f5bbb129520a0cffbab018a35754"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10211.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10211.json",
+      "sha256": "e17c41ab4b4f20d9d17ccff3e1a14f64a238f853a0bf791711f6693866b35df2"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10212.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10212.json",
+      "sha256": "b9b8dabb5a2c3a6b4a64b9ed072491569f5e208a8a966e68ab9f2483b190578f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10213.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10213.json",
+      "sha256": "27b122de97badfd37638eb93b7ae282574342c847928e6b16adac57751a6e752"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10218.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10218.json",
+      "sha256": "3633cb69a3a9257528859d5b66f58caa2aff9d2af7ac43fec6a73729c48f6120"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10234.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10234.json",
+      "sha256": "f46a08024bf05d080a9f5084c86dc3bb3cc2cefa6f0e6ebf90437ab79a354de5"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10237.json": {
+      "bytes": 396,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10237.json",
+      "sha256": "9520b1d24b4c75c8a31ebd2b09826c5217795205ed7a6cdf8b170e44a751f58a"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10650.json": {
+      "bytes": 982,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10650.json",
+      "sha256": "81feefa8ad8843023cfcf86282a3c5a6b50f307772c410b73e74179a8e2ea21d"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10851.json": {
+      "bytes": 548,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10851.json",
+      "sha256": "ba5de902a0f7ca90b03ff43e7030222680470905bd5a8b78de6fe3bdf2ed6cb0"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10866.json": {
+      "bytes": 548,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA10866.json",
+      "sha256": "340e2fecc9d787a8587d712a9f199eb2ec6234df8ee51b6ed918a9b8934028c4"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA11116.json": {
+      "bytes": 385,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA11116.json",
+      "sha256": "8cb24c682323dddace3e11980eadcd9ee76612081c48e32f612f7cd25827644d"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA12112.json": {
+      "bytes": 1022,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA12112.json",
+      "sha256": "eaadddaca859bd8e28039bc175b16ff4e054a01dcc22ab6cd4611677814593f7"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA12380.json": {
+      "bytes": 1031,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA12380.json",
+      "sha256": "515e23e48ec3b1aa5f9bf004cafe8256765339691a537d3b6d4e9a515127f81c"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA12636.json": {
+      "bytes": 1031,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA12636.json",
+      "sha256": "c50d6a04a02140052320aefa8bd94d36e0997d662c03b167ddb04b0de0fd21a1"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA12811.json": {
+      "bytes": 1022,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA12811.json",
+      "sha256": "0c7cf13805e4eb326aab072b6dcbc4c416431cdd6e39d0632b62cd436225c51f"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA13045.json": {
+      "bytes": 390,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA13045.json",
+      "sha256": "99a258933edb0d478559922da943d19159b98d4a7e51d1c2ec184d2e8a8b93c0"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA14204.json": {
+      "bytes": 384,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA14204.json",
+      "sha256": "3edd5d8df26b59948b5bcfe1c5eccf780e08e1338e39b7a9411cacf3bb14fe10"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA14209.json": {
+      "bytes": 384,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA14209.json",
+      "sha256": "6d043834721be4dfba2073ea37903eeeb1864e73ac169abc38e2e1b1aacb01ef"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA14836.json": {
+      "bytes": 543,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA14836.json",
+      "sha256": "697eec3e82ab5411a61994c128cfb93375a51366ff73dfff296cdf1a8aaf07c9"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA15036.json": {
+      "bytes": 543,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA15036.json",
+      "sha256": "3648cc004b402ca35b649d8a04f492c1ae7dc46c356d464b7d2b441e37da4017"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA15640.json": {
+      "bytes": 958,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA15640.json",
+      "sha256": "fc3548758998cbaa4e9efa0e8656983a746e2f047d8ac3fe1029a083de2309a3"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA16404.json": {
+      "bytes": 390,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA16404.json",
+      "sha256": "c2370a085971d9971f482b2e2167d7e394f457cbc993dc7673530fb8a6095d28"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA16429.json": {
+      "bytes": 390,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA16429.json",
+      "sha256": "d7f3cfa5224dedb4e1d806ad4fb499df5fbf4624bdfedcc3f5ef643e0edeabc7"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA17416.json": {
+      "bytes": 394,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA17416.json",
+      "sha256": "77ab12320ce6eb2fda4475953ecb0b2f8ced7d58cd07b1551953a20e9d9fb3aa"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA17419.json": {
+      "bytes": 394,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA17419.json",
+      "sha256": "86c283cb2d23a01748910ab5ca1674750c7115e695c241bd36295c10c10a1b4e"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA18797.json": {
+      "bytes": 397,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA18797.json",
+      "sha256": "5af442f596c457074fedbdfaf3f6162ff29046185853366ea8de2351ab68011d"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA18798.json": {
+      "bytes": 397,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA18798.json",
+      "sha256": "6f00e5386abf19500df4a7f785e9d644c4e8cbc8dcde8dae21d34014b604b089"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA18799.json": {
+      "bytes": 397,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA18799.json",
+      "sha256": "782f4f9a951f98bed10cda59364cd3f39f198612d93201379f10697a906f03d9"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA20141.json": {
+      "bytes": 397,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA20141.json",
+      "sha256": "3fcc9b96d005d9c2a003d4d9f4b0a220d688a8ae8df19f7c473079705eeeb1e5"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA20142.json": {
+      "bytes": 397,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA20142.json",
+      "sha256": "e81fc26a7defe7951e847682e3844f54eb4cf78714033df49add376c1a1faacc"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA26073.json": {
+      "bytes": 973,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA26073.json",
+      "sha256": "a8d422ddfa8ca9ec6d3c5cb63fd4573b041f730d9c2b276358f5f3cb5da1e338"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA31345.json": {
+      "bytes": 389,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA31345.json",
+      "sha256": "2b6fe0fb308b2d43413b26bd8e17aab5a0f869c026fc457df3785acd4d9575cc"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA31820.json": {
+      "bytes": 389,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA31820.json",
+      "sha256": "d7ddbce0c6716c0e488f213507da5833cf8f402cf6946fbf2f40289e785627f1"
+    },
+    "assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA47038.json": {
+      "bytes": 520,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/patches/repository/bachata-official/presets/CUSA47038.json",
+      "sha256": "51f33bbde1e7f7b4bf7d4fd71a1eccc5e076f7f2d04647f786e334e8827860a7"
+    },
+    "assets/sony/ps4/upstream/runtime/manifest.json": {
+      "bytes": 66330,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/runtime/manifest.json",
+      "sha256": "a1902b71628f6738e48e3c30a6ab37e689ae95db566784016bc83328618c4628"
+    },
+    "assets/sony/ps4/upstream/runtime/native-runtime.json": {
+      "bytes": 503,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/runtime/native-runtime.json",
+      "sha256": "8ace783c11d8e9d5d516ec46bb73b92b063f795f12649aa7a723d0a58161a6d2"
+    },
+    "assets/sony/ps4/upstream/runtime/runtime.zip": {
+      "bytes": 110834547,
+      "path": "private-work:correction/prepared-assets/assets/sony/ps4/upstream/runtime/runtime.zip",
+      "sha256": "bfead069a93b6838dd0ce8f27021b0fe81a9f402e809de925cee86939724e87e"
+    },
+    "assets/station-online/engines.json": {
+      "bytes": 19118,
+      "path": "private-work:correction/assembly/identity/engines.json",
+      "sha256": "0d5c548472a2878dfda801a69a87e5523b4a48bce4bde329ac2e825e0779d282"
+    },
+    "classes40.dex": {
+      "bytes": 148276,
+      "path": "private-work:correction/compiled-host-final/classes40.dex",
+      "sha256": "f3dddbea9c8fcb80e3ecc6f6a255fe5b77a2f3572d4fdf657e31a4ebd6576a10"
+    },
+    "lib/arm64-v8a/libstation_dolphin_runtime.so": {
+      "bytes": 109256,
+      "path": "private-work:correction/assembly/identity/libstation_dolphin_runtime.so",
+      "sha256": "cdfd3b17ee2b6c2108c47394e1a5c94a716b481ad594830b4593c618902088c5"
+    },
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so": {
+      "bytes": 98344,
+      "path": "private-work:correction/assembly/identity/libstation_mupen64plus_runtime.so",
+      "sha256": "cf3c21e161fac06c094fabfbf7e349280b5e86eed89258296f85baca576602eb"
+    },
+    "lib/arm64-v8a/libstation_psx_online.so": {
+      "bytes": 295544,
+      "path": "private-work:correction/assembly/identity/native/libstation_psx_online.so",
+      "sha256": "7c182b3928147af569e642d4b1951eedf60358018d8e03908e15169afbd563d9"
+    }
+  },
+  "publicReceiptProvenance": {
+    "absolutePathsReplacedWithLogicalReferences": true,
+    "binaryFirmwarePkgMaterialGameMediaPersonalLogsIncluded": false,
+    "hashMapsPreserved": true,
+    "originalPrivateReceiptSha256": "3e04f4123bcb07fcd1783c7de1fc8d94bfeecaa8707bdb63d4b2f83cbaf6ec72",
+    "originalReceiptRole": "correction/assembly/source-freeze.json"
+  },
+  "revision": "R131",
+  "schemaVersion": 1,
+  "sourceFrozen": true
+}

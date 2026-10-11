@@ -1,0 +1,35 @@
+{
+  "addedActivities": {
+    "org.emulationstation.frontend.sony.Ps3Activity": ":station_ps3",
+    "org.emulationstation.frontend.sony.Ps4Activity": ":station_ps4"
+  },
+  "allOtherComponentsAndAttributesPreserved": true,
+  "baseApkSha256": "d227b0af17600bf99ec097857bf182f6e7989f8ddc3b68b63e17c81f69eb30ad",
+  "donorSha256": "acda0e4404e29764a32fb3452b69899dc4501b63100376620a7e41a2ad85ff31",
+  "exactInverse": true,
+  "exported": false,
+  "externalEmulatorActivityInvoked": false,
+  "factory": "org.emulationstation.frontend.sony.StationSonyComponentFactory",
+  "ownerConfigChanges": 4016,
+  "ownerLaunchMode": "singleTask",
+  "passed": true,
+  "payload": {
+    "bytes": 64716,
+    "name": "AndroidManifest.xml",
+    "path": "private-work:payloads/AndroidManifest.xml",
+    "sha256": "575eacce86828aa332dbc7cae6d37e31d25a7891cb20d83bb936bf40e33659e1"
+  },
+  "publicReceiptProvenance": {
+    "absolutePathsReplacedWithLogicalReferences": true,
+    "binaryFirmwarePkgMaterialGameMediaPersonalLogsIncluded": false,
+    "hashMapsPreserved": true,
+    "originalPrivateReceiptSha256": "65ddf03368b146ac7d85cd37f903bb221f91e6eeb9d0c8456f60b7bb95029c9b",
+    "originalReceiptRole": "manifest-receipt.json"
+  },
+  "resourcesUnchanged": true,
+  "schema": "station.sony.internal.manifest.v1",
+  "sha256": "575eacce86828aa332dbc7cae6d37e31d25a7891cb20d83bb936bf40e33659e1",
+  "sourceSha256": {
+    "recipe/patch_manifest.py": "55067f557a3c63cca2c8685ea3e7a33e811be1b6d981f80f079d51f3547ce023"
+  }
+}

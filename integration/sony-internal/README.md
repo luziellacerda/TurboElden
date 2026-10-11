@@ -31,4 +31,10 @@ Recibos finais públicos ficam em `versions/station-sony-internal-r131-20261011/
 
 ## Validação
 
+APK final R131 corrigido `0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175`, 2.711.825.423bytes, fonte `8503c2e32d7487d3bb31397ba9533dc7e1bfe981`, assinado com certificado original e conferido em todas as entradas, v2/v3 e16KiB. A entrega e os mapas completos de hashes estão em `versions/station-sony-internal-r131-20261011`.
+
+A primeira candidata teve preparação PS3 observada, mas o PS4 falhou antes do JNI por API JavaSE ClassLoader indisponível no Android. A candidata corrigida usa boot Android na compilação e sincronização da instância; stubs de compilação não são empacotados. O resumo físico anterior identifica somente o primeiro APK.
+
+A candidata corrigida foi instalada no Motorola Edge30/Android14, com SHA integral, UID/dados e frontend oficial conferidos. Pelos botões reais de configuração, ambos os owners privados mostraram suas telas de preparo protegido e retornaram ao frontend. PS3 confirmou o firmware importado inicialmente e seu reuso após prepare/ensure. PS4 passou a carga JNI/initPKG/runtime e não repetiu a falha ClassLoader. Isso é evidência da UI e de seus pós-requisitos; arquivos privados não foram lidos independentemente. Nenhum ISO/PKG real foi iniciado/importado para jogar; gameplay/controles/temperatura/servidor não validados. Consulte os recibos `installation.json` e `physical-bootstrap.json` da entrega.
+
 Leia STATUS.md e os recibos finais. Compilação, presença de assets, carga JNI, importação de firmware e jogo real são evidências distintas. Compatibilidade e desempenho PS3/PS4 dependem do motor e do aparelho; preparação automática não garante execução de todo título.
