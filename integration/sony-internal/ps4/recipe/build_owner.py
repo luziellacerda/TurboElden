@@ -83,7 +83,10 @@ def main():
             if original.read_bytes()!=source.read_bytes():raise ValueError("JNI declarations differ from pinned APK: "+source.name)
     classes=out/"child-classes";classes.mkdir(exist_ok=True);dex=out/"child-dex";dex.mkdir(exist_ok=True)
     sources=sorted((root/"child-java").rglob("*.java"))
-    run(a.jdk/"bin/javac.exe","--release","8","-cp",a.android_jar,"-d",classes,*sources)
+    # This partition runs on Android: Java SE --release exposes APIs that the
+    # phone may not implement. Only the public Android SDK supplies boot APIs.
+    run(a.jdk/"bin/javac.exe","-encoding","UTF-8","-source","8","-target","8",
+        "-bootclasspath",a.android_jar,"-proc:none","-cp",a.android_jar,"-d",classes,*sources)
     run(a.jdk/"bin/java.exe","-cp",a.d8_jar,"com.android.tools.r8.D8","--min-api","31","--lib",a.android_jar,"--output",dex,*sorted(classes.rglob("*.class")))
     if sorted(x.name for x in dex.glob("*.dex"))!=["classes.dex"]:raise ValueError("Expected one isolated DEX")
     owner=out/"owner.dex";owner.write_bytes((dex/"classes.dex").read_bytes())
@@ -92,6 +95,8 @@ def main():
         rsa=out/"pkg-rsa.bin";private_rsa_material(inspect/"PkgRsa.smali",rsa);artifacts.append(("pkg-rsa.bin",rsa))
     receipt={"schemaVersion":1,"sourceApkSha256":APK_SHA,"sourceDexSha256":DEX_SHA,"nativeRegistration":declarations,
              "recipeSha256":sha(Path(__file__)),
+             "javaApiPolicy":"android-sdk-bootclasspath-only","javaSourceLevel":8,"javaTargetLevel":8,
+             "androidBootClasspathSha256":sha(a.android_jar),
              "toolchain":[{"role":role,"sha256":sha(path)} for role,path in [
                  ("javac",a.jdk/"bin/javac.exe"),("java",a.jdk/"bin/java.exe"),
                  ("androidJar",a.android_jar),("d8Jar",a.d8_jar),("apktoolJar",a.apktool),

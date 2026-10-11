@@ -136,7 +136,7 @@ public final class Ps4Activity extends Activity implements TextureView.SurfaceTe
             if(stopping.get())finishOwner();else {
                 String message=failure instanceof IOException?failure.getMessage():"Não foi possível iniciar o motor PS4 interno.";
                 show("PlayStation 4",message==null?"O jogo não pôde ser preparado.":message);
-                android.util.Log.e("StationPS4Owner","Internal owner failed in "+phase+": "+failure.getClass().getSimpleName());
+                android.util.Log.e("StationPS4Owner","Internal owner failed in "+phase,failure);
             }
         } finally {closeSession();}
     }

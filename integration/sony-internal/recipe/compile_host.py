@@ -3,7 +3,6 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
-import os
 import struct
 import subprocess
 import zipfile
@@ -73,9 +72,12 @@ def main():
     dex = args.out/"dex"
     classes.mkdir(parents=True)
     dex.mkdir()
-    dependencies = [args.android_jar, args.bridge_jar]
-    run([args.jdk/"bin/javac.exe", "-encoding", "UTF-8", "--release", "8", "-proc:none",
-        "-cp", os.pathsep.join(map(str, dependencies)), "-d", classes, *sources.values(), generated], args.out, "javac")
+    # --release 8 exposes Java SE 8 boot APIs, including ClassLoader methods
+    # absent from Android. Use the actual Android SDK as the bootstrap API;
+    # Station's bridge contains only compile-time app classes, never boot APIs.
+    run([args.jdk/"bin/javac.exe", "-encoding", "UTF-8", "-source", "8", "-target", "8",
+        "-bootclasspath", args.android_jar, "-proc:none", "-cp", args.bridge_jar,
+        "-d", classes, *sources.values(), generated], args.out, "javac")
     jar = args.out/"sony-host.jar"
     with zipfile.ZipFile(jar, "w", zipfile.ZIP_STORED) as archive:
         for path in sorted(classes.rglob("*.class")):
@@ -104,6 +106,9 @@ def main():
         "baseApkSha256": BASE_SHA, "sourceSha256": pins,
         "assetReceiptSha256": sha(args.assets_receipt), "generatedSourceSha256": sha(generated),
         "compileOnlyClasspathSha256": {"bridge.jar": sha(args.bridge_jar), "android.jar": sha(args.android_jar)},
+        "javaApiPolicy": "android-sdk-bootclasspath-only",
+        "javaSourceLevel": 8, "javaTargetLevel": 8,
+        "androidBootClasspathSha256": sha(args.android_jar),
         "compileOnlyClassesPackaged": False, "newTypes": sorted(new_types),
         "preservedDexSha256": preserved, "payload": {"name": "classes40.dex", "path": str(result),
             "bytes": result.stat().st_size, "sha256": sha(result)},

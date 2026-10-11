@@ -8,7 +8,9 @@ final class Ps4ClassLoader extends DexClassLoader {
         super(dex,optimized,nativePath,parent);
     }
     @Override protected Class<?> loadClass(String name,boolean resolve) throws ClassNotFoundException {
-        synchronized (getClassLoadingLock(name)) {
+        // Android ClassLoader has no Java SE getClassLoadingLock API.
+        // Use the defining loader monitor for the same serialized load contract.
+        synchronized (this) {
             Class<?> type=findLoadedClass(name);
             if (type==null && (name.startsWith("org.libsdl.app.") ||
                 name.startsWith("com.bachatas4.android.runtime.") ||
