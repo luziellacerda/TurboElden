@@ -1,0 +1,67 @@
+{
+  "baseApkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "identityReceiptSha256": "0278f06066b2853784a66201f289dde21859dd3c647a2832a46159bfd3684b72",
+  "payloads": {
+    "assets/station-online/engines.json": {
+      "bytes": 19118,
+      "path": "private-build:assembly/identity/engines.json",
+      "sha256": "b57780604b4d750b90a339bf3155ca3ac6e1670b3015da45804f569de6758e9f"
+    },
+    "classes8.dex": {
+      "bytes": 12752,
+      "path": "private-build:switch/classes8.dex",
+      "sha256": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e"
+    },
+    "lib/arm64-v8a/libstation_dolphin_runtime.so": {
+      "bytes": 110776,
+      "path": "private-build:assembly/identity/libstation_dolphin_runtime.so",
+      "sha256": "f32c0c2f87aa5ec5c8fb4edd3a8c4ee8b269807d084f7f85bb65fe511335fc2b"
+    },
+    "lib/arm64-v8a/libstation_frontend.so": {
+      "bytes": 3034632,
+      "path": "private-build:native/libstation_frontend.so",
+      "sha256": "4e7ad58e1e8f8a284654120c27280eed8c124ad5301a9e87d769e41f100d8d0d"
+    },
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so": {
+      "bytes": 99864,
+      "path": "private-build:assembly/identity/libstation_mupen64plus_runtime.so",
+      "sha256": "6b41b91a4914976ec2c5326a7081675d1a7bbf4cd7268dd1a3da8132e580d222"
+    },
+    "lib/arm64-v8a/libstation_psx_online.so": {
+      "bytes": 297064,
+      "path": "private-build:assembly/identity/native/libstation_psx_online.so",
+      "sha256": "6976f8ff22820520540b3e5c13fbb1234c21294e3e8c2fd6aaf3a6b0a7e32e2c"
+    },
+    "lib/arm64-v8a/libturbo_carousel.so": {
+      "bytes": 157404976,
+      "path": "private-build:native/libturbo_carousel.so",
+      "sha256": "0dc370523a448f2966a53563d90a73b3dc1555648c2ab87c02ea1a17470053cb"
+    }
+  },
+  "publicReceiptProvenance": {
+    "absolutePathsReplacedWithLogicalReferences": true,
+    "binaryFirmwarePkgMaterialGameMediaPersonalLogsIncluded": false,
+    "hashMapsPreserved": true,
+    "notAnOperatorDeployableIdentityPackagePair": true,
+    "originalPrivateReceiptSha256": "a8b360f490dad5e2815f6917f78ff5ef84cd8c0acf7afd5e63233dc339ae501a",
+    "originalReceiptRole": "assembly/source-freeze.json"
+  },
+  "revision": "R132",
+  "schemaVersion": 1,
+  "sourceCommit": "56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1",
+  "sourceFrozen": true,
+  "sourceSha256": {
+    "native/sony_system_info_rows.h": "80f24440749e1b0eb47428ecb1d6a5cd09646b6b70a758bc8bf9e1ce78a78bc9",
+    "recipe/AssembleScopedPartition.java": "c7f83e2ffc422c6f1745c86438995b27acda814e6fb2983b95b385efbc76f5b8",
+    "recipe/assemble_apk.py": "599f47f343f39ad04fe048dbbe2c6271a70856f0eef1cef3dd3750d1bfbcbc03",
+    "recipe/build_native.py": "b0d6d98cd11e6add998e0c07bb3d391f2ad770d7dc97fe1dc6c7113f7993a9a4",
+    "recipe/build_runtime_identity.py": "21fd2ea981c30c44c99511b9fa86cee8a04dcf3a0537b167325cd73b7efce15b",
+    "recipe/build_switch_payload.py": "426b1e1ba8dfc2f90e8f91312c29dbab48433f9364fd328f610404bf12a77893",
+    "recipe/common.py": "268230041e5560c8de4e549a7b55d3e0ab63cb23c069bab46ec9eaec97e4e460",
+    "recipe/patch_loading.py": "b5baed2ac3d6f5625eeb818d3e9ee45fb73d35d0bd5ef0f03f80adbab77e05b1",
+    "recipe/patch_sony_synopsis.py": "f79f0b5db3b287e68e3b9879f0124cfaaed43ed7c9b0634784dc23bb8434e2ec",
+    "recipe/patch_switch_path.py": "c560ce892e7db36b3acff9f4c8ea381af383bd11fa3439b71c89083e6676e646",
+    "recipe/r132_startup_loading.h": "0863bc3704f9c3ad393f9d8361bc205cbc15514f8adfbd4e5cfc784202b4bf19",
+    "recipe/verify_final.py": "43bafc1dfc172109875b8679044a56ea7e773fe87aa88bf3b9ab133a3f006e3a"
+  }
+}

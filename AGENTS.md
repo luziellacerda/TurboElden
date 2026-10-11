@@ -1,3 +1,13 @@
+# R132 — referência atual após auditoria e reparo inicial
+
+Fonte executável56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1, integration/startup-cleanup-r132; final47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20/2711825423bytes. Selecionar pelo CURRENT-LOCAL-ARTIFACTS e recibos em versions/station-startup-cleanup-r132-20261011, nunca por data/receita histórica. R131 corrigida0273 é donor; R130d227 segue necessário à reprodução do donor. Não alterar fontes congeladas por recibos posteriores.
+
+Sete substituições, zero adições,13853 entradas preservadas: DEX8 somente SwitchConfigPatcher, dois nativos de frontend/loading, três marcadores e engines.json. Outros39DEX, Manifest/resources/Sony/assets/vídeos/cores/opções/controller/protocolo/segurança permanecem exatos. Prewarm usa o mesmo contexto SDL/GL durante loading; não declarar menor custo total/térmica sem medição. PS3/4 recebem duas fichas no painel de sistema e continuam offline. Switch novo usa roms/switch; migração apenas do caminho exato SAMBOX-Vfull/sistema/roms/switch ausente ou vazio, sem mover/deletar jogos/saves. Não apagar workspaces de motores pelo nome.
+
+Um backup completo F existente, uma árvore G:/StationNormalOwnersR127/startup-cleanup-r132. Kit privado de servidor preparado com seis bibliotecas e originais de recibos byte exatos; públicos sanitizados NÃO são par de implantação. Fonte final/current/instalação/ativação/gameplay são estados separados. O retorno reala6b58e9 ainda revisaR129, não recebeu kit/não ativou motores e covers.published=false. Entrega atual única em HANDOFF-APP-R132-PARA-SERVIDOR-20261011.md; consumir cadastro v3, modos por edição/conteúdo e prova assinada fresca, não registro v2 antigo. Não recompilar por mero cadastro nem implantar/reiniciar Linux por conta própria. Não interromper partida/download, trocar assinatura ou limpar dados.
+
+## Histórico R131
+
 # R131 — owners Sony internos em composição
 
 Pedido humano atual supersede a rota externa R130: PS3/PS4 devem estar dentro do mesmo APK, exclusivamente offline, com preparação automática. Fonte em integration/sony-internal; ler README/STATUS e contratos. Firmware PS3 em assets e material comum do importador PKG PS4 foram especificamente autorizados para o APK local; nenhum byte desses inputs entra no Git. Não instalar apps externos nem manter downloader/wizard obrigatório. A presença do asset não comprova importação ou gameplay.

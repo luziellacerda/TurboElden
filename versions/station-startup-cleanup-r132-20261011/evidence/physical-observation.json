@@ -1,0 +1,62 @@
+{
+  "schema": "station.r132.public-physical-observation.v1",
+  "revision": "R132",
+  "sourceCommit": "56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1",
+  "apkSha256": "47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20",
+  "startupObservationRecordedUTC": "2026-10-11T20:55:18.447865+00:00",
+  "observationScope": "installed-Motorola-R132-front-end-and-safe-N64-create-panel-before-room-or-game-start",
+  "n64Online": {
+    "selectedPlatform": "n64",
+    "installedEngineId": "mupen64plus-ae-33bf7021-n64-v3-6b41b91a4914",
+    "createPanelOpened": true,
+    "firstSafeCreateActionRecheckedCapabilities": true,
+    "refusalRemainedAfterCapabilitiesRecheck": true,
+    "visibleMessage": "Não há modo aprovado para esta edição e o motor instalado. Atualize o aplicativo e o catálogo nos participantes.",
+    "uiRefusalScope": "edition + approved mode + current installed engine binding",
+    "specificMissingBindingDimensionDetermined": false,
+    "roomCreated": false,
+    "gameLaunched": false,
+    "selectedGameLocalCoverObserved": true,
+    "allN64CoversAudited": false,
+    "rawSignedEnvelopeCaptured": false,
+    "rawHttpResponseCaptured": false,
+    "knownErrorCodes": [],
+    "recordedHttpStatuses": [],
+    "physicalHttp409Proven": false,
+    "newApkRequiredByThisObservation": false,
+    "operatorAction": "Register the exact R132 engine and explicitly approved edition/content/mode; verify fresh signed v3 capabilities before room creation."
+  },
+  "switchPath": {
+    "canonicalPathObserved": true,
+    "legacySamboxDirectoryPresent": false,
+    "frontendResumed": true,
+    "continuousFolderRecreationReproduced": false
+  },
+  "startupMeasurement": {
+    "physicalShaderTimeAfterLoadingValidated": false,
+    "totalStartupTimeReductionValidated": false,
+    "uninterruptedIdleCpuMeasurementValidated": false,
+    "temperatureOrThermalReductionValidated": false,
+    "reason": "User navigation/reopening changed the measurement window; no reproducible post-loading or uninterrupted idle comparison was established.",
+    "privateCpuReadoutsOrLogsPublished": false
+  },
+  "authenticatedSessionChecked": false,
+  "signedCapabilitiesBindingValidated": false,
+  "serverActivationConfirmed": false,
+  "physicalGameplayValidated": false,
+  "physicalControllersValidated": false,
+  "physicalThermalValidated": false,
+  "screenshotsGameOrPlayerNamesSerialSessionsPersonalLogsIncluded": false,
+  "reportedOnlineScreenshotUsedAsN64Evidence": false,
+  "evidenceBasis": "Root inspected actual create-panel and refreshed-capabilities UI. Selected game name and all screenshots/logs remain private. Earlier reported-online screenshot was not N64 and is excluded.",
+  "publicReceiptProvenance": {
+    "originalPrivateReceiptSha256": "1076660bf86ced34eebf61ea1accf0b2198007d19a82b0e5f1efa41b276c940b",
+    "originalPrivateReceiptSha256ByRole": {
+      "private-build:physical/startup-observation.json": "1076660bf86ced34eebf61ea1accf0b2198007d19a82b0e5f1efa41b276c940b",
+      "private-build:physical/n64-safe-error-codes.json": "dea702278ce499f532babc2e81dc6e3d1d4c2e4816cd89aff1a86245654b6146"
+    },
+    "absolutePathsPublished": false,
+    "rawPrivateReceiptsPublished": false,
+    "uiMessageBasis": "Direct physical UI observation reported by root; no raw HTTP envelope or captured error code."
+  }
+}

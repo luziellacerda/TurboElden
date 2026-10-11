@@ -1,0 +1,259 @@
+{
+  "schema": "station.startup.cleanup.r132.delivery-status.v1",
+  "revision": "R132",
+  "stage": "installed-motorola-safe-n64-mode-binding-refusal-observed-server-activation-pending",
+  "sourceDirectory": "integration/startup-cleanup-r132",
+  "sourceCommit": "56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1",
+  "baseRevision": "R131",
+  "baseSourceCommit": "8503c2e32d7487d3bb31397ba9533dc7e1bfe981",
+  "baseApkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "baseApkBytes": 2711825423,
+  "preChangeCheckpoint": {
+    "commit": "8a199d025e9eb338f1973f8e2f8ca975862cdef5",
+    "branch": "checkpoint/station-r131-before-cleanup-20261011",
+    "remoteConfirmed": true,
+    "singleExistingBackupConfirmed": true
+  },
+  "apkSha256": "47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20",
+  "apkBytes": 2711825423,
+  "compiled": true,
+  "signedWithOriginalCertificate": true,
+  "finalEntryVerificationPassed": true,
+  "sourceRecipesPrepared": true,
+  "scope": [
+    "shader-prewarm-loading-barrier",
+    "sony-platform-synopses",
+    "switch-empty-legacy-path-migration"
+  ],
+  "expectedComposition": {
+    "replacements": 7,
+    "additions": 0,
+    "entryNames": [
+      "classes8.dex",
+      "lib/arm64-v8a/libturbo_carousel.so",
+      "lib/arm64-v8a/libstation_frontend.so",
+      "lib/arm64-v8a/libstation_psx_online.so",
+      "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+      "lib/arm64-v8a/libstation_dolphin_runtime.so",
+      "assets/station-online/engines.json"
+    ],
+    "dex8AllowedClasses": [
+      "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;"
+    ],
+    "otherDexCountPreserved": 39,
+    "includesPreservedDex40Sony": true,
+    "allDexClassSetsPreservedRequired": true,
+    "unrelatedDex8ClassesPreservedRequired": true,
+    "finalByteVerificationConfirmed": true
+  },
+  "shaderPrewarm": {
+    "preparedDuringInitialLoading": true,
+    "rendererGlContextRequired": true,
+    "loadingBarrierHeldUntilPreparation": true,
+    "totalStartupTimeReductionMeasured": false,
+    "thermalReductionMeasured": false,
+    "visualShaderChangeInScope": false,
+    "videoPolicyChangeInScope": false,
+    "menuFpsChangeInScope": false,
+    "cachePreloadEconomyChangeInScope": false,
+    "physicalTimeAfterLoadingValidated": false,
+    "uninterruptedIdleCpuMeasurementValidated": false,
+    "physicalMeasurementLimitation": "Usuário navegou/reabriu a tela; não foi validado tempo de shaders depois do loading, idle CPU ou redução térmica."
+  },
+  "sonySynopsis": {
+    "platforms": [
+      "ps3",
+      "ps4"
+    ],
+    "platformInfoCountAdded": 2,
+    "usesExistingSystemInformationPanel": true,
+    "frozenR124R131FilesOverwritten": false,
+    "gameAndDemoSynopsesChangeInScope": false,
+    "signedCatalogChangeInScope": false
+  },
+  "switchPath": {
+    "confirmedLegacyPath": "SAMBOX-Vfull/sistema/roms/switch",
+    "newPath": "roms/switch",
+    "migrationScope": "exact-empty-legacy-path-only",
+    "continuousFolderRecreationReproduced": false,
+    "userFilesMovedOrDeleted": false,
+    "otherOwnerWorkspacesRemoved": false,
+    "ps4ExtractedRuntimeRemoved": false,
+    "canonicalPathObserved": true,
+    "legacySamboxDirectoryPresent": false,
+    "frontendResumed": true
+  },
+  "preservationRequirements": {
+    "sonyNativeLibrariesFirmwarePkgMaterial": true,
+    "localCoversAndVideos": true,
+    "ledEffectsAndMenus30Fps": true,
+    "cachePreloadEconomy": true,
+    "coresOptionsControllerProfilesCapacities": true,
+    "onlineTransportSecurityAndProtocol": true,
+    "snesMegaDriveRoutes": true,
+    "licensesGamesSavesOriginalSignature": true
+  },
+  "finalEngines": [
+    {
+      "platform": "psx",
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-6976f8ff2282",
+      "runtimeSha256": "6976f8ff22820520540b3e5c13fbb1234c21294e3e8c2fd6aaf3a6b0a7e32e2c",
+      "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+      "maximumPlayers": 2,
+      "controllerProfile": "standard-2p-v1",
+      "configurationSha256": "81c0e2323a37130dbdbdb9c2efefca8837a9bb6e7169304b4e5731b2ec56290a"
+    },
+    {
+      "platform": "n64",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-6b41b91a4914",
+      "runtimeSha256": "6b41b91a4914976ec2c5326a7081675d1a7bbf4cd7268dd1a3da8132e580d222",
+      "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+      "maximumPlayers": 4,
+      "controllerProfile": "direct-four-ports-v1",
+      "configurationSha256": "2966309729f8a19c03b564f0178f263170e1843172f6719002f35fb54e313f9c"
+    },
+    {
+      "platform": "gamecube",
+      "engineId": "dolphin-5102a033-gamecube-v3-f32c0c2f87aa",
+      "runtimeSha256": "f32c0c2f87aa5ec5c8fb4edd3a8c4ee8b269807d084f7f85bb65fe511335fc2b",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "maximumPlayers": 4,
+      "controllerProfile": "dolphin-gamecube-four-ports-v1",
+      "configurationSha256": "89dc579c37afab7731a2d7322ab7fcf70ed0afa86ba7e491a605c45cd5443fc1"
+    },
+    {
+      "platform": "wii",
+      "engineId": "dolphin-5102a033-wii-v3-f32c0c2f87aa",
+      "runtimeSha256": "f32c0c2f87aa5ec5c8fb4edd3a8c4ee8b269807d084f7f85bb65fe511335fc2b",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "maximumPlayers": 4,
+      "controllerProfile": "dolphin-wii-remotes-four-v1",
+      "configurationSha256": "cf3b214d63ce324a82b331fc96a95c6f35e8cc1c7b6bc2bcd659cf35743ceaed"
+    }
+  ],
+  "finalEngineIdentityStatus": "compiled-final-runtime-and-canonical-receipts-matched",
+  "protocol": "station-stream.v3",
+  "ps3Ps4OfflineOnly": true,
+  "ps3Ps4OnlineEnabled": false,
+  "server": {
+    "auditedCommit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+    "auditedReturnReviewedAppRevision": "R129",
+    "returnPath": "docs/station-android/online-plataformas-20261009/r128-retorno-servidor-20261011.json",
+    "scriptsEffectivePublicationConfirmed": false,
+    "privateKitReceived": false,
+    "newFinalEnginesActivated": false,
+    "nativeAdministrativeAuthenticationRequired": true,
+    "r132ActivationConfirmed": false,
+    "apiRestartPerformedByThisTask": false,
+    "privateOriginalReceiptPairRequired": true,
+    "sanitizedPublicReceiptPairDeployable": false,
+    "finalPrivateKitPath": "private-kit:R132",
+    "finalOriginalRuntimeReceiptSha256": "0278f06066b2853784a66201f289dde21859dd3c647a2832a46159bfd3684b72",
+    "finalOriginalPackageReceiptSha256": "85c554c8b55e887a9697fa122444a4375fdee1a39e3852c8972b5a8df0c35728",
+    "modeApprovalsAreEditionAndContentSpecific": true,
+    "privateKitPreparedLocally": true,
+    "privateKitPublicHashManifest": "evidence/server-kit-manifest.json",
+    "privateKitFileCount": 16,
+    "privateKitLibraryCount": 6,
+    "originalPairIdentitySealMatched": true
+  },
+  "installed": true,
+  "androidBootstrapValidated": false,
+  "physicalGameplayValidated": false,
+  "physicalControllersValidated": false,
+  "physicalThermalValidated": false,
+  "publicationConfirmed": false,
+  "privateArtifactsIncludedInGit": false,
+  "auditPaths": {
+    "owners": "audits/station-runtime-cleanup-r132-20261011/sandbox-owners.json",
+    "server": "audits/station-runtime-cleanup-r132-20261011/server-crosscheck.json",
+    "operatorTemplate": "audits/station-runtime-cleanup-r132-20261011/r132-server-delivery-template.json"
+  },
+  "stageNote": "R132 instalada somente no Motorola com hash integral/UID/dados e frontend confirmados. Criar sala N64 refez capabilities e manteve recusa por edição/modo/motor atual antes de criar sala ou jogo. Mensagem UI observada; HTTP/envelope bruto não capturados. Caminho Switch canônico observado, diretório SAMBOX legado ausente na conferência; recriação contínua não reproduzida. Navegação/reabertura invalidou medição de shader após loading/idle CPU. Ativação, gameplay e térmica continuam pendentes.",
+  "signatureSchemesVerified": [
+    "v2",
+    "v3"
+  ],
+  "signingCertificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "zipAlignmentVerifiedBytes": 16384,
+  "verifiedComposition": {
+    "replacementCount": 7,
+    "additionCount": 0,
+    "preservedEntryCount": 13853,
+    "preservedEntryManifestSha256": "72d2cb21d11759be2d7ad8a2ad3aa2d3bc1b535cecbf120ad80f0a9dc354d485",
+    "completeAggregateEntryHashMaps": true,
+    "replacedEntrySha256": {
+      "assets/station-online/engines.json": "b57780604b4d750b90a339bf3155ca3ac6e1670b3015da45804f569de6758e9f",
+      "classes8.dex": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e",
+      "lib/arm64-v8a/libstation_dolphin_runtime.so": "f32c0c2f87aa5ec5c8fb4edd3a8c4ee8b269807d084f7f85bb65fe511335fc2b",
+      "lib/arm64-v8a/libstation_frontend.so": "4e7ad58e1e8f8a284654120c27280eed8c124ad5301a9e87d769e41f100d8d0d",
+      "lib/arm64-v8a/libstation_mupen64plus_runtime.so": "6b41b91a4914976ec2c5326a7081675d1a7bbf4cd7268dd1a3da8132e580d222",
+      "lib/arm64-v8a/libstation_psx_online.so": "6976f8ff22820520540b3e5c13fbb1234c21294e3e8c2fd6aaf3a6b0a7e32e2c",
+      "lib/arm64-v8a/libturbo_carousel.so": "0dc370523a448f2966a53563d90a73b3dc1555648c2ab87c02ea1a17470053cb"
+    },
+    "existing39OtherDexByteIdentical": true,
+    "switchDex8ClassSetExactlyPreserved": true,
+    "switchDex8UnrelatedClassesByteIdentical": true,
+    "resourcesAndSonyAssetsByteIdentical": true,
+    "manifestByteIdentical": true
+  },
+  "evidenceIndex": "evidence/PUBLIC-EVIDENCE.json",
+  "coverPublication": {
+    "observedServerCommit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+    "published": false,
+    "preparedN64Bindings": 157,
+    "preparedAllPlatformBindings": 2255,
+    "latestProductionBindingsReported": {
+      "megadrive": 331,
+      "snes": 671,
+      "psx": 28
+    },
+    "provesAllExistingN64CoversAbsent": false,
+    "actualR132PhoneCoverStateChecked": true,
+    "catalogRevisionAfterPendingPublication": null,
+    "publishedN64BindingsAfterPendingPublication": null,
+    "cacheKey": "coverId + item.revision",
+    "requiredImageDimensions": [
+      480,
+      720
+    ],
+    "requiredImageFormat": "JPEG",
+    "note": "Batch servidor de157 vínculos N64 segue sem publicação confirmada; capa do jogo N64 selecionado foi exibida localmente. Esses fatos não são equivalentes nem comprovam auditoria de todas as capas.",
+    "phoneCoverCheckScope": "one-selected-N64-game-local-cover-only",
+    "selectedN64GameLocalCoverObserved": true,
+    "allN64CoversAudited": false
+  },
+  "installationDeviceModel": "motorola edge 30",
+  "installationCompletedUTC": "2026-10-11T20:54:08.764316+00:00",
+  "installationFullApkHashChecked": true,
+  "originalUidAndDataPreserved": true,
+  "officialFrontendObserved": true,
+  "officialFrontendObservedUTC": "2026-10-11T20:54:12.047096+00:00",
+  "authenticatedSessionChecked": false,
+  "installationEvidence": "evidence/installation.json",
+  "installedDevices": [
+    "motorola edge 30"
+  ],
+  "physicalObservationEvidence": "evidence/physical-observation.json",
+  "onlineModeBindingObservation": {
+    "selectedPlatform": "n64",
+    "installedEngineId": "mupen64plus-ae-33bf7021-n64-v3-6b41b91a4914",
+    "createPanelOpened": true,
+    "firstSafeCreateActionRecheckedCapabilities": true,
+    "refusalRemainedAfterCapabilitiesRecheck": true,
+    "visibleMessage": "Não há modo aprovado para esta edição e o motor instalado. Atualize o aplicativo e o catálogo nos participantes.",
+    "uiRefusalScope": "edition + approved mode + current installed engine binding",
+    "specificMissingBindingDimensionDetermined": false,
+    "roomCreated": false,
+    "gameLaunched": false,
+    "selectedGameLocalCoverObserved": true,
+    "allN64CoversAudited": false,
+    "rawSignedEnvelopeCaptured": false,
+    "rawHttpResponseCaptured": false,
+    "knownErrorCodes": [],
+    "recordedHttpStatuses": [],
+    "physicalHttp409Proven": false,
+    "newApkRequiredByThisObservation": false,
+    "operatorAction": "Register the exact R132 engine and explicitly approved edition/content/mode; verify fresh signed v3 capabilities before room creation."
+  }
+}

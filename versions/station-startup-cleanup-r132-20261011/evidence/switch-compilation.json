@@ -1,0 +1,129 @@
+{
+  "addedPrivateMethods": [
+    "r132LegacyVacant(Ljava/io/File;)Z",
+    "r132MigrateLegacyPath(Ljava/io/File;Lorg/w3c/dom/Element;)Z"
+  ],
+  "allowedTypes": [
+    "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;"
+  ],
+  "apkProduced": false,
+  "approvedScopes": [
+    "switch-canonical-config-path"
+  ],
+  "assembledClassSha256": {
+    "org/emulationstation/frontend/switchengine/SwitchConfigPatcher.smali": "2c007ed389d0c4c66f766134b9088cec0a176f6437df0d800a38a967149246c3",
+    "org/emulationstation/frontend/switchengine/TurboEdenBridge.smali": "8055783f2facc37933921f2643bb5266b09b3574a3d22fad1de7ff2dbcd7d170",
+    "org/emulationstation/frontend/theme/ThemeInstaller.smali": "40adc9e309e1a6fe18813906553470a0c4cf55525448a02785051a0c23d6eb14"
+  },
+  "baseApkSha256": "0273ab9ae1b7ef5a061fdcc76c49558db4180bedd10a8100e6d5f764ac2ab175",
+  "baselineClassCount": 3,
+  "baselineDexSha256": "1f099e70e5d5220e46fa92d6ac8743f26bd70c63f2ebc99f4316db970cad90a5",
+  "changedExistingMethods": [
+    "apply(Ljava/io/File;)Ljava/lang/String;"
+  ],
+  "classSetExactlyPreserved": true,
+  "customConfiguredPathsPreserved": true,
+  "dependencySourceSha256": {
+    "integration/local-sony-demos/recipe/VerifyScopedPartition.java": "32b627f5334d1c7b62c94ab2fef05d10df44707241f9379416fb44f6464f8acd",
+    "integration/psx-online/recipe/DecodeDolphinPartition.java": "d1365cf8cce05fb08c6e04dbcc47e9b154af268637bf0d768c32f851420c2b67"
+  },
+  "dexChanged": true,
+  "existingMethodsOutsideApplyByteVerified": true,
+  "filePreservationScope": "Existing games, saves and ROM directories; original atomic CFG temporary writer is retained",
+  "gameAndSaveFilesPreserved": true,
+  "inputClassSha256": {
+    "org/emulationstation/frontend/switchengine/SwitchConfigPatcher.smali": "ce2c73f546612a7a12012fae19dd7ec2cb8227fbf3668904b307df78ee7c330e",
+    "org/emulationstation/frontend/switchengine/TurboEdenBridge.smali": "8055783f2facc37933921f2643bb5266b09b3574a3d22fad1de7ff2dbcd7d170",
+    "org/emulationstation/frontend/theme/ThemeInstaller.smali": "40adc9e309e1a6fe18813906553470a0c4cf55525448a02785051a0c23d6eb14"
+  },
+  "installed": false,
+  "migrationAllowedLegacyStates": [
+    "missing",
+    "empty-directory"
+  ],
+  "migrationLegacyRoot": "SAMBOX-Vfull/sistema/roms/switch",
+  "missingOrEmptyLegacyOnly": true,
+  "newSwitchRoot": "roms/switch",
+  "noFilesMovedOrDeleted": true,
+  "noLegacyDirectoryCreated": true,
+  "noNewClasses": true,
+  "onlyExactEmptyLegacyPathMigrated": true,
+  "originalEngineCommandsPreserved": true,
+  "outsideAllowlistByteVerified": true,
+  "payloads": {
+    "classes8.dex": {
+      "bytes": 12752,
+      "path": "private-build:switch/classes8.dex",
+      "sha256": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e"
+    }
+  },
+  "physicalValidation": false,
+  "publicReceiptProvenance": {
+    "absolutePathsReplacedWithLogicalReferences": true,
+    "binaryFirmwarePkgMaterialGameMediaPersonalLogsIncluded": false,
+    "hashMapsPreserved": true,
+    "notAnOperatorDeployableIdentityPackagePair": true,
+    "originalPrivateReceiptSha256": "9a83a80a8bb8c1d72aa6eb365f923559cf5744b8c05e936e684d0e87b8245daa",
+    "originalReceiptRole": "switch/switch-receipt.json"
+  },
+  "recursiveScan": false,
+  "restoredInitializerArrays": 0,
+  "revision": "R132",
+  "schema": "station.startup.cleanup.switch.v1",
+  "scopedInputClassSha256": {
+    "org/emulationstation/frontend/switchengine/SwitchConfigPatcher.smali": "6b0bc93121cf66beeaf38222373547a3d5dbdf5c5ae8415a92643384819b8d5f",
+    "org/emulationstation/frontend/switchengine/TurboEdenBridge.smali": "8055783f2facc37933921f2643bb5266b09b3574a3d22fad1de7ff2dbcd7d170",
+    "org/emulationstation/frontend/theme/ThemeInstaller.smali": "40adc9e309e1a6fe18813906553470a0c4cf55525448a02785051a0c23d6eb14"
+  },
+  "sourceCommit": "56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1",
+  "sourceSha256": {
+    "native/sony_system_info_rows.h": "80f24440749e1b0eb47428ecb1d6a5cd09646b6b70a758bc8bf9e1ce78a78bc9",
+    "recipe/AssembleScopedPartition.java": "c7f83e2ffc422c6f1745c86438995b27acda814e6fb2983b95b385efbc76f5b8",
+    "recipe/assemble_apk.py": "599f47f343f39ad04fe048dbbe2c6271a70856f0eef1cef3dd3750d1bfbcbc03",
+    "recipe/build_native.py": "b0d6d98cd11e6add998e0c07bb3d391f2ad770d7dc97fe1dc6c7113f7993a9a4",
+    "recipe/build_runtime_identity.py": "21fd2ea981c30c44c99511b9fa86cee8a04dcf3a0537b167325cd73b7efce15b",
+    "recipe/build_switch_payload.py": "426b1e1ba8dfc2f90e8f91312c29dbab48433f9364fd328f610404bf12a77893",
+    "recipe/common.py": "268230041e5560c8de4e549a7b55d3e0ab63cb23c069bab46ec9eaec97e4e460",
+    "recipe/patch_loading.py": "b5baed2ac3d6f5625eeb818d3e9ee45fb73d35d0bd5ef0f03f80adbab77e05b1",
+    "recipe/patch_sony_synopsis.py": "f79f0b5db3b287e68e3b9879f0124cfaaed43ed7c9b0634784dc23bb8434e2ec",
+    "recipe/patch_switch_path.py": "c560ce892e7db36b3acff9f4c8ea381af383bd11fa3439b71c89083e6676e646",
+    "recipe/r132_startup_loading.h": "0863bc3704f9c3ad393f9d8361bc205cbc15514f8adfbd4e5cfc784202b4bf19",
+    "recipe/verify_final.py": "43bafc1dfc172109875b8679044a56ea7e773fe87aa88bf3b9ab133a3f006e3a"
+  },
+  "staticCommandUnchanged": true,
+  "toolSha256": {
+    "apktool": "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423",
+    "java.exe": "1977f302375adbb920d41dac65c7e22eb9c2ed8e1e8d6258964154ff16f14406",
+    "javac.exe": "9c71eee841aeebb723bfc2cceca7d72c6c1988fb679402f4123aa4d0e86aa549"
+  },
+  "transform": {
+    "addedPrivateMethods": 2,
+    "allowedTypes": [
+      "Lorg/emulationstation/frontend/switchengine/SwitchConfigPatcher;"
+    ],
+    "anyChildOrLinkOrAccessErrorPreservesLegacy": true,
+    "atomicConfigWriterPreserved": true,
+    "baselineClassSha256": "ce2c73f546612a7a12012fae19dd7ec2cb8227fbf3668904b307df78ee7c330e",
+    "exactLegacyRelativePath": "SAMBOX-Vfull/sistema/roms/switch",
+    "existingSwitchCommandAndEnginePreserved": true,
+    "gameOrDirectoryDeletion": false,
+    "gameOrDirectoryMove": false,
+    "inverseByteIdentical": true,
+    "legacyMkdirRemoved": true,
+    "migrationTrigger": "existing Switch apply during preparation; never renderer",
+    "missingOrEmptyLegacyOnly": true,
+    "newClassCount": 0,
+    "newInstallRelativePath": "roms/switch",
+    "patchedClassSha256": "6b0bc93121cf66beeaf38222373547a3d5dbdf5c5ae8415a92643384819b8d5f",
+    "recursiveScan": false
+  },
+  "unchangedClassCount": 2,
+  "unchangedExistingMethodSha256": {
+    "<init>()V": "cff56c6f5001dd439ae8cbf0edd68b5707c71f1c47550f1c12cf6d90afcd9af4",
+    "add(Lorg/w3c/dom/Document;Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;)V": "297ab318acebe2dc6933c2331008475b1493034219aeb038944cb8f8131765ba",
+    "childText(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;": "a12a9506b70c93d274f505a4ea26b38ca8d2ed3966267587115a173b0f70ce60",
+    "isSwitchSystem(Lorg/w3c/dom/Element;)Z": "705a84c6d4e5c9e58f04c4b59bee85eabecef0c201a33ca1c9e50a5fcb8461c1",
+    "setCommand(Lorg/w3c/dom/Document;Lorg/w3c/dom/Element;)Z": "45779de3eac96f26c6747def4ed1d44815318f8c2ff495892acee60c2c54610f"
+  },
+  "unrelatedClassesByteIdentical": true
+}

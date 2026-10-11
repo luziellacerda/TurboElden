@@ -1,0 +1,138 @@
+{
+  "schema": "station.r132.public-private-kit-manifest.v1",
+  "revision": "R132",
+  "preparedUTC": "2026-10-11T20:49:05.835881+00:00",
+  "sourceCommit": "56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1",
+  "serverOperatorSourceCommit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+  "apkSha256": "47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20",
+  "apkBytes": 2711825423,
+  "canonicalProfiles": {
+    "psx": {
+      "controllerProfile": "standard-2p-v1",
+      "profileSha256": "81c0e2323a37130dbdbdb9c2efefca8837a9bb6e7169304b4e5731b2ec56290a",
+      "maximumPlayers": 2,
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-6976f8ff2282",
+      "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+      "runtimeSha256": "6976f8ff22820520540b3e5c13fbb1234c21294e3e8c2fd6aaf3a6b0a7e32e2c"
+    },
+    "n64": {
+      "controllerProfile": "direct-four-ports-v1",
+      "profileSha256": "2966309729f8a19c03b564f0178f263170e1843172f6719002f35fb54e313f9c",
+      "maximumPlayers": 4,
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-6b41b91a4914",
+      "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+      "runtimeSha256": "6b41b91a4914976ec2c5326a7081675d1a7bbf4cd7268dd1a3da8132e580d222"
+    },
+    "gamecube": {
+      "controllerProfile": "dolphin-gamecube-four-ports-v1",
+      "profileSha256": "89dc579c37afab7731a2d7322ab7fcf70ed0afa86ba7e491a605c45cd5443fc1",
+      "maximumPlayers": 4,
+      "engineId": "dolphin-5102a033-gamecube-v3-f32c0c2f87aa",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "runtimeSha256": "f32c0c2f87aa5ec5c8fb4edd3a8c4ee8b269807d084f7f85bb65fe511335fc2b"
+    },
+    "wii": {
+      "controllerProfile": "dolphin-wii-remotes-four-v1",
+      "profileSha256": "cf3b214d63ce324a82b331fc96a95c6f35e8cc1c7b6bc2bcd659cf35743ceaed",
+      "maximumPlayers": 4,
+      "engineId": "dolphin-5102a033-wii-v3-f32c0c2f87aa",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "runtimeSha256": "f32c0c2f87aa5ec5c8fb4edd3a8c4ee8b269807d084f7f85bb65fe511335fc2b"
+    }
+  },
+  "selectedLibraryCount": 6,
+  "privateFileCount": 16,
+  "inventory": {
+    "server-kit/artifact-kit-receipt.json": {
+      "bytes": 5479,
+      "sha256": "a236accd65949082dfef08a1aede6860324ed55bd0fbfd3eb4f37f42f7e21363"
+    },
+    "server-kit/incoming-engine-manifest.json": {
+      "bytes": 12221,
+      "sha256": "df03d1d7884f94f2f3c7ea46aab19e1419a797e5bcf605ddb3b2e729ac4368c8"
+    },
+    "server-kit/libpcsx_rearmed_libretro_android.so": {
+      "bytes": 1582960,
+      "sha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9"
+    },
+    "server-kit/libstation_dolphin_online.so": {
+      "bytes": 15781128,
+      "sha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d"
+    },
+    "server-kit/libstation_dolphin_runtime.so": {
+      "bytes": 110776,
+      "sha256": "f32c0c2f87aa5ec5c8fb4edd3a8c4ee8b269807d084f7f85bb65fe511335fc2b"
+    },
+    "server-kit/libstation_mupen64plus_core.so": {
+      "bytes": 561056,
+      "sha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8"
+    },
+    "server-kit/libstation_mupen64plus_runtime.so": {
+      "bytes": 99864,
+      "sha256": "6b41b91a4914976ec2c5326a7081675d1a7bbf4cd7268dd1a3da8132e580d222"
+    },
+    "server-kit/libstation_psx_online.so": {
+      "bytes": 297064,
+      "sha256": "6976f8ff22820520540b3e5c13fbb1234c21294e3e8c2fd6aaf3a6b0a7e32e2c"
+    },
+    "server-kit/profile-canonical-receipt.json": {
+      "bytes": 2126,
+      "sha256": "05d4f795926c119ff5ef375faf40fcebb9691cd0ab9c6074ae3c7a31093809f3"
+    },
+    "server-kit-original-receipts/engines.json": {
+      "bytes": 19118,
+      "sha256": "b57780604b4d750b90a339bf3155ca3ac6e1670b3015da45804f569de6758e9f"
+    },
+    "server-kit-original-receipts/package-final.json": {
+      "bytes": 1734649,
+      "sha256": "85c554c8b55e887a9697fa122444a4375fdee1a39e3852c8972b5a8df0c35728"
+    },
+    "server-kit-original-receipts/psx-controller-profile.json": {
+      "bytes": 859,
+      "sha256": "60adcbb778dc49fed47909b693d5b6f192ef62efa90f822d44198d6c453c60a3"
+    },
+    "server-kit-original-receipts/runtime-final.json": {
+      "bytes": 114989,
+      "sha256": "0278f06066b2853784a66201f289dde21859dd3c647a2832a46159bfd3684b72"
+    },
+    "server-kit-original-receipts/source-freeze.json": {
+      "bytes": 3500,
+      "sha256": "a8b360f490dad5e2815f6917f78ff5ef84cd8c0acf7afd5e63233dc339ae501a"
+    },
+    "server-kit-tools/build_incoming_manifest.py": {
+      "bytes": 4372,
+      "sha256": "362bcae9d8915f7f43aac4c48d06b35bdf57efc88d6acb9199aa06e3a0231426"
+    },
+    "server-kit-tools/extract_private_server_artifacts.py": {
+      "bytes": 6099,
+      "sha256": "27053b843d763adcf570e859b2c8658e216dbf6f80963b600fa5326958f70ef4"
+    }
+  },
+  "originalPackageReceiptSha256": "85c554c8b55e887a9697fa122444a4375fdee1a39e3852c8972b5a8df0c35728",
+  "originalRuntimeReceiptSha256": "0278f06066b2853784a66201f289dde21859dd3c647a2832a46159bfd3684b72",
+  "originalSourceFreezeSha256": "a8b360f490dad5e2815f6917f78ff5ef84cd8c0acf7afd5e63233dc339ae501a",
+  "originalPairIdentitySealMatched": true,
+  "allSixteenPrivateFileHashesIndependentlyChecked": true,
+  "privateKitPrepared": true,
+  "uploaded": false,
+  "serverDeployed": false,
+  "nativeAdministrationPerformed": false,
+  "nativeModesApproved": false,
+  "serverActivationConfirmed": false,
+  "physicalGameplayValidated": false,
+  "dependencyCountChecked": 20,
+  "serverOperatorGitBlobSha256": {
+    "extract_private_server_artifacts.py": "27053b843d763adcf570e859b2c8658e216dbf6f80963b600fa5326958f70ef4",
+    "build_incoming_manifest.py": "362bcae9d8915f7f43aac4c48d06b35bdf57efc88d6acb9199aa06e3a0231426"
+  },
+  "provenance": {
+    "originalPrivatePreparationReceiptSha256": "4871ef81e6b821f29ed5ff262587d3c5c65fd6a4bf1c6d9d6c92ecd25cdce4e5",
+    "originalPrivatePreparationReceiptRole": "private-build:server-kit-preparation.json",
+    "absolutePathsPublished": false,
+    "logicalRoot": "private-kit:R132",
+    "originalPrivateReceiptBytesIncluded": false,
+    "binaryLibraryBytesIncluded": false,
+    "apkFirmwareBiosPkgMaterialKeyGameSaveMediaLicensePersonalLogBytesIncluded": false,
+    "publicManifestIsNotAnOperatorDeployableIdentityPackagePair": true
+  }
+}

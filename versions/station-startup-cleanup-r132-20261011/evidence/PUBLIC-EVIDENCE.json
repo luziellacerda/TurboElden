@@ -1,0 +1,66 @@
+{
+  "revision": "R132",
+  "sourceCommit": "56ba83b7fcc5c243ae50052fec9b6f4141e1b5f1",
+  "apkSha256": "47a619a194c095e70738a4d191fb8491ee410d868e4c11742530ffcaaf844f20",
+  "apkBytes": 2711825423,
+  "files": {
+    "package-final.json": {
+      "sha256": "c021f19680c15beed2788657c24b667a9a40e524a5ee3e6e1a0d47f9822dc602",
+      "bytes": 1720954,
+      "originalPrivateReceiptSha256": "85c554c8b55e887a9697fa122444a4375fdee1a39e3852c8972b5a8df0c35728"
+    },
+    "runtime-final.json": {
+      "sha256": "25b1e66472bf14fd42f700a2d7b7f41dae44bef2f9607ab598316ef745855f61",
+      "bytes": 114221,
+      "originalPrivateReceiptSha256": "0278f06066b2853784a66201f289dde21859dd3c647a2832a46159bfd3684b72"
+    },
+    "source-freeze.json": {
+      "sha256": "07d3b5d8ddff6ee20bcc48e0e4e42355762230cab8ea256124dac952fc8bf81f",
+      "bytes": 3579,
+      "originalPrivateReceiptSha256": "a8b360f490dad5e2815f6917f78ff5ef84cd8c0acf7afd5e63233dc339ae501a"
+    },
+    "native-compilation.json": {
+      "sha256": "04d83a702249064e8b4957462ef12d13c8b8ff6c97cf94038aeaa976b8e41bf3",
+      "bytes": 23438,
+      "originalPrivateReceiptSha256": "c2b8c5db8a6cd56dfea8c922c8c9d8bc0ed48d429851f3c58594e1bd3faf1f31"
+    },
+    "switch-compilation.json": {
+      "sha256": "1899ba8f033387748e8850a24f63c89e832e306c0b72fd6758338926d6d0f0cb",
+      "bytes": 7078,
+      "originalPrivateReceiptSha256": "9a83a80a8bb8c1d72aa6eb365f923559cf5744b8c05e936e684d0e87b8245daa"
+    },
+    "server-kit-manifest.json": {
+      "sha256": "eaefd54309152e1733f74cc8d4b5ebddd85e8d0372edf4314b0325f9a1d0c3b5",
+      "bytes": 6486,
+      "originalPrivateReceiptSha256": "4871ef81e6b821f29ed5ff262587d3c5c65fd6a4bf1c6d9d6c92ecd25cdce4e5"
+    },
+    "installation.json": {
+      "sha256": "5689d34698c84d0e6a8d1ff104cbaa56573e96926ed01fe86bf715ab2b485624",
+      "bytes": 2238,
+      "originalPrivateReceiptSha256": "b04e7286e7eb12cc6a5ec4568285857a78651a21e60d6613dd7c5bc7b4adb2e0"
+    },
+    "physical-observation.json": {
+      "sha256": "d3d00d375c711e52742495237e51a2041bdffa74bec36be2e38d190b0432f41a",
+      "bytes": 3373,
+      "originalPrivateReceiptSha256": "1076660bf86ced34eebf61ea1accf0b2198007d19a82b0e5f1efa41b276c940b",
+      "originalPrivateReceiptSha256ByRole": {
+        "private-build:physical/startup-observation.json": "1076660bf86ced34eebf61ea1accf0b2198007d19a82b0e5f1efa41b276c940b",
+        "private-build:physical/n64-safe-error-codes.json": "dea702278ce499f532babc2e81dc6e3d1d4c2e4816cd89aff1a86245654b6146"
+      }
+    }
+  },
+  "operatorKitUsesOriginalPrivateReceiptBytes": true,
+  "installed": true,
+  "physicalGameplayValidated": false,
+  "serverActivated": false,
+  "installationDevices": [
+    "motorola edge 30"
+  ],
+  "officialFrontendObserved": true,
+  "authenticatedSessionChecked": false,
+  "n64ModeBindingUiRefusalObserved": true,
+  "switchCanonicalPathObserved": true,
+  "physicalStartupTimeValidated": false,
+  "physicalIdleCpuValidated": false,
+  "physicalThermalValidated": false
+}
