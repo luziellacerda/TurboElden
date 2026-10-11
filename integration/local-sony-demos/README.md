@@ -1,0 +1,37 @@
+# Demonstrações locais PS3 e PS4 — R129
+
+Extensão isolada sobre a R128 assinada `0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc`. Acrescenta duas linhas de apresentação locais ao catálogo entregue ao carrossel, depois da preparação das linhas reais. Não modifica o catálogo autenticado, jogos reais, perfis online, downloads, renderização, vídeos, economia, cache ou pré-carregamento.
+
+## O que aparece
+
+- PS3: **DEMO — Aventura orbital**, identificador `local-demo-ps3-orbital-v1`.
+- PS4: **DEMO — Corrida neon**, identificador `local-demo-ps4-neon-v1`.
+- Cada amostra tem capa PNG estática identificada como DEMO e sinopse explícita de que não contém jogo. Não anuncia capacidade multiplayer, avaliação ou compatibilidade física.
+
+O caminho raiz é o `romsRoot` efetivo recebido da integração nativa existente. A extensão cria apenas `ps3/DEMO-AventuraOrbital.iso`, `ps4/DEMO-CorridaNeon.pkg` e duas capas `.station-demo-cover-…-v1.png`, sem sobrescrever arquivos existentes. ISO/PKG de demonstração contêm um pequeno marcador textual, não conteúdo de console. Capas são desenhadas uma vez e reutilizadas; não há rede, serviço ou animação nova.
+
+## Guardas
+
+1. O catálogo real e seus IDs têm prioridade. Uma colisão com ID autenticado impede a inserção da amostra.
+2. A preparação roda no trabalhador finito existente do catálogo; caminhos simbólicos e arquivos preexistentes que não correspondam à amostra são preservados e recusados.
+3. O limite original de 4096 linhas do JNI é mantido. Amostras não podem invalidar um catálogo real que já ocupe a capacidade.
+4. `start`, `remove` e `cover` interceptam somente IDs de amostras efetivamente publicados. Nenhuma solicitação HTTP de download, remoção ou capa é feita para eles. Resultado de capa `1` mantém a capa local já aquecida, conforme o tratamento original do JNI.
+5. O botão Jogar usa o `localPath` da linha nativa: o `GuiStore::launchItem` original lê `Item.localPath` em `+0xb0`, usa `getPreferredPath` e substitui `%ROM%`/`%ROM_RAW%`. O hook Sony offline da R128 permanece intacto.
+6. Na Activity Sony, o trabalhador confere autoridade do provedor, nome exato **e todos os bytes do marcador** antes de procurar ou chamar um emulador. Uma amostra mostra somente o aviso de demonstração. A extensão nunca envia um ISO/PKG falso ao aPS3e ou Bachata S4.
+7. O catálogo Java autenticado não contém as amostras. `StationOnlineGame.profiles`, `classifications` e `prepare` já recusam `client.item(id)==null` antes de solicitar perfil ou criar sala. Nenhum engine ou perfil PS3/PS4 é adicionado.
+
+## Alterações de payload
+
+| Payload | Alteração permitida |
+| --- | --- |
+| `classes28.dex` | Somente os quatro métodos `publishCurrent`, `start`, `remove`, `cover` de `StationFrontend`; outras 270 classes, inclusive fábrica PSX, preservadas |
+| `classes39.dex` | Helper local, guarda de demonstração na Activity Sony e política Sony idêntica à R128 |
+| `libturbo_carousel.so` | Fallback de capa somente para célula de plataforma PS3/PS4 sem arte cadastrada; lê a primeira capa local da própria plataforma durante `syncModel` |
+
+O fallback nativo não desenha efeitos nem muda rotas. Primeiro reproduz o carousel R128 e exige hash idêntico; depois aplica um delta com inversa exata. Manifesto, `classes6.dex`, `classes35.dex`, motores e opções permanecem os da R128. Marcadores dos motores que incluem DEX/carousel compartilhados precisam ser renovados pelo pipeline R129.
+
+## Compilação isolada
+
+`recipe/build_demo_payloads.py` exige `--donor`, `--jdk`, `--android-jar`, `--d8-jar`, `--apktool`, `--parent-offline`, `--ndk`, `--native-inputs`, `--out`. O donor é exclusivamente a R128 assinada; `--parent-offline` aponta para `integration/ps3-ps4-offline`; `--native-inputs` reutiliza a árvore privada preservada `reconstrucao/native-inputs`; `--ndk` é o diretório `bin` LLVM. Saída deve ser um diretório novo fora das fontes.
+
+A receita produz os três payloads e `demo-payloads.json`. Confere as 271 classes antes e depois de remontar o DEX real, namespaces de DEX39, política Sony, reprodução nativa R128, exports, alinhamento 16 KiB e congelamento de fontes. Não monta, assina ou instala APK. Não substitui prova de conferência visual ou gameplay.

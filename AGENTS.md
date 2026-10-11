@@ -1,3 +1,17 @@
+# R129 — demonstrações locais Sony e compilação/instalação verificadas
+
+Implementação em integration/local-sony-demos, sobre R128, e ferramentas em tooling/release. Resolver APK pelo CURRENT-LOCAL-ARTIFACTS.json e desenvolvimento/ATUAL.json do backup único; nunca selecionar versões pela data ou restaurar Activities históricas. Ler README e evidence atuais. As seções R128 e anteriores abaixo descrevem entregas históricas e não escolhem o instalador atual.
+
+As pastas PS3/PS4 recebem duas amostras DEMO e capas estáticas locais apenas para aparecer no carrossel. Não são jogos. O helper acrescenta linhas à publicação visual, sem modificar catálogo assinado, instalação real ou autoridade online. Marcador e nome completos impedem enviar amostras ao emulador; jogos de usuário nunca são sobrescritos. Respeitar limite JNI4096. PS3/PS4 continuam exclusivamente offline.
+
+DEX28 modifica somente publishCurrent/start/remove/cover da StationFrontend; outras270classes preservadas. DEX39 conserva ponte Sony e inclui helper. Native só acrescenta fallback de capa das plataformas Sony em syncModel. Preservar renderer, LEDs, vídeos locais, cache/preload/economia/30fps, controles e bibliotecas dos emuladores. Os quatro IDs N64/GameCube/Wii/PSX vinculam o novo bundle; cores/opções/perfis/capacidade/transporte permanecem os mesmos. Não reutilizar IDs R128 para o pacote R129.
+
+tooling/release/finalize_verified.py exige unsigned.package.json + fontes/runtime exatos, certificado original e conferência final antes da promoção atômica. Nenhuma senha/chave em código público. install_current.py confere aparelho explícito, user0, APK integral e UID/dados; bloqueia partida/download. A abertura oficial deve ser observada: instalação, frontend, autenticação, gameplay e ativação de servidor são evidências distintas. Uma Gallery histórica invisível só admite retry delimitado de Login; não matar jogos, remover tarefas ou burlar autenticação.
+
+Um backup completo em F:/TurboStations-Backup-Completo-20261011 e uma árvore de build G:/StationNormalOwnersR127/local-sony-demos. Fontes/recibos públicos; APKs, ferramentas, mídias, chaves e registros pessoais locais. Sem novos snapshots, limpeza de dados, troca de assinatura ou implantação/reinício do servidor. Conferir STATUS e recibos antes de afirmar instalado ou aprovado.
+
+## Histórico R128
+
 # R128 — PS3 e PS4 offline e cadastro v3 consolidado
 
 Fonte executável 3ea94ade312640ab69ca09e4092f60607996ccba, diretório integration/ps3-ps4-offline, sobre integration/psx-online e bases R124/R126/R127 preservadas. APK candidato 0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc, 2234617901bytes; assinatura original v2/v3, 16KiB e 13548 entradas preservadas conferidas. Não instalado, servidor não ativado, gameplay não validado; última instalação comprovada R124.
