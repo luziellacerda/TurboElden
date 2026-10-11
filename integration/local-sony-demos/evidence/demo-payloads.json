@@ -5,16 +5,19 @@
   "sourceSha256": {
     "java/org/emulationstation/frontend/station/StationLocalSonyDemos.java": "ebfe7b90420961a42b97d9c795d78a4eb8b47b77b624b521fe12b14fb6476931",
     "recipe/assemble_apk.py": "946a39aae210498ebdfdf9c1b1b9659bb34435e945f7ef46b9790dc562bfe282",
-    "recipe/build_demo_payloads.py": "0806dc6dcb12ca1eec6251aa8fb302c130eb11cbb8ceee9d2279fef9ec451994",
-    "recipe/build_runtime_identity.py": "f3467c30e402ce28c565facf750c03d0efc75631595f563dca6a10bc78936fd4",
-    "recipe/build_unsigned.py": "4ce0b4b9041e9d48ada0acfc1fdb20250e784ba0283c5c7611969df3e452b431",
+    "recipe/AssembleScopedPartition.java": "f2cbf40f179685dca3057b1e9c623f6a65fedb74fd1b3eac472d1c56bf1078e4",
+    "recipe/build_demo_payloads.py": "34e92c5dc6d9ac3b7cce2509d79dde0beb27236e32a84ae92d8ff8c203b17011",
+    "recipe/build_runtime_identity.py": "2c200577100d6af5c9b49a5c3af439e4bfe1e2c170ed03900eca8f7eb7f2f940",
+    "recipe/build_unsigned.py": "42c92259489312f0f4cf2b0feb60ce4220f673206b711a7aad47cbc614fa72aa",
     "recipe/patch_demo_native.py": "bbe2310465a2881cf9ee3bec810c23d3027857a552a47d39f4d938a16c330038",
     "recipe/patch_frontend.py": "35bfd5e78ce728ebc51cb4f349c0382557d29ad0bd67f338752501cd0950648c",
-    "recipe/patch_sony_activity.py": "1431296df0b8f9f0af0606fc87836954ee0fe5e04e783f989ceb59dd840b09b9",
-    "recipe/patch_sony_settings.py": "a577a4dc06de7478dbb9066ed3693c52e6af768263d07548675d1991684cc4f1",
-    "recipe/pipeline_common.py": "c05b406f8007c3e52a4705b91ea183c65ecfe1dbec92a13a3ed32c965a9da6ac",
+    "recipe/patch_sony_activity.py": "4408ffdb86cc25ca5f1da6c42394c74e7b478b0c4f7a02d4033a1fdd823eddb7",
+    "recipe/patch_sony_settings.py": "7f59494fa49bce072dda0733dbecd07081a7b6207d4d5fa918ad69ce0fd9edaf",
+    "recipe/patch_video_loop.py": "c91505a0aa452cdafb4e507738dc105fdd6071d7d329b223153873e8d4ed5791",
+    "recipe/pipeline_common.py": "f4bf9e67e447748485eb1e0b52974eec1e1df13479778336f220ef11f2835535",
     "recipe/sony_media.py": "58f8107ba11b2252f2c1d60201d73cb0af84df7f0764085dc02467bb70719ae2",
-    "recipe/verify_final.py": "4b0fb6676db40e493d3b3673da69b4709abc9263ed3fdb60c6f46bd95378fc40"
+    "recipe/verify_final.py": "195a9f5b72e1ebed2e1a2ccbfb2a860bded44fc4a5789e58d70041d3a1f8db8d",
+    "recipe/VerifyScopedPartition.java": "32b627f5334d1c7b62c94ab2fef05d10df44707241f9379416fb44f6464f8acd"
   },
   "parentSourceSha256": {
     "java/org/emulationstation/frontend/offline/StationSonyOfflineActivity.java": "e7701a030ed54a16dabdd7e66fb8cc785112722ebc747fc686e12d0ba16a5d88",
@@ -28,16 +31,20 @@
   },
   "payloads": {
     "classes28.dex": {
-      "sha256": "f682bbbb0575157cf04990e775258d6354d8a1037e84192f30251a954fe879af",
-      "bytes": 305076
+      "sha256": "62d74741c096e0280133b4cb7b37f4b9c4b25bade682be44dae734f2554140e0",
+      "bytes": 306168
+    },
+    "classes35.dex": {
+      "sha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76",
+      "bytes": 770008
     },
     "classes39.dex": {
-      "sha256": "4e7177427cb701e229603b7af1d74596a686380af9afb20f2e0e263a8c7fe8f0",
-      "bytes": 31548
+      "sha256": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
+      "bytes": 30904
     },
     "libturbo_carousel.so": {
-      "sha256": "b3d351d2274dc130d5866f4cc7e8ae145c1b9f467dc06f47bdcdc67f476c330f",
-      "bytes": 157402144
+      "sha256": "45e8131c0fc59f5c4627950c3aaed7b05dee1b519704d173698d5f56644fb806",
+      "bytes": 157401320
     },
     "assets/turbo-system-videos/720-ps3.mp4": {
       "sha256": "d6fb573d754c5a21edc633cf1b3ce61fd4c2f5d2615881178aee9427f8354ff9",
@@ -52,15 +59,14 @@
   "baselineNativeByteIdentical": true,
   "preservedParentPayloadSha256": {
     "AndroidManifest.xml": "acda0e4404e29764a32fb3452b69899dc4501b63100376620a7e41a2ad85ff31",
-    "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
-    "classes35.dex": "585b88564556c9106df0f9ec5a979cdd726824e96dcdc662122717648e227276"
+    "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb"
   },
   "offlineOnly": true,
   "localDisplayOnly": true,
   "signedCatalogChanged": false,
   "realDownloadsChanged": false,
   "graphicsRenderMethodsChanged": true,
-  "graphicsRenderChangeScope": "two-new-Sony-settings-owned-label-exclusions-only",
+  "graphicsRenderChangeScope": "compact-settings-and-primary-video-loop-only",
   "existingCarouselGeometryAndEffectRenderMethodsChanged": false,
   "existingOnlineCodePreserved": true,
   "sharedDexRequiresNewRuntimeIdentities": true,
@@ -72,6 +78,9 @@
     "ps3",
     "ps4"
   ],
+  "primaryPlatformVideoLoopCompiled": true,
+  "collectionLoopEnabled": false,
+  "compactSettingsMenuCompiled": true,
   "apkProduced": false,
   "signed": false,
   "installed": false,

@@ -1,0 +1,30 @@
+{
+  "donorSha256": "585b88564556c9106df0f9ec5a979cdd726824e96dcdc662122717648e227276",
+  "sha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76",
+  "classCount": 606,
+  "unchangedClasses": 590,
+  "changedTypes": [
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda0;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda10;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda1;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda2;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda3;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda4;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda5;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda6;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda7;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda8;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda9;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$1;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$2$$ExternalSyntheticBackportWithForwarding0;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$2;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$Session;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720;"
+  ],
+  "exactDonorClassSet": true,
+  "allOtherClassesByteIdentical": true,
+  "staticInitializersPreserved": true,
+  "restoredInitializerArrays": 1,
+  "compileOnlyClasspathsPackaged": false,
+  "clientOverlayFirstOnPlayerClasspath": true
+}

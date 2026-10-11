@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "revision": "R129",
+  "revision": "R130",
   "baseApkSha256": "f2924c7b49ea4e40f67c41e0f2997ea4dcd5aee6f2d495517b3c5dfa3c664a9d",
-  "apkSha256": "89dd543986fdcb0c4b7ea53e82de87907f3b41ee0fe892479d8a63f52e4b7df0",
-  "apkBytes": 2237505749,
-  "freezeSha256": "94b706c31b9293102428cd6726331b5b4131e89cbe5fb8002092c0002ca4db5c",
-  "identityReceiptSha256": "3fbd74d9c196af0d12b019a7049a8682852688bee71c0faa09bf6a685586bd4d",
+  "apkSha256": "d227b0af17600bf99ec097857bf182f6e7989f8ddc3b68b63e17c81f69eb30ad",
+  "apkBytes": 2237522133,
+  "freezeSha256": "c8007aed0eb0cc79d8c5130960a979706cfe958932a59d65a65cce2c2fd987d7",
+  "identityReceiptSha256": "37d0cebb7f3d30cce0d503e684ceea7e819922a3bac4d6baa5b4816cab2678ab",
   "replacedEntrySha256": {
     "AndroidManifest.xml": "acda0e4404e29764a32fb3452b69899dc4501b63100376620a7e41a2ad85ff31",
-    "assets/station-online/engines.json": "9211c9e872b0d96dd7b74fc69cdd5e7f6b4327756b0ea92540fd3415aeb97b3e",
-    "classes28.dex": "f682bbbb0575157cf04990e775258d6354d8a1037e84192f30251a954fe879af",
-    "classes35.dex": "585b88564556c9106df0f9ec5a979cdd726824e96dcdc662122717648e227276",
+    "assets/station-online/engines.json": "d59bf7d111c10ab8ee291c866d5dc24a5706bcc0146aa3b7e104ef809e2198c2",
+    "classes28.dex": "62d74741c096e0280133b4cb7b37f4b9c4b25bade682be44dae734f2554140e0",
+    "classes35.dex": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76",
     "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
-    "lib/arm64-v8a/libstation_dolphin_runtime.so": "9765756f70fda14d8103ce7ab7055a4e0fd92e1ed0edef09930ed38e013d9031",
-    "lib/arm64-v8a/libstation_mupen64plus_runtime.so": "6868eddfca6c5380b8191fe9c5ad7671faa3ffb1a0215c0fcc9b73236e685ef8",
-    "lib/arm64-v8a/libturbo_carousel.so": "b3d351d2274dc130d5866f4cc7e8ae145c1b9f467dc06f47bdcdc67f476c330f"
+    "lib/arm64-v8a/libstation_dolphin_runtime.so": "e1be15478a3d4ddc31c605bee19539744714a32d0b6cdef51a07f85c2c661dd6",
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so": "61d0bdd0db5e4be480e2390104d76c08dd40b87f639650ac5e5065ac6616a8df",
+    "lib/arm64-v8a/libturbo_carousel.so": "45e8131c0fc59f5c4627950c3aaed7b05dee1b519704d173698d5f56644fb806"
   },
   "addedEntrySha256": {
     "assets/turbo-system-videos/720-ps3.mp4": "d6fb573d754c5a21edc633cf1b3ce61fd4c2f5d2615881178aee9427f8354ff9",
     "assets/turbo-system-videos/720-ps4.mp4": "4162ed5331876ab0749fc5abe287f419af0b90b980ecafd32947422ee13643ae",
-    "classes39.dex": "4e7177427cb701e229603b7af1d74596a686380af9afb20f2e0e263a8c7fe8f0",
-    "lib/arm64-v8a/libstation_psx_online.so": "f31f0a3dbfc90163e1d12591facb26e66380a02e4c53ae92274ae7ebc01c4597"
+    "classes39.dex": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
+    "lib/arm64-v8a/libstation_psx_online.so": "8502dc971a89e578890843a1ba44eb79eaffbbd2a4a988deac880a17dc2a5377"
   },
   "preservedEntryCount": 13548,
   "preservedEntryManifestSha256": "a6a3ee5d945c726f868c01ad2ab9df0033e37b69592b6417866c618bcfb9201f",
@@ -47,10 +47,10 @@
     }
   },
   "engineIds": [
-    "pcsx-rearmed-ff81ed17-player-v3-f31f0a3dbfc9",
-    "mupen64plus-ae-33bf7021-n64-v3-6868eddfca6c",
-    "dolphin-5102a033-gamecube-v3-9765756f70fd",
-    "dolphin-5102a033-wii-v3-9765756f70fd"
+    "pcsx-rearmed-ff81ed17-player-v3-8502dc971a89",
+    "mupen64plus-ae-33bf7021-n64-v3-61d0bdd0db5e",
+    "dolphin-5102a033-gamecube-v3-e1be15478a3d",
+    "dolphin-5102a033-wii-v3-e1be15478a3d"
   ],
   "offlineEmulatorEntriesChanged": false,
   "n64DolphinCoresAndOptionsPreserved": true,
@@ -76,5 +76,13 @@
   ],
   "signedCatalogChanged": false,
   "ps3Ps4PhysicalGameplayValidated": false,
-  "sourceCommit": "cf623c7c5cf34d4aa59ad278dc98fa6d7a50721b"
+  "compactSettingsMenuImplemented": true,
+  "platformHeroVideoLoopSelectable": true,
+  "collectionVideoLoopsEnabled": false,
+  "loopReusesExistingDecoder": true,
+  "maximumCarouselRenderFPS": 30,
+  "redundantSonyGameConfirmationRemoved": true,
+  "thermalImprovementValidated": false,
+  "sourceCommit": "c8e0a8c0f46a43b9d3cb16c3ab194a90cad18a54",
+  "compiledSourceURL": "https://github.com/luziellacerda/TurboElden/commit/c8e0a8c0f46a43b9d3cb16c3ab194a90cad18a54"
 }

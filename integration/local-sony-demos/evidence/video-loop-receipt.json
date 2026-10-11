@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "revision": "R130",
+  "passed": true,
+  "recipeSha256": "c91505a0aa452cdafb4e507738dc105fdd6071d7d329b223153873e8d4ed5791",
+  "java": {
+    "sources": {
+      "client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java": {
+        "sourceSha256": "0327cb2f25e05162e19f81b50128c478ebbc298e063d219fd391572b30199b52",
+        "patchedSha256": "59c317a085a0f3a8423d37019a7ea8065c86b8ef0dd054d3a115335e4798dc96",
+        "exactInverse": true,
+        "replacementCount": 3
+      },
+      "client/src/java/org/emulationstation/frontend/station/StationGraphicsPanel.java": {
+        "sourceSha256": "7b8483c4775e2f1c2c543f74308be153a4b5b601d1edde3f00881721d0e96654",
+        "patchedSha256": "ac759cf8486705678f012dbe7503526a3ca22f2ec97b46e0da68b37949715ef8",
+        "exactInverse": true,
+        "replacementCount": 8
+      },
+      "netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java": {
+        "sourceSha256": "dde13ca08170e98354a22a764a42f9a6a98e032389aba48e81fb5aab3d9e1673",
+        "patchedSha256": "262e46cb60a3a5328bb37c9b396c4cf7e60ae10567238c5ee11b7c91b5991daa",
+        "exactInverse": true,
+        "replacementCount": 13
+      }
+    },
+    "allowedDex28Families": [
+      "Lorg/emulationstation/frontend/station/StationGraphicsPanel;",
+      "Lorg/emulationstation/frontend/station/StationGraphicsPreferences;"
+    ],
+    "allowedDex35Families": [
+      "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720;"
+    ],
+    "newJavaTypes": false,
+    "newLambdas": false,
+    "classSetVerificationRequired": true,
+    "compileClientBeforePlayer": true,
+    "clientOverlayJarMustPrecedeOldClientJar": true,
+    "originalGraphicsStateAndMaskContractUnchanged": true,
+    "newPreference": {
+      "file": "station_graphics_r117",
+      "key": "platform_video_loop",
+      "default": true
+    },
+    "preferenceIOPerFrameAdded": false,
+    "preferenceReadPerFrameAdded": false,
+    "loopUsesExistingWorkerAndDecoder": true,
+    "playerSetLoopingRemainsFalse": true,
+    "originalStopTwoFramesEarlyTimingUnchanged": true,
+    "collectionLoopEnabled": false,
+    "backgroundLifecycleAndWatchdogUnchanged": true,
+    "physicalPlaybackValidated": false,
+    "thermalReductionMeasured": false
+  },
+  "native": {
+    "sourceSha256": "46ce61db3596847f7806537aeea616d0bc2e477069e1ed5bc92faf42a8cc66be",
+    "patchedSha256": "eb9a7e14bc50e7fac66fee14f9a98ef8b7f109860720c6564ab5da34dea7723b",
+    "videoSourceSha256": "f88f90d04a0da17ab96d4278f2b77ed60f071dcae715c7709bb840d5198a56e5",
+    "graphicsSourceSha256": "fb266e78ad9daffdf3742b0e3967bfbec7124930997afabc1a8a241cb6cd703d",
+    "headers": {
+      "loop_native_system_video720.h": "96c6e67f8998e5bfbd570733bdf02e5fe2d030840c84971c42b5f34c25097e0f",
+      "native_platform_video_loop.h": "99227fdad8cb47b195c3924b85115fcd09c77ca02ce0574747d47324f34056c3"
+    },
+    "nativeCppExactInverse": true,
+    "nativeVideoExactInverse": true,
+    "onlyNativeIncludeAndVideoStartArgumentChanges": true,
+    "nativeGraphicsHeaderByteIdentical": true,
+    "nativeVideoCompletionAndRetirementByteIdentical": true,
+    "retireBeforeStartPolicyByteIdentical": true,
+    "decoderCapacityChanged": false,
+    "maximumRenderFPSChanged": false,
+    "ledCacheAndPreloadChanged": false,
+    "graphicsSnapshotABIChanged": false,
+    "jniCallsPerFrameAdded": false,
+    "preferenceIOPerFrameAdded": false,
+    "platformScope": "systemsMode && !folderMode, focused asset only",
+    "collectionLoopEnabled": false,
+    "physicalPlaybackValidated": false
+  },
+  "compileOnlyClasspathSha256": {
+    "client.jar": "011bce981b609d2cc5cfbad49c386e7f54dea1f560a17fe79bae3a56b3f8f313",
+    "rooms.jar": "6b2929eb3621b208593a886b6f06a32de52af9c931663cb314e197af155f773d"
+  },
+  "dex28ChangedTypes": [
+    "Lorg/emulationstation/frontend/station/StationFrontend;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$$ExternalSyntheticLambda0;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$$ExternalSyntheticLambda1;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$1;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$ConsoleMark;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$ConsoleSurface;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda0;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda1;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda2;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda3;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda4;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda5;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda6;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda7;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda8;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content$$ExternalSyntheticLambda9;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Content;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel$Option;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPanel;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPreferences$$ExternalSyntheticLambda0;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPreferences$Listener;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPreferences$State;",
+    "Lorg/emulationstation/frontend/station/StationGraphicsPreferences;"
+  ],
+  "dex35ChangedTypes": [
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda0;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda10;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda1;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda2;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda3;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda4;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda5;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda6;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda7;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda8;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda9;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$1;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$2$$ExternalSyntheticBackportWithForwarding0;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$2;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$Session;",
+    "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720;"
+  ],
+  "actualDonorClassSetsRetained": true,
+  "unrelatedClassesByteIdentical": true,
+  "compileOnlyClasspathsPackaged": false,
+  "payloads": {
+    "classes28.dex": {
+      "sha256": "62d74741c096e0280133b4cb7b37f4b9c4b25bade682be44dae734f2554140e0",
+      "bytes": 306168
+    },
+    "classes35.dex": {
+      "sha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76",
+      "bytes": 770008
+    },
+    "libturbo_carousel.so": {
+      "sha256": "45e8131c0fc59f5c4627950c3aaed7b05dee1b519704d173698d5f56644fb806",
+      "bytes": 157401320
+    }
+  },
+  "physicalPlaybackValidated": false,
+  "thermalReductionMeasured": false
+}

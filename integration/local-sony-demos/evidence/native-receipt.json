@@ -11,7 +11,7 @@
   "sourceSha256": "08d2748ac2931119799f914659cf8ebb82746349190b0740c7a0c9f99a8608d6",
   "nativeBaselineSha256": "0d76a7a15cedd8d9e74c3824b77b2d0cbbd26067c503d0770fc97ad5e374dc2b",
   "baselineNativeByteIdentical": true,
-  "sha256": "b3d351d2274dc130d5866f4cc7e8ae145c1b9f467dc06f47bdcdc67f476c330f",
+  "sha256": "45e8131c0fc59f5c4627950c3aaed7b05dee1b519704d173698d5f56644fb806",
   "exportSetExactlyPreserved": true,
   "loadAlignment16KiB": true,
   "productiveInputSha256": {
@@ -280,19 +280,40 @@
   },
   "sonySettingsMenuReceipt": {
     "sourceSha256": "7d7e4d388319594d7bfc934105d1d09c75af09a3887f4b1f8bb1dcf14d9b3abb",
-    "patchedSha256": "3a79dda4a57f30495e15497955232f70ad3bdeded1ec84b8db7b78d3bf07f8c2",
+    "patchedSha256": "8d24f927d3aae4f78248f15d57566f3430d19d7a8bac1cacb6b9b7761a4dcf1b",
     "exactInverse": true,
     "changedMethods": [
+      "settingsRefreshThemeLabels",
       "layoutSettingsSkin",
+      "settingsSkinText",
+      "settingsSkinRect",
       "drawSettingsSkinHook",
       "touchSettingsSkinHook"
     ],
     "addedMethods": [
-      "openStationSonySettings"
+      "openStationSonySettings",
+      "settingsOwnedCard"
     ],
     "originalTabsAndEmulatorDispatchUnchanged": true,
     "originalOptionValueActionsUnchanged": true,
     "oneOptionsRowReservedForSonySettings": true,
+    "compactSettingsPresentation": true,
+    "minimum48DpLogicalTargetsRetained": true,
+    "slimVisualCardsDoNotReduceTouchTargets": true,
+    "sonyActionsAboveOptions": true,
+    "colorControlSharesHeader": true,
+    "sidebarNarrowedWithoutChangingTabs": true,
+    "nativeOptionsViewportExpanded": true,
+    "sonyRowSeparateFromNativeOptionsViewport": true,
+    "optionsRenderAndTouchExcludedFromSonyRow": true,
+    "originalScrollDispatchUnchanged": true,
+    "ownedCardMatrixRestoredBeforeEveryDraw": true,
+    "cardsDrawnBeforeOwnedLabels": true,
+    "sameStaticPrimitiveProgram": true,
+    "newGpuProgramsAdded": false,
+    "newFramebufferOrFilterAdded": false,
+    "graphicsPanelEntryPreserved": true,
+    "videoLoopPreferenceChangedByThisPatch": false,
     "externalSettingsLauncherOnly": true,
     "humanTapOnly": true,
     "jniPerFrameAdded": false,
@@ -306,5 +327,31 @@
     "nativeCppExactInverse": true,
     "sonyLabelsDrawnOnlyByOpenSettingsModal": true
   },
-  "nativeVideoMethodsByteIdentical": true
+  "primaryPlatformVideoLoopReceipt": {
+    "sourceSha256": "46ce61db3596847f7806537aeea616d0bc2e477069e1ed5bc92faf42a8cc66be",
+    "patchedSha256": "eb9a7e14bc50e7fac66fee14f9a98ef8b7f109860720c6564ab5da34dea7723b",
+    "videoSourceSha256": "f88f90d04a0da17ab96d4278f2b77ed60f071dcae715c7709bb840d5198a56e5",
+    "graphicsSourceSha256": "fb266e78ad9daffdf3742b0e3967bfbec7124930997afabc1a8a241cb6cd703d",
+    "headers": {
+      "loop_native_system_video720.h": "96c6e67f8998e5bfbd570733bdf02e5fe2d030840c84971c42b5f34c25097e0f",
+      "native_platform_video_loop.h": "99227fdad8cb47b195c3924b85115fcd09c77ca02ce0574747d47324f34056c3"
+    },
+    "nativeCppExactInverse": true,
+    "nativeVideoExactInverse": true,
+    "onlyNativeIncludeAndVideoStartArgumentChanges": true,
+    "nativeGraphicsHeaderByteIdentical": true,
+    "nativeVideoCompletionAndRetirementByteIdentical": true,
+    "retireBeforeStartPolicyByteIdentical": true,
+    "decoderCapacityChanged": false,
+    "maximumRenderFPSChanged": false,
+    "ledCacheAndPreloadChanged": false,
+    "graphicsSnapshotABIChanged": false,
+    "jniCallsPerFrameAdded": false,
+    "preferenceIOPerFrameAdded": false,
+    "platformScope": "systemsMode && !folderMode, focused asset only",
+    "collectionLoopEnabled": false,
+    "physicalPlaybackValidated": false
+  },
+  "nativeVideoMethodsByteIdentical": false,
+  "nativeVideoChangeScope": "focused-primary-platform-start-scope-only"
 }

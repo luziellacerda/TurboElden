@@ -4,15 +4,15 @@
   "markers": {
     "psx": {
       "runtimeLibrary": "libstation_psx_online.so",
-      "runtimeSha256": "f31f0a3dbfc90163e1d12591facb26e66380a02e4c53ae92274ae7ebc01c4597",
-      "runtimeBytes": 242232,
-      "fingerprintSha256": "a2718953b2bb8798181818ab7bf2b54d6a648ac628eb2e8ac43cadf470e6d19c"
+      "runtimeSha256": "8502dc971a89e578890843a1ba44eb79eaffbbd2a4a988deac880a17dc2a5377",
+      "runtimeBytes": 242568,
+      "fingerprintSha256": "9f6ef71e107cdbf14514e7b76bb8a02c63bdc3b697d1b2aa279396149a42eec1"
     },
     "n64": {
       "runtimeLibrary": "libstation_mupen64plus_runtime.so",
-      "runtimeSha256": "6868eddfca6c5380b8191fe9c5ad7671faa3ffb1a0215c0fcc9b73236e685ef8",
-      "runtimeBytes": 45032,
-      "fingerprintSha256": "91bac79b2454f57c45e53a430b6f8dca078672b08548931db577944f0f185be0",
+      "runtimeSha256": "61d0bdd0db5e4be480e2390104d76c08dd40b87f639650ac5e5065ac6616a8df",
+      "runtimeBytes": 45368,
+      "fingerprintSha256": "8c7a78dac3a77c5c430b8c593f4ae32d001dde517d118be7483ec80cf4b40b8a",
       "elf": {
         "machine": "AArch64",
         "soname": "libstation_mupen64plus_runtime.so",
@@ -29,9 +29,9 @@
     },
     "dolphin": {
       "runtimeLibrary": "libstation_dolphin_runtime.so",
-      "runtimeSha256": "9765756f70fda14d8103ce7ab7055a4e0fd92e1ed0edef09930ed38e013d9031",
-      "runtimeBytes": 55944,
-      "fingerprintSha256": "ce691fb47f68498660cba87887436cbb92d7fd690efbdb2fd9e97b16307edfba",
+      "runtimeSha256": "e1be15478a3d4ddc31c605bee19539744714a32d0b6cdef51a07f85c2c661dd6",
+      "runtimeBytes": 56280,
+      "fingerprintSha256": "44c83d5d8f58d0c43d4acec2e6cbca9f777555329687f69fb09a593b9f16ce34",
       "elf": {
         "machine": "AArch64",
         "soname": "libstation_dolphin_runtime.so",
@@ -49,13 +49,13 @@
   },
   "engines": [
     {
-      "engineId": "pcsx-rearmed-ff81ed17-player-v3-f31f0a3dbfc9",
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-8502dc971a89",
       "platform": "psx",
       "backend": "psx-player-station-v1",
       "library": "libpcsx_rearmed_libretro_android.so",
       "runtimeLibrary": "libstation_psx_online.so",
       "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
-      "runtimeSha256": "f31f0a3dbfc90163e1d12591facb26e66380a02e4c53ae92274ae7ebc01c4597",
+      "runtimeSha256": "8502dc971a89e578890843a1ba44eb79eaffbbd2a4a988deac880a17dc2a5377",
       "dependencySha256": {
         "libmain.so": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
         "libSDL2.so": "a282b35554eb006773349430e117bfeeff32a84e246a058c8fb7c7027c2e4dee",
@@ -84,13 +84,13 @@
       }
     },
     {
-      "engineId": "mupen64plus-ae-33bf7021-n64-v3-6868eddfca6c",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-61d0bdd0db5e",
       "platform": "n64",
       "backend": "mupen64plus-ae-station-v1",
       "library": "libstation_mupen64plus_core.so",
       "runtimeLibrary": "libstation_mupen64plus_runtime.so",
       "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
-      "runtimeSha256": "6868eddfca6c5380b8191fe9c5ad7671faa3ffb1a0215c0fcc9b73236e685ef8",
+      "runtimeSha256": "61d0bdd0db5e4be480e2390104d76c08dd40b87f639650ac5e5065ac6616a8df",
       "dependencySha256": {
         "libSDL2_net.so": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
         "libae-bridge.so": "ba5a7582295215f159e197f805dbfe85851aa912462996870f61ccd752ecb360",
@@ -127,7 +127,7 @@
       }
     },
     {
-      "engineId": "dolphin-5102a033-gamecube-v3-9765756f70fd",
+      "engineId": "dolphin-5102a033-gamecube-v3-e1be15478a3d",
       "platform": "gamecube",
       "backend": "dolphin-station-v1",
       "library": "libstation_dolphin_online.so",
@@ -151,7 +151,7 @@
         "default": "launch-file-v1"
       },
       "runtimeLibrary": "libstation_dolphin_runtime.so",
-      "runtimeSha256": "9765756f70fda14d8103ce7ab7055a4e0fd92e1ed0edef09930ed38e013d9031",
+      "runtimeSha256": "e1be15478a3d4ddc31c605bee19539744714a32d0b6cdef51a07f85c2c661dd6",
       "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
       "dependencySha256": {
         "libstation_dolphin_file_redirect_hook.so": "23347bb99e0e73fde1f6deaf1b39d544ab4e4a5cc9e5f2c61c8d9facf5dfe06c",
@@ -164,7 +164,7 @@
       ]
     },
     {
-      "engineId": "dolphin-5102a033-wii-v3-9765756f70fd",
+      "engineId": "dolphin-5102a033-wii-v3-e1be15478a3d",
       "platform": "wii",
       "backend": "dolphin-station-v1",
       "library": "libstation_dolphin_online.so",
@@ -188,7 +188,7 @@
         "default": "launch-file-v1"
       },
       "runtimeLibrary": "libstation_dolphin_runtime.so",
-      "runtimeSha256": "9765756f70fda14d8103ce7ab7055a4e0fd92e1ed0edef09930ed38e013d9031",
+      "runtimeSha256": "e1be15478a3d4ddc31c605bee19539744714a32d0b6cdef51a07f85c2c661dd6",
       "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
       "dependencySha256": {
         "libstation_dolphin_file_redirect_hook.so": "23347bb99e0e73fde1f6deaf1b39d544ab4e4a5cc9e5f2c61c8d9facf5dfe06c",
@@ -203,16 +203,16 @@
   ],
   "psxControllerProfileSha256": "81c0e2323a37130dbdbdb9c2efefca8837a9bb6e7169304b4e5731b2ec56290a",
   "psxOptionsSha256": "8c1e81460dc19b6e8d151ec6231c9092000b4946e6f084222cb40d3aab2e66a9",
-  "enginesAssetSha256": "9211c9e872b0d96dd7b74fc69cdd5e7f6b4327756b0ea92540fd3415aeb97b3e",
+  "enginesAssetSha256": "d59bf7d111c10ab8ee291c866d5dc24a5706bcc0146aa3b7e104ef809e2198c2",
   "payloadSha256": {
     "AndroidManifest.xml": "acda0e4404e29764a32fb3452b69899dc4501b63100376620a7e41a2ad85ff31",
     "assets/turbo-system-videos/720-ps3.mp4": "d6fb573d754c5a21edc633cf1b3ce61fd4c2f5d2615881178aee9427f8354ff9",
     "assets/turbo-system-videos/720-ps4.mp4": "4162ed5331876ab0749fc5abe287f419af0b90b980ecafd32947422ee13643ae",
-    "classes28.dex": "f682bbbb0575157cf04990e775258d6354d8a1037e84192f30251a954fe879af",
-    "classes35.dex": "585b88564556c9106df0f9ec5a979cdd726824e96dcdc662122717648e227276",
-    "classes39.dex": "4e7177427cb701e229603b7af1d74596a686380af9afb20f2e0e263a8c7fe8f0",
+    "classes28.dex": "62d74741c096e0280133b4cb7b37f4b9c4b25bade682be44dae734f2554140e0",
+    "classes35.dex": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76",
+    "classes39.dex": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
     "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
-    "lib/arm64-v8a/libturbo_carousel.so": "b3d351d2274dc130d5866f4cc7e8ae145c1b9f467dc06f47bdcdc67f476c330f"
+    "lib/arm64-v8a/libturbo_carousel.so": "45e8131c0fc59f5c4627950c3aaed7b05dee1b519704d173698d5f56644fb806"
   },
   "normalPsxLibrariesPreserved": {
     "libmain.so": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
@@ -226,10 +226,61 @@
   "registeredOnServer": false,
   "installed": false,
   "physicalGameplayValidated": false,
-  "revision": "R129",
+  "revision": "R130",
   "parentOfflineReceiptSha256": "7165042b4de851594c2a62d94aeb6ab7868056553d62f3c1b76826bd4c59ef1d",
-  "demoCompilationReceiptSha256": "940a1aef0e19c414b1b230b51ed7d9306996e659197052a3d73fd4cb10c26069",
+  "demoCompilationReceiptSha256": "cd0a82560834a9a59c790b9035ba838c5a15b6aad426b58b15f3db14f34c3014",
+  "baseJavaCompilationReceiptSha256": "942244cd7c1b4f3e9862e88d62805dde47b3c27d32e4e3864abc2a638c06f6ca",
+  "dex35PreservationReceiptSha256": "e82b1d8059e65c80b4a30b3be3e42cb54b9f6dbb2951f6d38a5d94921445fa97",
+  "videoLoopCompilationReceiptSha256": "ae510d591c9dfe942825d51f4a4250873145cf6fcb2a598ee957fccdb9f24721",
+  "compositeJavaReceiptSha256": "7bca37f3b54b1697225c2f3587d568965de299e5805613c95e7ce098d4e498f4",
   "localDemonstrationsOnly": true,
+  "javaReceiptComposition": {
+    "baseJavaReceiptSha256": "942244cd7c1b4f3e9862e88d62805dde47b3c27d32e4e3864abc2a638c06f6ca",
+    "baseClasses35Sha256": "585b88564556c9106df0f9ec5a979cdd726824e96dcdc662122717648e227276",
+    "baseCompilerProducedOverlayDex": false,
+    "scopedDex35Overlay": {
+      "partition": "classes35.dex",
+      "effectivePayload": {
+        "sha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76",
+        "bytes": 770008
+      },
+      "demoCompilationReceiptSha256": "cd0a82560834a9a59c790b9035ba838c5a15b6aad426b58b15f3db14f34c3014",
+      "strictPartitionReceiptSha256": "e82b1d8059e65c80b4a30b3be3e42cb54b9f6dbb2951f6d38a5d94921445fa97",
+      "videoLoopCompilationReceiptSha256": "ae510d591c9dfe942825d51f4a4250873145cf6fcb2a598ee957fccdb9f24721",
+      "donorApkSha256": "0189527c7537845562a2be4be15c0fab976c85f4f9c7f8ab884915c8bc3052dc",
+      "donorPartitionSha256": "585b88564556c9106df0f9ec5a979cdd726824e96dcdc662122717648e227276",
+      "changedTypes": [
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda0;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda10;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda1;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda2;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda3;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda4;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda5;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda6;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda7;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda8;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$$ExternalSyntheticLambda9;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$1;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$2$$ExternalSyntheticBackportWithForwarding0;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$2;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720$Session;",
+        "Lorg/emulationstation/frontend/netplay/StationSinglePassVideo720;"
+      ],
+      "classCount": 606,
+      "unchangedClasses": 590,
+      "unrelatedClassesByteIdentical": true,
+      "staticInitializersPreserved": true,
+      "compileOnlyClasspathsPackaged": false,
+      "sourceTransform": {
+        "sourceSha256": "dde13ca08170e98354a22a764a42f9a6a98e032389aba48e81fb5aab3d9e1673",
+        "patchedSha256": "262e46cb60a3a5328bb37c9b396c4cf7e60ae10567238c5ee11b7c91b5991daa",
+        "exactInverse": true,
+        "replacementCount": 13
+      }
+    }
+  },
+  "baseJavaCompilerProducedOverlayDex": false,
   "sonyLocalPlatformVideosAdded": [
     "ps3",
     "ps4"
