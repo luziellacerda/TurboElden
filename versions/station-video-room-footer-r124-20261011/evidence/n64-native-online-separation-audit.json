@@ -1,0 +1,113 @@
+{
+  "version": "R124",
+  "utc": "2026-10-11T05:42:47.651918+00:00",
+  "request": "Use online engine only for connectivity and the system native emulator for gameplay; N64 must use integrated Mupen64Plus AE, not only its touch skin.",
+  "implementationOfRequestedSeparation": false,
+  "apkChangedByAudit": false,
+  "productiveSourceChangedByAudit": false,
+  "physicalObservation": {
+    "deviceModel": "Motorola Edge30",
+    "activity": "org.emulationstation.frontend.netplay.StationRetroActivity",
+    "gamePlatform": "n64",
+    "gameSceneRendered": true,
+    "oldGrayTouchOverlayObserved": true,
+    "externalRetroArchApplicationObserved": false,
+    "twoDeviceSynchronizationValidated": false,
+    "roomStartedOrClosedByAgent": false,
+    "rawScreenshotOrPersonalDataPublished": false
+  },
+  "currentRoutes": {
+    "normal": {
+      "entry": "native/d0/native_n64.h",
+      "chain": [
+        "N64Bootstrap.launch",
+        "N64EntryActivity",
+        "Mupen64Plus AE GameActivity"
+      ],
+      "engine": "Integrated Mupen64Plus AE"
+    },
+    "online": {
+      "entry": "StationRoomsActivity.java:1091",
+      "activity": "StationRetroActivity",
+      "runtime": "libstation_retroarch.so",
+      "core": "libstation_online_n64.so",
+      "engineId": "parallel-3be1f437-n64-v3-81b3daa38fb9",
+      "protocol": "station-stream.v3",
+      "playsGameInsideLibretroRuntime": true,
+      "connectionOnly": false
+    }
+  },
+  "inputSourceSHA256": {
+    "StationRoomsActivity.java": "6d9c0e0d0c0f481bde173c2863e4fdb955b4663f3c65fccd09e23edb499f3c0a",
+    "StationRetroActivity.java": "31ca6cf7108270c424129327cd8605ff8f140db3e2925d1a536d1027cb155787",
+    "StationRetroLaunch.java": "6552e3e58bd0ca4423a0d5358d6e76e0cf8ffccef04ae67c549c37974259dbdc",
+    "StationOnlineGame.java": "88915e3d218013f8da2491531b29bf3c1e5be0c2bd830854aaecaa9fea459d5d",
+    "StationMultiplayerSession.java": "56ae015bbb92c548f656affcd4d92f93868f5a3326ce54cb9ab7cbda2892834f",
+    "StationMultiplayerTunnel.java": "c117815045ad93c6736d4618cf71c3e4226faace620054acecfd64e7eb393961"
+  },
+  "requestedBridgeNotPresentInAuditedSources": true,
+  "existingReusableTransportInterfaces": [
+    "StationMultiplayerSession.Listener",
+    "StationMultiplayerTunnel.Listener"
+  ],
+  "nativeDependencies": [
+    "core_run",
+    "core_serialize_special",
+    "core_unserialize_special",
+    "libretro input callbacks per port",
+    "JNI recovery pause acknowledged by emulator thread and epoch",
+    "no frame/audio/render progress while waiting"
+  ],
+  "mupenExistingNativeNetplayAPIs": [
+    "M64CMD_NETPLAY_INIT",
+    "M64CMD_NETPLAY_CONTROL_PLAYER",
+    "M64CMD_NETPLAY_GET_VERSION",
+    "M64CMD_NETPLAY_CLOSE"
+  ],
+  "mupenExistingNativeNetplayTransport": {
+    "tcp": "Player registration, settings and saves",
+    "udp": "Input data and sync checks"
+  },
+  "serverReadOnlyAudit": {
+    "localCommitPrefix": "141b488",
+    "fetchPerformed": false,
+    "productionActivationVerified": false,
+    "codeRead": [
+      "StationMultiplayer.cs",
+      "StationMultiplayerEndpoints.cs",
+      "StationMultiplayerStream.cs"
+    ],
+    "currentContract": "station-stream.v3 WSS / TSR3 offset stream with all-participant PAUSED/READY barrier",
+    "nativeMupenUDPBackendFound": false,
+    "limits": [
+      "Platform policy blob was absent in partial clone; no network fetch requested by this audit.",
+      "These facts describe available local code, not current production activation."
+    ]
+  },
+  "minimumImplementationComponents": [
+    "Mupen gameplay bridge providing real synchronized input/frame/state and pause acknowledgement",
+    "Launch/service ownership bound to the native emulator without starting a second gameplay engine",
+    "New exact engine/profile identity and hashes approved for both participants",
+    "Recovery preserving active roster, acknowledged epoch, waiting without game progression and human exit",
+    "Explicit validation with two phones and then supported 3/4-player games"
+  ],
+  "alternatives": {
+    "preserveStationTransport": "Adapt Mupen to the authenticated v3 transport and real frame/input/state barriers; keep current server transport but register new engine/profile hashes.",
+    "nativeMupenProtocol": "Add authenticated TCP/datagram adapter and matching server contract; current v3 offset stream is not a UDP endpoint."
+  },
+  "notApplied": [
+    "Touch-skin-only workaround",
+    "Simple Activity Intent replacement",
+    "Fixed fake READY/native status",
+    "Reusing paraLLEl identity for Mupen"
+  ],
+  "primaryReferences": [
+    "https://docs.libretro.com/development/retroarch/netplay/",
+    "https://github.com/mupen64plus/mupen64plus-core/blob/master/doc/emuwiki-api-doc/Mupen64Plus-v2.0-Netplay-API.mediawiki"
+  ],
+  "limits": [
+    "Analysis only; no adapter claimed compiled or installed.",
+    "R124 emulator/runtime/source identities remain unchanged.",
+    "No server change, deployment, automatic phone operation or gameplay test by this audit."
+  ]
+}
