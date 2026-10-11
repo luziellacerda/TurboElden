@@ -84,7 +84,7 @@
     "compiled": true,
     "signed": true,
     "installed": true,
-    "published": false,
+    "published": true,
     "promotedStable": false,
     "apk": "TurboStations-Premium-R124-20261011.apk",
     "apkSHA256": "aeeb2f8167a442db5a58b990cf6d45b613fab42b1e7a9bbc0bf3214b260420c4",
@@ -99,6 +99,8 @@
     "physicalVisualApproval": false,
     "thermalImprovementVerified": false,
     "authenticatedOpeningObserved": true,
-    "carouselTenSmallCellsPhysicallyObserved": true
+    "carouselTenSmallCellsPhysicallyObserved": true,
+    "sourceCommit": "08cf0947538da796a9534d211467ecfefb4884e8",
+    "sourceURL": "https://github.com/luziellacerda/TurboElden/commit/08cf0947538da796a9534d211467ecfefb4884e8"
   }
 }
