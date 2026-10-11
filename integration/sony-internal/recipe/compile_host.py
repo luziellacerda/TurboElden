@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
+import os
 import struct
 import subprocess
 import zipfile
@@ -55,7 +56,10 @@ def main():
     if sha(args.bridge_jar) != BRIDGE_JAR_SHA:
         raise ValueError("Exact R130 compile-only bridge classpath required")
     if args.out.exists():
-        raise ValueError("Do not overwrite a compiled owner")
+        empty_directories = all(path.is_dir() and path.name in ('classes', 'dex') and
+            not any(path.iterdir()) for path in args.out.iterdir())
+        if not empty_directories:
+            raise ValueError("Do not overwrite a compiled owner")
     assets = json.loads(args.assets_receipt.read_text(encoding="utf-8"))
     if assets.get("passed") is not True:
         raise ValueError("Prepared and pinned Sony assets required")
@@ -70,8 +74,8 @@ def main():
     pins = {name: sha(path) for name, path in sources.items()}
     classes = args.out/"classes"
     dex = args.out/"dex"
-    classes.mkdir(parents=True)
-    dex.mkdir()
+    classes.mkdir(parents=True, exist_ok=True)
+    dex.mkdir(exist_ok=True)
     # --release 8 exposes Java SE 8 boot APIs, including ClassLoader methods
     # absent from Android. Use the actual Android SDK as the bootstrap API;
     # Station's bridge contains only compile-time app classes, never boot APIs.
