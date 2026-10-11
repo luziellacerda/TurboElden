@@ -85,8 +85,8 @@
     "compiled": true,
     "signed": true,
     "installed": true,
-    "published": false,
-    "sourceCommitStatus": "awaiting-publication",
+    "published": true,
+    "sourceCommitStatus": "remote-verified",
     "javaSourceCount": 233,
     "sourceJavaComplete": true,
     "nativeSnapshotComplete": false,
@@ -137,6 +137,9 @@
       "Motorola Edge30"
     ],
     "installationReceipt": "versions/station-theme-room-download-r122-20261011/evidence/installation-motorola-r122.json",
-    "observationReceipt": "versions/station-theme-room-download-r122-20261011/evidence/post-install-observation-r122.json"
+    "observationReceipt": "versions/station-theme-room-download-r122-20261011/evidence/post-install-observation-r122.json",
+    "sourceCommit": "ea6b85f05f39231091417df9e267b04400cba559",
+    "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-theme-room-download-r122-20261011/versions/station-theme-room-download-r122-20261011",
+    "publicationReceipt": "versions/station-theme-room-download-r122-20261011/evidence/publication-r122.json"
   }
 }
