@@ -52,8 +52,13 @@ def load(path):
     return module
 
 def scoped_final_guard(receipt, identity, package):
-    """R133 promotions accept only the closed console overlay's final proof."""
+    """R133/R134 promotions require their explicit closed-scope final proof."""
     runtime = json.loads(Path(identity).read_text(encoding="utf-8"))
+    if runtime.get("revision") == "R134":
+        release = load(Path(__file__).with_name("compile_current.py"))
+        require(package.REPLACED == release.R134_REPLACED, "R134 assembler scope differs from reviewed release")
+        release.r134_final_guard(receipt, runtime)
+        return
     if runtime.get("revision") != "R133":
         return
     require(receipt.get("revision") == "R133" and

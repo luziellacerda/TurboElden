@@ -172,7 +172,7 @@ def local_preflight(context):
     """Verify the explicit current bytes/signature/entry and scoped source bindings."""
     current, apk, final, tools = context["current"], context["apk"], context["final"], context["tools"]
     require(apk.stat().st_size == current["bytes"] and release.sha(apk) == current["sha256"], "Actual installer differs from CURRENT")
-    if current["revision"] in ("R131", "R132", "R133"):
+    if current["revision"] in ("R131", "R132", "R133", "R134"):
         # Internal owners and subsequent scoped overlays require their actual
         # compilation/asset/source guards and exact reviewed assembly before
         # any phone operation, not merely a signed APK receipt.

@@ -1,0 +1,155 @@
+{
+  "allowedOwnerClassFamilies": [
+    "org.emulationstation.frontend.sony.Ps3Activity",
+    "org.emulationstation.frontend.sony.Ps4Activity"
+  ],
+  "approvedScope": [
+    "sony-settings-real-config-and-back-navigation"
+  ],
+  "baselineOwnerSourceSha256": {
+    "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Activity.java": "b1353b5530f4f5249a063b8fb30dccb34bccb68f117530baedbb1cbcf017983b",
+    "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java": "1401c1a71c926d373e77ddff96f943ef50f3831cfbb2b8fd810e93221693a1e0"
+  },
+  "donorApkSha256": "945f7ded35e551d638135a05140c32218eb38277d10eaf21e3f83087d71da112",
+  "donorRevision": "R133",
+  "donorSourceCommit": "5966a8ad23ae9040c570d359b999c8a31de904b4",
+  "hostDexPartition": "classes40.dex",
+  "newOwnerSourceSha256": {
+    "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java": "e880c20753cc8fe0fc794a133cd50f8cbae698a0cf13c7ac379374e709814547",
+    "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java": "12cbc937e0d2110e0fd67c690cc5420cb198a0e77e8090e47a7f25728d78e80d"
+  },
+  "preservation": {
+    "externalApplicationOrLibrarySettingsFallback": false,
+    "humanSavesFinishBeforeBack": true,
+    "nativeJniCoreAssetsNotChanged": true,
+    "noAutomaticDefaultRewrite": true,
+    "noExistingSourceSnapshotEdited": true,
+    "noGameSaveConfigMoveOrDelete": true,
+    "noNewAnimationLoopPollingTimerShader": true,
+    "ps3Ps4RemainOffline": true,
+    "transportOrAuthenticationChanged": false
+  },
+  "primarySourceCacheSha256": {
+    "aps3e-release-source-tree--app__src__main__java__aenu__aps3e__EmulatorSettings.java": "74c67695fcfadf80666478ba2eb2b3965b34710ae5e5ff28653c4b69f3f4fefc",
+    "r134-native--src__common__path_util.cpp": "5ca135d72c9a9187100f41577c3703ce2d2270a7772d547ce0908102503ec6ca",
+    "r134-native--src__core__emulator_settings.cpp": "eed1fc4a6999134f0bfe572ab2a3f369bdf984055aec9917fbeddb5c12901e41",
+    "r134-native--src__core__emulator_settings.h": "414fb7ecf71cf2d5d0c72db9e7874ccd755b68c7ddc67b39dd49f7da5dfc2a49",
+    "r134-settings--app__src__main__res__values__arrays.xml": "e5a5062b3ca3cc268ab13f28078750c173918254cc304a12f6e5c5abcbdee286",
+    "r134-settings--app__src__main__res__xml__emulator_settings.xml": "8b0846d48c355147cb36e9e28c4c95ab69d15fff1a588faf7bf8a564acba9495"
+  },
+  "ps3": {
+    "atomicYamlSaveAfterHumanEditOnly": true,
+    "categories": [
+      "Imagem",
+      "\u00c1udio",
+      "Processamento",
+      "Sistema"
+    ],
+    "displayedNativeFields": 18,
+    "editableNativeFields": 16,
+    "jniConfig": "aenu.emulator.Emulator.Config.openFile/load/save/closeText",
+    "nativeConfigurationRelativeToOwner": "config/config.yml",
+    "persistentBackVisible": true,
+    "readOnlyNativeFields": 2,
+    "rendererAndShaderModeReadOnly": true,
+    "settingsBackVisibleDuringInitialPreparation": true,
+    "shaderResourceEnumDiffersFromOfficialNativeDefaults": true,
+    "touchPreference": 1
+  },
+  "ps4": {
+    "atomicJsonSaveAfterHumanEditOnly": true,
+    "categories": [
+      "Imagem",
+      "Desempenho",
+      "Sistema",
+      "\u00c1udio"
+    ],
+    "defaultConfigurationFileCreatedOnOpeningSettings": false,
+    "displayedNativeFields": 11,
+    "documentedWriterClassAndMethod": "Lz93;->a(Path,ns2,Float)",
+    "editableNativeFields": 8,
+    "homeAndXdgDataBoundBeforeDlopen": true,
+    "inventedBackendOrDriverToggle": false,
+    "nativeConfigurationRelativeToFilesDir": "ps4/storage/.local/share/shadPS4/config.json",
+    "nativePathConsumer": "src/common/path_util.cpp:87-128; src/core/emulator_settings.cpp:359-384",
+    "nativePathSourceCommit": "be6bc2e9c60799e071dd2fafa6216e8d80ec619c",
+    "nativeReader": "EmulatorSettingsImpl::Load; per-group merge of JSON config",
+    "officialApkSha256": "4077b0d0b80e354c71eff1ce2c003f122449ac266eb27a6ac26744d3f9809a08",
+    "officialDexSha256": "0b33b62b7663370587fbcf1b14fdb54ba97990d9e7e205f50c8cbf976be56052",
+    "officialSettingsCatalogEntry": "runtime-settings/shadps4.json",
+    "officialSettingsCatalogSha256": "462a342d7f4ef0a6cd1102b3bc1fc0147f7853427a004b0da8da5f75f3f2151e",
+    "originalNativeArgvAndRunEnvironmentTextUnchanged": true,
+    "persistentBackVisible": true,
+    "readOnlyNativeFields": 3,
+    "selectedNativeFields": [
+      {
+        "documentedDefault": "Fit",
+        "kind": "ENUM",
+        "nativeKey": "GPU.display_mode"
+      },
+      {
+        "documentedDefault": false,
+        "kind": "BOOLEAN",
+        "nativeKey": "GPU.present_rb_swap"
+      },
+      {
+        "documentedDefault": false,
+        "kind": "BOOLEAN",
+        "nativeKey": "GPU.hdr_allowed"
+      },
+      {
+        "documentedDefault": false,
+        "kind": "BOOLEAN",
+        "nativeKey": "GPU.fsr_enabled"
+      },
+      {
+        "documentedDefault": true,
+        "kind": "BOOLEAN",
+        "nativeKey": "GPU.rcas_enabled"
+      },
+      {
+        "documentedDefault": "Mailbox",
+        "kind": "ENUM",
+        "nativeKey": "GPU.present_mode"
+      },
+      {
+        "documentedDefault": false,
+        "kind": "BOOLEAN",
+        "nativeKey": "General.big_core_affinity"
+      },
+      {
+        "documentedDefault": false,
+        "kind": "BOOLEAN",
+        "nativeKey": "Vulkan.pipeline_cache_enabled"
+      },
+      {
+        "documentedDefault": 60,
+        "kind": "INTEGER",
+        "nativeKey": "GPU.vblank_frequency"
+      },
+      {
+        "documentedDefault": 1,
+        "kind": "INTEGER",
+        "nativeKey": "General.console_language"
+      },
+      {
+        "documentedDefault": null,
+        "kind": "ENUM",
+        "nativeKey": "Audio.audio_backend"
+      }
+    ],
+    "touchPreference": 1,
+    "unknownJsonSectionsAndKeysPreserved": true,
+    "writerDerivesNativeSectionAndKeyFromPinnedCatalog": true
+  },
+  "revision": "R134",
+  "schema": "station.settings.refinement.sony-contract.v1",
+  "validation": {
+    "compiled": false,
+    "controllerGameplayOrThermalValidated": false,
+    "installed": false,
+    "physicalConfigurationConsumedByRealGameValidated": false,
+    "physicalSettingsNavigationValidated": false,
+    "staticSourceAndPrimaryContractChecked": true
+  }
+}
