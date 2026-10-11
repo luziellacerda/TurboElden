@@ -1,3 +1,17 @@
+# R117 instalada no Motorola — candidato atual de efeitos/servidor em 10/10/2026
+
+Pedido atual: conciliar os três últimos retornos reais do servidor, preservar a economia R116, antecipar a apresentação dos LEDs e criar opções gráficas. Fonte atual `versions/station-effects-server-r117-20261010`; leia README, ALTERACOES-DETALHADAS, SERVER-CROSSCHECK, STATUS e recibos R117. Branch `fix/station-effects-server-r117-20261010`. Não escolher fonte/APK pelo histórico abaixo nem pela data de uma pasta local.
+
+APK R117 SHA256 `fce3be2821abcb89da05b18370a36dadc0a78f1f5f8381ccbc8a0ba2c2645372`, 2.217.033.096 bytes. Java 230 fontes e duas bibliotecas UI recompiladas; 13.543 outras entradas byte idênticas à R116, incluindo runtime, controles, vídeos e capas. Mesma assinatura e alinhamento 16 KiB. Instalada diretamente no Motorola Edge30; SHA integral, UID e dados originais conferidos. Carrossel autenticado, aba EFEITOS, alternância Modo leve e fundo Ondas observados; céu e efeitos ativos originais restaurados. Samsung não recebeu R117 nesta entrega. Ainda não há qualificação visual completa, medida do primeiro LED, redução térmica ou gameplay físico R117.
+
+LED começa pelo primeiro pacote válido; a conclusão segue quatro linhas por quadro (até oito segundos no exemplo 960px/30fps). Shader/ganho/halo/rastro/velocidade preservados. Cache retido limitado a três campos/8 MiB, além dos alvos ativo/candidato. Opções persistentes desligam LEDs, vídeos, fundo, Lotties, efeitos de células e transições, conservando escolhas individuais. Vídeos desligados mantêm imagem/poster estático; nenhum decoder é iniciado nesse caminho. Céu/Ondas/Sem fundo selecionáveis; padrão preservado. Menus 30fps não limitam emuladores.
+
+Três retornos reais lidos: servidor141b488/5f9c019/6dbc9e2, catálogo33 e paginação v3. Cursores de pessoas/salas separados, recuo apenas de consultas transitórias e sinopses pelo itemId autenticado. Não substituir StationApi/fila/Activities por candidatos antigos nem fabricar motores para plataformas pendentes. Fila IO/decode única, prioridade visível, cache por revisão, preload limitado e vídeos locais R116 mantidos. Nenhum serviço Linux implantado/reiniciado.
+
+Publicar só fontes, receitas, manifestos e recibos agregados. Objetos/arrays privados, APKs, jogos, BIOS, licenças pessoais, capturas, credenciais e seriais ficam locais. Receita exige o APK R116 exato e inputs privados identificados por hash. Temporários em E:, montagem e final em G:. Chave local só pode ser usada se o certificado for idêntico. Não reinstalar para mero cadastro nem interromper jogo/download. R76/R95 em ACTIVE são canais históricos; currentCandidate é R117, sem promoção a estável.
+
+## Histórico R116
+
 # R116 instalada nos dois aparelhos — fonte atual para publicação em 10/10/2026
 
 Pedido atual: publicar esta versão no TurboElden com documentação detalhada. Fonte integrada em `versions/station-legacy-cover-diagnostics-r116-20261010`; ler `README.md`, `ALTERACOES-DETALHADAS.md`, `STATUS.json` e os recibos em `evidence/`. APK SHA256 `3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1`, 2.218.343.816 bytes, instalado e hash integral conferido no Motorola Edge30 e Samsung A56. Dados e instalação original preservados. R116 sucede R115, sobre a linha R99 restaurada; R100 continua rejeitada. Não usar o histórico abaixo para escolher APK/fonte atual.

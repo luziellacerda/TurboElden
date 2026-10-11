@@ -1,0 +1,38 @@
+{
+  "common": [
+    "--base",
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R116-20261010.apk",
+    "--work",
+    "E:\\ESTUDO APK\\work\\station-effects-server-r117-final-20261010",
+    "--output",
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R117-20261010.apk",
+    "--package-work",
+    "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\r117-final-build-temp",
+    "--jdk",
+    "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot\\bin",
+    "--android-jar",
+    "G:\\Android\\Sdk\\platforms\\android-34\\android.jar",
+    "--d8-jar",
+    "G:\\Android\\Sdk\\build-tools\\34.0.0\\lib\\d8.jar",
+    "--ndk",
+    "E:\\TurboEdenEngine\\android-ndk-r28c\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin"
+  ],
+  "packageOnly": [
+    "--zipalign",
+    "E:\\ESTUDO APK\\TurboRetroEmu-build\\android-build-tools\\35.0.0\\android-15\\zipalign.exe",
+    "--apksigner",
+    "E:\\ESTUDO APK\\TurboRetroEmu-build\\android-build-tools\\35.0.0\\android-15\\lib\\apksigner.jar",
+    "--keystore",
+    "C:\\Users\\Admin\\.android\\debug.keystore",
+    "--key-alias",
+    "androiddebugkey",
+    "--ks-pass-env",
+    "STATION_KS_PASS",
+    "--key-pass-env",
+    "STATION_KEY_PASS"
+  ],
+  "signingPasswordsIncluded": false,
+  "prepareCompileDoNotSign": true,
+  "requireFinalizedJavaAndNativeManifests": true,
+  "baseSHA256": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1"
+}

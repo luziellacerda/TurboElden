@@ -1,0 +1,18 @@
+{
+  "version": "R116-candidate",
+  "deviceModel": "Motorola Edge30",
+  "explicitReinstallationRequested": true,
+  "installMode": "adb install -r streamed",
+  "result": "Success",
+  "apkSHA256": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+  "installedAPKHashMatchesPackage": true,
+  "firstInstallTimeDevice": "2026-10-06 17:12:33",
+  "lastUpdateTimeDevice": "2026-10-10 20:02:32",
+  "existingDataDirectoryPreserved": true,
+  "uninstalled": false,
+  "dataCleared": false,
+  "extraAPKCopiedToSharedStorage": false,
+  "foregroundBeforeInstall": "ESActivity",
+  "launcherStart": "accepted",
+  "gameplayVerified": false
+}

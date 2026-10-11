@@ -1,0 +1,25 @@
+{
+  "version": "R116",
+  "repository": "https://github.com/luziellacerda/TurboElden",
+  "branch": "fix/station-cover-sequential-r116-20261010",
+  "sourceCommit": "cc8ab9371d878cff0be859edbc522fe290a9d2fa",
+  "sourceCommitURL": "https://github.com/luziellacerda/TurboElden/commit/cc8ab9371d878cff0be859edbc522fe290a9d2fa",
+  "remoteCommitConfirmed": "cc8ab9371d878cff0be859edbc522fe290a9d2fa",
+  "remoteCheckedAtUTC": "2026-10-10T23:31:29Z",
+  "apkSHA256": "3c5fb1cb84330b4cea635152e65b7498bf6baf15192371789945fcaf861226c1",
+  "containsAPK": false,
+  "containsMedia": false,
+  "containsPrivateLogs": false,
+  "javaSourceCount": 226,
+  "nativeSnapshotComplete": false,
+  "detailedChanges": "ALTERACOES-DETALHADAS.md",
+  "installedDevices": [
+    "Motorola Edge30",
+    "Samsung A56"
+  ],
+  "fullInstalledAPKHashVerifiedOnBoth": true,
+  "promotedStable": false,
+  "gameplayVerified": false,
+  "thermalImprovementMeasured": false,
+  "note": "This receipt records the executable-source publication commit; later documentation-only receipts do not change the APK."
+}

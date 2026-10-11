@@ -1,0 +1,35 @@
+package org.emulationstation.frontend.netplay;
+
+/** A public room locator, never an authorization token or emulator password. */
+final class StationInvitationCode {
+    final String instance, roomId, itemId;
+    final String shortCode;
+    private StationInvitationCode(String instance,String room,String item){this.instance=instance;roomId=room;itemId=item;shortCode="";}
+    private StationInvitationCode(String code){instance=roomId=itemId="";shortCode=code;}
+    static String display(String code){
+        if(code==null||!code.matches("[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}"))throw new IllegalArgumentException("O convite desta sala ainda não está disponível.");
+        return code.substring(0,4)+"-"+code.substring(4);
+    }
+    static String encode(String instance,String room,String item){
+        validate(instance,room,item);
+        return "TS1:"+instance+":"+room+":"+item;
+    }
+    static StationInvitationCode parse(String value){
+        if(value==null||value.length()>160)throw new IllegalArgumentException("Cole o código completo de uma sala TurboStations.");
+        String trimmed=value.trim();
+        if(!trimmed.startsWith("TS1:")){
+            String code=trimmed.toUpperCase(java.util.Locale.ROOT);
+            if(code.length()==9&&code.charAt(4)=='-')code=code.substring(0,4)+code.substring(5);
+            if(!code.matches("[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{8}"))throw new IllegalArgumentException("Digite os 8 caracteres do convite, por exemplo 7KPM-4XRT.");
+            return new StationInvitationCode(code);
+        }
+        String[] parts=trimmed.split(":",-1);
+        if(parts.length!=4||!"TS1".equals(parts[0]))throw new IllegalArgumentException("Este código não é uma sala TurboStations válida.");
+        validate(parts[1],parts[2],parts[3]);
+        return new StationInvitationCode(parts[1],parts[2],parts[3]);
+    }
+    private static void validate(String instance,String room,String item){
+        if(instance==null||!instance.matches("[0-9a-f]{32}")||room==null||!room.matches("[0-9a-f]{32}")||item==null||!item.matches("[A-Za-z0-9_-]{8,64}"))
+            throw new IllegalArgumentException("Código incompleto ou inválido. Copie novamente da sala.");
+    }
+}

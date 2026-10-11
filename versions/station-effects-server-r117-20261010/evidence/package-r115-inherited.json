@@ -1,0 +1,63 @@
+{
+  "version": "R115-candidate",
+  "sourceBaseVersion": "R114",
+  "baseAPK": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R114-20261010.apk",
+  "baseSHA256": "2c602194086dfb07146d6eb1db697b3e688d686c17610cc38b880982439a6fe3",
+  "apk": "G:\\BAKUP SISTEMA APP 03-10-2026\\apks-candidatos-visuais\\TurboStations-Premium-R115-20261010.apk",
+  "sha256": "290b9e237c8ad158aac443ce5c11959004f7a28ab4844c4c3453721a288f0dcc",
+  "bytes": 2218327432,
+  "certificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "changes": [
+    "classes28.dex",
+    "classes35.dex",
+    "lib/arm64-v8a/libstation_frontend.so",
+    "lib/arm64-v8a/libturbo_carousel.so"
+  ],
+  "allOtherEntriesByteIdentical": true,
+  "changedJavaFromR114": [
+    "client/src/java/org/emulationstation/frontend/station/ExistingCoverCache.java",
+    "client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+    "client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineCoverView.java"
+  ],
+  "javaSourceCount": 226,
+  "javaTests": [
+    "PASS 20 resource bundle marker checks",
+    "PASS 54 cover warm-start checks; ledger-symlink=unsupported; legacy-direct=executed; preindex4096Ms=2177"
+  ],
+  "nativeWarmPathTest": "PASS 26 native warm-cover checks",
+  "coverWarmup": {
+    "networkConcurrency": 1,
+    "maximumRemoteAttemptsPerLaunch": 64,
+    "wallBudgetSeconds": 20,
+    "persistedSuccessesAreNotRedownloaded": true
+  },
+  "warmRoots": [
+    "/data/data/org.turboramastation.frontend/no_backup/",
+    "/data/user/0/org.turboramastation.frontend/no_backup/"
+  ],
+  "publication": {
+    "privateFullMap": true,
+    "visibleWindow": 9,
+    "revealIntervalMs": 80,
+    "heroImmediate": true
+  },
+  "led": {
+    "baseCoverVisibleWhilePending": true,
+    "prewarmSameCarouselContext": true,
+    "incrementalRowsPerFrame": 4,
+    "atomicCommit": true,
+    "qualityChanged": false
+  },
+  "classes28DexSHA256": "283f1583f064c4e2058bada9a6bf9cc84a0bfb31b30d6b50043afcd0fe272961",
+  "classes35DexSHA256": "e89f74ece71570fb008a6f70e04db6979deea03ad22f9fa2ea309ebdd0e3128b",
+  "frontendSHA256": "3c9d6bfba6ef08ad4909c6e1338c7a2ccd5cf46f9bf0c9bf895910093d3c8b1e",
+  "carouselSHA256": "8b774382c71b18100fb2e70bd9d553307cabe615fcb6aaecc3047bb612d4b3a5",
+  "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "signatureV2V3Passed": true,
+  "zipAlignment16KiBPassed": true,
+  "installed": false,
+  "physicalVerified": false,
+  "utc": "2026-10-10T22:01:20.278202+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "nativeCacheResult": "PASS 818 executed native field-cache lifetime checks",
+  "shaderBytesUnchanged": {
+    "native/d0/premium-magazine-led-android.glsl": "8ec0c097d36cb5c82e4492d00335eda5fe59d2e3d205d10ef6a9845a9fb7ea61",
+    "native/d0/magazine_shader.h": "71dc1dd7e1392b3ce4b0132dd0024161431ca76de9559d116f73dd74311bb23a",
+    "java/netplay-src/org/emulationstation/frontend/netplay/StationCoverLightingShader.java": "2e63f83cb14f20ce07a3854ce17ca7328438dfabf76de87daaa342778dbdfa4b"
+  },
+  "oldGateExample": {
+    "height": 960,
+    "rowsPerMenuFrame": 4,
+    "menuFps": 30,
+    "fullFieldSeconds": 8
+  },
+  "newGate": "first successful parcel is displayed; zeros remain the exact base image",
+  "quotaRowsPerFrame": 4,
+  "retainedCacheBudgetBytes": 8388608,
+  "retainedCacheEntries": 3,
+  "budgetScope": "retained fields only; active/candidate targets still use their existing dimensions",
+  "physicalValidation": false,
+  "thermalClaim": false
+}
