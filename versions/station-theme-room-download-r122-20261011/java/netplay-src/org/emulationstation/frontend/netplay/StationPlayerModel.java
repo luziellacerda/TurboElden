@@ -1,0 +1,75 @@
+package org.emulationstation.frontend.netplay;
+
+import org.json.*;
+
+/** Only information actually published in the signed lobby snapshot. */
+final class StationPlayerModel {
+    final String id,name,status,roomItemId,inviteLabel,reason,joinRoomId,joinItemId;
+    final boolean present,self,available,canInvite,canShare,canJoin;
+    final JSONObject ownedRoom;
+    private StationPlayerModel(String id,String name,String status,String item,String label,String reason,
+            boolean present,boolean self,boolean available,boolean invite,boolean share,JSONObject room,
+            JSONObject target,boolean join){
+        this.id=id;this.name=name;this.status=status;roomItemId=item;inviteLabel=label;this.reason=reason;
+        this.present=present;this.self=self;this.available=available;canInvite=invite;canShare=share;ownedRoom=room;
+        joinRoomId=target==null?"":target.optString("roomId");
+        joinItemId=target==null?"":target.optString("itemId");canJoin=join;
+    }
+    static JSONObject peer(JSONObject snapshot,String id){
+        JSONArray all=snapshot==null?null:snapshot.optJSONArray("peers");
+        if(all!=null)for(int i=0;i<all.length();i++){JSONObject p=all.optJSONObject(i);if(p!=null&&id.equals(p.optString("peerId")))return p;}
+        return null;
+    }
+    static boolean member(JSONObject room,String id){
+        JSONArray members=room==null?null:room.optJSONArray("members");
+        if(members!=null)for(int i=0;i<members.length();i++)if(id.equals(members.optString(i)))return true;
+        return false;
+    }
+    static boolean shareable(JSONObject snapshot){
+        if(snapshot==null)return false;JSONObject room=snapshot.optJSONObject("room");
+        JSONArray members=room==null?null:room.optJSONArray("members");
+        if(room!=null&&"station-stream.v3".equals(room.optString("recoveryProtocol")))return false;
+        return room!=null&&snapshot.optString("selfId").equals(room.optString("hostId"))&&"waiting".equals(room.optString("state"))&&members!=null&&members.length()<2;
+    }
+    static boolean soloWaitingRoom(JSONObject snapshot){
+        JSONObject mine=snapshot==null?null:snapshot.optJSONObject("room");
+        JSONArray members=mine==null?null:mine.optJSONArray("members");
+        String self=snapshot==null?"":snapshot.optString("selfId");
+        return !self.isEmpty()&&mine!=null&&"waiting".equals(mine.optString("state"))&&
+            self.equals(mine.optString("hostId"))&&members!=null&&members.length()==1&&self.equals(members.optString(0));
+    }
+    static StationPlayerModel read(JSONObject snapshot,String id,String lastName,String selectedItem){
+        JSONObject p=peer(snapshot,id),mine=snapshot==null?null:snapshot.optJSONObject("room");
+        String name=p==null?lastName:p.optString("nickname","Jogador");
+        boolean self=snapshot!=null&&id.equals(snapshot.optString("selfId"));
+        boolean online=p!=null&&"online".equals(p.optString("status"));
+        boolean inRoom=p!=null&&"in-room".equals(p.optString("status"));
+        String status=p==null?"Presença não confirmada":self?(inRoom?"Você está em uma sala":"Você está online"):online?"Disponível para jogar":inRoom?"Em uma sala":"Status não informado";
+        String item="";JSONObject target=null;
+        if(member(mine,id))item=mine.optString("itemId");
+        else if(snapshot!=null){JSONArray rs=snapshot.optJSONArray("rooms");if(rs!=null)for(int i=0;i<rs.length();i++){JSONObject r=rs.optJSONObject(i);if(r!=null&&(id.equals(r.optString("hostId"))||member(r,id))){item=r.optString("itemId");target=r;break;}}}
+        boolean publicRoom=target!=null&&target.optString("roomId").matches("[0-9a-f]{32}")&&
+            target.optString("itemId").matches("[A-Za-z0-9_-]{8,64}");
+        boolean join=publicRoom&&p!=null&&!self&&inRoom&&"waiting".equals(target.optString("state"))&&
+            target.optInt("players",0)==1&&target.optInt("maximumPlayers",0)==2&&
+            (mine==null||soloWaitingRoom(snapshot));
+        if(!publicRoom)target=null;
+        if(target!=null&&"station-stream.v3".equals(target.optString("recoveryProtocol")))join=p!=null&&!self&&"waiting".equals(target.optString("state"))&&target.optInt("players")<target.optInt("capacity")&&(mine==null||soloWaitingRoom(snapshot));
+        boolean share=shareable(snapshot),invite=false;
+        String label=mine==null?"Criar sala e convidar":"Enviar convite",reason;
+        if(p==null)reason="Este jogador não está na página atual. Volte à lista para atualizar a presença.";
+        else if(self)reason="Seu perfil na comunidade. Compartilhe o código da sua sala para chamar alguém.";
+        else if(join)reason=mine==null?"Entre na sala deste jogador. Os dois precisam da mesma edição instalada.":"Você está sozinho na sua sala. Entre na sala deste jogador para jogar junto.";
+        else if(member(mine,id))reason="Vocês já estão na mesma sala. Marque Estou pronto para confirmar sua participação.";
+        else if(target!=null&&mine!=null)reason="Saia da sala atual antes de entrar na sala deste jogador.";
+        else if(target!=null)reason="Esta sala está cheia ou a partida já está em preparação.";
+        else if(!online)reason=inRoom?"Este jogador já está em uma sala.":"Aguarde a confirmação de disponibilidade deste jogador.";
+        else if(mine==null){invite=selectedItem!=null&&!selectedItem.isEmpty();reason=invite?"Cria uma sala do jogo selecionado e envia o convite para este jogador.":"Abra um jogo e escolha Jogar online para criar a sala.";}
+        else if(!snapshot.optString("selfId").equals(mine.optString("hostId")))reason="Somente quem criou sua sala pode enviar convites.";
+        else if(!"waiting".equals(mine.optString("state")))reason="A partida já está em preparação. Aguarde para convidar outro jogador.";
+        else if(!share)reason="Sua sala já está completa.";
+        else {invite=true;reason="O convite aparece no aplicativo do jogador e expira em 60 segundos.";}
+        if(snapshot!=null&&snapshot.optInt("multiplayerVersion")==3){invite=false;share=false;if(target==null&&!self&&!member(mine,id))reason="Converse com este jogador e combine a entrada pela lista de salas.";}
+        return new StationPlayerModel(id,name,status,item,label,reason,p!=null,self,online,invite,share,mine,target,join);
+    }
+}

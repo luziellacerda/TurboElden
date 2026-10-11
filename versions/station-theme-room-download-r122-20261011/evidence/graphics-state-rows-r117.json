@@ -1,0 +1,20 @@
+{
+  "version": "R117",
+  "passed": true,
+  "utc": "2026-10-11T00:49:26.596083+00:00",
+  "preferences": "PASS 51 graphics state checks",
+  "javaRows": "PASS 7978753 executed Java progressive-field row checks",
+  "nativeRows": "PASS 2659588 executed native progressive-field row checks",
+  "compiledJarSHA256": {
+    "client.jar": "a216c9ae677144bc8217dc7f210611f4663b344a755ae1e98feb1aff27692af8",
+    "rooms.jar": "fec5e0e5259d0b892daec043c2766f14183f27adc9cbd3e8a0e7d452139c2b4a"
+  },
+  "sourceSHA256": {
+    "tests\\StationGraphicsPreferencesTest.java": "0846c535e804899d32f3f50535cb02b93eed625118568581b771fbee24168364",
+    "tests\\StationMagazineRowsTest.java": "90950f6acbbf8b4c7a75b8ef41e2dd471b7e76e226f4f0d94dd588c3ae3441ad",
+    "tests\\magazine_rows_test.cpp": "a9529c819a2fc6dd9a3aac2875d03b5933817f57a2cebf786c9fe5e5ec359b9e"
+  },
+  "scope": "host state/row planners using final compiled Java; no Android visual/thermal/gameplay proof",
+  "physicalValidation": false,
+  "thermalClaim": false
+}

@@ -1,0 +1,27 @@
+{
+  "version": "R117",
+  "utc": "2026-10-11T01:04:01.220463+00:00",
+  "repository": "https://github.com/luziellacerda/TurboElden",
+  "branch": "fix/station-effects-server-r117-20261010",
+  "sourceCommit": "129ee9db892a327f720df8ae4f8e8a5ffab3f7ee",
+  "sourceCommitRemoteVerified": true,
+  "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-effects-server-r117-20261010/versions/station-effects-server-r117-20261010",
+  "apkSHA256": "fce3be2821abcb89da05b18370a36dadc0a78f1f5f8381ccbc8a0ba2c2645372",
+  "installedDevices": [
+    "Motorola Edge30"
+  ],
+  "installedAPKHashVerified": true,
+  "publicationScope": [
+    "R117 public sources",
+    "hash manifests",
+    "build/test/install recipes",
+    "aggregate evidence",
+    "current version pointers"
+  ],
+  "apkMediaPrivateObjectsSecretsPublished": false,
+  "serverDeployed": false,
+  "promotedStable": false,
+  "thermalQualified": false,
+  "gameplayQualified": false,
+  "graphicsBasicSmokeObserved": true
+}

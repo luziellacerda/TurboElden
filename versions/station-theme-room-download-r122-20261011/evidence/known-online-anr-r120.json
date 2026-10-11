@@ -1,0 +1,18 @@
+{
+  "kind": "physical-Android-ANR",
+  "version": "R120",
+  "activity": "org.emulationstation.frontend.netplay.StationRoomsActivity",
+  "rootCauseConfirmed": false,
+  "reason": "Input dispatch timeout MotionEvent",
+  "gpuWaitUnderReview": true,
+  "mainThreadFrames": [
+    "HardwareRenderer.nSyncAndDrawFrame",
+    "ThreadedRenderer.draw",
+    "ViewRootImpl.performDraw"
+  ],
+  "personalLogsPublished": false,
+  "reproducedControlled": false,
+  "timeLocal": "2026-10-10 23:57:32",
+  "waitMilliseconds": 5002,
+  "rawEvidenceLocalOnly": true
+}

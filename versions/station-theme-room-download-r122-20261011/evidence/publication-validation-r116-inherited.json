@@ -1,0 +1,30 @@
+{
+  "version": "R116",
+  "scope": "Staged publication files only; game/runtime tests were not repeated",
+  "selectedFilesCheckedExcludingThisReceipt": 549,
+  "selectedSourceBytesChecked": 2781410,
+  "allStagedFilesAreText": true,
+  "preservedLegacyEncodedTextFiles": [
+    "versions/station-legacy-cover-diagnostics-r116-20261010/assets/station-online/licenses/fbneo.txt"
+  ],
+  "allStagedJSONParsed": true,
+  "privateDeviceIdentifiersFound": false,
+  "highConfidenceSecretPatternsFound": false,
+  "forbiddenAssetsOrGeneratedFilesFound": false,
+  "javaManifestCount": 226,
+  "javaStagedBytesMatchBuildManifest": true,
+  "javaChangedFromR115": [
+    "client/src/java/org/emulationstation/frontend/station/ExistingCoverCache.java",
+    "client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+    "client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomArtwork.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "baselineR115ManifestSHA256": "dc9e59a18f46e211cd00456f32ea75079a5ad68af11f9e9767ecde95277f57c1",
+  "buildRecipeSyntaxValid": true,
+  "buildRecipeR115SourceDirectoryDependencyRemoved": true,
+  "privateBaseAPKAndSigningToolsStillRequired": true,
+  "nativeSnapshotComplete": false
+}

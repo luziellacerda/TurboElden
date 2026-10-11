@@ -1,0 +1,29 @@
+{
+  "version": "R122",
+  "baseVersion": "R121",
+  "javaSources": 233,
+  "nativeInputs": 123,
+  "changedJava": [
+    "client/src/java/org/emulationstation/frontend/auth/LoginActivity.java",
+    "client/src/java/org/emulationstation/frontend/station/StationComponentFactory.java",
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadUi.java",
+    "client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "client/src/java/org/emulationstation/frontend/station/StationWaveBackground.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "changedNative": [
+    "d0/native_settings.h",
+    "d0/native_space.h"
+  ],
+  "addedJava": [
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadUi.java"
+  ],
+  "javaManifestSHA256": "72e3293ca816a4b1cf2b5d4dd2c76f6a67e65ccf6aced167fb7180b7359da4a5",
+  "nativeManifestSHA256": "4b4ab63b76ec4e54aa9d9bbbcaa773f0bb4bc0cf75fb498199afdbeb8c269097",
+  "allOtherExistingJavaByteIdentical": true,
+  "allOtherNativeInputsByteIdentical": true,
+  "originalFactoryDelegationPreserved": true,
+  "runtimeAndEngineChanges": false,
+  "sourcePublicationContainsPrivateInputs": false
+}

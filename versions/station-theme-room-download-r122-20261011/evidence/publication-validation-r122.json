@@ -1,0 +1,81 @@
+{
+  "version": "R122",
+  "utc": "2026-10-11T03:48:01.412901+00:00",
+  "phase": "pre-stage-public-candidate-and-compile-audit",
+  "passed": true,
+  "candidateSnapshotCount": 735,
+  "trackedSnapshotCount": 0,
+  "candidateInventorySHA256": "47f2ea07fed957f7b21f8af19a2324f5fd57a82a2c7c9047de1ba129211151f7",
+  "method": "git ls-files --others --exclude-standard -z and tracked inventory; SHA256 over raw local/compiled bytes; no stage or Git mutation",
+  "java": {
+    "sources": 233,
+    "manifestSHA256": "72e3293ca816a4b1cf2b5d4dd2c76f6a67e65ccf6aced167fb7180b7359da4a5",
+    "localMatchesManifest": true,
+    "compiledAliasesByteIdentical": true,
+    "allArePublicCandidates": true,
+    "sourcesContainingCRLF": 36
+  },
+  "native": {
+    "manifestEntries": 123,
+    "manifestSHA256": "4b4ab63b76ec4e54aa9d9bbbcaa773f0bb4bc0cf75fb498199afdbeb8c269097",
+    "publicManifestEntries": 78,
+    "privateIgnoredManifestEntries": 45,
+    "publicD1": [
+      "d1/native_pause_menu.h"
+    ],
+    "privateInputsIgnored": true,
+    "allCompileStagingSHA256Match": true,
+    "allSelectedLocalInputSHA256Match": true,
+    "publicSourcesContainingCRLF": 42,
+    "originDoesNotDependOnRemovedR121TemporaryBuild": true
+  },
+  "frontend": {
+    "sourceCount": 12,
+    "sourcesMatchCompileReceipt": true,
+    "compiledLibraryPreservedSHA256": "a724caa8ac7c9422f494c1be82c95c500adc5730f8f17e05d49829bfc14761d6"
+  },
+  "receipts": {
+    "publicCompileReceiptByteIdentical": true,
+    "compileReceiptSHA256": "35393fdbb8fdbb1343337eb91a310166a8d1365196b2e6f26ac03f36ef8574ec",
+    "recipeSHA256": "6a090f1f732a4c148c49ff21ab956e096e99e7a557f867d07f487a1640d0bcf1",
+    "compiledPayloadSHA256Verified": true,
+    "compileInputsMatchFrozenManifests": true,
+    "manifestPreservedSHA256": "c4e9a6d69497bb928f53b35b49bef86d1b57a0b2b0bd5d0aa1953cfd5d9752a4",
+    "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+    "packageAndApkNotRehashedByThisAudit": true
+  },
+  "publication": {
+    "allCandidateAttributesTextUnset": true,
+    "noGitFilterOrWorkingTreeEncoding": true,
+    "CRLFBytesRetainedByGitAttributes": true,
+    "forbiddenBinaryCandidates": 0,
+    "privateInputsIgnored": true,
+    "binaryAndLongBearerPrivateKeyScanFlags": [],
+    "JSONSensitiveFieldScanFlags": 0,
+    "deviceSerialOrSessionValuesNotFoundInJsonFields": true,
+    "assetScope": "Text-only policies, emulator autoconfig and licenses; no graphic media, ROM, BIOS, APK, DEX or native binaries",
+    "textEncodingExceptions": [
+      {
+        "path": "assets/station-online/licenses/fbneo.txt",
+        "encoding": "cp1252",
+        "exactR121Bytes": true,
+        "sha256": "bb2369f1b75f42242968a78191b47ee90f85682224d3ad1ef63044e244b3e202",
+        "binary": false
+      }
+    ],
+    "indexUnchanged": true,
+    "indexSHA256Before": "b3b369ecd11951aa80dbc9e86c3ed76e403da5feebd8c83d1acc2c50eb1e584c",
+    "indexSHA256After": "b3b369ecd11951aa80dbc9e86c3ed76e403da5feebd8c83d1acc2c50eb1e584c",
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "limits": [
+    "Pre-stage audit only; raw index blobs must be checked after root stages the final snapshot.",
+    "Status, README, installation wording and physical behavior are outside this audit.",
+    "Secret and personal-data checks are heuristics; no private logs or device operations were used.",
+    "The APK is not rehashed here; compiled payloads and compile inputs were rehashed directly.",
+    "Inventory excludes this receipt and may grow while root adds public documentation and installation receipts."
+  ],
+  "errors": []
+}

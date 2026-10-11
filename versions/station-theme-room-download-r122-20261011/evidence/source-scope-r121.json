@@ -1,0 +1,23 @@
+{
+  "version": "R121",
+  "javaSources": 232,
+  "nativeInputs": 123,
+  "changedJava": [
+    "netplay-src/org/emulationstation/frontend/netplay/StationCoverLayout.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationCreateGameCard.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationExitPanel.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationFlowPanel.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineCoverView.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java"
+  ],
+  "changedNative": [
+    "d1/native_pause_menu.h"
+  ],
+  "javaManifestSHA256": "35ba233c151b327489f730a5bd9fcff4098dd54a48f40287f9197313079ca10c",
+  "nativeManifestSHA256": "bec43d6506abca9553791cbcb31fcdd6a2aa672392cefbbac2c417d7e6ba1137",
+  "runtimeAndEngineChanges": false,
+  "sourcePublicationContainsPrivateInputs": false,
+  "retroActivityOnlyConfirmPresentationChanged": true,
+  "allOtherJavaByteIdentical": true
+}

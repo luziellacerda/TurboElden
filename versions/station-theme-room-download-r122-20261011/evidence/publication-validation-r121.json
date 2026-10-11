@@ -1,0 +1,72 @@
+{
+  "version": "R121",
+  "utc": "2026-10-11T03:25:07.014352+00:00",
+  "phase": "pre-stage-public-candidate-audit",
+  "passed": true,
+  "candidateSnapshotCount": 716,
+  "candidateInventorySHA256": "cb6127b5e2cea54d049334c96a87061b8006969bb2718d92fa28119891b49282",
+  "method": "git ls-files --others --exclude-standard -z; SHA-256 over raw file bytes; no stage or Git mutation",
+  "java": {
+    "sources": 232,
+    "manifestSHA256": "35ba233c151b327489f730a5bd9fcff4098dd54a48f40287f9197313079ca10c",
+    "localMatchesManifest": true,
+    "compiledAliasesByteIdentical": true,
+    "allArePublicCandidates": true,
+    "sourcesContainingCRLF": 35
+  },
+  "native": {
+    "manifestEntries": 123,
+    "manifestSHA256": "bec43d6506abca9553791cbcb31fcdd6a2aa672392cefbbac2c417d7e6ba1137",
+    "publicManifestEntries": 78,
+    "privateIgnoredManifestEntries": 45,
+    "publicD1": [
+      "d1/native_pause_menu.h"
+    ],
+    "privateRestoredInputsRetainedLocally": true,
+    "allCompileStagingSHA256Match": true,
+    "allSelectedLocalInputSHA256Match": true,
+    "publicSourcesContainingCRLF": 42
+  },
+  "frontend": {
+    "sourceCount": 12,
+    "sourcesMatchCompileReceipt": true
+  },
+  "receipts": {
+    "publicCompileReceiptByteIdentical": true,
+    "compileReceiptSHA256": "c1f815e547dbbd6db0b5bb3532f241d6aa8e8d11af6d9b48a295efcbaddaa90c",
+    "compiledPayloadSHA256Verified": true,
+    "packageSHA256": "eadb83cc2b797eed7d6c3cbdcae09fae7fdfbff0004c3b9db791aaadf68113b0",
+    "packageChangedEntries": [
+      "classes35.dex",
+      "lib/arm64-v8a/libturbo_carousel.so"
+    ],
+    "otherEntriesPreserved": 13545,
+    "packageClaimsAllOtherEntriesByteIdentical": true,
+    "apkRehashedByThisAudit": false
+  },
+  "publication": {
+    "allCandidateAttributesTextUnset": true,
+    "noGitFilterOrWorkingTreeEncoding": true,
+    "CRLFBytesRetainedByGitAttributes": true,
+    "forbiddenBinaryCandidates": 0,
+    "privateInputsIgnored": true,
+    "binaryAndLongBearerPrivateKeyScanFlags": [],
+    "JSONSensitiveFieldScanFlags": 0,
+    "deviceSerialOrSessionValuesNotFoundInJsonFields": true,
+    "assetScope": "Text-only policies, emulator autoconfig and licenses; no graphic media, ROM, BIOS, APK, DEX or native binaries",
+    "indexUnchanged": true,
+    "indexSHA256Before": "5f2d97584abe82c6e451f1aa2af3756c1240621a1a4374f9668eed68de09fa9e",
+    "indexSHA256After": "5f2d97584abe82c6e451f1aa2af3756c1240621a1a4374f9668eed68de09fa9e",
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "limits": [
+    "This is a pre-stage candidate audit; root must compare raw index blobs after staging.",
+    "Status/README/install wording is intentionally not reviewed while root updates it.",
+    "Credential checks are heuristic; no raw private logs or device operations were used.",
+    "The final 2.217 GB APK was not rehashed here; its exact compile/package receipt and payload hashes were checked.",
+    "Candidate inventory does not include this receipt and may grow while root updates public documentation."
+  ],
+  "errors": []
+}

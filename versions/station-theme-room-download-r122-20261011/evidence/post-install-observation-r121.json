@@ -1,0 +1,19 @@
+{
+  "version": "R121",
+  "device": "Motorola Edge30",
+  "installedHashMatches": true,
+  "observedScreen": "Sua sala",
+  "foregroundActivity": "StationRoomsActivity",
+  "authenticatedFrontendObserved": true,
+  "gameCoverAndRoomRosterVisible": true,
+  "currentProcessFatalObservedInCapturedWindow": false,
+  "fullRoomWorkflowValidated": false,
+  "onlineANRResolvedPhysically": false,
+  "physicalGameplayValidated": false,
+  "thermalImprovementVerified": false,
+  "screenshotsAndRawLogsPrivate": true,
+  "limitations": [
+    "Read-only observation of an existing room; no start or gameplay test.",
+    "Absence of a fatal line in this window does not prove ANR resolution."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "R120",
+  "kind": "read-only-directory-check-not-gameplay",
+  "deviceModel": "Motorola Edge30",
+  "directory": "/storage/emulated/0/EmulationStation/.emulationstation/cores",
+  "exists": false,
+  "observedResponse": "No such file or directory",
+  "standaloneFallbackCoreAvailabilityConfirmed": false,
+  "doesNotInvalidateBuiltInDedicatedHooks": true,
+  "containsDeviceSerialOrPersonalData": false
+}

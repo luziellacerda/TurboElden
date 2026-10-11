@@ -1,0 +1,89 @@
+{
+  "version": "R122",
+  "utc": "2026-10-11T03:55:21.630734+00:00",
+  "phase": "final-raw-index-blobs-and-compile-input-audit",
+  "passed": true,
+  "method": "git diff --cached/ls-files --stage and raw git cat-file --batch; SHA256 over raw staged/compiled bytes; no Git mutation, conversion or checkout",
+  "stagedCount": 740,
+  "snapshotStagedCount": 738,
+  "rootStagedPaths": [
+    "AGENTS.md",
+    "release-channels/ACTIVE.json"
+  ],
+  "stagedInventorySHA256": "04abd260d518712fba370c8d146685fc61bac2fec4c954ef79c0257f7e7c7d4c",
+  "java": {
+    "sources": 233,
+    "rawIndexMatchesFrozenManifest": true,
+    "compiledAliasesByteIdentical": true,
+    "CRLFSourceCount": 36,
+    "manifestSHA256": "72e3293ca816a4b1cf2b5d4dd2c76f6a67e65ccf6aced167fb7180b7359da4a5"
+  },
+  "native": {
+    "publicSources": 78,
+    "privateIgnoredInputs": 45,
+    "rawIndexAndCompiledInputsMatchFrozenManifest": true,
+    "CRLFSourceCount": 42,
+    "manifestSHA256": "4b4ab63b76ec4e54aa9d9bbbcaa773f0bb4bc0cf75fb498199afdbeb8c269097"
+  },
+  "frontend": {
+    "compiledInputs": 12,
+    "publicAuxiliaries": [
+      "build_frontend.py",
+      "tests/bridge_header_c_test.c",
+      "tests/profile_name_test.cpp",
+      "tests/warm_cover_test.cpp"
+    ],
+    "auxiliariesExactR121Bytes": true,
+    "rawIndexMatchesCompileReceipt": true,
+    "compiledLibraryPreservedSHA256": "a724caa8ac7c9422f494c1be82c95c500adc5730f8f17e05d49829bfc14761d6"
+  },
+  "receipts": {
+    "recipeSHA256": "6a090f1f732a4c148c49ff21ab956e096e99e7a557f867d07f487a1640d0bcf1",
+    "compileReceiptSHA256": "35393fdbb8fdbb1343337eb91a310166a8d1365196b2e6f26ac03f36ef8574ec",
+    "compileReceiptByteIdentical": true,
+    "payloadHashesReverified": true,
+    "manifestPreservedSHA256": "c4e9a6d69497bb928f53b35b49bef86d1b57a0b2b0bd5d0aa1953cfd5d9752a4",
+    "runtimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc"
+  },
+  "publication": {
+    "allSnapshotRawIndexEqualsLocalBytes": true,
+    "snapshotCachedGitTextUnsetNoFilters": true,
+    "snapshotCRLFBytesRetained": true,
+    "rootMetadataLineEndingNormalization": [
+      {
+        "path": "AGENTS.md",
+        "indexCRLFCount": 0,
+        "localCRLFCount": 1220,
+        "onlyCRLFToLF": true
+      },
+      {
+        "path": "release-channels/ACTIVE.json",
+        "indexCRLFCount": 0,
+        "localCRLFCount": 142,
+        "onlyCRLFToLF": true
+      }
+    ],
+    "forbiddenBinaryOrSensitiveFlags": [],
+    "textEncodingExceptions": [
+      {
+        "path": "versions/station-theme-room-download-r122-20261011/assets/station-online/licenses/fbneo.txt",
+        "encoding": "cp1252",
+        "exactR121Bytes": true
+      }
+    ],
+    "R123Excluded": true,
+    "indexUnchanged": true,
+    "indexSHA256Before": "0b633adb6612bb67446327c56db26ac0f4396bb07f9e368285a036d1c0a153b0",
+    "indexSHA256After": "0b633adb6612bb67446327c56db26ac0f4396bb07f9e368285a036d1c0a153b0",
+    "stagedByThisAudit": false,
+    "committed": false,
+    "pushed": false
+  },
+  "preStageReceiptSHA256": "4814c5eae92fcf02135f037a7cba5be00708b7e4dd8c3c5e1e725ce97f22aa49",
+  "limits": [
+    "Secret and personal-data detection is heuristic; no private logs were read.",
+    "APK and physical/visual/thermal/gameplay behavior are not validated here; compiled payloads were rehashed.",
+    "This audit receipt is written after the audited index snapshot and is not staged by this process."
+  ],
+  "errors": []
+}

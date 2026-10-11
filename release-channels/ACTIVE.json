@@ -76,18 +76,18 @@
     }
   },
   "currentCandidate": {
-    "version": "R121",
-    "branch": "fix/station-online-room-gpu-reuse-r121-20261011",
-    "sourceDirectory": "versions/station-online-room-gpu-reuse-r121-20261011",
-    "apk": "TurboStations-Premium-R121-20261011.apk",
-    "apkSHA256": "eadb83cc2b797eed7d6c3cbdcae09fae7fdfbff0004c3b9db791aaadf68113b0",
-    "apkBytes": 2217065864,
+    "version": "R122",
+    "branch": "fix/station-theme-room-download-r122-20261011",
+    "sourceDirectory": "versions/station-theme-room-download-r122-20261011",
+    "apk": "TurboStations-Premium-R122-20261011.apk",
+    "apkSHA256": "dc36a8f978aaab9fef507acd2a59281aa52a4827914c2d8d10b93b4b56cfe339",
+    "apkBytes": 2217082248,
     "compiled": true,
     "signed": true,
     "installed": true,
-    "published": true,
-    "sourceCommitStatus": "remote-verified",
-    "javaSourceCount": 232,
+    "published": false,
+    "sourceCommitStatus": "awaiting-publication",
+    "javaSourceCount": 233,
     "sourceJavaComplete": true,
     "nativeSnapshotComplete": false,
     "nativePrivateInputsHashChecked": true,
@@ -116,18 +116,12 @@
     "switchEngineChanged": false,
     "switchLaunchPackageCorrected": true,
     "dolphinTransientControllerOverlayAdapter": true,
-    "installedDevices": [
-      "Motorola Edge30"
-    ],
-    "installedAPKHashMatchesPackage": true,
-    "dataPreserved": true,
     "authenticatedFrontendObserved": true,
-    "status": "R121 installed/hash/data verified on Motorola; physical room workflow and prolonged stability unverified",
-    "detailedChanges": "versions/station-online-room-gpu-reuse-r121-20261011/ALTERACOES-DETALHADAS.md",
+    "status": "installed-awaiting-physical-validation",
+    "detailedChanges": "versions/station-theme-room-download-r122-20261011/ALTERACOES-DETALHADAS.md",
     "launchAudit": "versions/station-game-menu-controller-audit-r120-20261010/LAUNCH-AUDIT-R120.md",
     "controllerAudit": "versions/station-game-menu-controller-audit-r120-20261010/REVIEW-CONTROLLER-VISIBILITY-R120.md",
-    "packageReceipt": "versions/station-online-room-gpu-reuse-r121-20261011/evidence/package-r121.json",
-    "installationReceipt": "versions/station-online-room-gpu-reuse-r121-20261011/evidence/installation-motorola-r121.json",
+    "packageReceipt": "versions/station-theme-room-download-r122-20261011/evidence/package-r122.json",
     "onlineRoomANRReported": false,
     "onlineRoomANRReviewPending": false,
     "baselineOnlineRoomANRCaptured": true,
@@ -138,8 +132,11 @@
     "exitMenusUniversal": false,
     "flowReview": "versions/station-online-room-gpu-reuse-r121-20261011/REVIEW-ONLINE-FLOW-EXIT-R121.md",
     "roomScreenObserved": true,
-    "sourceCommit": "0ef1513e43f6918956e3e95c674a35b3684504f9",
-    "sourceUrl": "https://github.com/luziellacerda/TurboElden/tree/fix/station-online-room-gpu-reuse-r121-20261011/versions/station-online-room-gpu-reuse-r121-20261011",
-    "publicationReceipt": "versions/station-online-room-gpu-reuse-r121-20261011/evidence/publication-r121.json"
+    "fullRoomWorkflowValidated": false,
+    "installedDevices": [
+      "Motorola Edge30"
+    ],
+    "installationReceipt": "versions/station-theme-room-download-r122-20261011/evidence/installation-motorola-r122.json",
+    "observationReceipt": "versions/station-theme-room-download-r122-20261011/evidence/post-install-observation-r122.json"
   }
 }

@@ -1,3 +1,9 @@
+# R122 — tema Ondas, salas e downloads em 11/10/2026
+
+Fonte atual `versions/station-theme-room-download-r122-20261011`, branch `fix/station-theme-room-download-r122-20261011`, base R121/0ef1513. Instalada no Motorola, com SHA integral e dados preservados. Ler README/ALTERACOES/STATUS/recibos R122. Avisos e central, posição de nickname/ações e cor Ondas apenas; preservar lifecycle GPU R121, LEDs, economia/cache/preload/vídeos/30FPS, emuladores/controle/runtime81b3, autenticação/protocolo/slots/transporte/downloads. Factory original delegada mantida; observador de apresentação sem polling. Nenhum servidor. Não promover estável nem alegar ausência ANR/gameplay/thermal. Fontes públicas e recibos agregados; APK, mídia, chaves, seriais e logs pessoais locais. E: compile, G: final; mesma assinatura, preservar dados, não interromper jogo/download.
+
+## Histórico R121
+
 # R121 — salas/capas/saídas de jogos em 11/10/2026
 
 Fonte atual `versions/station-online-room-gpu-reuse-r121-20261011`, branch `fix/station-online-room-gpu-reuse-r121-20261011`, base final R120/e56ae2d. Instalada no Motorola Edge30; conferência física do fluxo completo ainda pendente. APK SHA256 `eadb83cc2b797eed7d6c3cbdcae09fae7fdfbff0004c3b9db791aaadf68113b0`, 2217065864 bytes; assinatura e alinhamento originais. Ler README/STATUS/ALTERACOES, REVIEW-ONLINE-FLOW-EXIT, REVIEW-ROOM-GPU e recibos R121. Não usar recibos herdados como validação desta revisão. Sem promoção estável.
