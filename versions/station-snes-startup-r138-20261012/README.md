@@ -17,7 +17,7 @@ No moto g52, o core instalado falhou com as opções originais nos dois jogos. T
 
 ## Reprodução e instalação
 
-Instalado no moto g52 em 12/10/2026, por atualização: hash integral do APK, UID e dados preservados, tela inicial observada. Ver [recibo de instalação](evidence/instalacao-moto-g52.json). Edge 30 e A56 permanecem na última R135 conferida; atualizar todos os participantes antes de repetir partidas R138.
+Instalado no moto g52 em 12/10/2026, por atualização: hash integral do APK, UID e dados preservados, tela inicial observada. Ver [recibo de instalação](evidence/instalacao-moto-g52.json). Edge 30 também atualizado para R138, com hash/UID/dados preservados; ver [recibo](evidence/instalacao-edge30.json). Samsung A56 permanece na última R135 conferida; atualizar todos os participantes antes de repetir partidas R138.
 
 Usar [as receitas R138](../../integration/online-snes-startup-r138/recipe/): reconstruir a base correspondente de SHA pinado, aplicar o patch de lifecycle e montar `package_r138.py` com o donor R137 e o runtime compilado. A receita preserva o manifesto integral de entradas para assinatura/verificação independente. Alinhar e assinar com a chave original; conferir novamente todos os hashes antes da instalação. Fontes do core, probes e matrizes de perfis estão no mesmo overlay; APK, chave, logs privados e arquivos de conteúdo permanecem locais.
 

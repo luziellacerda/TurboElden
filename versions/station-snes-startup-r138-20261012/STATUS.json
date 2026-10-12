@@ -27,6 +27,14 @@
   "maximumNativePlayerPositions": 5,
   "topGear3000Maximum": 4,
   "superMarioKartMaximum": 2,
-  "otherPhones": "Edge 30 and Samsung A56 last verified R135",
-  "consumerHomologated": false
+  "otherPhones": "Samsung A56 last verified R135",
+  "consumerHomologated": false,
+  "installedOnEdge30": true,
+  "edge30InstalledApkHashVerified": true,
+  "edge30OriginalUIDAndDataPreserved": true,
+  "edge30FrontendObserved": true,
+  "installedDeviceModels": [
+    "moto g52",
+    "motorola edge 30"
+  ]
 }
