@@ -9,6 +9,7 @@ A referência instalada é o APK **R134**, fonte executável `4f9039eb9ce13907ce
 - [Handoff de ativação R134](../../versions/station-settings-refinement-r134-20261011/HANDOFF-APP-R134-PARA-SERVIDOR-20261011.md): kit, registrador, modos e resposta administrativa exigida.
 - [Auditoria e incidentes](AUDITORIA-E-INCIDENTES.md): defeitos comprovados, hipóteses e correções em fonte.
 - [Overlay de lifecycle](../../integration/online-lifecycle-review-r135/README.md): alteração proposta, testes e estado da candidata. Não é APK instalado.
+- [Revisão das verificações de compilação no GitHub](validation/CI-DELIVERY-REVIEW.json): correções de formatação e da conferência de migrações, sem alteração do banco produtivo.
 
 ## Inventários pesquisáveis
 
