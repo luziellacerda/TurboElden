@@ -1,0 +1,74 @@
+{
+  "scope": "API34/JDK17 compilation (production Java8 target) and deterministic JVM probes of actual production classes; Android/native/IO edges mocked; no phone, server, APK or gameplay validation",
+  "createdUtc": "2026-10-12T00:28:26.890161+00:00",
+  "inputsSha256": {
+    "clientJar": "011bce981b609d2cc5cfbad49c386e7f54dea1f560a17fe79bae3a56b3f8f313",
+    "jsonJar": "3ea61b2a06e31edf1c91134fe9106b0ebb16628be169f3db75bc7a2b06b45796",
+    "roomsJar": "6b2929eb3621b208593a886b6f06a32de52af9c931663cb314e197af155f773d",
+    "androidJar": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+    "javac": "9c71eee841aeebb723bfc2cceca7d72c6c1988fb679402f4123aa4d0e86aa549",
+    "java": "1977f302375adbb920d41dac65c7e22eb9c2ed8e1e8d6258964154ff16f14406"
+  },
+  "results": [
+    {
+      "name": "baseline-production-api34",
+      "exitCode": 0,
+      "stdout": ""
+    },
+    {
+      "name": "baseline-deadlock-fixtures",
+      "exitCode": 0,
+      "stdout": ""
+    },
+    {
+      "name": "baseline-deadlock",
+      "exitCode": 0,
+      "stdout": "baseline: deterministic ABBA proven by ThreadMXBean for UI and production fatal callback"
+    },
+    {
+      "name": "baseline-departure-fixtures",
+      "exitCode": 0,
+      "stdout": ""
+    },
+    {
+      "name": "baseline-departure",
+      "exitCode": 0,
+      "stdout": "baseline: actual event 4 silently strands membership on stale generation"
+    },
+    {
+      "name": "fixed-production-api34",
+      "exitCode": 0,
+      "stdout": ""
+    },
+    {
+      "name": "fixed-deadlock-fixtures",
+      "exitCode": 0,
+      "stdout": ""
+    },
+    {
+      "name": "fixed-deadlock",
+      "exitCode": 0,
+      "stdout": "fixed: actual Session and actual transport callback complete without monitor cycle"
+    },
+    {
+      "name": "fixed-departure-fixtures",
+      "exitCode": 0,
+      "stdout": ""
+    },
+    {
+      "name": "fixed-departure",
+      "exitCode": 0,
+      "stdout": "fixed: actual event 4; exact identity, new request id, signed absence, stale snapshot, cancellation and no blind error retries passed"
+    }
+  ],
+  "overlaySha256": {
+    "java/org/emulationstation/frontend/netplay/StationDolphinSession.java": "8dabb51d65313e2a6b2925927163aa1a50d24533a8bcc5ccaa5b1cd1a59c6231",
+    "java/org/emulationstation/frontend/netplay/StationGameSession.java": "382066fb971d4fd15005f2e8057271f2148f70e2e295e4cb45ac9088648ec22f",
+    "java/org/emulationstation/frontend/netplay/StationHumanDeparture.java": "45eb52fa73d1412589a5f27b6d9cb772cd137c316dd7126873f1e9ce81db3dc7"
+  },
+  "baselineSha256": {
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java": "2b8fcbf368e38362e9f46701534471172ae388c1e163b2bb99f765a438ca7da2",
+    "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinSession.java": "dc9e16fe10ffa87250fa2351ab60b6a628771ba3559a5f88dd4b8e936633cab7",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java": "0f4032baae452d5203adf2f845c1e9830c8e1132b99dfffa7ec0b4b758f37017"
+  }
+}

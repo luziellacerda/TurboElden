@@ -1,0 +1,1 @@
+package org.emulationstation.frontend.station;public class StationApi{public static class Cancellation{private boolean c;public void cancel(){c=true;}public boolean cancelled(){return c;}}public static class Failure extends Exception{public int status;public String code="";public boolean licenseDenied(){return false;}public boolean sessionDenied(){return false;}}}

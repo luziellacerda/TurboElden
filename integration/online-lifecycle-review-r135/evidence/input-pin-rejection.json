@@ -1,0 +1,19 @@
+{
+  "scope": "Both public scripts reject a synthetic alternate classpath even when its supplied digest matches its actual bytes; before compilation/output creation",
+  "checks": [
+    {
+      "script": "production-recipe",
+      "alternateFileHashMatchesSuppliedManifest": true,
+      "canonicalPinRejected": true,
+      "outputCreated": false,
+      "exitCode": 1
+    },
+    {
+      "script": "probes",
+      "alternateFileHashMatchesSuppliedManifest": true,
+      "canonicalPinRejected": true,
+      "outputCreated": false,
+      "exitCode": 1
+    }
+  ]
+}

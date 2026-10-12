@@ -1,0 +1,1207 @@
+{
+  "sections": [
+    {
+      "title": "Escopo da leitura do frontend e dos motores offline",
+      "paragraphs": [
+        "Esta parte do dossiê descreve o comportamento implementado do TurboStations Android e a proveniência das suas rotas offline na fonte 4f9039eb9ce13907ce043870bfe1f6e294888556, revisão R134. A leitura considera a composição explícita de R134 sobre R133, R132, R131 corrigida e os módulos preservados da R124 e anteriores. O repositório utiliza fontes congeladas e receitas de transformação delimitadas: a existência de um arquivo histórico não significa que ele seja a fonte escolhida pelo instalador atual. Os exemplos de métodos e processos abaixo apontam para os componentes efetivamente documentados pela cadeia de preservação.",
+        "A expressão implementado significa que há código, contrato de lançamento ou evidência estática correspondente. Componente presente significa classe, biblioteca ou recurso identificado no pacote auditado. Instalado significa atualização Android acompanhada de recibo do APK exato. Navegação observada significa uma tela vista em uma sessão delimitada. Gameplay validado exigiria executar o título e conferir renderização, controles, som, saída e demais condições pertinentes. Essas categorias têm resultados próprios e não devem ser fundidas. O estado final dos dois aparelhos deve ser lido no capítulo de instalação produzido durante esta tarefa.",
+        "A matriz histórica R120 fornece 50 plataformas canônicas, 78 chaves aceitas pelo catálogo e 43 perfis originais de fallback. A R131 acrescenta os owners internos PS3 e PS4, que são apresentados separadamente porque não pertencem às 50 linhas daquela matriz. A R134 preserva motores, bibliotecas, firmware/importador, vídeos, cache, LEDs e protocolos, alterando o painel gráfico e as famílias Ps3Activity/Ps4Activity. Não há fundamento para declarar todos os jogos, todos os controles ou todos os dispositivos compatíveis apenas pela existência dessas rotas."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF01], [OFF02], [OFF03], [OFF04]."
+      ]
+    },
+    {
+      "title": "Biblioteca, hierarquia e publicação do catálogo",
+      "paragraphs": [
+        "O frontend apresenta uma hierarquia de plataformas, coleções/subpastas e jogos. O modelo nativo agrupa os sistemas por fabricante e prepara uma linha de plataforma a partir dos jogos publicados. Entrar em uma plataforma abre suas coleções ou lista de jogos; a navegação por pastas usa caminho e tipo, distinguindo o item agregado Todos os jogos das coleções reais. O retorno usa o contexto atual para voltar ao nível anterior. No nível de plataformas, Jogar/Baixar é apresentado como Abrir e ações próprias de um jogo, como Apagar ou Saves, são suprimidas pela camada de apresentação.",
+        "StationFrontend publica cada linha com itemId, nome, rótulo da plataforma, pasta canônica, coverId, caminho de lançamento instalado, chave da coleção, descrição, revisão e eventual caminho de capa previamente preparado. O mapeamento StationPlatforms é explícito; não deduz o destino de uma string arbitrária. Uma plataforma desconhecida gera aviso de suporte e não recebe uma pasta inventada. Aliases brasileiros preservam os mesmos motores e, quando aplicável, as pastas existentes: megadrive--br, super-nintendo--br e nintendo-64--br têm regras próprias, enquanto PSP BR compartilha a pasta psp.",
+        "StationCoordinator administra a biblioteca e mantém o catálogo assinado em cache. No acesso sem novo código, pode restaurar um envelope local válido ligado à licença salva e ao dispositivo; uma sessão recém-autenticada continua necessária para operações que pedem autorização remota. A biblioteca em cache é identificada como tal. Atualizar a lista faz a renovação pelo serviço e substitui o catálogo autorizado. O frontend também possui atualização automática em trabalhador separado: primeira tentativa após cinco segundos e intervalo de sessenta segundos, condicionados a foreground, configuração, disponibilidade da API, autorização e ausência de downloads e trabalho de capas ativos.",
+        "A consulta de um jogo instalado é feita pelo recibo da instalação correspondente, não por uma varredura indiscriminada de pastas ROM. installedPathsFor filtra a plataforma mapeada; installedPathForItem exige o identificador selecionado e retorna erro se não houver instalação reconhecida. A abertura de uma sala utiliza essa regra para exigir que o jogo seja baixado antes. O caminho publicado para o renderer é o arquivo inicial reconhecido, enquanto a seleção do motor offline continua sendo responsabilidade do resolvedor de comandos."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF05], [OFF06], [OFF07]."
+      ]
+    },
+    {
+      "title": "Pesquisa, ficha e ações do usuário",
+      "paragraphs": [
+        "A pesquisa respeita o contexto em que foi aberta: plataformas, coleções ou jogos. A camada nativa mantém o campo de entrada, teclado e resultados do GuiStore original, acrescentando apresentação e ações de recuperação. Limpar pesquisa remove o filtro; Ver resultados fecha a edição para mostrar a lista; Editar pesquisa retorna ao campo quando a busca está vazia. Há mensagens específicas para nenhuma plataforma, nenhuma coleção e nenhum jogo encontrado. As caixas usadas pelo desenho e pelo toque/controle são as mesmas, evitando que a aparência e a área clicável sejam calculadas por regras diferentes.",
+        "A ficha do item apresenta título, capa, descrição ou sinopse, contagens, informação de jogadores e classificação. A escolha da sinopse combina o texto recebido do servidor com informações locais e correções específicas de edição; quando não há informação, mostra Sinopse ainda não localizada para esta edição. A ausência de classificação aparece como SEM NOTA. Texto que ultrapassa a altura disponível tem área de rolagem; isso não deve ser confundido com atualização da capacidade online. A indicação textual de jogadores é descritiva, enquanto criar uma sala continua dependendo do contrato específico do jogo, conteúdo e modo.",
+        "As ações de jogo disponíveis no contexto original incluem baixar/jogar, online, saves, apagar, atualizar e voltar. A barra nativa tem ícones vetoriais e estados de foco, desabilitado e confirmação. Baixar recebe cor própria; a apresentação não cria uma segunda rotina de transferência. O pedido de apagar é encaminhado à implementação de instalação por recibo. No contexto de plataforma ou coleção, o botão Abrir substitui a ação de jogo e navega para o conteúdo. A faixa INSTALADO depende da reconciliação do recibo com o arquivo inicial e não garante que o emulador tenha executado esse título.",
+        "A revisão R133 acrescenta fotografias estáticas de PSP, PS3 e PS4 ao painel ao lado da sinopse. A arte de hardware é um recurso de apresentação separado da ficha de plataforma, da rota do emulador e da elegibilidade online. O código desenha uma quad no contexto SDL/GL existente, com ajuste proporcional e limites alfa. O nome de uma plataforma na tabela visual, como PlayStation 5, também não é prova de um motor correspondente: a matriz de lançamento e os componentes reais devem ser consultados."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF08], [OFF09], [OFF10]."
+      ]
+    },
+    {
+      "title": "Painel de efeitos gráficos da R134",
+      "paragraphs": [
+        "A R134 organiza o painel Efeitos gráficos em quatro páginas: Fundo, Carrossel, Luzes e Ícones. O cabeçalho mantém Efeitos gerais e Voltar. Em telas largas, a navegação fica numa coluna lateral; em telas estreitas, as quatro categorias ficam numa faixa horizontal. A decisão de layout considera orientação e largura em dp. A área de opções é rolável e apenas a página ativa permanece visível. Há estados de foco, seleção e descrições acessíveis para os controles. As mudanças são salvas automaticamente nas preferências existentes, sem criar um ciclo de animação ou consulta periódica para navegar entre categorias.",
+        "Fundo oferece Ondas, Céu e Sem fundo, além de Movimento do fundo. Carrossel oferece Reta, Diagonal e De lado, Vídeos do carrossel e Com loop/Sem loop para o vídeo principal. Luzes contém LEDs das capas e Efeitos das células. Ícones contém Ícones e Lotties e Transições. O total é de seis efeitos independentes: LED, vídeo, movimento do fundo, ícones, efeitos das células e transições. A mudança do estilo do carrossel usa uma preferência separada da máscara de efeitos; a escolha não é codificada como mais um bit de iluminação.",
+        "Efeitos gerais desliga a máscara efetiva sem apagar as escolhas individuais. Ao reativar, as opções salvas voltam a determinar os efeitos. O estilo de fundo também é preservado quando o movimento é desligado. StationGraphicsPreferences usa um estado imutável com máscara individual, masterDisabled, modo de fundo e revisão. Os anúncios são entregues na thread principal e consolidados para evitar notificações redundantes. A ponte JNI recebe estado e revisão numa publicação coerente, impedindo que o renderer combine partes de escolhas distintas.",
+        "Esses controles afetam a apresentação dos menus. Não mudam o núcleo do emulador, os mapeamentos de input, o frame rate do jogo ou o perfil multiplayer. Economia significa supressão de efeitos implementada na UI, mas o valor de consumo ou temperatura não foi medido por essa implementação. A R134 conserva a política de vídeos e o limitador de apresentação herdados; mudar a divisão em páginas não demonstra ganho físico de bateria, latência ou estabilidade."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF11], [OFF12]."
+      ]
+    },
+    {
+      "title": "Geometria do carrossel e limite de apresentação",
+      "paragraphs": [
+        "Reta é a formação padrão. Diagonal aplica uma geometria alternativa às células que não estão selecionadas, mantendo o pipeline de MVP e os mecanismos existentes de picking e recorte. De lado inverte a orientação e pode mostrar a capa principal com dez vizinhas, sem duplicatas. A revisão R123 ampliou as prioridades apenas nesse modo até a janela necessária; os modos Reta e Diagonal continuam com a formação anterior. O renderer mantém a capa selecionada como referência e não utiliza um novo shader, FBO ou decoder apenas para transformar a geometria.",
+        "Na R124, o orçamento de frames retidos dos vídeos acompanha os itens únicos visíveis. Reta e Diagonal mantêm oito frames. De lado admite de oito até treze conforme a janela e a transição, descartando frames que saem do conjunto quando o orçamento diminui. A política corrige células sem imagem que ocorriam com o limite antigo de oito. Onze frames representam aproximadamente 2,97 MiB adicionais de pixels em relação ao orçamento anterior; o teto transitório de treze representa cerca de 4,94 MiB adicionais. Esses números são estimativas de buffers do formato previsto, não memória residente total do driver.",
+        "O limite de trinta fps se aplica aos menus/apresentação. O código mantém vídeos locais de 720 por 720 e trinta quadros por segundo, frames adjacentes retidos e um único decoder focado. Não se deve ler esse limite como travamento de todos os jogos em trinta fps. A configuração Frame limit do PS3 e a VBlank do PS4 pertencem aos próprios motores, com semântica diferente. A documentação da R131 explicita que a composição Sony não impõe o limite do carrossel ao gameplay.",
+        "Existe evidência física histórica da R124 mostrando a capa principal e dez pequenas no carrossel De lado, sem célula vazia naquela captura. Isso qualifica uma observação delimitada da apresentação e não a reprodução contínua de todos os vídeos, todos os temas ou todas as transições. Os testes HOST e de política exercitam geometria e orçamento, porém não executam GPU Android, codec, gesto físico, fonte ampliada ou consumo."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF13], [OFF14]."
+      ]
+    },
+    {
+      "title": "Capas, filas, cache e concorrência",
+      "paragraphs": [
+        "A fila de capas é global para o frontend. StationCoverQueue possui um trabalhador de IO/decodificação; pedidos visíveis têm prioridade sobre a passagem opcional de preenchimento do cache. Downloads de jogos têm um trabalhador independente. O estado de preparação do catálogo evita competição entre a publicação inicial e os pedidos visíveis. Sair de foreground cancela gerações obsoletas; uma capa de uma publicação anterior não deve entrar numa lista substituída. Erros são classificados em cancelamento, falha transitória, ausente, limite de taxa e autorização negada, com tratamento de nova tentativa coerente.",
+        "O cache canônico guarda identidades coverId/revisão e pode reconhecer cache legado permitido. O legado exige revisão exata, arquivo privado regular, tamanho limitado e assinatura de imagem válida; o caminho é revalidado por tipo, tamanho e mtime antes de nova publicação. A operação evita copiar em massa arquivos já persistidos. StationFrontend constrói o conjunto de identidades esperado e aquece o cache antes da publicação quando pertinente. Uma geração, a biblioteca correspondente e o estado foreground são conferidos repetidamente para interromper trabalho desatualizado.",
+        "A preparação herdada limita a passagem inicial de misses a sessenta e quatro tentativas ou vinte segundos. Falha de rede, autenticação ou rate limit encerra essa passagem; o catálogo continua com os sucessos disponíveis. Uma instalação vazia com milhares de capas pode precisar de mais de uma abertura para completar o cache. A publicação é progressiva: capa selecionada imediata, janela atual delimitada e uma vizinha por pulso de oitenta milissegundos. No estilo De lado, a política posterior de prioridades considera a janela expandida; não deve ser descrita como uma publicação simultânea das milhares de capas.",
+        "Na central de downloads, os thumbnails têm cache de bitmap próprio limitado a oito MiB e decodificação reduzida para até 256 pixels na maior dimensão. A fila de capa compartilhada realiza a leitura/decodificação fora da UI. Ao fechar o painel, handles, callbacks, retries e imagens são liberados. O frontend nativo limita as filas de inbox de capas e jobs a 4096 identidades; exceder o limite gera falha explícita. O valor é um teto defensivo da ponte, não uma garantia de que qualquer catálogo de tamanho arbitrário possa ser publicado."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF05], [OFF15], [OFF16], [OFF17]."
+      ]
+    },
+    {
+      "title": "LEDs, estado GL e cache de campos",
+      "paragraphs": [
+        "A iluminação da capa selecionada mantém o classificador da arte e o kernel de emissores/halos do pipeline herdado. O trabalho estático caro é preparado num campo RGBA16F; animação, paleta, ganho e composição continuam no shader de desenho. Há um destino candidato separado do campo completo. A preparação incremental cria quatro linhas por quadro, e somente um candidato completo com a mesma chave é promovido. Mudança de seleção, identidade, revisão de upload, modelo, viewport ou contexto invalida a preparação correspondente.",
+        "O cache de campos completos conserva até três entradas no mesmo contexto e limita seus pixels acumulados a oito MiB. O cálculo nominal é largura vezes altura vezes oito bytes. Uma entrada maior que esse teto não entra no conjunto salvo. O reaproveitamento exige correspondência de textura fonte, identidade, modelo, tamanho e viewport. Upload ou destruição da textura de origem invalida os campos associados antes de eventual reutilização do número GLuint. Nomes GL de um contexto antigo não são apagados através de um contexto novo, pois o driver pode ter reutilizado o mesmo identificador para outro objeto.",
+        "Cada fatia restaura os estados de framebuffer, viewport, scissor, buffers, texturas, samplers, programas e máscaras de escrita pertinentes ao pipeline. O destino incompleto não substitui a capa original: o usuário continua vendo a arte enquanto o campo é produzido. Se o caminho otimizado não está disponível ou a preparação não conclui, o desenho usa os fallbacks herdados. O cache é uma otimização, não um novo requisito de funcionamento nem uma promessa de qualidade diferente.",
+        "Quatro linhas por quadro podem fazer a preparação inicial da iluminação de capas de 1024–1536 pixels levar cerca de 8,5–12,8 segundos segundo a estimativa documentada da R115. Esse tempo não equivale a bloquear a UI durante toda a preparação. Também não prova ausência de pausas do driver, custo GL constante ou redução térmica. O orçamento precisa ser relacionado com medição no aparelho para qualquer alteração; a R134 apenas conserva esse comportamento e reorganiza os controles que o habilitam."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF16], [OFF18]."
+      ]
+    },
+    {
+      "title": "Loading e preparação dos shaders",
+      "paragraphs": [
+        "A R132 introduz uma barreira na fase inicial do GuiStore. Primeiro deve ser desenhado um frame preto de loading; só então a atualização seguinte tenta preparar os programas existentes no contexto SDL/GL que fará o desenho dos menus. Não existe criação de um contexto trabalhador concorrente para essa compilação. O owner e o contexto são parte do estado da preparação. Se mudarem, o estado deve ser reavaliado; a regra de efeitos desligados também é mantida.",
+        "O progresso final depende de dois marcos reais: publicação do catálogo nativo e preparação gráfica. O cálculo acrescenta essas duas unidades ao total de itens e só mostra conclusão real quando ambos estão satisfeitos. O frame terminal de loading deve ser desenhado antes de avançar para o menu e para o tratamento de capas/boas-vindas. Se o catálogo falhar, o fluxo original de erro continua disponível; o código não apresenta cem por cento como sucesso de uma publicação que não ocorreu.",
+        "A tentativa de compilação de shader pode ser rejeitada pelo driver. Nesse caso, a rotina considera a tentativa encerrada e mantém o fallback anterior em vez de repetir indefinidamente o loading. A composição exige os exports emparelhados StationLoading_graphicsReady e StationLoading_stage e verifica o ABI/GOT original antes de instalar o hook. Essa verificação evita aplicar os offsets a uma biblioteca diferente sem reconhecer o contexto binário.",
+        "Preparar mais cedo muda quando o custo acontece. O código não demonstra redução do tempo total de compilação, não acrescenta cache binário de programas e não prova menor consumo. Loading, cache de capas, preparo de emulador Sony e importação de jogo são etapas distintas; a extração Sony só começa no worker do owner solicitado e não vira uma tarefa obrigatória executada a cada frame do carrossel."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF19], [OFF20]."
+      ]
+    },
+    {
+      "title": "Vídeos locais, decoder e ciclo de vida",
+      "paragraphs": [
+        "StationSinglePassVideo720 mantém sessões com SurfaceTexture, Surface, estado de visibilidade, frame pronto e indicadores de conclusão. O MediaPlayer pertence exclusivamente ao HandlerThread StationVideoOnce. A consulta dos codecs aceita hardware AVC compatível com 720×720 a trinta fps; se não houver decoder apropriado, a capacidade fica zero e as artes/posters herdados permanecem como alternativa. Quatro slots são estrutura de controle, não quatro players ativos: uma nova sessão chama stopAll e o decoder focado é único.",
+        "A rotina de ciclo de vida reconhece a ESActivity do frontend. Resume de outra Activity, pause/stop/destroy do frontend e mudança de foreground encerram as sessões pertinentes. Um watchdog detecta sessão sem desenho recente, primeiro frame que não chegou e entrega de frames interrompida. Os limites documentados são três segundos sem desenho, quinze segundos para primeiro frame e quatro segundos de atraso de entrega quando o vídeo está visível e preparado; a checagem é agendada no worker, fora do loop de desenho da UI.",
+        "Na política de reprodução única, o player busca um frame aproximadamente dois quadros antes do fim e o renderer conserva essa imagem. Seek tem limite de espera e, se falhar, o frame anterior é mantido. A R130 adiciona a preferência persistente de loop e o parâmetro de escopo da plataforma. No fim de um vídeo de plataforma visível, busca o começo e reinicia o mesmo player/Surface/decoder, sem nova preparação ou nova leitura do asset. Coleções continuam reprodução única, mesmo quando o usuário escolhe Com loop.",
+        "Desabilitar vídeos, ativar economia, esconder a sessão ou retirar sua posse impede reinício indevido. Frames retidos de miniaturas são recursos separados do player e ficam sujeitos ao orçamento visível de oito a treze da R124. Mudança de contexto remove a possibilidade de reutilizar handles incompatíveis. Esses mecanismos reduzem duplicações desnecessárias e delimitam recursos, mas codec, GL, travamentos, tempo de retorno e funcionamento contínuo precisam de observação física para serem declarados estáveis."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF21], [OFF22], [OFF14]."
+      ]
+    },
+    {
+      "title": "Central de downloads, estados e recuperação",
+      "paragraphs": [
+        "StationDownloads representa cada pedido como um Job e expõe uma Entry imutável para apresentação. Os estados são QUEUED, AUTHORIZING, DOWNLOADING, PREPARING, WAITING, PAUSED, ERROR, COMPLETE e CANCELLED. A fila admite até trinta e dois pedidos não terminados e mantém histórico limitado de entradas. Há um ScheduledThreadPoolExecutor com um trabalhador de instalação/transferência e um executor separado para gravar o diário. Um pedido pausado ou aguardando conexão não mantém a transferência ocupada, permitindo outro jogo elegível avançar.",
+        "Cada tentativa pede uma autorização nova do servidor, relacionada ao item e revisão atuais. A transferência e a preparação calculam o espaço necessário incluindo tamanho comprimido, expansão e reserva de 256 MiB. O arquivo chega a uma transação temporária; depois, a instalação prepara uma geração nova. Falhas transitórias passam para WAITING com delay crescente ou Retry-After. Uma conexão validada pode antecipar pedidos que aguardavam rede. Autorização negada, item indisponível, formato inválido e espaço insuficiente resultam em estados ou mensagens próprios.",
+        "Pausar cancela a tentativa corrente e salva a intenção; a preparação final não oferece pausa enquanto está publicando o conteúdo. Continuar ou tentar de novo põe o pedido na fila e zera o contador de falhas. Cancelar remove a transferência da lista e interrompe a tentativa pertinente. O diário persiste identificadores e estado de pausa, limitado em tamanho, e restaura apenas itens que ainda existem no catálogo. Pedidos concluídos não voltam à fila automaticamente.",
+        "A retomada pode reiniciar o arquivo inteiro. O código não preserva os bytes parciais como prova de uma continuação por HTTP Range: cada retry pede grant novo, a tentativa limpa seu artefato temporário e recomeça a transferência. A UI informa essa condição. A central mostra bytes, taxa, tempo decorrido, ETA e etapa de preparação, com uma atualização visual por segundo. O DownloadService mantém notificação em foreground e gerenciamento de wake lock para as tarefas ativas; fechar a lista não equivale a cancelar os downloads."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF23], [OFF17], [OFF24]."
+      ]
+    },
+    {
+      "title": "Instalação de jogos, recibos e remoção",
+      "paragraphs": [
+        "StationInstaller confere que itemId e revisão correspondem ao grant. O artefato precisa ser arquivo regular, ter o tamanho assinado e apresentar prefixo compatível com o formato descrito. Os caminhos são normalizados, os ancestrais são conferidos sem links simbólicos e a pasta da plataforma vem de StationPlatforms. Arquivos de archive têm limites de nome, contagem e expansão; duplicatas e aliases perigosos de caixa em armazenamento Android são recusados antes da criação. O arquivo inicial deve existir, ser não vazio e ter suas referências internas compatíveis com o conjunto instalado.",
+        "O hashing de conteúdo dos jogos foi expressamente desativado pela política registrada no código. Permanecem tamanho/formato assinados, caminhos seguros, recibos e publicação transacional. Não escrever que o instalador atual valida toda ROM por SHA-256, CRC ou equivalência semântica. Outros módulos, como preparação de assets Sony, firmware e identidades online, têm políticas de hash próprias e não devem ser confundidos com a cópia geral de jogos.",
+        "A instalação cria roms/.station-v2/<plataforma>/<itemId>/install-<geração>/content, prepara o manifesto e só então substitui atomicamente o ponteiro privado do recibo. Uma atualização que falha antes do commit preserva a geração anterior. find verifica o recibo, a plataforma mapeada e o arquivo inicial registrado; ao retornar à biblioteca, evita fazer stat de todos os companions em cada publicação. Isso é um compromisso de reconciliação rápida, não uma auditoria integral do conteúdo a cada seleção.",
+        "Uninstall marca um tombstone e remove apenas os arquivos listados no recibo comprometido. Diretórios são removidos quando ficam vazios, sem apagar recursivamente conteúdo desconhecido. Saves e dados criados pelo emulador fora da lista pertencem ao seu owner e permanecem. Se um download está ativo, apagar exige cancelá-lo antes. Um auxiliar CD preparado posteriormente e não presente no recibo de download pode permanecer depois de remover o disco; essa conservação é esperada pela política de propriedade."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF25], [OFF26]."
+      ]
+    },
+    {
+      "title": "Resolução de comandos e leitura da matriz de 50 plataformas",
+      "paragraphs": [
+        "A resolução offline passa pelos hooks N64, Mega e o conjunto de comandos de GameCube/demais sistemas, antes do XML original. Quando o XML não possui uma chave, o resolvedor procura um perfil original pela pasta e depois pelo nome, usando a normalização prevista naquele consumidor. A comparação dos hooks tem regras distintas, por isso a R120 precisou reconhecer explicitamente megadrive--br, super-nintendo--br e pc-engine-cd. A ausência de comando no XML, isoladamente, não significa ausência de rota.",
+        "Alguns comandos têm a forma libretro: core=<identificador>, porém o identificador é interceptado e abre um emulador Android próprio. N64, Dolphin, MAME, PPSSPP, ARMSX2, Flycast e outros não devem ser descritos automaticamente como cores executados no LibretroPlayer apenas porque esse texto aparece no comando. A matriz registra o bootstrap, a cadeia de Activity e o processo onde a emulação realmente ocorre. As famílias sem interceptação usam o LibretroPlayer original no processo principal.",
+        "A tabela a seguir reproduz as cinquenta linhas canônicas auditadas com motor, pasta e processo. A coluna Família remete à tabela de condições que detalha Android, formatos realmente conferidos, opções e controles. Em todas as linhas, a comprovação principal é estática e herdada pela preservação posterior; instalada no aparelho descreve o pacote inteiro e não cinquenta gameplays. Oito dependências ausentes são um achado histórico do Motorola consultado na R120 e não uma afirmação sobre a situação atual dos dois aparelhos sem nova leitura dos diretórios.",
+        "O registro completo de nomes/aliases, bibliotecas e class_defs é launch-matrix-r120.json. Ele registra 146 verificações HOST das seis funções reais de seleção de comando, com zero falhas e trinta e sete passagens ao fallback original. Strings e resolvedor XML foram mocks delimitados nesse harness; ele não executou ABI ARM64, JNI, GPU, assets, BIOS ou jogo. A R126 acrescenta uma auditoria estática de 51.818 verificações, igualmente sem gameplay, e os recibos R134 confirmam a preservação das bibliotecas dos motores offline."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Plataforma / pasta",
+            "Motor",
+            "Processo",
+            "Família / condição"
+          ],
+          "rows": [
+            [
+              "3ds / 3ds",
+              "LibretroPlayer: azahar",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Arcade / arcade",
+              "MAME4droid Current",
+              ":mame",
+              "M1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Atomiswave / atomiswave",
+              "Flycast Android",
+              ":flycast",
+              "F1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Dreamcast / dreamcast",
+              "Flycast Android",
+              ":flycast",
+              "F1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "GameCube / gamecube",
+              "Dolphin Android",
+              ":dolphin",
+              "D1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Gameboy / gameboy",
+              "LibretroPlayer: gambatte",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Gameboy Color / gameboy-color",
+              "LibretroPlayer: gambatte",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Gba / gba",
+              "LibretroPlayer: mgba",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Master System / master-system",
+              "LibretroPlayer: genesis_plus_gx",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "MegaDrive / megadrive",
+              "MD.emu EX+",
+              ":megadrive",
+              "E1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "MegaDrive - BR / megadrive--br",
+              "MD.emu EX+",
+              ":megadrive",
+              "E1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Neo Geo / neo-geo",
+              "MAME4droid Current",
+              ":mame",
+              "M1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Neo Geo CD / neo-geo-cd",
+              "MAME4droid Current",
+              ":mame",
+              "M1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Nintendinho / nintendinho",
+              "LibretroPlayer: fceumm",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Nintendo 64 / nintendo-64",
+              "Mupen64Plus AE",
+              ":n64 → :n64core",
+              "N1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Nintendo 64 - BR / nintendo-64--br",
+              "Mupen64Plus AE",
+              ":n64 → :n64core",
+              "N1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Nintendo DS / nintendo-ds",
+              "LibretroPlayer: melonds",
+              "principal",
+              "L1 · dependência ausente na observação R120"
+            ],
+            [
+              "Odyssey 2 / odyssey-2",
+              "LibretroPlayer: o2em",
+              "principal",
+              "L1 · dependência ausente na observação R120"
+            ],
+            [
+              "PSP / psp",
+              "PPSSPP Android",
+              ":psp",
+              "P1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Pc Engine / pc-engine",
+              "LibretroPlayer: mednafen_pce_fast",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Pc Engine cd / pc-engine-cd",
+              "LibretroPlayer: mednafen_pce",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Playstation 1 / psx",
+              "LibretroPlayer: pcsx_rearmed",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Playstation 2 / ps2",
+              "ARMSX2 Android",
+              ":ps2",
+              "P2 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Playstation 2 - BR / ps2br",
+              "ARMSX2 Android",
+              ":ps2",
+              "P2 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Psp - BR / psp",
+              "PPSSPP Android",
+              ":psp",
+              "P1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Psvita / psvita",
+              "Vita3K Android",
+              ":psvita",
+              "V1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Super Nintendo / super-nintendo",
+              "Snes9x EX+",
+              ":snes",
+              "E1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Super Nintendo - BR / super-nintendo--br",
+              "Snes9x EX+",
+              ":snes",
+              "E1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "Switch / switch",
+              "Yuzu Android (unchanged)",
+              "principal",
+              "S1 · rota package corrigida; jogo pendente"
+            ],
+            [
+              "atari2600 / atari2600",
+              "LibretroPlayer: stella",
+              "principal",
+              "L1 · dependência ausente na observação R120"
+            ],
+            [
+              "atari7800 / atari7800",
+              "LibretroPlayer: prosystem",
+              "principal",
+              "L1 · dependência ausente na observação R120"
+            ],
+            [
+              "colecovision / colecovision",
+              "LibretroPlayer: bluemsx",
+              "principal",
+              "L1 · dependência ausente na observação R120"
+            ],
+            [
+              "cps1 / cps1",
+              "MAME4droid Current",
+              ":mame",
+              "M1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "cps2 / cps2",
+              "MAME4droid Current",
+              ":mame",
+              "M1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "cps3 / cps3",
+              "MAME4droid Current",
+              ":mame",
+              "M1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "fbneo / fbneo",
+              "LibretroPlayer: fbneo",
+              "principal",
+              "L1 · dependência ausente na observação R120"
+            ],
+            [
+              "fds / fds",
+              "LibretroPlayer: fceumm",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "gameandwatch / gameandwatch",
+              "LibretroPlayer: gw",
+              "principal",
+              "L1 · dependência ausente na observação R120"
+            ],
+            [
+              "gamegear / gamegear",
+              "LibretroPlayer: genesis_plus_gx",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "jaguar / jaguar",
+              "LibretroPlayer: virtualjaguar",
+              "principal",
+              "L1 · dependência ausente na observação R120"
+            ],
+            [
+              "mame / mame",
+              "MAME4droid Current",
+              ":mame",
+              "M1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "naomi / naomi",
+              "Flycast Android",
+              ":flycast",
+              "F1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "naomi2 / naomi2",
+              "Flycast Android",
+              ":flycast",
+              "F1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "saturn / saturn",
+              "Saturn integrado",
+              ":saturn",
+              "T1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "sega32x / sega32x",
+              "LibretroPlayer: picodrive",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "supergrafx / supergrafx",
+              "LibretroPlayer: mednafen_supergrafx",
+              "principal",
+              "L1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "wii / wii",
+              "Dolphin Android",
+              ":dolphin",
+              "D1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "wiiu / wiiu",
+              "Cemu Android",
+              ":wiiu",
+              "W1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "xbox / xbox",
+              "x1box/xemu",
+              ":xbox → :xboxemu",
+              "X1 · componentes/rota auditados; jogo pendente"
+            ],
+            [
+              "xbox360 / xbox360",
+              "Xendroid",
+              ":xbox360 → :xbox360emu",
+              "X2 · componentes/rota auditados; jogo pendente"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "Família",
+            "Exemplo de despacho / biblioteca"
+          ],
+          "rows": [
+            [
+              "L1",
+              "Fallback → LibretroPlayer::run em ESActivity; lib<core>_libretro_android.so."
+            ],
+            [
+              "E1",
+              "megaCommandHook/SNES → com.mdimagn.BaseActivity ou com.imagine.BaseActivity; libs próprias EX+."
+            ],
+            [
+              "N1",
+              "n64CommandHook → N64Bootstrap → GameActivity/CoreService; libmupen64plus-core.so."
+            ],
+            [
+              "D1",
+              "gamecubeCommandHook → DolphinEntryActivity/EmulationActivity; libdolp.so."
+            ],
+            [
+              "M1",
+              "mameCore → MameBootstrap/MameEntryActivity → MAME4droid; libMAME4droid.so + JNI."
+            ],
+            [
+              "F1",
+              "identificador flycast interceptado → NativeGLActivity; libflycast.so + libturbo_flycast.so."
+            ],
+            [
+              "P1",
+              "identificador PPSSPP interceptado → PpssppActivity; libppsspp_jni.so."
+            ],
+            [
+              "P2",
+              "native_ps2 → Ps2Bootstrap → com.armsx2.Main; emucore16k/4k."
+            ],
+            [
+              "V1",
+              "VitaEntryActivity → org.vita3k.emulator.Emulator; libVita3K.so."
+            ],
+            [
+              "S1",
+              "ACTION_VIEW → BootstrapActivity → Yuzu EmulationActivity; libyuzu-android.so."
+            ],
+            [
+              "T1",
+              "native_saturn → SaturnActivity; libturbo_saturn.so."
+            ],
+            [
+              "W1",
+              "WiiUEntryActivity → Cemu EmulationActivity; libCemuAndroid.so."
+            ],
+            [
+              "X1",
+              "XboxEntryActivity → x1box.MainActivity; libxemu.so."
+            ],
+            [
+              "X2",
+              "Xbox360Entry/GameEntry → XenDroid EmulatorHostActivity; libe.so."
+            ]
+          ]
+        }
+      ],
+      "bullets": [
+        "Referências: [OFF03], [OFF27], [OFF02]."
+      ]
+    },
+    {
+      "title": "Condições dos motores offline e limites de inventário",
+      "paragraphs": [
+        "Os formatos mencionados abaixo são aqueles explicitamente documentados pela ponte ou contrato local lido. Não se presume que a lista geral de extensões de um projeto upstream atual descreva o binário exato incorporado. Para várias famílias LibretroPlayer e wrappers legados, esta janela de auditoria não consolidou uma lista completa de extensões ou o minSdk de cada componente; isso é registrado como não conferido. ARM64 e capacidade gráfica apropriada continuam condições do conjunto nativo, mas não são uma garantia de performance de cada título.",
+        "A identificação de versão vem dos recibos de proveniência e dos commits correspondentes. Há motores preservados de APKs oficiais e módulos recompilados: Flycast, PSP, PS2, Vita, Cemu e XenDroid incluem binários cuja reconstrução integral não é alegada pelos recibos; Saturn registra reconstrução a partir da fonte correspondente. O LibretroPlayer possui binário normal preservado cuja fonte C++ exata do loop não foi localizada na auditoria. Isso é relevante para alterar overlays, pauses ou comportamentos internos: a disponibilidade de um projeto com nome semelhante não autoriza tratá-lo como fonte equivalente.",
+        "N64 usa o conjunto oficial Mupen64Plus AE 3.0.249 beta, commit 33bf7021, mínimo API28 documentado, plugins e preferências separados. Dolphin usa a integração 2609-7 e commit 5102a033 na documentação das rotas online/controle, com Android e formato offline completo não requalificados neste dossiê. PPSSPP tem proveniência 1.20.4; ARMSX2 2.7.2; Flycast v2.7-44-ge36e9df2d; Vita3K build4115/a366df69; Yaba Sanshiro1.20.46; Cemu0.5.2 e XenDroid0b11201, os dois últimos explicitamente experimentais.",
+        "A tela de configuração de cada família segue o owner correspondente quando há rota documentada. O frontend não fornece automaticamente todas as opções de todos os motores num painel único. A R134 altera apenas o painel gráfico e as configurações dos owners Sony internos. Escolha de renderer, driver, resolução, frame skip, perfis e saves dos demais emuladores foi preservada; sua aparência e efeito físico dependem dos componentes existentes e precisam ser conferidos no próprio motor."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Família",
+            "Versão / requisito comprovado",
+            "Conteúdo / configurações / controles"
+          ],
+          "rows": [
+            [
+              "L1 · LibretroPlayer",
+              "Binário normal preservado; ABI ARM64. MinSdk e lista completa de extensões por core não consolidados.",
+              "Cores individuais da matriz; host é ESActivity/LibretroPlayer. PSX normal possui duas portas no caminho auditado; não importar capacidades Multitap/analógico por nome de core. API de ocultação universal do touch não comprovada."
+            ],
+            [
+              "E1 · SNES/Mega EX+",
+              "Snes9x EX+ e MD.emu EX+; fonte EX+ correspondente disponível. Versão comercial exata e minSdk não fixados nesta matriz.",
+              "Menu, input, save states/saves e preferências próprios preservados. VController AUTO possui hotplug e respeita ON/OFF manual; a detecção também considera teclado. Extensões offline completas não requalificadas."
+            ],
+            [
+              "N1 · N64",
+              "Mupen64Plus AE3.0.249 beta, commit33bf7021; Android9/API28.",
+              "ROM_PATH real; formatos registrados N64 incluem n64/z64/v64, mas lista offline completa/archives não requalificada aqui. Menu oficial vídeo/áudio/input/perfis e saves; touch/input próprios. :n64 e :n64core."
+            ],
+            [
+              "D1 · GameCube/Wii",
+              "Dolphin2609-7, commit5102a033; pacote ARM64 preservado. MinSdk offline não consolidado.",
+              "Arquivo local enviado ao owner Dolphin. Registro do bundle usa iso/gcz/wbfs/rvz; isso não substitui auditoria de todos os formatos offline. Configurações originais, touch e portas próprios; adaptação transitória Dolphin da R120."
+            ],
+            [
+              "M1 · MAME/Neo Geo",
+              "MAME4droid Current1.41.2, MAME0.289; minSdk não consolidado nesta leitura.",
+              "Cartucho ZIP permanece comprimido para o MAME; conteúdo e BIOS devem corresponder ao driver/parent. CD: CHDv5 autônomo, BIOS específica e driverCDZ. Menus/controles próprios; hide pode depender da primeira entrada."
+            ],
+            [
+              "F1 · Flycast",
+              "v2.7-44-ge36e9df2d, commit e36e9df2; binário oficial preservado.",
+              "Dreamcast/Atomiswave/Naomi/Naomi2, bibliotecas e BIOS/configuração por hardware. MinSdk/formato completo não consolidado. VGamepad/timer têm gaps de supressão e hitTest; não foi aplicado conserto universal."
+            ],
+            [
+              "P1 · PSP",
+              "PPSSPP1.20.4 oficial preservado; minSdk do componente não consolidado.",
+              "URI/arquivo enviado ao PPSSPP, menu próprio. Lista offline de formatos não extraída nesta janela. ShowTouchControls é persistente e TouchButtonHideSeconds é inatividade; presença física não prova restauração automática."
+            ],
+            [
+              "P2 · PS2",
+              "ARMSX2 2.7.2; artefato legacy armv8.0-sdk26. SDK26 do artefato não é mínimo efetivo comprovado de todo TurboStations.",
+              "Owner com.armsx2.Main e emucore4k/16k preservados. BIOS/configuração/licenças permanecem privadas quando aplicáveis. Formatos e overlay precisam ser conciliados com DEX exato; referência upstream isolada não basta."
+            ],
+            [
+              "V1 · Vita",
+              "Vita3K build4115, engine_commit a366df69, binário preservado.",
+              "Instalação/importação/configuração do owner Vita; dependências de jogo/firmware e formato completo não requalificados. hideOverlayWhenControllerConnected defaulttrue e restauração no último disconnect documentados."
+            ],
+            [
+              "S1 · Switch",
+              "Yuzu integrado; biblioteca idêntica às referências R76/R119. Versão de release textual/minSdk não fixados aqui.",
+              "Bootstrap/action/URI/MIME/content preservados; assets/keys e firmware privados mantidos. Novos caminhos roms/switch; legado exato só migra quando ausente/vazio. Overlay de presença do motor preservado; gameplay pendente."
+            ],
+            [
+              "T1 · Saturn",
+              "Yaba Sanshiro1.20.46 Android; recompilado de fonte correspondente.",
+              "SaturnActivity/Pad separa input físico e toque. Opção touch manual; sem listener de presença no wrapper auditado. MinSdk, BIOS e formato offline completo não requalificados."
+            ],
+            [
+              "W1 · Wii U",
+              "Cemu Android0.5.2; binário oficial preservado; experimental.",
+              "Cemu EmulationActivity e InputOverlaySurfaceView/StateFlow; callbacks de input próprios. Lista offline de formatos, conteúdo/keys e minSdk não consolidados. Auto-hide por presença não confirmado no gate do StateFlow."
+            ],
+            [
+              "X1 · Xbox clássico",
+              "x1box/xemu, libs preservadas; versão textual/minSdk não fixados nesta matriz.",
+              "Wrapper MainActivity, processos interface/emulação distintos. Dependências de firmware/disco/storage do owner precisam ser válidas; lista de formatos não consolidada. Detecção/hide existentes não excluem virtual na fonte inspecionada."
+            ],
+            [
+              "X2 · Xbox360",
+              "XenDroid0b11201 oficial preservado; experimental.",
+              "XenDroid EmulatorHostActivity/Compose, processos distintos. show_touch_overlay manual persistente; presença transitória não comprovada. Formatos/minSdk e compatibilidade de jogos não consolidados."
+            ],
+            [
+              "Y3 · PS3 interno",
+              "aPS3e2.43; Android9/API28, ARM64; :station_ps3.",
+              "Launcher direto ISO; owner também reconhece pasta de jogo válida. Firmware automático do pacote local; ISO criptografado pode exigir chave própria. Config18campos+touch, input físico e Surface próprios."
+            ],
+            [
+              "Y4 · PS4 interno",
+              "BachataS4 0.2.4; Android12/API31, ARM64 e GPU compatível; :station_ps4.",
+              "Launcher direto PKG; probe/extract oficiais e biblioteca privada. Importação precisa de conteúdo válido e, quando necessário, chave própria. Config11campos+touch. Bridge sem pause/rebind e retorno background físico pendente."
+            ]
+          ]
+        }
+      ],
+      "bullets": [
+        "Referências: [OFF28], [OFF29], [OFF30]."
+      ]
+    },
+    {
+      "title": "N64, Dolphin e separação dos owners",
+      "paragraphs": [
+        "N64 incorpora interface, controles, áudio, vídeo, perfis, saves, núcleo e plugins do Mupen64Plus AE. O lançamento normal parte do arquivo instalado e passa pela ponte N64Bootstrap e entrada oficial antes de GameActivity/CoreService. O parâmetro de caminho utiliza a chave real ROM_PATH. A ponte de configurações abre o menu público do upstream e não simula coordenadas. A interface fica no processo :n64 e core em :n64core; arquivos internos, cache, arquivos externos privados e SharedPreferences n64.* evitam compartilhar estado com SNES, Mega e frontend.",
+        "Na primeira preparação N64, o armazenamento de dados de jogo é interno; uma escolha posterior válida é mantida. Assets oficiais de mupen64plus_data são preparados pela rotina existente. A saída de GameActivity informa resultado à Gallery; a ponte retorna à ESActivity com CLEAR_TOP|SINGLE_TOP e encerra somente seu processo de interface conforme a cadeia documentada. O núcleo segue o encerramento oficial. Isso não autoriza matar uma partida para conferir cadastro, firmware ou existência de biblioteca.",
+        "Dolphin usa Activity e superfície próprias em :dolphin. O adaptador de presença da R120 é restrito à Activity exata EmulationActivity e à classe InputOverlay. Reconhece dispositivo não virtual com máscara completa GAMEPAD ou JOYSTICK, guarda a visibilidade original, envia ACTION_CANCEL, libera os overrides virtuais e usa INVISIBLE para preservar geometria. Ao remover o último controle, reconstrói o layout de toque pela API pública e restaura o estado anterior. Não grava preferências e não altera GameSurface nem mapeamento físico.",
+        "A configuração nativa do Dolphin, suas portas de GameCube/Wii e o renderer pertencem ao emulador. O runtime online real acrescentado na R126 usa as APIs oficiais, mas não transforma toda função offline em capacidade de sala. Os cinquenta motores não foram migrados universalmente para o mesmo owner online. As integrações de N64/Dolphin são exemplos de owners específicos preservados, e a elegibilidade por jogo/modo é tratada no capítulo multiplayer."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF29], [OFF30], [OFF31]."
+      ]
+    },
+    {
+      "title": "MAME, Neo Geo e BIOS CD automática",
+      "paragraphs": [
+        "MAME4droid Current1.41.2/MAME0.289 recebe as rotas Arcade, MAME, CPS1/2/3, Neo Geo e Neo Geo CD. Cartuchos usam o ZIP interno do conjunto e rompath apontando para o pai real do arquivo instalado, incluindo gerações de coleções. O contêiner da transferência e o ZIP do conjunto são camadas diferentes. A correção histórica do bootstrap substituiu a chave de pasta errada e passou a localizar a BIOS junto ao conteúdo existente. A preferência e os saves válidos do MAME são conservados.",
+        "Neo Geo CD na integração lida aceita CHD v5 autônomo. A identificação da plataforma é feita pelos ancestrais canônicos neo-geo-cd/neogeocd, não por uma palavra no nome do jogo. CUE/BIN/ISO, CHD com pai e seletor de múltiplos discos não foram acrescentados nessa correção. O lançador valida cabeçalho e dependências e abre o driver CDZ com -cdrom; conferir o cabeçalho não é validar todos os setores de um disco. A BIOS CD é distinta da BIOS de cartucho.",
+        "A R66 liga a preparação aos recursos que já estavam incluídos no APK. Primeiro reutiliza as dependências válidas privadas ou ao lado do disco; se faltar algo, lê os assets conhecidos, confere tamanho/CRC/SHA-1 e prepara os arquivos atomicamente no worker. Reabertura válida evita releitura e regravação. Importação manual permanece alternativa quando necessária, mas não é requisito normal do APK que já traz essas dependências. Este dossiê registra somente o comportamento e as referências; não reproduz bytes de BIOS.",
+        "A auditoria do catálogo histórico identificou nomes não registrados no MAME0.289, variantes/hacks com conjuntos próprios e dois itens classificados como Neo Geo que pertencem a outro hardware. Uma abertura histórica de KOF98 apresentou corrupção verde/branca na captura curta, sem causa isolada. A correção da BIOS CD não resolve automaticamente cartuchos, driver, gráficos ou online. Os 66 testes locais da R66 exercitaram preparação e preservação com cabeçalho CHD sintético; não qualificaram gameplay, áudio ou controles de todos os títulos."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF26], [OFF32], [OFF33]."
+      ]
+    },
+    {
+      "title": "Controles físicos, toque e gaps por família",
+      "paragraphs": [
+        "O Android distingue teclado, mouse, remoto DPAD, dispositivo virtual e fontes GAMEPAD/JOYSTICK. Reconhecer um dispositivo não prova todos os botões, eixos, slots ou modalidades de Bluetooth/USB. A R120 produziu uma auditoria por owner e acrescentou apenas a supressão transitória do touch do Dolphin. Não há adaptação universal no frontend que esconda toda superfície ou que desligue todos os overlays com a mesma chamada. O código dos cores Libretro não controla necessariamente a UI Android do host que os executa.",
+        "SNES/Mega EX+ já possuem AUTO em VController e recebem hotplug, mas a condição de presença também inclui teclado; escolhas manuais ON/OFF permanecem. Switch possui estado overlayHiddenByPhysicalController e restauração quando a própria camada o havia ocultado. Vita possui hideOverlayWhenControllerConnected e recuperação depois do último disconnect. O wrapper Xbox clássico inspecionado enumera presença e restaura o touch, embora sua regra não exclua virtual. Esses comportamentos são achados de fonte/rotas, não testes físicos completos nesta leitura.",
+        "Flycast possui show/hide e timer, mas hitTest não depende da mesma visibilidade e o delegate pode reabrir; N64 oculta por entrada e timer sem getter que identifique a propriedade da supressão; PPSSPP possui preferência persistente e opacidade por inatividade; MAME registra efetivamente alguns controles pela primeira entrada. PS2 tem divergências entre a superfície decoded e referências upstream. Cemu usa StateFlow para overlay, XenDroid usa opção Compose manual e Saturn usa toque manual sem listener de presença no wrapper lido. Chamar um setter isolado pode ser revertido pelo owner ou interferir no input.",
+        "O adaptador Dolphin passou 68 testes isolados com stubs, incluindo dois controles, último disconnect, mil callbacks de layout sem release repetido, pause/destroy e falha de ponte. Esses testes não exercitam JNI real, latência, botão BSP-D3, pareamento, eixos ou gameplay. PS3/PS4 têm detecção própria de presença e máscaras/eixos no owner interno, mas sua resposta física completa permanece uma tarefa de validação. Slots online têm autoridade própria e não podem ser deduzidos do número do InputDevice."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF31], [OFF34], [OFF35]."
+      ]
+    },
+    {
+      "title": "PS3 interno: bootstrap, firmware, jogo e retorno",
+      "paragraphs": [
+        "PS3 usa aPS3e2.43 em :station_ps3, com mínimo Android9/API28 e ARM64 verificados pela ponte. StationSonyComponentFactory preserva a factory delegada e escolhe o dispatcher interno, de modo que a rota atual não depende de instalar ou abrir outro aplicativo. O worker prepara o módulo fixado por manifest, confere arquivos e bibliotecas, vincula as pastas privadas e executa o importador nativo do firmware autorizado presente no pacote local. Um marcador só não basta: sucesso do importador e arquivos reais de flash são condições do sistema preparado.",
+        "O launcher Station aceita ISO para a abertura direta e valida URI content/file, extensão e disponibilidade; amostras DEMO e arquivos vazios são rejeitados. Ps3Activity também tem caminho para pasta com executável válido, mas essa capacidade interna não significa que o catálogo Station ofereça importação universal de pastas. ISO usa um descriptor para metadados e outro descriptor novo para playback, com propriedade transferida ao JNI. Quando há criptografia, a chave válida do próprio jogo precisa ser fornecida pela rota que a requer. Título/serial vêm da leitura real do motor, não do nome da capa.",
+        "A interface de jogo utiliza SurfaceView, touch próprio e eventos físicos. O worker configura a Surface, executa boot e usa pause/resume quando o ciclo de vida exige; mudança de tamanho é encaminhada ao motor. Perder a Surface libera estados de input e pausa a sessão apropriada. Há confirmação humana para sair da partida e retorno ao frontend. Um pedido novo respeita a instância singleTask e não deve criar uma segunda emulação simultânea por mera preparação.",
+        "A R131 corrigida teve instalação/abertura do frontend e telas de preparo PS3/PS4 observadas. PS3 confirmou importação inicial e reuso do firmware; PS4 superou o erro antigo ClassLoader. A evidência qualifica bootstrap e telas, sem leitura independente dos arquivos privados e sem jogo ISO/PKG real iniciado. As configurações posteriores R134 não são fisicamente validadas por uma observação anterior R131. Firmware incluído, JNI carregado, configuração salva e gameplay são estados diferentes."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF36], [OFF37], [OFF38]."
+      ]
+    },
+    {
+      "title": "PS3 R134: inventário completo das opções",
+      "paragraphs": [
+        "A tela PS3 R134 tem categorias Imagem, Áudio, Processamento e Sistema, Voltar persistente e retorno disponível durante a preparação. São dezoito campos nativos, dezesseis editáveis e dois de leitura, mais a preferência de controles de toque. O cabeçalho informa que alterações valem no próximo jogo. Valores são carregados com aenu.emulator.Emulator.Config.openFile/load e gravados por save/closeText no YAML do owner, seguido de publicação atômica; o frontend não cria equivalentes fictícios com chaves próprias.",
+        "Renderizador e Compilação de shaders ficam somente para leitura. Os nomes de enum do XML publicado divergem do padrão do binário2.43 e o código não converte esses valores por inferência. Resolução, aspecto, limite de quadros e decodificadores usam a enumeração fixada pelo contrato. Valores numéricos têm faixa explícita. Um valor ausente ou tipo incompatível fica indisponível na UI, em vez de receber um padrão fabricado e ser automaticamente regravado.",
+        "A troca de categoria incrementa um epoch e descarta callbacks que pertencem à página anterior, Activity fechada ou saída em curso. O gate de submissão e destroy foi revisado para impedir trabalho posterior ao fechamento do executor. Uma gravação humana já enfileirada termina antes de Voltar completar o retorno. A preferência de toque usa SharedPreferences do owner e continua condicionada à presença do controle físico. A existência do campo e da gravação não prova que um título físico consumiu a alteração ou ganhou desempenho.",
+        "A tabela reúne as chaves exatas, opções e intervalos expostos. O limite de quadros PS3, a escala de resolução e número de threads são escolhas do motor; alterá-los pode afetar compatibilidade e qualidade de modo específico ao jogo. Os rótulos em português simplificam a navegação, mas não alteram a semântica das chaves. Nenhum desses campos habilita PS3 online."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Categoria",
+            "Campo nativo / rótulo",
+            "Opções / faixa / condição"
+          ],
+          "rows": [
+            [
+              "Imagem",
+              "Video|Renderer · Renderizador",
+              "Somente leitura; divergência enum XML/binário impede conversão inferida."
+            ],
+            [
+              "Imagem",
+              "Video|Resolution · Resolução",
+              "1920x1080,1920x1080i,1280x720,720x480,720x480i,720x576,720x576i,1600x1080,1440x1080,1280x1080,960x1080."
+            ],
+            [
+              "Imagem",
+              "Video|Resolution Scale · Escala",
+              "25–800%."
+            ],
+            [
+              "Imagem",
+              "Video|Aspect ratio · Proporção",
+              "4:3 ou16:9."
+            ],
+            [
+              "Imagem",
+              "Video|Frame limit · Limite de quadros",
+              "Off,30,50,60,120,Display,Auto,PS3 Native,Infinite."
+            ],
+            [
+              "Imagem",
+              "Video|Shader Mode · Compilação de shaders",
+              "Somente leitura pelo conflito de enums da fonte publicada."
+            ],
+            [
+              "Imagem",
+              "Video|Write Color Buffers",
+              "Booleano."
+            ],
+            [
+              "Imagem",
+              "Video|Strict Rendering Mode",
+              "Booleano."
+            ],
+            [
+              "Áudio",
+              "Audio|Master Volume",
+              "0–200%."
+            ],
+            [
+              "Áudio",
+              "Audio|Enable Buffering",
+              "Booleano."
+            ],
+            [
+              "Áudio",
+              "Audio|Enable Time Stretching",
+              "Booleano."
+            ],
+            [
+              "Processamento",
+              "Core|PPU Decoder",
+              "Interpreter(static), Recompiler(LLVM)."
+            ],
+            [
+              "Processamento",
+              "Core|SPU Decoder",
+              "Interpreter(static), Interpreter(dynamic), Recompiler(ASMJIT), Recompiler(LLVM)."
+            ],
+            [
+              "Processamento",
+              "Core|PPU Threads",
+              "1–8."
+            ],
+            [
+              "Processamento",
+              "Core|Preferred SPU Threads",
+              "0–6."
+            ],
+            [
+              "Processamento",
+              "Core|Max LLVM Compile Threads",
+              "0–12."
+            ],
+            [
+              "Processamento",
+              "Core|LLVM Precompilation",
+              "Booleano."
+            ],
+            [
+              "Sistema",
+              "Miscellaneous|Show trophy popups",
+              "Booleano."
+            ],
+            [
+              "Sistema",
+              "Controles de toque",
+              "Preferência própria; mantém condição de ausência de controle físico."
+            ]
+          ]
+        }
+      ],
+      "bullets": [
+        "Referências: [OFF39], [OFF40]."
+      ]
+    },
+    {
+      "title": "PS4 interno: runtime, PKG, vídeo, áudio e input",
+      "paragraphs": [
+        "PS4 usa Bachata S4 0.2.4 em :station_ps4, Activity privada singleTask e mínimo Android12/API31 com ARM64. O bootstrap filho carrega apenas namespaces SDL3/runtime/entrada próprios antes do pai; classes Android e Station permanecem no classloader principal. Bibliotecas e libc++ privadas não substituem as raízes dos outros motores. O módulo derivado contém as declarações JNI conferidas, e o pacote estrangeiro completo com sua UI/Hilt não foi incorporado.",
+        "A preparação confere manifest e archive oficiais, caminhos, duplicatas, tamanhos e hashes dos assets; promove uma staging atomicamente e revalida cache no worker. Os arquivos de configuração, HOME/XDG, cache de shaders e sessões pertencem ao armazenamento privado do PS4. Um PKG real passa por probe/extract oficiais, em staging de biblioteca, com validação de eboot.bin e sce_sys/param.sfo antes da promoção. TITLE_ID e título vêm do SFO. Importação inválida ou conteúdo que requer chave própria resulta em erro explícito; DEMO não é importação válida.",
+        "Ps4Activity usa TextureView/Surface. O bridge0.2.4 não oferece pausa/rebind: o owner retém a mesma SurfaceTexture ao destacar a View e não inventa uma chamada SDL para pausar. Ao voltar, reaproveita o producer quando previsto. Sair/Back confirmado solicita stop real, neutraliza input e libera transportes/Surface depois do retorno nativo, encerrando somente o processo PS4. Retorno de background ainda exige teste físico; retenção implementada não é garantia de estabilidade.",
+        "Input físico/toque usa máscaras PS4, quatro slots, analógicos, hat, gatilhos e deadzones através de AF_UNIX privado e snapshots sequenciados com fila limitada/coalescida. A camada de toque é ocultada quando há controle físico e suas fontes são separadas dos eixos físicos. Perda de foco/desconexão neutraliza o estado. Áudio implementa BACHATA_ALSA_SOCKET com preparação, PCM e fechamento, usando AudioTrack/conversões nos workers e limites de payload. A documentação não qualifica Bluetooth, áudio ou gameplay de PKG real apenas por essa implementação."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF41], [OFF42], [OFF43]."
+      ]
+    },
+    {
+      "title": "PS4 R134: inventário completo e persistência das opções",
+      "paragraphs": [
+        "PS4 R134 divide suas opções em Imagem, Desempenho, Sistema e Áudio. São onze campos nativos, oito editáveis e três para leitura, mais controles de toque. O contrato vem do catálogo runtime-settings/shadps4.json do artefato oficial0.2.4 e do leitor/writer correspondente. O arquivo que o motor consome é ps4/storage/.local/share/shadPS4/config.json, relativo ao armazenamento privado do owner. HOME e XDG são definidos antes de carregar bibliotecas para que a configuração da tela e a execução usem a mesma raiz.",
+        "Abrir Configurações não cria o JSON e não regrava padrões. Se uma chave não existe, a UI mostra o padrão documentado para aquele campo; ao editar, apenas a chave escolhida é atualizada. Seções/chaves desconhecidas são preservadas. A leitura e escrita recusam arquivo ou payload maior que 512KiB, tipos incompatíveis e seção não objeto. AtomicFile preserva o arquivo anterior se a gravação falhar. Nenhum backend de áudio, faixa numérica ou driver é inventado quando o contrato primário não o demonstrou.",
+        "Enquadramento e modo de apresentação usam enumeração real; os booleanos permitem canal de cor, HDR, FSR, RCAS, afinidade de núcleos e cache de pipelines. VBlank, idioma e backend de áudio são de leitura porque limites/enumeração ou escrita segura não foram expostos com comprovação suficiente. O controle de toque pertence à preferência do owner, não ao JSON nativo. Valores e chaves estão reunidos na tabela abaixo, sem implicar que todas as combinações funcionam na GPU dos aparelhos.",
+        "A fonte definitiva corrige um callback que podia submeter trabalho depois da destruição da tela. settingsActive considera destruição, finishing, leaving e shutdown; o epoch é invalidado antes de encerrar o worker. Voltar marca saída e enfileira finish depois das gravações humanas já solicitadas. A mudança não encerra um jogo nativo em andamento por simples callback de settings. O consumo da configuração pelo jogo, os efeitos físicos e a navegação completa R134 dependem dos recibos de validação específicos."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Categoria",
+            "Chave nativa / rótulo",
+            "Opções / padrão documentado / condição"
+          ],
+          "rows": [
+            [
+              "Imagem",
+              "GPU.display_mode · Enquadramento",
+              "Fit,Stretch,Crop; padrão Fit."
+            ],
+            [
+              "Imagem",
+              "GPU.present_rb_swap · Corrigir canais de cor",
+              "Booleano; padrão false."
+            ],
+            [
+              "Imagem",
+              "GPU.hdr_allowed · Permitir HDR",
+              "Booleano; padrão false."
+            ],
+            [
+              "Imagem",
+              "GPU.fsr_enabled · Filtro FSR",
+              "Booleano; padrão false."
+            ],
+            [
+              "Imagem",
+              "GPU.rcas_enabled · Nitidez RCAS",
+              "Booleano; padrão true."
+            ],
+            [
+              "Imagem",
+              "GPU.present_mode · Apresentação",
+              "Immediate,Mailbox,Fifo,FifoRelaxed; padrão Mailbox."
+            ],
+            [
+              "Desempenho",
+              "General.big_core_affinity",
+              "Booleano; padrão false."
+            ],
+            [
+              "Desempenho",
+              "Vulkan.pipeline_cache_enabled",
+              "Booleano; padrão false."
+            ],
+            [
+              "Desempenho",
+              "GPU.vblank_frequency",
+              "Somente leitura; padrão documentado60."
+            ],
+            [
+              "Sistema",
+              "General.console_language",
+              "Somente leitura; padrão documentado1."
+            ],
+            [
+              "Áudio",
+              "Audio.audio_backend",
+              "Somente leitura; padrão do motor quando ausente."
+            ],
+            [
+              "Sistema",
+              "Controles de toque",
+              "Preferência própria do owner; não grava chave fictícia no JSON."
+            ]
+          ]
+        }
+      ],
+      "bullets": [
+        "Referências: [OFF44], [OFF40], [OFF02]."
+      ]
+    },
+    {
+      "title": "Saves, retorno ao frontend e condição operacional",
+      "paragraphs": [
+        "O TurboStations preserva a assinatura e os dados de uma atualização Android para manter licenças, instalação e armazenamento de jogos. Essa operação de pacote é diferente da opção Apagar jogo. O instalador só conhece seus arquivos de conteúdo pelo recibo; saves e preferências são administrados pelos emuladores. Não há prova nesta leitura de uma camada universal que converta save states entre MAME, EX+, Dolphin, N64, LibretroPlayer, Yuzu, Sony e os demais owners.",
+        "Cada família tem seu retorno. N64 possui resultado oficial Gallery/GameActivity e ponte de volta à ESActivity; MAME usa a rota para plataformas e encerra seu processo apenas após ação humana; os owners Sony têm Voltar para configurações e confirmação de saída para jogo. Em processos separados, encerrar a Activity e encerrar o core não são a mesma operação. As fontes preservadas não autorizam apresentar toda saída como identicamente implementada ou fisicamente validada.",
+        "PS3 conserva config custom_cfg por serial quando existe; PS4 mantém biblioteca importada e armazenamento interno privado sem mover saves de outros motores. O dispatcher Sony recusa DEMOs e valida o jogo real antes de enviar ao owner. Ao receber pedido novo com uma sessão já aberta, os owners mantêm a sessão atual ou pedem retorno ao catálogo, em vez de iniciar outra emulação simultânea. Controles devem ser neutralizados na pausa/saída conforme a implementação específica para evitar input preso.",
+        "A condição de operação para instalar, revisar ou comparar versões é não interromper uma partida/download. O guard da instalação verifica esse estado e o recibo mantém APK integral, UID e data de instalação para conferir continuidade. Este dossiê não inclui ROMs, BIOS, firmware, chaves, tokens, seriais, capturas privadas ou logs pessoais. As referências são código/contratos e recibos agregados; material binário local autorizado continua em seu destino privado."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF25], [OFF29], [OFF38], [OFF41], [OFF45]."
+      ]
+    },
+    {
+      "title": "Pontos ainda abertos na qualificação offline",
+      "paragraphs": [
+        "A abrangência do catálogo é maior que a qualificação física disponível. Os cinquenta comandos auditados e os dois owners Sony descrevem intenção de lançamento; para cada título permanecem relevantes formato aceito pelo binário exato, dependências de conteúdo, integridade, BIOS/firmware, capacidade gráfica, preferências, controles e retorno. Nas oito famílias com dependência ausente na observação histórica, a informação precisa ser atualizada por uma leitura atual dos aparelhos antes de afirmar disponibilidade.",
+        "O dossiê não consolida um minSdk e uma whitelist completa de extensões para todas as famílias antigas. Não preencher essas lacunas com requisitos de uma release recente upstream: vários motores têm binários preservados e wrappers com políticas próprias. O inventário registra explicitamente API28 N64/PS3, API31 PS4 e proveniência SDK26 do artefato ARMSX2, distinguindo requisito do motor e requisito efetivo do pacote. A matriz é completa quanto às cinquenta linhas auditadas; o detalhamento de compatibilidade não é declarado completo quando a evidência não o permite.",
+        "Os testes isolados de filas, geometria, lifecycle, config, ABI e composição verificam riscos específicos. Eles não medem rendimento de GPU, consumo, aquecimento, resposta Bluetooth, áudio contínuo, estabilidade de emulação ou todas as combinações de configuração. Instalar o APK atual em dois aparelhos e observar o frontend acrescenta evidência de instalação/abertura, mas não transforma o pacote em release estável universal nem qualifica quatro jogadores ou todos os motores.",
+        "Para uma validação operacional completa de um motor, selecionar um título instalado real, conferir boot, imagem/som, controles físicos e toque, pausa/background quando houver API, retorno e persistência de saves. Para settings Sony, conferir que o arquivo muda somente a chave escolhida e que o motor consome a alteração no próximo lançamento. Para render/menu, medir primeira entrada, mudanças rápidas, contexto recriado, tempo do LED e memória. Qualquer alegação térmica precisa de medição física separada."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [OFF02], [OFF03], [OFF31], [OFF40]."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "OFF01",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/AGENTS.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/AGENTS.md",
+      "purpose": "Política de composição, preservação e separação das evidências"
+    },
+    {
+      "id": "OFF02",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-settings-refinement-r134-20261011/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-settings-refinement-r134-20261011/README.md",
+      "purpose": "Composição e escopo atual R134"
+    },
+    {
+      "id": "OFF03",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/evidence/launch-matrix-r120.json",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/evidence/launch-matrix-r120.json",
+      "purpose": "50 plataformas, rotas, processos, componentes e limites"
+    },
+    {
+      "id": "OFF04",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/README.md",
+      "purpose": "Owners Sony internos e validação R131"
+    },
+    {
+      "id": "OFF05",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "purpose": "Publicação de catálogo, workers, capas, refresh e instalados"
+    },
+    {
+      "id": "OFF06",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+      "purpose": "Mapeamento explícito de plataformas"
+    },
+    {
+      "id": "OFF07",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+      "purpose": "Biblioteca/cache/sessões/autorização"
+    },
+    {
+      "id": "OFF08",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_carousel.cpp",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_carousel.cpp",
+      "purpose": "Modelo, ações, comandos e despacho"
+    },
+    {
+      "id": "OFF09",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_info.h",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_info.h",
+      "purpose": "Sinopse, contagens, classificação e ficha"
+    },
+    {
+      "id": "OFF10",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/console-panel-r133/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/console-panel-r133/README.md",
+      "purpose": "Fotos console, cache e custos nominais"
+    },
+    {
+      "id": "OFF11",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+      "purpose": "Painel gráfico R134 e controles"
+    },
+    {
+      "id": "OFF12",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java",
+      "purpose": "Persistência da máscara, fundo e economia"
+    },
+    {
+      "id": "OFF13",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-carousel-diagonal-online-compact-r123-20261011/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-carousel-diagonal-online-compact-r123-20261011/README.md",
+      "purpose": "Reta/Diagonal/De lado e prioridades"
+    },
+    {
+      "id": "OFF14",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/README.md",
+      "purpose": "Orçamento de frames e evidência física delimitada"
+    },
+    {
+      "id": "OFF15",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "purpose": "Fila única, foreground e preempção de capas"
+    },
+    {
+      "id": "OFF16",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-smooth-preload-r115-20261010/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-smooth-preload-r115-20261010/README.md",
+      "purpose": "Cache progressivo e preparação incremental LED"
+    },
+    {
+      "id": "OFF17",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+      "purpose": "Central, ETA, ações e bitmap cache"
+    },
+    {
+      "id": "OFF18",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_magazine_field.h",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_magazine_field.h",
+      "purpose": "Cache GL, chave, três entradas e 8MiB"
+    },
+    {
+      "id": "OFF19",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/startup-cleanup-r132/recipe/patch_loading.py",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/startup-cleanup-r132/recipe/patch_loading.py",
+      "purpose": "Barreira loading e marcos de progresso"
+    },
+    {
+      "id": "OFF20",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/startup-cleanup-r132/recipe/r132_startup_loading.h",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/startup-cleanup-r132/recipe/r132_startup_loading.h",
+      "purpose": "Prewarm no SDL/GL e contexto"
+    },
+    {
+      "id": "OFF21",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java",
+      "purpose": "Player, decoder e lifecycle baseline"
+    },
+    {
+      "id": "OFF22",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/local-sony-demos/recipe/patch_video_loop.py",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/local-sony-demos/recipe/patch_video_loop.py",
+      "purpose": "Loop persistente e reutilização decoder R130"
+    },
+    {
+      "id": "OFF23",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+      "purpose": "Estados, fila, retry, pausa e limpeza da tentativa"
+    },
+    {
+      "id": "OFF24",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/DownloadService.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/DownloadService.java",
+      "purpose": "Notificação foreground e wake lock"
+    },
+    {
+      "id": "OFF25",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+      "purpose": "Instalação transacional, não hashing ROM e remoção"
+    },
+    {
+      "id": "OFF26",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-neogeo-cd-r65-20261007/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-neogeo-cd-r65-20261007/README.md",
+      "purpose": "Neo Geo/MAME, CHD, BIOS, nomes e limites"
+    },
+    {
+      "id": "OFF27",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/audits/station-online-system-engines-20261011/evidence/current-apk-audit.json",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/audits/station-online-system-engines-20261011/evidence/current-apk-audit.json",
+      "purpose": "Auditoria R126 das rotas/binários preservados"
+    },
+    {
+      "id": "OFF28",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/audits/station-online-system-engines-20261011/remaining-systems/matrix.json",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/audits/station-online-system-engines-20261011/remaining-systems/matrix.json",
+      "purpose": "Proveniência versões de motores"
+    },
+    {
+      "id": "OFF29",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-emulators-r15-20261005/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-emulators-r15-20261005/README.md",
+      "purpose": "Integração normal N64, processos, storage e retorno"
+    },
+    {
+      "id": "OFF30",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-dolphin-online-r126-20261011/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-dolphin-online-r126-20261011/README.md",
+      "purpose": "Dolphin/N64 owners reais e proveniência"
+    },
+    {
+      "id": "OFF31",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/REVIEW-CONTROLLER-VISIBILITY-R120.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/REVIEW-CONTROLLER-VISIBILITY-R120.md",
+      "purpose": "Inventário controle por motor e limites"
+    },
+    {
+      "id": "OFF32",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-neogeocd-bundled-bios-r66-20261007/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-neogeocd-bundled-bios-r66-20261007/README.md",
+      "purpose": "Preparação automática das BIOS existentes"
+    },
+    {
+      "id": "OFF33",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-neogeocd-bundled-bios-r66-20261007/evidence",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-neogeocd-bundled-bios-r66-20261007/evidence",
+      "purpose": "Recibos e limites das provas CD; diretório de evidências"
+    },
+    {
+      "id": "OFF34",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/java/client/src/java/org/emulationstation/frontend/station/StationControllerPresence.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/java/client/src/java/org/emulationstation/frontend/station/StationControllerPresence.java",
+      "purpose": "Adaptador Dolphin completo"
+    },
+    {
+      "id": "OFF35",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/evidence/controller-presence-r120.json",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/evidence/controller-presence-r120.json",
+      "purpose": "68 provas isoladas controle"
+    },
+    {
+      "id": "OFF36",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps3/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps3/README.md",
+      "purpose": "Contrato PS3 runtime/firmware/input"
+    },
+    {
+      "id": "OFF37",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyLaunchActivity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyLaunchActivity.java",
+      "purpose": "API/ARM64/formatos e despacho interno Sony"
+    },
+    {
+      "id": "OFF38",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "purpose": "Bootstrap PS3 baseline, jogo e lifecycle"
+    },
+    {
+      "id": "OFF39",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "purpose": "Configuração PS3 R134 com 18 campos"
+    },
+    {
+      "id": "OFF40",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/evidence/sony-settings-contract.json",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/evidence/sony-settings-contract.json",
+      "purpose": "Contrato primário settings, lifecycle e limites"
+    },
+    {
+      "id": "OFF41",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps4/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps4/README.md",
+      "purpose": "Contrato PS4 runtime/PKG/áudio/input/retorno"
+    },
+    {
+      "id": "OFF42",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "purpose": "Owner PS4 baseline"
+    },
+    {
+      "id": "OFF43",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Game.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Game.java",
+      "purpose": "Importação PKG, staging e SFO"
+    },
+    {
+      "id": "OFF44",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "purpose": "Configuração PS4 R134, JSON e callbacks"
+    },
+    {
+      "id": "OFF45",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/tooling/release/install_current.py",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/tooling/release/install_current.py",
+      "purpose": "Guard de instalação e verificação de dados"
+    }
+  ],
+  "openQuestions": [
+    "Leitura atual dos diretórios de cores externos nos dois aparelhos para as oito famílias ausentes na observação R120.",
+    "Whitelist offline de extensões e minSdk por componente para todas as famílias preservadas; não foram consolidados na auditoria global.",
+    "Gameplay real ISO/PKG e consumo de configurações Sony R134, input Bluetooth/USB, áudio, pausa/retorno e saves.",
+    "Qualificação por título/edição dos demais motores, ANR/codec/GL e qualquer alegação de temperatura/consumo."
+  ]
+}

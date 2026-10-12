@@ -1,0 +1,15 @@
+{
+  "java/org/emulationstation/frontend/sony/Ps3Activity.java": "e880c20753cc8fe0fc794a133cd50f8cbae698a0cf13c7ac379374e709814547",
+  "java/org/emulationstation/frontend/sony/Ps4Activity.java": "0fc2875f32295acbabcf6a5ee31b923bee61bf56c157996419d7d4415d3dfaf6",
+  "java/org/emulationstation/frontend/station/StationGraphicsPanel.java": "e642ead7d345f08a9e677f42975bea93c127e7d3788d171129f2d464165d0d47",
+  "recipe/aggregate_payloads.py": "ec34f6c7937b7649d02137b4c944307888b5f9824fee34727762ed2a6a9e6fd4",
+  "recipe/assemble_apk.py": "f0f04fa3640230fcab2a78e6dc13852540c73040665eb1ccb6314379ea4d251c",
+  "recipe/AssembleScopedPartition.java": "5ea794aad4cb177080e331b09d449419e352020ac61a6b9ea4194e32b4b1b022",
+  "recipe/build_java_payloads.py": "b2835a4c35a0fed6b49dead28f55a2953796beab98890d3f9be9af6b68308b21",
+  "recipe/build_runtime_identity.py": "6ab25ed68d80c9d422fb13472b46fba5e902b5890242b43a57bf217de24663a7",
+  "recipe/common.py": "4319021a2a5ad6970946384a4bb2f5f48907405d64b788a2f7dc4aeec922a077",
+  "recipe/DecodeDolphinPartition.java": "d1365cf8cce05fb08c6e04dbcc47e9b154af268637bf0d768c32f851420c2b67",
+  "recipe/patch_settings_labels.py": "c83b4dd8e38b4fe895a93b0330d9fcf849dbf8715f2a9895433244c397ae6f46",
+  "recipe/verify_final.py": "521826e9a78c2994c762f824f8706912b81901dfe371db4a76eb7de08cb14eb4",
+  "recipe/VerifyScopedPartition.java": "13e7284c075775257eae411c39bc6c41714cbbd260707d61126e437bec8f3957"
+}

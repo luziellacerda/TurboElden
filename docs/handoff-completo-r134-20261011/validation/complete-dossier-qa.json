@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "document": "TurboStations-Dossie-Completo-Auditoria-e-Handoff.docx",
+  "documentSha256": "2f806bb48f0c571f04cdb870bd5279c1fd42bac76854d8ff39495e03dc3ab335",
+  "renderedPages": 142,
+  "individualVisualCoverageWithByteIdenticalReuse": 142,
+  "sections": 109,
+  "groups": 6,
+  "sources": 172,
+  "reviewRanges": [
+    {
+      "reviewer": "root",
+      "first": 1,
+      "last": 31,
+      "record": "complete-qa-root.json",
+      "recordSha256": "49a297d3bd7bd936ed9f1154d42ffe5fb1c12d74326cc3dbfab5843777b572bb",
+      "status": "pass"
+    },
+    {
+      "reviewer": "offline",
+      "first": 32,
+      "last": 70,
+      "record": "complete-qa-offline.json",
+      "recordSha256": "d59d128c5ca7a1cb3b227d04289d547adfaeebbaf00cb6b7356ff9eb8a773e16",
+      "status": "pass"
+    },
+    {
+      "reviewer": "online",
+      "first": 71,
+      "last": 106,
+      "record": "complete-qa-online.json",
+      "recordSha256": "8040259e999eb8eb79331d9d6c921c32dbcdcb30ed62b867f30bd1d0e1c3ff43",
+      "status": "pass"
+    },
+    {
+      "reviewer": "services",
+      "first": 107,
+      "last": 142,
+      "record": "complete-qa-services.json",
+      "recordSha256": "06577c11fbfd8db967cafe654484528982c5bfccab8c819ce9078c01c05b4741",
+      "status": "pass"
+    }
+  ],
+  "finalPublicationAdditionalReview": {
+    "page": 104,
+    "reviewer": "root",
+    "detail": "original",
+    "sha256": "fdf9a83979031a5356e31beabff8224cd2af32e31a13f67aadb8701491459c81",
+    "result": "pass; repaired short revision reference intact, all table cells and footer legible"
+  },
+  "onlineFinalPublicationReuse": {
+    "range": [
+      71,
+      106
+    ],
+    "changedPages": [
+      104
+    ],
+    "other35PagesByteIdentical": true
+  },
+  "remainingLayoutIssues": [],
+  "phoneValidation": false,
+  "serverDeployed": false
+}

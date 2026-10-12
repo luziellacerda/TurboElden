@@ -1,0 +1,2 @@
+package android.os;import java.util.concurrent.*;
+public class ResultReceiver{public static CountDownLatch entered=new CountDownLatch(1),release=new CountDownLatch(1);public void send(int code,Bundle data){if(code==4){entered.countDown();try{if(!release.await(3,TimeUnit.SECONDS))throw new AssertionError("human event timeout");}catch(InterruptedException e){throw new AssertionError(e);}}}}

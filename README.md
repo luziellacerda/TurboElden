@@ -1,3 +1,17 @@
+# TurboStations R134 e auditoria para entrega ao consumidor
+
+A versão instalada é **R134**, fonte executável `4f9039eb9ce13907ce043870bfe1f6e294888556`, APK SHA256 `f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2`. Edge 30 e Samsung A56 foram atualizados com dados e assinatura preservados. O proprietário relatou partida de três presa no carregamento e pedido para fechar o app ao sair do online.
+
+- [Dossiê completo do aplicativo e operação](docs/handoff-completo-r134-20261011/README.md).
+- [Auditoria e incidentes](docs/handoff-completo-r134-20261011/AUDITORIA-E-INCIDENTES.md).
+- [Fontes da correção de lifecycle e testes](integration/online-lifecycle-review-r135/README.md): Java compilado, sem novo APK/instalação/homologação física.
+- [Handoff R134 ao servidor](versions/station-settings-refinement-r134-20261011/HANDOFF-APP-R134-PARA-SERVIDOR-20261011.md).
+- [Receitas R134](integration/settings-refinement-r134/recipe/README.md) e [estado consolidado](versions/station-settings-refinement-r134-20261011/STATUS.json).
+
+O código fonte e as receitas foram publicados para revisão. A ativação dos motores no servidor e o aceite físico do online continuam pendentes; não promover a estável com base em instalação ou testes de preparação. O ramo padrão antigo e os blocos históricos abaixo não selecionam outra entrega. Nenhum USB ou deploy foi usado na auditoria atual.
+
+## Histórico preservado
+
 # TurboStations — fonte atual e emuladores online
 
 A candidata atual é **R127**, com [fonte executável publicada](https://github.com/luziellacerda/TurboElden/commit/50eefa3eb40f0987b9dc6001e1d10ed2ad81a77c). O APK foi compilado, assinado com o certificado original e conferido integralmente. Ainda não foi instalado nem promovido a estável; a última instalação comprovada permanece R124.

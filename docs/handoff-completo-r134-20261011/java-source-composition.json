@@ -1,0 +1,1417 @@
+{
+  "schema": "station.source.composition.index.v1",
+  "baselineCommit": "4f9039eb9ce13907ce043870bfe1f6e294888556",
+  "sourceCount": 281,
+  "files": {
+    "client/src/java/org/emulationstation/frontend/AssetInstaller.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/AssetInstaller.java",
+      "sha256": "456f2d0a4a68bfaff74d7d46f4809c2de7342b7ec3439f075f2e503bc91929d7",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/DownloadService.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/DownloadService.java",
+      "sha256": "137feba21320b9cda6df61a5168c862099f46c6c41ea0aee079c896126fe9bf3",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/auth/LoginActivity.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/LoginActivity.java",
+      "sha256": "764ff0b9cb77c209b0bbb88b2e79e50cfff51aab9e508bab511fcac816c7ef50",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/auth/StationLogin.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationLogin.java",
+      "sha256": "4bcca2a762584312222f8dfd9b3b36c06a5ea552c2eca42ec25642940d8eb187",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/auth/StationTaskNavigation.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationTaskNavigation.java",
+      "sha256": "0fd4745792931f0b1b80d57b4e6d4d37b70aed477cfb732de59553ad01077703",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/auth/StationTaskPolicy.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationTaskPolicy.java",
+      "sha256": "2771621dadf0a384be2140e182a36b1b781d6e073ad3d4f0e6fc097c94dad551",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/ExistingCoverCache.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/ExistingCoverCache.java",
+      "sha256": "5d07ae03edc6b165ceab21cdd93593318cd315f5e6c65381dc73206b9051c342",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationAndroid.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationAndroid.java",
+      "sha256": "ce102c7b18189929bddb6dd8895661c5ad26814da2d4988774482b8ca1532d76",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationApi.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+      "sha256": "f70ad339cff8bc168c46ec400cd90b145fcb7a81834c2ae23e38ebeb9e923f67",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationArchive.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationArchive.java",
+      "sha256": "107669c6885725d99b430e7340c550466eed24a2842d43b51526c673a9d51b86",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationArtifact.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationArtifact.java",
+      "sha256": "fe6eee3c4dfaaf66ac68eb0096b6ff0dc7792fa377dadf5898b5ea06e803bac9",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationBundledFiles.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationBundledFiles.java",
+      "sha256": "74292e8dcfe8318d8697a2c81446ab23cd66ff2c815bf98632849b34cc39e67e",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCarouselMedia.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCarouselMedia.java",
+      "sha256": "08800d7f35ee82aadd58276ca09497040bee5fa7070277d7f0fe502681a3d42f",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCarouselStylePreferences.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCarouselStylePreferences.java",
+      "sha256": "6a113b744e7b0f6d756d42890e99de1b4c26efadc6f75d15b470442ba716333c",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCatalog.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalog.java",
+      "sha256": "f8775fc40290a23167199205cb77ed45f7200942a903ec897b7a667befec74ea",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCatalogPlayerEvidence.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogPlayerEvidence.java",
+      "sha256": "ad20a55c98552d7ae6e03799253f1b3ec69a80cdb7591e40e10903972fa45379",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCatalogPlayerEvidenceLoader.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogPlayerEvidenceLoader.java",
+      "sha256": "c5e3b6e7f4f6c0ca6778181cc9e1abc2bec132a015100ba4c442d5943a3788d2",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCatalogPoll.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogPoll.java",
+      "sha256": "ca03baafce7af515d907eaa5b3e40ae7efff0efb3a50b4f1f571bcaba03e844b",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCatalogStore.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogStore.java",
+      "sha256": "9a8b823c9a5473e950225e8067365fa7f4a602c3821cbe1722980e61c3f2968e",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationComponentFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationComponentFactory.java",
+      "sha256": "c6653994a239b6d15e66460265b0d3422a0123c4bf6e4aaa6ad6d6316b6c52ea",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationConfig.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationConfig.java",
+      "sha256": "8c430cdf7b6cf2ee03f1ad3dca50ff18bc32a6b26ddfa1fe70397db81fe03cb1",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationControllerPresence.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationControllerPresence.java",
+      "sha256": "536a4a65ee9d4ccb15771b1d4f4a9403fd28b6ecec54d8ab2fc99f1fdf0fe2ec",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCoordinator.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+      "sha256": "5375f83eedbb14c14b8ae547a1304b508448e3eb173d467f418a64cfacf75e24",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "sha256": "11decbdb7db269a0fcd6894116d8fae8f876ff584185d684af43ee51c724340a",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCoverStore.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+      "sha256": "687341ff2f5c0e6ce9ca2873ec758d6f938d7bfe2435ded45fb114bfa5b4eb1b",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationCrypto.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCrypto.java",
+      "sha256": "b6d57060b23c953ec513098e49c337e8e648588623b4fd3359d4f91c99db9586",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationDiagnostics.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDiagnostics.java",
+      "sha256": "4ab4bc93edf1444094f0be982cbbe8218bbe1a18e46f3d2fab7c2f434a41934f",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+      "sha256": "dcc0161d1e934503ea053936713ff54df89bc4cd16c78ad429d44a8f9e5af2d1",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadRetry.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadRetry.java",
+      "sha256": "4b9556459d5f10e6c7777cbf9b13a0501515ce002215b9c8eaf7b651dde195da",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationDownloadUi.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadUi.java",
+      "sha256": "1f874035ea6d097c422460036a3a9e3bb2229f70e1348a60e0d52d3d4f27c465",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationDownloads.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+      "sha256": "59c8da97a19cd00eab6316c576520ecdcbbcd22ced701e78adc739bba5143f4f",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationExistingArtifact.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationExistingArtifact.java",
+      "sha256": "d01b4806e70a637c093c1d55a10b4e7230b3bce729aa94638a94fe82530d931f",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationFiles.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFiles.java",
+      "sha256": "cecc2450821c1b91ec683f9c3ba48c1ca20aef3bdeb008690c9b724d1e009750",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationFrontend.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "sha256": "059ebe29d30e62203bd048d54421757c220a0055440b6ae03f50dabce62070fd",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationGamePlayerFacts.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationGamePlayerFacts.java",
+      "sha256": "87bcc7fd294f20b7e41d650b47b9f4792064d4689f9e21156d85a32501500cf2",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationGraphicsPanel.java": {
+      "path": "integration/settings-refinement-r134/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+      "sha256": "e642ead7d345f08a9e677f42975bea93c127e7d3788d171129f2d464165d0d47",
+      "composition": "R134 settings overlay"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java",
+      "sha256": "0327cb2f25e05162e19f81b50128c478ebbc298e063d219fd391572b30199b52",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationHttp.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationHttp.java",
+      "sha256": "9f897c3d30465f9bc77b4d71d02a051746788b7a9aade4b8e0a25ba3ef8a4460",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationInstaller.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+      "sha256": "1b61d8764dfbfdaeab817cc2e81b7f160b773c30fb4771f19f34d963e84d2559",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationMediaCatalog.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationMediaCatalog.java",
+      "sha256": "c4c9c8f437abcc718f0f46887b0868660feaac4a83caf530d1af3dbecad2da3e",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationMediaStore.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationMediaStore.java",
+      "sha256": "873be7b5681dbd3eacd4a8ded1ee176e834bb98cc3338a42df1de82c05d25ad2",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationPlatforms.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+      "sha256": "c1466f6de9ff707d2cf22f136c06e286f2a9242aa6a68cd2f5badeeaa9bd7757",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationProtocol.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationProtocol.java",
+      "sha256": "43bdf2b6f948eab1fd386741d88b2b57e65c37b63eb608eca9e156b128052c51",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationPublication.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationPublication.java",
+      "sha256": "d6972d792c18e377cfda161d156b3e3cb279f36a3f420e5b53a72cb86316799e",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationRequestProof.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationRequestProof.java",
+      "sha256": "40ba9734251969e4c1b3042e332f12e471b14f0bd5232e7444342428a3d9a5d9",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationResourceBundle.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationResourceBundle.java",
+      "sha256": "675e593d3a9a4e8452b940c0c4279d5211a762803a73cc53a2410c36468c93ba",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationRetryAfter.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationRetryAfter.java",
+      "sha256": "7ea5fb4e3267249ac5b6cc1165ede174c152286f7aceb7632a35510fa5f1be57",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationSessions.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationSessions.java",
+      "sha256": "dbd8810253b74d9a5c00493115292a175d963a40a113e3113246eb3386178ec2",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationStorage.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationStorage.java",
+      "sha256": "3979ac629fe3778c609fd7bca20c3d72c9b89df920d1454a637ec24f575cfc9d",
+      "composition": "R124 baseline"
+    },
+    "client/src/java/org/emulationstation/frontend/station/StationWaveBackground.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationWaveBackground.java",
+      "sha256": "fa038decbe408ca4d05c873f2aad4553b2bde8bc091ee162cda3e9881483c5cd",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/ILoggerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/ILoggerFactory.java",
+      "sha256": "ab0bb52f4cf43e3a5fa27d00213755872578e7faee3e0c64839b80261bb70670",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/IMarkerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/IMarkerFactory.java",
+      "sha256": "b117ebd1bb1cb96f9c10126a1d9333c080cb8ab712bad44ce8df777ea3e0ef91",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/Logger.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/Logger.java",
+      "sha256": "3260945ee26d761430c30b356dc3426a7685bf42c6e0683b4c071f0ba733b17f",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/LoggerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/LoggerFactory.java",
+      "sha256": "fa196dd87db2ffdb16dbad229c2206af6fa04fce4e3bfeb1f4ff10eeac276618",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/LoggerFactoryFriend.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/LoggerFactoryFriend.java",
+      "sha256": "7c03986dbf69b843ffef03d75f52626168050f62e128033c846ad0fea1543ecd",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/MDC.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/MDC.java",
+      "sha256": "1a21ecf457230b77e148a6262b84b599cf8069583c6a96b6522735c073003dd0",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/Marker.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/Marker.java",
+      "sha256": "2f786e0c523a27f0f7cc170e4c7563cdd5a5fd213d38dd0aa112cee5858d225c",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/MarkerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/MarkerFactory.java",
+      "sha256": "47cc0e35c53a2f2a92a4315a3b52af7957e782e587eaa71e460f918fe4a90a3f",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/DefaultLoggingEvent.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/event/DefaultLoggingEvent.java",
+      "sha256": "95801e024aafc8ce0dc93672b839eba56c5cd30b42f92ec1d7af8cb3da1a2925",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/EventConstants.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/event/EventConstants.java",
+      "sha256": "092f4b29eeb6d6d1ed43e67111dbe94f6dff9c42273cf879167312d9b067a331",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/EventRecordingLogger.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/event/EventRecordingLogger.java",
+      "sha256": "e5af50242eaed3d021b9e11de196094b890547205973afba31ec35e121d24d14",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/KeyValuePair.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/event/KeyValuePair.java",
+      "sha256": "9e49c4990f2d926e0b309df9d34f5cacd3a1aadc7524cb5c4d8827a33fa3cce6",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/Level.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/event/Level.java",
+      "sha256": "71a2931e069faf3bd7f3a6da2a1ea48c64be96bd4af87c138995bcd15e45c03a",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/LoggingEvent.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/event/LoggingEvent.java",
+      "sha256": "36f4b1427e7472a2ae9821346fd946f0d8f645497885f7761e51b23b21543780",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/event/SubstituteLoggingEvent.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/event/SubstituteLoggingEvent.java",
+      "sha256": "dc52015fdfd175fa15cc137a24037e5791cdd7008c69af9befbdbaec557b7f48",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/AbstractLogger.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/AbstractLogger.java",
+      "sha256": "2d1071378e0e2cf5314898c2ff4e9d00a1f644e16f3e5d0ab66b9e216de6c7aa",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMDCAdapter.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMDCAdapter.java",
+      "sha256": "1f7c073ecc7df8905ca56362f6fe8e9f4df114192b609b550dcc508c0ba47823",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMarker.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMarker.java",
+      "sha256": "98744c8a47b722d01db353581ae24d684301ec3e357abf0407e77b7927bcdc9c",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMarkerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/BasicMarkerFactory.java",
+      "sha256": "ab5dcd8c3c343d7d8c0c9471d86bc334aaf906311c6c9d01ec6692e903e735f4",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/CheckReturnValue.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/CheckReturnValue.java",
+      "sha256": "ce7ac3af2b6db642e67ace0b92eca0fc5b2be6d0f8f610843c719fe5558cebdf",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/FormattingTuple.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/FormattingTuple.java",
+      "sha256": "e2871e8b25e52508fb01880fe6e783e2e84e46faffdf09eadebcceb88c564101",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/LegacyAbstractLogger.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/LegacyAbstractLogger.java",
+      "sha256": "444bd61ad6540631364e228bb20a9d0c1b21c9591bc9c5a392d3fb8c5e8f69c3",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/MarkerIgnoringBase.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/MarkerIgnoringBase.java",
+      "sha256": "85e756f52685605020d1ab40965e651d8b705e9ff4d4a63af8ee96359ba299c9",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/MessageFormatter.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/MessageFormatter.java",
+      "sha256": "42ba80b2b7709cf4ae363fe8717c2ae4d4aaa8ceb680a1c4c554579deaa216e0",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPLogger.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPLogger.java",
+      "sha256": "295c11c53b8fc37bd3d79d2e24ba3160a40bc7bef38de8291cefc99a0638d376",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPLoggerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPLoggerFactory.java",
+      "sha256": "202266e72ed6c3ab853c9508c625cb3bebee97b4d0fd16a49f85a21aa9765cde",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPMDCAdapter.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/NOPMDCAdapter.java",
+      "sha256": "face675ee80a476f59bb01f9f464ba66cdf6c198c8faa3fc5025edf80d601986",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NOP_FallbackServiceProvider.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/NOP_FallbackServiceProvider.java",
+      "sha256": "5cf653995692d533390d28378a596f05dfcd67a72b8acc2217f154b9e1c51c5a",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NamedLoggerBase.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/NamedLoggerBase.java",
+      "sha256": "5ec8420816f56f6d6beaaa8995b24fbea445e623f3e3622543af89a0bdbf200b",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/NormalizedParameters.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/NormalizedParameters.java",
+      "sha256": "3fc1a44ce409d0c28961b574d3f1ff744d4bac2d4feb99dc570d51b7803556d9",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/Reporter.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/Reporter.java",
+      "sha256": "105e4aebc7e584cfbd9338066ceffe55533ea6f1db2c565f87f27b8da9086e2f",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteLogger.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteLogger.java",
+      "sha256": "57504b2d3b085767ea30a2185d5ec69b783502a92c9668e6492703719483ca3a",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteLoggerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteLoggerFactory.java",
+      "sha256": "7b3261816790f528985e86dc1f34cc24f0ab8fbe5f05eb17d795a429da7c045b",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteServiceProvider.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/SubstituteServiceProvider.java",
+      "sha256": "3a69416d6bd17c445a399cb75c315cbd47fa4b73d7b6d2ec7e37804738035b23",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/ThreadLocalMapOfStacks.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/ThreadLocalMapOfStacks.java",
+      "sha256": "9d1b56a7a87aaf524d8b84536f8d19d3c35c85b6da2c89415db1e396a1f9121b",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/helpers/Util.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/helpers/Util.java",
+      "sha256": "fd3dea9b59d1a947216e9c5a71332342219f3c865adeff6339217488b9fd5cfd",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/CallerBoundaryAware.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/CallerBoundaryAware.java",
+      "sha256": "6c4670c67fcae4654cbe0840a18e7ae64474c76815fdc021fe3b23d957807901",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/DefaultLoggingEventBuilder.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/DefaultLoggingEventBuilder.java",
+      "sha256": "36b6bd4afbd40c362ff2425b483b2a5916ee6d425fc802ef6b7631bdc8e9db51",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/LocationAwareLogger.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/LocationAwareLogger.java",
+      "sha256": "6dc67d5ba05816b496afe72566fb58184e9cd224e1bf55f907d6c32c0bb3d891",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/LoggerFactoryBinder.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/LoggerFactoryBinder.java",
+      "sha256": "6772d6bf13a3ee0d07075c664f309b37c79914bd8406ff829cdb27a046422285",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/LoggingEventAware.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/LoggingEventAware.java",
+      "sha256": "3f01e6c131368e5af698c385d3e28fa74c96624e17b435b857dcbffa19b7ffbd",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/LoggingEventBuilder.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/LoggingEventBuilder.java",
+      "sha256": "be7aab88213bf95f3296b3f5ad5602264d7d278ce6a31abb37d470264fdfc81a",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/MDCAdapter.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/MDCAdapter.java",
+      "sha256": "6acf6b2804791f32b49199c833ed3ceda8b3ae8f2fd2689126121f17c4fd145f",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/MarkerFactoryBinder.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/MarkerFactoryBinder.java",
+      "sha256": "ac3fbba575e912d745cc43ada0effd20de42159b47ee22ba1d8f8b1241258bc0",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/NOPLoggingEventBuilder.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/NOPLoggingEventBuilder.java",
+      "sha256": "9768d7e4823e6a54d9cd791ad48b698ed008730724542e00588483020f598c2b",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/log/spi/SLF4JServiceProvider.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/log/spi/SLF4JServiceProvider.java",
+      "sha256": "494bc93fc7f053d0992bfba59574944c543066e3258e50b60bc8a5fc0262bd49",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/AbstractWebSocket.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/AbstractWebSocket.java",
+      "sha256": "66585af4e4ad90bdadf3451c719dc8cb586792b731d41736568572977ec58ef5",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/AbstractWrappedByteChannel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/AbstractWrappedByteChannel.java",
+      "sha256": "0037c56793bc8c5a50760422a3d275bc1cad8bde9699a2e704d8f6dc0f9fdcb3",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/SSLSocketChannel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/SSLSocketChannel.java",
+      "sha256": "1675dc60aec80de1e90bd8805d481fffb9faeeaada5f3b3135d233e000c30314",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/SSLSocketChannel2.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/SSLSocketChannel2.java",
+      "sha256": "763bce757f3a88ceb2da838801413bebe2ec428dfcff19d250118b4716da3724",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/SocketChannelIOHelper.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/SocketChannelIOHelper.java",
+      "sha256": "b623f316471565df650e9122ee9df6afcb48d1e8ffc75b543a165b99e0db37c2",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocket.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/WebSocket.java",
+      "sha256": "472a0056be48f09412cfb1884171cb7bab58ebb5e3466497e0dd271ca120bea2",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketAdapter.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/WebSocketAdapter.java",
+      "sha256": "02c2c4592d0c3229d45d4bf59b01d398d3e78d30ee2fc3024ed4132f333de18b",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/WebSocketFactory.java",
+      "sha256": "7fbe149158c87c4aa57fde6c58fa672f2ac737b8ad276d69c87ea01fdd011cef",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketImpl.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/WebSocketImpl.java",
+      "sha256": "eeb1f51152e7f99b07afafa3a5499407d76047267c117cd2d0b7fd5c3facaeac",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketListener.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/WebSocketListener.java",
+      "sha256": "dbed53bf089cef30fa0ea77467c4477f648380861813d7320950a67960145185",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WebSocketServerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/WebSocketServerFactory.java",
+      "sha256": "ae2074e5016c48ec009e3e02ce48eabbe18cf58ab4d8af81ff5f22563bbaca0f",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/WrappedByteChannel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/WrappedByteChannel.java",
+      "sha256": "bccd03ac637dd46006e09068722c64bb8b5c6977f53510f289e42297ef6db3e4",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/client/DnsResolver.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/client/DnsResolver.java",
+      "sha256": "be024a65b8102336e00e07fbbbe07207ca77bed2f391ad3fa7b52d3bc76439ce",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/client/WebSocketClient.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/client/WebSocketClient.java",
+      "sha256": "46d4e3d2b75c50a2a8067206c9cef8425404b82ae02b30626badad33f2c2dbc6",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/client/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/client/package-info.java",
+      "sha256": "e6eb138ea6a4823752540f46cabe2afde7ba5c32783dccdb3b1c7e1086776ff1",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/drafts/Draft.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/drafts/Draft.java",
+      "sha256": "163e962b1accdf9b35d18355adb128871a8340b59e56f016a0a656bd27da71e2",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/drafts/Draft_6455.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/drafts/Draft_6455.java",
+      "sha256": "0197d66ad70b85a836d25f51fb46be5613bfdfd9a6d6660814358930cd4bd817",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/drafts/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/drafts/package-info.java",
+      "sha256": "d707a48ef0eaba78736680ce7c1ccd6eb31956d3474f15e9601cbc58c7a3bba4",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/CloseHandshakeType.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/enums/CloseHandshakeType.java",
+      "sha256": "59884bd60287636507d00f319cc3ac7daffaae28780e3f5898dbb3d9bbeab9c8",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/HandshakeState.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/enums/HandshakeState.java",
+      "sha256": "ae60ce0f03a6bf499498ad96382ba9c00a7645f2c23138e72cc19452042585bc",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/Opcode.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/enums/Opcode.java",
+      "sha256": "1615e6dd67f03d9205b191528ed3e25e973e4ae6d8f9aa3af7f3206eb85f125c",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/ReadyState.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/enums/ReadyState.java",
+      "sha256": "412999c9839d9217e877767812d967f2168fe17e3fb1b3515114e862d358fb6d",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/Role.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/enums/Role.java",
+      "sha256": "962c180cae257db3736588fc21054f054c06f9090917fd28203c5302e29582db",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/enums/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/enums/package-info.java",
+      "sha256": "235f3fa12b48d8a6e1f32ab1fb6e2cb99d034df39683b60f7783c91d362499db",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/IncompleteException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/IncompleteException.java",
+      "sha256": "c3765c5261a7cbff4bf2e0f23f03a2efa1880f75e7ba305efe69b60b8eb70d77",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/IncompleteHandshakeException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/IncompleteHandshakeException.java",
+      "sha256": "c72d64535b7409caede1745e0e72f9ea48e4a3bbb6955ce91fd4e91e0587dfa6",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidDataException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidDataException.java",
+      "sha256": "7bb664e132af04e320f60ce8f8a6c39c6d8172c3d59715578487a44c8a755bf5",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidEncodingException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidEncodingException.java",
+      "sha256": "5c23102e779218c2f255d128943be49215e6fedfd76fed48aaafd34eb2e28e34",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidFrameException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidFrameException.java",
+      "sha256": "b15a160c29fd9720c448837394b7a4a44b19fa6bac0e485f25e849e7feb4ecaf",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidHandshakeException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/InvalidHandshakeException.java",
+      "sha256": "8ceee2f64343c7b89b40c1d75313fe56d14733721675081d3944af3cd8f01e51",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/LimitExceededException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/LimitExceededException.java",
+      "sha256": "30473c6a7c8b9e0f6ab82350d788b45d59af3367360d514e8545a2daf1ace5c8",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/NotSendableException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/NotSendableException.java",
+      "sha256": "1240d7e0061d3f110dac3be83da2bee4c261da89864c6d48eefba1db483c8058",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/WebsocketNotConnectedException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/WebsocketNotConnectedException.java",
+      "sha256": "cdb759017cce67c99ae9265916d4453c1efe3a092605c7cbd5c23cecee0a12ca",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/WrappedIOException.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/WrappedIOException.java",
+      "sha256": "ff198c13075649f0811eb86ff2621cb310d16d56eefb168937d8cce588498c3a",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/exceptions/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/exceptions/package-info.java",
+      "sha256": "7607ce0dee88234fb2db2eafc8a0ad3447c24f15315f2909d024777828ae15ef",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/CompressionExtension.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/extensions/CompressionExtension.java",
+      "sha256": "4c9105ac1a11fa8061adada1e2fbbcb5437056ec31f509156b1e4fc951bee2f1",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/DefaultExtension.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/extensions/DefaultExtension.java",
+      "sha256": "12eb9ce24d5bd7e22e72b1568086f721270330dd19a416a613ee1d6ad992c171",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/ExtensionRequestData.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/extensions/ExtensionRequestData.java",
+      "sha256": "4154be72a8374f5f6b764c4ab6e6fb10ac611ed099ed767ee5cde550e1c856cf",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/IExtension.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/extensions/IExtension.java",
+      "sha256": "6f3dfa7a6a6b5e30413d119ec9eb2845a825af8f5775c51a9f2be629ccfb1813",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/extensions/package-info.java",
+      "sha256": "572e8742551e1744dbf1a0f7456ddf9081634fb26ca0dc4e4d8455d04d874c67",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/extensions/permessage_deflate/PerMessageDeflateExtension.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/extensions/permessage_deflate/PerMessageDeflateExtension.java",
+      "sha256": "d5a2a373b99a115ab2eb374ba865c54785469733316d4eb7fd57c57487ddcd75",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/BinaryFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/BinaryFrame.java",
+      "sha256": "2311a98f870be98afa0e6bf09b970ab58abee53bde1bebb04e9196ad685cf9f0",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/CloseFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/CloseFrame.java",
+      "sha256": "dbbeae482e141035a015d0d113a2280dcf455a4f5075ef971349af13d40aad2b",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/ContinuousFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/ContinuousFrame.java",
+      "sha256": "8ca7a10fd568da830351a2ad3eb30b9db783db8b6cd68d5c4449dbabb5428cb5",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/ControlFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/ControlFrame.java",
+      "sha256": "5611f08bf26559fc5b4cab58f17006e675c2ad56c6484dbcd3efd52e3d280ae0",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/DataFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/DataFrame.java",
+      "sha256": "ee2e0aa8f02045c0300e86fedbd7c2390b7e48653c02cf1441b93ef84ae61ebd",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/Framedata.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/Framedata.java",
+      "sha256": "af38393fc88c0e5dd59c50b889ac2e8de134b2ed5e80c4a9987c46f6537bec80",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/FramedataImpl1.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/FramedataImpl1.java",
+      "sha256": "990a639a7d2180cd4d960aa277c95f3fddb7c5eeb927e9a6881b60bb3368c41c",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/PingFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/PingFrame.java",
+      "sha256": "10652b5c92ca962f7e65d7cd50f7b7c47dcb8667adcdeadeeec176bf48b03b3b",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/PongFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/PongFrame.java",
+      "sha256": "961b25419f996fa0e86341af27985b732150c8f5b7db9583cd1b74b11506a25a",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/TextFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/TextFrame.java",
+      "sha256": "98deee54f1eeb955e6bd88ccfb0aabc12493cf74684ec5df851bab0ade7e9943",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/framing/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/framing/package-info.java",
+      "sha256": "415b83e44d9aae2057a1711e190f2900ced106e7a4e59e08d6a70de4fc7d0be5",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/ClientHandshake.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/ClientHandshake.java",
+      "sha256": "a36a37b2078f543dc1acbc1ad12118812bdd457013b2b65ef8d7b5b25e3d306f",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/ClientHandshakeBuilder.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/ClientHandshakeBuilder.java",
+      "sha256": "e3bd28b41043aaadc4ecce61064da149af97bd597f5a65196fbb3c9219bb7042",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeBuilder.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeBuilder.java",
+      "sha256": "f7ec4a3073c0ec22451283d6d2377099a7d3dd337e711e0414fa05d41bd65887",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeImpl1Client.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeImpl1Client.java",
+      "sha256": "3d32c3509eb158009ae181fffcc0ca654632b9f259a519561da15c593eacda4e",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeImpl1Server.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakeImpl1Server.java",
+      "sha256": "89529286cfc97c0014277aaf7d79e1fb0ab7f20adea75d9315d67dd8500e529a",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/Handshakedata.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/Handshakedata.java",
+      "sha256": "4a4565a9b9fa40a1a6d7266217b2b024f427cffcbf485baad64d328d3aa71c9e",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakedataImpl1.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/HandshakedataImpl1.java",
+      "sha256": "b54306cc2dac9479e43f0657df1c86ffcbd44d48dad966a58da9cdf1efebb1c1",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/ServerHandshake.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/ServerHandshake.java",
+      "sha256": "d2c43a8669afaa39aca969c199875817e4e7f5a534e385e540607af2cd5129c6",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/ServerHandshakeBuilder.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/ServerHandshakeBuilder.java",
+      "sha256": "576b117ca7418d42dea670d399049092dce92948053bcee92ca0ea5178c4a1a6",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/handshake/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/handshake/package-info.java",
+      "sha256": "66d021e6df318310f89428f8b5ed0ac3bd873c333a5423776920186548b69072",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/interfaces/ISSLChannel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/interfaces/ISSLChannel.java",
+      "sha256": "28eba50431a901a00d70e208eb80fe725f32df6ebaac8edf6df3a9bf147f5eb9",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/interfaces/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/interfaces/package-info.java",
+      "sha256": "ac800af5c90dec9eb645224453ee3f609bdce7ccc882a90f83271c90e2a3470f",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/protocols/IProtocol.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/protocols/IProtocol.java",
+      "sha256": "986bc81466a806a5168a7508471f9c1f4fb8eef3179b2823379ae456ac321879",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/protocols/Protocol.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/protocols/Protocol.java",
+      "sha256": "632977dbcee22a27903759ccae2a164f045b9ff6dc10ae7ca61daea404079727",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/protocols/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/protocols/package-info.java",
+      "sha256": "1b44adeb71125073b4d6953565a7cbe4846163903189f9877fbf6fb02c31111e",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/CustomSSLWebSocketServerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/server/CustomSSLWebSocketServerFactory.java",
+      "sha256": "bd9eee4432c8674a7b9c41173b9011c516d6ec7556037fb0f15236aa52998ba5",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/DefaultSSLWebSocketServerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/server/DefaultSSLWebSocketServerFactory.java",
+      "sha256": "459a88e7416f35607f7d0f2b5d2f7bc7e385b65249322edb6cd94e6c9c64d439",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/DefaultWebSocketServerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/server/DefaultWebSocketServerFactory.java",
+      "sha256": "9195bb24756f85aba5d66c0ab95c5bb13d7557abc8597743ace501a07b6ec8e5",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/SSLParametersWebSocketServerFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/server/SSLParametersWebSocketServerFactory.java",
+      "sha256": "90d97968529ed0b68ec5a39f4c580e55c49f04323252006b890053a5c00fa0b3",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/WebSocketServer.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/server/WebSocketServer.java",
+      "sha256": "bec37425509d8b058af37c3b2532575b9e18abeea13b6997704a475111a96d19",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/server/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/server/package-info.java",
+      "sha256": "605c088e6297b5634d8390d8184396f3ca2eaa5850d9b267df5f25385604fa06",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/Base64.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/util/Base64.java",
+      "sha256": "1fbed083d1291a9a77c5d4f9333ef671728fc63f359e94aec6246ec65ab97448",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/ByteBufferUtils.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/util/ByteBufferUtils.java",
+      "sha256": "72eb3957ce6a5a871c8cdb0c5560b761f2d117b403ac5fdaa4c1ddae1e31a6f7",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/Charsetfunctions.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/util/Charsetfunctions.java",
+      "sha256": "af2bf03f1b2e4c8749dff928f886d6203d2310efcbee38f52a62baedec669131",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/NamedThreadFactory.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/util/NamedThreadFactory.java",
+      "sha256": "e4252112109f26144a6f32c48a3a49e9d927871cba8b1e9ec8b4518de3a08f17",
+      "composition": "R124 baseline"
+    },
+    "dependency-src/org/emulationstation/frontend/relay/ws/util/package-info.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/dependency-src/org/emulationstation/frontend/relay/ws/util/package-info.java",
+      "sha256": "f2d6e97908ae604ebfd9ad495847d91d942fc9a7e41cc03442e0e381981fc12e",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/NetplayPaths.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/NetplayPaths.java",
+      "sha256": "e1cfc916a17eaaabadbcd821c2483469b99e0057944e2f2118fad064187e6a67",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/NetplayUi.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/NetplayUi.java",
+      "sha256": "f205101af034b89aa257c61347af9f942fce1603478c6fabb24597c91d6037cd",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationActionButton.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationActionButton.java",
+      "sha256": "c8741d3c47d73b137e36e7a3fe2e8f6b84c8afca3e90025422bcd442ab2795af",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationAndroidControllerProfile.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationAndroidControllerProfile.java",
+      "sha256": "9c0f7e4c64f3d7e02f8dda31f5a0e2fb0c12edcabc452d515c3c08e05e4bfbd2",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationContentIdentity.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationContentIdentity.java",
+      "sha256": "ad28ac0ef87361e4954e7b76d6180dcb96fe2762877f3ec3d81374df8ba58aeb",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationCoverLayout.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationCoverLayout.java",
+      "sha256": "7cfc3636abd03bb66f370703c99a34e50b5c24c9844507259ea007bf8162a80f",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationCoverLightingShader.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationCoverLightingShader.java",
+      "sha256": "56dbdfce878b47c0e9020f52df06a7e04a51d0c4ee4235880c09580cd7743e74",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationCreateGameCard.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationCreateGameCard.java",
+      "sha256": "fa5b41819909f140987d6a05780dc950bfe9d05b571764865b1c4db4c09f3328",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinNetplayActivity.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationDolphinNetplayActivity.java",
+      "sha256": "f947b5f72a35184c3eafb2ad551f39ce5ded40a1949a3a536d685b2660461b8e",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationExitPanel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationExitPanel.java",
+      "sha256": "881d0309c79a14485ac9f8bf848b3b6e55833f638a44e2531b741f6ac8c45ada",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationFlowPanel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationFlowPanel.java",
+      "sha256": "a1997af783ac46b43712542cce08608ce95db9a18693ce78b56e1644988d0fca",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationGamePlayerInfo.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationGamePlayerInfo.java",
+      "sha256": "8245787c3f2575401d8c5f514377e7817c4dae7a1f873d548c135cedeb260fb5",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationGameRatingView.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationGameRatingView.java",
+      "sha256": "c12c7879c78d8379db4dc5c9b14ef089fcb1bbf8f9f32607da6a2b5f5fd26277",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java",
+      "sha256": "0f4032baae452d5203adf2f845c1e9830c8e1132b99dfffa7ec0b4b758f37017",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationHeaderMetadata.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationHeaderMetadata.java",
+      "sha256": "8b7fa4a64e8788233958f37c73171d2d7c99764ee9343cd3993ea3c7941bfe77",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationHostConnector.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationHostConnector.java",
+      "sha256": "c909aea87a8e6c4631002a565a8e4b8b720ffcc1f964dcb8796c4bc155002032",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationHyperspaceState.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationHyperspaceState.java",
+      "sha256": "6dda519ef8a8ae3729f7bbf015bc50945359c62cc2ea7555ba0517ace5f2b8bc",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationHyperspaceView.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationHyperspaceView.java",
+      "sha256": "9dd76ac90fec628f28400780cb9eed036a0696d7f619c58e687834f78032b120",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationInvitationCode.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationInvitationCode.java",
+      "sha256": "611c98d7c8c6428dbed0d271e8ccdb9a0cf4f8e54c215ff17386dfa604b8aa0f",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationLaunchPolicy.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationLaunchPolicy.java",
+      "sha256": "462a154bfdc5308432d7fffe2c5378ddec35398622158276f76bf0b20a441754",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationLobbySurface.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationLobbySurface.java",
+      "sha256": "b2320101df0889e59fd4832f83596d8e8d448f688d33e82f5236167722df50db",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationLottieIllustration.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationLottieIllustration.java",
+      "sha256": "73aabe85b04b11636c44de70bf8a1c56ce6c60855e6b86a7f7cdfad5bd1426a4",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationMagazineRows.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationMagazineRows.java",
+      "sha256": "f828e8003024ceb6d9b3c5c5627366b92de7f663134f41cf50e15fbed93f6393",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerProfile.java": {
+      "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationMultiplayerProfile.java",
+      "sha256": "8f860be54196af7b7f5f41e5103188a469b6d4c4a7206d7bc5a28b544c099ae8",
+      "composition": "R126 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerSession.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+      "sha256": "2b8fcbf368e38362e9f46701534471172ae388c1e163b2bb99f765a438ca7da2",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java",
+      "sha256": "63222e1586e4398dbb6c51d2ca4ba99893b63e454f588acec2c9296bd9869559",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerWire.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerWire.java",
+      "sha256": "318e6daa0f0ce483c9c7458ee33f918085ad4f1d9c1f2e4319895b3df7dba3c0",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationNetplayActivity.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationNetplayActivity.java",
+      "sha256": "e6d93b5e1c159432f538f277b0d28813b91764ac5ce1145f14dbc872309dedbb",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineBios.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineBios.java",
+      "sha256": "0fea483a36d9b1877e2db3d0f8935123c8b808da3435114b850afe16030cb4f5",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java",
+      "sha256": "a3c184aff3eabd2aae9d861235fa132eb31fc6d95b4a1ffcb52248fa4724625e",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineCoverView.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineCoverView.java",
+      "sha256": "2da2bbee3e9497a301ed81a2110b72872872d9d63b7f6c161fbaa0c7615bd151",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlineGame.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationOnlineGame.java",
+      "sha256": "032c87b7435a0ef7ab38cc2a98532dae6f226593ff366909f16547bacefeebd8",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationOnlinePlatformPolicy.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlinePlatformPolicy.java",
+      "sha256": "52335acf09835b4dad0c944d8ad2a19f294da52c6eb771b55204457198887d70",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPlayerModel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationPlayerModel.java",
+      "sha256": "8adf63d868f72560ad5bf122be94c71581c396710e5d8d699bc8f4497f32b688",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPlayerSheet.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationPlayerSheet.java",
+      "sha256": "fdb1ff266df5059cd87589712064d2894ed00230b40d02ac9bc8fe1de146610a",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPresence.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationPresence.java",
+      "sha256": "1328f2353c6bde0d6ffde7d861511eda15af861f01dc471d7de16bc813ded83c",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationProcess.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationProcess.java",
+      "sha256": "d024190147ae5cb66abc0932c7bcaf282586bbbe060093c7d72722103b83fa73",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRecoveryTunnel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRecoveryTunnel.java",
+      "sha256": "442c50840a280d4a5605e32a06873fa14a879285a959a6f2a0b5231e2204ede9",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRecoveryWire.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRecoveryWire.java",
+      "sha256": "cb7e83ee84c1297c91c23bc24c47f7eb34204ce8ffda933f71d4b27bbc418a20",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRelayTls.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRelayTls.java",
+      "sha256": "423e8c5aa19c27596e69ff837749d1a2e3dbc8d06497cd74b54125af54c61abe",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java",
+      "sha256": "9845e639b93223188dd0b3b6f4389ce80c72f9397380e52a30f4b1f4ca9f2104",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+      "sha256": "31ca6cf7108270c424129327cd8605ff8f140db3e2925d1a536d1027cb155787",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRetroLaunch.java",
+      "sha256": "6552e3e58bd0ca4423a0d5358d6e76e0cf8ffccef04ae67c549c37974259dbdc",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomArtwork.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomArtwork.java",
+      "sha256": "8afccc580b866cfa8edfd36d042dccfce96a8572f47e078b5a0b46d8f53e6860",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomCreation.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomCreation.java",
+      "sha256": "104b87d5717839fd56c93327d7f108b44406e0e86768ffed5922f0877e1b4578",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomFeedback.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomFeedback.java",
+      "sha256": "7a90edf37c15d3059a9160e05404d41058500b926f9843940bb516b189a4c701",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomLeaveIntent.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomLeaveIntent.java",
+      "sha256": "28f776b5f3130fcd0910f3a9b4b649b93fc0a3ece5466f229a4d703c982d99fc",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomRoster.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomRoster.java",
+      "sha256": "46b27325570c1dcd5f11edfe6b88bf7783041bc0b6e50d7b10badcbd3e8843b9",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomStartState.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomStartState.java",
+      "sha256": "2b63338a3042e97cab99e967c997dd5bf10ca7b595170aabdf9d5cc88783d1ce",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomState.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRoomState.java",
+      "sha256": "3569a17e3b3134b0388d5a3231dad9f269461fa5b35566fd5195be21018ac5f9",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationRoomsActivity.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "sha256": "cbe080a2f7b9d99c4ce36f7ba19e6a292f92e29ba2117623af14a2863eda3fb1",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationSessionChannel.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSessionChannel.java",
+      "sha256": "678037ceb5f34245c2a5a816727e0c3f81c10d9b6703fecb8a0041267b137ac8",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationSessionLink.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSessionLink.java",
+      "sha256": "2cdf6807d6d96e6265f8719a40ea75b3b81680d2b033dd985181c2094e89eb1c",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationSessionRegistry.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSessionRegistry.java",
+      "sha256": "53834181e95328483d498348e51269c325851451bea4bbab3cb135689a705ba5",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationSessionService.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSessionService.java",
+      "sha256": "fb8857ab4b0bbd9507764c9a6e1b4a48eccddd25a7bff36ad406cd9a800b641a",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationSinglePassAnimationState.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassAnimationState.java",
+      "sha256": "58ce23a10da5898c125e87bda8edb0f4506d11c23dd329256425e03ba5ade444",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java",
+      "sha256": "dde13ca08170e98354a22a764a42f9a6a98e032389aba48e81fb5aab3d9e1673",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationSocial.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSocial.java",
+      "sha256": "c0a8b36cf544cfb5b6bbb1c0a2becfb617f282f57992b3f99f859cf40e254be2",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationSocialIcon.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSocialIcon.java",
+      "sha256": "19ff1286d4f021df60b29075c9db848d68183f76312430b2ef5b1a8b97b2c44c",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationVideoEndFrame.java": {
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationVideoEndFrame.java",
+      "sha256": "afbb98b4e7cd14c821d381201af570a876843e105b67e025a036e6557b288b70",
+      "composition": "R124 baseline"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationN64Activity.java": {
+      "path": "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Activity.java",
+      "sha256": "8d050153c82821b2b5119b8a0d53e836a67c3535224d6267a7ac5c9a6023d0a5",
+      "composition": "R125 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationN64Bridge.java": {
+      "path": "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Bridge.java",
+      "sha256": "54b93f8c9007d48c9b3dd727197e87a58838ea3e1da816a2a96375ff79099693",
+      "composition": "R125 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationN64Launch.java": {
+      "path": "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Launch.java",
+      "sha256": "767747b5f7a2b24926b8224ed174748258eb547ed32b4d5099cde6d57e8dd7e1",
+      "composition": "R125 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationN64Mux.java": {
+      "path": "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Mux.java",
+      "sha256": "6c3b37e207355063cea92e46c0a8a23056884a765b19c1f053774da6eb82009f",
+      "composition": "R125 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationN64Server.java": {
+      "path": "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Server.java",
+      "sha256": "39d86015ce89ed34818fb275ab35c963871fc975b4ff16e21f7aa07d68909216",
+      "composition": "R125 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationN64Wire.java": {
+      "path": "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Wire.java",
+      "sha256": "fa30f4a200bfec71a715f9f0c5ee54e51f27f98e3c8723f191094d6df717ca40",
+      "composition": "R125 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinActivity.java": {
+      "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinActivity.java",
+      "sha256": "daa766dc35b4739b2d554c313e5a0ebc05cc3af57525ec84eaad6a8c37026b60",
+      "composition": "R126 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinBridge.java": {
+      "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinBridge.java",
+      "sha256": "ac3b0ccc947b357b67aed099d46319746d9bed78ffa143e6d3fca37b57c95e72",
+      "composition": "R126 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinEndpoint.java": {
+      "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinEndpoint.java",
+      "sha256": "b42634450bd2383051de95ffcff472131b4512aef651202f090a8cc442296058",
+      "composition": "R126 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinLaunch.java": {
+      "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinLaunch.java",
+      "sha256": "37b467bebb1ea3bfaab9ed4e1c3cfad0eace48c1f65d182dd195fa22f45d5278",
+      "composition": "R126 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinOnlineActivity.java": {
+      "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinOnlineActivity.java",
+      "sha256": "a683b968c2cd6dcf44c7b93a96f2a2ee9bf926219e6e0188ef4fefa777bd1344",
+      "composition": "R126 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinSelector.java": {
+      "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinSelector.java",
+      "sha256": "8a979e3d1b11128d70a27c8a2cdc32091f7f085254199db059f9899ed2108590",
+      "composition": "R126 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationDolphinSession.java": {
+      "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinSession.java",
+      "sha256": "dc9e16fe10ffa87250fa2351ab60b6a628771ba3559a5f88dd4b8e936633cab7",
+      "composition": "R126 netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationMultiplayerEndpoint.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerEndpoint.java",
+      "sha256": "4e1836a8abd9c3e63475981a0b1af426edaa9533d6190c9309df2e5fb429ab96",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPsxApplication.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxApplication.java",
+      "sha256": "f9a2681a4986ac89eb9e0178df523f0cba5b288afbf7b8bbded834c788346ede",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPsxBridge.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxBridge.java",
+      "sha256": "d4a52a90ba9f6ff5eb3e8e220b417d171df7f2115cd17467e3b1b57aa4967260",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPsxEndpoint.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxEndpoint.java",
+      "sha256": "d1f9eb7a2d295f11e20c030dda24b8cbe553422534ecc0bf629b358b2b8a1ed5",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPsxExitGate.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxExitGate.java",
+      "sha256": "784e9d33cd06ac45659d17371266332592bac296bbf11680f3a585218eb501cd",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPsxLaunch.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxLaunch.java",
+      "sha256": "e2f9d2fd68ca8978eb1b9483d18ffc0fd7cd9499a12c31bcd4bde991a2d7a349",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPsxOnlineActivity.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxOnlineActivity.java",
+      "sha256": "482a7d14c7bda8d5cd2ad93ed248b6e314ff600fda4c49196b7f342e752ceecf",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPsxPolicy.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxPolicy.java",
+      "sha256": "602f742ff0b31844305131ea2bb310768f9d5489a41303ad75cb9c2b83591731",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "netplay-src/org/emulationstation/frontend/netplay/StationPsxSession.java": {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java",
+      "sha256": "73fdcb47ad0472dd0f4a398020e647af8da5f82b4ab3af78dbbbb457be29288b",
+      "composition": "R127 PSX and shared netplay overlay"
+    },
+    "org/emulationstation/frontend/sony/StationSonyComponentFactory.java": {
+      "path": "integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyComponentFactory.java",
+      "sha256": "db7086e5ee9f00680f61f29fb1a7b8331906d8eb4d48b4cf205a2006878ab29a",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/StationSonyLaunchActivity.java": {
+      "path": "integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyLaunchActivity.java",
+      "sha256": "6765dad71deb2964f6a406d06efdb039e5af394e2ef8708a5e481b7c0b12ee69",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/StationSonyAssets.java": {
+      "path": "integration/sony-internal/composition/java/org/emulationstation/frontend/sony/StationSonyAssets.java",
+      "sha256": "cd760fe0bcf187b1dd146ce381a2c8a7e1f3e1d02341b99c13ab4cc1b975d153",
+      "composition": "R131 Sony hosts"
+    },
+    "aenu/aps3e/Emulator.java": {
+      "path": "integration/sony-internal/ps3/java/aenu/aps3e/Emulator.java",
+      "sha256": "337a76adb8af8570aea687e090b2435b647e5f00c11708224b38a6be0cb1feec",
+      "composition": "R131 Sony hosts"
+    },
+    "aenu/emulator/Emulator.java": {
+      "path": "integration/sony-internal/ps3/java/aenu/emulator/Emulator.java",
+      "sha256": "fbadac53409b72eee65aa201ec6946fb2f89be695263dbed7f30e9b160bf2bac",
+      "composition": "R131 Sony hosts"
+    },
+    "aenu/hardware/ProcessorInfo.java": {
+      "path": "integration/sony-internal/ps3/java/aenu/hardware/ProcessorInfo.java",
+      "sha256": "91cf20e281f583f02b84e3b6d511a818935b029263f3181bdcb01250b03a0e30",
+      "composition": "R131 Sony hosts"
+    },
+    "aenu/lang/System.java": {
+      "path": "integration/sony-internal/ps3/java/aenu/lang/System.java",
+      "sha256": "ba061ce5ec5a88b31ff7b7d0a7ccd58940316e8153b0eeb1a0601fd0f3b4304b",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps3Activity.java": {
+      "path": "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "sha256": "e880c20753cc8fe0fc794a133cd50f8cbae698a0cf13c7ac379374e709814547",
+      "composition": "R134 settings overlay"
+    },
+    "org/emulationstation/frontend/sony/Ps3Application.java": {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Application.java",
+      "sha256": "6b588b3de321094e008ca65cb4cfd1c33fb613617e8e20f488b5c4789a18c8b7",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps3AssetPaths.java": {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3AssetPaths.java",
+      "sha256": "8f86f3352e4ccdabf3f0c4e004636d985764b5d94975c9871a5b609805842141",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps3Bootstrap.java": {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Bootstrap.java",
+      "sha256": "f628e0d938a547ec1cb1474bf5f3b32ce2c8f21fad25037900bdaec8636e7ea8",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps3Firmware.java": {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Firmware.java",
+      "sha256": "13651fc5f22089380c9e117c755d60770464e4baf2d6b24cabeeae90fdceac6a",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps3Input.java": {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Input.java",
+      "sha256": "74d45165b65260874c1ab75ca2176626a7a8ce0f5678b0bfbcb275c6ddc487e1",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps3LocalizedStrings.java": {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3LocalizedStrings.java",
+      "sha256": "df7906b7168a083e43217618b2a40fa4fdafd878d88dc7fa6b996766a9cc330a",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps3TouchControls.java": {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3TouchControls.java",
+      "sha256": "7b9e385f20e7a31c5b40619e57613477fd4fbb0f163e4073441c85a6713017d6",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps4Activity.java": {
+      "path": "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "sha256": "0fc2875f32295acbabcf6a5ee31b923bee61bf56c157996419d7d4415d3dfaf6",
+      "composition": "R134 settings overlay"
+    },
+    "org/emulationstation/frontend/sony/Ps4Application.java": {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Application.java",
+      "sha256": "9a57e8df1236851a4129719fbb4b31ea9cf537f8c29c45604d4a467d14a1aace",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps4Audio.java": {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Audio.java",
+      "sha256": "4f15fa79a3ee5822b79ff80b8a55c5154af506f4399a03a9d54995bbf877b0ae",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps4ClassLoader.java": {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4ClassLoader.java",
+      "sha256": "201f1f428c41f5e84dcb14799c2106ac3c66892544ef91c73adce6aa48bc67ab",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps4Control.java": {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Control.java",
+      "sha256": "6a7b65a34785baa828a8ed4960e92c7c098ccdbaf80a436b28f16837d45130ae",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps4Game.java": {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Game.java",
+      "sha256": "60dd6a971036c7e40ca06360bdd9855e05d90cc1529781e4d1cb3a65b323a877",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps4Runtime.java": {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Runtime.java",
+      "sha256": "187d1ef052ea8c5f0c3dd089ec5fe3a5ad9bffa1b20629a7f3530c14c51c8d1c",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps4Touch.java": {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Touch.java",
+      "sha256": "fbf4c10245b4756a388f8ea598f759d9d254fc6249cf62fc19a1ff5e58173518",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/sony/Ps4UnixServer.java": {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4UnixServer.java",
+      "sha256": "9dce635ca8da1e043b547938be8dbd6bccc53fa2152eebb40a77540b991a9650",
+      "composition": "R131 Sony hosts"
+    },
+    "org/emulationstation/frontend/station/StationLocalSonyDemos.java": {
+      "path": "integration/local-sony-demos/java/org/emulationstation/frontend/station/StationLocalSonyDemos.java",
+      "sha256": "ebfe7b90420961a42b97d9c795d78a4eb8b47b77b624b521fe12b14fb6476931",
+      "composition": "R129 local Sony demos"
+    }
+  },
+  "limitations": [
+    "Source syntax index, not byte proof of all packaged classes.",
+    "R130 StationFrontend and StationSinglePassVideo720 and R132 SwitchConfigPatcher include byte transformations described by recipes.",
+    "Generated private pins, compiled third party owners and sources unavailable in public inventory remain explicitly outside syntax index."
+  ]
+}

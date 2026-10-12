@@ -64,3 +64,9 @@ versions/station-room-bootstrap-r79-20261008/** -text
 # Preserve sealed build and installation receipts byte for byte.
 integration/local-sony-demos/evidence/*.json -text
 docs/server/normal-motors-r128-20261011/** -text
+
+# Preserve byte-frozen CRLF inputs while retaining whitespace checks.
+docs/handoff-completo-r134-20261011/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+integration/online-lifecycle-review-r135/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+versions/station-settings-refinement-r134-20261011/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+audits/station-r134-online-mode-completion-20261011/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

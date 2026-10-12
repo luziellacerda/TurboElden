@@ -1,0 +1,1 @@
+package org.emulationstation.frontend.netplay;final class StationRelayTls{static java.net.URI multiplayerEndpoint(){return java.net.URI.create("wss://fixture.invalid/v1/station/online/multiplayer/relay");}static javax.net.ssl.SSLSocketFactory create(){return (javax.net.ssl.SSLSocketFactory)javax.net.ssl.SSLSocketFactory.getDefault();}}

@@ -1,0 +1,44 @@
+{
+  "status": "compiled-java-overlay-only",
+  "createdUtc": "2026-10-12T00:28:18.790473+00:00",
+  "androidApi": 34,
+  "productionJavaTarget": 8,
+  "classMajorVersion": 52,
+  "classCount": 9,
+  "jarSha256": "8e746f8fa449cfebae14b9db68b0080ffa9a9bfb6a45300449c4d2f7c9ce2bc4",
+  "inputsSha256": {
+    "javac": "9c71eee841aeebb723bfc2cceca7d72c6c1988fb679402f4123aa4d0e86aa549",
+    "androidJar": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+    "roomsJar": "6b2929eb3621b208593a886b6f06a32de52af9c931663cb314e197af155f773d",
+    "clientJar": "011bce981b609d2cc5cfbad49c386e7f54dea1f560a17fe79bae3a56b3f8f313"
+  },
+  "baselineSha256": {
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java": "2b8fcbf368e38362e9f46701534471172ae388c1e163b2bb99f765a438ca7da2",
+    "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinSession.java": "dc9e16fe10ffa87250fa2351ab60b6a628771ba3559a5f88dd4b8e936633cab7",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java": "0f4032baae452d5203adf2f845c1e9830c8e1132b99dfffa7ec0b4b758f37017"
+  },
+  "sourcesSha256": {
+    "java/org/emulationstation/frontend/netplay/StationDolphinSession.java": "8dabb51d65313e2a6b2925927163aa1a50d24533a8bcc5ccaa5b1cd1a59c6231",
+    "java/org/emulationstation/frontend/netplay/StationGameSession.java": "382066fb971d4fd15005f2e8057271f2148f70e2e295e4cb45ac9088648ec22f",
+    "java/org/emulationstation/frontend/netplay/StationHumanDeparture.java": "45eb52fa73d1412589a5f27b6d9cb772cd137c316dd7126873f1e9ce81db3dc7"
+  },
+  "classesSha256": {
+    "org/emulationstation/frontend/netplay/StationDolphinSession$Session$1.class": "b0e6e4401ccaff5984ea0c847ea7e4f7e8678b06a107423206fdb3561a73dd94",
+    "org/emulationstation/frontend/netplay/StationDolphinSession$Session$2.class": "a50ff8f44a8e6bb992b8738efb80673a6e68cfbb4cdcb3a64b84b38aaf692b31",
+    "org/emulationstation/frontend/netplay/StationDolphinSession$Session$Control.class": "145b317e20d043e4236fcaf76359cc75fb9579f85cc19b8ab48623b5f4ae3f22",
+    "org/emulationstation/frontend/netplay/StationDolphinSession$Session.class": "63c9d5dcf520e25a1cad0d88ee65adfd19d23236dbe6e7019b90a671f8b6781d",
+    "org/emulationstation/frontend/netplay/StationDolphinSession.class": "15539b2946ce1612d8e5942ad536a7d4278f89bb7a3505b542a3c440dd40fd02",
+    "org/emulationstation/frontend/netplay/StationGameSession$1.class": "e50be5cd53320198fb0729cc2e78ddbe24bf32785e25a1a9b8f65dea08c778d6",
+    "org/emulationstation/frontend/netplay/StationGameSession$LaunchReturn.class": "f059b1e815cd3898c3fe56e9ff8f7ff1fa9dbb01a517742f88e4139a5622d71d",
+    "org/emulationstation/frontend/netplay/StationGameSession.class": "623239662a4193f6994c1780865de81bc288900a44611377e8781bd2664bf7d1",
+    "org/emulationstation/frontend/netplay/StationHumanDeparture.class": "986433077d31fd2d8d9749589b7db59f4651e4604e7681f319758a22f507ec9f"
+  },
+  "sourcePinsSha256": "098b53075ca15255fc3df1d5637d169d694d7ebf84e5ae481cf6fed1cc03c54e",
+  "recipeSha256": "6d0fbf1e3cdd8a213b137693958ca048a13da936ee52b61800b322cf20e77eba",
+  "testsOrFixturesPackaged": false,
+  "sdkOrDependenciesPackaged": false,
+  "apkBuilt": false,
+  "dexBuilt": false,
+  "installed": false,
+  "productionAccess": false
+}

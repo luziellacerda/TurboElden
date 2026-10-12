@@ -1,0 +1,644 @@
+[
+  {
+    "id": "SV01",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/AGENTS.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/AGENTS.md",
+    "purpose": "Regras, cadeia de revisões e separação entre fonte, pacote, instalação, autenticação e execução."
+  },
+  {
+    "id": "SV02",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-settings-refinement-r134-20261011/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-settings-refinement-r134-20261011/README.md",
+    "purpose": "Escopo R134: famílias alteradas e serviços preservados; limites da publicação."
+  },
+  {
+    "id": "SV03",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/local-sony-demos/recipe/patch_frontend.py",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/local-sony-demos/recipe/patch_frontend.py",
+    "purpose": "Delta efetivo herdado da publicação Java: linhas DEMO e guardas sem rede."
+  },
+  {
+    "id": "SV04",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationAndroid.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationAndroid.java",
+    "purpose": "Composição dos serviços, armazenamento no_backup, identidade Android e integração do perfil."
+  },
+  {
+    "id": "SV05",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+    "purpose": "Métodos/rotas, esquemas de ativação/sessão/perfil/catálogo/grants/mídia, assinatura e erros."
+  },
+  {
+    "id": "SV06",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationProtocol.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationProtocol.java",
+    "purpose": "Domínios v1, formatos de identificadores, identidade de requisição e limites de corpo."
+  },
+  {
+    "id": "SV07",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationHttp.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationHttp.java",
+    "purpose": "Allowlist HTTP, HTTPS/pin, cabeçalhos, timeouts, tamanho de requisições e recusa de redirects."
+  },
+  {
+    "id": "SV08",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCrypto.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCrypto.java",
+    "purpose": "Chaves Keystore RSA2048 e EC P256, atestação, reuso e limites."
+  },
+  {
+    "id": "SV09",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationRequestProof.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationRequestProof.java",
+    "purpose": "Prova vinculada a método, destino, corpo, credencial, tempo e nonce."
+  },
+  {
+    "id": "SV10",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationSessions.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationSessions.java",
+    "purpose": "Licença persistida, sessão em memória, renovação e leases de concorrência."
+  },
+  {
+    "id": "SV11",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+    "purpose": "Login, cache offline, perfil, renovação, invalidação e autorização vinculada a catálogo."
+  },
+  {
+    "id": "SV12",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/LoginActivity.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/LoginActivity.java",
+    "purpose": "Interface de acesso, Manter conectado, armazenamento e navegação após login."
+  },
+  {
+    "id": "SV13",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationLogin.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationLogin.java",
+    "purpose": "Fila de login, callbacks, autorização e mensagens de erro."
+  },
+  {
+    "id": "SV14",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalog.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalog.java",
+    "purpose": "Modelo assinado de itens/metadados/coleções e limite de 4096."
+  },
+  {
+    "id": "SV15",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogStore.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogStore.java",
+    "purpose": "Cache privado assinado, monotonicidade de revisão e bloqueio persistente."
+  },
+  {
+    "id": "SV16",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "purpose": "Publicação da biblioteca, refresh, polling, downloads, capas e identificação de instalados."
+  },
+  {
+    "id": "SV17",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+    "purpose": "Cache de capas por revisão, pré-indexação, reaproveitamento e falhas 404/429."
+  },
+  {
+    "id": "SV18",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "purpose": "Fila única de IO/decode, prioridades, gerações, foreground e prefetch."
+  },
+  {
+    "id": "SV19",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+    "purpose": "Estados, fila, grant novo, pausa/cancelamento/persistência e limite de transferências."
+  },
+  {
+    "id": "SV20",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadRetry.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadRetry.java",
+    "purpose": "Classificação e espera de falhas transitórias sem repetir grant consumido."
+  },
+  {
+    "id": "SV21",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+    "purpose": "Central atual de downloads, progresso, estimativa, botões e lifecycle."
+  },
+  {
+    "id": "SV22",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadUi.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadUi.java",
+    "purpose": "Avisos e confirmação de cancelamento."
+  },
+  {
+    "id": "SV23",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/DownloadService.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/DownloadService.java",
+    "purpose": "Notificação foreground, bloqueio parcial de energia e ausência de serviço ocioso."
+  },
+  {
+    "id": "SV24",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationArtifact.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationArtifact.java",
+    "purpose": "Descritor de artefato, formatos, caminhos e limites de tamanho/contagem."
+  },
+  {
+    "id": "SV25",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+    "purpose": "Transação, extração, CUE/M3U, recibo, descoberta de instalados e remoção que preserva saves."
+  },
+  {
+    "id": "SV26",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFiles.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFiles.java",
+    "purpose": "Escrita limitada/atômica, fsync, detecção de tipos e política de hash."
+  },
+  {
+    "id": "SV27",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationStorage.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationStorage.java",
+    "purpose": "Preparação de raiz canônica, prova de escrita, espaço livre e erros de armazenamento."
+  },
+  {
+    "id": "SV28",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationResourceBundle.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationResourceBundle.java",
+    "purpose": "Revisão do bundle de recursos e política de reparo/substituição."
+  },
+  {
+    "id": "SV29",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationBundledFiles.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationBundledFiles.java",
+    "purpose": "Cópia de recursos empacotados que preserva adições do usuário."
+  },
+  {
+    "id": "SV30",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationMediaCatalog.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationMediaCatalog.java",
+    "purpose": "Contrato dos vídeos de menu, domínio, dimensões/fps/áudio e limites."
+  },
+  {
+    "id": "SV31",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationMediaStore.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationMediaStore.java",
+    "purpose": "Cache persistente de mídia por hash, validação e publicação transacional."
+  },
+  {
+    "id": "SV32",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCarouselMedia.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCarouselMedia.java",
+    "purpose": "Prefetch de mídia, intervalo, prioridade, suspensão e checagem H264."
+  },
+  {
+    "id": "SV33",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationTaskNavigation.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationTaskNavigation.java",
+    "purpose": "Reuso de tarefas e retorno sem encerrar processos ou tarefas de jogo."
+  },
+  {
+    "id": "SV34",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationTaskPolicy.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/auth/StationTaskPolicy.java",
+    "purpose": "Seleção de tarefa pertencente ao pacote e guarda contra abertura durante jogo."
+  },
+  {
+    "id": "SV35",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDiagnostics.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDiagnostics.java",
+    "purpose": "Contagens, correlação, categorias de erro e tags de item/capa sem credenciais."
+  },
+  {
+    "id": "SV36",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationRetryAfter.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationRetryAfter.java",
+    "purpose": "Parsing de Retry-After numérico/data HTTP e limites."
+  },
+  {
+    "id": "SV37",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-download-center-r90-20261009/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-download-center-r90-20261009/README.md",
+    "purpose": "Provas históricas isoladas da fila/recuperação; não é nova homologação R134."
+  },
+  {
+    "id": "SV38",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/README.md",
+    "purpose": "Fonte completa R124, classes preservadas e qualificação física limitada."
+  },
+  {
+    "id": "SV39",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationConfig.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationConfig.java",
+    "purpose": "Base pública, produto/aplicação e clientVersion legado; valores de chaves/pin omitidos."
+  },
+  {
+    "id": "SV40",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_search_download.h",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_search_download.h",
+    "purpose": "Busca nativa e apresentação enquanto digita; barra de progresso no carrossel."
+  },
+  {
+    "id": "OFF01",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/AGENTS.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/AGENTS.md",
+    "purpose": "Política de composição, preservação e separação das evidências"
+  },
+  {
+    "id": "OFF02",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-settings-refinement-r134-20261011/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-settings-refinement-r134-20261011/README.md",
+    "purpose": "Composição e escopo atual R134"
+  },
+  {
+    "id": "OFF03",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/evidence/launch-matrix-r120.json",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/evidence/launch-matrix-r120.json",
+    "purpose": "50 plataformas, rotas, processos, componentes e limites"
+  },
+  {
+    "id": "OFF04",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/README.md",
+    "purpose": "Owners Sony internos e validação R131"
+  },
+  {
+    "id": "OFF05",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "purpose": "Publicação de catálogo, workers, capas, refresh e instalados"
+  },
+  {
+    "id": "OFF06",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationPlatforms.java",
+    "purpose": "Mapeamento explícito de plataformas"
+  },
+  {
+    "id": "OFF07",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoordinator.java",
+    "purpose": "Biblioteca/cache/sessões/autorização"
+  },
+  {
+    "id": "OFF08",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_carousel.cpp",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_carousel.cpp",
+    "purpose": "Modelo, ações, comandos e despacho"
+  },
+  {
+    "id": "OFF09",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_info.h",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_info.h",
+    "purpose": "Sinopse, contagens, classificação e ficha"
+  },
+  {
+    "id": "OFF10",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/console-panel-r133/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/console-panel-r133/README.md",
+    "purpose": "Fotos console, cache e custos nominais"
+  },
+  {
+    "id": "OFF11",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+    "purpose": "Painel gráfico R134 e controles"
+  },
+  {
+    "id": "OFF12",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java",
+    "purpose": "Persistência da máscara, fundo e economia"
+  },
+  {
+    "id": "OFF13",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-carousel-diagonal-online-compact-r123-20261011/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-carousel-diagonal-online-compact-r123-20261011/README.md",
+    "purpose": "Reta/Diagonal/De lado e prioridades"
+  },
+  {
+    "id": "OFF14",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/README.md",
+    "purpose": "Orçamento de frames e evidência física delimitada"
+  },
+  {
+    "id": "OFF15",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "purpose": "Fila única, foreground e preempção de capas"
+  },
+  {
+    "id": "OFF16",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-smooth-preload-r115-20261010/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-smooth-preload-r115-20261010/README.md",
+    "purpose": "Cache progressivo e preparação incremental LED"
+  },
+  {
+    "id": "OFF17",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloadPanel.java",
+    "purpose": "Central, ETA, ações e bitmap cache"
+  },
+  {
+    "id": "OFF18",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_magazine_field.h",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_magazine_field.h",
+    "purpose": "Cache GL, chave, três entradas e 8MiB"
+  },
+  {
+    "id": "OFF19",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/startup-cleanup-r132/recipe/patch_loading.py",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/startup-cleanup-r132/recipe/patch_loading.py",
+    "purpose": "Barreira loading e marcos de progresso"
+  },
+  {
+    "id": "OFF20",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/startup-cleanup-r132/recipe/r132_startup_loading.h",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/startup-cleanup-r132/recipe/r132_startup_loading.h",
+    "purpose": "Prewarm no SDL/GL e contexto"
+  },
+  {
+    "id": "OFF21",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java",
+    "purpose": "Player, decoder e lifecycle baseline"
+  },
+  {
+    "id": "OFF22",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/local-sony-demos/recipe/patch_video_loop.py",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/local-sony-demos/recipe/patch_video_loop.py",
+    "purpose": "Loop persistente e reutilização decoder R130"
+  },
+  {
+    "id": "OFF23",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationDownloads.java",
+    "purpose": "Estados, fila, retry, pausa e limpeza da tentativa"
+  },
+  {
+    "id": "OFF24",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/DownloadService.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/DownloadService.java",
+    "purpose": "Notificação foreground e wake lock"
+  },
+  {
+    "id": "OFF25",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationInstaller.java",
+    "purpose": "Instalação transacional, não hashing ROM e remoção"
+  },
+  {
+    "id": "OFF26",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-neogeo-cd-r65-20261007/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-neogeo-cd-r65-20261007/README.md",
+    "purpose": "Neo Geo/MAME, CHD, BIOS, nomes e limites"
+  },
+  {
+    "id": "OFF27",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/audits/station-online-system-engines-20261011/evidence/current-apk-audit.json",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/audits/station-online-system-engines-20261011/evidence/current-apk-audit.json",
+    "purpose": "Auditoria R126 das rotas/binários preservados"
+  },
+  {
+    "id": "OFF28",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/audits/station-online-system-engines-20261011/remaining-systems/matrix.json",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/audits/station-online-system-engines-20261011/remaining-systems/matrix.json",
+    "purpose": "Proveniência versões de motores"
+  },
+  {
+    "id": "OFF29",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-emulators-r15-20261005/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-emulators-r15-20261005/README.md",
+    "purpose": "Integração normal N64, processos, storage e retorno"
+  },
+  {
+    "id": "OFF30",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-dolphin-online-r126-20261011/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-dolphin-online-r126-20261011/README.md",
+    "purpose": "Dolphin/N64 owners reais e proveniência"
+  },
+  {
+    "id": "OFF31",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/REVIEW-CONTROLLER-VISIBILITY-R120.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/REVIEW-CONTROLLER-VISIBILITY-R120.md",
+    "purpose": "Inventário controle por motor e limites"
+  },
+  {
+    "id": "OFF32",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-neogeocd-bundled-bios-r66-20261007/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-neogeocd-bundled-bios-r66-20261007/README.md",
+    "purpose": "Preparação automática das BIOS existentes"
+  },
+  {
+    "id": "OFF33",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-neogeocd-bundled-bios-r66-20261007/evidence",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-neogeocd-bundled-bios-r66-20261007/evidence",
+    "purpose": "Recibos e limites das provas CD; diretório de evidências"
+  },
+  {
+    "id": "OFF34",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/java/client/src/java/org/emulationstation/frontend/station/StationControllerPresence.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/java/client/src/java/org/emulationstation/frontend/station/StationControllerPresence.java",
+    "purpose": "Adaptador Dolphin completo"
+  },
+  {
+    "id": "OFF35",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/evidence/controller-presence-r120.json",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/evidence/controller-presence-r120.json",
+    "purpose": "68 provas isoladas controle"
+  },
+  {
+    "id": "OFF36",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps3/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps3/README.md",
+    "purpose": "Contrato PS3 runtime/firmware/input"
+  },
+  {
+    "id": "OFF37",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyLaunchActivity.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyLaunchActivity.java",
+    "purpose": "API/ARM64/formatos e despacho interno Sony"
+  },
+  {
+    "id": "OFF38",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+    "purpose": "Bootstrap PS3 baseline, jogo e lifecycle"
+  },
+  {
+    "id": "OFF39",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+    "purpose": "Configuração PS3 R134 com 18 campos"
+  },
+  {
+    "id": "OFF40",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/evidence/sony-settings-contract.json",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/evidence/sony-settings-contract.json",
+    "purpose": "Contrato primário settings, lifecycle e limites"
+  },
+  {
+    "id": "OFF41",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps4/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps4/README.md",
+    "purpose": "Contrato PS4 runtime/PKG/áudio/input/retorno"
+  },
+  {
+    "id": "OFF42",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+    "purpose": "Owner PS4 baseline"
+  },
+  {
+    "id": "OFF43",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Game.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Game.java",
+    "purpose": "Importação PKG, staging e SFO"
+  },
+  {
+    "id": "OFF44",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+    "purpose": "Configuração PS4 R134, JSON e callbacks"
+  },
+  {
+    "id": "OFF45",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/tooling/release/install_current.py",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/tooling/release/install_current.py",
+    "purpose": "Guard de instalação e verificação de dados"
+  },
+  {
+    "id": "ON-01",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-settings-refinement-r134-20261011/HANDOFF-APP-R134-PARA-SERVIDOR-20261011.md",
+    "url": null,
+    "purpose": "Handoff R134 local atual: identidades, kit, ledger e procedimento. Arquivo local em preparação; publicação não presumida."
+  },
+  {
+    "id": "ON-02",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-settings-refinement-r134-20261011/STATUS.json",
+    "url": null,
+    "purpose": "Status R134 e escopo limitado dos deltas."
+  },
+  {
+    "id": "ON-03",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/recipe/compile_java.py",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/recipe/compile_java.py",
+    "purpose": "Ordem explícita de composição Java R124/R125/R126/PSX."
+  },
+  {
+    "id": "ON-04",
+    "path": "src/TurboRamaSuiteOnlineServer/StationEndpoints.cs e StationService.cs",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationEndpoints.cs",
+    "purpose": "Rotas Station, ativação, sessão e grants efetivamente lidos no GitHub."
+  },
+  {
+    "id": "ON-05",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+    "purpose": "Cliente HTTP, assinatura, domínios, grants, limites e mídia."
+  },
+  {
+    "id": "ON-06",
+    "path": "src/TurboRamaSuiteOnlineServer/StationOnline.cs e StationOnlineEndpoints.cs",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationOnline.cs",
+    "purpose": "Operações sociais/legadas, limites, capacidades e endpoints."
+  },
+  {
+    "id": "ON-07",
+    "path": "src/TurboRamaSuiteOnlineServer/StationRequestProof.cs",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationRequestProof.cs",
+    "purpose": "Canonical HTTP, timestamp/nonce, criptografia e proteção de replay."
+  },
+  {
+    "id": "ON-08",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/java/org/emulationstation/frontend/netplay/StationOnlineGame.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/java/org/emulationstation/frontend/netplay/StationOnlineGame.java",
+    "purpose": "Engine, conteúdo, preparo e conferência das salas."
+  },
+  {
+    "id": "ON-09",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+    "purpose": "Lobby, salas, pronto/start, convites guardados e lançamento."
+  },
+  {
+    "id": "ON-10",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java",
+    "purpose": "Composição social/v3, requisições, capacidades e retry somente leitura."
+  },
+  {
+    "id": "ON-11",
+    "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerEndpoints.cs",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationMultiplayerEndpoints.cs",
+    "purpose": "Endpoints POST/WSS, timeout/corpo/cabeçalhos, assinatura e autenticação."
+  },
+  {
+    "id": "ON-12",
+    "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayer.cs e StationMultiplayerPlatformPolicy.cs",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationMultiplayer.cs",
+    "purpose": "Schema, 12 ações, aprovação, roster, tickets, limites e snapshot."
+  },
+  {
+    "id": "ON-13",
+    "path": "G:/StationNormalOwnersR127/settings-refinement-r134/assembly/identity/runtime-identity.json",
+    "url": null,
+    "purpose": "Recibo original R134: IDs, hashes, opções, extensões e dependências técnicas; sem segredos."
+  },
+  {
+    "id": "ON-14",
+    "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerStream.cs e StationRecoveryRelay.cs",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationMultiplayerStream.cs",
+    "purpose": "TSR3, replay, barreira, relay, timeouts e autorizações."
+  },
+  {
+    "id": "ON-15",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-mupen-online-r125-20261011/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-mupen-online-r125-20261011/README.md",
+    "purpose": "Integração Mupen AE, SN64 e alcance dos testes; consultar também java/StationN64Wire.java."
+  },
+  {
+    "id": "ON-16",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-dolphin-online-r126-20261011/NATIVE-CONTRACT.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-dolphin-online-r126-20261011/NATIVE-CONTRACT.md",
+    "purpose": "Dolphin real, DPL1, CurrentRun, ACK/CPU gate e saída humana."
+  },
+  {
+    "id": "ON-17",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/ENTRY-CONTRACT.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/ENTRY-CONTRACT.md",
+    "purpose": "Owner PSX, ABI, SDL, status e saída; complemento native/StationPsxProtocol.hpp e .cpp."
+  },
+  {
+    "id": "ON-18",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/audits/station-online-system-engines-20261011/README.md",
+    "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/audits/station-online-system-engines-20261011/README.md",
+    "purpose": "Auditoria histórica R126 dos demais sistemas; PSX posterior supersede linha PS1; canais ACTIVE históricos."
+  },
+  {
+    "id": "ON-19",
+    "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/audits/station-r134-online-mode-completion-20261011/summary.json",
+    "url": null,
+    "purpose": "Matriz/ledger R134 local e estados auditados; não é snapshot de produção."
+  },
+  {
+    "id": "ON-20",
+    "path": "docs/station-android/online-plataformas-20261009/r128-retorno-servidor-20261011.json",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/docs/station-android/online-plataformas-20261009/r128-retorno-servidor-20261011.json",
+    "purpose": "Último retorno real a6b58e9 verificado nesta leitura, ainda R129."
+  },
+  {
+    "id": "ON-21",
+    "path": "docs/station-android/r133/DELIVERY.json",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/524d2ebff08353fda62aacbc5f05f9248ba69b7c/docs/station-android/r133/DELIVERY.json",
+    "purpose": "Entrega documental R133 publicada; não é aplicação servidor."
+  },
+  {
+    "id": "ON-22",
+    "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerProfileMonitor.cs",
+    "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationMultiplayerProfileMonitor.cs",
+    "purpose": "Hotreload de 10 s, limite de 16 MiB, último válido e salas congeladas."
+  }
+]

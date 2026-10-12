@@ -1,0 +1,41 @@
+{
+  "status": "candidate-source-only",
+  "baseAppCommit": "4f9039eb9ce13907ce043870bfe1f6e294888556",
+  "apkBuilt": false,
+  "installed": false,
+  "physicalGameplayValidated": false,
+  "serverChanged": false,
+  "scope": [
+    "Dolphin explicit-human Exit monitor ordering",
+    "v3 explicit-human Leave after verified stale generation rejection"
+  ],
+  "newRuntimeIds": false,
+  "limitations": [
+    "No APK assembly or phone test in this review",
+    "Three-player waiting investigated separately; do not relax READY/ACK/profile guards",
+    "HTTP/network errors remain failures, never authorize blind mutation retry"
+  ],
+  "javaCompiled": true,
+  "productionClassCount": 9,
+  "javaTarget": 8,
+  "compiledPayload": "operator-local:online-r135-java-overlay",
+  "dexBuilt": false,
+  "localEvidence": [
+    "evidence/test-receipt.json",
+    "evidence/compile-production.json"
+  ],
+  "confirmedFixes": [
+    "Dolphin human Exit ABBA reproduced on production Java classes; fixed completion",
+    "v3 event4 stale-generation rejection silently strands membership; fixed exact verified retry"
+  ],
+  "knownPending": [
+    "Human departure network failures log categorical unconfirmed status; no durable pending intent added",
+    "Three-player waiting cause not traced; READY/ACK/membership/profile/license barriers preserved",
+    "RetroArch NativeActivity unbounded wait hypothesis requires Android/native trace"
+  ],
+  "serverAcceptanceValidated": false,
+  "payloadRecipe": "recipe/build_payload.py",
+  "payloadReproducedByteExact": true,
+  "testedCompilerAndClasspathPinned": true,
+  "inputPinRejectionEvidence": "evidence/input-pin-rejection.json"
+}

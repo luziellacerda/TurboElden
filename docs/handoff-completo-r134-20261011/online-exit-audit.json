@@ -1,0 +1,199 @@
+{
+  "createdUtc": "2026-10-12T00:13:39.510868+00:00",
+  "language": "pt-BR",
+  "baseCommit": "4f9039eb9ce13907ce043870bfe1f6e294888556",
+  "sourceLayer": "R124 frozen base → R125 N64 → R126 Dolphin → PSX overlay; R134 shared settings does not change online lifecycle",
+  "scope": "Revisão e correções isoladas em publication-app, compilação Java/JVM somente; original dirty checkout e históricos preservados",
+  "noDevices": true,
+  "noAdb": true,
+  "noProductionConnections": true,
+  "apkBuilt": false,
+  "installed": false,
+  "newRuntimeIdsGenerated": false,
+  "findings": [
+    {
+      "id": "ONLINE-P1-DOLPHIN-EXIT-ABBA",
+      "severity": "P1",
+      "classification": "comprovado no código e reproduzido em JVM; causalidade do relato físico não comprovada",
+      "title": "Saída GameCube/Wii pode bloquear a interface por ciclo Session/transporte",
+      "evidence": [
+        {
+          "path": "versions/station-dolphin-online-r126-20261011/java/org/emulationstation/frontend/netplay/StationDolphinSession.java",
+          "lines": [
+            147,
+            189,
+            190
+          ]
+        },
+        {
+          "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+          "lines": [
+            30,
+            72
+          ]
+        }
+      ],
+      "mechanism": "UI closeByHuman mantém Session e tenta transporte.close; callback unrecoverable mantém transporte e tenta Session.fatal. Ordem invertida; ambos BLOCKED. ThreadMXBean identifica os dois threads em deadlock.",
+      "fix": "Bloco curto Session para autorização/flags; fechar transporte depois de soltar Session; StopEmulation/closeBlocking seguem worker.",
+      "status": "overlay corrigido e teste base/fixed passou"
+    },
+    {
+      "id": "ONLINE-P2-STALE-HUMAN-LEAVE",
+      "severity": "P2",
+      "classification": "comprovado no cliente e contrato servidor; reproduzido com classes reais do cliente/servidor fixture",
+      "title": "Saída humana rejeitada por geração antiga pode deixar membership remoto ativo",
+      "evidence": [
+        {
+          "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java",
+          "lines": [
+            73,
+            76
+          ]
+        },
+        {
+          "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+          "lines": [
+            465,
+            467
+          ]
+        },
+        {
+          "repository": "luziellacerda/Servidor-pix",
+          "ref": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+          "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayer.cs",
+          "lines": [
+            193,
+            217,
+            263,
+            268
+          ]
+        }
+      ],
+      "mechanism": "Um Leave usa binding.generation; exceção ignorada e v3 retorno não reemite. Servidor valida Own antes da mutação.",
+      "fix": "Somente evento4 humano: uma rejeição409/código exato permite snapshot próprio assinado, identidade integral idêntica, geração maior e uma única reemissão com requestId novo. Confirmar alvo ausente.",
+      "status": "overlay corrigido e testes de guardas passaram",
+      "remaining": "Erro rede/timeout não ganha retry automático nem durable intent; sai localmente e registra diagnóstico categórico de saída não confirmada."
+    },
+    {
+      "id": "ONLINE-PENDING-3P-BARRIER",
+      "severity": "pendência de diagnóstico",
+      "classification": "condição implementada; causa da partida relatada não comprovada",
+      "title": "Três participantes precisam de dois links/four attachments/barreira global completa",
+      "evidence": [
+        {
+          "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+          "lines": [
+            40,
+            54,
+            55
+          ]
+        },
+        {
+          "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java",
+          "lines": [
+            197,
+            199,
+            253,
+            270
+          ]
+        }
+      ],
+      "mechanism": "Host só roda quando todas épocas/estados/available estão compatíveis. Servidor exige quatro Hello/Paused/Ready e pending0. PING prova conexão, não execução/READY/ACK de owner. Espera pode permanecer indefinidamente se um peer não completar a barreira.",
+      "fix": "Instrumentar diagnóstico agregado de slots/fase/época/bytes sem credenciais; capturar emulador e estado real de cada owner. Não relaxar gates.",
+      "status": "sem mudança de barreira; análise servidor conduzida separadamente"
+    },
+    {
+      "id": "ONLINE-HYPOTHESIS-RETRO-NATIVE-WAIT",
+      "severity": "hipótese para trace",
+      "classification": "esperas demonstradas; bloqueio físico não reproduzido",
+      "title": "NativeActivity aguarda eventos nativos/destruição sem limite",
+      "evidence": [
+        {
+          "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+          "lines": [
+            113,
+            119,
+            125,
+            126,
+            155,
+            159
+          ]
+        },
+        {
+          "path": "versions/station-multiplayer-r77-20261008/native/source/frontend/drivers/platform_unix.c",
+          "lines": [
+            256,
+            282,
+            301,
+            307,
+            323,
+            333,
+            338,
+            739,
+            749
+          ]
+        }
+      ],
+      "mechanism": "quit atômico+wake looper; callbacks set input/window/state e onDestroy aguardam cond/worker. Wake não interrompe retro_run/GL/audio/save preso.",
+      "fix": "Obter trace nativo/UI e confirmar ponto antes de mudar teardown; nunca remover waits ou destruir owner em execução por timeout.",
+      "status": "sem alteração nativa"
+    },
+    {
+      "id": "ONLINE-HYPOTHESIS-UI-HTTP-CANCEL",
+      "severity": "hipótese para trace",
+      "classification": "abort síncrono demonstrado; latência/ANR não medida",
+      "title": "Cancelamento HTTP é executado no chamador durante cleanup",
+      "evidence": [
+        {
+          "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationGameSession.java",
+          "lines": [
+            74,
+            101
+          ]
+        },
+        {
+          "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+          "lines": [
+            48,
+            59
+          ]
+        },
+        {
+          "path": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationHttp.java",
+          "lines": [
+            64,
+            65
+          ]
+        }
+      ],
+      "mechanism": "pause cancela pending; Cancellation.cancel sincronizado chama abort.run; StationHttp conecta abort a disconnect. Se disconnect demora, chamada de UI pode demorar; não existe prova de demora neste ambiente.",
+      "fix": "Medir/trace primeiro; eventual cancelamento separa publicação da flag e abort fora de monitores sem abrir janela de acesso indevido.",
+      "status": "não alterado; cliente congelado preservado"
+    }
+  ],
+  "ownerReview": {
+    "N64": "Session.close synchronized toma transporte, mas fatal/nativeControl não tomam monitor Session; não há o ABBA Dolphin identificado. Guarda quit fecha mux/socket e shutdown workers. Nenhuma estabilidade real inferida.",
+    "PSX": "humanExit solta monitor antes de worker fechar transporte/JNI. awaitClosed250ms reprogramado50ms e capturedOwner.join fora UI; waits podem impedir conclusão se thread nunca termina, sem autoridade para kill por timeout.",
+    "Dolphin": "closeBlocking serializado no worker e strong official pointer preservado até Connect retornar; correção resolve ciclo de monitores Java comprovado.",
+    "RetroArch": "Pedido humano envia evento4 antes teardown; onRetroArchExit posta finish na UI, não chama finish síncrono dentro mutex nativo."
+  },
+  "overlay": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-11\\temo\\work\\publication-app\\integration\\online-lifecycle-review-r135",
+  "compiledPayload": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-11\\temo\\work\\online-r135-payload\\online-lifecycle-overlay.jar",
+  "evidence": [
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-11\\temo\\work\\publication-app\\integration\\online-lifecycle-review-r135\\evidence\\test-receipt.json",
+    "C:\\Users\\Admin\\Documents\\Codex\\2026-10-11\\temo\\work\\publication-app\\integration\\online-lifecycle-review-r135\\evidence\\compile-production.json"
+  ],
+  "nextTests": [
+    "APK final conferir classe/entradas/assinatura/16KiB e renovar runtime bundle sem tocar core/perfil",
+    "Teste autorizado em Android de saída durante preparação/sync/gameplay e callback fatal concorrente",
+    "Snapshot fresco deve confirmar ausência da sala antiga; rede ausente deve mostrar pendência antes de alegar saída remota",
+    "Três participantes: dois links/quatro attachments, fase local/READY/Paused/epoch/pending de cada owner, jogo/edição/perfil real",
+    "Trace ANR UI+worker+nativo se ainda ocorrer; identificar retro_run/GL/audio/save/HTTP cancel sem dump de credenciais ou dados pessoais"
+  ],
+  "openQuestions": [
+    "Qual plataforma, jogo/edição e perfil produziram o ANR observado?",
+    "A partida de três estava em RetroArch/SNES, N64, GameCube/Wii ou outra rota?",
+    "Qual slot/link/owner não produziu READY da época atual?",
+    "Como registrar de forma durável a saída humana ainda não confirmada sem encerrar outra sala ou geração?"
+  ]
+}

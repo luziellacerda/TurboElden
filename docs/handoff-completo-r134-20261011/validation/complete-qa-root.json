@@ -1,0 +1,172 @@
+{
+  "status": "pass",
+  "renderDirectory": "work/complete-dossier-render-publication",
+  "totalDocumentPages": 142,
+  "reviewedPages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "evidence": {
+    "pages1and2": "individually viewed in original initial render; SHA-256 identical in final render",
+    "pages3to31": "all individually viewed at original detail in verified render",
+    "page7": "individually re-viewed in identifiers and publication renders; filename and commit repair passed"
+  },
+  "pageHashes": [
+    {
+      "page": 1,
+      "sha256": "4777b5e41a2b8f9e3a7389bd421f8119a71a5443c4546d2fd75a0afe8b754d35"
+    },
+    {
+      "page": 2,
+      "sha256": "78fc804445df6ad9b83884e11171c58c0048829fe60e4fc747f205087f8122c7"
+    },
+    {
+      "page": 3,
+      "sha256": "8a4dd7a7b09d4306d7f1e3c2795d24ae68bba12573bf20d7deae7641d40f0688"
+    },
+    {
+      "page": 4,
+      "sha256": "1f72ee04508799684a85d0654adda0fdada89f67ad31ea1974bc12dd38e55741"
+    },
+    {
+      "page": 5,
+      "sha256": "c562208a9d45ac749dc702591a8dbe840cf8ea004a663b1f95c48073e746562c"
+    },
+    {
+      "page": 6,
+      "sha256": "f694aa8956935bcde4fcfe3d868b93da0a843de4be3d9de3f85d355fb94a2be6"
+    },
+    {
+      "page": 7,
+      "sha256": "fab21ab48ff2fbb91094d7bbc521b3052ac89bcdf0026116ddeddb28105cab0b"
+    },
+    {
+      "page": 8,
+      "sha256": "67ef3b9df7041142eafb9364af24d1fb77d78d4c833dfcfcf290db8c6a09ea09"
+    },
+    {
+      "page": 9,
+      "sha256": "5ff74882435903192fd606f0cccbb927118cd73402352995994b375d3e4c10f6"
+    },
+    {
+      "page": 10,
+      "sha256": "99266fca0715ee1ddc39ad74d3b4264564a71c51f40b9d0c28912566943eedd2"
+    },
+    {
+      "page": 11,
+      "sha256": "cffaad6301fba52442f1d1c8f53b986f19d59a5b50f5519bbb53275fa4cf5825"
+    },
+    {
+      "page": 12,
+      "sha256": "cbf04488f6fc3d97bb83509272e28ddaef1d6b2df4bd3b0efd0498b295024d20"
+    },
+    {
+      "page": 13,
+      "sha256": "7e9292a95d77e27292aab9d300a9aada644be724ac9ba0002a4c6240a302d5e2"
+    },
+    {
+      "page": 14,
+      "sha256": "bc935b0730ede0eb6f09238e949aa67a5411e39d83a807981ce9137e06d3ce7c"
+    },
+    {
+      "page": 15,
+      "sha256": "048599b43f4a01f5260488473db6570322916b157f2fe4a41608ca5ffa2fa56f"
+    },
+    {
+      "page": 16,
+      "sha256": "b93e89755312d11cb37bc00ddb8f9a10a2e42bcefe872cba4f3b9e3441e226b1"
+    },
+    {
+      "page": 17,
+      "sha256": "0840df67030e3a2aaf8f73f00dc6278441a1b25a32efe4d1cd8fd06b31440a54"
+    },
+    {
+      "page": 18,
+      "sha256": "d854cdfabf4808080838bc9895fb54b8dec2324602aaf78e3c7b6547fe843b4f"
+    },
+    {
+      "page": 19,
+      "sha256": "a310a798385c203815c4b33b77a4e09f6466b34f6ebee38d5c94bdc8fdd4a656"
+    },
+    {
+      "page": 20,
+      "sha256": "ea2923a64e05d6a1735716442ca8903a436225dd109e38efed90858f75880853"
+    },
+    {
+      "page": 21,
+      "sha256": "f82de65165d526eb8b68dd0c90d8e8a1a510f34da6083c2d62fdc9c4a342767d"
+    },
+    {
+      "page": 22,
+      "sha256": "db397257be63b24042261d920d1c461fe11d397bc17463d794bf404c8ed7bcb6"
+    },
+    {
+      "page": 23,
+      "sha256": "6b3b5e962147d2794c1c55ad968a3e1b2e1a0edbd9c4b92204572a24700c75a9"
+    },
+    {
+      "page": 24,
+      "sha256": "c3e9d06d71cc186ed95812d75fe81a1f32227922c35fd78bafcd182c8bda052f"
+    },
+    {
+      "page": 25,
+      "sha256": "94f2ca6637b92ecf9ccc47c2e672b0dda08538cb6154de5882a882888895e09c"
+    },
+    {
+      "page": 26,
+      "sha256": "b7fcbb7984a7679f35b4a59424cc8f9f5d7b5364123cb5ef14f5257d6d671100"
+    },
+    {
+      "page": 27,
+      "sha256": "acdc64637efb7587b616f8e638c50bd0423d005e9c406709a24397cc8ffe37e0"
+    },
+    {
+      "page": 28,
+      "sha256": "896937643c91d42434886038eead0eaf41522537d97b303de0e2a184ee547e5b"
+    },
+    {
+      "page": 29,
+      "sha256": "3355fb2b3aab7539be7f844b7637bc759105325a127922eeeddc4393aea18891"
+    },
+    {
+      "page": 30,
+      "sha256": "1870e337f0d1ce282e988922aae43b82aae9b13035372f624ea1b3405f7de4df"
+    },
+    {
+      "page": 31,
+      "sha256": "8b7643face2a4cac488ae478bafd29f350951747576710e715c010f1ea66603d"
+    }
+  ],
+  "clipping": false,
+  "overlap": false,
+  "identifierIssues": []
+}

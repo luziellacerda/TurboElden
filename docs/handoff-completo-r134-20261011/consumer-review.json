@@ -1,0 +1,269 @@
+{
+  "title": "Auditoria atual e operação para entrega ao consumidor",
+  "sections": [
+    {
+      "title": "Incidentes relatados e estado para entrega ao consumidor",
+      "paragraphs": [
+        "Após a instalação da R134 nos dois aparelhos, o proprietário relatou que uma partida com três participantes permanecia carregando e que, ao sair de uma partida online, o celular pedia para fechar o aplicativo. Esses relatos passam a compor o estado operacional atual. A instalação com SHA correto e a abertura do frontend não homologam o multiplayer.",
+        "A revisão atual foi realizada sem acesso USB aos telefones. O jogo, plataforma, etapa exata de carregamento, horário da ocorrência, APK do terceiro participante e texto do diálogo não foram identificados. O relato de fechar o aplicativo é compatível com falha de resposta, mas a classificação como ANR requer o registro do Android; uma exceção ou falha nativa exige outra evidência.",
+        "A entrega comercial do online deve aguardar a correção dos defeitos comprovados no código, a aplicação administrativa dos motores exatos quando exigida e a execução do aceite físico por edição, modo e quantidade de jogadores. Os achados estáticos não permitem afirmar que o defeito relatado no telefone foi resolvido."
+      ],
+      "bullets": [],
+      "tables": []
+    },
+    {
+      "title": "Mapa de responsabilidades do aplicativo completo",
+      "paragraphs": [
+        "LoginActivity e StationLogin conduzem ativação e sessão autenticada; StationApi verifica TLS, prova de requisição e envelope assinado. StationFrontend e as pontes Java e JNI publicam a biblioteca para o carrossel. O frontend nativo apresenta hierarquia, pesquisa, capas, vídeos, efeitos e ações de jogo.",
+        "A central de downloads obtém grants assinados e acompanha a fila. StationInstaller e StationArchive instalam transacionalmente os formatos suportados e usam recibos para remoção. A biblioteca local e o catálogo remoto têm responsabilidades diferentes: indisponibilidade de sessão não apaga jogos instalados nem autoriza qualquer novo download.",
+        "Os resolvedores offline escolhem owners por plataforma, formato e configuração. Online acrescenta identidade de conteúdo, engine e runtime, perfil de controle, modo aprovado, slots e sala assinada antes de lançar o owner. Os processos de Sony seguem exclusivos do offline. Os owners normais N64, Dolphin e PSX não podem ser substituídos por um core genérico por conveniência de cadastro.",
+        "Os capítulos de serviços, frontend e motores e multiplayer apresentam as funções, campos persistidos e condições de cada domínio. O índice java-methods.json dá arquivo, classe, assinatura e linhas das declarações disponíveis. Os índices de DEX e bibliotecas apresentam a presença dos módulos compilados que não têm fonte completa disponível."
+      ],
+      "bullets": [],
+      "tables": [
+        {
+          "headers": [
+            "Domínio",
+            "Entrada ou responsável",
+            "Condição de operação"
+          ],
+          "rows": [
+            [
+              "Identidade e catálogo",
+              "LoginActivity, StationLogin, StationApi",
+              "Sessão e respostas assinadas; licença e identidade de dispositivo"
+            ],
+            [
+              "Biblioteca e apresentação",
+              "StationFrontend, libstation_frontend, libturbo_carousel",
+              "Publicação atual e lifecycle; cache e mídia com limites"
+            ],
+            [
+              "Downloads e instalação",
+              "DownloadService, StationDownload*, StationInstaller, StationArchive",
+              "Grant vigente, fila, instalação transacional e recibos"
+            ],
+            [
+              "Offline",
+              "Resolvedores e owners de cada plataforma",
+              "Arquivo/formato e dependências reais do motor"
+            ],
+            [
+              "Lobby online",
+              "StationRoomsActivity e StationOnlineClient",
+              "Edição, engine, modo, capacidade e roster assinados"
+            ],
+            [
+              "Partida e reconexão",
+              "StationGameSession e StationMultiplayerSession/Tunnel",
+              "Binding, geração, epoch, ACK/READY e recuperação v3"
+            ],
+            [
+              "Encerramento",
+              "Owner Activity, sessão humana e leave",
+              "Autorização humana, recursos encerrados e confirmação da sala"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Índice de fontes e funções e limites de reconstrução",
+      "paragraphs": [
+        "O parser de sintaxe do JDK indexou 281 fontes Java e 3.650 declarações de métodos, construtores e métodos de classes anônimas; 97 são declarações native. Isso permite localizar uma função com precisão e buscar suas chamadas. Expressões lambda não são tratadas como métodos independentes pelo índice. A indexação não executa o código nem resolve semanticamente as APIs Android.",
+        "A composição parte de 234 arquivos R124 e aplica os overlays R125, R126, PSX, hosts Sony e menus R134. O índice mantém a origem de cada arquivo. Transformações de bytecode posteriores, como StationFrontend, StationSinglePassVideo720 e SwitchConfigPatcher, estão descritas pelas receitas e não são apresentadas como Java integral reconstruído.",
+        "O índice adicional de todas as 41 entradas DEX do APK, lidas e conferidas pelos hashes de cada entrada, enumera 51.615 definições de classes e 311.866 definições de métodos; 2.001 são declarações nativas. São 40 partições principais e o owner.dex PS4 em assets. dex-defined-methods.json.gz contém seus descriptors, partição e flags. Esse inventário cobre as assinaturas definidas nos DEX, incluindo componentes de terceiros; não exporta instruções, corpos de métodos ou constantes arbitrárias e não reconstrói a implementação nativa.",
+        "integration-build-source-index.json registra caminho, tamanho e SHA256 de 209 arquivos de integração e compilação presentes antes da nova correção de lifecycle. Os arquivos da correção têm seu próprio recibo. As 40 partições DEX principais, o owner.dex PS4 em assets, 166 entradas de bibliotecas nativas e 13.860 entradas do APK estão integralmente enumerados nos anexos do pacote R134.",
+        "O loop C++ original do LibretroPlayer e alguns componentes de terceiros não têm fonte exata localizada. O repasse registra essa dependência por hash, interface e limitação. O repositório público sozinho não reproduz o APK de 2,7 GB: donors, classpaths, materiais privados e assinatura original continuam sendo inputs obrigatórios identificados pelas receitas."
+      ],
+      "bullets": [],
+      "tables": []
+    },
+    {
+      "title": "Fluxo de partida de três e pontos de confirmação",
+      "paragraphs": [
+        "No transporte v3, três jogadores formam dois links entre o host e os convidados. Cada link tem dois attachments, totalizando quatro conexões. O estado Playing depende de HELLO, confirmação de pausa e READY no epoch atual em todas as conexões, com as janelas Pending zeradas. Uma conexão WebSocket aberta ou um PING não confirma consumo pelo motor.",
+        "A implementação do servidor consultada não estabelece um prazo global para concluir starting ou synchronizing. O heartbeat de presença e o PING podem manter a sala enquanto uma conexão não chega a READY. Os timeouts de inatividade do transporte e de presença disparam recuperação, conservando a sala; não constituem um pedido humano de sair.",
+        "O operador deve localizar a etapa que falta em cada uma das quatro conexões. Registrar apenas geração, epoch, slot, estado HELLO/PAUSED/READY, offsets accepted/delivered/Pending e categoria de erro redigida. Não colocar ticket, requestProof, Authorization, conteúdo do jogo, nomes pessoais ou IPs nos recibos públicos.",
+        "A quantidade três precisa estar aprovada para a edição e modo selecionados. O teto teórico quatro não autoriza qualquer partida com três. PSX standard-2p-v1 e a política efetiva Mega de duas portas não devem oferecer três; SNES exige o perfil multitap e modo correspondente; N64/GameCube/Wii exigem os vínculos finais específicos e as contagens permitidas."
+      ],
+      "bullets": [],
+      "tables": []
+    },
+    {
+      "title": "Coleta de diagnóstico sem USB",
+      "paragraphs": [
+        "Para identificar o diálogo, o suporte pode receber uma foto enviada voluntariamente pelo usuário com dados pessoais removidos, junto do modelo, versão Android, versão/hash do aplicativo quando disponível, jogo/edição/plataforma, quantidade de jogadores e ação que precedeu a falha. Uma foto identifica a mensagem; não identifica sozinha a thread bloqueada.",
+        "No servidor, correlacionar o horário e um identificador de suporte redigido com os estados de cada attachment e o resultado dos comandos start, ticket, resume e leave. Registrar 409 com sua categoria exata. O recebimento HTTP de leave não substitui a confirmação de que a sala foi encerrada ou o participante foi removido.",
+        "No Android API 30 ou superior, uma futura coleta dentro do próprio aplicativo pode consultar ActivityManager.getHistoricalProcessExitReasons e ApplicationExitInfo. REASON_ANR e getTraceInputStream podem oferecer a pilha; a disponibilidade do trace não é garantida. A R134 não foi alterada nesta revisão para coletar ou enviar esses dados automaticamente. Qualquer exportação deve permanecer local e exigir ação explícita do usuário.",
+        "O watchdog ou a instrumentação devem servir ao diagnóstico. Não matar automaticamente o app, descartar saves ou fingir READY para remover o carregamento. Antes de publicar um novo APK, a coleta precisa de limites de tamanho, retenção curta, redação e uma validação para assegurar que não registra licença, ticket, caminhos pessoais ou conteúdo dos jogos."
+      ],
+      "bullets": [
+        "[Diagnóstico de ANRs Android](https://developer.android.com/topic/performance/anrs/diagnose-and-fix-anrs).",
+        "[ApplicationExitInfo e traces](https://developer.android.com/reference/android/app/ApplicationExitInfo)."
+      ],
+      "tables": []
+    },
+    {
+      "title": "Operação de saída e invariantes de dados",
+      "paragraphs": [
+        "A saída nasce da ação humana no painel ou botão de retorno confirmado. A UI marca a intenção e permanece responsiva enquanto os recursos são encerrados. A sessão precisa cancelar requests e transporte, sinalizar o owner para sair, observar o encerramento dos workers e somente então retornar ou reabrir o frontend. Uma resposta tardia de sessão antiga deve ser ignorada por geração e identidade.",
+        "Não executar esperas de término de threads, bloqueio de sockets ou fechamento nativo demorado segurando um monitor usado pelo callback do transporte. Operações em workers também precisam de ordem de locks e cancelamento válidos; mover a espera para outro executor sem acordar o motor não comprova encerramento.",
+        "A notificação leave precisa manter o mesmo roomId do pedido humano. Uma rejeição explícita por geração stale admite buscar snapshot atual, confirmar a mesma sala e repetir de forma limitada com a nova geração. Erro de rede ambíguo não autoriza uma mutação cega; uma nova sala nunca deve receber a saída destinada à anterior.",
+        "Os saves online isolados, arquivos offline e recibos locais permanecem distintos. O encerramento não limpa dados da instalação, não troca o certificado e não copia estado online de sessão para o save offline. Remoção de jogo deve seguir a transação e recibo do instalador, preservando arquivos não registrados."
+      ],
+      "bullets": [],
+      "tables": []
+    },
+    {
+      "title": "Qualificação do produto e regressões obrigatórias",
+      "paragraphs": [
+        "O aceite abaixo define o que o responsável deve comprovar na candidata com APK e identidade exatos. Os ensaios de concorrência e contratos executados no computador são registrados no relatório da correção. As linhas de aceite físico permanecem pendentes até serem executadas nos aparelhos, sem confundir teste de preparação com jogo real.",
+        "Qualificar host e convidado nas duas posições e repetir em três participantes no mesmo conteúdo e modo aprovado. A aprovação de um jogo e uma edição não se estende automaticamente a todas as ROMs, BIOS, cores, modos ou perfis de controle da plataforma."
+      ],
+      "bullets": [],
+      "tables": [
+        {
+          "headers": [
+            "Cenário",
+            "Resultado exigido",
+            "Gate"
+          ],
+          "rows": [
+            [
+              "Ativar e abrir",
+              "Erros de licença/sessão claros; catálogo assinado e navegação respondem",
+              "Serviços"
+            ],
+            [
+              "Sessão expirada e offline",
+              "Renovação delimitada; biblioteca instalada preservada",
+              "Serviços"
+            ],
+            [
+              "Download pausar/retomar/cancelar",
+              "Uma transferência; novos grants; sem arquivo parcial publicado",
+              "Instalação"
+            ],
+            [
+              "Arquivo/ZIP inválido e armazenamento cheio",
+              "Falha transacional explicada e sem apagar jogo existente",
+              "Instalação"
+            ],
+            [
+              "Remover e reinstalar jogo",
+              "Somente arquivos registrados; saves e arquivos desconhecidos preservados",
+              "Instalação"
+            ],
+            [
+              "Abrir cada owner offline",
+              "Formato, dependências, toque, gamepad, áudio e save reais",
+              "Offline"
+            ],
+            [
+              "PS3 ISO e PS4 PKG reais",
+              "Bootstrap, importação e gameplay distintos; retorno responsivo",
+              "Sony offline"
+            ],
+            [
+              "Criar/entrar com 2 jogadores",
+              "Roster/slots corretos, todos READY e frames sincronizados",
+              "Online"
+            ],
+            [
+              "Criar/entrar com 3 jogadores",
+              "2 links e 4 attachments aptos; modo/count aprovado",
+              "Online"
+            ],
+            [
+              "Capacidade/mode não permitido",
+              "Recusa antes do owner; mensagem útil",
+              "Online"
+            ],
+            [
+              "Conteúdo/core/runtime/profile diferente",
+              "Recusa explícita, sem remover guardas",
+              "Online"
+            ],
+            [
+              "Wi-Fi cai e volta",
+              "Pausa global, epoch monotônico, replay/ACK e READY corretos",
+              "Recovery"
+            ],
+            [
+              "Um convidado demora a READY",
+              "Diagnóstico do attachment; saída humana continua responsiva",
+              "Recovery"
+            ],
+            [
+              "Background, retorno, tela gira",
+              "Sem worker duplicado nem COMMIT de geração antiga",
+              "Lifecycle"
+            ],
+            [
+              "Host sai em starting/playing/recovery",
+              "Sem ANR; cleanup comprovado; sala confirma encerramento",
+              "Saída"
+            ],
+            [
+              "Convidado sai em starting/playing/recovery",
+              "Sem ANR; demais recebem estado real de recovery/saída",
+              "Saída"
+            ],
+            [
+              "Generation muda antes de leave",
+              "Snapshot fresco; mesma sala; retry delimitado",
+              "Saída"
+            ],
+            [
+              "Entrar novamente após sair",
+              "Sem link/socket/thread de sessão anterior; novas identidades",
+              "Regressão"
+            ],
+            [
+              "Jogo offline após online",
+              "Input/áudio/save/config offline preservados",
+              "Regressão"
+            ],
+            [
+              "20 ciclos entrar/sair por owner",
+              "Sem aumento continuado de recursos; sem deadlock/ANR",
+              "Estabilidade"
+            ],
+            [
+              "Carrossel e efeitos após retorno",
+              "30fps dos menus, capas/cache/vídeos/economia preservados",
+              "Regressão"
+            ],
+            [
+              "Aparelho com pouca memória/rede lenta",
+              "Erro/espera explicados, interface e saída utilizáveis",
+              "Consumidor"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Compilação reprodução e promoção de candidata",
+      "paragraphs": [
+        "A fonte executável da instalação continua 4f9039eb9ce13907ce043870bfe1f6e294888556, APK R134 SHA256 f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2. A revisão de lifecycle acrescenta um overlay separado e testes. Ela não modifica as fontes congeladas das versões históricas nem transforma os recibos R134 em prova de um APK novo.",
+        "Para um novo APK, compilar os payloads do overlay com API Android e classpaths exatos, restringir as famílias de DEX, conferir as classes fora do escopo, recompor o pacote, renovar os runtime IDs afetados pelo bundle, assinar com o certificado original e verificar mapas de entradas, assinatura e alinhamento 16 KiB. Depois conciliar ponteiros, kit e registrador do servidor com os novos hashes.",
+        "A publicação de fontes e build recipes é suficiente para revisar a correção, mas a candidata só pode ser instalada e homologada depois da montagem assinada e das verificações completas. O pedido atual proíbe usar USB; nenhuma instalação da candidata é realizada por esta revisão. R134 instalada e overlay proposto são estados separados.",
+        "A atualização do servidor exige recebimento do kit privado byte exato, preservação dos baselines atuais, autenticação administrativa nativa, transação de cadastro e resposta assinada fresca do multiplayer. Os handoffs R134 e o suplemento do incidente devem ser devolvidos com uma única matriz de aprovados/recusados e recibos reais. Não reiniciar serviços ou aplicar scripts históricos por ler o Git."
+      ],
+      "bullets": [],
+      "tables": []
+    },
+    {
+      "title": "Pacote público e transferência do conhecimento",
+      "paragraphs": [
+        "O pacote público reúne handoff completo em Word e Markdown, capítulos estruturados, inventários de funções/arquivos/DEX/bibliotecas, receitas de indexação e geração do dossiê, evidências públicas R134, matriz de modos por edição e relatório de auditoria com fontes e resultados de testes. O consumidor e o operador têm necessidades diferentes: o operador recebe contratos e gates; a interface do consumidor deve apresentar resultado e ação útil em linguagem simples.",
+        "APKs, bibliotecas compiladas, jogos, firmware, BIOS, mídias e chaves de assinatura continuam no canal privado indicado pelas receitas. O pacote público contém seus hashes técnicos e requisitos. Um recibo público sanitizado não substitui o recibo original para o registrador. O servidor precisa confirmar o recebimento dos originais antes da aplicação.",
+        "O responsável que assumir a manutenção deve começar pelo README do handoff completo, ler estado atual e incidente, localizar a função no índice, usar o commit explícito e confirmar no STATUS se o artefato é fonte, payload, APK assinado, instalado ou homologado. A branch padrão antiga e rótulos de versão isolados não selecionam o APK atual."
+      ],
+      "bullets": [],
+      "tables": []
+    }
+  ]
+}
