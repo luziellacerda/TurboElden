@@ -1,0 +1,15 @@
+{
+  "revision": "R137",
+  "parentApkSha256": "fd14c522f51e717a636febf1ab9dee1970217339f37880421238eb2f30ce7b05",
+  "parentDexSha256": "84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05",
+  "outputDexSha256": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9",
+  "classCount": 608,
+  "unchangedClasses": 607,
+  "modifiedClasses": [
+    "Lorg/emulationstation/frontend/netplay/StationRetroActivity;"
+  ],
+  "assembled": "verifiedClasses=608 finalClasses=608 unchanged=577 originalAllowed=31 finalAllowed=31 donorSHA=84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05\nassembledClasses=608 restoredInitializerArrays=1 originalAllowed=31 finalAllowed=31 donorSHA=84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05",
+  "verified": "verifiedClasses=608 finalClasses=608 unchanged=577 originalAllowed=31 finalAllowed=31 donorSHA=84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05",
+  "patchSha256": "b18e3ce9535f2dbfd39f37e0b135a84c3fe63afafa4237a9444ac186d712d5f5",
+  "installed": false
+}
