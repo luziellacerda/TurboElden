@@ -1,0 +1,107 @@
+{
+  "schema": "station.online-lifecycle.release.r135.v1",
+  "revision": "R135",
+  "sourceCommit": "ca8f1ccda18bef397e71e1c979a4f813acf608c0",
+  "baseApkSha256": "f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2",
+  "apkSha256": "f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896",
+  "apkBytes": 2714991631,
+  "compiled": true,
+  "signedAndVerified": true,
+  "installed": true,
+  "installedDevices": [
+    {
+      "model": "motorola edge 30",
+      "completedUtc": "2026-10-12T04:33:05.661370+00:00",
+      "frontendObserved": true
+    }
+  ],
+  "signatureSchemes": [
+    "v2",
+    "v3"
+  ],
+  "signingCertificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "zipAlignmentBytes": 16384,
+  "replacementCount": 5,
+  "additionCount": 0,
+  "preservedEntryCount": 13855,
+  "changedDexPartitions": [
+    "classes35.dex"
+  ],
+  "originalClassCount": 606,
+  "finalClassCount": 608,
+  "unrelatedClassesPreserved": 582,
+  "newRuntimeIds": true,
+  "engines": [
+    {
+      "platform": "psx",
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-841204679ef2",
+      "runtimeSha256": "841204679ef25419d9084462c8f9f31717ea11c78abd3363a9cdefdbb2e26400",
+      "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9"
+    },
+    {
+      "platform": "n64",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-de303362cf1c",
+      "runtimeSha256": "de303362cf1c7b686b7005833b3a9a45a53db06fb9e01575d469d4204cdf24de",
+      "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8"
+    },
+    {
+      "platform": "gamecube",
+      "engineId": "dolphin-5102a033-gamecube-v3-76ce6c2190d4",
+      "runtimeSha256": "76ce6c2190d4b51c0432a9676b0657bb4152beff9f52431318c4fa292fe9d1ce",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d"
+    },
+    {
+      "platform": "wii",
+      "engineId": "dolphin-5102a033-wii-v3-76ce6c2190d4",
+      "runtimeSha256": "76ce6c2190d4b51c0432a9676b0657bb4152beff9f52431318c4fa292fe9d1ce",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d"
+    }
+  ],
+  "sameDataAndSigningIdentityAccepted": true,
+  "serverActivationConfirmed": false,
+  "physicalGameplayValidated": false,
+  "physicalThreePlayerMatchValidated": false,
+  "productionDeployed": false,
+  "approvedScopes": [
+    "online-explicit-human-exit-lock-order",
+    "online-explicit-human-leave-stale-generation-confirmed-retry"
+  ],
+  "privateApkLibrariesAndKeysPublished": false,
+  "receipts": {
+    "dex-compilation.json": {
+      "bytes": 292701,
+      "sha256": "9ceb38fcc1531d1911d01a513ab9fe9e7570fc26fdbf33097bf657d00068c510",
+      "originalPrivateReceiptSha256": "b7172fa83ba5119ba5e2bb29011f69fd9b9ed0f4f15cbb0f73f5b8e0174f3f9c"
+    },
+    "runtime-final.json": {
+      "bytes": 410901,
+      "sha256": "622a78e63c23aa7eee1d2e57f2cf74394794998d2d449ac6070782f515174e92",
+      "originalPrivateReceiptSha256": "07754bea0ceabac68d59ee044600d012443d85c222c8f238574e63d607fa53cd"
+    },
+    "source-freeze.json": {
+      "bytes": 294665,
+      "sha256": "bcfe00499d7957579eb6065a5a12ab15cf82338f0f3240e2c89c1ba257c94067",
+      "originalPrivateReceiptSha256": "03325b613ba513db026bf50a288016aa0cbb8853a988048a7c2141951ffb0917"
+    },
+    "unsigned-package.json": {
+      "bytes": 2024207,
+      "sha256": "e49a8b84a8c0770a47a5cb70ec36f99253efe69c8ad4bc663bf729a71a9407ae",
+      "originalPrivateReceiptSha256": "e49a8b84a8c0770a47a5cb70ec36f99253efe69c8ad4bc663bf729a71a9407ae"
+    },
+    "package-final.json": {
+      "bytes": 2026949,
+      "sha256": "24dc463175530d4c5dfd8bf135293a0205bd770e2d8ccd9eb429fbb7ddb17c76",
+      "originalPrivateReceiptSha256": "a913af6a405cc8d0e1db6223b07c98f600f9c5c010843137d95e6d9a4aff9dbe"
+    },
+    "instalacao-r135-edge30.json": {
+      "bytes": 1849,
+      "sha256": "f7e197626ca99b1b5aab73ebcc8e0400ba05767ce2889179755b2e864a0b3bdf",
+      "sanitizedAtCreation": true
+    },
+    "startup-r135-edge30.json": {
+      "bytes": 599,
+      "sha256": "9640bb26500fbcb56e1d30e003d9d5080d159eaac1756171257b27b84fcaaf32",
+      "sanitizedAtCreation": true
+    }
+  }
+}

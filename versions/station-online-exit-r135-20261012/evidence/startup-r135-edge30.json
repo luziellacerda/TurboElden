@@ -1,0 +1,18 @@
+{
+  "schema": "station.physical.startup.smoke.v1",
+  "revision": "R135",
+  "deviceModel": "motorola edge 30",
+  "checkedUtc": "2026-10-12T04:36:37.206783+00:00",
+  "installedReceipt": "instalacao-r135-edge30.json",
+  "mainProcessRunning": true,
+  "frontendActivityTop": false,
+  "crashCategoriesForCurrentMainProcess": [],
+  "crashCategoryCount": 0,
+  "currentProcessOnly": true,
+  "gameplayTested": false,
+  "threePlayerMatchTested": false,
+  "serverActivationTested": false,
+  "dataCleared": false,
+  "forceStopPerformed": false,
+  "rawLogsOrDeviceIdentifiersPublished": false
+}

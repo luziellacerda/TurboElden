@@ -1,0 +1,42 @@
+# Reprodução da R135 e atualização para testes
+
+Fonte executável congelada: `ca8f1ccda18bef397e71e1c979a4f813acf608c0`. Os documentos posteriores não alteram os 14 arquivos produtivos registrados em [source-freeze](evidence/source-freeze.json). Restaurar o bundle Git do backup em um checkout próprio, conservando esse commit no histórico, permite às receitas comparar os bytes por `git show`.
+
+## Inputs obrigatórios
+
+| Input | Identidade e função |
+| --- | --- |
+| APK R134 | SHA256 `f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2`, 2.714.991.631 bytes; base assinada, conservada |
+| JAR produtivo Java8 | SHA256 `8e746f8fa449cfebae14b9db68b0080ffa9a9bfb6a45300449c4d2f7c9ce2bc4`, 56.890 bytes; nove classes; cópia original `reviewed-java/online-lifecycle-overlay.jar` no conjunto privado R135 |
+| Recibo Java exigido por DEX | SHA256 `1807e0200ff5750b2c636bd7318e4afd831fecfa7f1dd9b5064f34ebb65b262a`, 3.415 bytes; cópia byte a byte `reviewed-java/compile-production.json`; um recibo novo, mesmo com JAR igual, não substitui esse input pinado |
+| Execução das receitas | Python 3.14.7 preservado em `ferramentas/python314/python.exe`; Git disponível no PATH para `git show`. Usar Python com `-B`; o backup conserva o Git em `ferramentas/Git/bin/git.exe` |
+| Ferramentas | JDK17, API34, build-tools35, apktool3.0.3, NDKr28c e ADB; hashes exatos nos recibos e nas receitas |
+| Classpath | rooms.jar e client.jar pinados; usados para compilar, não incorporados ao aplicativo |
+| Identidade R134 | Diretório `parent-r134/identity` do conjunto privado R135, com seis JSONs originais: `runtime-identity.json` SHA256 `2d6fc1c1933b4dc88aa09192138b8564b5f0b743461faa7580896b8339b2067f`, `engines.json`, `psx-controller-profile.json`, `psx.fingerprint.json` e os dois fingerprints N64/Dolphin |
+| Assinatura | Chave privada do certificado `7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825`; alias e senha informados pelo operador fora do Git |
+
+O mapa privado `desenvolvimento/reconstrucao-atual/online-lifecycle-r135/INPUT-MAP-R135.json` do backup único lista caminhos, tamanhos e hashes dos inputs preservados. Os recibos públicos de composição com caminhos sanitizados não substituem os originais privados como inputs de composição ou registro no servidor. O APK e as bibliotecas não são publicados no Git.
+
+Os originais preservam os caminhos absolutos usados no build. Para reutilizá-los sem alterar seu SHA, os arquivos referenciados precisam existir nos `originalPath` do mapa; o mapa não redireciona automaticamente esses campos. As bibliotecas sem cópia separada podem ser recuperadas pelas entradas dos APKs indicadas no mapa. Uma reprodução em diretório novo deve gerar seus próprios recibos a partir dos inputs mapeados; não editar os recibos originais para trocar caminhos.
+
+## Ordem de execução
+
+Executar na pasta `integration/online-lifecycle-review-r135/recipe` com o Python indicado. Os nomes em maiúsculas abaixo representam caminhos explícitos do operador. As saídas Java/DEX aceitam diretório novo ou vazio; `IDENTITY_OUT` deve ser inexistente. `ASSEMBLY_DIR` deve ser um diretório novo de trabalho dentro de `G:/StationNormalOwnersR127`, separado das assemblies preservadas. Não sobrescrever donors ou originais.
+
+`R134_IDENTITY` é o diretório dos seis JSONs, não o arquivo de recibo. `R135_IDENTITY` é o arquivo `IDENTITY_OUT/runtime-identity.json`. `DEX_RECEIPT` é `DEX_OUT/dex-compilation.json`, acompanhado de `DEX_OUT/classes35.dex`. `UNSIGNED_APK` deve ser exatamente `ASSEMBLY_DIR/unsigned.apk`, acompanhado do `unsigned.package.json` criado pela montagem: o assinador usa esses dois nomes fixos. `FINAL_APK` deve ser um destino distinto do donor e dos intermediários; um arquivo final existente com outro hash é recusado.
+
+1. Reproduzir o JAR com `build_payload.py --out JAVA_OUT --jdk-bin JDK_BIN --android-jar ANDROID_JAR --rooms-jar ROOMS_JAR --client-jar CLIENT_JAR --input-hashes INPUT_HASHES_JSON`. Criar `INPUT_HASHES_JSON` como arquivo privado contendo o objeto `inputsSha256` de `SOURCE-PINS.json`; os quatro campos consumidos são `javac`, `androidJar`, `roomsJar` e `clientJar`. O `INPUT-MAP-R135.json` completo não tem esse formato. Comparar o SHA do JAR e usar em DEX o recibo original de compilação com SHA `1807e0200ff5750b2c636bd7318e4afd831fecfa7f1dd9b5064f34ebb65b262a`; timestamps de uma recompilação geram outro hash de recibo. O JAR original já preservado também satisfaz esse input.
+2. Produzir DEX com `build_dex.py --donor R134_APK --overlay-jar REVIEWED_JAR --compile-receipt PINNED_COMPILE_RECEIPT --jdk-bin JDK_BIN --android-jar ANDROID_JAR --d8-jar D8_JAR --apktool APKTOOL_JAR --rooms-jar ROOMS_JAR --client-jar CLIENT_JAR --out DEX_OUT --source-commit ca8f1ccda18bef397e71e1c979a4f813acf608c0`, conforme [README-dex](../../integration/online-lifecycle-review-r135/recipe/README-dex.md). Conferir `passed=true`, DEX35 `a7a66724f26c06075ec1833e11866a073f93ee056aeabf58301cab016f96a4f5` e preservação das 582 classes externas. O recibo original de DEX permanece como prova da composição publicada; reutilizá-lo exige também seus arquivos e caminhos internos exatos. Um recibo novo muda o vínculo documental superior.
+3. `build_runtime_identity.py --base-apk R134_APK --parent-identity R134_IDENTITY --payload-receipt DEX_RECEIPT --ndk NDK_ROOT --out IDENTITY_OUT --source-commit ca8f1ccda18bef397e71e1c979a4f813acf608c0`. O programa verifica os 345 payloads herdados, fontes/flags nativas pinadas e deriva os mesmos quatro motores com a nova identidade do bundle.
+4. `assemble_apk.py --base R134_APK --freeze FREEZE_JSON --identity-receipt R135_IDENTITY --write-freeze`. Depois, `assemble_apk.py --base R134_APK --freeze FREEZE_JSON --identity-receipt R135_IDENTITY --out UNSIGNED_APK`. `--check-inputs` permite conferir os inputs sem montar APK. O freeze deve registrar cinco substituições e zero adições.
+5. `sign_verified.py --base R134_APK --freeze FREEZE_JSON --identity R135_IDENTITY --recipe RECIPE_DIR --assembly ASSEMBLY_DIR --final FINAL_APK --key PRIVATE_KEY --tools TOOLS_ROOT --alias PRIVATE_ALIAS --password-env PASSWORD_VARIABLE_NAME`. A variável externa contém a senha somente em memória. A receita confere o certificado, alinha em 16 KiB, assina v2/v3, executa a verificação integral e promove o arquivo final por renomeação atômica. Não inserir senha na linha de comando, documento ou recibo.
+6. A verificação avulsa é `verify_final.py --base R134_APK --apk FINAL_APK --freeze FREEZE_JSON --identity-receipt R135_IDENTITY --receipt NEW_VERIFICATION_JSON --java JAVA_EXE --apksigner-jar APKSIGNER_JAR --zipalign ZIPALIGN_EXE`. Conferir mapas completos, 13.855 entradas preservadas, 39 DEX principais externos e owner.dex PS4 iguais, cinco substituições e assinatura original.
+7. Inspecionar o aparelho autorizado e o SHA integral realmente instalado. Com o telefone ocioso, `install_verified.py --base R134_APK --apk FINAL_APK --freeze FREEZE_JSON --identity R135_IDENTITY --verification VERIFIED_FINAL_JSON --tools TOOLS_ROOT --receipt NEW_INSTALLATION_JSON --serial PRIVATE_USB_SERIAL --expected-model OBSERVED_MODEL --expected-installed-sha256 OBSERVED_INSTALLED_SHA --allow-update --launch`. O serial fica privado; não salvar uma linha expandida no Git. A receita recusa dispositivo/usuário/estado inesperados e preserva UID, data original e dados.
+
+Para este build, o resultado final é `f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896`; ver [instalação](evidence/instalacao-r135-edge30.json). Não recompilar ou reinstalar para mera atualização de cadastro no servidor. Instalação e abertura não comprovam uma partida online, saída durante gameplay, aceitação de perfil ou estabilidade térmica.
+
+## Handoff e condição de aceite
+
+O kit privado R135 contém os três marcadores novos e os três cores intactos, engines, perfil PSX e recibos originais; o servidor deve conferir o par exato de recibos antes de registrar os quatro IDs. Aplicar somente pelo procedimento administrativo vigente, com aceite por edição, conteúdo, perfil e modo. O diagnóstico de três jogadores da auditoria anterior preserva HELLO/PAUSED/READY, epoch, ACK/replay, geração e reserva.
+
+A evidência administrativa deve distinguir recebimento, validação do kit, registro de cada ID, perfil PSX, aprovação dos modos e resposta assinada fresca. Continuam pendentes a ativação efetiva e o teste físico com três participantes, inclusive sair/voltar, queda de rede e retomada. A saída sem rede ainda não possui intenção durável nova nesta correção.

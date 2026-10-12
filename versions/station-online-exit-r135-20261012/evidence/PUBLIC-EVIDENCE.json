@@ -1,0 +1,49 @@
+{
+  "schema": "station.public.evidence.r135.v1",
+  "revision": "R135",
+  "sourceCommit": "ca8f1ccda18bef397e71e1c979a4f813acf608c0",
+  "apkSha256": "f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896",
+  "compiled": true,
+  "installed": true,
+  "files": {
+    "dex-compilation.json": {
+      "bytes": 292701,
+      "sha256": "9ceb38fcc1531d1911d01a513ab9fe9e7570fc26fdbf33097bf657d00068c510",
+      "originalPrivateReceiptSha256": "b7172fa83ba5119ba5e2bb29011f69fd9b9ed0f4f15cbb0f73f5b8e0174f3f9c"
+    },
+    "runtime-final.json": {
+      "bytes": 410901,
+      "sha256": "622a78e63c23aa7eee1d2e57f2cf74394794998d2d449ac6070782f515174e92",
+      "originalPrivateReceiptSha256": "07754bea0ceabac68d59ee044600d012443d85c222c8f238574e63d607fa53cd"
+    },
+    "source-freeze.json": {
+      "bytes": 294665,
+      "sha256": "bcfe00499d7957579eb6065a5a12ab15cf82338f0f3240e2c89c1ba257c94067",
+      "originalPrivateReceiptSha256": "03325b613ba513db026bf50a288016aa0cbb8853a988048a7c2141951ffb0917"
+    },
+    "unsigned-package.json": {
+      "bytes": 2024207,
+      "sha256": "e49a8b84a8c0770a47a5cb70ec36f99253efe69c8ad4bc663bf729a71a9407ae",
+      "originalPrivateReceiptSha256": "e49a8b84a8c0770a47a5cb70ec36f99253efe69c8ad4bc663bf729a71a9407ae"
+    },
+    "package-final.json": {
+      "bytes": 2026949,
+      "sha256": "24dc463175530d4c5dfd8bf135293a0205bd770e2d8ccd9eb429fbb7ddb17c76",
+      "originalPrivateReceiptSha256": "a913af6a405cc8d0e1db6223b07c98f600f9c5c010843137d95e6d9a4aff9dbe"
+    },
+    "instalacao-r135-edge30.json": {
+      "bytes": 1849,
+      "sha256": "f7e197626ca99b1b5aab73ebcc8e0400ba05767ce2889179755b2e864a0b3bdf",
+      "sanitizedAtCreation": true
+    },
+    "startup-r135-edge30.json": {
+      "bytes": 599,
+      "sha256": "9640bb26500fbcb56e1d30e003d9d5080d159eaac1756171257b27b84fcaaf32",
+      "sanitizedAtCreation": true
+    }
+  },
+  "operatorKitUsesOriginalPrivateReceiptBytes": true,
+  "publicSanitizedReceiptsAreNotDeploymentInputs": true,
+  "serverActivated": false,
+  "physicalGameplayValidated": false
+}

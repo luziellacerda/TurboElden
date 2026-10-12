@@ -1,3 +1,13 @@
+# TurboStations R135 instalada para teste
+
+A R135 foi compilada com a fonte congelada `ca8f1ccda18bef397e71e1c979a4f813acf608c0` e instalada no Edge 30 em 12/10/2026 às 01:33 UTC−3. APK SHA256 `f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896`; assinatura original e dados preservados. O Samsung A56 permanece na R134.
+
+Somente as correções solicitadas de saída online entraram em `classes35.dex`; os marcadores de identidade e `engines.json` foram renovados pelo contrato existente. Cinco substituições, zero adições, 13.855 entradas preservadas byte a byte. [Entrega R135, receitas e recibos](versions/station-online-exit-r135-20261012/README.md). A partida com três aparelhos e a ativação dos quatro IDs no servidor continuam pendentes.
+
+O [dossiê integral](docs/handoff-completo-r134-20261011/README.md) descreve o aplicativo R134 usado como base; a entrega R135 registra o delta exato e as provas atuais. Instalar cada novo APK de teste no telefone autorizado disponível é uma instrução do proprietário registrada em AGENTS.md.
+
+## Auditoria R134 preservada
+
 # TurboStations R134 e auditoria para entrega ao consumidor
 
 A versão instalada é **R134**, fonte executável `4f9039eb9ce13907ce043870bfe1f6e294888556`, APK SHA256 `f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2`. Edge 30 e Samsung A56 foram atualizados com dados e assinatura preservados. O proprietário relatou partida de três presa no carregamento e pedido para fechar o app ao sair do online.
