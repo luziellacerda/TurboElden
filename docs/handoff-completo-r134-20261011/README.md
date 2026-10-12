@@ -2,7 +2,7 @@
 
 ## Atualização R135 em 12/10/2026
 
-O dossiê e os inventários abaixo conservam a auditoria integral da base R134. A [entrega R135](../../versions/station-online-exit-r135-20261012/README.md) é o suplemento atual: correções solicitadas de saída em DEX35, compilação/assinatura, mapa de preservação e instalação comprovada no Edge 30. O [estado R135](../../versions/station-online-exit-r135-20261012/STATUS.json) prevalece sobre os snapshots históricos de preparação abaixo. Samsung A56 permanece R134; gameplay com três aparelhos e aceite do servidor continuam pendentes.
+O dossiê e os inventários abaixo conservam a auditoria integral da base R134. A [entrega R135](../../versions/station-online-exit-r135-20261012/README.md) é o suplemento atual: correções solicitadas de saída em DEX35, compilação/assinatura, mapa de preservação e instalação comprovada no Edge 30, moto g52 e Samsung A56. O [estado R135](../../versions/station-online-exit-r135-20261012/STATUS.json) prevalece sobre os snapshots históricos de preparação abaixo. A abertura visual do moto g52 não foi observada com a tela apagada; gameplay com três aparelhos e aceite do servidor continuam pendentes.
 
 ## Auditoria integral R134 preservada
 

@@ -1,6 +1,6 @@
 # TurboStations R135 instalada para teste
 
-A R135 foi compilada com a fonte congelada `ca8f1ccda18bef397e71e1c979a4f813acf608c0` e instalada no Edge 30 em 12/10/2026 às 01:33 UTC−3. APK SHA256 `f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896`; assinatura original e dados preservados. O Samsung A56 permanece na R134.
+A R135 foi compilada com a fonte congelada `ca8f1ccda18bef397e71e1c979a4f813acf608c0` e instalada no Edge 30, moto g52 e Samsung A56 em 12/10/2026. Os três telefones confirmaram o mesmo APK SHA256 `f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896`, com assinatura original e dados preservados. O frontend foi observado no Edge 30 e Samsung A56; a tela apagada do moto g52 impediu comprovar visualmente a abertura.
 
 Somente as correções solicitadas de saída online entraram em `classes35.dex`; os marcadores de identidade e `engines.json` foram renovados pelo contrato existente. Cinco substituições, zero adições, 13.855 entradas preservadas byte a byte. [Entrega R135, receitas e recibos](versions/station-online-exit-r135-20261012/README.md). A partida com três aparelhos e a ativação dos quatro IDs no servidor continuam pendentes.
 
