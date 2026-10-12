@@ -1,0 +1,27 @@
+{
+  "sourceReference": "versions/station-video-room-footer-r124-20261011",
+  "clientSourceFiles": 50,
+  "JavaRelease": 8,
+  "androidCompileAPI": 34,
+  "D8MinimumAPI": 26,
+  "javaCompilePassed": true,
+  "d8Passed": true,
+  "javaParserChecks": 8,
+  "actualCatalogParsed": 4435,
+  "actualNESParsed": 750,
+  "maximumItems": 20000,
+  "nativeArm64Linked": true,
+  "nativeMinimumAPI": 26,
+  "nativeELFLoadAlignment": 16384,
+  "nativeABILayoutAssertsPassed": true,
+  "unchangedABIHeaders": {
+    "station_catalog_abi.hpp": "0251380f0638a6c3b332d0e91c0bf2d19746e08ee650163f312c985a4f104c35",
+    "station_catalog_row.hpp": "be971e626ae45e745e1bf182699def4ce58349d7c62ab3dcd80438e5f85fe7cb"
+  },
+  "qualificationDEXSHA256": "bbe306ec469d417dc29938e47a0e156a8fe9f0c087b14982365ff519f57f344a",
+  "qualificationFrontendSHA256": "51651139db9c9f6aa511bedaa1dfb985c9b583e9111f90ac3fcce6f4742dcc03",
+  "completeAPKProduced": false,
+  "APKInstalled": false,
+  "existingNativeRuntimeR138Unmodified": true,
+  "workerCountUnmodified": true
+}
