@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "baselinePlatformUnixSHA256": "baa00df315ba604e1ac5612e2186a685c27b843c20bcaea2f27c6a4036f7e7db",
+  "candidatePlatformUnixSHA256": "e4811bef12aeacd07947e51badaf8341be6c12c347c4952a9334ba22e56342f2",
+  "installedRuntimeSHA256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+  "correspondingArchiveSHA256": "b8f7649a5edacbe9e913d5e50f66482c0aa082fbd2237f5fd7800d00723b735a",
+  "archiveVerified": true,
+  "changedFunctions": [
+    "android_app_entry",
+    "android_app_destroy"
+  ],
+  "addedForwardDeclaration": "android_app_destroy",
+  "allOtherSourceBytesPreserved": true,
+  "playerCapacityChanged": false,
+  "readinessOrProtocolChanged": false,
+  "fullNativeCompiled": false,
+  "androidExecuted": false,
+  "gameplayValidated": false
+}

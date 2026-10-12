@@ -1,0 +1,26 @@
+{
+  "baseRuntimeSHA256": "351cee4540e916468a504788911e4c5fcb4fe141e3b544b1b1255d32e1d04a26",
+  "maximumPlayers": 5,
+  "files": {
+    "frontend/drivers/platform_unix.c": {
+      "beforeSHA256": "baa00df315ba604e1ac5612e2186a685c27b843c20bcaea2f27c6a4036f7e7db",
+      "afterSHA256": "baa00df315ba604e1ac5612e2186a685c27b843c20bcaea2f27c6a4036f7e7db"
+    },
+    "frontend/drivers/station_multiplayer.h": {
+      "beforeSHA256": "51978c54a614a2076852d68cea5611d7192a6c9e7fbc5da6168ac5b7e8c194c3",
+      "afterSHA256": "a92734e48582f096f056f84462251128af5b06ab19fc8881760b1f07db4f3f35"
+    },
+    "frontend/drivers/station_recovery.h": {
+      "beforeSHA256": "daa15e061698c5a59fe8fdd40cf46d0931fd590889363750b5d3a06fc6533f11",
+      "afterSHA256": "daa15e061698c5a59fe8fdd40cf46d0931fd590889363750b5d3a06fc6533f11"
+    },
+    "network/netplay/netplay_frontend.c": {
+      "beforeSHA256": "369840e6634659ccd3315e30a394d939a18107f89a8d7218bfaf2148dac9afd8",
+      "afterSHA256": "369840e6634659ccd3315e30a394d939a18107f89a8d7218bfaf2148dac9afd8"
+    },
+    "runloop.c": {
+      "beforeSHA256": "13179287191fe00a76c6d35ddc75374388543b2c05607b14dc8c6efef135a012",
+      "afterSHA256": "13179287191fe00a76c6d35ddc75374388543b2c05607b14dc8c6efef135a012"
+    }
+  }
+}

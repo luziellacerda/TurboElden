@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "probes": [
+    {
+      "sourceFile": "native-core-probe.c",
+      "sourceSHA256": "f0c04ab0f65ce5f4baca4498ecf717b86e2aeb856a125cf079a49c241c53ed1c",
+      "binaryFile": "native-core-probe",
+      "binarySHA256": "34ecd046d5dae05cf2e72958d84cf01f5ff765148790ec28ba20f44aea213ef5",
+      "binaryBytes": 13496,
+      "architecture": "AArch64",
+      "minimumAndroidAPI": 26,
+      "minimumLoadAlignment": 16384,
+      "ndkRevision": "28.2.13676358",
+      "compiled": true,
+      "androidExecuted": false,
+      "gameplayValidated": false
+    },
+    {
+      "sourceFile": "native-core-frame-probe.c",
+      "sourceSHA256": "527966b203362c95c704d65a1d33b81b3a6719e09a14245f8e7a957ef09bd1ef",
+      "binaryFile": "native-core-frame-probe",
+      "binarySHA256": "877fe729158baf75344b372eef5bb61ab3c0109a389e78d96dfea5930c796e5c",
+      "binaryBytes": 14824,
+      "architecture": "AArch64",
+      "minimumAndroidAPI": 26,
+      "minimumLoadAlignment": 16384,
+      "ndkRevision": "28.2.13676358",
+      "compiled": true,
+      "androidExecuted": false,
+      "gameplayValidated": false
+    }
+  ],
+  "usesUsb": false,
+  "reproducesPhysicallyExecutedProbeBinaries": true,
+  "physicalProbeBinarySHA256": {
+    "native-core-probe": "34ecd046d5dae05cf2e72958d84cf01f5ff765148790ec28ba20f44aea213ef5",
+    "native-core-frame-probe": "877fe729158baf75344b372eef5bb61ab3c0109a389e78d96dfea5930c796e5c"
+  }
+}

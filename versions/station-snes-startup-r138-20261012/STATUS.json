@@ -1,0 +1,32 @@
+{
+  "revision": "R138",
+  "parentRevision": "R137",
+  "finalApkSha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+  "finalApkBytes": 2714991631,
+  "signedAndVerified": true,
+  "installedOnMotoG52": true,
+  "installedApkHashVerified": true,
+  "originalUIDAndDataPreserved": true,
+  "frontendObserved": true,
+  "changedApkEntries": [
+    "assets/station-online/engines.json",
+    "lib/arm64-v8a/libstation_retroarch.so"
+  ],
+  "preservedApkEntries": 13858,
+  "all40DexByteIdentical": true,
+  "isolatedSnesLoadAnd120FramesValidated": [
+    "Super Mario Kart",
+    "Top Gear 3000"
+  ],
+  "nativeLifecycleHostFixturesValidated": true,
+  "nativeExitPhysicalValidated": false,
+  "signalLossExitPhysicalValidated": false,
+  "networkGameplayValidated": false,
+  "serverRegistered": false,
+  "serverHandoffResponseReceived": false,
+  "maximumNativePlayerPositions": 5,
+  "topGear3000Maximum": 4,
+  "superMarioKartMaximum": 2,
+  "otherPhones": "Edge 30 and Samsung A56 last verified R135",
+  "consumerHomologated": false
+}

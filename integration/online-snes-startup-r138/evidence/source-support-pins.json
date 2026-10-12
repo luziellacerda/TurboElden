@@ -1,0 +1,11 @@
+{
+  "upstreamCommit": "79d7f9de218b6ffa65a80bbdc5828532bc239232",
+  "coreSha256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+  "sourceSha256": {
+    "target-libretro/libretro.cpp": "e0d95df5f51a215457a9dc693d1797450e1e41179b96229b04c738a0277fa3c7",
+    "sfc/cartridge/markup.cpp": "aadbb0413920b99c32ccc792c04db5d8b2ed0f97f6276d54380b4467c22bc100",
+    "ananke/heuristics/super-famicom.hpp": "6fca78a90ae7466387348a7082c8e92ff3cd84e1731ff2086faa89ed54dddd40"
+  },
+  "sourceSupportOnly": true,
+  "androidGameplayValidated": false
+}

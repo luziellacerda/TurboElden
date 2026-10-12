@@ -10,18 +10,18 @@ O processo `:station_netplay` entrou em `StationRetroActivity` às 02:25:39 (Ame
 
 Captura bruta privada, fora do Git: `work/live-top-gear-3000-20261012/logcat.txt` SHA-256 `6f284269a6737625d6cdc194fb7805ae4f61a515ec9df1f7aae0e7f7aa9090f7`. Não publicar identificadores de sala, URLs de sessão, tokens, serial, caminhos de ROM ou conteúdo.
 
-## Limites por jogo e inconsistência de cinco participantes
+## Limites por jogo e errata de cinco participantes
 
 A matriz R134 marca Top Gear 3000 e a edição PT-BR como `[2,3,4]`; cinco não é um modo deste jogo. Oito entradas visíveis possuem contagens acima de dois compatíveis no histórico atual: NBA Jam `[2,3,4]`; Secret of Mana `[2,3]`; Super Bomberman, Super Bomberman 2 e a edição PT-BR de 2 `[2,3,4]`; Super Bomberman 3 `[2,3,4,5]`; Top Gear 3000 e PT-BR `[2,3,4]`. Esse histórico não substitui o perfil aprovado e a resposta assinada fresca da produção.
 
-O servidor aceita perfis específicos até cinco somente dentro da política SNES com Multitap. A preparação Java e a tela de início aceitam cinco. O runtime nativo herdado de R77 ainda restringe `count>4`, `local_slot>=4`, máscara de quatro bits e três vínculos de convidados (`station_multiplayer.h`); assim a configuração de cinco não chega ao jogo, mesmo quando catálogo e servidor permitem. O wrapper bsnes Mercury já encaminha o quinto controle físico no Multitap, mas isso não corrige o limite do runtime. Essa divergência precisa ser tratada atomicamente no componente nativo, em suas provas de slot/roster, no cadastro assinado do bundle e em teste real com cinco aparelhos. Até lá, não anunciar cinco como jogável no APK atual.
+Errata R138: a auditoria inicial usou o header histórico R77, com teto de quatro, mas esse arquivo não descreve o runtime instalado. O APK R136/R137 contém `81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc`; sua fonte correspondente de 09/10 define cinco posições, quatro convidados e máscara 31. Não há motivo para alterar esse limite. O servidor e Java também permitem cinco nos perfis SNES específicos. Ainda falta comprovar gameplay em cinco aparelhos num modo que permita cinco. Top Gear 3000 continua limitado a quatro por seu próprio modo. Ver a [auditoria R138](../station-r138-snes-dsp-startup-20261012/README.md).
 
 ## Verificações necessárias antes da liberação
 
 1. Capturar, em uma mesma tentativa, eventos do anfitrião e dos dois convidados: início/fim da thread RetroArch, abertura da porta TCP local, `onNetplayListening`, estado nativo por epoch, conexão local e PAUSED/READY por link. Guardar apenas códigos e contadores no handoff público.
 2. Obter `barrierDiagnostics` member-only assinado do servidor, se o patch já estiver ativado, com dois links, quatro attachments, HELLO/PAUSED/READY, `pendingBytes`, `waitingReasons` e a mesma epoch. Sem recibo de deploy, não presumir disponibilidade do campo.
 3. Testar Top Gear 3000 com 2, 3 e 4 aparelhos, todos no mesmo APK/identidade registrada, e entrada, vídeo, áudio, controles P1–P4, perda/retorno de rede e saída humana de anfitrião/convidado. Não usar o teste de 5 para esse jogo.
-4. Para um modo SNES aprovado de cinco, corrigir e validar o limite nativo antes de permitir sua criação no produto; confirmar cinco entradas independentes P1–P5 em jogo, quatro links, oito attachments e READY para todos. Preservar as restrições de PSX e de cada outro jogo.
+4. Para um modo SNES aprovado de cinco, validar o suporte nativo já existente; confirmar cinco entradas independentes P1–P5 em jogo, quatro links, oito attachments e READY para todos. Preservar as restrições de PSX e de cada outro jogo.
 5. Repetir navegação e saída no moto g52 para confirmar a contenção do ANR de capa; a R136 de capa não altera o túnel, o core nem a barreira da partida.
 
 Nenhum teste físico de 3/4/5 foi aprovado nesta investigação. A R136 final corrige apenas o vínculo dos marcadores da revisão de capa e não deve ser apresentada como correção da espera de Top Gear 3000.
