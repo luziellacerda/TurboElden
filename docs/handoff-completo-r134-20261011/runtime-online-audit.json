@@ -1,0 +1,2162 @@
+{
+  "kind": "source-only-runtime-and-complete-offline-boundary-audit-r134",
+  "head": "4f9039eb9ce13907ce043870bfe1f6e294888556",
+  "sections": [
+    {
+      "title": "Auditoria adicional da fronteira entre app, online e emulador",
+      "paragraphs": [
+        "Este complemento lê a fonte executável 4f9039eb9ce13907ce043870bfe1f6e294888556 e as fontes herdadas explicitamente pela composição R134. O trabalho foi somente consulta: nenhum USB/ADB, partida, firmware, ROM, aparelho, servidor ou fonte congelada foi alterado. As mudanças preparadas em outro recorte da equipe devem possuir seus próprios testes/recibos; elas não transformam as hipóteses abaixo em falhas reproduzidas no aparelho.",
+        "O foco é o trajeto completo: frontend→launcher→owner→core→partida→save→saída→frontend, incluindo autoridade/Binder/transporte nos modos online. Activity fechada, socket fechado, executor interrompido, thread terminada e core descarregado são eventos distintos. A análise identifica quais eventos o código exige e quais ainda precisam de prova. A preservação de um hash não comprova estabilidade de renderização, áudio, input ou encerramento.",
+        "Classificações utilizadas: fonte confirmada significa que o trecho foi lido; risco significa consequência plausível da estrutura; hipótese precisa de teste/reprodução; proteção existente significa guard implementado; qualificação física depende de teste do APK exato, título, aparelho e modo. Não foi comprovado neste recorte que todas as bibliotecas preservadas possuem fonte correspondente ou que seus locks internos foram revisados."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [RUN01], [RUN25], [RUN39]."
+      ]
+    },
+    {
+      "title": "Saída online: Retro e callbacks NativeActivity",
+      "paragraphs": [
+        "No owner Retro herdado da R124, a confirmação humana marca humanExit e quitRequested. Antes de chamar o JNI stationRequestQuit, requestHumanExit chama closeSession de forma síncrona. Esse método possui monitor da Activity e fecha multiplayer, recovery e relay. Assim, uma operação de rede que demora pode prender o caminho da UI antes de o owner receber o pedido de quit. O recorte online da equipe analisa os monitores de transporte e o overlay corretivo.",
+        "O JNI nativo verifica a Activity exata sob station_activity_mutex. android_app_request_quit grava stationQuitRequested atomicamente e chama ALooper_wake; o caminho evita backpressure do pipe. O input herdado da R74 verifica o flag antes e depois de poll e durante a espera inicial de window. Esse mecanismo já existe e deve ser preservado. Ele acorda o looper, mas não interrompe código de emulação, driver GL, áudio ou gravação que não retorna ao pump.",
+        "Os callbacks NativeActivity de input, window, estado da Activity e saveState esperam a confirmação do owner por condition variable sem prazo. A destruição espera destroyed e faz join. O código libera o mutex durante a condition wait e faz join fora dele; por isso não foi identificado um deadlock trivial desse mutex. Continua possível um ANR quando um core/driver demora indefinidamente e a UI está dentro de um callback Android esperando sua resposta.",
+        "onRetroArchExit no worker agenda finish na UI; não chama finish diretamente no mutex finalizador nativo. O shutdown final Android usa exit(0) no runtime isolado. A publicação deve distinguir retorno da Activity de término do processo e não apresentar um timeout arbitrário como licença para liberar ANativeWindow ou memória ainda em uso. A melhoria apropriada é retirar trabalho próprio de rede da UI, enviar o quit cedo e registrar a etapa que ainda falta."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Fronteira",
+            "O que o código prova",
+            "O que permanece pendente"
+          ],
+          "rows": [
+            [
+              "UI→transport close→JNI quit",
+              "Ordem síncrona e monitor de closeSession.",
+              "Contenção do close e responsividade física de Sair."
+            ],
+            [
+              "JNI→ALooper",
+              "Atomic release/acquire, wake e checks no pump.",
+              "Core/driver fora do pump pode não cooperar."
+            ],
+            [
+              "Destroy→worker",
+              "Condition libera mutex; join fora dele.",
+              "Espera sem prazo e garantia física de término."
+            ],
+            [
+              "Worker→UI finish",
+              "onRetroArchExit agenda a UI.",
+              "Conferir resultado da autoridade e catálogo restaurado."
+            ]
+          ]
+        }
+      ],
+      "bullets": [
+        "Achados RT-01 aRT-03. Referências: [RUN02] 117–159; [RUN03] 241–408, 739–749; [RUN04] 1640–1693."
+      ]
+    },
+    {
+      "title": "N64: quit cooperativo, saves isolados e recursos locais",
+      "paragraphs": [
+        "StationN64Bridge atua apenas quando o descriptor de lançamento Station foi consumido e o contexto é reconhecido. A sessão redireciona autoSaveDir, config, SRAM, slotSaveDir e userSaveDir para o diretório privado da sala/geração. Autosave/load automático e import/export do storage offline são bloqueados no contexto online. A partida offline conserva sua rota normal. Isso evita escrever estados online na biblioteca habitual, mas não constitui migração universal de saves.",
+        "O quit nativo StationMupenRequestQuit marca quitting e acorda a condição. O gate somente reconhece checkpoint/ACK no thread do emulador; bombeia a rede fora do mutex, reavalia revisão e não dorme após atualização perdida. A receita de transferência usa poll de 20 ms e recv/send não bloqueantes, com check de cancelamento/falha. netplay_stop recusa fechar/free enquanto EXECUTE ainda roda, e o cleanup do owner libera a fila de inputs.",
+        "Session.close Java é sincronizado e chamado por onExit/onDestroy. Ele solicita quit, fecha transporte, mux e Binder, interrompe o worker e remove a tela de espera. O mux fecha TCP/UDP/listeners/queues, acorda guestReady e interrompe seus executores; o servidor acorda registro/saves/sendqueues e interrompe senders. Não há awaitTermination dessa família de workers. Fechamento de sockets e shutdownNow são evidências de cancelamento, não prova de término real de todas as threads.",
+        "Não foi encontrado no N64 o mesmo ABBA entre monitor Session e transport descrito no Dolphin: fatal/nativeControl N64 não sincronizam Session. Ainda é necessário validar o fechamento comum do transporte, a ordem transport→mux e retorno oficial após o core acabar. O thread principal não deve aguardar a liberação completa de workers sob um monitor de Activity. A confirmação humana deve seguir necessária; falha de rede continua sendo pausa/atenção, nunca STOP automático."
+      ],
+      "tables": [],
+      "bullets": [
+        "Achados RT-04 eRT-05. Referências: [RUN05] 35–56, 94–141; [RUN06] 111–124, 216–236; [RUN07] 53–98, 108–135; [RUN08] 95–97; [RUN09] 122–124."
+      ]
+    },
+    {
+      "title": "PSX: owner exato, checkpoints e condição de retorno",
+      "paragraphs": [
+        "O caminho PXL1 executa o LibretroPlayer normal preservado e o core PCSX-ReARMed normal, em processo privado. O shim confere hashes/ABI e adapta somente entradas delimitadas. O protocolo não executa retro_run a partir de thread de IO; o checkpoint original concede o fechamento após autorização humana e depois de inFrame/aplicação de estado terminarem. Unload/deinit automáticos são bloqueados até o owner registrar closed.",
+        "humanExit marca a ação sob monitor breve e realiza t.close em worker separado. Na sequência, o Binder é fechado na UI, o JNI recebe a autorização humana e o cleanup verifica transport.awaitClosed. Cada espera tem janela de 250 ms e novo agendamento de 50 ms; o ciclo continua até terminar. A Activity captura o thread real do owner e faz join numa thread daemon própria, evitando self-join e espera longa na UI.",
+        "A retirada do processo exige quatro condições: ação humana registrada, cleanup de IO/Binder completo, processo PSX privado e owner efetivamente encerrado. O opt-in SDL mantém uma destruição inesperada como falha/pausa, sem chamar o teardown padrão enquanto esses gates faltam. Não se deve relaxar essa proteção para esconder um bloqueio, pois ela impede use-after-free e encerramento de jogo por lifecycle.",
+        "Há um limite de disponibilidade: se uma chamada do core, callback, Binder ou IO nunca termina, a saída permanece pendente sem informação de etapa. A fonte C++ completa do LibretroPlayer exato não foi localizada; a leitura presente cobre shim, adaptação, protocolo e gates Java, não todos os locks de render/input/audio do owner binário. A melhoria possível é mostrar estágio/duração e colher diagnóstico agregado, mantendo recuperação adicional como ação humana explícita no processo privado."
+      ],
+      "tables": [],
+      "bullets": [
+        "Achados RT-06 eRT-07. Referências: [RUN10] 146–164; [RUN11] 67–96; [RUN12] 182–233; [RUN13] 151–154, 207–214; [RUN14] 264–271; [RUN15] 20–32."
+      ]
+    },
+    {
+      "title": "Sony: encerramento, áudio e continuidade da sessão",
+      "paragraphs": [
+        "PS3 R134 mantém operações de superfície e configuração num worker serial. setup_surface/boot/resume/pause/change_surface não são executados como longas esperas na UI. surfaceDestroyed libera inputs e agenda pause+surface null. onDestroy marca closed, neutraliza inputs e enfileira quit após o trabalho existente; depois encerra só o processo :station_ps3 quando há jogo configurado/iniciado. Voltar de settings entra atrás dos saves humanos pendentes. Se uma chamada JNI anterior não retornar, o quit não chega ao início da fila; ainda falta qualificação física com jogo real.",
+        "PS4 usa dois executores: o worker de preparo/run/config e stopper para a ação humana cancelImport/stop. O worker de run fecha a sessão no finally, depois de o native run retornar. Dessa forma, superfície/input/áudio não são descartados enquanto a emulação normal ainda os usa. Não há prazo para stop/run. A tela Encerrando pode permanecer aberta quando o owner não coopera; o retorno da UI e fim do processo devem ter provas separadas.",
+        "A ponte Bachata S4 0.2.4 não oferece pause/rebind. TextureView retém sua SurfaceTexture ao desanexar; onPause apenas limpa toque e envia estado neutro do controle. Por isso não há fundamento para prometer pausa de execução/som ao mandar o app para background. onDestroy sem ação humana não mata o jogo; se Android destrói a Activity, ainda pode existir runtime ativo sem aquela UI até o processo ser encerrado. É necessária prova de retorno de superfície, áudio, inputs e capacidade de voltar ao catálogo.",
+        "Ps4Audio limita 8 workers de streams, valida cabeçalhos/tamanho/tipo/rate, converte para estéreoPCM 16 e escreve AudioTrack de modo bloqueante. release remove o track atomicamente antes de pause/flush/release, evitando dupla liberação. close fecha listener/peers/tracks e chama shutdownNow; Ps4Control acorda queue, fecha sockets e interrompe worker. Não há join/await desses executores. A limpeza é bem delimitada, mas duração do driver e término real não foram medidos. Não mover release de áudio bloqueante para a UI como suposta correção."
+      ],
+      "tables": [],
+      "bullets": [
+        "Achados RT-08 aRT-10. Referências: [RUN16] 138–250; [RUN17] 160–177, 236–255, 451–455; [RUN18] 17–22, 61–78, 106–117; [RUN19] 135–160."
+      ]
+    },
+    {
+      "title": "Frontend ao entrar e voltar de uma partida",
+      "paragraphs": [
+        "O vídeo do carrossel observa o lifecycle da Activity oficial. Pause/stop/destroy ou Activity diferente do frontend chama stopAll. Cada slot é retirado atomicamente, sua sessão fica inválida, as superfícies são liberadas sob o monitor da Session e o MediaPlayer é liberado no worker próprio. O render também segura esse monitor ao executar updateTexImage/getTransformMatrix. Uma chamada de driver lenta nesse ponto pode prolongar a espera da UI por releaseSurfaces; esse é risco de contenção, ainda não reprodução de ANR.",
+        "A camada nativa retira slots somente depois de o JNI aceitar stop; se o JNI está temporariamente indisponível, mantém stopPending e tenta depois. Um GLuint é deletado apenas no contexto em que foi criado. Campos LED/frames retidos possuem identidades de contexto/fonte e são esquecidos na troca de contexto; não são liberados através de um novo contexto com nome numérico reutilizado. Esses guards devem ser preservados em qualquer alteração de saída.",
+        "O foreground do frontend incrementa a geração da publicação, cancela warm de capa, suspende prefetch/polling e notifica a presença online. Capas nativas deferidas durante preparação do catálogo são mantidas silenciosas para não criar uma tempestade de retries quando a Activity está pausada. No retorno, as filas admitidas e polling podem retomar. Downloads possuem serviço/worker próprios e podem continuar por opção do usuário; atividade de download em background não deve ser classificada automaticamente como vazamento.",
+        "Para certificar o handoff visual é preciso observar ida e volta entre settings, sala e jogo real: catálogo/foco restaurados, um decoder no máximo, nenhum menu áudio sobre a partida, sem textura de contexto antigo, sem callback de capa antiga e sem reentrada de owner. O limite de 30 fps é da apresentação do menu e não limita a emulação. Nem os guards de contexto nem o cancelamento por geração comprovam temperatura, consumo ou FPS físico de jogos."
+      ],
+      "tables": [],
+      "bullets": [
+        "Achado RT-11. Referências: [RUN20] 57–60, 173–204; [RUN21] 138–160; [RUN22] 354–404; [RUN23] 243–245; [RUN37] 251–253; [RUN38]."
+      ]
+    },
+    {
+      "title": "Correções de abrangência do dossiê e limites da fonte",
+      "paragraphs": [
+        "O dossiê anterior cobriu as 50 plataformas canônicas e os dois owners Sony, mas citou sem enumerar os 43 perfis originais de fallback. Esses perfis são extração estática do ELF normal; há seletores para SegaCD, AtariLynx, NeoGeoPocket, WonderSwan, MSX e VirtualBoy além das linhas canônicas. Não são novas plataformas aprovadas pelo StationPlatforms, nem prova de core disponível no APK/aparelho. Sua presença pode atender rotas legadas/normalizadas, mas um catálogo novo com nome sem mapeamento explícito segue sendo recusado.",
+        "Também havia requisitos de wrappers antigos marcados como não consolidados. A leitura adicional fixa guards existentes: Vita API 28; Xbox clássico API 29/Android 10, com mensagem X1 BOX 1.2.8; WiiU/Cemu e Xbox360/XenDroid API 30/Android 11 mais feature Vulkan 1.1. Estes são guards de Java preservados na cadeia documental. O mínimo efetivo de todo o pacote e o comportamento final do APK exato precisam ser conferidos no recibo/composição; não usar requisito de release upstream recente para preencher lacunas.",
+        "Extensões nos 43 perfis são critérios históricos de seleção e não whitelist validada do binário/launcher atual. Exemplos: o perfil 3DS aponta citra mas o comando canônico usa azahar; o perfil N64 aponta mupen64plus_next mas a rota normal usa Mupen64Plus AE; Switch fallback suyu é substituído pelo bootstrap Yuzu; NeoGeo/Arcade/CPS/NeoCD atuais passam pelo MAME; PCECD atual força mednafen_pce. A revisão não deve restaurar fallback antigo por causa de um nome conhecido.",
+        "As oito dependências ausentes na observação Motorola R119/R120 eram melonds, o2em, stella, prosystem, bluemsx, fbneo, gw e virtualjaguar. Esse estado é histórico; ele não foi novamente lido nos aparelhos e não autoriza dizer que continuam ausentes ou estão resolvidas. A matriz consumer mantém essa condição aberta. Nos motores binários preservados, leitura de wrapper/receita/hash é cobertura de fronteira, não auditoria do loop nativo inteiro.",
+        "Além dos handoffs de lançamento, a aprovação precisa considerar input e saves por família. EX+ AUTO pode incluir teclado; PPSSPP conserva touch manual; Saturn não tem listener transitório universal; Flycast tem gaps de hitTest/visibilidade; Cemu StateFlow ainda precisa de prova; XenDroid Compose é manual; Xbox wrapper não exclui virtual na fonte lida; LibretroPlayer não tem API de auto-hide universal comprovada. Esses limites já descritos permanecem gates, sem conserto global por suposição."
+      ],
+      "tables": [],
+      "bullets": [
+        "Referências: [RUN24], [RUN25], [RUN26], [RUN27] 23–37, [RUN28] 34–36, [RUN29] 20–24, [RUN30] 30."
+      ]
+    },
+    {
+      "title": "Inventário dos 43 seletores originais de fallback",
+      "paragraphs": [
+        "A tabela completa mantém os nomes, cores e extensões extraídos do ELF normal. A resolução original tenta comandoXML/hook, depois pasta normalizada e nome normalizado. Os hooks de integração atuais têm precedência. Para todos os perfis abaixo, disponibilidade, dependências, compatibilidade e gameplay não são concedidos pela tabela."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Perfil",
+            "Core original",
+            "Aliases do seletor",
+            "Extensões históricas"
+          ],
+          "rows": [
+            [
+              "Nintendo Entertainment System",
+              "fceumm",
+              "nes famicom fc nintendoentertainmentsystem nintendinho fds famicomdisksystem",
+              ".nes .fds .unf .unif .zip"
+            ],
+            [
+              "Super Nintendo",
+              "snes9x",
+              "snes sfc superfamicom supernintendo supernes",
+              ".smc .sfc .fig .swc .bs .zip"
+            ],
+            [
+              "Game Boy",
+              "gambatte",
+              "gb gameboy",
+              ".gb .zip"
+            ],
+            [
+              "Game Boy Color",
+              "gambatte",
+              "gbc gameboycolor",
+              ".gbc .gb .zip"
+            ],
+            [
+              "Game Boy Advance",
+              "mgba",
+              "gba gameboyadvance",
+              ".gba .zip"
+            ],
+            [
+              "Nintendo DS",
+              "melonds",
+              "nds ds nintendods",
+              ".nds .zip"
+            ],
+            [
+              "Mega Drive",
+              "genesis_plus_gx",
+              "megadrive genesis md segagenesis segamegadrive",
+              ".md .gen .smd .bin .sms .zip"
+            ],
+            [
+              "Master System",
+              "genesis_plus_gx",
+              "mastersystem sms segamastersystem",
+              ".sms .zip"
+            ],
+            [
+              "Game Gear",
+              "genesis_plus_gx",
+              "gamegear gg segagamegear",
+              ".gg .zip"
+            ],
+            [
+              "Sega CD",
+              "genesis_plus_gx",
+              "segacd megacd",
+              ".cue .chd .iso .m3u"
+            ],
+            [
+              "Sega 32X",
+              "picodrive",
+              "sega32x 32x",
+              ".32x .zip"
+            ],
+            [
+              "PC Engine",
+              "mednafen_pce_fast",
+              "pcengine pce tg16 turbografx16 turbografx",
+              ".pce .zip"
+            ],
+            [
+              "PC Engine CD",
+              "mednafen_pce_fast",
+              "pcenginecd tg16cd turbografxcd",
+              ".cue .chd .ccd"
+            ],
+            [
+              "PlayStation",
+              "pcsx_rearmed",
+              "psx ps1 playstation playstation1 psone",
+              ".pbp .cue .chd .bin .iso .img .m3u"
+            ],
+            [
+              "Neo Geo",
+              "fbneo",
+              "neogeo",
+              ".zip .7z"
+            ],
+            [
+              "Arcade",
+              "fbneo",
+              "arcade fbneo fba finalburn",
+              ".zip .7z"
+            ],
+            [
+              "MAME",
+              "mame2003_plus",
+              "mame mame2003",
+              ".zip"
+            ],
+            [
+              "Atari 2600",
+              "stella",
+              "atari2600 a2600",
+              ".a26 .bin .zip"
+            ],
+            [
+              "Atari 7800",
+              "prosystem",
+              "atari7800 a7800",
+              ".a78 .bin .zip"
+            ],
+            [
+              "Atari Lynx",
+              "handy",
+              "atarilynx lynx",
+              ".lnx .zip"
+            ],
+            [
+              "Neo Geo Pocket",
+              "mednafen_ngp",
+              "ngp ngpc neogeopocket neogeopocketcolor",
+              ".ngp .ngc .zip"
+            ],
+            [
+              "WonderSwan",
+              "mednafen_wswan",
+              "wonderswan wsc ws wonderswancolor",
+              ".ws .wsc .zip"
+            ],
+            [
+              "MSX",
+              "bluemsx",
+              "msx msx1 msx2",
+              ".rom .mx1 .mx2 .dsk .cas .m3u .zip .7z"
+            ],
+            [
+              "ColecoVision",
+              "bluemsx",
+              "colecovision coleco",
+              ".col .rom .zip"
+            ],
+            [
+              "Virtual Boy",
+              "mednafen_vb",
+              "virtualboy vb",
+              ".vb .vboy .zip"
+            ],
+            [
+              "PlayStation 2",
+              "armsx2",
+              "ps2 playstation2 ps2br playstation2br",
+              ".iso .chd .cso .zso .bin .elf .gz .mdf .nrg .img .m3u"
+            ],
+            [
+              "Nintendo Switch",
+              "suyu",
+              "switch nintendoswitch nsw ns",
+              ".nsp .xci .nca .nro"
+            ],
+            [
+              "CPS-1",
+              "fbalpha2012_cps1",
+              "cps1 capcomcps1 cpsi",
+              ".zip .7z"
+            ],
+            [
+              "CPS-2",
+              "fbalpha2012_cps2",
+              "cps2 capcomcps2 cpsii",
+              ".zip .7z"
+            ],
+            [
+              "CPS-3",
+              "fbalpha2012_cps3",
+              "cps3 capcomcps3 cpsiii",
+              ".zip .7z"
+            ],
+            [
+              "PSP",
+              "ppsspp",
+              "psp playstationportable",
+              ".iso .cso .pbp .chd .elf .prx .zip"
+            ],
+            [
+              "Nintendo 3DS",
+              "citra",
+              "3ds nintendo3ds",
+              ".3ds .3dsx .cci .cxi .cia .app .elf .axf"
+            ],
+            [
+              "Dreamcast",
+              "flycast",
+              "dreamcast dc",
+              ".gdi .cdi .chd .cue .bin .elf .m3u .zip"
+            ],
+            [
+              "GameCube",
+              "dolphin",
+              "gamecube gc ngc",
+              ".iso .gcm .gcz .ciso .rvz .wbfs .wia .dol .elf .m3u"
+            ],
+            [
+              "Wii",
+              "dolphin",
+              "wii nintendowii",
+              ".iso .wbfs .rvz .ciso .gcz .wia .wad .dol .elf .m3u"
+            ],
+            [
+              "Nintendo 64",
+              "mupen64plus_next_gles3",
+              "n64 nintendo64",
+              ".n64 .z64 .v64 .zip"
+            ],
+            [
+              "Saturn",
+              "yabasanshiro",
+              "saturn segasaturn ss",
+              ".cue .ccd .chd .iso .m3u .zip"
+            ],
+            [
+              "Neo Geo CD",
+              "neocd",
+              "neogeocd neocd ngcd neogeocdz",
+              ".cue .chd"
+            ],
+            [
+              "Atomiswave",
+              "flycast",
+              "atomiswave awave naomi naomi2",
+              ".zip .7z .lst .dat"
+            ],
+            [
+              "SuperGrafx",
+              "mednafen_supergrafx",
+              "supergrafx sgx pcenginesupergrafx",
+              ".pce .sgx .cue .ccd .chd .zip"
+            ],
+            [
+              "Game & Watch",
+              "gw",
+              "gameandwatch gw gamewatch",
+              ".mgw"
+            ],
+            [
+              "Odyssey 2",
+              "o2em",
+              "o2em odyssey2 odyssey videopac",
+              ".bin .zip"
+            ],
+            [
+              "Atari Jaguar",
+              "virtualjaguar",
+              "jaguar atarijaguar",
+              ".j64 .jag .rom .abs .cof .bin .prg .zip"
+            ]
+          ]
+        }
+      ],
+      "bullets": [
+        "Referência: [RUN24]."
+      ]
+    },
+    {
+      "title": "Roteiro consumidor para todas as plataformas canônicas e Sony",
+      "paragraphs": [
+        "A matriz abaixo cobre as 50 linhas do catálogo auditado e os dois owners Sony. Cada linha requer o ciclo G01 no título real e gates adicionais da família. O formato/dependência indicado é condição, não certificado de compatibilidade. Nenhum desses testes físicos foi executado neste recorte. VariaçõesBR devem usar título e recibo próprios mesmo quando compartilham motor.",
+        "Registrar APK exato, aparelho/Android, título/edição/conteúdo, modo, input e resultado por etapa. Para catálogo/menu anotar somente evidência necessária; para rede/sala usar logs agregados sem ticket/token/identidade. Um boot incompleto, silêncio, tela preta, erro de dependência ou saída parada deve ficar como resultado próprio, sem mascarar pela instalação do aplicativo."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Plataforma",
+            "Owner / processo",
+            "Pré-condição",
+            "Controle, save, retorno e gates"
+          ],
+          "rows": [
+            [
+              "3ds",
+              "LibretroPlayer: azahar · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "Arcade",
+              "MAME4droid Current · :mame",
+              "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+              "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+            ],
+            [
+              "Atomiswave",
+              "Flycast Android · :flycast",
+              "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+              "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+            ],
+            [
+              "Dreamcast",
+              "Flycast Android · :flycast",
+              "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+              "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+            ],
+            [
+              "GameCube",
+              "Dolphin Android · :dolphin",
+              "Arquivo real iso/gcz/wbfs/rvz no registro; GC/Wii usam configurações e input próprios.",
+              "Conferir portas GC/Wiimote, touch/hotplug e saves; saída humana e retorno. Gates: G01, G02, G04, G09"
+            ],
+            [
+              "Gameboy",
+              "LibretroPlayer: gambatte · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "Gameboy Color",
+              "LibretroPlayer: gambatte · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "Gba",
+              "LibretroPlayer: mgba · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "Master System",
+              "LibretroPlayer: genesis_plus_gx · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "MegaDrive",
+              "MD.emu EX+ · :megadrive",
+              "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+              "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+            ],
+            [
+              "MegaDrive - BR",
+              "MD.emu EX+ · :megadrive",
+              "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+              "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+            ],
+            [
+              "Neo Geo",
+              "MAME4droid Current · :mame",
+              "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+              "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+            ],
+            [
+              "Neo Geo CD",
+              "MAME4droid Current · :mame",
+              "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+              "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+            ],
+            [
+              "Nintendinho",
+              "LibretroPlayer: fceumm · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "Nintendo 64",
+              "Mupen64Plus AE · :n64 → :n64core",
+              "API 28; ROM n64/z64/v64 segundo registro; formato completo do owner deve ser conferido.",
+              "Menu oficial, toque+físico, save nativo; no online usar saves isolados e G05. Gates: G01, G02, G05, G09"
+            ],
+            [
+              "Nintendo 64 - BR",
+              "Mupen64Plus AE · :n64 → :n64core",
+              "API 28; ROM n64/z64/v64 segundo registro; formato completo do owner deve ser conferido.",
+              "Menu oficial, toque+físico, save nativo; no online usar saves isolados e G05. Gates: G01, G02, G05, G09"
+            ],
+            [
+              "Nintendo DS",
+              "LibretroPlayer: melonds · main (applicationId)",
+              "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "Odyssey 2",
+              "LibretroPlayer: o2em · main (applicationId)",
+              "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "PSP",
+              "PPSSPP Android · :psp",
+              "Arquivo real enviado ao PPSSPP1.20.4; extensões do perfil não garantem suporte de cada pacote.",
+              "ShowTouchControls manual persistente, menu próprio e memstick; conferir saída sem login novo. Gates: G01, G04, G10"
+            ],
+            [
+              "Pc Engine",
+              "LibretroPlayer: mednafen_pce_fast · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "Pc Engine cd",
+              "LibretroPlayer: mednafen_pce · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "Playstation 1",
+              "LibretroPlayer: pcsx_rearmed · main (applicationId)",
+              "Core PCSX normal presente na matriz; HLE online só por edição/aprovação e2 portas.",
+              "Save state não equivale a save nativo; offline e PXL1 têm storage distinto. Gates: G01, G02, G06, G10"
+            ],
+            [
+              "Playstation 2",
+              "ARMSX2 Android · :ps2",
+              "ARMSX2 2.7.2, BIOS/conteúdo validado; SDK26 do artefato não garante mínimo do app.",
+              "Renderer/menu/input próprio; conciliar DEX do overlay; save e retorno official. Gates: G01, G04, G10"
+            ],
+            [
+              "Playstation 2 - BR",
+              "ARMSX2 Android · :ps2",
+              "ARMSX2 2.7.2, BIOS/conteúdo validado; SDK26 do artefato não garante mínimo do app.",
+              "Renderer/menu/input próprio; conciliar DEX do overlay; save e retorno official. Gates: G01, G04, G10"
+            ],
+            [
+              "Psp - BR",
+              "PPSSPP Android · :psp",
+              "Arquivo real enviado ao PPSSPP1.20.4; extensões do perfil não garantem suporte de cada pacote.",
+              "ShowTouchControls manual persistente, menu próprio e memstick; conferir saída sem login novo. Gates: G01, G04, G10"
+            ],
+            [
+              "Psvita",
+              "Vita3K Android · :psvita",
+              "Guard de wrapper API 28; instalação/firmware/conteúdo precisam estar preparados.",
+              "Touch hide no controle conectado e retorno após última desconexão; conferir save. Gates: G01, G04, G10"
+            ],
+            [
+              "Super Nintendo",
+              "Snes9x EX+ · :snes",
+              "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+              "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+            ],
+            [
+              "Super Nintendo - BR",
+              "Snes9x EX+ · :snes",
+              "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+              "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+            ],
+            [
+              "Switch",
+              "Yuzu Android (unchanged) · main (applicationId)",
+              "Bootstrap Android do próprio pacote; conteúdo/keys/firmware privados; novo roms/switch.",
+              "Conferir overlay, renderer, save, back e retorno; não mover biblioteca existente. Gates: G01, G04, G10"
+            ],
+            [
+              "atari2600",
+              "LibretroPlayer: stella · main (applicationId)",
+              "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "atari7800",
+              "LibretroPlayer: prosystem · main (applicationId)",
+              "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "colecovision",
+              "LibretroPlayer: bluemsx · main (applicationId)",
+              "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "cps1",
+              "MAME4droid Current · :mame",
+              "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+              "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+            ],
+            [
+              "cps2",
+              "MAME4droid Current · :mame",
+              "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+              "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+            ],
+            [
+              "cps3",
+              "MAME4droid Current · :mame",
+              "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+              "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+            ],
+            [
+              "fbneo",
+              "LibretroPlayer: fbneo · main (applicationId)",
+              "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "fds",
+              "LibretroPlayer: fceumm · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "gameandwatch",
+              "LibretroPlayer: gw · main (applicationId)",
+              "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "gamegear",
+              "LibretroPlayer: genesis_plus_gx · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "jaguar",
+              "LibretroPlayer: virtualjaguar · main (applicationId)",
+              "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "mame",
+              "MAME4droid Current · :mame",
+              "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+              "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+            ],
+            [
+              "naomi",
+              "Flycast Android · :flycast",
+              "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+              "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+            ],
+            [
+              "naomi2",
+              "Flycast Android · :flycast",
+              "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+              "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+            ],
+            [
+              "saturn",
+              "Saturn integrado · :saturn",
+              "Owner Yaba Sanshiro 1.20.46; BIOS/imagem do formato real.",
+              "Touch manual, pad físico separado; nunca releaseAll universal porque afeta físico. Gates: G01, G04, G10"
+            ],
+            [
+              "sega32x",
+              "LibretroPlayer: picodrive · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "supergrafx",
+              "LibretroPlayer: mednafen_supergrafx · main (applicationId)",
+              "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+              "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+            ],
+            [
+              "wii",
+              "Dolphin Android · :dolphin",
+              "Arquivo real iso/gcz/wbfs/rvz no registro; GC/Wii usam configurações e input próprios.",
+              "Conferir portas GC/Wiimote, touch/hotplug e saves; saída humana e retorno. Gates: G01, G02, G04, G09"
+            ],
+            [
+              "wiiu",
+              "Cemu Android · :wiiu",
+              "Guard de wrapper API 30+Vulkan 1.1; Cemu 0.5.2 experimental; conteúdo executável/keys válidos.",
+              "StateFlow/input overlay próprio; conferir GamePad, save, background, retorno e som. Gates: G01, G04, G10"
+            ],
+            [
+              "xbox",
+              "x1box/xemu · :xbox → :xboxemu",
+              "Guard de wrapper API 29 e X1 BOX 1.2.8; dependências/disco/storage do xemu.",
+              "Conferir settings vs game process; input físico/touch, saves, retorno humano. Gates: G01, G04, G10"
+            ],
+            [
+              "xbox360",
+              "Xendroid · :xbox360 → :xbox360emu",
+              "Guard de wrapper API 30+Vulkan 1.1; XenDroid experimental; conteúdo do owner.",
+              "Touch Compose manual; conferir som/render/controller, saves e duas etapas de processo. Gates: G01, G04, G10"
+            ],
+            [
+              "PlayStation 3",
+              "aPS3e2.43 · :station_ps3",
+              "API 28/ARM64; firmware preparado; ISO real ou pasta válida do owner, chave própria quando aplicável.",
+              "R134: 18 campos+touch; saída humana→quit worker; conferir save/input/Superfície e próximo boot. Gates G01, G07, G09."
+            ],
+            [
+              "PlayStation 4",
+              "Bachata S4 0.2.4 · :station_ps4",
+              "API 31/ARM64/GPU compatível; PKG real preparado na biblioteca privada.",
+              "R134: 11 campos+touch;4 slots; background não pausa; stop→fim run→áudio/input/superfície. Gates G01, G07, G08, G09."
+            ]
+          ]
+        }
+      ],
+      "bullets": [
+        "Referências: [RUN25], [RUN26], [RUN27] 23–37; [RUN28] 34–36; [RUN29] 20–24; [RUN30] 30; [RUN16], [RUN17]."
+      ]
+    },
+    {
+      "title": "Gates de teste e critério para publicação",
+      "paragraphs": [
+        "Os testes de modelo/concorrência e probes nativos delimitados devem verificar a ordem de cleanup, idempotência e uso correto dos monitores. Eles não substituem os testes consumidor. Uma alteração de lifecycle deve ter allowlist e recibos de origem/composição; conservar assinatura/dados/opções/input/render/saves dos motores e registrar novos IDs de runtime quando compartilhados mudam.",
+        "A liberação pode afirmar que a fonte foi corrigida e os testes específicos passaram, se houver essas provas. Instalação, abertura, jogo, servidor e estabilidade física continuam etapas distintas. Não declarar todos os motores aprovados, 4 jogadores estáveis, som/saves perfeitos ou redução térmica pela aprovação de um helper Java. Nenhum timeout deve autorizar apagar dados, matar jogo sem ação humana ou liberar memória ainda em uso."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Gate",
+            "Teste",
+            "Resultado mínimo"
+          ],
+          "rows": [
+            [
+              "G01 · Ciclo consumidor offline por título",
+              "Selecionar título real instalado; abrir; conferir imagem/som/toque/controle; gravar save nativo; sair pelo menu humano; voltar ao mesmo catálogo; abrir o mesmo título e conferir save. Repetir no mesmo APK/aparelho sem limpar dados.",
+              "Título correto, uma sessão, nenhum input/som preso, retorno responsivo e save persistente."
+            ],
+            [
+              "G02 · Sair em todas as fases do owner online",
+              "Aplicar confirmação Sair antes do primeiro frame, durante preparação, registro, sincronização, espera de input, partida e pausa nativa. Testar duplo toque/back/menu e sair logo após falha.",
+              "Ação humana é idempotente; UI continua respondendo; quit chega ao owner; IO/Binder/owner terminam e autoridade recebe um único encerramento."
+            ],
+            [
+              "G03 · NativeActivity e contenção",
+              "Atrasar mock de close/callback, core/driver e fim do owner; solicitar pause/window/input/save/destroy; coletar stacks/etapas agregadas sem identidades.",
+              "Trabalho próprio de rede não segura UI/monitor de Activity; nenhum uso de memória/janela após liberar; wait real é visível e diagnosticável."
+            ],
+            [
+              "G04 · Carrossel e contexto recriado",
+              "Entrar/sair rapidamente de jogo, settings, sala e frontend; apagar/recriar contexto GL; alterar vídeos/economia durante retorno; conferir stopAll e contagem de decoder.",
+              "Um decoder no máximo, nenhum GLuint velho usado no contexto novo, catálogo/foco restaurados, toque correto e sem áudio do menu sobre a partida."
+            ],
+            [
+              "G05 · N64 normal e SN64",
+              "Registro incompleto, espera de save/input, EOF local, fechamento de UDP/TCP, input físico removido e quit humano em cada fase; observar fim de EXECUTE antes de netplay_stop.",
+              "Mutex do gate não fica em pump externo; quit desbloqueia transfer/gate; queues/senders/mux terminam e offline não herda diretório online."
+            ],
+            [
+              "G06 · PSX normal e PXL1",
+              "Core/HLE aprovado por edição; falha de fonte/ABI/config; native menu pause; destroy sem humano; confirmação humana durante IO/callback preso; liberação de estado após checkpoint.",
+              "Nenhum unload/deinit automático, nenhum falso READY/ACK, join fora da UI e retirada só depois de owner+Binder+IO realmente concluídos."
+            ],
+            [
+              "G07 · Sony settings e sessão",
+              "Alterar um campo R134 e clicar Voltar imediatamente; reabrir; conferir chave desconhecida preservada e mudança consumida pelo motor; iniciar jogo real; background e retorno; sair durante bootstrap/import.",
+              "Saves FIFO completos, uma sessão, sem callbacks antigos na nova tela, input neutro, retorno consistente. Preparação/firmware importado é registrada separadamente de gameplay."
+            ],
+            [
+              "G08 · PS4 áudio/input e stop",
+              "Áudio ativo, 8 streams, stream truncado, socket perdido, WRITE_BLOCKING atrasado e stop simultâneo; hotplug em 4 slots; neutralização em pause/removal.",
+              "Sockets fecham, uma release por track, workers terminam, sem som/input residual; superfície liberada só após native run retornar."
+            ],
+            [
+              "G09 · Pacote e regressão da composição",
+              "Comparar somente entradas autorizadas; source/runtime/engine IDs novos coerentes; DEX fora allowlist e motores/controles/opções/saves byte preservados; compilar tests de concorrência e probes nativos relevantes.",
+              "Recibos separados para fonte, pacote, instalado, boot, gameplay e servidor; não promover por mock/status 200/PONG isolado."
+            ],
+            [
+              "G10 · Dependências e rotas ausentes",
+              "Conferir core/BIOS/firmware/content no APK exato ou diretório permitido atual; apresentar requisito ausente antes de launch; arquivos válidos e inválidos por formato do owner.",
+              "Sem falso botão que promete gameplay; o histórico de 8 dependências não é tratado como inventário atual."
+            ]
+          ]
+        }
+      ],
+      "bullets": [
+        "Referências: [RUN01], [RUN02] 154–159; [RUN03] 326–338; [RUN10] 146–164; [RUN11] 88–96; [RUN16] 186–215."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "RUN01",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/AGENTS.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/AGENTS.md",
+      "purpose": "Instruções de composição, preservação e limites de evidência."
+    },
+    {
+      "id": "RUN02",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java",
+      "purpose": "Saída humana e lifecycle Java Retro herdado."
+    },
+    {
+      "id": "RUN03",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-multiplayer-r77-20261008/native/source/frontend/drivers/platform_unix.c",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-multiplayer-r77-20261008/native/source/frontend/drivers/platform_unix.c",
+      "purpose": "Quit JNI, callbacks NativeActivity e finalização do worker."
+    },
+    {
+      "id": "RUN04",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-session-lifecycle-r74-20261007/native/source/input/drivers/android_input.c",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-session-lifecycle-r74-20261007/native/source/input/drivers/android_input.c",
+      "purpose": "Leitura do quit no input/poll inicial; fonte herdada do lifecycle."
+    },
+    {
+      "id": "RUN05",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Bridge.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Bridge.java",
+      "purpose": "Owner normal N64, saves isolados, fechamento e hooks humanos."
+    },
+    {
+      "id": "RUN06",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-mupen-online-r125-20261011/native/n64-station-recovery.c",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-mupen-online-r125-20261011/native/n64-station-recovery.c",
+      "purpose": "Condicional de pausa/quit no thread do emulador."
+    },
+    {
+      "id": "RUN07",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-mupen-online-r125-20261011/native/apply_native_patch.py",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-mupen-online-r125-20261011/native/apply_native_patch.py",
+      "purpose": "Receita de I/O cancelável, guards de STOP e descarte seguro dos inputs."
+    },
+    {
+      "id": "RUN08",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Mux.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Mux.java",
+      "purpose": "Fechamento dos sockets locais, queues e executores N64."
+    },
+    {
+      "id": "RUN09",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Server.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Server.java",
+      "purpose": "Espera de registro/saves e cancelamento de senders."
+    },
+    {
+      "id": "RUN10",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java",
+      "purpose": "Saída humana PSX, IO/Binder cleanup e polling de status."
+    },
+    {
+      "id": "RUN11",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxOnlineActivity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxOnlineActivity.java",
+      "purpose": "Join fora da UI, captura de owner e gate de retirada privada."
+    },
+    {
+      "id": "RUN12",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/native/StationPsxEntry.cpp",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/native/StationPsxEntry.cpp",
+      "purpose": "Shim SDL/JNI, autorização humana, waits e renderer deinit."
+    },
+    {
+      "id": "RUN13",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/native/StationPsxOwner.cpp",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/native/StationPsxOwner.cpp",
+      "purpose": "Checkpoint do owner exato e liberação guardada de core."
+    },
+    {
+      "id": "RUN14",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/native/StationPsxProtocol.cpp",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/native/StationPsxProtocol.cpp",
+      "purpose": "Locks internos do protocolo e estados inFrame/applying."
+    },
+    {
+      "id": "RUN15",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/recipe/patch_sdl_optin.py",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/recipe/patch_sdl_optin.py",
+      "purpose": "Opt-in SDL: onDestroy não mata owner sem gate e inversão exata do patch."
+    },
+    {
+      "id": "RUN16",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "purpose": "R134 PS4: stopper, run, superfície retida, configurações e retorno."
+    },
+    {
+      "id": "RUN17",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "purpose": "R134 PS3: worker serial de superfície/config/quit."
+    },
+    {
+      "id": "RUN18",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Audio.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Audio.java",
+      "purpose": "Áudio local PS4, AudioTrack bloqueante e limpeza idempotente."
+    },
+    {
+      "id": "RUN19",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Control.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Control.java",
+      "purpose": "Input local PS4, neutralização, queue e close."
+    },
+    {
+      "id": "RUN20",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java",
+      "purpose": "Lifecycle e exclusão mútua de SurfaceTexture/MediaPlayer."
+    },
+    {
+      "id": "RUN21",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_system_video720.h",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_system_video720.h",
+      "purpose": "Retirada dos slots e handles GL por contexto."
+    },
+    {
+      "id": "RUN22",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "purpose": "Foreground, gerações e cancelamento das capas."
+    },
+    {
+      "id": "RUN23",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "purpose": "Foreground do frontend, capa/polling e publicação."
+    },
+    {
+      "id": "RUN24",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/evidence/original-launch-profile-table-r120.json",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/evidence/original-launch-profile-table-r120.json",
+      "purpose": "43 perfis de fallback extraídos do ELF original; extensões são seletores."
+    },
+    {
+      "id": "RUN25",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/evidence/launch-matrix-r120.json",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/evidence/launch-matrix-r120.json",
+      "purpose": "50 rotas canônicas e inventário histórico de dependências ausentes."
+    },
+    {
+      "id": "RUN26",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-game-menu-controller-audit-r120-20261010/REVIEW-CONTROLLER-VISIBILITY-R120.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-game-menu-controller-audit-r120-20261010/REVIEW-CONTROLLER-VISIBILITY-R120.md",
+      "purpose": "Diferenças e limitações de toque/hotplug por família."
+    },
+    {
+      "id": "RUN27",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/platform-xbox-pce-refresh/java/org/emulationstation/frontend/XboxBootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/platform-xbox-pce-refresh/java/org/emulationstation/frontend/XboxBootstrap.java",
+      "purpose": "Guard de Android10/X1 BOX1.2.8 e retorno isolado Xbox."
+    },
+    {
+      "id": "RUN28",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/wiiu-rar5-fix-20260930/WiiUBootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/wiiu-rar5-fix-20260930/WiiUBootstrap.java",
+      "purpose": "Guard API30/Vulkan1.1 e seletor executável Cemu preservado."
+    },
+    {
+      "id": "RUN29",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/xbox360-integration/java/org/emulationstation/frontend/Xbox360Bootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/xbox360-integration/java/org/emulationstation/frontend/Xbox360Bootstrap.java",
+      "purpose": "Guard API30/Vulkan1.1 do XenDroid integrado."
+    },
+    {
+      "id": "RUN30",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/vita-wiiu-pronto-20261001/VitaBootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/vita-wiiu-pronto-20261001/VitaBootstrap.java",
+      "purpose": "Guard API28 do wrapper Vita preservado."
+    },
+    {
+      "id": "RUN31",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/dolphin-integration/java/org/emulationstation/frontend/DolphinBootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/dolphin-integration/java/org/emulationstation/frontend/DolphinBootstrap.java",
+      "purpose": "Owner Dolphin offline e migração só dos saves nativos ausentes."
+    },
+    {
+      "id": "RUN32",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/flycast-integration/java/org/emulationstation/frontend/FlycastBootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/flycast-integration/java/org/emulationstation/frontend/FlycastBootstrap.java",
+      "purpose": "Retorno Flycast e migração delimitada de BIOS/saves."
+    },
+    {
+      "id": "RUN33",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/psp-integration/java/org/emulationstation/frontend/PspBootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/psp-integration/java/org/emulationstation/frontend/PspBootstrap.java",
+      "purpose": "Owner PSP, preferências e cópia dos saves ausentes."
+    },
+    {
+      "id": "RUN34",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/ps2-integration/java/org/emulationstation/frontend/Ps2Bootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/ps2-integration/java/org/emulationstation/frontend/Ps2Bootstrap.java",
+      "purpose": "Owner PS2, finishActivity e monitor de retorno das configurações."
+    },
+    {
+      "id": "RUN35",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/saturn-modern/java/org/emulationstation/frontend/SaturnBootstrap.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/estavel-2026-09-30-plataformas-emuladores/snapshot/implementation/saturn-modern/java/org/emulationstation/frontend/SaturnBootstrap.java",
+      "purpose": "Wrapper Saturn preservado."
+    },
+    {
+      "id": "RUN36",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+      "purpose": "Monitor do transporte comum e awaitClosed."
+    },
+    {
+      "id": "RUN37",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/frontend/station_frontend.cpp",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/frontend/station_frontend.cpp",
+      "purpose": "JNI de foreground/graphics e limites das inboxes."
+    },
+    {
+      "id": "RUN38",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/native/d0/native_magazine_field.h",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/native/d0/native_magazine_field.h",
+      "purpose": "Identidade dos recursos GL/LED por contexto e liberação."
+    },
+    {
+      "id": "RUN39",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-multiplayer-r77-20261008/native/build_native.py",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-multiplayer-r77-20261008/native/build_native.py",
+      "purpose": "Composição de fonte herdada e overlays do runtime Retro."
+    }
+  ],
+  "findings": [
+    {
+      "id": "RT-01",
+      "priority": "P1",
+      "classification": "risco demonstrado na estrutura; travamento físico não reproduzido",
+      "title": "Callbacks NativeActivity podem aguardar o owner indefinidamente",
+      "evidence": [
+        {
+          "source": "RUN03",
+          "startLine": 241,
+          "endLine": 303
+        },
+        {
+          "source": "RUN03",
+          "startLine": 326,
+          "endLine": 358
+        },
+        {
+          "source": "RUN03",
+          "startLine": 373,
+          "endLine": 408
+        }
+      ],
+      "observed": "input/window/activityState/saveState usam scond_wait sem prazo; onDestroy espera destroyed e depois sthread_join. cond_wait libera o mutex e o join acontece fora dele, portanto não há o deadlock trivial de segurar o mutex finalizador.",
+      "risk": "Se retro_run, renderer, áudio, gravação ou driver não retornarem ao event pump, um callback chamado pela UI do Android pode exceder seu orçamento e resultar em ANR.",
+      "possibleCorrection": "Preservar ownership NativeActivity; mover o trabalho próprio de rede/cleanup para executor, publicar quit cedo e acompanhar o owner de forma assíncrona. Diagnosticar a etapa presa. Não destruir ANativeWindow ou liberar estado nativo ainda usado, nem tratar timeout como autorização para matar um jogo.",
+      "gates": [
+        "G02",
+        "G03",
+        "G04",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-02",
+      "priority": "P1",
+      "classification": "fluxo síncrono confirmado; dependência do fechamento do transporte",
+      "title": "Retro fecha rede na UI antes de enviar quit nativo",
+      "evidence": [
+        {
+          "source": "RUN02",
+          "startLine": 117,
+          "endLine": 126
+        },
+        {
+          "source": "RUN02",
+          "startLine": 154,
+          "endLine": 159
+        }
+      ],
+      "observed": "requestHumanExit marca a ação humana, chama closeSession e só depois stationRequestQuit. closeSession synchronized chama close em multiplayer/recovery/relay; há chamadas duplicadas idempotentes.",
+      "risk": "Uma contenção ou bloqueio no close de rede impede a UI de chegar ao wake do owner e deixa a confirmação Sair parada.",
+      "possibleCorrection": "Separar notificação humana, quit nativo e fechamento de transporte em estágios; não segurar monitor de Activity em operações externas. O outro recorte da equipe valida o patch comum de close e suas corridas.",
+      "gates": [
+        "G01",
+        "G02",
+        "G03",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-03",
+      "priority": "P2",
+      "classification": "proteção nativa existente confirmada",
+      "title": "Quit Retro acorda o poll sem depender do pipe",
+      "evidence": [
+        {
+          "source": "RUN03",
+          "startLine": 306,
+          "endLine": 323
+        },
+        {
+          "source": "RUN03",
+          "startLine": 739,
+          "endLine": 749
+        },
+        {
+          "source": "RUN04",
+          "startLine": 1640,
+          "endLine": 1667
+        },
+        {
+          "source": "RUN04",
+          "startLine": 1681,
+          "endLine": 1693
+        }
+      ],
+      "observed": "O quit grava um atomic com release e usa ALooper_wake. O input pump lê com acquire antes e após poll; o wait inicial de window também observa o quit.",
+      "risk": "O wake resolve a espera do looper, mas não cancela uma operação de core/driver bloqueada fora dele.",
+      "possibleCorrection": "Manter o wake e as checagens. Acrescentar diagnóstico de checkpoint/exit e testes que exercitem quit antes do primeiro window, durante pausa e durante carregamento.",
+      "gates": [
+        "G02",
+        "G03",
+        "G04"
+      ]
+    },
+    {
+      "id": "RT-04",
+      "priority": "P2",
+      "classification": "cleanup estrutural confirmado; término real não medido",
+      "title": "N64 solicita quit sem esperar, mas close Java é síncrono e não prova término de workers",
+      "evidence": [
+        {
+          "source": "RUN05",
+          "startLine": 53,
+          "endLine": 56
+        },
+        {
+          "source": "RUN05",
+          "startLine": 140,
+          "endLine": 141
+        },
+        {
+          "source": "RUN06",
+          "startLine": 111,
+          "endLine": 124
+        },
+        {
+          "source": "RUN08",
+          "startLine": 95,
+          "endLine": 97
+        },
+        {
+          "source": "RUN09",
+          "startLine": 122,
+          "endLine": 124
+        }
+      ],
+      "observed": "StationMupenRequestQuit apenas marca quitting e broadcast. Session.close sincronizado fecha transport/mux/Binder e shutdownNow. Mux fecha listeners, UDP, sockets, queues, notifica guestReady e interrompe executor; Server notifica waits e senders. Não há awaitTermination destes workers.",
+      "risk": "onExit/onDestroy podem gastar tempo em close de objetos externos na UI; uma thread não cooperativa pode continuar até o processo terminar. Não foi identificado o ABBA Session↔transport específico do Dolphin: fatal/nativeControl N64 não sincronizam Session.",
+      "possibleCorrection": "Retirar operações externas do monitor, rastrear os workers de IO e confirmar término fora da UI. Conservar a precedência quit→fim EXECUTE→netplay_stop prevista pelo patch, sem antecipar liberação da memória do core.",
+      "gates": [
+        "G01",
+        "G02",
+        "G05",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-05",
+      "priority": "P2",
+      "classification": "proteção existente confirmada",
+      "title": "N64 tem I/O cancelável e evita liberar inputs durante EXECUTE",
+      "evidence": [
+        {
+          "source": "RUN07",
+          "startLine": 53,
+          "endLine": 75
+        },
+        {
+          "source": "RUN07",
+          "startLine": 89,
+          "endLine": 98
+        },
+        {
+          "source": "RUN07",
+          "startLine": 108,
+          "endLine": 135
+        },
+        {
+          "source": "RUN06",
+          "startLine": 216,
+          "endLine": 236
+        }
+      ],
+      "observed": "Transferência nativa usa poll de20ms, recv/send não bloqueantes e checks quitting/failed. O gate bombeia rede fora de seu mutex e reconhece quit. netplay_stop recusa enquanto o emulador executa; inputs são liberados no cleanup do owner.",
+      "risk": "Isso cobre o adaptador de rede, não prova que plugins de vídeo/áudio ou run_device sempre retornam rapidamente.",
+      "possibleCorrection": "Preservar os guards e testar desconexão+Sair nas fases de registro, espera de input, pausa e partida. Só marcar owner terminado depois do término real do EXECUTE.",
+      "gates": [
+        "G02",
+        "G05",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-06",
+      "priority": "P2",
+      "classification": "retorno indefinido possível pela política; deadlock não confirmado",
+      "title": "PSX exige IO, Binder e owner terminados antes de retirar o processo",
+      "evidence": [
+        {
+          "source": "RUN10",
+          "startLine": 146,
+          "endLine": 164
+        },
+        {
+          "source": "RUN11",
+          "startLine": 67,
+          "endLine": 96
+        },
+        {
+          "source": "RUN13",
+          "startLine": 207,
+          "endLine": 214
+        },
+        {
+          "source": "RUN14",
+          "startLine": 264,
+          "endLine": 271
+        }
+      ],
+      "observed": "humanExit solta o monitor antes de enfileirar t.close e nativeAuthorizeHumanExit no worker. awaitClosed(250) reprograma a checagem em50ms indefinidamente. O join do owner é feito numa thread daemon separada. A retirada exige ação humana, cleanup, processo privado e owner realmente terminado.",
+      "risk": "Um callback, Binder, IO ou owner que não termina deixa a saída pendente sem diagnóstico de etapa. O jogo não deve ser morto automaticamente para esconder a falha.",
+      "possibleCorrection": "Manter os gates; mostrar Encerrando com etapa e duração, colher status sem dados privados, impedir uma segunda sessão e oferecer recuperação humana apenas para o processo privado após consentimento explícito e preservação dos saves possíveis.",
+      "gates": [
+        "G01",
+        "G02",
+        "G06",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-07",
+      "priority": "P2",
+      "classification": "guard de segurança existente; disponibilidade física pendente",
+      "title": "PSX depende do checkpoint original para fechar core/renderer",
+      "evidence": [
+        {
+          "source": "RUN12",
+          "startLine": 86,
+          "endLine": 105
+        },
+        {
+          "source": "RUN12",
+          "startLine": 133,
+          "endLine": 136
+        },
+        {
+          "source": "RUN12",
+          "startLine": 182,
+          "endLine": 233
+        },
+        {
+          "source": "RUN13",
+          "startLine": 151,
+          "endLine": 154
+        },
+        {
+          "source": "RUN13",
+          "startLine": 192,
+          "endLine": 214
+        },
+        {
+          "source": "RUN15",
+          "startLine": 20,
+          "endLine": 32
+        }
+      ],
+      "observed": "O shim acorda espera de preparação humana; ownerCheckpoint autoriza fechamento e muda Running só no thread original. Unload/deinit automáticos ficam bloqueados até r.closed. O opt-in SDL evita o onDestroy normal enquanto o owner não terminou.",
+      "risk": "Se o binário original LibretroPlayer não retorna ao checkpoint, a autorização humana sozinha não encerra. A fonte C++ completa desse owner não foi localizada; este recorte audita a ponte e protocolo, não todos os locks internos do binário.",
+      "possibleCorrection": "Obter/reconciliar a fonte exata antes de alterar loop/input/renderer; testar atraso de frame, pausa nativa, falha de inicialização e saída com core carregado. Não substituir owner por projeto semelhante.",
+      "gates": [
+        "G02",
+        "G06",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-08",
+      "priority": "P2",
+      "classification": "serialização de cleanup confirmada; timeout nativo ausente",
+      "title": "PS3 mantém saves/config FIFO e faz quit no worker",
+      "evidence": [
+        {
+          "source": "RUN17",
+          "startLine": 160,
+          "endLine": 177
+        },
+        {
+          "source": "RUN17",
+          "startLine": 236,
+          "endLine": 255
+        },
+        {
+          "source": "RUN17",
+          "startLine": 451,
+          "endLine": 455
+        }
+      ],
+      "observed": "Surface/setup/pause/changeSurface e quit usam o worker serial. onDestroy marca closed, libera inputs e coloca quit atrás do trabalho pendente; depois encerra só o processo Sony quando o core foi configurado/iniciado. Voltar de settings é enfileirado atrás dos saves.",
+      "risk": "Uma chamada JNI ou I/O anterior que fica presa impede o quit de executar; não há prazo/estágio. Retorno ao frontend não prova que todos os recursos do motor foram liberados.",
+      "possibleCorrection": "Instrumentar estágios e conclusão real; testar settings salvos antes de Voltar, destruição da superfície e saída com jogo real. Preservar a separação :station_ps3 e não bloquear a UI aguardando worker.",
+      "gates": [
+        "G01",
+        "G07",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-09",
+      "priority": "P2",
+      "classification": "limitação da ponte oficial confirmada",
+      "title": "PS4 não pausa o jogo ao sair para background",
+      "evidence": [
+        {
+          "source": "RUN16",
+          "startLine": 138,
+          "endLine": 159
+        },
+        {
+          "source": "RUN16",
+          "startLine": 186,
+          "endLine": 215
+        },
+        {
+          "source": "RUN16",
+          "startLine": 231,
+          "endLine": 250
+        }
+      ],
+      "observed": "Stop humano usa executor stopper que chama cancelImport/stop; closeSession ocorre após run retornar. TextureView retém a superfície porque a ponte0.2.4 não tem pause/rebind. onPause neutraliza toque/controle; onDestroy não solicita término do jogo.",
+      "risk": "O jogo e som podem continuar em background; se run/stop travar, Encerrando permanece sem prazo. Activity destruída sem saída humana pode perder a UI de uma sessão que ainda executa até o processo ser encerrado pelo sistema. Não afirmar pausa universal.",
+      "possibleCorrection": "Explicar o comportamento ao consumidor, diagnosticar sessão ativa e impedir novo owner. Rebind/pause só pode ser criado com suporte real no motor. Validar background/retorno/som e encerramento físico antes de certificar estabilidade.",
+      "gates": [
+        "G01",
+        "G07",
+        "G08",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-10",
+      "priority": "P2",
+      "classification": "recursos fechados por código; terminação de threads não verificada",
+      "title": "Áudio/input PS4 usam limpeza idempotente e shutdown sem await",
+      "evidence": [
+        {
+          "source": "RUN18",
+          "startLine": 17,
+          "endLine": 22
+        },
+        {
+          "source": "RUN18",
+          "startLine": 61,
+          "endLine": 78
+        },
+        {
+          "source": "RUN18",
+          "startLine": 106,
+          "endLine": 117
+        },
+        {
+          "source": "RUN19",
+          "startLine": 73,
+          "endLine": 81
+        },
+        {
+          "source": "RUN19",
+          "startLine": 135,
+          "endLine": 160
+        }
+      ],
+      "observed": "Há no máximo8 workers de áudio. write AudioTrack é WRITE_BLOCKING. close fecha peers/listener, remove/release cada track uma vez e shutdownNow; input fecha peers/listener, acorda queue e shutdownNow. Não há join/await de acceptor/streams/input.",
+      "risk": "Interrupção não é por si só prova de que um driver/bloqueio nativo terminou. Cleanup é chamado no worker da sessão; ANR direto na UI não foi demonstrado aqui.",
+      "possibleCorrection": "Registrar término real fora da UI e testar sockets interrompidos, stream parcial, áudio ativo e stop simultâneo. Não mover release bloqueante para UI nem liberar superfície antes do native run terminar.",
+      "gates": [
+        "G01",
+        "G08",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-11",
+      "priority": "P2",
+      "classification": "contenção potencial; não reproduzida",
+      "title": "Parada de vídeo do carrossel compartilha mutex com updateTexImage",
+      "evidence": [
+        {
+          "source": "RUN20",
+          "startLine": 57,
+          "endLine": 60
+        },
+        {
+          "source": "RUN20",
+          "startLine": 173,
+          "endLine": 204
+        },
+        {
+          "source": "RUN21",
+          "startLine": 138,
+          "endLine": 160
+        }
+      ],
+      "observed": "Activity pause/stop/destroy chama stopAll. stop retira o slot atomicamente, invalida Session, releaseSurfaces sob synchronized(s) e enfileira MediaPlayer.release no worker. updateTexImage e transform também seguram synchronized(s) no render.",
+      "risk": "Se uma chamada de driver SurfaceTexture demora enquanto detém esse monitor, a UI que faz releaseSurfaces pode esperar. O watchdog de decoder não limita a duração de uma chamada de driver já bloqueada.",
+      "possibleCorrection": "Medir a fronteira render↔UI em contexto destruído. Se confirmado, publicar invalidação na UI e retirar superfícies no owner de GL adequado com protocolo explícito; não alterar ownership/GL por suposição.",
+      "gates": [
+        "G01",
+        "G04",
+        "G09"
+      ]
+    },
+    {
+      "id": "RT-12",
+      "priority": "P2",
+      "classification": "limite de cobertura auditado",
+      "title": "Drivers e loops originais preservados impedem declarar auditoria interna universal",
+      "evidence": [
+        {
+          "source": "RUN24",
+          "startLine": 1,
+          "endLine": 31
+        },
+        {
+          "source": "RUN25",
+          "startLine": 1,
+          "endLine": 35
+        }
+      ],
+      "observed": "A matriz é extração estática de rotas/componentes; vários motores são binários preservados. LibretroPlayer original normal não tem fonte exata localizada. Presença de classe/lib ou hash igual confirma composição, não teardown, som, saves ou estabilidade física.",
+      "risk": "Publicar que todos os motores foram auditados internamente ou testados em gameplay excederia a evidência.",
+      "possibleCorrection": "Publicar o nível de evidência por owner e manter consumer gates por plataforma/título/dispositivo. Onde falta fonte, testar apenas comportamento externo e solicitar a proveniência exata para mudanças internas.",
+      "gates": [
+        "G01",
+        "G09",
+        "G10"
+      ]
+    }
+  ],
+  "consumerGates": [
+    {
+      "id": "G01",
+      "title": "Ciclo consumidor offline por título",
+      "steps": "Selecionar título real instalado; abrir; conferir imagem/som/toque/controle; gravar save nativo; sair pelo menu humano; voltar ao mesmo catálogo; abrir o mesmo título e conferir save. Repetir no mesmo APK/aparelho sem limpar dados.",
+      "pass": "Título correto, uma sessão, nenhum input/som preso, retorno responsivo e save persistente.",
+      "evidence": "Não executado neste recorte; instalação/abertura do frontend não substituem esta prova."
+    },
+    {
+      "id": "G02",
+      "title": "Sair em todas as fases do owner online",
+      "steps": "Aplicar confirmação Sair antes do primeiro frame, durante preparação, registro, sincronização, espera de input, partida e pausa nativa. Testar duplo toque/back/menu e sair logo após falha.",
+      "pass": "Ação humana é idempotente; UI continua respondendo; quit chega ao owner; IO/Binder/owner terminam e autoridade recebe um único encerramento."
+    },
+    {
+      "id": "G03",
+      "title": "NativeActivity e contenção",
+      "steps": "Atrasar mock de close/callback, core/driver e fim do owner; solicitar pause/window/input/save/destroy; coletar stacks/etapas agregadas sem identidades.",
+      "pass": "Trabalho próprio de rede não segura UI/monitor de Activity; nenhum uso de memória/janela após liberar; wait real é visível e diagnosticável."
+    },
+    {
+      "id": "G04",
+      "title": "Carrossel e contexto recriado",
+      "steps": "Entrar/sair rapidamente de jogo, settings, sala e frontend; apagar/recriar contexto GL; alterar vídeos/economia durante retorno; conferir stopAll e contagem de decoder.",
+      "pass": "Um decoder no máximo, nenhum GLuint velho usado no contexto novo, catálogo/foco restaurados, toque correto e sem áudio do menu sobre a partida."
+    },
+    {
+      "id": "G05",
+      "title": "N64 normal e SN64",
+      "steps": "Registro incompleto, espera de save/input, EOF local, fechamento de UDP/TCP, input físico removido e quit humano em cada fase; observar fim de EXECUTE antes de netplay_stop.",
+      "pass": "Mutex do gate não fica em pump externo; quit desbloqueia transfer/gate; queues/senders/mux terminam e offline não herda diretório online."
+    },
+    {
+      "id": "G06",
+      "title": "PSX normal e PXL1",
+      "steps": "Core/HLE aprovado por edição; falha de fonte/ABI/config; native menu pause; destroy sem humano; confirmação humana durante IO/callback preso; liberação de estado após checkpoint.",
+      "pass": "Nenhum unload/deinit automático, nenhum falso READY/ACK, join fora da UI e retirada só depois de owner+Binder+IO realmente concluídos."
+    },
+    {
+      "id": "G07",
+      "title": "Sony settings e sessão",
+      "steps": "Alterar um campo R134 e clicar Voltar imediatamente; reabrir; conferir chave desconhecida preservada e mudança consumida pelo motor; iniciar jogo real; background e retorno; sair durante bootstrap/import.",
+      "pass": "Saves FIFO completos, uma sessão, sem callbacks antigos na nova tela, input neutro, retorno consistente. Preparação/firmware importado é registrada separadamente de gameplay."
+    },
+    {
+      "id": "G08",
+      "title": "PS4 áudio/input e stop",
+      "steps": "Áudio ativo,8 streams, stream truncado, socket perdido, WRITE_BLOCKING atrasado e stop simultâneo; hotplug em4 slots; neutralização em pause/removal.",
+      "pass": "Sockets fecham, uma release por track, workers terminam, sem som/input residual; superfície liberada só após native run retornar."
+    },
+    {
+      "id": "G09",
+      "title": "Pacote e regressão da composição",
+      "steps": "Comparar somente entradas autorizadas; source/runtime/engine IDs novos coerentes; DEX fora allowlist e motores/controles/opções/saves byte preservados; compilar tests de concorrência e probes nativos relevantes.",
+      "pass": "Recibos separados para fonte, pacote, instalado, boot, gameplay e servidor; não promover por mock/status200/PONG isolado."
+    },
+    {
+      "id": "G10",
+      "title": "Dependências e rotas ausentes",
+      "steps": "Conferir core/BIOS/firmware/content no APK exato ou diretório permitido atual; apresentar requisito ausente antes de launch; arquivos válidos e inválidos por formato do owner.",
+      "pass": "Sem falso botão que promete gameplay; o histórico de8 dependências não é tratado como inventário atual."
+    }
+  ],
+  "consumerMatrix": [
+    [
+      "3ds",
+      "LibretroPlayer: azahar · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "Arcade",
+      "MAME4droid Current · :mame",
+      "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+      "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+    ],
+    [
+      "Atomiswave",
+      "Flycast Android · :flycast",
+      "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+      "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+    ],
+    [
+      "Dreamcast",
+      "Flycast Android · :flycast",
+      "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+      "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+    ],
+    [
+      "GameCube",
+      "Dolphin Android · :dolphin",
+      "Arquivo real iso/gcz/wbfs/rvz no registro; GC/Wii usam configurações e input próprios.",
+      "Conferir portas GC/Wiimote, touch/hotplug e saves; saída humana e retorno. Gates: G01, G02, G04, G09"
+    ],
+    [
+      "Gameboy",
+      "LibretroPlayer: gambatte · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "Gameboy Color",
+      "LibretroPlayer: gambatte · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "Gba",
+      "LibretroPlayer: mgba · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "Master System",
+      "LibretroPlayer: genesis_plus_gx · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "MegaDrive",
+      "MD.emu EX+ · :megadrive",
+      "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+      "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+    ],
+    [
+      "MegaDrive - BR",
+      "MD.emu EX+ · :megadrive",
+      "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+      "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+    ],
+    [
+      "Neo Geo",
+      "MAME4droid Current · :mame",
+      "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+      "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+    ],
+    [
+      "Neo Geo CD",
+      "MAME4droid Current · :mame",
+      "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+      "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+    ],
+    [
+      "Nintendinho",
+      "LibretroPlayer: fceumm · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "Nintendo 64",
+      "Mupen64Plus AE · :n64 → :n64core",
+      "API28; ROM n64/z64/v64 segundo registro; formato completo do owner deve ser conferido.",
+      "Menu oficial, toque+físico, save nativo; no online usar saves isolados e G05. Gates: G01, G02, G05, G09"
+    ],
+    [
+      "Nintendo 64 - BR",
+      "Mupen64Plus AE · :n64 → :n64core",
+      "API28; ROM n64/z64/v64 segundo registro; formato completo do owner deve ser conferido.",
+      "Menu oficial, toque+físico, save nativo; no online usar saves isolados e G05. Gates: G01, G02, G05, G09"
+    ],
+    [
+      "Nintendo DS",
+      "LibretroPlayer: melonds · main (applicationId)",
+      "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "Odyssey 2",
+      "LibretroPlayer: o2em · main (applicationId)",
+      "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "PSP",
+      "PPSSPP Android · :psp",
+      "Arquivo real enviado ao PPSSPP1.20.4; extensões do perfil não garantem suporte de cada pacote.",
+      "ShowTouchControls manual persistente, menu próprio e memstick; conferir saída sem login novo. Gates: G01, G04, G10"
+    ],
+    [
+      "Pc Engine",
+      "LibretroPlayer: mednafen_pce_fast · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "Pc Engine cd",
+      "LibretroPlayer: mednafen_pce · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "Playstation 1",
+      "LibretroPlayer: pcsx_rearmed · main (applicationId)",
+      "Core PCSX normal presente na matriz; HLE online só por edição/aprovação e2 portas.",
+      "Save state não equivale a save nativo; offline e PXL1 têm storage distinto. Gates: G01, G02, G06, G10"
+    ],
+    [
+      "Playstation 2",
+      "ARMSX2 Android · :ps2",
+      "ARMSX2 2.7.2, BIOS/conteúdo validado; SDK26 do artefato não garante mínimo do app.",
+      "Renderer/menu/input próprio; conciliar DEX do overlay; save e retorno official. Gates: G01, G04, G10"
+    ],
+    [
+      "Playstation 2 - BR",
+      "ARMSX2 Android · :ps2",
+      "ARMSX2 2.7.2, BIOS/conteúdo validado; SDK26 do artefato não garante mínimo do app.",
+      "Renderer/menu/input próprio; conciliar DEX do overlay; save e retorno official. Gates: G01, G04, G10"
+    ],
+    [
+      "Psp - BR",
+      "PPSSPP Android · :psp",
+      "Arquivo real enviado ao PPSSPP1.20.4; extensões do perfil não garantem suporte de cada pacote.",
+      "ShowTouchControls manual persistente, menu próprio e memstick; conferir saída sem login novo. Gates: G01, G04, G10"
+    ],
+    [
+      "Psvita",
+      "Vita3K Android · :psvita",
+      "Guard de wrapper API28; instalação/firmware/conteúdo precisam estar preparados.",
+      "Touch hide no controle conectado e retorno após última desconexão; conferir save. Gates: G01, G04, G10"
+    ],
+    [
+      "Super Nintendo",
+      "Snes9x EX+ · :snes",
+      "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+      "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+    ],
+    [
+      "Super Nintendo - BR",
+      "Snes9x EX+ · :snes",
+      "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+      "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+    ],
+    [
+      "Switch",
+      "Yuzu Android (unchanged) · main (applicationId)",
+      "Bootstrap Android do próprio pacote; conteúdo/keys/firmware privados; novo roms/switch.",
+      "Conferir overlay, renderer, save, back e retorno; não mover biblioteca existente. Gates: G01, G04, G10"
+    ],
+    [
+      "atari2600",
+      "LibretroPlayer: stella · main (applicationId)",
+      "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "atari7800",
+      "LibretroPlayer: prosystem · main (applicationId)",
+      "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "colecovision",
+      "LibretroPlayer: bluemsx · main (applicationId)",
+      "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "cps1",
+      "MAME4droid Current · :mame",
+      "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+      "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+    ],
+    [
+      "cps2",
+      "MAME4droid Current · :mame",
+      "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+      "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+    ],
+    [
+      "cps3",
+      "MAME4droid Current · :mame",
+      "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+      "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+    ],
+    [
+      "fbneo",
+      "LibretroPlayer: fbneo · main (applicationId)",
+      "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "fds",
+      "LibretroPlayer: fceumm · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "gameandwatch",
+      "LibretroPlayer: gw · main (applicationId)",
+      "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "gamegear",
+      "LibretroPlayer: genesis_plus_gx · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "jaguar",
+      "LibretroPlayer: virtualjaguar · main (applicationId)",
+      "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "mame",
+      "MAME4droid Current · :mame",
+      "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+      "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+    ],
+    [
+      "naomi",
+      "Flycast Android · :flycast",
+      "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+      "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+    ],
+    [
+      "naomi2",
+      "Flycast Android · :flycast",
+      "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+      "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+    ],
+    [
+      "saturn",
+      "Saturn integrado · :saturn",
+      "Owner Yaba Sanshiro1.20.46; BIOS/imagem do formato real.",
+      "Touch manual, pad físico separado; nunca releaseAll universal porque afeta físico. Gates: G01, G04, G10"
+    ],
+    [
+      "sega32x",
+      "LibretroPlayer: picodrive · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "supergrafx",
+      "LibretroPlayer: mednafen_supergrafx · main (applicationId)",
+      "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+      "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+    ],
+    [
+      "wii",
+      "Dolphin Android · :dolphin",
+      "Arquivo real iso/gcz/wbfs/rvz no registro; GC/Wii usam configurações e input próprios.",
+      "Conferir portas GC/Wiimote, touch/hotplug e saves; saída humana e retorno. Gates: G01, G02, G04, G09"
+    ],
+    [
+      "wiiu",
+      "Cemu Android · :wiiu",
+      "Guard de wrapper API30+Vulkan1.1; Cemu0.5.2 experimental; conteúdo executável/keys válidos.",
+      "StateFlow/input overlay próprio; conferir GamePad, save, background, retorno e som. Gates: G01, G04, G10"
+    ],
+    [
+      "xbox",
+      "x1box/xemu · :xbox → :xboxemu",
+      "Guard de wrapper API29 e X1 BOX1.2.8; dependências/disco/storage do xemu.",
+      "Conferir settings vs game process; input físico/touch, saves, retorno humano. Gates: G01, G04, G10"
+    ],
+    [
+      "xbox360",
+      "Xendroid · :xbox360 → :xbox360emu",
+      "Guard de wrapper API30+Vulkan1.1; XenDroid experimental; conteúdo do owner.",
+      "Touch Compose manual; conferir som/render/controller, saves e duas etapas de processo. Gates: G01, G04, G10"
+    ],
+    [
+      "PlayStation3",
+      "aPS3e2.43 · :station_ps3",
+      "API28/ARM64; firmware preparado; ISO real ou pasta válida do owner, chave própria quando aplicável.",
+      "R13418 campos+touch; saída humana→quit worker; conferir save/input/Superfície e próximo boot. Gates G01,G07,G09."
+    ],
+    [
+      "PlayStation4",
+      "BachataS4 0.2.4 · :station_ps4",
+      "API31/ARM64/GPU compatível; PKG real preparado na biblioteca privada.",
+      "R13411 campos+touch;4 slots; background não pausa; stop→fim run→áudio/input/superfície. Gates G01,G07,G08,G09."
+    ]
+  ],
+  "fallbackProfiles": [
+    {
+      "aliases": "nes famicom fc nintendoentertainmentsystem nintendinho fds famicomdisksystem",
+      "description": "Nintendo Entertainment System",
+      "core": "fceumm",
+      "extensions": ".nes .fds .unf .unif .zip",
+      "originalFallbackCommand": "libretro: core=fceumm_libretro_android.so"
+    },
+    {
+      "aliases": "snes sfc superfamicom supernintendo supernes",
+      "description": "Super Nintendo",
+      "core": "snes9x",
+      "extensions": ".smc .sfc .fig .swc .bs .zip",
+      "originalFallbackCommand": "libretro: core=snes9x_libretro_android.so"
+    },
+    {
+      "aliases": "gb gameboy",
+      "description": "Game Boy",
+      "core": "gambatte",
+      "extensions": ".gb .zip",
+      "originalFallbackCommand": "libretro: core=gambatte_libretro_android.so"
+    },
+    {
+      "aliases": "gbc gameboycolor",
+      "description": "Game Boy Color",
+      "core": "gambatte",
+      "extensions": ".gbc .gb .zip",
+      "originalFallbackCommand": "libretro: core=gambatte_libretro_android.so"
+    },
+    {
+      "aliases": "gba gameboyadvance",
+      "description": "Game Boy Advance",
+      "core": "mgba",
+      "extensions": ".gba .zip",
+      "originalFallbackCommand": "libretro: core=mgba_libretro_android.so"
+    },
+    {
+      "aliases": "nds ds nintendods",
+      "description": "Nintendo DS",
+      "core": "melonds",
+      "extensions": ".nds .zip",
+      "originalFallbackCommand": "libretro: core=melonds_libretro_android.so"
+    },
+    {
+      "aliases": "megadrive genesis md segagenesis segamegadrive",
+      "description": "Mega Drive",
+      "core": "genesis_plus_gx",
+      "extensions": ".md .gen .smd .bin .sms .zip",
+      "originalFallbackCommand": "libretro: core=genesis_plus_gx_libretro_android.so"
+    },
+    {
+      "aliases": "mastersystem sms segamastersystem",
+      "description": "Master System",
+      "core": "genesis_plus_gx",
+      "extensions": ".sms .zip",
+      "originalFallbackCommand": "libretro: core=genesis_plus_gx_libretro_android.so"
+    },
+    {
+      "aliases": "gamegear gg segagamegear",
+      "description": "Game Gear",
+      "core": "genesis_plus_gx",
+      "extensions": ".gg .zip",
+      "originalFallbackCommand": "libretro: core=genesis_plus_gx_libretro_android.so"
+    },
+    {
+      "aliases": "segacd megacd",
+      "description": "Sega CD",
+      "core": "genesis_plus_gx",
+      "extensions": ".cue .chd .iso .m3u",
+      "originalFallbackCommand": "libretro: core=genesis_plus_gx_libretro_android.so"
+    },
+    {
+      "aliases": "sega32x 32x",
+      "description": "Sega 32X",
+      "core": "picodrive",
+      "extensions": ".32x .zip",
+      "originalFallbackCommand": "libretro: core=picodrive_libretro_android.so"
+    },
+    {
+      "aliases": "pcengine pce tg16 turbografx16 turbografx",
+      "description": "PC Engine",
+      "core": "mednafen_pce_fast",
+      "extensions": ".pce .zip",
+      "originalFallbackCommand": "libretro: core=mednafen_pce_fast_libretro_android.so"
+    },
+    {
+      "aliases": "pcenginecd tg16cd turbografxcd",
+      "description": "PC Engine CD",
+      "core": "mednafen_pce_fast",
+      "extensions": ".cue .chd .ccd",
+      "originalFallbackCommand": "libretro: core=mednafen_pce_fast_libretro_android.so"
+    },
+    {
+      "aliases": "psx ps1 playstation playstation1 psone",
+      "description": "PlayStation",
+      "core": "pcsx_rearmed",
+      "extensions": ".pbp .cue .chd .bin .iso .img .m3u",
+      "originalFallbackCommand": "libretro: core=pcsx_rearmed_libretro_android.so"
+    },
+    {
+      "aliases": "neogeo",
+      "description": "Neo Geo",
+      "core": "fbneo",
+      "extensions": ".zip .7z",
+      "originalFallbackCommand": "libretro: core=fbneo_libretro_android.so"
+    },
+    {
+      "aliases": "arcade fbneo fba finalburn",
+      "description": "Arcade",
+      "core": "fbneo",
+      "extensions": ".zip .7z",
+      "originalFallbackCommand": "libretro: core=fbneo_libretro_android.so"
+    },
+    {
+      "aliases": "mame mame2003",
+      "description": "MAME",
+      "core": "mame2003_plus",
+      "extensions": ".zip",
+      "originalFallbackCommand": "libretro: core=mame2003_plus_libretro_android.so"
+    },
+    {
+      "aliases": "atari2600 a2600",
+      "description": "Atari 2600",
+      "core": "stella",
+      "extensions": ".a26 .bin .zip",
+      "originalFallbackCommand": "libretro: core=stella_libretro_android.so"
+    },
+    {
+      "aliases": "atari7800 a7800",
+      "description": "Atari 7800",
+      "core": "prosystem",
+      "extensions": ".a78 .bin .zip",
+      "originalFallbackCommand": "libretro: core=prosystem_libretro_android.so"
+    },
+    {
+      "aliases": "atarilynx lynx",
+      "description": "Atari Lynx",
+      "core": "handy",
+      "extensions": ".lnx .zip",
+      "originalFallbackCommand": "libretro: core=handy_libretro_android.so"
+    },
+    {
+      "aliases": "ngp ngpc neogeopocket neogeopocketcolor",
+      "description": "Neo Geo Pocket",
+      "core": "mednafen_ngp",
+      "extensions": ".ngp .ngc .zip",
+      "originalFallbackCommand": "libretro: core=mednafen_ngp_libretro_android.so"
+    },
+    {
+      "aliases": "wonderswan wsc ws wonderswancolor",
+      "description": "WonderSwan",
+      "core": "mednafen_wswan",
+      "extensions": ".ws .wsc .zip",
+      "originalFallbackCommand": "libretro: core=mednafen_wswan_libretro_android.so"
+    },
+    {
+      "aliases": "msx msx1 msx2",
+      "description": "MSX",
+      "core": "bluemsx",
+      "extensions": ".rom .mx1 .mx2 .dsk .cas .m3u .zip .7z",
+      "originalFallbackCommand": "libretro: core=bluemsx_libretro_android.so"
+    },
+    {
+      "aliases": "colecovision coleco",
+      "description": "ColecoVision",
+      "core": "bluemsx",
+      "extensions": ".col .rom .zip",
+      "originalFallbackCommand": "libretro: core=bluemsx_libretro_android.so"
+    },
+    {
+      "aliases": "virtualboy vb",
+      "description": "Virtual Boy",
+      "core": "mednafen_vb",
+      "extensions": ".vb .vboy .zip",
+      "originalFallbackCommand": "libretro: core=mednafen_vb_libretro_android.so"
+    },
+    {
+      "aliases": "ps2 playstation2 ps2br playstation2br",
+      "description": "PlayStation 2",
+      "core": "armsx2",
+      "extensions": ".iso .chd .cso .zso .bin .elf .gz .mdf .nrg .img .m3u",
+      "originalFallbackCommand": "libretro: core=armsx2_libretro_android.so"
+    },
+    {
+      "aliases": "switch nintendoswitch nsw ns",
+      "description": "Nintendo Switch",
+      "core": "suyu",
+      "extensions": ".nsp .xci .nca .nro",
+      "originalFallbackCommand": "libretro: core=suyu_libretro_android.so"
+    },
+    {
+      "aliases": "cps1 capcomcps1 cpsi",
+      "description": "CPS-1",
+      "core": "fbalpha2012_cps1",
+      "extensions": ".zip .7z",
+      "originalFallbackCommand": "libretro: core=fbalpha2012_cps1_libretro_android.so"
+    },
+    {
+      "aliases": "cps2 capcomcps2 cpsii",
+      "description": "CPS-2",
+      "core": "fbalpha2012_cps2",
+      "extensions": ".zip .7z",
+      "originalFallbackCommand": "libretro: core=fbalpha2012_cps2_libretro_android.so"
+    },
+    {
+      "aliases": "cps3 capcomcps3 cpsiii",
+      "description": "CPS-3",
+      "core": "fbalpha2012_cps3",
+      "extensions": ".zip .7z",
+      "originalFallbackCommand": "libretro: core=fbalpha2012_cps3_libretro_android.so"
+    },
+    {
+      "aliases": "psp playstationportable",
+      "description": "PSP",
+      "core": "ppsspp",
+      "extensions": ".iso .cso .pbp .chd .elf .prx .zip",
+      "originalFallbackCommand": "libretro: core=ppsspp_libretro_android.so"
+    },
+    {
+      "aliases": "3ds nintendo3ds",
+      "description": "Nintendo 3DS",
+      "core": "citra",
+      "extensions": ".3ds .3dsx .cci .cxi .cia .app .elf .axf",
+      "originalFallbackCommand": "libretro: core=citra_libretro_android.so"
+    },
+    {
+      "aliases": "dreamcast dc",
+      "description": "Dreamcast",
+      "core": "flycast",
+      "extensions": ".gdi .cdi .chd .cue .bin .elf .m3u .zip",
+      "originalFallbackCommand": "libretro: core=flycast_libretro_android.so"
+    },
+    {
+      "aliases": "gamecube gc ngc",
+      "description": "GameCube",
+      "core": "dolphin",
+      "extensions": ".iso .gcm .gcz .ciso .rvz .wbfs .wia .dol .elf .m3u",
+      "originalFallbackCommand": "libretro: core=dolphin_libretro_android.so"
+    },
+    {
+      "aliases": "wii nintendowii",
+      "description": "Wii",
+      "core": "dolphin",
+      "extensions": ".iso .wbfs .rvz .ciso .gcz .wia .wad .dol .elf .m3u",
+      "originalFallbackCommand": "libretro: core=dolphin_libretro_android.so"
+    },
+    {
+      "aliases": "n64 nintendo64",
+      "description": "Nintendo 64",
+      "core": "mupen64plus_next_gles3",
+      "extensions": ".n64 .z64 .v64 .zip",
+      "originalFallbackCommand": "libretro: core=mupen64plus_next_gles3_libretro_android.so"
+    },
+    {
+      "aliases": "saturn segasaturn ss",
+      "description": "Saturn",
+      "core": "yabasanshiro",
+      "extensions": ".cue .ccd .chd .iso .m3u .zip",
+      "originalFallbackCommand": "libretro: core=yabasanshiro_libretro_android.so"
+    },
+    {
+      "aliases": "neogeocd neocd ngcd neogeocdz",
+      "description": "Neo Geo CD",
+      "core": "neocd",
+      "extensions": ".cue .chd",
+      "originalFallbackCommand": "libretro: core=neocd_libretro_android.so"
+    },
+    {
+      "aliases": "atomiswave awave naomi naomi2",
+      "description": "Atomiswave",
+      "core": "flycast",
+      "extensions": ".zip .7z .lst .dat",
+      "originalFallbackCommand": "libretro: core=flycast_libretro_android.so"
+    },
+    {
+      "aliases": "supergrafx sgx pcenginesupergrafx",
+      "description": "SuperGrafx",
+      "core": "mednafen_supergrafx",
+      "extensions": ".pce .sgx .cue .ccd .chd .zip",
+      "originalFallbackCommand": "libretro: core=mednafen_supergrafx_libretro_android.so"
+    },
+    {
+      "aliases": "gameandwatch gw gamewatch",
+      "description": "Game & Watch",
+      "core": "gw",
+      "extensions": ".mgw",
+      "originalFallbackCommand": "libretro: core=gw_libretro_android.so"
+    },
+    {
+      "aliases": "o2em odyssey2 odyssey videopac",
+      "description": "Odyssey 2",
+      "core": "o2em",
+      "extensions": ".bin .zip",
+      "originalFallbackCommand": "libretro: core=o2em_libretro_android.so"
+    },
+    {
+      "aliases": "jaguar atarijaguar",
+      "description": "Atari Jaguar",
+      "core": "virtualjaguar",
+      "extensions": ".j64 .jag .rom .abs .cof .bin .prg .zip",
+      "originalFallbackCommand": "libretro: core=virtualjaguar_libretro_android.so"
+    }
+  ],
+  "openQuestions": [
+    "Qual estágio efetivo prende Sair no APK instalado? Não houve reprodução, stack de aparelho ou execução de gameplay neste recorte.",
+    "Os8 cores ausentes históricos existem hoje no APK exato ou diretório externo permitido de cada aparelho?",
+    "Há fonte C++ correspondente ao LibretroPlayer normal62ad07 para revisar loop/input/render/audio internos sem inferência?",
+    "Todos os executores N64/PS4 realmente terminam após fechar sockets/AudioTrack no hardware, incluindo driver bloqueado?",
+    "Qual é o resultado físico de background/retorno PS4 com jogo real, já que a ponte não tem pause/rebind?",
+    "Quais formatos antigos de fallback são realmente aceitos pelos owners atuais, títulos e dependências válidas?"
+  ],
+  "notPerformed": [
+    "USB/ADB/aparelhos",
+    "Build/instalação",
+    "Gameplay",
+    "Operação de servidor",
+    "Edição de fontes congeladas",
+    "Auditoria interna de binários sem fonte exata"
+  ]
+}

@@ -1,3 +1,11 @@
+# R134 instalada e revisão de lifecycle proposta
+
+Referência instalada4f9039eb9ce13907ce043870bfe1f6e294888556 / APKf8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2. Ler docs/handoff-completo-r134-20261011/README.md e as duas instalações sanitizadas. User relatou carregamento3p e diálogo de fechar na saída. A revisão atual foi autorizada sem USB. O overlay integration/online-lifecycle-review-r135 é fonte/Java compilado, não APK novo ou instalado; manter fontes históricas congeladas intactas. Testes locais e fonte confirmam Dolphin ABBA e Leave stale; aceite físico, saída durável sem rede e trace Android pendentes. Não relaxar licença, identidade, modos, ACK/READY ou saída humana.
+
+Publicação de fontes/receitas/dossiê ao Git foi solicitada, sem deploy/restart produtivo. R134 kit e modos estão no handoff único atualizado, servidor docs/station-android/r134; fontes/diagnóstico propostos são separados da aplicação administrativa. APK/binários/mídias/ROM/BIOS/firmware/chaves/identidades pessoais permanecem privados. A fonte executável instalada permanece4f; novo commit documental/corretivo não a substitui sem pacote final e recibos.
+
+## Histórico preservado
+
 # R133 — consoles no painel e classificação online por edição/modo
 
 Fonte executável5966a8ad23ae9040c570d359b999c8a31de904b4, integration/console-panel-r133. APK945f7ded35e551d638135a05140c32218eb38277d10eaf21e3f83087d71da112,2714971151bytes, mesma assinatura originalv2/v3/16KiB. Ler versions/station-console-mode-completion-r133-20261011/README.md, STATUS.json e recibos completos; resolver exclusivamente pelos três ponteiros CURRENT/ATUAL. R132 é donor e a cadeia R131/R130 segue necessária para reconstrução, não escolher receitas/APKs históricos por data.

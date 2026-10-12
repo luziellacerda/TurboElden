@@ -1,0 +1,303 @@
+[
+  {
+    "aliases": "nes famicom fc nintendoentertainmentsystem nintendinho fds famicomdisksystem",
+    "description": "Nintendo Entertainment System",
+    "core": "fceumm",
+    "extensions": ".nes .fds .unf .unif .zip",
+    "originalFallbackCommand": "libretro: core=fceumm_libretro_android.so"
+  },
+  {
+    "aliases": "snes sfc superfamicom supernintendo supernes",
+    "description": "Super Nintendo",
+    "core": "snes9x",
+    "extensions": ".smc .sfc .fig .swc .bs .zip",
+    "originalFallbackCommand": "libretro: core=snes9x_libretro_android.so"
+  },
+  {
+    "aliases": "gb gameboy",
+    "description": "Game Boy",
+    "core": "gambatte",
+    "extensions": ".gb .zip",
+    "originalFallbackCommand": "libretro: core=gambatte_libretro_android.so"
+  },
+  {
+    "aliases": "gbc gameboycolor",
+    "description": "Game Boy Color",
+    "core": "gambatte",
+    "extensions": ".gbc .gb .zip",
+    "originalFallbackCommand": "libretro: core=gambatte_libretro_android.so"
+  },
+  {
+    "aliases": "gba gameboyadvance",
+    "description": "Game Boy Advance",
+    "core": "mgba",
+    "extensions": ".gba .zip",
+    "originalFallbackCommand": "libretro: core=mgba_libretro_android.so"
+  },
+  {
+    "aliases": "nds ds nintendods",
+    "description": "Nintendo DS",
+    "core": "melonds",
+    "extensions": ".nds .zip",
+    "originalFallbackCommand": "libretro: core=melonds_libretro_android.so"
+  },
+  {
+    "aliases": "megadrive genesis md segagenesis segamegadrive",
+    "description": "Mega Drive",
+    "core": "genesis_plus_gx",
+    "extensions": ".md .gen .smd .bin .sms .zip",
+    "originalFallbackCommand": "libretro: core=genesis_plus_gx_libretro_android.so"
+  },
+  {
+    "aliases": "mastersystem sms segamastersystem",
+    "description": "Master System",
+    "core": "genesis_plus_gx",
+    "extensions": ".sms .zip",
+    "originalFallbackCommand": "libretro: core=genesis_plus_gx_libretro_android.so"
+  },
+  {
+    "aliases": "gamegear gg segagamegear",
+    "description": "Game Gear",
+    "core": "genesis_plus_gx",
+    "extensions": ".gg .zip",
+    "originalFallbackCommand": "libretro: core=genesis_plus_gx_libretro_android.so"
+  },
+  {
+    "aliases": "segacd megacd",
+    "description": "Sega CD",
+    "core": "genesis_plus_gx",
+    "extensions": ".cue .chd .iso .m3u",
+    "originalFallbackCommand": "libretro: core=genesis_plus_gx_libretro_android.so"
+  },
+  {
+    "aliases": "sega32x 32x",
+    "description": "Sega 32X",
+    "core": "picodrive",
+    "extensions": ".32x .zip",
+    "originalFallbackCommand": "libretro: core=picodrive_libretro_android.so"
+  },
+  {
+    "aliases": "pcengine pce tg16 turbografx16 turbografx",
+    "description": "PC Engine",
+    "core": "mednafen_pce_fast",
+    "extensions": ".pce .zip",
+    "originalFallbackCommand": "libretro: core=mednafen_pce_fast_libretro_android.so"
+  },
+  {
+    "aliases": "pcenginecd tg16cd turbografxcd",
+    "description": "PC Engine CD",
+    "core": "mednafen_pce_fast",
+    "extensions": ".cue .chd .ccd",
+    "originalFallbackCommand": "libretro: core=mednafen_pce_fast_libretro_android.so"
+  },
+  {
+    "aliases": "psx ps1 playstation playstation1 psone",
+    "description": "PlayStation",
+    "core": "pcsx_rearmed",
+    "extensions": ".pbp .cue .chd .bin .iso .img .m3u",
+    "originalFallbackCommand": "libretro: core=pcsx_rearmed_libretro_android.so"
+  },
+  {
+    "aliases": "neogeo",
+    "description": "Neo Geo",
+    "core": "fbneo",
+    "extensions": ".zip .7z",
+    "originalFallbackCommand": "libretro: core=fbneo_libretro_android.so"
+  },
+  {
+    "aliases": "arcade fbneo fba finalburn",
+    "description": "Arcade",
+    "core": "fbneo",
+    "extensions": ".zip .7z",
+    "originalFallbackCommand": "libretro: core=fbneo_libretro_android.so"
+  },
+  {
+    "aliases": "mame mame2003",
+    "description": "MAME",
+    "core": "mame2003_plus",
+    "extensions": ".zip",
+    "originalFallbackCommand": "libretro: core=mame2003_plus_libretro_android.so"
+  },
+  {
+    "aliases": "atari2600 a2600",
+    "description": "Atari 2600",
+    "core": "stella",
+    "extensions": ".a26 .bin .zip",
+    "originalFallbackCommand": "libretro: core=stella_libretro_android.so"
+  },
+  {
+    "aliases": "atari7800 a7800",
+    "description": "Atari 7800",
+    "core": "prosystem",
+    "extensions": ".a78 .bin .zip",
+    "originalFallbackCommand": "libretro: core=prosystem_libretro_android.so"
+  },
+  {
+    "aliases": "atarilynx lynx",
+    "description": "Atari Lynx",
+    "core": "handy",
+    "extensions": ".lnx .zip",
+    "originalFallbackCommand": "libretro: core=handy_libretro_android.so"
+  },
+  {
+    "aliases": "ngp ngpc neogeopocket neogeopocketcolor",
+    "description": "Neo Geo Pocket",
+    "core": "mednafen_ngp",
+    "extensions": ".ngp .ngc .zip",
+    "originalFallbackCommand": "libretro: core=mednafen_ngp_libretro_android.so"
+  },
+  {
+    "aliases": "wonderswan wsc ws wonderswancolor",
+    "description": "WonderSwan",
+    "core": "mednafen_wswan",
+    "extensions": ".ws .wsc .zip",
+    "originalFallbackCommand": "libretro: core=mednafen_wswan_libretro_android.so"
+  },
+  {
+    "aliases": "msx msx1 msx2",
+    "description": "MSX",
+    "core": "bluemsx",
+    "extensions": ".rom .mx1 .mx2 .dsk .cas .m3u .zip .7z",
+    "originalFallbackCommand": "libretro: core=bluemsx_libretro_android.so"
+  },
+  {
+    "aliases": "colecovision coleco",
+    "description": "ColecoVision",
+    "core": "bluemsx",
+    "extensions": ".col .rom .zip",
+    "originalFallbackCommand": "libretro: core=bluemsx_libretro_android.so"
+  },
+  {
+    "aliases": "virtualboy vb",
+    "description": "Virtual Boy",
+    "core": "mednafen_vb",
+    "extensions": ".vb .vboy .zip",
+    "originalFallbackCommand": "libretro: core=mednafen_vb_libretro_android.so"
+  },
+  {
+    "aliases": "ps2 playstation2 ps2br playstation2br",
+    "description": "PlayStation 2",
+    "core": "armsx2",
+    "extensions": ".iso .chd .cso .zso .bin .elf .gz .mdf .nrg .img .m3u",
+    "originalFallbackCommand": "libretro: core=armsx2_libretro_android.so"
+  },
+  {
+    "aliases": "switch nintendoswitch nsw ns",
+    "description": "Nintendo Switch",
+    "core": "suyu",
+    "extensions": ".nsp .xci .nca .nro",
+    "originalFallbackCommand": "libretro: core=suyu_libretro_android.so"
+  },
+  {
+    "aliases": "cps1 capcomcps1 cpsi",
+    "description": "CPS-1",
+    "core": "fbalpha2012_cps1",
+    "extensions": ".zip .7z",
+    "originalFallbackCommand": "libretro: core=fbalpha2012_cps1_libretro_android.so"
+  },
+  {
+    "aliases": "cps2 capcomcps2 cpsii",
+    "description": "CPS-2",
+    "core": "fbalpha2012_cps2",
+    "extensions": ".zip .7z",
+    "originalFallbackCommand": "libretro: core=fbalpha2012_cps2_libretro_android.so"
+  },
+  {
+    "aliases": "cps3 capcomcps3 cpsiii",
+    "description": "CPS-3",
+    "core": "fbalpha2012_cps3",
+    "extensions": ".zip .7z",
+    "originalFallbackCommand": "libretro: core=fbalpha2012_cps3_libretro_android.so"
+  },
+  {
+    "aliases": "psp playstationportable",
+    "description": "PSP",
+    "core": "ppsspp",
+    "extensions": ".iso .cso .pbp .chd .elf .prx .zip",
+    "originalFallbackCommand": "libretro: core=ppsspp_libretro_android.so"
+  },
+  {
+    "aliases": "3ds nintendo3ds",
+    "description": "Nintendo 3DS",
+    "core": "citra",
+    "extensions": ".3ds .3dsx .cci .cxi .cia .app .elf .axf",
+    "originalFallbackCommand": "libretro: core=citra_libretro_android.so"
+  },
+  {
+    "aliases": "dreamcast dc",
+    "description": "Dreamcast",
+    "core": "flycast",
+    "extensions": ".gdi .cdi .chd .cue .bin .elf .m3u .zip",
+    "originalFallbackCommand": "libretro: core=flycast_libretro_android.so"
+  },
+  {
+    "aliases": "gamecube gc ngc",
+    "description": "GameCube",
+    "core": "dolphin",
+    "extensions": ".iso .gcm .gcz .ciso .rvz .wbfs .wia .dol .elf .m3u",
+    "originalFallbackCommand": "libretro: core=dolphin_libretro_android.so"
+  },
+  {
+    "aliases": "wii nintendowii",
+    "description": "Wii",
+    "core": "dolphin",
+    "extensions": ".iso .wbfs .rvz .ciso .gcz .wia .wad .dol .elf .m3u",
+    "originalFallbackCommand": "libretro: core=dolphin_libretro_android.so"
+  },
+  {
+    "aliases": "n64 nintendo64",
+    "description": "Nintendo 64",
+    "core": "mupen64plus_next_gles3",
+    "extensions": ".n64 .z64 .v64 .zip",
+    "originalFallbackCommand": "libretro: core=mupen64plus_next_gles3_libretro_android.so"
+  },
+  {
+    "aliases": "saturn segasaturn ss",
+    "description": "Saturn",
+    "core": "yabasanshiro",
+    "extensions": ".cue .ccd .chd .iso .m3u .zip",
+    "originalFallbackCommand": "libretro: core=yabasanshiro_libretro_android.so"
+  },
+  {
+    "aliases": "neogeocd neocd ngcd neogeocdz",
+    "description": "Neo Geo CD",
+    "core": "neocd",
+    "extensions": ".cue .chd",
+    "originalFallbackCommand": "libretro: core=neocd_libretro_android.so"
+  },
+  {
+    "aliases": "atomiswave awave naomi naomi2",
+    "description": "Atomiswave",
+    "core": "flycast",
+    "extensions": ".zip .7z .lst .dat",
+    "originalFallbackCommand": "libretro: core=flycast_libretro_android.so"
+  },
+  {
+    "aliases": "supergrafx sgx pcenginesupergrafx",
+    "description": "SuperGrafx",
+    "core": "mednafen_supergrafx",
+    "extensions": ".pce .sgx .cue .ccd .chd .zip",
+    "originalFallbackCommand": "libretro: core=mednafen_supergrafx_libretro_android.so"
+  },
+  {
+    "aliases": "gameandwatch gw gamewatch",
+    "description": "Game & Watch",
+    "core": "gw",
+    "extensions": ".mgw",
+    "originalFallbackCommand": "libretro: core=gw_libretro_android.so"
+  },
+  {
+    "aliases": "o2em odyssey2 odyssey videopac",
+    "description": "Odyssey 2",
+    "core": "o2em",
+    "extensions": ".bin .zip",
+    "originalFallbackCommand": "libretro: core=o2em_libretro_android.so"
+  },
+  {
+    "aliases": "jaguar atarijaguar",
+    "description": "Atari Jaguar",
+    "core": "virtualjaguar",
+    "extensions": ".j64 .jag .rom .abs .cof .bin .prg .zip",
+    "originalFallbackCommand": "libretro: core=virtualjaguar_libretro_android.so"
+  }
+]

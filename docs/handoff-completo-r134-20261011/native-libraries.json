@@ -1,0 +1,1164 @@
+[
+  {
+    "path": "lib/arm64-v8a/libandroidx.graphics.path.so",
+    "bytes": 10096,
+    "compressedBytes": 4526,
+    "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libc++_shared.so",
+    "bytes": 1423696,
+    "compressedBytes": 480212,
+    "sha256": "b5d97c38a728afe28d341cda3369f512d35eaf9c680c1b0563cd6a63e395230f",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libfile_redirect_hook.so",
+    "bytes": 4000,
+    "compressedBytes": 1340,
+    "sha256": "ff3403f449eb7bd9b417a3f1fe035f0d5a90f4686133af7a14b0ab3c419d9d66",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libgsl_alloc_hook.so",
+    "bytes": 4312,
+    "compressedBytes": 1452,
+    "sha256": "c5ee790c3273b00bbbe0be721dc3791bea43362c99cab3dadd1eff8dc6b01f30",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libhook_impl.so",
+    "bytes": 272424,
+    "compressedBytes": 91897,
+    "sha256": "dfbee62eb45510c67398bbc7c7c521f086822dad8a82a17469b7ddd1010ac3df",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmain.so",
+    "bytes": 4588272,
+    "compressedBytes": 1796594,
+    "sha256": "62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmain_hook.so",
+    "bytes": 4216,
+    "compressedBytes": 1411,
+    "sha256": "5f5ccafe26ffb9f795cee640f985e43b1f3245a05d955614ebfbfb21440f3a1c",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus_next_gles3_libretro_android.so",
+    "bytes": 6203328,
+    "compressedBytes": 6203328,
+    "sha256": "08bdded18263563874b39a1a86115fc3377b48885f8a2be988244f13dced5a54",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libSDL2.so",
+    "bytes": 1239896,
+    "compressedBytes": 532507,
+    "sha256": "a282b35554eb006773349430e117bfeeff32a84e246a058c8fb7c7027c2e4dee",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libVkLayer_khronos_validation.so",
+    "bytes": 24616200,
+    "compressedBytes": 7495211,
+    "sha256": "a11e2d33f8473fdc50cde07d50c330c23de88223a2c5f566ccabe62f0ffe2308",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libyuzu-android.so",
+    "bytes": 35518648,
+    "compressedBytes": 12103531,
+    "sha256": "c82b35d81aa4b9521a64bf79e7d617fb418df5e9b728b5b228b4860e55d1a72b",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libturbo_carousel.so",
+    "bytes": 160551608,
+    "compressedBytes": 160551608,
+    "sha256": "867d86a5dba085fadec1e4b8dee0f8be99467551ba830607d3041b324c02b80e",
+    "role": "replacement"
+  },
+  {
+    "path": "lib/arm64-v8a/libdhok_impl.so",
+    "bytes": 93824,
+    "compressedBytes": 93824,
+    "sha256": "9547a6fe74d5c5a38d4f1f4455cbe8c7d52f093f48cb8d48f9c7fcb05a8e3c91",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libdile_redirect_hook.so",
+    "bytes": 3976,
+    "compressedBytes": 3976,
+    "sha256": "43d8668dae68e7e7154936541f826e9b59a2f50aaa01eec96601ffcc7ba01419",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libdolp.so",
+    "bytes": 15333048,
+    "compressedBytes": 15333048,
+    "sha256": "a436ab9d34e3e5895e3a5459cc140ce1832299fc492d47f04e7d6ba07d248c1d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libdolp_hook.so",
+    "bytes": 4192,
+    "compressedBytes": 4192,
+    "sha256": "3910e6e2e0d04bf50ba485b3df3336e77c051760700933c451b5abe4df95e828",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libdsl_alloc_hook.so",
+    "bytes": 4288,
+    "compressedBytes": 4288,
+    "sha256": "dec362082d92d5178c9fa562a6d2f1939a96f7a886c5d8c9d9d3ccd1c1802f45",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libtdolphin.graphics.path.so",
+    "bytes": 10096,
+    "compressedBytes": 10096,
+    "sha256": "c1e1e22576aeaf713c8385f6e7088f38e24aeb04240539129b045b7d29fbaf3b",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libfhok_impl.so",
+    "bytes": 285824,
+    "compressedBytes": 285824,
+    "sha256": "4777af473830259a4ba402084ad77d52b6c28d8af83cee74af58cb01045b7c8f",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libfile_redirecf_hook.so",
+    "bytes": 4120,
+    "compressedBytes": 4120,
+    "sha256": "21d6467a2bf545e2c16b3bede7be7bbf9395593108ea194e9cf6e9bb6b26156a",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libflycast.so",
+    "bytes": 18610480,
+    "compressedBytes": 18610480,
+    "sha256": "31b628b3a53f08a4c489417ee7def9cd064c086431c0a7e94189198eff6504e0",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libflyc_hook.so",
+    "bytes": 4352,
+    "compressedBytes": 4352,
+    "sha256": "b23911a7876e21f83f71a64635b751648b688cadc7246361cd25b10adf36db19",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libfsl_alloc_hook.so",
+    "bytes": 4448,
+    "compressedBytes": 4448,
+    "sha256": "3772ff74d6ad63d82ef713328187581ba2585055eabc4f4966e1dcb590118835",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libswappy.so",
+    "bytes": 575296,
+    "compressedBytes": 575296,
+    "sha256": "41011170e991692fab55278b225e7a2cc276ba93560e5eb32bd15adfa8201907",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libturbo_flycast.so",
+    "bytes": 15088,
+    "compressedBytes": 15088,
+    "sha256": "bcd15ed32df785cdc6f5ee8afada182cb82a4e961fead8a2e26d17dbeb231d6c",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libarmsx2_discord.so",
+    "bytes": 446872,
+    "compressedBytes": 446872,
+    "sha256": "93234c9c0e5d7609508d2587c05bd787a510d2d5c7fc1be33385edeee85927b0",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libdiscord_partner_sdk.so",
+    "bytes": 8631304,
+    "compressedBytes": 8631304,
+    "sha256": "8cee97e99bf5830c24752dc13db2cbf9fd84e898e5517889fd90c715797c529e",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libEGL_angle.so",
+    "bytes": 311960,
+    "compressedBytes": 311960,
+    "sha256": "0638fd7d03631a65659e2af51c997ac966f082d3e189ba7137382952daa334c2",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libemucore_16k.so",
+    "bytes": 24625560,
+    "compressedBytes": 24625560,
+    "sha256": "1dd6c1068517101c598b5e398fb36b93051737f3671ed921bef3ed7a09a1faac",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libemucore_4k.so",
+    "bytes": 24626456,
+    "compressedBytes": 24626456,
+    "sha256": "421a122c64cf7aa46cff8f7fa5e3addfd32caa15674610ee5c2d37ae6265a7f6",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libflurry.so",
+    "bytes": 26736,
+    "compressedBytes": 26736,
+    "sha256": "f61463ea2f66f2f286491a29b325a9600c40589e960f27d802e99e1d217facf3",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libGLESv2_angle.so",
+    "bytes": 6288024,
+    "compressedBytes": 6288024,
+    "sha256": "def0973783d540aa1a888e9c3bc34849afcfb04d7487a823184a52c390e361c5",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/liblibrashader_capi.so",
+    "bytes": 10001576,
+    "compressedBytes": 10001576,
+    "sha256": "7476c785e317e15efe9b2cfc74ac01d00477d23f50046f9037f76cfe1b9aa376",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libp2c_shared.so",
+    "bytes": 1374336,
+    "compressedBytes": 1374336,
+    "sha256": "5a2620b68113817ffea8d8bb2b0f3d20f94e8d5bbd791a7fc1c331863e5dccf5",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libphok_impl.so",
+    "bytes": 268816,
+    "compressedBytes": 268816,
+    "sha256": "42206118b4ded0b630dcb28f999659de3a9255787bdf80195b178d57a26be95d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libpile_redirect_hook.so",
+    "bytes": 4080,
+    "compressedBytes": 4080,
+    "sha256": "2e03ac2c36d90a36316e4a9f97cf467ba5806ac8f7e2f9c5ce4c869b28f5e9bd",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libps2x_hook.so",
+    "bytes": 4280,
+    "compressedBytes": 4280,
+    "sha256": "13ac4cf0ca8dc25888f3361b6645e4f3a5d7af3942909757f80a48e3e035bd1f",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libpsl_alloc_hook.so",
+    "bytes": 4376,
+    "compressedBytes": 4376,
+    "sha256": "03e9431bdc013de35aa2fca14f57ae1bb66a353a5ed5e3142dc277492ed4aac5",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libsavers.so",
+    "bytes": 5357448,
+    "compressedBytes": 5357448,
+    "sha256": "89353230620b732d993f8d213444374d30053a65b088925c108d4cf1c3cd53d8",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libshaderc_shared.so",
+    "bytes": 6518248,
+    "compressedBytes": 6518248,
+    "sha256": "3aadb4d097749fded8c73448c3e3fd5d2b652e7fabb09a3f69cba772da054dd6",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libSPIRV-Tools-shared.so",
+    "bytes": 2615288,
+    "compressedBytes": 2615288,
+    "sha256": "031b184514a57dab2a4b6f0cc04ba9328ef5a164292c56854cf3b59e51be74e4",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libtps2core.graphics.path.so",
+    "bytes": 10096,
+    "compressedBytes": 10096,
+    "sha256": "450ae7f17166348177d49db9e480371bfbeee2560b7219cc882f7e3669d4d142",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libppsspp_jni.so",
+    "bytes": 24942512,
+    "compressedBytes": 24942512,
+    "sha256": "cd699e1733dfeb1de099f21d8560c09d9919b48a6fae6dc79cc956e1bea6dd28",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libpsc_shared.so",
+    "bytes": 1374336,
+    "compressedBytes": 1374336,
+    "sha256": "746dffed47cfe28b03f7698ffc1b24629d26627b832f6cd2653eae3bfcfa2b68",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libpspx_hook.so",
+    "bytes": 4544,
+    "compressedBytes": 4544,
+    "sha256": "d8b52212b283721370fde8941d32cc36da7f42617c34ca1a2ccce989236b93cf",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libshok_impl.so",
+    "bytes": 39664,
+    "compressedBytes": 39664,
+    "sha256": "de69d417e614f8cf0679ffa2f2a5975642884ff16ae9fe4e7be92c77c29f2599",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libsile_redirect_hook.so",
+    "bytes": 4312,
+    "compressedBytes": 4312,
+    "sha256": "b74d6e7019ab3a0eff633e4fafd860e71b9ceac1fc586d49ac17f19931457a11",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libssl_alloc_hook.so",
+    "bytes": 4640,
+    "compressedBytes": 4640,
+    "sha256": "78c354eeb0283702bbd762c21b86f7f30db569a73034d5c2d142d46e0e165440",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libCemuAndroid.so",
+    "bytes": 22075928,
+    "compressedBytes": 22075928,
+    "sha256": "8c8c321307705f71a6c6f58b7c1e0830f172c3093c8a5de4fc8b3d1ee56c5c0d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libtwiiucor.graphics.path.so",
+    "bytes": 10096,
+    "compressedBytes": 10096,
+    "sha256": "857e3f02703f907e81d4e979b4974976081877b1f9e5a342b23e66d12aa05263",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libwhok_impl.so",
+    "bytes": 16016,
+    "compressedBytes": 16016,
+    "sha256": "8eea2cfa1b858092c84ec872453fa6ebd3fdc089b9c7787432c838a6263153ff",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libwiiustore_shared_counter.so",
+    "bytes": 10240,
+    "compressedBytes": 10240,
+    "sha256": "4438c71a01d1febbdd2decaebff03dfb224e4109efd77c0f4813eab9d95d7ad5",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libwiiu_hook.so",
+    "bytes": 4440,
+    "compressedBytes": 4440,
+    "sha256": "dc6f11b4cd553637b899db432ba3c12ee39c2d8ee603d7d4f3c8da8dfb343832",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libwile_redirect_hook.so",
+    "bytes": 4224,
+    "compressedBytes": 4224,
+    "sha256": "3665593c1b89ffb085b6a66ef0f27234b1170bf1a857d9ce1699e1a9e7b9a431",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libwsl_alloc_hook.so",
+    "bytes": 4536,
+    "compressedBytes": 4536,
+    "sha256": "6988ad50b66a807d40d27f8968b1170238c3351400b3a37cda30e47edd361696",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libwuc_shared.so",
+    "bytes": 1374336,
+    "compressedBytes": 1374336,
+    "sha256": "84862367703570bcf7901f83b3ba1e24b8fe23ef501a808037decb2ef4b20559",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libe.so",
+    "bytes": 24913592,
+    "compressedBytes": 24913592,
+    "sha256": "b47b09c8a65aba7e49fb27faafbaa88c99c3836b6d634817e8df33be9e5bb71c",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libhardware_ProcessorInfo.so",
+    "bytes": 230376,
+    "compressedBytes": 230376,
+    "sha256": "3cf167574960cf6a700fef9c11945bf6ca36af9be29ae6d05130976b7a1823dc",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libtx360cor.graphics.path.so",
+    "bytes": 10096,
+    "compressedBytes": 10096,
+    "sha256": "aa0658c020fbf86226f13b797940925b0e6af8193ac48c95f03b117b7d947d51",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libx360store_shared_counter.so",
+    "bytes": 7112,
+    "compressedBytes": 7112,
+    "sha256": "869937f882871e1ba4e372d1b0a33a0091ef3f8c90e486f20af5825f7fdca6d8",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libX360V-Tools-shared.so",
+    "bytes": 2393392,
+    "compressedBytes": 2393392,
+    "sha256": "693258897e7f7defcba86f4fdde0e1419564a8bef784b0cd3d159b014ccd6cee",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libx360_hook.so",
+    "bytes": 4336,
+    "compressedBytes": 4336,
+    "sha256": "dc3c26bf4db214bcf01761af0efdf8e434231b47b74a36bb27002428568e6f01",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxhok_impl.so",
+    "bytes": 251376,
+    "compressedBytes": 251376,
+    "sha256": "3c3a123c4ae13b8175a4655c854bcc5c89f0c91b3758a74b86ffc0d1faba2001",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxile_redirect_hook.so",
+    "bytes": 4136,
+    "compressedBytes": 4136,
+    "sha256": "e31ca8534b4979b2c386158ace44e8bd8626f5bafbe1f0e0d736473e0a0e320a",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxsl_alloc_hook.so",
+    "bytes": 4432,
+    "compressedBytes": 4432,
+    "sha256": "f4eb7e125058405e1e3d826a51746a28bd727a629afe1c9f88ed2740440cbc2e",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libturbo_vita_jni.so",
+    "bytes": 447776,
+    "compressedBytes": 447776,
+    "sha256": "bf17a24ca657277dd425044f8a64b6ec6e327f3b51e26d9abe95f23bbb76d883",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libtvita3kc.graphics.path.so",
+    "bytes": 10096,
+    "compressedBytes": 10096,
+    "sha256": "fba34f8f6589ed6ab84d380dd7d0c022768e232306584617bcf85e3b729bb875",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libvhok_impl.so",
+    "bytes": 234488,
+    "compressedBytes": 234488,
+    "sha256": "b1c2815793b09cbdb51e4d43e151799e28c5481538975c98771c1ab70ec6ae85",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libvile_redirect_hook.so",
+    "bytes": 4136,
+    "compressedBytes": 4136,
+    "sha256": "5075059a68bd9f232f87d6c25252033c54058c117762255c85091ed7ce99bdc3",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libVita3K.so",
+    "bytes": 28034048,
+    "compressedBytes": 28034048,
+    "sha256": "a133ff7e5397ae09d863e9583c37a5070024f0bc226630ae4a1fc40e77fed8db",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libvita_hook.so",
+    "bytes": 4336,
+    "compressedBytes": 4336,
+    "sha256": "b53e2360d8dbcc11fff05612b3e69b6dd168c22c4a72f0d9e144881da5eafded",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libvsl_alloc_hook.so",
+    "bytes": 4432,
+    "compressedBytes": 4432,
+    "sha256": "5db08206741684f3c728dbe48f8077c2001a16b57a2c0e2756200abb0d8dbd46",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libturbo_wiiu_counter_jni.so",
+    "bytes": 7568,
+    "compressedBytes": 7568,
+    "sha256": "e348dca9d36cff5cef767dcee4047ad23c7f1eddc1e9800d233e086cf54b464a",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libturbo_wiiu_archive.so",
+    "bytes": 904920,
+    "compressedBytes": 904920,
+    "sha256": "ede1b80b81cd99f22578d5f90cb96b80e20ce34048b0dba98aa9e7f1e45855c1",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libturbo_saturn.so",
+    "bytes": 2632920,
+    "compressedBytes": 2632920,
+    "sha256": "8455e15daaed8b0f8d788b42727a5026df25578bb92b205542246685784064fe",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmednafen_pce_libretro_android.so",
+    "bytes": 4301952,
+    "compressedBytes": 4301952,
+    "sha256": "58f773d7c3d9cd4bc678151fd91718381699832958a16e77eb0412f2a5d68e18",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libSDL3.so",
+    "bytes": 2861576,
+    "compressedBytes": 2861576,
+    "sha256": "a274e7fe8bdaf8281aba1ec82dda8ca74493bc0b1aea64576ea62adbcdc5f598",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxbox_hook.so",
+    "bytes": 5664,
+    "compressedBytes": 5664,
+    "sha256": "352529bc3744de5d5cf8617b3597ae55c37b6b6b9d873c4c059a4616f6a4730d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxbox_impl.so",
+    "bytes": 398544,
+    "compressedBytes": 398544,
+    "sha256": "3aa0b8739f13476d5c7ec881976769659e7e040b166fb58d61ebb25d189891fc",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxbox_redirect_hook.so",
+    "bytes": 5296,
+    "compressedBytes": 5296,
+    "sha256": "fb36d8cb7065f70b28ceaade4c01a70fb9b83eb4f903f92c22125f97de0171b6",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxbo_alloc_hook.so",
+    "bytes": 5824,
+    "compressedBytes": 5824,
+    "sha256": "b2ea38c32ad33edb867d142e721981818bbdee5d42dfede56ca807c6b46b50f1",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxemu.so",
+    "bytes": 38114296,
+    "compressedBytes": 38114296,
+    "sha256": "3dc13e2b0a96794eed0815b701c5098e3d812f49bc7a1bc059cd1e6f1cfd4d08",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libxiso_converter.so",
+    "bytes": 6270256,
+    "compressedBytes": 6270256,
+    "sha256": "fb1ff398cae87d69640f8f7a59d05e13182599b7b52886603f4b624d91f5d802",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmame4droid-jni.so",
+    "bytes": 32856,
+    "compressedBytes": 32856,
+    "sha256": "a7dea2fc4fb73a7a57fccb5ffc2dca3faf53ac11b7f54b1337b04da09edaf108",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libMAME4droid.so",
+    "bytes": 366992944,
+    "compressedBytes": 366992944,
+    "sha256": "ab587eec36db170387baa743d1078912927d6b9c0e2fe8057d56225739d62d71",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libgenesis_plus_gx_libretro_android.so",
+    "bytes": 11073912,
+    "compressedBytes": 11073912,
+    "sha256": "ef8ca1df538d5904707edd083d19df1927da767f1be5425624f61c527bc2b71a",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libpicodrive_libretro_android.so",
+    "bytes": 1621480,
+    "compressedBytes": 1621480,
+    "sha256": "92d28b94fd9381a9dea670e57d58a0f3252a99d0ffde8d310add41f81f90a4fd",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmednafen_pce_fast_libretro_android.so",
+    "bytes": 3214168,
+    "compressedBytes": 3214168,
+    "sha256": "ffc291edc40220dd2269091cffd45cc8e7fe93ad3d2bc8e35bbeda20a7686e4d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmednafen_supergrafx_libretro_android.so",
+    "bytes": 2933456,
+    "compressedBytes": 2933456,
+    "sha256": "c57e72045da588cf87c48b09cee25527930d17dd9640f2d26f8f680b002bb4c9",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libfceumm_libretro_android.so",
+    "bytes": 2878064,
+    "compressedBytes": 2878064,
+    "sha256": "38659530f800032ed6ed46ea0cdf167a38326e0ecd9afa09a3c08130020d85af",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libgambatte_libretro_android.so",
+    "bytes": 3341912,
+    "compressedBytes": 3341912,
+    "sha256": "fbd8fb0a85ff019b178a7c2fa37039cc437df2a9a9a2f459e099605f96ce1b78",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmgba_libretro_android.so",
+    "bytes": 2472240,
+    "compressedBytes": 2472240,
+    "sha256": "b5a6ed40ede735ea7f1d56916f4ceed8c2aabe4d481fe3383ae2b5e5485b6545",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libpcsx_rearmed_libretro_android.so",
+    "bytes": 1582960,
+    "compressedBytes": 1582960,
+    "sha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libazahar_libretro_android.so",
+    "bytes": 38142088,
+    "compressedBytes": 38142088,
+    "sha256": "62ca4d7f75951b4352eb4429f174c343d54cbfdb725f4d3c6fb5cd5e7dfccfae",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_frontend.so",
+    "bytes": 3034632,
+    "compressedBytes": 3034632,
+    "sha256": "4e7ad58e1e8f8a284654120c27280eed8c124ad5301a9e87d769e41f100d8d0d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_archive.so",
+    "bytes": 1732864,
+    "compressedBytes": 1732864,
+    "sha256": "9b6576b07b3e44dc48e5ec478cfb8db16852aa1aca0a7895cb567e7b57ff8c7a",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libsnes9x_explus.so",
+    "bytes": 3802928,
+    "compressedBytes": 3802928,
+    "sha256": "3adeeabe25117265cdd10138fc9631c58da7deda533ff0272a89d7e64bb77956",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmdemu_station.so",
+    "bytes": 6755552,
+    "compressedBytes": 6755552,
+    "sha256": "889d18461fc14e765813d7ef197ecfc922786df8f1f961dd82443dd88aecd124",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_bsnes.so",
+    "bytes": 1791648,
+    "compressedBytes": 1791648,
+    "sha256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_clownmdemu.so",
+    "bytes": 926416,
+    "compressedBytes": 926416,
+    "sha256": "109b62ac11b2f59572de0666bcb02b3701676896b91cb32529bbe5c5032b6b69",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_geolith.so",
+    "bytes": 907512,
+    "compressedBytes": 907512,
+    "sha256": "68ebde3e475d0e86f99bda278cadb85dc7fb32dc560072be017ad257dfd2eb0c",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_retroarch.so",
+    "bytes": 10673944,
+    "compressedBytes": 10673944,
+    "sha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libSDL2_net.so",
+    "bytes": 15888,
+    "compressedBytes": 15888,
+    "sha256": "f668cb9971913181761213be7d04dbfe5a3bf92c92d4ac9c1ab6d3eeaf44b9f5",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libae-bridge.so",
+    "bytes": 326424,
+    "compressedBytes": 326424,
+    "sha256": "ba5a7582295215f159e197f805dbfe85851aa912462996870f61ccd752ecb360",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libfreetype.so",
+    "bytes": 653088,
+    "compressedBytes": 653088,
+    "sha256": "9e374b7256f2920a11cc277393b5101d68ebd2f0ea6a3473ff87eee80a7a1b91",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libhidapi.so",
+    "bytes": 54656,
+    "compressedBytes": 54656,
+    "sha256": "19714e0fa120f52d3e2ff708da5c1709ab67c89f7b1c63223c90675c92085078",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libjnidispatch.so",
+    "bytes": 165992,
+    "compressedBytes": 165992,
+    "sha256": "ddfc6c965bbe366615c000ec1f06552ddf0bb2b4f9d921d0bff8c75b3cb2ca4c",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libminiupnp-bridge.so",
+    "bytes": 74528,
+    "compressedBytes": 74528,
+    "sha256": "7a9e7025ff7a1210b9ee9a4be778a36201d455b4d914c4b3441258a5a9861957",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libminiupnp-build.so",
+    "bytes": 51296,
+    "compressedBytes": 51296,
+    "sha256": "ec4ee8227bc0757de3bde76a3132374b977af1490b9624a970af7a492e699290",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-audio-android-fp.so",
+    "bytes": 88304,
+    "compressedBytes": 88304,
+    "sha256": "79bd6457b4a77364721e98df4946fadde2bc44256b156ae8b361bcf769e03f74",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-audio-android.so",
+    "bytes": 88208,
+    "compressedBytes": 88208,
+    "sha256": "a8f8a5f83827a5056fca58bf72dc25951c56cdba568c55773f81efb20f2f0be5",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-core.so",
+    "bytes": 506280,
+    "compressedBytes": 506280,
+    "sha256": "390d204cf75cb36198670b058820db4313b6ab6d9c0302bb66b3401654cddea0",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-input-android.so",
+    "bytes": 7920,
+    "compressedBytes": 7920,
+    "sha256": "11783275d71eaa14f3e15eff330a784195fdd98b31ea4c16d23d4691e5f91512",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-input-raphnet.so",
+    "bytes": 14768,
+    "compressedBytes": 14768,
+    "sha256": "4def9b52c8d37c25bde4c2644a48a74bdde93a6ae3929e217541093986c9bb43",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-rsp-cxd4.so",
+    "bytes": 39488,
+    "compressedBytes": 39488,
+    "sha256": "0f2bb0a515e8a03899ca543f9ec77d6a8ef816289df01645f198c75e573653d3",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-rsp-hle.so",
+    "bytes": 63832,
+    "compressedBytes": 63832,
+    "sha256": "67d0f74eb35a889c6abbc0ab0503691f45555ca601570911e0435be492bcf189",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-rsp-parallel.so",
+    "bytes": 459336,
+    "compressedBytes": 459336,
+    "sha256": "74d9ef492bfbc0278fcd4d25bde6f66e063e43a51873de83e99512a9df595e12",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-video-GLideN64.so",
+    "bytes": 3682160,
+    "compressedBytes": 3682160,
+    "sha256": "c2d4ea393b9acc65edf5dc118b54ca2937dc618c2247841dd093304176a65190",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-video-angrylion-plus.so",
+    "bytes": 572928,
+    "compressedBytes": 572928,
+    "sha256": "2f0d33a765c72dbb46f10c774ade9da2411b2cc5578b7efff637b30ff02eac51",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-video-glide64mk2-egl.so",
+    "bytes": 721640,
+    "compressedBytes": 721640,
+    "sha256": "6eef95fa7b03836d4b5e8f14cbbe8edd5692d6528d1298e36671dc79fc75d855",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-video-glide64mk2.so",
+    "bytes": 712936,
+    "compressedBytes": 712936,
+    "sha256": "5c10d28d442ce37cacaba892317319029a0340b4503dd8ac10ff850fdc5e9ce6",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-video-gln64.so",
+    "bytes": 101856,
+    "compressedBytes": 101856,
+    "sha256": "5ffc5aa3492c752a690bae837e8e7ecc28def030ad99f35fccd57a8b7716598f",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-video-parallel.so",
+    "bytes": 4617304,
+    "compressedBytes": 4617304,
+    "sha256": "6ee01f0624513825afc6d0096f48b282d5a27484e3a39b42ad6d23434208fb06",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libmupen64plus-video-rice.so",
+    "bytes": 493584,
+    "compressedBytes": 493584,
+    "sha256": "bbea101792ef16112504fe22ade903c0b1ab2c76123f83e7834a6ea34651c45f",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libn64cpp.so",
+    "bytes": 1330832,
+    "compressedBytes": 1330832,
+    "sha256": "fa2c06d3c09c0d9a4931fa7cd03a3aba15f6ed7ea990d8e4a37b8a5811867c0d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libnatpmp.so",
+    "bytes": 13152,
+    "compressedBytes": 13152,
+    "sha256": "450ce3bd0a295566efe70c7cfa043f3e1c8365bea06f690cd4d9b736c00c130e",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/liboboe.so",
+    "bytes": 259048,
+    "compressedBytes": 259048,
+    "sha256": "2d1ab385a0817273cbcd249ce6488b54a7d31dde193a8bf3037bcd901ea2079f",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libsoundtouch.so",
+    "bytes": 91760,
+    "compressedBytes": 91760,
+    "sha256": "9944e132db1c2362b52cd88b438413d92802847b2174c64ce4dc801a7eaa41e3",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libsoundtouch_fp.so",
+    "bytes": 89992,
+    "compressedBytes": 89992,
+    "sha256": "5fae9c0a403f01415327b1175ac20460a438184075c8da467dcfea56435a002a",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libusb1.0.so",
+    "bytes": 105880,
+    "compressedBytes": 105880,
+    "sha256": "429ae49f0992c95547222cd0345edef0701ec2afad2a52d9abfe3e8e7ba0823d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_online_fbneo.so",
+    "bytes": 72223816,
+    "compressedBytes": 72223816,
+    "sha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_online_n64.so",
+    "bytes": 5486424,
+    "compressedBytes": 5486424,
+    "sha256": "09555f50df2767f078217058648420970024993603217bc9a29066032a8cad9d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_online_neocd.so",
+    "bytes": 1551584,
+    "compressedBytes": 1551584,
+    "sha256": "78a35bc9a9435238d74125e77ae8f8d249ba59e90f07d43f43c84ad5ddc68870",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_online_pcsx.so",
+    "bytes": 1547280,
+    "compressedBytes": 1547280,
+    "sha256": "4de0afbd3bb113a4b9927b5b250860194b485f278d1dced81501dc6555fa18a8",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_mupen64plus_core.so",
+    "bytes": 561056,
+    "compressedBytes": 561056,
+    "sha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+    "bytes": 102360,
+    "compressedBytes": 102360,
+    "sha256": "5f56099c433f29514c864d1eeea2995e3f52b0d15d76eaf125c4f4346a9d6e87",
+    "role": "replacement"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_dolphin_online.so",
+    "bytes": 15781128,
+    "compressedBytes": 15781128,
+    "sha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_dolphin_hook.so",
+    "bytes": 4400,
+    "compressedBytes": 4400,
+    "sha256": "7547dd37533c4352edf7666ef3b5220db08364054578bde7570c388658e0de16",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_dolphin_hook_impl.so",
+    "bytes": 258824,
+    "compressedBytes": 258824,
+    "sha256": "b3f2973bdccfb877cfc10fcaadd40b69e48af39434cc232d02bfc81a1669e264",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_dolphin_file_redirect_hook.so",
+    "bytes": 4184,
+    "compressedBytes": 4184,
+    "sha256": "23347bb99e0e73fde1f6deaf1b39d544ab4e4a5cc9e5f2c61c8d9facf5dfe06c",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_dolphin_gsl_alloc_hook.so",
+    "bytes": 4496,
+    "compressedBytes": 4496,
+    "sha256": "e9254fe5325818c1ef50cf986cd6db9a87d9b3c29c4567cd74e666b512598d02",
+    "role": "preserved"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+    "bytes": 113256,
+    "compressedBytes": 113256,
+    "sha256": "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad",
+    "role": "replacement"
+  },
+  {
+    "path": "lib/arm64-v8a/libstation_psx_online.so",
+    "bytes": 299560,
+    "compressedBytes": 299560,
+    "sha256": "69ac2b703f03826c8f7203b296665c6f2cc34cb944af7c3f758d9033116cade3",
+    "role": "replacement"
+  },
+  {
+    "path": "assets/sony/ps3/native/libe.so",
+    "bytes": 63807464,
+    "compressedBytes": 63807464,
+    "sha256": "5d8fb9b0c2e849df795be50ae767e4443617d7b6af7a9dd2970a21b022e278f3",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps3/native/libfile_redirect_hook.so",
+    "bytes": 4152,
+    "compressedBytes": 4152,
+    "sha256": "f9eb4b29ff765677d7da7f7cd43e3d229bb805229184711223bfbb9286e53e99",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps3/native/libgsl_alloc_hook.so",
+    "bytes": 4464,
+    "compressedBytes": 4464,
+    "sha256": "6f08f828946f6f9728d0c00419541aa827bfbcd2bdf610e145ab7a2561acc1c9",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps3/native/libhardware_ProcessorInfo.so",
+    "bytes": 256720,
+    "compressedBytes": 256720,
+    "sha256": "c063fa372009bdf177b50449f3ec31d7319dfe5f40d5e99f0f652da4610e760a",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps3/native/libhook_impl.so",
+    "bytes": 278080,
+    "compressedBytes": 278080,
+    "sha256": "da054d8d54e46a07c6c64207073899031b4f5a7688b77417bfc812c0ae9c72ea",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps3/native/liblang_System.so",
+    "bytes": 4280,
+    "compressedBytes": 4280,
+    "sha256": "5caf4ce1216f910f2fb290b6887c44afc05882bca830a28089925dc70f02d3eb",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps3/native/libmain_hook.so",
+    "bytes": 4368,
+    "compressedBytes": 4368,
+    "sha256": "71361a99dcdcd375686376f4819b2f2fa2656a540bb1c2161bce99de74b13a0c",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libXss.so",
+    "bytes": 67616,
+    "compressedBytes": 67616,
+    "sha256": "f8f95c98751ff9d9d1d0244a9106e7e89dba76dab3ceff7ef4a7a72c7640365b",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libandroidx.graphics.path.so",
+    "bytes": 10096,
+    "compressedBytes": 10096,
+    "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libbachata_custom_vulkan.so",
+    "bytes": 51728,
+    "compressedBytes": 51728,
+    "sha256": "e6c4ec061bbb34990ecc76326740311c371b24c6d2face37fcd31d7fb2adfb61",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libbachata_host_loader.so",
+    "bytes": 201208,
+    "compressedBytes": 201208,
+    "sha256": "e9d9a01ac27c4369980023a7b20817aa4c158a8bd797c9883bd20386f126e578",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libbachata_lsfg_assets.so",
+    "bytes": 70584,
+    "compressedBytes": 70584,
+    "sha256": "fa91963161361220e8dd35159fb4b17677f4d51a95dcf22c31b3ccac33038a23",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libbachata_native_runtime.so",
+    "bytes": 85157224,
+    "compressedBytes": 85157224,
+    "sha256": "5159ebdf1aa34713217e3598a0c084aa04ce59d623152fdbab501d293957c06a",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libbachata_patch_domain.so",
+    "bytes": 1404080,
+    "compressedBytes": 1404080,
+    "sha256": "3c283a0a1bada853d050c25e2c89532760b70795a4a43587ee8e9a9d73af148e",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libbachata_pkg.so",
+    "bytes": 166360,
+    "compressedBytes": 166360,
+    "sha256": "9e28ee2bc4b4909634a34402e3aa79c03300ed99327eb79c09e080a1995dc0ff",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libbachata_xserver.so",
+    "bytes": 47488,
+    "compressedBytes": 47488,
+    "sha256": "c93437a9df5b3dd4f79a242ca5e748adf172b53a3a75e05aaafc50c84aa1e60c",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libc++_shared.so",
+    "bytes": 1423696,
+    "compressedBytes": 1423696,
+    "sha256": "8fed70ee5cf18534beebe28b525af8e422d08de3a241ccd3db7856f47048eda0",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libdatastore_shared_counter.so",
+    "bytes": 7784,
+    "compressedBytes": 7784,
+    "sha256": "178f89a2c6c9234ddf980dd4cd1f3616186a46b2b932aafa6707abd04c5fd76a",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libfile_redirect_hook.so",
+    "bytes": 4080,
+    "compressedBytes": 4080,
+    "sha256": "88eced08d2196b9f575530f7a720f4cc41f7fee021a0cc96cf0d7224cac44458",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libgsl_alloc_hook.so",
+    "bytes": 4376,
+    "compressedBytes": 4376,
+    "sha256": "aa9e70dc46e299bacfaa79565a3b25ac1f2118ac057b9b402b56bce19fedf628",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libhook_impl.so",
+    "bytes": 38408,
+    "compressedBytes": 38408,
+    "sha256": "d0eb5fbdd9c72d3f78fc12487cbc1bc2028fb394c65550cf3d56aa33b0316e4c",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libmain_hook.so",
+    "bytes": 4296,
+    "compressedBytes": 4296,
+    "sha256": "1ad4ba5f4544a30c67948a129be07c977d515e25e3989fc4f1ba0c9cfffb49c5",
+    "role": "preserved"
+  },
+  {
+    "path": "assets/sony/ps4/native/libxkbcommon.so",
+    "bytes": 330336,
+    "compressedBytes": 330336,
+    "sha256": "92bb8e3f914924f0975c9f529196ec74fbb56e1e6433a3920bf1c462dddbb410",
+    "role": "preserved"
+  }
+]

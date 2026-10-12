@@ -1,0 +1,664 @@
+{
+  "status": "pass",
+  "renderDirectory": "work/complete-dossier-render-publication",
+  "totalDocumentPages": 142,
+  "requestedPages": {
+    "first": 71,
+    "last": 106
+  },
+  "coverageComplete": true,
+  "reviewedCount": 36,
+  "visualOriginalCount": 1,
+  "reusedByteIdenticalCount": 35,
+  "method": "Publicação definitiva: página 104 inspecionada individualmente com view_image(detail=original); outras 35 páginas reutilizadas após conferência SHA256 byte a byte entre identifiers e publication. Histórico por página preserva a inspeção original e as versões aprovadas anteriores.",
+  "checkedAspects": [
+    "clipping",
+    "legibilidade de tabelas e colunas",
+    "glyphs e símbolos",
+    "sobreposição",
+    "cabeçalhos e rodapés",
+    "quebras de linhas/tabelas",
+    "números partidos"
+  ],
+  "pages": [
+    {
+      "page": 71,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Inspeção original anterior reutilizada após SHA256 idêntico.",
+      "sha256": "3fe464c54b5b0dc157d9b12581300ab9d731597d6b91390d1298799c61de3d7d",
+      "image": "work/complete-dossier-render-publication/page-71.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-71.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-71.png",
+        "sha256": "3fe464c54b5b0dc157d9b12581300ab9d731597d6b91390d1298799c61de3d7d",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-71.png",
+        "previousInspectionMode": "reused-byte-identical"
+      }
+    },
+    {
+      "page": 72,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Tabela/continuação, referências e números de duração legíveis.",
+      "sha256": "31022e209affc890d1b1a36a1f0105c1efaf68cc239a1d3db88d82877a408f68",
+      "image": "work/complete-dossier-render-publication/page-72.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-72.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-72.png",
+        "sha256": "31022e209affc890d1b1a36a1f0105c1efaf68cc239a1d3db88d82877a408f68",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-72.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 73,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Texto Sony/PSX e referências legíveis; glyphs/margens livres.",
+      "sha256": "2ee839f8f5e3b593ab45706efeaddff6eea75a114a7e64dcc8a8c1273cb0dfed",
+      "image": "work/complete-dossier-render-publication/page-73.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-73.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-73.png",
+        "sha256": "2ee839f8f5e3b593ab45706efeaddff6eea75a114a7e64dcc8a8c1273cb0dfed",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-73.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 74,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Texto e referências legíveis; fluxo final para75 sem clipping.",
+      "sha256": "06fd0b65ffa66bf92c77250a6ac3fe4e005ee643d895b23e90609615e8d7aefc",
+      "image": "work/complete-dossier-render-publication/page-74.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-74.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-74.png",
+        "sha256": "06fd0b65ffa66bf92c77250a6ac3fe4e005ee643d895b23e90609615e8d7aefc",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-74.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 75,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Texto, cabeçalho de tabela, quatro colunas e rodapé legíveis; nenhuma linha/célula cortada.",
+      "sha256": "fb0afd71965fa53c13a9e2d452a5a4ab73f2e00811bdea7274e554e86541b4ba",
+      "image": "work/complete-dossier-render-publication/page-75.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-75.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-75.png",
+        "sha256": "fb0afd71965fa53c13a9e2d452a5a4ab73f2e00811bdea7274e554e86541b4ba",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-75.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 76,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Texto, cabeçalho de tabela, quatro colunas e rodapé legíveis; nenhuma linha/célula cortada.",
+      "sha256": "df32286e5c2dcb80c9e3262815a76280a0ee9ff6cf5bea24dd7e35cb5b4ee472",
+      "image": "work/complete-dossier-render-publication/page-76.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-76.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-76.png",
+        "sha256": "df32286e5c2dcb80c9e3262815a76280a0ee9ff6cf5bea24dd7e35cb5b4ee472",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-76.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 77,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Texto, cabeçalho de tabela, quatro colunas e rodapé legíveis; nenhuma linha/célula cortada.",
+      "sha256": "1e937b18303d6154df70ca102d3ca4a1105a214cf0c2ce3fb7330d2012245fb2",
+      "image": "work/complete-dossier-render-publication/page-77.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-77.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-77.png",
+        "sha256": "1e937b18303d6154df70ca102d3ca4a1105a214cf0c2ce3fb7330d2012245fb2",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-77.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 78,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz consumidor: todas as células/linhas legíveis e completas; processos/setas e rodapé livres.",
+      "sha256": "554c48baacdec0c345371dff452c80033947124fc97e01044161ed5bf5412bd5",
+      "image": "work/complete-dossier-render-publication/page-78.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-78.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-78.png",
+        "sha256": "554c48baacdec0c345371dff452c80033947124fc97e01044161ed5bf5412bd5",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-78.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 79,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz consumidor: todas as células/linhas legíveis e completas; processos/setas e rodapé livres.",
+      "sha256": "852a6482c90c11aee1c414ccc7809b180a3d8219a350c5948ea747ae8ad5d950",
+      "image": "work/complete-dossier-render-publication/page-79.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-79.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-79.png",
+        "sha256": "852a6482c90c11aee1c414ccc7809b180a3d8219a350c5948ea747ae8ad5d950",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-79.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 80,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Inspeção original anterior reutilizada após SHA256 idêntico.",
+      "sha256": "c7d8c7d4cd4b69ab2e165143a64b8d25f8f082c64ce235dbf81fca3310c97bc0",
+      "image": "work/complete-dossier-render-publication/page-80.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-80.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-80.png",
+        "sha256": "c7d8c7d4cd4b69ab2e165143a64b8d25f8f082c64ce235dbf81fca3310c97bc0",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-80.png",
+        "previousInspectionMode": "reused-byte-identical"
+      }
+    },
+    {
+      "page": 81,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Inspeção original anterior reutilizada após SHA256 idêntico.",
+      "sha256": "91810b73e4d605d710ff8f17c81019be58a3790c82ac9bdd8b56340bf1286772",
+      "image": "work/complete-dossier-render-publication/page-81.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-81.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-81.png",
+        "sha256": "91810b73e4d605d710ff8f17c81019be58a3790c82ac9bdd8b56340bf1286772",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-81.png",
+        "previousInspectionMode": "reused-byte-identical"
+      }
+    },
+    {
+      "page": 82,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz consumidor: todas as células/linhas legíveis e completas; processos/setas e rodapé livres.",
+      "sha256": "52304c5c062883a2107c1e4a7546d769e8478ec74c9fffd8841c8fadd9caafb7",
+      "image": "work/complete-dossier-render-publication/page-82.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-82.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-82.png",
+        "sha256": "52304c5c062883a2107c1e4a7546d769e8478ec74c9fffd8841c8fadd9caafb7",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-82.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 83,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz/gates legíveis e alinhados; cabeçalhos repetidos, unidades e rodapés sem sobreposição.",
+      "sha256": "c454cc6fe1ad687b1ed8221738256b7edafd659c4d5e6735ce5c414070fd1d12",
+      "image": "work/complete-dossier-render-publication/page-83.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-83.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-83.png",
+        "sha256": "c454cc6fe1ad687b1ed8221738256b7edafd659c4d5e6735ce5c414070fd1d12",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-83.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 84,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz/gates legíveis e alinhados; cabeçalhos repetidos, unidades e rodapés sem sobreposição.",
+      "sha256": "7c1bd99880c7cc3747e0ffdb77e4df6ddb0cbaa4fe0933c974983f9be24e6022",
+      "image": "work/complete-dossier-render-publication/page-84.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-84.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-84.png",
+        "sha256": "7c1bd99880c7cc3747e0ffdb77e4df6ddb0cbaa4fe0933c974983f9be24e6022",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-84.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 85,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz/gates legíveis e alinhados; cabeçalhos repetidos, unidades e rodapés sem sobreposição.",
+      "sha256": "67cb5f87a1c83f2f382804a7ab879f32ef41a6b97231703933ae6d5011afee18",
+      "image": "work/complete-dossier-render-publication/page-85.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-85.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-85.png",
+        "sha256": "67cb5f87a1c83f2f382804a7ab879f32ef41a6b97231703933ae6d5011afee18",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-85.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 86,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Rechecagem original final: commits a6b58e9beb12eb564c1b58d9d4c32ed3e7513861 e 524d2ebff08353fda62aacbc5f05f9248ba69b7c íntegros, branches legíveis; tabela, margens, rodapé e números sem cortes ou sobreposição.",
+      "sha256": "ff3e5ddafde02c92fe35e6058306f21ce9f89ab1ed700a2109735d87fc3f674e",
+      "image": "work/complete-dossier-render-publication/page-86.png",
+      "previousInspectionMode": "visual-original-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-86.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-86.png",
+        "sha256": "ff3e5ddafde02c92fe35e6058306f21ce9f89ab1ed700a2109735d87fc3f674e",
+        "mode": "visual-original-final",
+        "reusedFrom": null,
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 87,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Texto e tabela estados legíveis; símbolos ≥ e números preservados.",
+      "sha256": "e4e8ff648ec519dba7983fcb39655df02129dc51a9d2cea3913d4b3c9f28a29b",
+      "image": "work/complete-dossier-render-publication/page-87.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-87.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-87.png",
+        "sha256": "e4e8ff648ec519dba7983fcb39655df02129dc51a9d2cea3913d4b3c9f28a29b",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-87.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 88,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Correção confirmada: heartbeat mostra60 s inteiro numa linha; tabela e rodapé sem cortes.",
+      "sha256": "bf9a0d7f926efdce6a080fe4052409af3b005f74abbd4a4f1d6ef78b5b22eb01",
+      "image": "work/complete-dossier-render-publication/page-88.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-88.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-88.png",
+        "sha256": "bf9a0d7f926efdce6a080fe4052409af3b005f74abbd4a4f1d6ef78b5b22eb01",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-88.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 89,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Tabelas/continuações e texto servidor legíveis; números e referências não cortados, rodapé separado.",
+      "sha256": "7c453b941ecd2042a457e3df5b68700f98e44b580277a8857872cfc153565810",
+      "image": "work/complete-dossier-render-publication/page-89.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-89.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-89.png",
+        "sha256": "7c453b941ecd2042a457e3df5b68700f98e44b580277a8857872cfc153565810",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-89.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 90,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Tabelas/continuações e texto servidor legíveis; números e referências não cortados, rodapé separado.",
+      "sha256": "994cbeddb8adf826ccf047f1eb41d4b00820c8bb71322a8ffafb4f2e12718a1f",
+      "image": "work/complete-dossier-render-publication/page-90.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-90.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-90.png",
+        "sha256": "994cbeddb8adf826ccf047f1eb41d4b00820c8bb71322a8ffafb4f2e12718a1f",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-90.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 91,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Tabelas/continuações e texto servidor legíveis; números e referências não cortados, rodapé separado.",
+      "sha256": "453aed1559bf6c08b4a1b3c712c224e5235a4e2efc65a7c4a1d238a97193a49b",
+      "image": "work/complete-dossier-render-publication/page-91.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-91.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-91.png",
+        "sha256": "453aed1559bf6c08b4a1b3c712c224e5235a4e2efc65a7c4a1d238a97193a49b",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-91.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 92,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Texto comercial e títulos completos, números/IDs legíveis dentro das margens.",
+      "sha256": "7b024eee9d89ed5a15a069ef9faa72a95b81d9ecc400b6837922658d91676898",
+      "image": "work/complete-dossier-render-publication/page-92.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-92.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-92.png",
+        "sha256": "7b024eee9d89ed5a15a069ef9faa72a95b81d9ecc400b6837922658d91676898",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-92.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 93,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Tabela endpoints com células longas legíveis; nenhuma linha partida entre páginas.",
+      "sha256": "717e2bde7623e6999771ed3d02800856322270ff7b89a71e05c965c5cbf87bcd",
+      "image": "work/complete-dossier-render-publication/page-93.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-93.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-93.png",
+        "sha256": "717e2bde7623e6999771ed3d02800856322270ff7b89a71e05c965c5cbf87bcd",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-93.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 94,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Continuação tabela endpoints, códigos/esquemas/números legíveis; rodapé separado.",
+      "sha256": "33298477b66f47530512c84b677c677e62b087caff653cbb8815096fcdc4cfd4",
+      "image": "work/complete-dossier-render-publication/page-94.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-94.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-94.png",
+        "sha256": "33298477b66f47530512c84b677c677e62b087caff653cbb8815096fcdc4cfd4",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-94.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 95,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz endpoints/erros legível; células técnicas longas quebram dentro das margens sem cortes, números íntegros.",
+      "sha256": "45cf957f2a15396c354c74ab4164914f7671ef87a3f3065726cd2f0c4be27941",
+      "image": "work/complete-dossier-render-publication/page-95.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-95.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-95.png",
+        "sha256": "45cf957f2a15396c354c74ab4164914f7671ef87a3f3065726cd2f0c4be27941",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-95.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 96,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz endpoints/erros legível; células técnicas longas quebram dentro das margens sem cortes, números íntegros.",
+      "sha256": "09f4c519afc779928c5b903c5a98bf28e5908340fa26c13aeecbf0f58fd2375b",
+      "image": "work/complete-dossier-render-publication/page-96.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-96.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-96.png",
+        "sha256": "09f4c519afc779928c5b903c5a98bf28e5908340fa26c13aeecbf0f58fd2375b",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-96.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 97,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz endpoints/erros legível; células técnicas longas quebram dentro das margens sem cortes, números íntegros.",
+      "sha256": "c7cfc6e0fb8e526848479e57231d4a0a4efc429f7d34a1d0f57bb538786c301e",
+      "image": "work/complete-dossier-render-publication/page-97.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-97.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-97.png",
+        "sha256": "c7cfc6e0fb8e526848479e57231d4a0a4efc429f7d34a1d0f57bb538786c301e",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-97.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 98,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Erros/limites/capítulos legíveis; números inteiros e margens/rodapé livres, sem sobreposição.",
+      "sha256": "7d14550a798871a607f2e0c12fc31a5c8ded948e16dc7f152f1442b8771bcd32",
+      "image": "work/complete-dossier-render-publication/page-98.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-98.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-98.png",
+        "sha256": "7d14550a798871a607f2e0c12fc31a5c8ded948e16dc7f152f1442b8771bcd32",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-98.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 99,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Erros/limites/capítulos legíveis; números inteiros e margens/rodapé livres, sem sobreposição.",
+      "sha256": "6718dcca860be358e00c135f96534ff69ad22d11580b53192d6161b9461dcafc",
+      "image": "work/complete-dossier-render-publication/page-99.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-99.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-99.png",
+        "sha256": "6718dcca860be358e00c135f96534ff69ad22d11580b53192d6161b9461dcafc",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-99.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 100,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Erros/limites/capítulos legíveis; números inteiros e margens/rodapé livres, sem sobreposição.",
+      "sha256": "e5a3574767b182461afc9bf29f4d227f4d9dee971c833dfa1bcfaff194117fd1",
+      "image": "work/complete-dossier-render-publication/page-100.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-100.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-100.png",
+        "sha256": "e5a3574767b182461afc9bf29f4d227f4d9dee971c833dfa1bcfaff194117fd1",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-100.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 101,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz multiplayer/legado em quatro colunas legível; schemas e números íntegros, linhas mantidas completas e rodapé livre.",
+      "sha256": "f7565de47902054e2e2520ac2172b59588149c57d436e9a0e048d4b073aa5980",
+      "image": "work/complete-dossier-render-publication/page-101.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-101.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-101.png",
+        "sha256": "f7565de47902054e2e2520ac2172b59588149c57d436e9a0e048d4b073aa5980",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-101.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 102,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz multiplayer/legado em quatro colunas legível; schemas e números íntegros, linhas mantidas completas e rodapé livre.",
+      "sha256": "e4ccecb17a74021af76bfef2614ee36c09fc9038e5b5ee3fede706a1a17cf7b6",
+      "image": "work/complete-dossier-render-publication/page-102.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-102.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-102.png",
+        "sha256": "e4ccecb17a74021af76bfef2614ee36c09fc9038e5b5ee3fede706a1a17cf7b6",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-102.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 103,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Matriz multiplayer/legado em quatro colunas legível; schemas e números íntegros, linhas mantidas completas e rodapé livre.",
+      "sha256": "ecba7a61a35524c42933736c60e7f113bc35b710fbba0a7aaa62e4bd9de13e85",
+      "image": "work/complete-dossier-render-publication/page-103.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-103.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-103.png",
+        "sha256": "ecba7a61a35524c42933736c60e7f113bc35b710fbba0a7aaa62e4bd9de13e85",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-103.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 104,
+      "result": "pass",
+      "mode": "visual-original-publication",
+      "notes": "Página 104 da publicação inspecionada individualmente em detalhe original: referência a6b58e9/docs524d2eb íntegra, caminhos legíveis, tabela de quatro colunas sem clipping, sobreposição, glyphs faltantes ou números partidos; cabeçalho e rodapé livres.",
+      "sha256": "fdf9a83979031a5356e31beabff8224cd2af32e31a13f67aadb8701491459c81",
+      "image": "work/complete-dossier-render-publication/page-104.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": null,
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-104.png",
+        "sha256": "8248707db5bad238f803f930ae5887adf99ab1a7ddce4979381a03138bc6bdf6",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-104.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 105,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Tabela/texto/identidades longas legíveis; nenhum clipping, sobreposição ou número partido, rodapé livre.",
+      "sha256": "0c4f4d5b4e9369e43f080693e4bfc778667073735868aec68f11abc1914ec092",
+      "image": "work/complete-dossier-render-publication/page-105.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-105.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-105.png",
+        "sha256": "0c4f4d5b4e9369e43f080693e4bfc778667073735868aec68f11abc1914ec092",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-105.png",
+        "previousInspectionMode": "visual-original"
+      }
+    },
+    {
+      "page": 106,
+      "result": "pass",
+      "mode": "reused-byte-identical-publication",
+      "notes": "Tabela/texto/identidades longas legíveis; nenhum clipping, sobreposição ou número partido, rodapé livre.",
+      "sha256": "b3e47df82ea77a9dec5c8d9df4d4fa98be98fee2645fa8f7e76236dcce5074dd",
+      "image": "work/complete-dossier-render-publication/page-106.png",
+      "previousInspectionMode": "reused-byte-identical-final",
+      "reusedFrom": "work/complete-dossier-render-identifiers/page-106.png",
+      "priorPublicationInspection": {
+        "image": "work/complete-dossier-render-identifiers/page-106.png",
+        "sha256": "b3e47df82ea77a9dec5c8d9df4d4fa98be98fee2645fa8f7e76236dcce5074dd",
+        "mode": "reused-byte-identical-final",
+        "reusedFrom": "work/complete-dossier-render-verified/page-106.png",
+        "previousInspectionMode": "visual-original"
+      }
+    }
+  ],
+  "issues": [],
+  "resolvedPriorIssues": [
+    {
+      "page": 88,
+      "issue": "Número60 partido entre linhas na célula heartbeat/Limite do render anterior",
+      "resolution": "Render definitivo mostra60 s inteiro e legível numa linha; rechecado visualmente."
+    }
+  ],
+  "contentEdited": false,
+  "productiveSourcesEdited": false,
+  "finalIdentifierComparison": "work/qa-final-identifier-comparison.json",
+  "identifierChecks": {
+    "page": 86,
+    "serverRuntimeCommit": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+    "serverDeliveryCommit": "524d2ebff08353fda62aacbc5f05f9248ba69b7c",
+    "result": "pass"
+  },
+  "finalPublicationComparison": "work/qa-publication-comparison.json",
+  "publicationReferenceChecks": {
+    "page": 104,
+    "reference": "a6b58e9/docs524d2eb",
+    "result": "pass"
+  },
+  "publicationChangedPages": [
+    104
+  ],
+  "publicationComparisonSha256": "43f3dc2457b649e44864333d609b33eb16564b2d119acf448386c3027a265db4"
+}

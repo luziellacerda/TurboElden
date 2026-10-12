@@ -1,0 +1,314 @@
+[
+  [
+    "3ds",
+    "LibretroPlayer: azahar · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "Arcade",
+    "MAME4droid Current · :mame",
+    "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+    "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+  ],
+  [
+    "Atomiswave",
+    "Flycast Android · :flycast",
+    "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+    "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+  ],
+  [
+    "Dreamcast",
+    "Flycast Android · :flycast",
+    "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+    "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+  ],
+  [
+    "GameCube",
+    "Dolphin Android · :dolphin",
+    "Arquivo real iso/gcz/wbfs/rvz no registro; GC/Wii usam configurações e input próprios.",
+    "Conferir portas GC/Wiimote, touch/hotplug e saves; saída humana e retorno. Gates: G01, G02, G04, G09"
+  ],
+  [
+    "Gameboy",
+    "LibretroPlayer: gambatte · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "Gameboy Color",
+    "LibretroPlayer: gambatte · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "Gba",
+    "LibretroPlayer: mgba · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "Master System",
+    "LibretroPlayer: genesis_plus_gx · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "MegaDrive",
+    "MD.emu EX+ · :megadrive",
+    "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+    "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+  ],
+  [
+    "MegaDrive - BR",
+    "MD.emu EX+ · :megadrive",
+    "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+    "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+  ],
+  [
+    "Neo Geo",
+    "MAME4droid Current · :mame",
+    "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+    "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+  ],
+  [
+    "Neo Geo CD",
+    "MAME4droid Current · :mame",
+    "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+    "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+  ],
+  [
+    "Nintendinho",
+    "LibretroPlayer: fceumm · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "Nintendo 64",
+    "Mupen64Plus AE · :n64 → :n64core",
+    "API28; ROM n64/z64/v64 segundo registro; formato completo do owner deve ser conferido.",
+    "Menu oficial, toque+físico, save nativo; no online usar saves isolados e G05. Gates: G01, G02, G05, G09"
+  ],
+  [
+    "Nintendo 64 - BR",
+    "Mupen64Plus AE · :n64 → :n64core",
+    "API28; ROM n64/z64/v64 segundo registro; formato completo do owner deve ser conferido.",
+    "Menu oficial, toque+físico, save nativo; no online usar saves isolados e G05. Gates: G01, G02, G05, G09"
+  ],
+  [
+    "Nintendo DS",
+    "LibretroPlayer: melonds · main (applicationId)",
+    "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "Odyssey 2",
+    "LibretroPlayer: o2em · main (applicationId)",
+    "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "PSP",
+    "PPSSPP Android · :psp",
+    "Arquivo real enviado ao PPSSPP1.20.4; extensões do perfil não garantem suporte de cada pacote.",
+    "ShowTouchControls manual persistente, menu próprio e memstick; conferir saída sem login novo. Gates: G01, G04, G10"
+  ],
+  [
+    "Pc Engine",
+    "LibretroPlayer: mednafen_pce_fast · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "Pc Engine cd",
+    "LibretroPlayer: mednafen_pce · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "Playstation 1",
+    "LibretroPlayer: pcsx_rearmed · main (applicationId)",
+    "Core PCSX normal presente na matriz; HLE online só por edição/aprovação e2 portas.",
+    "Save state não equivale a save nativo; offline e PXL1 têm storage distinto. Gates: G01, G02, G06, G10"
+  ],
+  [
+    "Playstation 2",
+    "ARMSX2 Android · :ps2",
+    "ARMSX2 2.7.2, BIOS/conteúdo validado; SDK26 do artefato não garante mínimo do app.",
+    "Renderer/menu/input próprio; conciliar DEX do overlay; save e retorno official. Gates: G01, G04, G10"
+  ],
+  [
+    "Playstation 2 - BR",
+    "ARMSX2 Android · :ps2",
+    "ARMSX2 2.7.2, BIOS/conteúdo validado; SDK26 do artefato não garante mínimo do app.",
+    "Renderer/menu/input próprio; conciliar DEX do overlay; save e retorno official. Gates: G01, G04, G10"
+  ],
+  [
+    "Psp - BR",
+    "PPSSPP Android · :psp",
+    "Arquivo real enviado ao PPSSPP1.20.4; extensões do perfil não garantem suporte de cada pacote.",
+    "ShowTouchControls manual persistente, menu próprio e memstick; conferir saída sem login novo. Gates: G01, G04, G10"
+  ],
+  [
+    "Psvita",
+    "Vita3K Android · :psvita",
+    "Guard de wrapper API28; instalação/firmware/conteúdo precisam estar preparados.",
+    "Touch hide no controle conectado e retorno após última desconexão; conferir save. Gates: G01, G04, G10"
+  ],
+  [
+    "Super Nintendo",
+    "Snes9x EX+ · :snes",
+    "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+    "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+  ],
+  [
+    "Super Nintendo - BR",
+    "Snes9x EX+ · :snes",
+    "Motor Snes9x ou MD.emu preservado; arquivo e extensão do owner.",
+    "AUTO do controle respeita ON/OFF manual; conferir teclado/hotplug, save nativo e state. Gates: G01, G04, G09"
+  ],
+  [
+    "Switch",
+    "Yuzu Android (unchanged) · main (applicationId)",
+    "Bootstrap Android do próprio pacote; conteúdo/keys/firmware privados; novo roms/switch.",
+    "Conferir overlay, renderer, save, back e retorno; não mover biblioteca existente. Gates: G01, G04, G10"
+  ],
+  [
+    "atari2600",
+    "LibretroPlayer: stella · main (applicationId)",
+    "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "atari7800",
+    "LibretroPlayer: prosystem · main (applicationId)",
+    "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "colecovision",
+    "LibretroPlayer: bluemsx · main (applicationId)",
+    "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "cps1",
+    "MAME4droid Current · :mame",
+    "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+    "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+  ],
+  [
+    "cps2",
+    "MAME4droid Current · :mame",
+    "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+    "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+  ],
+  [
+    "cps3",
+    "MAME4droid Current · :mame",
+    "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+    "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+  ],
+  [
+    "fbneo",
+    "LibretroPlayer: fbneo · main (applicationId)",
+    "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "fds",
+    "LibretroPlayer: fceumm · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "gameandwatch",
+    "LibretroPlayer: gw · main (applicationId)",
+    "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "gamegear",
+    "LibretroPlayer: genesis_plus_gx · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "jaguar",
+    "LibretroPlayer: virtualjaguar · main (applicationId)",
+    "Dependência ausente na observação R119/R120: inventário atual precisa ser conferido antes de iniciar.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "mame",
+    "MAME4droid Current · :mame",
+    "ROMset/driver/parent/BIOS compatíveis; cartucho ZIP; Neo Geo CD somente CHDv5 autônomo no launcher.",
+    "Menu do MAME, toque/físico e save nativo; NeoCD validar BIOS automática e driver CDZ. Gates: G01, G04, G10"
+  ],
+  [
+    "naomi",
+    "Flycast Android · :flycast",
+    "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+    "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+  ],
+  [
+    "naomi2",
+    "Flycast Android · :flycast",
+    "Imagem válida e dependências do hardware; BIOS/saves são específicos DC/Naomi/Atomiswave.",
+    "Conferir VGamepad/hotplug, VMU/NVRAM, retorno oficial e reabertura. Gates: G01, G04, G10"
+  ],
+  [
+    "saturn",
+    "Saturn integrado · :saturn",
+    "Owner Yaba Sanshiro1.20.46; BIOS/imagem do formato real.",
+    "Touch manual, pad físico separado; nunca releaseAll universal porque afeta físico. Gates: G01, G04, G10"
+  ],
+  [
+    "sega32x",
+    "LibretroPlayer: picodrive · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "supergrafx",
+    "LibretroPlayer: mednafen_supergrafx · main (applicationId)",
+    "Core da linha deve existir; conteúdo/BIOS e formato completo dependem do core exato.",
+    "Input/menu/saves originais; API universal de touch e cleanup interno não comprovados. Gates: G01, G04, G10"
+  ],
+  [
+    "wii",
+    "Dolphin Android · :dolphin",
+    "Arquivo real iso/gcz/wbfs/rvz no registro; GC/Wii usam configurações e input próprios.",
+    "Conferir portas GC/Wiimote, touch/hotplug e saves; saída humana e retorno. Gates: G01, G02, G04, G09"
+  ],
+  [
+    "wiiu",
+    "Cemu Android · :wiiu",
+    "Guard de wrapper API30+Vulkan1.1; Cemu0.5.2 experimental; conteúdo executável/keys válidos.",
+    "StateFlow/input overlay próprio; conferir GamePad, save, background, retorno e som. Gates: G01, G04, G10"
+  ],
+  [
+    "xbox",
+    "x1box/xemu · :xbox → :xboxemu",
+    "Guard de wrapper API29 e X1 BOX1.2.8; dependências/disco/storage do xemu.",
+    "Conferir settings vs game process; input físico/touch, saves, retorno humano. Gates: G01, G04, G10"
+  ],
+  [
+    "xbox360",
+    "Xendroid · :xbox360 → :xbox360emu",
+    "Guard de wrapper API30+Vulkan1.1; XenDroid experimental; conteúdo do owner.",
+    "Touch Compose manual; conferir som/render/controller, saves e duas etapas de processo. Gates: G01, G04, G10"
+  ],
+  [
+    "PlayStation3",
+    "aPS3e2.43 · :station_ps3",
+    "API28/ARM64; firmware preparado; ISO real ou pasta válida do owner, chave própria quando aplicável.",
+    "R13418 campos+touch; saída humana→quit worker; conferir save/input/Superfície e próximo boot. Gates G01,G07,G09."
+  ],
+  [
+    "PlayStation4",
+    "BachataS4 0.2.4 · :station_ps4",
+    "API31/ARM64/GPU compatível; PKG real preparado na biblioteca privada.",
+    "R13411 campos+touch;4 slots; background não pausa; stop→fim run→áudio/input/superfície. Gates G01,G07,G08,G09."
+  ]
+]

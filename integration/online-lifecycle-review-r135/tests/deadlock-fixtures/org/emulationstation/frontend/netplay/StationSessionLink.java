@@ -1,0 +1,1 @@
+package org.emulationstation.frontend.netplay;final class StationSessionLink{void close(){}}

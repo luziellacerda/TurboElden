@@ -1,0 +1,1 @@
+package android.app;import android.content.*;import android.os.*;public class Service extends Context{public IBinder onBind(Intent i){return null;}public boolean onUnbind(Intent i){return false;}public void onDestroy(){}}

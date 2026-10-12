@@ -1,0 +1,21 @@
+{
+  "status": "pass-source-only-scoped-overlay",
+  "scope": "3 Java production sources, baseline diffs, JVM probes, recipe and receipts; no execution/build/device access",
+  "overlay": "work/publication-app/integration/online-lifecycle-review-r135",
+  "checked": [
+    "Dolphin closeByHuman changed only monitor boundary; state+authorization remain serialized, transport close outside Session lock, Stop/closeBlocking/owner close remain worker.",
+    "GameSession event4 only calls helper for multiplayer; event4 remains idempotent and departure worker distinct; source diff limited to this branch+categorical error log.",
+    "Helper retries only exact409GENERATION_MISMATCH; verifies own membership,9 identity fields and strictly greater generation; fresh requestId; single retry; confirmation target absent.",
+    "Wrong/absent own room never mutates another room; network/profile/generic409/500/cancel/stale snapshot never authorize fresh Leave.",
+    "6 source digests (3overlay+3baseline) match test receipt; compile receipt production Java8/API34/no fixtures payload/noDEX/APK/installed.",
+    "JVM probes exercise real production Session/transport callback and event4 with fixtures; deterministic baseline reproductions and fixed completions recorded."
+  ],
+  "newConcreteFailures": [],
+  "remainingLimits": [
+    "transport.close and nativeCloseTransport remain synchronous on UI; scoped patch removes demonstrated ABBA but doesn't certify all UI latency/native locks.",
+    "Failure during native cleanup may leave closed transport/human-authorized session with retry; inherited behavior outside this exact change, physical cleanup still requires gate.",
+    "Network-departure failure remains categorical unconfirmed with no durable intent/reopen guarantee.",
+    "Tests mock authentication/IO/JNI edges; do not independently prove signed response acceptance, server activation or Android/gameplay behavior.",
+    "No claim that reported consumer stuck-exit cause was proven on a phone."
+  ]
+}

@@ -1,0 +1,1050 @@
+{
+  "schema": "station.build.source.index.v1",
+  "files": [
+    {
+      "path": "integration/console-panel-r133/recipe/assemble_apk.py",
+      "bytes": 6524,
+      "sha256": "d0accb19c99bca6fc9ec648317de397300f05ae6af7a60ebaa53e821fd4331c3"
+    },
+    {
+      "path": "integration/console-panel-r133/recipe/build_native.py",
+      "bytes": 7634,
+      "sha256": "ae6b785056118aa3965dd4220d4438fadf58467622535b10c550827feaa8d5b6"
+    },
+    {
+      "path": "integration/console-panel-r133/recipe/build_runtime_identity.py",
+      "bytes": 23064,
+      "sha256": "a1e79bd9dd1498c1ad2dae95b48ccaf307495b2f51e9017c7624f0dd75bd37d9"
+    },
+    {
+      "path": "integration/console-panel-r133/recipe/common.py",
+      "bytes": 3728,
+      "sha256": "c680a8e148b00e1dd3f0d2f690a6f0c3868e18c3659005b63debd6ba133cd5f7"
+    },
+    {
+      "path": "integration/console-panel-r133/recipe/patch_console_panel.py",
+      "bytes": 11748,
+      "sha256": "77bf718af505f20f924c0b9468adf7e26e482dfdc7a519f1cea74b442e68512e"
+    },
+    {
+      "path": "integration/console-panel-r133/recipe/prepare_art_inputs.py",
+      "bytes": 5586,
+      "sha256": "44f99996cd7313edf8c044c8522e804bdaa9b0eeae3d53cb5dc340dd55b98216"
+    },
+    {
+      "path": "integration/console-panel-r133/recipe/verify_final.py",
+      "bytes": 4179,
+      "sha256": "b1ab4d39cd00ceb89212a4d811c033b8300630d899b29d3835758b84ff500e94"
+    },
+    {
+      "path": "integration/local-sony-demos/java/org/emulationstation/frontend/station/StationLocalSonyDemos.java",
+      "bytes": 10692,
+      "sha256": "ebfe7b90420961a42b97d9c795d78a4eb8b47b77b624b521fe12b14fb6476931"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/assemble_apk.py",
+      "bytes": 181,
+      "sha256": "946a39aae210498ebdfdf9c1b1b9659bb34435e945f7ef46b9790dc562bfe282"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/AssembleScopedPartition.java",
+      "bytes": 9746,
+      "sha256": "f2cbf40f179685dca3057b1e9c623f6a65fedb74fd1b3eac472d1c56bf1078e4"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/build_demo_payloads.py",
+      "bytes": 24759,
+      "sha256": "34e92c5dc6d9ac3b7cce2509d79dde0beb27236e32a84ae92d8ff8c203b17011"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/build_runtime_identity.py",
+      "bytes": 8739,
+      "sha256": "2c200577100d6af5c9b49a5c3af439e4bfe1e2c170ed03900eca8f7eb7f2f940"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/build_unsigned.py",
+      "bytes": 9220,
+      "sha256": "42c92259489312f0f4cf2b0feb60ce4220f673206b711a7aad47cbc614fa72aa"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/patch_demo_native.py",
+      "bytes": 1967,
+      "sha256": "bbe2310465a2881cf9ee3bec810c23d3027857a552a47d39f4d938a16c330038"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/patch_frontend.py",
+      "bytes": 6004,
+      "sha256": "35bfd5e78ce728ebc51cb4f349c0382557d29ad0bd67f338752501cd0950648c"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/patch_sony_activity.py",
+      "bytes": 6710,
+      "sha256": "4408ffdb86cc25ca5f1da6c42394c74e7b478b0c4f7a02d4033a1fdd823eddb7"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/patch_sony_settings.py",
+      "bytes": 29269,
+      "sha256": "7f59494fa49bce072dda0733dbecd07081a7b6207d4d5fa918ad69ce0fd9edaf"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/patch_video_loop.py",
+      "bytes": 17582,
+      "sha256": "c91505a0aa452cdafb4e507738dc105fdd6071d7d329b223153873e8d4ed5791"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/pipeline_common.py",
+      "bytes": 12323,
+      "sha256": "f4bf9e67e447748485eb1e0b52974eec1e1df13479778336f220ef11f2835535"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/sony_media.py",
+      "bytes": 16426,
+      "sha256": "58f8107ba11b2252f2c1d60201d73cb0af84df7f0764085dc02467bb70719ae2"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/verify_final.py",
+      "bytes": 1589,
+      "sha256": "195a9f5b72e1ebed2e1a2ccbfb2a860bded44fc4a5789e58d70041d3a1f8db8d"
+    },
+    {
+      "path": "integration/local-sony-demos/recipe/VerifyScopedPartition.java",
+      "bytes": 3024,
+      "sha256": "32b627f5334d1c7b62c94ab2fef05d10df44707241f9379416fb44f6464f8acd"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/java/org/emulationstation/frontend/offline/StationSonyOfflineActivity.java",
+      "bytes": 11230,
+      "sha256": "e7701a030ed54a16dabdd7e66fb8cc785112722ebc747fc686e12d0ba16a5d88"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/java/org/emulationstation/frontend/offline/StationSonyOfflinePolicy.java",
+      "bytes": 1718,
+      "sha256": "960da6dfdf66bef5925164db87712412da8b49586bd1705488967236465bf21f"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/native/offline_routes.h",
+      "bytes": 1122,
+      "sha256": "085b5a630aa4a6e18673bebd69c9bd82609259ba1e842c579ffeb894ff3ffadb"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/recipe/assemble_apk.py",
+      "bytes": 472,
+      "sha256": "bcce272cf5052075982cee8e1d60dbe3be88e5f92f023d583320e12eae4ebdc8"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/recipe/build_offline_payloads.py",
+      "bytes": 11178,
+      "sha256": "ebbd5346914c44056f7043dad8dedc61c5d27474a8d4d3ebb5776165bacaeeae"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/recipe/build_runtime_identity.py",
+      "bytes": 2620,
+      "sha256": "db4775fa0c55dea8c0d3ab44667a9425c8ccf69d4767401fac48fe8997f365ed"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/recipe/patch_manifest.py",
+      "bytes": 5773,
+      "sha256": "83320c1f2d78ce22385e685c5ccde0d8eb589608e422e14fb646ea8783d73eef"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/recipe/patch_native.py",
+      "bytes": 1611,
+      "sha256": "4dbeade73fa89f9beee5ed6f0bc2853c68406e29c82d0441c488ac0a37d2d41f"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/recipe/patch_platforms.py",
+      "bytes": 2616,
+      "sha256": "e4cf6ce90f0aac0a1ee63f8db76488382f1a30debc4cca605bbe2f8c657d4977"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/recipe/pipeline_common.py",
+      "bytes": 1901,
+      "sha256": "3c00b49e07052ff8dc0301fbbe0b3e7ff926d084f2da7db3e125097fd9e7b8ec"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/recipe/verify_final.py",
+      "bytes": 874,
+      "sha256": "4dea6f40b38e75aba934cd32e712629b7ae0c8661569888272fbfad375b5d6fb"
+    },
+    {
+      "path": "integration/ps3-ps4-offline/tests/OfflinePolicyProbe.java",
+      "bytes": 2616,
+      "sha256": "a137507adad60adf12cfe88333e55aa4fbc3c3fa66bcee4bac92b50b18d33e18"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerEndpoint.java",
+      "bytes": 7468,
+      "sha256": "4e1836a8abd9c3e63475981a0b1af426edaa9533d6190c9309df2e5fb429ab96"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+      "bytes": 7352,
+      "sha256": "2b8fcbf368e38362e9f46701534471172ae388c1e163b2bb99f765a438ca7da2"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java",
+      "bytes": 26176,
+      "sha256": "63222e1586e4398dbb6c51d2ca4ba99893b63e454f588acec2c9296bd9869559"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationOnlineGame.java",
+      "bytes": 14062,
+      "sha256": "032c87b7435a0ef7ab38cc2a98532dae6f226593ff366909f16547bacefeebd8"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxApplication.java",
+      "bytes": 582,
+      "sha256": "f9a2681a4986ac89eb9e0178df523f0cba5b288afbf7b8bbded834c788346ede"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxBridge.java",
+      "bytes": 2672,
+      "sha256": "d4a52a90ba9f6ff5eb3e8e220b417d171df7f2115cd17467e3b1b57aa4967260"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxEndpoint.java",
+      "bytes": 2118,
+      "sha256": "d1f9eb7a2d295f11e20c030dda24b8cbe553422534ecc0bf629b358b2b8a1ed5"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxExitGate.java",
+      "bytes": 704,
+      "sha256": "784e9d33cd06ac45659d17371266332592bac296bbf11680f3a585218eb501cd"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxLaunch.java",
+      "bytes": 17491,
+      "sha256": "e2f9d2fd68ca8978eb1b9483d18ffc0fd7cd9499a12c31bcd4bde991a2d7a349"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxOnlineActivity.java",
+      "bytes": 4993,
+      "sha256": "482a7d14c7bda8d5cd2ad93ed248b6e314ff600fda4c49196b7f342e752ceecf"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxPolicy.java",
+      "bytes": 1103,
+      "sha256": "602f742ff0b31844305131ea2bb310768f9d5489a41303ad75cb9c2b83591731"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java",
+      "bytes": 16017,
+      "sha256": "73fdcb47ad0472dd0f4a398020e647af8da5f82b4ab3af78dbbbb457be29288b"
+    },
+    {
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "bytes": 126977,
+      "sha256": "cbe080a2f7b9d99c4ce36f7ba19e6a292f92e29ba2117623af14a2863eda3fb1"
+    },
+    {
+      "path": "integration/psx-online/native/PsxPinnedOptions.h",
+      "bytes": 4957,
+      "sha256": "a7538301ae7d93b0b815d6536300035745135cf3dd15eb333d1711a0e633b193"
+    },
+    {
+      "path": "integration/psx-online/native/StationPsxEntry.cpp",
+      "bytes": 17835,
+      "sha256": "901c0fff549c02f88da79e4144de478ba59d9a833a944a6dca1fb93c43db86ed"
+    },
+    {
+      "path": "integration/psx-online/native/StationPsxOwner.cpp",
+      "bytes": 22247,
+      "sha256": "93f64655982dbd34664eb5e4b5d6f96bc6c597a35e8bd2ff3f2d0593dde272a5"
+    },
+    {
+      "path": "integration/psx-online/native/StationPsxProtocol.cpp",
+      "bytes": 29094,
+      "sha256": "01e4d93dce252e543930ce5feb76062da482dd354d6db9b404699aee17190625"
+    },
+    {
+      "path": "integration/psx-online/native/StationPsxSha256.cpp",
+      "bytes": 2670,
+      "sha256": "0459d697ed286705b2fc9c11aa6204aed54e1e05840fd448d8d06e48d491cd3c"
+    },
+    {
+      "path": "integration/psx-online/recipe/assemble_apk.py",
+      "bytes": 22076,
+      "sha256": "1d8c07e825fd28da68381a5e3b41cc9e6191cb6669ece1ff8f9a98624855f7a1"
+    },
+    {
+      "path": "integration/psx-online/recipe/assemble_optin_dex.py",
+      "bytes": 10024,
+      "sha256": "e031fb646673f097866c2f7a5d5c81b6b5cf335e0e2dc968c36c21021f868b61"
+    },
+    {
+      "path": "integration/psx-online/recipe/AssembleDolphinPartition.java",
+      "bytes": 1506,
+      "sha256": "f41e1317bf0bf5e5430b47d70e0f8d8cbfc729f87b37c901a1dbe6810090972a"
+    },
+    {
+      "path": "integration/psx-online/recipe/build_entry.py",
+      "bytes": 4526,
+      "sha256": "08f5409cb5c9eb7cbc4c8ab370d0a1d7184156a6668bb63b29eb212cfd92f058"
+    },
+    {
+      "path": "integration/psx-online/recipe/build_owner.py",
+      "bytes": 2275,
+      "sha256": "28bea7cf8eb0c2a078fd542220596306cf10055e5884fab94e0d8955e87117c8"
+    },
+    {
+      "path": "integration/psx-online/recipe/build_protocol.py",
+      "bytes": 4145,
+      "sha256": "63ee910b401084ecd542889e7f6513087156c45cbe7e7880afaa151c42beb5ff"
+    },
+    {
+      "path": "integration/psx-online/recipe/build_runtime_identity.py",
+      "bytes": 11618,
+      "sha256": "19289e76db7ff1159e93fd1b6a93ebb984ce062b251b8ede2ebc747e187175d0"
+    },
+    {
+      "path": "integration/psx-online/recipe/compile_java.py",
+      "bytes": 4440,
+      "sha256": "0f8ad14b7656866c86bd021355100d07c0c2962ce1fd42d348d2a331dfd190a8"
+    },
+    {
+      "path": "integration/psx-online/recipe/DecodeDolphinPartition.java",
+      "bytes": 1556,
+      "sha256": "d1365cf8cce05fb08c6e04dbcc47e9b154af268637bf0d768c32f851420c2b67"
+    },
+    {
+      "path": "integration/psx-online/recipe/DecodeOneClass.java",
+      "bytes": 1415,
+      "sha256": "d42ed8f2cac30362568388b8a2e43eb6f7b531564a324c8860a21aa7b681a5ae"
+    },
+    {
+      "path": "integration/psx-online/recipe/extract_core_defaults.py",
+      "bytes": 5058,
+      "sha256": "a46686dbccb379ed57d3d68823cd910d9207f844aaf008b664d8d3853259e5a7"
+    },
+    {
+      "path": "integration/psx-online/recipe/generate_profile.py",
+      "bytes": 5323,
+      "sha256": "0bb19bf56dfc7b039312509766c45a33e97d8ee289f63ffd9dd0fde74ad8d766"
+    },
+    {
+      "path": "integration/psx-online/recipe/generate_routes.py",
+      "bytes": 2836,
+      "sha256": "fc4519dfe9448062d8be56743368d75e90533177a8a37de1e5caed29770667bc"
+    },
+    {
+      "path": "integration/psx-online/recipe/patch_factory_optin.py",
+      "bytes": 2727,
+      "sha256": "9338c89536c03af1ab19037038ab2a0147b1c1c60cc588d431670246b6a3dd8b"
+    },
+    {
+      "path": "integration/psx-online/recipe/patch_manifest.py",
+      "bytes": 4406,
+      "sha256": "0c44cd82b9ad528ffe27bb352037e96b4fc9ea3cf1cd2bd3d40e8779cb510ecb"
+    },
+    {
+      "path": "integration/psx-online/recipe/patch_sdl_optin.py",
+      "bytes": 3591,
+      "sha256": "e7e03348e45966cd3e1849a86be4b0088deb0164db08ef4b240a778f300ba6b7"
+    },
+    {
+      "path": "integration/psx-online/recipe/probe_owner_abi.py",
+      "bytes": 7594,
+      "sha256": "f1893e0f72da940101b71c7b0f441b774ec560ebed9443098f89bc7dd20881bd"
+    },
+    {
+      "path": "integration/psx-online/recipe/run_owner_probe.py",
+      "bytes": 3096,
+      "sha256": "c4895fc553d67031c86f5a4a12f8552e52af9949e4f76a20193bb177dbdbd767"
+    },
+    {
+      "path": "integration/psx-online/recipe/verify_final.py",
+      "bytes": 6133,
+      "sha256": "9d7c40088a848367df431fac8088ad778a139bcc31bcb4ef10a219ce4a085ddf"
+    },
+    {
+      "path": "integration/psx-online/recipe/VerifyOptinPartition.java",
+      "bytes": 1965,
+      "sha256": "ccea0a83f20582cb2337a72e8968cb822558d1fca0ecac19ba6ca649fdf0f4b2"
+    },
+    {
+      "path": "integration/psx-online/tests/fixtures/org/emulationstation/frontend/netplay/StationPsxBridge.java",
+      "bytes": 1200,
+      "sha256": "ebb3ba9f4ddf28ef6adfc66595d96b2b2823d9efc4e38a223083ea7cf7a1def9"
+    },
+    {
+      "path": "integration/psx-online/tests/owner_probe.cpp",
+      "bytes": 15501,
+      "sha256": "6e0c848c0f7b9a48d0cac211608f6165be2230c3b8cbc0692074fc58b0c1a397"
+    },
+    {
+      "path": "integration/psx-online/tests/package_probe.py",
+      "bytes": 8777,
+      "sha256": "dbf244305ff30d22342aabe2504e7d574feb9155deee3568d5e537ec9be920db"
+    },
+    {
+      "path": "integration/psx-online/tests/protocol_probe.cpp",
+      "bytes": 22295,
+      "sha256": "8422cdd5f91e32ba25556d0d38d0a56974926e012aac91fc04ee40722391a004"
+    },
+    {
+      "path": "integration/psx-online/tests/run_endpoint_probe.py",
+      "bytes": 2890,
+      "sha256": "aee5128dd832f72a3fdf8b947c387ba6c7a9bf64c2c5f91eababa6785a4c6088"
+    },
+    {
+      "path": "integration/psx-online/tests/run_session_probe.py",
+      "bytes": 2452,
+      "sha256": "3e9961e9ecc7bde01038678639cc35df396170742ed3903f0b5897fc61ad7d28"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/app/Activity.java",
+      "bytes": 554,
+      "sha256": "b9dad35aedfe5cc9b788bda16507a8ad8398f499e215045806d23b0eed9e030e"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/app/AlertDialog.java",
+      "bytes": 771,
+      "sha256": "bba7e0ec53a084c3bfd374eaebb2c65e4d86160dc42fc40b7495f102fdb6ec46"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/app/Dialog.java",
+      "bytes": 435,
+      "sha256": "67dfedbed0d75d9d48a2f8a42548b984ce791e3316cb8dd6711e104a20970009"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/content/Context.java",
+      "bytes": 813,
+      "sha256": "ac296447fc33aa8213ae3408604a8ad04a1d833e75b86d4580cb1eb836d391c1"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/content/DialogInterface.java",
+      "bytes": 249,
+      "sha256": "21d038946cd61eca9670519c383ac907811c1f3bf86dab931f06c110fcef87fc"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/content/Intent.java",
+      "bytes": 337,
+      "sha256": "8d04e7b92b67de588ae5a77f9bdc21d6ca24d72fe18bc3190b75521ba34a0221"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/content/pm/ApplicationInfo.java",
+      "bytes": 149,
+      "sha256": "409249cc9a76249abea6da9d0476b3daea9974605c951aade6a26a242ce1595c"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/content/res/AssetManager.java",
+      "bytes": 246,
+      "sha256": "7c2dcb5e1e9d4297a089e9e0e2e898bb7b3bf6b417f8845ee93e9c54c86e1416"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/os/Build.java",
+      "bytes": 139,
+      "sha256": "dc22480f84e846a0901d8c18723ffd03bf9fad5378c22899466f86b53b61cb2b"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/os/Bundle.java",
+      "bytes": 528,
+      "sha256": "579f088cde333139a3abed41aa2b4fe9611b7453e110e948548d20ce687b0793"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/os/Environment.java",
+      "bytes": 202,
+      "sha256": "4684c9b9264c9127539fb47202b3cf8564c545e60a3df7a3630bb0b5b4ab7017"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/os/Handler.java",
+      "bytes": 128,
+      "sha256": "657132d3bd0ce99affaafa0927a71788d75dd0a5c209c1a268e47349e8fbc278"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/os/Looper.java",
+      "bytes": 159,
+      "sha256": "762c9fe2b1fdae53bda22e598b4b3a3a5c0aa82e0237d827307ddf0530321b25"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/os/ResultReceiver.java",
+      "bytes": 332,
+      "sha256": "1165a8a90ac8e7cb305c3de9a17f6cee28641767e2ed373456b72365879789c9"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/os/SystemClock.java",
+      "bytes": 182,
+      "sha256": "2200763eacf80e01e598c0ed229aaf23e85eec2412137233c8952c84c4f8bb03"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/util/Log.java",
+      "bytes": 198,
+      "sha256": "3e04a8d4c1f1c09663702691bc53232e3af33c2d010a5ac55fd69fc0231a6ec3"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/view/Gravity.java",
+      "bytes": 133,
+      "sha256": "2b9f0799c5f7dbb358dc8d02f393b1876c8d798a963ba388b68c2bcc08d86071"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/view/Window.java",
+      "bytes": 241,
+      "sha256": "5a4cf27ccca8655a2b4e87c741811b28d15b148b9bec35d7e74c88e738654573"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/view/WindowManager.java",
+      "bytes": 189,
+      "sha256": "6505f4dcad0b921391b101df7bc305f396295494db5a60a73413d4781c55d840"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/widget/LinearLayout.java",
+      "bytes": 284,
+      "sha256": "e44c988629186d75b3b01f5d4e77fdfe6ab03007bd942bbd1e6dd250ce239485"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/android/widget/TextView.java",
+      "bytes": 255,
+      "sha256": "85118590d7fb6f202cfcaf26e4f3655673357c04e5ded902c10050b53c1c8595"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationGameSession.java",
+      "bytes": 195,
+      "sha256": "3a437af749fe3c10184a007e0123d281e2c02e67b8da0d0d23b012b34113ceb6"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationMultiplayerProfile.java",
+      "bytes": 714,
+      "sha256": "c378e8bccbcb9971e578e512e4787085a488c752ffc3ca8832aea5811823a989"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationMultiplayerSession.java",
+      "bytes": 1070,
+      "sha256": "764f94a5f9a79df8589f62d1cd6ad640d0a33508bf4e03b000e143b457f586f1"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationOnlineGame.java",
+      "bytes": 1478,
+      "sha256": "dc03d1d1caf08914a34a17eca5a0749f91f6ee87c5410386858d3e37616da25d"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationPsxBridge.java",
+      "bytes": 2439,
+      "sha256": "33f65c70f52c08d5ef0804f555b669ec55bdd50301ed0dec0868e949879bc37f"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationPsxEndpoint.java",
+      "bytes": 176,
+      "sha256": "6802b30d2f06fc31b89723e16deaa15a137521cf533f1979ee453959707bbc08"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationPsxOnlineActivity.java",
+      "bytes": 318,
+      "sha256": "faac084e48eb9ea85d5d4598a18a8d93b5e3d8925cedfa57fa1a01684cfe7e34"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationSessionChannel.java",
+      "bytes": 316,
+      "sha256": "eb21f2c4f139529b75f839739c88e6c40ce47a5699da77442c9f7b60840fb881"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/netplay/StationSessionLink.java",
+      "bytes": 315,
+      "sha256": "23442f67d42c791fc403440fa339c078a69f7e45fd74490c9672ae5734826f07"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/emulationstation/frontend/station/StationApi.java",
+      "bytes": 188,
+      "sha256": "9d957059fe75a56b2c8aa7f974a324d83187845a056432a012be37e28fefc3c4"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/json/JSONArray.java",
+      "bytes": 326,
+      "sha256": "1b36d15da2c58107ad29e9a665dc2cf70726684404fb5d059cbb877132d6554b"
+    },
+    {
+      "path": "integration/psx-online/tests/session-fixtures/org/json/JSONObject.java",
+      "bytes": 1478,
+      "sha256": "23e2b1293a842cd7b2b8250b3d3c220e10a91698371aec9186a05096e44a6377"
+    },
+    {
+      "path": "integration/psx-online/tests/StationPsxEndpointProbe.java",
+      "bytes": 15624,
+      "sha256": "b6e62383510310d7ffdd0890418d5df4e166f08ed75508a0fcc22f6321d6b9a9"
+    },
+    {
+      "path": "integration/psx-online/tests/StationPsxExitGateProbe.java",
+      "bytes": 1777,
+      "sha256": "7f21b2c1901af56a64ba7619f3bf88b1956ad4d22d3f14222af1f9cd0fcdcecf"
+    },
+    {
+      "path": "integration/psx-online/tests/StationPsxSessionProbe.java",
+      "bytes": 16734,
+      "sha256": "8cae7420fae2c89c23dd2431825a7c2369b06ad0aaacc2c373bfccb33edd7640"
+    },
+    {
+      "path": "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "bytes": 26664,
+      "sha256": "e880c20753cc8fe0fc794a133cd50f8cbae698a0cf13c7ac379374e709814547"
+    },
+    {
+      "path": "integration/settings-refinement-r134/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "bytes": 28266,
+      "sha256": "0fc2875f32295acbabcf6a5ee31b923bee61bf56c157996419d7d4415d3dfaf6"
+    },
+    {
+      "path": "integration/settings-refinement-r134/java/org/emulationstation/frontend/station/StationGraphicsPanel.java",
+      "bytes": 31556,
+      "sha256": "e642ead7d345f08a9e677f42975bea93c127e7d3788d171129f2d464165d0d47"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/aggregate_payloads.py",
+      "bytes": 8872,
+      "sha256": "ec34f6c7937b7649d02137b4c944307888b5f9824fee34727762ed2a6a9e6fd4"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/assemble_apk.py",
+      "bytes": 7835,
+      "sha256": "f0f04fa3640230fcab2a78e6dc13852540c73040665eb1ccb6314379ea4d251c"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/AssembleScopedPartition.java",
+      "bytes": 8424,
+      "sha256": "5ea794aad4cb177080e331b09d449419e352020ac61a6b9ea4194e32b4b1b022"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/build_java_payloads.py",
+      "bytes": 17149,
+      "sha256": "b2835a4c35a0fed6b49dead28f55a2953796beab98890d3f9be9af6b68308b21"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/build_runtime_identity.py",
+      "bytes": 34263,
+      "sha256": "6ab25ed68d80c9d422fb13472b46fba5e902b5890242b43a57bf217de24663a7"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/common.py",
+      "bytes": 3656,
+      "sha256": "4319021a2a5ad6970946384a4bb2f5f48907405d64b788a2f7dc4aeec922a077"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/DecodeDolphinPartition.java",
+      "bytes": 1556,
+      "sha256": "d1365cf8cce05fb08c6e04dbcc47e9b154af268637bf0d768c32f851420c2b67"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/patch_settings_labels.py",
+      "bytes": 5034,
+      "sha256": "c83b4dd8e38b4fe895a93b0330d9fcf849dbf8715f2a9895433244c397ae6f46"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/verify_final.py",
+      "bytes": 4966,
+      "sha256": "521826e9a78c2994c762f824f8706912b81901dfe371db4a76eb7de08cb14eb4"
+    },
+    {
+      "path": "integration/settings-refinement-r134/recipe/VerifyScopedPartition.java",
+      "bytes": 7698,
+      "sha256": "13e7284c075775257eae411c39bc6c41714cbbd260707d61126e437bec8f3957"
+    },
+    {
+      "path": "integration/sony-internal/composition/java/org/emulationstation/frontend/sony/StationSonyAssets.java",
+      "bytes": 22402,
+      "sha256": "cd760fe0bcf187b1dd146ce381a2c8a7e1f3e1d02341b99c13ab4cc1b975d153"
+    },
+    {
+      "path": "integration/sony-internal/composition/recipe/prepare_assets.py",
+      "bytes": 18717,
+      "sha256": "89a29170f81e4a96b1b32d87311e186463c58ee9dbc61ed67141165e75176f04"
+    },
+    {
+      "path": "integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyComponentFactory.java",
+      "bytes": 4563,
+      "sha256": "db7086e5ee9f00680f61f29fb1a7b8331906d8eb4d48b4cf205a2006878ab29a"
+    },
+    {
+      "path": "integration/sony-internal/java/org/emulationstation/frontend/sony/StationSonyLaunchActivity.java",
+      "bytes": 6601,
+      "sha256": "6765dad71deb2964f6a406d06efdb039e5af394e2ef8708a5e481b7c0b12ee69"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/aenu/aps3e/Emulator.java",
+      "bytes": 2492,
+      "sha256": "337a76adb8af8570aea687e090b2435b647e5f00c11708224b38a6be0cb1feec"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/aenu/emulator/Emulator.java",
+      "bytes": 3563,
+      "sha256": "fbadac53409b72eee65aa201ec6946fb2f89be695263dbed7f30e9b160bf2bac"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/aenu/hardware/ProcessorInfo.java",
+      "bytes": 254,
+      "sha256": "91cf20e281f583f02b84e3b6d511a818935b029263f3181bdcb01250b03a0e30"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/aenu/lang/System.java",
+      "bytes": 365,
+      "sha256": "ba061ce5ec5a88b31ff7b7d0a7ccd58940316e8153b0eeb1a0601fd0f3b4304b"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Activity.java",
+      "bytes": 16671,
+      "sha256": "b1353b5530f4f5249a063b8fb30dccb34bccb68f117530baedbb1cbcf017983b"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Application.java",
+      "bytes": 381,
+      "sha256": "6b588b3de321094e008ca65cb4cfd1c33fb613617e8e20f488b5c4789a18c8b7"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3AssetPaths.java",
+      "bytes": 2615,
+      "sha256": "8f86f3352e4ccdabf3f0c4e004636d985764b5d94975c9871a5b609805842141"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Bootstrap.java",
+      "bytes": 5884,
+      "sha256": "f628e0d938a547ec1cb1474bf5f3b32ce2c8f21fad25037900bdaec8636e7ea8"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Firmware.java",
+      "bytes": 4485,
+      "sha256": "13651fc5f22089380c9e117c755d60770464e4baf2d6b24cabeeae90fdceac6a"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3Input.java",
+      "bytes": 5253,
+      "sha256": "74d45165b65260874c1ab75ca2176626a7a8ce0f5678b0bfbcb275c6ddc487e1"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3LocalizedStrings.java",
+      "bytes": 22895,
+      "sha256": "df7906b7168a083e43217618b2a40fa4fdafd878d88dc7fa6b996766a9cc330a"
+    },
+    {
+      "path": "integration/sony-internal/ps3/java/org/emulationstation/frontend/sony/Ps3TouchControls.java",
+      "bytes": 4498,
+      "sha256": "7b9e385f20e7a31c5b40619e57613477fd4fbb0f163e4073441c85a6713017d6"
+    },
+    {
+      "path": "integration/sony-internal/ps3/recipe/generate_owner_assets.py",
+      "bytes": 3118,
+      "sha256": "a6e3d7a7040722a81b4631cdc79bf98972bc02ba94b0b6c9e6ad200012203509"
+    },
+    {
+      "path": "integration/sony-internal/ps3/recipe/inspect_official.py",
+      "bytes": 6874,
+      "sha256": "d52b24b42c66ba7c3a56d08171376173324e421530868721f83ced34266c442a"
+    },
+    {
+      "path": "integration/sony-internal/ps3/recipe/verify_jni.py",
+      "bytes": 3575,
+      "sha256": "3ee01441b580c675f58ed18ee9c6e79b0de163649ac49591589157639fcbb198"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/com/bachatas4/android/runtime/pkg/PkgExtractor.java",
+      "bytes": 495,
+      "sha256": "8bfc3ef448b0b5491ef1baa3e1c3464f60472cff1bc60f8b7cff0b612f213dee"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/com/bachatas4/android/runtime/pkg/PkgExtractResult.java",
+      "bytes": 294,
+      "sha256": "22f82b1aba26aa6a73d8b438cbc682950cd8ded7861a09b1aa81e71e0fb2d228"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/com/bachatas4/android/runtime/pkg/PkgProbeResult.java",
+      "bytes": 536,
+      "sha256": "2f1d638503230a6240f0d7fc7a2eaba66a03d83f4a79af4ee1c90f26b7c38bad"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/com/bachatas4/android/runtime/pkg/PkgProgressListener.java",
+      "bytes": 226,
+      "sha256": "cd67004ed459068353f98f9425b62b4e04b502c41426e1815479b63ba6a86504"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/com/bachatas4/android/runtime/pkg/PkgRsa.java",
+      "bytes": 2584,
+      "sha256": "8806ea16377f4ef18bab1aa71651143a2d086414100af344a02decba18d46293"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/com/bachatas4/android/runtime/pkg/PkgStatus.java",
+      "bytes": 170,
+      "sha256": "a07f477f1e638b9201f90e0aeb8d26bbb1a6f81eec93a14bc7b503edda4186de"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/com/bachatas4/android/runtime/process/NativeRuntimeBridge.java",
+      "bytes": 802,
+      "sha256": "60ff3d8a59eb646317a07da15e36269b5670785d838eada30c3460837066fed4"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/org/emulationstation/ps4child/Ps4NativeEntry.java",
+      "bytes": 2651,
+      "sha256": "38f4e6b20003bffb049d70873491fcb531a49d9a1a19e97ffd84f69fed1c9245"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/org/libsdl/app/HIDDeviceManager.java",
+      "bytes": 752,
+      "sha256": "10679d53b73c644bd144812d59229dd3d888b72cf3cc041670a17d0711c025e8"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/org/libsdl/app/SDLActivity.java",
+      "bytes": 3046,
+      "sha256": "0f3158eb67e2ef0fce95d25c7a943bd0c9b83ce0e2ff5ab0bcbcefeaac247d53"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/org/libsdl/app/SDLAudioManager.java",
+      "bytes": 356,
+      "sha256": "aa062fc30d09ae3a570b92ddfef44c3c405d1dc283930c60681b67b17ea8886a"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/org/libsdl/app/SDLControllerManager.java",
+      "bytes": 979,
+      "sha256": "a381bdb11f6ef0454c4cf442b07f8cf5ba592a002d8b3c49a38de070c297d867"
+    },
+    {
+      "path": "integration/sony-internal/ps4/child-java/org/libsdl/app/SDLInputConnection.java",
+      "bytes": 293,
+      "sha256": "35e1bd7484570fc9f5de1f4b4cd2972303ff123a98549ba4b27257f15c4c1265"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Activity.java",
+      "bytes": 15959,
+      "sha256": "1401c1a71c926d373e77ddff96f943ef50f3831cfbb2b8fd810e93221693a1e0"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Application.java",
+      "bytes": 278,
+      "sha256": "9a57e8df1236851a4129719fbb4b31ea9cf537f8c29c45604d4a467d14a1aace"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Audio.java",
+      "bytes": 7352,
+      "sha256": "4f15fa79a3ee5822b79ff80b8a55c5154af506f4399a03a9d54995bbf877b0ae"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4ClassLoader.java",
+      "bytes": 1117,
+      "sha256": "201f1f428c41f5e84dcb14799c2106ac3c66892544ef91c73adce6aa48bc67ab"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Control.java",
+      "bytes": 9771,
+      "sha256": "6a7b65a34785baa828a8ed4960e92c7c098ccdbaf80a436b28f16837d45130ae"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Game.java",
+      "bytes": 7508,
+      "sha256": "60dd6a971036c7e40ca06360bdd9855e05d90cc1529781e4d1cb3a65b323a877"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Runtime.java",
+      "bytes": 6478,
+      "sha256": "187d1ef052ea8c5f0c3dd089ec5fe3a5ad9bffa1b20629a7f3530c14c51c8d1c"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4Touch.java",
+      "bytes": 5924,
+      "sha256": "fbf4c10245b4756a388f8ea598f759d9d254fc6249cf62fc19a1ff5e58173518"
+    },
+    {
+      "path": "integration/sony-internal/ps4/java/org/emulationstation/frontend/sony/Ps4UnixServer.java",
+      "bytes": 2387,
+      "sha256": "9dce635ca8da1e043b547938be8dbd6bccc53fa2152eebb40a77540b991a9650"
+    },
+    {
+      "path": "integration/sony-internal/ps4/recipe/build_owner.py",
+      "bytes": 7925,
+      "sha256": "96fc3cf862a01f7ee14497b2df0b713e137eb37448b8afcce4ce98e48aa0461b"
+    },
+    {
+      "path": "integration/sony-internal/recipe/assemble_apk.py",
+      "bytes": 14662,
+      "sha256": "83de4c796e55189769338cdfa41dbae563d6f7867b5f2bd9f9325cafd4642c06"
+    },
+    {
+      "path": "integration/sony-internal/recipe/build_runtime_identity.py",
+      "bytes": 17708,
+      "sha256": "6f28ceb525276621b45a214cf6fd479b2beeb816d9edab262ca1a65e05b38274"
+    },
+    {
+      "path": "integration/sony-internal/recipe/compile_host.py",
+      "bytes": 7113,
+      "sha256": "927d17d9459b71b6b83e78b230d0bc1c9c2b8cb49ee9f5fa720d0d3272b3f621"
+    },
+    {
+      "path": "integration/sony-internal/recipe/patch_manifest.py",
+      "bytes": 9170,
+      "sha256": "55067f557a3c63cca2c8685ea3e7a33e811be1b6d981f80f079d51f3547ce023"
+    },
+    {
+      "path": "integration/sony-internal/recipe/verify_final.py",
+      "bytes": 2258,
+      "sha256": "349905b04d68fdc7a6fe7abdfd854a9ec5b5206a52a62c182285896537122129"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/native/sony_system_info_rows.h",
+      "bytes": 1952,
+      "sha256": "80f24440749e1b0eb47428ecb1d6a5cd09646b6b70a758bc8bf9e1ce78a78bc9"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/assemble_apk.py",
+      "bytes": 6166,
+      "sha256": "599f47f343f39ad04fe048dbbe2c6271a70856f0eef1cef3dd3750d1bfbcbc03"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/AssembleScopedPartition.java",
+      "bytes": 9731,
+      "sha256": "c7f83e2ffc422c6f1745c86438995b27acda814e6fb2983b95b385efbc76f5b8"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/build_native.py",
+      "bytes": 9659,
+      "sha256": "b0d6d98cd11e6add998e0c07bb3d391f2ad770d7dc97fe1dc6c7113f7993a9a4"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/build_runtime_identity.py",
+      "bytes": 29965,
+      "sha256": "21fd2ea981c30c44c99511b9fa86cee8a04dcf3a0537b167325cd73b7efce15b"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/build_switch_payload.py",
+      "bytes": 9571,
+      "sha256": "426b1e1ba8dfc2f90e8f91312c29dbab48433f9364fd328f610404bf12a77893"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/common.py",
+      "bytes": 3524,
+      "sha256": "268230041e5560c8de4e549a7b55d3e0ab63cb23c069bab46ec9eaec97e4e460"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/patch_loading.py",
+      "bytes": 10802,
+      "sha256": "b5baed2ac3d6f5625eeb818d3e9ee45fb73d35d0bd5ef0f03f80adbab77e05b1"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/patch_sony_synopsis.py",
+      "bytes": 8023,
+      "sha256": "f79f0b5db3b287e68e3b9879f0124cfaaed43ed7c9b0634784dc23bb8434e2ec"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/patch_switch_path.py",
+      "bytes": 8892,
+      "sha256": "c560ce892e7db36b3acff9f4c8ea381af383bd11fa3439b71c89083e6676e646"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/r132_startup_loading.h",
+      "bytes": 2410,
+      "sha256": "0863bc3704f9c3ad393f9d8361bc205cbc15514f8adfbd4e5cfc784202b4bf19"
+    },
+    {
+      "path": "integration/startup-cleanup-r132/recipe/verify_final.py",
+      "bytes": 4234,
+      "sha256": "43bafc1dfc172109875b8679044a56ea7e773fe87aa88bf3b9ab133a3f006e3a"
+    },
+    {
+      "path": "tooling/release/compile_current.py",
+      "bytes": 47660,
+      "sha256": "0009341406e25b578a44e387c3c9f79c4b36fbaea405e4fe97336d773a95a4ac"
+    },
+    {
+      "path": "tooling/release/finalize_verified.py",
+      "bytes": 10334,
+      "sha256": "51f2e500411952b365994ab559ccc0b48c9f1d01b80534c9a186aefb633b2920"
+    },
+    {
+      "path": "tooling/release/install_current.py",
+      "bytes": 20181,
+      "sha256": "98fde21e001000d7ec2013e5d1b7899c3735869d08a4e7c97d45c6cfa26272e1"
+    },
+    {
+      "path": "versions/station-mupen-online-r125-20261011/recipes/AssembleMupen.java",
+      "bytes": 1469,
+      "sha256": "65d6f6ed825954f130f95d3c419afa37a0e934a72d30d3b3985a17db9582c9a6"
+    },
+    {
+      "path": "versions/station-mupen-online-r125-20261011/recipes/build_native.py",
+      "bytes": 9686,
+      "sha256": "cbaea3529eb2d94123df653fdf66b3a5abb1d33959bb789df304c672757c0788"
+    },
+    {
+      "path": "versions/station-mupen-online-r125-20261011/recipes/build_runtime_identity.py",
+      "bytes": 19993,
+      "sha256": "fdb79db3e354f3359d00980a1a00e7dec9d5fcbfed27892d4c42fbd4af1b2a16"
+    },
+    {
+      "path": "versions/station-mupen-online-r125-20261011/recipes/compile_java.py",
+      "bytes": 3576,
+      "sha256": "59c3a7fdf4e6a7bf52405fd911748f878bd82bf0e144127774afb1803a3d0933"
+    },
+    {
+      "path": "versions/station-mupen-online-r125-20261011/recipes/package_r125.py",
+      "bytes": 8060,
+      "sha256": "aead29ad937168cfe612ce15c978e0f84eaa4d54a0c4e804bdb294c68c0e2c42"
+    },
+    {
+      "path": "versions/station-mupen-online-r125-20261011/recipes/patch_manifest.py",
+      "bytes": 4094,
+      "sha256": "1da7e078e4ed911caed3be56a91c3cc902cf954856a39827f8f9c80f5be60fea"
+    },
+    {
+      "path": "versions/station-mupen-online-r125-20261011/recipes/patch_mupen_smali.py",
+      "bytes": 16052,
+      "sha256": "354d0aa5ca7044e04925a7c47920e4f3e4a424be17ddfc13250cfd41318a9a9a"
+    },
+    {
+      "path": "versions/station-mupen-online-r125-20261011/recipes/verify_final.py",
+      "bytes": 3737,
+      "sha256": "3b5885736898fae5115181b60d20d5d57f8d6bffc60c1e33b24935b55d7ccc89"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/AssembleDolphinPartition.java",
+      "bytes": 1506,
+      "sha256": "f41e1317bf0bf5e5430b47d70e0f8d8cbfc729f87b37c901a1dbe6810090972a"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/build_runtime_identity.py",
+      "bytes": 24249,
+      "sha256": "de118216baf9e6b6bf133a95e4ab30c6b4d83f779c070304b641b6c1cac6c66d"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/compile_java.py",
+      "bytes": 3662,
+      "sha256": "8b62f8f4e6056ab62e7bb1c6821ee68db916745f019152207df4de55874a8c30"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/DecodeDolphinPartition.java",
+      "bytes": 1556,
+      "sha256": "d1365cf8cce05fb08c6e04dbcc47e9b154af268637bf0d768c32f851420c2b67"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/fetch_dependencies.py",
+      "bytes": 7347,
+      "sha256": "5aa223301734cfff986ee708b637eeaf09e035a727aca839daf54563ac1d2ac9"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/finalize_native.py",
+      "bytes": 6462,
+      "sha256": "db3532e47465ddb27f9ea16cd8fa549c2577d64056ad8b4492e4aac947492f1c"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/generate_source.py",
+      "bytes": 18244,
+      "sha256": "62f3dd530b2b13fcd3556719c3bd476483715beb3ac20ca8c24de159bfd7f791"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/package_r126.py",
+      "bytes": 9242,
+      "sha256": "7ed51fece7a6a461adb2fc5948eb5cf293fb67a530a75c6add4e3688d30f82f5"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/patch_dolphin_smali.py",
+      "bytes": 13575,
+      "sha256": "5df71fb4d44d6fed1fe91a851ffaee05463607019314e3e0b82d10080fb6aab4"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/patch_manifest.py",
+      "bytes": 6575,
+      "sha256": "ed29f0ce9b907a5391836079b1159392545edd8be1011de1c9c461897bc31da1"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/prepare_hooks.py",
+      "bytes": 2888,
+      "sha256": "e37912330709de23cb93579f4c7ce74f09ab21ce0c754c9bed3d14a2e4a971f6"
+    },
+    {
+      "path": "versions/station-dolphin-online-r126-20261011/recipe/verify_final.py",
+      "bytes": 4242,
+      "sha256": "cd3c3e2d41fafb0883aa2c8f4cd2ebc211a18c46dc1a569e02950a712388f2cc"
+    }
+  ]
+}

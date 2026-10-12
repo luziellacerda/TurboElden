@@ -1,0 +1,5 @@
+*.json -text
+*.gz -text
+*.zip -text
+*.docx -text
+*.md text eol=lf

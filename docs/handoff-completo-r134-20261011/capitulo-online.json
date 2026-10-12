@@ -1,0 +1,806 @@
+{
+  "sections": [
+    {
+      "title": "Online: versão efetiva e limites desta leitura",
+      "paragraphs": [
+        "Este capítulo descreve a composição R134, fonte executável 4f9039eb9ce13907ce043870bfe1f6e294888556, APK SHA-256 f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2, 2.714.991.631 bytes. A mudança R134 concentra-se no painel de efeitos e configurações PS3/PS4. A composição conserva os emuladores, cores, controles, opções, autenticação e protocolo online; renova quatro identidades porque o fingerprint incorpora compartilhados do pacote. Um ID da R133 não representa a R134, embora o core continue igual. [ON-01, ON-02]",
+        "As fontes online são uma composição explícita: a base Java completa da R124, o overlay N64 R125, o overlay Dolphin R126 e o overlay PSX em integration/psx-online. A receita compile_java.py verifica hashes das fontes congeladas antes de compor as classes. A R134 preserva as classes online; DEX28 só permite StationGraphicsPanel, DEX40 só permite Ps3Activity/Ps4Activity e classes internas. Não escolher uma Activity histórica pela data do arquivo. [ON-03]",
+        "Há seis estados a registrar separadamente: código implementado; pacote compilado/assinado/verificado; instalação do APK exato; preparo do kit e dos perfis; aplicação protegida no servidor; partida física validada. O recibo de instalação mais recente e a seção de instalação consolidada deste dossiê prevalecem sobre o installed=false dos documentos de preparação. Nenhuma instalação autoriza inferir autenticação, ativação do servidor, gameplay, controles ou temperatura. Os valores técnicos abaixo não incluem token, licença, chave privada, senha, serial de aparelho ou conteúdo de jogo."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Inventário de endpoints consumidos pelo aplicativo",
+      "paragraphs": [
+        "O contrato Android usa rotas relativas à raiz /v1/station/. O domínio/hostname configurado não concede autoridade por si só: o cliente verifica o envelope assinado e os vínculos esperados. A tabela descreve método, finalidade e condição de consumo. As rotas C# de autenticação/biblioteca e online foram lidas no commit servidor a6b58e9; as duas rotas de mídia estão implementadas no cliente, mas não foram encontradas nessa árvore de servidor examinada. Essa ausência não é diagnóstico de uma requisição de produção, que não foi executada. [ON-04, ON-05, ON-06]",
+        "As rotas /ready são telemetria administrativa local. /ready/station/online exige conexão loopback; diagnostics também verifica Host local e rejeita cabeçalhos de encaminhamento. Não usá-las como endpoint público nem como prova de aprovação de um jogo. HTTP 200, PONG, serverReady ou presença de uma biblioteca também não substituem um snapshot multiplayer v3 assinado para o conteúdo e engine atuais."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Método e rota",
+            "Função real",
+            "Condição/resultado"
+          ],
+          "rows": [
+            [
+              "POST /v1/station/activations/challenge",
+              "Desafio para ativar acesso por código",
+              "Identidade de produto/app/aparelho; resposta activation-challenge/v1; prazo de 60 s"
+            ],
+            [
+              "POST /v1/station/activations/complete",
+              "Concluir ativação assinada pelo aparelho",
+              "Mesmo challengeId/nonce/código/chave; resposta activated/v1"
+            ],
+            [
+              "POST /v1/station/challenges",
+              "Desafio de sessão para licença/aparelho autorizado",
+              "Resposta session-challenge/v1; prazo de 60 s"
+            ],
+            [
+              "POST /v1/station/sessions",
+              "Abrir sessão autenticada",
+              "Envelope do aparelho; resposta session/v1; validade de 180 s"
+            ],
+            [
+              "GET /v1/station/me",
+              "Nome de exibição/perfil",
+              "Bearer+prova quando negociada; profile/v1"
+            ],
+            [
+              "GET /v1/station/catalog?metadata=1",
+              "Catálogo assinado e metadados",
+              "catalog/v1; cache não cria autorização"
+            ],
+            [
+              "GET /v1/station/covers/{coverId}",
+              "Bytes da capa autorizada",
+              "Autenticação e ID válido; MIME/tamanho limitados no cliente"
+            ],
+            [
+              "POST /v1/station/downloads/authorize",
+              "Grant para um item do catálogo",
+              "request-download/v1; resposta download-grant/v1"
+            ],
+            [
+              "GET /v1/station/artifacts/{grantId}",
+              "Consumir grant e transmitir artefato",
+              "Mesmo aparelho/licença/sessão; bytes/tamanho/hash do descriptor"
+            ],
+            [
+              "POST /v1/station/online/command",
+              "Presença/social e sala legada",
+              "enter/heartbeat/chat privado/bloqueio; envelope online/v1"
+            ],
+            [
+              "POST /v1/station/online/events",
+              "Eventos/presença por revisão",
+              "requestId/instance/revision/page; espera limitada"
+            ],
+            [
+              "GET /v1/station/online/relay",
+              "Relay histórico v1 ou recovery v2",
+              "Upgrade WSS; StationRelay ticket; subprotocolo correto"
+            ],
+            [
+              "POST /v1/station/online/multiplayer/command",
+              "Salas/perfis/controle multiplayer v3",
+              "12 ações; Bearer+prova; snapshot multiplayerVersion 3"
+            ],
+            [
+              "GET /v1/station/online/multiplayer/relay",
+              "DATA e barreira v3 por ligação",
+              "WSS station-stream.v3; ticket uso único/prova/lease atual"
+            ],
+            [
+              "GET /v1/station/media/catalog?requestId=...",
+              "Contrato cliente de vídeos de menu remotos",
+              "media-catalog/v1 assinado; servidor atual não confirmado"
+            ],
+            [
+              "GET /v1/station/media/files/{sha256}",
+              "Contrato cliente de MP4 imutável",
+              "Hash/tamanho/MIME e geometria esperados; servidor não confirmado"
+            ],
+            [
+              "GET /ready/station/online",
+              "Métricas agregadas administrativas",
+              "Somente loopback; não aprova edição/modo"
+            ],
+            [
+              "GET /ready/station/online/diagnostics",
+              "Diagnóstico recovery administrativo",
+              "Host/IP locais, sem forwarding; não público"
+            ]
+          ]
+        }
+      ],
+      "bullets": []
+    },
+    {
+      "title": "Ativação, sessão, assinatura e prova de posse",
+      "paragraphs": [
+        "O produto/applicationId do protocolo é TURBORAMA_STATION_ANDROID. O prefixo dos domínios é TurboRamaStationAndroid/. A ativação começa com schemaVersion 1, domínio request-activation-challenge/v1, deviceId, clientVersion, fabricante/modelo/SDK e activationCode/devicePublicKey. O servidor verifica o acesso e produz desafio assinado contendo challengeId, nonce e capacidades de segurança. A conclusão leva o mesmo desafio, a identidade e a assinatura do aparelho; o servidor confere código, chave e gerações de ativação/revogação. Esses campos são identidades operacionais privadas, e só seus nomes integram este documento. [ON-04]",
+        "A sessão usa licença já ativada e deviceId autorizado, challenge de 60 s e envelope open-session/v1. A resposta tem sessionId, accessToken, expiresInSeconds=180, requestProof, verifiedApp e serverTime. O cliente verifica licença, dispositivo, challengeId/nonce, domínio, sessão e prazo antes de usar o token. StationSessions controla leases/renovação; uma aquisição de sessão dentro de outra lease é evitada no discovery multiplayer porque pode bloquear renovação. Sessão expirada ou negada requer renovar/revalidar o acesso; não repetir uma mutação de sala às cegas. [ON-05]",
+        "O envelope da autoridade contém keyId, payload e signature. O cliente exige a autoridade pinada e RSA-PSS/SHA-256, MGF1-SHA256 e salt de 32 bytes; a assinatura cobre os bytes do payload, não uma representação JSON reformatada. Após verificar, confere schemaVersion 1, domínio, productId/applicationId, deviceId e, com sessão, licenseId/sessionId. O requestId retornado tem de coincidir com o comando emitido. O domínio externo online/v1 continua correto na API multiplayer: a versão 3 é confirmada também por multiplayerVersion=3 e capability=station-multiplayer.v3. [ON-05]",
+        "A prova HTTP usa X-Station-Request-Proof e domínio TurboRamaStationAndroid/request/v1. Canonical: domínio, método, target, SHA-256 do corpo, hash da credencial, timestamp e nonce, cada um separado por LF e com LF final. Header: v1.timestamp.nonce.signature. A janela de timestamp é ±90 s; nonce de 16 bytes Base64URL canônico é registrado somente depois da verificação criptográfica. RSA-PSS exige 2.048 bits / assinatura de 256 bytes; ECDSA exige curva P-256 e DER. Reuso de nonce é recusado; o cache padrão limita 262.144 nonces. A prova não lê ROM nem assina cada quadro de jogo. [ON-07]",
+        "A prova protege Bearer nas chamadas HTTP e ticket no upgrade GET WSS. Tickets não devem estar em query string nem logs. Os endpoints v3 proíbem query, verificam o token, reautenticam antes da resposta assinada e revogam a presença se o acesso deixou de valer durante a espera. O relay reautoriza licença/dispositivo periodicamente. Não fabricar chave, PKEXEC_UID, sessão ou resultado de assinatura para contornar uma recusa."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Catálogo, capas, downloads e mídia: autorização distinta de multiplayer",
+      "paragraphs": [
+        "O catálogo assinado apresenta jogos e metadados. O descritor de instalação chega no grant assinado de downloads/authorize. O cache local é dado de apresentação: restoreLocalCatalog verifica assinatura e propriedade da instalação, mas não cria Session nem Grant. Para criar/entrar em sala, o app precisa de classificação v3 fresca, arquivo instalado e identidade exata do conteúdo. Nome, quantidade descritiva de jogadores, capa ou item visível não são permissões de multiplayer. [ON-05, ON-08]",
+        "downloads/authorize recebe itemId com identidade request-download/v1. O servidor resolve o artefato atual, sela o vínculo privado com licença/dispositivo/sessão/item/grant e devolve grantId, itemRevision, descriptor e validade de 60 s. artifacts/{grantId} confere Bearer, identidade, revisão/hash/tamanho/caminho protegido e consome o grant antes de transmitir. Não é URL pública de ROM, nem credencial reaproveitável para outro aparelho. No app o grant vale para o descriptor original e o download respeita limite local, staging, cancelamento e confirmação de tamanho, formato e descritor assinado antes da instalação; o SHA integral do corpo da ROM não é calculado nesse fluxo. [ON-04, ON-05]",
+        "O cliente limita catálogo a 64 MiB e capa a 5 MiB. Para mídia remota aceita no máximo 128 entradas, JSON de 256 KiB, arquivo de 32 MiB e total de 256 MiB; asset precisa corresponder a turbo-system-videos/720-...mp4, hash SHA-256 válido, video/mp4, 720×720, 30 fps, zero áudio. Não segue URL/caminho fornecido pelo servidor. Vídeos locais continuam no pacote. Essa implementação cliente não demonstra que o servidor de mídia tenha sido publicado. O retorno de capas e o registro de modos online são publicações independentes."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Lobby, presença e funções sociais",
+      "paragraphs": [
+        "A Activity de salas conserva apelido em preferências station-online-profile; o campo admite24 caracteres e impede entrada vazia. enter confirma presença, heartbeat ocorre a cada20 s, e o contrato legado anuncia expiração60 s. As telas têm Salas/Sua sala, Pessoas, Criar e Conversa. Pessoas mostra disponíveis/em sala, pesquisa local da página, paginação e perfil; as salas mostram capa, título, anfitrião, ocupação e estado. As leituras de eventos/snapshot são canceláveis; polling v3 é único e sequencial. [ON-09, ON-10]",
+        "O social legado fornece direct-chat-v1, join-request-v1, short-invite-v1 e own-room-member-profiles-v1 conforme habilitação. Conversa privada usa peerId, chat da sala usa roomId; limite 500 caracteres sem controles/quebras de linha e espaçamento mínimo1 s. Há rascunho por conversa e aviso de mensagem recebida; o cliente não promete histórico permanente. Servidor mantém até 32 mensagens privadas por participante e até 50 no chat legado; v3 mantém até 32 ou64KiB na sala. [ON-06]",
+        "Bloquear exige confirmação humana. O servidor limita 128 bloqueios, oculta o jogador, remove conversas/convites/pedidos entre envolvidos e encerra a sala compartilhada conforme a autoridade social. O bloqueio aceito é propagado ao hub v3 sob AdmissionGate. A perda de rede não é comando block, leave ou offline; não se deve confundir transporte desconectado com saída autorizada. Não foram encontrados fluxo de denúncia, lista persistente de amigos ou desbloqueio nessa interface atual."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Operação social/legada",
+            "Condição",
+            "Disponibilidade no fluxo atual"
+          ],
+          "rows": [
+            [
+              "enter / heartbeat / offline",
+              "Presença por licença+dispositivo; apelido validado",
+              "Base social do lobby"
+            ],
+            [
+              "direct-chat / block",
+              "Capacidade social, peer existente, bloqueio/limites",
+              "Conversa privada/bloqueio quando aceitos"
+            ],
+            [
+              "chat",
+              "Membro da sala",
+              "V3 direciona ao endpoint multiplayer"
+            ],
+            [
+              "create / join / ready / start / leave",
+              "Identidade e estado da sala",
+              "V3 direciona ao endpoint multiplayer"
+            ],
+            [
+              "invite / dismiss-invite",
+              "Sala legada aguardando e vaga; convite60 s",
+              "Histórico; não oferecido no multiplayer v3"
+            ],
+            [
+              "request-join / accept-request / dismiss-request",
+              "Capacidade join-request-v1; anfitrião responde",
+              "Histórico; recusado no multiplayer v3"
+            ],
+            [
+              "resolve-code",
+              "Código curto ou locator histórico validado",
+              "Histórico; código v3 em preparação"
+            ],
+            [
+              "host-listening / relay-ticket / resume-relay / recovery-failed",
+              "Transporte/geração legados",
+              "Contrato v1/v2 histórico"
+            ]
+          ]
+        }
+      ],
+      "bullets": []
+    },
+    {
+      "title": "Convites: evitar confusão entre código histórico e v3",
+      "paragraphs": [
+        "O app contém parser/gerador de código curto de8 caracteres e locator TS1 legado. No fluxo antigo, o anfitrião copia um código enquanto há vaga; resolve-code obtém locator assinado e o convidado valida instance/room/item antes de preparar arquivos. Convites diretos têm60 s; limites 10 enviados por anfitrião e20 recebidos pelo jogador. Pedidos para jogar têm60 s, até 5 enviados por jogador e20 por sala. Essas funções são reais no contrato social legado, mas não estão liberadas pela modalidade v3 atual. [ON-06, ON-09]",
+        "StationOnlineClient.compose remove join-request-v1 e zera roomCapabilities ao apresentar o multiplayer. StationRoomsActivity oculta inviteNavigation quando multiplayerEnabled; invitePlayer orienta conversar e entrar pela lista; showRoomCode recusa recoveryProtocol station-stream.v3. call recusa request-join/accept-request/dismiss-request/invite/dismiss-invite quando a ação pertence à sala v3. A ficha de perfil pode conter ações históricas, mas a guarda funcional prevalece. O sucessor deve preservar essa distinção na UI e no handoff, sem anunciar convites v3 com base em R63/R41. [ON-09, ON-10]"
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Schema e operações do comando multiplayer v3",
+      "paragraphs": [
+        "StationMultiplayerCommand é JSON estrito com action/requestId; campos opcionais roomId,itemId,contentSha256,engineId,coreSha256,runtimeSha256,profileId,profileSha256,capacity,generation,linkId,value,nickname,text,clientMaximumPlayers,page,roomPageSize. Propriedades duplicadas são recusadas; profundidade máxima 16 e corpo máximo 8.192 bytes. O timeout do endpoint é 15 s. O cliente anuncia clientMaximumPlayers=5, página da sala e roomPageSize=32; o servidor admite capacidade de cliente 2..5, página 0..40 e tamanho 32 ou 100. [ON-11]",
+        "São12 ações aceitas, listadas abaixo. UUID formato D é obrigatório; reuso do requestId só é idempotente quando o fingerprint do comando é idêntico. Mudança do corpo com mesmo ID retorna REQUEST_REUSED. O servidor conserva64 recibos por participante e limita20 ações por segundo. Uma mutação é enviada uma vez; backoff automático fica restrito às leituras. create/join não podem coexistir com membership legado; o gate compartilhado impede dupla admissão. [ON-12]",
+        "O snapshot contém schemaVersion 1, multiplayerVersion 3, capability,selfId, instance, revision, serverTimeMs, status, profiles, profileCount, classification, platformPolicy, serverPlatforms, paginação, totalRooms, rooms, room, ticket. Os profiles retornados são filtrados por item e capacidade do cliente, até 32 por item. platformPolicy apresenta teto, topology host-star, trusted-manifest, profileReloadWithoutRestart e availability; esses indicadores não substituem approved e identidade exata. [ON-12]"
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Ação",
+            "Campos/efeito",
+            "Guardas principais"
+          ],
+          "rows": [
+            [
+              "capabilities / snapshot",
+              "Consulta perfis/capacidade/salas",
+              "Sessão e resposta assinadas; não cria autorização implícita"
+            ],
+            [
+              "heartbeat",
+              "Renova presença multiplayer",
+              "Identidade atual"
+            ],
+            [
+              "create",
+              "Identidade completa + capacity",
+              "Perfil approved/catálogo/hash; sem sala; limite 100 salas"
+            ],
+            [
+              "join",
+              "roomId + generation + identidade",
+              "Vaga, esperando, sem bloqueio; perfil igual; sem sala"
+            ],
+            [
+              "ready",
+              "roomId/generation/value",
+              "Membro, sem partida; perfil continua válido"
+            ],
+            [
+              "start",
+              "roomId/generation",
+              "Só anfitrião; todos prontos; quantidade permitida"
+            ],
+            [
+              "leave",
+              "roomId/generation",
+              "Saída humana/membro; host ou partida encerra sala"
+            ],
+            [
+              "chat",
+              "roomId/generation/text",
+              "Membro;500 caracteres; mínimo1 s"
+            ],
+            [
+              "ticket",
+              "roomId/generation/linkId + identidade",
+              "Partida iniciada; prova; ligação própria; sem attachment"
+            ],
+            [
+              "resume",
+              "Mesmo vínculo do ticket para recuperação",
+              "Estado recuperável e membership atual"
+            ],
+            [
+              "failed",
+              "roomId/generation",
+              "Partida iniciada; marca stream irrecuperável"
+            ]
+          ]
+        }
+      ],
+      "bullets": []
+    },
+    {
+      "title": "Perfis aprovados, canonical e posições",
+      "paragraphs": [
+        "StationMultiplayerProfile vincula itemId, contentSha256, platform, engineId, coreSha256, runtimeSha256, profileId, profileSha256, maximumPlayers, approved, controllerProfile, mode, allowedPlayerCounts e opcionais modeTitle/instructions/sources. A chave administrativa inclui todos os hashes/IDs: uma aprovação de outro core, edição, runtime ou owner não serve. approved deve ser true; as contagens precisam ser distintas, crescentes e incluir maximumPlayers quando este é ≥2. Perfil single-player usa maximumPlayers=1 e allowedPlayerCounts vazio, apresentando classificação sem criar sala. [ON-08, ON-12]",
+        "O servidor valida até 50.000 perfis e até 32 por item, sources HTTPS sem userinfo, até 8 fontes/instruções, títulos de 80 caracteres, instruções de 500 e fontes de 512. A política de plataforma é outro limite, aplicado tanto na carga quanto na admissão. O cadastro exige objetos/controller configuration; o array de nomes controllerProfiles do asset Android não é um registro administrativo equivalente. [ON-12]",
+        "Canonical do perfil é UTF-8 compacto, ordem exata schemaVersion/controllerProfile/devices/coreOptions, sem BOM nem LF final depois do JSON. coreOptions é string com sua própria ordem e LF final preservados. profileSha256 é SHA-256 desses bytes. O app recomputa o hash e exige correspondência; inserir espaço, normalizar escape/LF ou trocar opções pode invalidar o perfil. standard-2p-v1 usa devices=[1,1], direct-four-ports-v1 usa devices=[1,1,1,1]; Dolphin tem nomes próprios de quatro portas. [ON-08, ON-13]",
+        "O roster tem peerId,nickname,slot,ready. Host é slot1; convidados recebem posições2..5 conforme capacidade. Uma mudança pré-jogo recompõe posições e desmarca prontidão, incrementando generation; start incrementa novamente e congela links. Cada participante controla somente seu slot autenticado. O mask Java usa bit(slot−1); Dolphin nativo usa bits1..4 e recebe conversão <<1. Quatro entradas no driver não são aprovação de um modo de quatro pessoas. PSX current owner aceita somente duas portas humanas Standard."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Identidades técnicas finais R134",
+      "paragraphs": [
+        "A tabela fixa o par exato core/runtime dos quatro motores renovados. O core é a implementação emulada; runtime é a adaptação/fingerprint ligado à composição do pacote. GameCube/Wii compartilham biblioteca e runtime, mas têm engineId e controllerProfile próprios. O kit privado inclui seis bibliotecas únicas: PCSX core+runtime PSX, core+runtime N64, core+runtime Dolphin. Há 20 dependências conferidas no manifesto. Não substituir runtime marker por uma biblioteca histórica ou usar o ID R133 no APK R134. [ON-02, ON-13]",
+        "Todos os quatro têm launchReady=true e recoveryProtocol=station-stream.v3 no asset local. Isso significa que o seletor cliente tem rota preparada, não que o servidor a aceite. O status implementado continua peer-gameplay-pending. O hash original do recibo de identidade R134 é 2d6fc1c1933b4dc88aa09192138b8564b5f0b743461faa7580896b8339b2067f; source-freeze 7b9eead9ecd79d1582647b1b41d45158a36627ba6b8231663a3fa87067a97af0. As cópias públicas sanitizadas permitem auditoria, não implantação."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Plataforma / backend / perfil",
+            "Engine ID R134",
+            "Core SHA-256",
+            "Runtime SHA-256"
+          ],
+          "rows": [
+            [
+              "PSX / psx-player-station-v1 / standard-2p-v1",
+              "pcsx-rearmed-ff81ed17-player-v3-69ac2b703f03",
+              "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+              "69ac2b703f03826c8f7203b296665c6f2cc34cb944af7c3f758d9033116cade3"
+            ],
+            [
+              "N64 / mupen64plus-ae-station-v1 / direct-four-ports-v1",
+              "mupen64plus-ae-33bf7021-n64-v3-5f56099c433f",
+              "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+              "5f56099c433f29514c864d1eeea2995e3f52b0d15d76eaf125c4f4346a9d6e87"
+            ],
+            [
+              "GameCube / dolphin-station-v1 / dolphin-gamecube-four-ports-v1",
+              "dolphin-5102a033-gamecube-v3-9c87e2ec4c79",
+              "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+              "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad"
+            ],
+            [
+              "Wii / dolphin-station-v1 / dolphin-wii-remotes-four-v1",
+              "dolphin-5102a033-wii-v3-9c87e2ec4c79",
+              "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+              "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "Plataforma",
+            "Bibliotecas principais / extensões",
+            "Teto e política"
+          ],
+          "rows": [
+            [
+              "PSX",
+              "libpcsx_rearmed_libretro_android.so + libstation_psx_online.so; pbp,chd,cue",
+              "2; HLE por edição; CUE=cue-set-v1"
+            ],
+            [
+              "N64",
+              "libstation_mupen64plus_core.so + libstation_mupen64plus_runtime.so; z64,n64,v64,rom",
+              "4; modo exato; launch-file-v1"
+            ],
+            [
+              "GameCube",
+              "libstation_dolphin_online.so + libstation_dolphin_runtime.so; iso,gcm,gcz,ciso,wia,rvz",
+              "4; GameINI/opções sincronizados"
+            ],
+            [
+              "Wii",
+              "Mesmas bibliotecas Dolphin; iso,gcz,ciso,wbfs,wia,rvz",
+              "4; Wiimotes emulados; acessórios por perfil"
+            ]
+          ]
+        }
+      ],
+      "bullets": []
+    },
+    {
+      "title": "Preparo local, criação, entrada e arranque",
+      "paragraphs": [
+        "Antes de criar/entrar, StationOnlineGame consulta classificação fresca por item, lê engine local launchReady/v3 e confere perfil/canonical. O jogo deve estar instalado e pertencer ao catálogo carregado; symlink ou arquivo ausente é recusado. Hash de conteúdo precisa coincidir com o aprovado; bibliotecas locais são conferidas por SHA. Para PSX CUE a identidade inclui todos os tracks no conjunto; CHD/PBP e demais rotas usam arquivo de lançamento. A confirmação da sala é revalidada depois da resposta. [ON-08]",
+        "Ao criar, o usuário vê modos e contagens permitidos, resumo/instruções e volta antes da confirmação. O client revalida setupContext para impedir confirmar escolhas de uma sala/edição que mudou. Ao entrar em outra sala, trata a saída anterior de forma explícita, prepara a edição correta e exige room/generation e membership reconhecidos. Não se escolhe o primeiro profile de uma lista ambígua. A regra de ocultar two-player genérico quando há modos documentados evita que descrição antiga substitua uma escolha específica. [ON-09]",
+        "Iniciar usa StationRoomStartState: anfitrião, todos prontos, contagem aprovada, roomConfirmationKey e transporte anunciado. O worker revalida as condições novamente antes de mandar start. A resposta contém links host-star e generation atual; host obtém ticket de cada link, convidado somente do próprio. Ticket e sala precisam ter identidade/geração concordantes. O descriptor privado de lançamento é preparado para Mupen/Dolphin/PSX/RetroArch conforme backend e consumido uma vez. O app recusa N64/Dolphin históricos quando a rota não corresponde ao emulador normal integrado. [ON-09]",
+        "Abertura da Activity não é prova de gameplay: ainda existem bootstrap do owner, registro dos slots, estado inicial, pausa real e barreira global. Diretórios/saves online são novos por sessão; não reaproveitar saves normais ou prefs offline como opções silenciosas. Revalidar em sala nova com APK exato em todos os participantes após alteração de engine, em vez de tentar reciclar sala congelada de outra revisão."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "WSS v3, tickets e formato externo TSR3",
+      "paragraphs": [
+        "A topologia é estrela: cada convidado tem um link autenticado com o host, dois attachments e duas janelas FIFO independentes. Não existe rota convidado↔convidado. GET multiplayer/relay exige upgrade WebSocket, station-stream.v3, nenhuma query e Authorization StationRelay seguido do ticket canônico de 32 bytes. O ticket dura 60 s, tem path/protocol/linkId/ownerSlot/hostSide/windowBytes/epoch e é consumido ao criar attachment. Não é grant de download. Lease associa identidade, room/generation/link/slot/prova; qualquer alteração invalida o uso. [ON-11, ON-12, ON-14]",
+        "TSR3 preserva o formato de recovery v2 com magic distinto. Header24 bytes: magic TSR3 nos bytes 0..3, type no byte 4, zeros reservados nos bytes 5..7, offset int64 big-endian nos bytes 8..15, value int64 big-endian nos bytes 16..23. DATA carrega1..16.384 bytes e value0; controles têm só header. Offset/value são não negativos e o parser impede overflow. O relay não interpreta SN64,DPL1,PXL1: esses protocolos internos são bytes opacos no DATA. [ON-14]",
+        "Cada direção retém 256 KiB de replay; limite global padrão 32 MiB compartilhado com recovery, configurável entre 512 KiB e 128 MiB. start reserva númeroLinks×2×256 KiB; falta de orçamento retorna REPLAY_FULL antes de iniciar. A janela guarda bytes até confirmação de consumo pelo destino, não até o envio WSS. Replays antigos idênticos não entregam input duas vezes; sobreposição parcial, bytes divergentes, salto de offset ou janela cheia são recusados. O consumidor nativo precisa confirmar cópia/consumo real antes de ACK externo. [ON-14]"
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Tipo TSR3",
+            "Código",
+            "Semântica"
+          ],
+          "rows": [
+            [
+              "HELLO",
+              "1",
+              "Primeiro frame; posições locais de aceito/entregue para replay"
+            ],
+            [
+              "WELCOME",
+              "2",
+              "Primeira confirmação de watermarks"
+            ],
+            [
+              "DATA",
+              "3",
+              "Bytes internos opacos com offset"
+            ],
+            [
+              "ACK",
+              "4",
+              "Destino confirma consumo; value0"
+            ],
+            [
+              "ACCEPTED",
+              "5",
+              "Servidor informa accepted/delivered"
+            ],
+            [
+              "STATE",
+              "6",
+              "Epoch e estado global; não é snapshot de core"
+            ],
+            [
+              "PAUSED",
+              "7",
+              "Participante confirma pausa real no epoch"
+            ],
+            [
+              "READY",
+              "8",
+              "Pausa confirmada+watermark exato+filas drenadas"
+            ],
+            [
+              "PING / PONG",
+              "9 / 10",
+              "Saúde do transporte; não prova core rodando"
+            ],
+            [
+              "SUSPEND",
+              "11",
+              "Lifecycle/foco solicita pausa global"
+            ],
+            [
+              "FOREGROUND",
+              "12",
+              "Retira suspensão do participante"
+            ],
+            [
+              "NEED_SYNC",
+              "13",
+              "Solicita novo epoch quando necessário"
+            ]
+          ]
+        }
+      ],
+      "bullets": []
+    },
+    {
+      "title": "Pausa, recuperação e falhas: barreira global",
+      "paragraphs": [
+        "TSR3 inicia em epoch 1 e estado Waiting=0. Depois que todas as conexões apresentam HELLO e PAUSED do epoch atual, sem participantes suspensos, passa a Synchronizing=1; somente todas as confirmações READY e todas as janelas com Pending=0 permitem Playing=2. Unrecoverable=3 é terminal para aquela execução. Desconexão incrementa epoch e revoga Paused/Ready. Novos bytes aceitos invalidam readiness apenas do link afetado; replay duplicado sem avanço não fabrica nova invalidação. Estado de core, IO enfileirado e contador de bytes são evidências diferentes. [ON-14]",
+        "No app, pausa significa que a thread real do owner/CPU está parada em ponto autorizado, sem avançar um quadro para drenar. O serial local aumenta para cada controle aceito, inclusive mudanças no mesmo epoch. Resume exige epoch e serial mais recentes, autorização global assinada, estado inicial aplicado e filas locais/servidor drenadas. Uma pausa mais nova bloqueia resume antigo. DATA de preparação/estado continua transitando durante a pausa para evitar ciclo READY/EXECUTE. Não liberar a barreira por rendererReady, PONG ou retorno positivo de enqueue. [ON-15, ON-16]",
+        "O relay verifica membership e autorização a cada 10 s. PresenceAge ≥ 60 s ou 30 s sem frame recebido fecha o attachment. Autorização indisponível encerra o transporte, e revogação explícita revoga a identidade/sala. Fechar attachment por timeout não é saída humana do emulador: o cliente pausa e mostra recuperação/falha. O writer de WebSocket é único e é aguardado antes de close output. O handshake de fechamento tem 2 s, sem interpretar isso como timeout de gameplay. [ON-14]",
+        "No polling somente leitura, falhas transitórias usam 1/2/4/8 s de backoff; Retry-After pode aumentar o intervalo até 60 s. HTTP 401/403, assinatura/vínculo inválido e serviço desabilitado são terminais para essa tentativa. Ações create/join/start/leave não são reexecutadas automaticamente. NativeFail ou protocolo irrecuperável mantém explicação e saída pelo menu. Não há promessa de rollback, restauração silenciosa ou reconstrução do core no meio da sessão. [ON-10]"
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Nintendo 64: Mupen64Plus AE e SN64/1",
+      "paragraphs": [
+        "N64 online abre GameActivity/CoreService reais do Mupen64Plus AE, com renderer, áudio, menu e controles desse emulador. O core variante Station deriva do upstream 33bf7021549d7873e976884370fbd1a8e7333bc7; biblioteca normal e plugins continuam preservados. Não abre StationRetroActivity. GameActivity/CoreService continuam no processo :n64core. A preparação ocorre fora da UI e assets ausentes de instalação nova são preparados antes de abrir o owner. [ON-15]",
+        "Opções fixadas: backend=mupen64plus-ae-station-v1; wire=SN64/1; cpu=cached-interpreter; video=glide64mk2; rsp=hle; rawInput=false; expansionPak=true; countPerOp/countPerOpDen/forceAlignmentOfPiDma=0; randomizeInterrupt=false; inputDelay=2; rollback=false; saves=session-only. O interpretador sincronizável não demonstra desempenho equivalente ao modo normal. As quatro portas disponíveis só são usadas se edição, modo e allowedPlayerCounts autorizarem. [ON-13]",
+        "SN64 começa com magic SN64 de 4 bytes e versão 1. Cada frame tem kind 1=TCP ou 2=UDP, tamanho uint16 big-endian e payload. TCP admite 1..16.384 bytes, UDP 1..512 bytes; fila de entrada de 256 KiB produz backpressure. O protocolo interno não aceita ticket, role ou epoch como autoridade: esses vínculos vêm da sessão Station. Não precisa abrir UDP público, pois o TCP/UDP nativo é transportado pelo DATA WSS autenticado. EOF cancela leitura e não gera loop de tentativas. [ON-15]",
+        "Cada telefone conserva o gamepad local na porta P1; o transporte associa esse input ao slot de sala. O anfitrião oferece configurações e saves temporários. Nomes de save UTF-8 são limitados e rejeitam separadores, controles, vazio, ponto e ponto-ponto. Preferências, cheats e saves da sessão são isolados. O registro inicial MEMORY=2/raw=0 cobre a fase anterior à anexação do input plugin. Pausa requer confirmação da thread de emulação; perda WSS conserva pausa e solicita reconexão. As 282 verificações JVM e 134 C citadas são testes isolados históricos, não gameplay atual."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "GameCube/Wii: Dolphin real e DPL1",
+      "paragraphs": [
+        "Dolphin online usa upstream 2609-7 / 5102a0339c2177575378107b76541e47cc52122d, libstation_dolphin_online.so e quatro hooks próprios. Seleciona a biblioteca antes de DolphinApplication iniciar no processo exclusivo :dolphin; owner normal continua original em lançamento normal. A sessão oficial NetplaySession, GameFile, BootSessionData e EmulationActivity são reutilizados. O host inicia conexão local antes de convidados para preservar PID nativo 1. O boot só ocorre com roster/controller mapping exatos, jogo nos clientes oficiais e autorização da barreira. [ON-16]",
+        "As opções de CurrentRun não gravam preferências offline: direct/loopback, UPnP/index/QoS=false, chunkedUploadLimit=false, fixeddelay, padBuffer=5, clientBuffer=1, saveLoad/saveWrite=true, syncAllWii=false, syncCodes/cheats/recordInputs=false, strictSettingsSync=true, golfMode/remoteGbas=false, saves=session-only. settingsPolicy=official-pinned-gameini+host-synchronized-strict-v1: GameINI pinado e serialização oficial sincronizam Core/GFX/SYSCONF. Isso não significa que toda preferência do host recebeu um valor fixo. [ON-13, ON-16]",
+        "DPL1 tem 8 bytes de header: magic de 4 bytes, source slot de 1 byte, target slot de 1 byte, payload size uint16 big-endian; depois datagrama ENet UDP de 1..1.392 bytes. Só host↔guest; wrappers preservam fronteiras e simulam endereço loopback. nativeDeliver=1 é cópia validada/enfileirada, não ACK Station. nativeAwaitDelivery do mesmo uniqueId confirma cópia completa na recepção ENet real; só então cabe ACK do offset externo. Filas por link/endpoint são limitadas a 256 KiB e a deduplicação é preservada. [ON-16]",
+        "GameCube exige quatro entradas de porta; Wii exige quatro remotes emulados, cada entrada com slot autenticado ou zero. DesiredWiimoteState oficial transporta acessórios Nunchuk/Classic/MotionPlus configurados, sem liberar Wiimotes reais ou GBA remoto. Four Swords Adventures depende de gamecube-gba-link-v1 ausente; Galaxy 1/2 precisam de papel/input co-star não implementado. NativeSuspendTransport congela relógio ENet e pede break, mas pause ACK requer PauseAndLock/CPU idle. Reset real ENet é falha permanente. Somente nativeAuthorizeHumanExit permite teardown; loss/Stop/Disable/Core::Stop automáticos mantêm suspensão."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "PlayStation: owner normal, PXL1 e HLE por edição",
+      "paragraphs": [
+        "PSX reutiliza libmain.so / LibretroPlayer original e libpcsx_rearmed_libretro_android.so normal, no processo :station_psx_online, por adaptador ABI pinado. O owner não foi reconstruído de fonte C++ recuperada: o ELF original é conferido por hash/segmentos e o opt-in só atua no processo privado. SDL, renderer, input e áudio pertencem ao Player; não há segundo retro_run em thread de rede. A entrada estática recebe core/ROM absolutos, HOME privado, fonte original conferida por hash e autoriza após descriptor/Binder. [ON-17]",
+        "A política combina 59 defaults compilados conferidos com 7 overrides: HLE; analog combo, multitap, frameskip e threads auxiliares DRC/GPU/SPU desabilitados. DRC compilado permanece no seu default. Options incluem ownerSha256=62ad07ba... / coreSha256=e7534aa6... / compiledDefaultsSha256=bcbb221e..., compiled-defaults+explicit-overrides-v1, standard-two-ports-v1, host-authoritative-lockstep-v1, atraso de 4 quadros, owner-thread-snapshot-v1, saves=session-only-fresh e humanExitOnly=true. Aprovação de BIOS real ou perfil PSX RetroArch antigo não migra para HLE atual. Os hashes integrais estão no recibo de identidade, e os de owner/core constam da tabela. [ON-13, ON-17]",
+        "PXL1 transporta pacote de até 1.400 bytes, payload de até 1.392 bytes e janela de 256 KiB. Header: magic PXL1, origem/destino autenticados 1/2, tamanho uint16; payload tem kind/versão/protocolo, epoch, stateSerial, frame e corpo. Kinds: Input=1, Frame=2, StateBegin=3, StateChunk=4, StateEnd=5, RequestState=6, Commit=7. MaxState=16 MiB deve coincidir com serializeSize real; FrameWindow=32, ReceiptWindow=512, StandardPadBits=0x3fff. O hash de estado/identidade e o tamanho exatos são verificados antes de o decoder original aplicar o estado. [ON-17]",
+        "O owner amostra quadro N para N+4; host reúne slots e define o quadro canônico. ownerComplete só emite compromisso de execução depois de retro_run retornar. copied(uniqueId) é receipt de transporte e permite drenar STATE durante CPU pausada; takeCommit distingue Executed/Superseded/AppliedState/OwnerFailed. IO nunca executa core/aplica snapshot. nativeStatus retorna 20 long com coreReady, failed, pausa/autorização, epoch/serial/frame/state e condições de ACK/state/drained. RendererReady não é CoreReady e nenhum deles sozinho é READY global. [ON-17]",
+        "Back/Menu/Guide abrem confirmação. O positivo humano permite encerramento, aguarda transporte/Binder e a Thread SDL real TERMINATED, devolve RESULT e retira somente o processo privado. Null em mSDLThread não prova término; join ocorre em worker. Só as strings Player1Controller/Player2Controller e bool LibretroStretch validados são copiadas para HOME privado. Não copiar saves, BIOS ou opções offline. Todos os 84 PSX atuais continuam HLE por edição pendente, com zero novos aprovados: instalar o owner ou testar ABI não resolve a política de cada jogo."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Rotas históricas e tetos efetivos",
+      "paragraphs": [
+        "A migração universal dos emuladores normais não foi concluída. SNES continua bsnes/runtime RetroArch no online, embora o normal seja Snes9x EX+; Mega Drive continua clownmdemu/runtime RetroArch, com normal MD.emu; CPS/Neo Geo/FBNeo usam FBNeo online; Neo Geo CD usa NeoCD. Essas rotas foram preservadas, inclusive controles e registros compatíveis. N64/Dolphin/PSX são as quatro identidades renovadas, não prova de que PS2, PSP, Switch, Dreamcast, Saturn ou Wii U tenham adaptador Station. [ON-18]",
+        "A política servidor lista 17 plataformas capazes de receber dados de cadastro, mas serverReady da plataforma não significa engine/perfil cliente disponível. Teto SNES=5; N64/Dreamcast/GameCube/Wii/Wii U=4; demais=2. Dreamcast/PS2/PSP/Saturn/Sega 32X/Switch/Wii U têm 337 itens sem engine online atual na matriz. PS3/PS4 permanecem exclusivamente offline. Foto de PSP ou anúncio textual de portas não cria rota. A normalização BR une a família, mas conteúdo/edição permanece vinculado ao hash específico. [ON-12, ON-18]",
+        "Existem casos de profile megadrive-sega-teamplayer-v1 e megadrive-ea-4way-v1 no código, com devices/opções próprias. Ainda assim a política efetiva de plataforma consultada limita Mega Drive a 2. Não anunciar 4 com base só no case do perfil. snes-multitap-port2-v1 usa [1,257,1,1,1] e pode admitir 5 apenas no modo permitido. Compartilhar um controle por turnos também não comprova duas entradas independentes."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Ledger R134: cobertura, modos preparados e recusas",
+      "paragraphs": [
+        "A auditoria atual confronta 3.940 registros de catálogo 33: 3.685 visíveis / 255 aliases. Mantém 5.176 perfis e 321 modos históricos como baseline, com 78 novos modos/perfis preparados em 44 jogos/edições e identidade R134 final. A preparação usa reviewed-decisions original e validadores oficiais, não regex de título ou teto do console. operatorApplied=false, currentProductionAuthenticatedSnapshotCaptured=false e physicalGameplayValidated=false referem-se ao preparo; devem ser atualizados apenas com provas reais posteriores. [ON-01, ON-19]",
+        "Distribuição: N64 66 modos / 33 jogos, GameCube 9/8, Wii 3/3, PSX 0/0. Restam 110 N64 com propostas genéricas de teste, 14 bloqueios documentais/periféricos, 17 jogos individuais documentados, 337 itens sem engine e 84 PSX HLE pendentes. A matriz soma 2.996 registros baseline-current-engine-profile-compatible, 77 classificações individuais de baseline, 6 sem vínculo de modo atual e os demais estados específicos. Compatibilidade documental não é snapshot de produção nem ensaio físico. [ON-19]",
+        "Bloqueios nativos concretos incluem Banjo-Tooie japonês por minigame/contagem; Mythologies/Pilotwings pela página de modo/manual; Stadium japonês sem equivalência à edição ocidental; Smash Remix por revisão específica do mod; Turok 2/3 por páginas ilegíveis; Code Veronica X DUB / Disc 1 e 2 por edição GameCube não revista; Terminator 3 por contagem co-op não extraída; Four Swords por link GBA ausente; Epic Mickey 2 por modo/controller; Galaxy 1/2 por co-star. PSX tem 10 achados primários de 26 históricos multiplayer, mas isso não preenche biosPolicy=HLE-per-game-approved e reviewEvidence real. Preservar recusas."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Escopo R134",
+            "Quantidade",
+            "Estado"
+          ],
+          "rows": [
+            [
+              "Catálogo integral",
+              "3.940 (3.685 visíveis + 255 aliases)",
+              "Auditado; não universalmente aprovado"
+            ],
+            [
+              "Perfis / modos históricos",
+              "5.176 / 321",
+              "Preservados"
+            ],
+            [
+              "N64 preparados",
+              "33 jogos / 66 modos",
+              "Vínculo R134 pronto localmente"
+            ],
+            [
+              "GameCube preparados",
+              "8 jogos / 9 modos",
+              "Vínculo R134 pronto localmente"
+            ],
+            [
+              "Wii preparados",
+              "3 jogos / 3 modos",
+              "Vínculo R134 pronto localmente"
+            ],
+            [
+              "PSX novos",
+              "0 jogos / 0 modos",
+              "84 edições HLE pendentes"
+            ],
+            [
+              "Nativos documentais bloqueados",
+              "14 entradas",
+              "Sem remover validação"
+            ],
+            [
+              "Sem engine online cliente",
+              "337 entradas",
+              "Sem fallback aprovado"
+            ],
+            [
+              "Snapshot v3 fresco / operador aplicado",
+              "Não capturados no preparo",
+              "Prova independente necessária"
+            ]
+          ]
+        }
+      ],
+      "bullets": []
+    },
+    {
+      "title": "GitHub e estado real do servidor",
+      "paragraphs": [
+        "O repositório de serviço é luziellacerda/Servidor-pix. O ref feat/station-r128-aplicado-20261011 foi novamente consultado nesta leitura e permaneceu a6b58e9beb12eb564c1b58d9d4c32ed3e7513861. r128-retorno-servidor-20261011.json ainda revisa fonte R129 cf623c7 e APK 89dd...: privateKitReceived=false, newFinalEnginesActivated=false, scriptsEffectivePublicationConfirmed=false, nativeAdministrativeAuthenticationRequired=true. Os 68 métodos Linux passaram no preparo administrativo; não é ativação. [ON-20]",
+        "A entrega do app R133 está publicada em docs/station-r133-final-console-modes-20261011, commit 524d2ebff08353fda62aacbc5f05f9248ba69b7c. DELIVERY.json identifica R133 e serverActivated=false, privateArtifactsPublished=false; parent é a6b58e9. Essa branch é publicação documental do produtor, não retorno de aplicação do servidor. O handoff R134 local pede continuar a mesma branch, substituindo somente identidades/hashes e mantendo contrato e recusas. Não criar outro contrato por nome de revisão. A publicação R134 e os resultados atuais devem ser comprovados pelo responsável, sem inferir de arquivos locais/untracked. [ON-01, ON-21]",
+        "O retorno descreve 2.255 vínculos de capas preparados / 2.150 imagens distintas, 278 não resolvidos e covers.published=false. latestProductionBindings lista Mega Drive=331, SNES=671, PSX=28; há 157 N64 no batch preparado. Isso não prova ausência de toda capa local: uma capa N64 foi vista na R132. Preserve capa correta/ambígua e exija revisão/hash/contagens efetivamente publicadas. Captura de capa não autoriza jogo online. A recusa física R132 em Criar sala ocorreu antes de sala/jogo, sem HTTP/envelope bruto: não usar como diagnóstico de produção R134."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Kit privado R134 e recibos públicos",
+      "paragraphs": [
+        "O kit atual preparado está em G:/StationNormalOwnersR127/settings-refinement-r134/server-kit, server-kit-original-receipts e server-kit-tools. server-kit contém seis bibliotecas e três JSONs técnicos; originais conservam runtime/package/source-freeze/engines/profile; tools conserva extratores/geradores pinados. Manifesto público indexa 16 arquivos; modos, 22 inputs/outputs. O recibo privado de preparo do kit tem SHA b46b64a1aac139974eef764ba92b3039545fdee24d81a969dd198403f0c15d1f; modos, d5ca95395a41b28deae5402e6fa200e916184685de869018cbc5612bc4a21b98. [ON-01]",
+        "O backup único resolve os inputs em desenvolvimento/reconstrucao-atual/settings-refinement-r134/inputs via INPUT-MAP-R134.json, com originalPath/role → backupRelativePath. Não presumir G: no Linux nem montar folha flat pela aparência dos nomes. Transferir privadamente os originais finais; públicos sanitizados são auditoria e não o par de implantação. Não transmitir APK, ROM, firmware, BIOS, RSA, saves, licenças, sessões, capturas ou logs pessoais. Bibliotecas técnicas do kit exigem o canal autorizado; disponibilidade local não prova recebimento servidor. [ON-01]",
+        "Ledger reviewed-decisions SHA 1cde1bfb3e591108263abb3c0bf4d15bd91e22c9f9ffbb4ade41abad8c59aa8b permanece; mode-additions R134 SHA 945ae692f2bbddc40e791cd9cf18a783ac53d142373893b850536715b6622065; prepared-new-profiles SHA de650a99245468beb39f7138f2a602c090196167dc6803bd85e3dd0793230a8f; official-merge-receipt SHA 86fe321c43946be5eb6851c4257f7c916a6f2b67211416a882d7e58e1c05ea66. Esses hashes permitem conferir integridade, mas a prévia não deve sobrescrever perfil ativo. O operador precisa reexecutar contra baseline ativo atual."
+      ],
+      "tables": [],
+      "bullets": []
+    },
+    {
+      "title": "Procedimento administrativo protegido para o próximo operador",
+      "paragraphs": [
+        "Esta receita é documental e não foi executada nesta leitura. Antes da preparação, resolver CONFIG ativo, OUTPUT, CATALOG=outputDirectory/index.json, PROFILES=autoOnlineProfiles.registry, ENGINES=autoOnlineProfiles.engineManifest, MODES=autoOnlineProfiles.preparedModes. Os quatro registros protegidos ficam diretamente no mesmo outputDirectory. SERVER_OPERATOR/PROFILES_MODULE devem apontar aos módulos ativos realmente importados; conferir hash/caminho/module.__file__. Não adivinhar diretório Linux ou alterar permissão para permitir escrita. [ON-01]",
+        "Com DELIVERY original, ARTIFACTS recebido, TOOLS fixado e PREPARATION fora dos registros ativos, executar build_incoming_manifest.py --runtime-receipt DELIVERY/runtime-final.json --package-receipt DELIVERY/package-final.json --output PREPARATION/incoming-engine-manifest.json --profile-receipt PREPARATION/profile-canonical-receipt.json. requireExplicitEngineModes:true restringe os quatro IDs a modos revisados. O gerador confere par final/canonical, não um snapshot.engines v2. Os placeholders são caminhos reais resolvidos, não literais a executar. [ON-01]",
+        "Depois, merge_scoped_modes.py --catalog CATALOG --profiles PROFILES --modes MODES --runtime-receipt DELIVERY/runtime-final.json --profiles-module PROFILES_MODULE --decisions REVIEW_LEDGER --output PREPARATION/prepared-modes-merged.json --audit-json PREPARATION/scoped-mode-audit.json. Helper chama validate_modes/prepare reais; prepare chama validate_manifest e revalida portas/configuração. Preserve 5.176 perfis, 321 modos, engines anteriores e recusas; se baseline mudou, usar o novo e registrar diferença. PSX é excluído de migração automática sem HLE por edição. [ON-01]",
+        "Selar candidata absoluta ainda inexistente: SERVER_OPERATOR prepare --catalog CATALOG --profiles PROFILES --current ENGINES --modes MODES --mode-additions PREPARATION/prepared-modes-merged.json --incoming PREPARATION/incoming-engine-manifest.json --artifacts ARTIFACTS --output CANDIDATE. --modes é o ativo original; merge entra somente em --mode-additions. A candidata conserva selos/incoming/engines/profiles/modes e confere bytes reais. Não substituir candidata por JSON editado manualmente. [ON-01]",
+        "Aplicar somente com operador humano/autenticação Linux nativa: pkexec python3 -B SERVER_OPERATOR apply --config CONFIG --candidate CANDIDATE. A guarda exige geteuid()==0 e PKEXEC_UID original do operador esperado. Sob scan.lock revalida baselines, selos, binários e publica modos → engines → perfis. Falha restaura os três arquivos byte a byte; baseline alterado interrompe. Alternativa integrada install usa --config --incoming --artifacts --mode-additions --output sob mesma autenticação. Escolher uma rota e não aplicar duas vezes. [ON-01]",
+        "StationMultiplayerProfileMonitor verifica a cada 10 s, lê arquivo regular absoluto até 16 MiB, chama ReplaceProfiles e retém último registro válido se falhar. Salas existentes conservam perfil, links e janelas congelados. Hotreload de dados não publica script Python: scanner oneshot importa módulos por execução. Se código ativo divergir, operador coordena timer existente/execução, confere Type/ExecStart/import/hash no processo novo. Não há necessidade demonstrada de reiniciar API por cadastro; nenhum serviço foi operado neste handoff. [ON-22]",
+        "Após aplicação, comprovar enter autenticado e capabilities/snapshot em multiplayer/command com UUID novo e identidade R134. Verificar assinatura e licença/dispositivo/sessão/requestId privadamente, capability v3, instance/revision, item/content/engine/core/runtime/profile/canonical/controller/mode/allowedPlayerCounts. Guardar recibo agregado sanitizado da candidata/aplicação/hotreload e informar aprovados/recusados por motivo. Kit recebido, administração aplicada, snapshot fresco e partida física são quatro provas diferentes."
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Ferramenta fixada do servidor a6b58e9",
+            "SHA-256"
+          ],
+          "rows": [
+            [
+              "r128/operator/build_incoming_manifest.py",
+              "362bcae9d8915f7f43aac4c48d06b35bdf57efc88d6acb9199aa06e3a0231426"
+            ],
+            [
+              "r128/operator/extract_private_server_artifacts.py",
+              "27053b843d763adcf570e859b2c8658e216dbf6f80963b600fa5326958f70ef4"
+            ],
+            [
+              "r128/operator/merge_scoped_modes.py",
+              "ddac598ca1671e6d682b626866a3b1984eb88c5ff7d677c7b4cd563a6a677783"
+            ],
+            [
+              "online-plataformas-20261009/library-tools/station_online_profiles.py",
+              "3d5d5b5563e2a6825ab9e798da80313cdbf2640522bc4dfd6b47e25c7f69eae1"
+            ],
+            [
+              "online-plataformas-20261009/library-tools/cadastrar-motor-online-station.py",
+              "a3c81e0c379984d6b7736f79ce963c73a3f3250883f6304a32b5c6cfda73a096"
+            ]
+          ]
+        }
+      ],
+      "bullets": []
+    },
+    {
+      "title": "Erros, evidência física e critérios de aceite",
+      "paragraphs": [
+        "Diagnóstico deve preservar código real e etapa. GAME_UNCLASSIFIED/PROFILE_UNAPPROVED/CAPACITY_UNSUPPORTED indicam ausência de vínculo aprovado exato; não remover validadores. GENERATION_MISMATCH significa que sala mudou: reconsultar e confirmar. NOT_READY exige todos prontos. CLIENT_UPDATE_REQUIRED exige pacote compatível com capacidade do perfil. ALREADY_ATTACHED/TICKET_INVALID exigem lease/ticket novo conforme estado; UNRECOVERABLE não permite fingir resume. HTTP 401/403 revalidam acesso; 503 pode ser serviço desabilitado/ocupado; HTTP 404 isolado não prova engine ausente. Os prefixos completos STATION_MULTIPLAYER_ ou STATION_ONLINE_ devem ser preservados nos recibos. [ON-10, ON-12]",
+        "O sucessor deve registrar, por motor e jogo/edição/modo: APK/hash em ambos; resposta assinada validada; slot/controller mapping; core load/estado inicial; READY real; execução/input nos dois; pausa/rede/foco/reconexão; saída humana/retorno e preservação de saves. Testes ABI/JVM/C/loopback, shader/compilação, instalação ou frontend observado não cobrem isso. Nos relatos históricos, R95 foi instalada em dois aparelhos, mas o próprio canal conserva two-device gameplay pending e fourPhoneGameplayQualified=false. Não herdar qualificações para R134. [ON-18]",
+        "Não declarar ausência de lag/ANR/aquecimento ou desempenho equivalente sem medições físicas. N64 cached-interpreter e Dolphin delay fixo podem ter custos diferentes; fotos/prewarm/30 fps de menu não medem emulação online. Isolar uptime, tempo de frame, FPS de jogo, memória, temperatura e condições de rede/aparelho numa sessão autorizada. Uma verificação breve pode mostrar arranque, mas não estabilidade prolongada. O estado atual deve ser fechado com evidência mínima clara e limites de alcance."
+      ],
+      "tables": [],
+      "bullets": [
+        "Conferir os quatro IDs R134 e o par original runtime/package; não usar R133/R129 ou públicos sanitizados na implantação.",
+        "Registrar recebimento privado, hash das seis bibliotecas e 20 dependências, ledger/selos finais e baselines ativos.",
+        "Aplicar somente pela administração nativa autorizada; guardar recibo e confirmar hotreload sem substituir validação por reinício.",
+        "Capturar/validar capabilities v3 fresco vinculado ao item/content/engine/profile atual; publicar resultado sanitizado sem tokens.",
+        "Manter recusas HLE/edição/acessório e capacidades específicas; nenhuma aprovação derivada só do teto.",
+        "Fazer sala nova com participantes atualizados, confirmar input/execução nos dois e medir recuperação/saída/saves.",
+        "Separar capas/mídia, instalação, autenticação, registro, transporte e gameplay no aceite final."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "ON-01",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-settings-refinement-r134-20261011/HANDOFF-APP-R134-PARA-SERVIDOR-20261011.md",
+      "url": null,
+      "purpose": "Handoff R134 local atual: identidades, kit, ledger e procedimento. Arquivo local em preparação; publicação não presumida."
+    },
+    {
+      "id": "ON-02",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-settings-refinement-r134-20261011/STATUS.json",
+      "url": null,
+      "purpose": "Status R134 e escopo limitado dos deltas."
+    },
+    {
+      "id": "ON-03",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/recipe/compile_java.py",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/recipe/compile_java.py",
+      "purpose": "Ordem explícita de composição Java R124/R125/R126/PSX."
+    },
+    {
+      "id": "ON-04",
+      "path": "src/TurboRamaSuiteOnlineServer/StationEndpoints.cs e StationService.cs",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationEndpoints.cs",
+      "purpose": "Rotas Station, ativação, sessão e grants efetivamente lidos no GitHub."
+    },
+    {
+      "id": "ON-05",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+      "purpose": "Cliente HTTP, assinatura, domínios, grants, limites e mídia."
+    },
+    {
+      "id": "ON-06",
+      "path": "src/TurboRamaSuiteOnlineServer/StationOnline.cs e StationOnlineEndpoints.cs",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationOnline.cs",
+      "purpose": "Operações sociais/legadas, limites, capacidades e endpoints."
+    },
+    {
+      "id": "ON-07",
+      "path": "src/TurboRamaSuiteOnlineServer/StationRequestProof.cs",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationRequestProof.cs",
+      "purpose": "Canonical HTTP, timestamp/nonce, criptografia e proteção de replay."
+    },
+    {
+      "id": "ON-08",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/java/org/emulationstation/frontend/netplay/StationOnlineGame.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/java/org/emulationstation/frontend/netplay/StationOnlineGame.java",
+      "purpose": "Engine, conteúdo, preparo e conferência das salas."
+    },
+    {
+      "id": "ON-09",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "purpose": "Lobby, salas, pronto/start, convites guardados e lançamento."
+    },
+    {
+      "id": "ON-10",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java",
+      "purpose": "Composição social/v3, requisições, capacidades e retry somente leitura."
+    },
+    {
+      "id": "ON-11",
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerEndpoints.cs",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationMultiplayerEndpoints.cs",
+      "purpose": "Endpoints POST/WSS, timeout/corpo/cabeçalhos, assinatura e autenticação."
+    },
+    {
+      "id": "ON-12",
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayer.cs e StationMultiplayerPlatformPolicy.cs",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationMultiplayer.cs",
+      "purpose": "Schema, 12 ações, aprovação, roster, tickets, limites e snapshot."
+    },
+    {
+      "id": "ON-13",
+      "path": "G:/StationNormalOwnersR127/settings-refinement-r134/assembly/identity/runtime-identity.json",
+      "url": null,
+      "purpose": "Recibo original R134: IDs, hashes, opções, extensões e dependências técnicas; sem segredos."
+    },
+    {
+      "id": "ON-14",
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerStream.cs e StationRecoveryRelay.cs",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationMultiplayerStream.cs",
+      "purpose": "TSR3, replay, barreira, relay, timeouts e autorizações."
+    },
+    {
+      "id": "ON-15",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-mupen-online-r125-20261011/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-mupen-online-r125-20261011/README.md",
+      "purpose": "Integração Mupen AE, SN64 e alcance dos testes; consultar também java/StationN64Wire.java."
+    },
+    {
+      "id": "ON-16",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/versions/station-dolphin-online-r126-20261011/NATIVE-CONTRACT.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/versions/station-dolphin-online-r126-20261011/NATIVE-CONTRACT.md",
+      "purpose": "Dolphin real, DPL1, CurrentRun, ACK/CPU gate e saída humana."
+    },
+    {
+      "id": "ON-17",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/integration/psx-online/ENTRY-CONTRACT.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/integration/psx-online/ENTRY-CONTRACT.md",
+      "purpose": "Owner PSX, ABI, SDL, status e saída; complemento native/StationPsxProtocol.hpp e .cpp."
+    },
+    {
+      "id": "ON-18",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/audits/station-online-system-engines-20261011/README.md",
+      "url": "https://github.com/luziellacerda/TurboElden/blob/4f9039eb9ce13907ce043870bfe1f6e294888556/audits/station-online-system-engines-20261011/README.md",
+      "purpose": "Auditoria histórica R126 dos demais sistemas; PSX posterior supersede linha PS1; canais ACTIVE históricos."
+    },
+    {
+      "id": "ON-19",
+      "path": "C:/Users/Admin/Documents/Codex/2026-09-28/turboramaemutestes-apk-e-estudo-apk-work/work/TurboElden-git/audits/station-r134-online-mode-completion-20261011/summary.json",
+      "url": null,
+      "purpose": "Matriz/ledger R134 local e estados auditados; não é snapshot de produção."
+    },
+    {
+      "id": "ON-20",
+      "path": "docs/station-android/online-plataformas-20261009/r128-retorno-servidor-20261011.json",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/docs/station-android/online-plataformas-20261009/r128-retorno-servidor-20261011.json",
+      "purpose": "Último retorno real a6b58e9 verificado nesta leitura, ainda R129."
+    },
+    {
+      "id": "ON-21",
+      "path": "docs/station-android/r133/DELIVERY.json",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/524d2ebff08353fda62aacbc5f05f9248ba69b7c/docs/station-android/r133/DELIVERY.json",
+      "purpose": "Entrega documental R133 publicada; não é aplicação servidor."
+    },
+    {
+      "id": "ON-22",
+      "path": "src/TurboRamaSuiteOnlineServer/StationMultiplayerProfileMonitor.cs",
+      "url": "https://github.com/luziellacerda/Servidor-pix/blob/a6b58e9beb12eb564c1b58d9d4c32ed3e7513861/src/TurboRamaSuiteOnlineServer/StationMultiplayerProfileMonitor.cs",
+      "purpose": "Hotreload de 10 s, limite de 16 MiB, último válido e salas congeladas."
+    }
+  ],
+  "openQuestions": [
+    "Confirmar publicação documental R134 na branch servidor existente e recebimento privado do kit exato R134, sem inferir dos arquivos locais.",
+    "Obter recibo de aplicação administrativa e hotreload com baselines ativos/hash/selos e capacidades v3 frescas vinculadas aos novos IDs.",
+    "Validar partida física e recuperação/controles nos dois aparelhos para cada motor/modo autorizado; instalação e frontend não cobrem gameplay.",
+    "Fechar as 14 recusas documentais/periféricos e 84 PSX HLE por edição quando houver evidência suficiente, mantendo bloqueio até aprovação.",
+    "Confirmar publicação efetiva das capas e contrato de mídia remota em produção; cliente implementado/batch preparado não são deploy."
+  ]
+}
