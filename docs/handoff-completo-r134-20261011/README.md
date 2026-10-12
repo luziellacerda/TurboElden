@@ -10,6 +10,7 @@ A referência instalada é o APK **R134**, fonte executável `4f9039eb9ce13907ce
 - [Auditoria e incidentes](AUDITORIA-E-INCIDENTES.md): defeitos comprovados, hipóteses e correções em fonte.
 - [Overlay de lifecycle](../../integration/online-lifecycle-review-r135/README.md): alteração proposta, testes e estado da candidata. Não é APK instalado.
 - [Revisão das verificações de compilação no GitHub](validation/CI-DELIVERY-REVIEW.json): correções de formatação e da conferência de migrações, sem alteração do banco produtivo.
+- [Estado conferido em 12/10](validation/STATUS-CHECK-20261012.json): quatro verificações do servidor aprovadas, retorno operacional ainda sem confirmação, APK R134 instalado e candidata de correção sem APK.
 
 ## Inventários pesquisáveis
 

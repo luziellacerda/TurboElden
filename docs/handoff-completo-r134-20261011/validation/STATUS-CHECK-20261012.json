@@ -1,0 +1,112 @@
+{
+  "schema": "station.handoff.status.check.v1",
+  "checkedUtc": "2026-10-12T04:02:34Z",
+  "checkedLocal": "2026-10-12 01:02:34 America/Fortaleza",
+  "git": {
+    "app": {
+      "url": "https://github.com/luziellacerda/TurboElden/pull/1",
+      "published": true,
+      "draft": true,
+      "qualifiedPreviousHead": "0877f9f4670ec4a78f60cb553c8e6290a101e0c8"
+    },
+    "server": {
+      "url": "https://github.com/luziellacerda/Servidor-pix/pull/5",
+      "published": true,
+      "draft": true,
+      "headSha": "1adcc732455da0887dfecb901a8a94bdf79f258d"
+    }
+  },
+  "serverReturn": {
+    "newOperationalReplyFound": false,
+    "branchesCompared": 118,
+    "priorHeadsUnchanged": true,
+    "prComments": 0,
+    "prReviews": 0,
+    "privateKitReceiptConfirmed": false,
+    "activationConfirmed": false,
+    "codeBaseline": "a6b58e9beb12eb564c1b58d9d4c32ed3e7513861",
+    "note": "GitHub delivery and successful CI are not proof of receiving the private kit or activating production; no production host queried"
+  },
+  "serverCi": {
+    "allFourChecksPassed": true,
+    "checks": [
+      {
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/luziellacerda/Servidor-pix/actions/runs/38190917956/job/114623337359",
+        "completedUtc": "2026-10-12T01:21:56Z"
+      },
+      {
+        "name": "build-and-self-test",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/luziellacerda/Servidor-pix/actions/runs/38190918112/job/114623286275",
+        "completedUtc": "2026-10-12T01:11:40Z"
+      },
+      {
+        "name": "build-test",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/luziellacerda/Servidor-pix/actions/runs/38190917966/job/114623286009",
+        "completedUtc": "2026-10-12T01:13:46Z"
+      },
+      {
+        "name": "build-and-self-test",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/luziellacerda/Servidor-pix/actions/runs/38190915514/job/114623278085",
+        "completedUtc": "2026-10-12T01:11:49Z"
+      }
+    ]
+  },
+  "apk": {
+    "latestVerifiedRevision": "R134",
+    "sourceCommit": "4f9039eb9ce13907ce043870bfe1f6e294888556",
+    "path": "F:/TurboStations-Backup-Completo-20261011/desenvolvimento/TurboStations-Premium-R134-20261011.apk",
+    "bytes": 2714991631,
+    "sha256": "f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2",
+    "laterApkFound": false
+  },
+  "installations": [
+    {
+      "model": "motorola edge 30",
+      "revision": "R134",
+      "completedUtc": "2026-10-11T23:18:33.944601+00:00",
+      "completedLocal": "11/10/2026 20:18:33 UTC-3",
+      "receipt": "instalacao-r134-edge30.json",
+      "apkHashMatches": true,
+      "frontendObserved": true
+    },
+    {
+      "model": "Samsung A56 SM-A566E",
+      "revision": "R134",
+      "completedUtc": "2026-10-11T23:23:26.145296+00:00",
+      "completedLocal": "11/10/2026 20:23:26 UTC-3",
+      "receipt": "instalacao-r134-samsung-a56.json",
+      "apkHashMatches": true,
+      "frontendObserved": true
+    }
+  ],
+  "correctionCandidate": {
+    "revisionLabel": "R135",
+    "javaCompiled": true,
+    "productionClasses": 9,
+    "jarSha256": "8e746f8fa449cfebae14b9db68b0080ffa9a9bfb6a45300449c4d2f7c9ce2bc4",
+    "dexBuilt": false,
+    "apkBuilt": false,
+    "installed": false,
+    "physicalGameplayAcceptance": false
+  },
+  "stalePointers": {
+    "backupPointersStillReportPreInstallationState": true,
+    "currentInstallationEvidence": "later receipts above; do not substitute preparation snapshot for completed installation"
+  },
+  "verification": {
+    "usbUsed": false,
+    "adbUsed": false,
+    "productionDeployed": false,
+    "productionRestarted": false,
+    "phonesInspectedLive": false
+  }
+}
