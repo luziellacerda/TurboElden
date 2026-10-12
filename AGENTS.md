@@ -1,3 +1,11 @@
+# Compilação R135 de teste autorizada em 12/10
+
+O usuário pediu compilar as correções R135 e instalar no telefone conectado. A autorização atual substitui a restrição anterior de USB para esta compilação. Sempre que for criada uma nova compilação de APK para testes, concluir também sua instalação no telefone autorizado disponível, preservando assinatura original, dados e identidade; não interromper jogo ou download ativo. Não pedir novamente autorização de instalação já concedida. Se aparelho estiver ausente/não autorizado/ocupado, concluir a compilação verificável e solicitar somente a ação humana necessária.
+
+Preservar atomicamente a R134 exata como donor, mudando apenas as partes solicitadas. R135 altera exclusivamente as famílias DolphinSession/GameSession e nova HumanDeparture em classes35.dex; todas as classes externas, outros DEX, Manifest/resources/telas/cores/opções/perfis devem ficar exatos. Identidades do bundle são renovadas pelo contrato existente sem mudar lógica dos emuladores. Fontes históricas congeladas ficam intactas. Não presumir gameplay, correção causal de todo ANR ou ativação do servidor; publicação Git não é deploy.
+
+## Estado anterior preservado
+
 # R134 instalada e revisão de lifecycle proposta
 
 Referência instalada4f9039eb9ce13907ce043870bfe1f6e294888556 / APKf8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2. Ler docs/handoff-completo-r134-20261011/README.md e as duas instalações sanitizadas. User relatou carregamento3p e diálogo de fechar na saída. A revisão atual foi autorizada sem USB. O overlay integration/online-lifecycle-review-r135 é fonte/Java compilado, não APK novo ou instalado; manter fontes históricas congeladas intactas. Testes locais e fonte confirmam Dolphin ABBA e Leave stale; aceite físico, saída durável sem rede e trace Android pendentes. Não relaxar licença, identidade, modos, ACK/READY ou saída humana.
