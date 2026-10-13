@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": "R141",
-  "apkPath": "TurboStations-Premium-R141-downloads-diretos-20261013.apk",
-  "sha256": "b5a76023860bceb2aa11c946c8003fa2d92951e700dbde3a498f8316857670d4",
+  "revision": "R142",
+  "apkPath": "TurboStations-Premium-R142-multitap-snes-20261013.apk",
+  "sha256": "f99b51a04f4967c086533157835868dcc6a22a3eb06eb63706886f9f60453b83",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-direct-downloads-on-preserved-r140",
-  "warning": "Teste R141: downloads diretos e reparos online R140 preservados. Gameplay e velocidade ainda pendentes. Quatro novos IDs independentes exigem cadastro próprio; IDs RetroArch/SNES preservados.",
-  "sourceCommit": "240b7c0504252e542975089f585bd67d5264f074",
+  "status": "test-snes-multitap-on-preserved-r141",
+  "warning": "R142 teste: entrega do multitap SNES corrigida; downloads R141 preservados. Gameplay 3/4 pendente; quatro IDs independentes aguardam cadastro. SNES mantém cadastro existente.",
+  "sourceCommit": "9a38881f467ee533b4f8bcff3ea6769b98401175",
   "bytes": 2715008015,
   "serverBindingsRegistered": false
 }
