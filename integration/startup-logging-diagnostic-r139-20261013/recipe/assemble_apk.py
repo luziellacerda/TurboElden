@@ -9,6 +9,8 @@ import sys
 import zipfile
 
 sys.dont_write_bytecode = True
+# Android's APK tooling requires classic ZIP headers below the 4 GiB boundary.
+zipfile.ZIP64_LIMIT = (1 << 32) - 1
 from common import BASE, BASE_BYTES, DEX, RETRO, PARTITION, WRAPPERS, SIDE, REPLACED, ROOT, need, sha, digest, read, entry_sha, verify_commit, isolated, temporary_fields
 
 
@@ -66,9 +68,9 @@ def build(a):
         need(all(expected[n] == checksum for n, checksum in identity["payloadSha256"].items()), "Marker common payload differs from package")
         out.mkdir(parents=True)
         unsigned = out / "TurboStations-R139-DIAG-startup-unsigned.apk"
-        with zipfile.ZipFile(unsigned, "w", allowZip64=True) as destination:
+        with zipfile.ZipFile(unsigned, "w", allowZip64=False) as destination:
             for item in original.infolist():
-                with destination.open(copy.copy(item), "w", force_zip64=True) as target:
+                with destination.open(copy.copy(item), "w", force_zip64=False) as target:
                     if item.filename in files:
                         with files[item.filename].open("rb") as source:
                             shutil.copyfileobj(source, target, 1024 * 1024)
@@ -78,7 +80,7 @@ def build(a):
             item = zipfile.ZipInfo(SIDE)
             item.compress_type = zipfile.ZIP_STORED
             item.external_attr = 0o100644 << 16
-            with destination.open(item, "w", force_zip64=True) as target, a.sidecar.open("rb") as source:
+            with destination.open(item, "w", force_zip64=False) as target, a.sidecar.open("rb") as source:
                 shutil.copyfileobj(source, target, 1024 * 1024)
     need(verify_commit(a.source_commit) == pins, "Sources changed during package assembly")
     receipt = dict(schema="station.r139.startup-logging.package.v1", passed=True, sourceCommit=a.source_commit, sourceFiles=pins,
