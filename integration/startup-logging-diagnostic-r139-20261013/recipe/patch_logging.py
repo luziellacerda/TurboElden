@@ -50,6 +50,8 @@ def additions(name):
                      '    invoke-static {v2, v3, v4}, L' + PACKAGE + 'StationRetroLaunch;->set(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V\n\n')
     # v3 is assigned by both arms of the following mask branch; v4 is assigned
     # by the following platform iget before any read. No register count changes.
+    # Keep the donor separator: the assembler collapses extra blank lines.
+    inserted = inserted.rstrip("\n") + "\n"
     write = '    invoke-static {v5, v2}, L' + PACKAGE + 'StationRetroLaunch;->write(Ljava/io/File;Ljava/lang/String;)V\n'
     receipt = '\n    invoke-static {}, ' + HELPER + '->cfgWritten()V\n'
     return [(anchor, inserted), (write, receipt)]
