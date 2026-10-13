@@ -1,10 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": "R139",
-  "apkPath": "TurboStations-Premium-R139-recursos-20261013.apk",
-  "sha256": "19acdeceef86bc66c2475300cbd142da783850c02f5a9e2068d8652ef8523164",
+  "revision": "R141",
+  "apkPath": "TurboStations-Premium-R141-downloads-diretos-20261013.apk",
+  "sha256": "b5a76023860bceb2aa11c946c8003fa2d92951e700dbde3a498f8316857670d4",
   "package": "org.turboramastation.frontend",
-  "adbPath": "",
-  "status": "test-awaiting-r139-server-registration",
-  "warning": "R139 de testes: recursos de início e JNI/TLS corrigidos e conferidos no Android. Novos IDs aguardam cadastro v3 no servidor; partida e saída após perda de sinal ainda precisam de teste físico."
+  "adbPath": "platform-tools/adb.exe",
+  "status": "test-direct-downloads-on-preserved-r140",
+  "warning": "Teste R141: downloads diretos e reparos online R140 preservados. Gameplay e velocidade ainda pendentes. Quatro novos IDs independentes exigem cadastro próprio; IDs RetroArch/SNES preservados.",
+  "sourceCommit": "240b7c0504252e542975089f585bd67d5264f074",
+  "bytes": 2715008015,
+  "serverBindingsRegistered": false
 }
