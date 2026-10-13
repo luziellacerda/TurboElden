@@ -1,0 +1,85 @@
+{
+  "phase": "after",
+  "recordedUTC": "2026-10-13T12:58:54.134272+00:00",
+  "deviceModel": "moto g52",
+  "android": "13",
+  "sdk": "33",
+  "installedApkSha256": "19acdeceef86bc66c2475300cbd142da783850c02f5a9e2068d8652ef8523164",
+  "expectedR138": false,
+  "topOwnActivity": "org.emulationstation.frontend.netplay.StationRoomsActivity",
+  "ownActivityRecords": [
+    {
+      "component": "org.emulationstation.frontend.netplay.StationRoomsActivity",
+      "visible": true
+    },
+    {
+      "component": "org.emulationstation.frontend.ESActivity",
+      "visible": false
+    }
+  ],
+  "activeServices": [
+    [
+      "u0",
+      "org.turboramastation.frontend/org.emulationstation.frontend.DownloadService"
+    ]
+  ],
+  "ownProcesses": [
+    "org.turboramastation.frontend"
+  ],
+  "sampledProcesses": {
+    "org.turboramastation.frontend": {
+      "rawSha256": "75e01ab50896e6640f0ffc5f72092b9f30ab7a3dc6a5e16bc9bb845db713c444",
+      "frames": 4
+    }
+  },
+  "thermalStatus": 0,
+  "batteryCelsius": 32.0,
+  "samplingDidNotNavigateOrChangeSettings": true,
+  "appForceStopped": false,
+  "phoneDataChanged": false,
+  "cpuPercentageComparedOnlyForMatchingScenarios": false,
+  "rawPrivateFileHashes": {
+    "activities": {
+      "sha256": "73ad236cb1531069b8bb1647c91945c1ec85bc3911382a94a97b218323c7f8a0",
+      "bytes": 36473
+    },
+    "services": {
+      "sha256": "5e53c19f05c16b03879f30f80e9923abedd67efc886e328bcfa294567551a4e1",
+      "bytes": 1571
+    },
+    "processes": {
+      "sha256": "c7d8dd726570bc495b4f2ede32d62c743b28f27ac7cbf429fe29332089b31e02",
+      "bytes": 18976
+    },
+    "top-help": {
+      "sha256": "145d7b1f612b8ab9d48062db2cf945fb11faaf9862cdd4cca88e1ef37aa1f0e3",
+      "bytes": 842
+    },
+    "top-org.turboramastation.frontend": {
+      "sha256": "75e01ab50896e6640f0ffc5f72092b9f30ab7a3dc6a5e16bc9bb845db713c444",
+      "bytes": 20769
+    },
+    "memory": {
+      "sha256": "21bf372cc5a7fdde7e4b79370405a6fae7884c0535489b4ea60538f1bc6ee94f",
+      "bytes": 3269
+    },
+    "thermal": {
+      "sha256": "cd6b211e19393fd764fdbc1029f14b47426e75ec65fb1e4b8fee98f81339c09a",
+      "bytes": 241
+    },
+    "battery": {
+      "sha256": "5d2a14a5a97924d718a91ad7212ad64544dec763b1b256e9e9c28137d2cd0880",
+      "bytes": 744
+    },
+    "logcat": {
+      "sha256": "68b0540eaff0d23d6f375aa5aa4d27f89934868da42581af2a64230f62a60ca4",
+      "bytes": 923070
+    },
+    "exit-info": {
+      "sha256": "23328ea7f6729435e7a7e81221e81d96519fb5989c4985fe507f05eab2497691",
+      "bytes": 6080
+    }
+  },
+  "containsSerialOrPersonalData": false,
+  "expectedR139": true
+}

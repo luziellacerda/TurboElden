@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "24420118e5ce94376b077051084a84d4c52f152d00b9e2330333896bced798fb",
+  "productionFunctions": {
+    "station_jni_key_ensure": "851c9aa0cf21ec2b6bb2c631848543fdb10a69c45888c549ebb615e8309be3cd",
+    "jni_thread_getenv": "df6de05e117143d623a8fe6b6b889dbe411282460b12382b3e7b8d67ae7c43fc",
+    "jni_thread_destruct": "a58c0fb7b8e6478be177e2473e3d01584def1938120f6cb8984ce5fa2d3f0e19"
+  },
+  "productionGlobalsSha256": "6485e00fbc56ff0eb7b3859d90b4f327dd1391f1cc38abda353f02c804db25da",
+  "templateSha256": "5200d452dd96807602174233346ec3d4778a971999bb6b57eacb8fcbabdb00be",
+  "javaSourceSha256": "df00ed8f04f2c55cc21732043dd4244e315d27d2b0777d1b7b4c0208f610dee3",
+  "patchRecipeSha256": "685de6c92972bdc7671cf36e6409f18b2bd111023f62a3419a75628775958cf1",
+  "compilerSha256": "7d31c6f6fad98987b6c9d21b800afaa8b3e37f052e94aaddc941d42ff2a35579",
+  "javaSha256": "1977f302375adbb920d41dac65c7e22eb9c2ed8e1e8d6258964154ff16f14406",
+  "javacSha256": "9c71eee841aeebb723bfc2cceca7d72c6c1988fb679402f4123aa4d0e86aa549",
+  "d8JarSha256": "305622ad00535684534eb8f742cbf5e628a9abc09d8ea4d39d1babb95bf0cee5",
+  "androidJarSha256": "6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad",
+  "generatedCSha256": "78ac336e1985cf18217f8315e9193a028d66650aafa314157d4564571d6b784d",
+  "librarySha256": "b6391c15a6d2377ba775b9b75b3ad76b3cb5a8b8b95437f504bc5e2333c29d09",
+  "libraryBytes": 16176,
+  "jarSha256": "4c7acc601edecf5f56952da1d6a45dda68ff6e9de894872fe35c89de8028c9ef",
+  "jarBytes": 3204,
+  "target": "aarch64-linux-android26",
+  "minimumLoadAlignment": 16384,
+  "buildOnly": true,
+  "apkInstalled": false,
+  "androidExecuted": false
+}

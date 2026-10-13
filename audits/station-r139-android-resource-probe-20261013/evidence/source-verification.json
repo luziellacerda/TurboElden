@@ -1,0 +1,10 @@
+{
+  "sourceSha256": "24420118e5ce94376b077051084a84d4c52f152d00b9e2330333896bced798fb",
+  "productionFunctionBytesExact": {
+    "station_jni_key_ensure": true,
+    "jni_thread_getenv": true,
+    "jni_thread_destruct": true
+  },
+  "allFunctionsExact": true,
+  "productiveSourceUnchanged": true
+}

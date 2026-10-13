@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": "R138",
-  "apkPath": "TurboStations-Premium-R138-SNES-online-20261012.apk",
-  "sha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+  "revision": "R139",
+  "apkPath": "TurboStations-Premium-R139-recursos-20261013.apk",
+  "sha256": "19acdeceef86bc66c2475300cbd142da783850c02f5a9e2068d8652ef8523164",
   "package": "org.turboramastation.frontend",
   "adbPath": "",
-  "status": "test-awaiting-server-registration",
-  "warning": "R138 de testes: os dois jogos SNES passaram carga e 120 quadros isolados. O cadastro dos novos motores/perfis no servidor e os testes de partida/saída após queda de sinal ainda estão pendentes."
+  "status": "test-awaiting-r139-server-registration",
+  "warning": "R139 de testes: recursos de início e JNI/TLS corrigidos e conferidos no Android. Novos IDs aguardam cadastro v3 no servidor; partida e saída após perda de sinal ainda precisam de teste físico."
 }
