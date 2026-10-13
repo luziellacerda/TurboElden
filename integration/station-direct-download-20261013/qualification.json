@@ -19,10 +19,20 @@
   "retainedDex28Classes": 266,
   "hostContractChecksPassed": 43,
   "realTlsScenariosPassed": 3,
-  "signed": false,
+  "signed": true,
   "installed": false,
-  "registeredOnServer": false,
+  "registeredOnServer": true,
   "actualAuthorizedDeviceDownloadVerified": false,
   "speedImprovementMeasured": false,
-  "originalSigningKeyPending": true
+  "originalSigningKeyPending": false,
+  "signedApkSha256": "e69616ee6377920f808f3b5a267f5592ffff9ae70c2bbe2063c6902cd903c02a",
+  "signedApkBytes": 2713648143,
+  "originalSignerSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "finalEntriesVerified": 13860,
+  "v2Verified": true,
+  "v3Verified": true,
+  "usbInstallerManifestUpdated": true,
+  "authorizedProductionVhostDownloadVerified": true,
+  "grantReuseForeignSessionAndExpiryRefused": true,
+  "usbCopyVerified": true
 }

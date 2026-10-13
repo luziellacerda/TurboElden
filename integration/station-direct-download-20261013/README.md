@@ -1,8 +1,8 @@
 # Downloads diretos protegidos — candidata sobre R139
 
-**Servidor direto ativo; APK candidato compilado unsigned, ainda sem assinatura,
-instalação ou medição física de velocidade.** Não substituir a R139 instalada
-por este artefato sem a chave original e a conferência da assinatura.
+**Servidor direto ativo; APK assinado com a chave original e quatro identidades
+registradas no servidor. Instalação e medição física de velocidade pendentes.**
+O celular não foi detectado pelo USB nesta etapa; o kit de instalação está preparado.
 
 `StationHttp` usa `downloads-station.lzgames.com.br` somente no GET canônico de
 artefato. As demais rotas continuam em `app.lzgames.com.br`, com o pin antigo.
@@ -58,14 +58,46 @@ não é o hash de um APK instalável ou publicado. Materiais privados permanecem
 
 Artefato alinhado ainda unsigned: SHA256
 `d8ac31fa84ea1a8bf704878bf740e03599524d342474ef12ecc9a757ed08c805`,
-2.713.640.743 bytes. Assinatura e atualização USB seguem pendentes.
+2.713.640.743 bytes. Este é o artefato anterior à assinatura final.
+
+APK final assinado: SHA256
+`e69616ee6377920f808f3b5a267f5592ffff9ae70c2bbe2063c6902cd903c02a`,
+2.713.648.143 bytes. Certificado original, assinaturas v2/v3 e alinhamento 16 KiB
+conferidos; todas as 13.860 entradas finais relidas e comparadas à montagem aprovada.
+A chave original foi localizada no material privado fornecido pelo operador e
+permanece fora do Git. Nenhum APK desta candidata foi publicado ou instalado.
+
+## Registro administrativo aplicado
+
+O registrador v3 vigente recebeu os seis binários reais extraídos do APK assinado.
+Suas 20 dependências distintas também foram conferidas. Foram acrescentados os quatro
+IDs renovados e 78 vínculos dos mesmos modos N64/GameCube/Wii já aprovados, com IDs de
+perfil limitados ao novo owner. Core, opções, controles, modos e fontes de aprovação
+permaneceram iguais; nenhuma aprovação HLE PSX foi acrescentada.
+
+Os 31 motores, 11.448 perfis e 6.587 modos anteriores foram preservados integralmente.
+Totais após aplicação: 35 motores, 11.526 perfis e 6.665 modos. Respostas v3 assinadas
+locais e públicas confirmaram os vínculos das três plataformas; seis recusas de
+conteúdo/engine/capacidade indevidos passaram. Catálogo46, configurações, identidades
+de conteúdo, licenças reais, DLL e processo da API permaneceram iguais, sem restart.
+O cadastro não confirma gameplay no aparelho. [Recibo sanitizado](registration.json).
+
+O vhost de produção também foi testado com duas sessões sintéticas e prova real,
+conservando CA pública, hostname e pin. Um download completo de 4 MiB conferiu o SHA;
+sessão estrangeira, reuso e expiração foram recusados. Após fechar uma leitura parcial,
+o grant foi recusado e uma nova autorização funcionou. As licenças sintéticas foram
+removidas e as reais preservadas. O socket dessa prova chegou ao vhost local; não
+mede Internet do cliente nem execução Android. [Recibo](protected-download-validation.json).
+
+O APK e o instalador foram copiados ao pendrive indicado pelo operador; o arquivo
+copiado foi relido e seu SHA final conferido antes da ejeção segura. O kit permite
+instalação pelo Windows ou abertura do APK no Android por USB/OTG compatível.
 
 ## Conclusão necessária no aparelho
 
-Receber a chave original do operador, alinhar/assinar e conferir o certificado v2/v3
-e todas as entradas finais. Instalar por atualização no aparelho autorizado ocioso,
+Instalar o APK final assinado por atualização no aparelho autorizado ocioso,
 preservando UID/dados/Keystore/licença/jogos/saves. Não interromper partida ou download.
-Atualizar o manifesto USB somente após definir o APK final assinado.
+O manifesto USB já identifica o APK final assinado e o kit inclui ADB para Windows.
 
 Conferir autorização, download completo e SHA, grant expirado/reuso recusados,
 cancelamento e nova autorização para retomar. Comparar velocidade em rede externa

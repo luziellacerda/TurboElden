@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": "R139",
-  "apkPath": "TurboStations-Premium-R139-recursos-20261013.apk",
-  "sha256": "19acdeceef86bc66c2475300cbd142da783850c02f5a9e2068d8652ef8523164",
+  "revision": "DIRECT-DOWNLOAD-20261013",
+  "apkPath": "TurboStation-Downloads-Diretos-Teste-20261013.apk",
+  "sha256": "e69616ee6377920f808f3b5a267f5592ffff9ae70c2bbe2063c6902cd903c02a",
   "package": "org.turboramastation.frontend",
   "adbPath": "",
-  "status": "test-awaiting-r139-server-registration",
-  "warning": "R139 de testes: recursos de início e JNI/TLS corrigidos e conferidos no Android. Novos IDs aguardam cadastro v3 no servidor; partida e saída após perda de sinal ainda precisam de teste físico."
+  "status": "test-awaiting-device-install-and-download",
+  "warning": "Downloads diretos de teste sobre R139: assinatura original e cadastro v3 conferidos. Instalação no aparelho e teste de download/velocidade ainda pendentes. Atualizar sem desinstalar ou apagar dados."
 }
