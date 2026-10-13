@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "qualification": "Static source contract inspection and Python AST parsing only; no compiler or Android execution.",
+  "checks": {
+    "singleJniExport": true,
+    "exactAlreadyLoadedResolution": true,
+    "noDefaultNamespaceLookup": true,
+    "allThreeSymbolOriginsChecked": true,
+    "fixedLogTag": true,
+    "allCallsBeforeReferenceClose": true,
+    "jniStringReleasedAfterClose": true,
+    "noRuntimeConfigOrGameApis": true,
+    "runtimePinMatchesBase": true,
+    "sourceOnlyBaseReceipt": true
+  },
+  "sourceFiles": {
+    "integration/startup-logging-diagnostic-r139-20261013/native/station_startup_logging.c": "d850c858ac1d923f23efc18129cefa4a3913dde1bb691d46de15a3ca6a1127ea",
+    "integration/startup-logging-diagnostic-r139-20261013/native/build_sidecar.py": "8805e21a53e99c45d83652423a6941e9a121f837e751825b959ebafcb4d886b7",
+    "integration/startup-logging-diagnostic-r139-20261013/native/COPYING": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "integration/startup-logging-diagnostic-r139-20261013/native/base-receipt.json": "913e4e9450434520321167cd15286d0b41d2810ee3c123a59af251ec7014914c",
+    "integration/startup-logging-diagnostic-r139-20261013/native/probe/StationStartupLogging.java": "9485c04e87b4ba84121c37b9fc1027755718de2217e415dbabf5bb3daafae4a4",
+    "integration/startup-logging-diagnostic-r139-20261013/native/probe/build_probe.py": "0ffc89892f2588504c624e34744c5f53af64c8f53c0f5befc3822f631ee5c859"
+  },
+  "compiled": false,
+  "installed": false,
+  "androidExecuted": false,
+  "gameplayValidated": false
+}
