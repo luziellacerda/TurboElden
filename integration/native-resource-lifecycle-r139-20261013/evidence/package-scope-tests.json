@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "revision": "R139",
+  "scopeChecksPassed": 18,
+  "checks": [
+    "positive: nine descriptors, eight active, donor immutable",
+    "rejected: global policy",
+    "rejected: engine addition",
+    "rejected: engine removal",
+    "rejected: SNES HLE options",
+    "rejected: SNES extra frameskip",
+    "rejected: core hash",
+    "rejected: controller device profile",
+    "rejected: maximum players",
+    "rejected: Geolith activation",
+    "rejected: independent PSX mutation",
+    "rejected: stale native suffix",
+    "rejected: wrong runtime SHA",
+    "rejected: recovery protocol",
+    "rejected: invalid/old runtime hash 64",
+    "rejected: invalid/old runtime hash 63",
+    "rejected: invalid/old runtime hash 64",
+    "rejected: invalid/old runtime hash 7"
+  ],
+  "baselineRegistrySha256": "76b3cb61149293200cb8853784e6b6e4023f4e4c33b6b7cfcad8a954e1f9f519",
+  "baselineRuntimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f",
+  "independentWrapperPins": {
+    "libstation_psx_online.so": {
+      "runtimeSha256": "c26d8836df255ad4cc10d19d328b6fc8dcbc6a429725794c88acd4de5ca3dc50",
+      "fingerprintSha256": "8950075ba8fd86c69f99a27ebd6d548e41e255b15d536d3c5a2254d42e14dbe3",
+      "boundEntryCount": 350,
+      "r139ReplacedEntriesBound": false
+    },
+    "libstation_mupen64plus_runtime.so": {
+      "runtimeSha256": "2f248cfcdc9e6d0e20795b1dab84f581b8fe9ea59eb0994ae96036aed2abeb77",
+      "fingerprintSha256": "810fb99ada75d9198ef430ea9c219318c1c16012ffe461b6f523f467739de3ff",
+      "boundEntryCount": 357,
+      "r139ReplacedEntriesBound": false
+    },
+    "libstation_dolphin_runtime.so": {
+      "runtimeSha256": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82",
+      "fingerprintSha256": "d6d3440bf649c1170b2e011328d3c71a510adb8423f2088af09e4a4b109832ab",
+      "boundEntryCount": 349,
+      "r139ReplacedEntriesBound": false
+    }
+  },
+  "packageRecipeSha256": "a34931b7db4a1f503f22d08b9c6710e68c878cb0de3b429ce5bde6928aab8a08",
+  "testSourceSha256": "397e451815723efdd4ee2f91743503103dd4f935f146eb7310df7f40befd3e30",
+  "apkCreated": false,
+  "nativeCompiled": false,
+  "signed": false,
+  "installed": false,
+  "productionTouched": false,
+  "physicalGameplayValidated": false
+}

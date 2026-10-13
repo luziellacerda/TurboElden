@@ -1,0 +1,24 @@
+{
+  "revision": "R139",
+  "date": "2026-10-13",
+  "stage": "source-reviewed-baseline-reproduced-before-candidate-build",
+  "parentRevision": "R138",
+  "parentApkSha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+  "nativeSourceSha256": "24420118e5ce94376b077051084a84d4c52f152d00b9e2330333896bced798fb",
+  "nativeBaselineProductiveSectionsReproduced": true,
+  "hostResourceScenariosPassed": 24,
+  "nativeRuntimeBuilt": false,
+  "signedApkBuilt": false,
+  "installed": false,
+  "serverRegistered": false,
+  "physicalGameplayValidated": false,
+  "physicalResourceFailureInjected": false,
+  "scope": [
+    "nativeStartupResourceChecks",
+    "oneProcessJniTlsKey",
+    "threadOwnedJniDetach"
+  ],
+  "nesCapacityOverlayIncluded": false,
+  "timersOrPacingChanged": false,
+  "coreOptionsChanged": false
+}

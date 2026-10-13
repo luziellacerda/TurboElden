@@ -1,0 +1,240 @@
+/* Production functions are extracted verbatim. Host allocation/JNI/FD/Activity
+ * fixtures are controlled; TLS destructors and concurrency use real Windows FLS
+ * and threads. This is not an Android lifecycle/CPU-performance measurement. */
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdint.h>
+
+#define JNI_OK 0
+#define JNI_EDETACHED (-2)
+#define JNI_VERSION_1_6 0x00010006
+typedef const struct mock_jni_ops *JNIEnv;
+typedef const struct mock_vm_ops *JavaVM;
+typedef void *jclass;
+struct mock_jni_ops {
+ jclass (*FindClass)(JNIEnv*,const char*);
+ int (*ThrowNew)(JNIEnv*,jclass,const char*);
+ void (*DeleteLocalRef)(JNIEnv*,jclass);
+};
+struct mock_vm_ops {
+ int (*GetEnv)(JavaVM*,void**,int);
+ int (*AttachCurrentThread)(JavaVM*,JNIEnv**,void*);
+ int (*DetachCurrentThread)(JavaVM*);
+};
+typedef struct ANativeActivity ANativeActivity;
+typedef void ANativeWindow;
+typedef void AInputQueue;
+typedef struct {int left,top,right,bottom;} ARect;
+struct mock_callbacks {
+ void (*onDestroy)(ANativeActivity*),(*onStart)(ANativeActivity*),(*onResume)(ANativeActivity*);
+ void *(*onSaveInstanceState)(ANativeActivity*,size_t*);
+ void (*onPause)(ANativeActivity*),(*onStop)(ANativeActivity*),(*onConfigurationChanged)(ANativeActivity*),(*onLowMemory)(ANativeActivity*);
+ void (*onWindowFocusChanged)(ANativeActivity*,int);
+ void (*onNativeWindowCreated)(ANativeActivity*,ANativeWindow*),(*onNativeWindowDestroyed)(ANativeActivity*,ANativeWindow*);
+ void (*onInputQueueCreated)(ANativeActivity*,AInputQueue*),(*onInputQueueDestroyed)(ANativeActivity*,AInputQueue*);
+ void (*onContentRectChanged)(ANativeActivity*,const ARect*);
+};
+struct ANativeActivity {void *instance;JNIEnv *env;JavaVM *vm;struct mock_callbacks *callbacks;};
+typedef SRWLOCK slock_t;
+typedef CONDITION_VARIABLE scond_t;
+typedef struct {int live;} sthread_t;
+typedef SRWLOCK pthread_mutex_t;
+typedef DWORD pthread_key_t;
+#define PTHREAD_MUTEX_INITIALIZER SRWLOCK_INIT
+struct android_app {
+ ANativeActivity *activity;slock_t *mutex;scond_t *cond;sthread_t *thread;
+ void *savedState;size_t savedStateSize;int msgread,msgwrite,running;
+};
+static int fault;
+static LONG live_allocs,live_fds,finish_calls,release_calls,create_calls,reset_calls;
+static LONG key_attempts,key_creations,get_calls,attach_calls,detach_calls,java_detaches,wrong_detaches,env_errors,checked_calls;
+static LONG activity_reserved;
+static DWORD allocated_keys[256];
+static pthread_mutex_t station_activity_mutex=PTHREAD_MUTEX_INITIALIZER;
+static struct android_app *station_activity_app,*g_android;
+static bool reenter_vm;
+static HANDLE concurrent_gate;
+static bool candidate;
+static __declspec(thread) bool current_attached,attached_by_us;
+static __declspec(thread) DWORD attached_tid;
+static __declspec(thread) JNIEnv thread_env;
+static void *alloc(size_t n){void *p=malloc(n?n:1);if(p)InterlockedIncrement(&live_allocs);return p;}
+static void dealloc(void *p){if(p){InterlockedDecrement(&live_allocs);free(p);}}
+static void *fake_calloc(size_t n,size_t size){if(fault==1)return NULL;void *p=alloc(n*size);if(p)memset(p,0,n*size);return p;}
+static void *fake_malloc(size_t n){return fault==4?NULL:alloc(n);}
+static void *fake_memcpy(void *to,const void *from,size_t n){if(!to&&n){puts("NULL_SAVED_STATE_DESTINATION");exit(0);}return memcpy(to,from,n);}
+static slock_t *slock_new(void){if(fault==2)return NULL;slock_t *p=alloc(sizeof(*p));if(p)InitializeSRWLock(p);return p;}
+static scond_t *scond_new(void){if(fault==3)return NULL;scond_t *p=alloc(sizeof(*p));if(p)InitializeConditionVariable(p);return p;}
+static void slock_free(slock_t *p){dealloc(p);}
+static void scond_free(scond_t *p){dealloc(p);}
+static void slock_lock(slock_t *p){if(p)AcquireSRWLockExclusive(p);}
+static void slock_unlock(slock_t *p){if(p)ReleaseSRWLockExclusive(p);}
+static void scond_wait(scond_t *p,slock_t *m){if(!m){puts("NULL_MUTEX_IN_CONDITION_WAIT");exit(0);}if(!p){puts("NULL_CONDITION_WAIT");exit(0);}puts("WAIT_WITHOUT_WORKER");exit(0);}
+static int pipe(int fds[2]){if(fault==5)return -1;fds[0]=101;fds[1]=102;InterlockedExchangeAdd(&live_fds,2);return 0;}
+static int close(int fd){if(fd==101||fd==102)InterlockedDecrement(&live_fds);return 0;}
+static void android_app_entry(void *p){(void)p;}
+static sthread_t *sthread_create(void (*fn)(void*),void *p){(void)fn;InterlockedIncrement(&create_calls);if(fault==6)return NULL;((struct android_app*)p)->running=1;return alloc(sizeof(sthread_t));}
+static void pthread_mutex_lock(pthread_mutex_t *p){AcquireSRWLockExclusive(p);}
+static void pthread_mutex_unlock(pthread_mutex_t *p){ReleaseSRWLockExclusive(p);}
+static int pthread_key_create(pthread_key_t *key,void (*destroy)(void*)){
+ InterlockedIncrement(&key_attempts);if(fault==7)return 11;
+ DWORD value=FlsAlloc((PFLS_CALLBACK_FUNCTION)destroy);if(value==FLS_OUT_OF_INDEXES)return 11;
+ LONG index=InterlockedIncrement(&key_creations)-1;if(index>=256)exit(10);allocated_keys[index]=value;*key=value;return 0;
+}
+static int pthread_setspecific(pthread_key_t key,const void *value){if(fault==9&&value)return 12;return FlsSetValue(key,(void*)value)?0:12;}
+static bool station_activity_reserve(ANativeActivity *a){(void)a;return InterlockedCompareExchange(&activity_reserved,1,0)==0;}
+static void station_activity_release(ANativeActivity *a){(void)a;InterlockedIncrement(&release_calls);InterlockedExchange(&activity_reserved,0);station_activity_app=NULL;}
+static void ANativeActivity_finish(ANativeActivity *a){(void)a;InterlockedIncrement(&finish_calls);}
+static void ANativeActivity_setWindowFlags(ANativeActivity *a,int add,int remove){(void)a;(void)add;(void)remove;}
+static void station_recovery_reset(void){InterlockedIncrement(&reset_calls);}
+static void station_multiplayer_begin_launch(void){}
+#define AWINDOW_FLAG_KEEP_SCREEN_ON 1
+#define AWINDOW_FLAG_FULLSCREEN 2
+static void onDestroy(ANativeActivity *a){(void)a;}
+static void onStart(ANativeActivity *a){(void)a;}
+static void onResume(ANativeActivity *a){(void)a;}
+static void *onSaveInstanceState(ANativeActivity *a,size_t *n){(void)a;*n=0;return NULL;}
+static void onPause(ANativeActivity *a){(void)a;}
+static void onStop(ANativeActivity *a){(void)a;}
+static void onConfigurationChanged(ANativeActivity *a){(void)a;}
+static void onLowMemory(ANativeActivity *a){(void)a;}
+static void onWindowFocusChanged(ANativeActivity *a,int n){(void)a;(void)n;}
+static void onNativeWindowCreated(ANativeActivity *a,ANativeWindow *w){(void)a;(void)w;}
+static void onNativeWindowDestroyed(ANativeActivity *a,ANativeWindow *w){(void)a;(void)w;}
+static void onInputQueueCreated(ANativeActivity *a,AInputQueue *q){(void)a;(void)q;}
+static void onInputQueueDestroyed(ANativeActivity *a,AInputQueue *q){(void)a;(void)q;}
+static void onContentRectChanged(ANativeActivity *a,const ARect *r){(void)a;(void)r;}
+static jclass mock_find(JNIEnv *e,const char *n){(void)e;(void)n;return (void*)1;}
+static int mock_throw(JNIEnv *e,jclass c,const char *s){(void)e;(void)c;(void)s;return 0;}
+static void mock_delete(JNIEnv *e,jclass c){(void)e;(void)c;}
+static const struct mock_jni_ops jni_ops={mock_find,mock_throw,mock_delete};
+static JNIEnv ui_env=&jni_ops;
+static int mock_get(JavaVM *vm,void **e,int version);
+static int mock_attach(JavaVM *vm,JNIEnv **e,void *args);
+static int mock_detach(JavaVM *vm);
+static const struct mock_vm_ops vm_ops={mock_get,mock_attach,mock_detach};
+static JavaVM process_vm=&vm_ops,other_vm=&vm_ops;
+/* @TLS_GLOBALS@ */
+/* @ENSURE@ */
+#define malloc fake_malloc
+#define calloc fake_calloc
+#define free dealloc
+#define memcpy fake_memcpy
+#define RARCH_ERR(...) fprintf(stderr,__VA_ARGS__)
+/* @PRODUCTION@ */
+static void vm_reentry(JavaVM *vm){
+ if(!reenter_vm)return;
+ if(candidate){
+/* @REENTER@ */
+ }
+}
+static int mock_get(JavaVM *vm,void **e,int version){
+ (void)version;InterlockedIncrement(&get_calls);vm_reentry(vm);
+ if(fault==10)return -3;if(!current_attached)return JNI_EDETACHED;
+ *e=&thread_env;return JNI_OK;
+}
+static int mock_attach(JavaVM *vm,JNIEnv **e,void *args){
+ (void)args;vm_reentry(vm);if(fault==8)return -1;
+ InterlockedIncrement(&attach_calls);
+ if(!current_attached){current_attached=true;attached_by_us=true;attached_tid=GetCurrentThreadId();}
+ thread_env=&jni_ops;*e=&thread_env;return JNI_OK;
+}
+static int mock_detach(JavaVM *vm){
+ vm_reentry(vm);InterlockedIncrement(&detach_calls);
+ if(!attached_by_us)InterlockedIncrement(&java_detaches);
+ if(attached_by_us&&attached_tid!=GetCurrentThreadId())InterlockedIncrement(&wrong_detaches);
+ current_attached=false;attached_by_us=false;return JNI_OK;
+}
+static void retire_mock_activity(ANativeActivity *activity){
+ struct android_app *a=activity->instance;if(a){close(a->msgread);close(a->msgwrite);dealloc(a->savedState);scond_free(a->cond);slock_free(a->mutex);dealloc(a->thread);dealloc(a);}
+ activity->instance=NULL;station_activity_app=NULL;g_android=NULL;InterlockedExchange(&activity_reserved,0);
+}
+static void start_shaped_activity(ANativeActivity *activity,struct mock_callbacks *callbacks,void *saved,size_t size,bool null_vm){
+ memset(activity,0,sizeof(*activity));memset(callbacks,0,sizeof(*callbacks));activity->callbacks=callbacks;activity->env=&ui_env;activity->vm=&process_vm;
+ if(null_vm)activity->vm=NULL;
+ ANativeActivity_onCreate(activity,saved,size);
+ if(activity->instance)g_android=activity->instance;
+}
+static void start_mock_activity(ANativeActivity *activity,struct mock_callbacks *callbacks){char saved[8]={0};start_shaped_activity(activity,callbacks,saved,sizeof(saved),false);}
+struct thread_case {bool java_owned,clear_app;int calls;};
+static DWORD WINAPI tls_thread(void *parameter){
+ struct thread_case *t=parameter;if(concurrent_gate)WaitForSingleObject(concurrent_gate,5000);
+ current_attached=t->java_owned;attached_by_us=false;thread_env=&jni_ops;
+ for(int i=0;i<t->calls;i++){
+  JNIEnv *env=jni_thread_getenv();InterlockedIncrement(&checked_calls);
+  bool expect_null=fault==8||fault==10||(candidate&&fault==9);
+  if(expect_null?env!=NULL:env!=&thread_env)InterlockedIncrement(&env_errors);
+ }
+ if(t->clear_app)g_android=NULL;
+ return 0; /* Real Windows FLS invokes the production destructor on this thread. */
+}
+static int run_one(struct thread_case *t){HANDLE h=CreateThread(NULL,0,tls_thread,t,0,NULL);if(!h)return 12;DWORD wait=WaitForSingleObject(h,5000);CloseHandle(h);return wait==WAIT_OBJECT_0?0:13;}
+static DWORD WINAPI ensure_thread(void *parameter){
+ (void)parameter;WaitForSingleObject(concurrent_gate,5000);
+/* @ENSURE_THREAD@ */
+ return 0;
+}
+static void print_result(const char *scenario){
+ printf("scenario=%s fault=%d allocations=%ld fds=%ld finish=%ld release=%ld worker=%ld resets=%ld keyAttempts=%ld keys=%ld get=%ld attach=%ld detach=%ld javaDetach=%ld wrongDetach=%ld envErrors=%ld calls=%ld\n",
+ scenario,fault,live_allocs,live_fds,finish_calls,release_calls,create_calls,reset_calls,key_attempts,key_creations,get_calls,attach_calls,detach_calls,java_detaches,wrong_detaches,env_errors,checked_calls);
+}
+int main(int argc,char **argv){
+ if(argc!=3)return 2;candidate=atoi(argv[1])!=0;const char *scenario=argv[2];
+ ANativeActivity activity;struct mock_callbacks callbacks;
+ if(!strncmp(scenario,"fault-",6)){
+  fault=atoi(scenario+6);start_mock_activity(&activity,&callbacks);
+  if(fault==2&&activity.instance&&!((struct android_app*)activity.instance)->mutex)puts("NULL_MUTEX_ACCEPTED");
+  if(fault==3&&activity.instance&&!((struct android_app*)activity.instance)->cond)puts("NULL_CONDITION_ACCEPTED");
+  if(fault==0)retire_mock_activity(&activity);print_result(scenario);return 0;
+ }
+ if(!strcmp(scenario,"launches")){
+  for(int i=0;i<100;i++){start_mock_activity(&activity,&callbacks);if(!activity.instance)return 3;retire_mock_activity(&activity);}
+  print_result(scenario);return 0;
+ }
+ if(!strcmp(scenario,"key-retry")){
+  fault=7;start_mock_activity(&activity,&callbacks);if(candidate&&activity.instance)return 4;if(activity.instance)retire_mock_activity(&activity);
+  fault=0;start_mock_activity(&activity,&callbacks);if(!activity.instance)return 5;retire_mock_activity(&activity);print_result(scenario);return 0;
+ }
+ if(!strcmp(scenario,"ensure-concurrent")){
+  concurrent_gate=CreateEvent(NULL,TRUE,FALSE,NULL);HANDLE handles[32];
+  for(int i=0;i<32;i++)handles[i]=CreateThread(NULL,0,ensure_thread,NULL,0,NULL);
+  SetEvent(concurrent_gate);if(WaitForMultipleObjects(32,handles,TRUE,5000)!=WAIT_OBJECT_0)return 6;
+  for(int i=0;i<32;i++)CloseHandle(handles[i]);CloseHandle(concurrent_gate);concurrent_gate=NULL;
+  print_result(scenario);return 0;
+ }
+ if(!strcmp(scenario,"vm-null")){
+  start_shaped_activity(&activity,&callbacks,NULL,0,true);if(activity.instance)retire_mock_activity(&activity);print_result(scenario);return 0;
+ }
+ if(!strncmp(scenario,"state-",6)){
+  char saved[8]={1,2,3,4,5,6,7,8};bool present=strstr(scenario,"data")!=NULL;size_t size=strstr(scenario,"zero")?0:sizeof(saved);
+  start_shaped_activity(&activity,&callbacks,present?saved:NULL,size,false);if(!activity.instance)return 14;
+  struct android_app *a=activity.instance;
+  if(present&&size){if(!a->savedState||a->savedStateSize!=size||memcmp(a->savedState,saved,size))return 15;}
+  else if(candidate&&(a->savedState||a->savedStateSize))return 16;
+  retire_mock_activity(&activity);print_result(scenario);return 0;
+ }
+ start_mock_activity(&activity,&callbacks);if(!activity.instance)return 7;reenter_vm=candidate;
+ if(!strcmp(scenario,"no-context")){
+  if(!candidate){puts("BASELINE_NULL_CONTEXT_NOT_EXECUTED: source dereferences null app");retire_mock_activity(&activity);return 0;}
+  g_android=NULL;JNIEnv *env=jni_thread_getenv();if(candidate&&env)return 8;
+ }else if(!strcmp(scenario,"vm-mismatch")){
+/* @VM_MISMATCH@ */
+ }else if(!strcmp(scenario,"native-clear")){
+  struct thread_case t={false,true,20};int r=run_one(&t);if(r)return r;
+ }else if(!strcmp(scenario,"java-owned")){
+  struct thread_case t={true,false,20};int r=run_one(&t);if(r)return r;
+ }else if(!strcmp(scenario,"tls-concurrent")){
+  concurrent_gate=CreateEvent(NULL,TRUE,FALSE,NULL);HANDLE handles[32];struct thread_case cases[32];
+  for(int i=0;i<32;i++){cases[i]=(struct thread_case){i%2!=0,false,20};handles[i]=CreateThread(NULL,0,tls_thread,&cases[i],0,NULL);}
+  SetEvent(concurrent_gate);if(WaitForMultipleObjects(32,handles,TRUE,5000)!=WAIT_OBJECT_0)return 9;
+  for(int i=0;i<32;i++)CloseHandle(handles[i]);CloseHandle(concurrent_gate);concurrent_gate=NULL;
+ }else{
+  fault=!strcmp(scenario,"attach-failure")?8:!strcmp(scenario,"setspecific-failure")?9:10;
+  struct thread_case t={false,false,1};int r=run_one(&t);if(r)return r;
+ }
+ retire_mock_activity(&activity);print_result(scenario);return 0;
+}
