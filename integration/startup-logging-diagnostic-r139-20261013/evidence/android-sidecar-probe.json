@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "diagnosticOnly": true,
+  "sourceCommit": "5f4be74b1b6434b42de53285884d26b8b4ed9790",
+  "sidecarSourceSha256": "d850c858ac1d923f23efc18129cefa4a3913dde1bb691d46de15a3ca6a1127ea",
+  "unchangedRuntimeSha256": "ae72f1371e8e5a2d35f9250793ce2870f3feab73a3e17c83c9fbd48a9d15f378",
+  "sidecarSha256": "05ecff9574c281d3546440aa5e8d3df104b8c6b4c032003a10aabf0efef81171",
+  "probeJarSha256": "27ce107b05c37b14dcc1fa97114b45748343b29356a6d8f8520d964328341f4f",
+  "probeBuildReceiptSha256": "ef51985f6888c213875591c64cc94a72a7e1769308e2f8417655321110224111",
+  "startedUtc": "2026-10-13T18:08:26.465200+00:00",
+  "completedUtc": "2026-10-13T18:08:30.070583+00:00",
+  "device": {
+    "model": "moto g52",
+    "sdk": 33,
+    "abi": "arm64-v8a",
+    "soleAuthorizedUsbVerified": true
+  },
+  "scratch": "/data/local/tmp/station-r139-startup-logging-probe-20261013",
+  "pushedFiles": [
+    {
+      "file": "libstation_retroarch.so",
+      "bytes": 10673192,
+      "sha256": "ae72f1371e8e5a2d35f9250793ce2870f3feab73a3e17c83c9fbd48a9d15f378",
+      "remoteHashVerified": true
+    },
+    {
+      "file": "libstation_startup_logging.so",
+      "bytes": 7864,
+      "sha256": "05ecff9574c281d3546440aa5e8d3df104b8c6b4c032003a10aabf0efef81171",
+      "remoteHashVerified": true
+    },
+    {
+      "file": "logging-probe.jar",
+      "bytes": 1828,
+      "sha256": "27ce107b05c37b14dcc1fa97114b45748343b29356a6d8f8520d964328341f4f",
+      "remoteHashVerified": true
+    }
+  ],
+  "androidExecuted": true,
+  "plannedCases": 7,
+  "passed": true,
+  "failureCategory": null,
+  "observedFixedDiagnostics": [
+    {
+      "stage": "resolve",
+      "category": "PATH_MISSING"
+    },
+    {
+      "stage": "resolve",
+      "category": "PATH_INVALID"
+    },
+    {
+      "stage": "resolve",
+      "category": "PATH_INVALID"
+    },
+    {
+      "stage": "resolve",
+      "category": "PATH_INVALID"
+    },
+    {
+      "stage": "resolve",
+      "category": "RUNTIME_NOT_LOADED"
+    },
+    {
+      "stage": "enable",
+      "category": "INFO_ENABLED"
+    },
+    {
+      "stage": "enable",
+      "category": "INFO_ENABLED"
+    }
+  ],
+  "temporaryFilesRemoved": true,
+  "emptyScratchRemovedAndAbsentVerified": true,
+  "appLaunched": false,
+  "appForceStopped": false,
+  "appDataOrSettingsModified": false,
+  "apkInstalled": false,
+  "nativeActivityStarted": false,
+  "gameplayValidated": false,
+  "rawPrivateFiles": {
+    "01-devices.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "01-devices.stdout": "493149059e315beb73958d685dce3d0118af9813648ae6eeac6a445b3810b0d5",
+    "02-model.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "02-model.stdout": "69bdf0e5790139d596cb057f6b0d14ceef99021c3a0bf7a39e97a0f5c1796a18",
+    "03-sdk.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "03-sdk.stdout": "42817c432a683116970d4048f2ddf476ff8dfca7a5d178bfa3a56679862e36aa",
+    "04-abi.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "04-abi.stdout": "93a5f09ca2fe8b37c612145e5749beaf159a7218b686023da3c3c22d9d363327",
+    "05-scratch-absent.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "05-scratch-absent.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "06-scratch-create.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "06-scratch-create.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "07-push-libstation_retroarch.so.stderr": "58a703a9b47c002b08e27d6aeb1f94125e0a5ecb77723c7788c694894e54bebe",
+    "07-push-libstation_retroarch.so.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "08-hash-libstation_retroarch.so.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "08-hash-libstation_retroarch.so.stdout": "e242b1cc59fa09dcf287e78a2eec21268c0ef2b9f9409e32f24dab0417302238",
+    "09-push-libstation_startup_logging.so.stderr": "b7b1176dd9824b587abb783fdd14690bba9210553f64c9d8cb5c618ff4e03102",
+    "09-push-libstation_startup_logging.so.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "10-hash-libstation_startup_logging.so.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "10-hash-libstation_startup_logging.so.stdout": "57e80daef1caf97ff1eb62ef09efc817503f90ee22916030f19fdf569b15bf3e",
+    "11-push-logging-probe.jar.stderr": "515c94645d9c9489ccfb1a93256f6a507cb2e1e98d6a74e7a03d87a58c1df51e",
+    "11-push-logging-probe.jar.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "12-hash-logging-probe.jar.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "12-hash-logging-probe.jar.stdout": "051bc87b68243f442eb2aba34b079f6ce37e6d885c8dc381724b0306982817d5",
+    "13-start-epoch.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "13-start-epoch.stdout": "3f9407ed5cca5ec9c0e23c63da7754fab1462b258a5ac4f7727b0781ee21f280",
+    "14-app-process.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "14-app-process.stdout": "faacba026c8f574cc26fb16436487319e4c1fa2809bdde801d0fb10f1e5a7608",
+    "15-end-epoch.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "15-end-epoch.stdout": "f12a978394eaace932ba6700b9ae8f36781cfd4abcd15ef868576f03feb617ff",
+    "16-diagnostic-logs.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "16-diagnostic-logs.stdout": "d5cbbb3e12199c73841c75add140b5f99bd23f79a2050aae79d855d4b2e308bc",
+    "17-remove-libstation_retroarch.so.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "17-remove-libstation_retroarch.so.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "18-remove-libstation_startup_logging.so.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "18-remove-libstation_startup_logging.so.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "19-remove-logging-probe.jar.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "19-remove-logging-probe.jar.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "20-remove-empty-scratch.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "20-remove-empty-scratch.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "21-cleanup-absent.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "21-cleanup-absent.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "events.json": "96fd73a8fa2e05abcf28bfc53e297db7636fe055a1df43997d95a210796cad4e"
+  },
+  "qualification": "Actual app_process64 JNI/Android loader calls and seven guarded cases; no NativeActivity, core or gameplay proof."
+}
