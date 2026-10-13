@@ -1,6 +1,7 @@
 """Assemble an unpromoted diagnostic: five replacements, one logger library addition."""
 from pathlib import Path
 import argparse
+import copy
 import json
 import shutil
 import struct
@@ -67,7 +68,7 @@ def build(a):
         unsigned = out / "TurboStations-R139-DIAG-startup-unsigned.apk"
         with zipfile.ZipFile(unsigned, "w", allowZip64=True) as destination:
             for item in original.infolist():
-                with destination.open(item, "w", force_zip64=True) as target:
+                with destination.open(copy.copy(item), "w", force_zip64=True) as target:
                     if item.filename in files:
                         with files[item.filename].open("rb") as source:
                             shutil.copyfileobj(source, target, 1024 * 1024)
