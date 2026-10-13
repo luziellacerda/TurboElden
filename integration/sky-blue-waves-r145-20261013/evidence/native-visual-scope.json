@@ -1,0 +1,291 @@
+{
+  "schema": "station.r145.native.visual.scope.v1",
+  "revision": "R145-preparation",
+  "baselineExecutableSourceCommit": "1ac3f7d2fdd7cd349a5b37127b66712834e844fd",
+  "baselineNativeSha256": "67180bdd145cd03f456249b31b9163ee0baa3e66fb10b909e20831823accea10",
+  "sourceHeaders": [
+    {
+      "file": "native_space.h",
+      "baselineSha256": "e197030037ccb922304cef57d2b99a951a952fa354bb990e8dabe6f412336725",
+      "proposedSha256": "2ac9e649e27f8ed4259f01cf5116186f76b4481019f5181c36c3956ed4eb7f65",
+      "replacementBlockCount": 4,
+      "wholeFileInversePassed": true
+    },
+    {
+      "file": "station_wave_palette.h",
+      "baselineSha256": "a3e42391c906fe5126b69213d97c685f4077ef6867aec4c27adbe426deea3b29",
+      "proposedSha256": "c63c0725f8446fb1cfa434a89a9bdc6f04da44280dd61fd323b0ec95b9397a97",
+      "replacementBlockCount": 4,
+      "wholeFileInversePassed": true
+    },
+    {
+      "file": "station_theme_palette.h",
+      "baselineSha256": "8a156447f7c8a8497acbfb863bd6898b10c2a7403a83f3b9afcd4fa15f6bd058",
+      "proposedSha256": "e32a61fcbbd24f522b14d78ec138ebb8edaa7a80f1f31c39b9cb03f77f516ef3",
+      "replacementBlockCount": 2,
+      "wholeFileInversePassed": true
+    }
+  ],
+  "blueBackgroundRgb": {
+    "native_space.h": [
+      [
+        "050A15FF",
+        "287EB5FF"
+      ],
+      [
+        "081827FF",
+        "5DAEDEFF"
+      ]
+    ],
+    "station_theme_palette.h": [
+      [
+        "0B4B83FF",
+        "287EB5FF"
+      ],
+      [
+        "267CBBFF",
+        "5DAEDEFF"
+      ]
+    ],
+    "blackBranchesAndOpacityFFPreserved": true
+  },
+  "requestedConsoleProfiles": [
+    {
+      "index": 0,
+      "family": "SNES",
+      "count": 3,
+      "rgba": [
+        "FF4058B0",
+        "EE5B67A0",
+        "A7B3C390"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "SNES: red, red, gray"
+    },
+    {
+      "index": 1,
+      "family": "Nintendo64",
+      "count": 5,
+      "rgba": [
+        "FFDA52B0",
+        "44D98AA0",
+        "369DFF90",
+        "FF405890",
+        "FFDA5290"
+      ],
+      "widthMultipliers": [
+        0.5,
+        1,
+        1,
+        1,
+        0.5
+      ],
+      "changedFromR144": true,
+      "comment": "Nintendo64: thin yellow, green, blue, red, thin yellow"
+    },
+    {
+      "index": 2,
+      "family": "GameCube",
+      "count": 4,
+      "rgba": [
+        "FFDA52B0",
+        "44D98AA0",
+        "AA7DFF90",
+        "A7B3C390"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "GameCube: yellow, green, purple, gray"
+    },
+    {
+      "index": 6,
+      "family": "PSX",
+      "count": 3,
+      "rgba": [
+        "FF4058B0",
+        "369DFFA0",
+        "FFDA5290"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "PSX: red, blue, yellow"
+    },
+    {
+      "index": 7,
+      "family": "PS2",
+      "count": 3,
+      "rgba": [
+        "FF4058B0",
+        "369DFFA0",
+        "FFDA5290"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "PS2: red, blue, yellow"
+    },
+    {
+      "index": 12,
+      "family": "Dreamcast",
+      "count": 5,
+      "rgba": [
+        "44D98AB0",
+        "369DFFA0",
+        "FF405890",
+        "FFDA5290",
+        "FF944890"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "Dreamcast: green, blue, red, yellow, orange"
+    },
+    {
+      "index": 16,
+      "family": "NES",
+      "count": 3,
+      "rgba": [
+        "AA7DFFB0",
+        "FF4058A0",
+        "A7B3C390"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "NES: purple, red, gray"
+    },
+    {
+      "index": 17,
+      "family": "FinalBurnNeo",
+      "count": 3,
+      "rgba": [
+        "44D98AB0",
+        "FFDA52A0",
+        "FF944890"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "Final Burn Neo: green, yellow, orange"
+    }
+  ],
+  "unrequestedFamiliesPreserved": [
+    "Wii",
+    "WiiU",
+    "Switch",
+    "PSP",
+    "MegaDrive",
+    "32X",
+    "Saturn",
+    "Naomi",
+    "NeoGeo",
+    "CPS"
+  ],
+  "priorAliasesPreservedInOrder": true,
+  "addedAliases": [
+    {
+      "key": "Nintendinho",
+      "index": 16
+    },
+    {
+      "key": "nes",
+      "index": 16
+    },
+    {
+      "key": "Nintendo Entertainment System",
+      "index": 16
+    },
+    {
+      "key": "Nintendo NES",
+      "index": 16
+    },
+    {
+      "key": "fbneo",
+      "index": 17
+    },
+    {
+      "key": "Final Burn Neo",
+      "index": 17
+    },
+    {
+      "key": "FinalBurn Neo",
+      "index": 17
+    },
+    {
+      "key": "final-burn-neo",
+      "index": 17
+    }
+  ],
+  "defaultBandCount": 3,
+  "maximumApprovedBandCount": 5,
+  "alphaByBandHex": [
+    "B0",
+    "A0",
+    "90",
+    "90",
+    "90"
+  ],
+  "renderingBudget": {
+    "segmentsPerBand": 32,
+    "fixedReusableStackVertexCount": 66,
+    "maximumRequestedGeneratedVertices": 330,
+    "r144GeneratedVertices": 198,
+    "maximumRequestedDrawCalls": 5,
+    "r144DrawCalls": 3,
+    "newHeapJniWorkersOrTimers": false,
+    "actualPerformanceNotMeasured": true
+  },
+  "curveAndTimeFormulaPreserved": true,
+  "onlyRequestedBandCountsAndHalfWidthMultipliersChanged": true,
+  "cacheKeepsExactCopied64ByteKeyAndReadOnlyPalettePointer": true,
+  "unlistedPlatformsAndOversizeKeysKeepThreeBandThemeFallback": true,
+  "settingsNeutralFillPreserved": true,
+  "modalNeutralFillPreserved": true,
+  "offAndLoadingBlackPreserved": true,
+  "diagonalBackdropPreserved": true,
+  "cloudShaderPreserved": true,
+  "frontendAndControllerLogicNotTouched": true,
+  "ps3AndPs4R134LabelsMustBeReplayedAfterNativeCompilation": true,
+  "proposedCompiledReceiptSchema": "station.r145.native.sky-blue-bands.v1",
+  "proposedCompiledTransformFlags": [
+    "wholeHeaderInversePassed",
+    "drawNativeSpaceByteIdentical",
+    "diagonalBackdropByteIdentical",
+    "waveCurveTimingEquationByteIdentical",
+    "unrequestedPalettesCountsWidthsPreserved",
+    "requestedPaletteSpecVerified",
+    "onlyApprovedNativeVisualBlocksChanged"
+  ],
+  "drawNativeWavesIntentionallyNotByteIdentical": true,
+  "compiled": false,
+  "physicalVisualValidated": false,
+  "futureR146OnlineFixesExcluded": true
+}

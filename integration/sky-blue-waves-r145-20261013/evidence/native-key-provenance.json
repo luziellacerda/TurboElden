@@ -1,0 +1,26 @@
+{
+  "schema": "station.r145.native.key-provenance.v1",
+  "catalogReference": "docs/server/online-plataformas-20261009/catalogo-cruzado-completo.json",
+  "catalogRevision": 44,
+  "catalogSha256": "9eafb658974801b733059f3feff9eb1de2f1c818222b8b61c2f8a326551246d9",
+  "catalogPlatformKeysObserved": {
+    "nes": 750,
+    "fbneo": 913
+  },
+  "historicalLocalExportNotCurrentLiveSnapshot": true,
+  "closedNativeSystemsInputSha256": "8093bc915dce80d445a5cff868226e5db9f67207935f22cf9cd39bc7ada0c31f",
+  "nativeSystemRows": [
+    {
+      "line": 83,
+      "key": "Nintendinho",
+      "label": "Nintendinho"
+    },
+    {
+      "line": 92,
+      "key": "fbneo",
+      "label": "fbneo"
+    }
+  ],
+  "aliasesPurePresentationOnly": true,
+  "fbaAndArcadeNotAddedToRequestedFbneoPalette": true
+}
