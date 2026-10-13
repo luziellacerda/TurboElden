@@ -25,7 +25,8 @@
     "integration/psx-online/native/StationPsxProtocol.cpp": "01e4d93dce252e543930ce5feb76062da482dd354d6db9b404699aee17190625",
     "integration/psx-online/native/StationPsxProtocol.hpp": "ad168ec6e6d4a1e9de374b5db3e7e6aebb6dff858b9b372968b6fc19a29abcba",
     "integration/psx-online/native/StationPsxSha256.cpp": "0459d697ed286705b2fc9c11aa6204aed54e1e05840fd448d8d06e48d491cd3c",
-    "integration/psx-online/native/PsxPinnedOptions.h": "a7538301ae7d93b0b815d6536300035745135cf3dd15eb333d1711a0e633b193"
+    "integration/psx-online/native/PsxPinnedOptions.h": "a7538301ae7d93b0b815d6536300035745135cf3dd15eb333d1711a0e633b193",
+    "integration/core-options-binding-r140-20261013/recipe/AssembleScopedPartition.java": "5ea794aad4cb177080e331b09d449419e352020ac61a6b9ea4194e32b4b1b022"
   },
   "licenseCopies": {
     "licenses/COPYING.GPL-2.0": {
@@ -56,5 +57,14 @@
     "pertainsToReferenceServer": true,
     "androidOrClientInternetSpeedMeasured": false
   },
-  "incomingRegistrationDoesNotRegisterR141": true
+  "incomingRegistrationDoesNotRegisterR141": true,
+  "scopedDexEncoder": {
+    "api": "pinned APKtool reduced SmaliBuilder/DexBuilder API",
+    "restorationSource": "integration/core-options-binding-r140-20261013/recipe/AssembleScopedPartition.java",
+    "restorationMethodsByteExact": true,
+    "restorationMethodsSha256": "1a71007e9b9bce7acf35a848cd41172cebff9d166c24bca240a4308eda7ba2d1",
+    "preservedClassesPostwriteCanonicalComparison": 266,
+    "failedSourceCommit": "b9241af1ed6aa2177eb0229737db8a3e4c0daa6b",
+    "failedStage": "host helper javac API compatibility; no APK built or installed"
+  }
 }

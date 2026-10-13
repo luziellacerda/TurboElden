@@ -2,6 +2,12 @@
 
 **Fontes e receitas preparadas; nenhuma R141 foi compilada, assinada, instalada ou cadastrada nesta etapa.** A R140 foi instalada no moto g52; os demais telefones ainda não receberam a R140. O estado de cada instalação depende de seu recibo próprio. A futura R141 exige quatro novos IDs independentes e seu cadastro continua pendente.
 
+### Correção da ferramenta de montagem antes do APK
+
+A primeira tentativa congelada em `b9241af1ed6aa2177eb0229737db8a3e4c0daa6b` compilou o overlay Java/D8 e parou no `javac` do helper host: o APKtool Windows pinado expõe uma API reduzida de dexlib2, diferente da API `DexPool` usada no produtor Linux. Nenhum APK dessa tentativa foi montado, assinado ou instalado. A pasta privada inicial `E:/StationDirectDownloadsR141-20261013/dex` permanece como evidência; o moto g52 continua com a R140.
+
+Somente o helper de montagem foi adaptado à API real: leitura por `DexBackedClassDef`, `SmaliBuilder`/`DexBuilder` e fechamento por `FileDataStore.raf`. Os métodos de restauração de arrays estáticos foram copiados literalmente do assembler congelado da R140 e pinados na proveniência. Eles restauram somente defaults que o encoder remove do sufixo, em todas as 266 classes preservadas, inclusive `ResponseBody`; o gate final ainda compara a representação canônica completa dessas classes após escrever e reler o DEX. As duas fontes HTTP permanecem byte exatas. A [revisão preparatória v2](evidence/source-preparation-review-v2.json) registra a inspeção da API; a execução do helper corrigido depende de novo congelamento e compilação.
+
 ## Base e mudança solicitada
 
 A única base admitida é a R140 assinada, SHA256 `61e873e7bbd75a13fbd0d55515a3726f4debd8984cc0fe8f9d73401e0897792c`, 2.715.008.015 bytes, fonte `b93623b708bafe151441d3e4920acad51718e118`. `classes35.dex` deve continuar exatamente `49f381dc3ef375797d2db56b25a8a6c86a8150c2515ce115f4639b7bb243478e`: conserva `global_core_options=true` e `game_specific_options=false` e todos os reparos anteriores de sessão, capa e saída. Não há novo logger ou sidecar.
@@ -13,7 +19,7 @@ Somente o GET canônico `/v1/station/artifacts/{grant}` passa a usar `https://do
 ## Preservação exigida
 
 - Compilar apenas `StationHttp.java` e `StationDownloadOrigin.java`, Java8 com API34, usando dependências somente como classpath. JAR fechado com quatro classes; D8 release com mínimo API28.
-- `ScopedHttpDex.java` aceita somente os seis tipos HTTP esperados e o novo helper. Copia `StationHttp$ResponseBody` do donor, substitui os outros cinco tipos da família e adiciona um tipo. DEX28 passa de 271 para 272 tipos; 266 tipos permanecem exatos na representação canônica com métodos, campos, inicializadores e debug.
+- `ScopedHttpDex.java` aceita somente os seis tipos HTTP esperados e o novo helper. Copia `StationHttp$ResponseBody` do donor, substitui os outros cinco tipos da família e adiciona um tipo. Monta apenas essa partição pela API reduzida pinada, restaura os arrays estáticos originais das classes preservadas e relê o resultado. DEX28 passa de 271 para 272 tipos; 266 tipos devem permanecer exatos na representação canônica com métodos, campos, inicializadores e debug.
 - Todas as outras 39 partições DEX, incluindo DEX35 corrigida, ficam byte exatas. Manifest/SDK, recursos, frontend, vídeos, fila, cache, FPS, clocks, controles, opções HLE, catálogo e protocolo READY não entram na alteração.
 - O runtime RetroArch permanece `ae72f1371e8e5a2d35f9250793ce2870f3feab73a3e17c83c9fbd48a9d15f378`. Todos os cores e seus nove descritores permanecem iguais. Os oito IDs RetroArch ativos conservam o cadastro atual.
 - Os três wrappers independentes vinculam 345 payloads reais, incluindo DEX28 nova e DEX35 da R140. Renovam somente quatro IDs PS1/N64/GameCube/Wii. Suas políticas são iguais às dos fingerprints atuais da R140, e as sete fontes PSX originais são verificadas por hash. Exports, dependências, SONAME e alinhamento nativo são comparados.
@@ -66,20 +72,20 @@ python -B "$r141Recipe/build_dex.py" `
   --apktool "$r141Private/ferramentas/apktool_3.0.3.jar" `
   --rooms-jar "$r141Private/desenvolvimento/reconstrucao-atual/rooms.jar" `
   --client-jar "$r141Private/desenvolvimento/reconstrucao-atual/client.jar" `
-  --out "$r141Output/dex"
+  --out "$r141Output/dex-r2"
 
 python -B "$r141Recipe/build_identity.py" `
   --base "$r141Base" --source-commit "$r141Source" `
-  --dex "$r141Output/dex/classes28.dex" --dex-receipt "$r141Output/dex/dex-compilation.json" `
+  --dex "$r141Output/dex-r2/classes28.dex" --dex-receipt "$r141Output/dex-r2/dex-compilation.json" `
   --ndk "$r141Private/ferramentas/ndk-r28c" --out "$r141Output/identity"
 
 python -B "$r141Recipe/assemble_apk.py" `
   --base "$r141Base" --source-commit "$r141Source" `
-  --dex "$r141Output/dex/classes28.dex" --dex-receipt "$r141Output/dex/dex-compilation.json" `
+  --dex "$r141Output/dex-r2/classes28.dex" --dex-receipt "$r141Output/dex-r2/dex-compilation.json" `
   --identity "$r141Output/identity" --out "$r141Output/assembly"
 ```
 
-Recibos esperados: `dex/dex-compilation.json` (`station.r141.direct-downloads.dex.v1`), `identity/runtime-identity.json` (`identity.v1`) e `assembly/unsigned-package.json` (`package.v1`). APK unsigned: `assembly/TurboStations-Premium-R141-downloads-diretos-unsigned.apk`. O mapa completo privado de 13.860 hashes não deve ser publicado.
+Recibos esperados: `dex-r2/dex-compilation.json` (`station.r141.direct-downloads.dex.v1`), `identity/runtime-identity.json` (`identity.v1`) e `assembly/unsigned-package.json` (`package.v1`). APK unsigned: `assembly/TurboStations-Premium-R141-downloads-diretos-unsigned.apk`. O mapa completo privado de 13.860 hashes não deve ser publicado.
 
 A assinatura será feita pelo fluxo privado que conserva a chave original. O resultado assinado em `assembly/signed.apk` deve ser verificado assim:
 
