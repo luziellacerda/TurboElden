@@ -1,0 +1,38 @@
+{
+  "revision": "R142",
+  "baselineApkSha256": "b5a76023860bceb2aa11c946c8003fa2d92951e700dbde3a498f8316857670d4",
+  "baselineSourceCommit": "240b7c0504252e542975089f585bd67d5264f074",
+  "modifiedClass": "StationRetroLaunch",
+  "modifiedExistingMethods": [
+    "prepare"
+  ],
+  "addedMethods": [
+    "prepareSnesMultitap"
+  ],
+  "condition": "SNES + signed snes-multitap-port2-v1 profile only",
+  "newDeviceFile": "room/input-devices/bsnes-mercury/bsnes-mercury.rmp",
+  "newCfgKeys": {
+    "auto_remaps_enable": "true",
+    "input_remapping_directory": "room/input-devices",
+    "input_remap_sort_by_controller_enable": "false",
+    "notification_show_remap_load": "false"
+  },
+  "deviceVector": [
+    1,
+    257,
+    1,
+    1,
+    1
+  ],
+  "preserved": [
+    "R140 HLE flags",
+    "R141 direct downloads",
+    "all native runtime and emulation cores",
+    "all input button mappings and signed profiles",
+    "network/READY/ACK/admission",
+    "all other platforms/profiles",
+    "39 DEX and 13855 package entries"
+  ],
+  "candidateOnly": true,
+  "physicalGameplayValidated": false
+}

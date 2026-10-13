@@ -1,0 +1,1 @@
+Corpos de configuration.c/command.c do RetroArch69a4f0, GPLv3. Fixture e estruturas/getters controlados descritos no recibo; não executa Android/ROM/rede. Runner conserva caminhos do posto produtor e exige fontes upstream com hashes pinados; ajustar somente caminhos da execução em outra estação. O APK não contém este teste.

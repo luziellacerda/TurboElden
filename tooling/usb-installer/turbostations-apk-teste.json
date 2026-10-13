@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": "R141",
-  "apkPath": "TurboStations-Premium-R141-downloads-diretos-20261013.apk",
-  "sha256": "b5a76023860bceb2aa11c946c8003fa2d92951e700dbde3a498f8316857670d4",
+  "revision": "R143",
+  "apkPath": "TurboStations-Premium-R143-multitap-flag-20261013.apk",
+  "sha256": "508480e3671ae924f037bd32f6d71efda7a9d905c45c7b2571bd9f219add83d4",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-direct-downloads-on-preserved-r140",
-  "warning": "Teste R141: downloads diretos e reparos online R140 preservados. Gameplay e velocidade ainda pendentes. Quatro novos IDs independentes exigem cadastro próprio; IDs RetroArch/SNES preservados.",
-  "sourceCommit": "240b7c0504252e542975089f585bd67d5264f074",
-  "bytes": 2715008015,
+  "status": "test-snes-unique-remap-flag",
+  "warning": "R143: Top Gear 3000 Corrida VS com três jogadores confirmado pelo mantenedor. Quatro/cinco participantes e outros jogos pendentes; IDs independentes aguardam cadastro, SNES mantém IDs válidos.",
+  "sourceCommit": "26257869b59af8ecea44932ab287705990a9acbe",
+  "bytes": 2715024399,
   "serverBindingsRegistered": false
 }
