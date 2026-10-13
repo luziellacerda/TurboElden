@@ -11,6 +11,8 @@ O servidor oferece 4.435 jogos visíveis, incluindo 750 NES. A R138 instalada te
    python patch_catalog_capacity.py CAMINHO/STATION --native-source CAMINHO/station_frontend.cpp --write
    ```
 
+**Preservação conferida em 13/10:** o snapshot C++ abaixo é R124 e não contém os exports de loading R132 da composição R138. Aplique somente o patch de capacidade à fonte corrente. Antes de compilar, execute `audits/station-performance-preservation-20261013/recipe/verify_nes_preservation.py` sobre os diretórios antes/depois e o frontend corrente; a verificação recusa substituição pelo snapshot antigo e qualquer ajuste de workers/cache não relacionado.
+
 2. Compile o cliente Java completo e o frontend pela receita vigente. Os cinco arquivos Java e o C++ nesta pasta registram o delta revisado sobre a fonte R124, herdada pela R138; o patch permite conservar as demais mudanças da composição corrente.
 3. O pedido passa a ser `GET /v1/station/catalog?metadata=1&maximumItems=20000`, com a prova assinando o caminho **incluindo a query**. Continue validando assinatura, domínio, produto, licença, aparelho e sessão. O limite de corpo continua 64 MiB.
 4. Preserve as estruturas ABI de `station_catalog_abi.hpp`. Os dois limites JNI de publicação/preparação passam a 20.000. As filas de jobs, os controles, os workers de imagens, os buffers e os limites de evidência por modo mantêm suas regras atuais.

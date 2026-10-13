@@ -1,0 +1,346 @@
+{
+  "schema": "station.performance.history.review.v1",
+  "date": "2026-10-13",
+  "optimizedBackupReference": "R124 / 08cf0947538da796a9534d211467ecfefb4884e8",
+  "preOnlineRepairReference": "R134 / 4f9039eb9ce13907ce043870bfe1f6e294888556",
+  "currentInstalledSourceReference": "R138 / 6dd36aeb353369eea4c80a0c27c9f1945bc983af",
+  "gitHead": "97fe6f3f3068f4c1d7ab5bd2de8ee549a0da03d8",
+  "readOnlyFrozenSources": true,
+  "noUSBOrNetworkUsed": true,
+  "performancePreservation": [
+    {
+      "component": "StationCoverQueue.java",
+      "sourceSHA256": {
+        "station-legacy-cover-diagnostics-r116-20261010": "11decbdb7db269a0fcd6894116d8fae8f876ff584185d684af43ee51c724340a",
+        "station-effects-server-r117-20261010": "11decbdb7db269a0fcd6894116d8fae8f876ff584185d684af43ee51c724340a",
+        "station-video-room-footer-r124-20261011": "11decbdb7db269a0fcd6894116d8fae8f876ff584185d684af43ee51c724340a"
+      },
+      "byteExactR116R117R124": true,
+      "laterR125R138Changes": "No source replacement of this family in productive overlays; NES97fe6f3 has a narrowly scoped capacity delta only"
+    },
+    {
+      "component": "ExistingCoverCache.java",
+      "sourceSHA256": {
+        "station-legacy-cover-diagnostics-r116-20261010": "5d07ae03edc6b165ceab21cdd93593318cd315f5e6c65381dc73206b9051c342",
+        "station-effects-server-r117-20261010": "5d07ae03edc6b165ceab21cdd93593318cd315f5e6c65381dc73206b9051c342",
+        "station-video-room-footer-r124-20261011": "5d07ae03edc6b165ceab21cdd93593318cd315f5e6c65381dc73206b9051c342"
+      },
+      "byteExactR116R117R124": true,
+      "laterR125R138Changes": "No source replacement of this family in productive overlays; NES97fe6f3 has a narrowly scoped capacity delta only"
+    },
+    {
+      "component": "StationCoverStore.java",
+      "sourceSHA256": {
+        "station-legacy-cover-diagnostics-r116-20261010": "687341ff2f5c0e6ce9ca2873ec758d6f938d7bfe2435ded45fb114bfa5b4eb1b",
+        "station-effects-server-r117-20261010": "687341ff2f5c0e6ce9ca2873ec758d6f938d7bfe2435ded45fb114bfa5b4eb1b",
+        "station-video-room-footer-r124-20261011": "687341ff2f5c0e6ce9ca2873ec758d6f938d7bfe2435ded45fb114bfa5b4eb1b"
+      },
+      "byteExactR116R117R124": true,
+      "laterR125R138Changes": "No source replacement of this family in productive overlays; NES97fe6f3 has a narrowly scoped capacity delta only"
+    },
+    {
+      "component": "StationApi.java",
+      "sourceSHA256": {
+        "station-legacy-cover-diagnostics-r116-20261010": "f70ad339cff8bc168c46ec400cd90b145fcb7a81834c2ae23e38ebeb9e923f67",
+        "station-effects-server-r117-20261010": "f70ad339cff8bc168c46ec400cd90b145fcb7a81834c2ae23e38ebeb9e923f67",
+        "station-video-room-footer-r124-20261011": "f70ad339cff8bc168c46ec400cd90b145fcb7a81834c2ae23e38ebeb9e923f67"
+      },
+      "byteExactR116R117R124": true,
+      "laterR125R138Changes": "No source replacement of this family in productive overlays; NES97fe6f3 has a narrowly scoped capacity delta only"
+    },
+    {
+      "component": "StationCatalog.java",
+      "sourceSHA256": {
+        "station-legacy-cover-diagnostics-r116-20261010": "f8775fc40290a23167199205cb77ed45f7200942a903ec897b7a667befec74ea",
+        "station-effects-server-r117-20261010": "f8775fc40290a23167199205cb77ed45f7200942a903ec897b7a667befec74ea",
+        "station-video-room-footer-r124-20261011": "f8775fc40290a23167199205cb77ed45f7200942a903ec897b7a667befec74ea"
+      },
+      "byteExactR116R117R124": true,
+      "laterR125R138Changes": "No source replacement of this family in productive overlays; NES97fe6f3 has a narrowly scoped capacity delta only"
+    },
+    {
+      "component": "native_menu_power.h",
+      "r117SHA256": "720451c726b3e7edd1398dee7bced41732e84ba091cc8cacbdd76fcbcdebe889",
+      "r124SHA256": "720451c726b3e7edd1398dee7bced41732e84ba091cc8cacbdd76fcbcdebe889",
+      "byteExact": true
+    },
+    {
+      "component": "station_menu_frame_policy.h",
+      "r117SHA256": "7e6b4c8d88b832d9bb8297a3269e9c6e07db0172b59aeb20bbd12b88a609656c",
+      "r124SHA256": "7e6b4c8d88b832d9bb8297a3269e9c6e07db0172b59aeb20bbd12b88a609656c",
+      "byteExact": true
+    },
+    {
+      "component": "r53_video_policy.h",
+      "r117SHA256": "cb0be1e3c5bf15822a63ab4284d26d0dbe26df8bf4a7105f9fa5984a4d6d48cb",
+      "r124SHA256": "cb0be1e3c5bf15822a63ab4284d26d0dbe26df8bf4a7105f9fa5984a4d6d48cb",
+      "byteExact": true
+    }
+  ],
+  "authorizedPerformanceAffectingChanges": [
+    {
+      "release": "R125-R127",
+      "change": "Real Mupen64Plus AE/Dolphin/PSX online adapter routes replaced earlier launch routes; no menu FPS/core performance preset changed by those integration overlays",
+      "authorization": "User requested corresponding normal emulator engines and online functions"
+    },
+    {
+      "release": "R128-R131",
+      "change": "Sony offline owners/resources and explicit settings; R130 adds platform focused-video looping by request",
+      "authorization": "User requested those owners inside APK and platform loop; do not revert loop as an accidental performance modification"
+    },
+    {
+      "release": "R132",
+      "change": "Same SDL/GL shader prewarm moved into a true loading milestone; no total shader compilation reduction measured",
+      "authorization": "User requested startup/loading correction"
+    },
+    {
+      "release": "R133-R134",
+      "change": "Three static console arts and settings panels/owner return callbacks; 30 FPS, queue/cache budgets preserved",
+      "authorization": "User requested panel/settings refinements"
+    },
+    {
+      "release": "R135",
+      "change": "Online exit worker ordering/deadlock and departure lifetime repair",
+      "authorization": "User reported loading/exit freezes and requested fixes"
+    },
+    {
+      "release": "R136",
+      "change": "Only moto g52 online optional cover GLES suppressed after driver shader stall; original ImageView still shown",
+      "authorization": "User requested cause/fix for ANR on simple phone"
+    },
+    {
+      "release": "R137",
+      "change": "Finish Activity after accepted native quit, no pacing/cache policy change",
+      "authorization": "User requested online-exit repair; physical native failure later discovered"
+    },
+    {
+      "release": "R138",
+      "change": "Native cleanup at early return and idempotent destroy; exact online SNES HLE+violate-accuracy gate required for missing DSP firmware",
+      "authorization": "User requested games leave loading and safe exit; no other SNES options/core speed presets changed"
+    },
+    {
+      "release": "NES97fe6f3 proposal",
+      "change": "Only catalogue capacity, signed maximumItems query and related bounded evidence/prefetch identity limits; no new worker count",
+      "authorization": "Server integration for NES/all published games, not an installed APK"
+    }
+  ],
+  "findings": [
+    {
+      "id": "PERF-COMP-01",
+      "severity": "P1 conditional build regression",
+      "status": "Potential composition error prevented by using the supplied patch, no installed regression proved",
+      "description": "Replacing the current frontend with the full NES R124 snapshot would remove the R132 loading/GPU milestone exports. The current carousel requires those paired exports before hooks, so the replacement is unsafe.",
+      "codeLocations": [
+        {
+          "file": "integration/station-nes-catalogo-20261012/README.md",
+          "line": 7,
+          "anchor": "Aplique `patch_catalog_capacity.py`"
+        },
+        {
+          "file": "integration/startup-cleanup-r132/recipe/patch_loading.py",
+          "line": 51,
+          "anchor": "StationLoading_graphicsReady"
+        },
+        {
+          "file": "integration/startup-cleanup-r132/recipe/r132_startup_loading.h",
+          "line": 11,
+          "anchor": "StationLoading_graphicsReady"
+        }
+      ],
+      "proof": {
+        "R132PatchedSourceSHA256": "817154dc40f45b86cd7629602b62940cc4f38b71f268116eb28a682ba2131867",
+        "R132PlusNESCapacitySHA256": "a5ccb93c5aeeaa313b4955cd2326ea11307110ac45adb627c7465810b908ec8e",
+        "NESFullSnapshotMissingExports": [
+          "API void StationLoading_graphicsReady(",
+          "API unsigned StationLoading_stage("
+        ]
+      },
+      "recommendation": "Add preflight check before composition: require both R132 exports, apply only exact capacity replacements to current source; reject the full old snapshot"
+    }
+  ],
+  "hostTests": [
+    {
+      "test": "StationCoverPrefetchTest",
+      "result": "PASS 72 one-lane cover prefetch checks",
+      "productionFamily": "R124 inherited exactly by R134-R138; source SHA verified against R116/R117",
+      "harnessSHA256": "06400411a37cf73a82b35f86a8d8e9048bb614a177ed8f5b1c06b7855ea16d9f",
+      "AndroidDriverExecuted": false
+    },
+    {
+      "test": "StationCoverWarmStartTest",
+      "result": "PASS 54 cover warm-start checks; ledger-symlink=unsupported; legacy-direct=executed; preindex4096Ms=840",
+      "productionFamily": "R124 inherited exactly by R134-R138; source SHA verified against R116/R117",
+      "harnessSHA256": "17ffffbe67d7c0ed081741c1848a22cf0f261ae81d45bcb9af36f89bfc7c55e4",
+      "AndroidDriverExecuted": false
+    },
+    {
+      "test": "ExistingCoverCacheDiagnosticsTest",
+      "result": "PASS 23 aggregate legacy-cover diagnostics checks",
+      "productionFamily": "R124 inherited exactly by R134-R138; source SHA verified against R116/R117",
+      "harnessSHA256": "dc967d1a2fc80b1897e87d5e1c595ffc6c492516c066329406efb7784f306868",
+      "AndroidDriverExecuted": false
+    },
+    {
+      "test": "GpuTest",
+      "result": "PASS gpuLifecycle=46 serializedInitRuns=400",
+      "extractedActualSource": "R124 StationOnlineCoverView worker inherited unchanged by R138; R136 only constructor fallback",
+      "harnessSHA256": "05fa50e732316c59a4e56a9c02fdfbec369622182ac566bea1cb06e9a330c609",
+      "AndroidDriverExecuted": false
+    },
+    {
+      "test": "EglTest",
+      "result": "PASS eglBalance=1211",
+      "extractedActualSource": "R124 StationOnlineCoverView worker inherited unchanged by R138; R136 only constructor fallback",
+      "harnessSHA256": "f65da211e6f22b61108142904ac71da8253c9ecb64f843e840ed6a642baf029f",
+      "AndroidDriverExecuted": false
+    }
+  ],
+  "limits": [
+    "Sources and deterministic host harnesses do not measure CPU/GPU/temperature on a phone",
+    "The original complete frontend binary includes unavailable upstream source; source review is supplemented by parent's independent APK/DEX hash comparison",
+    "Current Git NES capacity material is a source overlay, not a new installed APK",
+    "R134 composition index includes baseline paths for transformed Java; R130 pure transforms are checked independently rather than treating that index as the final transformed bytes"
+  ],
+  "performancePolicyCodeLocations": [
+    {
+      "description": "Nine bounded queued tasks",
+      "file": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "line": 32,
+      "anchor": "new LinkedBlockingDeque<Runnable>(9)"
+    },
+    {
+      "description": "One cover IO/decode lane",
+      "file": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "line": 33,
+      "anchor": "new ThreadPoolExecutor(1,1,10"
+    },
+    {
+      "description": "No prefetch worker admission in background",
+      "file": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "line": 250,
+      "anchor": "if(!passOpen||!foreground||catalogPreparing"
+    },
+    {
+      "description": "Idle cover worker may stop",
+      "file": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+      "line": 57,
+      "anchor": "workers.allowCoreThreadTimeOut(true)"
+    },
+    {
+      "description": "At most 64 remote warm attempts",
+      "file": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+      "line": 23,
+      "anchor": "WARM_REMOTE_ATTEMPTS_PER_LAUNCH=64"
+    },
+    {
+      "description": "Warm wall clock bound 20s",
+      "file": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverStore.java",
+      "line": 24,
+      "anchor": "WARM_WALL_NANOS=TimeUnit.SECONDS.toNanos(20)"
+    },
+    {
+      "description": "Periodic catalogue polling every 60s",
+      "file": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "line": 81,
+      "anchor": "CATALOG_POLL_DELAY_MS=60000L"
+    },
+    {
+      "description": "Foreground cancellation follows producer lifecycle",
+      "file": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+      "line": 243,
+      "anchor": "images.setForeground(visible)"
+    },
+    {
+      "description": "Native menu target remains 30 FPS",
+      "file": "versions/station-video-room-footer-r124-20261011/native/d0/station_menu_frame_policy.h",
+      "line": 6,
+      "anchor": "(void)dialog;(void)interacting;(void)loading;return 30;"
+    },
+    {
+      "description": "Native pacing sleeps instead of busy polling",
+      "file": "versions/station-video-room-footer-r124-20261011/native/d0/native_menu_power.h",
+      "line": 17,
+      "anchor": "SDL_Delay"
+    }
+  ],
+  "NESOverlayVerification": {
+    "java": [
+      {
+        "file": "StationCatalog.java",
+        "R124SHA256": "f8775fc40290a23167199205cb77ed45f7200942a903ec897b7a667befec74ea",
+        "NESCandidateSHA256": "7e6796f0a5959e146ad0803efcba2ea7303922b5a0e8064ea50987d2b0ccb682",
+        "onlyDeclaredEditsAfterEOLNormalization": true,
+        "declaredEdits": 1
+      },
+      {
+        "file": "StationApi.java",
+        "R124SHA256": "f70ad339cff8bc168c46ec400cd90b145fcb7a81834c2ae23e38ebeb9e923f67",
+        "NESCandidateSHA256": "0650725d0ce83b18b51b9cdb104088866f44a2b9c3880616699abdda53463685",
+        "onlyDeclaredEditsAfterEOLNormalization": true,
+        "declaredEdits": 1
+      },
+      {
+        "file": "StationCatalogPlayerEvidence.java",
+        "R124SHA256": "ad20a55c98552d7ae6e03799253f1b3ec69a80cdb7591e40e10903972fa45379",
+        "NESCandidateSHA256": "f8dca0aa12ecbab01009f9fd2daa46baa2bcbcd72ed3c766dfbc80e8229000f9",
+        "onlyDeclaredEditsAfterEOLNormalization": true,
+        "declaredEdits": 2
+      },
+      {
+        "file": "StationCatalogPlayerEvidenceLoader.java",
+        "R124SHA256": "c5e3b6e7f4f6c0ca6778181cc9e1abc2bec132a015100ba4c442d5943a3788d2",
+        "NESCandidateSHA256": "4ca5fe897c04697b38f180b5b3339badd1f2e96ee77776968b079d7b3803a8f3",
+        "onlyDeclaredEditsAfterEOLNormalization": true,
+        "declaredEdits": 1
+      },
+      {
+        "file": "StationCoverQueue.java",
+        "R124SHA256": "11decbdb7db269a0fcd6894116d8fae8f876ff584185d684af43ee51c724340a",
+        "NESCandidateSHA256": "c90f34daf9773717d552fd4abc193122c40aa2fe2c9adfbeb1325967ec8b8854",
+        "onlyDeclaredEditsAfterEOLNormalization": true,
+        "declaredEdits": 1
+      }
+    ],
+    "nativeExactlyR124PlusTwoCapacityEdits": true,
+    "nativeBaselineSHA256": "603f63e33bfcbb0c81b88f37213999cc0d874d140fa224591fae72737679eefd",
+    "nativeCandidateSHA256": "4e72912468e47a2e3c72a5e3f7c911f51340cf794d7e8980884e5e9184727f56",
+    "workerQueueAndWarmupBoundsUnmodified": true,
+    "newCapacity": 20000,
+    "processingImplication": "More real items may require more parsing/storage/publication and serial cover cache completion; no additional concurrent worker or eager decode task was added",
+    "notInstalled": true
+  },
+  "R130LoopVerified": {
+    "actualTransformGuardsExecuted": true,
+    "sources": {
+      "client/src/java/org/emulationstation/frontend/station/StationGraphicsPreferences.java": {
+        "sourceSha256": "0327cb2f25e05162e19f81b50128c478ebbc298e063d219fd391572b30199b52",
+        "patchedSha256": "59c317a085a0f3a8423d37019a7ea8065c86b8ef0dd054d3a115335e4798dc96",
+        "exactInverse": true,
+        "replacementCount": 3
+      },
+      "client/src/java/org/emulationstation/frontend/station/StationGraphicsPanel.java": {
+        "sourceSha256": "7b8483c4775e2f1c2c543f74308be153a4b5b601d1edde3f00881721d0e96654",
+        "patchedSha256": "ac759cf8486705678f012dbe7503526a3ca22f2ec97b46e0da68b37949715ef8",
+        "exactInverse": true,
+        "replacementCount": 8
+      },
+      "netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java": {
+        "sourceSha256": "dde13ca08170e98354a22a764a42f9a6a98e032389aba48e81fb5aab3d9e1673",
+        "patchedSha256": "262e46cb60a3a5328bb37c9b396c4cf7e60ae10567238c5ee11b7c91b5991daa",
+        "exactInverse": true,
+        "replacementCount": 13
+      }
+    },
+    "reusesExistingDecoder": true,
+    "scope": "systemsMode && !folderMode, focused asset",
+    "default": true,
+    "collectionsRemainSinglePass": true,
+    "processingImplication": "Requested platform loop keeps the focused decoder active until selection/lifecycle/effects gate changes. It increases ongoing work compared to single pass, while off/no loop controls retain the old path.",
+    "sourceLocation": {
+      "file": "integration/local-sony-demos/recipe/patch_video_loop.py",
+      "line": 39,
+      "anchor": "platform_video_loop"
+    }
+  },
+  "historicalFrozenFilesChangedInGitR134ToHead": []
+}

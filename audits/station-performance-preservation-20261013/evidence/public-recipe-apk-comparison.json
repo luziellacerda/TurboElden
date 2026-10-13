@@ -1,0 +1,88 @@
+{
+  "method": "SHA256 of whole APK and every uncompressed entry; no CRC-only shortcut",
+  "baseline": {
+    "apkBasename": "TurboStations-Premium-R134-20261011.apk",
+    "bytes": 2714991631,
+    "sha256": "f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2",
+    "entryCount": 13860
+  },
+  "candidate": {
+    "apkBasename": "TurboStations-Premium-R138-SNES-online-20261012.apk",
+    "bytes": 2714991631,
+    "sha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+    "entryCount": 13860
+  },
+  "added": [],
+  "removed": [],
+  "changed": [
+    {
+      "entry": "assets/station-online/engines.json",
+      "before": {
+        "bytes": 19118,
+        "sha256": "40e55b795eae0d2a0f1a439f271bab692eb84e38907043c537b69da403fa354e"
+      },
+      "after": {
+        "bytes": 19121,
+        "sha256": "76b3cb61149293200cb8853784e6b6e4023f4e4c33b6b7cfcad8a954e1f9f519"
+      }
+    },
+    {
+      "entry": "classes35.dex",
+      "before": {
+        "bytes": 770008,
+        "sha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76"
+      },
+      "after": {
+        "bytes": 771548,
+        "sha256": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9"
+      }
+    },
+    {
+      "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+      "before": {
+        "bytes": 113256,
+        "sha256": "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad"
+      },
+      "after": {
+        "bytes": 115368,
+        "sha256": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+      }
+    },
+    {
+      "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+      "before": {
+        "bytes": 102360,
+        "sha256": "5f56099c433f29514c864d1eeea2995e3f52b0d15d76eaf125c4f4346a9d6e87"
+      },
+      "after": {
+        "bytes": 104456,
+        "sha256": "2f248cfcdc9e6d0e20795b1dab84f581b8fe9ea59eb0994ae96036aed2abeb77"
+      }
+    },
+    {
+      "entry": "lib/arm64-v8a/libstation_psx_online.so",
+      "before": {
+        "bytes": 299560,
+        "sha256": "69ac2b703f03826c8f7203b296665c6f2cc34cb944af7c3f758d9033116cade3"
+      },
+      "after": {
+        "bytes": 301656,
+        "sha256": "c26d8836df255ad4cc10d19d328b6fc8dcbc6a429725794c88acd4de5ca3dc50"
+      }
+    },
+    {
+      "entry": "lib/arm64-v8a/libstation_retroarch.so",
+      "before": {
+        "bytes": 10673944,
+        "sha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc"
+      },
+      "after": {
+        "bytes": 10674272,
+        "sha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+      }
+    }
+  ],
+  "preservedEntryCount": 13854,
+  "inputsChanged": false,
+  "physicalPerformanceMeasured": false
+}

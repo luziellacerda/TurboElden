@@ -1,0 +1,778 @@
+{
+  "schema": "station.performance.relay-recompile-static-review.v1",
+  "classesReviewed": 37,
+  "r124DependencySourcesPinnedAndVerified": 124,
+  "dependencySourceManifestSha256": "9882dac27132af7b2468380138a315b87ebebb134395b957a7a578c3b9b25780",
+  "r125CompilerRecipeUsesExactR124DependencySources": true,
+  "recipeSha256": "59c3a7fdf4e6a7bf52405fd911748f878bd82bf0e144127774afb1803a3d0933",
+  "reviews": [
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/Logger;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/LoggerFactory;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 10,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/event/KeyValuePair;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/event/Level;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/BasicMarker;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 3,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method public toString()Ljava/lang/String;",
+          "before": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {
+              "Ljava/lang/StringBuilder;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/log/helpers/BasicMarker;->hasReferences()Z": 1,
+              "Lorg/emulationstation/frontend/relay/log/helpers/BasicMarker;->getName()Ljava/lang/String;": 2,
+              "Lorg/emulationstation/frontend/relay/log/helpers/BasicMarker;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 2,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/log/Marker;->getName()Ljava/lang/String;": 1
+            },
+            "stringConstants": [
+              "\" ]\"",
+              "\", \"",
+              "\"[ \""
+            ]
+          },
+          "after": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {
+              "Ljava/lang/StringBuilder;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/log/helpers/BasicMarker;->hasReferences()Z": 1,
+              "Lorg/emulationstation/frontend/relay/log/helpers/BasicMarker;->getName()Ljava/lang/String;": 2,
+              "Lorg/emulationstation/frontend/relay/log/helpers/BasicMarker;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 2,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/log/Marker;->getName()Ljava/lang/String;": 1
+            },
+            "stringConstants": [
+              "\" [ \"",
+              "\" ]\"",
+              "\", \""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/MarkerIgnoringBase;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/MessageFormatter;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 2,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/NOP_FallbackServiceProvider;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method static constructor <clinit>()V",
+          "before": {
+            "backwardBranchCount": 0,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {},
+            "stringConstants": [
+              "\"2.0.99\""
+            ]
+          },
+          "after": {
+            "backwardBranchCount": 0,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {},
+            "stringConstants": []
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/NormalizedParameters;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/Reporter$1;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/Reporter;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 5,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/SubstituteLogger;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 2,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/helpers/Util;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 4,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/spi/DefaultLoggingEventBuilder$1;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/log/spi/DefaultLoggingEventBuilder;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 5,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method static constructor <clinit>()V",
+          "before": {
+            "backwardBranchCount": 0,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {
+              "Ljava/lang/Class;->getName()Ljava/lang/String;": 1
+            },
+            "stringConstants": []
+          },
+          "after": {
+            "backwardBranchCount": 0,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {},
+            "stringConstants": []
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/AbstractWebSocket$1;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/AbstractWebSocket;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 2,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method public setConnectionLostTimeout(I)V",
+          "before": {
+            "backwardBranchCount": 1,
+            "allocationsByType": {
+              "Ljava/util/ArrayList;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Ljava/util/concurrent/TimeUnit;->toNanos(J)J": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->trace(Ljava/lang/String;)V": 2,
+              "Lorg/emulationstation/frontend/relay/ws/AbstractWebSocket;->cancelConnectionLostTimer()V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/AbstractWebSocket;->getConnections()Ljava/util/Collection;": 1,
+              "Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V": 1,
+              "Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->updateLastPong()V": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->error(Ljava/lang/String;Ljava/lang/Throwable;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/AbstractWebSocket;->restartConnectionLostTimer()V": 1
+            },
+            "stringConstants": [
+              "\"Connection lost timer restarted\"",
+              "\"Connection lost timer stopped\"",
+              "\"Exception during connection lost restart\""
+            ]
+          },
+          "after": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {
+              "Ljava/util/ArrayList;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Ljava/util/concurrent/TimeUnit;->toNanos(J)J": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->trace(Ljava/lang/String;)V": 2,
+              "Lorg/emulationstation/frontend/relay/ws/AbstractWebSocket;->cancelConnectionLostTimer()V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/AbstractWebSocket;->getConnections()Ljava/util/Collection;": 1,
+              "Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V": 1,
+              "Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->updateLastPong()V": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->error(Ljava/lang/String;Ljava/lang/Throwable;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/AbstractWebSocket;->restartConnectionLostTimer()V": 1
+            },
+            "stringConstants": [
+              "\"Connection lost timer restarted\"",
+              "\"Connection lost timer stopped\"",
+              "\"Exception during connection lost restart\""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/SSLSocketChannel$1;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/SSLSocketChannel2;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 2,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/SSLSocketChannel;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 5,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method public declared-synchronized write(Ljava/nio/ByteBuffer;)I",
+          "before": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {
+              "Ljava/lang/IllegalStateException;": 1,
+              "Ljavax/net/ssl/SSLException;": 1,
+              "Ljava/lang/StringBuilder;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Ljava/nio/ByteBuffer;->hasRemaining()Z": 2,
+              "Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;": 1,
+              "Ljavax/net/ssl/SSLEngine;->wrap(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)Ljavax/net/ssl/SSLEngineResult;": 1,
+              "Ljavax/net/ssl/SSLEngineResult;->getStatus()Ljavax/net/ssl/SSLEngineResult$Status;": 2,
+              "Ljavax/net/ssl/SSLEngineResult$Status;->ordinal()I": 1,
+              "Lorg/emulationstation/frontend/relay/ws/SSLSocketChannel;->closeConnection()V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/SSLSocketChannel;->enlargePacketBuffer(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;": 1,
+              "Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;)V": 1,
+              "Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;": 1,
+              "Ljava/nio/channels/SocketChannel;->write(Ljava/nio/ByteBuffer;)I": 1,
+              "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V": 1
+            },
+            "stringConstants": [
+              "\"Buffer underflow occurred after a wrap. I don\\'t think we should ever get here.\"",
+              "\"Invalid SSL status: \""
+            ]
+          },
+          "after": {
+            "backwardBranchCount": 3,
+            "allocationsByType": {
+              "Ljava/lang/IllegalStateException;": 1,
+              "Ljava/lang/StringBuilder;": 1,
+              "Ljavax/net/ssl/SSLException;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Ljava/nio/ByteBuffer;->hasRemaining()Z": 2,
+              "Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;": 1,
+              "Ljavax/net/ssl/SSLEngine;->wrap(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)Ljavax/net/ssl/SSLEngineResult;": 1,
+              "Ljavax/net/ssl/SSLEngineResult;->getStatus()Ljavax/net/ssl/SSLEngineResult$Status;": 2,
+              "Ljavax/net/ssl/SSLEngineResult$Status;->ordinal()I": 1,
+              "Lorg/emulationstation/frontend/relay/ws/SSLSocketChannel;->closeConnection()V": 1,
+              "Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/SSLSocketChannel;->enlargePacketBuffer(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;": 1,
+              "Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;)V": 1,
+              "Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;": 1,
+              "Ljava/nio/channels/SocketChannel;->write(Ljava/nio/ByteBuffer;)I": 1
+            },
+            "stringConstants": [
+              "\"Buffer underflow occurred after a wrap. I don\\'t think we should ever get here.\"",
+              "\"Invalid SSL status: \""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 5,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method private decodeFrames(Ljava/nio/ByteBuffer;)V",
+          "before": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {
+              "Ljava/lang/Exception;": 1,
+              "Ljava/lang/StringBuilder;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/ws/drafts/Draft;->translateFrame(Ljava/nio/ByteBuffer;)Ljava/util/List;": 1,
+              "Ljava/util/List;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->trace(Ljava/lang/String;Ljava/lang/Object;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/drafts/Draft;->processFrame(Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;Lorg/emulationstation/frontend/relay/ws/framing/Framedata;)V": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->error(Ljava/lang/String;)V": 2,
+              "Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketListener;->onWebsocketError(Lorg/emulationstation/frontend/relay/ws/WebSocket;Ljava/lang/Exception;)V": 3,
+              "Ljava/lang/Object;->getClass()Ljava/lang/Class;": 1,
+              "Ljava/lang/Class;->getName()Ljava/lang/String;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->close(ILjava/lang/String;)V": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->error(Ljava/lang/String;Ljava/lang/Throwable;)V": 2,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->close(Lorg/emulationstation/frontend/relay/ws/exceptions/InvalidDataException;)V": 2,
+              "Lorg/emulationstation/frontend/relay/ws/exceptions/LimitExceededException;->getLimit()I": 1
+            },
+            "stringConstants": [
+              "\"Closing due to invalid data in frame\"",
+              "\"Closing due to invalid size of frame\"",
+              "\"Closing web socket due to an error during frame processing\"",
+              "\"Got error \"",
+              "\"Got fatal error during frame processing\"",
+              "\"matched frame: {}\""
+            ]
+          },
+          "after": {
+            "backwardBranchCount": 1,
+            "allocationsByType": {
+              "Ljava/lang/Exception;": 1,
+              "Ljava/lang/StringBuilder;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/ws/drafts/Draft;->translateFrame(Ljava/nio/ByteBuffer;)Ljava/util/List;": 1,
+              "Ljava/util/List;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->trace(Ljava/lang/String;Ljava/lang/Object;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/drafts/Draft;->processFrame(Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;Lorg/emulationstation/frontend/relay/ws/framing/Framedata;)V": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->error(Ljava/lang/String;)V": 2,
+              "Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketListener;->onWebsocketError(Lorg/emulationstation/frontend/relay/ws/WebSocket;Ljava/lang/Exception;)V": 3,
+              "Ljava/lang/Object;->getClass()Ljava/lang/Class;": 1,
+              "Ljava/lang/Class;->getName()Ljava/lang/String;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->close(ILjava/lang/String;)V": 1,
+              "Lorg/emulationstation/frontend/relay/log/Logger;->error(Ljava/lang/String;Ljava/lang/Throwable;)V": 2,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->close(Lorg/emulationstation/frontend/relay/ws/exceptions/InvalidDataException;)V": 2,
+              "Lorg/emulationstation/frontend/relay/ws/exceptions/LimitExceededException;->getLimit()I": 1
+            },
+            "stringConstants": [
+              "\"Closing due to invalid data in frame\"",
+              "\"Closing due to invalid size of frame\"",
+              "\"Closing web socket due to an error during frame processing\"",
+              "\"Got error \"",
+              "\"Got fatal error during frame processing\"",
+              "\"matched frame: {}\""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/client/WebSocketClient$WebsocketWriteThread;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 3,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/client/WebSocketClient;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 4,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/drafts/Draft;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 3,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/drafts/Draft_6455;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 13,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method public constructor <init>(Ljava/util/List;Ljava/util/List;I)V",
+          "before": {
+            "backwardBranchCount": 1,
+            "allocationsByType": {
+              "Lorg/emulationstation/frontend/relay/ws/extensions/DefaultExtension;": 2,
+              "Ljava/security/SecureRandom;": 1,
+              "Ljava/util/ArrayList;": 3,
+              "Ljava/lang/IllegalArgumentException;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/ws/drafts/Draft;-><init>()V": 1,
+              "Lorg/emulationstation/frontend/relay/log/LoggerFactory;->getLogger(Ljava/lang/Class;)Lorg/emulationstation/frontend/relay/log/Logger;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/extensions/DefaultExtension;-><init>()V": 2,
+              "Ljava/security/SecureRandom;-><init>()V": 1,
+              "Ljava/util/List;->size()I": 3,
+              "Ljava/util/ArrayList;-><init>(I)V": 2,
+              "Ljava/util/ArrayList;-><init>()V": 1,
+              "Ljava/util/List;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Ljava/lang/Object;->getClass()Ljava/lang/Class;": 1,
+              "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z": 1,
+              "Ljava/util/List;->addAll(Ljava/util/Collection;)Z": 2,
+              "Ljava/util/List;->add(ILjava/lang/Object;)V": 1,
+              "Ljava/lang/IllegalArgumentException;-><init>()V": 1
+            },
+            "stringConstants": []
+          },
+          "after": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {
+              "Lorg/emulationstation/frontend/relay/ws/extensions/DefaultExtension;": 2,
+              "Ljava/security/SecureRandom;": 1,
+              "Ljava/util/ArrayList;": 3,
+              "Ljava/lang/IllegalArgumentException;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/ws/drafts/Draft;-><init>()V": 1,
+              "Lorg/emulationstation/frontend/relay/log/LoggerFactory;->getLogger(Ljava/lang/Class;)Lorg/emulationstation/frontend/relay/log/Logger;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/extensions/DefaultExtension;-><init>()V": 2,
+              "Ljava/security/SecureRandom;-><init>()V": 1,
+              "Ljava/util/List;->size()I": 3,
+              "Ljava/util/ArrayList;-><init>(I)V": 2,
+              "Ljava/util/ArrayList;-><init>()V": 1,
+              "Ljava/util/List;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Ljava/lang/Object;->getClass()Ljava/lang/Class;": 1,
+              "Ljava/lang/Object;->equals(Ljava/lang/Object;)Z": 1,
+              "Ljava/util/List;->addAll(Ljava/util/Collection;)Z": 2,
+              "Ljava/util/List;->add(ILjava/lang/Object;)V": 1,
+              "Ljava/lang/IllegalArgumentException;-><init>()V": 1
+            },
+            "stringConstants": []
+          }
+        },
+        {
+          "method": ".method public postProcessHandshakeRequestAsClient(Lorg/emulationstation/frontend/relay/ws/handshake/ClientHandshakeBuilder;)Lorg/emulationstation/frontend/relay/ws/handshake/ClientHandshakeBuilder;",
+          "before": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {
+              "Ljava/lang/StringBuilder;": 2
+            },
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/ws/handshake/ClientHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V": 6,
+              "Ljava/security/SecureRandom;->nextBytes([B)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/util/Base64;->encodeBytes([B)Ljava/lang/String;": 1,
+              "Ljava/util/List;->iterator()Ljava/util/Iterator;": 2,
+              "Ljava/util/Iterator;->hasNext()Z": 2,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 2,
+              "Lorg/emulationstation/frontend/relay/ws/extensions/IExtension;->getProvidedExtensionAsClient()Ljava/lang/String;": 3,
+              "Ljava/lang/String;->length()I": 2,
+              "Lorg/emulationstation/frontend/relay/ws/protocols/IProtocol;->getProvidedProtocol()Ljava/lang/String;": 2
+            },
+            "stringConstants": [
+              "\", \"",
+              "\"13\"",
+              "\"Connection\"",
+              "\"Sec-WebSocket-Extensions\"",
+              "\"Sec-WebSocket-Key\"",
+              "\"Sec-WebSocket-Protocol\"",
+              "\"Sec-WebSocket-Version\"",
+              "\"Upgrade\"",
+              "\"websocket\""
+            ]
+          },
+          "after": {
+            "backwardBranchCount": 5,
+            "allocationsByType": {
+              "Ljava/lang/StringBuilder;": 2
+            },
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/ws/handshake/ClientHandshakeBuilder;->put(Ljava/lang/String;Ljava/lang/String;)V": 6,
+              "Ljava/security/SecureRandom;->nextBytes([B)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/util/Base64;->encodeBytes([B)Ljava/lang/String;": 1,
+              "Ljava/util/List;->iterator()Ljava/util/Iterator;": 2,
+              "Ljava/util/Iterator;->hasNext()Z": 2,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 2,
+              "Lorg/emulationstation/frontend/relay/ws/extensions/IExtension;->getProvidedExtensionAsClient()Ljava/lang/String;": 3,
+              "Ljava/lang/String;->length()I": 2,
+              "Lorg/emulationstation/frontend/relay/ws/protocols/IProtocol;->getProvidedProtocol()Ljava/lang/String;": 2
+            },
+            "stringConstants": [
+              "\", \"",
+              "\"13\"",
+              "\"Connection\"",
+              "\"Sec-WebSocket-Extensions\"",
+              "\"Sec-WebSocket-Key\"",
+              "\"Sec-WebSocket-Protocol\"",
+              "\"Sec-WebSocket-Version\"",
+              "\"Upgrade\"",
+              "\"websocket\""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/extensions/CompressionExtension;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/extensions/DefaultExtension;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/extensions/ExtensionRequestData;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/extensions/permessage_deflate/PerMessageDeflateExtension;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 2,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method public getProvidedExtensionAsServer()Ljava/lang/String;",
+          "before": {
+            "backwardBranchCount": 0,
+            "allocationsByType": {
+              "Ljava/lang/StringBuilder;": 1
+            },
+            "callsExceptStringBuilder": {},
+            "stringConstants": [
+              "\"\"",
+              "\"; client_no_context_takeover\"",
+              "\"permessage-deflate; server_no_context_takeover\""
+            ]
+          },
+          "after": {
+            "backwardBranchCount": 0,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {
+              "Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;": 1
+            },
+            "stringConstants": [
+              "\"\"",
+              "\"; client_no_context_takeover\"",
+              "\"permessage-deflate; server_no_context_takeover\""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/framing/CloseFrame;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 4,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/framing/FramedataImpl1$1;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/framing/FramedataImpl1;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/handshake/HandshakedataImpl1;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer$WebSocketWorker;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 2,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 10,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": [
+        {
+          "method": ".method private doAdditionalRead()V",
+          "before": {
+            "backwardBranchCount": 1,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {
+              "Ljava/util/List;->isEmpty()Z": 1,
+              "Ljava/util/List;->remove(I)Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->getChannel()Ljava/nio/channels/ByteChannel;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->takeBuffer()Ljava/nio/ByteBuffer;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/SocketChannelIOHelper;->readMore(Ljava/nio/ByteBuffer;Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;Lorg/emulationstation/frontend/relay/ws/WrappedByteChannel;)Z": 1,
+              "Ljava/util/List;->add(Ljava/lang/Object;)Z": 1,
+              "Ljava/nio/ByteBuffer;->hasRemaining()Z": 1,
+              "Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->queue(Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->pushBuffer(Ljava/nio/ByteBuffer;)V": 2
+            },
+            "stringConstants": []
+          },
+          "after": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {
+              "Ljava/util/List;->isEmpty()Z": 1,
+              "Ljava/util/List;->remove(I)Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->getChannel()Ljava/nio/channels/ByteChannel;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->takeBuffer()Ljava/nio/ByteBuffer;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/SocketChannelIOHelper;->readMore(Ljava/nio/ByteBuffer;Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;Lorg/emulationstation/frontend/relay/ws/WrappedByteChannel;)Z": 1,
+              "Ljava/util/List;->add(Ljava/lang/Object;)Z": 1,
+              "Ljava/nio/ByteBuffer;->hasRemaining()Z": 1,
+              "Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->queue(Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->pushBuffer(Ljava/nio/ByteBuffer;)V": 2
+            },
+            "stringConstants": []
+          }
+        },
+        {
+          "method": ".method private doBroadcast(Ljava/lang/Object;Ljava/util/Collection;)V",
+          "before": {
+            "backwardBranchCount": 1,
+            "allocationsByType": {
+              "Ljava/util/HashMap;": 1,
+              "Ljava/util/ArrayList;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Ljava/util/HashMap;-><init>()V": 1,
+              "Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V": 1,
+              "Ljava/util/List;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocket;->getDraft()Lorg/emulationstation/frontend/relay/ws/drafts/Draft;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->fillFrames(Lorg/emulationstation/frontend/relay/ws/drafts/Draft;Ljava/util/Map;Ljava/lang/String;Ljava/nio/ByteBuffer;)V": 1,
+              "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocket;->sendFrame(Ljava/util/Collection;)V": 1
+            },
+            "stringConstants": []
+          },
+          "after": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {
+              "Ljava/util/HashMap;": 1,
+              "Ljava/util/ArrayList;": 1
+            },
+            "callsExceptStringBuilder": {
+              "Ljava/util/HashMap;-><init>()V": 1,
+              "Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V": 1,
+              "Ljava/util/List;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocket;->getDraft()Lorg/emulationstation/frontend/relay/ws/drafts/Draft;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->fillFrames(Lorg/emulationstation/frontend/relay/ws/drafts/Draft;Ljava/util/Map;Ljava/lang/String;Ljava/nio/ByteBuffer;)V": 1,
+              "Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/WebSocket;->sendFrame(Ljava/util/Collection;)V": 1
+            },
+            "stringConstants": []
+          }
+        },
+        {
+          "method": ".method public run()V",
+          "before": {
+            "backwardBranchCount": 2,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doEnsureSingleThread()Z": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doSetupSelectorAndServerThread()Z": 1,
+              "Ljava/lang/Thread;->isInterrupted()Z": 1,
+              "Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z": 2,
+              "Ljava/nio/channels/Selector;->select(J)I": 1,
+              "Ljava/nio/channels/Selector;->selectedKeys()Ljava/util/Set;": 1,
+              "Ljava/util/Set;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Ljava/nio/channels/SelectionKey;->isValid()Z": 1,
+              "Ljava/nio/channels/SelectionKey;->isAcceptable()Z": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doAccept(Ljava/nio/channels/SelectionKey;Ljava/util/Iterator;)V": 1,
+              "Ljava/nio/channels/SelectionKey;->isReadable()Z": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doRead(Ljava/nio/channels/SelectionKey;Ljava/util/Iterator;)Z": 1,
+              "Ljava/nio/channels/SelectionKey;->isWritable()Z": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doWrite(Ljava/nio/channels/SelectionKey;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doAdditionalRead()V": 1,
+              "Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;": 1,
+              "Ljava/lang/Thread;->interrupt()V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->handleIOException(Ljava/nio/channels/SelectionKey;Lorg/emulationstation/frontend/relay/ws/WebSocket;Ljava/io/IOException;)V": 2,
+              "Lorg/emulationstation/frontend/relay/ws/exceptions/WrappedIOException;->getConnection()Lorg/emulationstation/frontend/relay/ws/WebSocket;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/exceptions/WrappedIOException;->getIOException()Ljava/io/IOException;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doServerShutdown()V": 3,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->handleFatal(Lorg/emulationstation/frontend/relay/ws/WebSocket;Ljava/lang/Exception;)V": 1
+            },
+            "stringConstants": []
+          },
+          "after": {
+            "backwardBranchCount": 5,
+            "allocationsByType": {},
+            "callsExceptStringBuilder": {
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doEnsureSingleThread()Z": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doSetupSelectorAndServerThread()Z": 1,
+              "Ljava/lang/Thread;->isInterrupted()Z": 1,
+              "Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z": 2,
+              "Ljava/nio/channels/Selector;->select(J)I": 1,
+              "Ljava/nio/channels/Selector;->selectedKeys()Ljava/util/Set;": 1,
+              "Ljava/util/Set;->iterator()Ljava/util/Iterator;": 1,
+              "Ljava/util/Iterator;->hasNext()Z": 1,
+              "Ljava/util/Iterator;->next()Ljava/lang/Object;": 1,
+              "Ljava/nio/channels/SelectionKey;->isValid()Z": 1,
+              "Ljava/nio/channels/SelectionKey;->isAcceptable()Z": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doAccept(Ljava/nio/channels/SelectionKey;Ljava/util/Iterator;)V": 1,
+              "Ljava/nio/channels/SelectionKey;->isReadable()Z": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doRead(Ljava/nio/channels/SelectionKey;Ljava/util/Iterator;)Z": 1,
+              "Ljava/nio/channels/SelectionKey;->isWritable()Z": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doWrite(Ljava/nio/channels/SelectionKey;)V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doAdditionalRead()V": 1,
+              "Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;": 1,
+              "Ljava/lang/Thread;->interrupt()V": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->handleIOException(Ljava/nio/channels/SelectionKey;Lorg/emulationstation/frontend/relay/ws/WebSocket;Ljava/io/IOException;)V": 2,
+              "Lorg/emulationstation/frontend/relay/ws/exceptions/WrappedIOException;->getConnection()Lorg/emulationstation/frontend/relay/ws/WebSocket;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/exceptions/WrappedIOException;->getIOException()Ljava/io/IOException;": 1,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->doServerShutdown()V": 3,
+              "Lorg/emulationstation/frontend/relay/ws/server/WebSocketServer;->handleFatal(Lorg/emulationstation/frontend/relay/ws/WebSocket;Ljava/lang/Exception;)V": 1
+            },
+            "stringConstants": []
+          }
+        }
+      ]
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/util/Base64;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 4,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    },
+    {
+      "class": "Lorg/emulationstation/frontend/relay/ws/util/NamedThreadFactory;",
+      "methodSignatureSetEqual": true,
+      "nonShapeEqualMethodCount": 1,
+      "methodsWithDifferentCallAllocationLoopOrConstantSummary": []
+    }
+  ],
+  "limits": [
+    "Backward-edge/call/allocation/constant summaries are static screening, not proof of semantic equivalence.",
+    "StringBuilder calls are separately excluded from call screening because Javac/D8 rewrites prefix constructors and discards redundant move-result.",
+    "No Android CPU/power/runtime load was measured."
+  ]
+}

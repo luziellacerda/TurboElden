@@ -1,0 +1,376 @@
+{
+  "schema": "station.performance.online.audit.v1",
+  "reviewDate": "2026-10-13",
+  "currentInstalledRevision": "R138",
+  "apkSha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+  "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f",
+  "scope": "Read-only effective online Java/native source audit. No phone, network, deployment, runtime mutation or APK build. Private candidate is separately qualified with host fixtures.",
+  "effectiveSourceComposition": {
+    "base": "R134 source composition index: R124 client/rooms, R125 N64, R126 Dolphin, PSX overlay; 281 Java sources",
+    "R135": [
+      "StationDolphinSession lock release before transport close",
+      "StationGameSession event4 calls constrained departure worker",
+      "new StationHumanDeparture rejects unsafe mutation retries"
+    ],
+    "R136": "DEX constructor patch hides optional cover TextureView and removes its listener on Motorola moto g52 only; all cover shader/scheduling source retained elsewhere",
+    "R137": "DEX requestHumanExit queued native quit no longer prevents Activity.finish",
+    "R138": "All 40 DEX remain byte identical to R137. Native android_app_entry/destroy cleanup overlay, SNES two-option fixed HLE profile, renewed RetroArch IDs. No other native source bytes changed.",
+    "newGitNesOverlay": "integration/station-nes-catalogo-20261012 is not part of installed R138; capacity/query changes must not be counted as installed behavior"
+  },
+  "requestedChangesPerformanceAssessment": {
+    "R135": "No periodic frequency, renderer policy, core execution or worker-count adjustment. Human Leave may issue one original Leave, one fresh snapshot, one identity-constrained reissued Leave only for exact generation rejection. Dolphin cleanup moved across monitor boundary.",
+    "R136": "Disables cover GLES processing on one affected model, causally scoped to the captured Adreno ANR. No general speed preset.",
+    "R137": "Explicit human exit completes Java finish/close. Does not introduce a new background polling interval.",
+    "R138": "HLE changes SNES DSP implementation as requested for missing DSP firmware; no overclock. Native fallback is on rarch_main return and shutdown, not the per-frame loop.",
+    "snesOptionGateVerified": {
+      "sourceSha256": "e0d95df5f51a215457a9dc693d1797450e1e41179b96229b04c738a0277fa3c7",
+      "readOptCallSites": [
+        438,
+        444,
+        602
+      ],
+      "DSP": "HLE requested change",
+      "SuperFX": "fixed100% before/after; enabling read_opt yields the same100%",
+      "experimentalSGB": "not explicitly changed; defaultInternal preserved",
+      "otherOptions": "region/aspect/crop/gamma already use get_var without violate_accuracy gate and remain exact"
+    },
+    "noAdditionalUnrequestedCpuTuningFoundInTheseDeltas": true
+  },
+  "boundedExecutionAndCleanup": [
+    {
+      "component": "StationMultiplayerTunnel",
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java",
+      "lines": [
+        25,
+        58,
+        80,
+        90,
+        100,
+        109,
+        118,
+        122,
+        203,
+        215,
+        226,
+        230
+      ],
+      "behavior": "One250ms control scheduler and serialized writer per link. Native TCP IO blocks; credit/receive gates condition-wait. Host connection retries wait50ms and stop45s. Full WebSocket queue retry sleeps25ms and window/queue is bounded. close wakes gates/closes sockets and shuts workers. No pure busy-spin found."
+    },
+    {
+      "component": "RetroArch recovery pause",
+      "path": "integration/online-snes-startup-r138/native/baseline-five-player/source/runloop.c",
+      "lines": [
+        7373,
+        7380
+      ],
+      "behavior": "Stopped retro_run polls recovery, records genuine epoch token and sleeps50ms; nominal20 wakeups/s. Source unchanged R134 through R138."
+    },
+    {
+      "component": "Room UI v3 snapshot",
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "lines": [
+        514,
+        521,
+        531,
+        532,
+        455,
+        456
+      ],
+      "behavior": "Snapshot schedule waits at least1s after successful request, with errors backoff up to8s plus serverRetryAfter; lifecycle cancels and destroys schedulers."
+    },
+    {
+      "component": "Main game authority",
+      "path": "integration/online-lifecycle-review-r135/java/org/emulationstation/frontend/netplay/StationGameSession.java",
+      "lines": [
+        66,
+        72,
+        87,
+        106
+      ],
+      "behavior": "Heartbeat every20s with fixed delay, stopped on anchorEnded/human/fatal. Event4 departure is separate worker, always shutdown in finally. Per-link ticket set bounds duplicate resume work."
+    },
+    {
+      "component": "PSX/Dolphin session",
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java",
+      "otherPath": "integration/online-lifecycle-review-r135/java/org/emulationstation/frontend/netplay/StationDolphinSession.java",
+      "lines": [
+        66,
+        130,
+        144,
+        159,
+        160
+      ],
+      "behavior": "State poll50ms,20/s, genuineCPU barrier required. Commit drain bounded64 perPSX tick. PSX cleanup retry waits on join up to250ms then schedules50ms; no UI join or timeout-to-kill. Dolphin join/StopEmulation serialized worker."
+    },
+    {
+      "component": "Cover rendering",
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineCoverView.java",
+      "lines": [
+        85,
+        88,
+        89,
+        90,
+        91,
+        113,
+        121,
+        127
+      ],
+      "behavior": "34ms nominal29.4fps only while visible/resumed/focused/LED-enabled. Single pending draw, worker prepares/cleans GPU, image/light-field caches bounded. R136 g52 exception prevents this worker surface altogether."
+    },
+    {
+      "component": "N64 streams",
+      "path": "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Mux.java",
+      "otherPath": "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Server.java",
+      "behavior": "Socket accept/read and native bounded queues/monitor waits dominate; dynamic local connection workers are a bounded legitimate roster path. No new scheduler introduced after R134."
+    }
+  ],
+  "findings": [
+    {
+      "id": "CPU-ONLINE-001",
+      "priority": "P1",
+      "status": "confirmed-source-and-fault-injection",
+      "title": "Unchecked allocation/thread creation can strand startup or crash under resource pressure",
+      "path": "integration/online-snes-startup-r138/native/source/frontend/drivers/platform_unix.c",
+      "lines": [
+        540,
+        541,
+        545,
+        547,
+        550,
+        561,
+        565,
+        619,
+        624
+      ],
+      "trigger": "Force failure of slock_new/scond_new/savedState malloc/pipe/sthread_create before the native worker starts, e.g. memory/FD/thread exhaustion.",
+      "cause": "Thread NULL is not checked, then UI waits forever for running with no worker. Mutex NULL is silently ignored by the real slock_lock guard, so synchronization is absent; scond_wait dereferences lock and condition and can subsequently crash. SavedState NULL is passed to memcpy; condition NULL accepted into instance; pipe failure leaks mutex/condition; null instance releases reservation but does not finish Activity.",
+      "effect": "ANR or crash while starting; extra resource leaks on pipe failure. This is not evidence of CPU100% and not proven cause of historical g52 incident.",
+      "inheritedFromBaseline": true,
+      "introducedByR135toR138": false,
+      "evidence": "native-allocation-candidate-receipt.json; exact production android_app_create and onCreate creation tail; six resource faults plus success case",
+      "minimalCandidate": "Check allocators before use; cleanup own savedState/cond/mutex/pipe on startup failure; returnNULL without wait/join when no worker; release reservation and NativeActivity_finish only on null instance.",
+      "candidatePath": "native-allocation-candidate.c",
+      "candidateSha256": "b3ad1cbe5843d77a2f645707d3bb329fbbc8bb1a41d86e6cfe76d3d1626858dd",
+      "candidateTests": "Six injected failures return safely with zero allocations/FDs alive and one release/finish; success returns a mocked running handshake with no finish. All other production source bytes preserved. These controlled fixtures do not prove concurrent Android lifecycle behavior.",
+      "productChanged": false,
+      "physicalValidation": false,
+      "integrationRisk": "Future incorporation needs AndroidNDK compilation, new runtime/engine identities, signed APK entry preservation and all-phone startup/exit/memory-pressure tests; no runtime was published in this audit."
+    },
+    {
+      "id": "CPU-ONLINE-002",
+      "priority": "P2",
+      "status": "residual-risk-not-causally-confirmed",
+      "title": "Main-thread native lifecycle waits can still stall if core/driver never returns",
+      "path": "integration/online-snes-startup-r138/native/source/frontend/drivers/platform_unix.c",
+      "lines": [
+        256,
+        282,
+        301,
+        333,
+        395
+      ],
+      "trigger": "Core or GL/audio/save driver remains blocked while UI requests pause/window/destroy; quit wake cannot preempt a stuck driver.",
+      "cause": "Condition waits and workerjoin have no deadline; destroyed is now reliably published for an ordinary or early return, but cannot be published if worker never returns.",
+      "effect": "PossibleANR, no evidence of CPU100% from waiting; R138 fixes stale looper exit but does not solve arbitrary driver stalls.",
+      "minimalNextStep": "Use Android trace of a remaining physical stall. Do not free live native objects or force another thread/process as a timeout workaround. No code change justified by this risk alone.",
+      "physicalValidation": false
+    },
+    {
+      "id": "CPU-ONLINE-003",
+      "priority": "P3",
+      "status": "bounded-cost-observation-no-fix-required",
+      "title": "Control polling and background retained sessions have measurable fixed wakeup cost",
+      "path": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java",
+      "lines": [
+        58,
+        151
+      ],
+      "details": "Up to4 hostlinks means16 control ticks/s; RetroArch paused loop20/s; PSX/Dolphin20/s; game owner20s. Terminal gates immediately return and background does not request fresh tickets. Native/barrier correctness constrains timing. No physical CPU/temperature measurement was collected; reducing frequencies without traces could delay reconnect/ACK/READY.",
+      "minimalNextStep": "Measure only after consistent R138 devices and signed registry; preserve existing frequencies until a specific cost/latency issue is measured."
+    },
+    {
+      "id": "CPU-ONLINE-004",
+      "priority": "P3",
+      "status": "conditional-resilience-observation",
+      "title": "Social event loops depend on server long-poll contract on successful responses",
+      "path": "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationPresence.java",
+      "otherPath": "integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java",
+      "lines": [
+        51,
+        55,
+        471,
+        475
+      ],
+      "details": "Error loops back off/cancel; successful events immediately repoll, relying on server to wait when revision unchanged. Rapid repeated unchanged200 responses or high global revision churn could amplify signed payload parsing/copies. No current server misbehavior/physical CPU surge is proved. v3snapshot separate poll already has1s delay.",
+      "minimalNextStep": "Verify response elapsed/revision and CPUtrace if a real surge occurs; add no blind sleeps or protocol weakening without such evidence."
+    },
+    {
+      "id": "CPU-ONLINE-005",
+      "priority": "P2",
+      "status": "static-resource-lifetime-observation-process-reuse-not-physically-qualified",
+      "title": "A JNI TLS key is created per native Activity and has no matching delete/reuse",
+      "path": "integration/online-snes-startup-r138/native/source/frontend/drivers/platform_unix.c",
+      "lines": [
+        121,
+        489,
+        505,
+        612,
+        613
+      ],
+      "details": "pthread_key_create overwrites the static thread_key for each accepted native launch. Full corresponding runtime C/C++/headers search finds no pthread_key_delete for that private key; unrelated glslang, VCOS and generic rthreads TLS deletion refer to their own keys. android_app_free/onDestroy join the worker but do not delete this key. StationRetroActivity onRetroArchExit/requestHumanExit/finish have no explicit process exit. If the same Android process is retained across launches, keys can accumulate; allocation failure is only logged and launch continues. Actual same-process/library retention and repeated-launch key allocation were not physically measured; no Android key limit/failure count is asserted.",
+      "inheritedFromBaseline": true,
+      "introducedByR135toR138": false,
+      "effect": "Resource leak and eventual JNI destructor/key setup failure during repeated use; not evidence of CPU 100%.",
+      "minimalNextStep": "Qualify repeated start/exit in one retained process and error injection. Consider creating a single process-lifetime key once with checked failure, or deleting it only after all users/worker have ended. Do not delete a key while its worker JNI destructor can still use it.",
+      "candidateImplemented": false,
+      "physicalValidation": false
+    }
+  ],
+  "newGitNesOverlayReview": {
+    "deployedIntoInstalledApk": false,
+    "maximumItemsBefore": 4096,
+    "maximumItemsAfter": 20000,
+    "currentCatalogDocumented": 4435,
+    "capacityGrowth": {
+      "versus4096Maximum": 1.082763671875,
+      "versus3685OldVisibleItems": 1.203527815468114,
+      "maximumAllowedGrowth": 4.8828125
+    },
+    "semanticJavaDeltas": [
+      {
+        "file": "StationCatalog.java",
+        "beforeSha256": "f8775fc40290a23167199205cb77ed45f7200942a903ec897b7a667befec74ea",
+        "afterSha256": "7e6796f0a5959e146ad0803efcba2ea7303922b5a0e8064ea50987d2b0ccb682",
+        "lineEndingsIgnoredForSemanticComparison": true,
+        "changes": [
+          {
+            "operation": "replace",
+            "before": [
+              "    public static final int MAX_ITEMS = 4096;"
+            ],
+            "after": [
+              "    public static final int MAX_ITEMS = 20000;"
+            ],
+            "oldLine": 16,
+            "newLine": 16
+          }
+        ]
+      },
+      {
+        "file": "StationApi.java",
+        "beforeSha256": "f70ad339cff8bc168c46ec400cd90b145fcb7a81834c2ae23e38ebeb9e923f67",
+        "afterSha256": "0650725d0ce83b18b51b9cdb104088866f44a2b9c3880616699abdda53463685",
+        "lineEndingsIgnoredForSemanticComparison": true,
+        "changes": [
+          {
+            "operation": "replace",
+            "before": [
+              "        SignedReply reply=signedReply(\"GET\",\"catalog?metadata=1\",null,session,StationProtocol.CATALOG,"
+            ],
+            "after": [
+              "        SignedReply reply=signedReply(\"GET\",\"catalog?metadata=1&maximumItems=\"+StationCatalog.MAX_ITEMS,null,session,StationProtocol.CATALOG,"
+            ],
+            "oldLine": 235,
+            "newLine": 235
+          }
+        ]
+      },
+      {
+        "file": "StationCatalogPlayerEvidence.java",
+        "beforeSha256": "ad20a55c98552d7ae6e03799253f1b3ec69a80cdb7591e40e10903972fa45379",
+        "afterSha256": "f8dca0aa12ecbab01009f9fd2daa46baa2bcbcd72ed3c766dfbc80e8229000f9",
+        "lineEndingsIgnoredForSemanticComparison": true,
+        "changes": [
+          {
+            "operation": "replace",
+            "before": [
+              "        if(historyExhausted||catalog==null||catalog.length>4096||values==null||values.size()>4096) {"
+            ],
+            "after": [
+              "        if(historyExhausted||catalog==null||catalog.length>StationCatalog.MAX_ITEMS||values==null||values.size()>StationCatalog.MAX_ITEMS) {"
+            ],
+            "oldLine": 100,
+            "newLine": 100
+          }
+        ]
+      },
+      {
+        "file": "StationCatalogPlayerEvidenceLoader.java",
+        "beforeSha256": "c5e3b6e7f4f6c0ca6778181cc9e1abc2bec132a015100ba4c442d5943a3788d2",
+        "afterSha256": "4ca5fe897c04697b38f180b5b3339badd1f2e96ee77776968b079d7b3803a8f3",
+        "lineEndingsIgnoredForSemanticComparison": true,
+        "changes": [
+          {
+            "operation": "replace",
+            "before": [
+              "        JSONArray rows=root.getJSONArray(\"records\");if(rows.length()>4096)throw new IllegalArgumentException(\"Evidence count\");"
+            ],
+            "after": [
+              "        JSONArray rows=root.getJSONArray(\"records\");if(rows.length()>StationCatalog.MAX_ITEMS)throw new IllegalArgumentException(\"Evidence count\");"
+            ],
+            "oldLine": 42,
+            "newLine": 42
+          }
+        ]
+      },
+      {
+        "file": "StationCoverQueue.java",
+        "beforeSha256": "11decbdb7db269a0fcd6894116d8fae8f876ff584185d684af43ee51c724340a",
+        "afterSha256": "c90f34daf9773717d552fd4abc193122c40aa2fe2c9adfbeb1325967ec8b8854",
+        "lineEndingsIgnoredForSemanticComparison": true,
+        "changes": [
+          {
+            "operation": "replace",
+            "before": [
+              " private static final int MAX_PREFETCH_ITEMS=4096;"
+            ],
+            "after": [
+              " private static final int MAX_PREFETCH_ITEMS=StationCatalog.MAX_ITEMS;"
+            ],
+            "oldLine": 15,
+            "newLine": 15
+          }
+        ]
+      }
+    ],
+    "cpuImplication": "Larger catalog payloads increase parsing/publication work and retained metadata. Native publication uses std::set and std::map per item, including O(n log n) ordered-container work plus payload byte processing. No exact CPU/memory proportion or Android measurement is asserted. The maximum does not eagerly allocate 20000 Item objects. Inherited String.matches recompiles patterns per ID; its practical cost requires profiling.",
+    "unchangedBounds": "Cover queue one globalIOworker, bounded9 runnable deque, one optional prefetch task, rate backoff with one resumption, foreground/cancel gates remain exact; native cover concurrency remains1. Metadata/mode evidence limits,64MiBbody and authentication unchanged.",
+    "classification": "New catalog capacity/query feature; no introduced busy-spin or extra worker. Qualification host test is not Android thermal/gameplay proof."
+  },
+  "reviewedSourceHashes": {
+    "integration/online-snes-startup-r138/native/source/frontend/drivers/platform_unix.c": "e4811bef12aeacd07947e51badaf8341be6c12c347c4952a9334ba22e56342f2",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationPresence.java": "1328f2353c6bde0d6ffde7d861511eda15af861f01dc471d7de16bc813ded83c",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRetroActivity.java": "31ca6cf7108270c424129327cd8605ff8f140db3e2925d1a536d1027cb155787",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineClient.java": "a3c184aff3eabd2aae9d861235fa132eb31fc6d95b4a1ffcb52248fa4724625e",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationOnlineCoverView.java": "2da2bbee3e9497a301ed81a2110b72872872d9d63b7f6c161fbaa0c7615bd151",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationHostConnector.java": "c909aea87a8e6c4631002a565a8e4b8b720ffcc1f964dcb8796c4bc155002032",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRecoveryTunnel.java": "442c50840a280d4a5605e32a06873fa14a879285a959a6f2a0b5231e2204ede9",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationRelayTunnel.java": "9845e639b93223188dd0b3b6f4389ce80c72f9397380e52a30f4b1f4ca9f2104",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSessionLink.java": "2cdf6807d6d96e6265f8719a40ea75b3b81680d2b033dd985181c2094e89eb1c",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSessionService.java": "fb8857ab4b0bbd9507764c9a6e1b4a48eccddd25a7bff36ad406cd9a800b641a",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationSinglePassVideo720.java": "dde13ca08170e98354a22a764a42f9a6a98e032389aba48e81fb5aab3d9e1673",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationActionButton.java": "c8741d3c47d73b137e36e7a3fe2e8f6b84c8afca3e90025422bcd442ab2795af",
+    "versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationLobbySurface.java": "b2320101df0889e59fd4832f83596d8e8d448f688d33e82f5236167722df50db",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerSession.java": "2b8fcbf368e38362e9f46701534471172ae388c1e163b2bb99f765a438ca7da2",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerTunnel.java": "63222e1586e4398dbb6c51d2ca4ba99893b63e454f588acec2c9296bd9869559",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationMultiplayerEndpoint.java": "4e1836a8abd9c3e63475981a0b1af426edaa9533d6190c9309df2e5fb429ab96",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationRoomsActivity.java": "cbe080a2f7b9d99c4ce36f7ba19e6a292f92e29ba2117623af14a2863eda3fb1",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java": "73fdcb47ad0472dd0f4a398020e647af8da5f82b4ab3af78dbbbb457be29288b",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxOnlineActivity.java": "482a7d14c7bda8d5cd2ad93ed248b6e314ff600fda4c49196b7f342e752ceecf",
+    "integration/online-lifecycle-review-r135/java/org/emulationstation/frontend/netplay/StationDolphinSession.java": "8dabb51d65313e2a6b2925927163aa1a50d24533a8bcc5ccaa5b1cd1a59c6231",
+    "integration/online-lifecycle-review-r135/java/org/emulationstation/frontend/netplay/StationGameSession.java": "382066fb971d4fd15005f2e8057271f2148f70e2e295e4cb45ac9088648ec22f",
+    "integration/online-lifecycle-review-r135/java/org/emulationstation/frontend/netplay/StationHumanDeparture.java": "45eb52fa73d1412589a5f27b6d9cb772cd137c316dd7126873f1e9ce81db3dc7",
+    "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Bridge.java": "54b93f8c9007d48c9b3dd727197e87a58838ea3e1da816a2a96375ff79099693",
+    "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Mux.java": "6c3b37e207355063cea92e46c0a8a23056884a765b19c1f053774da6eb82009f",
+    "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Server.java": "39d86015ce89ed34818fb275ab35c963871fc975b4ff16e21f7aa07d68909216",
+    "versions/station-mupen-online-r125-20261011/java/org/emulationstation/frontend/netplay/StationN64Wire.java": "fa30f4a200bfec71a715f9f0c5ee54e51f27f98e3c8723f191094d6df717ca40"
+  },
+  "frozenR134OnlineSourcePinsVerified": true,
+  "limits": [
+    "No device CPU/temperature/memory traces captured",
+    "Network gameplay and physicalR138 exit were not exercised by this audit",
+    "No production server code/deploy inspected",
+    "CurrentGit additions are distinct from installed APK",
+    "Findings do not establish fault of a specific assistant or alteration authorization; compare committed scope with user history separately"
+  ]
+}

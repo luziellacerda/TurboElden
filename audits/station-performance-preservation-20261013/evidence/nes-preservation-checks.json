@@ -1,0 +1,72 @@
+{
+  "acceptedCurrentComposition": {
+    "schemaVersion": 1,
+    "readOnly": true,
+    "referenceInstalledRevision": "R138",
+    "javaSourceCount": 44,
+    "changedJavaSources": [
+      {
+        "file": "StationApi.java",
+        "beforeSha256": "f70ad339cff8bc168c46ec400cd90b145fcb7a81834c2ae23e38ebeb9e923f67",
+        "afterSha256": "eef27305845dcc9dd8fe9e2d0cb0c4fe88661687b538d4c4393fffab85c03134"
+      },
+      {
+        "file": "StationCatalog.java",
+        "beforeSha256": "f8775fc40290a23167199205cb77ed45f7200942a903ec897b7a667befec74ea",
+        "afterSha256": "7e6796f0a5959e146ad0803efcba2ea7303922b5a0e8064ea50987d2b0ccb682"
+      },
+      {
+        "file": "StationCatalogPlayerEvidence.java",
+        "beforeSha256": "ad20a55c98552d7ae6e03799253f1b3ec69a80cdb7591e40e10903972fa45379",
+        "afterSha256": "4e9fae54f3cddb152a74da5523eccc38e50616b857d27990842c8c9ded62dd66"
+      },
+      {
+        "file": "StationCatalogPlayerEvidenceLoader.java",
+        "beforeSha256": "c5e3b6e7f4f6c0ca6778181cc9e1abc2bec132a015100ba4c442d5943a3788d2",
+        "afterSha256": "1b22e749aa1f5f03639001e66a5dc82255b38310ffd50b92fddaa0e0f0ea53b0"
+      },
+      {
+        "file": "StationCoverQueue.java",
+        "beforeSha256": "11decbdb7db269a0fcd6894116d8fae8f876ff584185d684af43ee51c724340a",
+        "afterSha256": "c90f34daf9773717d552fd4abc193122c40aa2fe2c9adfbeb1325967ec8b8854"
+      }
+    ],
+    "preservedJavaSources": 39,
+    "nativeBeforeSha256": "817154dc40f45b86cd7629602b62940cc4f38b71f268116eb28a682ba2131867",
+    "nativeAfterSha256": "a5ccb93c5aeeaa313b4955cd2326ea11307110ac45adb627c7465810b908ec8e",
+    "declaredJavaSubstitutions": 6,
+    "declaredNativeSubstitutions": 2,
+    "onlySevenLimitsAndOneQueryChanged": true,
+    "startupExportsPreserved": true,
+    "allOtherSourceBytesPreserved": true,
+    "apkBuilt": false,
+    "androidExecuted": false,
+    "scope": "Source preflight only. Final DEX class scope, ELF, APK identities/signature and phone validation remain required."
+  },
+  "rejectedUnsafeCompositions": [
+    {
+      "case": "complete-old-NES-frontend-snapshot",
+      "error": "Current startup/loading exports must be preserved"
+    },
+    {
+      "case": "extra-cover-workers",
+      "error": "Unrelated Java change or source rollback: StationCoverQueue.java"
+    },
+    {
+      "case": "unrelated-store-edit",
+      "error": "Unrelated Java change or source rollback: StationCoverStore.java"
+    },
+    {
+      "case": "whole-file-line-ending-rewrite",
+      "error": "Unrelated Java change or source rollback: StationCoverQueue.java"
+    },
+    {
+      "case": "extra-java-source",
+      "error": "Java sources added or removed"
+    }
+  ],
+  "allFiveNegativeCasesRejected": true,
+  "frozenSourcesChanged": false,
+  "apkBuilt": false,
+  "androidExecuted": false
+}

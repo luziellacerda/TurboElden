@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "baselineSha256": "e4811bef12aeacd07947e51badaf8341be6c12c347c4952a9334ba22e56342f2",
+  "candidateSha256": "b3ad1cbe5843d77a2f645707d3bb329fbbc8bb1a41d86e6cfe76d3d1626858dd",
+  "changedFunctions": [
+    "android_app_create",
+    "ANativeActivity_onCreate failure tail"
+  ],
+  "allOtherSourceBytesPreserved": true,
+  "normalHandshakePreserved": true,
+  "normalWorkerSchedulingPreserved": true,
+  "hotLoopsChanged": false,
+  "emptySavedStateCases": 4,
+  "emptySavedStateCasesPassed": true,
+  "nativeActivityFinishOnlyOnCreationFailure": true,
+  "allCandidateResourceFailureBranchesReturnWithoutWait": true,
+  "compilerSha256": "986af49c2d1eefeac324f724ff54597753d1053927fa5d58a37a457f578e1cf8",
+  "results": {
+    "baseline": {
+      "fixtureSha256": "863663b3dbee6368e3658716bf8ecf01b1605ece1b4dfd47e699d3833715d75a",
+      "cases": {
+        "success": {
+          "exitCode": 0,
+          "output": "RESULT fault=0 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "app_calloc": {
+          "exitCode": 0,
+          "output": "RESULT fault=1 instanceNull=1 liveAllocations=0 liveFds=0 releaseCalls=1 finishCalls=0 createCalls=0"
+        },
+        "mutex": {
+          "exitCode": 0,
+          "output": "NULL_MUTEX_ACCEPTED_IN_RUNNING_INSTANCE\nRESULT fault=2 instanceNull=0 liveAllocations=4 liveFds=2 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "condition": {
+          "exitCode": 0,
+          "output": "NULL_CONDITION_ACCEPTED_IN_RUNNING_INSTANCE\nRESULT fault=3 instanceNull=0 liveAllocations=4 liveFds=2 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "saved_state": {
+          "exitCode": 0,
+          "output": "NULL_SAVED_STATE_DESTINATION"
+        },
+        "pipe": {
+          "exitCode": 0,
+          "output": "RESULT fault=5 instanceNull=1 liveAllocations=2 liveFds=0 releaseCalls=1 finishCalls=0 createCalls=0"
+        },
+        "thread": {
+          "exitCode": 0,
+          "output": "WAIT_WITHOUT_WORKER"
+        },
+        "empty-state-none-malloc-fault-0": {
+          "exitCode": 0,
+          "output": "RESULT fault=0 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "empty-state-none-malloc-fault-4": {
+          "exitCode": 0,
+          "output": "RESULT fault=4 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "empty-state-zero-malloc-fault-0": {
+          "exitCode": 0,
+          "output": "RESULT fault=0 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "empty-state-zero-malloc-fault-4": {
+          "exitCode": 0,
+          "output": "RESULT fault=4 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        }
+      }
+    },
+    "candidate": {
+      "fixtureSha256": "8be4d19721ab6c9d84181fa89ce555041417b8157b6a339fafb2141c8c4b9257",
+      "cases": {
+        "success": {
+          "exitCode": 0,
+          "output": "RESULT fault=0 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "app_calloc": {
+          "exitCode": 0,
+          "output": "RESULT fault=1 instanceNull=1 liveAllocations=0 liveFds=0 releaseCalls=1 finishCalls=1 createCalls=0"
+        },
+        "mutex": {
+          "exitCode": 0,
+          "output": "RESULT fault=2 instanceNull=1 liveAllocations=0 liveFds=0 releaseCalls=1 finishCalls=1 createCalls=0"
+        },
+        "condition": {
+          "exitCode": 0,
+          "output": "RESULT fault=3 instanceNull=1 liveAllocations=0 liveFds=0 releaseCalls=1 finishCalls=1 createCalls=0"
+        },
+        "saved_state": {
+          "exitCode": 0,
+          "output": "RESULT fault=4 instanceNull=1 liveAllocations=0 liveFds=0 releaseCalls=1 finishCalls=1 createCalls=0"
+        },
+        "pipe": {
+          "exitCode": 0,
+          "output": "RESULT fault=5 instanceNull=1 liveAllocations=0 liveFds=0 releaseCalls=1 finishCalls=1 createCalls=0"
+        },
+        "thread": {
+          "exitCode": 0,
+          "output": "RESULT fault=6 instanceNull=1 liveAllocations=0 liveFds=0 releaseCalls=1 finishCalls=1 createCalls=1"
+        },
+        "empty-state-none-malloc-fault-0": {
+          "exitCode": 0,
+          "output": "RESULT fault=0 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "empty-state-none-malloc-fault-4": {
+          "exitCode": 0,
+          "output": "RESULT fault=4 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "empty-state-zero-malloc-fault-0": {
+          "exitCode": 0,
+          "output": "RESULT fault=0 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        },
+        "empty-state-zero-malloc-fault-4": {
+          "exitCode": 0,
+          "output": "RESULT fault=4 instanceNull=0 liveAllocations=0 liveFds=0 releaseCalls=0 finishCalls=0 createCalls=1"
+        }
+      }
+    }
+  },
+  "productCodeChanged": false,
+  "apkBuilt": false,
+  "androidExecuted": false,
+  "scope": "Exact android_app_create and exact onCreate creation tail. Allocation, FD, lock and worker primitives are controlled fixtures. Baseline unsafe wait/null branches are recorded without actually blocking or crashing the host.",
+  "futurePackagingRisk": "Requires a new native runtime and engine IDs after real Android/NDK build, byte preservation checks, signed package and all-device validation. Candidate remains isolated and unapplied."
+}
