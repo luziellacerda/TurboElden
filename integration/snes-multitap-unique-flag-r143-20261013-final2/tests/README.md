@@ -1,0 +1,1 @@
+Fixture do parser libretro-common/config_file.c com licença MIT preservada no cabeçalho; corpos/hash map reais. Include/reference stubs não entram; tokenizer Windows strtok_s equivalente. Runner conserva caminhos da estação produtora; nenhum input de aparelho. Leitor de controles anterior e sua licençaGPL permanecem naR142. Fontes do APK congeladas26257869.

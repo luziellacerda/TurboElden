@@ -1,3 +1,7 @@
+# Conferência final de rótulos
+
+A tentativa b02a080 foi recusada na comparação pós-montagem. O assembler gerou nomes diferentes para o mesmo endereço; o guard26257869 unifica somente rótulos consecutivos sem instrução. Método produtivo idêntico ao b02a080; instruções/operandos/destinos completos continuam comparados. Nenhum APK dessa montagem recusada foi instalado.
+
 # Fonte final antes da montagem
 
 A preparação d6479ab permanece intacta e não gerou APK. Esta cópia usa um único rótulo de retorno em vez de dois rótulos no mesmo endereço, permitindo a comparação canônica após montagem sem relaxar o guard de instruções. A correção produtiva é a mesma substituição única da flag; todas as guardas e valores permanecem.
