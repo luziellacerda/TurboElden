@@ -1,3 +1,9 @@
+# R139 instalada também no Edge 30 — 13/10/2026
+
+Moto g52 e Edge30 agora na mesma R139/19acdece…, fonte executável42da congelada. Instalação Edge30 conferiu SHA integral/UID/dados/primeira instalação; frontend oficial observado: true. Samsung A56 última R135 conferida. Ler STATUS e evidence/instalacao-edge30.json da R139. Somente recibos/inventário atualizados; não inferir cadastro, saída física ou gameplay deste procedimento.
+
+## Histórico preservado
+
 # R139 instalada no moto g52 — 13/10/2026
 
 Fonte executável congelada `42da152e54bbbb4a6d569ca26fe90835503bcccb`, APK final `19acdeceef86bc66c2475300cbd142da783850c02f5a9e2068d8652ef8523164` instalado e hash integral/UID/dados preservados, frontend oficial observado True. Runtime ae72f137…; somente RetroArch e engines.json substituídos, 13.858 entradas/40DEX exatos. 24 cenários host, baseline R138 reconstruída e prova Android JNI/TLS real passaram. Uma chave por processo; detach somente da própria thread nativa; falhas de recursos recusadas antes da espera. Não alterar FPS/loops/timers/cache/opções/perfis/capacidades/catalogo/NES. BAT/PowerShell mantidos, manifesto explícito R139 atualizado. Ler STATUS/README/evidence em versions/station-native-resource-lifecycle-r139-20261013 e audits/station-r139-android-resource-probe-20261013. Novos oito motores ativos exigem registro v3; manter nove descritores/Geolith inativo e todos registros R138. Gameplay/saída física/perda de sinal/ganho térmico ainda não homologados. Edge30 última R138, A56 R135. Não deploy/restart por consequência; publicar somente fonte/documentação/recibos sem APK, biblioteca, ROM, BIOS, chave ou serial.

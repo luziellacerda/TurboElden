@@ -45,7 +45,6 @@
   "topGear3000Maximum": 4,
   "superMarioKartMaximum": 2,
   "otherPhonesLastVerified": {
-    "motorola edge 30": "R138",
     "Samsung A56": "R135"
   },
   "privateKitPrepared": true,
@@ -56,5 +55,13 @@
   "roomCreationSymptomConfirmed": true,
   "roomCreationGame": "Battletoads in Battlemaniacs (USA)",
   "roomCreationStoppedBeforeNative": true,
-  "roomCreationFreshCapabilitiesCaptured": false
+  "roomCreationFreshCapabilitiesCaptured": false,
+  "installedOnEdge30": true,
+  "edge30InstalledApkHashVerified": true,
+  "edge30OriginalUIDAndDataPreserved": true,
+  "edge30FrontendObserved": true,
+  "installedDeviceModels": [
+    "moto g52",
+    "motorola edge 30"
+  ]
 }
