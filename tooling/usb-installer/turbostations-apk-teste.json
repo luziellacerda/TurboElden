@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": "R143",
-  "apkPath": "TurboStations-Premium-R143-multitap-flag-20261013.apk",
-  "sha256": "508480e3671ae924f037bd32f6d71efda7a9d905c45c7b2571bd9f219add83d4",
+  "revision": "R144",
+  "apkPath": "TurboStations-Premium-R144-ondas-paletas-20261013.apk",
+  "sha256": "01427f4e73141b7d6a462c2420a9abeb018a8716102e7fb959bf9a1d69eccee0",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-snes-unique-remap-flag",
-  "warning": "R143: Top Gear 3000 Corrida VS com três jogadores confirmado pelo mantenedor. Quatro/cinco participantes e outros jogos pendentes; IDs independentes aguardam cadastro, SNES mantém IDs válidos.",
-  "sourceCommit": "26257869b59af8ecea44932ab287705990a9acbe",
+  "status": "test-wave-system-palettes-online-opacity-only",
+  "warning": "R144 teste visual: paletas por sistema somente no menu principal; salas online mesmas cores e mais brilho. Jogabilidade/descarga preservadas. Tag estável R143 mantida; novos IDs independentes aguardam cadastro.",
+  "sourceCommit": "1ac3f7d2fdd7cd349a5b37127b66712834e844fd",
   "bytes": 2715024399,
   "serverBindingsRegistered": false
 }
