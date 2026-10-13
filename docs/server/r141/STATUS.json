@@ -1,0 +1,51 @@
+{
+  "schema": "station.r141.server-input-review.v1",
+  "revision": "R141",
+  "date": "2026-10-13",
+  "reviewedAppDirectCommit": "4478e490041fe961ae7716c0aaed7bc71881066c",
+  "reviewedServerDirectCommit": "c8817a2c0e6bfadef7c422cd041c431697f70410",
+  "reviewedAppOnlineReturn": "73a39fc",
+  "reviewedServerOnlineReturn": "dceb9a4",
+  "retainedR140SourceCommit": "b93623b708bafe151441d3e4920acad51718e118",
+  "retainedR140ApkSha256": "61e873e7bbd75a13fbd0d55515a3726f4debd8984cc0fe8f9d73401e0897792c",
+  "incomingApkInstalled": false,
+  "incomingApkWouldRevertR140Dex35": true,
+  "r140InstalledOnMotoG52": true,
+  "edge30LastKnown": "R139-DIAG-startup",
+  "a56LastKnown": "R135",
+  "directServerVhostAppliedPerReturn": true,
+  "incomingFourEngineRegistrationAppliedPerReturn": true,
+  "combinedR141EngineRegistrationApplied": false,
+  "r141Compiled": false,
+  "r141Signed": false,
+  "r141Installed": false,
+  "physicalAndroidDownloadValidated": false,
+  "speedImprovementMeasured": false,
+  "productLogicScope": "Only reviewed HTTP origin selection composed onto the exact R140 donor; independent fingerprints renewed.",
+  "unchanged": [
+    "classes35.dex",
+    "39 root DEX partitions",
+    "RetroArch ae72 runtime and cores",
+    "9 RetroArch descriptors",
+    "HLE values and canonical room binding",
+    "READY/ACK/authentication",
+    "queue and cancellation",
+    "FPS/cache/controls"
+  ],
+  "nextTests": [
+    "Authorized small artifact through normal Android app",
+    "Cancel and request fresh grant",
+    "Complete normal installation and service cleanup",
+    "Top Gear VS and championship using two phones on the same combined version"
+  ],
+  "relay409Reason": "Unknown; safe code requested for future test, protections preserved.",
+  "evidenceSha256": {
+    "incoming-apk-preservation-review.json": "b1549333c923cccd454f3e8ff42843600e52e7413fd9d1d3fd0dd1d9e41885b0",
+    "incoming-server-registration.json": "c604bc9c2b2e34991d17ed376abc484ed791c98be57061e373d34e8777f84422",
+    "incoming-server-protected-download-validation.json": "6af3334b316ee30c7cc01e47567b3252aa46f3a0e4bea8c42a9329345da28038",
+    "incoming-host-qualification.json": "15f3716cc9483e45c5837fd0482dbcc9fed696ebf225b68c3ecc52c3467f9df8",
+    "r140-installed-moto-g52.json": "67ca1c21dd218166d71fbcad434bd46dd7be9f3c9252697eab7514143a5be786",
+    "r140-signed-package.json": "331e07a45c3563748555245598993f1a7cf7f12b0fbf8d7729c13bd83a96013a",
+    "r140-backup-receipt.json": "e54f9fc55991884965b9126de8702dde5250e008b186eb781dab40da8096d35f"
+  }
+}

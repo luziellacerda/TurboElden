@@ -1,3 +1,9 @@
+## R141 preparada: downloads diretos conservando os reparos R140 — 13/10/2026
+
+Retorno de downloads app4478e49/servidorc8817a2 lido junto ao retorno online app73a39fc/servidordceb9a4. APK USB e69616ee parte da R139 e retiraria DEX35 corrigida da R140; não foi instalado. A composição solicitada usa somente a origem HTTP revisada sobre o donor R14061e873e7, com DEX35 49f381dc exata. R140 está instalada no moto g52 e sua reconstrução foi preservada no backup F existente; Edge30 última R139-DIAG conhecida, A56 R135. Nova fonte R141 ainda na preparação, sem assinatura/instalação/cadastro. Cinco substituições/13.855 entradas preservadas, fila/cache/FPS/cores/HLE/READY exatos. Quatro novos IDs independentes da combinação exigem bytes e recibos próprios; cadastro do e696 não se aplica à R141. Leia [estado, contratos, provas e pendências](r141/README.md). Download Android e velocidade pendentes. Relay409 permanece sem motivo; proposta de captura segura separada, sem mudança de proteção ou logging nesta composição.
+
+## Histórico preservado
+
 ## Diagnóstico USB de Top Gear recebido e conferido — 13/10/2026
 
 O pacote `Diagnostico-TopGear3000-R139-20261013.zip` foi recebido: 53.620 bytes, SHA256 `43ed435a1d0540d440f28b53de1403e305819ddf3e8e424f0dba156ab4387e9a`. Os onze arquivos listados conferem com o manifesto. Moto g52 e Edge 30 têm capturas de VS e Campeonato: quatro tentativas separadas, cada aparelho como anfitrião, sem captura simultânea de uma mesma rodada. [Diagnóstico e cruzamento com a API](r139/server-phone-diagnostic.json) · [Retorno consolidado](r139/server-return.json).
