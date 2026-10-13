@@ -1,0 +1,912 @@
+.class public final Lorg/emulationstation/frontend/station/StationWaveBackground;
+.super Landroid/view/View;
+.source "StationWaveBackground.java"
+
+# interfaces
+.implements Lorg/emulationstation/frontend/station/StationGraphicsPreferences$Listener;
+
+
+# static fields
+.field private static final FRAME_MILLIS:J = 0x22L
+
+.field private static final SAMPLES:I = 0x18
+
+
+# instance fields
+.field private allowed:Z
+
+.field private final appearance:Landroid/content/SharedPreferences;
+
+.field private attached:Z
+
+.field private blue:Z
+
+.field private connected:Z
+
+.field private final frame:Ljava/lang/Runnable;
+
+.field private framePending:Z
+
+.field private lastFrameNanos:J
+
+.field private final paints:[Landroid/graphics/Paint;
+
+.field private final paths:[Landroid/graphics/Path;
+
+.field private phase:D
+
+.field private final preferences:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+.field private final themeListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
+
+    .line 40
+    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+
+    .line 18
+    new-instance v0, Landroid/graphics/Paint;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+
+    new-instance v2, Landroid/graphics/Paint;
+
+    invoke-direct {v2, v1}, Landroid/graphics/Paint;-><init>(I)V
+
+    new-instance v3, Landroid/graphics/Paint;
+
+    invoke-direct {v3, v1}, Landroid/graphics/Paint;-><init>(I)V
+
+    filled-new-array {v0, v2, v3}, [Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->paints:[Landroid/graphics/Paint;
+
+    .line 19
+    new-instance v0, Landroid/graphics/Path;
+
+    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+
+    new-instance v1, Landroid/graphics/Path;
+
+    invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
+
+    new-instance v2, Landroid/graphics/Path;
+
+    invoke-direct {v2}, Landroid/graphics/Path;-><init>()V
+
+    filled-new-array {v0, v1, v2}, [Landroid/graphics/Path;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->paths:[Landroid/graphics/Path;
+
+    .line 22
+    new-instance v0, Lorg/emulationstation/frontend/station/StationWaveBackground$$ExternalSyntheticLambda0;
+
+    invoke-direct {v0, p0}, Lorg/emulationstation/frontend/station/StationWaveBackground$$ExternalSyntheticLambda0;-><init>(Lorg/emulationstation/frontend/station/StationWaveBackground;)V
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->themeListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+
+    .line 27
+    new-instance v0, Lorg/emulationstation/frontend/station/StationWaveBackground$1;
+
+    invoke-direct {v0, p0}, Lorg/emulationstation/frontend/station/StationWaveBackground$1;-><init>(Lorg/emulationstation/frontend/station/StationWaveBackground;)V
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->frame:Ljava/lang/Runnable;
+
+    .line 41
+    invoke-static {p1}, Lorg/emulationstation/frontend/station/StationGraphicsPreferences;->get(Landroid/content/Context;)Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->preferences:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    .line 42
+    const-string v0, "station_appearance"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->appearance:Landroid/content/SharedPreferences;
+
+    .line 43
+    const/4 p1, 0x2
+
+    invoke-virtual {p0, p1}, Lorg/emulationstation/frontend/station/StationWaveBackground;->setImportantForAccessibility(I)V
+
+    .line 44
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->readPreferences()V
+
+    .line 45
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->readTheme()V
+
+    .line 46
+    return-void
+.end method
+
+.method static synthetic access$002(Lorg/emulationstation/frontend/station/StationWaveBackground;Z)Z
+    .locals 0
+
+    .line 13
+    iput-boolean p1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->framePending:Z
+
+    return p1
+.end method
+
+.method static synthetic access$100(Lorg/emulationstation/frontend/station/StationWaveBackground;)Z
+    .locals 0
+
+    .line 13
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->mayAnimate()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic access$200(Lorg/emulationstation/frontend/station/StationWaveBackground;)J
+    .locals 2
+
+    .line 13
+    iget-wide v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->lastFrameNanos:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$202(Lorg/emulationstation/frontend/station/StationWaveBackground;J)J
+    .locals 0
+
+    .line 13
+    iput-wide p1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->lastFrameNanos:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$300(Lorg/emulationstation/frontend/station/StationWaveBackground;)D
+    .locals 2
+
+    .line 13
+    iget-wide v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->phase:D
+
+    return-wide v0
+.end method
+
+.method static synthetic access$302(Lorg/emulationstation/frontend/station/StationWaveBackground;D)D
+    .locals 0
+
+    .line 13
+    iput-wide p1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->phase:D
+
+    return-wide p1
+.end method
+
+.method static synthetic access$400(Lorg/emulationstation/frontend/station/StationWaveBackground;)V
+    .locals 0
+
+    .line 13
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->schedule()V
+
+    return-void
+.end method
+
+.method private mayAnimate()Z
+    .locals 1
+
+    .line 92
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->attached:Z
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->allowed:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->isShown()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->getWindowVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->hasWindowFocus()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method private readPreferences()V
+    .locals 2
+
+    .line 90
+    iget-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->preferences:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    invoke-virtual {v0}, Lorg/emulationstation/frontend/station/StationGraphicsPreferences;->effectiveBackgroundMode()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    iput-boolean v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->allowed:Z
+
+    .line 91
+    return-void
+.end method
+
+.method private readTheme()V
+    .locals 3
+
+    .line 54
+    iget-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->appearance:Landroid/content/SharedPreferences;
+
+    const-string v1, "theme"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    move v2, v1
+
+    .line 55
+    :cond_0
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->blue:Z
+
+    if-ne v0, v2, :cond_1
+
+    return-void
+
+    .line 56
+    :cond_1
+    iput-boolean v2, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->blue:Z
+
+    .line 57
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->getHeight()I
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->updatePalette(I)V
+
+    .line 58
+    return-void
+.end method
+
+.method private reconcile()V
+    .locals 3
+
+    .line 97
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->mayAnimate()Z
+
+    move-result v0
+
+    const-wide/16 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iput-wide v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->lastFrameNanos:J
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->schedule()V
+
+    goto :goto_0
+
+    .line 98
+    :cond_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->frame:Ljava/lang/Runnable;
+
+    invoke-virtual {p0, v0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->framePending:Z
+
+    iput-wide v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->lastFrameNanos:J
+
+    .line 99
+    :goto_0
+    return-void
+.end method
+
+.method private schedule()V
+    .locals 3
+
+    .line 94
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->framePending:Z
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->mayAnimate()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->framePending:Z
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->frame:Ljava/lang/Runnable;
+
+    const-wide/16 v1, 0x22
+
+    invoke-virtual {p0, v0, v1, v2}, Lorg/emulationstation/frontend/station/StationWaveBackground;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 95
+    :cond_0
+    return-void
+.end method
+
+.method private updatePalette(I)V
+    .locals 13
+
+    .line 60
+    if-gtz p1, :cond_0
+
+    return-void
+
+    .line 61
+    :cond_0
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->blue:Z
+
+    if-eqz v0, :cond_1
+
+    const v1, 0x585782ff
+
+    const v2, 0x5038d9e8
+
+    const v3, 0x6029acff
+
+    filled-new-array {v3, v1, v2}, [I
+
+    move-result-object v1
+
+    goto :goto_0
+
+    .line 62
+    :cond_1
+    const v1, 0x58384550
+
+    const v2, 0x50616b74
+
+    const v3, 0x603b4b59
+
+    filled-new-array {v3, v1, v2}, [I
+
+    move-result-object v1
+
+    .line 63
+    :goto_0
+    if-eqz v0, :cond_2
+
+    const v0, 0x24233573
+
+    const v2, 0x202087a7
+
+    const v3, 0x2833509b
+
+    filled-new-array {v3, v0, v2}, [I
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 64
+    :cond_2
+    const v0, 0x241a2027
+
+    const v2, 0x20303840
+
+    const v3, 0x281a2128
+
+    filled-new-array {v3, v0, v2}, [I
+
+    move-result-object v0
+
+    .line 65
+    :goto_1
+    const/4 v2, 0x0
+
+    :goto_2
+    iget-object v3, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->paints:[Landroid/graphics/Paint;
+
+    array-length v4, v3
+
+    if-ge v2, v4, :cond_3
+
+    .line 66
+    aget-object v3, v3, v2
+
+    new-instance v12, Landroid/graphics/LinearGradient;
+
+    const/4 v5, 0x0
+
+    int-to-float v4, p1
+
+    const v6, 0x3ecccccd    # 0.4f
+
+    mul-float/2addr v6, v4
+
+    const/4 v7, 0x0
+
+    const v8, 0x3f666666    # 0.9f
+
+    mul-float/2addr v8, v4
+
+    aget v9, v1, v2
+
+    aget v10, v0, v2
+
+    sget-object v11, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    move-object v4, v12
+
+    invoke-direct/range {v4 .. v11}, Landroid/graphics/LinearGradient;-><init>(FFFFIILandroid/graphics/Shader$TileMode;)V
+
+    invoke-virtual {v3, v12}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    .line 65
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    .line 68
+    :cond_3
+    return-void
+.end method
+
+
+# virtual methods
+.method synthetic lambda$new$0$org-emulationstation-frontend-station-StationWaveBackground(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+    .locals 0
+
+    .line 23
+    const-string p1, "theme"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-boolean p1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->attached:Z
+
+    if-eqz p1, :cond_0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->readTheme()V
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->invalidate()V
+
+    .line 24
+    :cond_0
+    return-void
+.end method
+
+.method synthetic lambda$onGraphicsChanged$1$org-emulationstation-frontend-station-StationWaveBackground()V
+    .locals 1
+
+    .line 114
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->attached:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->readPreferences()V
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->reconcile()V
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->invalidate()V
+
+    return-void
+.end method
+
+.method protected onAttachedToWindow()V
+    .locals 3
+
+    .line 101
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->attached:Z
+
+    .line 102
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->connected:Z
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->preferences:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    invoke-virtual {v1, p0}, Lorg/emulationstation/frontend/station/StationGraphicsPreferences;->addListener(Lorg/emulationstation/frontend/station/StationGraphicsPreferences$Listener;)V
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->appearance:Landroid/content/SharedPreferences;
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->themeListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->connected:Z
+
+    .line 103
+    :cond_0
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->readPreferences()V
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->readTheme()V
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->reconcile()V
+
+    .line 104
+    return-void
+.end method
+
+.method protected onDetachedFromWindow()V
+    .locals 3
+
+    .line 106
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->attached:Z
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->frame:Ljava/lang/Runnable;
+
+    invoke-virtual {p0, v1}, Lorg/emulationstation/frontend/station/StationWaveBackground;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->framePending:Z
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->lastFrameNanos:J
+
+    .line 107
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->connected:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->preferences:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    invoke-virtual {v1, p0}, Lorg/emulationstation/frontend/station/StationGraphicsPreferences;->removeListener(Lorg/emulationstation/frontend/station/StationGraphicsPreferences$Listener;)V
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->appearance:Landroid/content/SharedPreferences;
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->themeListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->connected:Z
+
+    .line 108
+    :cond_0
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    .line 109
+    return-void
+.end method
+
+.method protected onDraw(Landroid/graphics/Canvas;)V
+    .locals 23
+
+    .line 71
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-super/range {p0 .. p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+
+    .line 72
+    iget-boolean v2, v0, Lorg/emulationstation/frontend/station/StationWaveBackground;->blue:Z
+
+    if-eqz v2, :cond_0
+
+    const v2, -0xfaf5eb
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v2, -0x1000000
+
+    :goto_0
+    invoke-virtual {v1, v2}, Landroid/graphics/Canvas;->drawColor(I)V
+
+    .line 73
+    iget-boolean v2, v0, Lorg/emulationstation/frontend/station/StationWaveBackground;->allowed:Z
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual/range {p0 .. p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->getWidth()I
+
+    move-result v2
+
+    if-lez v2, :cond_5
+
+    invoke-virtual/range {p0 .. p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->getHeight()I
+
+    move-result v2
+
+    if-gtz v2, :cond_1
+
+    goto/16 :goto_4
+
+    .line 74
+    :cond_1
+    invoke-virtual/range {p0 .. p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-virtual/range {p0 .. p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->getHeight()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    .line 75
+    const/4 v5, 0x0
+
+    :goto_1
+    iget-object v6, v0, Lorg/emulationstation/frontend/station/StationWaveBackground;->paths:[Landroid/graphics/Path;
+
+    array-length v7, v6
+
+    if-ge v5, v7, :cond_4
+
+    .line 76
+    aget-object v6, v6, v5
+
+    invoke-virtual {v6}, Landroid/graphics/Path;->reset()V
+
+    .line 77
+    const/4 v7, 0x0
+
+    :goto_2
+    const/16 v8, 0x18
+
+    if-gt v7, v8, :cond_3
+
+    .line 78
+    int-to-double v10, v7
+
+    const-wide/high16 v12, 0x4038000000000000L    # 24.0
+
+    div-double/2addr v10, v12
+
+    .line 79
+    const-wide v12, 0x400921fb54442d18L    # Math.PI
+
+    mul-double/2addr v12, v10
+
+    const-wide/high16 v14, 0x4000000000000000L    # 2.0
+
+    mul-double/2addr v14, v12
+
+    move-wide/from16 v16, v10
+
+    iget-wide v9, v0, Lorg/emulationstation/frontend/station/StationWaveBackground;->phase:D
+
+    add-double/2addr v14, v9
+
+    int-to-double v9, v5
+
+    const-wide v18, 0x3ff2666666666666L    # 1.15
+
+    mul-double v18, v18, v9
+
+    add-double v14, v14, v18
+
+    invoke-static {v14, v15}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v14
+
+    const-wide v18, 0x3fac28f5c28f5c29L    # 0.055
+
+    mul-double v14, v14, v18
+
+    move/from16 v20, v5
+
+    iget-wide v4, v0, Lorg/emulationstation/frontend/station/StationWaveBackground;->phase:D
+
+    const-wide v21, 0x3fe6666666666666L    # 0.7
+
+    mul-double v4, v4, v21
+
+    add-double/2addr v12, v4
+
+    const-wide v4, 0x3fe3333333333333L    # 0.6
+
+    mul-double/2addr v4, v9
+
+    add-double/2addr v12, v4
+
+    .line 80
+    invoke-static {v12, v13}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v4
+
+    const-wide v12, 0x3fa1eb851eb851ecL    # 0.035
+
+    mul-double/2addr v4, v12
+
+    add-double/2addr v14, v4
+
+    .line 81
+    const-wide v4, 0x3fe2e147ae147ae1L    # 0.59
+
+    mul-double v9, v9, v18
+
+    add-double/2addr v9, v4
+
+    add-double/2addr v9, v14
+
+    float-to-double v4, v3
+
+    mul-double/2addr v9, v4
+
+    double-to-float v4, v9
+
+    .line 82
+    if-nez v7, :cond_2
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v6, v5, v4}, Landroid/graphics/Path;->moveTo(FF)V
+
+    goto :goto_3
+
+    :cond_2
+    float-to-double v8, v2
+
+    mul-double v8, v8, v16
+
+    double-to-float v5, v8
+
+    invoke-virtual {v6, v5, v4}, Landroid/graphics/Path;->lineTo(FF)V
+
+    .line 77
+    :goto_3
+    add-int/lit8 v7, v7, 0x1
+
+    move/from16 v5, v20
+
+    goto :goto_2
+
+    .line 84
+    :cond_3
+    move/from16 v20, v5
+
+    invoke-virtual {v6, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v6, v4, v3}, Landroid/graphics/Path;->lineTo(FF)V
+
+    invoke-virtual {v6}, Landroid/graphics/Path;->close()V
+
+    .line 85
+    iget-object v4, v0, Lorg/emulationstation/frontend/station/StationWaveBackground;->paints:[Landroid/graphics/Paint;
+
+    aget-object v4, v4, v20
+
+    invoke-virtual {v1, v6, v4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    .line 75
+    add-int/lit8 v5, v20, 0x1
+
+    goto/16 :goto_1
+
+    .line 87
+    :cond_4
+    return-void
+
+    .line 73
+    :cond_5
+    :goto_4
+    return-void
+.end method
+
+.method public onGraphicsChanged(Lorg/emulationstation/frontend/station/StationGraphicsPreferences$State;)V
+    .locals 0
+
+    .line 114
+    new-instance p1, Lorg/emulationstation/frontend/station/StationWaveBackground$$ExternalSyntheticLambda1;
+
+    invoke-direct {p1, p0}, Lorg/emulationstation/frontend/station/StationWaveBackground$$ExternalSyntheticLambda1;-><init>(Lorg/emulationstation/frontend/station/StationWaveBackground;)V
+
+    invoke-virtual {p0, p1}, Lorg/emulationstation/frontend/station/StationWaveBackground;->post(Ljava/lang/Runnable;)Z
+
+    .line 115
+    return-void
+.end method
+
+.method protected onSizeChanged(IIII)V
+    .locals 0
+
+    .line 49
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
+
+    .line 50
+    invoke-direct {p0, p2}, Lorg/emulationstation/frontend/station/StationWaveBackground;->updatePalette(I)V
+
+    .line 51
+    return-void
+.end method
+
+.method protected onVisibilityChanged(Landroid/view/View;I)V
+    .locals 0
+
+    .line 110
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onVisibilityChanged(Landroid/view/View;I)V
+
+    iget-object p1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->preferences:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    if-eqz p1, :cond_0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->reconcile()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onWindowFocusChanged(Z)V
+    .locals 0
+
+    .line 112
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowFocusChanged(Z)V
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->reconcile()V
+
+    return-void
+.end method
+
+.method protected onWindowVisibilityChanged(I)V
+    .locals 0
+
+    .line 111
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
+
+    iget-object p1, p0, Lorg/emulationstation/frontend/station/StationWaveBackground;->preferences:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    if-eqz p1, :cond_0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/station/StationWaveBackground;->reconcile()V
+
+    :cond_0
+    return-void
+.end method

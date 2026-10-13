@@ -1,0 +1,679 @@
+.class final Lorg/emulationstation/frontend/netplay/StationHyperspaceView;
+.super Landroid/view/View;
+.source "StationHyperspaceView.java"
+
+# interfaces
+.implements Lorg/emulationstation/frontend/station/StationGraphicsPreferences$Listener;
+
+
+# instance fields
+.field private background:Landroid/graphics/Bitmap;
+
+.field private graphics:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+.field private final paint:Landroid/graphics/Paint;
+
+.field private final source:Landroid/graphics/Rect;
+
+.field private final target:Landroid/graphics/Rect;
+
+
+# direct methods
+.method constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    .line 29
+    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+
+    .line 23
+    new-instance v0, Landroid/graphics/Paint;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    .line 24
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->source:Landroid/graphics/Rect;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->target:Landroid/graphics/Rect;
+
+    .line 29
+    invoke-static {p1}, Lorg/emulationstation/frontend/station/StationGraphicsPreferences;->get(Landroid/content/Context;)Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->graphics:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    const/4 p1, 0x2
+
+    invoke-virtual {p0, p1}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->setImportantForAccessibility(I)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->setFocusable(Z)V
+
+    invoke-virtual {p0, p1}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->setClickable(Z)V
+
+    return-void
+.end method
+
+.method private allowed()Z
+    .locals 1
+
+    .line 78
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->graphics:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lorg/emulationstation/frontend/station/StationGraphicsPreferences;->effectiveBackgroundMode()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method private drawWave(Landroid/graphics/Canvas;IIFFIF)V
+    .locals 7
+
+    int-to-float p3, p3
+
+    mul-float/2addr p4, p3
+
+    mul-float/2addr p5, p3
+
+    .line 64
+    new-instance p3, Landroid/graphics/Path;
+
+    invoke-direct {p3}, Landroid/graphics/Path;-><init>()V
+
+    neg-int v0, p2
+
+    int-to-float v0, v0
+
+    const v1, 0x3d4ccccd    # 0.05f
+
+    mul-float/2addr v0, v1
+
+    const v1, 0x3ee66666    # 0.45f
+
+    mul-float/2addr v1, p5
+
+    add-float/2addr v1, p4
+
+    invoke-virtual {p3, v0, v1}, Landroid/graphics/Path;->moveTo(FF)V
+
+    int-to-float p2, p2
+
+    const v0, 0x3e23d70a    # 0.16f
+
+    mul-float v1, p2, v0
+
+    sub-float v4, p4, p5
+
+    const v0, 0x3eae147b    # 0.34f
+
+    mul-float v3, p2, v0
+
+    const v0, 0x3f051eb8    # 0.52f
+
+    mul-float v5, p2, v0
+
+    move-object v0, p3
+
+    move v2, v4
+
+    move v6, p4
+
+    .line 65
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    const v0, 0x3f333333    # 0.7f
+
+    mul-float v1, p2, v0
+
+    add-float v2, p4, p5
+
+    const v0, 0x3f5c28f6    # 0.86f
+
+    mul-float v3, p2, v0
+
+    const v0, 0x3f3851ec    # 0.72f
+
+    mul-float/2addr v0, p5
+
+    add-float v4, p4, v0
+
+    const v0, 0x3f866666    # 1.05f
+
+    mul-float v5, p2, v0
+
+    const p2, 0x3e8f5c29    # 0.28f
+
+    mul-float/2addr p5, p2
+
+    sub-float v6, p4, p5
+
+    move-object v0, p3
+
+    .line 66
+    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    .line 67
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    sget-object p4, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p2, p4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    sget-object p4, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
+
+    invoke-virtual {p2, p4}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
+
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {p2, p7}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {p2, p6}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    invoke-static {p6}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result p4
+
+    invoke-virtual {p2, p4}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    .line 68
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, p3, p2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method private ensureBackground()V
+    .locals 3
+
+    .line 79
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->allowed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->getWidth()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->getHeight()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->getHeight()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lorg/emulationstation/frontend/netplay/StationHyperspaceState;->renderWidth(II)I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->getHeight()I
+
+    move-result v2
+
+    invoke-static {v1, v2}, Lorg/emulationstation/frontend/netplay/StationHyperspaceState;->renderHeight(II)I
+
+    move-result v1
+
+    invoke-direct {p0, v0, v1}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->renderBackground(II)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    :cond_0
+    return-void
+.end method
+
+.method private renderBackground(II)Landroid/graphics/Bitmap;
+    .locals 21
+
+    move-object/from16 v8, p0
+
+    move/from16 v9, p1
+
+    move/from16 v10, p2
+
+    .line 44
+    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v9, v10, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v11
+
+    .line 45
+    new-instance v12, Landroid/graphics/Canvas;
+
+    invoke-direct {v12, v11}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    .line 47
+    iget-object v0, v8, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget-object v0, v8, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    const/16 v1, 0xff
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    .line 48
+    iget-object v0, v8, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    new-instance v1, Landroid/graphics/LinearGradient;
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    int-to-float v6, v9
+
+    int-to-float v7, v10
+
+    const v18, -0xfdfbf6
+
+    const v19, -0xf8ebdf
+
+    sget-object v20, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    move-object v13, v1
+
+    move/from16 v16, v6
+
+    move/from16 v17, v7
+
+    invoke-direct/range {v13 .. v20}, Landroid/graphics/LinearGradient;-><init>(FFFFIILandroid/graphics/Shader$TileMode;)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    .line 49
+    iget-object v5, v8, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    move-object v0, v12
+
+    move v3, v6
+
+    move v4, v7
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    .line 51
+    iget-object v0, v8, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    new-instance v1, Landroid/graphics/RadialGradient;
+
+    const v2, 0x3f3851ec    # 0.72f
+
+    mul-float v14, v6, v2
+
+    const v2, 0x3f051eb8    # 0.52f
+
+    mul-float v15, v7, v2
+
+    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    const v3, 0x3f1eb852    # 0.62f
+
+    mul-float v16, v2, v3
+
+    const v2, 0x120c405f
+
+    const/4 v3, 0x0
+
+    const v4, 0x281d73a3
+
+    filled-new-array {v4, v2, v3}, [I
+
+    move-result-object v17
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [F
+
+    fill-array-data v2, :array_0
+
+    sget-object v19, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    move-object v13, v1
+
+    move-object/from16 v18, v2
+
+    invoke-direct/range {v13 .. v19}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    .line 53
+    iget-object v5, v8, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    move-object v0, v12
+
+    move v3, v6
+
+    move v4, v7
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    iget-object v0, v8, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    const v4, 0x3ef5c28f    # 0.48f
+
+    const v5, 0x3d6147ae    # 0.055f
+
+    const v6, 0x174e9bd4
+
+    const/high16 v7, 0x41600000    # 14.0f
+
+    move-object/from16 v0, p0
+
+    move-object v1, v12
+
+    move/from16 v2, p1
+
+    move/from16 v3, p2
+
+    .line 55
+    invoke-direct/range {v0 .. v7}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->drawWave(Landroid/graphics/Canvas;IIFFIF)V
+
+    const v4, 0x3f0a3d71    # 0.54f
+
+    const v5, 0x3d99999a    # 0.075f
+
+    const v6, 0x224ba7dc
+
+    const/high16 v7, 0x40e00000    # 7.0f
+
+    .line 56
+    invoke-direct/range {v0 .. v7}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->drawWave(Landroid/graphics/Canvas;IIFFIF)V
+
+    const v4, 0x3f19999a    # 0.6f
+
+    const v5, 0x3dc28f5c    # 0.095f
+
+    const v6, 0x3a9edcf4
+
+    const v7, 0x400ccccd    # 2.2f
+
+    .line 57
+    invoke-direct/range {v0 .. v7}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->drawWave(Landroid/graphics/Canvas;IIFFIF)V
+
+    const v4, 0x3f28f5c3    # 0.66f
+
+    const v5, 0x3d8f5c29    # 0.07f
+
+    const v6, 0x2492caeb
+
+    const v7, 0x3fa66666    # 1.3f
+
+    .line 58
+    invoke-direct/range {v0 .. v7}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->drawWave(Landroid/graphics/Canvas;IIFFIF)V
+
+    return-object v11
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3eeb851f    # 0.46f
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+
+# virtual methods
+.method protected onAttachedToWindow()V
+    .locals 1
+
+    .line 80
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->graphics:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    invoke-virtual {v0, p0}, Lorg/emulationstation/frontend/station/StationGraphicsPreferences;->addListener(Lorg/emulationstation/frontend/station/StationGraphicsPreferences$Listener;)V
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->ensureBackground()V
+
+    return-void
+.end method
+
+.method protected onDetachedFromWindow()V
+    .locals 1
+
+    .line 81
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->graphics:Lorg/emulationstation/frontend/station/StationGraphicsPreferences;
+
+    invoke-virtual {v0, p0}, Lorg/emulationstation/frontend/station/StationGraphicsPreferences;->removeListener(Lorg/emulationstation/frontend/station/StationGraphicsPreferences$Listener;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    return-void
+.end method
+
+.method protected onDraw(Landroid/graphics/Canvas;)V
+    .locals 4
+
+    .line 72
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+
+    .line 73
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_0
+
+    const v0, -0xfdfbf6
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawColor(I)V
+
+    return-void
+
+    .line 74
+    :cond_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->source:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3, v3, v0, v2}, Landroid/graphics/Rect;->set(IIII)V
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->target:Landroid/graphics/Rect;
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->getHeight()I
+
+    move-result v2
+
+    invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 75
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    const/16 v1, 0xff
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->source:Landroid/graphics/Rect;
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->target:Landroid/graphics/Rect;
+
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public onGraphicsChanged(Lorg/emulationstation/frontend/station/StationGraphicsPreferences$State;)V
+    .locals 0
+
+    .line 82
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->allowed()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->ensureBackground()V
+
+    :goto_0
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->invalidate()V
+
+    return-void
+.end method
+
+.method protected onSizeChanged(IIII)V
+    .locals 0
+
+    .line 36
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
+
+    if-lez p1, :cond_1
+
+    if-lez p2, :cond_1
+
+    .line 37
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->allowed()Z
+
+    move-result p3
+
+    if-nez p3, :cond_0
+
+    goto :goto_0
+
+    .line 38
+    :cond_0
+    invoke-static {p1, p2}, Lorg/emulationstation/frontend/netplay/StationHyperspaceState;->renderWidth(II)I
+
+    move-result p3
+
+    .line 39
+    invoke-static {p1, p2}, Lorg/emulationstation/frontend/netplay/StationHyperspaceState;->renderHeight(II)I
+
+    move-result p1
+
+    .line 40
+    invoke-direct {p0, p3, p1}, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->renderBackground(II)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    return-void
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    .line 37
+    iput-object p1, p0, Lorg/emulationstation/frontend/netplay/StationHyperspaceView;->background:Landroid/graphics/Bitmap;
+
+    return-void
+.end method
+
+.method setResumed(Z)V
+    .locals 0
+
+    return-void
+.end method
