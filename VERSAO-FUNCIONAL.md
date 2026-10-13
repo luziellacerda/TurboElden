@@ -1,3 +1,11 @@
+# TurboStations R143 estável aprovado em 13/10/2026
+
+Tag e ramo `estavel-station-r143-20261013` fixam o ponto de recuperação aprovado pelo proprietário. APK `508480e3671ae924f037bd32f6d71efda7a9d905c45c7b2571bd9f219add83d4`, fonte executável `26257869b59af8ecea44932ab287705990a9acbe`, g52 instalado; Top Gear 3000 VS três participantes e Bomberman com relatos positivos. A56/Edge30 última R141. Kit independente R143 preparado, não aplicado; SNES cadastro existente.
+
+[Descrição completa e restauração](versions/estavel-station-r143-20261013/README.md). [Manifesto](versions/estavel-station-r143-20261013/MANIFESTO-ESTAVEL.json).
+
+## Histórico preservado
+
 # Carrossel — LED colorido e overlay cinza (01/10/2026)
 
 Código nativo no ramo `versao-funcional`. O LED colorido permanece no aro das células do carrossel principal de sistemas; o overlay cinza transparente da arte foi removido. [Código e handoff](versions/carousel-led-overlay-20261001/README.md). Cemu 0.5.2 estável `7ce3fab3` / tag `estavel-2026-09-30-cemu-052` permanece. APK, `.so` e mídias ficam fora do Git.

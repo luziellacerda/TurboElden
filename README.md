@@ -1,3 +1,11 @@
+# TurboStations R143 estável aprovado em 13/10/2026
+
+Tag e ramo `estavel-station-r143-20261013` fixam o ponto de recuperação aprovado pelo proprietário. APK `508480e3671ae924f037bd32f6d71efda7a9d905c45c7b2571bd9f219add83d4`, fonte executável `26257869b59af8ecea44932ab287705990a9acbe`, g52 instalado; Top Gear 3000 VS três participantes e Bomberman com relatos positivos. A56/Edge30 última R141. Kit independente R143 preparado, não aplicado; SNES cadastro existente.
+
+[Descrição completa e restauração](versions/estavel-station-r143-20261013/README.md). [Manifesto](versions/estavel-station-r143-20261013/MANIFESTO-ESTAVEL.json).
+
+## Histórico preservado
+
 # TurboStations R135 instalada para teste
 
 A R135 foi compilada com a fonte congelada `ca8f1ccda18bef397e71e1c979a4f813acf608c0` e instalada no Edge 30, moto g52 e Samsung A56 em 12/10/2026. Os três telefones confirmaram o mesmo APK SHA256 `f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896`, com assinatura original e dados preservados. O frontend foi observado no Edge 30 e Samsung A56; a tela apagada do moto g52 impediu comprovar visualmente a abertura.
