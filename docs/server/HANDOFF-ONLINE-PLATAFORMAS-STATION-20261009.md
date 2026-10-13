@@ -1,3 +1,7 @@
+## Downloads diretos protegidos — 13/10/2026
+
+Servidor `downloads-station.lzgames.com.br` somente DNS e HTTPS aplicado; atualizadores de IPv4 e certificado ativos. API/banco/catalogo/licencas preservados, sem restart. App R139 instalado continua na origem anterior; overlay direto sobre donor exato compilado unsigned, aguardando chave original, assinatura/instalação/teste físico e registro dos quatro IDs de bundle renovados. Nenhum APK unsigned foi publicado/instalado e nenhum ganho de velocidade foi presumido. [Escopo e evidências desta configuração](../../integration/station-direct-download-20261013/README.md).
+
 ## NES e capas novas publicadas — 12/10/2026
 
 **Estado atual: catálogo44 / 4.690 IDs / 4.435 visíveis / 255 aliases.** NES foi movido de `snes/nes` para a raiz `nes`: 750 arquivos, 748 NES + um FDS + um UNIF, bytes preservados. O arquivo de Game Boy recebido no conjunto foi conservado e excluído do catálogo NES. [Recibo consolidado](online-plataformas-20261009/nes-publicado-20261012.json) · [Todos os vínculos NES/capa/Git](online-plataformas-20261009/nes-capas-20261012.json) · [Catálogo integral](online-plataformas-20261009/catalogo-cruzado-completo.json).
