@@ -1,8 +1,10 @@
 # Downloads diretos protegidos — candidata sobre R139
 
 **Servidor direto ativo; APK assinado com a chave original e quatro identidades
-registradas no servidor. Instalação e medição física de velocidade pendentes.**
-O celular não foi detectado pelo USB nesta etapa; o kit de instalação está preparado.
+registradas no servidor. O operador testou downloads e relatou melhora superior ao dobro,
+chegando perto de 10 MB/s.** [Resultado informado](operator-speed-result.json).
+O kit foi entregue no pendrive. O SHA instalado no aparelho não foi adquirido por ADB;
+a taxa informada é um resultado prático, sem comparação controlada gravada.
 
 `StationHttp` usa `downloads-station.lzgames.com.br` somente no GET canônico de
 artefato. As demais rotas continuam em `app.lzgames.com.br`, com o pin antigo.
@@ -65,7 +67,7 @@ APK final assinado: SHA256
 2.713.648.143 bytes. Certificado original, assinaturas v2/v3 e alinhamento 16 KiB
 conferidos; todas as 13.860 entradas finais relidas e comparadas à montagem aprovada.
 A chave original foi localizada no material privado fornecido pelo operador e
-permanece fora do Git. Nenhum APK desta candidata foi publicado ou instalado.
+permanece fora do Git. O APK desta candidata foi entregue no pendrive para teste; seu SHA instalado no aparelho não foi verificado por ADB.
 
 ## Registro administrativo aplicado
 
@@ -93,14 +95,13 @@ O APK e o instalador foram copiados ao pendrive indicado pelo operador; o arquiv
 copiado foi relido e seu SHA final conferido antes da ejeção segura. O kit permite
 instalação pelo Windows ou abertura do APK no Android por USB/OTG compatível.
 
-## Conclusão necessária no aparelho
+## Uso do kit em outros aparelhos
 
-Instalar o APK final assinado por atualização no aparelho autorizado ocioso,
+Para atualizar outros aparelhos, instalar o APK final assinado no aparelho autorizado ocioso,
 preservando UID/dados/Keystore/licença/jogos/saves. Não interromper partida ou download.
 O manifesto USB já identifica o APK final assinado e o kit inclui ADB para Windows.
 
-Conferir autorização, download completo e SHA, grant expirado/reuso recusados,
-cancelamento e nova autorização para retomar. Comparar velocidade em rede externa
-com origem direta e antiga usando grants diferentes e o mesmo conteúdo. Validar
-login/catálogo/capas na origem antiga. Não presumir homologação física ou ganho de
-velocidade a partir dos fixtures ou dos testes públicos sem autorização.
+O teste de velocidade desta entrega foi realizado pelo operador e relatado acima.
+Uma comparação controlada futura deve usar grants diferentes para o mesmo conteúdo
+e rede. A integridade por SHA e as recusas de grants foram verificadas no servidor;
+o teste informado não acrescenta homologação de gameplay ou de outros aparelhos.

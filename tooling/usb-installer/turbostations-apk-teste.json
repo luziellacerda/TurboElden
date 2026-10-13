@@ -5,6 +5,6 @@
   "sha256": "e69616ee6377920f808f3b5a267f5592ffff9ae70c2bbe2063c6902cd903c02a",
   "package": "org.turboramastation.frontend",
   "adbPath": "",
-  "status": "test-awaiting-device-install-and-download",
-  "warning": "Downloads diretos de teste sobre R139: assinatura original e cadastro v3 conferidos. Instalação no aparelho e teste de download/velocidade ainda pendentes. Atualizar sem desinstalar ou apagar dados."
+  "status": "test-operator-reported-speed-improvement",
+  "warning": "O operador relatou downloads perto de 10 MB/s e melhora maior que duas vezes. Assinatura original e cadastro v3 conferidos; o SHA instalado no aparelho não foi adquirido por ADB. Atualizar sem desinstalar ou apagar dados."
 }

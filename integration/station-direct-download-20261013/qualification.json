@@ -20,7 +20,6 @@
   "hostContractChecksPassed": 43,
   "realTlsScenariosPassed": 3,
   "signed": true,
-  "installed": false,
   "registeredOnServer": true,
   "actualAuthorizedDeviceDownloadVerified": false,
   "speedImprovementMeasured": false,
@@ -34,5 +33,11 @@
   "usbInstallerManifestUpdated": true,
   "authorizedProductionVhostDownloadVerified": true,
   "grantReuseForeignSessionAndExpiryRefused": true,
-  "usbCopyVerified": true
+  "usbCopyVerified": true,
+  "installedApkHashIndependentlyVerified": false,
+  "practicalDeviceDownloadTestReported": true,
+  "userReportedSpeedImprovement": true,
+  "approximateUserReportedPeakMegabytesPerSecond": 10,
+  "controlledSpeedComparisonRecorded": false,
+  "operatorResultReceipt": "operator-speed-result.json"
 }
