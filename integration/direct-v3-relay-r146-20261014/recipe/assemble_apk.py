@@ -1,0 +1,113 @@
+"""Assemble R146 route: five replacements, no entry additions or removals."""
+from pathlib import Path
+import argparse
+import copy
+import json
+import re
+import shutil
+import sys
+import zipfile
+
+sys.dont_write_bytecode = True
+zipfile.ZIP64_LIMIT = (1 << 32) - 1
+from common import *
+from build_identity import (DEPENDENCIES, validate_dex_receipt,
+                            expected_payload, validate_marker_bindings)
+
+
+def build(a):
+    need(a.base.stat().st_size == BASE_BYTES and sha(a.base) == BASE, "Exact signed R145 donor required")
+    pins = verify_commit(a.source_commit)
+    dex, dex_paths = validate_dex_receipt(read(a.dex_receipt), a.dex_dir, a.source_commit, pins)
+    parent_proof = verify_parent_proof(a.parent_proof)
+    identity = read(a.identity / "runtime-identity.json")
+    need(identity.get("schema") == "station.r146.direct-v3-relay.identity.v1" and identity.get("passed") is True and
+         identity.get("compiled") is True and all(identity.get(key) == value for key, value in state_fields().items()) and
+         identity.get("sourceCommit") == a.source_commit and identity.get("sourceFiles") == pins and
+         identity.get("retainedIdentityDependencies") == DEPENDENCIES and identity.get("baselineApkSha256") == BASE and
+         identity.get("changedDexSha256") == {name: sha(path) for name, path in dex_paths.items()} and identity.get("carouselSha256") == CAROUSEL_SHA and
+         identity.get("dexBuildReceiptSha256") == sha(a.dex_receipt) and identity.get("parentFinalProofSha256") == sha(a.parent_proof) and
+         identity.get("scopeDeclarationSha256") == sha(ROOT / "evidence/route-scope.json") and
+         identity.get("preservedRetroArchSha256") == RETRO and identity.get("preservedDexSha256") == dex["preservedDexSha256"] and
+         identity.get("inheritedPayloadCount") == identity.get("finalPayloadCount") == 345 and
+         identity.get("changedPayloadEntries") == sorted(CHANGED_PAYLOAD),
+         "Exact qualified route identity and actual signed R145 parent proof required")
+    files = {**dex_paths, "assets/station-online/engines.json": a.identity / "engines.json"}
+    for kind, (library, _) in WRAPPERS.items():
+        path = a.identity / "native" / library if kind == "psx" else a.identity / library
+        need(sha(path) == identity["markers"][kind]["runtimeSha256"], "Qualified wrapper binary differs: " + kind)
+        files["lib/arm64-v8a/" + library] = path
+    need(set(files) == REPLACED and len(files) == 5 and
+         sha(files["assets/station-online/engines.json"]) == identity["enginesAssetSha256"],
+         "Exactly five replacements with no additions allowed")
+    out = isolated(a.out)
+    with zipfile.ZipFile(a.base) as original:
+        names = original.namelist()
+        need(len(names) == len(set(names)) == 13860 and REPLACED <= set(names) and
+             {name for name in names if re.fullmatch(r"classes(?:\d+)?\.dex", name)} == ROOT_DEX,
+             "Exact R145 donor entry and 40-DEX inventory required")
+        previous = fingerprints(original)
+        payload = expected_payload(previous, dex_paths)
+        expected_registry, selected = validate_marker_bindings(original, previous, payload, pins, identity["markers"], files)
+        old_registry = json.loads(original.read("assets/station-online/engines.json"))
+        registry = read(files["assets/station-online/engines.json"])
+        retro = [row for row in old_registry["engines"] if row["platform"] not in {"psx", "n64", "gamecube", "wii"}]
+        need(registry == expected_registry and identity["engines"] == selected and len(old_registry["engines"]) == 13 and
+             len(registry["engines"]) == 13 and len(retro) == 9 and identity["preservedRetroArchDescriptors"] == retro and
+             [row for row in registry["engines"] if row["platform"] not in {"psx", "n64", "gamecube", "wii"}] == retro,
+             "Original nine RetroArch descriptors and four independent owner policies must stay exact")
+        before = {name: entry_sha(original, name) for name in names}
+        need(all(before[name] == checksum for name, checksum in DEX_BASE.items()) and before[CAROUSEL] == CAROUSEL_SHA and
+             before["lib/arm64-v8a/libstation_retroarch.so"] == RETRO and
+             {name: before[name] for name in ROOT_DEX - PARTITIONS} == dex["preservedDexSha256"] and
+             all(before[name] == checksum for name, checksum in previous["psx"]["payloadSha256"].items()),
+             "Exact donor DEX, runtime and complete inherited marker payload required")
+        need(payload == identity["payloadSha256"], "Qualified complete route payload binding differs")
+        carousel_contract = elf_contract(original.read(CAROUSEL))
+        need(carousel_contract["soname"] == ["libturbo_carousel.so"], "Exact preserved carousel contract required")
+        expected = {**before, **{name: sha(path) for name, path in files.items()}}
+        need({name for name in before if before[name] != expected[name]} == REPLACED and
+             all(expected[name] == checksum for name, checksum in payload.items()),
+             "Exact five changed entries and all 345 bound payloads required")
+        out.mkdir(parents=True)
+        unsigned = out / "TurboStations-Premium-R146-relay-v3-unsigned.apk"
+        with zipfile.ZipFile(unsigned, "w", allowZip64=False) as destination:
+            for item in original.infolist():
+                with destination.open(copy.copy(item), "w", force_zip64=False) as target:
+                    if item.filename in files:
+                        with files[item.filename].open("rb") as source:
+                            shutil.copyfileobj(source, target, 1024 * 1024)
+                    else:
+                        with original.open(item.filename) as source:
+                            shutil.copyfileobj(source, target, 1024 * 1024)
+    with zipfile.ZipFile(unsigned) as archive:
+        need(len(archive.namelist()) == len(set(archive.namelist())) == 13860 and
+             {name: entry_sha(archive, name) for name in archive.namelist()} == expected,
+             "Independent full assembled entry readback failed")
+    need(verify_commit(a.source_commit) == pins and read(a.dex_receipt) == dex and verify_parent_proof(a.parent_proof) == parent_proof,
+         "Frozen sources or qualified receipts changed during assembly")
+    receipt = dict(schema="station.r146.direct-v3-relay.package.v1", passed=True, sourceCommit=a.source_commit, sourceFiles=pins,
+        baselineApkSha256=BASE, baselineApkBytes=BASE_BYTES, unsignedApkSha256=sha(unsigned), unsignedApkBytes=unsigned.stat().st_size,
+        replacedEntries=sorted(REPLACED), addedEntries=[], removedEntries=[], preservedEntryCount=13855,
+        baselineEntryCount=13860, finalEntryCount=13860, expectedEntrySha256=expected,
+        preservedDexSha256=dex["preservedDexSha256"], changedDexSha256={name: sha(path) for name, path in dex_paths.items()},
+        dexScopes=dex["scopes"], gameplayMethodsPreserved=True, legacyRelayAndApiAuthPreserved=True,
+        v3TicketProofPathProtocolReadyAckAndExitPreserved=True,
+        nativeRuntimeSha256=RETRO, carouselSha256=CAROUSEL_SHA, carouselContract=carousel_contract,
+        preservedRetroArchDescriptors=retro, renewedIndependentEngines=selected, renewedRuntimeMarkers=identity["markers"],
+        payloadSha256=payload, runtimeIdentityReceiptSha256=sha(a.identity / "runtime-identity.json"),
+        dexBuildReceiptSha256=sha(a.dex_receipt), parentFinalProofSha256=sha(a.parent_proof),
+        scopeDeclarationSha256=sha(ROOT / "evidence/route-scope.json"),
+        retainedIdentityDependencies=DEPENDENCIES, **state_fields())
+    (out / "unsigned-package.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
+    return receipt
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    for name in ("base", "dex-dir", "dex-receipt", "identity", "out"):
+        parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--parent-proof", type=Path, default=PARENT_PROOF_PATH)
+    parser.add_argument("--source-commit", required=True)
+    result = build(parser.parse_args())
+    print(json.dumps({"passed": True, "unsignedApkSha256": result["unsignedApkSha256"], "revision": "R146"}))

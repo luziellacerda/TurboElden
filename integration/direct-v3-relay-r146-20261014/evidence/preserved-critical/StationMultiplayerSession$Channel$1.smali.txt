@@ -1,0 +1,410 @@
+.class Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;
+.super Ljava/lang/Object;
+.source "StationMultiplayerSession.java"
+
+# interfaces
+.implements Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;-><init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;Lorg/json/JSONObject;I)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+.field final synthetic val$this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+
+# direct methods
+.method constructor <init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .line 22
+    iput-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iput-object p2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->val$this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public nativeControl(JZZ)V
+    .locals 2
+
+    .line 27
+    iget-object p4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object p4, p4, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    monitor-enter p4
+
+    :try_start_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$400(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-wide v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->at:J
+
+    cmp-long v0, p1, v0
+
+    if-gez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iput-wide p1, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->at:J
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    if-nez p3, :cond_1
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    iput-boolean v1, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->running:Z
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iput-boolean p3, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->sync:Z
+
+    iget-object p3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object p3, p3, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$600(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    invoke-static {p3, p1, p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$602(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;J)J
+
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object p1, p1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {p1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$500(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)V
+
+    monitor-exit p4
+
+    return-void
+
+    :cond_2
+    :goto_1
+    monitor-exit p4
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public nativeStalled()Z
+    .locals 1
+
+    .line 29
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$300(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;->nativeStalled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public nativeStatus()J
+    .locals 2
+
+    .line 28
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$300(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;->nativeStatus()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public ready()V
+    .locals 3
+
+    .line 25
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->ready:Z
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v1, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$500(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public state(ZZ)V
+    .locals 1
+
+    .line 26
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object p1, p1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iput-boolean p2, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->sync:Z
+
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object p2, p2, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$500(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)V
+
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public ticket()V
+    .locals 8
+
+    .line 24
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v1, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$400(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v1, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$300(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v2, v2, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->id:Ljava/lang/String;
+
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-wide v4, v3, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->serial:J
+
+    const-wide/16 v6, 0x1
+
+    add-long/2addr v4, v6
+
+    iput-wide v4, v3, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->serial:J
+
+    invoke-interface {v1, v2, v4, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;->ticket(Ljava/lang/String;J)V
+
+    :cond_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public trace(Ljava/lang/String;)V
+    .locals 3
+
+    .line 23
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$300(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "linkSlot="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget v2, v2, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->guestSlot:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;->trace(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public unrecoverable(Ljava/lang/String;)V
+    .locals 3
+
+    .line 30
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v0, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->running:Z
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v1, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$500(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)V
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v1, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$400(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel$1;->this$1:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;
+
+    iget-object v1, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Channel;->this$0:Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;
+
+    invoke-static {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;->access$300(Lorg/emulationstation/frontend/netplay/StationMultiplayerSession;)Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;
+
+    move-result-object v1
+
+    invoke-interface {v1, p1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerSession$Listener;->fatal(Ljava/lang/String;)V
+
+    :cond_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
