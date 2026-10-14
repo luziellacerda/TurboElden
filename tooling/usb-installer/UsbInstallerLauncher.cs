@@ -65,15 +65,26 @@ internal static class UsbInstallerLauncher
     private sealed class InstallReceipt
     {
         public string resultCode { get; set; }
+        public string appServiceCheck { get; set; }
+        public string appActivityCheck { get; set; }
         public bool installAttempted { get; set; }
         public bool installSuccess { get; set; }
         public string deviceModel { get; set; }
+    }
+
+    private sealed class InstallResultSignal
+    {
+        public string Code;
+        public bool Installed;
+        public bool HashVerified;
+        public bool ReceiptSaved;
     }
 
     private sealed class DashboardProgressBar : Control
     {
         private readonly System.Windows.Forms.Timer animation = new System.Windows.Forms.Timer();
         private int value;
+        private int lastMeasured;
         private int sweep;
         private bool indeterminate;
         private Color accent = Color.FromArgb(64, 174, 255);
@@ -91,6 +102,18 @@ internal static class UsbInstallerLauncher
             animation.Stop();
             indeterminate = false;
             value = Math.Max(0, Math.Min(100, percentage));
+            lastMeasured = value;
+            accent = color;
+            Invalidate();
+        }
+
+        public int LastMeasuredPercentage { get { return lastMeasured; } }
+
+        public void StopAtLastMeasured(Color color)
+        {
+            animation.Stop();
+            indeterminate = false;
+            value = lastMeasured;
             accent = color;
             Invalidate();
         }
@@ -124,7 +147,7 @@ internal static class UsbInstallerLauncher
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             var track = new Rectangle(0, 1, Math.Max(1, Width - 1), Math.Max(1, Height - 2));
             using (var shape = Rounded(track, 8))
-            using (var background = new SolidBrush(Color.FromArgb(37, 54, 77)))
+            using (var background = new SolidBrush(Color.FromArgb(217, 228, 240)))
             {
                 e.Graphics.FillPath(background, shape);
                 e.Graphics.SetClip(shape);
@@ -159,19 +182,20 @@ internal static class UsbInstallerLauncher
 
     private sealed class InstallerForm : Form
     {
-        private static readonly Color Canvas = Color.FromArgb(11, 20, 34);
-        private static readonly Color Surface = Color.FromArgb(22, 35, 53);
-        private static readonly Color SurfaceRaised = Color.FromArgb(27, 44, 65);
-        private static readonly Color Ink = Color.FromArgb(239, 246, 255);
-        private static readonly Color Muted = Color.FromArgb(155, 177, 198);
-        private static readonly Color Blue = Color.FromArgb(64, 174, 255);
-        private static readonly Color Green = Color.FromArgb(104, 216, 174);
-        private static readonly Color Amber = Color.FromArgb(245, 190, 101);
-        private static readonly Color Red = Color.FromArgb(247, 122, 125);
+        private static readonly Color Canvas = Color.FromArgb(244, 247, 251);
+        private static readonly Color Surface = Color.White;
+        private static readonly Color SurfaceRaised = Color.FromArgb(239, 244, 250);
+        private static readonly Color Ink = Color.FromArgb(25, 42, 62);
+        private static readonly Color Muted = Color.FromArgb(77, 95, 115);
+        private static readonly Color Blue = Color.FromArgb(15, 94, 174);
+        private static readonly Color Green = Color.FromArgb(20, 116, 75);
+        private static readonly Color Amber = Color.FromArgb(151, 91, 11);
+        private static readonly Color Red = Color.FromArgb(181, 48, 51);
         private readonly string folder;
         private readonly string script;
         private readonly string manifestFile;
         private readonly Panel header = new Panel();
+        private readonly Panel packageCard = new Panel();
         private readonly Panel deviceCard = new Panel();
         private readonly Panel confirmationCard = new Panel();
         private readonly Panel operationCard = new Panel();
@@ -182,26 +206,45 @@ internal static class UsbInstallerLauncher
         private readonly Label version = new Label();
         private readonly Label candidate = new Label();
         private readonly Label warning = new Label();
+        private readonly Label packageHeading = new Label();
+        private readonly Label packageTitle = new Label();
+        private readonly Label packageDetail = new Label();
+        private readonly Label packageBadge = new Label();
         private readonly Label devicesHeading = new Label();
+        private readonly Label deviceEmpty = new Label();
         private readonly Label stage = new Label();
         private readonly Label status = new Label();
         private readonly Label statusDetail = new Label();
         private readonly Label progressCaption = new Label();
         private readonly Label actionHint = new Label();
         private readonly Label[] stepLabels = new Label[4];
-        private readonly ListBox phones = new ListBox();
+        private readonly ComboBox phones = new ComboBox();
         private readonly CheckBox idleConfirmed = new CheckBox();
         private readonly Button refresh = new Button();
         private readonly Button install = new Button();
         private readonly Button verify = new Button();
         private readonly Button close = new Button();
         private readonly DashboardProgressBar progress = new DashboardProgressBar();
+        private readonly DashboardProgressBar packageProgress = new DashboardProgressBar();
         private readonly TextBox log = new TextBox();
+        private TextBox liveDetails;
         private readonly LinkLabel receipts = new LinkLabel();
         private readonly LinkLabel details = new LinkLabel();
         private readonly List<string> knownSerials = new List<string>();
         private readonly Stopwatch elapsed = new Stopwatch();
         private readonly System.Windows.Forms.Timer elapsedTimer = new System.Windows.Forms.Timer();
+        private readonly System.Windows.Forms.Timer packageTimer = new System.Windows.Forms.Timer();
+        private FileSystemWatcher packageWatcher;
+        private Manifest packageManifest;
+        private string packageApk;
+        private string verifiedStamp;
+        private string failedStamp;
+        private string validationStamp;
+        private string packageStateKey;
+        private bool packageNeedsVerification;
+        private bool directCopyPending;
+        private DateTime lastPackageChangeUtc;
+        private long lastQueuedPackageEventTicks;
         private bool manifestValid;
         private bool busy;
         private bool retryAvailable;
@@ -224,24 +267,25 @@ internal static class UsbInstallerLauncher
             BackColor = Canvas;
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.Sizable;
-            MinimumSize = new Size(840, 700);
+            MinimumSize = new Size(760, 600);
             ClientSize = new Size(900, 660);
+            AutoScroll = true;
 
-            header.BackColor = Color.FromArgb(15, 31, 51);
+            header.BackColor = Surface;
             brandMark.BackColor = Blue;
             brandLetter.Text = "T";
-            brandLetter.Font = new Font("Segoe UI", 17F, FontStyle.Bold);
-            brandLetter.ForeColor = Canvas;
+            brandLetter.Font = new Font("Segoe UI Semibold", 19F, FontStyle.Bold);
+            brandLetter.ForeColor = Color.White;
             brandLetter.TextAlign = ContentAlignment.MiddleCenter;
             brandMark.Controls.Add(brandLetter);
             title.Text = "TurboStations";
             title.ForeColor = Ink;
-            title.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold);
+            title.Font = new Font("Segoe UI Semibold", 19F, FontStyle.Bold);
             version.ForeColor = Blue;
             version.Font = new Font("Segoe UI Semibold", 8.5F, FontStyle.Bold);
             candidate.Text = "VERSÃO DE TESTE";
             candidate.TextAlign = ContentAlignment.MiddleCenter;
-            candidate.BackColor = Color.FromArgb(70, 54, 38);
+            candidate.BackColor = Surface;
             candidate.ForeColor = Amber;
             candidate.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold);
             warning.ForeColor = Muted;
@@ -249,8 +293,24 @@ internal static class UsbInstallerLauncher
             warning.AutoEllipsis = true;
             header.Controls.AddRange(new Control[] { brandMark, title, version, candidate, warning });
 
+            packageCard.BackColor = Surface;
+            packageHeading.Text = "ARQUIVO DE INSTALAÇÃO";
+            packageHeading.ForeColor = Muted;
+            packageHeading.Font = new Font("Segoe UI Semibold", 8.5F, FontStyle.Bold);
+            packageTitle.ForeColor = Ink;
+            packageTitle.Font = new Font("Segoe UI Semibold", 12.5F, FontStyle.Bold);
+            packageTitle.AutoEllipsis = true;
+            packageDetail.ForeColor = Muted;
+            packageDetail.Font = new Font("Segoe UI", 9F);
+            packageDetail.AutoEllipsis = true;
+            packageBadge.TextAlign = ContentAlignment.MiddleCenter;
+            packageBadge.Font = new Font("Segoe UI Semibold", 8.5F, FontStyle.Bold);
+            packageCard.Controls.AddRange(new Control[] {
+                packageHeading, packageTitle, packageDetail, packageBadge, packageProgress
+            });
+
             deviceCard.BackColor = Surface;
-            devicesHeading.Text = "01   TELEFONE CONECTADO";
+            devicesHeading.Text = "TELEFONE USB";
             devicesHeading.ForeColor = Muted;
             devicesHeading.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             refresh.Text = "ATUALIZAR USB";
@@ -258,12 +318,17 @@ internal static class UsbInstallerLauncher
             refresh.Click += delegate { StartRefresh(); };
             phones.BackColor = SurfaceRaised;
             phones.ForeColor = Ink;
-            phones.BorderStyle = BorderStyle.None;
             phones.DrawMode = DrawMode.OwnerDrawFixed;
             phones.ItemHeight = 43;
             phones.DrawItem += DrawPhone;
             phones.IntegralHeight = false;
-            phones.SelectionMode = SelectionMode.One;
+            phones.DropDownStyle = ComboBoxStyle.DropDownList;
+            phones.MaxDropDownItems = 6;
+            deviceEmpty.Text = "Buscando aparelhos conectados…";
+            deviceEmpty.ForeColor = Muted;
+            deviceEmpty.BackColor = SurfaceRaised;
+            deviceEmpty.Font = new Font("Segoe UI", 9.5F);
+            deviceEmpty.TextAlign = ContentAlignment.MiddleLeft;
             phones.SelectedIndexChanged += delegate {
                 retryAvailable = false;
                 idleConfirmed.Checked = false;
@@ -276,7 +341,7 @@ internal static class UsbInstallerLauncher
                         "Feche e reabra o instalador após conferir este aparelho.", Red);
                 UpdateButtons();
             };
-            deviceCard.Controls.AddRange(new Control[] { devicesHeading, refresh, phones });
+            deviceCard.Controls.AddRange(new Control[] { devicesHeading, refresh, phones, deviceEmpty });
 
             confirmationCard.BackColor = Surface;
             idleConfirmed.Text = "Saí da partida, concluí downloads e deixei o TurboStations ou o Android na tela inicial.";
@@ -298,7 +363,7 @@ internal static class UsbInstallerLauncher
             progressCaption.ForeColor = Muted;
             progressCaption.Font = new Font("Segoe UI Semibold", 8.5F, FontStyle.Bold);
             actionHint.ForeColor = Muted;
-            actionHint.BackColor = SurfaceRaised;
+            actionHint.BackColor = Surface;
             actionHint.Font = new Font("Segoe UI", 9F);
             actionHint.TextAlign = ContentAlignment.MiddleLeft;
             operationCard.Controls.AddRange(new Control[] {
@@ -339,17 +404,27 @@ internal static class UsbInstallerLauncher
             receipts.VisitedLinkColor = Blue;
             receipts.LinkClicked += delegate { OpenReceipts(); };
             Controls.AddRange(new Control[] {
-                header, deviceCard, confirmationCard, operationCard, actionRow, details, receipts
+                header, packageCard, deviceCard, confirmationCard, operationCard,
+                actionRow, details, receipts
             });
             Resize += delegate { LayoutDashboard(); };
             elapsedTimer.Interval = 1000;
             elapsedTimer.Tick += delegate { UpdateElapsed(); };
+            packageTimer.Interval = 1000;
+            packageTimer.Tick += delegate { RefreshPackageState(); };
             FormClosing += OnFormClosing;
-            FormClosed += delegate { elapsedTimer.Dispose(); };
+            FormClosed += delegate {
+                elapsedTimer.Stop();
+                packageTimer.Stop();
+                elapsedTimer.Dispose();
+                packageTimer.Dispose();
+                if (packageWatcher != null) packageWatcher.Dispose();
+            };
             Shown += delegate { BeginInvoke(new Action(StartRefresh)); };
             LayoutDashboard();
             ShowIdle("Aguardando telefone", "Conecte um aparelho por USB e autorize a depuração.");
             LoadManifest();
+            StartPackageWatcher();
             UpdateButtons();
         }
 
@@ -357,9 +432,9 @@ internal static class UsbInstallerLauncher
         {
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderSize = 1;
-            button.FlatAppearance.BorderColor = Color.FromArgb(69, 92, 116);
-            button.BackColor = SurfaceRaised;
-            button.ForeColor = Ink;
+            button.FlatAppearance.BorderColor = Color.FromArgb(192, 208, 225);
+            button.BackColor = Surface;
+            button.ForeColor = Blue;
             button.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             button.Cursor = Cursors.Hand;
             button.UseVisualStyleBackColor = false;
@@ -370,7 +445,7 @@ internal static class UsbInstallerLauncher
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderSize = 0;
             button.BackColor = Blue;
-            button.ForeColor = Canvas;
+            button.ForeColor = Color.White;
             button.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             button.Cursor = Cursors.Hand;
             button.UseVisualStyleBackColor = false;
@@ -378,45 +453,58 @@ internal static class UsbInstallerLauncher
 
         private void LayoutDashboard()
         {
-            int width = ClientSize.Width;
-            int height = ClientSize.Height;
-            header.SetBounds(0, 0, width, 102);
-            brandMark.SetBounds(24, 17, 54, 54);
+            float scale;
+            using (var graphics = CreateGraphics()) scale = graphics.DpiX / 96F;
+            Func<int, int> u = value => (int)Math.Round(value * scale);
+            int width = Math.Max(ClientSize.Width, u(850));
+            int height = Math.Max(ClientSize.Height, u(660));
+            header.SetBounds(0, 0, width, u(94));
+            brandMark.SetBounds(u(24), u(16), u(50), u(50));
             brandLetter.Dock = DockStyle.Fill;
-            title.SetBounds(94, 12, Math.Max(200, width - 300), 40);
-            version.SetBounds(96, 57, Math.Max(200, width - 300), 19);
-            candidate.SetBounds(width - 177, 23, 153, 28);
-            warning.SetBounds(24, 80, width - 48, 19);
+            title.SetBounds(u(91), u(11), Math.Max(u(200), width - u(300)), u(36));
+            version.SetBounds(u(92), u(49), Math.Max(u(200), width - u(300)), u(19));
+            candidate.SetBounds(width - u(177), u(22), u(153), u(27));
+            warning.SetBounds(u(24), u(70), width - u(48), u(19));
 
-            int cardWidth = width - 48;
-            deviceCard.SetBounds(24, 114, cardWidth, 106);
-            devicesHeading.SetBounds(20, 12, cardWidth - 205, 28);
-            refresh.SetBounds(cardWidth - 170, 10, 150, 32);
-            phones.SetBounds(20, 49, cardWidth - 40, 48);
-            confirmationCard.SetBounds(24, 232, cardWidth, 50);
-            idleConfirmed.SetBounds(18, 8, cardWidth - 36, 34);
+            int cardWidth = width - u(48);
+            packageCard.SetBounds(u(24), u(105), cardWidth, u(105));
+            packageHeading.SetBounds(u(20), u(9), cardWidth - u(175), u(20));
+            packageTitle.SetBounds(u(20), u(29), cardWidth - u(193), u(26));
+            packageDetail.SetBounds(u(20), u(56), cardWidth - u(40), u(20));
+            packageBadge.SetBounds(cardWidth - u(176), u(15), u(156), u(27));
+            packageProgress.SetBounds(u(20), u(84), cardWidth - u(40), u(9));
 
-            int operationBottom = height - 126;
-            operationCard.SetBounds(24, 294, cardWidth, Math.Max(228, operationBottom - 294));
-            stage.SetBounds(20, 17, cardWidth - 40, 20);
-            status.SetBounds(20, 43, cardWidth - 40, 38);
-            statusDetail.SetBounds(20, 82, cardWidth - 40, 24);
-            progressCaption.SetBounds(20, 116, cardWidth - 40, 19);
-            progress.SetBounds(20, 141, cardWidth - 40, 18);
-            actionHint.SetBounds(20, 168, cardWidth - 40, 34);
-            int chipsTop = operationCard.Height - 36;
-            int gap = 7;
-            int chipWidth = (cardWidth - 40 - gap * 3) / 4;
+            deviceCard.SetBounds(u(24), u(220), cardWidth, u(99));
+            devicesHeading.SetBounds(u(20), u(9), cardWidth - u(205), u(27));
+            refresh.SetBounds(cardWidth - u(172), u(10), u(152), u(31));
+            phones.SetBounds(u(20), u(45), cardWidth - u(40), u(44));
+            deviceEmpty.SetBounds(u(20), u(45), cardWidth - u(40), u(44));
+            confirmationCard.SetBounds(u(24), u(329), cardWidth, u(45));
+            idleConfirmed.SetBounds(u(18), u(5), cardWidth - u(36), u(35));
+
+            int operationBottom = height - u(97);
+            operationCard.SetBounds(u(24), u(384), cardWidth,
+                Math.Max(u(172), operationBottom - u(384)));
+            stage.SetBounds(u(20), u(8), cardWidth - u(40), u(19));
+            status.SetBounds(u(20), u(30), cardWidth - u(40), u(34));
+            statusDetail.SetBounds(u(20), u(65), cardWidth - u(40), u(22));
+            progressCaption.SetBounds(u(20), u(89), cardWidth - u(40), u(18));
+            progress.SetBounds(u(20), u(110), cardWidth - u(40), u(10));
+            actionHint.SetBounds(u(20), u(124), cardWidth - u(40), u(20));
+            int chipsTop = operationCard.Height - u(24);
+            int gap = u(7);
+            int chipWidth = (cardWidth - u(40) - gap * 3) / 4;
             for (int i = 0; i < stepLabels.Length; i++)
-                stepLabels[i].SetBounds(20 + i * (chipWidth + gap), chipsTop, chipWidth, 23);
+                stepLabels[i].SetBounds(u(20) + i * (chipWidth + gap), chipsTop, chipWidth, u(20));
 
-            actionRow.SetBounds(24, height - 114, cardWidth, 48);
-            int primaryWidth = Math.Min(330, Math.Max(250, cardWidth / 2 - 35));
-            install.SetBounds(0, 0, primaryWidth, 46);
-            verify.SetBounds(primaryWidth + 12, 0, 160, 46);
-            close.SetBounds(cardWidth - 126, 0, 126, 46);
-            details.SetBounds(24, height - 47, 166, 21);
-            receipts.SetBounds(208, height - 47, 140, 21);
+            actionRow.SetBounds(u(24), height - u(87), cardWidth, u(46));
+            int primaryWidth = Math.Min(u(330), Math.Max(u(250), cardWidth / 2 - u(35)));
+            install.SetBounds(0, 0, primaryWidth, u(44));
+            verify.SetBounds(primaryWidth + u(12), 0, u(160), u(44));
+            close.SetBounds(cardWidth - u(126), 0, u(126), u(44));
+            details.SetBounds(u(24), height - u(30), u(166), u(21));
+            receipts.SetBounds(u(208), height - u(30), u(140), u(21));
+            AutoScrollMinSize = new Size(width, height);
         }
 
         private void DrawPhone(object sender, DrawItemEventArgs e)
@@ -425,7 +513,7 @@ internal static class UsbInstallerLauncher
             var device = phones.Items[e.Index] as UsbDevice;
             if (device == null) return;
             bool selected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
-            using (var background = new SolidBrush(selected ? Color.FromArgb(32, 72, 102) : SurfaceRaised))
+            using (var background = new SolidBrush(selected ? Color.FromArgb(218, 235, 250) : SurfaceRaised))
                 e.Graphics.FillRectangle(background, e.Bounds);
             if (selected)
                 using (var accent = new SolidBrush(Blue))
@@ -447,6 +535,11 @@ internal static class UsbInstallerLauncher
 
         private void OpenDetails()
         {
+            if (liveDetails != null && !liveDetails.IsDisposed)
+            {
+                liveDetails.FindForm().Activate();
+                return;
+            }
             var window = new Form();
             window.Text = "TurboStations — detalhes técnicos";
             window.StartPosition = FormStartPosition.CenterParent;
@@ -464,6 +557,8 @@ internal static class UsbInstallerLauncher
             copy.Dock = DockStyle.Fill;
             copy.Text = log.Text;
             window.Controls.Add(copy);
+            liveDetails = copy;
+            window.FormClosed += delegate { liveDetails = null; };
             window.Show(this);
         }
 
@@ -477,10 +572,7 @@ internal static class UsbInstallerLauncher
         {
             actionHint.Text = "   " + message;
             actionHint.ForeColor = color;
-            actionHint.BackColor = Color.FromArgb(
-                Math.Min(255, (SurfaceRaised.R * 4 + color.R) / 5),
-                Math.Min(255, (SurfaceRaised.G * 4 + color.G) / 5),
-                Math.Min(255, (SurfaceRaised.B * 4 + color.B) / 5));
+            actionHint.BackColor = Surface;
         }
 
         private void UpdateStepLabels()
@@ -493,9 +585,7 @@ internal static class UsbInstallerLauncher
                 bool complete = i < completedStages;
                 bool active = i == activeStage;
                 bool blocked = i == blockedStage;
-                label.BackColor = blocked ? Color.FromArgb(74, 42, 52) :
-                    complete ? Color.FromArgb(30, 72, 65) :
-                    active ? Color.FromArgb(31, 72, 105) : SurfaceRaised;
+                label.BackColor = Surface;
                 label.ForeColor = blocked ? Red : complete ? Green : active ? Blue : Muted;
             }
         }
@@ -544,43 +634,235 @@ internal static class UsbInstallerLauncher
                 completed >= 2 ? "Instalação iniciada; resultado não confirmado" :
                 completed + " de 4 etapas concluídas; sem transferência";
             progressCaption.Text = captionBase;
-            progress.ShowMeasured(completed * 25, color);
+            // Four milestones do not represent a measured ADB transfer percentage.
+            progress.StopAtLastMeasured(color);
+            if (progress.LastMeasuredPercentage > 0)
+                progressCaption.Text = "Leitura do APK: " + progress.LastMeasuredPercentage + "%";
             SetActionHint(hint, color);
             UpdateStepLabels();
+        }
+
+        private static string FileStamp(string apk, Manifest manifest)
+        {
+            var file = new FileInfo(apk);
+            return apk.ToUpperInvariant() + "|" + file.Length + "|" +
+                file.LastWriteTimeUtc.Ticks + "|" + manifest.sha256.ToUpperInvariant();
+        }
+
+        private bool TryCompleteApk(out string stamp)
+        {
+            stamp = null;
+            try
+            {
+                if (directCopyPending || packageManifest == null || String.IsNullOrWhiteSpace(packageApk) ||
+                    File.Exists(packageApk + ".partial") || !File.Exists(packageApk) ||
+                    new FileInfo(packageApk).Length != packageManifest.bytes) return false;
+                // A copy may preallocate its final length. Require the writer to have
+                // released the file before any hash or installation can start.
+                using (var unlocked = new FileStream(packageApk, FileMode.Open,
+                    FileAccess.Read, FileShare.None)) { }
+                stamp = FileStamp(packageApk, packageManifest);
+                return true;
+            }
+            catch (IOException) { return false; }
+            catch (UnauthorizedAccessException) { return false; }
+        }
+
+        private void SetPackageState(string key, string heading, string detail,
+            string badge, Color accent, bool working, bool complete)
+        {
+            if (packageStateKey == key) return;
+            packageStateKey = key;
+            packageTitle.Text = heading;
+            packageDetail.Text = detail;
+            packageBadge.Text = badge;
+            packageBadge.ForeColor = accent;
+            packageBadge.BackColor = Surface;
+            if (working) packageProgress.ShowWorking(accent);
+            else packageProgress.ShowMeasured(complete ? 100 : 0, accent);
         }
 
         private void LoadManifest()
         {
             manifestValid = false;
+            packageNeedsVerification = false;
+            packageManifest = null;
+            packageApk = null;
             try
             {
+                if (!File.Exists(manifestFile))
+                    throw new FileNotFoundException("Arquivo de controle ausente: " +
+                        Path.GetFileName(manifestFile));
                 var manifest = new JavaScriptSerializer().Deserialize<Manifest>(
                     File.ReadAllText(manifestFile, Encoding.UTF8));
                 if (manifest == null || String.IsNullOrWhiteSpace(manifest.revision))
-                    throw new InvalidDataException("Manifesto sem revisão.");
+                    throw new InvalidDataException("O arquivo de controle não informa a revisão.");
                 if (String.IsNullOrWhiteSpace(manifest.apkPath) ||
                     !Regex.IsMatch(manifest.sha256 ?? "", "^[a-fA-F0-9]{64}$") || manifest.bytes <= 0)
-                    throw new InvalidDataException("Manifesto do APK incompleto.");
+                    throw new InvalidDataException("O arquivo de controle não informa APK, tamanho e SHA-256 válidos.");
                 string apk = Path.IsPathRooted(manifest.apkPath) ? manifest.apkPath :
                     Path.Combine(folder, manifest.apkPath);
-                if (!File.Exists(apk) || new FileInfo(apk).Length != manifest.bytes)
-                    throw new FileNotFoundException("APK ausente ou com tamanho diferente do manifesto.", apk);
-                title.Text = "TurboStations";
-                version.Text = "INSTALADOR USB   /   " + manifest.revision.ToUpperInvariant();
-                warning.Text = "Pacote " + manifest.revision + " para teste  ·  confira o resultado no telefone antes de considerar estável.";
-                if (!String.IsNullOrWhiteSpace(manifest.warning)) AppendLog(manifest.warning);
-                manifestValid = true;
-                if (!busy) ShowIdle("Pacote pronto", "Buscando telefones USB autorizados.");
+                packageManifest = manifest;
+                packageApk = apk;
+                candidate.Visible = true;
+                version.Text = "INSTALADOR USB  /  " + manifest.revision.ToUpperInvariant();
+                warning.Text = "Atualização de teste · seus dados são preservados · instale um telefone por vez";
+                packageHeading.Text = "ARQUIVO DE INSTALAÇÃO  ·  " + manifest.revision.ToUpperInvariant();
+                string name = Path.GetFileName(apk);
+                bool partial = File.Exists(apk + ".partial");
+                if (partial || directCopyPending)
+                {
+                    packageTimer.Start();
+                    SetPackageState("copying|" + name + "|" + partial,
+                        "Recebendo o APK", partial ?
+                            "Cópia temporária: " + name + ".partial · aguarde a conclusão." :
+                            "Cópia em andamento: " + name + " · aguardando o arquivo fechar.",
+                        "CÓPIA EM ANDAMENTO", Blue, true, false);
+                    return;
+                }
+                packageTimer.Stop();
+                if (!File.Exists(apk))
+                {
+                    SetPackageState("missing|" + name,
+                        "APK não encontrado", "Arquivo esperado nesta pasta: " + name,
+                        "ARQUIVO AUSENTE", Amber, false, false);
+                    return;
+                }
+                var file = new FileInfo(apk);
+                if (file.Length != manifest.bytes)
+                {
+                    SetPackageState("size|" + name + "|" + file.Length,
+                        "Arquivo incompleto ou incorreto", "Esperado: " + name +
+                        " · tamanho diferente do pacote oficial.",
+                        "INSTALAÇÃO BLOQUEADA", Red, false, false);
+                    return;
+                }
+                string stamp = FileStamp(apk, manifest);
+                if (String.Equals(stamp, verifiedStamp, StringComparison.Ordinal))
+                {
+                    manifestValid = true;
+                    SetPackageState("ready|" + stamp, "APK íntegro e pronto",
+                        name + " · tamanho e SHA-256 conferidos.",
+                        "VERIFICADO", Green, false, true);
+                }
+                else if (String.Equals(stamp, failedStamp, StringComparison.Ordinal))
+                    SetPackageState("failed|" + stamp, "APK não passou na conferência",
+                        name + " · confira a cópia e tente Verificar APK novamente.",
+                        "INSTALAÇÃO BLOQUEADA", Red, false, false);
+                else
+                {
+                    packageNeedsVerification = true;
+                    SetPackageState("pending|" + stamp, "Conferência necessária",
+                        name + " · aguardando leitura completa do SHA-256.",
+                        "AGUARDANDO VERIFICAÇÃO", Blue, false, false);
+                }
             }
             catch (Exception error)
             {
-                title.Text = "TurboStations";
-                version.Text = "INSTALADOR USB   /   PACOTE INCOMPLETO";
-                warning.Text = "O pacote de instalação está incompleto.";
-                ShowBlocked(0, 0, "Pacote incompleto", "Confira o APK e o manifesto ao lado do instalador.",
-                    "NENHUM APK FOI INSTALADO", Red);
-                AppendLog("Instalação bloqueada: " + error.Message);
+                packageTimer.Stop();
+                version.Text = "INSTALADOR USB  /  SEM PACOTE";
+                candidate.Visible = false;
+                warning.Text = "Conecte um pacote completo para iniciar a instalação.";
+                packageHeading.Text = "ARQUIVO DE INSTALAÇÃO";
+                SetPackageState("manifest|" + error.Message, "Pacote indisponível", error.Message,
+                    "INSTALAÇÃO BLOQUEADA", Red, false, false);
             }
+            finally { UpdateButtons(); }
+        }
+
+        private void RefreshPackageState()
+        {
+            if (busy) return;
+            if (directCopyPending)
+            {
+                if (DateTime.UtcNow - lastPackageChangeUtc < TimeSpan.FromSeconds(2)) return;
+                try
+                {
+                    if (!File.Exists(packageApk)) directCopyPending = false;
+                    else using (var unlocked = new FileStream(packageApk, FileMode.Open,
+                        FileAccess.Read, FileShare.None)) { directCopyPending = false; }
+                }
+                catch (IOException) { return; }
+                catch (UnauthorizedAccessException) { return; }
+            }
+            LoadManifest();
+            TryAutoValidate();
+        }
+
+        private void TryAutoValidate()
+        {
+            string stamp;
+            if (busy || !packageNeedsVerification || !TryCompleteApk(out stamp) ||
+                String.Equals(stamp, failedStamp, StringComparison.Ordinal)) return;
+            StartValidation();
+        }
+
+        private void StartPackageWatcher()
+        {
+            try
+            {
+                packageWatcher = new FileSystemWatcher(folder);
+                packageWatcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite;
+                packageWatcher.Created += delegate(object sender, FileSystemEventArgs e) {
+                    PackageFileChanged(e.Name, e.ChangeType);
+                };
+                packageWatcher.Changed += delegate(object sender, FileSystemEventArgs e) {
+                    PackageFileChanged(e.Name, e.ChangeType);
+                };
+                packageWatcher.Deleted += delegate(object sender, FileSystemEventArgs e) {
+                    PackageFileChanged(e.Name, e.ChangeType);
+                };
+                packageWatcher.Renamed += delegate(object sender, RenamedEventArgs e) {
+                    PackageFileChanged(e.Name, e.ChangeType);
+                };
+                packageWatcher.Error += delegate {
+                    try
+                    {
+                        if (!IsDisposed && IsHandleCreated)
+                            BeginInvoke(new Action(delegate {
+                                if (packageWatcher != null) packageWatcher.Dispose();
+                                packageWatcher = null;
+                                LoadManifest();
+                                AppendLog("A unidade do pacote deixou de responder. Reconecte-a e clique em Atualizar USB.");
+                            }));
+                    }
+                    catch (InvalidOperationException) { }
+                };
+                packageWatcher.EnableRaisingEvents = true;
+            }
+            catch (IOException) { packageWatcher = null; }
+            catch (UnauthorizedAccessException) { packageWatcher = null; }
+        }
+
+        private void PackageFileChanged(string name, WatcherChangeTypes kind)
+        {
+            if (String.IsNullOrWhiteSpace(name)) return;
+            string expected = packageApk == null ? "" : Path.GetFileName(packageApk);
+            if (!String.Equals(name, Path.GetFileName(manifestFile), StringComparison.OrdinalIgnoreCase) &&
+                !String.Equals(name, expected, StringComparison.OrdinalIgnoreCase) &&
+                !String.Equals(name, expected + ".partial", StringComparison.OrdinalIgnoreCase)) return;
+            if (kind == WatcherChangeTypes.Changed)
+            {
+                long now = DateTime.UtcNow.Ticks;
+                long previous = Interlocked.Read(ref lastQueuedPackageEventTicks);
+                if (now - previous < TimeSpan.FromMilliseconds(600).Ticks) return;
+                Interlocked.Exchange(ref lastQueuedPackageEventTicks, now);
+            }
+            try
+            {
+                if (!IsDisposed && IsHandleCreated)
+                    BeginInvoke(new Action(delegate {
+                        if (String.Equals(name, expected, StringComparison.OrdinalIgnoreCase))
+                        {
+                            directCopyPending = kind == WatcherChangeTypes.Created ||
+                                kind == WatcherChangeTypes.Changed;
+                            lastPackageChangeUtc = DateTime.UtcNow;
+                            if (directCopyPending) packageTimer.Start();
+                        }
+                        RefreshPackageState();
+                    }));
+            }
+            catch (InvalidOperationException) { }
         }
 
         private void OnFormClosing(object sender, FormClosingEventArgs e)
@@ -650,6 +932,11 @@ internal static class UsbInstallerLauncher
             captionBase = "Leitura real do arquivo: " + percentage + "%";
             UpdateElapsed();
             progress.ShowMeasured(percentage, Blue);
+            packageTitle.Text = "Conferindo a integridade do APK";
+            packageDetail.Text = "Lidos " + percentage + "% dos bytes para calcular o SHA-256.";
+            packageBadge.Text = percentage + "% LIDO";
+            packageBadge.ForeColor = Blue;
+            packageProgress.ShowMeasured(percentage, Blue);
             SetActionHint("A instalação no telefone ainda não começou.", Blue);
             UpdateStepLabels();
             return true;
@@ -667,18 +954,33 @@ internal static class UsbInstallerLauncher
             if (log.TextLength > 32000)
                 log.Text = log.Text.Substring(Math.Min(log.TextLength, 16000));
             log.AppendText(DateTime.Now.ToString("HH:mm:ss") + "  " + safe + Environment.NewLine);
+            if (liveDetails != null && !liveDetails.IsDisposed)
+            {
+                liveDetails.Text = log.Text;
+                liveDetails.SelectionStart = liveDetails.TextLength;
+                liveDetails.ScrollToCaret();
+            }
         }
 
         private void UpdateButtons()
         {
             bool ready = manifestValid && !busy;
             bool selected = phones.SelectedItem is UsbDevice;
+            string availableStamp;
             refresh.Enabled = !busy;
-            verify.Enabled = !busy;
-            phones.Enabled = ready;
-            idleConfirmed.Enabled = ready && selected;
+            verify.Enabled = !busy && TryCompleteApk(out availableStamp);
+            phones.Enabled = !busy && phones.Items.Count > 0;
+            // Keep the instruction readable even while the APK or USB is unavailable.
+            // The install action itself remains gated by package, device and confirmation.
+            idleConfirmed.Enabled = true;
+            idleConfirmed.ForeColor = Ink;
             install.Enabled = ready && selected && idleConfirmed.Checked && !installOutcomeUncertain;
+            install.BackColor = install.Enabled ? Blue : Color.FromArgb(216, 226, 238);
+            install.ForeColor = install.Enabled ? Color.White : Color.FromArgb(88, 105, 122);
             install.Text = retryAvailable ? "TENTAR NOVAMENTE" : "INSTALAR NO TELEFONE";
+            phones.Visible = phones.Items.Count > 0;
+            deviceEmpty.Visible = phones.Items.Count == 0;
+            deviceEmpty.BringToFront();
             close.Enabled = !busy;
             receipts.Enabled = !busy && Directory.Exists(Path.Combine(folder, "recibos-usb"));
         }
@@ -686,10 +988,11 @@ internal static class UsbInstallerLauncher
         private void StartRefresh()
         {
             if (busy) return;
+            if (packageWatcher == null) StartPackageWatcher();
             LoadManifest();
-            if (!manifestValid) { UpdateButtons(); return; }
             retryAvailable = false;
             phones.Items.Clear();
+            deviceEmpty.Text = "Buscando telefones USB autorizados…";
             knownSerials.Clear();
             idleConfirmed.Checked = false;
             ShowIdle("Buscando telefone", "Procurando aparelhos Android autorizados na porta USB.");
@@ -703,7 +1006,17 @@ internal static class UsbInstallerLauncher
         {
             if (busy) return;
             LoadManifest();
-            if (!manifestValid) { UpdateButtons(); return; }
+            string availableStamp;
+            if (!TryCompleteApk(out availableStamp))
+            {
+                UpdateButtons();
+                return;
+            }
+            packageNeedsVerification = false;
+            validationStamp = availableStamp;
+            SetPackageState("checking|" + validationStamp,
+                "Conferindo a integridade do APK", "Lendo o arquivo completo para validar o SHA-256.",
+                "VERIFICANDO", Blue, true, false);
             ShowIdle("Conferindo o pacote", "Lendo o APK completo para validar tamanho e SHA-256.");
             AppendLog("Verificando o APK indicado no manifesto.");
             StartCommand(new CommandRequest { Kind = "validate", Arguments = "-ValidateOnly -GuiProgress", StreamOutput = true });
@@ -711,7 +1024,9 @@ internal static class UsbInstallerLauncher
 
         private void StartInstall()
         {
-            if (busy || !manifestValid || !idleConfirmed.Checked || installOutcomeUncertain) return;
+            if (busy || !idleConfirmed.Checked || installOutcomeUncertain) return;
+            LoadManifest();
+            if (!manifestValid) return;
             var device = phones.SelectedItem as UsbDevice;
             if (device == null || String.IsNullOrWhiteSpace(device.Serial) ||
                 !Regex.IsMatch(device.Serial, "^[A-Za-z0-9._-]{1,128}$"))
@@ -774,6 +1089,11 @@ internal static class UsbInstallerLauncher
                 else if (request.Kind == "validate") FinishValidation(result);
                 else FinishInstall(result);
                 UpdateButtons();
+                if (request.Kind == "list")
+                {
+                    LoadManifest();
+                    TryAutoValidate();
+                }
             };
             worker.RunWorkerAsync(request);
         }
@@ -782,7 +1102,8 @@ internal static class UsbInstallerLauncher
         {
             if (result.ExitCode != 0)
             {
-                ShowIdle("USB indisponível", "Confira o cabo, desbloqueie o telefone e autorize a depuração.");
+                ShowIdle("USB indisponível", "Confira o cabo e a autorização da depuração USB.");
+                deviceEmpty.Text = "Não foi possível consultar o USB. Confira o cabo e tente Atualizar USB.";
                 SetActionHint("Nenhum APK foi instalado.", Amber);
                 string cause = !String.IsNullOrWhiteSpace(result.Error) ? result.Error : result.Output;
                 AppendLog(String.IsNullOrWhiteSpace(cause) ? "A consulta USB falhou." : cause.Trim());
@@ -802,10 +1123,38 @@ internal static class UsbInstallerLauncher
                 }
                 if (phones.Items.Count == 1) phones.SelectedIndex = 0;
                 if (phones.Items.Count == 0)
-                    ShowIdle("Nenhum telefone autorizado", "Desbloqueie o Android e aceite a depuração USB.");
+                {
+                    if (listing.UnauthorizedCount > 0)
+                    {
+                        ShowIdle("Depuração USB não autorizada", "Desbloqueie o telefone e aceite a autorização deste computador.");
+                        deviceEmpty.Text = "Aguardando autorização de depuração USB no telefone.";
+                    }
+                    else if (listing.OfflineCount > 0)
+                    {
+                        ShowIdle("Telefone USB desconectado", "Reconecte o cabo e mantenha a tela desbloqueada.");
+                        deviceEmpty.Text = "Telefone offline. Reconecte o cabo USB.";
+                    }
+                    else
+                    {
+                        ShowIdle("Nenhum telefone encontrado", "Conecte um Android por USB e autorize a depuração.");
+                        deviceEmpty.Text = "Nenhum telefone autorizado por USB. Conecte e desbloqueie o aparelho.";
+                    }
+                    if (!manifestValid) stage.Text = "AGUARDANDO PACOTE";
+                }
                 else
+                {
                     ShowIdle(phones.Items.Count == 1 ? "Telefone encontrado" : "Telefones encontrados",
-                        "Selecione um aparelho e confirme que está livre para instalar.");
+                        manifestValid ? "Confirme que o aparelho está livre para instalar." :
+                            "Telefone pronto; falta receber e conferir o APK mostrado acima.");
+                    if (!manifestValid)
+                    {
+                        stage.Text = "AGUARDANDO APK";
+                        status.Text = phones.Items.Count == 1 ? "Telefone conectado" : "Telefones conectados";
+                        SetActionHint("A instalação fica disponível após conferir o APK.", Amber);
+                    }
+                }
+                devicesHeading.Text = phones.Items.Count > 1 ?
+                    "TELEFONES USB · " + phones.Items.Count + " DISPONÍVEIS" : "TELEFONE USB";
                 if (installOutcomeUncertain)
                     ShowBlocked(2, 2, "Resultado anterior incerto",
                         "Confira no telefone se a atualização terminou.",
@@ -821,6 +1170,7 @@ internal static class UsbInstallerLauncher
             catch (Exception)
             {
                 ShowIdle("Consulta USB falhou", "A resposta do Android não pôde ser lida. Atualize a lista.");
+                deviceEmpty.Text = "O computador não conseguiu ler a lista USB. Clique em Atualizar USB.";
                 SetActionHint("Nenhum APK foi instalado.", Amber);
                 AppendLog("A consulta USB retornou dados inesperados.");
             }
@@ -828,14 +1178,20 @@ internal static class UsbInstallerLauncher
 
         private void FinishValidation(CommandResult result)
         {
-            if (result.ExitCode == 0)
+            string currentStamp;
+            bool sameFile = TryCompleteApk(out currentStamp) &&
+                String.Equals(currentStamp, validationStamp, StringComparison.Ordinal);
+            if (result.ExitCode == 0 && sameFile)
             {
+                verifiedStamp = validationStamp;
+                failedStamp = null;
+                LoadManifest();
                 completedStages = 1;
                 activeStage = -1;
                 blockedStage = -1;
                 stage.Text = "VERIFICAÇÃO CONCLUÍDA";
                 status.Text = "APK íntegro";
-                statusDetail.Text = "Tamanho e SHA-256 conferidos. Escolha o telefone para instalar.";
+                statusDetail.Text = "Tamanho e SHA-256 conferidos. Confirme que o telefone está livre.";
                 progressCaption.Text = "Arquivo conferido  ·  " + elapsed.Elapsed.ToString(@"mm\:ss");
                 progress.ShowMeasured(100, Green);
                 SetActionHint("Nenhum telefone foi alterado nesta verificação.", Green);
@@ -844,8 +1200,13 @@ internal static class UsbInstallerLauncher
             }
             else
             {
-                ShowBlocked(0, 0, "APK não conferido", "O pacote não passou na validação de integridade.",
-                    "Nenhum APK foi instalado. Consulte os detalhes técnicos.", Red);
+                verifiedStamp = null;
+                failedStamp = sameFile ? validationStamp : null;
+                LoadManifest();
+                ShowBlocked(0, 0, "APK não conferido",
+                    sameFile ? "O SHA-256 não corresponde ao pacote esperado." :
+                        "O arquivo mudou durante a leitura; confira a cópia e repita.",
+                    "Nenhum APK foi instalado. Confira o arquivo esperado acima.", Red);
                 if (!String.IsNullOrWhiteSpace(result.Error)) AppendLog(result.Error.Trim());
             }
         }
@@ -867,20 +1228,48 @@ internal static class UsbInstallerLauncher
             }
         }
 
-        private void ShowInstallFailure(string code, bool attempted)
+        private static InstallResultSignal ReadResultSignal(string output)
         {
-            if (code == "APP_STILL_IN_FOREGROUND")
+            var match = Regex.Match(output ?? "",
+                @"(?m)^TS_RESULT\|([A-Z0-9_]+)\|([01])\|([01])\|([01])\s*$",
+                RegexOptions.CultureInvariant);
+            if (!match.Success) return null;
+            return new InstallResultSignal {
+                Code = match.Groups[1].Value,
+                Installed = match.Groups[2].Value == "1",
+                HashVerified = match.Groups[3].Value == "1",
+                ReceiptSaved = match.Groups[4].Value == "1"
+            };
+        }
+
+        private void ShowInstallFailure(string code, bool attempted, InstallReceipt receipt)
+        {
+            if (code == "ONLINE_SESSION_CHECK_UNAVAILABLE" ||
+                code == "APP_SERVICE_CHECK_UNAVAILABLE" ||
+                code == "APP_ACTIVITY_CHECK_UNAVAILABLE")
+                ShowBlocked(1, 1, "Checagem do telefone indisponível",
+                    "O Android não respondeu à verificação de segurança. Reconecte o USB e tente novamente.",
+                    "NENHUM APK FOI INSTALADO.", Amber);
+            else if (code == "APP_STILL_IN_FOREGROUND")
                 ShowBlocked(1, 1, "TurboStations em outra tela",
                     "Volte à tela inicial do aplicativo ou do Android.",
                     "NENHUM APK FOI INSTALADO. Depois clique em Tentar novamente.", Amber);
             else if (code == "ONLINE_SESSION_NOT_CLOSED" || code == "APP_ACTIVITY_NOT_IDLE")
-                ShowBlocked(1, 1, "Partida ainda ativa",
-                    "Saia da partida pelo próprio jogo e aguarde o encerramento.",
+            {
+                bool unavailable = receipt != null && receipt.appActivityCheck == "APP_ACTIVITY_CHECK_UNAVAILABLE";
+                ShowBlocked(1, 1, unavailable ? "Checagem do telefone indisponível" : "Partida ainda ativa",
+                    unavailable ? "Não foi possível confirmar se o jogo fechou. Reconecte o USB e tente novamente." :
+                        "Saia da partida pelo próprio jogo e aguarde o encerramento.",
                     "NENHUM APK FOI INSTALADO.", Amber);
+            }
             else if (code == "APP_SERVICE_NOT_CLOSED")
-                ShowBlocked(1, 1, "Download ou serviço ativo",
-                    "Conclua o download e volte à tela inicial.",
+            {
+                bool unavailable = receipt != null && receipt.appServiceCheck == "APP_SERVICES_CHECK_UNAVAILABLE";
+                ShowBlocked(1, 1, unavailable ? "Checagem USB indisponível" : "Download ou serviço ativo",
+                    unavailable ? "Não foi possível conferir os serviços. Reconecte o USB e tente novamente." :
+                        "Conclua o download e volte à tela inicial.",
                     "NENHUM APK FOI INSTALADO.", Amber);
+            }
             else if (code == "INSTALL_FAILED_INSUFFICIENT_STORAGE")
                 ShowBlocked(2, 2, "Espaço insuficiente",
                     "Libere espaço no telefone e tente novamente.",
@@ -907,6 +1296,28 @@ internal static class UsbInstallerLauncher
         private void FinishInstall(CommandResult result)
         {
             var receipt = ReadInstallReceipt(result.Output);
+            var signal = ReadResultSignal(result.Output);
+            if (signal != null && signal.Installed && signal.HashVerified &&
+                result.ExitCode != 0)
+            {
+                completedStages = 4;
+                activeStage = -1;
+                blockedStage = -1;
+                stage.Text = "INSTALAÇÃO CONFIRMADA";
+                status.Text = "APK instalado e conferido";
+                statusDetail.Text = signal.ReceiptSaved ?
+                    "O telefone confirmou o SHA-256. Consulte o detalhe da ressalva." :
+                    "O telefone confirmou o SHA-256; o recibo local não foi salvo.";
+                progressCaption.Text = "Verificação concluída · " + elapsed.Elapsed.ToString(@"mm\:ss");
+                progress.ShowMeasured(100, Green);
+                SetActionHint("Não repita a instalação; confira a versão no telefone.", Amber);
+                UpdateStepLabels();
+                retryAvailable = false;
+                idleConfirmed.Checked = false;
+                AppendLog("Instalação e hash confirmados; " +
+                    (signal.ReceiptSaved ? "resultado com ressalva." : "recibo local não foi salvo."));
+                return;
+            }
             if (result.ExitCode == 0)
             {
                 completedStages = 4;
@@ -925,10 +1336,34 @@ internal static class UsbInstallerLauncher
             }
             else
             {
-                string code = receipt == null ? "" : receipt.resultCode ?? "";
+                bool verifiedWithoutReceipt = receipt == null &&
+                    (result.Output ?? "").IndexOf("instalação e SHA256 conferidos.",
+                        StringComparison.OrdinalIgnoreCase) >= 0;
+                if (verifiedWithoutReceipt)
+                {
+                    completedStages = 4;
+                    activeStage = -1;
+                    blockedStage = -1;
+                    stage.Text = "INSTALAÇÃO CONFIRMADA";
+                    status.Text = "APK instalado e conferido";
+                    statusDetail.Text = "O telefone confirmou o SHA-256, mas o recibo local não foi salvo.";
+                    progressCaption.Text = "Verificação concluída · " + elapsed.Elapsed.ToString(@"mm\:ss");
+                    progress.ShowMeasured(100, Green);
+                    SetActionHint("Não repita a instalação; confira a versão no telefone.", Amber);
+                    UpdateStepLabels();
+                    retryAvailable = false;
+                    idleConfirmed.Checked = false;
+                    AppendLog("Instalação e hash confirmados, porém o recibo local não foi salvo.");
+                    return;
+                }
+                string code = signal != null ? signal.Code :
+                    (receipt == null ? "" : receipt.resultCode ?? "");
                 bool uncertain = (receipt == null && completedStages >= 2) ||
                     code == "INSTALL_STATUS_UNKNOWN_TIMEOUT" ||
+                    code == "INSTALL_STATUS_UNKNOWN_LOCAL_ERROR" ||
                     (result.Output ?? "").IndexOf("INSTALL_STATUS_UNKNOWN_TIMEOUT", StringComparison.OrdinalIgnoreCase) >= 0;
+                if (signal != null) uncertain = code == "INSTALL_STATUS_UNKNOWN_TIMEOUT" ||
+                    code == "INSTALL_STATUS_UNKNOWN_LOCAL_ERROR";
                 if (uncertain)
                 {
                     var device = phones.SelectedItem as UsbDevice;
@@ -948,9 +1383,13 @@ internal static class UsbInstallerLauncher
                     idleConfirmed.Checked = false;
                     return;
                 }
-                else ShowInstallFailure(code, receipt == null ? completedStages >= 2 : receipt.installAttempted);
+                else ShowInstallFailure(code, signal != null ? signal.Installed :
+                    (receipt == null ? completedStages >= 2 : receipt.installAttempted),
+                    receipt);
                 if (!String.IsNullOrWhiteSpace(result.Error)) AppendLog(result.Error.Trim());
-                retryAvailable = !uncertain;
+                retryAvailable = !uncertain &&
+                    !(signal != null && signal.Installed) &&
+                    !(receipt != null && receipt.installSuccess);
                 idleConfirmed.Checked = false;
             }
         }
@@ -1056,7 +1495,7 @@ internal static class UsbInstallerLauncher
         string folder = AppDomain.CurrentDomain.BaseDirectory;
         string script = Path.Combine(folder, "Instalar-TurboStations-USB.ps1");
         string manifest = Path.Combine(folder, "turbostations-apk-teste.json");
-        if (!File.Exists(script) || !File.Exists(manifest))
+        if (!File.Exists(script) || (validateOnly && !File.Exists(manifest)))
         {
             const string missing = "Instalador PowerShell ou manifesto ausente ao lado do EXE.";
             if (validateOnly || listOnly) WriteUtf8(true, missing + Environment.NewLine);
