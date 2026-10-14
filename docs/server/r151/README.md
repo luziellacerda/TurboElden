@@ -27,11 +27,12 @@ relatou o mesmo bloqueio para todos os jogos N64 que tentou. A captura privada
 foi conferida; SHA-256 da imagem
 `f05ebab61de3a7f2db6fde60ca4b637b19933b6fc36fc8abe9e3e3575ee469f1`.
 
-O [último cadastro aplicado documentado](../r141/server-return.json) contém
+O [último cadastro aplicado documentado](../r149/server-return.json), R149 às
+13h59 UTC, mantém o servidor ativo com 66 modos N64 em 33 edições. Ele contém
 um modo assinado de corrida para dois para a edição
 `station_c13a5bbc179ccbe871697999c62ba13d`, com motor N64
-`mupen64plus-ae-33bf7021-n64-v3-6638adec6f02` e runtime SHA-256
-`6638adec6f02917243f5a84c0d0a88d966254440fee369c700020fd9a4587b56`.
+`mupen64plus-ae-33bf7021-n64-v3-dcad075758e5` e runtime SHA-256
+`dcad075758e57caea6d94557318d03c7f834801419fa00a576f857ecaaaad5d0`.
 O APK R151 usa motor `mupen64plus-ae-33bf7021-n64-v3-8eda486330ca` e
 runtime SHA-256
 `8eda486330caf7245fb733820c11b94f3ec2c2d216e8ab7ae1dd36afbed02616`.
@@ -39,7 +40,7 @@ O core N64 continua com o mesmo SHA-256
 `fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8`.
 
 O cliente exige correspondência exata de item, motor, core e runtime para
-mostrar escolhas aprovadas. Assim, o cadastro R141 conhecido não autoriza a
+mostrar escolhas aprovadas. Assim, o cadastro R149 conhecido não autoriza a
 identidade R151, embora o serviço esteja online e o jogo tenha modo aprovado
 para o motor antigo. Esta divergência explica o bloqueio observado. O estado
 produtivo vivo precisa ser confirmado pelo handoff do servidor antes de
@@ -52,7 +53,7 @@ afirmarmos que nenhum registro R151 foi aplicado por outro caminho.
 2. Ler baseline protegido **fresco** de catálogo, engines, perfis e modos.
    Preparar e registrar aditivamente as identidades R151 pelo operador vigente
    sob `scan.lock`, preservando os registros e recusas anteriores. Não
-   reaplicar R141 nem ampliar aprovações PS1 HLE.
+   reaplicar R141/R149 nem ampliar aprovações PS1 HLE.
 3. Devolver recibo de aplicação e capacidade `station-multiplayer.v3`
    assinada para a edição exata de 1080 Snowboarding, com engineId e hashes
    R151, perfil aprovado e dois jogadores permitidos. Confirmar também as
