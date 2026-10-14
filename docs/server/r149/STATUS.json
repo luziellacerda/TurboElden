@@ -49,8 +49,8 @@
     "evidence/INSTALACAO-A56-AGUARDOU-DESBLOQUEIO-20261014.json",
     "evidence/INSTALACAO-A56-SUCESSO-20261014.json"
   ],
-  "serverRegistrationConfirmed": false,
-  "serverKitApplied": false,
+  "serverRegistrationConfirmed": true,
+  "serverKitApplied": true,
   "physicalDolphinLaunchObserved": true,
   "priorOnPauseLinkageErrorObservedInR149Attempt": false,
   "physicalOfflineTestResult": "DOLPHIN_OPENED_DISC_READ_ERROR",
@@ -60,5 +60,21 @@
   "physicalExitToGameListEvidence": "evidence/WINDWAKER-A56-MIDIA-20261014.json",
   "physicalOfflineGameplayValidated": false,
   "physicalOnlineGameplayValidated": false,
-  "consumerReady": false
+  "consumerReady": false,
+  "serverConsumerReady": true,
+  "serverRegistrationEvidence": "server-return.json",
+  "serverCatalogRevision": 49,
+  "n64ServerReady": true,
+  "n64ServerOffline": false,
+  "n64ServerMaximumPlayers": 4,
+  "n64ServerReviewedGameEditions": 33,
+  "n64ServerReviewedModes": 66,
+  "n64ServerFourPlayerEditions": 26,
+  "n64ServerReadinessEvidence": "evidence/server-n64-live-ready-20261014.json",
+  "n64ServerReadyScope": "Reviewed modes of the exact R149 native engine, identified by item/content/engine/core/runtime/profile.",
+  "n64PhysicalAndroidGameplayValidated": false,
+  "serverPhysicalAcceptanceSeparate": true,
+  "windWakerServerQuarantineConfirmed": true,
+  "windWakerServerQuarantineEvidence": "evidence/server-wind-waker-applied-20261014.json",
+  "serverStatus": "r149-kit-applied-n64-ready-wind-waker-quarantined"
 }
