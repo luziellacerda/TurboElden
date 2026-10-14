@@ -67,6 +67,9 @@ The Wind Waker foi aberto pela rota de jogar sozinho na R149. O Dolphin chegou
 `EmulationActivity.onPause()` não reapareceu na tentativa capturada. Isso
 confirma que o motor passou pelo ponto que antes impedia sua abertura, mas **não
 confirma jogo funcional**: a partida ficou bloqueada pela leitura da mídia.
+Após o aviso, o usuário saiu do jogo e confirmou que o TurboStations voltou
+normalmente à lista de jogos, sem travar. Esse retorno valida a saída nessa
+tentativa; não valida a execução da partida, que segue bloqueada pela mídia.
 
 O item do catálogo `station_12b835c9539b4800a6bb29ca00a25f94` aponta um
 arquivo `.iso` de 546.776.387 bytes e SHA-256

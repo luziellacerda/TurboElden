@@ -10,6 +10,10 @@
   "gameplayValidated": false,
   "discReadWarningObserved": true,
   "warningText": "The disc could not be read (at 0x55e3c040 - 0x55e3c060).",
+  "exitAfterWarningUserReported": true,
+  "exitDestinationUserReported": "TurboStations game list",
+  "exitWithoutHangUserReported": true,
+  "exitEvidenceSource": "Resposta direta do usuário em 2026-10-14: após sair do Wind Waker, o TurboStations voltou à lista de jogos.",
   "readStartHex": "0x55e3c040",
   "readEndHex": "0x55e3c060",
   "readStartDecimal": 1440989248,
@@ -27,7 +31,7 @@
   "privateLogSha256": "ae1487e0a559c19d98f406129a458354f6f525fa8569b49eb5a343698bc19b67",
   "rawLogPublished": false,
   "screenshotPublished": false,
-  "interpretation": "O reparo de ligação permitiu abrir o Dolphin nesta tentativa. A falha seguinte é de leitura da mídia catalogada; o hash coincidente não valida o conteúdo da imagem. A origem e a edição precisam ser verificadas antes de atribuir a falha a outra lógica do aplicativo.",
+  "interpretation": "O reparo de ligação permitiu abrir o Dolphin nesta tentativa. O usuário confirmou que saiu do jogo e voltou à lista do TurboStations sem travar, validando esse fluxo de saída nesta tentativa. A falha seguinte é de leitura da mídia catalogada; o hash coincidente não valida o conteúdo da imagem. A origem e a edição precisam ser verificadas antes de atribuir a falha a outra lógica do aplicativo.",
   "nextCheck": "Validar a imagem original de GameCube no servidor, conferir edição/tamanho, corrigir artefato e metadados quando necessário, publicar nova revisão/hash, baixar novamente e repetir o teste offline.",
   "consumerReady": false
 }
