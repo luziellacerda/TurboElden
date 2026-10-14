@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": "R145",
-  "apkPath": "TurboStations-Premium-R145-azul-ceu-faixas-20261013.apk",
-  "sha256": "275f31b34145eb77c457b1a9c09bbff4034cc28a990b74121b0b1fd4573c5df0",
+  "revision": "R146",
+  "apkPath": "TurboStations-Premium-R146-relay-direto-online-20261014.apk",
+  "sha256": "04930201ad2f1c016f3385b3f08248ed4fa112d482a98761d00494b7a937468a",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-sky-blue-requested-console-bands",
-  "warning": "R145 teste: azul céu em fundos azuis e faixas solicitadas. Reparos/jogos/rede/downloads preservados. Estável R143 mantida; novos IDs independentes aguardam kit correspondente.",
-  "sourceCommit": "25d10b2322d2e5687c9dfacc71a826c3955fad5d",
-  "bytes": 2715057167,
+  "status": "test-direct-v3-relay-with-r145-visual",
+  "warning": "R146 teste: visual R145 preservado e conexão v3 direta com pin próprio. Motores/controles/reparos anteriores intactos. Cadastro independente e teste físico pendentes; correções Dolphin serão outra revisão. Estável R143 mantida.",
+  "sourceCommit": "bfea454d04ef297e9dfd1b397e0bf25df3937e93",
+  "bytes": 2715073551,
   "serverBindingsRegistered": false
 }
