@@ -1,7 +1,12 @@
 # R150 visual: azul, ondas e capa grande SNES
 
-Status: **fonte e prova apenas**. A R150 ainda não tem APK compilado, assinatura,
-instalação ou kit de servidor.
+Status em 14/10/2026: **APK R150 compilado, assinado e instalado no Galaxy A56**.
+SHA-256 do APK e do pacote instalado:
+`e1f9332b5164138b0782a9147bfd47779044e131c758a5dcc4000ae0f3742245`.
+Kit privado R150 preparado, SHA-256
+`60a73b495a007de144e89ddc21cf8c5d46d011a7c14dba4701d73a8d7628393f`.
+O kit ainda não foi aplicado no servidor. A arte nova de referência não estava
+presente na biblioteca SNES do aparelho durante a conferência visual.
 
 Este conjunto é uma alteração visual isolada sobre a R149 funcional assinada
 (`698e8a7914cc7be2facc00e6701ff1f3533fa13f763358b51578a35d25c2741e`).
@@ -9,8 +14,8 @@ A comparação integral das entradas do APK R148/R149 encontrou somente cinco
 mudanças: `classes10.dex`, o manifesto `engines.json` e três bibliotecas dos
 motores Dolphin/N64/PSX. As partições DEX 28/35/40 e `libmain.so`, usadas por
 estas receitas visuais, são byte a byte iguais. A montagem R150 deve preservar
-as cinco entradas R149 sem modificação. Nada foi compilado ou instalado por
-estas receitas.
+as cinco entradas R149 sem modificação. A montagem R150 foi feita a partir
+da R149 assinada.
 `recipe/verify_r149_rebase.py` reproduz a prova com SHA256 das 13.860 entradas
 dos dois APKs assinados e grava o recibo em local privado.
 
@@ -88,12 +93,16 @@ continua com o mesmo número de amostras por pixel.
 
 ## Verificação e publicação
 
-As três receitas passaram leitura dos SHA de entrada, limites de substituição
-e inversão integral. O comparador de APKs confirmou a base R149 exata. Seus
-recibos públicos estão em `evidence/`, sem arte, APK ou dados de aparelho.
-A decodificação direta dos DEX do APK R149 assinado produziu as mesmas sete
-classes de saída e o mesmo recibo da preparação anterior. Ainda
-falta compilar sobre a R149 final, verificar a
-assinatura, instalar nos telefones de teste após terminar partidas/downloads e
-inspecionar a capa SNES e as ondas na tela real. Não publicar como estável antes
-dessas conferências.
+As receitas passaram leitura dos SHA de entrada, limites de substituição e
+inversão integral. A compilação reproduziu R145 e R149 byte a byte e manteve a
+ABI da biblioteca visual. O APK R150 assinado alterou exatamente oito das
+13.860 entradas da R149: a biblioteca visual, três DEX de cor, três marcadores
+de motor e `engines.json`. As outras 13.852 entradas são idênticas. A
+assinatura original v2/v3 e o alinhamento de 16 KiB foram verificados. A
+instalação USB preservou os dados do app, e o SHA-256 do pacote instalado é
+idêntico ao do APK assinado. A biblioteca de jogos SNES abriu no Galaxy A56;
+as capas antigas visíveis não mostraram animação adicional do perfil novo,
+como previsto pela detecção da nova arte. A arte Chrono Trigger usada como
+referência de emissão não apareceu no catálogo do aparelho; portanto, o efeito
+aceso na arte nova e a jogabilidade física ainda exigem conferência antes de
+promover esta revisão como estável.

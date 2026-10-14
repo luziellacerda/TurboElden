@@ -1,9 +1,10 @@
 # Portões de montagem R150 sobre a R149 assinada
 
-Este é o plano de produção; a inspeção atual não compilou nem instalou a R150.
-Iniciar a montagem apenas depois da instalação e do teste funcional da R149 e
-da verificação de espaço no aparelho de teste. Congelar as receitas R150 em um
-novo commit antes de gerar artefatos finais.
+Execução em 14/10/2026: montagem, assinatura, instalação USB e kit privado
+concluídos. Os comprovantes completos ficam fora do Git junto aos artefatos
+privados. A arte nova de referência ainda não apareceu na biblioteca SNES do
+Galaxy A56; sua animação não foi validada fisicamente. O kit não foi aplicado
+no servidor e a revisão não foi promovida como estável.
 
 ## 1. Doadores e sobreposições
 
