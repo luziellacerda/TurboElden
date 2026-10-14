@@ -1,3 +1,18 @@
+# R157 designada estável pelo proprietário — 14/10/2026
+
+Ler `docs/server/r157/STABLE-CHECKPOINT.md` e `docs/server/r157/README.md` antes
+de instalar, recadastrar motores ou restaurar. APK assinado/instalado A56
+SHA-256 `563625c40bfce77def6770a67448f83e2206e67a07023c58359ad2a0de4eee34`;
+fonte executável `c9906512faf4d80ca5fd6d66880772f02b29a359`. Backup
+conferido em `F:\TurboStations-Estavel-R157-20261014`. Kit R157 preparado
+SHA-256 `240ecba97b9b6773f3177eb127f8a065bfc8f6993f6f4918869e1ffb4b5acbd3`,
+**não aplicado**; última aplicação confirmada R152. A sala online R157 e
+partidas físicas ainda não foram verificadas no aparelho. Não inventar esse
+aceite. O servidor precisa registrar os 78 modos base e depois, sob nova
+baseline efetiva, vincular 321 decisões N64 ao motor R157, com dois recibos.
+Preservar o tag R143 como retorno anterior. Nenhuma lógica de jogo/rede foi
+alterada nesta promoção.
+
 # Manutenção 18h UTC — R157 instalada por recibo; capas preparadas — 14/10/2026
 
 Retornos08ac3f9d/bd0c51d2 recebidos: R157 assinada/instaladaA56 conforme produtora, aceitevisual/kit/USB/cadastro pendentes. R153–R156 retidas; NÃOAPLICAR. R152/R151 e157N64 já aplicadas/provadas, não repetir. CapasGit iguais;48locais novas,36revistas/36vínculos/34artes compiladas,14sem edição correspondente. Primeira authLinux concluiu mas faltouwebsockets antes de baseline/publicação; dependência agora usa venv existente. Tentativa2canceladasemroot após148s por erro do monitor corrigido; tentativa3expirou118s. NENHUMA capa/seed/fingerprint/catálogo publicada nem provaHTTP executada; API3297582/scannera10c78f53797/timers preservados. Ler MESMO handoff/maintenance/20261014-18z e /mnt/DADOS/station-maintenance-20261014-18z. Próximo ciclo conciliar published/applied antes de executar publicador novo com authnativa<=120s/baseline fresca/scan.lock. R157kit exige78modos/nova baseline/321decisõesN64 próprias; não relaxar replay por relato409. R143/CRLF/ROMs/capas/licenças/outros produtos/banda100/800/globalpartial preservados.
