@@ -1,0 +1,19 @@
+{
+  "schema": "station.r147.native.source-draft-qualification.v1",
+  "passed": true,
+  "sourceSha256": {
+    "native/Source/Android/jni/MainAndroid.cpp": "dba43bc602cbf2d0045cc138a23c769db287ff2654f01824351143909e41e07f",
+    "recipe/build_native.py": "3d0ca6c157fd6716e6abe4a4854d0d21bfd9cfea854037e961416d7c7d32379d",
+    "recipe/StationDolphinMainAndroidOverride.cmake": "a6731de5fe54e16510472472d73b2c588e7dbb11ee555d2b5247df0ca1e6e1c9",
+    "evidence/native-scope.json": "d17410711e791289d6bf3c40304fc62df100982995da8b69d0cbacf98a993448"
+  },
+  "wholeMainInversePassed": true,
+  "ninjaObjectRuleParsedOriginalExactly": true,
+  "cmakeSafetyFixtureSha256": "1c7bf544d62318da30cf1c1aaf33ffe4785121b0d25471c5db93c3cf32d7cf48",
+  "cmakeWriteAuditSha256": "a943f74913ea358267629ad3463881ec615c5b3300b1631f6fa0256181f4f54b",
+  "baselineGeneratedInputs": 94,
+  "productiveUnchangedGeneratedInputs": 93,
+  "sourceFilesFrozen": false,
+  "nativeCompiled": false,
+  "gitOrPhoneOrServerChanged": false
+}

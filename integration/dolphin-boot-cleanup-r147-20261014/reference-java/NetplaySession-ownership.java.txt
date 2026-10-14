@@ -1,0 +1,45 @@
+// Readable member excerpts only. Do not compile/replace the Kotlin class with
+// this file. Production draft uses the complete actual donor smali and changes
+// only the four methods in evidence/ownership-scope.json.
+
+public final long consumeBootSessionData() {
+    synchronized (NetplaySession.class) {
+        long pointer = bootSessionDataPointer;
+        bootSessionDataPointer = 0;
+        return pointer;
+    }
+}
+
+public final boolean isLaunching() {
+    synchronized (NetplaySession.class) {
+        return bootSessionDataPointer != 0;
+    }
+}
+
+public final void releaseNativeResources() {
+    if (!StationDolphinSession.allowClose(this)) return; // Existing exact hook.
+    long pointer = consumeBootSessionData();
+    if (pointer != 0) nativeReleaseBootSessionData(pointer); // Outside lock.
+    // Existing client/server/UI callbacks pointer release instructions follow
+    // byte-for-byte. Existing closeBlocking/finalize methods are unchanged.
+}
+
+public final void onBootGame(String path, long incoming) {
+    path.getClass(); // Existing null validation.
+    long retired = 0;
+    boolean accepted = false;
+    synchronized (NetplaySession.class) {
+        long pending = bootSessionDataPointer;
+        if (!isClosed) { // Existing volatile field; same close writer retained.
+            if (pending != incoming) retired = pending;
+            bootSessionDataPointer = incoming;
+            accepted = true;
+        } else if (pending != incoming) {
+            retired = incoming;
+        }
+    }
+    if (retired != 0) nativeReleaseBootSessionData(retired); // Outside lock.
+    if (!accepted) return;
+    // Existing StationDolphinSession.onBootGame(this,path) hook and fallback
+    // channel flush/trySend suffix follow byte-for-byte. No callback under lock.
+}
