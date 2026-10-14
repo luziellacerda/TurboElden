@@ -101,8 +101,8 @@ de motor e `engines.json`. As outras 13.852 entradas são idênticas. A
 assinatura original v2/v3 e o alinhamento de 16 KiB foram verificados. A
 instalação USB preservou os dados do app, e o SHA-256 do pacote instalado é
 idêntico ao do APK assinado. A biblioteca de jogos SNES abriu no Galaxy A56;
-as capas antigas visíveis não mostraram animação adicional do perfil novo,
-como previsto pela detecção da nova arte. A arte Chrono Trigger usada como
+as capas antigas visíveis não exibiram o contorno da arte nova,
+como previsto pela detecção dessa arte. A capa Chrono Trigger usada como
 referência de emissão não apareceu no catálogo do aparelho; portanto, o efeito
 aceso na arte nova e a jogabilidade física ainda exigem conferência antes de
 promover esta revisão como estável.
