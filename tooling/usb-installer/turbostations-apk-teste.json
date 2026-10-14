@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": "R146",
-  "apkPath": "TurboStations-Premium-R146-relay-direto-online-20261014.apk",
-  "sha256": "04930201ad2f1c016f3385b3f08248ed4fa112d482a98761d00494b7a937468a",
+  "revision": "R147",
+  "apkPath": "TurboStations-Premium-R147-dolphin-online-20261014.apk",
+  "sha256": "c038a0d75113359187d8eb9d2762e8d7e4ceee1f3538d1982313fc1e3a781ad6",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-direct-v3-relay-with-r145-visual",
-  "warning": "R146 teste: visual R145 preservado e conexão v3 direta com pin próprio. Motores/controles/reparos anteriores intactos. Cadastro independente e teste físico pendentes; correções Dolphin serão outra revisão. Estável R143 mantida.",
-  "sourceCommit": "bfea454d04ef297e9dfd1b397e0bf25df3937e93",
-  "bytes": 2715073551,
+  "status": "test-dolphin-boot-ownership-cleanup",
+  "warning": "R147 teste: limpeza de falha Dolphin e propriedade de inicialização. R145 visual/R146 rota/reparos preservados. Kit correspondente e testes físicos pendentes; estável R143 intacta.",
+  "sourceCommit": "64a6da91aee9c61d26a3a85172af6521fcc82a36",
+  "bytes": 2715089935,
   "serverBindingsRegistered": false
 }
