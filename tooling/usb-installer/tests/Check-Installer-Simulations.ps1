@@ -52,7 +52,11 @@ synthetic-unknown device model:Unknown
     if ($Arguments -contains 'services') {
         if ($script:AppServiceState -eq 'unavailable') { return [pscustomobject]@{ExitCode=1; Output='error'} }
         if ($script:AppServiceState -eq 'active') { return [pscustomobject]@{ExitCode=0; Output='ServiceRecord{example org.turboramastation.frontend/.DownloadService}'} }
-        return [pscustomobject]@{ExitCode=0; Output='ACTIVITY MANAGER SERVICES (dumpsys activity services)`n  (nothing)'}
+        if ($script:AppServiceState -eq 'n64-core') { return [pscustomobject]@{ExitCode=0; Output='  * ServiceRecord{current u0 org.turboramastation.frontend/paulscode.android.mupen64plusae.jni.CoreService c:org.turboramastation.frontend}'} }
+        if ($script:AppServiceState -eq 'other-service') { return [pscustomobject]@{ExitCode=0; Output='ServiceRecord{current org.turboramastation.frontend/.OtherService}'} }
+        if ($script:AppServiceState -eq 'old-anr') { return [pscustomobject]@{ExitCode=0; Output="ACTIVITY MANAGER SERVICES (dumpsys activity services)`n  Last ANR service:`nServiceRecord{old org.turboramastation.frontend/.CoreService}`n  (nothing)"} }
+        if ($script:AppServiceState -eq 'active-and-old-anr') { return [pscustomobject]@{ExitCode=0; Output="ACTIVITY MANAGER SERVICES (dumpsys activity services)`nServiceRecord{current org.turboramastation.frontend/.DownloadService}`n  Last ANR service:`nServiceRecord{old org.turboramastation.frontend/.CoreService}`n  (nothing)"} }
+        return [pscustomobject]@{ExitCode=0; Output="ACTIVITY MANAGER SERVICES (dumpsys activity services)`n  (nothing)"}
     }
     if ($Arguments -contains 'activities' -and $script:AppHistoryState -ne 'normal') {
         $idle = '    * Hist  #0: ActivityRecord{one u0 org.turboramastation.frontend/org.emulationstation.frontend.ESActivity t1}'
@@ -65,6 +69,7 @@ synthetic-unknown device model:Unknown
         elseif ($script:AppHistoryState -eq 'online-game') { $rows = @($prefix, $idle, $game, $launcher) }
         elseif ($script:AppHistoryState -eq 'two-resumed') { $rows = @($prefix, 'mResumedActivity: ActivityRecord{three u0 org.turboramastation.frontend/paulscode.android.mupen64plusae.GalleryActivity t1}', $idle, $gallery) }
         elseif ($script:AppHistoryState -eq 'other-app') { $rows = @($launcher) }
+        elseif ($script:AppHistoryState -eq 'motorola-launcher') { $rows = @('ResumedActivity: ActivityRecord{one u0 com.motorola.launcher3/com.android.launcher3.CustomizationPanelLauncher t31}', $launcher) }
         else { $rows = @('unrecognized activity output') }
         return [pscustomobject]@{ExitCode=0; Output=($rows -join "`n")}
     }
@@ -121,6 +126,8 @@ $script:AppHistoryState = 'two-resumed'
 if ((Get-ForegroundComponent 'synthetic-two') -ne ($TargetPackage + '/paulscode.android.mupen64plusae.GalleryActivity')) { throw 'Game on second display lost priority.' }
 $script:AppHistoryState = 'other-app'
 if ((Get-IdleAppActivityState 'synthetic-two') -ne 'NO_APP_ACTIVITY_DETECTED') { throw 'Other app history classification failed.' }
+$script:AppHistoryState = 'motorola-launcher'
+if ((Get-ForegroundComponent 'synthetic-two') -ne 'com.motorola.launcher3/com.android.launcher3.CustomizationPanelLauncher') { throw 'Motorola ResumedActivity format not recognized.' }
 $script:AppHistoryState = 'unknown'
 if ((Get-IdleAppActivityState 'synthetic-two') -ne 'APP_ACTIVITY_CHECK_UNAVAILABLE') { throw 'Unknown activity layout did not block.' }
 $script:AppHistoryState = 'normal'
@@ -137,7 +144,15 @@ $script:NativeState = 'unsupported'
 if ((Get-OnlineSessionState 'synthetic-two') -ne 'NATIVE_PROCESS_CHECK_UNAVAILABLE') { throw 'Conservative unknown process gate failed.' }
 if ((Get-AppServiceState 'synthetic-two') -ne 'NO_APP_SERVICE_DETECTED') { throw 'Idle service detection failed.' }
 $script:AppServiceState = 'active'
-if ((Get-AppServiceState 'synthetic-two') -ne 'APP_SERVICE_ACTIVE') { throw 'Background download service detection failed.' }
+if ((Get-AppServiceState 'synthetic-two') -ne 'APP_DOWNLOAD_SERVICE_ACTIVE') { throw 'Background download service detection failed.' }
+$script:AppServiceState = 'n64-core'
+if ((Get-AppServiceState 'synthetic-two') -ne 'N64_CORE_SERVICE_ACTIVE') { throw 'N64 core misclassified as download.' }
+$script:AppServiceState = 'other-service'
+if ((Get-AppServiceState 'synthetic-two') -ne 'APP_SERVICE_ACTIVE') { throw 'Unknown live service was missed.' }
+$script:AppServiceState = 'old-anr'
+if ((Get-AppServiceState 'synthetic-two') -ne 'NO_APP_SERVICE_DETECTED') { throw 'Historical ANR incorrectly blocked idle phone.' }
+$script:AppServiceState = 'active-and-old-anr'
+if ((Get-AppServiceState 'synthetic-two') -ne 'APP_DOWNLOAD_SERVICE_ACTIVE') { throw 'Live service with historical ANR was missed.' }
 $script:AppServiceState = 'unavailable'
 if ((Get-AppServiceState 'synthetic-two') -ne 'APP_SERVICES_CHECK_UNAVAILABLE') { throw 'Unknown service state gate failed.' }
 $script:AppServiceState = 'none'

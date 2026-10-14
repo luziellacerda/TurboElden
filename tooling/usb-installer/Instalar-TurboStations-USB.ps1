@@ -221,7 +221,8 @@ function Get-ForegroundComponent {
     $foregroundComponents = New-Object 'System.Collections.Generic.List[string]'
     if ($activities.ExitCode -eq 0) {
         foreach ($line in ($activities.Output -split '\r?\n')) {
-            if ($line -match '(mResumedActivity|topResumedActivity)' -and $line -match '\s(?<component>[A-Za-z][A-Za-z0-9_.]*/[A-Za-z0-9_.]+)') {
+            if ($line -match '^\s*(?:mResumedActivity|topResumedActivity|ResumedActivity|Resumed):\s*ActivityRecord\{' -and
+                $line -match '\s(?<component>[A-Za-z][A-Za-z0-9_.]*/[A-Za-z0-9_.]+)') {
                 $foregroundComponents.Add($Matches['component'])
             }
         }
@@ -295,8 +296,24 @@ function Get-AppServiceState {
     # Um download pode seguir em um Service mesmo com a tela inicial do Android aberta.
     $services = Invoke-Adb @('-s', $DeviceSerial, 'shell', 'dumpsys', 'activity', 'services', $TargetPackage)
     if ($services.ExitCode -ne 0) { return 'APP_SERVICES_CHECK_UNAVAILABLE' }
-    if ($services.Output -match 'ServiceRecord\{') { return 'APP_SERVICE_ACTIVE' }
-    return 'NO_APP_SERVICE_DETECTED'
+    # O Android inclui um "Last ANR service" histórico mesmo sem serviço vivo.
+    # Somente o trecho anterior a esse relatório descreve serviços atuais.
+    $hasHistoricalAnr = $services.Output -match '(?m)^\s*Last ANR service:\s*$'
+    $liveServices = ($services.Output -split '(?m)^\s*Last ANR service:\s*$', 2)[0]
+    $records = [regex]::Matches($liveServices,
+        ('ServiceRecord\{[^\r\n]*' + [regex]::Escape($TargetPackage) + '/(?<service>[A-Za-z0-9_.$]+)'))
+    if ($records.Count -gt 0) {
+        $serviceNames = @($records | ForEach-Object { $_.Groups['service'].Value })
+        if (@($serviceNames | Where-Object { $_ -match '(^|\.)DownloadService$' }).Count -gt 0) {
+            return 'APP_DOWNLOAD_SERVICE_ACTIVE'
+        }
+        if (@($serviceNames | Where-Object { $_ -ne 'paulscode.android.mupen64plusae.jni.CoreService' }).Count -eq 0) {
+            return 'N64_CORE_SERVICE_ACTIVE'
+        }
+        return 'APP_SERVICE_ACTIVE'
+    }
+    if ($hasHistoricalAnr -or $liveServices -match '(?m)^\s*\(nothing\)\s*$') { return 'NO_APP_SERVICE_DETECTED' }
+    return 'APP_SERVICES_CHECK_UNAVAILABLE'
 }
 
 function Get-IdleAppActivityState {
@@ -416,6 +433,37 @@ try {
     if ([string]::IsNullOrWhiteSpace($ManifestPath)) {
         $ManifestPath = Join-Path $PSScriptRoot 'turbostations-apk-teste.json'
     }
+    if ($ListUsbDevices) {
+        # Descoberta USB não depende da integridade do pacote de instalação.
+        # O manifesto só fornece identificação opcional e caminho alternativo do ADB.
+        $listRevision = ''
+        $listWarning = ''
+        $listAdbPath = ''
+        $listManifestDirectory = $PSScriptRoot
+        $listManifestPath = if ([System.IO.Path]::IsPathRooted($ManifestPath)) { $ManifestPath } else { Join-Path $PSScriptRoot $ManifestPath }
+        if (Test-Path -LiteralPath $listManifestPath -PathType Leaf) {
+            try {
+                $listManifest = Get-Content -LiteralPath $listManifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+                $listRevision = [string](Get-ManifestValue $listManifest 'revision')
+                $listWarning = [string](Get-ManifestValue $listManifest 'warning')
+                $listAdbPath = [string](Get-ManifestValue $listManifest 'adbPath')
+                $listManifestDirectory = Split-Path -Parent (Get-Item -LiteralPath $listManifestPath).FullName
+            } catch {
+                # Um manifesto ausente ou inválido não esconde telefones conectados.
+            }
+        }
+        $script:AdbExecutable = Find-Adb $AdbPath $listAdbPath $listManifestDirectory
+        $usbDiscovery = Get-UsbDevices
+        [pscustomobject]@{
+            revision = $listRevision
+            warning = $listWarning
+            Authorized = @($usbDiscovery.Authorized)
+            UnauthorizedCount = $usbDiscovery.UnauthorizedCount
+            OfflineCount = $usbDiscovery.OfflineCount
+            ExcludedCount = $usbDiscovery.ExcludedCount
+        } | ConvertTo-Json -Depth 6 -Compress
+        exit 0
+    }
     $resolvedManifest = Resolve-ExistingFile $ManifestPath $PSScriptRoot 'Manifesto'
     $manifestDirectory = Split-Path -Parent $resolvedManifest
     $manifest = Get-Content -LiteralPath $resolvedManifest -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -425,19 +473,6 @@ try {
     if ($expectedHash -notmatch '^[a-fA-F0-9]{64}$') { throw 'O manifesto precisa conter um SHA256 completo válido.' }
     $revision = [string](Get-ManifestValue $manifest 'revision')
     if ($revision -notmatch '^R[0-9]+(?:[A-Za-z0-9._-]*)$') { throw 'Revisão inválida no manifesto.' }
-    if ($ListUsbDevices) {
-        $script:AdbExecutable = Find-Adb $AdbPath ([string](Get-ManifestValue $manifest 'adbPath')) $manifestDirectory
-        $usbDiscovery = Get-UsbDevices
-        [pscustomobject]@{
-            revision = $revision
-            warning = [string](Get-ManifestValue $manifest 'warning')
-            Authorized = @($usbDiscovery.Authorized)
-            UnauthorizedCount = $usbDiscovery.UnauthorizedCount
-            OfflineCount = $usbDiscovery.OfflineCount
-            ExcludedCount = $usbDiscovery.ExcludedCount
-        } | ConvertTo-Json -Depth 6 -Compress
-        exit 0
-    }
     if ([string]::IsNullOrWhiteSpace($ApkPath)) {
         $ApkPath = [string](Get-ManifestValue $manifest 'apkPath')
         $resolvedApk = Resolve-ExistingFile $ApkPath $manifestDirectory 'APK'
@@ -585,21 +620,14 @@ try {
             $onlineSession = Get-OnlineSessionState $device.Serial
             $receipt.nativeSessionCheck = $onlineSession
             if ($onlineSession -ne 'NO_ONLINE_SESSION_DETECTED') {
-                $receipt.resultCode = 'ONLINE_SESSION_NOT_CLOSED'
                 if ($onlineSession -eq 'ACTIVE_NATIVE_PROCESS' -or $onlineSession -eq 'ACTIVE_ONLINE_ACTIVITY') {
+                    $receipt.resultCode = 'ONLINE_SESSION_NOT_CLOSED'
                     Write-Host 'A partida ainda está aberta, mesmo que você tenha tocado em Home. Volte ao jogo e use Sair da partida.' -ForegroundColor Yellow
                     Write-Host 'Se já saiu, aguarde alguns segundos e tente novamente; o jogo pode estar concluindo o encerramento.'
                 } else {
-                    Write-Host 'Não foi possível conferir se a partida terminou. Confira a conexão e tente novamente após sair do jogo.' -ForegroundColor Yellow
+                    $receipt.resultCode = 'ONLINE_SESSION_CHECK_UNAVAILABLE'
+                    Write-Host 'A checagem da partida está indisponível. Não é possível confirmar se ela terminou; confira a conexão USB e tente verificar novamente.' -ForegroundColor Yellow
                 }
-                $failedCount++
-                continue
-            }
-            $appService = Get-AppServiceState $device.Serial
-            $receipt.appServiceCheck = $appService
-            if ($appService -ne 'NO_APP_SERVICE_DETECTED') {
-                $receipt.resultCode = 'APP_SERVICE_NOT_CLOSED'
-                Write-Host 'Um serviço do TurboStations ainda está ativo ou não pôde ser conferido. Termine downloads e tente novamente.' -ForegroundColor Yellow
                 $failedCount++
                 continue
             }
@@ -607,9 +635,56 @@ try {
             $receipt.appActivityCheck = $appActivity
             if ($appActivity -ne 'IDLE_APP_ACTIVITIES_ONLY' -and
                 -not ($appActivity -eq 'NO_APP_ACTIVITY_DETECTED' -and -not $foreground.StartsWith($TargetPackage + '/', [System.StringComparison]::Ordinal))) {
-                $receipt.resultCode = 'APP_ACTIVITY_NOT_IDLE'
-                Write-Host 'Um jogo ou tela desconhecida ainda aparece nos tasks do Android, ou a checagem ficou indisponível. Saia dela e tente novamente.' -ForegroundColor Yellow
+                if ($appActivity -eq 'APP_ACTIVITY_CHECK_UNAVAILABLE' -or $appActivity -eq 'APP_ACTIVITY_PARSE_UNAVAILABLE') {
+                    $receipt.resultCode = 'APP_ACTIVITY_CHECK_UNAVAILABLE'
+                    Write-Host 'A checagem das telas do Android está indisponível. Não é possível confirmar se há jogo aberto; confira a conexão USB e tente verificar novamente.' -ForegroundColor Yellow
+                } else {
+                    $receipt.resultCode = 'APP_ACTIVITY_NOT_IDLE'
+                    Write-Host 'Um jogo ou tela do TurboStations ainda aparece nos tasks do Android. Saia dela e tente novamente.' -ForegroundColor Yellow
+                }
                 $failedCount++
+                continue
+            }
+            $appService = Get-AppServiceState $device.Serial
+            $receipt.appServiceCheck = $appService
+            if ($appService -eq 'N64_CORE_SERVICE_ACTIVE') {
+                # Só encerra um motor N64 isolado depois de confirmar que não há
+                # partida, Activity de jogo ou download. Não limpa dados.
+                Write-Host 'Motor N64 permaneceu ativo após sair do jogo. Encerrando o aplicativo ocioso antes da atualização.'
+                $stop = Invoke-Adb @('-s', $device.Serial, 'shell', 'am', 'force-stop', $TargetPackage)
+                if ($stop.ExitCode -eq 0) {
+                    $receipt.forceStopped = $true
+                    $appService = Get-AppServiceState $device.Serial
+                    $receipt.appServiceCheck = $appService
+                }
+            }
+            if ($appService -ne 'NO_APP_SERVICE_DETECTED') {
+                if ($appService -eq 'APP_DOWNLOAD_SERVICE_ACTIVE') {
+                    $receipt.resultCode = 'APP_DOWNLOAD_NOT_CLOSED'
+                    Write-Host 'O serviço de download ainda está ativo. Conclua ou cancele o download antes de atualizar.' -ForegroundColor Yellow
+                } elseif ($appService -eq 'N64_CORE_SERVICE_ACTIVE') {
+                    $receipt.resultCode = 'N64_CORE_NOT_CLOSED'
+                    Write-Host 'O motor N64 continua ativo mesmo após o encerramento; a instalação foi interrompida para preservar a partida.' -ForegroundColor Yellow
+                } elseif ($appService -eq 'APP_SERVICE_ACTIVE') {
+                    $receipt.resultCode = 'APP_SERVICE_NOT_CLOSED'
+                    Write-Host 'Outro serviço do TurboStations ainda está ativo. Encerre a atividade antes de atualizar.' -ForegroundColor Yellow
+                } else {
+                    $receipt.resultCode = 'APP_SERVICE_CHECK_UNAVAILABLE'
+                    Write-Host 'Não foi possível confirmar o estado dos serviços. Confira a conexão USB e tente novamente.' -ForegroundColor Yellow
+                }
+                $failedCount++
+                continue
+            }
+            # Evita transferir 2,7 GB e solicitar espaço quando o APK assinado
+            # já está exatamente no aparelho. Não altera nem reinicia o app.
+            if ($GuiProgress) { Write-Host 'TS_STAGE|VERIFYING_PHONE' }
+            $existingVerification = Get-InstalledApkVerification $device.Serial $actualHash
+            if ($existingVerification.State -eq 'matched') {
+                $receipt.installedApkSha256 = $existingVerification.Hash
+                $receipt.installedHashVerificationCode = $existingVerification.Code
+                $receipt.installedHashVerified = $true
+                $receipt.resultCode = 'ALREADY_INSTALLED'
+                Write-Host ('{0}: {1} já está instalada; SHA256 idêntico. Nenhuma transferência necessária.' -f $device.Alias, $revision) -ForegroundColor Green
                 continue
             }
             Write-Host ('Instalando {0} em {1}. Mantenha o cabo conectado; pode levar vários minutos.' -f $revision, $device.Alias)
@@ -652,17 +727,36 @@ try {
                 }
             }
         } catch {
-            $receipt.resultCode = 'LOCAL_OPERATION_FAILED'
+            if ($receipt.installSuccess) {
+                $receipt.resultCode = 'SUCCESS_HASH_UNVERIFIED'
+                Write-Host ('{0}: o Android confirmou a instalação, mas a conferência final falhou. Verifique o APK instalado antes de repetir.' -f $device.Alias) -ForegroundColor Yellow
+            } elseif ($receipt.installAttempted) {
+                $receipt.resultCode = 'INSTALL_STATUS_UNKNOWN_LOCAL_ERROR'
+                Write-Host ('{0}: a instalação foi iniciada, mas não há confirmação do resultado. Verifique a versão no telefone antes de repetir.' -f $device.Alias) -ForegroundColor Yellow
+            } else {
+                $receipt.resultCode = 'LOCAL_OPERATION_FAILED'
+                Write-Host ('{0}: não foi possível concluir a preparação. Confira cabo, autorização e arquivos.' -f $device.Alias) -ForegroundColor Yellow
+            }
             $failedCount++
-            Write-Host ('{0}: não foi possível concluir a operação. Confira cabo, autorização e arquivos.' -f $device.Alias) -ForegroundColor Yellow
         } finally {
             $receipt.completedUtc = [DateTime]::UtcNow.ToString('o')
+            $receiptSaved = $false
             try {
                 Write-Receipt $receipt
+                $receiptSaved = $true
             } catch {
                 $failedCount++
-                Write-Host ('{0}: operação encerrada, mas não foi possível salvar o recibo. Confira o espaço e a permissão da pasta do instalador.' -f $device.Alias) -ForegroundColor Yellow
+                if ($receipt.installSuccess -and $receipt.installedHashVerified) {
+                    Write-Host ('{0}: INSTALADO E SHA256 CONFERIDO. Somente o recibo não pôde ser salvo; não repita a instalação. Confira o espaço e a permissão da pasta do instalador.' -f $device.Alias) -ForegroundColor Yellow
+                } elseif ($receipt.installSuccess) {
+                    Write-Host ('{0}: o Android confirmou a instalação, mas a conferência do APK e o recibo não foram concluídos. Verifique o telefone antes de repetir.' -f $device.Alias) -ForegroundColor Yellow
+                } elseif ($receipt.installAttempted) {
+                    Write-Host ('{0}: o resultado da tentativa de instalação precisa ser verificado no telefone, e o recibo não pôde ser salvo. Não repita sem conferir.' -f $device.Alias) -ForegroundColor Yellow
+                } else {
+                    Write-Host ('{0}: nenhum APK foi instalado; não foi possível salvar o recibo. Confira o espaço e a permissão da pasta do instalador.' -f $device.Alias) -ForegroundColor Yellow
+                }
             }
+            Write-Host ('TS_RESULT|{0}|{1}|{2}|{3}' -f $receipt.resultCode, [int][bool]$receipt.installSuccess, [int][bool]$receipt.installedHashVerified, [int][bool]$receiptSaved)
         }
     }
     if ($failedCount -gt 0) { exit 1 }
