@@ -44,11 +44,22 @@ esses IDs, hashes e estados exatos.
 
 O backup do APK, kit e provas foi concluído, conforme
 `outputs/recibo-backup-r149-dolphin-onpause.json` no workspace. A primeira
-tentativa de atualização por USB no A56 em 14/10 falhou por espaço insuficiente.
-A R148 continua instalada, com dados e UID intactos. O recibo sem número de
-série está em `evidence/INSTALACAO-A56-20261014.json`. O usuário está liberando
-espaço para repetir a instalação. Até existir instalação e teste reais, a
-correção é verificada estaticamente, não confirmada no telefone.
+tentativa de atualização por USB no A56 em 14/10 falhou por espaço insuficiente;
+o recibo está em `evidence/INSTALACAO-A56-20261014.json`. Na segunda passagem,
+o instalador aguardou o desbloqueio do aparelho e não iniciou a instalação;
+veja `evidence/INSTALACAO-A56-AGUARDOU-DESBLOQUEIO-20261014.json`.
+
+Após o desbloqueio, a terceira passagem instalou a R149 no A56 com resultado
+`SUCCESS` e conferiu no aparelho o SHA-256 do APK instalado, igual ao pacote
+assinado acima. A atualização solicitou preservação de dados, sem desinstalação,
+limpeza ou downgrade; o recibo sanitizado está em
+`evidence/INSTALACAO-A56-SUCESSO-20261014.json`. O campo `appLaunched=false`
+desse recibo se refere ao instante de conclusão do instalador. Depois disso,
+o aplicativo foi aberto: `ESActivity` permaneceu em primeiro plano e os
+registros mostraram carregamento de capas, sem `FATAL EXCEPTION` ou
+`LinkageError` no trecho conferido. Ainda falta testar The Wind Waker offline
+no aparelho para confirmar o reparo em jogo real. A instalação, sozinha, não
+promove a candidata a estável.
 
 O teste GameCube **offline** não depende de registrar o kit. Para partidas
 online, o servidor precisa cadastrar o kit R149 correspondente com baseline
