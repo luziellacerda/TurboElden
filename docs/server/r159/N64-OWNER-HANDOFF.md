@@ -2,6 +2,8 @@
 
 Estado em 14/10/2026. Este documento registra o defeito observado no Android e o contrato de recebimento para o servidor. **O APK R159 está assinado, o kit privado correspondente está conferido e o moto g52 recebeu o APK com hash idêntico. A aplicação no servidor e a partida física ainda precisam de recibos.** A R157 estável e os cadastros anteriores permanecem como pontos de recuperação.
 
+O [retorno mais recente do servidor](https://github.com/luziellacerda/Servidor-pix/commit/6ccf0f6d003d57269d0a198f69bee2d11c1862a6) confirma o cadastro do APK **anterior** (SHA-256 iniciado por `fc1d2d98`) e a falha `N64_OWNER_MISSING` no anfitrião, antes de estabelecer WSS. A API voltou após o reinício, mas esse retorno não registra recebimento nem cadastro do kit R159 (APK iniciado por `4837be70`, motor N64 terminado em `7d50f27b4702`). Aplicar as quatro identidades R159 descritas abaixo sobre o estado atual do servidor e abrir uma sala nova para a prova física.
+
 ## Identidades finais e entrega
 
 | Artefato | Identidade conferida |
