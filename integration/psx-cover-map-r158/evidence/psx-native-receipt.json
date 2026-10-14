@@ -1,0 +1,23 @@
+{
+  "schema": "station.r158.psx-cover.native.v1",
+  "passed": true,
+  "r157Reproduced": true,
+  "baseSha256": "52aa5e3e32e0664c829a68ffed41e883aacb9992481b96becebb8a3b26867309",
+  "outputSha256": "b11aa69c95f0593980cc06311568a6ef7c82e0aad78ece442ae83b906dd78561",
+  "shaderSha256": "f19d0660b66b12ee76fb5b0aa379ee4d0919a4c5f07d2be7ba5ddfe27788f3d1",
+  "sourceArtDimensions": [
+    1024,
+    1536
+  ],
+  "changedHeaders": [
+    "magazine_shader.h",
+    "native_magazine_field.h"
+  ],
+  "otherNativeHeadersChanged": false,
+  "psxUsesSnesInstantFieldBake": true,
+  "extraPerFrameDrawCalls": 0,
+  "newTimersThreadsHeapAllocations": 0,
+  "legacyPsxOverlayRemoved": true,
+  "sharedPsxFrameMap": true,
+  "snesProfilePreserved": true
+}

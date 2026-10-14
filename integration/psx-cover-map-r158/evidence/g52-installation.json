@@ -1,0 +1,15 @@
+{
+  "schema": "station.r158.psx-mega-cover.device-test.v1",
+  "revision": "R158",
+  "device": "Motorola moto g52",
+  "package": "org.turboramastation.frontend",
+  "installationCommand": "adb install -r",
+  "installationResult": "Performing Streamed Install; Success",
+  "appFirstInstallTimeLocal": "2026-04-03 10:50:21",
+  "appLastUpdateTimeLocal": "2026-10-14 16:55:48",
+  "signedApkSha256": "1d0036c808cf3125a140c9aaedf48e03e3a82e69149f210a7c2d33f8d677fe3e",
+  "installedBaseApkSha256": "1d0036c808cf3125a140c9aaedf48e03e3a82e69149f210a7c2d33f8d677fe3e",
+  "dataPreserved": true,
+  "physicalVisualValidated": false,
+  "stable": false
+}

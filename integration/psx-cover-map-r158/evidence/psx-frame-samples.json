@@ -1,0 +1,9 @@
+{
+  "schema": "station.r158.psx-frame-samples.v1",
+  "logicalArtSize": [1024, 1536],
+  "samplePoints": [[12, 510], [1012, 510], [12, 600], [1012, 600]],
+  "twoXtremeArtRgb": [[248, 8, 4], [223, 2, 1], [243, 4, 1], [224, 2, 2]],
+  "alienTrilogyG52ScreenRgbApproximate": [[132, 4, 2], [143, 6, 4], [114, 7, 6], [114, 4, 2]],
+  "finding": "Alien Trilogy has the shared red side rails, but they are darker and have no white core at these probes. The previous white-core classifier could leave the legacy PSX map active. The unified model-8 map avoids a whole-cover brightness test and gates each frame pixel by its red or white color.",
+  "phoneScreenshotRetained": false
+}
