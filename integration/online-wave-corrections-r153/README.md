@@ -19,7 +19,19 @@ Os 40 DEX, a ponte `libstation_frontend.so`, o restante dos motores, os dados
 e as políticas permanecem byte a byte iguais à R152. Os marcadores precisam
 ser renovados porque o contrato de identidade inclui o hash do carrossel.
 
-O kit do servidor deve ser gerado do APK R153 assinado e registrar os novos
-IDs de forma aditiva após leitura atual do servidor. A compilação nativa
-isolada passou; assinatura, instalação no Galaxy, teste visual físico e
-aplicação do kit no servidor ainda requerem seus respectivos recibos.
+O APK R153 foi compilado e assinado, SHA-256
+`e99935da9308501f915e8b16f86c36857c7cbe2d20680d2e6e072bc6fc2b35ce`.
+A prova final conferiu as 13.860 entradas, os 40 DEX preservados, certificado
+original, assinatura v2/v3 e alinhamento de 16 KiB. A atualização por USB no
+Galaxy A56 retornou `Success`; a leitura do APK instalado no aparelho produziu
+o mesmo SHA-256, com os dados do aplicativo preservados. O teste visual
+posterior rejeitou a R153: ela retirou o céu com névoa que aparecia na R152 e
+escureceu toda a área à direita, embora o pedido fosse escurecer somente a
+faixa atrás das células pequenas do carrossel. A R153 não foi aprovada.
+
+O kit privado foi montado do APK R153 assinado, SHA-256
+`9d0f4a5e98b4d1cf01c75981db1dc0e96043fc2095c5cbfbcf07560d7adc8e1e`.
+O [handoff do servidor](../../docs/server/r153/README.md) identifica os quatro
+IDs apenas para rastreio. O kit R153 não deve ser entregue nem aplicado; a
+revisão substituta precisará de seu próprio kit exato. O recibo R153 marca
+`serverApplied:false`; não há cadastro nem partida física R153 confirmados.
