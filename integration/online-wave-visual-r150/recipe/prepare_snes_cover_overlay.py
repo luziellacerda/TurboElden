@@ -176,7 +176,8 @@ static void roundedCoverQuad(const Vertex*q,int src,int dst,const CoverRect&r){"
         )
         change(
             "    return snesSupport(p)||megaSupport(p);",
-            "    return (model>0.125?snesNewSupport(p):snesSupport(p))||megaSupport(p);",
+            "    if(model>0.125) return snesNewSupport(p);\n"
+            "    return snesSupport(p)||megaSupport(p);",
         )
         change(
             "    if(activeMagazineModel>1.5) return n64Lamp(c);\n    return blue(c);",
@@ -191,6 +192,58 @@ static void roundedCoverQuad(const Vertex*q,int src,int dst,const CoverRect&r){"
             "                signature=blue(sampleArt(vec2(49,565)).rgb)+blue(sampleArt(vec2(963,565)).rgb)\n"
             "                         +blue(sampleArt(vec2(120,42)).rgb)+blue(sampleArt(vec2(900,42)).rgb);\n"
             "            }",
+        )
+        section(
+            "void classifyMagazine(out float signature,out float activeModel,out float enabled,out float segmented){",
+            " }else if(magazineModel<1.5){",
+            """void classifyMagazine(out float signature,out float activeModel,out float enabled,out float segmented){
+ signature=0.0;activeModel=magazineModel;enabled=1.0;segmented=0.0;
+ if(magazineModel<0.5){
+  if(magazineModel>0.125){
+   signature=vcBlue(vcSample(vec2(22,460)).grb)+vcBlue(vcSample(vec2(1002,460)).grb)
+       +vcBlue(vcSample(vec2(22,850)).grb)+vcBlue(vcSample(vec2(1002,850)).grb);
+   float darkHeader=1.0-smoothstep(0.08,0.25,vcLuminance(vcSample(vec2(512,30)).rgb));
+   enabled=smoothstep(2.0,3.2,signature)*darkHeader;
+  }else{
+   float megaSignature=vcBlue(vcSample(vec2(220,12)).rgb)+vcBlue(vcSample(vec2(800,12)).rgb)
+       +vcBlue(vcSample(vec2(47,560)).rgb)+vcBlue(vcSample(vec2(976,560)).rgb);
+   float megaHeader=1.0-smoothstep(0.08,0.25,vcLuminance(vcSample(vec2(512,208)).rgb));
+   activeModel=max(magazineModel,step(0.95,smoothstep(2.0,3.2,megaSignature)*megaHeader));
+   if(activeModel>0.5){signature=megaSignature;enabled=smoothstep(2.0,3.2,signature)*megaHeader;}
+   else{
+    signature=vcBlue(vcSample(vec2(49,565)).rgb)+vcBlue(vcSample(vec2(963,565)).rgb)
+        +vcBlue(vcSample(vec2(120,42)).rgb)+vcBlue(vcSample(vec2(900,42)).rgb);
+    float darkHeader=1.0-smoothstep(0.08,0.25,vcLuminance(vcSample(vec2(512,30)).rgb));
+    enabled=smoothstep(2.0,3.2,signature)*darkHeader;
+   }
+  }
+""",
+        )
+        section(
+            "    // Exact R104 path used by Java and by the native automatic fallback.",
+            "    } else if(magazineModel<1.5) {",
+            """    // Exact R104 path used by Java and by the native automatic fallback.
+    activeMagazineModel=magazineModel;
+    if(magazineModel<0.5) {
+        if(magazineModel>0.125){
+            signature=blue(sampleArt(vec2(22,460)).grb)+blue(sampleArt(vec2(1002,460)).grb)
+                     +blue(sampleArt(vec2(22,850)).grb)+blue(sampleArt(vec2(1002,850)).grb);
+            darkHeader=1.0-smoothstep(0.08,0.25,dot(sampleArt(vec2(512,30)).rgb,vec3(0.299,0.587,0.114)));
+        }else{
+            float megaSignature=blue(sampleArt(vec2(220,12)).rgb)+blue(sampleArt(vec2(800,12)).rgb)
+                         +blue(sampleArt(vec2(47,560)).rgb)+blue(sampleArt(vec2(976,560)).rgb);
+            // Keep the legacy Mega detection only for the model-zero fallback.
+            float megaHeader=1.0-smoothstep(0.08,0.25,dot(sampleArt(vec2(512,208)).rgb,vec3(0.299,0.587,0.114)));
+            activeMagazineModel=max(magazineModel,step(0.95,smoothstep(2.0,3.2,megaSignature)*megaHeader));
+            if(activeMagazineModel>0.5){signature=megaSignature;darkHeader=megaHeader;}
+            else{
+                signature=blue(sampleArt(vec2(49,565)).rgb)+blue(sampleArt(vec2(963,565)).rgb)
+                         +blue(sampleArt(vec2(120,42)).rgb)+blue(sampleArt(vec2(900,42)).rgb);
+                darkHeader=1.0-smoothstep(0.08,0.25,dot(sampleArt(vec2(512,30)).rgb,vec3(0.299,0.587,0.114)));
+            }
+        }
+        enabled=smoothstep(2.0,3.2,signature)*darkHeader;
+""",
         )
     else:
         raise ValueError(filename)
@@ -235,6 +288,8 @@ def prepare(donor: Path, output: Path) -> dict[str, object]:
         "snesNewStaticFieldCacheKey": 9,
         "existingStaticFieldCacheKeysChanged": False,
         "effectCadenceGainAndBakeQuotaChanged": False,
+        "snesLegacyAndMegaClassifiersSkipped": True,
+        "snesLegacyAndMegaSupportSkipped": True,
         "compiled": False,
     }
     for filename, (changed, count) in prepared.items():

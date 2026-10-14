@@ -68,6 +68,9 @@ ser processadas pelo mapa SNES. A nova arte recebe o subperfil uniforme `0,25`
 somente se a plataforma for SNES/SNES BR. O perfil `0` e seu mapa original
 permanecem para capas de outras plataformas que usam o fallback; nenhum outro
 modelo é alterado. As condicionais de perfil não acrescentam amostras por pixel.
+O subperfil SNES `0,25` executa apenas a classificação e o mapa novos: pula a
+detecção Mega Drive e o mapa SNES legado. Ambos ficam disponíveis somente ao
+fallback de perfil `0`, sem processamento paralelo sobre a capa SNES.
 O cache do campo estático identifica esse subperfil com a chave `9`; as
 chaves `0–8` e a política de invalidação anterior permanecem iguais.
 

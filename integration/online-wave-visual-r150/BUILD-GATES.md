@@ -20,6 +20,9 @@ novo commit antes de gerar artefatos finais.
   `r132_native_info.h` R148 SHA-256
   `af31da6851bb2ce6742aca553b361fdb5beccab87c68a4874a6c6febbb89b0b6`.
   Nenhuma entrada privada, arte JPEG ou caminho de máquina vai para o Git.
+- Exigir SHA-256 `c40505b7a848a2c9ebcb21e17782b6b3f1c257756a514cadaeac0ac87ca6523d`
+  para `magazine_shader.h`. O perfil SNES novo deve ignorar classificação e
+  regiões antigas SNES/Mega; somente o perfil `0` conserva esse fallback.
 
 ## 2. Reproduzir e alterar o carrossel
 
@@ -32,6 +35,8 @@ novo commit antes de gerar artefatos finais.
   exports, dependências ELF, SONAME e alinhamento 16 KiB iguais aos anteriores.
   Conferir que sinopses dos jogos/coleções permanecem e a sinopse dos sistemas
   segue oculta. Apenas `libturbo_carousel.so` pode mudar nesta etapa nativa.
+  Confirmar um único desenho da capa selecionada, sem outra thread, textura,
+  temporizador ou chamada GL por quadro para o efeito novo.
 
 ## 3. DEX visuais de origem R149
 
