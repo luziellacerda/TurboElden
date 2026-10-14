@@ -1,0 +1,12 @@
+{
+  "schema": "station.r158.psx-mega-cover.startup-observation.v1",
+  "device": "Motorola moto g52",
+  "installedApkSha256": "ea696bc1636716facc1c5f0caa2a1b4cc2beadbde05e76af17fae725e32d048c",
+  "observedAtLocal": "2026-10-14 16:14:58",
+  "graphicsProgramPreparationMs": 58773,
+  "staticFieldProgramCompilationMs": 36214,
+  "source": "Android logcat, TurboCarousel tag, first launch after installation",
+  "baselineR157MeasuredOnSameDevice": false,
+  "performanceAccepted": false,
+  "note": "This single cold-launch timing requires a same-device R157 comparison before attributing the delay to this candidate. It is not a recurring per-frame cost."
+}

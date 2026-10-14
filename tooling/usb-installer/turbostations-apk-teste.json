@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": "R147",
-  "apkPath": "TurboStations-Premium-R147-dolphin-online-20261014.apk",
-  "sha256": "c038a0d75113359187d8eb9d2762e8d7e4ceee1f3538d1982313fc1e3a781ad6",
+  "revision": "R158",
+  "apkPath": "TurboStations-Premium-R158-psx-sega-cantos-20261014.apk",
+  "sha256": "fc1d2d983deb5179979a4aebac7fa64b1740da1c62ae46bfc0d1f4c11eb46cf0",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-dolphin-boot-ownership-cleanup",
-  "warning": "R147 teste: limpeza de falha Dolphin e propriedade de inicialização. R145 visual/R146 rota/reparos preservados. Kit correspondente e testes físicos pendentes; estável R143 intacta.",
-  "sourceCommit": "64a6da91aee9c61d26a3a85172af6521fcc82a36",
-  "bytes": 2715089935,
+  "status": "test-psx-mega-cover-light-map",
+  "warning": "R158 candidata visual: nome SEGA e pulso azul no Mega Drive, cantos leves nas capas grandes. A R157 aprovada permanece como retorno; confira a tela antes de considerar estável.",
+  "bytes": 2715106319,
   "serverBindingsRegistered": false
 }

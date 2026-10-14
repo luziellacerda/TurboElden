@@ -1,0 +1,16 @@
+{
+  "schema": "station.r158.psx-mega-cover.device-test.v1",
+  "revision": "R158",
+  "device": "Samsung Galaxy A56 SM-A566E",
+  "package": "org.turboramastation.frontend",
+  "installationCommand": "adb install -r",
+  "installationResult": "Performing Streamed Install; Success",
+  "appFirstInstallTimeLocal": "2026-10-13 20:22:47",
+  "appLastUpdateTimeLocal": "2026-10-14 16:36:43",
+  "signedApkSha256": "ad34bad0dc6f4e22ef9846512e6d1a1ae1226c2b4878bf05b882795ba949e231",
+  "installedBaseApkSha256": "ad34bad0dc6f4e22ef9846512e6d1a1ae1226c2b4878bf05b882795ba949e231",
+  "dataPreserved": true,
+  "supersededByApkSha256": "1d0036c808cf3125a140c9aaedf48e03e3a82e69149f210a7c2d33f8d677fe3e",
+  "physicalVisualValidated": false,
+  "stable": false
+}

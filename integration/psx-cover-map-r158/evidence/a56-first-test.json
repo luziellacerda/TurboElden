@@ -1,0 +1,16 @@
+{
+  "schema": "station.r158.psx-mega-cover.device-test.v1",
+  "revision": "R158",
+  "device": "Samsung Galaxy A56 SM-A566E",
+  "package": "org.turboramastation.frontend",
+  "installationCommand": "adb install -r",
+  "installationResult": "Performing Streamed Install; Success",
+  "appFirstInstallTimeLocal": "2026-10-13 20:22:47",
+  "appLastUpdateTimeLocal": "2026-10-14 15:57:31",
+  "signedApkSha256": "6203804f1590d5377c261ac079a7bf302decc9e8c7269ddd2495bfaac70de7c6",
+  "dataPreserved": true,
+  "testFeedback": "New PSX cover lighting formed slowly and appeared weak; Mega Drive was not reported faulty in this first test.",
+  "supersededByApkSha256": "ea696bc1636716facc1c5f0caa2a1b4cc2beadbde05e76af17fae725e32d048c",
+  "physicalVisualValidated": false,
+  "stable": false
+}
