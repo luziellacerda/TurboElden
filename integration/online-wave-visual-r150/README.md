@@ -1,5 +1,8 @@
 # R150 visual: azul, ondas e capa grande SNES
 
+Status: **fonte e prova apenas**. A R150 ainda não tem APK compilado, assinatura,
+instalação ou kit de servidor.
+
 Este conjunto é uma alteração visual isolada sobre a R149 funcional assinada
 (`698e8a7914cc7be2facc00e6701ff1f3533fa13f763358b51578a35d25c2741e`).
 A comparação integral das entradas do APK R148/R149 encontrou somente cinco
@@ -35,6 +38,15 @@ o decodificador e `verify_r149_rebase.py` validam os SHA das três partições.
 A receita exige os SHA de sete classes e seus métodos, troca somente dez
 ARGB em métodos existentes, emite sete classes e comprova reversão exata.
 Nunca repor uma partição DEX antiga inteira.
+`recipe/patch_dex_binary.py` localiza as dez instruções `const` 31i pelas
+tabelas de classes, métodos e protótipos dos DEX assinados R149. Troca apenas
+os imediatos de quatro bytes e a integridade dos cabeçalhos, com inversão
+byte a byte. O verificador Java pinado usa dexlib2 para percorrer fronteiras
+reais de instruções, conferindo opcode, registrador e literal antes/depois.
+`--inspect` calcula os três SHA previstos sem gravar DEX ou APK;
+as sete classes smali decodificadas diretamente da R149 são o oráculo de
+métodos e valores. Na montagem futura, decodificar novamente os DEX alterados
+e conferir essas sete classes e todas as demais antes de aceitar o pacote.
 
 ## Capa selecionada de jogos SNES
 
