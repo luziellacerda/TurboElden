@@ -28,7 +28,10 @@ os recibos, o commit completo de fontes e oito entradas alteradas na APK:
 carrossel, ponte gráfica, dois DEX, três marcadores de motor e o registro de
 motores. Os outros 13.852 itens do pacote devem permanecer idênticos.
 
-Estado: biblioteca nativa, ponte e dois DEX compilados e verificados. APK,
-assinatura, kit de servidor, instalação e aceite visual físico ainda dependem
-dos respectivos recibos finais. A R151 instalada e a R143 estável permanecem
-intactas. Nunca inferir cadastro N64 do mero build visual.
+Estado: APK R152 assinado e conferido, com 13.852 entradas preservadas e 38
+partições DEX intactas. O kit independente correspondente também está pronto,
+com seis bibliotecas de motor e vinte dependências; o resumo da ponte gráfica
+no cadastro PS1 confere com o arquivo do APK. Há uma cópia do APK e do kit em F:.
+O kit ainda não foi aplicado no servidor e a R152 não foi instalada nem aceita
+visualmente no aparelho. A R151 instalada e a R143 estável permanecem intactas.
+O cadastro N64 no servidor exige confirmação separada.
