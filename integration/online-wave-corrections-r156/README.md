@@ -36,7 +36,9 @@ A comparação preservou 13.855 de 13.860 entradas, incluindo 40 DEX, e a
 assinatura original v2/v3. O mesmo SHA-256 foi conferido no `base.apk` instalado
 no Galaxy A56, sem alterar `firstInstallTime` ou `dataDir`.
 
-Estado: APK instalado para teste físico. A aprovação visual do usuário ainda
-está pendente; o kit R156 não foi gerado nem aplicado no servidor. A R152 é a
-última revisão com aplicação confirmada; os kits R153, R154 e R155 estão retidos
-e não devem ser aplicados.
+Estado: APK instalado no Galaxy A56; o usuário aprovou as três ondas da tela
+principal. O kit R156 foi gerado e conferido, mas está retido porque o usuário
+pediu o mesmo desenho na sala online, que ainda apresenta quatro linhas finas
+estáticas. A correção delimitada está na R157. A R152 é a última revisão com
+aplicação confirmada no servidor; os kits R153, R154, R155 e R156 não devem ser
+aplicados como revisão final.
