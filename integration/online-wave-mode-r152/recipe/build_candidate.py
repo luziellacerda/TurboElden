@@ -239,6 +239,12 @@ def build(args: argparse.Namespace) -> dict:
         markers[kind] = primitive.marker(value, parent_binary, api, args.ndk, out)
         identities[kind] = value
     registry, selected = inherited.expected_engines(old_registry, markers)
+    psx_descriptor = next(row for row in selected if row["platform"] == "psx")
+    need(psx_descriptor["dependencySha256"].get("libstation_frontend.so") == FRONTEND_BASE_SHA,
+         "R151 PSX graphics bridge dependency differs")
+    psx_descriptor["dependencySha256"]["libstation_frontend.so"] = FRONTEND_OUTPUT_SHA
+    need(next(row for row in registry["engines"] if row["platform"] == "psx") is psx_descriptor,
+         "Registry and selected PSX descriptor must share the updated dependency")
     retro = [row for row in old_registry["engines"] if row["platform"] not in {"psx", "n64", "gamecube", "wii"}]
     need(len(old_registry["engines"]) == len(registry["engines"]) == 13 and len(retro) == 9 and
          [row for row in registry["engines"] if row["platform"] not in {"psx", "n64", "gamecube", "wii"}] == retro,
