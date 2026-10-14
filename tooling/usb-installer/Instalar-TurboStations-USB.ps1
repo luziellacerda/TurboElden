@@ -463,6 +463,7 @@ try {
     if ($actualHash -cne $expectedHash.ToLowerInvariant()) {
         throw 'O SHA256 do APK não corresponde ao manifesto. Não será instalado. Para uma nova compilação, atualize o manifesto com a identidade conferida dessa versão.'
     }
+    if ($GuiProgress) { Write-Host 'TS_STAGE|APK_VERIFIED' }
     if ($ValidateOnly) {
         [pscustomobject]@{
             validation = 'passed'
@@ -493,6 +494,7 @@ try {
     }
     $devices = @($discovery.Authorized)
     if ($devices.Count -eq 0) { throw 'Nenhum telefone USB autorizado encontrado. Conecte, desbloqueie e autorize a depuração; depois tente novamente.' }
+    if ($GuiProgress) { Write-Host 'TS_STAGE|USB_FOUND' }
     Write-Host ''
     for ($deviceIndex = 0; $deviceIndex -lt $devices.Count; $deviceIndex++) {
         Write-Host ('{0}. {1} — {2} (USB)' -f ($deviceIndex + 1), $devices[$deviceIndex].Alias, $devices[$deviceIndex].Model)
@@ -549,6 +551,7 @@ try {
         try {
             Write-Host ''
             Write-Host ('Preparar {0} — {1}' -f $device.Alias, $device.Model)
+            if ($GuiProgress) { Write-Host 'TS_STAGE|PHONE_CHECK' }
             if (-not $UserConfirmedIdle) {
                 $answer = (Read-Host 'Saia da partida, conclua downloads e deixe a tela inicial do TurboStations ou do Android aberta. Enter para conferir ou 0 para pular').Trim()
                 if ($answer -eq '0') { $receipt.resultCode = 'SKIPPED_BY_USER'; $failedCount++; continue }
@@ -563,7 +566,7 @@ try {
             }
             if ($foreground.StartsWith($TargetPackage + '/', [System.StringComparison]::Ordinal) -and -not (Test-IdleFrontendComponent $foreground)) {
                 $receipt.resultCode = 'APP_STILL_IN_FOREGROUND'
-                Write-Host 'Uma tela do jogo ou de download ainda está aberta. Volte à tela inicial do TurboStations antes de repetir.' -ForegroundColor Yellow
+                Write-Host 'TurboStations está em outra tela; volte à tela inicial do app ou do Android antes de repetir.' -ForegroundColor Yellow
                 $failedCount++
                 continue
             }
@@ -611,12 +614,14 @@ try {
             }
             Write-Host ('Instalando {0} em {1}. Mantenha o cabo conectado; pode levar vários minutos.' -f $revision, $device.Alias)
             $receipt.installAttempted = $true
+            if ($GuiProgress) { Write-Host 'TS_STAGE|INSTALLING' }
             $installation = Invoke-Adb @('-s', $device.Serial, 'install', '-r', $resolvedApk)
             $receipt.installExitCode = $installation.ExitCode
             if ($installation.ExitCode -eq 0 -and $installation.Output -match '(?m)^\s*Success\s*$') {
                 $receipt.installSuccess = $true
                 $receipt.resultCode = 'SUCCESS'
                 Write-Host ('{0}: atualização instalada. Conferindo o APK no telefone; aguarde.' -f $device.Alias)
+                if ($GuiProgress) { Write-Host 'TS_STAGE|VERIFYING_PHONE' }
                 $installedVerification = Get-InstalledApkVerification $device.Serial $actualHash
                 $receipt.installedHashVerificationCode = $installedVerification.Code
                 $receipt.installedApkSha256 = $installedVerification.Hash
