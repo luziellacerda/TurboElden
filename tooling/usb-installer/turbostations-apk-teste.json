@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": "R144",
-  "apkPath": "TurboStations-Premium-R144-ondas-paletas-20261013.apk",
-  "sha256": "01427f4e73141b7d6a462c2420a9abeb018a8716102e7fb959bf9a1d69eccee0",
+  "revision": "R145",
+  "apkPath": "TurboStations-Premium-R145-azul-ceu-faixas-20261013.apk",
+  "sha256": "275f31b34145eb77c457b1a9c09bbff4034cc28a990b74121b0b1fd4573c5df0",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-wave-system-palettes-online-opacity-only",
-  "warning": "R144 teste visual: paletas por sistema somente no menu principal; salas online mesmas cores e mais brilho. Jogabilidade/descarga preservadas. Tag estável R143 mantida; novos IDs independentes aguardam cadastro.",
-  "sourceCommit": "1ac3f7d2fdd7cd349a5b37127b66712834e844fd",
-  "bytes": 2715024399,
+  "status": "test-sky-blue-requested-console-bands",
+  "warning": "R145 teste: azul céu em fundos azuis e faixas solicitadas. Reparos/jogos/rede/downloads preservados. Estável R143 mantida; novos IDs independentes aguardam kit correspondente.",
+  "sourceCommit": "25d10b2322d2e5687c9dfacc71a826c3955fad5d",
+  "bytes": 2715057167,
   "serverBindingsRegistered": false
 }
