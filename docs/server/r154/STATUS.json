@@ -1,0 +1,18 @@
+{
+  "schema": "station.r154.server-readiness.v1",
+  "revision": "R154",
+  "sourceCommit": "ce5855a495fc493cca58b39b486e8a06dfd2c41a",
+  "apkSha256": "c91d97ab5a6538c1498594fc70d24c10cec4ef8ee83a1739697d9c8dcc31a8fe",
+  "privateKitSha256": "972d244bc412b98403a806e4c7606c6edc6d2c134be524a535c6277a809f634a",
+  "installedOnA56": true,
+  "installedApkHashConfirmed": true,
+  "existingAppDataPreserved": true,
+  "visualApproved": false,
+  "serverKitApplied": false,
+  "serverRegistrationConfirmed": false,
+  "serverConsumerReady": false,
+  "physicalGameplayValidated": false,
+  "replacementInProgress": true,
+  "lastConfirmedServerRevision": "R152",
+  "doNotApply": true
+}

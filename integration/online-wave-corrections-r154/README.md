@@ -31,6 +31,11 @@ o restante do aplicativo devem permanecer idênticos à R152. O kit de servidor
 deve corresponder ao APK R154 final e seguir a linhagem direta R152→R154, sem
 herdar os IDs da R153 rejeitada.
 
-Estado: fonte R154 preparada para validação nativa; APK, assinatura, instalação,
-prova visual no aparelho e cadastro no servidor ainda não concluídos. O kit
-R153 rejeitado não deve ser entregue ou aplicado ao servidor.
+Estado em 14/10/2026: fonte congelada em `ce5855a495fc493cca58b39b486e8a06dfd2c41a`.
+O APK R154 foi compilado, assinado e instalado no Galaxy A56 preservando os dados,
+mas o responsável rejeitou o visual. A faixa escura horizontal atrás das capas
+não era o degradê diagonal solicitado, e o modo Ondas Online mostrou o céu com
+quatro traços finos, em vez de quatro faixas largas como o modelo da sala.
+O kit R154 foi gerado para rastreio, mas **não deve ser aplicado ao servidor**.
+A R152 continua sendo a última revisão cadastrada; a substituta terá APK e kit
+próprios. Consulte `docs/server/r154/README.md` para os hashes.
