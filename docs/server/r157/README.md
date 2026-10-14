@@ -24,18 +24,24 @@ cliente de conexão, os comandos online, a segurança ou o protocolo do servidor
 O custo da animação na sala ainda requer medição física de processamento e
 bateria. Não inferir desempenho ou partida jogável da verificação de código.
 
-**Estado deste repasse:** APK compilado, conferido e instalado no Galaxy A56 em
-14/10/2026. O hash do `base.apk` no aparelho confere exatamente com o APK
-assinado acima; `firstInstallTime` e `dataDir` permaneceram iguais, preservando
-os dados. Aceite visual da sala, kit privado R157, entrega USB e cadastro R157
-no servidor ainda dependem de recibos próprios. A prova do APK registra
-`installed=false` e `serverRegistered=false` no instante da compilação; a
-instalação posterior não implica cadastro. O kit R156 foi preparado,
-mas está retido; os kits R153/R154/R155 também não devem ser aplicados. A última
-aplicação de kit confirmada neste handoff é a R152. Não tratar a R157 como
-estável ou pronta para consumidores por causa do APK assinado.
+**Estado deste repasse:** o proprietário designou a R157 como versão estável em
+14/10/2026. O APK foi compilado, conferido e instalado no Galaxy A56; o hash
+do `base.apk` no aparelho confere exatamente com o APK assinado acima.
+`firstInstallTime` e `dataDir` permaneceram iguais, preservando os dados. O
+kit privado R157 foi gerado com SHA-256
+`240ecba97b9b6773f3177eb127f8a065bfc8f6993f6f4918869e1ffb4b5acbd3`.
+A cópia do APK e do kit foi conferida em
+`F:\TurboStations-Estavel-R157-20261014`; ler o
+[checkpoint estável](STABLE-CHECKPOINT.md). **A sala online R157 ainda não foi
+inspecionada visualmente no aparelho**, e o kit não foi entregue nem aplicado
+no servidor. O teste físico de partidas também não foi feito. A prova do APK
+registra `installed=false` e `serverRegistered=false` no instante da compilação;
+a instalação posterior não implica cadastro. O kit R156 e os kits
+R153/R154/R155 permanecem retidos. A última aplicação de kit confirmada neste
+handoff é a R152. A designação estável do proprietário não constitui prova de
+distribuição aos consumidores nem de gameplay.
 
-## Recebimento e cadastro quando a R157 for autorizada
+## Recebimento e cadastro da R157 no servidor
 
 1. Receber **somente** o kit privado da R157 final aceita. Conferir o SHA-256
    externo do ZIP, manifesto interno, os quatro `engineId` exatos do

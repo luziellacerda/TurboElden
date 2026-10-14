@@ -1,3 +1,18 @@
+# R157 designada estável pelo proprietário — 14/10/2026
+
+Ler `docs/server/r157/STABLE-CHECKPOINT.md` e `docs/server/r157/README.md` antes
+de instalar, recadastrar motores ou restaurar. APK assinado/instalado A56
+SHA-256 `563625c40bfce77def6770a67448f83e2206e67a07023c58359ad2a0de4eee34`;
+fonte executável `c9906512faf4d80ca5fd6d66880772f02b29a359`. Backup
+conferido em `F:\TurboStations-Estavel-R157-20261014`. Kit R157 preparado
+SHA-256 `240ecba97b9b6773f3177eb127f8a065bfc8f6993f6f4918869e1ffb4b5acbd3`,
+**não aplicado**; última aplicação confirmada R152. A sala online R157 e
+partidas físicas ainda não foram verificadas no aparelho. Não inventar esse
+aceite. O servidor precisa registrar os 78 modos base e depois, sob nova
+baseline efetiva, vincular 321 decisões N64 ao motor R157, com dois recibos.
+Preservar o tag R143 como retorno anterior. Nenhuma lógica de jogo/rede foi
+alterada nesta promoção.
+
 # N64 — coleção de 157 edições revisada — 14/10/2026
 
 **Aplicado e comprovado no servidor para R152/R151.** As 157 edições foram identificadas na ROM real e revisadas nos manuais originais: 120 têm multiplayer documentado e 37 são individuais. Entre as multiplayer, 85 permitem até quatro pessoas, duas até três e 33 até duas, conforme o modo. Não restam edições sem classificação nesta coleção.
