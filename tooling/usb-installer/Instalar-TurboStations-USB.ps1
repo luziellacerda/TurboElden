@@ -221,7 +221,8 @@ function Get-ForegroundComponent {
     $foregroundComponents = New-Object 'System.Collections.Generic.List[string]'
     if ($activities.ExitCode -eq 0) {
         foreach ($line in ($activities.Output -split '\r?\n')) {
-            if ($line -match '(mResumedActivity|topResumedActivity)' -and $line -match '\s(?<component>[A-Za-z][A-Za-z0-9_.]*/[A-Za-z0-9_.]+)') {
+            if ($line -match '^\s*(?:mResumedActivity|topResumedActivity|ResumedActivity|Resumed):\s*ActivityRecord\{' -and
+                $line -match '\s(?<component>[A-Za-z][A-Za-z0-9_.]*/[A-Za-z0-9_.]+)') {
                 $foregroundComponents.Add($Matches['component'])
             }
         }
@@ -295,8 +296,15 @@ function Get-AppServiceState {
     # Um download pode seguir em um Service mesmo com a tela inicial do Android aberta.
     $services = Invoke-Adb @('-s', $DeviceSerial, 'shell', 'dumpsys', 'activity', 'services', $TargetPackage)
     if ($services.ExitCode -ne 0) { return 'APP_SERVICES_CHECK_UNAVAILABLE' }
-    if ($services.Output -match 'ServiceRecord\{') { return 'APP_SERVICE_ACTIVE' }
-    return 'NO_APP_SERVICE_DETECTED'
+    # O Android inclui um "Last ANR service" histórico mesmo sem serviço vivo.
+    # Somente o trecho anterior a esse relatório descreve serviços atuais.
+    $hasHistoricalAnr = $services.Output -match '(?m)^\s*Last ANR service:\s*$'
+    $liveServices = ($services.Output -split '(?m)^\s*Last ANR service:\s*$', 2)[0]
+    if ($liveServices -match ('ServiceRecord\{[^\r\n]*' + [regex]::Escape($TargetPackage) + '/')) {
+        return 'APP_SERVICE_ACTIVE'
+    }
+    if ($hasHistoricalAnr -or $liveServices -match '(?m)^\s*\(nothing\)\s*$') { return 'NO_APP_SERVICE_DETECTED' }
+    return 'APP_SERVICES_CHECK_UNAVAILABLE'
 }
 
 function Get-IdleAppActivityState {
@@ -639,6 +647,18 @@ try {
                     Write-Host 'Um jogo ou tela do TurboStations ainda aparece nos tasks do Android. Saia dela e tente novamente.' -ForegroundColor Yellow
                 }
                 $failedCount++
+                continue
+            }
+            # Evita transferir 2,7 GB e solicitar espaço quando o APK assinado
+            # já está exatamente no aparelho. Não altera nem reinicia o app.
+            if ($GuiProgress) { Write-Host 'TS_STAGE|VERIFYING_PHONE' }
+            $existingVerification = Get-InstalledApkVerification $device.Serial $actualHash
+            if ($existingVerification.State -eq 'matched') {
+                $receipt.installedApkSha256 = $existingVerification.Hash
+                $receipt.installedHashVerificationCode = $existingVerification.Code
+                $receipt.installedHashVerified = $true
+                $receipt.resultCode = 'ALREADY_INSTALLED'
+                Write-Host ('{0}: {1} já está instalada; SHA256 idêntico. Nenhuma transferência necessária.' -f $device.Alias, $revision) -ForegroundColor Green
                 continue
             }
             Write-Host ('Instalando {0} em {1}. Mantenha o cabo conectado; pode levar vários minutos.' -f $revision, $device.Alias)

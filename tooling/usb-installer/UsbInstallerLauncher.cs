@@ -1297,6 +1297,23 @@ internal static class UsbInstallerLauncher
         {
             var receipt = ReadInstallReceipt(result.Output);
             var signal = ReadResultSignal(result.Output);
+            if (signal != null && signal.Code == "ALREADY_INSTALLED" && signal.HashVerified)
+            {
+                completedStages = 4;
+                activeStage = -1;
+                blockedStage = -1;
+                stage.Text = "VERSÃO JÁ INSTALADA";
+                status.Text = "Telefone atualizado";
+                statusDetail.Text = "O APK no telefone é idêntico ao pacote. Nenhuma transferência foi necessária.";
+                progressCaption.Text = "Verificação concluída · " + elapsed.Elapsed.ToString(@"mm\:ss");
+                progress.ShowMeasured(100, Green);
+                SetActionHint("Abra o TurboStations para testar a versão instalada.", Green);
+                UpdateStepLabels();
+                retryAvailable = false;
+                idleConfirmed.Checked = false;
+                AppendLog("Versão já instalada; SHA-256 confirmado no telefone.");
+                return;
+            }
             if (signal != null && signal.Installed && signal.HashVerified &&
                 result.ExitCode != 0)
             {
