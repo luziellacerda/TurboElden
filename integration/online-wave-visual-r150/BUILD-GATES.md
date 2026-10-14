@@ -1,9 +1,10 @@
 # Portões de montagem R150 sobre a R149 assinada
 
-Este é o plano de produção; a inspeção atual não compilou nem instalou a R150.
-Iniciar a montagem apenas depois da instalação e do teste funcional da R149 e
-da verificação de espaço no aparelho de teste. Congelar as receitas R150 em um
-novo commit antes de gerar artefatos finais.
+Execução em 14/10/2026: montagem, assinatura, instalação USB e kit privado
+concluídos. Os comprovantes completos ficam fora do Git junto aos artefatos
+privados. A arte nova de referência ainda não apareceu na biblioteca SNES do
+Galaxy A56; sua animação não foi validada fisicamente. O kit não foi aplicado
+no servidor e a revisão não foi promovida como estável.
 
 ## 1. Doadores e sobreposições
 
@@ -20,6 +21,9 @@ novo commit antes de gerar artefatos finais.
   `r132_native_info.h` R148 SHA-256
   `af31da6851bb2ce6742aca553b361fdb5beccab87c68a4874a6c6febbb89b0b6`.
   Nenhuma entrada privada, arte JPEG ou caminho de máquina vai para o Git.
+- Exigir SHA-256 `c40505b7a848a2c9ebcb21e17782b6b3f1c257756a514cadaeac0ac87ca6523d`
+  para `magazine_shader.h`. O perfil SNES novo deve ignorar classificação e
+  regiões antigas SNES/Mega; somente o perfil `0` conserva esse fallback.
 
 ## 2. Reproduzir e alterar o carrossel
 
@@ -32,6 +36,8 @@ novo commit antes de gerar artefatos finais.
   exports, dependências ELF, SONAME e alinhamento 16 KiB iguais aos anteriores.
   Conferir que sinopses dos jogos/coleções permanecem e a sinopse dos sistemas
   segue oculta. Apenas `libturbo_carousel.so` pode mudar nesta etapa nativa.
+  Confirmar um único desenho da capa selecionada, sem outra thread, textura,
+  temporizador ou chamada GL por quadro para o efeito novo.
 
 ## 3. DEX visuais de origem R149
 
