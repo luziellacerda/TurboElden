@@ -85,11 +85,17 @@ reproduzível. O resumo sanitizado está em
 permanecem privados no workspace e no backup
 `F:\TurboStations-Backup-Completo-20261011\desenvolvimento\R149-dolphin-onpause-20261014-provas\teste-fisico-a56`.
 
-Antes de alterar outra lógica do aplicativo, verificar no servidor a imagem
-original com um leitor/validador de GameCube, conferir tamanho e edição,
-substituir ou corrigir o artefato se necessário, atualizar revisão e SHA do
-catálogo, baixar novamente no A56 e repetir o teste offline. A R149 continua
-candidata; não foi promovida a estável nem liberada ao consumidor.
+A segunda entrada do catálogo, `station_d0a6aa65e5900ba9167a200f8dccfae5`,
+tem uma cópia local de 1.459.978.240 bytes que passou a verificação estática
+do DolphinTool. Após baixá-la no A56, o usuário informou em 14/10 que ela
+**entrou no jogo** ao abrir para jogar sozinho. Isso confirma a abertura
+relatada, sem comprovar partida prolongada ou o SHA do arquivo atualmente
+servido no Linux. O handoff do servidor registra a validação e prepara a
+quarentena cirúrgica da entrada Europe defeituosa no commit `4d783c6`;
+a execução em produção e o aceite HTTP ainda são necessários. Não alterar
+o APK nem trocar o ID da edição Europe pelo arquivo da segunda entrada.
+A R149 continua candidata; não foi promovida a estável nem liberada ao
+consumidor.
 
 O teste GameCube **offline** não depende de registrar o kit. Para partidas
 online, o servidor precisa cadastrar o kit R149 correspondente com baseline
