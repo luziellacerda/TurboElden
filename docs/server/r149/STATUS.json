@@ -51,6 +51,10 @@
   ],
   "serverRegistrationConfirmed": false,
   "serverKitApplied": false,
+  "physicalDolphinLaunchObserved": true,
+  "priorOnPauseLinkageErrorObservedInR149Attempt": false,
+  "physicalOfflineTestResult": "DOLPHIN_OPENED_DISC_READ_ERROR",
+  "physicalOfflineTestEvidence": "evidence/WINDWAKER-A56-MIDIA-20261014.json",
   "physicalOfflineGameplayValidated": false,
   "physicalOnlineGameplayValidated": false,
   "consumerReady": false
