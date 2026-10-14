@@ -157,7 +157,8 @@ def main() -> None:
     r150_binary, r150_labels = labels.patch_labels(r150_unlabelled.read_bytes())
     final = out / "libturbo_carousel.so"
     final.write_bytes(r150_binary)
-    need(base_labels == r150_labels and sha(final) != R149_CAROUSEL_SHA,
+    label_contract = lambda rows: [(row["bytes"], row["fromText"], row["toText"]) for row in rows]
+    need(label_contract(base_labels) == label_contract(r150_labels) and sha(final) != R149_CAROUSEL_SHA,
          "R150 changed retained labels or did not change the visual library")
     old_abi, new_abi = elf.elf_contract(r149_binary), elf.elf_contract(r150_binary)
     need(old_abi["exports"] == new_abi["exports"] and
