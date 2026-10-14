@@ -1,3 +1,42 @@
+# N64 R152 pronto no servidor; R151 preservada — 14/10/2026
+
+Ler o topo do MESMO handoff e r152/server-return.json. Kits R151/R152 da USB verificados e aplicados sob scan.lock, sem deploy/reinício. A56 agora R152 conforme novo documento USB, APKf06747b7/fonte6d76c1dd. Motor atual mupen64plus-ae-33bf7021-n64-v3-62d4d48b1184, runtime62d4d48b; R1518eda4863 também registrada. Catálogo49,51motores/11838perfis/6977modos, API3297582/DLLb3473cc0. Cada revisão4IDs/6ELF/20deps/78modos,66N64/9GC/3Wii/0HLEPS1novo, prefixos antigos conservados.
+
+Capabilities assinadas locais/públicas R151/R152 passaram. R152:1080Snowboarding2P criar/entrar/Pronto/iniciar; MarioKart64 quatro clientes/6WSS/READY/playing/24.615B/pausa/epoch2/reconexão/TLS+SPKI+prioridade passaram.66modos/33edições/26edições4P;124demais sem novo modo revisado desse owner. Não inventar gameplay em quatroAndroid. Licenças sintéticas removidas, reais/outrosserviços/índice/capas/ROMs preservados. Atualizar cache capabilities no app; todos jogadores mesma revisão/edição. STATUS servidor true/online agora; aceite físico não homologado.
+
+Autoridade /mnt/DADOS/station-r151-20261014/applied.json PASSED; published.json/enrollment-r152/r151 e provas existentes. NÃO REAPLICAR operadores/cadastro/DLL nem pedir kits já recebidos. WindWaker/quarentena/scanner aplicados continuam corretos; scanner a10c78f53797, timerativo. Mesmas branches/handoff/monitor, backup station-before-r151-r152-engines-20261014 confirmado, R143 estável intacta. SNES/N64 novas capas e limites100/800 do operador conservados. Fontes/receitas/recibos congelados e os doisCRLF históricos locais ficam intactos.
+
+
+## Histórico anterior preservado
+
+# App atual R151 exige seu kit; não confundir a liberação R149 — 14/10/2026
+
+Ler o topo do MESMO handoff, r151/README.md e r151/server-receiver-status.json. Retornoappbcb1fc6/fonteR151d5afd35/APKc6090d6 instaladoA56. Mensagem N64: indicadorOnline, nenhum modo aprovado para motor instalado. Exige engine mupen64plus-ae-33bf7021-n64-v3-8eda486330ca/runtime8eda4863, corefe6e810a igual. R149dcad0757 já aplicada e nova prova4clientes pública passou; STATUSr149 corrigido true refere-se SÓ R149. Não marcarR151aplicada nem relaxar vínculos por core igual.
+
+KitR151 SHA76cf298a4a9efffc068bddb94e312dacc10e0ca35aca2ffc57ddf8c7b8f51651 não encontrado noUSB(SERVIDORLER contémR149/WindWaker) ou busca nativa61.902pastas/367ZIPcandidatos. Uma pasta temporária privada de WhatsApp ficou fora, conectorPCAPKoffline. Receptor /mnt/DADOS/station-r151-20261014/kit-privado criado; pergunta assíncrona pedeZIPexato/caminho, semAPK/senhas. Receber6ELF20deps4IDs78modos,baselineprotegido fresco49+, preparar/registrar aditivo vigente/scan.lock, semdeploy/restart; devolvercapabilities1080Snowboardingpara2 e modos4PcomidentidadeR151. Arquivos congelados/receitas/recibos da produçãoR150/R151 preservados.
+
+WindWaker aplicado,catálogo49/API3297582/DLLb3473cc0/scannera10c78f53797,43motores/11682perfis/6821modos atuais preservados. Não repetir operadores/aplicados; manterglobalpartialporbytesR151pendentes. Não declararN64pronto para APKR151 enquanto sóR149cadastrada. R143estável intacta; mesmasbranches/handoff/monitor.
+
+## Histórico preservado integralmente
+
+# N64 R149 pronto para a produção: STATUS corrigido e prova pública atual — 14/10/2026
+
+Ler a seção atual do mesmo handoff e r149/evidence/server-n64-live-ready-20261014.json. A inconsistência que mantinha STATUSr149 com serverKitApplied=false/serverRegistrationConfirmed=false foi corrigida em ambos Gits: agora true, serverConsumerReady/n64ServerReady=true, n64ServerOffline=false. O consumerReady de aceite físico do APK permanece separado e não indica o servidor offline. README/recebimento abrem pelo estado atual; hashes/APK/kit/fontes congeladas/candidata/estável/flags físicas preservados.
+
+Nova prova pública15h19UTC com catálogo49/PID3297582 passou:66modos33edições,4clientes/slots1–4,6WSS,playing24.615B semmistura,queda/epoch2/retomada,TLS+SPKI+prioridade,próprias licenças sintéticas removidas. Motor mupen64plus-ae-33bf7021-n64-v3-dcad075758e5. 26edições permitem4;124outros sem modo revisado do owner,legados retidos; não inventar aprovação ou gameplay4Android. Consumir capabilities assinadas com clientMaximumPlayers=4/tupla exata/allowedPlayerCounts; não confundir estado físico global com disponibilidade do servidor. Sessão180s requer renovação pelo contrato existente em chamadas posteriores a transferências longas. Não reaplicar kit R149/quarentena/scanner nem pedir kit já recebido; R143estável intacta.
+
+## Histórico preservado integralmente
+
+# Wind Waker USB aplicado; scanner corrigido — 14/10/2026
+
+Ler a seção atual do MESMO handoff e r149/evidence/server-wind-waker-applied-20261014.json. Catálogo49/4690registros/4434visíveis: somente station_12b835c9539b4800a6bb29ca00a25f94 oculto e sem artifact; origem de546.776.387B em quarentena, bytes e artefato imutável retidos. Edição completa station_d0a6aa65e5900ba9167a200f8dccfae5 já estava no servidor e coincide com ISOUSB1.459.978.240B/SHA3ea3cc8f. Download público integral e catálogo/grant assinados passaram; nova autorização do defeituoso recusa503/STATION_ARTIFACT_NOT_READY; licenças sintéticas próprias removidas, reais preservadas. Usar no app The Legend of Zelda The Wind Waker sem Europe; atualização de catálogo não troca instalação antiga de outroID.
+
+A varredura encontrou KeyError artifact após a quarentena. Reproduzida a falha no scanner completo e corrigidos somente station_cartridge.py/atualizar-biblioteca-station.py: oculto sem artefato não converte/vincula; identidade histórica retida, visível sem artefato ainda rejeitado. Dois testes de integração passaram no ambiente descartável e cópia instalada,16 do operador passaram. Scanner efetivo /opt/turborama-station-library-quarantine-20261014-a10c78f53797/library-tools, exec0/timerativo. API segue PID3297582/DLLb3473cc0 sem restart;43motores/11682perfis/6821modos/N64R149 preservados. Outras entradas/serviços/licenças/configuração/banda100/800/capas preservados. BackupGit prévio station-before-wind-waker-quarantine-20261014 confirmado; R143estável intacta.
+
+Autoridade /mnt/DADOS/station-wind-waker-usb-20261014/applied.json PASSED e scanner-applied.json. NÃO reaplicar workflow inicial, quarentena ou publicação do scanner; o workflow inicial parou DEPOIS da publicação correta, por falha do scanner, e não fez rollback. Para eventual retirada da correção, conciliar primeiro a quarentena; scanner anterior falha com a linha sem artefato. Preservar os históricos congelados e o mesmo handoff. Não ampliar a quarentena a outros discos só por tamanho. Não houve novo APK ou gameplay online/pausa física homologados aqui. N64continua33edições/66modos/26edições4P,124demaissemperfilnativorevisado; demais pendências globais e manutenção horária existentes preservadas.
+
+## Histórico preservado integralmente
+
 # N64 R149 aplicado e transporte de quatro participantes comprovado — 14/10/2026
 
 Ler a seção atual do MESMO handoff `HANDOFF-ONLINE-PLATAFORMAS-STATION-20261009.md` e `r149/server-return.json` no diretório documental correspondente. Kit USB R149 recebido e verificado: ed95ba61/12.181.272 B, APK698e8a79. Cadastro aplicado:43 motores/11.682 perfis/6.821 modos, quatro motores e78 modos novos; N64 owner mupen64plus-ae-33bf7021-n64-v3-dcad075758e5 com33 edições/66 modos revisados,26 edições de quatro jogadores. Os124 outros itens não têm modo revisado desse owner; legados retidos. Não declarar todos157 online ou quatro jogadores.
