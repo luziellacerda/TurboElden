@@ -1,0 +1,37 @@
+.method public final consumeBootSessionData()J
+    .locals 6
+
+    const-class v4, Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;
+
+    monitor-enter v4
+
+    :station_boot_lock_start
+    .line 1
+    iget-wide v0, p0, Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;->bootSessionDataPointer:J
+
+    .line 2
+    .line 3
+    const-wide/16 v2, 0x0
+
+    .line 4
+    .line 5
+    iput-wide v2, p0, Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;->bootSessionDataPointer:J
+
+    .line 6
+    .line 7
+    goto :station_boot_return
+    :station_boot_lock_end
+    .catchall {:station_boot_lock_start .. :station_boot_lock_end} :station_boot_lock_catch
+
+    :station_boot_return
+    monitor-exit v4
+
+    return-wide v0
+
+    :station_boot_lock_catch
+    move-exception v5
+
+    monitor-exit v4
+
+    throw v5
+.end method

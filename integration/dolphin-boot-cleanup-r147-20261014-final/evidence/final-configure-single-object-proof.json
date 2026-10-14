@@ -1,0 +1,23 @@
+{
+  "schema": "station.r147.final.closed-configure-single-object-proof.v1",
+  "passed": true,
+  "sourceOverrideSha256": "5d729c1f32882a2552b98e01a934778bf7402193d92d3a13802c7bd0d0514665",
+  "zconfHeaderSha256": "63a4b8f5f5e0a2c40ac0f48866cfd713df97e9c81748da7bbb149f7671877a7d",
+  "original37BlankLinesPreserved": true,
+  "objectRelativePath": "Externals/mGBA/mgba/CMakeFiles/mgba.dir/version.c.o",
+  "objectSha256": "049392a0b237e3434280fa9be038d2097aaf1eadb5750f022a6d73529affea71",
+  "originalObjectByteExact": true,
+  "originalConfigurationExactlyPreserved": true,
+  "sourceStageFileSetAndHashesPreserved": true,
+  "fullMotorCompiled": false,
+  "productiveMainAndroidCompiled": false,
+  "apkCompiled": false,
+  "failedFrozenScopeChanged": false,
+  "sourceDateEpoch": 1790576668,
+  "compilerCacheUsed": false,
+  "logs": {
+    "configure": "910bdf22b24e986421e644f942828bb40847190d1557c9c9f56bca6e87a30600",
+    "singleObject": "bb3d4a432b8f1f1e445b1645167db6ce74d14918eac51986d979f5d065636194",
+    "command": "f2c6d248c2ed092c4f2bccfb4a48981f1ba56612198c06dea1f0fa19d2f8a9a6"
+  }
+}

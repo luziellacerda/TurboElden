@@ -1,0 +1,56 @@
+{
+  "schema": "station.r147.final.argument-and-source-guards.host-fixture.v1",
+  "passed": true,
+  "overrideSha256": "5d729c1f32882a2552b98e01a934778bf7402193d92d3a13802c7bd0d0514665",
+  "cmakeSha256": "414ad2a5dcabbb2a49ba1514e6651523865ae306b73a0e769f18e14cab1570e8",
+  "results": {
+    "pass": {
+      "passed": true,
+      "sourceBytesPreserved": true,
+      "cmakeReturnCode": 0
+    },
+    "deny-write": {
+      "passed": true,
+      "sourceBytesPreserved": true,
+      "cmakeReturnCode": 1
+    },
+    "deny-delete": {
+      "passed": true,
+      "sourceBytesPreserved": true,
+      "cmakeReturnCode": 1
+    },
+    "deny-configure": {
+      "passed": true,
+      "sourceBytesPreserved": true,
+      "cmakeReturnCode": 1
+    },
+    "deny-custom": {
+      "passed": true,
+      "sourceBytesPreserved": true,
+      "cmakeReturnCode": 1
+    },
+    "deny-scmrev-present": {
+      "passed": true,
+      "sourceBytesPreserved": true,
+      "cmakeReturnCode": 1
+    },
+    "deny-source-case": {
+      "passed": true,
+      "sourceBytesPreserved": true,
+      "cmakeReturnCode": 1
+    },
+    "deny-other-output": {
+      "passed": true,
+      "sourceBytesPreserved": true,
+      "cmakeReturnCode": 1
+    }
+  },
+  "leadingThreeNewlinesPreserved": true,
+  "crlfQuotesBackslashesSemicolonsAndLiteralVariablesPreserved": true,
+  "fileAndCustomCommandOriginalArgumentsPreserved": true,
+  "exactAssetsAndAbsentScmrevGuardsPreserved": true,
+  "metadataTargetApiStubbedInThisNoneLanguageFixture": true,
+  "originalStageConfigured": false,
+  "nativeBuilt": false,
+  "originalFrozenScopeChanged": false
+}

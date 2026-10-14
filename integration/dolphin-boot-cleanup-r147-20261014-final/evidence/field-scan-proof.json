@@ -1,0 +1,132 @@
+{
+  "schema": "station.r147.dolphin.boot-ownership.field-scan.v1",
+  "actualDexSha256": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+  "scannedClasses": 4991,
+  "references": [
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession$join$2;",
+      "method": "invokeSuspend[Ljava/lang/Object;]Ljava/lang/Object;",
+      "opcode": "IGET_BOOLEAN",
+      "field": "isClosed"
+    },
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;",
+      "method": "closeBlocking[]V",
+      "opcode": "IGET_BOOLEAN",
+      "field": "isClosed"
+    },
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;",
+      "method": "closeBlocking[]V",
+      "opcode": "IPUT_BOOLEAN",
+      "field": "isClosed"
+    },
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;",
+      "method": "consumeBootSessionData[]J",
+      "opcode": "IGET_WIDE",
+      "field": "bootSessionDataPointer"
+    },
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;",
+      "method": "consumeBootSessionData[]J",
+      "opcode": "IPUT_WIDE",
+      "field": "bootSessionDataPointer"
+    },
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;",
+      "method": "isLaunching[]Z",
+      "opcode": "IGET_WIDE",
+      "field": "bootSessionDataPointer"
+    },
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;",
+      "method": "onBootGame[Ljava/lang/String;, J]V",
+      "opcode": "IPUT_WIDE",
+      "field": "bootSessionDataPointer"
+    },
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;",
+      "method": "releaseNativeResources[]V",
+      "opcode": "IGET_WIDE",
+      "field": "bootSessionDataPointer"
+    },
+    {
+      "owner": "Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;",
+      "method": "releaseNativeResources[]V",
+      "opcode": "IPUT_WIDE",
+      "field": "bootSessionDataPointer"
+    },
+    {
+      "owner": "Ltdolphin/shaded/coil/compose/AsyncImagePainter$onRemembered$1$1$2;",
+      "method": "invokeSuspend[Ljava/lang/Object;]Ljava/lang/Object;",
+      "opcode": "IGET_BOOLEAN",
+      "field": "isClosed"
+    }
+  ],
+  "bootFieldPrivateVerified": true,
+  "closedFieldVolatileVerified": true,
+  "closedFieldSingleBytecodeWriter": "NetplaySession.closeBlocking",
+  "fieldDeclarationsBeforeAndAfter": [
+    ".field public final _chatMessages:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field public final _connectionErrors:Ltdolphin/shaded/kotlinx/coroutines/channels/BufferedChannel;",
+    ".field public final _connectionLost:Ltdolphin/shaded/kotlinx/coroutines/channels/BufferedChannel;",
+    ".field public final _controllerMapping:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field public final _desyncMessages:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field public final _fatalTraversalError:Ltdolphin/shaded/kotlinx/coroutines/channels/BufferedChannel;",
+    ".field public final _game:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field public final _gameDigestProgress:Ltdolphin/shaded/kotlinx/coroutines/flow/StateFlowImpl;",
+    ".field public final _hostInputAuthorityEnabled:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field public final _launchGame:Ltdolphin/shaded/kotlinx/coroutines/channels/BufferedChannel;",
+    ".field public final _messages:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field public final _padBuffer:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field public final _players:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field public final _saveTransferProgress:Ltdolphin/shaded/kotlinx/coroutines/flow/StateFlowImpl;",
+    ".field public final _stopGame:Ltdolphin/shaded/kotlinx/coroutines/channels/BufferedChannel;",
+    ".field public final _traversalState:Ltdolphin/shaded/kotlinx/coroutines/flow/SharedFlowImpl;",
+    ".field private bootSessionDataPointer:J",
+    ".field public final chatMessages:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlySharedFlow;",
+    ".field public final connectionErrors:Ltdolphin/shaded/kotlinx/coroutines/flow/ChannelAsFlow;",
+    ".field public final connectionLost:Ltdolphin/shaded/kotlinx/coroutines/flow/ChannelAsFlow;",
+    ".field public final controllerMapping:Ltdolphin/shaded/kotlinx/coroutines/flow/Flow;",
+    ".field public final desyncMessages:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlySharedFlow;",
+    ".field public final fatalTraversalError:Ltdolphin/shaded/kotlinx/coroutines/flow/ChannelAsFlow;",
+    ".field public final game:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlySharedFlow;",
+    ".field public final gameDigestProgress:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlyStateFlow;",
+    ".field public final hostInputAuthorityEnabled:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlySharedFlow;",
+    ".field public volatile isClosed:Z",
+    ".field public final launchGame:Ltdolphin/shaded/kotlinx/coroutines/flow/ChannelAsFlow;",
+    ".field public final messages:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlySharedFlow;",
+    ".field private netPlayClientPointer:J",
+    ".field private netPlayServerPointer:J",
+    ".field private netPlayUICallbacksPointer:J",
+    ".field public final nickName$delegate:Ltdolphin/shaded/kotlin/SynchronizedLazyImpl;",
+    ".field public final onClosed:Lorg/dolphinemu/dolphinemu/model/TaskViewModel$$ExternalSyntheticLambda0;",
+    ".field public final padBuffer:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlySharedFlow;",
+    ".field public final players:Ltdolphin/shaded/kotlinx/coroutines/flow/Flow;",
+    ".field public final saveTransferProgress:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlyStateFlow;",
+    ".field public final sessionScope:Ltdolphin/shaded/kotlinx/coroutines/internal/ContextScope;",
+    ".field public final stopGame:Ltdolphin/shaded/kotlinx/coroutines/flow/ChannelAsFlow;",
+    ".field public final traversalState:Ltdolphin/shaded/kotlinx/coroutines/flow/ReadonlySharedFlow;"
+  ],
+  "fieldMapIdentical": true,
+  "fieldDeclarationSha256": "825e9bce8fdd7a326943d417c080fdd84e401c2d95d2f1c30745c901c7abf89e",
+  "originalMethodCount": 63,
+  "proposedMethodCount": 63,
+  "noNewMethodsOrFields": true,
+  "scannerSourceSha256": "202daeeada42bc70eec6dff779bc6ea3992c710e674a52bd9eece3c6b1a4f1f4",
+  "scannerClassSha256": "bbde4b918405f67a074b0c04813e447e2b0f249c39b680a0b4bdb0ebbf7bd40d",
+  "nativeCodeReferences": [
+    "BootGame forwards boot_session_data.release() as JNI argument exactly once.",
+    "RunNetPlay accepts the argument into unique_ptr ownership.",
+    "nativeReleaseBootSessionData deletes its argument.",
+    "No native GetLongField/SetLongField references to bootSessionDataPointer found in exact JNI source."
+  ],
+  "limits": [
+    "Whole real DEX10 field-instruction scan; no reflective-write enumeration for arbitrary external future code.",
+    "Only tool compiled; no productive DEX or native core built."
+  ],
+  "androidExecuted": false,
+  "apkCompiled": false,
+  "coreCompiled": false
+}
