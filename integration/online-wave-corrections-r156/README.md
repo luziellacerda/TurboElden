@@ -21,13 +21,22 @@ mudar: cinco entradas no total, 13.855 preservadas, inclusive os 40 DEX e
 `libstation_frontend.so`. O kit só poderá ser preparado após aprovação visual
 do APK R156 exato instalado, ligada ao commit e SHA-256 desse arquivo.
 
-A revisão de código deve provar que só a rotina ativa das faixas do modo 3
-mudou, sem helpers visuais sem uso nem novos timers, threads ou alocações de
-heap. A geometria usa uma chamada de desenho para as três faixas. Essas são
-verificações estáticas; ainda não há medição física de consumo ou bateria.
+A revisão de código confirmou que só a rotina ativa das faixas do modo 3 mudou.
+O helper novo é usado nessa rotina, e o helper sem uso da R155 foi removido. Não
+há novos timers, threads, alocações de heap ou chamadas de desenho. A geometria
+usa 154 vértices em uma chamada, contra 206 vértices na R155; são 159 cálculos
+de seno por quadro, contra 200 na R155. A R152 era estática e a animação atual
+tem custo adicional em relação a ela. Essas são verificações estáticas; ainda
+não há medição física de consumo ou bateria.
 
-Estado: fontes R156 preparadas e guardas estáticas aprovadas; compilação nativa
-e congelamento em commit ainda pendentes. Não há APK R156 assinado ou instalado,
-aprovação física ou kit R156 gerado. Nada da R156 foi aplicado no servidor. A
-R152 é a última revisão com aplicação confirmada; os kits R153, R154 e R155
-estão retidos e não devem ser aplicados.
+Fonte registrada no commit `4d2c6b1c73c63204e7928b4aa556b668035fa6f3`.
+A biblioteca nativa passou no recibo de compilação. O APK R156 assinado tem
+SHA-256 `a072af70c04f0b9f9455b22a856bcdf0995b42da5650c2f9ee87243d17f5d5a6`.
+A comparação preservou 13.855 de 13.860 entradas, incluindo 40 DEX, e a
+assinatura original v2/v3. O mesmo SHA-256 foi conferido no `base.apk` instalado
+no Galaxy A56, sem alterar `firstInstallTime` ou `dataDir`.
+
+Estado: APK instalado para teste físico. A aprovação visual do usuário ainda
+está pendente; o kit R156 não foi gerado nem aplicado no servidor. A R152 é a
+última revisão com aplicação confirmada; os kits R153, R154 e R155 estão retidos
+e não devem ser aplicados.
