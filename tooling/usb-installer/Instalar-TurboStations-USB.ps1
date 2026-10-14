@@ -300,7 +300,16 @@ function Get-AppServiceState {
     # Somente o trecho anterior a esse relatório descreve serviços atuais.
     $hasHistoricalAnr = $services.Output -match '(?m)^\s*Last ANR service:\s*$'
     $liveServices = ($services.Output -split '(?m)^\s*Last ANR service:\s*$', 2)[0]
-    if ($liveServices -match ('ServiceRecord\{[^\r\n]*' + [regex]::Escape($TargetPackage) + '/')) {
+    $records = [regex]::Matches($liveServices,
+        ('ServiceRecord\{[^\r\n]*' + [regex]::Escape($TargetPackage) + '/(?<service>[A-Za-z0-9_.$]+)'))
+    if ($records.Count -gt 0) {
+        $serviceNames = @($records | ForEach-Object { $_.Groups['service'].Value })
+        if (@($serviceNames | Where-Object { $_ -match '(^|\.)DownloadService$' }).Count -gt 0) {
+            return 'APP_DOWNLOAD_SERVICE_ACTIVE'
+        }
+        if (@($serviceNames | Where-Object { $_ -ne 'paulscode.android.mupen64plusae.jni.CoreService' }).Count -eq 0) {
+            return 'N64_CORE_SERVICE_ACTIVE'
+        }
         return 'APP_SERVICE_ACTIVE'
     }
     if ($hasHistoricalAnr -or $liveServices -match '(?m)^\s*\(nothing\)\s*$') { return 'NO_APP_SERVICE_DETECTED' }
@@ -622,19 +631,6 @@ try {
                 $failedCount++
                 continue
             }
-            $appService = Get-AppServiceState $device.Serial
-            $receipt.appServiceCheck = $appService
-            if ($appService -ne 'NO_APP_SERVICE_DETECTED') {
-                if ($appService -eq 'APP_SERVICE_ACTIVE') {
-                    $receipt.resultCode = 'APP_SERVICE_NOT_CLOSED'
-                    Write-Host 'Um serviço do TurboStations ainda está ativo. Conclua o download ou aguarde o encerramento do serviço antes de tentar novamente.' -ForegroundColor Yellow
-                } else {
-                    $receipt.resultCode = 'APP_SERVICE_CHECK_UNAVAILABLE'
-                    Write-Host 'A checagem dos serviços está indisponível. Não é possível confirmar se há download ativo; confira a conexão USB e tente verificar novamente.' -ForegroundColor Yellow
-                }
-                $failedCount++
-                continue
-            }
             $appActivity = Get-IdleAppActivityState $device.Serial
             $receipt.appActivityCheck = $appActivity
             if ($appActivity -ne 'IDLE_APP_ACTIVITIES_ONLY' -and
@@ -645,6 +641,36 @@ try {
                 } else {
                     $receipt.resultCode = 'APP_ACTIVITY_NOT_IDLE'
                     Write-Host 'Um jogo ou tela do TurboStations ainda aparece nos tasks do Android. Saia dela e tente novamente.' -ForegroundColor Yellow
+                }
+                $failedCount++
+                continue
+            }
+            $appService = Get-AppServiceState $device.Serial
+            $receipt.appServiceCheck = $appService
+            if ($appService -eq 'N64_CORE_SERVICE_ACTIVE') {
+                # Só encerra um motor N64 isolado depois de confirmar que não há
+                # partida, Activity de jogo ou download. Não limpa dados.
+                Write-Host 'Motor N64 permaneceu ativo após sair do jogo. Encerrando o aplicativo ocioso antes da atualização.'
+                $stop = Invoke-Adb @('-s', $device.Serial, 'shell', 'am', 'force-stop', $TargetPackage)
+                if ($stop.ExitCode -eq 0) {
+                    $receipt.forceStopped = $true
+                    $appService = Get-AppServiceState $device.Serial
+                    $receipt.appServiceCheck = $appService
+                }
+            }
+            if ($appService -ne 'NO_APP_SERVICE_DETECTED') {
+                if ($appService -eq 'APP_DOWNLOAD_SERVICE_ACTIVE') {
+                    $receipt.resultCode = 'APP_DOWNLOAD_NOT_CLOSED'
+                    Write-Host 'O serviço de download ainda está ativo. Conclua ou cancele o download antes de atualizar.' -ForegroundColor Yellow
+                } elseif ($appService -eq 'N64_CORE_SERVICE_ACTIVE') {
+                    $receipt.resultCode = 'N64_CORE_NOT_CLOSED'
+                    Write-Host 'O motor N64 continua ativo mesmo após o encerramento; a instalação foi interrompida para preservar a partida.' -ForegroundColor Yellow
+                } elseif ($appService -eq 'APP_SERVICE_ACTIVE') {
+                    $receipt.resultCode = 'APP_SERVICE_NOT_CLOSED'
+                    Write-Host 'Outro serviço do TurboStations ainda está ativo. Encerre a atividade antes de atualizar.' -ForegroundColor Yellow
+                } else {
+                    $receipt.resultCode = 'APP_SERVICE_CHECK_UNAVAILABLE'
+                    Write-Host 'Não foi possível confirmar o estado dos serviços. Confira a conexão USB e tente novamente.' -ForegroundColor Yellow
                 }
                 $failedCount++
                 continue

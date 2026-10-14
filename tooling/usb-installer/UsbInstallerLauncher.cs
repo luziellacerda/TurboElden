@@ -1262,12 +1262,20 @@ internal static class UsbInstallerLauncher
                         "Saia da partida pelo próprio jogo e aguarde o encerramento.",
                     "NENHUM APK FOI INSTALADO.", Amber);
             }
+            else if (code == "APP_DOWNLOAD_NOT_CLOSED")
+                ShowBlocked(1, 1, "Download ainda ativo",
+                    "Conclua ou cancele o download no telefone.",
+                    "NENHUM APK FOI INSTALADO.", Amber);
+            else if (code == "N64_CORE_NOT_CLOSED")
+                ShowBlocked(1, 1, "Motor N64 ainda ativo",
+                    "O motor permaneceu aberto mesmo após a tentativa de encerramento seguro.",
+                    "NENHUM APK FOI INSTALADO.", Amber);
             else if (code == "APP_SERVICE_NOT_CLOSED")
             {
                 bool unavailable = receipt != null && receipt.appServiceCheck == "APP_SERVICES_CHECK_UNAVAILABLE";
-                ShowBlocked(1, 1, unavailable ? "Checagem USB indisponível" : "Download ou serviço ativo",
+                ShowBlocked(1, 1, unavailable ? "Checagem USB indisponível" : "Serviço do app ainda ativo",
                     unavailable ? "Não foi possível conferir os serviços. Reconecte o USB e tente novamente." :
-                        "Conclua o download e volte à tela inicial.",
+                        "Encerre a atividade do TurboStations e tente novamente.",
                     "NENHUM APK FOI INSTALADO.", Amber);
             }
             else if (code == "INSTALL_FAILED_INSUFFICIENT_STORAGE")

@@ -52,6 +52,8 @@ synthetic-unknown device model:Unknown
     if ($Arguments -contains 'services') {
         if ($script:AppServiceState -eq 'unavailable') { return [pscustomobject]@{ExitCode=1; Output='error'} }
         if ($script:AppServiceState -eq 'active') { return [pscustomobject]@{ExitCode=0; Output='ServiceRecord{example org.turboramastation.frontend/.DownloadService}'} }
+        if ($script:AppServiceState -eq 'n64-core') { return [pscustomobject]@{ExitCode=0; Output='  * ServiceRecord{current u0 org.turboramastation.frontend/paulscode.android.mupen64plusae.jni.CoreService c:org.turboramastation.frontend}'} }
+        if ($script:AppServiceState -eq 'other-service') { return [pscustomobject]@{ExitCode=0; Output='ServiceRecord{current org.turboramastation.frontend/.OtherService}'} }
         if ($script:AppServiceState -eq 'old-anr') { return [pscustomobject]@{ExitCode=0; Output="ACTIVITY MANAGER SERVICES (dumpsys activity services)`n  Last ANR service:`nServiceRecord{old org.turboramastation.frontend/.CoreService}`n  (nothing)"} }
         if ($script:AppServiceState -eq 'active-and-old-anr') { return [pscustomobject]@{ExitCode=0; Output="ACTIVITY MANAGER SERVICES (dumpsys activity services)`nServiceRecord{current org.turboramastation.frontend/.DownloadService}`n  Last ANR service:`nServiceRecord{old org.turboramastation.frontend/.CoreService}`n  (nothing)"} }
         return [pscustomobject]@{ExitCode=0; Output="ACTIVITY MANAGER SERVICES (dumpsys activity services)`n  (nothing)"}
@@ -142,11 +144,15 @@ $script:NativeState = 'unsupported'
 if ((Get-OnlineSessionState 'synthetic-two') -ne 'NATIVE_PROCESS_CHECK_UNAVAILABLE') { throw 'Conservative unknown process gate failed.' }
 if ((Get-AppServiceState 'synthetic-two') -ne 'NO_APP_SERVICE_DETECTED') { throw 'Idle service detection failed.' }
 $script:AppServiceState = 'active'
-if ((Get-AppServiceState 'synthetic-two') -ne 'APP_SERVICE_ACTIVE') { throw 'Background download service detection failed.' }
+if ((Get-AppServiceState 'synthetic-two') -ne 'APP_DOWNLOAD_SERVICE_ACTIVE') { throw 'Background download service detection failed.' }
+$script:AppServiceState = 'n64-core'
+if ((Get-AppServiceState 'synthetic-two') -ne 'N64_CORE_SERVICE_ACTIVE') { throw 'N64 core misclassified as download.' }
+$script:AppServiceState = 'other-service'
+if ((Get-AppServiceState 'synthetic-two') -ne 'APP_SERVICE_ACTIVE') { throw 'Unknown live service was missed.' }
 $script:AppServiceState = 'old-anr'
 if ((Get-AppServiceState 'synthetic-two') -ne 'NO_APP_SERVICE_DETECTED') { throw 'Historical ANR incorrectly blocked idle phone.' }
 $script:AppServiceState = 'active-and-old-anr'
-if ((Get-AppServiceState 'synthetic-two') -ne 'APP_SERVICE_ACTIVE') { throw 'Live service with historical ANR was missed.' }
+if ((Get-AppServiceState 'synthetic-two') -ne 'APP_DOWNLOAD_SERVICE_ACTIVE') { throw 'Live service with historical ANR was missed.' }
 $script:AppServiceState = 'unavailable'
 if ((Get-AppServiceState 'synthetic-two') -ne 'APP_SERVICES_CHECK_UNAVAILABLE') { throw 'Unknown service state gate failed.' }
 $script:AppServiceState = 'none'
