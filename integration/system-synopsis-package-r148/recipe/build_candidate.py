@@ -20,6 +20,7 @@ import sys
 import zipfile
 
 sys.dont_write_bytecode = True
+zipfile.ZIP64_LIMIT = (1 << 32) - 1
 
 HERE = Path(__file__).resolve().parent
 SCOPE = HERE.parent
