@@ -173,12 +173,14 @@ def build(args: argparse.Namespace) -> dict:
          class_files[0].read_bytes()[6:8] == b"\x004", "Only one Java 8 productive class allowed")
     overlay = out / "overlay"
     overlay.mkdir()
-    command([java, "-cp", inputs["d8"], "com.android.tools.r8.D8", "--release", "--min-api", "28",
+    command([java, "-cp", inputs["d8"], "com.android.tools.r8.D8", "--release", "--min-api", "26",
              "--lib", inputs["android"], "--classpath", inputs["rooms"], "--classpath", inputs["client"],
              "--output", overlay, class_files[0]], "d8", out)
     overlay_dex = overlay / "classes.dex"
     need(overlay_dex.is_file() and list(overlay.iterdir()) == [overlay_dex],
          "D8 emitted an extra class or partition")
+    need(overlay_dex.read_bytes()[:8] == b"dex\n038\0",
+         "R165 helper overlay must use the API26 DEX format")
     overlay_zip = out / "overlay.zip"
     with zipfile.ZipFile(overlay_zip, "w", zipfile.ZIP_STORED) as archive:
         archive.writestr("classes.dex", overlay_dex.read_bytes())
@@ -225,6 +227,11 @@ def build(args: argparse.Namespace) -> dict:
     candidate = out / PARTITION
     command([java, "-cp", cp, "AssembleScopedPartition", args.donor, PARTITION, DEX_SHA,
              donor, candidate, scope], "assemble", out)
+    with zipfile.ZipFile(args.donor) as archive:
+        donor_magic = archive.read(PARTITION)[:8]
+    output_magic = candidate.read_bytes()[:8]
+    need(donor_magic == output_magic == b"dex\n039\0",
+         "R164 DEX35 version must be preserved by R165")
     candidate_zip = out / "candidate.zip"
     with zipfile.ZipFile(candidate_zip, "w", zipfile.ZIP_STORED) as archive:
         archive.writestr(PARTITION, candidate.read_bytes())
@@ -257,7 +264,10 @@ def build(args: argparse.Namespace) -> dict:
                "event4CallerProjectionSha256": original[CALLER],
                "event4CallerPreserved": True, "event4HelperCallCount": 1,
                "scopeSha256": sha(scope), "java8ClassSha256": sha(class_files[0]),
-               "d8OverlaySha256": sha(overlay_dex), "minimumAndroidApi": 28,
+               "d8OverlaySha256": sha(overlay_dex), "d8MinimumApi": 26,
+               "d8OverlayDexVersion": "038", "donorDexVersion": "039",
+               "candidateDexVersion": "039", "apkMinSdk": 26,
+               "api26And27PhysicalValidation": False,
                "changedDexPartitions": [PARTITION], "newThreadsTimersOrPolling": False,
                "apkAssembled": False, "signed": False, "installed": False,
                "serverRegistered": False, "physicalGameplayValidated": False}
