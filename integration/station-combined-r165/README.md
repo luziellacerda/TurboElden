@@ -1,4 +1,15 @@
-# R165 combinada — preparo sem APK
+# R165 combinada — APK assinado, cadastro pendente
+
+Estado em 15/10/2026: o retorno PSX do servidor foi publicado no commit
+`3f55caa582255ad87b508e95d24880d775bb9fe7`. O APK único R165 foi
+montado e assinado fora do Git, SHA-256
+`9e7ab2441e9d75568d5d2b741b4a0ed42e9a2d9f823698c0f39dccdcb7c19145`.
+O kit independente sem APK foi gerado, SHA-256
+`2e260ba80f93a0a9f65c1e2dca2f0632ce29b321dd895ad84d737e5a5628179b`.
+O [handoff atual](../../docs/server/r165/R165-APK-ASSINADO-REGISTRO-PENDENTE-20261015.md)
+contém os quatro IDs novos e a sequência exigida do servidor. As etapas de
+preparo abaixo documentam a receita executada; a R165 ainda não foi instalada
+nem cadastrada, e a R164 permanece o retorno estável.
 
 Esta receita congela uma futura candidata única sobre o APK assinado R164,
 SHA-256 `903700d5d6dcd63779df636cfb11bf94e2fadbeece462d2cb7a6cdf1dfbd5210`.

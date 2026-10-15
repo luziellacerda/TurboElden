@@ -127,9 +127,11 @@ def validate_package(package: Path) -> tuple[dict, Path]:
         if ids[platform] != prefix + markers[marker]["runtimeSha256"][:12]:
             raise ValueError("R165 online engine ID differs: " + platform)
     with zipfile.ZipFile(unsigned) as archive:
-        rows = {row["platform"]: row for row in
-                json.loads(archive.read("assets/station-online/engines.json"))["engines"]}
-    if len(rows) != 13 or any(rows[p]["engineId"] != ids[p] for p in ids):
+        rows = json.loads(archive.read("assets/station-online/engines.json"))["engines"]
+    selected = [row for row in rows if row["platform"] in ids]
+    if (len(rows) != 13 or len(selected) != 4 or
+        len({row["platform"] for row in selected}) != 4 or
+        any(row["engineId"] != ids[row["platform"]] for row in selected)):
         raise ValueError("R165 registry and package engine IDs differ")
     return receipt, unsigned
 

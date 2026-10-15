@@ -1,4 +1,6 @@
-# R165 combinada: fonte pronta, aguardando publicação PSX no servidor
+# R165 combinada: registro anterior à publicação PSX
+
+Estado posterior: [APK R165 assinado e cadastro dos motores pendente](R165-APK-ASSINADO-REGISTRO-PENDENTE-20261015.md). As informações abaixo documentam o ponto anterior ao retorno do servidor; não são o estado atual.
 
 ## Autoridades separadas
 
