@@ -139,7 +139,8 @@ final class StationPsxLaunch {
         JSONObject dependencies=engine.getJSONObject("dependencySha256");
         if(!OWNER_SHA.equals(dependencies.getString("libmain.so"))||!dependencies.has("libSDL2.so"))throw new IOException("PSX_OWNER_DEPENDENCIES");
         for(Iterator<String> names=dependencies.keys();names.hasNext();){String name=names.next();
-            if(!name.matches("lib[A-Za-z0-9_-]+\\.so")||!StationOnlineGame.sha(new File(context.getApplicationInfo().nativeLibraryDir,name),cancel).equals(dependencies.getString(name)))throw new IOException("PSX_DEPENDENCY_CHANGED");
+            // The Android C++ runtime has a literal "++" in its library name.
+            if((!name.matches("lib[A-Za-z0-9_-]+\\.so")&&!"libc++_shared.so".equals(name))||!StationOnlineGame.sha(new File(context.getApplicationInfo().nativeLibraryDir,name),cancel).equals(dependencies.getString(name)))throw new IOException("PSX_DEPENDENCY_CHANGED");
         }
     }
     private static File expectedHome(Context context,String name)throws IOException {
