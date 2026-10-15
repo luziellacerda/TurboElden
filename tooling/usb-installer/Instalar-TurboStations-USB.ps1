@@ -267,6 +267,58 @@ function Get-InstallFailureCode {
     return 'INSTALL_NOT_CONFIRMED'
 }
 
+function Get-SanitizedAdbInstallOutput {
+    param([string]$Output)
+    # ADB pode incluir caminho do APK, serial, conta ou texto vindo do Android.
+    # O recibo guarda apenas marcadores fixos; nunca uma parte livre da saída.
+    if ([string]::IsNullOrWhiteSpace($Output)) { return 'ADB_NO_OUTPUT' }
+    if ($Output.Length -gt 4096) { $Output = $Output.Substring(0, 4096) }
+    $markers = New-Object 'System.Collections.Generic.List[string]'
+    if ($Output -match 'ADB_TIMEOUT') { $markers.Add('ADB_TIMEOUT') }
+    if ($Output -match '(?i)performing streamed install') { $markers.Add('STREAMED_INSTALL_STARTED') }
+    if ($Output -match '(?i)failed to stat') { $markers.Add('ADB_FAILED_TO_STAT_APK') }
+    if ($Output -match '(?i)failed to read') { $markers.Add('ADB_FAILED_TO_READ') }
+    if ($Output -match '(?i)failed to write|short write|broken pipe') { $markers.Add('ADB_TRANSFER_INTERRUPTED') }
+    if ($Output -match '(?i)failed to install') { $markers.Add('ADB_FAILED_TO_INSTALL') }
+    if ($Output -match '(?i)failed to commit|failed to finalize') { $markers.Add('ANDROID_INSTALL_SESSION_FAILED') }
+    if ($Output -match '(?i)device.*not found|no devices|device disconnected') { $markers.Add('USB_DISCONNECTED') }
+    if ($Output -match '(?i)device offline|\boffline\b') { $markers.Add('USB_OFFLINE') }
+    if ($Output -match '(?i)unauthorized') { $markers.Add('USB_UNAUTHORIZED') }
+    if ($Output -match '\bINSTALL_FAILED_[A-Z0-9_]+\b') { $markers.Add('ANDROID_INSTALL_FAILURE_CODE_REPORTED') }
+    if ($Output -match '(?m)^\s*Success\s*$') { $markers.Add('ANDROID_SUCCESS_REPORTED') }
+    if ($markers.Count -eq 0) { return 'ADB_OUTPUT_UNCLASSIFIED' }
+    return (($markers | Select-Object -Unique) -join ';')
+}
+
+function Test-UncertainInstallResult {
+    param([string]$Code)
+    return $Code -eq 'INSTALL_NOT_CONFIRMED' -or
+           $Code -eq 'INSTALL_STATUS_UNKNOWN_TIMEOUT' -or
+           $Code -eq 'INSTALL_STATUS_UNKNOWN_LOCAL_ERROR' -or
+           $Code -eq 'USB_DISCONNECTED' -or
+           $Code -eq 'USB_OFFLINE' -or
+           $Code -eq 'USB_UNAUTHORIZED'
+}
+
+function Confirm-UncertainInstallByHash {
+    param([string]$DeviceSerial, [string]$ExpectedHash, [System.Collections.IDictionary]$Receipt)
+    if (-not (Test-UncertainInstallResult ([string]$Receipt.resultCode))) { return $false }
+    # Uma única consulta após a falha evita repetir a transferência se o
+    # Android concluiu a instalação, mas o cliente ADB perdeu a resposta.
+    try {
+        $verification = Get-InstalledApkVerification $DeviceSerial $ExpectedHash
+    } catch {
+        $verification = [pscustomobject]@{ State = 'unavailable'; Code = 'INSTALLED_HASH_CHECK_ERROR'; Hash = $null }
+    }
+    $Receipt.installedHashVerificationCode = $verification.Code
+    $Receipt.installedApkSha256 = $verification.Hash
+    if ($verification.State -ne 'matched') { return $false }
+    $Receipt.installSuccess = $true
+    $Receipt.installedHashVerified = $true
+    $Receipt.resultCode = 'SUCCESS_HASH_CONFIRMED_AFTER_ADB_ERROR'
+    return $true
+}
+
 function Get-OnlineSessionState {
     param([string]$DeviceSerial)
     # Home não encerra uma partida: o processo nativo pode continuar vivo.
@@ -569,6 +621,7 @@ try {
             installSuccess = $false
             resultCode = 'NOT_STARTED'
             installExitCode = $null
+            adbInstallOutputSanitized = 'NOT_STARTED'
             nativeSessionCheck = 'NOT_CHECKED'
             appServiceCheck = 'NOT_CHECKED'
             appActivityCheck = 'NOT_CHECKED'
@@ -692,6 +745,7 @@ try {
             if ($GuiProgress) { Write-Host 'TS_STAGE|INSTALLING' }
             $installation = Invoke-Adb @('-s', $device.Serial, 'install', '-r', $resolvedApk)
             $receipt.installExitCode = $installation.ExitCode
+            $receipt.adbInstallOutputSanitized = Get-SanitizedAdbInstallOutput $installation.Output
             if ($installation.ExitCode -eq 0 -and $installation.Output -match '(?m)^\s*Success\s*$') {
                 $receipt.installSuccess = $true
                 $receipt.resultCode = 'SUCCESS'
@@ -714,8 +768,13 @@ try {
                 }
             } else {
                 $receipt.resultCode = Get-InstallFailureCode $installation.Output
-                $failedCount++
-                Write-Host ('{0}: instalação não concluída ({1}).' -f $device.Alias, $receipt.resultCode) -ForegroundColor Yellow
+                if (Confirm-UncertainInstallByHash $device.Serial $actualHash $receipt) {
+                    Write-Host ('{0}: ADB perdeu a confirmação, mas o APK instalado tem o SHA256 esperado. Não repita a instalação.' -f $device.Alias) -ForegroundColor Green
+                } else {
+                    $failedCount++
+                    Write-Host ('{0}: instalação não concluída ({1}).' -f $device.Alias, $receipt.resultCode) -ForegroundColor Yellow
+                    Write-Host ('Diagnóstico ADB: {0}' -f $receipt.adbInstallOutputSanitized)
+                }
                 if ($receipt.resultCode -eq 'INSTALL_FAILED_UPDATE_INCOMPATIBLE') {
                     Write-Host 'A assinatura é incompatível. Preserve os dados; é necessário corrigir o APK com a assinatura original.'
                 } elseif ($receipt.resultCode -eq 'INSTALL_FAILED_VERSION_DOWNGRADE') {
@@ -731,13 +790,20 @@ try {
                 $receipt.resultCode = 'SUCCESS_HASH_UNVERIFIED'
                 Write-Host ('{0}: o Android confirmou a instalação, mas a conferência final falhou. Verifique o APK instalado antes de repetir.' -f $device.Alias) -ForegroundColor Yellow
             } elseif ($receipt.installAttempted) {
+                if ($receipt.adbInstallOutputSanitized -eq 'NOT_STARTED') {
+                    $receipt.adbInstallOutputSanitized = 'ADB_CLIENT_ERROR_REDACTED'
+                }
                 $receipt.resultCode = 'INSTALL_STATUS_UNKNOWN_LOCAL_ERROR'
-                Write-Host ('{0}: a instalação foi iniciada, mas não há confirmação do resultado. Verifique a versão no telefone antes de repetir.' -f $device.Alias) -ForegroundColor Yellow
+                if (Confirm-UncertainInstallByHash $device.Serial $actualHash $receipt) {
+                    Write-Host ('{0}: o APK instalado tem o SHA256 esperado após erro local. Não repita a instalação.' -f $device.Alias) -ForegroundColor Green
+                } else {
+                    Write-Host ('{0}: a instalação foi iniciada, mas não há confirmação do resultado. Verifique a versão no telefone antes de repetir.' -f $device.Alias) -ForegroundColor Yellow
+                }
             } else {
                 $receipt.resultCode = 'LOCAL_OPERATION_FAILED'
                 Write-Host ('{0}: não foi possível concluir a preparação. Confira cabo, autorização e arquivos.' -f $device.Alias) -ForegroundColor Yellow
             }
-            $failedCount++
+            if (-not ($receipt.installSuccess -and $receipt.installedHashVerified)) { $failedCount++ }
         } finally {
             $receipt.completedUtc = [DateTime]::UtcNow.ToString('o')
             $receiptSaved = $false

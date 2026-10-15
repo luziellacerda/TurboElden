@@ -19,6 +19,7 @@ $script:RemoteHashState = 'matched'
 $script:AppServiceState = 'none'
 $script:AppHistoryState = 'normal'
 $script:HashCommands = 0
+$script:PackagePathCommands = 0
 $script:FallbackSingleSerial = $null
 $script:FixtureWindowsSerials = @()
 function Get-WindowsPresentUsbSerials { return @($script:FixtureWindowsSerials) }
@@ -83,6 +84,8 @@ synthetic-unknown device model:Unknown
 '@ }
     }
     if ($Arguments -contains 'pm') {
+        $script:PackagePathCommands++
+        if ($script:RemotePathState -eq 'throw') { throw 'synthetic USB error' }
         if ($script:RemotePathState -eq 'unsafe') { return [pscustomobject]@{ExitCode=0; Output='package:/data/app/unsafe/base.apk;echo PRIVATE'} }
         if ($script:RemotePathState -eq 'split') {
             return [pscustomobject]@{ExitCode=0; Output="package:/data/app/~~example/pkg-example/base.apk`npackage:/data/app/~~example/pkg-example/split.apk"}
@@ -133,6 +136,12 @@ if ((Get-IdleAppActivityState 'synthetic-two') -ne 'APP_ACTIVITY_CHECK_UNAVAILAB
 $script:AppHistoryState = 'normal'
 if ((Get-InstallFailureCode 'Failure [INSTALL_FAILED_UPDATE_INCOMPATIBLE: details]') -ne 'INSTALL_FAILED_UPDATE_INCOMPATIBLE') { throw 'Failure classification failed.' }
 if ((Get-InstallFailureCode 'ADB_TIMEOUT: no reply') -ne 'INSTALL_STATUS_UNKNOWN_TIMEOUT') { throw 'Uncertain timeout classification failed.' }
+$privateAdbOutput = 'adb: failed to install C:\Users\Alice\Private\Turbo.apk on SERIAL-123: Failure [INSTALL_FAILED_INSUFFICIENT_STORAGE]; token=secret@example.com'
+$safeAdbOutput = Get-SanitizedAdbInstallOutput $privateAdbOutput
+if ($safeAdbOutput -ne 'ADB_FAILED_TO_INSTALL;ANDROID_INSTALL_FAILURE_CODE_REPORTED') { throw 'ADB error markers were not preserved.' }
+if ($safeAdbOutput -match 'Alice|Private|SERIAL|secret|example|Turbo') { throw 'ADB diagnostic leaked private data.' }
+if ((Get-SanitizedAdbInstallOutput 'unrecognized private-device-123') -ne 'ADB_OUTPUT_UNCLASSIFIED') { throw 'Unknown ADB output must be redacted.' }
+if ((Get-SanitizedAdbInstallOutput '') -ne 'ADB_NO_OUTPUT') { throw 'Empty ADB output marker failed.' }
 $script:HasOnlineActivity = $false
 if ((Get-OnlineSessionState 'synthetic-two') -ne 'ACTIVE_NATIVE_PROCESS') { throw 'Background native session detection failed.' }
 $script:NativeState = 'none'
@@ -168,4 +177,28 @@ if ((Get-InstalledApkVerification 'synthetic-two' ('a' * 64)).Code -ne 'PACKAGE_
 if ($script:HashCommands -ne $beforeUnsafePath) { throw 'Unsafe path reached hash command.' }
 $script:RemotePathState = 'split'
 if ((Get-InstalledApkVerification 'synthetic-two' ('a' * 64)).Code -ne 'SINGLE_BASE_APK_NOT_CONFIRMED') { throw 'Split APK gate failed.' }
-[pscustomobject]@{syntax='passed'; simulatedUsbAuthorized=2; unauthorizedAndOfflineRecognized=$true; networkAndEmulatorExcluded=$true; windowsPresentUsbFallback=$true; adbSingleUsbFallback=$true; substringSerialDoesNotConfirmUsb=$true; idleFrontendAllowed=$true; idleLoginAllowed=$true; activeGameComponentBlocked=$true; pausedOfflineGameBlocked=$true; gameOnSecondDisplayBlocked=$true; unknownActivityStateBlocked=$true; backgroundGameBlocked=$true; closedGameRecognized=$true; unknownProcessBlocked=$true; backgroundServiceBlocked=$true; unknownServiceStateBlocked=$true; installedHashMatchMismatchAndUnavailableRecognized=$true; unsafeRemotePathBlocked=$true; unexpectedSplitApkDetected=$true; usbAccess=$false; installationPerformed=$false} | ConvertTo-Json
+$script:RemotePathState = 'normal'
+$script:RemoteHashState = 'matched'
+$script:HashCommands = 0
+$script:PackagePathCommands = 0
+$uncertainReceipt = [ordered]@{resultCode='INSTALL_NOT_CONFIRMED'; installSuccess=$false; installedHashVerified=$false; installedHashVerificationCode='NOT_CHECKED'; installedApkSha256=$null}
+if (-not (Confirm-UncertainInstallByHash 'synthetic-two' ('a' * 64) $uncertainReceipt)) { throw 'ADB error with matching installed APK was not recovered.' }
+if ($uncertainReceipt.resultCode -ne 'SUCCESS_HASH_CONFIRMED_AFTER_ADB_ERROR' -or -not $uncertainReceipt.installSuccess -or -not $uncertainReceipt.installedHashVerified) { throw 'Recovered install receipt is inconsistent.' }
+if ($script:HashCommands -ne 1 -or $script:PackagePathCommands -ne 1) { throw 'Uncertain install must perform only one installed-hash verification.' }
+$script:RemoteHashState = 'mismatch'
+$failedReceipt = [ordered]@{resultCode='INSTALL_NOT_CONFIRMED'; installSuccess=$false; installedHashVerified=$false; installedHashVerificationCode='NOT_CHECKED'; installedApkSha256=$null}
+if (Confirm-UncertainInstallByHash 'synthetic-two' ('a' * 64) $failedReceipt) { throw 'Mismatched APK was marked installed.' }
+if ($failedReceipt.resultCode -ne 'INSTALL_NOT_CONFIRMED' -or $failedReceipt.installedHashVerificationCode -ne 'INSTALLED_HASH_MISMATCH') { throw 'Uncertain failure result was lost.' }
+$script:RemoteHashState = 'unavailable'
+$unavailableReceipt = [ordered]@{resultCode='INSTALL_STATUS_UNKNOWN_TIMEOUT'; installSuccess=$false; installedHashVerified=$false; installedHashVerificationCode='NOT_CHECKED'; installedApkSha256=$null}
+if (Confirm-UncertainInstallByHash 'synthetic-two' ('a' * 64) $unavailableReceipt) { throw 'Unavailable installed hash was marked installed.' }
+if ($unavailableReceipt.resultCode -ne 'INSTALL_STATUS_UNKNOWN_TIMEOUT' -or $unavailableReceipt.installedHashVerificationCode -ne 'INSTALLED_HASH_UNAVAILABLE') { throw 'Timeout result was lost.' }
+$beforeExplicitFailure = $script:PackagePathCommands
+$explicitFailure = [ordered]@{resultCode='INSTALL_FAILED_INSUFFICIENT_STORAGE'; installSuccess=$false; installedHashVerified=$false; installedHashVerificationCode='NOT_CHECKED'; installedApkSha256=$null}
+if (Confirm-UncertainInstallByHash 'synthetic-two' ('a' * 64) $explicitFailure) { throw 'Explicit Android failure was marked installed.' }
+if ($script:PackagePathCommands -ne $beforeExplicitFailure -or $explicitFailure.resultCode -ne 'INSTALL_FAILED_INSUFFICIENT_STORAGE') { throw 'Explicit Android failure must not trigger another hash read.' }
+$script:RemotePathState = 'throw'
+$exceptionReceipt = [ordered]@{resultCode='INSTALL_STATUS_UNKNOWN_LOCAL_ERROR'; installSuccess=$false; installedHashVerified=$false; installedHashVerificationCode='NOT_CHECKED'; installedApkSha256=$null}
+if (Confirm-UncertainInstallByHash 'synthetic-two' ('a' * 64) $exceptionReceipt) { throw 'Hash check exception was marked installed.' }
+if ($exceptionReceipt.resultCode -ne 'INSTALL_STATUS_UNKNOWN_LOCAL_ERROR' -or $exceptionReceipt.installedHashVerificationCode -ne 'INSTALLED_HASH_CHECK_ERROR') { throw 'Hash check exception lost original failure.' }
+[pscustomobject]@{syntax='passed'; simulatedUsbAuthorized=2; unauthorizedAndOfflineRecognized=$true; networkAndEmulatorExcluded=$true; windowsPresentUsbFallback=$true; adbSingleUsbFallback=$true; substringSerialDoesNotConfirmUsb=$true; idleFrontendAllowed=$true; idleLoginAllowed=$true; activeGameComponentBlocked=$true; pausedOfflineGameBlocked=$true; gameOnSecondDisplayBlocked=$true; unknownActivityStateBlocked=$true; backgroundGameBlocked=$true; closedGameRecognized=$true; unknownProcessBlocked=$true; backgroundServiceBlocked=$true; unknownServiceStateBlocked=$true; installedHashMatchMismatchAndUnavailableRecognized=$true; unsafeRemotePathBlocked=$true; unexpectedSplitApkDetected=$true; uncertainAdbResultRecheckedOnce=$true; matchingInstalledApkRecoversAdbError=$true; mismatchAndUnavailableRemainFailures=$true; explicitStorageFailureUntouched=$true; adbOutputSanitized=$true; usbAccess=$false; installationPerformed=$false} | ConvertTo-Json

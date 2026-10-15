@@ -1388,9 +1388,17 @@ internal static class UsbInstallerLauncher
                 bool uncertain = (receipt == null && completedStages >= 2) ||
                     code == "INSTALL_STATUS_UNKNOWN_TIMEOUT" ||
                     code == "INSTALL_STATUS_UNKNOWN_LOCAL_ERROR" ||
+                    code == "INSTALL_NOT_CONFIRMED" ||
+                    code == "USB_DISCONNECTED" ||
+                    code == "USB_OFFLINE" ||
+                    code == "USB_UNAUTHORIZED" ||
                     (result.Output ?? "").IndexOf("INSTALL_STATUS_UNKNOWN_TIMEOUT", StringComparison.OrdinalIgnoreCase) >= 0;
                 if (signal != null) uncertain = code == "INSTALL_STATUS_UNKNOWN_TIMEOUT" ||
-                    code == "INSTALL_STATUS_UNKNOWN_LOCAL_ERROR";
+                    code == "INSTALL_STATUS_UNKNOWN_LOCAL_ERROR" ||
+                    code == "INSTALL_NOT_CONFIRMED" ||
+                    code == "USB_DISCONNECTED" ||
+                    code == "USB_OFFLINE" ||
+                    code == "USB_UNAUTHORIZED";
                 if (uncertain)
                 {
                     var device = phones.SelectedItem as UsbDevice;
