@@ -1,5 +1,15 @@
 # Instalar TurboStations por USB
 
+## Cadastro R165 confirmado pelo servidor — 15/10/2026
+
+Os quatro motores e os modos R165 estão cadastrados e passaram na consulta
+assinada pública. A correção de saída confirmada do anfitrião também está ativa.
+Ler [recibo efetivo](../../docs/server/r165/server-return.json) e
+[teste físico](../../docs/server/r165/README.md). O manifesto de exemplo deste
+Git foi atualizado para esse estado. Nenhum APK, EXE, instalação ou arquivo
+privado do computador Windows foi alterado por este retorno do servidor.
+R165 continua candidata; R164 permanece estável até o teste nos aparelhos.
+
 ## Instalador sempre atual
 
 Neste computador, abra sempre `E:\TurboStations-Instalador-Atual\Instalar-TurboStations-USB.exe` (ou o atalho na Área de Trabalho). A janela mostra a revisão disponível e permite escolher o telefone USB que você quiser atualizar. Preparar uma revisão nova **não instala em nenhum telefone** e não deixa serviço de atualização rodando.

@@ -1,3 +1,26 @@
+<!-- STATION-R165-APPLIED-20261015 -->
+## R165 aplicada: cadastro e saída confirmada — 15/10/2026
+
+Ler o topo do MESMO handoff, r165/server-return.json e r165/README.md.
+Autoridade privada station-psx-return-20261015-1736/completed.json PASSED.
+Quatro motores e 492 vínculos aditivos: catálogo100,83 motores,15.912 perfis,
+10.997 modos. Anteriores preservados. PSX:84 edições,23 modos2P em19 edições,
+17 impedidos e53 classificações locais sem vagas. N64:157 edições/387 perfis,
+230 modos multiplayer/157 individuais. GameCube9/Wii3.
+
+DLL53d4adc9c114/fontec0ca229 publicada após sombra no mesmo sandbox e sem salas:
+dois reinícios somente do Station. Leave confirmado entrega STATE3 antes de
+close1000, com janela máxima2s. DLLb347 e configurações antigas preservadas.
+Passaram1.467+226 verificações, sete regressões, capabilities locais/públicas
+de84PSX/157N64, admissões/recusas, transporte sintético PSX2P/N644P e saída
+pública com replay3x. Isso NÃO é gameplay Android. A56R165 por recibo do produtor;
+g52R165, partida e saída física pendentes. R164 estável preservada.
+
+NÃO repetir cadastro/provas completas/deploy/capas/R164/R162. Nenhum APK
+recebido. Limites, licenças reais, esquema, outros produtos, rede100/800,
+DNS/onboard, ROMs e artes intactos. Preservar recibos e pendências globais;
+não copiar aprovações por nome ou metadata.players.
+
 ## Instalador USB permanente — instrução atual do mantenedor
 
 Ao terminar **qualquer APK novo assinado e conferido**, publique-o com

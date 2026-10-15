@@ -5,8 +5,8 @@
   "sha256": "9e7ab2441e9d75568d5d2b741b4a0ed42e9a2d9f823698c0f39dccdcb7c19145",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-combined-r165",
-  "warning": "R165 em teste: motores R165 ainda sem cadastro no servidor. R164 permanece estável.",
+  "status": "test-combined-r165-server-ready",
+  "warning": "R165 com cadastro e provas do servidor concluídos. Gameplay e saída física do anfitrião ainda em teste. R164 permanece estável.",
   "bytes": 2715466850,
-  "serverBindingsRegistered": false
+  "serverBindingsRegistered": true
 }
