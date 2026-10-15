@@ -1,3 +1,9 @@
+## Estado efetivo do servidor — 15/10/2026
+
+**R161 recebida da USB, conferida e aplicada.** Leia o [retorno efetivo](server-return.json) e a [prova de aplicação](evidence/server-applied.json). N64 liberado para testar o mesmo APK nos dois celulares; gameplay físico não homologado. Não repetir cadastro. A documentação original abaixo descreve o estado anterior à aplicação.
+
+## Documento anterior preservado
+
 # R161 — entrega privada ao servidor: N64 online com Dynarec
 
 **Estado em 15/10/2026:** candidata assinada, kit privado conferido e APK instalado no A56 com hash integral idêntico. `serverApplied=false`; `physicalGameplayValidated=false`. Não promover como estável nem substituir a R159 em produção antes do cadastro e da partida física. A [resposta R159 do servidor](https://github.com/luziellacerda/Servidor-pix/blob/docs/station-online-exit-r135-20261012/docs/station-android/r159/server-return.json) confirma a aplicação **da R159**, não desta revisão.
