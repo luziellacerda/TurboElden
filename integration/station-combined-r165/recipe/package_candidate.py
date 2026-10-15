@@ -226,7 +226,8 @@ def input_proof(base: Path, dex_dir: Path, native: Path | None, ndk: Path | None
     return dict(dex=dex, dexProof=dex_proof, sourceFiles=source_files, previous=previous,
                 payload=payload, registry=registry, before=before, names=names,
                  r149=r149, elf=elf, identity=identity, primitive=primitive, tools=tools,
-                 nativeProof=native_proof)
+                 nativeProof=native_proof,
+                 nativeReceiptSha=sha(native.parent / "native-receipt.json") if native else None)
 
 
 def build(base: Path, dex_dir: Path, native: Path | None, ndk: Path | None,
@@ -356,8 +357,8 @@ def build(base: Path, dex_dir: Path, native: Path | None, ndk: Path | None,
                "revision": "R165", "sourceCommit": revision,
                "dexSourceCommit": DEX_SOURCE_COMMIT,
                "baselineApkSha256": BASE_SHA, "baselineApkBytes": BASE_BYTES,
-               "dexReceiptSha256": sha(dex_dir / "dex-receipt.json"),
-               "nativeReceiptSha256": sha(native.parent / "native-receipt.json"),
+               "dexReceiptSha256": DEX_RECEIPT_SHA,
+               "nativeReceiptSha256": proof["nativeReceiptSha"],
                "nativeLibrarySha256": sha(native),
                "sourceFilesSha256": source_files,
                "unsignedApkSha256": sha(unsigned), "unsignedApkBytes": unsigned.stat().st_size,
@@ -381,7 +382,8 @@ def build(base: Path, dex_dir: Path, native: Path | None, ndk: Path | None,
     (out / "unsigned-package.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
     need(source_commit(revision, proof["nativeProof"]["sourceFilesSha256"]) == source_files and
          sha(base) == BASE_SHA and sha(native) == proof["nativeProof"]["outputSha256"] and
-         sha(native.parent / "native-receipt.json") == receipt["nativeReceiptSha256"] and
+         sha(native.parent / "native-receipt.json") == proof["nativeReceiptSha"] and
+         sha(dex_dir / "dex-receipt.json") == DEX_RECEIPT_SHA and
          sha(proof["dex"]) == proof["dexProof"]["candidateDexSha256"],
          "Source or payload changed during package assembly")
     return {"passed": True, "unsignedApkSha256": receipt["unsignedApkSha256"],
