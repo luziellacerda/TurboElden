@@ -1,3 +1,9 @@
+## R162 candidata para vídeo N64 online — 15/10/2026
+
+Ler `docs/server/r162/README.md` e `integration/n64-online-video-extension-r162/README.md`. Causa física R161: ponte Android prendia VideoExt ao core offline, causando `SDL_SetVideoMode failed` e tela preta online; a mesma edição 007 mostrava vídeo offline. R162 adiciona ponte exclusiva online, mantém ponte offline e demais políticas, assina com certificado original e está instalada/hash conferido no g52. Kit privado SHA `a777e90a1c5add265aed328e13c884af1277a8dee6770be4ca109d431aeec942`, sem APK; servidor ainda não cadastrou R162, A56 ainda precisa da revisão e gameplay não foi homologado. Não confundir a R161 aplicada abaixo com a candidata R162. Usuário determinou não enviar APK no handoff. O relato de abertura direta do N64 não se reproduziu no lançamento g52 observado: painel de 24 plataformas abriu após 44,6 s de preparo do carrossel, que é byte idêntico ao R161. Saída do anfitrião e aviso do convidado são pendência separada em `HOST_EXIT_AUDIT.md`.
+
+## Histórico preservado
+
 ## Manutenção13z aplicada — 15/10/2026
 
 Ler o topo do MESMO handoff e maintenance/20261015-13z/sanitized-receipt.json.
