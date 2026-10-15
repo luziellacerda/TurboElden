@@ -13,6 +13,8 @@ O [recibo de instalação do A56](a56-install-receipt.json) registra atualizaç�
 
 Conferir os hashes externos antes de abrir o ZIP. O kit contém `incoming.json`, `engines-apk.json`, `profile-policies.json`, seis ELF, vinte dependências, manifesto com hashes e recibos; não contém APK, ROM, BIOS, chave, serial ou log bruto. A [receita do kit](../../../integration/n64-online-dynarec-r161/README.md) está no repositório; o recibo completo fica ao lado do ZIP, em `server-kit-receipt-r161.json`. A prova do APK fica em `E:\StationN64OwnerAudit-20261014\package-r161-dynarec-only\final-apk-proof.json`. Publicar no Git somente documentação e receitas revisadas, nunca o APK, o ZIP privado, chaves ou dados de aparelhos.
 
+O [recibo de entrega USB](usb-delivery-receipt.json) confirma cópia e leitura de volta dos hashes do APK e do ZIP em `I:\SERVIDOR LER\R161-N64-ONLINE-DYNAREC-20261015`. A letra I: é apenas a identificação observada neste PC. O pen drive foi preparado para o servidor, mas ainda não há recibo de recebimento ou aplicação pelo servidor.
+
 ## Mudança delimitada
 
 A R159 usava `r4300Emulator=1` (interpretador em cache) nas sessões N64 online. A R161 usa `r4300Emulator=2` (Dynarec) no cliente e o aceita no servidor N64 **local do telefone anfitrião**. O registro N64 passa a declarar `cpu=dynarec`. O núcleo `libstation_mupen64plus_core.so`, o vídeo Glide64mk2, RSP HLE, `inputDelay=2`, transporte, saída, ciclo de vida dos serviços, emulação offline e regras de jogos não foram alterados. Portanto a mudança de CPU é uma hipótese técnica delimitada para a lentidão online observada; ela não comprova por si só que a espera de entradas pela rede ou a tela preta cessaram.
