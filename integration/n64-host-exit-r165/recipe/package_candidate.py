@@ -109,6 +109,8 @@ def verify_dex(path: Path, revision: str) -> tuple[Path, dict]:
          ["Lorg/emulationstation/frontend/netplay/StationHumanDeparture;"] and
          receipt.get("addedTypes") == receipt.get("removedTypes") == [] and
          receipt.get("classCount", 0) - receipt.get("unrelatedClassesUnchanged", -1) == 1 and
+         receipt.get("event4CallerPreserved") is True and
+         receipt.get("event4HelperCallCount") == 1 and
          receipt.get("changedDexPartitions") == [DEX_NAME] and
          receipt.get("apkAssembled") is False and receipt.get("signed") is False and
          receipt.get("installed") is False and dex.is_file() and

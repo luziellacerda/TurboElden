@@ -21,6 +21,7 @@ REPO = Path(__file__).resolve().parents[3]
 ROOT = Path(__file__).resolve().parents[1]
 PARTITION = "classes35.dex"
 OWNER = "org/emulationstation/frontend/netplay/StationHumanDeparture.smali"
+CALLER = "org/emulationstation/frontend/netplay/StationGameSession.smali"
 TYPE = "Lorg/emulationstation/frontend/netplay/StationHumanDeparture;"
 SOURCE = ROOT / "java" / OWNER.replace(".smali", ".java")
 SOURCE_SHA = "36db43e618eddca9167ecc1c835a42dfc64b8a5b126ec3e724d463e21e96cd5e"
@@ -190,7 +191,23 @@ def build(args: argparse.Namespace) -> dict:
     command([java, "-cp", cp, "DecodeDolphinPartition", args.donor, PARTITION, DEX_SHA, donor],
             "decode-donor", out)
     original = files(donor)
-    need(OWNER in original and len(original) > 1, "Original human departure class missing")
+    need(OWNER in original and CALLER in original and len(original) > 1,
+         "R164 event-4 caller or departure class missing")
+    caller = (donor / CALLER).read_bytes()
+    call = (b"invoke-static {v1, v2, v3}, "
+            b"Lorg/emulationstation/frontend/netplay/StationHumanDeparture;->leave("
+            b"Lorg/emulationstation/frontend/netplay/StationOnlineClient;"
+            b"Lorg/json/JSONObject;"
+            b"Lorg/emulationstation/frontend/station/StationApi$Cancellation;)V")
+    event = caller.split(b".method private declared-synchronized event(ILandroid/os/Bundle;)V", 1)
+    lambda_event = caller.split(b".method synthetic lambda$event$0$org-emulationstation-frontend-netplay-StationGameSession()V", 1)
+    need(len(event) == len(lambda_event) == 2 and
+         b"const/4 v0, 0x4" in event[1].split(b".end method", 1)[0] and
+         b"if-ne p1, v0" in event[1].split(b".end method", 1)[0] and
+         b"StationGameSession$$ExternalSyntheticLambda0" in event[1].split(b".end method", 1)[0] and
+         lambda_event[1].split(b".end method", 1)[0].count(call) == 1 and
+         sum(path.read_bytes().count(call) for path in donor.rglob("*.smali")) == 1,
+         "R164 human event 4 must already invoke the exact helper once")
     old_source = (donor / OWNER).read_bytes()
     new_source = (overlay_smali / OWNER).read_bytes()
     need(old_source != new_source and b"leave(Lorg/emulationstation/frontend/netplay/StationOnlineClient;" in old_source and
@@ -219,7 +236,9 @@ def build(args: argparse.Namespace) -> dict:
     final_files = files(final)
     need(set(final_files) == set(original) and
          all(final_files[name] == original[name] for name in original if name != OWNER) and
-         final_files[OWNER] == overlay_files[OWNER], "Compiled class projections differ")
+         final_files[OWNER] == overlay_files[OWNER] and
+         (final / CALLER).read_bytes() == caller,
+         "Compiled class projections or event-4 caller differ")
     need(sha(SOURCE) == SOURCE_SHA and sha(args.donor) == DONOR_SHA, "Source or donor changed during build")
     commit_matches(args.source_commit)
     for name, path in inputs.items():
@@ -235,6 +254,8 @@ def build(args: argparse.Namespace) -> dict:
                "unrelatedProjectionSha256": digest(json.dumps(preserved, sort_keys=True).encode("ascii")),
                "originalOwnerProjectionSha256": original[OWNER],
                "candidateOwnerProjectionSha256": final_files[OWNER],
+               "event4CallerProjectionSha256": original[CALLER],
+               "event4CallerPreserved": True, "event4HelperCallCount": 1,
                "scopeSha256": sha(scope), "java8ClassSha256": sha(class_files[0]),
                "d8OverlaySha256": sha(overlay_dex), "minimumAndroidApi": 28,
                "changedDexPartitions": [PARTITION], "newThreadsTimersOrPolling": False,
