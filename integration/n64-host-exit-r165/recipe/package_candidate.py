@@ -216,18 +216,27 @@ def build(base: Path, dex_dir: Path, ndk: Path | None, out: Path,
     markers["psx"] = {"runtimeLibrary": psx_binary.name, "runtimeSha256": sha(psx_binary),
                       "runtimeBytes": psx_binary.stat().st_size, "fingerprintSha256": digest(raw)}
     identities["psx"] = psx
-    for kind, api in (("n64", "StationMupenRuntime"), ("dolphin", "StationDolphinRuntime")):
-        value = copy.deepcopy(previous[kind])
-        name = WRAPPERS[kind]
-        value.update(baseApkSha256=BASE_SHA, payloadSha256=payload,
-                     productiveTransforms=transforms,
-                     parentFingerprintSha256=digest(canonical(previous[kind])),
-                     parentRuntimeSha256=proof["before"]["lib/arm64-v8a/" + name],
-                     psxRuntimeSha256=markers["psx"]["runtimeSha256"])
-        need(identity.policy(value) == identity.policy(previous[kind]),
-             "Unrequested owner policy changed: " + kind)
-        markers[kind] = primitive.marker(value, name, api, ndk, out)
-        identities[kind] = value
+    prior_temp = {key: os.environ.get(key) for key in ("TEMP", "TMP", "TMPDIR")}
+    os.environ.update(TEMP=str(temp), TMP=str(temp), TMPDIR=str(temp))
+    try:
+        for kind, api in (("n64", "StationMupenRuntime"), ("dolphin", "StationDolphinRuntime")):
+            value = copy.deepcopy(previous[kind])
+            name = WRAPPERS[kind]
+            value.update(baseApkSha256=BASE_SHA, payloadSha256=payload,
+                         productiveTransforms=transforms,
+                         parentFingerprintSha256=digest(canonical(previous[kind])),
+                         parentRuntimeSha256=proof["before"]["lib/arm64-v8a/" + name],
+                         psxRuntimeSha256=markers["psx"]["runtimeSha256"])
+            need(identity.policy(value) == identity.policy(previous[kind]),
+                 "Unrequested owner policy changed: " + kind)
+            markers[kind] = primitive.marker(value, name, api, ndk, out)
+            identities[kind] = value
+    finally:
+        for key, value in prior_temp.items():
+            if value is None:
+                os.environ.pop(key, None)
+            else:
+                os.environ[key] = value
     registry, selected = identity.expected_engines(proof["registry"], markers)
     old_selected = {row["platform"]: row for row in proof["registry"]["engines"]
                     if row["platform"] in {"psx", "n64", "gamecube", "wii"}}
