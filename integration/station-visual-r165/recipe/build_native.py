@@ -29,6 +29,11 @@ COMMANDS_SHA = "d49eeeda3810508683352cb5682512182be8b4436f11fdbbf14aba87d052f671
 WIDTH_PATCH = REPO / "integration/game-selection-main-width-r165/recipe/patch_width.py"
 MEGA_PATCH = REPO / "integration/mega-drive-cover-gate-r165/recipe/patch_mega_gate.py"
 CHANGED = {"native_formation.h", "station_bottom_action_layout.h", "magazine_shader.h"}
+SOURCE_FILES = {
+    "integration/station-visual-r165/recipe/build_native.py": HERE / "build_native.py",
+    "integration/game-selection-main-width-r165/recipe/patch_width.py": WIDTH_PATCH,
+    "integration/mega-drive-cover-gate-r165/recipe/patch_mega_gate.py": MEGA_PATCH,
+}
 
 
 def sha(path: Path) -> str:
@@ -92,9 +97,20 @@ def build(output: Path) -> dict:
        mega_receipt.get("outputSha256") != digest(new_shader) or \
        mega_receipt.get("changedFile") != "magazine_shader.h" or \
        mega_receipt.get("newTimersThreadsWorkersOrPerFrameDraws") != 0 or \
+       mega_receipt.get("newTimersThreadsTexturesDraws") != 0 or \
        mega_receipt.get("profile10LegacyPreserved") is not True or \
-       mega_receipt.get("profile125MapPreserved") is not True:
+       mega_receipt.get("profile125MapPreserved") is not True or \
+       mega_receipt.get("artworkProbeAndAnimationPreserved") is not True or \
+       mega_receipt.get("onlyChanges") != ["Mega Drive coarse support", "profile-aware coarse dispatch"]:
         raise ValueError("Reviewed single-pass Mega shader patch receipt required")
+    footprint = mega_receipt.get("footprint")
+    if not isinstance(footprint, dict) or footprint.get("newEmitters") != 7 or \
+       footprint.get("segaNameSupported") is not True or \
+       footprint.get("haloRadiusPixels") != 5 or \
+       footprint.get("legacyOnlyPixelsSkippedForNewCover", 0) <= 0 or \
+       new_shader.count(b"VARY vec4 magazineClassifier;") != 2 or \
+       new_shader.count(b"if(magazineClassifier.y>1.125&&magazineClassifier.y<1.5)") != 1:
+        raise ValueError("Mega profile routing or measured support was not audited")
 
     rows = json.loads(COMMANDS.read_text("utf-8"))
     native_commands = [row["command"] for row in rows if row["label"] == "sky-blue-bands-r145"]
@@ -159,10 +175,11 @@ def build(output: Path) -> dict:
        old_abi["minimumLoadAlignment"] < 16384 or new_abi["minimumLoadAlignment"] < 16384:
         raise ValueError("R165 carousel ABI, SONAME or 16 KiB alignment changed")
     receipt = {
-        "schema": "station.r165.combined-visual.native.v1", "passed": True,
+        "schema": "station.r165.selection-native.v1", "passed": True,
         "sourceLibrarySha256": SOURCE_LIBRARY_SHA,
         "sourceReceiptSha256": SOURCE_RECEIPT_SHA,
         "ndkCommandSha256": COMMANDS_SHA,
+        "sourceFilesSha256": {name: sha(path) for name, path in SOURCE_FILES.items()},
         "widthPatchSourceSha256": sha(WIDTH_PATCH),
         "megaPatchSourceSha256": sha(MEGA_PATCH),
         "changedHeaders": sorted(changed),
@@ -174,7 +191,9 @@ def build(output: Path) -> dict:
         "soname": new_abi["soname"],
         "minimumLoadAlignment": new_abi["minimumLoadAlignment"],
         "compilerWarningsUnchanged": True,
+        "effectRoutingAudited": True,
         "extraPerFrameDrawCalls": 0,
+        "newTimersThreadsHeapAllocations": 0,
         "newTimersThreadsWorkersOrPerFrameDraws": 0,
     }
     (out / "native-receipt.json").write_text(
