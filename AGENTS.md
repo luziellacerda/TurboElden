@@ -1,3 +1,21 @@
+<!-- STATION-PSX-ANDROID-XML-20261015 -->
+## PSX R167: falha de preparação Android confirmada
+
+Ler o topo do MESMO handoff e `docs/server/r167/diagnostics/psx-android-xml-20261015/incident.json`.
+Moto g52 R167 identificado pelo hash do APK no próprio aparelho; preparação
+Capcom VS falha em ParserConfigurationException antes de conectar o motor.
+Fonte StationPsxLaunch corrigido SHA bb045d8113c6ca7887a26c79b066a74ca79ad7f340d7032cf9399006db14ad4b:
+29 verificações Android reais, incluindo preferências intactas, e 64 JVM passaram.
+Nenhum APK novo compilado/assinado/instalado aqui. Produção precisa compilar
+sucessor com assinatura original, publicar kit exato e instalador USB manual.
+DEX35: 609 classes, 607 preservadas, root alterada e novo StationPsxLaunch$1;
+não reutilizar receita R166 de uma classe sem adaptação. Não repetir R167
+aplicada/provas/serviço. Crash mantém seus impedimentos. Serviço53d4 sem restart,
+rede/ROMs/saves/licenças preservados; logs/preferências/serial permanecem privados.
+As instruções R167 de instalar o APK antigo abaixo são histórico anterior ao erro.
+
+## Histórico preservado
+
 <!-- STATION-R167-APPLIED-20261015 -->
 ## R167 aplicada: motores cadastrados e API pública conferida
 
@@ -210,7 +228,7 @@ Não mudar renderer/JIT/timeouts por hipótese; APK/serviços/ROMs/licenças int
 
 Ler o topo do mesmo handoff e r159/server-return.json. Autoridade `/mnt/DADOS/station-r159-20261014/applied.json` PASSED: kit original USB d1f0b380 e APK4837be70 lidos/conferidos, 38 arquivos/26ELF; cadastro78+321 aplicado.67 motores/14127perfis/9215modos/Cat 84, 63 owners anteriores preservados, sem reinício da API 19631/DLLb347. N64R159 owner7d50f27b4702:387perfis/157edições/120MP/37solo.157 capabilities locais/públicas, 164 admissõesMP/157 recusasSolo/223contagens inválidas e4clientes sintéticos/6WSS/recuperação passaram. Não é gameplayAndroid. Importador MAXIMUM_TRUSTED_ENGINES=128, 512 KiB/hash/controles intactos; módulo instalado82d95a86;4regressõescapacidade+3versões+6hash passaram. NÃO repetir cadastro/provas/deploy/bootrecovery.
 
-Usuário relata007online preto com áudio travando, offline abre. Sem captura atual/ADB local nem hash dos dois aparelhos nessa tentativa; causa NÃOconfirmada. N64_OWNER_MISSING capturado eraR158, corrigida pela produçãoR159. Código online forçaGlide64mk2+cached interpreter1; não alterar renderer/JIT/timeout sem evidência. Pesquisa oficial e captura no mesmo handoff. Produção corrigeAPK; última análise lifecycleb173499 preservada. DNS contornada APENAS nos clientes de teste/Git, mantendo TLS/hostkeys; sistema/rede intactos. API/scanner/timer/licençasreais/ROM/capas/outrosprodutos/banda100/800/tagsR143R157 preservados.36capas20z e aceiteAndroid pendentes: REVALIDAR plano de capas porque hash do módulo protegido mudou. Recibos originais da produção congelados; preferir retorno efetivo r159. Globalpartial.
+Usuário relata007online preto com áudio travando, offline abre. Sem captura atual/ADB local nem hash dos dois aparelhos nessa tentativa; causa NÃOconfirmada. N64_OWNER_MISSING capturado eraR158, corrigida pela produçãoR159. Código online forçaGlide 64mk2+cached interpreter1; não alterar renderer/JIT/timeout sem evidência. Pesquisa oficial e captura no mesmo handoff. Produção corrigeAPK; última análise lifecycleb173499 preservada. DNS contornada APENAS nos clientes de teste/Git, mantendo TLS/hostkeys; sistema/rede intactos. API/scanner/timer/licençasreais/ROM/capas/outrosprodutos/banda100/800/tagsR143R157 preservados.36capas20z e aceiteAndroid pendentes: REVALIDAR plano de capas porque hash do módulo protegido mudou. Recibos originais da produção congelados; preferir retorno efetivo r159. Globalpartial.
 
 ## Histórico preservado
 
@@ -859,7 +877,7 @@ Fonte completa versions/station-gamecube-snes-r94-20261009. GameCube usa a mesma
 
 # R93 instalada no Samsung — LEDs GameCube baseados no SNES
 
-Fonte completa versions/station-gamecube-led-r93-20261009. Mesmo motor/relógio/ganho/halo SNES; GameCube roxo com curva de luz SNES adaptada R↔G, aro do selo e separador rodapé mapeados.39capas locais medidas e WindWaker real conferida antes. APK e64931292c6c223595943c3f7c608710763d988f2a428db3248247d02d4007b1, hash/UID/dados preservados. SóshaderJava/classes35.dex e2fontesGLSL/carrossel mudam;220Java,emuladores,motores,30fps,downloadsR92 intactos. Backup Java/carrossel idêntico. Aprovação visual física após atualização ainda pendente; não alegar redução térmica ou gameplay. MotorolaR86. Sem novo handoff/alteração de servidor; R91remotemídia26909e31 ainda não confirmada ativa.
+Fonte completa versions/station-gamecube-led-r93-20261009. Mesmo motor/relógio/ganho/halo SNES; GameCube roxo com curva de luz SNES adaptada R↔G, aro do selo e separador rodapé mapeados.39capas locais medidas e WindWaker real conferida antes. APK e 64931292c6c223595943c3f7c608710763d988f2a428db3248247d02d4007b1, hash/UID/dados preservados. SóshaderJava/classes35.dex e2fontesGLSL/carrossel mudam;220Java,emuladores,motores,30fps,downloadsR92 intactos. Backup Java/carrossel idêntico. Aprovação visual física após atualização ainda pendente; não alegar redução térmica ou gameplay. MotorolaR86. Sem novo handoff/alteração de servidor; R91remotemídia26909e31 ainda não confirmada ativa.
 
 ## Histórico anterior
 
@@ -1427,7 +1445,7 @@ Leia docs/server/RETORNO-PAINEL-CODIGOS-STATION-20261006.md e PAINEL-CODIGOS-STA
 
 # Servidor da comunidade R41 publicado — 06/10/2026
 
-Leia docs/server/RETORNO-COMUNIDADE-STATION-R41-20261006.md e versions/station-community-r41-20261006/evidence/server-deployment-r41.json. API a2bb176530fd4d2dfa740da7e934fd84d097404e, DLL d181bf97d5b39a334e95144267d6ece3f11d4e659a314d7d16cd2746e1999e13, SocialEnabled=true;186 checks autenticados no domínio público por três licenças sintéticas, conversa privada/pedido/aceite/dois membros/WSS65539 bytes por direção e pin conferido. Fonte/snapshot/DEX/APK R41 preservados; servidor retorna até32 mensagens privadas e64KiB das mais recentes. Catálogo14/2212, licenças/chaves/relay512/1024 e outros serviços preservados. Recibo5e40f7e confirma R41 instalada no Samsung/hashb6b19321/dados preservados. Agora testar R41 nos dois celulares: pessoas/DM/pedido/convite/sala/Pronto/Iniciar/gameplay. Conferir Voltar vindo das configurações e Boogerman no catálogo vsBattletoads no cabeçalho: causa ainda não estabelecida. POCO e latência externa continuam sem prova nova. Não usar delta R34 sobre R41, não limpar dados, não marcar estável geral e não enviar WhatsApp/MenuIA por inferência.
+Leia docs/server/RETORNO-COMUNIDADE-STATION-R41-20261006.md e versions/station-community-r41-20261006/evidence/server-deployment-r41.json. API a2bb176530fd4d2dfa740da7e934fd84d097404e, DLL d181bf97d5b39a334e95144267d6ece3f11d4e659a314d7d16cd2746e1999e13, SocialEnabled=true;186 checks autenticados no domínio público por três licenças sintéticas, conversa privada/pedido/aceite/dois membros/WSS65539 bytes por direção e pin conferido. Fonte/snapshot/DEX/APK R41 preservados; servidor retorna até32 mensagens privadas e 64KiB das mais recentes. Catálogo14/2212, licenças/chaves/relay512/1024 e outros serviços preservados. Recibo5e40f7e confirma R41 instalada no Samsung/hashb6b19321/dados preservados. Agora testar R41 nos dois celulares: pessoas/DM/pedido/convite/sala/Pronto/Iniciar/gameplay. Conferir Voltar vindo das configurações e Boogerman no catálogo vsBattletoads no cabeçalho: causa ainda não estabelecida. POCO e latência externa continuam sem prova nova. Não usar delta R34 sobre R41, não limpar dados, não marcar estável geral e não enviar WhatsApp/MenuIA por inferência.
 
 ## Histórico anterior — os blocos abaixo descrevem evidências nas datas originais
 
@@ -1530,7 +1548,7 @@ Base R27 + classes35 R29B (45675ff1) + carousel R30 (142ebfa9). Voltar nas cole�
 
 # R27 — jogadores online em lista compacta e painel de convites — 05/10/2026
 
-Leia `versions/station-compact-lobby-r27-20261005/README.md` e STATUS. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Salas-Lista-R27-20261005.apk`, SHA c1191ce1d531b1ec9171d6d4c2f57541349339e64e8941a33788c4067d616bd6. Compilado/testado PC e instalado sobre R25 em 05/10/2026 às 18:02 (UTC−3), SHA integral do telefone igual. Dados preservados por atualização, sem desinstalar/limpar. Tela Android bloqueou durante instalação; conferência visual/sessão/gameplay R27 pendentes. Leia evidence/installation.json. Sem aprovação estética ou promoção estável desta revisão.
+Leia `versions/station-compact-lobby-r27-20261005/README.md` e STATUS. APK `G:\BAKUP SISTEMA APP 03-10-2026\apks-candidatos-visuais\TurboStations-Salas-Lista-R27-20261005.apk`, SHA c1191ce1d531b1ec9171d6d4c2f57541349339e 64e8941a33788c4067d616bd6. Compilado/testado PC e instalado sobre R25 em 05/10/2026 às 18:02 (UTC−3), SHA integral do telefone igual. Dados preservados por atualização, sem desinstalar/limpar. Tela Android bloqueou durante instalação; conferência visual/sessão/gameplay R27 pendentes. Leia evidence/installation.json. Sem aprovação estética ou promoção estável desta revisão.
 
 Sobre R26 exato, altera somente classes35.dex;13.083 entradas preservadas, inclusive carouselSO b2d706dc07d4423758798fe0d6d37ce01c8f395b344c685a7b796ce60d03dd70. Mantém layout/botões/LEDs/motores do R26. Lista48dp nome/status, perfil ao tocar, criar sala+convite real, código público TS1 (instance/roomId/itemId) com copiar/colar. Usa comandos existentes; não adiciona senha/token/servidor.107 testesJava+18preservação, assinatura/16KiB/pacote inteiro passaram. Fonte final E:\ESTUDO APK\work\station-compact-lobby-r27-20261005. TemporáriosE/APKfinalG. Não reaplicar receitas históricas nem instalarR26sobreR27. Dados/saves/licença preservados; instalar somente sem jogo/download ativo. Downloads11be7f3 continuam fora.
 
