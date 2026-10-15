@@ -1,3 +1,183 @@
+<!-- STATION-HOURLY-20261015-23Z -->
+## Ciclo 23h UTC: R168 conferida; receitas R169 recebidas sem kit final
+
+A leitura nativa somente de conferência confirmou a R168 já aplicada: catálogo
+100/4.744 itens, 91 motores, 16.896 perfis e 11.981 modos. Processo, ExecStart,
+DLL `3480b991ac87`, 28 arquivos de configuração e três ferramentas instaladas
+coincidem com os recibos; API PID215916/NRestarts0. Autenticação genuína em
+6,37s; `scan.lock` adquirido. O recibo final R168 confirma entrega remota e
+liberação da lease anterior. Nenhuma publicação, parada de timer, scanner,
+reinício ou repetição das provas completas ocorreu neste ciclo.
+
+Foi observada a branch APP `fix/station-psx-cas-r169-20261015`, commit
+`e0fea23e96ccedad686f7d7d7d2a821780e486a0`. Contém README e três receitas de
+patch, empacotamento e assinatura. O produtor descreve uma chamada CAS inválida
+no DEX35 da R168 e uma troca para `AtomicReference.compareAndSet`. Este Linux
+leu os fontes; não reproduziu esse erro em Android. Não há recibo final
+assinado/handoff de servidor R169 no escopo dessa árvore, nem ZIP R169 nos
+globs locais autorizados. Mensagens de commit não substituem recibos e bytes.
+**R169 não cadastrada.** Nenhum APK ou receita foi executado ou alterado aqui;
+os IDs R168 não foram reutilizados para anunciar uma revisão futura.
+
+Capas Git `main5c6cc32`/`capas-super-nintendo9f85e9d` e manifesto SNES
+`c78c2fed` iguais: 220 outputs declarados, zero originais nos caminhos atuais.
+Continuam ausentes os PNGs exatos de Fighter's History, FIFA International
+Soccer e FIFA Soccer96. Zero importações/JPEGs; 20 artes sem edição exata,
+capas corretas anteriores e 1080R164 preservadas.
+
+Backups anteriores dos dois Gits e da entrada R169 publicados e lidos de volta;
+entrega em `feat/station-hourly-20261015-23z`, worktrees próprias no DADOS.
+Ler [recibo deste ciclo](online-plataformas-20261009/maintenance/20261015-23z/sanitized-receipt.json).
+Autoridade privada `/mnt/DADOS/station-maintenance-20261015-23z/`.
+Serviços compartilhados, ROMs, saves, licenças, rede100/800/DNS, R164 e os dois
+CRLF históricos preservados. Timer scanner ativo/últimoexit0; timer horário
+ativo/habilitado. A manutenção continua serializada pelo monitor pai225524
+até ele encerrar; este agente não liberou seu lock nem editou state/config.
+
+Próximo ciclo: conciliar recibos R168 e esta conferência, sem repetir cadastro,
+deploy ou provas. R169 exige handoff final, prova do APK assinado e kit privado
+exato, modos explícitos e ledger HLE PSX real. Só então baseline protegida
+fresca, preflight integral nos limites vigentes e registrador transacional.
+Não executar receitas Android neste PC nem restaurar validador/DLL128KiB sobre
+dados R168. Se só houver as mesmas receitas/capas, registrar conferência.
+Hashes dos dois celulares e gameplay/áudio/controles/saída física continuam
+pendentes, assim como os17 impedimentos PSX, sinopses/campos editoriais,
+502 histórico sem causa e N64 com3/4 Android. PS3/PS4 permanecem offline.
+
+## Histórico preservado
+
+<!-- STATION-R168-APPLIED-CAPACITY-20261015 -->
+## R168 aplicada: abertura PSX corrigida e cadastro conferido
+
+**R168 cadastrada:** catálogo 100 com 4.744 itens, 91 motores, 16.896 perfis e
+11.981 modos. Quatro owners e 492 vínculos novos; todos os anteriores preservados.
+Kit privado c0de71c3a4e1: 51 arquivos, 50 hashes e 27 ELF ARM64 conferidos.
+O APK R168 assinado 875fb0696c4f contém a correção XML bb045d81; assinatura e
+APK por recibo do produtor, sem receber o APK neste Linux. Núcleos, 21
+dependências, carrossel R167, opções e controles preservados.
+
+PSX: 84 edições, 93 decisões, 23 modos para duas pessoas em 19 edições,
+17 impedidos e 53 classificações individuais. N64: 157 edições e 387 perfis,
+230 modos multiplayer e 157 individuais. GameCube nove modos; Wii três.
+CTR e Crash Bash conservam suas recusas; títulos individuais não ganham vagas.
+Tuplas completas foram requalificadas, sem aprovar por nome ou metadados.
+
+O preflight original excedeu o orçamento de metadados do WinBack e não gravou.
+A correção necessária ampliou somente esse teto por conteúdo de 128 para
+256 KiB, no C# e no validador instalado. Mantidos 32 modos por binding,
+128 motores, 50.000 perfis, arquivos de modos de 8 MiB e registros de 16 MiB,
+limites de jogadores, protocolo, memória do relay e lógica N64/R165.
+A regressão reproduziu a recusa antiga; passaram 1.470 verificações C#,
+226 HTTP e quatro testes Python. A preparação completa manteve os prefixos.
+
+Maior grupo preparado: 138.876 bytes. A resposta pública assinada WinBack
+entregou os 133 perfis, incluindo os nove R168, em 189.469 bytes; limite Android
+vigente de 524.288 bytes. Nenhuma linha foi cortada. A sombra usou o mesmo
+sandbox e validou owners e saída. Dois ajustes do diagnóstico foram registrados:
+nome de teste acima de 24 caracteres e seletor ainda preso ao prefixo R167.
+Depois de corrigidos, as fases pendentes foram retomadas sem repetir cadastro
+ou implantação.
+
+**Um reinício controlado do Station, sem sala real em andamento.** Fonte
+b1d53643cb0fdfebbc1bf351485d868a079664fe, DLL 3480b991ac8761692f8c962e87f7a5e717ba1aed77d89ce895fb6e804eeb0eca, PID 215916,
+zero reinícios automáticos. DLL53d4 e seus dois overrides preservados;
+somente um override R168 e um módulo do scanner foram atualizados.
+Licenças reais, esquema, outros serviços, scanner ativo, catálogo, ROMs,
+capas, saves e rede 100/800 preservados.
+
+Capabilities assinadas locais e públicas das 84 PSX e 157 N64 passaram:
+23 admissões/167 recusas PSX;
+230 admissões/245 recusas N64.
+Quatro owners e 12 modos GameCube/Wii conferidos. Transporte público PSX com
+dois clientes e snapshot real de 4.456.448 bytes; N64 com quatro clientes,
+seis WSS, TLS/SPKI, prioridade e pausa/retomada passaram. A saída entregou
+STATE3 antes de close1000 e aceitou as três tentativas idênticas de leave.
+**São diagnósticos; gameplay físico Android permanece pendente.**
+
+Ler [recibo aplicado](r168/server-return.json) e [consumo/piloto](r168/README.md).
+Autoridade: /mnt/DADOS/station-r168-capacity-20261015/completed.json, PASSED.
+Não repetir cadastro, serviço, provas completas, R167 ou operadores antigos.
+O recibo serverApplied=false do kit e a recusa anterior abaixo são históricos.
+Após publicar os dados R168, o rollback exige conjunto compatível de software,
+validador e dados; não retirar só o novo override. R164 estável preservada.
+
+Produção: confirmar/publicar instalador USB permanente e instalar manualmente
+o mesmo APK assinado R168 nos dois aparelhos, preservando dados e registrando
+cada hash. APK esperado: 875fb0696c4fb50ce4af953bccd62fcd68dfdecb247f65d2fc027b71aa330b3d.
+Piloto Capcom vs. SNK / VS, duas vagas; item station_767e5e92f2f353479e6120f1c28f96a7,
+perfil psx-r168-20261015-005-versus. Conferir primeiro quadro, som,
+controles independentes e retorno do convidado por 25 segundos após sair o
+anfitrião. Não pedir outro kit R168; demais pendências globais mantidas.
+
+## Histórico preservado
+
+<!-- STATION-HOURLY-20261015-22Z-R168-RECEIVED -->
+## R168 recebida; publicação recusada pelo orçamento de WinBack — 15/10/2026, 22h UTC
+
+**O kit R168 chegou pelo Git privado e foi conferido, mas não foi cadastrado.**
+A branch pública `build/station-r168-psx-xml-20261015` ainda contém a receita
+`e8c0e8c6`; a carga real está no commit privado `4733c00f`, conferida por blob Git
+e SHA-256. ZIP `c0de71c3a4e10cce320f7ba6966e183871760157ca67e9010eb5bdfb0850177b`,
+14.275.389 bytes, 51 arquivos/50 hashes manifestados e 27 ELF ARM64 verificados.
+A cadeia de recibos da produção vincula o kit ao APK final `875fb069…`;
+nenhum APK foi recebido e a assinatura não foi verificada independentemente neste Linux.
+
+A R168 traz a correção SAX do PSX: fonte `bb045d81…`, uma classe alterada e
+uma adicionada no DEX35, 607 classes preservadas por prova da produção. As
+outras 39 partições DEX, carrossel R167, núcleos, 21 dependências, ponte AE,
+opções e controles permanecem pelos hashes/recibos conferidos. Os quatro
+owners recebidos são PSX `b21623fee188`, N64 `a0c9d15cfbc7` e GameCube/Wii
+`04383e1f63a0`; **esses owners ainda não estão registrados**.
+
+A autenticação Linux nativa concluiu em 61,71s, somente para leitura. Processo,
+ExecStart, DLL `53d4adc9c114`, configuração efetiva e ferramentas instaladas
+coincidem com a autoridade aplicada. Baseline sob `scan.lock`: catálogo100 /
+4.744 itens / 87 motores / 16.404 perfis / 11.489 modos, exatamente R167.
+API152812/NRestarts0, nginx4266 e cloudflared5155/NRestarts1 histórico preservados.
+
+**O preflight real recusou os primeiros 78 vínculos**, antes de staging ou
+transação: `automatic profile content projection exceeds the server byte limit`.
+WinBack: Covert Operations, item `station_4e577685b9feb98a02a1b2cb884f2925`,
+já tem 124 perfis ocupando130.472B. Os seis primeiros vínculos R168 elevam a
+projeção para137.167B, acima de131.072B em6.095B. Restam600B na baseline.
+A guarda/limite não foi alterada; não houve poda, reescrita de históricos,
+cadastro parcial ou tentativa administrativa de publicação. As 321 decisões
+N64 e os 492 vínculos completos não receberam validação final.
+
+Separadamente, a preparação PSX reavaliou o ledger HLE real das84 edições:
+93 decisões,23 modos2P em19 edições,17 impedidos e53 classificações locais.
+Todas coincidem com a política vigente R167. As negativas de core alterado,
+HLE real ausente e edição trocada passaram. Isso é preparação; não comprova
+capabilities assinadas R168 nem transporte/gameplay Android dessa revisão.
+
+Capas Git `main5c6cc32` / `capas-super-nintendo9f85e9d` e manifestoSNES
+`c78c2fed` iguais, sem PNG novo nos caminhos declarados. Zero importações ou
+JPEGs compilados. Os três PNGs finais exatos pendentes13z e as20 artes sem
+edição instalada exata continuam pendentes; capas13z/1080R164 preservadas.
+Nenhum timer foi parado, scanner invocado, serviço reiniciado ou arquivo de
+catálogo/ROM/capa/save/licença/rede/outro produto alterado por este ciclo.
+R164 estável, PS3/PS4offline e os dois CRLF históricos permanecem preservados.
+
+Ler [recibo R168](r168/server-return.json) e
+[conferência22z](online-plataformas-20261009/maintenance/20261015-22z/sanitized-receipt.json).
+Autoridade privada `/mnt/DADOS/station-maintenance-20261015-22z/`, incluindo
+`received-kit-verified.json`, `protected-audit.json`, `capacity-rejection.json`
+e `psx-requalification.json`. Os preparadores R168 são funções puras no Git
+do servidor; não existe publicador R168 aprovado neste ciclo.
+
+**Próximo ciclo:** não pedir novamente este kit nem repetir R167/R166/DLL/provas
+completas/capas. Primeiro conciliar recibos posteriores e o orçamento por
+conteúdo. A publicação conjunta só pode prosseguir com solução autorizada que
+preserve os históricos e o contrato vigente, baseline protegida nova e
+preflight completo aprovado; então registrador transacional/scan.lock,
+parando apenas o timer scanner durante a publicação real e aguardando o
+oneshot. Não executar `authenticate-next.py` R166 nem tratar este retorno como
+cadastro R168. Instalador privado, hashes dos dois APKs corrigidos, quadro,
+som, controles e retorno do convidado25s ainda precisam de prova física.
+O monitor pai205323 mantém `maintenance.lock` até encerrar; não foi liberado por este agente.
+
+## Histórico preservado
+
 <!-- STATION-PSX-ANDROID-XML-20261015 -->
 ## Capcom PSX: falha Android capturada; código corrigido para a próxima compilação
 

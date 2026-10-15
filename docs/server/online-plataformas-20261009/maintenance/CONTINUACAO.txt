@@ -1,3 +1,105 @@
+<!-- STATION-HOURLY-20261015-23Z -->
+# Ciclo23z: R168 conferida; R169 somente receitas, sem kit final recebido
+
+Autoridade /mnt/DADOS/station-maintenance-20261015-23z/sanitized-receipt.json.
+Leitura Linux nativa genuína6,37s, scan.lock: API215916/NRestarts0/DLL3480b991ac87,
+28configs e ferramentas b777/51522a3b/a3c81 iguais à R168 aplicada.
+Cat100/4744/91motores16896perfis11981modos; arquivos iguais à autoridade
+/mnt/DADOS/station-r168-capacity-20261015/completed.json. delivery-completed.json
+R168 confirma remoteReadbackVerified=true e maintenanceLeaseReleased=true.
+Auditoria FRESCA deste ciclo em protected-audit.json. Nenhuma publicação,
+reinício, scanner/timer parado ou prova completa repetida. R168 continua aplicada.
+
+APP fix/station-psx-cas-r169-20261015 e0fea23e96ccedad686f7d7d7d2a821780e486a0
+observada: README+3receitas para CAS no DEX35. Ausentes recibo final assinado e
+handoff/kit R169 no escopo lido; zeroZIPR169 nos globs locais autorizados.
+Não presumir assinatura por título de commit. R169 NÃO CADASTRADA, nenhum
+APK/receita executado nem código de app alterado nesteLinux. Diagnóstico CAS
+é relato/fonte do produtor, não execução Android deste ciclo. Ler
+r169-source-observation.json. Não inventar IDs/hashes futuros nem pedir kitR168.
+
+CapasGit main5c6cc32/SNES9f85e9d e manifestoSNESc78c2fed iguais:220outputs,
+0PNGoriginal nos paths declarados; trêsPNGexatos13z ausentes/20sem ediçãoexata.
+Zeroimportações; capas13z/1080R164 e anteriores preservadas. PSX17impedimentos,
+sinopses/camposeditoriais/mapeamento,502histórico e físicosAndroid mantidos.
+
+Backups backup/station-before-hourly-20261015-23z nos doisGits e
+backup/station-before-hourly-20261015-23z-r169 noapp publicados/conferidos.
+Branch própria feat/station-hourly-20261015-23z; worktrees
+/mnt/DADOS/servidor-pix-station-manutencao-20261015-23z e
+/mnt/DADOS/turboelden-station-manutencao-20261015-23z. Mesmo handoff e recibo
+maintenance/20261015-23z nos doisGits. Checkouts/2CRLF/outrosprodutos/ROMs/saves/
+licenças/rede100800/onboardDNS/R164 preservados. Scannerativoexit0, horário
+userativo/habilitado. MonitorPAI225524 DETÉM maintenance.lock ATÉ retorno final;
+NÃO alegar liberação antes dele. Nenhuma automação/mensagem externa/state/config.
+
+PRÓXIMO CICLO EXATO: ler este recibo e autoridades R168, comparar refs/inputs
+NOVOS. Se iguais, somente conferência; NÃO reexecutar R168/R167/R166/deploy/
+provas completas/capas13z11z/1080 ou controladores históricos. Para R169 receber
+handofffinal+provaassinadaAPK+kitprivadoexato/modosexplícitos/ledgerHLEreal; não
+reutilizar IDs R168 nem compilar/instalar APK aqui. Só com bytes reais, preparar
+NOVO plano/preflightTODOS sobre baselineprotegida fresca, limites atuais
+256KiBconteúdo/32binding/128motores/50000perfis/8MiBmodos/16MiBregistro, sem poda.
+Registrar aditivamente/scan.lock; parar SÓ timerscanner na publicação, aguardar
+oneshot/retomar e provar capabilities assinadas/transporte conforme escopo.
+Para3PNGexatos ver covers-pending.json13z; só se chegarem, NOVOplano/importador
+vigente+cover-sync.lock/scan.lock/catálogoassinado+byteslocalpúblico, semrehashROM.
+AuthLinuxnativa<=120s; cancelarsóprópriopedidonãoautenticado, nuncarootiniciado.
+Instalador MANUAL do APK final aceito nos doisaparelhos/dadospreservados,
+hashes/quadro/som/controles/retornoconvidado25s ainda dependem da produção/teste.
+PS3PS4offline, impedimentos17 e demaispendênciasglobaispreservados.
+
+# Histórico preservado
+
+<!-- STATION-HOURLY-20261015-22Z-R168-RECEIVED -->
+# Ciclo22z: R168 recebida/verificada; cadastro recusado por limite de conteúdo
+
+Autoridade /mnt/DADOS/station-maintenance-20261015-22z/sanitized-receipt.json.
+Ler capacity-rejection.json, received-kit-verified.json, protected-audit.json,
+psx-requalification.json e o topo do MESMO handoff nas worktrees
+/mnt/DADOS/servidor-pix-station-manutencao-20261015-22z/docs/station-android e
+/mnt/DADOS/turboelden-station-manutencao-20261015-22z/docs/server.
+Branch própria feat/station-hourly-20261015-22z. Backup Git anterior dos dois
+remotos backup/station-before-hourly-20261015-22z conferido antes das mudanças.
+
+KitR168 privado4733c00f/ZIPc0de71c3/14275389B recebido:51arquivos50hashes27ELF,
+seisbinários21deps, core/opções/controles/fonte verificados. APK875fb069 por
+recibos da produção, não recebido/lido/assinado/instalado aqui. PSXb21623fee188,
+N64a0c9d15cfbc7,GCWii04383e1f63a0 são identidades REAIS recebidas, NÃO cadastradas.
+Não pedir novamente kit R168; não usar a receita pública como prova de aplicação.
+
+PRE-FLIGHT RECUSADO antes de staging/root/publicação: WinBack item
+station_4e577685b9feb98a02a1b2cb884f2925, baseline124perfis130472B; primeiros
+seis novos vínculos já137167B contra limite131072B, excesso6095B/margem600B.
+Sem reescrever/podar antigos/elevar limite/cadastro parcial. Não existe
+registrar-applied/data-applied/candidate R168 ou publicador aprovado.
+PSX preparação84edições93decisões/23modos2P19edições/17impedidos53locais e
+negativas core/HLE/edição passaram, SEM capabilities/transporte R168 provados.
+
+AuthLinux genuína61,71s SOMENTELEITURA, scan.lock: DLL53d4/API152812/NRestarts0,
+config/tools/registroR167 exatos, Cat100/4744/87motores16404perfis11489modos.
+Nenhuma publicação/parada/restart/scanner/APK/ROM/capa/save/licença/rede/
+outroproduto. Timer scanner ativo/últimoexit0, horário user ativo. CapasGit
+5c6cc32/9f85e9d e manifestoSNESc78c2fed iguais, zeroimportações;3PNG exatos
+pendentes13z e20artes semedição exata preservados. R164 estável intacta.
+
+PRÓXIMO CICLO EXATO: conciliar recibos posteriores primeiro. Esta tarefa NÃO
+aguarda autenticação para publicar: o limite de conteúdo precisa de solução
+autorizada que mantenha os históricos e o contrato vigente. Só depois preparar
+NOVO plano/baselineprotegida fresca, preparar/validar TODOS os vínculos e staged
+registrador vigente; publicação transacional com scan.lock, parar SÓ timer
+scanner/aguardar oneshot/retomar; provar capabilities assinadas e transporte.
+NÃO rerodar R166 authenticate-next, R167, DLL, provas históricas ou capas.
+`preflight-r168.py` no diretório privado é somente diagnóstico já executado e
+registrado; não é um aplicador. Não marcar R168 pronta nem repetir pedido doZIP.
+Depois cadastro válido, instalador manual e ambos celulares MESMA revisão/
+edição/modo, hashes/quadro/som/controles/retorno25s; não falsear gameplay.
+Preservar17PSXimpedidos/502R162 semcausa/sinopses/camposeditoriais e demais
+pendências globais. EstadoJSON do monitor não foi alterado manualmente.
+MonitorPAI205323 segue maintenance.lock ATÉ retorno final; não alegar liberação.
+
+# Histórico preservado
+
 CICLO20Z — 2026-10-15T20:16:13.518910+00:00, PARTIAL. R166 recebida/preparada, NÃO APLICADA. Produtorcc216a1/fontee9dbad1/APK4872f6dd porrecibo, semAPK/aparelho lidoaqui. Kitprivado commit e8ef432/SHA b2b4eb8432c8dcb19327716aca3a20e56f84e1834a08d1b683e2a27ad5920b87/12988932B,45entradas44hashes27ELF6bibliotecas21deps conferidos. Quatroowners/492perfismodos preparados pelo registrador vigente; PSX84/23modos2P19edições/17impedidos53locais, N64387/230MP157solo, GC9Wii3. Validador/limites/DLL intactos; WinBack+420B resolvido SOMENTE condensando instruções de6NOVOS vínculos, máximo130472/131072B. Prefixos antigos exatos/regressões negativas PASS. Projeção87/16404/11489 NÃOAPLICADA.
 
 AUTENTICAÇÃO nativa expirou115,18s semroot, cancelado sópróprio pedido nãoautenticado. native-started/protected-audit/data-before/candidate/registrar-applied/data-applied/operation-error AUSENTES. NENHUMA publicação/parada/restart/provaR166. R165 permanece últimaaplicação comprovada. ExecStart/processo53d4/API152812/NRestarts0 observados; hashDLL/config/índice protegidos NÃO lidos agora. Health/diagnóstico200/zero salasconexões observado. Scanner ativo/últimoexit0, demaisserviços preservados.
