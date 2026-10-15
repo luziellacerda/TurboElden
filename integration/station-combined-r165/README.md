@@ -58,3 +58,43 @@ assinado ao mesmo tempo (aproximadamente 8,2 GB ao todo). Conferir o espaço
 livre em E: e F: e distribuir os temporários antes de montar. Não usar C:
 como área de trabalho de APK nem publicar APK, chave, ROM ou kit privado no
 Git público.
+
+## Assinatura e kit, somente depois do retorno PSX
+
+`recipe/sign_private.py` exige o recibo `station.combined.package.r165.v1`,
+confere as seis entradas, todas as 13.861 hashes, quatro IDs e três marcadores,
+verifica as fontes no commit congelado e usa o certificado Android original
+(SHA-256 `7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825`).
+Assina com v2/v3 e alinhamento ZIP de 16 KiB, depois lê e verifica o APK
+assinado. O destino final fica no volume do pacote; `--scratch` aponta para
+uma pasta existente, preferencialmente em outro volume com pelo menos o
+tamanho do APK mais 256 MiB livres. O volume do pacote precisa do mesmo
+espaço para a saída final. A operação não toca o APK R164.
+
+```text
+python -B integration/station-combined-r165/recipe/sign_private.py \
+  --package <PASTA_DA_MONTAGEM> --final <APK_FINAL_FORA_DO_GIT> \
+  --scratch <PASTA_TEMPORARIA_EXISTENTE_FORA_DO_GIT>
+```
+
+`recipe/package_server_kit.py` exige o APK assinado e seu recibo final,
+o kit R164 exato, os recibos DEX35 e nativo, o verificador privado já
+utilizado na R164 e as fontes congeladas da política do servidor. Ele
+confere assinatura, 16 KiB, 13.861 entradas, seis ELFs de motor, 21
+dependências, modos/perfis preservados e os quatro IDs novos. O ZIP privado
+contém binários de motor, dependências, manifesto e provas; nenhum APK.
+
+```text
+python -B integration/station-combined-r165/recipe/package_server_kit.py \
+  --apk <APK_FINAL> --package <PASTA_DA_MONTAGEM> \
+  --prior-kit <KIT_PRIVADO_R164_EXATO> --app-repo <REPO_APP> \
+  --server-repo <REPO_SERVIDOR> --private-helper <VERIFICADOR_PRIVADO_R164> \
+  --dex-receipt <RECIBO_DEX35_API26> --native-receipt <RECIBO_NATIVO_R165> \
+  --out <PASTA_NOVA_PRIVADA_FORA_DO_GIT>
+```
+
+O kit e o APK devem permanecer fora do Git público. Publicar ali apenas
+o handoff com hashes e instruções; o servidor precisa receber o kit por
+um canal privado e devolver o recibo de cadastro dos quatro IDs antes de
+testar as salas. Estas receitas foram preparadas sem executar as etapas de
+montagem, assinatura, instalação ou criação do kit.
