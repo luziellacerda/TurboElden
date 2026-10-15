@@ -115,7 +115,7 @@ def validate_package(package: Path, dex_dir: Path) -> tuple[dict, Path]:
     if (scoped.get("schema") != "station.psx.cas.dex.r169.v1" or
         scoped.get("passed") is not True or lineage.returncode != 0 or
         scoped.get("sourceSha256") != source_files[
-            "integration/psx-cas-r169/recipe/patch_dex.py"] or
+            "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxSession.java"] or
         scoped.get("donorApkSha256") != BASE_SHA or
         scoped.get("donorDexSha256") != DEX35_SHA or
         scoped.get("partition") != "classes35.dex" or
