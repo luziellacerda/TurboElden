@@ -1,3 +1,9 @@
+## Retorno efetivo do servidor — 15/10/2026
+
+**Motores R164 e nova capa de 1080° publicados e comprovados.** [Estado atual](server-return.json) · [Recibo da capa](new-1080-cover.json). Aceite físico R164 pendente; o pedido original abaixo permanece histórico.
+
+## Pedido original da produção
+
 # R164 — handoff da candidata de seleção de jogos e capa N64
 
 **Estado em 15/10/2026:** o APK R164 está assinado e o `base.apk` instalado no Samsung A56 confere com o SHA-256 da candidata por `adb sha256sum`. A seleção de jogos foi capturada e exercitada no A56; o usuário aceitou o desenho com a proporção de 10% mantida. **O cadastro R164 no servidor, a publicação da nova arte de 1080° Snowboarding e o gameplay N64 online R164 ainda estão pendentes.** R164 não está homologada como estável. [Recibo físico sanitizado](evidence/a56-selection-qa.json).

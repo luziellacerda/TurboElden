@@ -1,3 +1,17 @@
+## R164 aplicada e capa de 1080° publicada — 15/10/2026
+
+Ler o topo do mesmo handoff e r164/server-return.json. Autoridade
+/mnt/DADOS/station-r164-git-20261015/completed.json PASSED. Kit privado 37e3b9dd, 40 arquivos/27 ELF,
+quatro motores/399 perfis adicionados, prefixos R162 e anteriores preservados.
+157 capabilities locais/públicas, 164 admissões/223 recusas e quatro clientes
+sintéticos passaram. Não é gameplay Android. Capa exata de 1080° publicada:
+JPEG 480×720/q90, 150488 bytes, hash abd127d8; cache coverId+item.revision.
+NÃO repetir cadastro/capa/DLL/R162/R161/R159. APK não recebido; A56 R164 por
+recibo da produção. Testar mesma R164/edição nos dois aparelhos e novo efeito
+da capa. Preservar pendências SNES, rede onboard, banda100/800 e demais produtos.
+
+## Histórico preservado
+
 ## R164 candidata visual instalada — 15/10/2026
 
 Ler `docs/server/r164/README.md` e `integration/game-selection-n64-cover-r164/README.md` antes de alterar seleção, efeitos ou motores. APK R164 assinado SHA-256 `903700d5d6dcd63779df636cfb11bf94e2fadbeece462d2cb7a6cdf1dfbd5210`, instalado no A56 e conferido pelo hash do `base.apk`; dados preservados. Seleção de jogos capturada em 2340×1080: capa principal 10% mais estreita, miniaturas menores, faixa de ações alinhada à capa, Atualizar como ícone solto e busca sem cobrir estrelas. O usuário aprovou o restante do desenho. O toque na capa 1080°, no Atualizar e na busca foi observado. Recibo físico sanitizado em `docs/server/r164/evidence/a56-selection-qa.json`; capturas e APK ficam fora do Git público.

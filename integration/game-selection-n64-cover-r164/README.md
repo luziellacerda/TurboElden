@@ -1,3 +1,9 @@
+## Retorno efetivo do servidor — 15/10/2026
+
+**Cadastro R164 e nova capa de 1080° publicados e comprovados.** [Estado do servidor](../../docs/server/r164/server-return.json) · [Recibo da capa](../../docs/server/r164/new-1080-cover.json). Os testes com clientes sintéticos passaram; a nova capa no telefone e o gameplay R164 ainda precisam de aceite físico. O registro original da candidata abaixo foi preservado.
+
+## Registro original da candidata
+
 # R164 — seleção de jogos e mapeamento da capa N64
 
 **Candidata assinada, instalada e conferida por `adb sha256sum` no Samsung A56; seleção visual e toques conferidos em 2340 × 1080.** O usuário aceitou o desenho com a proporção de 10% mantida. O cadastro dos novos motores no servidor, a publicação da nova arte e o gameplay N64 online R164 continuam pendentes. [Handoff do servidor](../../docs/server/r164/README.md) e [recibo físico sanitizado](../../docs/server/r164/evidence/a56-selection-qa.json).
