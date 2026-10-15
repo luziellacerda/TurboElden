@@ -118,3 +118,21 @@ abertura. O usuário escolhe quando e em qual telefone instalar; preservar os
 dados e verificar o hash instalado. Registrar separadamente a aplicação dos
 quatro motores no servidor e a partida física PSX. Não enviar APK, chave ou
 logs privados ao Git.
+
+## 4. Kit privado independente para o servidor
+
+Depois da assinatura, gerar o kit sem APK a partir do mesmo arquivo assinado:
+
+```powershell
+python -B .\integration\psx-dependency-r166\recipe\package_server_kit.py `
+  --apk $final --package $package --dex-dir $dexOut `
+  --prior-kit 'E:\StationVisualR165Combined-20261015\server-kit\Kit-Servidor-TurboStations-R165-Independentes.zip' `
+  --app-repo 'E:\StationN64DexRecipeR165-20261015\app' `
+  --out 'E:\StationPsxDependencyR166-20261015\server-kit'
+```
+
+O empacotador exige o APK assinado, o kit R165 de hash fixado, a prova de
+preservação de todas as entradas e as políticas aprovadas. O ZIP contém os
+binários e manifestos que o servidor precisa, sem APK, chave ou ROM. Entregar
+esse kit pelo Git privado e exigir recibo de cadastro **aplicado** dos quatro
+novos `engineId` antes de declarar a R166 pronta para partidas online.
