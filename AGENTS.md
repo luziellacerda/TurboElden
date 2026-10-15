@@ -38,8 +38,10 @@ Preparar a nova revisão não instala automaticamente. O EXE continua genérico;
 a revisão exibida e o arquivo instalado vêm do manifesto atualizado. A
 instalação manual já bloqueia partida/download ativo e preserva dados.
 R165 é candidata de teste; R164 é o retorno estável até homologação. O estado
-do cadastro dos motores R165 deve ser verificado antes de afirmar que o online
-está liberado. Ver `tooling/usb-installer/README.md`.
+do cadastro dos quatro motores R165 está confirmado em
+`docs/server/r165/server-return.json`. A partida Android e a saída física do
+anfitrião N64 ainda precisam ser observadas em dois aparelhos R165. Ver
+`tooling/usb-installer/README.md`.
 
 ## PSX publicado e mapa integral das 84 edições — 15/10/2026
 
