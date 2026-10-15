@@ -1,6 +1,8 @@
 # R161 — entrega privada ao servidor: N64 online com Dynarec
 
-**Estado em 15/10/2026:** candidata assinada e kit privado conferido. `serverApplied=false`; `physicalGameplayValidated=false`. Não promover como estável nem substituir a R159 em produção antes do cadastro e da partida física. A [resposta R159 do servidor](https://github.com/luziellacerda/Servidor-pix/blob/docs/station-online-exit-r135-20261012/docs/station-android/r159/server-return.json) confirma a aplicação **da R159**, não desta revisão.
+**Estado em 15/10/2026:** candidata assinada, kit privado conferido e APK instalado no A56 com hash integral idêntico. `serverApplied=false`; `physicalGameplayValidated=false`. Não promover como estável nem substituir a R159 em produção antes do cadastro e da partida física. A [resposta R159 do servidor](https://github.com/luziellacerda/Servidor-pix/blob/docs/station-online-exit-r135-20261012/docs/station-android/r159/server-return.json) confirma a aplicação **da R159**, não desta revisão.
+
+O [recibo de instalação do A56](a56-install-receipt.json) registra atualização por cima sem limpar dados, `Success` e SHA-256 do `base.apk` instalado. O processo abriu a `LoginActivity`; login, sala e gameplay ainda não foram confirmados. Não iniciar uma sala R161 até o servidor cadastrar as identidades exatas e os demais aparelhos de teste receberem o mesmo APK.
 
 ## Arquivos exatos
 
