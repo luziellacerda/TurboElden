@@ -1,3 +1,9 @@
+## Retorno efetivo do servidor — 15/10/2026
+
+**Cadastro R162 aplicado e comprovado.** [Retorno efetivo](server-return.json). Kit exato/27 ELF conferidos; nenhum APK solicitado ou lido aqui. Gameplay físico ainda não homologado. A documentação original abaixo foi preservada.
+
+## Handoff original da produção
+
 # R162 — handoff mínimo para liberar o teste N64 online
 
 **Estado em 15/10/2026:** candidata assinada e instalada no moto g52 e no Samsung A56, com o mesmo SHA-256 do APK instalado. Os recibos dos aparelhos não comprovam cadastro no servidor nem partida física; confirmar o primeiro pelo retorno do servidor e homologar a segunda em teste. Não associar resultados de partidas R161 ao motor R162.

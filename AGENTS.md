@@ -1,3 +1,17 @@
+## R162 aplicada por kit privado — 15/10/2026
+
+Ler o topo do mesmo handoff e r162/server-return.json. Kit a777e90a conferido,
+27 ELF/40 arquivos; APK não solicitado/recebido nem assinatura local alegada.
+Ponte VideoExt online nova, offline/core/opções preservados. Cadastro 78+321
+concluído; etapa de 78 não repetida após falha de tamanho do JSON indentado.
+JSON compacto semanticamente igual; limites/registrador protegido intactos.
+Autoridade /mnt/DADOS/station-git-return-20261015-1355/applied.json PASSED.
+157 capabilities locais/públicas, 164 admissões/223 recusas e quatro clientes sintéticos PASS.
+NÃO repetir cadastro/provas/DLL/R161/R159/boot recovery. Teste físico R162 e
+saída do anfitrião seguem separados/pendentes. Preservar capas 13z/rede/banda.
+
+## Histórico preservado
+
 ## R162 candidata para vídeo N64 online — 15/10/2026
 
 Ler `docs/server/r162/README.md` e `integration/n64-online-video-extension-r162/README.md`. Causa física R161: ponte Android prendia VideoExt ao core offline, causando `SDL_SetVideoMode failed` e tela preta online; a mesma edição 007 mostrava vídeo offline. R162 adiciona ponte exclusiva online, mantém ponte offline e demais políticas, assina com certificado original e está instalada/hash conferido no g52 e no A56. No A56, um `DownloadService` estava em primeiro plano havia cerca de 40 minutos; o usuário relatava não haver download ativo, mas a causa não foi comprovada. Houve `force-stop` antes da instalação. Ao abrir, o serviço reapareceu em primeiro plano; o usuário confirmou que fechou um download, e alguns minutos depois não havia mais `ServiceRecord`. Não classificar o serviço como órfão. A abertura iniciou `LoginActivity` e chegou ao painel `ESActivity`, sem processo `:n64core`. Kit privado SHA `a777e90a1c5add265aed328e13c884af1277a8dee6770be4ca109d431aeec942`, fora do Git e sem entrega por pen drive neste handoff. Cadastro R162 depende de recibo do servidor; gameplay ainda não foi homologado. Não confundir a R161 aplicada abaixo com a candidata R162. Usuário determinou não enviar APK no handoff. O relato de abertura direta do N64 não se reproduziu no lançamento g52 observado: painel de 24 plataformas abriu após 44,6 s de preparo do carrossel, que é byte idêntico ao R161. Saída do anfitrião e aviso do convidado são pendência separada em `HOST_EXIT_AUDIT.md`.
