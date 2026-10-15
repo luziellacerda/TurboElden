@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "revision": "R159",
-  "apkPath": "TurboStations-Premium-R159-n64-owner-20261014.apk",
-  "sha256": "4837be706f9ac1f913b4844353741f70c539674e125ae185239611cf5faac2b3",
+  "revision": "R164",
+  "apkPath": "../final/TurboStations-Premium-R164-selection-actions.apk",
+  "sha256": "903700d5d6dcd63779df636cfb11bf94e2fadbeece462d2cb7a6cdf1dfbd5210",
   "package": "org.turboramastation.frontend",
   "adbPath": "platform-tools/adb.exe",
-  "status": "test-n64-owner-context",
-  "warning": "R159 candidata N64. R157 permanece como retorno estavel. Testar partida apos o servidor registrar as identidades R159.",
-  "bytes": 2715106319,
+  "status": "test-selection-actions-r164",
+  "warning": "R164 candidata visual. R157 permanece como retorno estavel. Testar online somente apos o servidor registrar as identidades R164.",
+  "bytes": 2715466850,
   "serverBindingsRegistered": false
 }
