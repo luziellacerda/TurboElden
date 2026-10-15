@@ -1,3 +1,23 @@
+## Instalador USB permanente — instrução atual do mantenedor
+
+Ao terminar **qualquer APK novo assinado e conferido**, publique-o com
+`tooling/usb-installer/publish_current_installer.py`, fornecendo o caminho exato
+do APK e do `final-apk-proof.json`. O destino permanente neste computador é
+`E:\TurboStations-Instalador-Atual\Instalar-TurboStations-USB.exe`; há um atalho
+na Área de Trabalho. Esse passo deve fazer parte do fechamento da compilação,
+antes de declarar a revisão pronta. O publicador valida a assinatura original,
+alinhamento, pacote, tamanho e SHA-256; atualiza o manifesto por último e
+mantém o APK único fora do Git. Não escolher versão por data, copiar outro APK
+de 2,7 GB, publicar unsigned nem deixar monitor/serviço em segundo plano.
+
+O usuário quer abrir o instalador **quando quiser** e escolher o telefone USB.
+Preparar a nova revisão não instala automaticamente. O EXE continua genérico;
+a revisão exibida e o arquivo instalado vêm do manifesto atualizado. A
+instalação manual já bloqueia partida/download ativo e preserva dados.
+R165 é candidata de teste; R164 é o retorno estável até homologação. O estado
+do cadastro dos motores R165 deve ser verificado antes de afirmar que o online
+está liberado. Ver `tooling/usb-installer/README.md`.
+
 ## R164 aplicada e capa de 1080° publicada — 15/10/2026
 
 Ler o topo do mesmo handoff e r164/server-return.json. Autoridade
@@ -11,6 +31,10 @@ recibo da produção. Testar mesma R164/edição nos dois aparelhos e novo efeit
 da capa. Preservar pendências SNES, rede onboard, banda100/800 e demais produtos.
 
 ## Histórico preservado
+
+As instruções de instalação registradas nos marcos históricos abaixo valiam
+naquelas revisões; o procedimento vigente é o instalador permanente sob demanda
+descrito no topo deste arquivo.
 
 ## R164 candidata visual instalada — 15/10/2026
 

@@ -706,7 +706,9 @@ internal static class UsbInstallerLauncher
                 packageApk = apk;
                 candidate.Visible = true;
                 version.Text = "INSTALADOR USB  /  " + manifest.revision.ToUpperInvariant();
-                warning.Text = "Atualização de teste · seus dados são preservados · instale um telefone por vez";
+                warning.Text = String.IsNullOrWhiteSpace(manifest.warning) ?
+                    "Atualização de teste · seus dados são preservados · instale um telefone por vez" :
+                    manifest.warning;
                 packageHeading.Text = "ARQUIVO DE INSTALAÇÃO  ·  " + manifest.revision.ToUpperInvariant();
                 string name = Path.GetFileName(apk);
                 bool partial = File.Exists(apk + ".partial");
