@@ -8,8 +8,9 @@ O kit independente sem APK foi gerado, SHA-256
 `2e260ba80f93a0a9f65c1e2dca2f0632ce29b321dd895ad84d737e5a5628179b`.
 O [handoff atual](../../docs/server/r165/R165-APK-ASSINADO-REGISTRO-PENDENTE-20261015.md)
 contém os quatro IDs novos e a sequência exigida do servidor. As etapas de
-preparo abaixo documentam a receita executada; a R165 ainda não foi instalada
-nem cadastrada, e a R164 permanece o retorno estável.
+preparo abaixo documentam a receita executada. A R165 foi instalada como
+piloto no Galaxy A56 com hash conferido, mas ainda não foi cadastrada no
+servidor nem validada em partida; a R164 permanece o retorno estável.
 
 Esta receita congela uma futura candidata única sobre o APK assinado R164,
 SHA-256 `903700d5d6dcd63779df636cfb11bf94e2fadbeece462d2cb7a6cdf1dfbd5210`.

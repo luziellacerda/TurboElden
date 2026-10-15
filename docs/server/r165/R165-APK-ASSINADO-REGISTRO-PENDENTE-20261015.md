@@ -7,6 +7,8 @@
 - O kit independente R165, sem APK, ROM, BIOS, chave, serial ou registros brutos de aparelho, tem SHA-256 `2e260ba80f93a0a9f65c1e2dca2f0632ce29b321dd895ad84d737e5a5628179b`, 12.985.386 bytes e 43 arquivos. Ele inclui `MANIFESTO-ARQUIVOS.json`, `incoming.json`, `engines-apk.json`, binários e provas. Conferir o ZIP e cada entrada antes do cadastro.
 - Entrega privada: commit `bbe57e5b8761f60a4e264ac97fe410e5f3a712b5` do repositório `luziellacerda/TurboramaEmulationStation`, ramo `handoff/station-r165-combined-20261015`, pasta `station-server-handoffs/r165/`. O remoto foi lido de volta com o mesmo tamanho e SHA-256. O repositório público do app contém somente este handoff textual; o kit não está nele.
 - Fonte de montagem congelada em `9d59b79571bcfc6e502b99a028c951bcd72a1eaf`. Uma checagem da receita de assinatura foi corrigida depois: o registro tem dois motores distintos para `neogeo`; a receita agora conta as 13 entradas e confere separadamente as quatro selecionadas. Essa correção não altera o APK.
+- O instalador EXE R165 foi atualizado fora do Git, SHA-256 `5485da08b493ee92c9f4bb553e42985c8240bfcdddb7970e6fd653bbe30ad0c1`. O manifesto aponta para o único APK final, sem cópia embutida; validação do APK e simulações passaram.
+- Instalação piloto no Galaxy A56 concluída às `2026-10-15T17:24:24Z` por USB com `install -r`, sem limpar dados nem forçar parada. O recibo confirmou `SUCCESS` e o SHA-256 do APK instalado igual ao assinado. A abertura e o visual ainda dependem de observação no telefone; nenhuma partida R165 foi validada.
 
 ## Alterações efetivas do APK
 
