@@ -1,14 +1,12 @@
-## Estado efetivo do servidor — 15/10/2026
-
-**R161 recebida da USB, conferida e aplicada.** Leia o [retorno efetivo](server-return.json) e a [prova de aplicação](evidence/server-applied.json). N64 liberado para testar o mesmo APK nos dois celulares; gameplay físico não homologado. Não repetir cadastro. A documentação original abaixo descreve o estado anterior à aplicação.
-
-## Documento anterior preservado
-
 # R161 — entrega privada ao servidor: N64 online com Dynarec
 
-**Estado em 15/10/2026:** candidata assinada, kit privado conferido e APK instalado no A56 com hash integral idêntico. `serverApplied=false`; `physicalGameplayValidated=false`. Não promover como estável nem substituir a R159 em produção antes do cadastro e da partida física. A [resposta R159 do servidor](https://github.com/luziellacerda/Servidor-pix/blob/docs/station-online-exit-r135-20261012/docs/station-android/r159/server-return.json) confirma a aplicação **da R159**, não desta revisão. O [retorno R161 do receptor](https://github.com/luziellacerda/Servidor-pix/blob/docs/station-online-exit-r135-20261012/docs/station-android/r161/server-receiver-status.json) confirma que ele leu a documentação e reproduziu o hash do perfil, mas ainda não recebeu os bytes do APK nem do ZIP; portanto não conferiu as bibliotecas nem aplicou o cadastro. A mídia conferida no Windows precisa ser montada no Linux do servidor, ou os dois arquivos precisam chegar ao destino privado `/mnt/DADOS` por um canal autorizado, com conferência dos hashes antes do registro.
+## Estado efetivo do servidor — 15/10/2026
 
-O [recibo de instalação do A56](a56-install-receipt.json) registra atualização por cima sem limpar dados, `Success` e SHA-256 do `base.apk` instalado. O processo abriu a `LoginActivity`; login, sala e gameplay ainda não foram confirmados. Não iniciar uma sala R161 até o servidor cadastrar as identidades exatas e os demais aparelhos de teste receberem o mesmo APK.
+**R161 recebida da USB, conferida e aplicada.** Leia o [retorno efetivo](server-return.json) e a [prova de aplicação](evidence/server-applied.json). O N64 está liberado para testar o mesmo APK nos dois celulares; gameplay físico ainda não foi homologado. Não repetir o cadastro.
+
+**Estado em 15/10/2026:** candidata assinada, kit privado conferido e APK instalado no A56 e no moto g52, ambos com hash integral idêntico. `serverApplied=true`; `physicalGameplayValidated=false`. O [retorno R161 do servidor](https://github.com/luziellacerda/Servidor-pix/blob/docs/station-online-exit-r135-20261012/docs/station-android/r161/server-return.json) confirma recebimento dos bytes, assinatura, bibliotecas, cadastro das identidades e provas públicas; a partida física Android ainda precisa ser conferida. A R159 continua cadastrada como retorno. Não promover a R161 como estável antes da partida física.
+
+Os recibos de instalação do [A56](a56-install-receipt.json) e do [moto g52](g52-install-receipt.json) registram atualização por cima sem limpar dados, `Success` e SHA-256 do `base.apk` instalado. Ambos iniciaram a `LoginActivity`; login, sala e gameplay ainda não foram confirmados pelos recibos. O servidor cadastrou as identidades exatas e ambos os aparelhos receberam o mesmo APK, então a partida física R161 pode ser executada.
 
 ## Arquivos exatos
 
@@ -19,7 +17,7 @@ O [recibo de instalação do A56](a56-install-receipt.json) registra atualizaç�
 
 Conferir os hashes externos antes de abrir o ZIP. O kit contém `incoming.json`, `engines-apk.json`, `profile-policies.json`, seis ELF, vinte dependências, manifesto com hashes e recibos; não contém APK, ROM, BIOS, chave, serial ou log bruto. A [receita do kit](../../../integration/n64-online-dynarec-r161/README.md) está no repositório; o recibo completo fica ao lado do ZIP, em `server-kit-receipt-r161.json`. A prova do APK fica em `E:\StationN64OwnerAudit-20261014\package-r161-dynarec-only\final-apk-proof.json`. Publicar no Git somente documentação e receitas revisadas, nunca o APK, o ZIP privado, chaves ou dados de aparelhos.
 
-O [recibo de entrega USB](usb-delivery-receipt.json) confirma cópia e leitura de volta dos hashes do APK e do ZIP em `I:\SERVIDOR LER\R161-N64-ONLINE-DYNAREC-20261015`. A letra I: é apenas a identificação observada neste PC. O pen drive foi preparado para o servidor, mas ainda não há recibo de recebimento ou aplicação pelo servidor.
+O [recibo de entrega USB](usb-delivery-receipt.json) confirma cópia e leitura de volta dos hashes do APK e do ZIP em `I:\SERVIDOR LER\R161-N64-ONLINE-DYNAREC-20261015`. A letra I: é apenas a identificação observada neste PC. O [retorno do servidor](https://github.com/luziellacerda/Servidor-pix/blob/docs/station-online-exit-r135-20261012/docs/station-android/r161/server-return.json) comprova o recebimento e a aplicação posteriores, com os mesmos hashes.
 
 ## Mudança delimitada
 
