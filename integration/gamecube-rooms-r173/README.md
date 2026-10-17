@@ -41,3 +41,5 @@ Os binários, classpaths e ferramentas privados continuam fora do Git. Os
 recibos finais indicarão a fonte realmente congelada e os hashes resultantes.
 A R172 continua sendo o ponto estável; esta pasta não promove a candidata,
 não publica atualização geral e não comprova gameplay por HTTP ou build.
+
+Estado operacional posterior à compilação: [cadastro e instalação R173](../../docs/server/GAMECUBE-R173-20261017.md).
