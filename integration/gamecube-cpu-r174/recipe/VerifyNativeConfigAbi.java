@@ -1,6 +1,5 @@
 import java.util.*;
 import java.util.zip.ZipFile;
-import com.android.tools.smali.dexlib2.AccessFlags;
 import com.android.tools.smali.dexlib2.dexbacked.*;
 import com.android.tools.smali.dexlib2.iface.*;
 import com.android.tools.smali.dexlib2.iface.value.IntEncodedValue;
@@ -26,16 +25,20 @@ public final class VerifyNativeConfigAbi {
         }
         if (found==null) throw new IllegalStateException("NativeConfig API absent");
         Map<String,Integer> layers=new HashMap<>();
-        for (Field f:found.getStaticFields())
-            if (f.getInitialValue() instanceof IntEncodedValue v) layers.put(f.getName(),v.getValue());
+        for (Object entry:found.getStaticFields()) {
+            Field f=(Field)entry;
+            if (f.getInitialValue() instanceof IntEncodedValue v)
+                layers.put(f.getName(),((Number)v.getClass().getField("value").get(v)).intValue());
+        }
         if (!Integer.valueOf(4).equals(layers.get("LAYER_CURRENT")) ||
             !Integer.valueOf(3).equals(layers.get("LAYER_ACTIVE")))
             throw new IllegalStateException("Native layer contract differs");
         Set<String> required=new HashSet<>(Set.of("setBoolean)V","getBoolean)Z"));
-        for (Method m:found.getDirectMethods()) {
+        for (Object entry:found.getDirectMethods()) {
+            Method m=(Method)entry;
             if (m.getParameterTypes().toString().equals("[I, Ljava/lang/String;, Ljava/lang/String;, Ljava/lang/String;, Z]") &&
-                AccessFlags.PUBLIC.isSet(m.getAccessFlags()) && AccessFlags.STATIC.isSet(m.getAccessFlags()) &&
-                AccessFlags.NATIVE.isSet(m.getAccessFlags())) required.remove(m.getName()+")"+m.getReturnType());
+                (m.getAccessFlags() & 0x109)==0x109) // DEX public, static, native.
+                required.remove(m.getName()+")"+m.getReturnType());
         }
         if (!required.isEmpty()) throw new IllegalStateException("Native boolean API signature differs: "+required);
         System.out.println("PASS realNativeConfigAbi=true transientLayer=4 activeLayer=3");
