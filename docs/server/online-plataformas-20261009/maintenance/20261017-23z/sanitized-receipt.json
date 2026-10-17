@@ -1,0 +1,281 @@
+{
+  "schema": "station.hourly-maintenance.20261017-23z.v1",
+  "utc": "2026-10-17T23:04:52.414261+00:00",
+  "status": "partial",
+  "scope": "Read-only reconciliation and documentation; no production publication",
+  "event": {
+    "utc": "2026-10-17T23:00:04.473844+00:00",
+    "fingerprint": "c102e71e24213809d15a811e6529d7194a80994bb592cac58acbd9549770a929",
+    "inputs": {
+      "server:origin/docs/station-gamecube-r178-20261017": "70bd3fcfed57314c8a60afaa336d1ecccb56c86b",
+      "app:origin/fix/station-update-storage-r178-20261017": "878df9981fd87796c36704022190383b8a20ac02",
+      "covers:origin/capas-super-nintendo": "9f85e9df1ec0c82d77156ed072b997855f719288",
+      "covers:origin/main": "5c6cc32c06e6944b9258df36ffdb846baa368a7f",
+      "privateInputFingerprint": "e3f4043320cb5654bd3920380d61ada26b9a9e75e30f36d7a12c72239b5cf3bc"
+    },
+    "newInput": true
+  },
+  "eventGitAndConfiguredPrivateInputsUnchanged": true,
+  "gitObservation": {
+    "utc": "2026-10-17T23:03:23.083821+00:00",
+    "repositories": [
+      {
+        "repository": "server",
+        "branchCount": 220,
+        "verifiedRefs": {
+          "refs/heads/docs/station-gamecube-r178-20261017": "70bd3fcfed57314c8a60afaa336d1ecccb56c86b",
+          "refs/heads/backup/station-before-hourly-20261017-23z": "70bd3fcfed57314c8a60afaa336d1ecccb56c86b",
+          "refs/heads/estavel-station-r172-20261017": "d0e1693020d4a1fe02fa685f4f529805bb7ac48a"
+        },
+        "newIncomingRefChanges": []
+      },
+      {
+        "repository": "app",
+        "branchCount": 208,
+        "verifiedRefs": {
+          "refs/heads/fix/station-update-storage-r178-20261017": "878df9981fd87796c36704022190383b8a20ac02",
+          "refs/heads/backup/station-before-hourly-20261017-23z": "878df9981fd87796c36704022190383b8a20ac02",
+          "refs/heads/estavel-station-r172-20261017": "5f7733239727b002d36e02874655237161233193"
+        },
+        "newIncomingRefChanges": []
+      },
+      {
+        "repository": "covers",
+        "branchCount": 2,
+        "verifiedRefs": {
+          "refs/heads/main": "5c6cc32c06e6944b9258df36ffdb846baa368a7f",
+          "refs/heads/capas-super-nintendo": "9f85e9df1ec0c82d77156ed072b997855f719288"
+        },
+        "newIncomingRefChanges": []
+      }
+    ]
+  },
+  "stableR172RefsVerified": true,
+  "backupRef": "backup/station-before-hourly-20261017-23z",
+  "deliveryBranch": "feat/station-hourly-20261017-23z",
+  "worktrees": {
+    "server": "/mnt/DADOS/servidor-pix-station-manutencao-20261017-23z",
+    "app": "/mnt/DADOS/turboelden-station-manutencao-20261017-23z"
+  },
+  "privateWorkspace": "/mnt/DADOS/station-maintenance-20261017-23z",
+  "authoritiesReadAndHashed": [
+    {
+      "path": "/mnt/DADOS/station-r179-gba-console-activation-20261017/completed.json",
+      "sha256": "20f9912c247bad702ba6cd9287ba929be51ab53f83f62213001cbf5d2ab4fc99"
+    },
+    {
+      "path": "/mnt/DADOS/station-r179-gba-console-activation-20261017/data-applied.json",
+      "sha256": "718d47a170ec2eb008074fa9d01a91d861ff989361991feb4b808cbc546754f8"
+    },
+    {
+      "path": "/mnt/DADOS/station-r179-gba-console-usb-install-20261017/installed-verified-pair-gamecube.json",
+      "sha256": "0cfaf14833adfe91b306269fed1e90777abfe47c125be31f2d0cda5b5b2a95b6"
+    },
+    {
+      "path": "/mnt/DADOS/station-r179-gamecube-online-test-20261017/physical-observation.json",
+      "sha256": "4f353a6057331407380bb0cc7e9c119e8c6cf05909337c72220d0dddca6d039c"
+    },
+    {
+      "path": "/mnt/DADOS/station-r179-gamecube-online-test-20261017/usb-stay-awake-restored.json",
+      "sha256": "f5360b317095ec4d6906950906d1a3c47595734994e074b414ab5db44fc48d1b"
+    },
+    {
+      "path": "/mnt/DADOS/station-r178-update-storage-activation-20261017/reviewed-runtime/deployment-applied.json",
+      "sha256": "0612ca2cb06571904056089ba9afdb66afe1338d1b1d08a00e68b00f510aa948"
+    }
+  ],
+  "lastAuthenticatedServerSnapshot": {
+    "authority": "/mnt/DADOS/station-r179-gba-console-activation-20261017/completed.json",
+    "utc": "2026-10-17T21:56:56.534108+00:00",
+    "counts": {
+      "catalogRevision": 108,
+      "catalogItems": 4846,
+      "visibleItems": 4589,
+      "engines": 135,
+      "profiles": 22428,
+      "modes": 13472
+    },
+    "exactEngineIds": {
+      "psx": "pcsx-rearmed-ff81ed17-player-v3-05c0fcdd1046",
+      "n64": "mupen64plus-ae-33bf7021-n64-v3-3bea8848a064",
+      "gamecube": "dolphin-5102a033-gamecube-v3-6055a5d72bf1",
+      "wii": "dolphin-5102a033-wii-v3-6055a5d72bf1"
+    },
+    "freshProtectedSnapshotThisCycle": false
+  },
+  "runtimeObservation": {
+    "apiPid": 880193,
+    "nRestarts": 0,
+    "execStartMatchesAuthenticatedDeployment": true,
+    "releaseDirectory": "/opt/turborama-station-r178-profile-capacity-20261017-660839baf1d1",
+    "dllSha256FromPriorAuthenticatedAuthority": "660839baf1d18167a96c78160b2a58cd3f5c44bb4ca50eaf718b9a1bb3bf99d4",
+    "binaryHashReadThisCycle": false,
+    "protectedLibraryConfigReadThisCycle": false,
+    "protectedToolsReadThisCycle": false,
+    "reason": "Linux file permissions; no production mutation planned and owner requested no new password prompts while away",
+    "readableServiceFilesCompared": 1,
+    "protectedServiceFilesNotReread": 29,
+    "readableServiceFilesMatchPriorAuthority": true
+  },
+  "loopbackCheck": {
+    "utc": "2026-10-17T23:02:28.670860+00:00",
+    "endpoints": [
+      {
+        "path": "/health",
+        "status": 200,
+        "numericOrBooleanFieldsOnly": {},
+        "responseBytes": 47
+      },
+      {
+        "path": "/ready/station/online/multiplayer-diagnostics",
+        "status": 200,
+        "numericOrBooleanFieldsOnly": {
+          "schemaVersion": 1,
+          "activeRooms": 1,
+          "activeConnections": 2,
+          "retainedBytes": 524288,
+          "maximumRetainedBytes": 134217728
+        },
+        "responseBytes": 1111
+      }
+    ]
+  },
+  "currentPhonesFromExistingReceipt": {
+    "revision": "R179",
+    "versionCode": 21,
+    "installedApkSha256": "aad5358bc1920a94eda414cf3edcccd5acd46daaaa54eed73ed4c005aec7032d",
+    "phonesVerifiedPreviously": 2,
+    "rereadOrInstalledThisCycle": false
+  },
+  "physicalObservationReconciled": {
+    "revision": "R179",
+    "actualSplitScreenTwoPlayerRace": true,
+    "observedCourse": "Luigi Circuit",
+    "modeSelectionObserved": "Cup selection; actual two-viewport race",
+    "ownerResult": "Much worse than the pre-R174 small-loss reference",
+    "gamecubePadBufferConfirmedOnBoth": 8,
+    "normalR173CpuPolicy": true,
+    "clockMeasurements": [
+      {
+        "phone": "moto_g52",
+        "nativeGameSecondsBefore": 19.821,
+        "nativeGameSecondsAfter": 40.343,
+        "nativeGameDeltaSeconds": 20.522,
+        "wallSeconds": 30.503157,
+        "wallUncertaintySeconds": 1.421127,
+        "nativeClockRateFraction": 0.6728,
+        "readFromOwnerStartedSplitScreenRace": true
+      },
+      {
+        "phone": "SM_A566E",
+        "nativeGameSecondsBefore": 19.852,
+        "nativeGameSecondsAfter": 40.409,
+        "nativeGameDeltaSeconds": 20.557,
+        "wallSeconds": 30.561064,
+        "wallUncertaintySeconds": 0.977229,
+        "nativeClockRateFraction": 0.6727,
+        "readFromOwnerStartedSplitScreenRace": true
+      }
+    ],
+    "motoSurfaceWindowFps": [
+      39.145,
+      38.653
+    ],
+    "serverSamples": 240,
+    "bothConnectionsPresentInAllSamples": true,
+    "sameRoomGenerationEpochAndEdition": true,
+    "nativeCoreOrNetworkChangedByObservation": false,
+    "physicalImprovementValidated": false,
+    "bufferEightExperimentAccepted": false,
+    "temperatureStatus": {
+      "moto_g52": 0,
+      "SM_A566E": 1
+    },
+    "thermalClaimLimitedToThisShortCapture": true,
+    "nextAction": "Prepare controlled restoration of pre-trial GameCube session policy; investigate and audit three requested systems; no Linux password prompts while owner away"
+  },
+  "usbStayAwakeRestorationFromExistingReceipt": {
+    "utc": "2026-10-17T22:26:16.624638+00:00",
+    "restoration": [
+      {
+        "phone": "moto_g52",
+        "restored": true
+      },
+      {
+        "phone": "SM_A566E",
+        "restored": false,
+        "reason": "USB unavailable"
+      }
+    ],
+    "gameSettingsChanged": false,
+    "gameInterrupted": false
+  },
+  "r180": {
+    "separateTaskInProgress": true,
+    "appWorktree": "/mnt/DADOS/turboelden-station-gba-wii-gamecube-r180-20261017",
+    "serverWorktree": "/mnt/DADOS/servidor-pix-station-gba-wii-gamecube-r180-20261017",
+    "finalHandoffReceivedThisCycle": false,
+    "serverAppliedPerCurrentTaskState": false,
+    "sourceOrBuildExecutedByThisCycle": false
+  },
+  "covers": {
+    "remoteRefsUnchanged": true,
+    "main": "5c6cc32c06e6944b9258df36ffdb846baa368a7f",
+    "superNintendo": "9f85e9df1ec0c82d77156ed072b997855f719288",
+    "localManifestSha256": "c78c2fed7eb724347896dd9b8ae92f566a5bd113c379521fc8dbedff7cc48f05",
+    "importedCovers": 0,
+    "requiredMissingOriginals": [
+      {
+        "title": "Fighter's History",
+        "present": false
+      },
+      {
+        "title": "FIFA International Soccer",
+        "present": false
+      },
+      {
+        "title": "FIFA Soccer 96",
+        "present": false
+      }
+    ],
+    "previousUnmatchedArtworksRetained": 20,
+    "sourceAuthority": "/mnt/DADOS/station-maintenance-20261015-13z/covers-pending.json",
+    "productionCoversChanged": false,
+    "romsReadCopiedOrRebuilt": false
+  },
+  "actions": {
+    "dataPublished": false,
+    "enginesRegistered": false,
+    "apiRestarted": false,
+    "gamesInterrupted": false,
+    "scannerTimerStopped": false,
+    "scannerInvoked": false,
+    "apkModifiedOrInstalled": false,
+    "syntheticProofsReplayed": false,
+    "networkChanged": false,
+    "linuxAuthenticationRequested": false,
+    "newAutomationsCreated": false,
+    "externalMessagesSent": false
+  },
+  "maintenanceLock": {
+    "owner": "existing parent monitor",
+    "parentPid": 912307,
+    "notReleasedByChild": true,
+    "willRemainHeldUntilParentReceivesFinalResult": true
+  },
+  "pending": [
+    "GameCube R179: piora relatada e relógio nativo em cerca de 67% do tempo real; não homologada. R180 permanece em preparação nas worktrees station-gba-wii-gamecube-r180-20261017, sem handoff final/kit aceito ou aplicação neste ciclo. Preservar o trabalho da outra tarefa e aguardar seus recibos finais; nenhuma nova janela de senha enquanto o proprietário estiver ausente.",
+    "Restaurar o ajuste temporário de tela USB do Samsung A56 quando sua USB autorizada estiver disponível e o teste terminar; usar o valor original em /mnt/DADOS/station-r177-gamecube-app-update-20261017/usb-stay-awake.private.json. Motorola já restaurado; não repetir.",
+    "Capas: faltam os PNGs exatos de Fighter's History, FIFA International Soccer e FIFA Soccer 96; 20 artes seguem sem edição instalada correspondente. Preservar capas corretas e usar novo plano apenas com fontes exatas novas.",
+    "UI compacta do atualizador e piloto completo por rede continuam adiados. Oferta geral continua R178; instalação integral pela rede e exclusão física do staging ainda sem comprovação. R179 instalada por USB não valida essas etapas.",
+    "Cobertura histórica de 4744 edições: 1087 sem motor online no APK, 325 sem perfil exato, 3003 aprovações históricas sem prova por jogo, 18 revisões e um formato incompatível; 17 modos PSX impedidos, sinopses e campos editoriais pendentes. Não é nova auditoria das 4846 entradas atuais; PSX exige ledger HLE real e PS3/PS4 permanecem offline.",
+    "N64 com três/quatro Android e saída física continuam sem homologação; HTTP502 histórico permanece sem causa estabelecida. R172 estável e seus limites físicos, tags e backup permanecem preservados."
+  ],
+  "documentationValidation": {
+    "passed": true,
+    "scope": "Documentation validation, source-receipt consistency and checkout preservation; no emulator/runtime tests executed",
+    "receiptCopiesByteIdentical": true,
+    "originalCheckoutsUnchanged": true,
+    "noNewRuntimeOrEmulatorTests": true
+  }
+}

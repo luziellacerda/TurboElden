@@ -1,3 +1,20 @@
+<!-- STATION-HOURLY-20261017-23Z -->
+# R179: teste físico apresentou piora; R180 somente em preparação
+
+Ler o topo do MESMO handoff e o recibo de manutenção 20261017-23z.
+R179 já aplicada/instalada; não repetir cadastro ou instalação. O recibo físico
+station-r179-gamecube-online-test-20261017/physical-observation.json registra
+piora relatada, relógio do jogo ~67% do tempo real e 240 amostras com duas
+conexões. Buffer oito não aceito; Surface FPS não é VPS. R180 pertence à tarefa
+em preparação nas worktrees gba-wii-gamecube-r180-20261017; não publicá-la sem
+handoff final/bytes/qualificação reais nem sobrescrever suas alterações.
+Sem novas janelas de senha enquanto o proprietário estiver ausente. Ajuste USB
+do Motorola restaurado; Samsung ainda pendente por USB indisponível.
+Capas/manifesto sem novidade, três PNGs e 20 artes sem edição ainda pendentes.
+Somente conferência/documentação neste ciclo; nenhuma mutação de produção.
+R172 estável, demais pendências globais e checkouts existentes preservados.
+<!-- END-STATION-HOURLY-20261017-23Z -->
+
 <!-- STATION-GAMECUBE-R178-20261017 -->
 ## R178: atualização corrigida; prioridade atual é testar GameCube
 
