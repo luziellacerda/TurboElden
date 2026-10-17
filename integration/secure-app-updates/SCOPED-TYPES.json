@@ -1,0 +1,27 @@
+{
+  "schema": "station.app-update.scoped-types.v1",
+  "replaceExistingFamiliesFromActualCurrentSource": [
+    "Lorg/emulationstation/frontend/station/StationApi;",
+    "Lorg/emulationstation/frontend/station/StationHttp;",
+    "Lorg/emulationstation/frontend/station/StationAndroid;"
+  ],
+  "addFamilies": [
+    "Lorg/emulationstation/frontend/station/StationAppRelease;",
+    "Lorg/emulationstation/frontend/station/StationAppUpdateFiles;",
+    "Lorg/emulationstation/frontend/station/StationAppUpdater;",
+    "Lorg/emulationstation/frontend/station/StationAppUpdateUi;",
+    "Lorg/emulationstation/frontend/station/StationAppUpdateActivity;",
+    "Lorg/emulationstation/frontend/station/StationAppUpdateService;",
+    "Lorg/emulationstation/frontend/station/StationAppUpdateReceiver;"
+  ],
+  "includeNestedAndDesugaredSyntheticClassesOfThoseFamilies": true,
+  "preserveExactTypesEvenInsideChangedFamilies": [
+    "Lorg/emulationstation/frontend/station/StationHttp$ResponseBody;"
+  ],
+  "discoverActualBasePartitionsBeforeAssembly": true,
+  "preserveEveryOtherClassAndPartition": true,
+  "neverAppendOverlayWithDuplicateExistingClasses": true,
+  "manifestRequiresScopedMergeAndIncreasingVersionCode": true,
+  "finalRuntimeIdentitiesAndExactPrivateKitRequired": true,
+  "completeApkOrPhoneValidationPerformed": false
+}
