@@ -1,3 +1,23 @@
+<!-- POLITICA-COMPILACAO-ESCOPO-20261017 -->
+## Regra vigente para qualquer IA ou agente que continue este aplicativo
+
+Antes de editar, compilar, montar, assinar, instalar ou entregar uma revisão,
+leia [a política de compilação e escopo](docs/build/POLITICA-DE-COMPILACAO-E-ESCOPO.md).
+Ela registra, passo a passo, a base R169, os insumos privados indispensáveis,
+as partes protegidas, a revisão de diferenças e as provas necessárias. Este
+bloco tem precedência sobre as instruções históricas abaixo quando elas
+apontarem para versões, instaladores ou tarefas antigas; um pedido posterior
+e explícito do proprietário pode autorizar uma mudança delimitada.
+
+Trabalhe somente no escopo solicitado. Não refaça, remonte, reassine ou
+"otimize" APKs, motores, DEX, bibliotecas, assinatura, visual, N64, SNES ou
+Mega Drive já prontos por iniciativa própria. Não acrescente efeitos, código
+inativo, funções duplicadas, loops, timers, threads ou trabalho por quadro
+sem necessidade demonstrada e escopo autorizado. Se a alteração mínima exigir
+uma parte protegida, apresente o motivo e a diferença proposta antes de mudá-la.
+Um commit de documentação não autoriza nova compilação, cadastro no servidor,
+instalação em telefone ou mudança em produção.
+
 <!-- STATION-PSX-ANDROID-XML-20261015 -->
 ## PSX R167: falha de preparação Android confirmada
 
