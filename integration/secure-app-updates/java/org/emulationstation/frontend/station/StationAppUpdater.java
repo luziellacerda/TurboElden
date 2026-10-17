@@ -32,7 +32,7 @@ public final class StationAppUpdater {
         boolean first=app==null;app=value;
         if(first)WORK.execute(()->{try{
             long expected=state().getLong("version",0);
-            if(expected>0&&installed().getLongVersionCode()>=expected){
+            if(expected>0&&version(installed())>=expected){
                 StationAppUpdateFiles.prune(app.privateFiles.resolve("station-app-updates"),"");
                 state().edit().clear().apply();
             }
@@ -46,11 +46,19 @@ public final class StationAppUpdater {
     private static android.content.SharedPreferences state(){return app.context.getSharedPreferences("station-app-update",Context.MODE_PRIVATE);}
 
     static PackageInfo installed()throws Exception{
-        return app.context.getPackageManager().getPackageInfo(StationAppRelease.PACKAGE,PackageManager.GET_SIGNING_CERTIFICATES);
+        return app.context.getPackageManager().getPackageInfo(StationAppRelease.PACKAGE,signatureFlags());
     }
+    @SuppressWarnings("deprecation")
+    static int signatureFlags(){return Build.VERSION.SDK_INT>=28?PackageManager.GET_SIGNING_CERTIFICATES:PackageManager.GET_SIGNATURES;}
+    @SuppressWarnings("deprecation")
+    static long version(PackageInfo info){return Build.VERSION.SDK_INT>=28?info.getLongVersionCode():info.versionCode;}
+    @SuppressWarnings("deprecation")
     static String certificate(PackageInfo info)throws Exception{
-        if(info.signingInfo==null||info.signingInfo.hasMultipleSigners())throw new IOException("UPDATE_SIGNER");
-        android.content.pm.Signature[] signatures=info.signingInfo.getApkContentsSigners();
+        android.content.pm.Signature[] signatures;
+        if(Build.VERSION.SDK_INT>=28){
+            if(info.signingInfo==null||info.signingInfo.hasMultipleSigners())throw new IOException("UPDATE_SIGNER");
+            signatures=info.signingInfo.getApkContentsSigners();
+        }else signatures=info.signatures;
         if(signatures==null||signatures.length!=1)throw new IOException("UPDATE_SIGNER");
         return StationAppUpdateFiles.hex(MessageDigest.getInstance("SHA-256").digest(signatures[0].toByteArray()));
     }
@@ -61,7 +69,7 @@ public final class StationAppUpdater {
             .put("domain","TurboRamaStationAndroid/"+(authorize?"request-app-update-download":"request-app-update-check")+"/v1")
             .put("productId",StationConfig.PRODUCT).put("applicationId",StationConfig.APPLICATION)
             .put("deviceId",app.api.deviceId()).put("requestId",UUID.randomUUID().toString().replace("-",""))
-            .put("packageName",StationAppRelease.PACKAGE).put("versionCode",info.getLongVersionCode())
+            .put("packageName",StationAppRelease.PACKAGE).put("versionCode",version(info))
             .put("androidSdk",Build.VERSION.SDK_INT).put("abi",arm64()?"arm64-v8a":"unsupported")
             .put("certificateSha256",certificate(info));
         if(authorize)result.put("releaseId",id);
@@ -80,7 +88,7 @@ public final class StationAppUpdater {
                 StationAppRelease next=(Boolean)available?StationAppRelease.parse(reply.getJSONObject("release")):null;
                 if(!(Boolean)available&&!reply.isNull("release"))throw new IOException("UPDATE_METADATA");
                 PackageInfo info=installed();
-                if(next!=null&&!next.eligible(info.getLongVersionCode(),Build.VERSION.SDK_INT,certificate(info),arm64()))throw new IOException("UPDATE_INCOMPATIBLE");
+                if(next!=null&&!next.eligible(version(info),Build.VERSION.SDK_INT,certificate(info),arm64()))throw new IOException("UPDATE_INCOMPATIBLE");
                 offer=next;message=next==null?"O aplicativo está atualizado.":"Atualização disponível: "+next.versionName;
             }catch(Exception failure){
                 // Old servers can return 404 until this additive feature is deployed.
@@ -129,11 +137,11 @@ public final class StationAppUpdater {
             }
             cancel.check();message="Preparando atualização…";received=0;total=selected.sizeBytes;changed();
             PackageManager manager=app.context.getPackageManager();
-            PackageInfo archive=manager.getPackageArchiveInfo(file.toString(),PackageManager.GET_SIGNING_CERTIFICATES);
+            PackageInfo archive=manager.getPackageArchiveInfo(file.toString(),signatureFlags());
             PackageInfo current=installed();
-            if(archive==null||!StationAppRelease.PACKAGE.equals(archive.packageName)||archive.getLongVersionCode()!=selected.versionCode||
+            if(archive==null||!StationAppRelease.PACKAGE.equals(archive.packageName)||version(archive)!=selected.versionCode||
                 !certificate(archive).equals(selected.certificateSha256)||!certificate(current).equals(selected.certificateSha256)||
-                selected.versionCode<=current.getLongVersionCode())throw new IOException("UPDATE_SIGNER_OR_VERSION");
+                selected.versionCode<=version(current))throw new IOException("UPDATE_SIGNER_OR_VERSION");
             PackageInstaller installer=manager.getPackageInstaller();
             int previous=state().getInt("session",-1);
             if(previous>=0)try{installer.abandonSession(previous);}catch(RuntimeException gone){/* only this updater's recorded session */}

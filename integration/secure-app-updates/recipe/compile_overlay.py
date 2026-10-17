@@ -49,7 +49,7 @@ def main():
     with zipfile.ZipFile(jar,'w') as output:
         for path in sorted(classes.rglob('*.class')):output.write(path,path.relative_to(classes).as_posix())
     dex=args.out/'overlay-dex';dex.mkdir()
-    command=['java','-cp',args.d8_jar,'com.android.tools.r8.D8','--release','--min-api','28','--lib',args.android_jar,'--output',dex]
+    command=['java','-cp',args.d8_jar,'com.android.tools.r8.D8','--release','--min-api','26','--lib',args.android_jar,'--output',dex]
     for dependency in dependencies:command+=['--classpath',dependency]
     run([*command,jar])
     receipt=dict(schema='station.app-update.overlay.v1',sourceCommit=commit,apkBuiltSignedOrInstalled=False,

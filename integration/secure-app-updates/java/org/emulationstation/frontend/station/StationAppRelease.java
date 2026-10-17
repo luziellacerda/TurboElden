@@ -20,7 +20,7 @@ public final class StationAppRelease {
         if(StationCatalog.integer(value,"schemaVersion")!=1||!PACKAGE.equals(text(value,"packageName"))||
             !hex(sha256)||!sha256.equals(id)||!hex(certificateSha256)||
             versionCode<1||versionCode>2100000000L||sizeBytes<1024||sizeBytes>MAXIMUM_BYTES||
-            sdk<28||sdk>1000||!"arm64-v8a".equals(abi)||versionName.isEmpty()||versionName.length()>100||
+            sdk<26||sdk>1000||!"arm64-v8a".equals(abi)||versionName.isEmpty()||versionName.length()>100||
             notes.length()>2000||controls(versionName,false)||controls(notes,true))throw new IOException("UPDATE_METADATA");
         minimumSdk=(int)sdk;
     }

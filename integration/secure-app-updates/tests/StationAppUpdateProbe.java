@@ -36,7 +36,10 @@ public final class StationAppUpdateProbe {
         }
         reject(()->StationAppRelease.parse(descriptor(bytes).put("versionCode",199.5)),"fractional version");
         reject(()->StationAppRelease.parse(descriptor(bytes).put("sizeBytes",StationAppRelease.MAXIMUM_BYTES+1)),"excess APK size");
-        reject(()->StationAppRelease.parse(descriptor(bytes).put("minimumSdk",27)),"unsupported Android baseline");
+        reject(()->StationAppRelease.parse(descriptor(bytes).put("minimumSdk",25)),"unsupported Android baseline");
+        StationAppRelease api26=StationAppRelease.parse(descriptor(bytes).put("minimumSdk",26));
+        check(api26.eligible(100,26,repeat('c',64),true),"received API26 baseline remains supported");
+        check(!api26.eligible(100,25,repeat('c',64),true),"older Android still refused");
         Path root=Files.createTempDirectory("station-app-update-jvm-");
         try{
             StationApi.Cancellation cancel=new StationApi.Cancellation();
