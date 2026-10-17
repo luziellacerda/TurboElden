@@ -1,0 +1,28 @@
+{
+  "revision": "R144",
+  "baselineRevision": "R143",
+  "baselineApkSha256": "508480e3671ae924f037bd32f6d71efda7a9d905c45c7b2571bd9f219add83d4",
+  "baselineSourceCommit": "26257869b59af8ecea44932ab287705990a9acbe",
+  "ownerRequest": "Brighter WAVES and listed system palettes in principal carousel. Online rooms preserve current design/colours, brightness only.",
+  "productiveChanges": [
+    "classes28.dex StationWaveBackground.updatePalette alpha-only (12 ARGB constants)",
+    "libturbo_carousel.so waves colour selector/opacity and system palette lookup cache"
+  ],
+  "preserved": [
+    "classes35.dex all gameplay and RoomsActivity",
+    "R143 multitap repair",
+    "R141 HTTP download functions",
+    "online cover g52 mitigation",
+    "RetroArch/core/HLE/controls/READY/ACK",
+    "geometry/schedulers/FPS/shaders/clouds/diagonal mask"
+  ],
+  "renewedBindingsOnly": [
+    "three identity wrappers",
+    "engines.json"
+  ],
+  "replacements": 6,
+  "preservedEntries": 13854,
+  "addedEntries": 0,
+  "removedEntries": 0,
+  "stableReferencePreserved": "estavel-station-r143-20261013"
+}

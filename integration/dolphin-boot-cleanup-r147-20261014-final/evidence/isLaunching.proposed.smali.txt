@@ -1,0 +1,51 @@
+.method public final isLaunching()Z
+    .locals 6
+
+    const-class v4, Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;
+
+    monitor-enter v4
+
+    :station_boot_lock_start
+    .line 1
+    iget-wide v0, p0, Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;->bootSessionDataPointer:J
+
+    .line 2
+    .line 3
+    const-wide/16 v2, 0x0
+
+    .line 4
+    .line 5
+    cmp-long p0, v0, v2
+
+    .line 6
+    .line 7
+    if-eqz p0, :cond_0
+
+    .line 8
+    .line 9
+    const/4 p0, 0x1
+
+    .line 10
+    goto :station_boot_return
+
+    .line 11
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 12
+    goto :station_boot_return
+    :station_boot_lock_end
+    .catchall {:station_boot_lock_start .. :station_boot_lock_end} :station_boot_lock_catch
+
+    :station_boot_return
+    monitor-exit v4
+
+    return p0
+
+    :station_boot_lock_catch
+    move-exception v5
+
+    monitor-exit v4
+
+    throw v5
+.end method

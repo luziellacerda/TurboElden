@@ -198,10 +198,39 @@ void commitReplayAndAdmission(){Pair p;p.init();eq(p.h.ownerSampleLocal(7),Resul
     eq(p.h.deliver(2,blocked,input),Result::Ok,"same unadmitted delivery retries after capacity");
     check(p.h.copied(blocked)&&!p.h.takeOutgoing().empty()&&p.h.status().nextFrame==1,"retry admits once without extra coreadvance");
 }
+void earlyBootstrapFrame(){
+    Pair p(4096,4);p.paused(1,1);p.snapshot();
+    eq(p.h.control(1,2,false,true),Result::Ok,"early frame host PLAYING");
+    eq(p.g.control(1,2,false,true),Result::Ok,"early frame guest PLAYING");
+    p.h.ownerCheckpoint();p.g.ownerCheckpoint();
+    eq(p.h.resume(1,2),Result::Ok,"host starts before guest Java tick");
+    eq(p.h.ownerSampleLocal(7),Result::Ok,"host samples real future input");
+    Lease lease;eq(p.h.ownerBegin(lease),Result::Ok,"host neutral bootstrap lease");
+    eq(p.h.ownerComplete(lease),Result::Ok,"host executes first actual frame");
+    auto frame=p.h.takeOutgoing();check(frame.size()==40&&frame[8]==unsigned(Kind::Frame),"actual canonical FRAME packet");
+    auto nonneutral=frame;nonneutral.back()=1;
+    eq(p.g.deliver(1,p.id++,nonneutral),Result::Invalid,"unprimed guest still rejects invented nonneutral pad");
+    auto outside=frame;outside[35]=4;
+    eq(p.g.deliver(1,p.id++,outside),Result::Invalid,"unprimed guest still rejects unsampled frame beyond neutral delay");
+    auto id=p.id++;
+    eq(p.g.deliver(1,id,frame),Result::Wait,"early genuine neutral frame waits for guest prime");
+    check(!p.g.copied(id)&&p.g.status().nextFrame==0,"wait neither fabricates copy nor advances core");
+    check(p.g.status().pause.valid&&p.g.status().initialStateSynced,"wait preserves real ACK and applied state");
+    eq(p.g.resume(1,2),Result::Ok,"guest resumes only exact serial and actual snapshot");
+    eq(p.g.deliver(1,id,frame),Result::Ok,"same early frame admitted once after guest prime");
+    check(p.g.copied(id),"copy receipt only follows actual admission");
+    eq(p.g.releaseReceipt(id),Result::Ok,"outer ACK releases actual copy receipt");
+    eq(p.g.ownerSampleLocal(11),Result::Ok,"guest samples actual future input");
+    eq(p.g.ownerBegin(lease),Result::Ok,"guest consumes original host frame");
+    eq(p.g.ownerComplete(lease),Result::Ok,"guest actual completion");
+    check(p.g.status().nextFrame==1,"guest cursor advances once after actual completion");
+    Pair zero(4096,0);zero.init();
+    eq(zero.g.deliver(1,zero.id++,frame),Result::Invalid,"zero delay cannot invent a neutral bootstrap window");
+}
 void humanExit(){Pair p;p.init();eq(p.h.automaticStop("NETWORK_TIMEOUT"),Result::HumanRequired,"timeout cannot terminate");
     check(p.h.status().failed&&!p.h.status().closed,"automatic loss pauses instead of STOP");eq(p.h.ownerClose(),Result::HumanRequired,"STOP still human gated");
     eq(p.h.authorizeHumanExit(),Result::Ok,"human chooses close");eq(p.h.ownerClose(),Result::Ok,"owner closes after authorization");}
 }
-int main(){try{hashes();configuration();lockstep();copiesAndParser();epochRecovery();stateGuards();boundsAndReplay();maxState();staleRequest();revisionBarrier();pipeline();commitReplayAndAdmission();humanExit();
+int main(){try{hashes();configuration();lockstep();copiesAndParser();epochRecovery();stateGuards();boundsAndReplay();maxState();staleRequest();revisionBarrier();pipeline();commitReplayAndAdmission();earlyBootstrapFrame();humanExit();
     std::cout<<"checks="<<checks<<"; result=passed; synthetic_owner_only=true\n";return 0;}
 catch(const std::exception& e){std::cerr<<"FAILED after "<<checks<<": "<<e.what()<<'\n';return 1;}}

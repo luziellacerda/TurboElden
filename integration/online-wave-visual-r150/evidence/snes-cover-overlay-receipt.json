@@ -1,0 +1,60 @@
+{
+  "schema": "station.r150.snes-cover-geometry-led.v1",
+  "parentRevision": "R149; native carousel unchanged from R148",
+  "sourceArtSha256": "fefec62a6a3a3933973a695764321050952130a263f7a71f02ed47a9276b9f09",
+  "sourceArtDimensions": [
+    5120,
+    7680
+  ],
+  "shaderCoordinateDimensions": [
+    1024,
+    1536
+  ],
+  "ledBarsMeasured": [
+    [
+      14,
+      401,
+      32,
+      910
+    ],
+    [
+      994,
+      401,
+      1011,
+      910
+    ]
+  ],
+  "inputSha256": {
+    "native_formation.h": "070cd1288c573f508aa25c227db504d7e4eb1eba12a369a18968f02dc63c012e",
+    "native_magazine.h": "ec45ed0dda47ed50c7ce194c599028a99a0d829a7625f614e3dc25bff34ff90f",
+    "native_magazine_field.h": "8d5704e63acddbeded45282d77caee3ba2677b108421a696b5a40e0e0c5297c0",
+    "magazine_shader.h": "4e1aec8892155c966b7a5301ac3e9f6a2b31953152ac9ca01a1fb8d779cb7dda"
+  },
+  "outputSha256": {
+    "native_formation.h": "f37992fd3dced2f2eee0eb014a526be417d02264825ffc0677e26dc06351453f",
+    "native_magazine.h": "c706102382f61996104505eb32582d69c7c50f75c44ce7f8c9756033616c0829",
+    "native_magazine_field.h": "89b279c5652408741edc87e0426f6cfc329fd7687590b5d80641fecd16996517",
+    "magazine_shader.h": "c40505b7a848a2c9ebcb21e17782b6b3f1c257756a514cadaeac0ac87ca6523d"
+  },
+  "patchCounts": {
+    "native_formation.h": 9,
+    "native_magazine.h": 2,
+    "native_magazine_field.h": 1,
+    "magazine_shader.h": 8
+  },
+  "fullInversePassed": true,
+  "selectedSnesHeroOnly": true,
+  "systemCardsOrSmallThumbnailsChanged": false,
+  "drawCallsAddedPerFrame": 0,
+  "sourceTexturesAdded": 0,
+  "selectedCoverVerticesBeforeAfter": [
+    4,
+    16
+  ],
+  "snesNewStaticFieldCacheKey": 9,
+  "existingStaticFieldCacheKeysChanged": false,
+  "effectCadenceGainAndBakeQuotaChanged": false,
+  "snesLegacyAndMegaClassifiersSkipped": true,
+  "snesLegacyAndMegaSupportSkipped": true,
+  "compiled": false
+}

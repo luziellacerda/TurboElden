@@ -1,0 +1,31 @@
+{
+  "schema": "station.r147.dolphin.boot-ownership.source-instruction-probe.v1",
+  "actualDexSha256": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+  "actualClassSha256": "7dcbc2c67298d18e7ffe5b4839e73ca6967a0318e4628269598bef9a45ec2315",
+  "actualWholeMethodSha256": {
+    ".method public final consumeBootSessionData()J": "cd4fcfcc80cb99a28a28f38eb3a6e558b437b6f1e3432c93105dfa33aa80a992",
+    ".method public final releaseNativeResources()V": "2459bba206dc890d34562218ab67be1861fad3b252a7d0e6bdaeae8b931f6adb"
+  },
+  "interpreterSourceSha256": "53942f1f34eea7eca573ea97e4aa1e9f0d7c898ac0400143d348227ed1f1c566",
+  "unknownOpcodesRefused": true,
+  "productiveMethodInstructionsEdited": false,
+  "authorizedHumanAllowCloseHook": true,
+  "exactInstructionBarriersUsed": true,
+  "results": {
+    "consumerReturnedReleasedPointer": true,
+    "releaseCompletedBeforeConsumerHandoff": true,
+    "sameAddressHadTwoNativeOwners": true,
+    "twoConsumersReturnedSameAddress": true
+  },
+  "proven": "Actual read-clear transfer and authorized release are not atomic; valid two-thread instruction interleaving returns an already-released pointer to RunNetPlay unique_ptr ownership.",
+  "limits": [
+    "Exact Dalvik ownership instruction interpreter and allocation ledger, not ART or JNI execution.",
+    "No actual undefined C++ use/free attempted.",
+    "Does not establish that a reported phone failure used this interleaving."
+  ],
+  "sourceModified": false,
+  "apkCompiled": false,
+  "coreCompiled": false,
+  "phoneAccessed": false,
+  "serverAccessed": false
+}

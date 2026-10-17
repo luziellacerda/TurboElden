@@ -1,0 +1,4467 @@
+{
+  "schema": "station.performance.apk-preservation-independent.r134-r138.v1",
+  "recordedUtc": "2026-10-13T11:51:05.567826+00:00",
+  "method": "SHA256 of full APK and every uncompressed ZIP entry, not CRC-only comparison",
+  "apks": [
+    {
+      "revision": "R134",
+      "apkBasename": "TurboStations-Premium-R134-20261011.apk",
+      "bytes": 2714991631,
+      "sha256": "f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2",
+      "sha256MatchesExpectedPin": true,
+      "entryCount": 13860
+    },
+    {
+      "revision": "R135",
+      "apkBasename": "TurboStations-Premium-R135-20261012.apk",
+      "bytes": 2714991631,
+      "sha256": "f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896",
+      "sha256MatchesExpectedPin": true,
+      "entryCount": 13860
+    },
+    {
+      "revision": "R136-final",
+      "apkBasename": "TurboStations-Premium-R136-final-moto-g52-20261012.apk",
+      "bytes": 2714991631,
+      "sha256": "fd14c522f51e717a636febf1ab9dee1970217339f37880421238eb2f30ce7b05",
+      "sha256MatchesExpectedPin": true,
+      "entryCount": 13860
+    },
+    {
+      "revision": "R137",
+      "apkBasename": "TurboStations-Premium-R137-exit-moto-g52-20261012.apk",
+      "bytes": 2714991631,
+      "sha256": "fe4bc08fbc1f36d2790831f6bcd9593204ec0a032ca0d3a42c1cd385bc272719",
+      "sha256MatchesExpectedPin": true,
+      "entryCount": 13860
+    },
+    {
+      "revision": "R138",
+      "apkBasename": "TurboStations-Premium-R138-SNES-online-20261012.apk",
+      "bytes": 2714991631,
+      "sha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+      "sha256MatchesExpectedPin": true,
+      "entryCount": 13860
+    }
+  ],
+  "adjacentComparisons": [
+    {
+      "from": "R134",
+      "to": "R135",
+      "baseSha256": "f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2",
+      "finalSha256": "f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "entry": "assets/station-online/engines.json",
+          "before": {
+            "bytes": 19118,
+            "crc32": "74f572d8",
+            "sha256": "40e55b795eae0d2a0f1a439f271bab692eb84e38907043c537b69da403fa354e"
+          },
+          "after": {
+            "bytes": 19118,
+            "crc32": "98f1de29",
+            "sha256": "4302a91d7caa9cf0b42f21de4e8b3d0f3126fd691c81525fc69a65270f57270d"
+          }
+        },
+        {
+          "entry": "classes35.dex",
+          "before": {
+            "bytes": 770008,
+            "crc32": "283d778f",
+            "sha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76"
+          },
+          "after": {
+            "bytes": 771376,
+            "crc32": "c08dde4b",
+            "sha256": "a7a66724f26c06075ec1833e11866a073f93ee056aeabf58301cab016f96a4f5"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+          "before": {
+            "bytes": 113256,
+            "crc32": "a62483ba",
+            "sha256": "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad"
+          },
+          "after": {
+            "bytes": 115144,
+            "crc32": "e117ab48",
+            "sha256": "76ce6c2190d4b51c0432a9676b0657bb4152beff9f52431318c4fa292fe9d1ce"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+          "before": {
+            "bytes": 102360,
+            "crc32": "6900539c",
+            "sha256": "5f56099c433f29514c864d1eeea2995e3f52b0d15d76eaf125c4f4346a9d6e87"
+          },
+          "after": {
+            "bytes": 104232,
+            "crc32": "2b0cf79d",
+            "sha256": "de303362cf1c7b686b7005833b3a9a45a53db06fb9e01575d469d4204cdf24de"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_psx_online.so",
+          "before": {
+            "bytes": 299560,
+            "crc32": "5b1b2544",
+            "sha256": "69ac2b703f03826c8f7203b296665c6f2cc34cb944af7c3f758d9033116cade3"
+          },
+          "after": {
+            "bytes": 301432,
+            "crc32": "13445d9c",
+            "sha256": "841204679ef25419d9084462c8f9f31717ea11c78abd3363a9cdefdbb2e26400"
+          }
+        }
+      ],
+      "preservedEntryCount": 13855,
+      "dexEntryCount": 41,
+      "changedDexEntries": [
+        "classes35.dex"
+      ],
+      "preservedDexSha256": {
+        "assets/sony/ps4/upstream/derived/owner.dex": "b1afb8666ee71816a9c8f0a4b59b05ccb34671216748354df5504e02c3db9357",
+        "classes.dex": "7c7bc77016bf758b5b7c3efa13d439dca272aaf37c1967dae806eb9e25e66d07",
+        "classes10.dex": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+        "classes11.dex": "6970325cc48b12ab9e1bebb50badbd743a114f82b3397742fc46c3108697f462",
+        "classes12.dex": "297084c7424ababd5bf31abf3af929b8c6312af34c02f78c24f588fd5584af41",
+        "classes13.dex": "b1e618d7f82da8656673cc88b9becfa8cf6e4ba47eb2017063c33ddd7eb357f2",
+        "classes14.dex": "c7afcf54542be68636bee8466a483a631c8fe1f5fb3b69aac0df054bcf8275e1",
+        "classes15.dex": "221f7466cf3fe84ce0fa86005b9650b1b44e0a4119d9a450e196209ac2ba2cfd",
+        "classes16.dex": "992f88f13e88f966009f3cef83e00b365f97ae91d5b9d202b359c57e1dc8ebc3",
+        "classes17.dex": "b426624c0b0de1ccba686ab1587946223e9aaeff3abad3e34fbffcd0b14630ad",
+        "classes18.dex": "82fdb69cae1d07d4388d01ea873eb68dc0b66a2cb12c79d31811c99e76c646d5",
+        "classes19.dex": "00860db59f3a0a344d6d71e9a25a1a0ebc854e38867fc5a2e4b28c952e7c8896",
+        "classes2.dex": "6205f9f2e9642985c8b708802fbb8e30fac1e95e45129c4e1116bd069d83cfd8",
+        "classes20.dex": "08e15fb527d6b928cca3c6f5ea9c6dbb935aed30241c190993066eaad0ff5d75",
+        "classes21.dex": "c6c2dedeb8fd756ddf3353e1f408bb8ba9215854276a980ffaf42ee85b995a1c",
+        "classes22.dex": "018efa5abef07ddbf3af904ba025773ed36ddea74cd4bbf2de1eda50a1a1cae0",
+        "classes23.dex": "cb9726a822e76e742d211cc8b3867a1117389c5a83641572c2e5533d90f5bc36",
+        "classes24.dex": "972ae20692a0297a735cc7a24d957396950a20b9ff00d6fadb63f03949d142af",
+        "classes25.dex": "9e82aefc217dcf0c3b97e9142ba5a5788f4d9b48a78ab50afa0839dc8977eb45",
+        "classes26.dex": "c0be7cb89c4b3968799134a81c14c069811cc51997acc40c12dcfd1d94091b29",
+        "classes27.dex": "032d95b7de7265bc0c6bf802895b59421c3f2de9258f84f5acbb1cd948803218",
+        "classes28.dex": "6c9c2d6df00919ca4c927c3719b932ebfb1ef46b24f2de778120a84fd8d30225",
+        "classes29.dex": "4485c4b553aefd6fc97df82616094f9eb8e20a3892d9f14ccff5e94b28690205",
+        "classes3.dex": "5c6f8714ae379d49cd46da0c6849a08127e80f51ac0c2d4272b87e28e17d9a6a",
+        "classes30.dex": "1dcfa1e69686a326e22c54b9adc7c6013644e69d14642664e2ab7b5e2eee4ff4",
+        "classes31.dex": "9b56887e460451aa2786b32253f23398d3c7ddd52de7adba218a33e227208fc1",
+        "classes32.dex": "d3a28f93991b46bbfcb5a54a57e966a74292fa21e9ca8b7da8510342d83f95f4",
+        "classes33.dex": "69fe9934cf4551ae089faae65184e503e666744e6381f53301c15899a0ef017a",
+        "classes34.dex": "7982176a1b40fc0839c19e092b221fb2682bd2983bd06139e8b624b6a6a4db92",
+        "classes36.dex": "6e0f7116d156518fad1e65e72f4c204cfacfd9904c4ee2c3110395d56842d707",
+        "classes37.dex": "60bbf9baea410ce14d3387a7d5f2b345f7400b237b5db399af7c89e111dc29bb",
+        "classes38.dex": "158a04ece83b03933bce90407e13b68570b11b0349beaa908fd060659e832125",
+        "classes39.dex": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
+        "classes4.dex": "a00bc9994f55effdbd4f455c58a8792eb91b5d11f18a28ae583c6e7693877d25",
+        "classes40.dex": "47689f896202fb6a109fcfc7f4d820114b1416ce66d521db9d4780055443f4dd",
+        "classes5.dex": "1e53eea4678f6c95c0c4b36be6f279d5aa8b0bfba25e78c749e940d32df11d25",
+        "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+        "classes7.dex": "76422ce864f6d38226c3ca953a148142d88fa624399591975150f317ee600843",
+        "classes8.dex": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e",
+        "classes9.dex": "f3c381f0a008ab0a803d0cc27adf644bbf43a59a8886317c24c9498de754f9df"
+      }
+    },
+    {
+      "from": "R135",
+      "to": "R136-final",
+      "baseSha256": "f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896",
+      "finalSha256": "fd14c522f51e717a636febf1ab9dee1970217339f37880421238eb2f30ce7b05",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "entry": "assets/station-online/engines.json",
+          "before": {
+            "bytes": 19118,
+            "crc32": "98f1de29",
+            "sha256": "4302a91d7caa9cf0b42f21de4e8b3d0f3126fd691c81525fc69a65270f57270d"
+          },
+          "after": {
+            "bytes": 19118,
+            "crc32": "43b914fa",
+            "sha256": "e36c247b75059996bb5b5bf7b46a19080fb3d6fb17a46bb13f9164c1d24b8caa"
+          }
+        },
+        {
+          "entry": "classes35.dex",
+          "before": {
+            "bytes": 771376,
+            "crc32": "c08dde4b",
+            "sha256": "a7a66724f26c06075ec1833e11866a073f93ee056aeabf58301cab016f96a4f5"
+          },
+          "after": {
+            "bytes": 771548,
+            "crc32": "f987154d",
+            "sha256": "84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+          "before": {
+            "bytes": 115144,
+            "crc32": "e117ab48",
+            "sha256": "76ce6c2190d4b51c0432a9676b0657bb4152beff9f52431318c4fa292fe9d1ce"
+          },
+          "after": {
+            "bytes": 115256,
+            "crc32": "4d09b695",
+            "sha256": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+          "before": {
+            "bytes": 104232,
+            "crc32": "2b0cf79d",
+            "sha256": "de303362cf1c7b686b7005833b3a9a45a53db06fb9e01575d469d4204cdf24de"
+          },
+          "after": {
+            "bytes": 104344,
+            "crc32": "693860df",
+            "sha256": "aee665f0ac428270a4de65777da412650818e30d0559aa6d575e9d62a2949bc9"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_psx_online.so",
+          "before": {
+            "bytes": 301432,
+            "crc32": "13445d9c",
+            "sha256": "841204679ef25419d9084462c8f9f31717ea11c78abd3363a9cdefdbb2e26400"
+          },
+          "after": {
+            "bytes": 301544,
+            "crc32": "d64c9b0a",
+            "sha256": "2df6007ca0aafa0dfb78ccb0a8c21a433675077af3f07cbdbbfbc97c6130c250"
+          }
+        }
+      ],
+      "preservedEntryCount": 13855,
+      "dexEntryCount": 41,
+      "changedDexEntries": [
+        "classes35.dex"
+      ],
+      "preservedDexSha256": {
+        "assets/sony/ps4/upstream/derived/owner.dex": "b1afb8666ee71816a9c8f0a4b59b05ccb34671216748354df5504e02c3db9357",
+        "classes.dex": "7c7bc77016bf758b5b7c3efa13d439dca272aaf37c1967dae806eb9e25e66d07",
+        "classes10.dex": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+        "classes11.dex": "6970325cc48b12ab9e1bebb50badbd743a114f82b3397742fc46c3108697f462",
+        "classes12.dex": "297084c7424ababd5bf31abf3af929b8c6312af34c02f78c24f588fd5584af41",
+        "classes13.dex": "b1e618d7f82da8656673cc88b9becfa8cf6e4ba47eb2017063c33ddd7eb357f2",
+        "classes14.dex": "c7afcf54542be68636bee8466a483a631c8fe1f5fb3b69aac0df054bcf8275e1",
+        "classes15.dex": "221f7466cf3fe84ce0fa86005b9650b1b44e0a4119d9a450e196209ac2ba2cfd",
+        "classes16.dex": "992f88f13e88f966009f3cef83e00b365f97ae91d5b9d202b359c57e1dc8ebc3",
+        "classes17.dex": "b426624c0b0de1ccba686ab1587946223e9aaeff3abad3e34fbffcd0b14630ad",
+        "classes18.dex": "82fdb69cae1d07d4388d01ea873eb68dc0b66a2cb12c79d31811c99e76c646d5",
+        "classes19.dex": "00860db59f3a0a344d6d71e9a25a1a0ebc854e38867fc5a2e4b28c952e7c8896",
+        "classes2.dex": "6205f9f2e9642985c8b708802fbb8e30fac1e95e45129c4e1116bd069d83cfd8",
+        "classes20.dex": "08e15fb527d6b928cca3c6f5ea9c6dbb935aed30241c190993066eaad0ff5d75",
+        "classes21.dex": "c6c2dedeb8fd756ddf3353e1f408bb8ba9215854276a980ffaf42ee85b995a1c",
+        "classes22.dex": "018efa5abef07ddbf3af904ba025773ed36ddea74cd4bbf2de1eda50a1a1cae0",
+        "classes23.dex": "cb9726a822e76e742d211cc8b3867a1117389c5a83641572c2e5533d90f5bc36",
+        "classes24.dex": "972ae20692a0297a735cc7a24d957396950a20b9ff00d6fadb63f03949d142af",
+        "classes25.dex": "9e82aefc217dcf0c3b97e9142ba5a5788f4d9b48a78ab50afa0839dc8977eb45",
+        "classes26.dex": "c0be7cb89c4b3968799134a81c14c069811cc51997acc40c12dcfd1d94091b29",
+        "classes27.dex": "032d95b7de7265bc0c6bf802895b59421c3f2de9258f84f5acbb1cd948803218",
+        "classes28.dex": "6c9c2d6df00919ca4c927c3719b932ebfb1ef46b24f2de778120a84fd8d30225",
+        "classes29.dex": "4485c4b553aefd6fc97df82616094f9eb8e20a3892d9f14ccff5e94b28690205",
+        "classes3.dex": "5c6f8714ae379d49cd46da0c6849a08127e80f51ac0c2d4272b87e28e17d9a6a",
+        "classes30.dex": "1dcfa1e69686a326e22c54b9adc7c6013644e69d14642664e2ab7b5e2eee4ff4",
+        "classes31.dex": "9b56887e460451aa2786b32253f23398d3c7ddd52de7adba218a33e227208fc1",
+        "classes32.dex": "d3a28f93991b46bbfcb5a54a57e966a74292fa21e9ca8b7da8510342d83f95f4",
+        "classes33.dex": "69fe9934cf4551ae089faae65184e503e666744e6381f53301c15899a0ef017a",
+        "classes34.dex": "7982176a1b40fc0839c19e092b221fb2682bd2983bd06139e8b624b6a6a4db92",
+        "classes36.dex": "6e0f7116d156518fad1e65e72f4c204cfacfd9904c4ee2c3110395d56842d707",
+        "classes37.dex": "60bbf9baea410ce14d3387a7d5f2b345f7400b237b5db399af7c89e111dc29bb",
+        "classes38.dex": "158a04ece83b03933bce90407e13b68570b11b0349beaa908fd060659e832125",
+        "classes39.dex": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
+        "classes4.dex": "a00bc9994f55effdbd4f455c58a8792eb91b5d11f18a28ae583c6e7693877d25",
+        "classes40.dex": "47689f896202fb6a109fcfc7f4d820114b1416ce66d521db9d4780055443f4dd",
+        "classes5.dex": "1e53eea4678f6c95c0c4b36be6f279d5aa8b0bfba25e78c749e940d32df11d25",
+        "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+        "classes7.dex": "76422ce864f6d38226c3ca953a148142d88fa624399591975150f317ee600843",
+        "classes8.dex": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e",
+        "classes9.dex": "f3c381f0a008ab0a803d0cc27adf644bbf43a59a8886317c24c9498de754f9df"
+      }
+    },
+    {
+      "from": "R136-final",
+      "to": "R137",
+      "baseSha256": "fd14c522f51e717a636febf1ab9dee1970217339f37880421238eb2f30ce7b05",
+      "finalSha256": "fe4bc08fbc1f36d2790831f6bcd9593204ec0a032ca0d3a42c1cd385bc272719",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "entry": "assets/station-online/engines.json",
+          "before": {
+            "bytes": 19118,
+            "crc32": "43b914fa",
+            "sha256": "e36c247b75059996bb5b5bf7b46a19080fb3d6fb17a46bb13f9164c1d24b8caa"
+          },
+          "after": {
+            "bytes": 19118,
+            "crc32": "8aca08bb",
+            "sha256": "c0d75345922986c529137828e83b852612bb160870043654bd1b8d9821658ce7"
+          }
+        },
+        {
+          "entry": "classes35.dex",
+          "before": {
+            "bytes": 771548,
+            "crc32": "f987154d",
+            "sha256": "84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05"
+          },
+          "after": {
+            "bytes": 771548,
+            "crc32": "f2cfc867",
+            "sha256": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+          "before": {
+            "bytes": 115256,
+            "crc32": "4d09b695",
+            "sha256": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec"
+          },
+          "after": {
+            "bytes": 115368,
+            "crc32": "580c414b",
+            "sha256": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+          "before": {
+            "bytes": 104344,
+            "crc32": "693860df",
+            "sha256": "aee665f0ac428270a4de65777da412650818e30d0559aa6d575e9d62a2949bc9"
+          },
+          "after": {
+            "bytes": 104456,
+            "crc32": "74bd8835",
+            "sha256": "2f248cfcdc9e6d0e20795b1dab84f581b8fe9ea59eb0994ae96036aed2abeb77"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_psx_online.so",
+          "before": {
+            "bytes": 301544,
+            "crc32": "d64c9b0a",
+            "sha256": "2df6007ca0aafa0dfb78ccb0a8c21a433675077af3f07cbdbbfbc97c6130c250"
+          },
+          "after": {
+            "bytes": 301656,
+            "crc32": "e22c25bf",
+            "sha256": "c26d8836df255ad4cc10d19d328b6fc8dcbc6a429725794c88acd4de5ca3dc50"
+          }
+        }
+      ],
+      "preservedEntryCount": 13855,
+      "dexEntryCount": 41,
+      "changedDexEntries": [
+        "classes35.dex"
+      ],
+      "preservedDexSha256": {
+        "assets/sony/ps4/upstream/derived/owner.dex": "b1afb8666ee71816a9c8f0a4b59b05ccb34671216748354df5504e02c3db9357",
+        "classes.dex": "7c7bc77016bf758b5b7c3efa13d439dca272aaf37c1967dae806eb9e25e66d07",
+        "classes10.dex": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+        "classes11.dex": "6970325cc48b12ab9e1bebb50badbd743a114f82b3397742fc46c3108697f462",
+        "classes12.dex": "297084c7424ababd5bf31abf3af929b8c6312af34c02f78c24f588fd5584af41",
+        "classes13.dex": "b1e618d7f82da8656673cc88b9becfa8cf6e4ba47eb2017063c33ddd7eb357f2",
+        "classes14.dex": "c7afcf54542be68636bee8466a483a631c8fe1f5fb3b69aac0df054bcf8275e1",
+        "classes15.dex": "221f7466cf3fe84ce0fa86005b9650b1b44e0a4119d9a450e196209ac2ba2cfd",
+        "classes16.dex": "992f88f13e88f966009f3cef83e00b365f97ae91d5b9d202b359c57e1dc8ebc3",
+        "classes17.dex": "b426624c0b0de1ccba686ab1587946223e9aaeff3abad3e34fbffcd0b14630ad",
+        "classes18.dex": "82fdb69cae1d07d4388d01ea873eb68dc0b66a2cb12c79d31811c99e76c646d5",
+        "classes19.dex": "00860db59f3a0a344d6d71e9a25a1a0ebc854e38867fc5a2e4b28c952e7c8896",
+        "classes2.dex": "6205f9f2e9642985c8b708802fbb8e30fac1e95e45129c4e1116bd069d83cfd8",
+        "classes20.dex": "08e15fb527d6b928cca3c6f5ea9c6dbb935aed30241c190993066eaad0ff5d75",
+        "classes21.dex": "c6c2dedeb8fd756ddf3353e1f408bb8ba9215854276a980ffaf42ee85b995a1c",
+        "classes22.dex": "018efa5abef07ddbf3af904ba025773ed36ddea74cd4bbf2de1eda50a1a1cae0",
+        "classes23.dex": "cb9726a822e76e742d211cc8b3867a1117389c5a83641572c2e5533d90f5bc36",
+        "classes24.dex": "972ae20692a0297a735cc7a24d957396950a20b9ff00d6fadb63f03949d142af",
+        "classes25.dex": "9e82aefc217dcf0c3b97e9142ba5a5788f4d9b48a78ab50afa0839dc8977eb45",
+        "classes26.dex": "c0be7cb89c4b3968799134a81c14c069811cc51997acc40c12dcfd1d94091b29",
+        "classes27.dex": "032d95b7de7265bc0c6bf802895b59421c3f2de9258f84f5acbb1cd948803218",
+        "classes28.dex": "6c9c2d6df00919ca4c927c3719b932ebfb1ef46b24f2de778120a84fd8d30225",
+        "classes29.dex": "4485c4b553aefd6fc97df82616094f9eb8e20a3892d9f14ccff5e94b28690205",
+        "classes3.dex": "5c6f8714ae379d49cd46da0c6849a08127e80f51ac0c2d4272b87e28e17d9a6a",
+        "classes30.dex": "1dcfa1e69686a326e22c54b9adc7c6013644e69d14642664e2ab7b5e2eee4ff4",
+        "classes31.dex": "9b56887e460451aa2786b32253f23398d3c7ddd52de7adba218a33e227208fc1",
+        "classes32.dex": "d3a28f93991b46bbfcb5a54a57e966a74292fa21e9ca8b7da8510342d83f95f4",
+        "classes33.dex": "69fe9934cf4551ae089faae65184e503e666744e6381f53301c15899a0ef017a",
+        "classes34.dex": "7982176a1b40fc0839c19e092b221fb2682bd2983bd06139e8b624b6a6a4db92",
+        "classes36.dex": "6e0f7116d156518fad1e65e72f4c204cfacfd9904c4ee2c3110395d56842d707",
+        "classes37.dex": "60bbf9baea410ce14d3387a7d5f2b345f7400b237b5db399af7c89e111dc29bb",
+        "classes38.dex": "158a04ece83b03933bce90407e13b68570b11b0349beaa908fd060659e832125",
+        "classes39.dex": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
+        "classes4.dex": "a00bc9994f55effdbd4f455c58a8792eb91b5d11f18a28ae583c6e7693877d25",
+        "classes40.dex": "47689f896202fb6a109fcfc7f4d820114b1416ce66d521db9d4780055443f4dd",
+        "classes5.dex": "1e53eea4678f6c95c0c4b36be6f279d5aa8b0bfba25e78c749e940d32df11d25",
+        "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+        "classes7.dex": "76422ce864f6d38226c3ca953a148142d88fa624399591975150f317ee600843",
+        "classes8.dex": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e",
+        "classes9.dex": "f3c381f0a008ab0a803d0cc27adf644bbf43a59a8886317c24c9498de754f9df"
+      }
+    },
+    {
+      "from": "R137",
+      "to": "R138",
+      "baseSha256": "fe4bc08fbc1f36d2790831f6bcd9593204ec0a032ca0d3a42c1cd385bc272719",
+      "finalSha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "entry": "assets/station-online/engines.json",
+          "before": {
+            "bytes": 19118,
+            "crc32": "8aca08bb",
+            "sha256": "c0d75345922986c529137828e83b852612bb160870043654bd1b8d9821658ce7"
+          },
+          "after": {
+            "bytes": 19121,
+            "crc32": "f061ae75",
+            "sha256": "76b3cb61149293200cb8853784e6b6e4023f4e4c33b6b7cfcad8a954e1f9f519"
+          }
+        },
+        {
+          "entry": "lib/arm64-v8a/libstation_retroarch.so",
+          "before": {
+            "bytes": 10673944,
+            "crc32": "a211a334",
+            "sha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc"
+          },
+          "after": {
+            "bytes": 10674272,
+            "crc32": "fb5cebc4",
+            "sha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+          }
+        }
+      ],
+      "preservedEntryCount": 13858,
+      "dexEntryCount": 41,
+      "changedDexEntries": [],
+      "preservedDexSha256": {
+        "assets/sony/ps4/upstream/derived/owner.dex": "b1afb8666ee71816a9c8f0a4b59b05ccb34671216748354df5504e02c3db9357",
+        "classes.dex": "7c7bc77016bf758b5b7c3efa13d439dca272aaf37c1967dae806eb9e25e66d07",
+        "classes10.dex": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+        "classes11.dex": "6970325cc48b12ab9e1bebb50badbd743a114f82b3397742fc46c3108697f462",
+        "classes12.dex": "297084c7424ababd5bf31abf3af929b8c6312af34c02f78c24f588fd5584af41",
+        "classes13.dex": "b1e618d7f82da8656673cc88b9becfa8cf6e4ba47eb2017063c33ddd7eb357f2",
+        "classes14.dex": "c7afcf54542be68636bee8466a483a631c8fe1f5fb3b69aac0df054bcf8275e1",
+        "classes15.dex": "221f7466cf3fe84ce0fa86005b9650b1b44e0a4119d9a450e196209ac2ba2cfd",
+        "classes16.dex": "992f88f13e88f966009f3cef83e00b365f97ae91d5b9d202b359c57e1dc8ebc3",
+        "classes17.dex": "b426624c0b0de1ccba686ab1587946223e9aaeff3abad3e34fbffcd0b14630ad",
+        "classes18.dex": "82fdb69cae1d07d4388d01ea873eb68dc0b66a2cb12c79d31811c99e76c646d5",
+        "classes19.dex": "00860db59f3a0a344d6d71e9a25a1a0ebc854e38867fc5a2e4b28c952e7c8896",
+        "classes2.dex": "6205f9f2e9642985c8b708802fbb8e30fac1e95e45129c4e1116bd069d83cfd8",
+        "classes20.dex": "08e15fb527d6b928cca3c6f5ea9c6dbb935aed30241c190993066eaad0ff5d75",
+        "classes21.dex": "c6c2dedeb8fd756ddf3353e1f408bb8ba9215854276a980ffaf42ee85b995a1c",
+        "classes22.dex": "018efa5abef07ddbf3af904ba025773ed36ddea74cd4bbf2de1eda50a1a1cae0",
+        "classes23.dex": "cb9726a822e76e742d211cc8b3867a1117389c5a83641572c2e5533d90f5bc36",
+        "classes24.dex": "972ae20692a0297a735cc7a24d957396950a20b9ff00d6fadb63f03949d142af",
+        "classes25.dex": "9e82aefc217dcf0c3b97e9142ba5a5788f4d9b48a78ab50afa0839dc8977eb45",
+        "classes26.dex": "c0be7cb89c4b3968799134a81c14c069811cc51997acc40c12dcfd1d94091b29",
+        "classes27.dex": "032d95b7de7265bc0c6bf802895b59421c3f2de9258f84f5acbb1cd948803218",
+        "classes28.dex": "6c9c2d6df00919ca4c927c3719b932ebfb1ef46b24f2de778120a84fd8d30225",
+        "classes29.dex": "4485c4b553aefd6fc97df82616094f9eb8e20a3892d9f14ccff5e94b28690205",
+        "classes3.dex": "5c6f8714ae379d49cd46da0c6849a08127e80f51ac0c2d4272b87e28e17d9a6a",
+        "classes30.dex": "1dcfa1e69686a326e22c54b9adc7c6013644e69d14642664e2ab7b5e2eee4ff4",
+        "classes31.dex": "9b56887e460451aa2786b32253f23398d3c7ddd52de7adba218a33e227208fc1",
+        "classes32.dex": "d3a28f93991b46bbfcb5a54a57e966a74292fa21e9ca8b7da8510342d83f95f4",
+        "classes33.dex": "69fe9934cf4551ae089faae65184e503e666744e6381f53301c15899a0ef017a",
+        "classes34.dex": "7982176a1b40fc0839c19e092b221fb2682bd2983bd06139e8b624b6a6a4db92",
+        "classes35.dex": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9",
+        "classes36.dex": "6e0f7116d156518fad1e65e72f4c204cfacfd9904c4ee2c3110395d56842d707",
+        "classes37.dex": "60bbf9baea410ce14d3387a7d5f2b345f7400b237b5db399af7c89e111dc29bb",
+        "classes38.dex": "158a04ece83b03933bce90407e13b68570b11b0349beaa908fd060659e832125",
+        "classes39.dex": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
+        "classes4.dex": "a00bc9994f55effdbd4f455c58a8792eb91b5d11f18a28ae583c6e7693877d25",
+        "classes40.dex": "47689f896202fb6a109fcfc7f4d820114b1416ce66d521db9d4780055443f4dd",
+        "classes5.dex": "1e53eea4678f6c95c0c4b36be6f279d5aa8b0bfba25e78c749e940d32df11d25",
+        "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+        "classes7.dex": "76422ce864f6d38226c3ca953a148142d88fa624399591975150f317ee600843",
+        "classes8.dex": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e",
+        "classes9.dex": "f3c381f0a008ab0a803d0cc27adf644bbf43a59a8886317c24c9498de754f9df"
+      }
+    }
+  ],
+  "baseToFinal": {
+    "from": "R134",
+    "to": "R138",
+    "baseSha256": "f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2",
+    "finalSha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "entry": "assets/station-online/engines.json",
+        "before": {
+          "bytes": 19118,
+          "crc32": "74f572d8",
+          "sha256": "40e55b795eae0d2a0f1a439f271bab692eb84e38907043c537b69da403fa354e"
+        },
+        "after": {
+          "bytes": 19121,
+          "crc32": "f061ae75",
+          "sha256": "76b3cb61149293200cb8853784e6b6e4023f4e4c33b6b7cfcad8a954e1f9f519"
+        }
+      },
+      {
+        "entry": "classes35.dex",
+        "before": {
+          "bytes": 770008,
+          "crc32": "283d778f",
+          "sha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76"
+        },
+        "after": {
+          "bytes": 771548,
+          "crc32": "f2cfc867",
+          "sha256": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9"
+        }
+      },
+      {
+        "entry": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+        "before": {
+          "bytes": 113256,
+          "crc32": "a62483ba",
+          "sha256": "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad"
+        },
+        "after": {
+          "bytes": 115368,
+          "crc32": "580c414b",
+          "sha256": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+        }
+      },
+      {
+        "entry": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+        "before": {
+          "bytes": 102360,
+          "crc32": "6900539c",
+          "sha256": "5f56099c433f29514c864d1eeea2995e3f52b0d15d76eaf125c4f4346a9d6e87"
+        },
+        "after": {
+          "bytes": 104456,
+          "crc32": "74bd8835",
+          "sha256": "2f248cfcdc9e6d0e20795b1dab84f581b8fe9ea59eb0994ae96036aed2abeb77"
+        }
+      },
+      {
+        "entry": "lib/arm64-v8a/libstation_psx_online.so",
+        "before": {
+          "bytes": 299560,
+          "crc32": "5b1b2544",
+          "sha256": "69ac2b703f03826c8f7203b296665c6f2cc34cb944af7c3f758d9033116cade3"
+        },
+        "after": {
+          "bytes": 301656,
+          "crc32": "e22c25bf",
+          "sha256": "c26d8836df255ad4cc10d19d328b6fc8dcbc6a429725794c88acd4de5ca3dc50"
+        }
+      },
+      {
+        "entry": "lib/arm64-v8a/libstation_retroarch.so",
+        "before": {
+          "bytes": 10673944,
+          "crc32": "a211a334",
+          "sha256": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc"
+        },
+        "after": {
+          "bytes": 10674272,
+          "crc32": "fb5cebc4",
+          "sha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+        }
+      }
+    ],
+    "preservedEntryCount": 13854,
+    "dexEntryCount": 41,
+    "changedDexEntries": [
+      "classes35.dex"
+    ],
+    "preservedDexSha256": {
+      "assets/sony/ps4/upstream/derived/owner.dex": "b1afb8666ee71816a9c8f0a4b59b05ccb34671216748354df5504e02c3db9357",
+      "classes.dex": "7c7bc77016bf758b5b7c3efa13d439dca272aaf37c1967dae806eb9e25e66d07",
+      "classes10.dex": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+      "classes11.dex": "6970325cc48b12ab9e1bebb50badbd743a114f82b3397742fc46c3108697f462",
+      "classes12.dex": "297084c7424ababd5bf31abf3af929b8c6312af34c02f78c24f588fd5584af41",
+      "classes13.dex": "b1e618d7f82da8656673cc88b9becfa8cf6e4ba47eb2017063c33ddd7eb357f2",
+      "classes14.dex": "c7afcf54542be68636bee8466a483a631c8fe1f5fb3b69aac0df054bcf8275e1",
+      "classes15.dex": "221f7466cf3fe84ce0fa86005b9650b1b44e0a4119d9a450e196209ac2ba2cfd",
+      "classes16.dex": "992f88f13e88f966009f3cef83e00b365f97ae91d5b9d202b359c57e1dc8ebc3",
+      "classes17.dex": "b426624c0b0de1ccba686ab1587946223e9aaeff3abad3e34fbffcd0b14630ad",
+      "classes18.dex": "82fdb69cae1d07d4388d01ea873eb68dc0b66a2cb12c79d31811c99e76c646d5",
+      "classes19.dex": "00860db59f3a0a344d6d71e9a25a1a0ebc854e38867fc5a2e4b28c952e7c8896",
+      "classes2.dex": "6205f9f2e9642985c8b708802fbb8e30fac1e95e45129c4e1116bd069d83cfd8",
+      "classes20.dex": "08e15fb527d6b928cca3c6f5ea9c6dbb935aed30241c190993066eaad0ff5d75",
+      "classes21.dex": "c6c2dedeb8fd756ddf3353e1f408bb8ba9215854276a980ffaf42ee85b995a1c",
+      "classes22.dex": "018efa5abef07ddbf3af904ba025773ed36ddea74cd4bbf2de1eda50a1a1cae0",
+      "classes23.dex": "cb9726a822e76e742d211cc8b3867a1117389c5a83641572c2e5533d90f5bc36",
+      "classes24.dex": "972ae20692a0297a735cc7a24d957396950a20b9ff00d6fadb63f03949d142af",
+      "classes25.dex": "9e82aefc217dcf0c3b97e9142ba5a5788f4d9b48a78ab50afa0839dc8977eb45",
+      "classes26.dex": "c0be7cb89c4b3968799134a81c14c069811cc51997acc40c12dcfd1d94091b29",
+      "classes27.dex": "032d95b7de7265bc0c6bf802895b59421c3f2de9258f84f5acbb1cd948803218",
+      "classes28.dex": "6c9c2d6df00919ca4c927c3719b932ebfb1ef46b24f2de778120a84fd8d30225",
+      "classes29.dex": "4485c4b553aefd6fc97df82616094f9eb8e20a3892d9f14ccff5e94b28690205",
+      "classes3.dex": "5c6f8714ae379d49cd46da0c6849a08127e80f51ac0c2d4272b87e28e17d9a6a",
+      "classes30.dex": "1dcfa1e69686a326e22c54b9adc7c6013644e69d14642664e2ab7b5e2eee4ff4",
+      "classes31.dex": "9b56887e460451aa2786b32253f23398d3c7ddd52de7adba218a33e227208fc1",
+      "classes32.dex": "d3a28f93991b46bbfcb5a54a57e966a74292fa21e9ca8b7da8510342d83f95f4",
+      "classes33.dex": "69fe9934cf4551ae089faae65184e503e666744e6381f53301c15899a0ef017a",
+      "classes34.dex": "7982176a1b40fc0839c19e092b221fb2682bd2983bd06139e8b624b6a6a4db92",
+      "classes36.dex": "6e0f7116d156518fad1e65e72f4c204cfacfd9904c4ee2c3110395d56842d707",
+      "classes37.dex": "60bbf9baea410ce14d3387a7d5f2b345f7400b237b5db399af7c89e111dc29bb",
+      "classes38.dex": "158a04ece83b03933bce90407e13b68570b11b0349beaa908fd060659e832125",
+      "classes39.dex": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
+      "classes4.dex": "a00bc9994f55effdbd4f455c58a8792eb91b5d11f18a28ae583c6e7693877d25",
+      "classes40.dex": "47689f896202fb6a109fcfc7f4d820114b1416ce66d521db9d4780055443f4dd",
+      "classes5.dex": "1e53eea4678f6c95c0c4b36be6f279d5aa8b0bfba25e78c749e940d32df11d25",
+      "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+      "classes7.dex": "76422ce864f6d38226c3ca953a148142d88fa624399591975150f317ee600843",
+      "classes8.dex": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e",
+      "classes9.dex": "f3c381f0a008ab0a803d0cc27adf644bbf43a59a8886317c24c9498de754f9df"
+    }
+  },
+  "allInputsStableDuringAudit": true,
+  "readOnlyAPKDeviceUntouched": true,
+  "elapsedSeconds": 29.496,
+  "limits": [
+    "Runtime processing cost is not measured by byte preservation.",
+    "APK signing-block bytes differ across signed versions; this audit independently verifies pinned full package hashes, not signatures.",
+    "Behavior of class deltas requires separate class projection/source audit."
+  ],
+  "independentDexClassReview": {
+    "projectionFormat": "apktool-3.0.3-baksmali-locals-sequential-labels-debug-info",
+    "toolJarSha256": "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423",
+    "independentlyProjectedFromFinalSignedAPKs": true,
+    "comparisons": [
+      {
+        "from": "R134",
+        "to": "R135",
+        "beforeDexSha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76",
+        "afterDexSha256": "a7a66724f26c06075ec1833e11866a073f93ee056aeabf58301cab016f96a4f5",
+        "originalClassCount": 606,
+        "finalClassCount": 608,
+        "unchangedClassCount": 585,
+        "addedClasses": [
+          "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticBackportWithForwarding0;",
+          "Lorg/emulationstation/frontend/netplay/StationHumanDeparture;"
+        ],
+        "removedClasses": [],
+        "modifiedClasses": [
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$$ExternalSyntheticLambda0;",
+            "beforeProjectionSha256": "dd57464ae3dea5286fb6194c61973e7a8e301972db0264a9efce466e940001ef",
+            "afterProjectionSha256": "4e0c01336be04d87a60f7173b5cf6adecbf2983c48d00ad7913b91cef8f1bbc0",
+            "addedMethodHeaders": [
+              ".method public final onClick(Landroid/content/DialogInterface;I)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public final run()V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public synthetic constructor <init>(Landroid/app/Activity;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$$ExternalSyntheticLambda1;",
+            "beforeProjectionSha256": "a5dcb738d8de798e12857168b0d52cd5b661fe6a9f01e46659a05c76dc022d87",
+            "afterProjectionSha256": "a05ff3c8a9e6b7a62d2354de41ad1b29265b436dba888ba1677846260fba3537",
+            "addedMethodHeaders": [
+              ".method public final run()V"
+            ],
+            "removedMethodHeaders": [
+              ".method public final onClick(Landroid/content/DialogInterface;I)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public synthetic constructor <init>(Landroid/app/Activity;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda1;",
+            "beforeProjectionSha256": "3b22881106ffa48a5fc31c18b4ae07d030265033ba46da709490c05c8a107e91",
+            "afterProjectionSha256": "01d2b33127eebc167f09140c335c5e946fa66e87b4d94ee8e294fd2ec6f56272",
+            "addedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Landroid/app/Activity;Ljava/lang/String;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Ljava/lang/Runnable;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public final run()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda2;",
+            "beforeProjectionSha256": "a1e2f4ee0a6a6d04b1bb50f0ce833e15950d3e4ba7457c3d3cd285857256f930",
+            "afterProjectionSha256": "01b0a513095d555880054e86b96114f125148838aedc39b05d9b526cf35fb110",
+            "addedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Landroid/app/Activity;Ljava/lang/String;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public final run()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda3;",
+            "beforeProjectionSha256": "bb64e821033b857cfb7422fe4ddf9ddab8d55d9863e49f708cba907d5fe072c3",
+            "afterProjectionSha256": "c6f4c7d2b46a42a691fc41b42dc28a27cdf1e9dc09fb7a2c94d2e8a504595824",
+            "addedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Ljava/lang/Runnable;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public final run()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda4;",
+            "beforeProjectionSha256": "295c8e3c4ee6dfee435a658881ab8ba3c691973b92368e47b39d805cf9db82b3",
+            "afterProjectionSha256": "3833f2f7c04c709791b6f6655d3c12c3fcbc81910cea8a035d36af07493dc95f",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;",
+              ".method public synthetic constructor <init>()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda5;",
+            "beforeProjectionSha256": "9bb1c8626eeebee2c7e6be61ed56cce15bce048054a82b487b03df1124f11e5e",
+            "afterProjectionSha256": "fa44c1ff9408fc606da3ff3b0d3bfff72b62c5dd0abc3b95b7335b99126aa4d9",
+            "addedMethodHeaders": [
+              ".method public final apply(Ljava/lang/Object;)Ljava/lang/Object;",
+              ".method public synthetic constructor <init>()V"
+            ],
+            "removedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Ljava/lang/Class;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V"
+            ],
+            "modifiedMethodHeaders": []
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda6;",
+            "beforeProjectionSha256": "201b2ed2ac6acad8c82303386b971932f616b0fd3e35b97a3b5236188ff320af",
+            "afterProjectionSha256": "b3ad582380b8a10319e87870e00ee2914e94a86324dd802b8adbff41f131aa5d",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda7;",
+            "beforeProjectionSha256": "6219dde2211d5ec9880815a65688df6571a9879e91cd677461e8710f1c7ab4bc",
+            "afterProjectionSha256": "ee60cf08cb668b5ced7c5a26450a567cbdeac21cf4a2d66f0cb82eb7f93df507",
+            "addedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Ljava/lang/Class;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public final run()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda8;",
+            "beforeProjectionSha256": "7fe4a571cc3d14c398f2ab5cdf1317c302739d55450735127f30068f55a432fe",
+            "afterProjectionSha256": "1f251a0f110f0de0eb7deb3547794d3400ec3185cda8e82a6d1085eddefb26c9",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda9;",
+            "beforeProjectionSha256": "8fdf54e01b34e3362e9213e867048bbe401298294fc5da51d6b53e99b8e12777",
+            "afterProjectionSha256": "eb35172fa589ec79fae0b089b605abd9d22aa9c9d7e4dc0ff67d683211d35989",
+            "addedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public final apply(Ljava/lang/Object;)Ljava/lang/Object;",
+              ".method public synthetic constructor <init>()V"
+            ],
+            "modifiedMethodHeaders": []
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$2;",
+            "beforeProjectionSha256": "e230239ed3affcae29c0b3a57db169fd3d7615846429a12fc3e193ee91082693",
+            "afterProjectionSha256": "21f690a1e14ccfdc33583cd033e64107155100e06902481b324bc06b77887226",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method protected onReceiveResult(ILandroid/os/Bundle;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;",
+            "beforeProjectionSha256": "d80b951f86168fbe386feb2ef394d9474004eb7ab04ea7999b297351c5bba350",
+            "afterProjectionSha256": "1124f0e3cd2f2204e846396f36769ac9188d826cef685d0f663a91be9b307843",
+            "addedMethodHeaders": [
+              ".method closeByHuman(Ljava/lang/Runnable;)V",
+              ".method public static synthetic $r8$lambda$5PL70IRcONUMO4ve-fV3jp5oFu4(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method declared-synchronized closeByHuman(Ljava/lang/Runnable;)V",
+              ".method public static synthetic $r8$lambda$jgH53_z7_q8gQtcFLhFYicCp16k(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method boot(Ljava/lang/String;)V",
+              ".method constructor <init>(Landroid/app/Activity;Ljava/lang/String;Lorg/json/JSONObject;)V",
+              ".method initialize()V",
+              ".method private hideWaiting()V",
+              ".method private showWaiting(Ljava/lang/String;)V",
+              ".method private update()V",
+              ".method public declared-synchronized fatal(Ljava/lang/String;)V",
+              ".method public nativeControl(JZZ)V",
+              ".method public state(ZZ)V",
+              ".method public trace(Ljava/lang/String;)V",
+              ".method synthetic lambda$boot$4$org-emulationstation-frontend-netplay-StationDolphinSession$Session()V",
+              ".method synthetic lambda$closeByHuman$5$org-emulationstation-frontend-netplay-StationDolphinSession$Session(Ljava/lang/Runnable;)V",
+              ".method synthetic lambda$hideWaiting$7$org-emulationstation-frontend-netplay-StationDolphinSession$Session()V",
+              ".method synthetic lambda$initialize$1$org-emulationstation-frontend-netplay-StationDolphinSession$Session(Ljava/lang/Class;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V",
+              ".method synthetic lambda$initialize$2$org-emulationstation-frontend-netplay-StationDolphinSession$Session()V",
+              ".method synthetic lambda$showWaiting$6$org-emulationstation-frontend-netplay-StationDolphinSession$Session(Landroid/app/Activity;Ljava/lang/String;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession;",
+            "beforeProjectionSha256": "09c0ce1f7bbe76575ff75986466bf6e7ccef4ceecdb7800713abcd85669e0680",
+            "afterProjectionSha256": "a8de1e47d9a986d3dd7443ed69dfa5991e22046039c076797741edb96229eb16",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public static allowMenuAction(Landroid/app/Activity;I)Z",
+              ".method public static confirmExit(Landroid/app/Activity;)V",
+              ".method static synthetic lambda$confirmExit$1(Landroid/app/Activity;Landroid/content/DialogInterface;I)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda0;",
+            "beforeProjectionSha256": "730fdd5ff053698724a1d6fb240bc23e2593bd38449561b5ffbb138f454195d8",
+            "afterProjectionSha256": "6647845f9891a41f92fe3af343a166cb122ed0c593c05d509f6c721e55fa52c4",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda1;",
+            "beforeProjectionSha256": "a2224802a06a253f9d0b51442d9ec3410d4394561ce258fe6cac1441aa41a0c0",
+            "afterProjectionSha256": "7100e30da4211f04d8bdc65b59289e6b646a1b630bd6ca7e4ba7e118275ee23a",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;Ljava/util/concurrent/ExecutorService;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda2;",
+            "beforeProjectionSha256": "373f8e9be6ee5c4af94086397c2f177b73f43ada343c4a973ec13ba6033ddce2",
+            "afterProjectionSha256": "c45c83365b07b3fd5fd5980b4506efbf13b092dc52d7e0333705187e8c501288",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda3;",
+            "beforeProjectionSha256": "a668c778067ff1ba505a00ff2c6bea30397f6e24bb4f3f0f12d8178a444a7fab",
+            "afterProjectionSha256": "b5da3b5c2716ed0af6d0f9c0d661596ac28ba5af215cd48689c321764a500874",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;Ljava/lang/String;J)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda4;",
+            "beforeProjectionSha256": "bfb4bb5f4fd7b19ee228fd29f6a6cdbfa9a43499b26f9ff1a42a3cd9db821103",
+            "afterProjectionSha256": "11e6024f04e0e1f4aa3e4024ce487697a5127352f948b90a5e97f1f8156a786e",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$LaunchReturn;",
+            "beforeProjectionSha256": "79717035f5ae68e9bf3b7c698733fa8de2df2563ee992172910cf21f2ecb0c5f",
+            "afterProjectionSha256": "249707041b9a35372de53bd9a1c40a10265ac40eb227d9a1513468cab3e194cb",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method prepare(Landroid/content/Intent;Ljava/lang/String;J)I",
+              ".method restore(Landroid/os/Bundle;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession;",
+            "beforeProjectionSha256": "2ccc536ae02462b51773d16c99aa9c920d214d55b253899e589d285cac68b827",
+            "afterProjectionSha256": "71ff8bf7b27348a6316465f3cce8c0d2e38db691cad173dcfcb87d4dfe25d615",
+            "addedMethodHeaders": [
+              ".method public static synthetic $r8$lambda$T2F9SyRuzKvcteO_BgBjMgKpE08(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public static synthetic $r8$lambda$axB15Hh_vph0tX2NWWZURUZW5d8(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method private declared-synchronized event(ILandroid/os/Bundle;)V",
+              ".method private multiplayerTicket(Ljava/lang/String;J)V",
+              ".method private sync()V",
+              ".method private ticket()V",
+              ".method static attach(Landroid/content/Context;Lorg/json/JSONObject;Landroid/content/Intent;)Landroid/content/Intent;",
+              ".method static create(Landroid/content/Context;Lorg/json/JSONObject;)Landroid/os/ResultReceiver;",
+              ".method static discardLaunch(Landroid/content/Intent;Ljava/lang/String;J)V",
+              ".method synthetic lambda$event$0$org-emulationstation-frontend-netplay-StationGameSession()V"
+            ]
+          }
+        ],
+        "allowedFamilies": [
+          "StationDolphinSession",
+          "StationGameSession",
+          "StationHumanDeparture"
+        ],
+        "allDeltasWithinAllowedFamilies": true
+      },
+      {
+        "from": "R135",
+        "to": "R136-final",
+        "beforeDexSha256": "a7a66724f26c06075ec1833e11866a073f93ee056aeabf58301cab016f96a4f5",
+        "afterDexSha256": "84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05",
+        "originalClassCount": 608,
+        "finalClassCount": 608,
+        "unchangedClassCount": 607,
+        "addedClasses": [],
+        "removedClasses": [],
+        "modifiedClasses": [
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView;",
+            "beforeProjectionSha256": "54dc903b07837fcf5e847d09c052c28906bb37b92e38f41ad6fd40029ef73c51",
+            "afterProjectionSha256": "bdf5a8c94e298aad3c6ce3de9680e7f18e7b386fb5a6a7664920bd258cef6def",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method constructor <init>(Landroid/content/Context;)V"
+            ]
+          }
+        ],
+        "allowedFamilies": [
+          "StationOnlineCoverView"
+        ],
+        "allDeltasWithinAllowedFamilies": true
+      },
+      {
+        "from": "R136-final",
+        "to": "R137",
+        "beforeDexSha256": "84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05",
+        "afterDexSha256": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9",
+        "originalClassCount": 608,
+        "finalClassCount": 608,
+        "unchangedClassCount": 607,
+        "addedClasses": [],
+        "removedClasses": [],
+        "modifiedClasses": [
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationRetroActivity;",
+            "beforeProjectionSha256": "0a01d897beb644fff3c5d051f811d4d62d0d2d779f080103909dfa7d54c4e0e2",
+            "afterProjectionSha256": "653ffc33cd875efd04b08321ac21435aeac55be4c30318a1878dc33ad9920d17",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method private requestHumanExit()V"
+            ]
+          }
+        ],
+        "allowedFamilies": [
+          "StationRetroActivity"
+        ],
+        "allDeltasWithinAllowedFamilies": true
+      },
+      {
+        "from": "R137",
+        "to": "R138",
+        "beforeDexSha256": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9",
+        "afterDexSha256": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9",
+        "originalClassCount": 608,
+        "finalClassCount": 608,
+        "unchangedClassCount": 608,
+        "addedClasses": [],
+        "removedClasses": [],
+        "modifiedClasses": [],
+        "allowedFamilies": [],
+        "allDeltasWithinAllowedFamilies": true
+      },
+      {
+        "from": "R134",
+        "to": "R138",
+        "beforeDexSha256": "d5a689c7e60df0d3a822f97f17a27875c7c1b38da00f44419735724d4d1dda76",
+        "afterDexSha256": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9",
+        "originalClassCount": 606,
+        "finalClassCount": 608,
+        "unchangedClassCount": 583,
+        "addedClasses": [
+          "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticBackportWithForwarding0;",
+          "Lorg/emulationstation/frontend/netplay/StationHumanDeparture;"
+        ],
+        "removedClasses": [],
+        "modifiedClasses": [
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$$ExternalSyntheticLambda0;",
+            "beforeProjectionSha256": "dd57464ae3dea5286fb6194c61973e7a8e301972db0264a9efce466e940001ef",
+            "afterProjectionSha256": "4e0c01336be04d87a60f7173b5cf6adecbf2983c48d00ad7913b91cef8f1bbc0",
+            "addedMethodHeaders": [
+              ".method public final onClick(Landroid/content/DialogInterface;I)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public final run()V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public synthetic constructor <init>(Landroid/app/Activity;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$$ExternalSyntheticLambda1;",
+            "beforeProjectionSha256": "a5dcb738d8de798e12857168b0d52cd5b661fe6a9f01e46659a05c76dc022d87",
+            "afterProjectionSha256": "a05ff3c8a9e6b7a62d2354de41ad1b29265b436dba888ba1677846260fba3537",
+            "addedMethodHeaders": [
+              ".method public final run()V"
+            ],
+            "removedMethodHeaders": [
+              ".method public final onClick(Landroid/content/DialogInterface;I)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public synthetic constructor <init>(Landroid/app/Activity;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda1;",
+            "beforeProjectionSha256": "3b22881106ffa48a5fc31c18b4ae07d030265033ba46da709490c05c8a107e91",
+            "afterProjectionSha256": "01d2b33127eebc167f09140c335c5e946fa66e87b4d94ee8e294fd2ec6f56272",
+            "addedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Landroid/app/Activity;Ljava/lang/String;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Ljava/lang/Runnable;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public final run()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda2;",
+            "beforeProjectionSha256": "a1e2f4ee0a6a6d04b1bb50f0ce833e15950d3e4ba7457c3d3cd285857256f930",
+            "afterProjectionSha256": "01b0a513095d555880054e86b96114f125148838aedc39b05d9b526cf35fb110",
+            "addedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Landroid/app/Activity;Ljava/lang/String;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public final run()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda3;",
+            "beforeProjectionSha256": "bb64e821033b857cfb7422fe4ddf9ddab8d55d9863e49f708cba907d5fe072c3",
+            "afterProjectionSha256": "c6f4c7d2b46a42a691fc41b42dc28a27cdf1e9dc09fb7a2c94d2e8a504595824",
+            "addedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Ljava/lang/Runnable;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public final run()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda4;",
+            "beforeProjectionSha256": "295c8e3c4ee6dfee435a658881ab8ba3c691973b92368e47b39d805cf9db82b3",
+            "afterProjectionSha256": "3833f2f7c04c709791b6f6655d3c12c3fcbc81910cea8a035d36af07493dc95f",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;",
+              ".method public synthetic constructor <init>()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda5;",
+            "beforeProjectionSha256": "9bb1c8626eeebee2c7e6be61ed56cce15bce048054a82b487b03df1124f11e5e",
+            "afterProjectionSha256": "fa44c1ff9408fc606da3ff3b0d3bfff72b62c5dd0abc3b95b7335b99126aa4d9",
+            "addedMethodHeaders": [
+              ".method public final apply(Ljava/lang/Object;)Ljava/lang/Object;",
+              ".method public synthetic constructor <init>()V"
+            ],
+            "removedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Ljava/lang/Class;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V"
+            ],
+            "modifiedMethodHeaders": []
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda6;",
+            "beforeProjectionSha256": "201b2ed2ac6acad8c82303386b971932f616b0fd3e35b97a3b5236188ff320af",
+            "afterProjectionSha256": "b3ad582380b8a10319e87870e00ee2914e94a86324dd802b8adbff41f131aa5d",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda7;",
+            "beforeProjectionSha256": "6219dde2211d5ec9880815a65688df6571a9879e91cd677461e8710f1c7ab4bc",
+            "afterProjectionSha256": "ee60cf08cb668b5ced7c5a26450a567cbdeac21cf4a2d66f0cb82eb7f93df507",
+            "addedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;Ljava/lang/Class;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method public final run()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda8;",
+            "beforeProjectionSha256": "7fe4a571cc3d14c398f2ab5cdf1317c302739d55450735127f30068f55a432fe",
+            "afterProjectionSha256": "1f251a0f110f0de0eb7deb3547794d3400ec3185cda8e82a6d1085eddefb26c9",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$$ExternalSyntheticLambda9;",
+            "beforeProjectionSha256": "8fdf54e01b34e3362e9213e867048bbe401298294fc5da51d6b53e99b8e12777",
+            "afterProjectionSha256": "eb35172fa589ec79fae0b089b605abd9d22aa9c9d7e4dc0ff67d683211d35989",
+            "addedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public final apply(Ljava/lang/Object;)Ljava/lang/Object;",
+              ".method public synthetic constructor <init>()V"
+            ],
+            "modifiedMethodHeaders": []
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session$2;",
+            "beforeProjectionSha256": "e230239ed3affcae29c0b3a57db169fd3d7615846429a12fc3e193ee91082693",
+            "afterProjectionSha256": "21f690a1e14ccfdc33583cd033e64107155100e06902481b324bc06b77887226",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method protected onReceiveResult(ILandroid/os/Bundle;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;",
+            "beforeProjectionSha256": "d80b951f86168fbe386feb2ef394d9474004eb7ab04ea7999b297351c5bba350",
+            "afterProjectionSha256": "1124f0e3cd2f2204e846396f36769ac9188d826cef685d0f663a91be9b307843",
+            "addedMethodHeaders": [
+              ".method closeByHuman(Ljava/lang/Runnable;)V",
+              ".method public static synthetic $r8$lambda$5PL70IRcONUMO4ve-fV3jp5oFu4(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method declared-synchronized closeByHuman(Ljava/lang/Runnable;)V",
+              ".method public static synthetic $r8$lambda$jgH53_z7_q8gQtcFLhFYicCp16k(Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method boot(Ljava/lang/String;)V",
+              ".method constructor <init>(Landroid/app/Activity;Ljava/lang/String;Lorg/json/JSONObject;)V",
+              ".method initialize()V",
+              ".method private hideWaiting()V",
+              ".method private showWaiting(Ljava/lang/String;)V",
+              ".method private update()V",
+              ".method public declared-synchronized fatal(Ljava/lang/String;)V",
+              ".method public nativeControl(JZZ)V",
+              ".method public state(ZZ)V",
+              ".method public trace(Ljava/lang/String;)V",
+              ".method synthetic lambda$boot$4$org-emulationstation-frontend-netplay-StationDolphinSession$Session()V",
+              ".method synthetic lambda$closeByHuman$5$org-emulationstation-frontend-netplay-StationDolphinSession$Session(Ljava/lang/Runnable;)V",
+              ".method synthetic lambda$hideWaiting$7$org-emulationstation-frontend-netplay-StationDolphinSession$Session()V",
+              ".method synthetic lambda$initialize$1$org-emulationstation-frontend-netplay-StationDolphinSession$Session(Ljava/lang/Class;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CountDownLatch;)V",
+              ".method synthetic lambda$initialize$2$org-emulationstation-frontend-netplay-StationDolphinSession$Session()V",
+              ".method synthetic lambda$showWaiting$6$org-emulationstation-frontend-netplay-StationDolphinSession$Session(Landroid/app/Activity;Ljava/lang/String;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationDolphinSession;",
+            "beforeProjectionSha256": "09c0ce1f7bbe76575ff75986466bf6e7ccef4ceecdb7800713abcd85669e0680",
+            "afterProjectionSha256": "a8de1e47d9a986d3dd7443ed69dfa5991e22046039c076797741edb96229eb16",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public static allowMenuAction(Landroid/app/Activity;I)Z",
+              ".method public static confirmExit(Landroid/app/Activity;)V",
+              ".method static synthetic lambda$confirmExit$1(Landroid/app/Activity;Landroid/content/DialogInterface;I)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda0;",
+            "beforeProjectionSha256": "730fdd5ff053698724a1d6fb240bc23e2593bd38449561b5ffbb138f454195d8",
+            "afterProjectionSha256": "6647845f9891a41f92fe3af343a166cb122ed0c593c05d509f6c721e55fa52c4",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda1;",
+            "beforeProjectionSha256": "a2224802a06a253f9d0b51442d9ec3410d4394561ce258fe6cac1441aa41a0c0",
+            "afterProjectionSha256": "7100e30da4211f04d8bdc65b59289e6b646a1b630bd6ca7e4ba7e118275ee23a",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;Ljava/util/concurrent/ExecutorService;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda2;",
+            "beforeProjectionSha256": "373f8e9be6ee5c4af94086397c2f177b73f43ada343c4a973ec13ba6033ddce2",
+            "afterProjectionSha256": "c45c83365b07b3fd5fd5980b4506efbf13b092dc52d7e0333705187e8c501288",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda3;",
+            "beforeProjectionSha256": "a668c778067ff1ba505a00ff2c6bea30397f6e24bb4f3f0f12d8178a444a7fab",
+            "afterProjectionSha256": "b5da3b5c2716ed0af6d0f9c0d661596ac28ba5af215cd48689c321764a500874",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;Ljava/lang/String;J)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$$ExternalSyntheticLambda4;",
+            "beforeProjectionSha256": "bfb4bb5f4fd7b19ee228fd29f6a6cdbfa9a43499b26f9ff1a42a3cd9db821103",
+            "afterProjectionSha256": "11e6024f04e0e1f4aa3e4024ce487697a5127352f948b90a5e97f1f8156a786e",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method public final run()V",
+              ".method public synthetic constructor <init>(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession$LaunchReturn;",
+            "beforeProjectionSha256": "79717035f5ae68e9bf3b7c698733fa8de2df2563ee992172910cf21f2ecb0c5f",
+            "afterProjectionSha256": "249707041b9a35372de53bd9a1c40a10265ac40eb227d9a1513468cab3e194cb",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method prepare(Landroid/content/Intent;Ljava/lang/String;J)I",
+              ".method restore(Landroid/os/Bundle;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationGameSession;",
+            "beforeProjectionSha256": "2ccc536ae02462b51773d16c99aa9c920d214d55b253899e589d285cac68b827",
+            "afterProjectionSha256": "71ff8bf7b27348a6316465f3cce8c0d2e38db691cad173dcfcb87d4dfe25d615",
+            "addedMethodHeaders": [
+              ".method public static synthetic $r8$lambda$T2F9SyRuzKvcteO_BgBjMgKpE08(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ],
+            "removedMethodHeaders": [
+              ".method public static synthetic $r8$lambda$axB15Hh_vph0tX2NWWZURUZW5d8(Lorg/emulationstation/frontend/netplay/StationGameSession;)V"
+            ],
+            "modifiedMethodHeaders": [
+              ".method private declared-synchronized event(ILandroid/os/Bundle;)V",
+              ".method private multiplayerTicket(Ljava/lang/String;J)V",
+              ".method private sync()V",
+              ".method private ticket()V",
+              ".method static attach(Landroid/content/Context;Lorg/json/JSONObject;Landroid/content/Intent;)Landroid/content/Intent;",
+              ".method static create(Landroid/content/Context;Lorg/json/JSONObject;)Landroid/os/ResultReceiver;",
+              ".method static discardLaunch(Landroid/content/Intent;Ljava/lang/String;J)V",
+              ".method synthetic lambda$event$0$org-emulationstation-frontend-netplay-StationGameSession()V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView;",
+            "beforeProjectionSha256": "54dc903b07837fcf5e847d09c052c28906bb37b92e38f41ad6fd40029ef73c51",
+            "afterProjectionSha256": "bdf5a8c94e298aad3c6ce3de9680e7f18e7b386fb5a6a7664920bd258cef6def",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method constructor <init>(Landroid/content/Context;)V"
+            ]
+          },
+          {
+            "class": "Lorg/emulationstation/frontend/netplay/StationRetroActivity;",
+            "beforeProjectionSha256": "0a01d897beb644fff3c5d051f811d4d62d0d2d779f080103909dfa7d54c4e0e2",
+            "afterProjectionSha256": "653ffc33cd875efd04b08321ac21435aeac55be4c30318a1878dc33ad9920d17",
+            "addedMethodHeaders": [],
+            "removedMethodHeaders": [],
+            "modifiedMethodHeaders": [
+              ".method private requestHumanExit()V"
+            ]
+          }
+        ],
+        "allowedFamilies": [
+          "StationDolphinSession",
+          "StationGameSession",
+          "StationHumanDeparture",
+          "StationOnlineCoverView",
+          "StationRetroActivity"
+        ],
+        "allDeltasWithinAllowedFamilies": true
+      }
+    ],
+    "limitation": "Class projection compares byte-exact disassembly including debug info and explicit static arrays; this is not an execution test."
+  },
+  "independentRegistryAndElfSectionReview": [
+    {
+      "from": "R134",
+      "to": "R135",
+      "engineCount": 13,
+      "registryTopLevelByteValuesPreserved": true,
+      "changedEngines": [
+        {
+          "platform": "psx",
+          "engineIdBefore": "pcsx-rearmed-ff81ed17-player-v3-69ac2b703f03",
+          "diff": {
+            "engineId": {
+              "before": "pcsx-rearmed-ff81ed17-player-v3-69ac2b703f03",
+              "after": "pcsx-rearmed-ff81ed17-player-v3-841204679ef2"
+            },
+            "runtimeSha256": {
+              "before": "69ac2b703f03826c8f7203b296665c6f2cc34cb944af7c3f758d9033116cade3",
+              "after": "841204679ef25419d9084462c8f9f31717ea11c78abd3363a9cdefdbb2e26400"
+            }
+          }
+        },
+        {
+          "platform": "n64",
+          "engineIdBefore": "mupen64plus-ae-33bf7021-n64-v3-5f56099c433f",
+          "diff": {
+            "engineId": {
+              "before": "mupen64plus-ae-33bf7021-n64-v3-5f56099c433f",
+              "after": "mupen64plus-ae-33bf7021-n64-v3-de303362cf1c"
+            },
+            "runtimeSha256": {
+              "before": "5f56099c433f29514c864d1eeea2995e3f52b0d15d76eaf125c4f4346a9d6e87",
+              "after": "de303362cf1c7b686b7005833b3a9a45a53db06fb9e01575d469d4204cdf24de"
+            }
+          }
+        },
+        {
+          "platform": "gamecube",
+          "engineIdBefore": "dolphin-5102a033-gamecube-v3-9c87e2ec4c79",
+          "diff": {
+            "engineId": {
+              "before": "dolphin-5102a033-gamecube-v3-9c87e2ec4c79",
+              "after": "dolphin-5102a033-gamecube-v3-76ce6c2190d4"
+            },
+            "runtimeSha256": {
+              "before": "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad",
+              "after": "76ce6c2190d4b51c0432a9676b0657bb4152beff9f52431318c4fa292fe9d1ce"
+            }
+          }
+        },
+        {
+          "platform": "wii",
+          "engineIdBefore": "dolphin-5102a033-wii-v3-9c87e2ec4c79",
+          "diff": {
+            "engineId": {
+              "before": "dolphin-5102a033-wii-v3-9c87e2ec4c79",
+              "after": "dolphin-5102a033-wii-v3-76ce6c2190d4"
+            },
+            "runtimeSha256": {
+              "before": "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad",
+              "after": "76ce6c2190d4b51c0432a9676b0657bb4152beff9f52431318c4fa292fe9d1ce"
+            }
+          }
+        }
+      ],
+      "nativeELF": [
+        {
+          "library": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 384,
+                "sha256": "7a075641e28892074e51b8bb2af02e6e30626162bd268a62bff489d382572b80",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 384,
+                "sha256": "5204c5c021e519b1b6286bcc443d730143fad150157fbabe9b1361110988d2f2",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 144,
+                "sha256": "b58ecad523c1fbb79252caa0b6f47d7f93c9979dbc0580b860ee44006f731a4d",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 144,
+                "sha256": "e9cf36d5857060146da8445419551b63c1045aed42845086c31f12336d47ebc4",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame_hdr",
+              "before": {
+                "bytes": 76,
+                "sha256": "921993862b9f4a1925df36ac366a785c1b702e80f4db264215375b432c95d345",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 76,
+                "sha256": "b8498202067fac77cc575afcd5fc2dd1ed71981715563a95b81793d68e23b8d1",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 48,
+                "sha256": "5d7c3850f5cbc6f27c3f986d6c5267845598e17e213442f693710f1a82fb5cdd",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 48,
+                "sha256": "4c3aed567cd4fbb1070369015e2c95499b0416148fa3e7d65bdd0748dc64c9cf",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "008cd484dbc40d5c756dfd77d8c66eb25db35579e2318ce4b68079515f69b5b6",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "adbe069609132c1989f52786f0308ed0c661410e36dd03e03f20f02e9d3878d1",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 80,
+                "sha256": "205366940d4f142aeac70f204779b0a622b6b85d703e781e1eab3971476bff93",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 80,
+                "sha256": "14d474b6ad3e8f2dfd2360f9e2f00fdabe46986f20532ad43f90b8ad122d9e04",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 72,
+                "sha256": "f13a53dd6ed4c0bd572279ac6dd153cf965b30889b50d01e384300b3ae8baea1",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "0b933498c1d952a009ac242d300e5145dfc29d81107b2052743936668b0eaa3c",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 72,
+                "sha256": "0fc9c9a35f368e2ee1c4183d9095bba4375383da9b899394bf32949a886adc1d",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "a85355859d80c46903306c5727291668b536419daa7c38c49b1d29c7dfe8c8f0",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 3432,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1544,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 109035,
+                "sha256": "66e79ec73d4b9fe0a991367e145b1e9a9ac1d1207d499e512ad80309dc47dc42",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 110918,
+                "sha256": "d2bc99d8057afa50b464ec26aa44792843461713cde9c744bc8395d4b9441257",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 120,
+                "sha256": "db36ba6b2b0fbd4236dad7a53fbfce970f18e05d97a90dbb6ec01061826bf1f3",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": "910a1ab9a30325fb76b1e1275d60767a4f40be7a4cad9a2c45e9ad6f6ba69753",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 384,
+                "sha256": "13ffdfa265c8792ea187fbbb10b2bdb06f4ed632672da4b29a275de25d0bdcc3",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 384,
+                "sha256": "7e62fd4eb2d0b9091e3b7b761fa3b01b626c0859e511de9043077385b2f8c3b9",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 144,
+                "sha256": "ca97f1922ebe010452f92b40252578f46e7ee231f8ebb7542e049c0477ec0924",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 144,
+                "sha256": "c4012cb2b408b1580805bef91257501ce0c9a2ae5e56d500047ff56d930f1dd2",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame_hdr",
+              "before": {
+                "bytes": 76,
+                "sha256": "b8498202067fac77cc575afcd5fc2dd1ed71981715563a95b81793d68e23b8d1",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 76,
+                "sha256": "921993862b9f4a1925df36ac366a785c1b702e80f4db264215375b432c95d345",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 48,
+                "sha256": "0a2f889feae1aab352a7c2dc2421d0d40fe56b469ed8c31838ef02c12a057393",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 48,
+                "sha256": "ae0d782bc1f35905672f05ed254593df015488fe4a16c14f243e710c12365357",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "501da8584963ad1a3b035c1e3a2f9cab04c6b044e8a7c30cad0a20666b06d8c0",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "8ca29452066bf903622a90dc25e7da38fe345fd96535f0c03b5240e9e51f6c30",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 80,
+                "sha256": "f64d9d223c5238c8e6cc6e23d42255b7715449908e38b33f710ebdcd9e1350bd",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 80,
+                "sha256": "8e5f680f473a0b405d09638640352c8ff441ff5098d7ffbc39a3d65aba742507",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 72,
+                "sha256": "5e3c8af2e04dc76c23e4dd4f229527c574b485c69bde58d1bdd0eba94e071581",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "430150b476f9d3ee6147f006a0e2da65a7c8a4444831954c73463c9126a42e97",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 72,
+                "sha256": "3001fd97723bf90a971d38a5d59903c35413c010196ceb6a8ae927a95ad5132d",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "a0c96dc091da83f2328a77fc70e45c88868eefb8ea904b5f54ae96bb91681c4a",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 14328,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 12456,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 98127,
+                "sha256": "e71973a351056cea8e0ed81e12c9340c2c81225807eb60c0dc4090016705a7cc",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 100010,
+                "sha256": "d65b613c398a53801e8bc7e5e612beb4936233b508b31b8950dbcd05162e50a6",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 120,
+                "sha256": "069dca7245c58630d2fc4c694cfb5395e4d7d78b4ac642ef84e1c97d1dec7539",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": "267b4910d134ffd5d83448ca00479f0867c691932d9e91ccb25c1cb4ce99c01a",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_psx_online.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 448,
+                "sha256": "7f4c296306523c91fa956adf702dd7bc136cae0bd05bd7a340c7ee9c8191fc11",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 448,
+                "sha256": "443c1ffe57ea26b7d1b62d3380510c1f37501a3dab6180a12177908c13203e6e",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 4704,
+                "sha256": "94e096e06bb36a9c6663f5d0878ecbde3e9e8586322a720c5464a4960f615c6f",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 4704,
+                "sha256": "52f5813e3acb97c33708c246e4f05ca3242158ce7c2a8b7935d94daff12650ed",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame",
+              "before": {
+                "bytes": 13920,
+                "sha256": "9bd981f6d3859167343be576435acb56a9215431bcd29e109234d4a5db37d68e",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 13920,
+                "sha256": "01ea09408d8cecd2feeda4ec3041574a5b7903845e5f4274ea7e5ce666b96690",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame_hdr",
+              "before": {
+                "bytes": 2204,
+                "sha256": "4347bd76484d38447e3537d3aa539bafd9c57c68af4186fdf4353060a8065a3c",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 2204,
+                "sha256": "eda9e4ab070679a4896786720f9b70f60dc2f3c8f161e13373b9f39ce78666d8",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".gcc_except_table",
+              "before": {
+                "bytes": 3136,
+                "sha256": "95f557005b07a0a9dc9a4b913d094a338bd715f680f5b05b1dd995ddd2bad727",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 3136,
+                "sha256": "9ce39883705d19337af2a60e0a2f9bf87d31daf187af89e3baca58031d469c10",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 1200,
+                "sha256": "9b893688409076d761ceed6386a9832099fb520683bb80b311eb3397a1cc1275",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1200,
+                "sha256": "490459ba27af037e499f31c36a3995ebd5633606972e258b7c970dd16e0dd0e4",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 2384,
+                "sha256": "e7c34cc8ad38c43585938edbac4a1b20304e61e9fd901eeb2146a646ce4f30f6",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 2384,
+                "sha256": "90d8694abfc92e48643e3d9bb930e2c7b05d173eda73d3333a8f7a35df3b70bb",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 5208,
+                "sha256": "9b614b1f933231b86efbf7b6e6ac547122e1c7077ec54753373a645a99407805",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 5208,
+                "sha256": "866d62a4dd73a4c2a98454bf89f4b54dc05b39644d27f2de3e4821835591f8d4",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 3528,
+                "sha256": "32dfeb390810d792ed70a1160fcee6803204385dc76be0f30d2398aec3e76f2f",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 3528,
+                "sha256": "3780e72908e0e594c4ea22a6a8c3199c9edeaf349cd84c7f12cf6f4cdad3ab09",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 2104,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 232,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 105516,
+                "sha256": "d6b54101572327ae3089cd8301534813551a4801752cabed2207f384fc3b8fd3",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 107396,
+                "sha256": "dd1fa961db65aa267b7d96a74b90bc3e5017309c20c9b347f492df1a1a2814a4",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".symtab",
+              "before": {
+                "bytes": 18336,
+                "sha256": "13458fb7506bb095324ce3081000c40ff8a457b95470f1fbec58640de6aba6f5",
+                "type": 2,
+                "flags": 0
+              },
+              "after": {
+                "bytes": 18336,
+                "sha256": "b515aa08c57f474188cab4d2a2738c1a66b719c7e83db6344303a29232c6bf17",
+                "type": 2,
+                "flags": 0
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 96020,
+                "sha256": "b44ccec5e1d2af45fdda726d5c0769e35c1024233e1ec26c3015bd147b876110",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 96020,
+                "sha256": "7e7d4df078caf931e0c3121cde5a09530d1bc35962e315c613f2146cfb3983e4",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        }
+      ],
+      "allEngineFieldChangesExactlyIdsHashesAndSnesTwoOptions": true,
+      "fpsFrameskipTurboReplayClockPlayersDevicesCoreIdentityPreserved": true
+    },
+    {
+      "from": "R135",
+      "to": "R136-final",
+      "engineCount": 13,
+      "registryTopLevelByteValuesPreserved": true,
+      "changedEngines": [
+        {
+          "platform": "psx",
+          "engineIdBefore": "pcsx-rearmed-ff81ed17-player-v3-841204679ef2",
+          "diff": {
+            "engineId": {
+              "before": "pcsx-rearmed-ff81ed17-player-v3-841204679ef2",
+              "after": "pcsx-rearmed-ff81ed17-player-v3-2df6007ca0aa"
+            },
+            "runtimeSha256": {
+              "before": "841204679ef25419d9084462c8f9f31717ea11c78abd3363a9cdefdbb2e26400",
+              "after": "2df6007ca0aafa0dfb78ccb0a8c21a433675077af3f07cbdbbfbc97c6130c250"
+            }
+          }
+        },
+        {
+          "platform": "n64",
+          "engineIdBefore": "mupen64plus-ae-33bf7021-n64-v3-de303362cf1c",
+          "diff": {
+            "engineId": {
+              "before": "mupen64plus-ae-33bf7021-n64-v3-de303362cf1c",
+              "after": "mupen64plus-ae-33bf7021-n64-v3-aee665f0ac42"
+            },
+            "runtimeSha256": {
+              "before": "de303362cf1c7b686b7005833b3a9a45a53db06fb9e01575d469d4204cdf24de",
+              "after": "aee665f0ac428270a4de65777da412650818e30d0559aa6d575e9d62a2949bc9"
+            }
+          }
+        },
+        {
+          "platform": "gamecube",
+          "engineIdBefore": "dolphin-5102a033-gamecube-v3-76ce6c2190d4",
+          "diff": {
+            "engineId": {
+              "before": "dolphin-5102a033-gamecube-v3-76ce6c2190d4",
+              "after": "dolphin-5102a033-gamecube-v3-e8d6f6cf4387"
+            },
+            "runtimeSha256": {
+              "before": "76ce6c2190d4b51c0432a9676b0657bb4152beff9f52431318c4fa292fe9d1ce",
+              "after": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec"
+            }
+          }
+        },
+        {
+          "platform": "wii",
+          "engineIdBefore": "dolphin-5102a033-wii-v3-76ce6c2190d4",
+          "diff": {
+            "engineId": {
+              "before": "dolphin-5102a033-wii-v3-76ce6c2190d4",
+              "after": "dolphin-5102a033-wii-v3-e8d6f6cf4387"
+            },
+            "runtimeSha256": {
+              "before": "76ce6c2190d4b51c0432a9676b0657bb4152beff9f52431318c4fa292fe9d1ce",
+              "after": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec"
+            }
+          }
+        }
+      ],
+      "nativeELF": [
+        {
+          "library": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 384,
+                "sha256": "5204c5c021e519b1b6286bcc443d730143fad150157fbabe9b1361110988d2f2",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 384,
+                "sha256": "ade64907bc7d94e82232851b6b23f3ee87440237f38baf753b46886c6c2d9503",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 144,
+                "sha256": "e9cf36d5857060146da8445419551b63c1045aed42845086c31f12336d47ebc4",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 144,
+                "sha256": "d3c52deb7fc256a76e2934fd6142434561543bc2a346f4cceeb2b0cda67bd505",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 48,
+                "sha256": "4c3aed567cd4fbb1070369015e2c95499b0416148fa3e7d65bdd0748dc64c9cf",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 48,
+                "sha256": "29c951102f1d4fc0ad3d22202f52e58e7a220ac9ae1a1bd633a1ac1fa74f6e86",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "adbe069609132c1989f52786f0308ed0c661410e36dd03e03f20f02e9d3878d1",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "b8abd6c7afd78cd89810b7370531bba9ad1050acd39e88204e9a9d0195786657",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 80,
+                "sha256": "14d474b6ad3e8f2dfd2360f9e2f00fdabe46986f20532ad43f90b8ad122d9e04",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 80,
+                "sha256": "c8c5d54151f0bd8db0ac1c3070a68b9c2cc847d65c4cdce5942037b2761454d5",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 72,
+                "sha256": "0b933498c1d952a009ac242d300e5145dfc29d81107b2052743936668b0eaa3c",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "2e86f8dc6db6d83fea8f084544e8aa562931208540bd65fca93d7a1d210a2cc3",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 72,
+                "sha256": "a85355859d80c46903306c5727291668b536419daa7c38c49b1d29c7dfe8c8f0",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "c3b9a2e452c90606235df8ddbb6285ef48225a5936ae3bf83f1f6067e928f4ad",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 1544,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1432,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 110918,
+                "sha256": "d2bc99d8057afa50b464ec26aa44792843461713cde9c744bc8395d4b9441257",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 111031,
+                "sha256": "908a993c1bafaa43e26f4362500a6cd0eca3b6fe2f417ca9f371211876fe0232",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 120,
+                "sha256": "910a1ab9a30325fb76b1e1275d60767a4f40be7a4cad9a2c45e9ad6f6ba69753",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": "cafca3fcb8a4e6a46f1563d8ff1adff0d34a1a7f2f11302a2c22bccbcf20260b",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 384,
+                "sha256": "7e62fd4eb2d0b9091e3b7b761fa3b01b626c0859e511de9043077385b2f8c3b9",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 384,
+                "sha256": "6c79ffb915653af314523e42ae9576f9dc4809493ef87821a076e82953ba0f83",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 144,
+                "sha256": "c4012cb2b408b1580805bef91257501ce0c9a2ae5e56d500047ff56d930f1dd2",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 144,
+                "sha256": "4dde02c00f22dddbeb8622db9b337b697902e2f8cbf2ea3c4e8359754828e96b",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 48,
+                "sha256": "ae0d782bc1f35905672f05ed254593df015488fe4a16c14f243e710c12365357",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 48,
+                "sha256": "399e3bcf130ec2491308b347c536ac852b08e638951e5c37d563b82b1aef5a95",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "8ca29452066bf903622a90dc25e7da38fe345fd96535f0c03b5240e9e51f6c30",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "51b5c28423797a18d02f5e585391f8e710e0412b6589c05d54a204aebdaa1b2d",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 80,
+                "sha256": "8e5f680f473a0b405d09638640352c8ff441ff5098d7ffbc39a3d65aba742507",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 80,
+                "sha256": "d35e6b8f1c758ea1f0f7e126b413d945a6e96e3bd0f76b29366b0ce7b16b477a",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 72,
+                "sha256": "430150b476f9d3ee6147f006a0e2da65a7c8a4444831954c73463c9126a42e97",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "f3d2c45bb4c42c6e65b43296d977337bf2e59b6688595c00c94de285a5d30958",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 72,
+                "sha256": "a0c96dc091da83f2328a77fc70e45c88868eefb8ea904b5f54ae96bb91681c4a",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "db7730777fc7a91febee7b05579e79f4bcc9be67a53c0594b04ccc92b036351c",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 12456,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 12344,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 100010,
+                "sha256": "d65b613c398a53801e8bc7e5e612beb4936233b508b31b8950dbcd05162e50a6",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 100123,
+                "sha256": "65cf7168b31f5bbd2aeaa5b8cc7568fd7dfc3755044523fab2e437b99044b801",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 120,
+                "sha256": "267b4910d134ffd5d83448ca00479f0867c691932d9e91ccb25c1cb4ce99c01a",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": "f5fe038562f27cb868f90c4b31175316379cf6b48d3d41751cc213abb14cd314",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_psx_online.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 448,
+                "sha256": "443c1ffe57ea26b7d1b62d3380510c1f37501a3dab6180a12177908c13203e6e",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 448,
+                "sha256": "978b31e42ba2caa02d0313a2dd084009df15d10142fe7e73b4c486a255f295f2",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 4704,
+                "sha256": "52f5813e3acb97c33708c246e4f05ca3242158ce7c2a8b7935d94daff12650ed",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 4704,
+                "sha256": "9dbf9d1547436bd48655a297609df225081748a553053d055c67d6dcea15978c",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 1200,
+                "sha256": "490459ba27af037e499f31c36a3995ebd5633606972e258b7c970dd16e0dd0e4",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1200,
+                "sha256": "e7ac8e36bde7e7050ce5d8177cf32a7752b9adc75ec4218038a9d1b6fc0b4442",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 2384,
+                "sha256": "90d8694abfc92e48643e3d9bb930e2c7b05d173eda73d3333a8f7a35df3b70bb",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 2384,
+                "sha256": "d25ac3f22a5a2a8025c68a627069a3b308206da313919aa3229c3374c02b864d",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 5208,
+                "sha256": "866d62a4dd73a4c2a98454bf89f4b54dc05b39644d27f2de3e4821835591f8d4",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 5208,
+                "sha256": "5d622167231367dedf41f016b92ef9b4b2a95160fc2306406ed98e556ec02833",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 3528,
+                "sha256": "3780e72908e0e594c4ea22a6a8c3199c9edeaf349cd84c7f12cf6f4cdad3ab09",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 3528,
+                "sha256": "019cd1b4bab52efc0ce76476e8b185af809f7dcb132edb86054d8e56fd6d5b54",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 232,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 107396,
+                "sha256": "dd1fa961db65aa267b7d96a74b90bc3e5017309c20c9b347f492df1a1a2814a4",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 107508,
+                "sha256": "c14886ab0fc65c99266ce9033df98c54ad2163859d30633d5bbc9c2db1fef1f3",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".symtab",
+              "before": {
+                "bytes": 18336,
+                "sha256": "b515aa08c57f474188cab4d2a2738c1a66b719c7e83db6344303a29232c6bf17",
+                "type": 2,
+                "flags": 0
+              },
+              "after": {
+                "bytes": 18336,
+                "sha256": "e717e909425e0e7da3b132bbba3c3080d96e2983561abcee0835e77a9b9181d4",
+                "type": 2,
+                "flags": 0
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 96020,
+                "sha256": "7e7d4df078caf931e0c3121cde5a09530d1bc35962e315c613f2146cfb3983e4",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 96020,
+                "sha256": "66d7eed0af6868a75f002b12b8c72691a11ad5eddc4769d51e6d928135bd11f8",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        }
+      ],
+      "allEngineFieldChangesExactlyIdsHashesAndSnesTwoOptions": true,
+      "fpsFrameskipTurboReplayClockPlayersDevicesCoreIdentityPreserved": true
+    },
+    {
+      "from": "R136-final",
+      "to": "R137",
+      "engineCount": 13,
+      "registryTopLevelByteValuesPreserved": true,
+      "changedEngines": [
+        {
+          "platform": "psx",
+          "engineIdBefore": "pcsx-rearmed-ff81ed17-player-v3-2df6007ca0aa",
+          "diff": {
+            "engineId": {
+              "before": "pcsx-rearmed-ff81ed17-player-v3-2df6007ca0aa",
+              "after": "pcsx-rearmed-ff81ed17-player-v3-c26d8836df25"
+            },
+            "runtimeSha256": {
+              "before": "2df6007ca0aafa0dfb78ccb0a8c21a433675077af3f07cbdbbfbc97c6130c250",
+              "after": "c26d8836df255ad4cc10d19d328b6fc8dcbc6a429725794c88acd4de5ca3dc50"
+            }
+          }
+        },
+        {
+          "platform": "n64",
+          "engineIdBefore": "mupen64plus-ae-33bf7021-n64-v3-aee665f0ac42",
+          "diff": {
+            "engineId": {
+              "before": "mupen64plus-ae-33bf7021-n64-v3-aee665f0ac42",
+              "after": "mupen64plus-ae-33bf7021-n64-v3-2f248cfcdc9e"
+            },
+            "runtimeSha256": {
+              "before": "aee665f0ac428270a4de65777da412650818e30d0559aa6d575e9d62a2949bc9",
+              "after": "2f248cfcdc9e6d0e20795b1dab84f581b8fe9ea59eb0994ae96036aed2abeb77"
+            }
+          }
+        },
+        {
+          "platform": "gamecube",
+          "engineIdBefore": "dolphin-5102a033-gamecube-v3-e8d6f6cf4387",
+          "diff": {
+            "engineId": {
+              "before": "dolphin-5102a033-gamecube-v3-e8d6f6cf4387",
+              "after": "dolphin-5102a033-gamecube-v3-2e0b36222097"
+            },
+            "runtimeSha256": {
+              "before": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec",
+              "after": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+            }
+          }
+        },
+        {
+          "platform": "wii",
+          "engineIdBefore": "dolphin-5102a033-wii-v3-e8d6f6cf4387",
+          "diff": {
+            "engineId": {
+              "before": "dolphin-5102a033-wii-v3-e8d6f6cf4387",
+              "after": "dolphin-5102a033-wii-v3-2e0b36222097"
+            },
+            "runtimeSha256": {
+              "before": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec",
+              "after": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+            }
+          }
+        }
+      ],
+      "nativeELF": [
+        {
+          "library": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 384,
+                "sha256": "ade64907bc7d94e82232851b6b23f3ee87440237f38baf753b46886c6c2d9503",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 384,
+                "sha256": "bb8d0fd902cd15924d7c63fe000f9713e8428665f0c3bbd7e2fb49a568f9357a",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 144,
+                "sha256": "d3c52deb7fc256a76e2934fd6142434561543bc2a346f4cceeb2b0cda67bd505",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 144,
+                "sha256": "b83e34957a1fca25d783ea14208f9282c0343f2d192b51a8ff8395c221e70244",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame_hdr",
+              "before": {
+                "bytes": 76,
+                "sha256": "b8498202067fac77cc575afcd5fc2dd1ed71981715563a95b81793d68e23b8d1",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 76,
+                "sha256": "921993862b9f4a1925df36ac366a785c1b702e80f4db264215375b432c95d345",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 48,
+                "sha256": "29c951102f1d4fc0ad3d22202f52e58e7a220ac9ae1a1bd633a1ac1fa74f6e86",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 48,
+                "sha256": "43c1e3720702361d53e3488cd31d7454d72ac803e84e50a27f815935dea74ba5",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "b8abd6c7afd78cd89810b7370531bba9ad1050acd39e88204e9a9d0195786657",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "45bc5e102b937f416a73456eb666e118441737d9cf327ba8bfc8cd667e1e4940",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 80,
+                "sha256": "c8c5d54151f0bd8db0ac1c3070a68b9c2cc847d65c4cdce5942037b2761454d5",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 80,
+                "sha256": "ad5f2a51b128bbaf4d4ae69f548d7a39b6cca759a1cd0d3fc67145f6d4c139e4",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 72,
+                "sha256": "2e86f8dc6db6d83fea8f084544e8aa562931208540bd65fca93d7a1d210a2cc3",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "a8482f18b0b8c21d7de79ec0e9fc178120aae086d41753553b02df8a5e42f8f7",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 72,
+                "sha256": "c3b9a2e452c90606235df8ddbb6285ef48225a5936ae3bf83f1f6067e928f4ad",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "cf966fa236b5fa4d4a2734660cfa4a77ff42c7d207cb64c852f128427e6c8af2",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 1432,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1320,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 111031,
+                "sha256": "908a993c1bafaa43e26f4362500a6cd0eca3b6fe2f417ca9f371211876fe0232",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 111138,
+                "sha256": "e0cb6d7dfa73486ab9cd54f5926c3dc06ebc663b687468b31385fb47fcdfd3b6",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 120,
+                "sha256": "cafca3fcb8a4e6a46f1563d8ff1adff0d34a1a7f2f11302a2c22bccbcf20260b",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": "c9e6f8d27315b7594d2c135f393d6756aa90fa08e9a679184ce1b98a6afb1751",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 384,
+                "sha256": "6c79ffb915653af314523e42ae9576f9dc4809493ef87821a076e82953ba0f83",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 384,
+                "sha256": "742a8c83964012db41b9cc3c1fb319a4041c4854d015a84b2308a73ecb310d87",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 144,
+                "sha256": "4dde02c00f22dddbeb8622db9b337b697902e2f8cbf2ea3c4e8359754828e96b",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 144,
+                "sha256": "f872c5e085ff7db47a19683a4c2a572854722b8d9c2bcf1fb24f5079eb6b8b5b",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame_hdr",
+              "before": {
+                "bytes": 76,
+                "sha256": "921993862b9f4a1925df36ac366a785c1b702e80f4db264215375b432c95d345",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 76,
+                "sha256": "b8498202067fac77cc575afcd5fc2dd1ed71981715563a95b81793d68e23b8d1",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 48,
+                "sha256": "399e3bcf130ec2491308b347c536ac852b08e638951e5c37d563b82b1aef5a95",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 48,
+                "sha256": "a2724721d9c1983a53ce1f35886ee038b1b59337ae57bb37514e5e1b315f34a3",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "51b5c28423797a18d02f5e585391f8e710e0412b6589c05d54a204aebdaa1b2d",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "e1ff1420538ff3d4f1b47139d0de6f1170cb7f6141a654226ac251cc4bebb9ff",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 80,
+                "sha256": "d35e6b8f1c758ea1f0f7e126b413d945a6e96e3bd0f76b29366b0ce7b16b477a",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 80,
+                "sha256": "6b902fa05a15de2ab148dbe846f56bab0210bcc4046e9a23413ffae641ac572c",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 72,
+                "sha256": "f3d2c45bb4c42c6e65b43296d977337bf2e59b6688595c00c94de285a5d30958",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "9c8947b9c240b4c7e77ebb90b7076067fd9a55631d8dcc631682d333596e4108",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 72,
+                "sha256": "db7730777fc7a91febee7b05579e79f4bcc9be67a53c0594b04ccc92b036351c",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "aa1774b2df79d8f1eb4dfd873e13e1f85ad1c20941ee04fc4e47a170ac936ec5",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 12344,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 12232,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 100123,
+                "sha256": "65cf7168b31f5bbd2aeaa5b8cc7568fd7dfc3755044523fab2e437b99044b801",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 100230,
+                "sha256": "d248286fd863690e3d5bd0cdcc1e3c49e6273f377c6a3b4b211b77560baf39fa",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 120,
+                "sha256": "f5fe038562f27cb868f90c4b31175316379cf6b48d3d41751cc213abb14cd314",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": "351846149d33c9b1c7fdf264188d09aa4f17f25f1d131e19d606181929c1f813",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_psx_online.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 448,
+                "sha256": "978b31e42ba2caa02d0313a2dd084009df15d10142fe7e73b4c486a255f295f2",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 448,
+                "sha256": "fc39a531e195f4c07201c52ac3e5f5c6ff36c87097d3db27ff89998ea11eed31",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 4704,
+                "sha256": "9dbf9d1547436bd48655a297609df225081748a553053d055c67d6dcea15978c",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 4704,
+                "sha256": "104f6b95b18c63c384ab16f4cdf0cad584e9aab35135ce898b25f1c0cc4158be",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 1200,
+                "sha256": "e7ac8e36bde7e7050ce5d8177cf32a7752b9adc75ec4218038a9d1b6fc0b4442",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1200,
+                "sha256": "397fc4391f1b47efbe9cb3c4fa352f06c3042ea4b938689cfb52854e4131933b",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 2384,
+                "sha256": "d25ac3f22a5a2a8025c68a627069a3b308206da313919aa3229c3374c02b864d",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 2384,
+                "sha256": "3d05215a7b1f613f786592ef1283420121c0fb68f00919b7b0e49f1d5766745b",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 5208,
+                "sha256": "5d622167231367dedf41f016b92ef9b4b2a95160fc2306406ed98e556ec02833",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 5208,
+                "sha256": "ff69224dbca687515ffecef1c9aeb99aba5ec927e9e07213626ae74d204bb001",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 3528,
+                "sha256": "019cd1b4bab52efc0ce76476e8b185af809f7dcb132edb86054d8e56fd6d5b54",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 3528,
+                "sha256": "4a93fef902890db5738b0ee947867536079759ca603e45ae94db94e88b71922d",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 120,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 8,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 107508,
+                "sha256": "c14886ab0fc65c99266ce9033df98c54ad2163859d30633d5bbc9c2db1fef1f3",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 107620,
+                "sha256": "0759ac711e0fd001f26e1465524e6199a33cf1ebfa7ac424b21feb8999267678",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".symtab",
+              "before": {
+                "bytes": 18336,
+                "sha256": "e717e909425e0e7da3b132bbba3c3080d96e2983561abcee0835e77a9b9181d4",
+                "type": 2,
+                "flags": 0
+              },
+              "after": {
+                "bytes": 18336,
+                "sha256": "e1191dbb8c39c91d7500d168f4e94eee1cf6caf820f6d214ad73f36c496266db",
+                "type": 2,
+                "flags": 0
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 96020,
+                "sha256": "66d7eed0af6868a75f002b12b8c72691a11ad5eddc4769d51e6d928135bd11f8",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 96020,
+                "sha256": "e318125bc0e7c250c5f5a25b8e053a14a4d0cdbb532088ee06218960ad843101",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        }
+      ],
+      "allEngineFieldChangesExactlyIdsHashesAndSnesTwoOptions": true,
+      "fpsFrameskipTurboReplayClockPlayersDevicesCoreIdentityPreserved": true
+    },
+    {
+      "from": "R137",
+      "to": "R138",
+      "engineCount": 13,
+      "registryTopLevelByteValuesPreserved": true,
+      "changedEngines": [
+        {
+          "platform": "snes",
+          "engineIdBefore": "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+              "after": "bsnes-mercury-performance-79d7f9de-mt1-mp5-hle-463bdb0b409e"
+            },
+            "options": {
+              "before": "bsnes_violate_accuracy = \"disabled\"\nbsnes_chip_hle = \"LLE\"\nbsnes_superfx_overclock = \"100%\"\nbsnes_region = \"auto\"\nbsnes_aspect_ratio = \"auto\"\nbsnes_crop_overscan = \"disabled\"\nbsnes_gamma_ramp = \"disabled\"\n",
+              "after": "bsnes_violate_accuracy = \"enabled\"\nbsnes_chip_hle = \"HLE\"\nbsnes_superfx_overclock = \"100%\"\nbsnes_region = \"auto\"\nbsnes_aspect_ratio = \"auto\"\nbsnes_crop_overscan = \"disabled\"\nbsnes_gamma_ramp = \"disabled\"\n"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "megadrive",
+          "engineIdBefore": "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+              "after": "clownmdemu-d43c2708-mp5-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "neogeo",
+          "engineIdBefore": "geolith-19402493-mp5-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "geolith-19402493-mp5-81b3daa38fb9",
+              "after": "geolith-19402493-mp5-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "neogeocd",
+          "engineIdBefore": "neocd-b1e04c73-aslr1-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "neocd-b1e04c73-aslr1-v3-81b3daa38fb9",
+              "after": "neocd-b1e04c73-aslr1-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "neogeo",
+          "engineIdBefore": "fbneo-95153da1-neogeo-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-neogeo-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-neogeo-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "fbneo",
+          "engineIdBefore": "fbneo-95153da1-fbneo-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-fbneo-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-fbneo-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "cps1",
+          "engineIdBefore": "fbneo-95153da1-cps1-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-cps1-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-cps1-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "cps2",
+          "engineIdBefore": "fbneo-95153da1-cps2-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-cps2-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-cps2-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "cps3",
+          "engineIdBefore": "fbneo-95153da1-cps3-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-cps3-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-cps3-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        }
+      ],
+      "nativeELF": [
+        {
+          "library": "lib/arm64-v8a/libstation_retroarch.so",
+          "changedSections": [
+            {
+              "section": ".comment",
+              "before": {
+                "bytes": 204,
+                "sha256": "8d5ed8c5d0f543047596837e07b20ae865d0a4c70fbd80d917b16eb76fd1978f",
+                "type": 1,
+                "flags": 48
+              },
+              "after": {
+                "bytes": 362,
+                "sha256": "cf5c0cce1be59c6548888613ea0f93ef0985563ebf02256926628515e2ba86ad",
+                "type": 1,
+                "flags": 48
+              }
+            },
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 528,
+                "sha256": "a314b73fff9e6be42ea04772b8428ae6c8d3ae3414d791f61c9971bc7001e1cc",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 528,
+                "sha256": "9fa9f4ea8d426d7692d50a6eb8af8dab1f8e05c3586017dea6b3bb1e994ffc74",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynstr",
+              "before": {
+                "bytes": 105740,
+                "sha256": "e0d626849476ed642341c8512a35b363ef07c16fa02e55435cb6fffa10e39e62",
+                "type": 3,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 105740,
+                "sha256": "f3871d27de530db29afc292b4a4addd01f0f63737bc73698565cd72381dc17e9",
+                "type": 3,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 103032,
+                "sha256": "aa5784240ee6735ee6c592ee09e0420f9ea69a1448299f232e7aaee355fe34ea",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 103032,
+                "sha256": "4d40fef24d9eedfcfc628baa7f675c57e9a500d84550d0804232b7269d7cfc29",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame",
+              "before": {
+                "bytes": 350924,
+                "sha256": "d79012d25221ad2b5bc9c995c06b24c1e227696a169e6bc0966589285c954753",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 350964,
+                "sha256": "ab864e46029725f4af4c36fa668f5631a6ae464982f3fd6b23581f54bc034541",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame_hdr",
+              "before": {
+                "bytes": 64444,
+                "sha256": "0c9e07c820a7d72ab3c8a3d7e0e8ff7c6736be5cdf8f88035be47b444740a645",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 64452,
+                "sha256": "3d59d05b80ce557e53c187d01afa4d4377cf887ddfae8fd69a79b39e5e8676e0",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".gnu.version",
+              "before": {
+                "bytes": 8586,
+                "sha256": "4d796e092e5b938f1bfe8090f94b5168570744cb7a2db4950ecb4a59e0fd7053",
+                "type": 1879048191,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 8586,
+                "sha256": "e74bdbe21186c12c9cdb8d6dfe6b84aa8df7665f2f3cbabd746184f0f4c0d8ed",
+                "type": 1879048191,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 12080,
+                "sha256": "a12c73459469b1807bdcbe02106ec27fa7e020a9b140bff3c8c320d5430eb14f",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 12080,
+                "sha256": "34565f18b29d8700998e1253d27a76f852adf436654929728f5c9dd786ae5555",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "c2ddb5929ba8c9434ee81c4a4b1c5460a8f29f1c8cca48513ad53b4240a15eb7",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "c2d5938ef00442ca24474a1cfcb76048ec5f0b6c5512060cadacd03011406577",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 24144,
+                "sha256": "b5178295f40fe867596e29f1eafcfc20cb9fcf6de86d0a9c24725be6697631ba",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 24144,
+                "sha256": "6538196cb968e105db8ddc6227ebbc9566f90c8e5282d304bd48071d39efa537",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 116232,
+                "sha256": "3c1018615c2e071908b4daaeac2563a66ebf84c289f97b804dae2b63743ae68a",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 116232,
+                "sha256": "5eee6e2df313d4ce6466c83369192d80a6c0b82f75374669d67c5f0c29fc98dc",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 36168,
+                "sha256": "a016a67b1fe479ce6ccc3225d8758e753a99b0edfc73e44ba3dca34f53d90deb",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 36168,
+                "sha256": "daa612e9c24e02887144c73666c5f592b77aa710af62a25faf058bff1a464c1d",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 1992,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1816,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 6170316,
+                "sha256": "2bc6f7f1b8529f4479325f762c1f9b04d2aac18a781ac7f576c9a55f842a618e",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 6170356,
+                "sha256": "004660b9019b245154b753f052e548283067f913d87862e965d84dccd8207bfd",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 3546088,
+                "sha256": "fc8f6347b809549977712a22327be7fc896f5e560ce22ec6253716476ef5802e",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 3546184,
+                "sha256": "2c136a7d497b4baff55d962ba3492e0a82fae804495b9ecbd104507116189f53",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": false
+        }
+      ],
+      "allEngineFieldChangesExactlyIdsHashesAndSnesTwoOptions": true,
+      "fpsFrameskipTurboReplayClockPlayersDevicesCoreIdentityPreserved": true
+    },
+    {
+      "from": "R134",
+      "to": "R138",
+      "engineCount": 13,
+      "registryTopLevelByteValuesPreserved": true,
+      "changedEngines": [
+        {
+          "platform": "snes",
+          "engineIdBefore": "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "bsnes-mercury-performance-79d7f9de-mt1-mp5-81b3daa38fb9",
+              "after": "bsnes-mercury-performance-79d7f9de-mt1-mp5-hle-463bdb0b409e"
+            },
+            "options": {
+              "before": "bsnes_violate_accuracy = \"disabled\"\nbsnes_chip_hle = \"LLE\"\nbsnes_superfx_overclock = \"100%\"\nbsnes_region = \"auto\"\nbsnes_aspect_ratio = \"auto\"\nbsnes_crop_overscan = \"disabled\"\nbsnes_gamma_ramp = \"disabled\"\n",
+              "after": "bsnes_violate_accuracy = \"enabled\"\nbsnes_chip_hle = \"HLE\"\nbsnes_superfx_overclock = \"100%\"\nbsnes_region = \"auto\"\nbsnes_aspect_ratio = \"auto\"\nbsnes_crop_overscan = \"disabled\"\nbsnes_gamma_ramp = \"disabled\"\n"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "megadrive",
+          "engineIdBefore": "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "clownmdemu-d43c2708-mp5-81b3daa38fb9",
+              "after": "clownmdemu-d43c2708-mp5-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "neogeo",
+          "engineIdBefore": "geolith-19402493-mp5-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "geolith-19402493-mp5-81b3daa38fb9",
+              "after": "geolith-19402493-mp5-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "psx",
+          "engineIdBefore": "pcsx-rearmed-ff81ed17-player-v3-69ac2b703f03",
+          "diff": {
+            "engineId": {
+              "before": "pcsx-rearmed-ff81ed17-player-v3-69ac2b703f03",
+              "after": "pcsx-rearmed-ff81ed17-player-v3-c26d8836df25"
+            },
+            "runtimeSha256": {
+              "before": "69ac2b703f03826c8f7203b296665c6f2cc34cb944af7c3f758d9033116cade3",
+              "after": "c26d8836df255ad4cc10d19d328b6fc8dcbc6a429725794c88acd4de5ca3dc50"
+            }
+          }
+        },
+        {
+          "platform": "neogeocd",
+          "engineIdBefore": "neocd-b1e04c73-aslr1-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "neocd-b1e04c73-aslr1-v3-81b3daa38fb9",
+              "after": "neocd-b1e04c73-aslr1-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "n64",
+          "engineIdBefore": "mupen64plus-ae-33bf7021-n64-v3-5f56099c433f",
+          "diff": {
+            "engineId": {
+              "before": "mupen64plus-ae-33bf7021-n64-v3-5f56099c433f",
+              "after": "mupen64plus-ae-33bf7021-n64-v3-2f248cfcdc9e"
+            },
+            "runtimeSha256": {
+              "before": "5f56099c433f29514c864d1eeea2995e3f52b0d15d76eaf125c4f4346a9d6e87",
+              "after": "2f248cfcdc9e6d0e20795b1dab84f581b8fe9ea59eb0994ae96036aed2abeb77"
+            }
+          }
+        },
+        {
+          "platform": "neogeo",
+          "engineIdBefore": "fbneo-95153da1-neogeo-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-neogeo-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-neogeo-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "fbneo",
+          "engineIdBefore": "fbneo-95153da1-fbneo-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-fbneo-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-fbneo-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "cps1",
+          "engineIdBefore": "fbneo-95153da1-cps1-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-cps1-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-cps1-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "cps2",
+          "engineIdBefore": "fbneo-95153da1-cps2-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-cps2-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-cps2-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "cps3",
+          "engineIdBefore": "fbneo-95153da1-cps3-v3-81b3daa38fb9",
+          "diff": {
+            "engineId": {
+              "before": "fbneo-95153da1-cps3-v3-81b3daa38fb9",
+              "after": "fbneo-95153da1-cps3-v3-463bdb0b409e"
+            },
+            "runtimeSha256": {
+              "before": "81b3daa38fb9c051e1c83646b87df7120f84f31ed8b48fe6b0b362b617b847dc",
+              "after": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+            }
+          }
+        },
+        {
+          "platform": "gamecube",
+          "engineIdBefore": "dolphin-5102a033-gamecube-v3-9c87e2ec4c79",
+          "diff": {
+            "engineId": {
+              "before": "dolphin-5102a033-gamecube-v3-9c87e2ec4c79",
+              "after": "dolphin-5102a033-gamecube-v3-2e0b36222097"
+            },
+            "runtimeSha256": {
+              "before": "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad",
+              "after": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+            }
+          }
+        },
+        {
+          "platform": "wii",
+          "engineIdBefore": "dolphin-5102a033-wii-v3-9c87e2ec4c79",
+          "diff": {
+            "engineId": {
+              "before": "dolphin-5102a033-wii-v3-9c87e2ec4c79",
+              "after": "dolphin-5102a033-wii-v3-2e0b36222097"
+            },
+            "runtimeSha256": {
+              "before": "9c87e2ec4c798ab1f42130326855d0171617501ee513dfefa74241b3665e38ad",
+              "after": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+            }
+          }
+        }
+      ],
+      "nativeELF": [
+        {
+          "library": "lib/arm64-v8a/libstation_dolphin_runtime.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 384,
+                "sha256": "7a075641e28892074e51b8bb2af02e6e30626162bd268a62bff489d382572b80",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 384,
+                "sha256": "bb8d0fd902cd15924d7c63fe000f9713e8428665f0c3bbd7e2fb49a568f9357a",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 144,
+                "sha256": "b58ecad523c1fbb79252caa0b6f47d7f93c9979dbc0580b860ee44006f731a4d",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 144,
+                "sha256": "b83e34957a1fca25d783ea14208f9282c0343f2d192b51a8ff8395c221e70244",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 48,
+                "sha256": "5d7c3850f5cbc6f27c3f986d6c5267845598e17e213442f693710f1a82fb5cdd",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 48,
+                "sha256": "43c1e3720702361d53e3488cd31d7454d72ac803e84e50a27f815935dea74ba5",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "008cd484dbc40d5c756dfd77d8c66eb25db35579e2318ce4b68079515f69b5b6",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "45bc5e102b937f416a73456eb666e118441737d9cf327ba8bfc8cd667e1e4940",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 80,
+                "sha256": "205366940d4f142aeac70f204779b0a622b6b85d703e781e1eab3971476bff93",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 80,
+                "sha256": "ad5f2a51b128bbaf4d4ae69f548d7a39b6cca759a1cd0d3fc67145f6d4c139e4",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 72,
+                "sha256": "f13a53dd6ed4c0bd572279ac6dd153cf965b30889b50d01e384300b3ae8baea1",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "a8482f18b0b8c21d7de79ec0e9fc178120aae086d41753553b02df8a5e42f8f7",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 72,
+                "sha256": "0fc9c9a35f368e2ee1c4183d9095bba4375383da9b899394bf32949a886adc1d",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "cf966fa236b5fa4d4a2734660cfa4a77ff42c7d207cb64c852f128427e6c8af2",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 3432,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1320,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 109035,
+                "sha256": "66e79ec73d4b9fe0a991367e145b1e9a9ac1d1207d499e512ad80309dc47dc42",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 111138,
+                "sha256": "e0cb6d7dfa73486ab9cd54f5926c3dc06ebc663b687468b31385fb47fcdfd3b6",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 120,
+                "sha256": "db36ba6b2b0fbd4236dad7a53fbfce970f18e05d97a90dbb6ec01061826bf1f3",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": "c9e6f8d27315b7594d2c135f393d6756aa90fa08e9a679184ce1b98a6afb1751",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 384,
+                "sha256": "13ffdfa265c8792ea187fbbb10b2bdb06f4ed632672da4b29a275de25d0bdcc3",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 384,
+                "sha256": "742a8c83964012db41b9cc3c1fb319a4041c4854d015a84b2308a73ecb310d87",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 144,
+                "sha256": "ca97f1922ebe010452f92b40252578f46e7ee231f8ebb7542e049c0477ec0924",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 144,
+                "sha256": "f872c5e085ff7db47a19683a4c2a572854722b8d9c2bcf1fb24f5079eb6b8b5b",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 48,
+                "sha256": "0a2f889feae1aab352a7c2dc2421d0d40fe56b469ed8c31838ef02c12a057393",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 48,
+                "sha256": "a2724721d9c1983a53ce1f35886ee038b1b59337ae57bb37514e5e1b315f34a3",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "501da8584963ad1a3b035c1e3a2f9cab04c6b044e8a7c30cad0a20666b06d8c0",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "e1ff1420538ff3d4f1b47139d0de6f1170cb7f6141a654226ac251cc4bebb9ff",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 80,
+                "sha256": "f64d9d223c5238c8e6cc6e23d42255b7715449908e38b33f710ebdcd9e1350bd",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 80,
+                "sha256": "6b902fa05a15de2ab148dbe846f56bab0210bcc4046e9a23413ffae641ac572c",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 72,
+                "sha256": "5e3c8af2e04dc76c23e4dd4f229527c574b485c69bde58d1bdd0eba94e071581",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "9c8947b9c240b4c7e77ebb90b7076067fd9a55631d8dcc631682d333596e4108",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 72,
+                "sha256": "3001fd97723bf90a971d38a5d59903c35413c010196ceb6a8ae927a95ad5132d",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 72,
+                "sha256": "aa1774b2df79d8f1eb4dfd873e13e1f85ad1c20941ee04fc4e47a170ac936ec5",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 14328,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 12232,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 98127,
+                "sha256": "e71973a351056cea8e0ed81e12c9340c2c81225807eb60c0dc4090016705a7cc",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 100230,
+                "sha256": "d248286fd863690e3d5bd0cdcc1e3c49e6273f377c6a3b4b211b77560baf39fa",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 120,
+                "sha256": "069dca7245c58630d2fc4c694cfb5395e4d7d78b4ac642ef84e1c97d1dec7539",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 120,
+                "sha256": "351846149d33c9b1c7fdf264188d09aa4f17f25f1d131e19d606181929c1f813",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_psx_online.so",
+          "changedSections": [
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 448,
+                "sha256": "7f4c296306523c91fa956adf702dd7bc136cae0bd05bd7a340c7ee9c8191fc11",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 448,
+                "sha256": "fc39a531e195f4c07201c52ac3e5f5c6ff36c87097d3db27ff89998ea11eed31",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 4704,
+                "sha256": "94e096e06bb36a9c6663f5d0878ecbde3e9e8586322a720c5464a4960f615c6f",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 4704,
+                "sha256": "104f6b95b18c63c384ab16f4cdf0cad584e9aab35135ce898b25f1c0cc4158be",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame",
+              "before": {
+                "bytes": 13920,
+                "sha256": "9bd981f6d3859167343be576435acb56a9215431bcd29e109234d4a5db37d68e",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 13920,
+                "sha256": "01ea09408d8cecd2feeda4ec3041574a5b7903845e5f4274ea7e5ce666b96690",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame_hdr",
+              "before": {
+                "bytes": 2204,
+                "sha256": "4347bd76484d38447e3537d3aa539bafd9c57c68af4186fdf4353060a8065a3c",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 2204,
+                "sha256": "eda9e4ab070679a4896786720f9b70f60dc2f3c8f161e13373b9f39ce78666d8",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".gcc_except_table",
+              "before": {
+                "bytes": 3136,
+                "sha256": "95f557005b07a0a9dc9a4b913d094a338bd715f680f5b05b1dd995ddd2bad727",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 3136,
+                "sha256": "9ce39883705d19337af2a60e0a2f9bf87d31daf187af89e3baca58031d469c10",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 1200,
+                "sha256": "9b893688409076d761ceed6386a9832099fb520683bb80b311eb3397a1cc1275",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1200,
+                "sha256": "397fc4391f1b47efbe9cb3c4fa352f06c3042ea4b938689cfb52854e4131933b",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 2384,
+                "sha256": "e7c34cc8ad38c43585938edbac4a1b20304e61e9fd901eeb2146a646ce4f30f6",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 2384,
+                "sha256": "3d05215a7b1f613f786592ef1283420121c0fb68f00919b7b0e49f1d5766745b",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 5208,
+                "sha256": "9b614b1f933231b86efbf7b6e6ac547122e1c7077ec54753373a645a99407805",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 5208,
+                "sha256": "ff69224dbca687515ffecef1c9aeb99aba5ec927e9e07213626ae74d204bb001",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 3528,
+                "sha256": "32dfeb390810d792ed70a1160fcee6803204385dc76be0f30d2398aec3e76f2f",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 3528,
+                "sha256": "4a93fef902890db5738b0ee947867536079759ca603e45ae94db94e88b71922d",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 2104,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 8,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 105516,
+                "sha256": "d6b54101572327ae3089cd8301534813551a4801752cabed2207f384fc3b8fd3",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 107620,
+                "sha256": "0759ac711e0fd001f26e1465524e6199a33cf1ebfa7ac424b21feb8999267678",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".symtab",
+              "before": {
+                "bytes": 18336,
+                "sha256": "13458fb7506bb095324ce3081000c40ff8a457b95470f1fbec58640de6aba6f5",
+                "type": 2,
+                "flags": 0
+              },
+              "after": {
+                "bytes": 18336,
+                "sha256": "e1191dbb8c39c91d7500d168f4e94eee1cf6caf820f6d214ad73f36c496266db",
+                "type": 2,
+                "flags": 0
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 96020,
+                "sha256": "b44ccec5e1d2af45fdda726d5c0769e35c1024233e1ec26c3015bd147b876110",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 96020,
+                "sha256": "e318125bc0e7c250c5f5a25b8e053a14a4d0cdbb532088ee06218960ad843101",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": true
+        },
+        {
+          "library": "lib/arm64-v8a/libstation_retroarch.so",
+          "changedSections": [
+            {
+              "section": ".comment",
+              "before": {
+                "bytes": 204,
+                "sha256": "8d5ed8c5d0f543047596837e07b20ae865d0a4c70fbd80d917b16eb76fd1978f",
+                "type": 1,
+                "flags": 48
+              },
+              "after": {
+                "bytes": 362,
+                "sha256": "cf5c0cce1be59c6548888613ea0f93ef0985563ebf02256926628515e2ba86ad",
+                "type": 1,
+                "flags": 48
+              }
+            },
+            {
+              "section": ".dynamic",
+              "before": {
+                "bytes": 528,
+                "sha256": "a314b73fff9e6be42ea04772b8428ae6c8d3ae3414d791f61c9971bc7001e1cc",
+                "type": 6,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 528,
+                "sha256": "9fa9f4ea8d426d7692d50a6eb8af8dab1f8e05c3586017dea6b3bb1e994ffc74",
+                "type": 6,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".dynstr",
+              "before": {
+                "bytes": 105740,
+                "sha256": "e0d626849476ed642341c8512a35b363ef07c16fa02e55435cb6fffa10e39e62",
+                "type": 3,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 105740,
+                "sha256": "f3871d27de530db29afc292b4a4addd01f0f63737bc73698565cd72381dc17e9",
+                "type": 3,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".dynsym",
+              "before": {
+                "bytes": 103032,
+                "sha256": "aa5784240ee6735ee6c592ee09e0420f9ea69a1448299f232e7aaee355fe34ea",
+                "type": 11,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 103032,
+                "sha256": "4d40fef24d9eedfcfc628baa7f675c57e9a500d84550d0804232b7269d7cfc29",
+                "type": 11,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame",
+              "before": {
+                "bytes": 350924,
+                "sha256": "d79012d25221ad2b5bc9c995c06b24c1e227696a169e6bc0966589285c954753",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 350964,
+                "sha256": "ab864e46029725f4af4c36fa668f5631a6ae464982f3fd6b23581f54bc034541",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".eh_frame_hdr",
+              "before": {
+                "bytes": 64444,
+                "sha256": "0c9e07c820a7d72ab3c8a3d7e0e8ff7c6736be5cdf8f88035be47b444740a645",
+                "type": 1,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 64452,
+                "sha256": "3d59d05b80ce557e53c187d01afa4d4377cf887ddfae8fd69a79b39e5e8676e0",
+                "type": 1,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".gnu.version",
+              "before": {
+                "bytes": 8586,
+                "sha256": "4d796e092e5b938f1bfe8090f94b5168570744cb7a2db4950ecb4a59e0fd7053",
+                "type": 1879048191,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 8586,
+                "sha256": "e74bdbe21186c12c9cdb8d6dfe6b84aa8df7665f2f3cbabd746184f0f4c0d8ed",
+                "type": 1879048191,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".got.plt",
+              "before": {
+                "bytes": 12080,
+                "sha256": "a12c73459469b1807bdcbe02106ec27fa7e020a9b140bff3c8c320d5430eb14f",
+                "type": 1,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 12080,
+                "sha256": "34565f18b29d8700998e1253d27a76f852adf436654929728f5c9dd786ae5555",
+                "type": 1,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".note.gnu.build-id",
+              "before": {
+                "bytes": 36,
+                "sha256": "c2ddb5929ba8c9434ee81c4a4b1c5460a8f29f1c8cca48513ad53b4240a15eb7",
+                "type": 7,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 36,
+                "sha256": "c2d5938ef00442ca24474a1cfcb76048ec5f0b6c5512060cadacd03011406577",
+                "type": 7,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".plt",
+              "before": {
+                "bytes": 24144,
+                "sha256": "b5178295f40fe867596e29f1eafcfc20cb9fcf6de86d0a9c24725be6697631ba",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 24144,
+                "sha256": "6538196cb968e105db8ddc6227ebbc9566f90c8e5282d304bd48071d39efa537",
+                "type": 1,
+                "flags": 6
+              }
+            },
+            {
+              "section": ".rela.dyn",
+              "before": {
+                "bytes": 116232,
+                "sha256": "3c1018615c2e071908b4daaeac2563a66ebf84c289f97b804dae2b63743ae68a",
+                "type": 4,
+                "flags": 2
+              },
+              "after": {
+                "bytes": 116232,
+                "sha256": "5eee6e2df313d4ce6466c83369192d80a6c0b82f75374669d67c5f0c29fc98dc",
+                "type": 4,
+                "flags": 2
+              }
+            },
+            {
+              "section": ".rela.plt",
+              "before": {
+                "bytes": 36168,
+                "sha256": "a016a67b1fe479ce6ccc3225d8758e753a99b0edfc73e44ba3dca34f53d90deb",
+                "type": 4,
+                "flags": 66
+              },
+              "after": {
+                "bytes": 36168,
+                "sha256": "daa612e9c24e02887144c73666c5f592b77aa710af62a25faf058bff1a464c1d",
+                "type": 4,
+                "flags": 66
+              }
+            },
+            {
+              "section": ".relro_padding",
+              "before": {
+                "bytes": 1992,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              },
+              "after": {
+                "bytes": 1816,
+                "sha256": null,
+                "type": 8,
+                "flags": 3
+              }
+            },
+            {
+              "section": ".rodata",
+              "before": {
+                "bytes": 6170316,
+                "sha256": "2bc6f7f1b8529f4479325f762c1f9b04d2aac18a781ac7f576c9a55f842a618e",
+                "type": 1,
+                "flags": 50
+              },
+              "after": {
+                "bytes": 6170356,
+                "sha256": "004660b9019b245154b753f052e548283067f913d87862e965d84dccd8207bfd",
+                "type": 1,
+                "flags": 50
+              }
+            },
+            {
+              "section": ".text",
+              "before": {
+                "bytes": 3546088,
+                "sha256": "fc8f6347b809549977712a22327be7fc896f5e560ce22ec6253716476ef5802e",
+                "type": 1,
+                "flags": 6
+              },
+              "after": {
+                "bytes": 3546184,
+                "sha256": "2c136a7d497b4baff55d962ba3492e0a82fae804495b9ecbd104507116189f53",
+                "type": 1,
+                "flags": 6
+              }
+            }
+          ],
+          "textByteExact": false,
+          "dynamicStringTableByteExact": false
+        }
+      ],
+      "allEngineFieldChangesExactlyIdsHashesAndSnesTwoOptions": true,
+      "fpsFrameskipTurboReplayClockPlayersDevicesCoreIdentityPreserved": true
+    }
+  ],
+  "sourcePatchChecks": {
+    "r138Native": {
+      "baselineSha256": "baa00df315ba604e1ac5612e2186a685c27b843c20bcaea2f27c6a4036f7e7db",
+      "candidateSha256": "e4811bef12aeacd07947e51badaf8341be6c12c347c4952a9334ba22e56342f2",
+      "matchesExactTwoFunctionPatchInMemory": true,
+      "changedFunctions": [
+        "android_app_entry",
+        "android_app_destroy"
+      ],
+      "addedForwardDeclaration": "android_app_destroy",
+      "otherSourceBytesPreserved": true
+    },
+    "smallJavaPatchSources": [
+      {
+        "path": "integration/online-cover-anr-r136/recipe/patch_cover.py",
+        "sha256": "047b136481055e75c57d0bacd1afec2486f1dad42dafed5e26ed69a5d2a8e61e"
+      },
+      {
+        "path": "integration/online-exit-r137/recipe/patch_exit.py",
+        "sha256": "b18e3ce9535f2dbfd39f37e0b135a84c3fe63afafa4237a9444ac186d712d5f5"
+      }
+    ]
+  },
+  "auditorSourceHashes": {
+    "audit_apk_preservation.py": "65695f169c099d55e2e259424aff44995fa58c60f1d3df2f50b6ff58483cbb0c",
+    "audit_dex_and_policies.py": "3768c294b9b33018b917a28189e7aa8d9fbfbc0d32a8ca9ea7ea91e1ce851635",
+    "audit_backup_r124.py": "1636e0b2079ca8ce2a50121b7dfee66cd6cdc80f7f211aba9e7a14a8f1470fbf",
+    "audit_backup_dex.py": "9fccf8647f6069e0a4ca80b70da06f970256bba665adc99efddf62f7ee190e9f",
+    "ProjectDexClassHashes.java": "9c174ccdcda1190c5bd1586b03dbaa512fd8c5ef6c7b7e97dfd38e0019f951bd",
+    "audit_relay_recompile.py": "4cb4d4c597064abd5b70da11b7791e2a4ae5b1840ed8f41e09ae514a8500f447",
+    "classify_backup_delta.py": "a1b6ab333509a86f829be6ce8b32bd863560ab417c8a1c70ceeeb490cb744450"
+  },
+  "entryManifestFiles": [
+    {
+      "revision": "R134",
+      "file": "r134-entry-sha256.json",
+      "sha256": "f62c63150466395c58f40f82866882497eeb2084363ebbefbceda676a68add8d"
+    },
+    {
+      "revision": "R135",
+      "file": "r135-entry-sha256.json",
+      "sha256": "67f60ab1e45bfc00ddb82de032f92fd79070f7aa4034eaf9ebababa18342882c"
+    },
+    {
+      "revision": "R136-final",
+      "file": "r136-final-entry-sha256.json",
+      "sha256": "6cbc1cf0f901e1912092dd2fc4029e3e7a535ebb2f1dce477d775aa3606a5996"
+    },
+    {
+      "revision": "R137",
+      "file": "r137-entry-sha256.json",
+      "sha256": "7d0e8f323198c4318a93b3199ce5b78cde3aa81b60707b1d46dd9b0e79eb1fb6"
+    },
+    {
+      "revision": "R138",
+      "file": "r138-entry-sha256.json",
+      "sha256": "38168e1d8eccf290eafdeaf12d4121281bf53ba45251dd1a359d498052315c7f"
+    }
+  ],
+  "conclusion": {
+    "sixEntryChangesOnlyFromR134ToR138": true,
+    "noAddedOrRemovedProductivePayloadFromR134ToR138": true,
+    "allNonOnlineUiProcessingPayloadsBytePreservedFromR134ToR138": true,
+    "explicitRuntimeOptionsChangedFromR134ToR138": [
+      "SNES bsnes_violate_accuracy disabled\u2192enabled",
+      "SNES bsnes_chip_hle LLE\u2192HLE"
+    ],
+    "cpuFpsFrameskipTurboClockGlobalPreferencesChangedFromR134ToR138": false,
+    "nativeWrappersAreNotClaimedTextSectionIdentical": true,
+    "noRuntimeProcessingBenchmarkPerformed": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "revision": "R136",
+  "finalApkSha256": "69d4103d86b7551f7f682d39e2ee52b01c326a92e48a0c3ca866e2550b8f2436",
+  "bytes": 2714991631,
+  "signingCertificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "signatureSchemes": [
+    "v2",
+    "v3"
+  ],
+  "alignmentBytes": 16384,
+  "changedEntries": [
+    "assets/station-online/engines.json",
+    "classes35.dex",
+    "lib/arm64-v8a/libstation_dolphin_runtime.so",
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+    "lib/arm64-v8a/libstation_psx_online.so"
+  ],
+  "preservedEntries": 13855,
+  "fullEntryHashesVerified": true,
+  "installed": false
+}

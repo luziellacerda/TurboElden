@@ -1,0 +1,35 @@
+{
+  "revision": "R136",
+  "parentApkSha256": "f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896",
+  "parentIdentitySha256": "07754bea0ceabac68d59ee044600d012443d85c222c8f238574e63d607fa53cd",
+  "dexSha256": "84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05",
+  "engineIds": [
+    {
+      "platform": "psx",
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-2df6007ca0aa",
+      "runtimeSha256": "2df6007ca0aafa0dfb78ccb0a8c21a433675077af3f07cbdbbfbc97c6130c250"
+    },
+    {
+      "platform": "n64",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-aee665f0ac42",
+      "runtimeSha256": "aee665f0ac428270a4de65777da412650818e30d0559aa6d575e9d62a2949bc9"
+    },
+    {
+      "platform": "gamecube",
+      "engineId": "dolphin-5102a033-gamecube-v3-e8d6f6cf4387",
+      "runtimeSha256": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec"
+    },
+    {
+      "platform": "wii",
+      "engineId": "dolphin-5102a033-wii-v3-e8d6f6cf4387",
+      "runtimeSha256": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec"
+    }
+  ],
+  "markerSha256": {
+    "psx": "2df6007ca0aafa0dfb78ccb0a8c21a433675077af3f07cbdbbfbc97c6130c250",
+    "n64": "aee665f0ac428270a4de65777da412650818e30d0559aa6d575e9d62a2949bc9",
+    "dolphin": "e8d6f6cf43873b4bd5b4dd5b2764be4fc7b3f3e37f0ced3b2fe338297c4469ec"
+  },
+  "serverRegistered": false,
+  "gameplayValidated": false
+}

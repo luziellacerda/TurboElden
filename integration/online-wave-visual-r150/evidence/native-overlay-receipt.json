@@ -1,0 +1,33 @@
+{
+  "schema": "station.r150.visual.native-overlay.v1",
+  "parentRevision": "R149",
+  "inputSha256": {
+    "native_space.h": "2ac9e649e27f8ed4259f01cf5116186f76b4481019f5181c36c3956ed4eb7f65",
+    "station_theme_palette.h": "e32a61fcbbd24f522b14d78ec138ebb8edaa7a80f1f31c39b9cb03f77f516ef3",
+    "station_wave_palette.h": "c63c0725f8446fb1cfa434a89a9bdc6f04da44280dd61fd323b0ec95b9397a97"
+  },
+  "outputSha256": {
+    "native_space.h": "88147d7971bfea5fd6a4533e9fd7c9efd93ce01fb6c2a71807217b9906fb4b8c",
+    "station_theme_palette.h": "eb525207bb42abf4299f640a4dc046d74948db9797804e3e689bca2b699497bf",
+    "station_wave_palette.h": "21565ada7a678e3d21a75fd7e669d9d0220de4e97873224b1b37d9634a879914"
+  },
+  "inverseByteExact": true,
+  "blueArgb": {
+    "top": "#226FA7",
+    "bottom": "#509ACC"
+  },
+  "onlineRoomSourceChanged": false,
+  "nativeWaveSamplesPerStrip": 33,
+  "nativeWaveVerticesPerStrip": 66,
+  "trigonometricCallsPerSample": 2,
+  "waveBands": {
+    "SNES": 4,
+    "otherSystems": "unchanged"
+  },
+  "newTimersThreadsHeapAllocations": 0,
+  "systemCoverRadiusChanged": false,
+  "snesVideoChanged": false,
+  "systemSynopsisR148Changed": false,
+  "compiled": false,
+  "installed": false
+}

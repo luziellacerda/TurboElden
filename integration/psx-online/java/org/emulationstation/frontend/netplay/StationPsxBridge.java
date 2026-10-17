@@ -17,6 +17,7 @@ public final class StationPsxBridge {
     public static native boolean nativeCopied(long id);
     public static native int nativeReleaseReceipt(long id);
     public static native byte[] nativeTakeOutgoing();
+    public static native void nativeAwaitOutgoing(int timeoutMs);
     // null when empty, otherwise [kind,outcome,epoch,stateSerial,frame].
     public static native long[] nativeTakeCommit();
     public static native int nativeRequestState();

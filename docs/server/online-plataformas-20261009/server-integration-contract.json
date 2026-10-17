@@ -1,0 +1,682 @@
+{
+  "schemaVersion": 1,
+  "serverFirstOrder": true,
+  "appImplementationIsNextStage": true,
+  "protocol": "station-stream.v3",
+  "binaryMagic": "TSR3",
+  "headerBytes": 24,
+  "integerEncoding": "signed-int64-big-endian",
+  "maximumDataBytes": 16384,
+  "windowBytes": 262144,
+  "topology": "host-star",
+  "hostLinks": "one duplex link per guest",
+  "maximumIndependentPlayers": 5,
+  "commandPath": "/v1/station/online/multiplayer/command",
+  "commandMethod": "POST",
+  "relayPath": "/v1/station/online/multiplayer/relay",
+  "relayScheme": "wss",
+  "authentication": "existing license + device-bound bearer/proofs; no public engine registration",
+  "serverPlatforms": [
+    {
+      "platform": "snes",
+      "maximumPlayers": 5,
+      "serverReady": true
+    },
+    {
+      "platform": "megadrive",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "n64",
+      "maximumPlayers": 4,
+      "serverReady": true
+    },
+    {
+      "platform": "dreamcast",
+      "maximumPlayers": 4,
+      "serverReady": true
+    },
+    {
+      "platform": "gamecube",
+      "maximumPlayers": 4,
+      "serverReady": true
+    },
+    {
+      "platform": "wii",
+      "maximumPlayers": 4,
+      "serverReady": true
+    },
+    {
+      "platform": "wiiu",
+      "maximumPlayers": 4,
+      "serverReady": true
+    },
+    {
+      "platform": "switch",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "neogeo",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "neogeocd",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "psx",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "fbneo",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "cps1",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "cps2",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "cps3",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "ps2",
+      "maximumPlayers": 2,
+      "serverReady": true
+    },
+    {
+      "platform": "saturn",
+      "maximumPlayers": 2,
+      "serverReady": true
+    }
+  ],
+  "platformPolicy": {
+    "serverReady": "server transport and trusted enrollment implemented, independent from installed APK",
+    "onlineAvailable": "this exact game has an approved native-engine/content/controller binding",
+    "maximumPlayers": "platform ceiling; select an allowedPlayerCounts entry of the exact profile"
+  },
+  "engineEnrollment": {
+    "operator": "scripts/cadastrar-motor-online-station.py install",
+    "protectedLocalAdministration": true,
+    "serverRebuildRequired": false,
+    "serverRestartRequired": false,
+    "binaryHashes": "SHA-256 of the actual APK core and runtime files; both are verified offline",
+    "controllerProfiles": "explicit canonical controller definitions, including native device descriptors",
+    "profileConfigurationFieldOrder": [
+      "schemaVersion",
+      "controllerProfile",
+      "devices",
+      "coreOptions"
+    ],
+    "profileConfigurationEncoding": "UTF-8 compact JSON, no BOM/newline, Unicode unescaped, SHA-256 lowercase hex",
+    "contentIdentity": "exact existing contentSha256; cue-set-v1 and wiiu-set-v1 preserved",
+    "reloadWithinSeconds": 10,
+    "manifestSchema": {
+      "schemaVersion": 1,
+      "requiredEngineFields": [
+        "engineId",
+        "platform",
+        "library",
+        "runtimeLibrary",
+        "coreSha256",
+        "runtimeSha256",
+        "extensions",
+        "options",
+        "launchReady",
+        "recoveryProtocol",
+        "maximumPlayers",
+        "controllerProfiles"
+      ],
+      "requiredControllerFields": [
+        "controllerProfile",
+        "maximumPlayers",
+        "configuration"
+      ],
+      "requiredConfigurationFields": [
+        "schemaVersion",
+        "controllerProfile",
+        "devices",
+        "coreOptions"
+      ]
+    },
+    "configurationExample": {
+      "schemaVersion": 1,
+      "controllerProfile": "gamecube-four-ports-v1",
+      "devices": [
+        "gamecube-pad",
+        "gamecube-pad",
+        "gamecube-pad",
+        "gamecube-pad"
+      ],
+      "coreOptions": ""
+    },
+    "exampleIsActualNativeReceipt": false
+  },
+  "controllerProfiles": [
+    "dreamcast-four-ports-v1",
+    "gamecube-four-ports-v1",
+    "gamecube-shared-controller-v1",
+    "gamecube-gba-link-v1",
+    "wii-four-remotes-v1",
+    "wii-co-star-v1",
+    "wiiu-four-controllers-v1",
+    "switch-two-controllers-v1",
+    "ps2-two-controllers-v1",
+    "saturn-two-controllers-v1"
+  ],
+  "preparedCatalogItems": 320,
+  "preparedModes": 321,
+  "preparedModesFile": "server-prepared-modes.json",
+  "futureEngineHashesFabricated": false,
+  "nativeAdapterResponsibilities": [
+    "connect the original native session to each Station duplex link",
+    "preserve native session during WSS replacement",
+    "map roster slot to the exact native input port",
+    "implement HELLO/PAUSED/READY and native-drained ACK watermarks",
+    "pause/resume all participants with the shared epoch",
+    "use the automatic invitation/ticket flow"
+  ],
+  "deployment": "Applied; signed public catalog revision33 and 42 cover bodies verified. Same API process; existing online and artifact data preserved.",
+  "androidGameplayValidated": false,
+  "sourceCommit": "7eb0e009d40ce01db86aea9c489937e9bd2fd00a",
+  "dllSha256": "2c0d034476969cbed58b519b744e841111373f89a4bcd6abb9cd14543abcde35",
+  "presencePrerequisite": {
+    "path": "/v1/station/online/command",
+    "method": "POST",
+    "action": "enter",
+    "before": "all v3 multiplayer commands including capabilities",
+    "authentication": "existing device-bound bearer/request proof",
+    "leaving": "offline through the same presence API"
+  },
+  "clientCapacityDeclaration": {
+    "field": "clientMaximumPlayers",
+    "value": "actual native runtime capability; five-player candidate declares 5",
+    "legacyOmittedValue": 4,
+    "allowedRange": [
+      2,
+      5
+    ]
+  },
+  "eventsPollingPolicy": {
+    "path": "/v1/station/online/events",
+    "method": "POST",
+    "maximumConcurrentPendingPollsPerLicenseAndDevice": 1,
+    "serverWaitSeconds": 10,
+    "overlapError": "STATION_ONLINE_POLL_EXISTS",
+    "overlapHTTPStatus": 429,
+    "retryAfterSeconds": 1,
+    "clientRequirement": "Serialize polling; settle previous requests/cancellation before replacing a polling worker. Handle returned error code and Retry-After.",
+    "handlerDeadlineSeconds": 15,
+    "idleWaitPreviouslyValid": true,
+    "transientReadOnlyRetry": {
+      "operations": [
+        "presence heartbeat",
+        "events",
+        "multiplayer snapshot"
+      ],
+      "httpStatuses": [
+        408,
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "networkExceptions": [
+        "StationApi.Offline",
+        "SocketTimeoutException",
+        "SocketException"
+      ],
+      "backoffMillis": [
+        1000,
+        2000,
+        4000,
+        8000
+      ],
+      "maximumRetryAfterMillis": 60000,
+      "overlapBackoffMillis": 1000,
+      "explicitCancellationStopsImmediately": true,
+      "terminal": [
+        "401/403 or other non-transient statuses",
+        "disabled Station service",
+        "TLS/identity/signature/JSON failure"
+      ],
+      "mutateCommandAutomaticallyReplayed": false
+    }
+  },
+  "coverDelivery": {
+    "catalogRevision": 31,
+    "format": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "observedMaximumBytes": 198087,
+    "coverPath": "/v1/station/covers/{coverId}",
+    "cacheKey": "coverId + \"-\" + item.revision",
+    "workers": 4,
+    "sourceOriginalsBackedUp": true,
+    "newApkRequiredForThisDataChange": false,
+    "receipt": "capas-padronizadas-20261010.json",
+    "artworkCorrection": {
+      "receipt": "capas-site-ps2-psp-wii-wiiu-20261010.json",
+      "authoritativeSource": "hosted-turbobox-platform-catalogs",
+      "currentGamesInspected": 42,
+      "replaced": {
+        "wii": 6,
+        "wiiu": 1,
+        "ps2": 25,
+        "psp": 4
+      },
+      "unavailableOnSiteKept": 6,
+      "generatedArtwork": 0,
+      "dimensions": [
+        480,
+        720
+      ],
+      "format": "JPEG",
+      "originalSourceResolution": [
+        360,
+        540
+      ],
+      "cacheKey": "coverId + item.revision",
+      "coverIdsPreserved": true,
+      "oldCacheRevisionsMustNotBeReused": true,
+      "wiiuAutomaticSeedUsesGameFolder": true,
+      "noGenericTurboCoverFallback": true
+    }
+  },
+  "catalogData": {
+    "revision": 33,
+    "indexedItems": 3940,
+    "visibleItems": 3685,
+    "normalizedCatalogPlatforms": 19,
+    "catalogLabels": 21,
+    "onlineServerPlatforms": 17,
+    "catalogPath": "/v1/station/catalog?metadata=1",
+    "artifactDescriptorSource": "signed /v1/station/downloads/authorize response",
+    "newPlatform": {
+      "id": "ps2",
+      "folder": "ps2",
+      "catalogAndDownloadsReady": true,
+      "formats": [
+        ".iso",
+        ".cso"
+      ],
+      "onlineServerReady": true,
+      "clientPlatformMappingAlreadyPresent": true,
+      "maximumPlayers": 2,
+      "onlineAvailability": "online-engine-pending",
+      "controllerProfile": "ps2-two-controllers-v1"
+    },
+    "switchRoot": "switch",
+    "switchItems": 4,
+    "newRawFormats": [
+      ".iso",
+      ".cso",
+      ".nsp",
+      ".xci"
+    ],
+    "rawClientHandling": "Persist the signed single-file artifact at launchPath with its original extension, including PSP CSO. No forced ISO conversion or extra per-download integrity pass.",
+    "receipt": "capas-site-ps2-psp-wii-wiiu-20261010.json",
+    "saturn": {
+      "id": "saturn",
+      "folder": "saturn",
+      "items": 19,
+      "formats": [
+        ".chd",
+        ".cue",
+        ".iso",
+        ".zip",
+        ".7z",
+        ".rar"
+      ],
+      "rawCHD": 17,
+      "normalizedCUEZIP": 2,
+      "onlineServerReady": true,
+      "maximumPlayers": 2,
+      "controllerProfile": "saturn-two-controllers-v1",
+      "biosProvisioned": false
+    },
+    "newCatalogPlatforms": [
+      {
+        "id": "sega32x",
+        "folder": "sega32x",
+        "items": 36,
+        "artifactFormat": "zip",
+        "launchExtension": ".32x",
+        "catalogAndDownloadsReady": true,
+        "onlineServerReady": false,
+        "clientPlatformMappingAlreadyPresent": true,
+        "generatedArtwork": 0
+      },
+      {
+        "id": "psp",
+        "folder": "psp",
+        "items": 9,
+        "artifactFormat": "raw",
+        "launchExtension": ".cso",
+        "catalogAndDownloadsReady": true,
+        "onlineServerReady": false,
+        "clientPlatformMappingAlreadyPresent": true,
+        "generatedArtwork": 0
+      }
+    ],
+    "refreshAfterPublicationSeconds": 10,
+    "metadataPlayersAreNotOnlineSeatProof": true
+  },
+  "importerSourceCommit": "7eb0e009d40ce01db86aea9c489937e9bd2fd00a",
+  "nativeEngineReferences": [
+    {
+      "platform": "ps2",
+      "url": "https://docs.libretro.com/library/play/",
+      "documentedNetplay": false
+    },
+    {
+      "platform": "ps2",
+      "url": "https://docs.libretro.com/library/lrps2/",
+      "documentedNetplay": false
+    },
+    {
+      "platform": "saturn",
+      "url": "https://docs.libretro.com/library/beetle_saturn/",
+      "documentedNetplay": true,
+      "stationAndroidAdapterPresent": false
+    }
+  ],
+  "automaticCatalogSeeds": {
+    "snes": {
+      "file": "snes/station-catalog-seed.json",
+      "keys": 1366,
+      "sourceRevistaCovers": 1619,
+      "ambiguousKeysExcluded": 12
+    },
+    "saturn": {
+      "file": "saturn/station-catalog-seed.json",
+      "keys": 37,
+      "catalogCovers": 34,
+      "revistaCovers": 19
+    },
+    "sega32x": {
+      "xmlEntries": 36,
+      "catalogSeedKeys": 43,
+      "ambiguousKeysExcluded": [],
+      "existingXMLImages": 36,
+      "sourceCatalogCovers": 0,
+      "missingXMLImages": [],
+      "currentROMs": 36
+    },
+    "psp": {
+      "xmlEntries": 235,
+      "catalogSeedKeys": 464,
+      "ambiguousKeysExcluded": [
+        "atvoffroadfurypro",
+        "dragonballzshinbudokaianotherroad",
+        "toystory3"
+      ],
+      "existingXMLImages": 210,
+      "sourceCatalogCovers": 21,
+      "missingXMLImages": [
+        "Assassins Creed.cso",
+        "eFootball 2023 Version Beta ADLZ GAMING PRO.iso",
+        "Fast and the Furious, The (USA).cso",
+        "Fate_Unlimited_Codes_USA_PSP-EMiNENT.cso",
+        "Guilty Gear XX Reload - The Midnight Carnival (Japan).cso",
+        "Need For Speed Most Wanted USA.cso"
+      ],
+      "currentROMs": 9,
+      "artworkSource": "current-hosted-site",
+      "sourceReceipt": "capas-site-ps2-psp-wii-wiiu-20261010.json"
+    },
+    "ps2": {
+      "catalogSeedKeys": 122,
+      "artworkSource": "current-hosted-site",
+      "sourceReceipt": "capas-site-ps2-psp-wii-wiiu-20261010.json"
+    },
+    "wii": {
+      "catalogSeedKeys": 10,
+      "artworkSource": "current-hosted-site",
+      "sourceReceipt": "capas-site-ps2-psp-wii-wiiu-20261010.json"
+    },
+    "wiiu": {
+      "catalogSeedKeys": 9,
+      "artworkSource": "current-hosted-site",
+      "sourceReceipt": "capas-site-ps2-psp-wii-wiiu-20261010.json"
+    }
+  },
+  "roomPresentation": {
+    "utc": "2026-10-10T20:32:21.175853+00:00",
+    "textOrigins": {
+      "headingsAndButtons": "app",
+      "modeTitleAndInstructions": "signed-server-profile",
+      "synopsis": "signed-catalog.items[].metadata.description"
+    },
+    "catalogRequest": "GET /v1/station/catalog?metadata=1",
+    "lookupKey": "itemId",
+    "catalogRevision": 31,
+    "catalogSynopsisCounts": {
+      "allItems": 3895,
+      "allItemsWithSynopsis": 3747,
+      "visibleItems": 3640,
+      "visibleItemsWithSynopsis": 3492
+    },
+    "cachedCatalogLookup": true,
+    "additionalRequestsPerRoom": 0,
+    "views": {
+      "createRoom": "4-line synopsis; tap opens full text; player summary; Como jogar opens profile help",
+      "ownRoom": "4-line synopsis from the room itemId; tap opens full text; existing roster and ready/start controls; Como jogar opens room instructions",
+      "otherRooms": "2-line synopsis; Ver detalhes opens full synopsis and instructions"
+    },
+    "missingSynopsis": "Sinopse ainda não cadastrada.",
+    "catalogUnavailable": "Sinopse indisponível no momento.",
+    "instructionsRetained": true,
+    "admissionRulesChanged": false,
+    "serverDeploymentRequired": false,
+    "javaCompiled": true,
+    "sourceCount": 212,
+    "roomsDexSHA256": "c87d3efc19ff760015b355a00a45177bb43345ac9bb7a98fb53e61b87cd920e7",
+    "clientDexSHA256": "e7207a89517b168cc476e30a823bed3a1b6ad57339e1042f08a4660184543d63",
+    "signedApkBuilt": false,
+    "installed": false,
+    "physicalRoomUIVerified": false,
+    "backupBranch": "backup/station-antes-sinopse-sala-20261010",
+    "backupTag": "backup-station-antes-sinopse-sala-20261010",
+    "currentCandidateReceipt": "endpoint-review-20261010.json",
+    "originalSynopsisAdjustmentUTC": "2026-10-10T20:32:21.175853+00:00",
+    "currentCandidateCompiledUTC": "2026-10-10T21:35:34.318794+00:00"
+  },
+  "roomPagination": {
+    "path": "/v1/station/online/multiplayer/command",
+    "requestFields": {
+      "page": {
+        "default": 0,
+        "minimum": 0,
+        "maximum": 40
+      },
+      "roomPageSize": {
+        "default": 100,
+        "allowed": [
+          32,
+          100
+        ]
+      }
+    },
+    "optional": true,
+    "backwardCompatibleDefault": true,
+    "candidatePageSize": 32,
+    "responseFields": [
+      "page",
+      "roomPageSize",
+      "nextPage",
+      "totalRooms",
+      "rooms",
+      "room"
+    ],
+    "nextPage": "next zero-based page or null after the last visible room",
+    "totalRooms": "visible filtered rooms before pagination",
+    "ownRoom": "independent from the requested room page, even an empty page",
+    "invalidRequest": {
+      "httpStatus": 400,
+      "code": "STATION_MULTIPLAYER_PAGE_INVALID"
+    },
+    "social": {
+      "path": "/v1/station/online/command and /v1/station/online/events",
+      "pageSize": 100,
+      "nextPeerPage": "next page of visible people",
+      "nextRoomPage": "next page of visible legacy rooms",
+      "legacyNextPageRetained": true
+    },
+    "presentation": {
+      "peerPage": "social snapshot page",
+      "nextPeerPage": "social nextPeerPage, legacy nextPage fallback",
+      "roomPage": "selected room snapshot page",
+      "nextRoomPage": "v3 nextPage or legacy nextRoomPage",
+      "navigation": "reset to page zero when switching people/rooms; fetch requested room page immediately; show loading while source page differs",
+      "authority": "composed revision is local presentation only; never use as a request proof",
+      "presence": "server reports v3 room membership independently of the visible page"
+    }
+  },
+  "errorDelivery": {
+    "requestProofTimeout": {
+      "httpStatus": 504,
+      "code": "STATION_TIMEOUT",
+      "body": "bounded JSON"
+    },
+    "legacyRelayAuthorizationTimeout": {
+      "httpStatus": 504,
+      "code": "STATION_ONLINE_TIMEOUT",
+      "beforeWebSocketUpgrade": true,
+      "successfulEmptyHTTP200": false
+    },
+    "multiplayerRelayAuthorizationTimeout": {
+      "httpStatus": 504,
+      "code": "STATION_MULTIPLAYER_TIMEOUT",
+      "beforeWebSocketUpgrade": true,
+      "successfulEmptyHTTP200": false,
+      "attachmentCleaned": true
+    },
+    "covers": {
+      "timeout": {
+        "httpStatus": 504,
+        "code": "STATION_TIMEOUT"
+      },
+      "cancelledRequestStatus": 499,
+      "cacheControl": "no-store on errors",
+      "nosniff": true,
+      "missingOrIOError": {
+        "httpStatus": 404,
+        "code": "STATION_COVER_NOT_FOUND"
+      }
+    },
+    "onlineAuthentication": "JSON SuiteException status/code, Retry-After: 1 for HTTP 429",
+    "relayAndRequestProofCancellation": "do not write a new error body after the caller has cancelled or a response has already started"
+  },
+  "catalogReload": {
+    "validatedFileStampCapturedBeforeRead": true,
+    "fileStampRecheckedAfterValidation": true,
+    "concurrentReloadSerialized": true,
+    "invalidOrUnchangedRevisionKeepsLastGood": true,
+    "outstandingGrantRetentionSeconds": 120,
+    "singleLineFields": [
+      "publisher",
+      "developer",
+      "genre",
+      "players",
+      "releaseDate"
+    ],
+    "singleLineControlNormalization": "replace newline/tab with spaces",
+    "synopsis": "description keeps permitted newline/tab",
+    "metadataRevisionUnchangedByThisReview": true
+  },
+  "endpointReview": {
+    "receipt": "endpoint-review-20261010.json",
+    "serverDeployed": true,
+    "utc": "2026-10-10T21:49:22.368044+00:00",
+    "sourceCommit": "7eb0e009d40ce01db86aea9c489937e9bd2fd00a",
+    "appSourceCommit": "6324a3515b9626162d04a973694d089ddda539bb",
+    "javaSourceCount": 212,
+    "lobbyChecks": 36,
+    "roomsDexSHA256": "c87d3efc19ff760015b355a00a45177bb43345ac9bb7a98fb53e61b87cd920e7",
+    "clientDexSHA256": "e7207a89517b168cc476e30a823bed3a1b6ad57339e1042f08a4660184543d63",
+    "serverMustPrecedeCandidateAPK": true,
+    "signedApkBuilt": false,
+    "installed": false,
+    "androidGameplayVerified": false
+  },
+  "catalogIntegration": {
+    "clientCompiledParser": {
+      "realCompiledClient": true,
+      "sega32x": 36,
+      "catalogRevision": 32,
+      "visibleItems": 3685,
+      "passed": true,
+      "psp": 9,
+      "physicalAndroidGameplayVerified": false
+    },
+    "serverRestarted": false,
+    "onlinePlatformPoliciesUnchanged": 17,
+    "generatedArtwork": 0,
+    "currentCompiledParser": {
+      "realCompiledClient": true,
+      "sega32x": 36,
+      "catalogRevision": 33,
+      "visibleItems": 3685,
+      "passed": true,
+      "psp": 9,
+      "physicalAndroidGameplayVerified": false,
+      "existingIntegrationHarness": true,
+      "clientJarSha256": "61a71f796a734937c1573fe01ad33c927be0bb5ad6528e875afde97a75ab8164",
+      "newTestImplementation": false
+    },
+    "coverCorrection": "capas-site-ps2-psp-wii-wiiu-20261010.json",
+    "NES20261012": {
+      "games": 750,
+      "formats": {
+        ".nes": 748,
+        ".fds": 1,
+        ".unf": 1
+      },
+      "movedToRoot": true,
+      "folder": "nes",
+      "magazineFolder": "nes/media/revista",
+      "originalROMBytesPreserved": true,
+      "allGamesHaveCovers": true,
+      "newGitRecreatedCovers": 469,
+      "receivedFrontBoxesKept": 280,
+      "personalizedGeneratedCover": 1,
+      "gitFolder": "capas-em-producao/NES/Recriadas",
+      "gitCommit": "5c6cc32c06e6944b9258df36ffdb846baa368a7f",
+      "originalArtworkBytes": 1215873810,
+      "compressedArtworkBytes": 95253724,
+      "resolution": [
+        480,
+        720
+      ],
+      "format": "JPEG RGB",
+      "quality": 90,
+      "automaticDiscoveryEnabled": true,
+      "onlineNativeEngineRegistered": false
+    }
+  },
+  "catalogReading": {
+    "fullQuery": "/v1/station/catalog?metadata=1&maximumItems=20000",
+    "maximumItems": 20000,
+    "legacyMaximumItems": 4096,
+    "totalItemsField": true,
+    "hasMoreField": true,
+    "fullVisibleItems": 4435,
+    "legacyNESItems": 411,
+    "appUpdateRequiredForAll750NES": true
+  }
+}

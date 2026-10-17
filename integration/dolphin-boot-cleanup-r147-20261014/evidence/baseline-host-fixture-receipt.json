@@ -1,0 +1,33 @@
+{
+  "schema": "station.r146.dolphin.boot-failure.source-extracted-host-probe.v1",
+  "observedUtc": "2026-10-14T00:09:10.303974+00:00",
+  "actualNativeSourceSha256": "272bd5a97dee85ed8190203c100b05733e5c8f70c655559d3191e2657bf7081e",
+  "actualApkCoreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+  "extractedWholeFunctionSha256": {
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_SetIsBooting": "a38165593391f2e5456c89694db08043ccce5157e2282b047f665586d614b932",
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_RunNetPlay": "13ecbddeafe410ce62411addf38ff299185170316f0448a61500684ac25e9fe8",
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_StopEmulation": "4c44580edaeaec9cee18d422e12b5a10e54044a1f70d3a0de9f4dc585dd37e28",
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_SurfaceDestroyed": "04df57047f7e17d6452ec4d97725d412ff5b103aefedfb59e3d408eb872d7aaf"
+  },
+  "sourceBodiesEdited": false,
+  "fixtureCppSha256": "55b05c04b2f49cee03abf4b1712e4f199c7071063c6658a69f0dbb994946eba4",
+  "hostCompilerSha256": "e6d57100c82ae0310c18b16abfe52bc0df8fbb272ca6c5fb287d485807cfce91",
+  "hostBinarySha256": "c98e91ca30ce50e1213b3af162b346b7bd167d548c09ad5307ce519fb0f8e05e",
+  "faultInjected": "RunNetPlay null BootSessionData after SetIsBooting; authorized human StopEmulation while surface destruction waits",
+  "results": {
+    "normalRunStubClearedFlag": true,
+    "missingBootDataLeavesBootFlagSet": true,
+    "surfaceDestroyedBlockedAfterFailure": true,
+    "authorizedStopDidNotReleaseSurfaceDestroyed": true,
+    "fixtureCleanupReleasedWaiter": true
+  },
+  "fixtureExecuted": true,
+  "compiledProductiveMotor": false,
+  "unrelatedApisStubbed": true,
+  "successfulRunStubbed": true,
+  "engineCpuOrGameplayExecuted": false,
+  "androidExecuted": false,
+  "proves": "The exact failure JNI body returns without clearing the boot flag; exact synchronous SurfaceDestroyed keeps waiting; exact human StopEmulation does not repair the flag.",
+  "doesNotProve": "Occurrence in the reported phone failure, Android timing, emulator compatibility, CPU throughput or GPU behaviour.",
+  "mutations": "New private fixture and evidence only; APK/source/phone/server unchanged"
+}

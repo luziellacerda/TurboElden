@@ -133,12 +133,17 @@ public final class StationPsxSession {
             if(status[StationPsxBridge.FAILED]!=0){fatal("PSX_NATIVE_OWNER_FAILED");return;}
             boolean ack=status[StationPsxBridge.EPOCH]==c.epoch&&status[StationPsxBridge.CONTROL_SERIAL]==c.serial&&
                 status[StationPsxBridge.ACK_VALID]!=0&&status[StationPsxBridge.ACK_EPOCH]==c.epoch&&status[StationPsxBridge.ACK_SERIAL]==c.serial;
-            boolean synced=status[StationPsxBridge.INITIAL_STATE_SYNCED]!=0&&status[StationPsxBridge.DRAINED]!=0&&
+            // READY still requires drained queues in nativeStatus(). After the
+            // relay grants PLAYING, the faster peer may already have sent valid
+            // gameplay. Requiring an empty inbox here would prevent the owner
+            // from resuming to consume that very inbox. Native resume rechecks
+            // the exact epoch/serial ACK and the applied snapshot atomically.
+            boolean synced=status[StationPsxBridge.INITIAL_STATE_SYNCED]!=0&&
                 status[StationPsxBridge.CORE_READY]!=0&&status[StationPsxBridge.CLOSED]==0&&
                 status[StationPsxBridge.LOCAL_PAUSED]==0&&status[StationPsxBridge.IN_FRAME]==0&&
                 status[StationPsxBridge.APPLYING_STATE]==0;
             if(!c.pause&&ack&&synced&&visible&&ownerReady&&!localPaused&&!failed)StationPsxBridge.nativeResume(c.epoch,c.serial);
-            if(c==desired.get())reportedStatus=c.epoch*8|(ack?1:0)|(ack&&synced&&!failed&&!localPaused?2:0);
+            if(c==desired.get())reportedStatus=c.epoch*8|(ack?1:0)|(ack&&synced&&status[StationPsxBridge.DRAINED]!=0&&!failed&&!localPaused?2:0);
             // Gameplay commits are deliberately distinct from v3 byte ACKs.
             // Bound their diagnostic queue without logging inputs or identities.
             for(int i=0;i<64&&StationPsxBridge.nativeTakeCommit()!=null;i++){}

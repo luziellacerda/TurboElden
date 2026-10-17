@@ -1,0 +1,34 @@
+{
+  "schema": "station.r150.visual.dex-literal-overlay.v1",
+  "parentRevision": "R149",
+  "parentDexSha256": {
+    "classes28.dex": "0f4e73bf6389d9d594c96f2e478d2c55fade7ea09ecccef124eba59ea2b91a3a",
+    "classes35.dex": "dd9713ddace46aa902fe607a59ea13952afe374fed64f4200ab819537b9f8d2f",
+    "classes40.dex": "216196f6c24095e4c51512a08782e56f6c3bc0444ce4f728308502c908489c4b"
+  },
+  "inputClassSha256": {
+    "classes28.dex/Lorg/emulationstation/frontend/station/StationWaveBackground;": "6c436ff793c9e4287cce0cb970c36a067dfcbd45f1a0a54dc33f58914fbaac46",
+    "classes28.dex/Lorg/emulationstation/frontend/station/StationDownloadPanel;": "7a34cebba5e831d8206f1b1cecb312ec8ff62cebfd514e6c0658e93a944f223e",
+    "classes28.dex/Lorg/emulationstation/frontend/station/StationDownloadUi;": "8a25b5b574e89b3ecbbc0363b9aa2902975f74c5c621a04ea8863e32d1799201",
+    "classes35.dex/Lorg/emulationstation/frontend/netplay/StationHyperspaceView;": "97b3269bd5c11b7b383049641260df5ad416a538b28c8c07361e569ec2a5b0c3",
+    "classes35.dex/Lorg/emulationstation/frontend/netplay/StationRoomsActivity;": "93ec7c1fc1b70ebacb9956ae1f3ca36f8df1a3238e5a2fb2fe3b664b2d7d287e",
+    "classes40.dex/Lorg/emulationstation/frontend/sony/Ps3Activity;": "e87b17f7a1ece332051abbd4c06be7bb3104d7cfd8b10929d673fca46a60b96f",
+    "classes40.dex/Lorg/emulationstation/frontend/sony/Ps4Activity;": "2cd6402d3bf862efdfd04722f6c5df6b34e64d4398f5185def64edf3f94c4a90"
+  },
+  "outputClassSha256": {
+    "classes28.dex/Lorg/emulationstation/frontend/station/StationWaveBackground;": "30d8a471150933c31a78cb206969577abfb1b93ba4644d609f0ba26d9a79e7dc",
+    "classes28.dex/Lorg/emulationstation/frontend/station/StationDownloadPanel;": "ea446f848a0f02b7d943ecda962ef7e7f781939868b50fd430d1067035dfe1ba",
+    "classes28.dex/Lorg/emulationstation/frontend/station/StationDownloadUi;": "0a5d74609901399231eecd9f1dc08292c1a30330b484eaba6fa661980e77546e",
+    "classes35.dex/Lorg/emulationstation/frontend/netplay/StationHyperspaceView;": "95c5084d00c8e9c6f1f0f8551ff86c4f61c6660fa98d2162c085f525f17a5e66",
+    "classes35.dex/Lorg/emulationstation/frontend/netplay/StationRoomsActivity;": "89cc42f9c32eeefc8545e18f66850da377d1e26a8e9c5351ee47b55e5a724cfd",
+    "classes40.dex/Lorg/emulationstation/frontend/sony/Ps3Activity;": "cdc6ee69d01ebc302d9f246b2d2c49ace08d486b9bc039fc3d6c77ac14ca7521",
+    "classes40.dex/Lorg/emulationstation/frontend/sony/Ps4Activity;": "c429a23b32f3ed56ec7d7677304d68a02883f3a0c2c76e221a14c6589eb94869"
+  },
+  "changedClasses": 7,
+  "changedArgbConstants": 10,
+  "completeClassInversePassed": true,
+  "unrelatedClassesIncluded": false,
+  "gameplayNetworkOrDownloadLogicChanged": false,
+  "newClassesFieldsMethods": 0,
+  "compiled": false
+}

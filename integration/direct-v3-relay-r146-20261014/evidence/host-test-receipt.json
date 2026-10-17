@@ -1,0 +1,43 @@
+{
+  "schema": "station.r146.direct-v3-route.host-tests.v1",
+  "passed": true,
+  "scopeDeclarationSha256": "9d7cbcf6ee1b34402b05936c5c9d71e361567d1627f27a5e0c27e8e66575a3d2",
+  "baselineDexSha256": "5f36d5d9b2786a2877616bedffa227f83503621ec4e7eeb24b73a19264e4f089",
+  "hostProbe": {
+    "schema": "station.r146.direct-v3.tls-host-probe.v1",
+    "passed": true,
+    "checks": 20,
+    "networkAccessed": false,
+    "physicalGameplayValidated": false
+  },
+  "javaWholeSourceInversePassed": true,
+  "sourceWholeClassInversePassed": true,
+  "originalClasses": 608,
+  "modifiedClasses": 2,
+  "unrelatedClassesPreserved": 606,
+  "actualWebSocketHttpsHostnameIdentificationPreserved": true,
+  "negativeGuards": [
+    "Wrong API pin in direct factory rejected",
+    "Unexpected direct host rejected",
+    "V3 Channel using legacy factory rejected",
+    "Disabling actual WebSocket hostname validation rejected",
+    "Altering protocol/ticket/readiness owner rejected"
+  ],
+  "javaTlsSourceSha256": "73f5c9a2f1a79ff5807efa0fc7b209a6e02dda9b72ae493cc438d778c42a0a92",
+  "hostProbeSourceSha256": "4136bb464a4f341dfd7291a5f45f6afbe5bafb648931f8a4e10e144ae23eecf7",
+  "tools": {
+    "java": "1977f302375adbb920d41dac65c7e22eb9c2ed8e1e8d6258964154ff16f14406",
+    "javac": "9c71eee841aeebb723bfc2cceca7d72c6c1988fb679402f4123aa4d0e86aa549"
+  },
+  "hostCompileDiagnostics": "Note: C:\\Users\\Admin\\Documents\\Codex\\2026-10-11\\temo\\work\\r146-route-preparation-private\\tests\\StationRelayTlsRouteProbe.java uses or overrides a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.",
+  "networkAccessed": false,
+  "phoneAccessed": false,
+  "apkCompiled": false,
+  "compiledDexPostassemblyProofPending": true,
+  "physicalGameplayValidated": false,
+  "limits": [
+    "TLS probe uses inert JSSE boundaries and synthetic SPKI certificates; no live endpoint handshake.",
+    "Hostname protection checked in the unchanged actual WebSocket class and rejected when removed.",
+    "Production DEX build is deferred until distinct source scope freeze; it must decode actual output and repeat full inverse."
+  ]
+}

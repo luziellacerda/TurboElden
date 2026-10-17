@@ -1,0 +1,56 @@
+{
+  "schema": "station.r145.native.source-preservation.v1",
+  "revision": "R145-preparation",
+  "sourceBlocksOnly": true,
+  "compiled": false,
+  "sourceCommitNotFrozenYet": true,
+  "files": [
+    {
+      "file": "native_space.h",
+      "baselineSha256": "e197030037ccb922304cef57d2b99a951a952fa354bb990e8dabe6f412336725",
+      "proposedSha256": "2ac9e649e27f8ed4259f01cf5116186f76b4481019f5181c36c3956ed4eb7f65",
+      "replacementBlockCount": 4,
+      "wholeFileInversePassed": true
+    },
+    {
+      "file": "station_wave_palette.h",
+      "baselineSha256": "a3e42391c906fe5126b69213d97c685f4077ef6867aec4c27adbe426deea3b29",
+      "proposedSha256": "c63c0725f8446fb1cfa434a89a9bdc6f04da44280dd61fd323b0ec95b9397a97",
+      "replacementBlockCount": 4,
+      "wholeFileInversePassed": true
+    },
+    {
+      "file": "station_theme_palette.h",
+      "baselineSha256": "8a156447f7c8a8497acbfb863bd6898b10c2a7403a83f3b9afcd4fa15f6bd058",
+      "proposedSha256": "e32a61fcbbd24f522b14d78ec138ebb8edaa7a80f1f31c39b9cb03f77f516ef3",
+      "replacementBlockCount": 2,
+      "wholeFileInversePassed": true
+    }
+  ],
+  "drawNativeSpaceByteIdentical": true,
+  "diagonalMaskByteIdentical": true,
+  "stationWaveSystemKeyByteIdentical": true,
+  "waveCenterSinPhaseTimingEquationByteIdentical": true,
+  "bandCountsAndWidthsChangedOnlyForExplicitlyRequestedFamilies": true,
+  "unrequestedFamiliesPreserved": [
+    "Wii",
+    "WiiU",
+    "Switch",
+    "PSP",
+    "MegaDrive",
+    "32X",
+    "Saturn",
+    "Naomi",
+    "NeoGeo",
+    "CPS"
+  ],
+  "oldAliasOrderPreserved": true,
+  "themeBlackBranchesAndOffLoadingPreserved": true,
+  "settingsNeutralBackgroundPreserved": true,
+  "cloudShadersFrontendAndControllersNotTouched": true,
+  "heapJniWorkerTimerAdded": false,
+  "requestedWorstCaseWaveVerticesPerDraw": 330,
+  "r144WorstCaseWaveVerticesPerDraw": 198,
+  "extraDrawWorkLimitedToRequestedFourFiveBandFamilies": true,
+  "actualPerformanceNotMeasured": true
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "station.online-cover-anr.dex.r136.v1",
+  "donorApkSha256": "f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896",
+  "donorDexSha256": "a7a66724f26c06075ec1833e11866a073f93ee056aeabf58301cab016f96a4f5",
+  "outputDexSha256": "84b8aa3935a8e84eb69f8f7cc45885ac693e38bf1f26cfb07b811d3df60b8c05",
+  "originalClassCount": 608,
+  "finalClassCount": 608,
+  "unchangedClasses": 607,
+  "modifiedClasses": [
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView;"
+  ],
+  "addedClasses": [],
+  "removedClasses": [],
+  "scopeFamilyTypes": [
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$$ExternalSyntheticLambda0;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$$ExternalSyntheticLambda1;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$$ExternalSyntheticLambda2;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$1;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$GpuLifecycle;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$$ExternalSyntheticLambda0;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$$ExternalSyntheticLambda1;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$$ExternalSyntheticLambda2;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$$ExternalSyntheticLambda3;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$$ExternalSyntheticLambda4;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$$ExternalSyntheticLambda5;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$$ExternalSyntheticLambda6;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$$ExternalSyntheticLambda7;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$1;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker$CachedField;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView$Worker;",
+    "Lorg/emulationstation/frontend/netplay/StationOnlineCoverView;"
+  ],
+  "staticInitializerArraysRestored": 1,
+  "compiledPayloadOnly": true,
+  "signed": false,
+  "installed": false
+}

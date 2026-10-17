@@ -1,0 +1,30 @@
+{
+  "schema": "station.r146.dolphin.null-boot-cleanup.host-fixture.v1",
+  "observedUtc": "2026-10-14T00:12:11.118289+00:00",
+  "actualBaselineSourceSha256": "272bd5a97dee85ed8190203c100b05733e5c8f70c655559d3191e2657bf7081e",
+  "patchedSourceSha256": "dba43bc602cbf2d0045cc138a23c769db287ff2654f01824351143909e41e07f",
+  "extractedBodySha256": {
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_SetIsBooting": "a38165593391f2e5456c89694db08043ccce5157e2282b047f665586d614b932",
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_RunNetPlay": "7dd7972014310aa35a65454979a27d61ef6ea434065076577109f38230e7b886",
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_StopEmulation": "4c44580edaeaec9cee18d422e12b5a10e54044a1f70d3a0de9f4dc585dd37e28",
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_SurfaceDestroyed": "04df57047f7e17d6452ec4d97725d412ff5b103aefedfb59e3d408eb872d7aaf"
+  },
+  "binarySha256": "9b1af8eccee40db5dfecd2b21be8cecfa2fca51454a700e31d6279fd21aae26c",
+  "hostCompilerSha256": "e6d57100c82ae0310c18b16abfe52bc0df8fbb272ca6c5fb287d485807cfce91",
+  "fixtureExecuted": true,
+  "results": {
+    "normalRunStubClearedFlag": true,
+    "nullBootClearedBeforeFinishCallback": true,
+    "surfaceDestructionReturnedAfterFailure": true,
+    "failureThenHumanStopClean": true,
+    "stopAloneBodyUnchanged": true,
+    "humanStopThenFailureClean": true,
+    "repeatedFailedLaunchesReleased": 256
+  },
+  "unrelatedApisStubbed": true,
+  "successfulRunStubbed": true,
+  "arm64CoreExecuted": false,
+  "androidExecuted": false,
+  "physicalReportedCauseProven": false,
+  "productiveCompiled": false
+}

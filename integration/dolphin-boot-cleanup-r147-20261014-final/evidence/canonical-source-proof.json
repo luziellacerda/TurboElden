@@ -1,0 +1,64 @@
+{
+  "schema": "station.r147.dolphin.boot-ownership.canonical-source-proof.v1",
+  "passed": true,
+  "baselineParseEmitByteIdentical": true,
+  "originalRawClassSha256": "7dcbc2c67298d18e7ffe5b4839e73ca6967a0318e4628269598bef9a45ec2315",
+  "proposedRawClassSha256": "00869b191ffc794d32aaad2f787be11c80188395953ebd7f8a5c95bec69dd1de",
+  "canonicalProposedClassSha256": "ed45e5272b1d554d26e702b6d168b1e49ce1f14144b25451858e8cc78c542690",
+  "methods": {
+    ".method public final consumeBootSessionData()J": {
+      "rawSha256": "a0164080ccc7812533735b4131c8925ee5e3953a7aa56091ba22f2a8c90ec012",
+      "canonicalSha256": "cbfb5c2bea8e66ab6073fcec3a31c38b89d0e64bb8f2d6e9c0de0e0b89900bce",
+      "instructionGraphSha256": "310cbb2868c9a128ed6ab78ab6044c33bf6d9f318455a50c84875db3afb7ed63",
+      "instructionsAndTryRangesEquivalent": true
+    },
+    ".method public final releaseNativeResources()V": {
+      "rawSha256": "7f2c9480aa4a8ceb36c52e664b530be673d5e8113641cda48813b84df6f3583e",
+      "canonicalSha256": "a9e9beda1b4044447d296cd9c1af1c38b521ca88117f8700c268e8c9de49fa77",
+      "instructionGraphSha256": "7473238398811c534770fcd108426b35db60298e840134e8a8575dd5d5ba1d14",
+      "instructionsAndTryRangesEquivalent": true
+    },
+    ".method public final isLaunching()Z": {
+      "rawSha256": "96124e016781be030c9f92e044769ea8c632ee3954bf8f71595d08e30c504e1c",
+      "canonicalSha256": "57c763f0d4ead556105a5a5ec06330acd4697b9372808f4bd75dd6bb215a0193",
+      "instructionGraphSha256": "7147014e4959a6f32a1ae01c7cb41fa1bd149e225de216c6d08d612eda0b991a",
+      "instructionsAndTryRangesEquivalent": true
+    },
+    ".method public final onBootGame(Ljava/lang/String;J)V": {
+      "rawSha256": "cf05db3ab5467cc170dddd683ee39cc0737c5ea6e9a9ddf4e79ec19bfaefbbf2",
+      "canonicalSha256": "9161beea7a5987184ce5ed25b09de93795da02a12533a14676b4c77a2874b63f",
+      "instructionGraphSha256": "9b92eec102beae0a38eab6870bc5dfa4e50bb557f074d0e9bd5fcc0f74ef653d",
+      "instructionsAndTryRangesEquivalent": true
+    }
+  },
+  "wholeClassInverse": {
+    "canonicalClassSha256": "ed45e5272b1d554d26e702b6d168b1e49ce1f14144b25451858e8cc78c542690",
+    "inverseClassSha256": "7dcbc2c67298d18e7ffe5b4839e73ca6967a0318e4628269598bef9a45ec2315",
+    "inverseWholeClassPassed": true,
+    "unchangedFields": 40,
+    "originalMethodCount": 63,
+    "finalMethodCount": 63,
+    "changedMethods": [
+      ".method public final consumeBootSessionData()J",
+      ".method public final releaseNativeResources()V",
+      ".method public final isLaunching()Z",
+      ".method public final onBootGame(Ljava/lang/String;J)V"
+    ],
+    "unchangedMethods": 59,
+    "newMethods": [],
+    "newFields": [],
+    "newClasses": []
+  },
+  "negativeGuardsRejected": [
+    "VolatileFieldChanged",
+    "UnexpectedThisOwnershipLock",
+    "OtherCallbackAltered"
+  ],
+  "parseToolSourceSha256": "601513fc80c67517f13ae213ebde678a9a0ff0ffa7391dabe5a35ef28c176c4d",
+  "projectionGuardSourceSha256": "513070bfebe4771ae4e9c0752ab9810948527c09df7138252c0c6d5871d0cc71",
+  "singleClassParsedIntoMemory": true,
+  "dexWritten": false,
+  "postassemblyActualDexDecodeStillRequired": true,
+  "productiveCoreOrApkCompiled": false,
+  "androidExecuted": false
+}

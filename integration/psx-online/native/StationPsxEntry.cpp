@@ -160,6 +160,10 @@ extern "C" JNIEXPORT jboolean JNICALL JNI(nativeCopied)(JNIEnv*,jclass,jlong id)
 extern "C" JNIEXPORT jint JNICALL JNI(nativeReleaseReceipt)(JNIEnv*,jclass,jlong id){auto* p=live.load(std::memory_order_acquire);return id<=0?jint(Result::Invalid):(p?jint(p->releaseReceipt(std::uint64_t(id))):jint(Result::Wait));}
 extern "C" JNIEXPORT jbyteArray JNICALL JNI(nativeTakeOutgoing)(JNIEnv* env,jclass){auto* p=live.load(std::memory_order_acquire);if(!p)return nullptr;auto b=p->takeOutgoing();if(b.empty())return nullptr;
     auto out=env->NewByteArray(jsize(b.size()));if(out)env->SetByteArrayRegion(out,0,jsize(b.size()),reinterpret_cast<const jbyte*>(b.data()));return out;}
+extern "C" JNIEXPORT void JNICALL JNI(nativeAwaitOutgoing)(JNIEnv*,jclass,jint timeoutMs){
+    if(timeoutMs<1||timeoutMs>100)return;
+    if(auto* p=live.load(std::memory_order_acquire))p->awaitOutgoing(std::uint32_t(timeoutMs));
+}
 extern "C" JNIEXPORT jlongArray JNICALL JNI(nativeTakeCommit)(JNIEnv* env,jclass){auto* p=live.load(std::memory_order_acquire);station::psx::Commit c{};if(!p||!p->takeCommit(c))return nullptr;
     const jlong row[]{jlong(c.kind),jlong(c.outcome),jlong(c.stamp.epoch),jlong(c.stamp.stateSerial),jlong(c.stamp.frame)};
     auto out=env->NewLongArray(5);if(out)env->SetLongArrayRegion(out,0,5,row);return out;}

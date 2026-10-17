@@ -1,0 +1,18 @@
+{
+  "reviewDate": "2026-10-13",
+  "reviewedGitHead": "97fe6f3f3068f4c1d7ab5bd2de8ee549a0da03d8",
+  "optimizedBackupReference": "R124",
+  "preRepairsReference": "R134",
+  "activeRevision": "R138",
+  "activeApkSha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+  "activeApkChanged": false,
+  "newApkBuilt": false,
+  "usbDeviceAvailable": false,
+  "allApkEntriesHashed": true,
+  "unrequestedGeneralCpuTuningFoundInRepairDeltas": false,
+  "nativeResourceFailureConfirmedByFaultInjection": true,
+  "resourceCandidateAndroidValidated": false,
+  "nesSourceCompositionGuardPassed": true,
+  "physicalCpuGpuThermalProfileCaptured": false,
+  "networkGameplayValidatedByThisAudit": false
+}

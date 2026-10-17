@@ -1,0 +1,70 @@
+{
+  "schema": "station.r141.direct-downloads.provenance.v1",
+  "reviewedOriginCommit": "4478e490041fe961ae7716c0aaed7bc71881066c",
+  "reviewedOriginPath": "integration/station-direct-download-20261013",
+  "reviewedSourceSha256": {
+    "java/org/emulationstation/frontend/station/StationHttp.java": "15b1c9231cb195e6682159fbdfd661b229444c35cba713cf7662c65250eefa0b",
+    "java/org/emulationstation/frontend/station/StationDownloadOrigin.java": "732f5fb64cd1c079f6250739810f3cedb30c44e0494d4e2436d025b9cbca8ad3"
+  },
+  "referenceScopedHttpDexSha256": "cfa7f63cc06036e07a831a0f3dcd3fdc0dd78041960a370a3440e7959bcfdaac",
+  "referenceApkSha256": "e69616ee6377920f808f3b5a267f5592ffff9ae70c2bbe2063c6902cd903c02a",
+  "referenceApkIsNotR141Donor": true,
+  "referenceApkWouldRevertR140Binding": true,
+  "baselineApkSha256": "61e873e7bbd75a13fbd0d55515a3726f4debd8984cc0fe8f9d73401e0897792c",
+  "retainedBaseSourceCommit": "b93623b708bafe151441d3e4920acad51718e118",
+  "dependencySourceSha256": {
+    "integration/online-lifecycle-review-r135/recipe/build_runtime_identity.py": "f1a1d8e3bd161bb6751801efc5a314e61b403f670822085dc92127dc63fe98da",
+    "integration/online-lifecycle-review-r135/recipe/release_common.py": "114e5912dfaf319f518366e2330691864fd6709493c9b165e6eceedd3c6634de",
+    "integration/psx-online/recipe/build_entry.py": "08f5409cb5c9eb7cbc4c8ab370d0a1d7184156a6668bb63b29eb212cfd92f058",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxBridge.java": "d4a52a90ba9f6ff5eb3e8e220b417d171df7f2115cd17467e3b1b57aa4967260",
+    "versions/station-dolphin-online-r126-20261011/recipe/build_runtime_identity.py": "de118216baf9e6b6bf133a95e4ab30c6b4d83f779c070304b641b6c1cac6c66d",
+    "versions/station-mupen-online-r125-20261011/recipes/build_runtime_identity.py": "fdb79db3e354f3359d00980a1a00e7dec9d5fcbfed27892d4c42fbd4af1b2a16",
+    "integration/psx-online/native/StationPsxEntry.cpp": "901c0fff549c02f88da79e4144de478ba59d9a833a944a6dca1fb93c43db86ed",
+    "integration/psx-online/native/StationPsxOwner.cpp": "93f64655982dbd34664eb5e4b5d6f96bc6c597a35e8bd2ff3f2d0593dde272a5",
+    "integration/psx-online/native/StationPsxOwner.hpp": "03ad1dd8d1e651a019fbaaa6c11b02d73b9ef1d52f56c0b4ee3f130f83d0a90c",
+    "integration/psx-online/native/StationPsxProtocol.cpp": "01e4d93dce252e543930ce5feb76062da482dd354d6db9b404699aee17190625",
+    "integration/psx-online/native/StationPsxProtocol.hpp": "ad168ec6e6d4a1e9de374b5db3e7e6aebb6dff858b9b372968b6fc19a29abcba",
+    "integration/psx-online/native/StationPsxSha256.cpp": "0459d697ed286705b2fc9c11aa6204aed54e1e05840fd448d8d06e48d491cd3c",
+    "integration/psx-online/native/PsxPinnedOptions.h": "a7538301ae7d93b0b815d6536300035745135cf3dd15eb333d1711a0e633b193",
+    "integration/core-options-binding-r140-20261013/recipe/AssembleScopedPartition.java": "5ea794aad4cb177080e331b09d449419e352020ac61a6b9ea4194e32b4b1b022"
+  },
+  "licenseCopies": {
+    "licenses/COPYING.GPL-2.0": {
+      "original": "versions/estavel-2026-09-30-dolphin-flycast/snapshot/implementation/flycast-integration/LICENSE",
+      "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b"
+    },
+    "licenses/COPYING.GPL-3.0": {
+      "original": "integration/online-snes-startup-r138/native/baseline-five-player/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    }
+  },
+  "clinicalQualification": {
+    "path": "audits/station-r139-core-options-binding-20261013/evidence/host-resolver-qualification.json",
+    "sha256": "42db9aa7537486f15b555987ac05d0d4850de7b34af9ffa5063a014438bfc821",
+    "preservedByExactDex35": true
+  },
+  "originHostQualification": {
+    "path": "qualification.json",
+    "sha256": "15f3716cc9483e45c5837fd0482dbcc9fed696ebf225b68c3ecc52c3467f9df8",
+    "hostChecks": 43,
+    "realTlsScenarios": 3,
+    "pertainsToReferenceCandidate": true,
+    "rerunForR141": false
+  },
+  "originProtectedDownloadValidation": {
+    "path": "protected-download-validation.json",
+    "sha256": "6af3334b316ee30c7cc01e47567b3252aa46f3a0e4bea8c42a9329345da28038",
+    "pertainsToReferenceServer": true,
+    "androidOrClientInternetSpeedMeasured": false
+  },
+  "incomingRegistrationDoesNotRegisterR141": true,
+  "scopedDexEncoder": {
+    "api": "pinned APKtool reduced SmaliBuilder/DexBuilder API",
+    "restorationSource": "integration/core-options-binding-r140-20261013/recipe/AssembleScopedPartition.java",
+    "restorationMethodsByteExact": true,
+    "restorationMethodsSha256": "1a71007e9b9bce7acf35a848cd41172cebff9d166c24bca240a4308eda7ba2d1",
+    "preservedClassesPostwriteCanonicalComparison": 266,
+    "failedSourceCommit": "b9241af1ed6aa2177eb0229737db8a3e4c0daa6b",
+    "failedStage": "host helper javac API compatibility; no APK built or installed"
+  }
+}

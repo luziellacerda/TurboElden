@@ -1,0 +1,16 @@
+{
+  "schema": "station.r147.native.cmake-final-draft-inverse.v1",
+  "passed": true,
+  "originalCmakeSha256": "a6731de5fe54e16510472472d73b2c588e7dbb11ee555d2b5247df0ca1e6e1c9",
+  "finalCmakeSha256": "5d729c1f32882a2552b98e01a934778bf7402193d92d3a13802c7bd0d0514665",
+  "changedForwardingFunctions": [
+    "file",
+    "add_custom_command"
+  ],
+  "onlyExtraTargetMetadataMap": "mgba",
+  "wholeCmakeInversePassed": true,
+  "mainAndroidSha256": "dba43bc602cbf2d0045cc138a23c769db287ff2654f01824351143909e41e07f",
+  "cpuRuntimeOptionsChanged": false,
+  "originalFrozenScopeChanged": false,
+  "nativeCompiled": false
+}

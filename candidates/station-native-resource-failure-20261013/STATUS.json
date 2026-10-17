@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-13",
+  "stage": "isolated-tested-source-proposal",
+  "apkBuilt": false,
+  "androidExecuted": false,
+  "installed": false,
+  "activeR138Changed": false,
+  "baselineSourceSha256": "e4811bef12aeacd07947e51badaf8341be6c12c347c4952a9334ba22e56342f2",
+  "candidateSourceSha256": "b3ad1cbe5843d77a2f645707d3bb329fbbc8bb1a41d86e6cfe76d3d1626858dd",
+  "resourceFaultCases": 6,
+  "successCase": true,
+  "emptySavedStateHostCases": 4,
+  "independentReviewCorrectionsQualified": true
+}

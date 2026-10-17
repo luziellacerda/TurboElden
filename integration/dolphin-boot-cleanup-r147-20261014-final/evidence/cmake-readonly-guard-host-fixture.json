@@ -1,0 +1,59 @@
+{
+  "schema": "station.r147.native.cmake-readonly-guard.host-fixture.v1",
+  "passed": true,
+  "cmakeExecutableSha256": "414ad2a5dcabbb2a49ba1514e6651523865ae306b73a0e769f18e14cab1570e8",
+  "cmakeOverrideSha256": "a6731de5fe54e16510472472d73b2c588e7dbb11ee555d2b5247df0ca1e6e1c9",
+  "results": {
+    "pass": {
+      "passed": true,
+      "cmakeReturnCode": 0,
+      "originalSourcePreserved": true
+    },
+    "deny-write": {
+      "passed": true,
+      "cmakeReturnCode": 1,
+      "originalSourcePreserved": true
+    },
+    "deny-delete": {
+      "passed": true,
+      "cmakeReturnCode": 1,
+      "originalSourcePreserved": true
+    },
+    "deny-configure": {
+      "passed": true,
+      "cmakeReturnCode": 1,
+      "originalSourcePreserved": true
+    },
+    "deny-custom": {
+      "passed": true,
+      "cmakeReturnCode": 1,
+      "originalSourcePreserved": true
+    },
+    "deny-scmrev-present": {
+      "passed": true,
+      "cmakeReturnCode": 1,
+      "originalSourcePreserved": true
+    },
+    "deny-source-case": {
+      "passed": true,
+      "cmakeReturnCode": 1,
+      "originalSourcePreserved": true
+    },
+    "deny-other-output": {
+      "passed": true,
+      "cmakeReturnCode": 1,
+      "originalSourcePreserved": true
+    }
+  },
+  "semicolonNewlineArgumentPreserved": true,
+  "readOutputVariablesPreserved": true,
+  "exactFourPackagingCommandsRedirected": true,
+  "unexpectedSourceWritesRefused": true,
+  "absentScmrevRemovalNotDelegated": true,
+  "presentScmrevRemovalRefused": true,
+  "caseVariantsRefused": true,
+  "otherOutputNamespacesRefused": true,
+  "actualDolphinStageConfigured": false,
+  "nativeBuilt": false,
+  "gitOrPhoneOrServerChanged": false
+}

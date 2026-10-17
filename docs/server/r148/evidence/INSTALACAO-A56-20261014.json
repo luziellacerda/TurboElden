@@ -1,0 +1,19 @@
+{
+  "schema": "station.r148.usb-install-evidence.v1",
+  "revision": "R148",
+  "deviceModel": "SM-A566E",
+  "installedAtUtc": "2026-10-14T12:09:50.5666789Z",
+  "result": "SUCCESS",
+  "transport": "USB",
+  "dataPreservingUpdate": true,
+  "appDataCleared": false,
+  "appUninstalled": false,
+  "firstInstallTimeBeforeAndAfter": "2026-10-13 20:22:47",
+  "packageUidBeforeAndAfter": 10426,
+  "onlineSessionBeforeInstall": "NO_ONLINE_SESSION_DETECTED",
+  "expectedAndInstalledApkSha256": "c8b8c30cac7d36ec2a8ca8d470542096919435c749dede535cd0d58648e00dc1",
+  "installedHashVerified": true,
+  "physicalVisualValidated": false,
+  "physicalGameplayValidated": false,
+  "containsDeviceSerialOrLicense": false
+}

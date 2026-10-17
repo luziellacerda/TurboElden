@@ -10,6 +10,10 @@ interface StationMultiplayerEndpoint extends Closeable {
         StationMultiplayerEndpoint create(int authenticatedLocalSlot, int authenticatedRemoteSlot) throws Exception;
     }
     byte[] takeOutgoing(int timeoutMs) throws Exception;
+    /** Opt-in event wait after an empty read, outside READY's in-flight read.
+     * true means this endpoint handled the bounded wait, including timeout;
+     * false preserves the ordinary tunnel's existing nativeHint wait. */
+    default boolean awaitOutgoingWake(int timeoutMs) throws Exception { return false; }
     int deliver(long uniqueDeliveryId, byte[] completeFrame) throws Exception;
     boolean awaitDelivery(long uniqueDeliveryId, int timeoutMs) throws Exception;
     /** Ordinary Dolphin/ENet framing remains the default; PSX explicitly opts in. */

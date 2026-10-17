@@ -1,0 +1,83 @@
+{
+  "schema": "station.r147.dolphin.boot-cleanup.native-scope.v1",
+  "revision": "R147",
+  "baselineCoreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+  "baselineUnstrippedCoreSha256": "92b1951facb9fca6aad644026c47adcc62e09c9b5aca61629aab7e1515a270fe",
+  "baselineMainAndroidSha256": "272bd5a97dee85ed8190203c100b05733e5c8f70c655559d3191e2657bf7081e",
+  "plannedMainAndroidSha256": "dba43bc602cbf2d0045cc138a23c769db287ff2654f01824351143909e41e07f",
+  "privateInputReceiptSha256": {
+    "buildClosure": "d67ed8a82d26ff6c2ce1eb0e455cf13c0552dfd7e4cea92c7d76fcb9bb7ca95e",
+    "sourceClosure": "9aa6c8b937da034335b1ae7b129eb47d8ffdd39eb08ba944f5aba95faa53f9fe",
+    "graphClosure": "a073e2bdb84a8a4d5de70f74396d7ede71b41c405561e6b0cbe393c41d6e122a"
+  },
+  "modifiedFiles": [
+    "Source/Android/jni/MainAndroid.cpp"
+  ],
+  "modifiedFunctions": [
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_RunNetPlay"
+  ],
+  "productiveAddedLines": 1,
+  "productiveRemovedLines": 0,
+  "sourceInverseWholeFilePassed": true,
+  "allowedInsert": "s_is_booting.Clear() in null BootSessionData branch, before JNI finish callback",
+  "originalSuccessfulRunPreserved": true,
+  "originalStopAndSurfaceMethodsPreserved": true,
+  "unchanged": [
+    "CPU/JIT/interpreter/caches",
+    "options/profiles",
+    "controllers/capacity",
+    "FPS/timers",
+    "transport/READY/epoch",
+    "four Adrenotools hooks",
+    "offline Dolphin",
+    "R145 design/R146 direct-v3 route"
+  ],
+  "fullOriginalStageFiles": 24878,
+  "fullOriginalStageBytes": 330573613,
+  "pinnedArchives": 28,
+  "pinnedTools": 11,
+  "actualHeaderAndRuntimePins": 4590,
+  "actualHeaderAndRuntimeKinds": {
+    "stage": 3201,
+    "generated": 94,
+    "ndk": 1295,
+    "external": 0
+  },
+  "fullBaselineByteReproductionMandatory": true,
+  "allFourHooksMustRemainByteExact": true,
+  "metadataPathMapping": "Restore original source/build names solely in macro/debug paths; no compiler optimization/runtime option change. Full baseline hashes still mandatory.",
+  "cmakeOverride": "Substitute exactly one main target source. Redirect exactly four Android assets commands into fresh packaging-assets. Exact removal of absent source scmrev.h is a checked no-op; every other source-stage write/remove is refused. Original stage/CMake/source roots are not edited.",
+  "cmakeWriteSafety": {
+    "reviewedOriginalConfigureScripts": 140,
+    "reviewedExecuteProcessStatements": 15,
+    "reachableMainBuildCmakeScripts": 3,
+    "redirectedAndroidAssetsCommands": 4,
+    "absentScmrevRemovalDelegated": false,
+    "sourceStageWritesPermitted": false,
+    "writeOutputNamespace": "Fresh phase build/packaging-assets only",
+    "sourceStageFileSetAndHashesVerifiedBeforeAndAfter": true,
+    "hostGuardFixturesPassed": 8,
+    "guardFixturesBuiltNative": false,
+    "sourceRenamesInZlibRequireAbsentInputs": [
+      "Externals/zlib-ng/zlib-ng/zconf.h",
+      "Externals/zlib-ng/zlib-ng/zconf.h.cmakein"
+    ],
+    "mbedtlsSourceLinksDisabledByRetainedEnableTestingOff": true,
+    "installNetworkDocumentationFormattingTargetsNotBuilt": true
+  },
+  "generatedInputPolicy": {
+    "baselineExactInputs": 94,
+    "kinds": {".a": 46, ".h": 11, ".o": 34, ".so": 1, ".c": 2},
+    "productiveUnchangedExactInputs": 93,
+    "onlyProductiveGeneratedDelta": "Source/Android/jni/CMakeFiles/main.dir/MainAndroid.cpp.o",
+    "productiveObjectLocatedByExactFrozenSourceInputInMainNinjaRule": true,
+    "mainObjectIsDirectLinkedAndNotInAnyArchive": true,
+    "onlyGeneratedSharedLibrary": "Externals/libadrenotools/src/hook/libstation_dolphin_hook_impl.so"
+  },
+  "fixturePassed": true,
+  "hostFailedLaunchRepeats": 256,
+  "productiveCompiled": false,
+  "androidVerified": false,
+  "reportedPhoneCauseProven": false,
+  "sourceOnlyDraft": true
+}

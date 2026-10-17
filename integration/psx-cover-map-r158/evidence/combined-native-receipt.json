@@ -1,0 +1,33 @@
+{
+  "schema": "station.r158.psx-mega-cover.native.v1",
+  "passed": true,
+  "r157Reproduced": true,
+  "psxParentSha256": "b11aa69c95f0593980cc06311568a6ef7c82e0aad78ece442ae83b906dd78561",
+  "outputSha256": "7d2f2be22083c3fb2a27df9fd43c3b92cf63bc74f87e1f64955753910b00c025",
+  "shaderSha256": "b8821da12ca401b1288685a91a80bc9e91eb069b461b3be28a3cfdcc3a5870ae",
+  "sourceArtDimensions": {
+    "psx": [
+      1024,
+      1536
+    ],
+    "megaDrive": [
+      2560,
+      3840
+    ]
+  },
+  "otherNativeHeadersChanged": false,
+  "extraPerFrameDrawCalls": 0,
+  "newTimersThreadsHeapAllocations": 0,
+  "changedHeaders": [
+    "magazine_shader.h",
+    "native_magazine_field.h",
+    "native_formation.h"
+  ],
+  "psxAndMegaUseSnesInstantFieldBake": true,
+  "legacyPsxOverlayRemoved": true,
+  "legacyMegaProfilePreserved": true,
+  "snesProfilePreserved": true,
+  "megaTitleUsesExistingBlueEmitter": true,
+  "segaNameUsesExistingBlueEmitter": true,
+  "selectedGameCornersReuseSingleDraw": true
+}

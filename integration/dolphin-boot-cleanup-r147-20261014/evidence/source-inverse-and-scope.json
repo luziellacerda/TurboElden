@@ -1,0 +1,30 @@
+{
+  "schema": "station.r146.dolphin.null-boot-cleanup.scope.v1",
+  "baselineMainAndroidSha256": "272bd5a97dee85ed8190203c100b05733e5c8f70c655559d3191e2657bf7081e",
+  "plannedMainAndroidSha256": "dba43bc602cbf2d0045cc138a23c769db287ff2654f01824351143909e41e07f",
+  "baselineCoreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+  "baselineUpstream": "5102a0339c2177575378107b76541e47cc52122d",
+  "modifiedFiles": [
+    "Source/Android/jni/MainAndroid.cpp"
+  ],
+  "modifiedFunctions": [
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_RunNetPlay"
+  ],
+  "productiveLinesAdded": 1,
+  "productiveLinesRemoved": 0,
+  "inverseWholeFilePassed": true,
+  "unchangedFunctionsSha256": {
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_SetIsBooting": "a38165593391f2e5456c89694db08043ccce5157e2282b047f665586d614b932",
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_StopEmulation": "4c44580edaeaec9cee18d422e12b5a10e54044a1f70d3a0de9f4dc585dd37e28",
+    "Java_org_dolphinemu_dolphinemu_NativeLibrary_SurfaceDestroyed": "04df57047f7e17d6452ec4d97725d412ff5b103aefedfb59e3d408eb872d7aaf"
+  },
+  "originalNormalRunUnchanged": true,
+  "stopEmulationUnchanged": true,
+  "surfaceDestroyedUnchanged": true,
+  "synchronization": "Same existing Common::Flag.Clear() used by successful Run; clear before JNI finish callback.",
+  "cpuJitCachesOptionsProfilesControllersFpsNetworkUnchanged": true,
+  "sourceOnlyDraft": true,
+  "productiveCompiled": false,
+  "apkBuilt": false,
+  "androidValidated": false
+}

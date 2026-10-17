@@ -1,0 +1,17 @@
+{
+  "checksPassed": 8,
+  "checks": [
+    "exact-r137-asset-baseline",
+    "only-required-two-options-and-identity",
+    "other-engines-settings-exact",
+    "hle-gate-and-superfx100-preserved",
+    "pinned-existing-core-source",
+    "hle-selection-requires-accuracy-gate",
+    "dsp1-to-dsp4-hle-parser-bindings",
+    "mario-kart-topgear-firmware-map"
+  ],
+  "proposalAssetSha256": "44d6910ec343f2cf6b6a607b88c56ec5b760aac6ea0aabc1636fd8ace6d31781",
+  "finalIdentityValidated": false,
+  "sourceSupportOnly": true,
+  "androidGameplayValidated": false
+}

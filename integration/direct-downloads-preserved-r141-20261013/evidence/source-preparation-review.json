@@ -1,0 +1,627 @@
+{
+  "passed": true,
+  "reviewScope": "source preparation and read-only actual current R140 bindings",
+  "sourceFiles": {
+    "java/org/emulationstation/frontend/station/StationDownloadOrigin.java": "732f5fb64cd1c079f6250739810f3cedb30c44e0494d4e2436d025b9cbca8ad3",
+    "java/org/emulationstation/frontend/station/StationHttp.java": "15b1c9231cb195e6682159fbdfd661b229444c35cba713cf7662c65250eefa0b",
+    "recipe/assemble_apk.py": "0fbbf7071013835d4782e7129bce5bd030f5d7ac72afcd2cf326bd9ce375de5e",
+    "recipe/build_dex.py": "2fc72122b82d386e811b53b40ea059631e911dbe33313b95dda874076f84e347",
+    "recipe/build_identity.py": "874c1ee9a2d08ed350ce9bde230109a11720c8233dc354874ac3e240b7249245",
+    "recipe/common.py": "6c783e45834f34310fae21429f2df48e5da7f2daa7817fd4f31d8295d64480cb",
+    "recipe/ScopedHttpDex.java": "9d9eb5724e0b8769c92456ca221d632c80e6bf11b897b8ac98e7c950d0b1f2a1",
+    "recipe/verify_apk.py": "7680852e336c509cb72102d63797c92a8185cd62638d9af97d7b1556a11e2997",
+    "PROPOSED-SCOPE.json": "645fc86fe98ce00821680b351480bdbb78ec9712575eba4d937d8dc43928ec82",
+    "PROVENANCE.json": "7206ff5da81721da64ce094349223c783764282c3e97509371776878203cb795",
+    "licenses/COPYING.GPL-2.0": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b",
+    "licenses/COPYING.GPL-3.0": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "licenses/NOTICE.md": "c81640ca73418017684468cd1953fd3551b3682e382429a5a83ee058577001f1"
+  },
+  "dependencySourceSha256": {
+    "integration/online-lifecycle-review-r135/recipe/build_runtime_identity.py": "f1a1d8e3bd161bb6751801efc5a314e61b403f670822085dc92127dc63fe98da",
+    "integration/online-lifecycle-review-r135/recipe/release_common.py": "114e5912dfaf319f518366e2330691864fd6709493c9b165e6eceedd3c6634de",
+    "integration/psx-online/recipe/build_entry.py": "08f5409cb5c9eb7cbc4c8ab370d0a1d7184156a6668bb63b29eb212cfd92f058",
+    "integration/psx-online/java/org/emulationstation/frontend/netplay/StationPsxBridge.java": "d4a52a90ba9f6ff5eb3e8e220b417d171df7f2115cd17467e3b1b57aa4967260",
+    "versions/station-dolphin-online-r126-20261011/recipe/build_runtime_identity.py": "de118216baf9e6b6bf133a95e4ab30c6b4d83f779c070304b641b6c1cac6c66d",
+    "versions/station-mupen-online-r125-20261011/recipes/build_runtime_identity.py": "fdb79db3e354f3359d00980a1a00e7dec9d5fcbfed27892d4c42fbd4af1b2a16",
+    "integration/psx-online/native/StationPsxEntry.cpp": "901c0fff549c02f88da79e4144de478ba59d9a833a944a6dca1fb93c43db86ed",
+    "integration/psx-online/native/StationPsxOwner.cpp": "93f64655982dbd34664eb5e4b5d6f96bc6c597a35e8bd2ff3f2d0593dde272a5",
+    "integration/psx-online/native/StationPsxOwner.hpp": "03ad1dd8d1e651a019fbaaa6c11b02d73b9ef1d52f56c0b4ee3f130f83d0a90c",
+    "integration/psx-online/native/StationPsxProtocol.cpp": "01e4d93dce252e543930ce5feb76062da482dd354d6db9b404699aee17190625",
+    "integration/psx-online/native/StationPsxProtocol.hpp": "ad168ec6e6d4a1e9de374b5db3e7e6aebb6dff858b9b372968b6fc19a29abcba",
+    "integration/psx-online/native/StationPsxSha256.cpp": "0459d697ed286705b2fc9c11aa6204aed54e1e05840fd448d8d06e48d491cd3c",
+    "integration/psx-online/native/PsxPinnedOptions.h": "a7538301ae7d93b0b815d6536300035745135cf3dd15eb333d1711a0e633b193"
+  },
+  "pythonAstFiles": 5,
+  "compiled": false,
+  "gitUsed": false,
+  "adbUsed": false,
+  "signed": false,
+  "installed": false,
+  "currentPointersChanged": false,
+  "baselineApkSha256": "61e873e7bbd75a13fbd0d55515a3726f4debd8984cc0fe8f9d73401e0897792c",
+  "baselineHashEvidence": "existing R140 final receipts; whole APK not rehashed in this source-only check",
+  "actualDex28Sha256": "6c9c2d6df00919ca4c927c3719b932ebfb1ef46b24f2de778120a84fd8d30225",
+  "actualDex35Sha256": "49f381dc3ef375797d2db56b25a8a6c86a8150c2515ce115f4639b7bb243478e",
+  "actualRetroArchSha256": "ae72f1371e8e5a2d35f9250793ce2870f3feab73a3e17c83c9fbd48a9d15f378",
+  "parentWrapperSha256": {
+    "psx": "28371f460a4dc45d86ce4cdb434c972fc4cfaa08de674503cf60cbece1397529",
+    "n64": "1ef68413f83c82eb267b408f00922cc5a4c77f202182548cfd474246f3960664",
+    "dolphin": "7df312d0e8dbbe37ea66bfec60d054e1ceeb823c3fc03a9b0fe4dca84777a42c"
+  },
+  "parentFingerprints": {
+    "psx": "c1c9395847d1c561065d9ae1e38061fa5c3ad4130fce7cacd821bddae42089ae",
+    "n64": "f323984d9f2068677b22ee35faa32dda7561107ac54c56fed75cfa5fb59dc77b",
+    "dolphin": "c3bd1dbcd98e1efd7e3b9069c9e36823b056ed641662c21abac12d1e3dcdeaf4"
+  },
+  "parentPayloadCount": 345,
+  "parentDex35Bound": true,
+  "actualRetroArchDescriptorCount": 9,
+  "parentWrapperElfContracts": {
+    "psx": {
+      "exports": [
+        [
+          "JNI_OnLoad",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeAuthorizeHumanExit",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeControl",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeCopied",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeDeliver",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeFail",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeFailure",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeHumanExitAuthorized",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativePreparationFailed",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativePrepare",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeReleaseReceipt",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeRequestState",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeResume",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeStatus",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeTakeCommit",
+          18,
+          0
+        ],
+        [
+          "Java_org_emulationstation_frontend_netplay_StationPsxBridge_nativeTakeOutgoing",
+          18,
+          0
+        ],
+        [
+          "SDL_main",
+          18,
+          0
+        ],
+        [
+          "StationPsxRuntimeIdentity",
+          18,
+          0
+        ],
+        [
+          "StationPsxRuntimeManifest",
+          18,
+          0
+        ],
+        [
+          "_ZN11station_psx13pinned_optionEPKc",
+          34,
+          0
+        ],
+        [
+          "_ZN11station_psx16option_overridesE",
+          33,
+          0
+        ],
+        [
+          "_ZN11station_psx17compiled_defaultsE",
+          33,
+          0
+        ],
+        [
+          "_ZN11station_psx6lookupILm7EEEPKcRAT__KNS_12PinnedOptionES2_",
+          34,
+          0
+        ],
+        [
+          "_ZN7_JNIEnv20CallStaticVoidMethodEP7_jclassP10_jmethodIDz",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner11localPausedEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner18authorizeHumanExitEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner6failedEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner7installEmNSt6__ndk14spanIKhLm18446744073709551615EEES5_",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner7prepareERKNS1_6ConfigE",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner7sessionEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner8coreHashEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner9coreReadyEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx5owner9ownerHashEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx6sha256ENSt6__ndk14spanIKhLm18446744073709551615EEE",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session10ownerAbortERKNS0_5LeaseEPKc",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session10ownerBeginERNS0_5LeaseE",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session10ownerCloseEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session10takeCommitERNS0_6CommitE",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session12requestStateEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session12takeOutgoingEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session13automaticStopEPKc",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session13ownerCompleteERKNS0_5LeaseE",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session14releaseReceiptEm",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session15ownerApplyStateEPFbPvNSt6__ndk14spanIKhLm18446744073709551615EEEES2_",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session15ownerCheckpointEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session16ownerSampleLocalEt",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session17ownerPublishStateENSt6__ndk16vectorIhNS2_9allocatorIhEEEEm",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session18authorizeHumanExitEv",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl10failLockedEPKc",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl10sendCommitENS0_4KindENS0_7OutcomeENS0_5StampE",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl14supersedeInboxEv",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl15supersedeLedgerEm",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl5eventENS0_6CommitE",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl5primeEv",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl5queueENSt6__ndk16vectorIhNS3_9allocatorIhEEEE",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl9ackLockedEv",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4Impl9canonicalEv",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session4ImplD2Ev",
+          34,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session6resumeEmm",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session7controlEmmbb",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7Session7deliverEhmNSt6__ndk14spanIKhLm18446744073709551615EEE",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7SessionC1ENS0_6ConfigE",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7SessionC2ENS0_6ConfigE",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7SessionD1Ev",
+          18,
+          0
+        ],
+        [
+          "_ZN7station3psx7SessionD2Ev",
+          18,
+          0
+        ],
+        [
+          "_ZNK7station3psx7Session14stateRequestedEv",
+          18,
+          0
+        ],
+        [
+          "_ZNK7station3psx7Session16needsLocalSampleEv",
+          18,
+          0
+        ],
+        [
+          "_ZNK7station3psx7Session4Impl13historicInputENS0_5StampEt",
+          34,
+          0
+        ],
+        [
+          "_ZNK7station3psx7Session4Impl8historicENS0_5FrameE",
+          34,
+          0
+        ],
+        [
+          "_ZNK7station3psx7Session6copiedEm",
+          18,
+          0
+        ],
+        [
+          "_ZNK7station3psx7Session6statusEv",
+          18,
+          0
+        ],
+        [
+          "_ZNK7station3psx7Session7drainedEv",
+          18,
+          0
+        ],
+        [
+          "_ZNK7station3psx7Session7failureEv",
+          18,
+          0
+        ],
+        [
+          "_ZNSt6__ndk111unique_lockINS_5mutexEE4lockEv",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk111unique_lockINS_5mutexEE6unlockEv",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE17__assign_externalEPKc",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE17__assign_externalEPKcm",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE17__assign_no_aliasILb0EEERS5_PKcm",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE17__assign_no_aliasILb1EEERS5_PKcm",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE25__init_copy_ctor_externalEPKcm",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC2B8ne190000ILi0EEEPKc",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk114basic_ifstreamIcNS_11char_traitsIcEEED1Ev",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk119basic_istringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk13mapINS_5tupleIJjmmmEEEbNS_4lessIS2_EENS_9allocatorINS_4pairIKS2_bEEEEE7emplaceB8ne190000IJS2_bEEENS6_INS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeIS2_bEEPNS_11__tree_nodeISF_PvEElEEEEbEEDpOT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk13mapImN7station3psx5FrameENS_4lessImEENS_9allocatorINS_4pairIKmS3_EEEEE7emplaceB8ne190000IJRmRS3_EEENS7_INS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeImS3_EEPNS_11__tree_nodeISI_PvEElEEEEbEEDpOT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk13mapImNS_5arrayIhLm32EEENS_4lessImEENS_9allocatorINS_4pairIKmS2_EEEEE7emplaceB8ne190000IJRmRKS2_EEENS6_INS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeImS2_EEPNS_11__tree_nodeISI_PvEElEEEEbEEDpOT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2B8ne190000IRKPKcSD_TnNS_9enable_ifIXclsr10_CheckArgsE23__is_pair_constructibleIT_T0_EEEiE4typeELi0EEEOSF_OSG_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk15dequeINS_4pairINS_5tupleIJjmmmEEEN7station3psx7OutcomeEEENS_9allocatorIS7_EEE12emplace_backIJRKS3_RS6_EEERS7_DpOT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__find_equalIS8_EERPNS_16__tree_node_baseIPvEERPNS_15__tree_end_nodeISJ_EERKT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE21__emplace_unique_implIJRKPKcSJ_EEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEEDpOT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk16__treeINS_12__value_typeINS_5tupleIJjmmmEEEbEENS_19__map_value_compareIS3_S4_NS_4lessIS3_EELb1EEENS_9allocatorIS4_EEE12__find_equalIS3_EERPNS_16__tree_node_baseIPvEERPNS_15__tree_end_nodeISG_EERKT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk16__treeINS_12__value_typeINS_5tupleIJjmmmEEEbEENS_19__map_value_compareIS3_S4_NS_4lessIS3_EELb1EEENS_9allocatorIS4_EEE4findIS3_EENS_15__tree_iteratorIS4_PNS_11__tree_nodeIS4_PvEElEERKT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk16vectorIhNS_9allocatorIhEEE18__insert_with_sizeB8ne190000INS_11__wrap_iterIPKhEES8_EENS5_IPhEES8_T_T0_l",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk16vectorIhNS_9allocatorIhEEE18__insert_with_sizeB8ne190000INS_11__wrap_iterIPhEES7_EES7_NS5_IPKhEET_T0_l",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk16vectorIhNS_9allocatorIhEEE18__insert_with_sizeB8ne190000IPhS5_EENS_11__wrap_iterIS5_EENS6_IPKhEET_T0_l",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk16vectorIhNS_9allocatorIhEEEC2INS_11__wrap_iterIPKhEETnNS_9enable_ifIXaasr31__has_forward_iterator_categoryIT_EE5valuesr16is_constructibleIhNS_15iterator_traitsISA_E9referenceEEE5valueEiE4typeELi0EEESA_SA_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk18optionalIN7station3psx7Session4Impl5StateEEaSB8ne190000IS5_vEERS6_OT_",
+          34,
+          0
+        ],
+        [
+          "_ZNSt6__ndk18optionalIN7station3psx7Session4Impl6ExportEEaSB8ne190000IS5_vEERS6_OT_",
+          34,
+          0
+        ]
+      ],
+      "needed": [
+        "libc++_shared.so",
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "soname": [
+        "libstation_psx_online.so"
+      ],
+      "minimumLoadAlignment": 16384
+    },
+    "n64": {
+      "exports": [
+        [
+          "StationMupenRuntimeIdentity",
+          18,
+          0
+        ],
+        [
+          "StationMupenRuntimeManifest",
+          18,
+          0
+        ]
+      ],
+      "needed": [
+        "libc.so",
+        "libdl.so"
+      ],
+      "soname": [
+        "libstation_mupen64plus_runtime.so"
+      ],
+      "minimumLoadAlignment": 16384
+    },
+    "dolphin": {
+      "exports": [
+        [
+          "StationDolphinRuntimeIdentity",
+          18,
+          0
+        ],
+        [
+          "StationDolphinRuntimeManifest",
+          18,
+          0
+        ]
+      ],
+      "needed": [
+        "libc.so",
+        "libdl.so"
+      ],
+      "soname": [
+        "libstation_dolphin_runtime.so"
+      ],
+      "minimumLoadAlignment": 16384
+    }
+  },
+  "sourceFreezePending": true,
+  "expectedFinalEntries": 13860,
+  "expectedPreservedEntries": 13855,
+  "expectedReplacements": [
+    "assets/station-online/engines.json",
+    "classes28.dex",
+    "lib/arm64-v8a/libstation_dolphin_runtime.so",
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+    "lib/arm64-v8a/libstation_psx_online.so"
+  ],
+  "expectedAdds": [],
+  "expectedRemoves": [],
+  "limits": [
+    "No R141 Java/D8/native compilation or APK assembly performed",
+    "No R141 signature/install/server registration/physical download or speed measurement",
+    "Class preservation requires actual postcompile closed DEX receipt",
+    "Historical source recipes and current pointers were not changed"
+  ]
+}

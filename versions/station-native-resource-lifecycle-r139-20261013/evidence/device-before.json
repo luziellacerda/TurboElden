@@ -1,0 +1,34 @@
+{
+  "phase": "before",
+  "recordedUTC": "2026-10-13T12:27:19.527059+00:00",
+  "deviceModel": "moto g52",
+  "android": "13",
+  "sdk": "33",
+  "installedApkSha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+  "expectedR138": true,
+  "topOwnActivity": "org.emulationstation.frontend.ESActivity",
+  "ownActivityRecords": [
+    {
+      "component": "org.emulationstation.frontend.ESActivity",
+      "visible": true
+    }
+  ],
+  "activeServices": [],
+  "ownProcesses": [
+    "org.turboramastation.frontend"
+  ],
+  "thermalStatus": 0,
+  "batteryCelsius": 31.0,
+  "samplingDidNotNavigateOrChangeSettings": true,
+  "appForceStopped": false,
+  "phoneDataChanged": false,
+  "cpuPercentageComparedOnlyForMatchingScenarios": false,
+  "containsSerialOrPersonalData": false,
+  "idleNoGameOrDownloadConfirmed": true,
+  "physicalCoreGameSessionExercised": false,
+  "currentObservedContext": "Frontend ESActivity; no station_netplay process",
+  "performanceSummary": "SDLThread samples 55.0 to 57.0 percent of one CPU core; not percentage of all eight cores and not a game/recovery benchmark",
+  "memoryTotalPssKiB": 250979,
+  "memoryTotalRssKiB": 238740,
+  "memorySwapPssKiB": 71220
+}

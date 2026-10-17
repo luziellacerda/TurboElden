@@ -1,0 +1,18 @@
+.method public final consumeBootSessionData()J
+    .locals 4
+
+    .line 1
+    iget-wide v0, p0, Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;->bootSessionDataPointer:J
+
+    .line 2
+    .line 3
+    const-wide/16 v2, 0x0
+
+    .line 4
+    .line 5
+    iput-wide v2, p0, Lorg/dolphinemu/dolphinemu/features/netplay/NetplaySession;->bootSessionDataPointer:J
+
+    .line 6
+    .line 7
+    return-wide v0
+.end method

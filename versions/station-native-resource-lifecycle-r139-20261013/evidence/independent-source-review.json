@@ -1,0 +1,265 @@
+{
+  "schema": "station.r139.independent.preflight.review.v1",
+  "date": "2026-10-13",
+  "baseInstalledRevision": "R138",
+  "baseAPK": {
+    "sha256": "9183462e4d45cfcf2d2599d9e682b81890fee7b094505bf3073ab8183dd1dd10",
+    "bytes": 2714991631,
+    "entryCount": 13860
+  },
+  "baseRuntimeSHA256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f",
+  "baseNativeSourceSHA256": "e4811bef12aeacd07947e51badaf8341be6c12c347c4952a9334ba22e56342f2",
+  "baseCertificateSHA256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "allowedAPKChangedEntries": [
+    "lib/arm64-v8a/libstation_retroarch.so",
+    "assets/station-online/engines.json"
+  ],
+  "allOtherEntriesMustBeByteExact": true,
+  "newEntriesAllowed": false,
+  "removedEntriesAllowed": false,
+  "all40DEXPins": {
+    "classes.dex": "7c7bc77016bf758b5b7c3efa13d439dca272aaf37c1967dae806eb9e25e66d07",
+    "classes3.dex": "5c6f8714ae379d49cd46da0c6849a08127e80f51ac0c2d4272b87e28e17d9a6a",
+    "classes4.dex": "a00bc9994f55effdbd4f455c58a8792eb91b5d11f18a28ae583c6e7693877d25",
+    "classes5.dex": "1e53eea4678f6c95c0c4b36be6f279d5aa8b0bfba25e78c749e940d32df11d25",
+    "classes6.dex": "61ff49b6253a9f31f0519c2517a6b2b5b55c5af53c529cfd728bd052f0c5dacb",
+    "classes7.dex": "76422ce864f6d38226c3ca953a148142d88fa624399591975150f317ee600843",
+    "classes2.dex": "6205f9f2e9642985c8b708802fbb8e30fac1e95e45129c4e1116bd069d83cfd8",
+    "classes8.dex": "c8c736795ab98897e57689942aefaaa371150afe7f0d0418436a0150dc892a9e",
+    "classes9.dex": "f3c381f0a008ab0a803d0cc27adf644bbf43a59a8886317c24c9498de754f9df",
+    "classes10.dex": "09ed47c40c4a6f5194bcb9ace23f85392b99c19c84cd654e61716de37b32e01c",
+    "classes11.dex": "6970325cc48b12ab9e1bebb50badbd743a114f82b3397742fc46c3108697f462",
+    "classes12.dex": "297084c7424ababd5bf31abf3af929b8c6312af34c02f78c24f588fd5584af41",
+    "classes13.dex": "b1e618d7f82da8656673cc88b9becfa8cf6e4ba47eb2017063c33ddd7eb357f2",
+    "classes14.dex": "c7afcf54542be68636bee8466a483a631c8fe1f5fb3b69aac0df054bcf8275e1",
+    "classes15.dex": "221f7466cf3fe84ce0fa86005b9650b1b44e0a4119d9a450e196209ac2ba2cfd",
+    "classes16.dex": "992f88f13e88f966009f3cef83e00b365f97ae91d5b9d202b359c57e1dc8ebc3",
+    "classes17.dex": "b426624c0b0de1ccba686ab1587946223e9aaeff3abad3e34fbffcd0b14630ad",
+    "classes18.dex": "82fdb69cae1d07d4388d01ea873eb68dc0b66a2cb12c79d31811c99e76c646d5",
+    "classes19.dex": "00860db59f3a0a344d6d71e9a25a1a0ebc854e38867fc5a2e4b28c952e7c8896",
+    "classes20.dex": "08e15fb527d6b928cca3c6f5ea9c6dbb935aed30241c190993066eaad0ff5d75",
+    "classes21.dex": "c6c2dedeb8fd756ddf3353e1f408bb8ba9215854276a980ffaf42ee85b995a1c",
+    "classes22.dex": "018efa5abef07ddbf3af904ba025773ed36ddea74cd4bbf2de1eda50a1a1cae0",
+    "classes24.dex": "972ae20692a0297a735cc7a24d957396950a20b9ff00d6fadb63f03949d142af",
+    "classes23.dex": "cb9726a822e76e742d211cc8b3867a1117389c5a83641572c2e5533d90f5bc36",
+    "classes25.dex": "9e82aefc217dcf0c3b97e9142ba5a5788f4d9b48a78ab50afa0839dc8977eb45",
+    "classes26.dex": "c0be7cb89c4b3968799134a81c14c069811cc51997acc40c12dcfd1d94091b29",
+    "classes27.dex": "032d95b7de7265bc0c6bf802895b59421c3f2de9258f84f5acbb1cd948803218",
+    "classes28.dex": "6c9c2d6df00919ca4c927c3719b932ebfb1ef46b24f2de778120a84fd8d30225",
+    "classes29.dex": "4485c4b553aefd6fc97df82616094f9eb8e20a3892d9f14ccff5e94b28690205",
+    "classes30.dex": "1dcfa1e69686a326e22c54b9adc7c6013644e69d14642664e2ab7b5e2eee4ff4",
+    "classes31.dex": "9b56887e460451aa2786b32253f23398d3c7ddd52de7adba218a33e227208fc1",
+    "classes32.dex": "d3a28f93991b46bbfcb5a54a57e966a74292fa21e9ca8b7da8510342d83f95f4",
+    "classes33.dex": "69fe9934cf4551ae089faae65184e503e666744e6381f53301c15899a0ef017a",
+    "classes34.dex": "7982176a1b40fc0839c19e092b221fb2682bd2983bd06139e8b624b6a6a4db92",
+    "classes35.dex": "dd6ea401376aafcba86518038fa2589c3d626c076cdcfc21252efca1a93ab6a9",
+    "classes36.dex": "6e0f7116d156518fad1e65e72f4c204cfacfd9904c4ee2c3110395d56842d707",
+    "classes37.dex": "60bbf9baea410ce14d3387a7d5f2b345f7400b237b5db399af7c89e111dc29bb",
+    "classes38.dex": "158a04ece83b03933bce90407e13b68570b11b0349beaa908fd060659e832125",
+    "classes39.dex": "e0fa670ca261d697ea27ed7c9fa65875430943d85cda21861901e8c656fd28f8",
+    "classes40.dex": "47689f896202fb6a109fcfc7f4d820114b1416ce66d521db9d4780055443f4dd"
+  },
+  "engineCoreOptionsScopePins": [
+    {
+      "platform": "snes",
+      "engineId": "bsnes-mercury-performance-79d7f9de-mt1-mp5-hle-463bdb0b409e",
+      "library": "libstation_bsnes.so",
+      "coreSha256": "0a3ac7b4fa5da318b1c993d8867aa944eaa2d012680b49e9929bf7a4a398f527",
+      "options": "bsnes_violate_accuracy = \"enabled\"\nbsnes_chip_hle = \"HLE\"\nbsnes_superfx_overclock = \"100%\"\nbsnes_region = \"auto\"\nbsnes_aspect_ratio = \"auto\"\nbsnes_crop_overscan = \"disabled\"\nbsnes_gamma_ramp = \"disabled\"\n",
+      "launchReady": true,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "megadrive",
+      "engineId": "clownmdemu-d43c2708-mp5-463bdb0b409e",
+      "library": "libstation_clownmdemu.so",
+      "coreSha256": "109b62ac11b2f59572de0666bcb02b3701676896b91cb32529bbe5c5032b6b69",
+      "options": "",
+      "launchReady": true,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "neogeo",
+      "engineId": "geolith-19402493-mp5-463bdb0b409e",
+      "library": "libstation_geolith.so",
+      "coreSha256": "68ebde3e475d0e86f99bda278cadb85dc7fb32dc560072be017ad257dfd2eb0c",
+      "options": "",
+      "launchReady": false,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "psx",
+      "engineId": "pcsx-rearmed-ff81ed17-player-v3-c26d8836df25",
+      "library": "libpcsx_rearmed_libretro_android.so",
+      "coreSha256": "e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9",
+      "options": "backend=psx-player-station-v1\nwire=PXL1\nownerSha256=62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6\ncoreSha256=e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9\ncompiledDefaultsSha256=bcbb221ea532b6caffa5c78d807e2264ad6843e18b5e84a433fbd6aff7514d49\noptionsPolicy=compiled-defaults+explicit-overrides-v1\ninputPolicy=standard-two-ports-v1\nsynchronization=host-authoritative-lockstep-v1\ninputDelayFrames=4\nstatePolicy=owner-thread-snapshot-v1\nsaves=session-only-fresh\nhumanExitOnly=true\npcsx_rearmed_analog_combo=disabled\npcsx_rearmed_bios=HLE\npcsx_rearmed_drc_thread=disabled\npcsx_rearmed_frameskip_type=disabled\npcsx_rearmed_gpu_thread_rendering=disabled\npcsx_rearmed_multitap=disabled\npcsx_rearmed_spu_thread=disabled\n",
+      "launchReady": true,
+      "runtimeSha256": "c26d8836df255ad4cc10d19d328b6fc8dcbc6a429725794c88acd4de5ca3dc50"
+    },
+    {
+      "platform": "neogeocd",
+      "engineId": "neocd-b1e04c73-aslr1-v3-463bdb0b409e",
+      "library": "libstation_online_neocd.so",
+      "coreSha256": "78a35bc9a9435238d74125e77ae8f8d249ba59e90f07d43f43c84ad5ddc68870",
+      "options": "",
+      "launchReady": true,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "n64",
+      "engineId": "mupen64plus-ae-33bf7021-n64-v3-2f248cfcdc9e",
+      "library": "libstation_mupen64plus_core.so",
+      "coreSha256": "fe6e810a1c7fc50a494b50b1dccf581b84385667191c0cbcd235d585a0703dd8",
+      "options": "backend=mupen64plus-ae-station-v1\nwire=SN64/1\ncpu=cached-interpreter\nvideo=glide64mk2\nrsp=hle\nrawInput=false\nexpansionPak=true\ncountPerOp=0\ncountPerOpDen=0\nforceAlignmentOfPiDma=0\nrandomizeInterrupt=false\ninputDelay=2\nrollback=false\nsaves=session-only\n",
+      "launchReady": true,
+      "runtimeSha256": "2f248cfcdc9e6d0e20795b1dab84f581b8fe9ea59eb0994ae96036aed2abeb77"
+    },
+    {
+      "platform": "neogeo",
+      "engineId": "fbneo-95153da1-neogeo-v3-463bdb0b409e",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "fbneo",
+      "engineId": "fbneo-95153da1-fbneo-v3-463bdb0b409e",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "cps1",
+      "engineId": "fbneo-95153da1-cps1-v3-463bdb0b409e",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "cps2",
+      "engineId": "fbneo-95153da1-cps2-v3-463bdb0b409e",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "cps3",
+      "engineId": "fbneo-95153da1-cps3-v3-463bdb0b409e",
+      "library": "libstation_online_fbneo.so",
+      "coreSha256": "e3fd40b3aeb1ae9e8af7a80760b0b8f5fc8eb9aec8c18e25b4b604f9594ee7a7",
+      "options": "fbneo-allow-patched-romsets = \"disabled\"\nfbneo-hiscores = \"disabled\"\nfbneo-samplerate = \"48000\"\n",
+      "launchReady": true,
+      "runtimeSha256": "463bdb0b409e028aa34f6c9a09d291a3715ffb3eacb8f18ee28843e7373eb80f"
+    },
+    {
+      "platform": "gamecube",
+      "engineId": "dolphin-5102a033-gamecube-v3-2e0b36222097",
+      "library": "libstation_dolphin_online.so",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "options": "backend=dolphin-station-v1\nwire=DPL1\nsettingsPolicy=official-pinned-gameini+host-synchronized-strict-v1\ntraversal=direct\nupnp=false\nindex=false\nqos=false\nchunkedUploadLimit=false\nnetworkMode=fixeddelay\npadBuffer=5\nclientBuffer=1\nsaveLoad=true\nsaveWrite=true\nsyncAllWii=false\nsyncCodes=false\ncheats=false\nrecordInputs=false\nstrictSettingsSync=true\ngolfMode=false\nremoteGbas=false\nsaves=session-only\n",
+      "launchReady": true,
+      "runtimeSha256": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+    },
+    {
+      "platform": "wii",
+      "engineId": "dolphin-5102a033-wii-v3-2e0b36222097",
+      "library": "libstation_dolphin_online.so",
+      "coreSha256": "f7ebe048e030a029c0667cf071ab4a49d702f77daf50d40ad40ed1f493ded37d",
+      "options": "backend=dolphin-station-v1\nwire=DPL1\nsettingsPolicy=official-pinned-gameini+host-synchronized-strict-v1\ntraversal=direct\nupnp=false\nindex=false\nqos=false\nchunkedUploadLimit=false\nnetworkMode=fixeddelay\npadBuffer=5\nclientBuffer=1\nsaveLoad=true\nsaveWrite=true\nsyncAllWii=false\nsyncCodes=false\ncheats=false\nrecordInputs=false\nstrictSettingsSync=true\ngolfMode=false\nremoteGbas=false\nsaves=session-only\n",
+      "launchReady": true,
+      "runtimeSha256": "2e0b362220979226c4996fce6691b9f8330fb9193e4d16c67b5f4c06e46bec82"
+    }
+  ],
+  "nativeChangesAllowed": [
+    "Check android_app_create allocation/pipe/thread failures before use or waiting",
+    "Release own startup resources only before successful worker creation",
+    "Reuse one process-lifetime JNI pthread key and JavaVM safely",
+    "Fail startup before worker on unavailable JNI TLS key",
+    "Detach only threads newly attached by the native helper using stable JavaVM ownership",
+    "Request NativeActivity finish on real startup-resource failure"
+  ],
+  "mustPreserve": [
+    "Existing R138 idempotent destroy, early-return cleanup and worker join lifetime",
+    "All hot runloops and mutex waiting semantics",
+    "Core source/code/options and controller profiles",
+    "five native positions/four guests",
+    "timers/poll rates/long-poll contract/ACK/READY/reconnect",
+    "G52 cover constructor fallback and R137 human finish",
+    "original certificate, existing identity/directory/user data"
+  ],
+  "excludedCurrentRequest": [
+    "NES maximumItems/query/catalogue capacity patch",
+    "Replacement of native frontend/carousel/cache source by R124 snapshot",
+    "New polling/backoff/timeout/forced-kill policy",
+    "General frame/driver/core tuning"
+  ],
+  "residualRisks": [
+    "A driver/core stuck forever still can block normal waits/join; no timeout change is justified without a captured remaining stall",
+    "Social successful events rely on server long-poll timing; current task must not add sleeps or change contract without a physical/response trace",
+    "Getter/destructor must not retain or read freed g_android/ANativeActivity",
+    "Process-lifetime key is safe only while loaded callback code/VM remain live; Java System.loadLibrary call sites support retained classloader loading but this is not a physical unload/retention test",
+    "R139 native runtime fingerprint changes imply fresh engine identity registrations before new-version online acceptance",
+    "JNI errors remain caller-visible NULL; all reviewed external and platform consumers guard env. Active-app guard prevents valid env with absent g_android after join."
+  ],
+  "candidateReviewStatus": "source-final-approved-at24420118; separate host-test-output-isolation guard pending",
+  "noUSBNetworkOrBuildUsed": true,
+  "activeAPKUnchangedByThisReview": true,
+  "externalJNIConsumerReview": {
+    "nullGuardsBeforeUseConfirmed": true,
+    "sourceFamilies": [
+      "input/drivers/android_input.c",
+      "input/drivers_joypad/android_joypad.c",
+      "gfx/display_servers/dispserv_android.c",
+      "camera/drivers/android.c",
+      "location/drivers/android.c",
+      "play_feature_delivery/play_feature_delivery.c"
+    ],
+    "scope": "23 external getter sites, including multiline guards in Play-feature source; no extra edits to these drivers are justified",
+    "remainingActiveAppContract": "Some guarded consumers dereference g_android after a valid env; getter should reject no-active-app state. JNI destructor must remain independent of g_android."
+  },
+  "candidateSourceInspectedSHA256": "24420118e5ce94376b077051084a84d4c52f152d00b9e2330333896bced798fb",
+  "provisionalFindings": [
+    {
+      "id": "R139-BUILD-RECEIPT-01",
+      "description": "build_native_r139.py outputs frozenSourceManifestSha256 but package_r139.py currently expects sourceFreezeSha256; align before source freeze/package",
+      "fixRequestedToRoot": true,
+      "status": "resolved-before-build-freeze; build/package now both use sourceFreezeSha256"
+    },
+    {
+      "id": "R139-TEST-ISOLATION-02",
+      "description": "test_resource_lifecycle.py accepts existing/inside-repo --work and overwrite receipt paths; reject protected/work collisions before writing",
+      "fixRequestedToCPUAgent": true
+    }
+  ],
+  "exactRecipeReproductionVerified": true,
+  "unchangedLifecycleFunctions": {
+    "android_app_entry": "f9012dee5980b10513bcd0a1020b0a1acd3a262f04f17ead1bef68717da8fc81",
+    "android_app_destroy": "012d3f6623b8ce93654064d42f320967863e44a74cc793a5842d1ef27f2a0de3",
+    "android_app_request_quit": "3b7bdb29c3321e8aacbc6c79683730ac2b59c555a2a7575720f54da41216a769",
+    "android_app_free": "7077e4addcbe0d74eea685715f30069adb1b88a3c4bd6264f987423b18d0d4aa",
+    "station_activity_reserve": "db7eb220c10b4af7fbfabd65c8a5e04a237d47760223c72af0f8ef4542433a13",
+    "station_activity_release": "7f791b83e63b99e558cfa2b6735bd901a63d44adfe381af351d35a54d99bc20f",
+    "android_app_set_input": "b33142e3da98021d9da323bfcd32da854310e7e0b145aba6589aabfc8886d2d5",
+    "android_app_set_window": "267797a84259d11e24f8cbf47b01b26bda3b70d1c75cb8f76389243e683ccb20",
+    "android_app_set_activity_state": "2735d461b2ae0499660e154e7d00fa2a9495b994f7e710023bb7ed35df265759"
+  },
+  "allocationFunctionMatchesQualifiedCandidateB3ad": true,
+  "inheritedEmptySavedStateQualification": {
+    "receipt": "candidates/station-native-resource-failure-20261013/evidence/host-fault-injection-reviewed.json",
+    "cases": 4,
+    "functionByteExact": true
+  },
+  "candidateHostTestReceiptSHA256": "742780bec3084144607b49558d7e19e33c9729ae6abe1fef9e90924d1d1c156e",
+  "candidateHostScenarios": 19,
+  "JNIHelperFootprint": "Adds one library/process-lifetime key, a stable JavaVM pointer, initialized flag and separate mutex. No added per-call heap allocation; GetEnv and a short mutex snapshot replace unconditional AttachCurrentThread/setspecific on every getter. VM calls/destructor happen without holding the mutex. No physical performance gain or regression measured.",
+  "nativeCodeErrorsFoundAfterActiveAppGuard": [],
+  "finalSourceReviewConclusion": "No material new native lifetime, double attach/detach, ABBA or normal-path loss found in reviewed candidate. Scope is allocation/startup, onCreate failure tail, JNI key/getter/destructor ownership only. All unrelated lifecycle and active app/core/DEX options must remain exact at final package gate."
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "station.r147.native.cmake-write-readonly-audit.v1",
+  "passed": true,
+  "originalStageConfigured": false,
+  "allCmakeFilesScanned": 134,
+  "originalConfigureParsedCmakeFiles": 140,
+  "originalBuildNinjaSha256": "aed25cb9598a227db4c478ad8fe8177c87a55e56f7c871908f2f63a2befe8ced",
+  "reachableMainCommandsSha256": "f88d7574e9bcaa10025d57c60bb729ac95c5f1714272d9a089fdc1da5a23d519",
+  "activeExecuteProcessCalls": [
+    {
+      "path": "Externals/curl/curl/CMake/Utilities.cmake",
+      "operation": "execute_process",
+      "line": 58,
+      "call": "execute_process(COMMAND \"${CMAKE_COMMAND}\" \"--help-property-list\" OUTPUT_VARIABLE _cmake_property_list)"
+    },
+    {
+      "path": "Externals/lz4/lz4/build/cmake/CMakeLists.txt",
+      "operation": "execute_process",
+      "line": 244,
+      "call": "execute_process(\n          COMMAND \\\"${CMAKE_COMMAND}\\\" -E create_symlink lz4 \\\"\\${dest}\\\")"
+    },
+    {
+      "path": "Externals/mbedtls/3rdparty/CMakeLists.txt",
+      "operation": "execute_process",
+      "line": 7,
+      "call": "execute_process(COMMAND ${MBEDTLS_PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/../scripts/config.py -f ${CMAKE_CURRENT_SOURCE_DIR}/../include/mbedtls/config.h get MBEDTLS_ECDH_VARIANT_EVEREST_ENABLED RESULT_VARIABLE result)"
+    },
+    {
+      "path": "Externals/mbedtls/CMakeLists.txt",
+      "operation": "execute_process",
+      "line": 104,
+      "call": "execute_process(COMMAND ${MBEDTLS_PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/scripts/config.py -f ${CMAKE_CURRENT_SOURCE_DIR}/include/mbedtls/config.h get MBEDTLS_CTR_DRBG_USE_128_BIT_KEY\n                        RESULT_VARIABLE result)"
+    },
+    {
+      "path": "Externals/mbedtls/CMakeLists.txt",
+      "operation": "execute_process",
+      "line": 111,
+      "call": "execute_process(COMMAND ${MBEDTLS_PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/scripts/config.py -f ${CMAKE_CURRENT_SOURCE_DIR}/include/mbedtls/config.h get MBEDTLS_TEST_NULL_ENTROPY\n                        RESULT_VARIABLE result)"
+    },
+    {
+      "path": "Externals/mbedtls/CMakeLists.txt",
+      "operation": "execute_process",
+      "line": 163,
+      "call": "execute_process(COMMAND ${command}\n            RESULT_VARIABLE result\n            ERROR_VARIABLE output)"
+    },
+    {
+      "path": "Externals/mbedtls/CMakeLists.txt",
+      "operation": "execute_process",
+      "line": 180,
+      "call": "execute_process(COMMAND ${CMAKE_C_COMPILER} -dumpversion\n                    OUTPUT_VARIABLE GCC_VERSION)"
+    },
+    {
+      "path": "Externals/mGBA/mgba/CMakeLists.txt",
+      "operation": "execute_process",
+      "line": 246,
+      "call": "execute_process(COMMAND xcrun --show-sdk-version OUTPUT_VARIABLE MACOSX_SDK)"
+    },
+    {
+      "path": "Externals/mGBA/mgba/version.cmake",
+      "operation": "execute_process",
+      "line": 13,
+      "call": "execute_process(COMMAND ${GIT} describe --always --abbrev=40 --dirty WORKING_DIRECTORY \"${CMAKE_CURRENT_SOURCE_DIR}\" OUTPUT_VARIABLE GIT_COMMIT ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)"
+    },
+    {
+      "path": "Externals/mGBA/mgba/version.cmake",
+      "operation": "execute_process",
+      "line": 14,
+      "call": "execute_process(COMMAND ${GIT} describe --always --dirty WORKING_DIRECTORY \"${CMAKE_CURRENT_SOURCE_DIR}\" OUTPUT_VARIABLE GIT_COMMIT_SHORT ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)"
+    },
+    {
+      "path": "Externals/mGBA/mgba/version.cmake",
+      "operation": "execute_process",
+      "line": 15,
+      "call": "execute_process(COMMAND ${GIT} symbolic-ref --short HEAD WORKING_DIRECTORY \"${CMAKE_CURRENT_SOURCE_DIR}\" OUTPUT_VARIABLE GIT_BRANCH ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)"
+    },
+    {
+      "path": "Externals/mGBA/mgba/version.cmake",
+      "operation": "execute_process",
+      "line": 16,
+      "call": "execute_process(COMMAND ${GIT} rev-list HEAD --count WORKING_DIRECTORY \"${CMAKE_CURRENT_SOURCE_DIR}\" OUTPUT_VARIABLE GIT_REV ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)"
+    },
+    {
+      "path": "Externals/mGBA/mgba/version.cmake",
+      "operation": "execute_process",
+      "line": 17,
+      "call": "execute_process(COMMAND ${GIT} describe --tag --exact-match WORKING_DIRECTORY \"${CMAKE_CURRENT_SOURCE_DIR}\" OUTPUT_VARIABLE GIT_TAG ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)"
+    },
+    {
+      "path": "Externals/mGBA/mgba/version.cmake",
+      "operation": "execute_process",
+      "line": 55,
+      "call": "execute_process(COMMAND ${CMAKE_COMMAND} -E echo \"${${PRINT_STRING}}\")"
+    },
+    {
+      "path": "Source/Core/Common/CMakeLists.txt",
+      "operation": "execute_process",
+      "line": 384,
+      "call": "execute_process(\n    COMMAND ${POWERSHELL_EXE} -Command \"[System.Diagnostics.FileVersionInfo]::GetVersionInfo('$ENV{VCToolsRedistDir}vc_redist.x64.exe').ProductVersion\"\n    OUTPUT_VARIABLE VC_TOOLS_VERSION\n    OUTPUT_STRIP_TRAILING_WHITESPACE\n    )"
+    }
+  ],
+  "reachableBuildCmakeScripts": [
+    {
+      "line": 1,
+      "path": "G:/StationDolphinR126/stage/CMake/ScmRevGen.cmake",
+      "sha256": "63b66cf5da7337e862bf582f35962b9e8947c48d45b6021cded2ff672a39c171",
+      "command": "C:\\Windows\\system32\\cmd.exe /C \"cd /D G:\\StationDolphinR126\\build24 && \"C:\\Program Files\\CMake\\bin\\cmake.exe\" -DDOLPHIN_STATION_ONLINE=ON -DPROJECT_SOURCE_DIR=G:/StationDolphinR126/stage -DPROJECT_BINARY_DIR=G:/StationDolphinR126/build24 -DDISTRIBUTOR=None -DDOLPHIN_DEFAULT_UPDATE_TRACK= -DGIT_FOUND=TRUE \"-DGIT_EXECUTABLE=C:/Program Files/Git/cmd/git.exe\" -DDOLPHIN_WC_REVISION= -DDOLPHIN_WC_DESCRIBE= -DDOLPHIN_WC_BRANCH= -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0.0 -P G:/StationDolphinR126/stage/CMake/ScmRevGen.cmake\""
+    },
+    {
+      "line": 518,
+      "path": "G:/StationDolphinR126/stage/Externals/mGBA/mgba/version.cmake",
+      "sha256": "42ea016f32d2531646b47baaafb264e39f6d77d890f8c91952b433e61f0ca8ff",
+      "command": "C:\\Windows\\system32\\cmd.exe /C \"cd /D G:\\StationDolphinR126\\stage\\Externals\\mGBA\\mgba && \"C:\\Program Files\\CMake\\bin\\cmake.exe\" -DBINARY_NAME=mgba -DCONFIG_FILE=G:/StationDolphinR126/stage/Externals/mGBA/mgba/src/core/version.c.in -DOUT_FILE=G:/StationDolphinR126/build24/Externals/mGBA/mgba/version.c -P G:/StationDolphinR126/stage/Externals/mGBA/mgba/version.cmake\""
+    },
+    {
+      "line": 1098,
+      "path": "G:/StationDolphinR126/stage/CMake/GenerateAchievementHash.cmake",
+      "sha256": "134ff5b0042a30edf4b5f8167f350c8d1cc36e3e0d016042498cc7a4ba2d89ce",
+      "command": "C:\\Windows\\system32\\cmd.exe /C \"cd /D G:\\StationDolphinR126\\build24\\Source\\Core\\Core && \"C:\\Program Files\\CMake\\bin\\cmake.exe\" -DJSON_FILE=G:/StationDolphinR126/stage/Data/Sys/ApprovedInis.json -DTEMPLATE_FILE=G:/StationDolphinR126/stage/Source/Core/Core/AchievementApprovedHash.h.in -DOUTPUT_FILE=G:/StationDolphinR126/build24/Source/Core/Core/AchievementApprovedHash.h -P G:/StationDolphinR126/stage/CMake/GenerateAchievementHash.cmake\""
+    }
+  ],
+  "absentInTreeGeneratedHeaders": [
+    "Source/Core/Common/scmrev.h",
+    "Externals/zlib-ng/zlib-ng/zconf.h",
+    "Externals/zlib-ng/zlib-ng/zconf.h.cmakein"
+  ],
+  "generatedInputs": 94,
+  "generatedInputKinds": {
+    ".a": 46,
+    ".h": 11,
+    ".o": 34,
+    ".so": 1,
+    ".c": 2
+  },
+  "policy": "Exact four source assets commands redirected; exact absent scmrev.h removal is a no-op; every other source write/remove fails closed. All original source scripts/inputs are pinned before configuration.",
+  "nativeBuilt": false,
+  "gitOrPhoneOrServerChanged": false
+}

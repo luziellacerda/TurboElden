@@ -1,0 +1,37 @@
+{
+  "schema": "station.r147.dolphin.boot-ownership.patched-instruction-probe.v1",
+  "passed": true,
+  "results": {
+    "successfulHandoffExactlyOnceAndOriginalDispatchPreserved": true,
+    "cancelRepeatedCloseReleaseFinalizeDisposeExactlyOnce": true,
+    "consumeVersusCancelHasOneOwnerNoPrematureDelete": true,
+    "twoConcurrentConsumersOnlyOneNonzeroHandoff": true,
+    "lateDeliveryAfterVolatileClosedDisposedWithoutDispatch": true,
+    "replacementPendingDisposedOnceSamePendingNotDeletedDispatchPreserved": true,
+    "zeroOfferNeverDeletedOriginalNullDispatchPreserved": true,
+    "nativeClientJoinCallbackCompletesWhileCloseHoldsThis": true,
+    "negativeThisMonitorWouldBlockNativeJoinCallback": true,
+    "existingHumanCloseAuthorityGuardPreserved": true,
+    "allNativeReleasesAndStationCallbacksOutsideOwnershipMonitor": true
+  },
+  "actualBaselineClassSha256": "7dcbc2c67298d18e7ffe5b4839e73ca6967a0318e4628269598bef9a45ec2315",
+  "proposedClassSha256": "00869b191ffc794d32aaad2f787be11c80188395953ebd7f8a5c95bec69dd1de",
+  "sourceScopeSha256": "6f43e7d81bcf71af68e2c7515504b0ee87d70dc9f7e85001c89c4a5100335ccc",
+  "probeSourceSha256": "ce47682602a06f71df4a0b1787e5e84af13ed1705fcc76976f874ef3bdd93a05",
+  "exactSourceInstructionsExtracted": true,
+  "unknownReachedOpcodesRefused": true,
+  "wholeClassSourceInversePassed": true,
+  "isClosedFieldVolatileVerified": true,
+  "instanceCloseMonitorUnchanged": true,
+  "newCoupling": "Short NetplaySession.class ownership monitor serializes only boot-pointer field operations across NetplaySession instances; no JNI/callback/join under it.",
+  "boundaries": [
+    "Native releases counted in a ledger.",
+    "Station onBootGame hook accepts the existing owner.",
+    "NativeReleaseClient models the verified destructor joining a callback thread.",
+    "No actual ART/JNI/native core/gameplay executed; exception catchall paths statically preserved but not fault-injected."
+  ],
+  "apkCompiled": false,
+  "nativeCoreCompiled": false,
+  "phoneAccessed": false,
+  "serverAccessed": false
+}

@@ -1,0 +1,46 @@
+{
+  "revision": "R145",
+  "baselineRevision": "R144",
+  "baselineApkSha256": "01427f4e73141b7d6a462c2420a9abeb018a8716102e7fb959bf9a1d69eccee0",
+  "baselineSourceCommit": "1ac3f7d2fdd7cd349a5b37127b66712834e844fd",
+  "ownerRequest": "Sky-blue background on every existing blue surface; specified console band colours/counts/widths. Online room wave RGB remains unchanged.",
+  "blueGradientRgb": [
+    "287EB5",
+    "5DAEDE"
+  ],
+  "productiveChanges": [
+    "DEX28/35/40: ten literal background colours in seven classes and nine methods",
+    "Native carousel: three reviewed visual headers"
+  ],
+  "renewedBindingsOnly": [
+    "three original identity wrappers",
+    "engines.json"
+  ],
+  "replacements": 8,
+  "preservedEntries": 13852,
+  "addedEntries": 0,
+  "removedEntries": 0,
+  "preserved": [
+    "All gameplay and network methods via whole-class inverse",
+    "R143 SNES multitap",
+    "R140 HLE",
+    "R137 exit",
+    "g52 cover mitigation",
+    "R141 downloads",
+    "neutral/green/black surfaces",
+    "37 other DEX partitions",
+    "actual cores, runtimes, options, controllers, FPS and schedulers"
+  ],
+  "stableReferencePreserved": "estavel-station-r143-20261013",
+  "nativeRequestedWorstCase": {
+    "bands": 5,
+    "vertices": 330,
+    "previousVertices": 198,
+    "reusableBufferVertices": 66,
+    "newTimersOrHeap": false,
+    "measured": false
+  },
+  "physicalVisualValidated": false,
+  "onlineDefectsFixed": false,
+  "promoted": false
+}

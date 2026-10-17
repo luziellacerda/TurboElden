@@ -1,0 +1,128 @@
+import java.io.*;
+import java.net.*;
+import java.nio.ByteBuffer;
+import java.nio.charset.*;
+import java.nio.file.*;
+import java.security.*;
+import java.util.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+import org.xml.sax.*;
+import org.xml.sax.ext.DefaultHandler2;
+import org.json.*;
+
+/** Runs only the extracted production method, on Android's real XML classes.
+ * No app, room, JNI, ROM, save, or installed APK is opened by this diagnostic. */
+public final class PresentationAndroidProbe {
+    static final class StationApi {
+        static final class Cancellation {
+            boolean cancelled;
+            void check()throws IOException {if(cancelled)throw new IOException("PROBE_CANCELLED");}
+        }
+    }
+    // The runner inserts the byte-exact production method here and records SHA256.
+    __PRODUCTION_METHOD__
+
+    static File root;static int count;static JSONArray cases=new JSONArray();
+    static void need(boolean ok,String why){if(!ok)throw new AssertionError(why);}
+    static void pass(String label){count++;cases.put(label);System.out.println("PROBE_PASS "+label);}
+    static File home(String name)throws Exception {
+        File h=new File(root,name);need(new File(h,".emulationstation").mkdirs(),"fresh fixture home");return h;
+    }
+    static byte[] bytes(String xml){return xml.getBytes(StandardCharsets.UTF_8);}
+    static File source(File h,byte[] value)throws Exception {
+        File p=new File(h,"source.cfg");Files.write(p.toPath(),value);return p;
+    }
+    static Document parse(byte[] value)throws Exception {
+        // Only called for controlled fixture input or after production rejected
+        // any declaration in the real input. This independently inspects output.
+        return DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(new ByteArrayInputStream(value));
+    }
+    static Document nativeOutput(byte[] output)throws Exception {
+        String text=new String(output,StandardCharsets.UTF_8);
+        need(text.startsWith("<?xml version=\"1.0\"?>"),"native output declaration changed");
+        int end=text.indexOf("?>");String body=text.substring(end+2);
+        need(!body.contains("<config>"),"native settings must be direct document children");
+        return parse(bytes("<oracle>"+body+"</oracle>"));
+    }
+    static Map<String,String> values(Document d)throws Exception {
+        Map<String,String> out=new LinkedHashMap<>();NodeList nodes=d.getElementsByTagName("string");
+        for(int i=0;i<nodes.getLength();i++){Element e=(Element)nodes.item(i);String key=e.getAttribute("name");if(key.equals("Player1Controller")||key.equals("Player2Controller"))out.put(key,e.getAttribute("value"));}
+        nodes=d.getElementsByTagName("bool");for(int i=0;i<nodes.getLength();i++){Element e=(Element)nodes.item(i);if(e.getAttribute("name").equals("LibretroStretch"))out.put("LibretroStretch",e.getAttribute("value"));}return out;
+    }
+    static void accepted(String name,byte[] value)throws Exception {
+        acceptedAs(name,value,value);
+    }
+    static void acceptedAs(String name,byte[] value,byte[] oracle)throws Exception {
+        System.out.println("PROBE_BEGIN "+name);File h=home(name),p=source(h,value);copyPresentationSettings(p,h,new StationApi.Cancellation());
+        byte[] output=Files.readAllBytes(new File(h,".emulationstation/es_settings.cfg").toPath());Document got=nativeOutput(output);
+        need(values(parse(oracle)).equals(values(got)),name+": settings changed");
+        need(got.getElementsByTagName("string").getLength()+got.getElementsByTagName("bool").getLength()==values(got).size(),name+": unrelated setting copied");
+        need(Arrays.equals(value,Files.readAllBytes(p.toPath())),name+": source changed");pass(name);
+    }
+    static void rejected(String name,byte[] value,String code)throws Exception {
+        System.out.println("PROBE_BEGIN "+name);File h=home(name),p=source(h,value);Throwable error=null;
+        try{copyPresentationSettings(p,h,new StationApi.Cancellation());}catch(Exception e){error=e;}
+        need(error!=null,name+": invalid input accepted");
+        if(code!=null)need(error instanceof IOException&&code.equals(error.getMessage()),name+": wrong refusal "+error.getClass().getSimpleName());
+        need(!new File(h,".emulationstation/es_settings.cfg").exists(),name+": partial output written");
+        need(Arrays.equals(value,Files.readAllBytes(p.toPath())),name+": source changed");pass(name);
+    }
+    public static void main(String[] args)throws Exception {
+        try{run(args);}catch(Throwable failure){failure.printStackTrace(System.out);System.out.flush();System.exit(1);}
+    }
+    private static void run(String[] args)throws Exception {
+        System.out.println("PROBE_PROCESS "+android.os.Process.myPid());root=new File(args[0]);need(root.mkdirs(),"fresh probe directory");boolean baseline=Boolean.parseBoolean(args[2]);
+        if(baseline){
+            File h=home("baseline"),p=source(h,bytes("<config><string name=\"Player1Controller\" value=\"pad\"/></config>"));
+            Exception caught=null;try{copyPresentationSettings(p,h,new StationApi.Cancellation());}catch(Exception e){caught=e;}
+            need(caught instanceof ParserConfigurationException,"baseline did not reproduce Android ParserConfigurationException");
+            System.out.println(new JSONObject().put("passed",true).put("baselineFailedWithParserConfigurationException",true)
+                .put("exceptionType",caught.getClass().getName()).put("baselineProductionBodyExecuted",true));return;
+        }
+        accepted("minimal",bytes("<config/>"));
+        accepted("controllers-and-stretch-true",bytes("<config><string name=\"Player1Controller\" value=\"BSP-D3 &amp; pad &quot;A&quot;\"/><string name=\"Player2Controller\" value=\"segundo çã🎮\"/><bool name=\"LibretroStretch\" value=\"true\"/></config>"));
+        accepted("stretch-first-and-false",bytes("<config><bool name=\"LibretroStretch\" value=\"false\"/><string name=\"Player1Controller\" value=\"pad\"/></config>"));
+        accepted("other-settings-ignored",bytes("<config><string name=\"CoreOptions\" value=\"offline\"/><bool name=\"FastForward\" value=\"true\"/><string name=\"Player2Controller\" value=\"\"/></config>"));
+        accepted("comments-and-predefined-text-entities",bytes("<?xml version=\"1.0\"?><config><!--kept outside copied data-->&amp;<string name=\"Player1Controller\" value=\"a &lt; b &gt; c &apos; d\"/></config>"));
+        accepted("prefixed-lookalikes-ignored",bytes("<config xmlns:p=\"urn:fixture\"><p:string name=\"Player1Controller\" value=\"ignored\"/></config>"));
+        accepted("utf16-declaration",("<?xml version=\"1.0\" encoding=\"UTF-16\"?><config><string name=\"Player1Controller\" value=\"ação\"/></config>").getBytes(StandardCharsets.UTF_16));
+        String fragment="<bool name=\"LibretroStretch\" value=\"true\"/><int name=\"Ignored\" value=\"1\"/><map name=\"IgnoredMap\"><item key=\"a\" value=\"b\"/></map><string name=\"Player1Controller\" value=\"BSP-D3 &amp; pad\"/><string name=\"Player2Controller\" value=\"second\"/>";
+        acceptedAs("native-sibling-settings",bytes("<?xml version=\"1.0\"?>\n"+fragment),bytes("<oracle>"+fragment+"</oracle>"));
+        acceptedAs("native-prolog-and-comments",bytes("<?xml version=\"1.0\" encoding=\"UTF-8\"?><!-- comment with &literal; -->\n"+fragment),bytes("<oracle>"+fragment+"</oracle>"));
+        acceptedAs("native-fragments-utf16",("<?xml version=\"1.0\" encoding=\"UTF-16\"?>"+fragment).getBytes(StandardCharsets.UTF_16),bytes("<oracle>"+fragment+"</oracle>"));
+        rejected("empty",bytes(""),null);rejected("malformed",bytes("<config><string></config>"),null);
+        rejected("two-roots",bytes("<config/><config/>"),null);rejected("text-before-root",bytes("oops<config/>"),null);
+        rejected("duplicate-controller",bytes("<config><string name=\"Player1Controller\"/><string name=\"Player1Controller\"/></config>"),"PSX_INPUT_PREFERENCE_VALUE");
+        rejected("duplicate-stretch",bytes("<config><bool name=\"LibretroStretch\" value=\"true\"/><bool name=\"LibretroStretch\" value=\"false\"/></config>"),"PSX_DISPLAY_PREFERENCE_VALUE");
+        rejected("invalid-stretch",bytes("<config><bool name=\"LibretroStretch\" value=\"yes\"/></config>"),"PSX_DISPLAY_PREFERENCE_VALUE");
+        char[] longName=new char[513];Arrays.fill(longName,'x');rejected("overlong-controller",bytes("<config><string name=\"Player1Controller\" value=\""+new String(longName)+"\"/></config>"),"PSX_INPUT_PREFERENCE_VALUE");
+        rejected("controller-control-character",bytes("<config><string name=\"Player1Controller\" value=\"a&#10;b\"/></config>"),"PSX_INPUT_PREFERENCE_VALUE");
+        rejected("internal-dtd",bytes("<!DOCTYPE config [<!ENTITY custom 'expanded'>]><config><string name=\"Player1Controller\" value=\"&custom;\"/></config>"),"PSX_INPUT_PREFERENCES_DTD");
+        rejected("external-file-entity",bytes("<!DOCTYPE config [<!ENTITY custom SYSTEM 'file:///does-not-exist-station-fixture'>]><config>&custom;</config>"),"PSX_INPUT_PREFERENCES_DTD");
+        try(ServerSocket listener=new ServerSocket(0,1,InetAddress.getByAddress(new byte[]{127,0,0,1}))){
+            listener.setSoTimeout(250);String url="http://127.0.0.1:"+listener.getLocalPort()+"/forbidden.dtd";
+            rejected("external-http-dtd",bytes("<!DOCTYPE config SYSTEM '"+url+"'><config/>"),"PSX_INPUT_PREFERENCES_DTD");
+            try{Socket leaked=listener.accept();leaked.close();throw new AssertionError("DTD caused network IO");}catch(SocketTimeoutException expected){pass("no-external-network-resolution");}
+        }
+        rejected("unresolved-text-entity",bytes("<config>&undefined;</config>"),null);
+        rejected("unresolved-attribute-entity",bytes("<config><string name=\"Player1Controller\" value=\"&undefined;\"/></config>"),null);
+        rejected("oversize",new byte[1048577],"PSX_INPUT_PREFERENCES");
+        File h=home("absent"),p=new File(h,"missing.cfg");copyPresentationSettings(p,h,new StationApi.Cancellation());need(!new File(h,".emulationstation/es_settings.cfg").exists(),"missing input wrote output");pass("missing-input-unchanged");
+        h=home("cancelled");p=source(h,bytes("<config/>"));StationApi.Cancellation cancel=new StationApi.Cancellation();cancel.cancelled=true;
+        try{copyPresentationSettings(p,h,cancel);throw new AssertionError("cancellation ignored");}catch(IOException e){need("PROBE_CANCELLED".equals(e.getMessage()),"cancellation refusal changed");pass("cancelled-before-output");}
+        File real=new File(args[1]);boolean realTested=false;
+        if(real.isFile()){
+            byte[] original=Files.readAllBytes(real.toPath());h=home("real-settings");copyPresentationSettings(real,h,new StationApi.Cancellation());
+            byte[] output=Files.readAllBytes(new File(h,".emulationstation/es_settings.cfg").toPath());
+            JSONObject oracle=new JSONObject(new String(Files.readAllBytes(new File(args[3]).toPath()),StandardCharsets.UTF_8));Map<String,String> expected=new LinkedHashMap<>();
+            for(Iterator<String> keys=oracle.keys();keys.hasNext();){String key=keys.next();expected.put(key,oracle.getString(key));}
+            need(expected.equals(values(nativeOutput(output))),"real controller/stretch values changed");
+            need(Arrays.equals(original,Files.readAllBytes(real.toPath())),"real preferences changed");realTested=true;pass("real-installed-preferences-read-only");
+        }
+        System.out.println(new JSONObject().put("passed",true).put("checks",count).put("cases",cases)
+            .put("realPreferencesTested",realTested).put("realPreferencesUnchanged",realTested)
+            .put("androidFrameworkXmlUsed",true).put("typedCancellationFixture",true)
+            .put("installedApkModified",false).put("nativeEmulatorOrGameplayExecuted",false));
+    }
+}

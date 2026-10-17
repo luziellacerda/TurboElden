@@ -1,0 +1,10 @@
+--- a/Source/Android/jni/MainAndroid.cpp
++++ b/Source/Android/jni/MainAndroid.cpp
+@@ -631,6 +631,7 @@
+       std::unique_ptr<BootSessionData>(reinterpret_cast<BootSessionData*>(jBootSessionData));
+   if (!boot_session_data)
+   {
++    s_is_booting.Clear();
+     env->CallStaticVoidMethod(IDCache::GetNativeLibraryClass(), IDCache::GetDisplayToastMsg(),
+                               ToJString(env, "Netplay: no boot session data"), JNI_TRUE);
+     env->CallStaticVoidMethod(IDCache::GetNativeLibraryClass(),

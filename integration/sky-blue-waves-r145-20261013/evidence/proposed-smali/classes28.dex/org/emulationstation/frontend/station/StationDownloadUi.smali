@@ -1,0 +1,1197 @@
+.class public final Lorg/emulationstation/frontend/station/StationDownloadUi;
+.super Ljava/lang/Object;
+.source "StationDownloadUi.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;,
+        Lorg/emulationstation/frontend/station/StationDownloadUi$Notice;
+    }
+.end annotation
+
+
+# static fields
+.field private static final FOCUS:Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;
+
+.field private static final MAIN:Landroid/os/Handler;
+
+.field private static focusObserver:Landroid/view/ViewTreeObserver;
+
+.field private static focusView:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static installed:Z
+
+.field private static owner:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/app/Activity;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static final signals:Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;
+
+.field private static warning:Landroid/app/Dialog;
+
+
+# direct methods
+.method public static synthetic $r8$lambda$fqK4QvACGd6bNStY2c2j7uzNI-s()V
+    .locals 0
+
+    invoke-static {}, Lorg/emulationstation/frontend/station/StationDownloadUi;->showNext()V
+
+    return-void
+.end method
+
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 27
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    sput-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->MAIN:Landroid/os/Handler;
+
+    .line 28
+    new-instance v0, Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;
+
+    invoke-direct {v0}, Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;-><init>()V
+
+    sput-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->signals:Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;
+
+    .line 29
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->owner:Ljava/lang/ref/WeakReference;
+
+    .line 30
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusView:Ljava/lang/ref/WeakReference;
+
+    .line 34
+    new-instance v0, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda4;
+
+    invoke-direct {v0}, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda4;-><init>()V
+
+    sput-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->FOCUS:Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    .line 36
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic access$000(Landroid/app/Activity;)Z
+    .locals 0
+
+    .line 26
+    invoke-static {p0}, Lorg/emulationstation/frontend/station/StationDownloadUi;->menu(Landroid/app/Activity;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic access$100()V
+    .locals 0
+
+    .line 26
+    invoke-static {}, Lorg/emulationstation/frontend/station/StationDownloadUi;->detachFocus()V
+
+    return-void
+.end method
+
+.method static synthetic access$202(Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
+    .locals 0
+
+    .line 26
+    sput-object p0, Lorg/emulationstation/frontend/station/StationDownloadUi;->owner:Ljava/lang/ref/WeakReference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$302(Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
+    .locals 0
+
+    .line 26
+    sput-object p0, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusView:Ljava/lang/ref/WeakReference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400()Landroid/view/ViewTreeObserver;
+    .locals 1
+
+    .line 26
+    sget-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusObserver:Landroid/view/ViewTreeObserver;
+
+    return-object v0
+.end method
+
+.method static synthetic access$402(Landroid/view/ViewTreeObserver;)Landroid/view/ViewTreeObserver;
+    .locals 0
+
+    .line 26
+    sput-object p0, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusObserver:Landroid/view/ViewTreeObserver;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500()Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;
+    .locals 1
+
+    .line 26
+    sget-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->FOCUS:Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;
+
+    return-object v0
+.end method
+
+.method static synthetic access$600(Landroid/app/Activity;)V
+    .locals 0
+
+    .line 26
+    invoke-static {p0}, Lorg/emulationstation/frontend/station/StationDownloadUi;->release(Landroid/app/Activity;)V
+
+    return-void
+.end method
+
+.method static synthetic access$700()V
+    .locals 0
+
+    .line 26
+    invoke-static {}, Lorg/emulationstation/frontend/station/StationDownloadUi;->showNext()V
+
+    return-void
+.end method
+
+.method static action(Landroid/app/Activity;Ljava/lang/String;Z)Landroid/widget/TextView;
+    .locals 8
+
+    .line 128
+    if-eqz p2, :cond_0
+
+    const/16 v0, -0x3a35
+
+    goto :goto_0
+
+    :cond_0
+    const v0, -0x200501
+
+    :goto_0
+    const/16 v1, 0xd
+
+    invoke-static {p0, p1, v1, v0}, Lorg/emulationstation/frontend/station/StationDownloadUi;->label(Landroid/app/Activity;Ljava/lang/String;II)Landroid/widget/TextView;
+
+    move-result-object p1
+
+    const/16 v0, 0x11
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setGravity(I)V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
+
+    .line 129
+    new-instance v0, Landroid/graphics/drawable/InsetDrawable;
+
+    if-eqz p2, :cond_1
+
+    const v2, -0xc9dfd5
+
+    goto :goto_1
+
+    :cond_1
+    const v2, -0xedccbb
+
+    :goto_1
+    if-eqz p2, :cond_2
+
+    const p2, -0x8cbeaf
+
+    goto :goto_2
+
+    :cond_2
+    const p2, -0xcf9d89
+
+    :goto_2
+    const/high16 v3, 0x41000000    # 8.0f
+
+    invoke-static {p0, v2, p2, v3}, Lorg/emulationstation/frontend/station/StationDownloadUi;->surface(Landroid/app/Activity;IIF)Landroid/graphics/drawable/GradientDrawable;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const/high16 p2, 0x40a00000    # 5.0f
+
+    invoke-static {p0, p2}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    invoke-static {p0, p2}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v7
+
+    move-object v2, v0
+
+    invoke-direct/range {v2 .. v7}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 130
+    const/high16 p2, 0x42400000    # 48.0f
+
+    invoke-static {p0, p2}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setMinHeight(I)V
+
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setFocusable(Z)V
+
+    const/high16 p2, 0x41200000    # 10.0f
+
+    invoke-static {p0, p2}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v0
+
+    invoke-static {p0, p2}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result p0
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, v0, p2, p0, p2}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    return-object p1
+.end method
+
+.method public static changed(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)V
+    .locals 6
+
+    .line 104
+    sget-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->signals:Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    invoke-virtual/range {v0 .. v5}, Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;->offer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    .line 105
+    :cond_0
+    sget-object p0, Lorg/emulationstation/frontend/station/StationDownloadUi;->MAIN:Landroid/os/Handler;
+
+    new-instance p1, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda2;
+
+    invoke-direct {p1}, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda2;-><init>()V
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 106
+    return-void
+.end method
+
+.method private static detachFocus()V
+    .locals 4
+
+    .line 94
+    sget-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusView:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    .line 95
+    :goto_0
+    sget-object v2, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusObserver:Landroid/view/ViewTreeObserver;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    sget-object v2, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusObserver:Landroid/view/ViewTreeObserver;
+
+    sget-object v3, Lorg/emulationstation/frontend/station/StationDownloadUi;->FOCUS:Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;
+
+    invoke-virtual {v2, v3}, Landroid/view/ViewTreeObserver;->removeOnWindowFocusChangeListener(Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;)V
+
+    .line 96
+    :cond_1
+    if-eqz v0, :cond_2
+
+    sget-object v2, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusObserver:Landroid/view/ViewTreeObserver;
+
+    if-eq v0, v2, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    sget-object v2, Lorg/emulationstation/frontend/station/StationDownloadUi;->FOCUS:Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewTreeObserver;->removeOnWindowFocusChangeListener(Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;)V
+
+    .line 97
+    :cond_2
+    sput-object v1, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusObserver:Landroid/view/ViewTreeObserver;
+
+    sget-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->focusView:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
+
+    .line 98
+    return-void
+.end method
+
+.method static dp(Landroid/app/Activity;F)I
+    .locals 0
+
+    .line 119
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p0
+
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static declared-synchronized install(Landroid/app/Application;)V
+    .locals 2
+
+    const-class v0, Lorg/emulationstation/frontend/station/StationDownloadUi;
+
+    monitor-enter v0
+
+    .line 77
+    :try_start_0
+    sget-boolean v1, Lorg/emulationstation/frontend/station/StationDownloadUi;->installed:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_0
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x1
+
+    :try_start_1
+    sput-boolean v1, Lorg/emulationstation/frontend/station/StationDownloadUi;->installed:Z
+
+    .line 78
+    new-instance v1, Lorg/emulationstation/frontend/station/StationDownloadUi$1;
+
+    invoke-direct {v1}, Lorg/emulationstation/frontend/station/StationDownloadUi$1;-><init>()V
+
+    invoke-virtual {p0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 91
+    monitor-exit v0
+
+    return-void
+
+    .line 76
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+
+    throw p0
+.end method
+
+.method static label(Landroid/app/Activity;Ljava/lang/String;II)Landroid/widget/TextView;
+    .locals 1
+
+    .line 125
+    new-instance v0, Landroid/widget/TextView;
+
+    invoke-direct {v0, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    int-to-float p0, p2
+
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setTextSize(F)V
+
+    invoke-virtual {v0, p3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const/16 p0, 0x10
+
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setGravity(I)V
+
+    return-object v0
+.end method
+
+.method static synthetic lambda$messageDialog$2(Landroid/app/Dialog;Ljava/lang/Runnable;Landroid/view/View;)V
+    .locals 0
+
+    .line 143
+    invoke-virtual {p0}, Landroid/app/Dialog;->dismiss()V
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic lambda$messageDialog$3(Landroid/app/Dialog;Ljava/lang/Runnable;Landroid/view/View;)V
+    .locals 0
+
+    .line 144
+    invoke-virtual {p0}, Landroid/app/Dialog;->dismiss()V
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic lambda$showNext$1(Landroid/app/Dialog;Landroid/content/DialogInterface;)V
+    .locals 0
+
+    .line 115
+    sget-object p1, Lorg/emulationstation/frontend/station/StationDownloadUi;->warning:Landroid/app/Dialog;
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x0
+
+    sput-object p0, Lorg/emulationstation/frontend/station/StationDownloadUi;->warning:Landroid/app/Dialog;
+
+    :cond_0
+    sget-object p0, Lorg/emulationstation/frontend/station/StationDownloadUi;->MAIN:Landroid/os/Handler;
+
+    new-instance p1, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda2;
+
+    invoke-direct {p1}, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda2;-><init>()V
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method static synthetic lambda$static$0(Z)V
+    .locals 0
+
+    .line 34
+    if-eqz p0, :cond_0
+
+    invoke-static {}, Lorg/emulationstation/frontend/station/StationDownloadUi;->showNext()V
+
+    :cond_0
+    return-void
+.end method
+
+.method static mayPresent(ZZZZZZ)Z
+    .locals 0
+
+    .line 109
+    if-eqz p0, :cond_0
+
+    if-nez p1, :cond_0
+
+    if-nez p2, :cond_0
+
+    if-eqz p3, :cond_0
+
+    if-nez p4, :cond_0
+
+    if-nez p5, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method private static menu(Landroid/app/Activity;)Z
+    .locals 1
+
+    .line 92
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "org.emulationstation.frontend.ESActivity"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method static messageDialog(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/String;Ljava/lang/Runnable;)Landroid/app/Dialog;
+    .locals 16
+
+    .line 133
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p5
+
+    move-object/from16 v2, p6
+
+    new-instance v3, Landroid/app/Dialog;
+
+    invoke-direct {v3, v0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v4}, Landroid/app/Dialog;->requestWindowFeature(I)Z
+
+    .line 134
+    new-instance v5, Lorg/emulationstation/frontend/station/StationDownloadUi$2;
+
+    invoke-direct {v5, v0, v0}, Lorg/emulationstation/frontend/station/StationDownloadUi$2;-><init>(Landroid/content/Context;Landroid/app/Activity;)V
+
+    .line 135
+    invoke-virtual {v5, v4}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    const/high16 v6, 0x41a00000    # 20.0f
+
+    invoke-static {v0, v6}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v7
+
+    const/high16 v8, 0x41800000    # 16.0f
+
+    invoke-static {v0, v8}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v9
+
+    invoke-static {v0, v6}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v6
+
+    invoke-static {v0, v8}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v10
+
+    invoke-virtual {v5, v7, v9, v6, v10}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    .line 136
+    const v6, -0xceae99
+
+    const/high16 v7, 0x41600000    # 14.0f
+
+    const v9, -0xd7814b
+
+    invoke-static {v0, v9, v6, v7}, Lorg/emulationstation/frontend/station/StationDownloadUi;->surface(Landroid/app/Activity;IIF)Landroid/graphics/drawable/GradientDrawable;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 137
+    const/16 v6, 0x10
+
+    const v7, -0x100501
+
+    move-object/from16 v9, p1
+
+    invoke-static {v0, v9, v6, v7}, Lorg/emulationstation/frontend/station/StationDownloadUi;->label(Landroid/app/Activity;Ljava/lang/String;II)Landroid/widget/TextView;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v7, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
+
+    const/4 v7, 0x2
+
+    invoke-virtual {v6, v7}, Landroid/widget/TextView;->setMaxLines(I)V
+
+    new-instance v9, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v10, -0x1
+
+    const/4 v11, -0x2
+
+    invoke-direct {v9, v10, v11}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v5, v6, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 138
+    new-instance v6, Landroid/widget/ScrollView;
+
+    invoke-direct {v6, v0}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v6, v9}, Landroid/widget/ScrollView;->setFillViewport(Z)V
+
+    new-instance v12, Landroid/widget/LinearLayout;
+
+    invoke-direct {v12, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v12, v4}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 139
+    const/16 v13, 0xe
+
+    const v14, -0x862314
+
+    move-object/from16 v15, p2
+
+    invoke-static {v0, v15, v13, v14}, Lorg/emulationstation/frontend/station/StationDownloadUi;->label(Landroid/app/Activity;Ljava/lang/String;II)Landroid/widget/TextView;
+
+    move-result-object v13
+
+    new-instance v14, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v14, v10, v11}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    const/high16 v15, 0x41000000    # 8.0f
+
+    invoke-static {v0, v15}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v4
+
+    iput v4, v14, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    invoke-virtual {v12, v13, v14}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 140
+    const/16 v4, 0xd
+
+    const v13, -0x4c3728
+
+    move-object/from16 v14, p3
+
+    invoke-static {v0, v14, v4, v13}, Lorg/emulationstation/frontend/station/StationDownloadUi;->label(Landroid/app/Activity;Ljava/lang/String;II)Landroid/widget/TextView;
+
+    move-result-object v4
+
+    new-instance v13, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v13, v10, v11}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-static {v0, v15}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v14
+
+    iput v14, v13, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+
+    invoke-static {v0, v8}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v8
+
+    iput v8, v13, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    invoke-virtual {v12, v4, v13}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 141
+    new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v4, v10, v11}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v6, v12, v4}, Landroid/widget/ScrollView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/high16 v8, 0x3f800000    # 1.0f
+
+    invoke-direct {v4, v10, v9, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+
+    invoke-virtual {v5, v6, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 142
+    new-instance v4, Landroid/widget/LinearLayout;
+
+    invoke-direct {v4, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v4, v9}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 143
+    const/high16 v6, 0x42400000    # 48.0f
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v0, v2, v9}, Lorg/emulationstation/frontend/station/StationDownloadUi;->action(Landroid/app/Activity;Ljava/lang/String;Z)Landroid/widget/TextView;
+
+    move-result-object v2
+
+    new-instance v12, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda0;
+
+    move-object/from16 v13, p7
+
+    invoke-direct {v12, v3, v13}, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda0;-><init>(Landroid/app/Dialog;Ljava/lang/Runnable;)V
+
+    invoke-virtual {v2, v12}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v12, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-static {v0, v6}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v13
+
+    invoke-direct {v12, v9, v13, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+
+    invoke-static {v0, v15}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v13
+
+    iput v13, v12, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
+
+    invoke-virtual {v4, v2, v12}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 144
+    :cond_0
+    if-eqz v1, :cond_1
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move v2, v9
+
+    :goto_0
+    move-object/from16 v12, p4
+
+    invoke-static {v0, v12, v2}, Lorg/emulationstation/frontend/station/StationDownloadUi;->action(Landroid/app/Activity;Ljava/lang/String;Z)Landroid/widget/TextView;
+
+    move-result-object v2
+
+    new-instance v12, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda1;
+
+    invoke-direct {v12, v3, v1}, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda1;-><init>(Landroid/app/Dialog;Ljava/lang/Runnable;)V
+
+    invoke-virtual {v2, v12}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-static {v0, v6}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v0
+
+    invoke-direct {v1, v9, v0, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
+
+    invoke-virtual {v4, v2, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 145
+    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v0, v10, v11}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v5, v4, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v3, v5}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
+
+    invoke-virtual {v3}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    .line 146
+    if-eqz v0, :cond_2
+
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-direct {v1, v9}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v0, v7}, Landroid/view/Window;->addFlags(I)V
+
+    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v1
+
+    const v2, 0x3f23d70a    # 0.64f
+
+    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    .line 147
+    :cond_2
+    return-object v3
+.end method
+
+.method private static release(Landroid/app/Activity;)V
+    .locals 1
+
+    .line 100
+    sget-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->owner:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eq v0, p0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object p0, Lorg/emulationstation/frontend/station/StationDownloadUi;->owner:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->clear()V
+
+    invoke-static {}, Lorg/emulationstation/frontend/station/StationDownloadUi;->detachFocus()V
+
+    .line 101
+    sget-object p0, Lorg/emulationstation/frontend/station/StationDownloadUi;->warning:Landroid/app/Dialog;
+
+    if-eqz p0, :cond_1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->warning:Landroid/app/Dialog;
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->dismiss()V
+
+    .line 102
+    :cond_1
+    return-void
+.end method
+
+.method static resumeNotices()V
+    .locals 2
+
+    .line 107
+    sget-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->MAIN:Landroid/os/Handler;
+
+    new-instance v1, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda2;
+
+    invoke-direct {v1}, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda2;-><init>()V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method private static showNext()V
+    .locals 11
+
+    .line 112
+    sget-object v0, Lorg/emulationstation/frontend/station/StationDownloadUi;->signals:Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;
+
+    invoke-virtual {v0}, Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;->next()Lorg/emulationstation/frontend/station/StationDownloadUi$Notice;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    return-void
+
+    .line 113
+    :cond_0
+    sget-object v2, Lorg/emulationstation/frontend/station/StationDownloadUi;->owner:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/app/Activity;
+
+    if-eqz v2, :cond_4
+
+    invoke-static {v2}, Lorg/emulationstation/frontend/station/StationDownloadUi;->menu(Landroid/app/Activity;)Z
+
+    move-result v3
+
+    invoke-virtual {v2}, Landroid/app/Activity;->isFinishing()Z
+
+    move-result v4
+
+    invoke-virtual {v2}, Landroid/app/Activity;->isDestroyed()Z
+
+    move-result v5
+
+    invoke-virtual {v2}, Landroid/app/Activity;->hasWindowFocus()Z
+
+    move-result v6
+
+    invoke-static {}, Lorg/emulationstation/frontend/station/StationDownloadPanel;->isOpen()Z
+
+    move-result v7
+
+    sget-object v8, Lorg/emulationstation/frontend/station/StationDownloadUi;->warning:Landroid/app/Dialog;
+
+    if-eqz v8, :cond_1
+
+    const/4 v8, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v8, 0x0
+
+    :goto_0
+    invoke-static/range {v3 .. v8}, Lorg/emulationstation/frontend/station/StationDownloadUi;->mayPresent(ZZZZZZ)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    .line 114
+    :cond_2
+    const-string v4, "N\u00e3o foi poss\u00edvel concluir"
+
+    iget-object v5, v1, Lorg/emulationstation/frontend/station/StationDownloadUi$Notice;->name:Ljava/lang/String;
+
+    iget-object v6, v1, Lorg/emulationstation/frontend/station/StationDownloadUi$Notice;->message:Ljava/lang/String;
+
+    const-string v7, "ENTENDI"
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    move-object v3, v2
+
+    invoke-static/range {v3 .. v10}, Lorg/emulationstation/frontend/station/StationDownloadUi;->messageDialog(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;Ljava/lang/String;Ljava/lang/Runnable;)Landroid/app/Dialog;
+
+    move-result-object v3
+
+    .line 115
+    sput-object v3, Lorg/emulationstation/frontend/station/StationDownloadUi;->warning:Landroid/app/Dialog;
+
+    new-instance v4, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda3;
+
+    invoke-direct {v4, v3}, Lorg/emulationstation/frontend/station/StationDownloadUi$$ExternalSyntheticLambda3;-><init>(Landroid/app/Dialog;)V
+
+    invoke-virtual {v3, v4}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    .line 116
+    const/4 v4, 0x0
+
+    :try_start_0
+    invoke-virtual {v0, v1}, Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;->current(Lorg/emulationstation/frontend/station/StationDownloadUi$Notice;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    sput-object v4, Lorg/emulationstation/frontend/station/StationDownloadUi;->warning:Landroid/app/Dialog;
+
+    return-void
+
+    :cond_3
+    invoke-virtual {v3}, Landroid/app/Dialog;->show()V
+
+    invoke-static {v2, v3}, Lorg/emulationstation/frontend/station/StationDownloadUi;->sizeDialog(Landroid/app/Activity;Landroid/app/Dialog;)V
+
+    invoke-virtual {v0, v1}, Lorg/emulationstation/frontend/station/StationDownloadUi$SignalGate;->shown(Lorg/emulationstation/frontend/station/StationDownloadUi$Notice;)V
+    :try_end_0
+    .catch Landroid/view/WindowManager$BadTokenException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 117
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    sput-object v4, Lorg/emulationstation/frontend/station/StationDownloadUi;->warning:Landroid/app/Dialog;
+
+    .line 118
+    :goto_1
+    return-void
+
+    .line 113
+    :cond_4
+    :goto_2
+    return-void
+.end method
+
+.method static sizeDialog(Landroid/app/Activity;Landroid/app/Dialog;)V
+    .locals 4
+
+    .line 149
+    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    const/high16 v0, 0x43d20000    # 420.0f
+
+    invoke-static {p0, v0}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v0
+
+    const/high16 v1, 0x43700000    # 240.0f
+
+    invoke-static {p0, v1}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    const/high16 v3, 0x42000000    # 32.0f
+
+    invoke-static {p0, v3}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result p0
+
+    sub-int/2addr v2, p0
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result p0
+
+    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
+
+    move-result p0
+
+    const/4 v0, -0x2
+
+    invoke-virtual {p1, p0, v0}, Landroid/view/Window;->setLayout(II)V
+
+    :cond_0
+    return-void
+.end method
+
+.method static surface(Landroid/app/Activity;IIF)Landroid/graphics/drawable/GradientDrawable;
+    .locals 1
+
+    .line 121
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    invoke-static {p0, p3}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    .line 122
+    if-eqz p2, :cond_0
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    invoke-static {p0, p1}, Lorg/emulationstation/frontend/station/StationDownloadUi;->dp(Landroid/app/Activity;F)I
+
+    move-result p0
+
+    invoke-virtual {v0, p0, p2}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    :cond_0
+    return-object v0
+.end method

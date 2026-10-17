@@ -1,17 +1,17 @@
 {
-  "status": "candidate-source-only",
+  "status": "compiled-signed-installed-test-candidate",
   "baseAppCommit": "4f9039eb9ce13907ce043870bfe1f6e294888556",
-  "apkBuilt": false,
-  "installed": false,
+  "apkBuilt": true,
+  "installed": true,
   "physicalGameplayValidated": false,
   "serverChanged": false,
   "scope": [
     "Dolphin explicit-human Exit monitor ordering",
     "v3 explicit-human Leave after verified stale generation rejection"
   ],
-  "newRuntimeIds": false,
+  "newRuntimeIds": true,
   "limitations": [
-    "No APK assembly or phone test in this review",
+    "APK R135 compiled, signed, installed and official frontend observed on Edge 30; gameplay and physical online Exit remain unvalidated",
     "Three-player waiting investigated separately; do not relax READY/ACK/profile guards",
     "HTTP/network errors remain failures, never authorize blind mutation retry"
   ],
@@ -19,7 +19,7 @@
   "productionClassCount": 9,
   "javaTarget": 8,
   "compiledPayload": "operator-local:online-r135-java-overlay",
-  "dexBuilt": false,
+  "dexBuilt": true,
   "localEvidence": [
     "evidence/test-receipt.json",
     "evidence/compile-production.json"
@@ -37,5 +37,12 @@
   "payloadRecipe": "recipe/build_payload.py",
   "payloadReproducedByteExact": true,
   "testedCompilerAndClasspathPinned": true,
-  "inputPinRejectionEvidence": "evidence/input-pin-rejection.json"
+  "inputPinRejectionEvidence": "evidence/input-pin-rejection.json",
+  "sourceCommit": "ca8f1ccda18bef397e71e1c979a4f813acf608c0",
+  "apkSha256": "f6abe89490e7ba5e2cdd432625888bed6f40aea115d730cf612d509ec6ca9896",
+  "apkBytes": 2714991631,
+  "installedDeviceModel": "motorola edge 30",
+  "installedUtc": "2026-10-12T04:33:05.661370+00:00",
+  "officialFrontendObserved": true,
+  "releaseEvidence": "versions/station-online-exit-r135-20261012/evidence/PUBLIC-EVIDENCE.json"
 }

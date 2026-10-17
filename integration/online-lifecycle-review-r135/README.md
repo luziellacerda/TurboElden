@@ -1,3 +1,9 @@
+# R135 — candidata compilada e instalada para teste
+
+Estado atual: APK assinado com a identidade original e instalado no Edge 30, moto g52 e Samsung A56 em 12/10; mesmo hash integral e dados preservados nos três. [Entrega, preservação e provas](../../versions/station-online-exit-r135-20261012/README.md). A autorização atual inclui instalar os novos APKs de teste. Gameplay com três aparelhos e ativação dos quatro IDs no servidor continuam pendentes.
+
+## Auditoria original e passos de compilação preservados
+
 # R135 — revisão de saída e lifecycle online
 
 Estado: **candidata de fontes**, sobre a fonte R134 `4f9039eb9ce13907ce043870bfe1f6e294888556`. Esta pasta contém correções Java isoladas e testes locais. Não representa APK R135, instalação, ativação de servidor ou validação de gameplay.

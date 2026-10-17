@@ -1,0 +1,119 @@
+/* RetroArch functions below are extracted byte-for-byte from the qualified
+ * R139 source. Their original GPL-3.0-or-later licensing is retained. The probe
+ * runs in its own app_process shell process, using the real JavaVM/pthreads. */
+#include <jni.h>
+#include <pthread.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <string.h>
+#include <time.h>
+#include <errno.h>
+#define RARCH_ERR(...) fprintf(stderr,__VA_ARGS__)
+
+/* Only a context-presence marker is used; no Android app/Activity is referenced. */
+struct android_app {int marker;};
+static struct android_app context_marker;
+static struct android_app *g_android;
+static pthread_mutex_t observation_mutex = PTHREAD_MUTEX_INITIALIZER;
+static pthread_cond_t observation_cond = PTHREAD_COND_INITIALIZER;
+static JavaVM *process_vm;
+static int key_attempts,key_creations,destructors,after_clear,own_thread,matching_vm;
+static int tls_cleared,after_detached,before_detached,vm_errors,java_destructors;
+static int thread_errors,ready_threads,release_threads,calls,matching_env,initial_detached,tls_registered;
+static void (*registered_destructor)(void*);
+static __thread int owned_native;
+static __thread pthread_t attached_thread;
+/* @TLS_GLOBALS@ */
+
+static void observe_destructor(void *value) {
+    JNIEnv *before_env = NULL,*after_env = NULL;
+    int before = (*process_vm)->GetEnv(process_vm,(void**)&before_env,JNI_VERSION_1_6);
+    bool cleared = pthread_getspecific(thread_key)==NULL;
+    bool context_cleared = g_android==NULL;
+    bool owner = owned_native && pthread_equal(attached_thread,pthread_self());
+    registered_destructor(value); /* Exact production destructor, real JavaVM. */
+    int after = (*process_vm)->GetEnv(process_vm,(void**)&after_env,JNI_VERSION_1_6);
+    pthread_mutex_lock(&observation_mutex);
+    destructors++;after_clear+=context_cleared;own_thread+=owner;matching_vm+=value==process_vm;
+    tls_cleared+=cleared;after_detached+=after==JNI_EDETACHED;before_detached+=before==JNI_EDETACHED;
+    vm_errors+=before!=JNI_OK&&before!=JNI_EDETACHED;
+    vm_errors+=after!=JNI_EDETACHED;
+    java_destructors+=!owned_native;
+    pthread_mutex_unlock(&observation_mutex);
+}
+static int observed_key_create(pthread_key_t *key,void (*destructor)(void*)) {
+    pthread_mutex_lock(&observation_mutex);key_attempts++;pthread_mutex_unlock(&observation_mutex);
+    registered_destructor=destructor;
+    int result=pthread_key_create(key,observe_destructor);
+    pthread_mutex_lock(&observation_mutex);key_creations+=result==0;pthread_mutex_unlock(&observation_mutex);
+    return result;
+}
+#define pthread_key_create observed_key_create
+/* @PRODUCTION_FUNCTIONS@ */
+#undef pthread_key_create
+
+static jintArray results(JNIEnv *env,const jint *values,int count) {
+    jintArray result=(*env)->NewIntArray(env,count);
+    if(result)(*env)->SetIntArrayRegion(env,result,0,count,values);
+    return result;
+}
+JNIEXPORT jintArray JNICALL Java_org_station_audit_R139ResourceProbe_initialize(JNIEnv *env,jclass type) {
+    (void)type;
+    if((*env)->GetJavaVM(env,&process_vm)!=JNI_OK)return NULL;
+    g_android=&context_marker;
+    int succeeded=0;
+    for(int i=0;i<100;i++)succeeded+=station_jni_key_ensure(process_vm);
+    bool null_rejected=!station_jni_key_ensure(NULL);
+    /* Already-initialized helper compares this pointer; it never dereferences it. */
+    bool mismatch_rejected=!station_jni_key_ensure((JavaVM*)(uintptr_t)1);
+    jint values[]={succeeded,key_attempts,key_creations,null_rejected,mismatch_rejected};
+    return results(env,values,5);
+}
+JNIEXPORT jintArray JNICALL Java_org_station_audit_R139ResourceProbe_javaOwner(JNIEnv *env,jclass type) {
+    (void)type;
+    int correct=0,registered=0;
+    for(int i=0;i<20;i++){JNIEnv *current=jni_thread_getenv();correct+=current==env;registered+=pthread_getspecific(thread_key)!=NULL;}
+    jint values[]={20,correct,registered};
+    return results(env,values,3);
+}
+static void *native_owner(void *unused) {
+    (void)unused;
+    owned_native=1;attached_thread=pthread_self();JNIEnv *initial=NULL,*first=NULL;
+    bool detached=(*process_vm)->GetEnv(process_vm,(void**)&initial,JNI_VERSION_1_6)==JNI_EDETACHED;
+    int completed=0,same=0;
+    for(int i=0;i<20;i++){
+        JNIEnv *env=jni_thread_getenv();
+        if(i==0)first=env;
+        completed++;same+=env!=NULL&&env==first;
+    }
+    bool registered=pthread_getspecific(thread_key)==process_vm;
+    pthread_mutex_lock(&observation_mutex);
+    initial_detached+=detached;calls+=completed;matching_env+=same;tls_registered+=registered;
+    ready_threads++;pthread_cond_broadcast(&observation_cond);
+    while(!release_threads)pthread_cond_wait(&observation_cond,&observation_mutex);
+    pthread_mutex_unlock(&observation_mutex);
+    return NULL; /* Actual kernel pthread TLS teardown invokes observe_destructor. */
+}
+JNIEXPORT jintArray JNICALL Java_org_station_audit_R139ResourceProbe_nativeOwners(JNIEnv *env,jclass type) {
+    (void)type;
+    pthread_t threads[8];int started=0;
+    for(int i=0;i<8;i++){if(pthread_create(&threads[i],NULL,native_owner,NULL)){thread_errors++;break;}started++;}
+    pthread_mutex_lock(&observation_mutex);
+    struct timespec deadline;clock_gettime(CLOCK_REALTIME,&deadline);deadline.tv_sec+=5;
+    while(ready_threads<started){int result=pthread_cond_timedwait(&observation_cond,&observation_mutex,&deadline);if(result==ETIMEDOUT){thread_errors++;break;}}
+    /* All calls have ended before the synchronized context publication. */
+    g_android=NULL;release_threads=1;pthread_cond_broadcast(&observation_cond);
+    pthread_mutex_unlock(&observation_mutex);
+    for(int i=0;i<started;i++)if(pthread_join(threads[i],NULL))thread_errors++;
+    bool no_context=jni_thread_getenv()==NULL;
+    jint values[]={started,calls,matching_env,initial_detached,tls_registered,destructors,
+                   after_clear,own_thread,java_destructors,vm_errors,thread_errors,key_creations,
+                   no_context,8-matching_vm,8-tls_cleared};
+    /* The Java assertion checks exact ownership. GetEnv-after-detach is reported
+     * separately to distinguish VM automatic cleanup from callback execution. */
+    fprintf(stdout,"DESTRUCTOR_VM_STATE beforeAlreadyDetached=%d afterDetached=%d callbacks=%d\n",before_detached,after_detached,destructors);
+    fflush(stdout);
+    if(after_detached!=8)values[9]++;
+    return results(env,values,15);
+}

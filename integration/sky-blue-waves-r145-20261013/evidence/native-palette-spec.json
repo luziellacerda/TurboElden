@@ -1,0 +1,391 @@
+{
+  "schema": "station.r145.native.palette-spec.v1",
+  "revision": "R145-preparation",
+  "baselineSourceCommit": "1ac3f7d2fdd7cd349a5b37127b66712834e844fd",
+  "baselineNativeSha256": "67180bdd145cd03f456249b31b9163ee0baa3e66fb10b909e20831823accea10",
+  "skyBlue": {
+    "topRgba": "287EB5FF",
+    "bottomRgba": "5DAEDEFF",
+    "blueThemeOnly": true,
+    "nativeWaveAndSkyUseSameRgb": true
+  },
+  "palettes": [
+    {
+      "index": 0,
+      "family": "SNES",
+      "count": 3,
+      "rgba": [
+        "FF4058B0",
+        "EE5B67A0",
+        "A7B3C390"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "SNES: red, red, gray"
+    },
+    {
+      "index": 1,
+      "family": "Nintendo64",
+      "count": 5,
+      "rgba": [
+        "FFDA52B0",
+        "44D98AA0",
+        "369DFF90",
+        "FF405890",
+        "FFDA5290"
+      ],
+      "widthMultipliers": [
+        0.5,
+        1,
+        1,
+        1,
+        0.5
+      ],
+      "changedFromR144": true,
+      "comment": "Nintendo64: thin yellow, green, blue, red, thin yellow"
+    },
+    {
+      "index": 2,
+      "family": "GameCube",
+      "count": 4,
+      "rgba": [
+        "FFDA52B0",
+        "44D98AA0",
+        "AA7DFF90",
+        "A7B3C390"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "GameCube: yellow, green, purple, gray"
+    },
+    {
+      "index": 3,
+      "family": "Wii",
+      "count": 3,
+      "rgba": [
+        "F2F6FFB0",
+        "369DFFA0",
+        "F2F6FF90"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "Wii"
+    },
+    {
+      "index": 4,
+      "family": "WiiU",
+      "count": 3,
+      "rgba": [
+        "369DFFB0",
+        "F2F6FFA0",
+        "369DFF90"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "Wii U"
+    },
+    {
+      "index": 5,
+      "family": "Switch",
+      "count": 3,
+      "rgba": [
+        "FF4058B0",
+        "369DFFA0",
+        "F2F6FF90"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "Switch"
+    },
+    {
+      "index": 6,
+      "family": "PSX",
+      "count": 3,
+      "rgba": [
+        "FF4058B0",
+        "369DFFA0",
+        "FFDA5290"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "PSX: red, blue, yellow"
+    },
+    {
+      "index": 7,
+      "family": "PS2",
+      "count": 3,
+      "rgba": [
+        "FF4058B0",
+        "369DFFA0",
+        "FFDA5290"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "PS2: red, blue, yellow"
+    },
+    {
+      "index": 8,
+      "family": "PSP",
+      "count": 3,
+      "rgba": [
+        "369DFFB0",
+        "F2F6FFA0",
+        "A7B3C390"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "PSP"
+    },
+    {
+      "index": 9,
+      "family": "MegaDrive",
+      "count": 3,
+      "rgba": [
+        "369DFFB0",
+        "FF4058A0",
+        "A7B3C390"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "Mega Drive"
+    },
+    {
+      "index": 10,
+      "family": "32X",
+      "count": 3,
+      "rgba": [
+        "FF4058B0",
+        "369DFFA0",
+        "FF944890"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "32X"
+    },
+    {
+      "index": 11,
+      "family": "Saturn",
+      "count": 3,
+      "rgba": [
+        "A7B3C3B0",
+        "369DFFA0",
+        "F2F6FF90"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "Saturn"
+    },
+    {
+      "index": 12,
+      "family": "Dreamcast",
+      "count": 5,
+      "rgba": [
+        "44D98AB0",
+        "369DFFA0",
+        "FF405890",
+        "FFDA5290",
+        "FF944890"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "Dreamcast: green, blue, red, yellow, orange"
+    },
+    {
+      "index": 13,
+      "family": "Naomi",
+      "count": 3,
+      "rgba": [
+        "369DFFB0",
+        "F2F6FFA0",
+        "FF944890"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "Naomi / Naomi 2"
+    },
+    {
+      "index": 14,
+      "family": "NeoGeo",
+      "count": 3,
+      "rgba": [
+        "FFDA52B0",
+        "369DFFA0",
+        "F2F6FF90"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "Neo Geo"
+    },
+    {
+      "index": 15,
+      "family": "CPS",
+      "count": 3,
+      "rgba": [
+        "369DFFB0",
+        "FFDA52A0",
+        "F2F6FF90"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": false,
+      "comment": "CPS 1 / 2 / 3"
+    },
+    {
+      "index": 16,
+      "family": "NES",
+      "count": 3,
+      "rgba": [
+        "AA7DFFB0",
+        "FF4058A0",
+        "A7B3C390"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "NES: purple, red, gray"
+    },
+    {
+      "index": 17,
+      "family": "FinalBurnNeo",
+      "count": 3,
+      "rgba": [
+        "44D98AB0",
+        "FFDA52A0",
+        "FF944890"
+      ],
+      "widthMultipliers": [
+        1,
+        1,
+        1
+      ],
+      "changedFromR144": true,
+      "comment": "Final Burn Neo: green, yellow, orange"
+    }
+  ],
+  "maxBands": 5,
+  "segmentsPerBand": 32,
+  "fixedStackVertices": 66,
+  "alphaByBandHex": [
+    "B0",
+    "A0",
+    "90",
+    "90",
+    "90"
+  ],
+  "defaultBandCount": 3,
+  "unrequestedFamiliesPreserved": [
+    "Wii",
+    "WiiU",
+    "Switch",
+    "PSP",
+    "MegaDrive",
+    "32X",
+    "Saturn",
+    "Naomi",
+    "NeoGeo",
+    "CPS"
+  ],
+  "oldAliasesPreservedInOrder": true,
+  "newAliases": [
+    {
+      "key": "Nintendinho",
+      "index": 16
+    },
+    {
+      "key": "nes",
+      "index": 16
+    },
+    {
+      "key": "Nintendo Entertainment System",
+      "index": 16
+    },
+    {
+      "key": "Nintendo NES",
+      "index": 16
+    },
+    {
+      "key": "fbneo",
+      "index": 17
+    },
+    {
+      "key": "Final Burn Neo",
+      "index": 17
+    },
+    {
+      "key": "FinalBurn Neo",
+      "index": 17
+    },
+    {
+      "key": "final-burn-neo",
+      "index": 17
+    }
+  ],
+  "unrequestedFbaOrArcadeNotMapped": true,
+  "compiled": false,
+  "physicalVisualValidated": false
+}

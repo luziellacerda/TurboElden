@@ -1,0 +1,4807 @@
+.class final Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;
+.super Ljava/lang/Object;
+.source "StationMultiplayerTunnel.java"
+
+# interfaces
+.implements Ljava/io/Closeable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;,
+        Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;,
+        Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;,
+        Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;
+    }
+.end annotation
+
+
+# instance fields
+.field private final accept:Ljava/net/ServerSocket;
+
+.field private accepted:J
+
+.field private ackSent:J
+
+.field private final activeReaders:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private attempts:I
+
+.field private final closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field private cursor:J
+
+.field private final endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+.field private endpointReading:Z
+
+.field private epoch:J
+
+.field private foreground:Z
+
+.field private final gate:Ljava/lang/Object;
+
+.field private final host:Z
+
+.field private final hostPort:I
+
+.field private volatile inputThread:Ljava/lang/Thread;
+
+.field private lastReceive:J
+
+.field private final listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+.field private volatile local:Ljava/net/Socket;
+
+.field private localReady:Z
+
+.field private final localSlot:I
+
+.field private final nativeHint:Ljava/util/concurrent/Semaphore;
+
+.field private nextTicket:J
+
+.field private volatile outputThread:Ljava/lang/Thread;
+
+.field private pauseSent:J
+
+.field private pingSent:J
+
+.field private final pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field private final pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field private readyNotified:Z
+
+.field private readySent:J
+
+.field private volatile remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+.field private final remoteSlot:I
+
+.field private final rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+.field private socketBinding:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;
+
+.field private started:J
+
+.field private volatile startedTransport:Z
+
+.field private state:J
+
+.field private syncRequested:J
+
+.field private terminal:Z
+
+.field private ticketPending:Z
+
+.field private ticketRequested:J
+
+.field private final tls:Ljavax/net/ssl/SSLSocketFactory;
+
+.field private final tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+.field private final uri:Ljava/net/URI;
+
+.field private final waitDiagnostics:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;
+
+.field private welcome:Z
+
+.field private final worker:Ljava/util/concurrent/ScheduledExecutorService;
+
+.field private final writes:Ljava/util/concurrent/ExecutorService;
+
+
+# direct methods
+.method public static synthetic $r8$lambda$6p13ZljfqeJ4DhbC0EF95aU5A4g(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+    .locals 0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nativeInput()V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$l9yx_BiOm1AykQpwR3dOJ6GCNGo(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+    .locals 0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nativeOutput()V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$skC-a3LPn3iGDizL0DRXECDx6pA(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+    .locals 0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tick()V
+
+    return-void
+.end method
+
+.method constructor <init>(Ljava/net/URI;Ljava/lang/String;Ljava/lang/String;IZILjavax/net/ssl/SSLSocketFactory;Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;)V
+    .locals 12
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move/from16 v4, p4
+
+    move/from16 v5, p5
+
+    move/from16 v6, p6
+
+    move-object/from16 v7, p7
+
+    move-object/from16 v8, p8
+
+    .line 39
+    invoke-direct/range {v0 .. v11}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;-><init>(Ljava/net/URI;Ljava/lang/String;Ljava/lang/String;IZILjavax/net/ssl/SSLSocketFactory;Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;II)V
+
+    return-void
+.end method
+
+.method constructor <init>(Ljava/net/URI;Ljava/lang/String;Ljava/lang/String;IZILjavax/net/ssl/SSLSocketFactory;Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;II)V
+    .locals 12
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    move-object v0, p0
+
+    move/from16 v1, p4
+
+    move/from16 v2, p5
+
+    move-object/from16 v3, p9
+
+    move/from16 v4, p10
+
+    move/from16 v5, p11
+
+    .line 41
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 21
+    new-instance v6, Ljava/lang/Object;
+
+    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
+
+    iput-object v6, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    .line 25
+    new-instance v6, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda0;
+
+    invoke-direct {v6}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda0;-><init>()V
+
+    invoke-static {v6}, Ljava/util/concurrent/Executors;->newSingleThreadScheduledExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v6
+
+    iput-object v6, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->worker:Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 26
+    new-instance v6, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda1;
+
+    invoke-direct {v6}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda1;-><init>()V
+
+    invoke-static {v6}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v6
+
+    iput-object v6, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->writes:Ljava/util/concurrent/ExecutorService;
+
+    .line 27
+    new-instance v6, Ljava/util/concurrent/Semaphore;
+
+    const/4 v7, 0x0
+
+    invoke-direct {v6, v7}, Ljava/util/concurrent/Semaphore;-><init>(I)V
+
+    iput-object v6, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nativeHint:Ljava/util/concurrent/Semaphore;
+
+    .line 28
+    new-instance v6, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v6}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v6, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v6, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v6}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v6, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v6, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v6}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v6, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v6, 0x1
+
+    .line 30
+    iput-boolean v6, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    const-wide/16 v8, -0x1
+
+    .line 31
+    iput-wide v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ackSent:J
+
+    iput-wide v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pauseSent:J
+
+    iput-wide v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    .line 32
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v10
+
+    iput-wide v10, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->started:J
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v10
+
+    iput-wide v10, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->lastReceive:J
+
+    .line 35
+    invoke-static {}, Ljava/util/concurrent/ConcurrentHashMap;->newKeySet()Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+
+    move-result-object v10
+
+    iput-object v10, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->activeReaders:Ljava/util/Set;
+
+    .line 36
+    iput-wide v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->syncRequested:J
+
+    .line 37
+    new-instance v8, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;
+
+    invoke-direct {v8}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;-><init>()V
+
+    iput-object v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->waitDiagnostics:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;
+
+    const-string v8, "wss"
+
+    .line 42
+    invoke-virtual {p1}, Ljava/net/URI;->getScheme()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_7
+
+    invoke-virtual {p1}, Ljava/net/URI;->getUserInfo()Ljava/lang/String;
+
+    move-result-object v8
+
+    if-nez v8, :cond_7
+
+    invoke-virtual {p1}, Ljava/net/URI;->getQuery()Ljava/lang/String;
+
+    move-result-object v8
+
+    if-nez v8, :cond_7
+
+    invoke-virtual {p1}, Ljava/net/URI;->getFragment()Ljava/lang/String;
+
+    move-result-object v8
+
+    if-nez v8, :cond_7
+
+    const-string v8, "/v1/station/online/multiplayer/relay"
+
+    invoke-virtual {p1}, Ljava/net/URI;->getPath()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_7
+
+    move-object v8, p1
+
+    .line 43
+    iput-object v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->uri:Ljava/net/URI;
+
+    move-object/from16 v8, p7
+
+    iput-object v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tls:Ljavax/net/ssl/SSLSocketFactory;
+
+    iput-boolean v2, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->host:Z
+
+    move/from16 v8, p6
+
+    iput v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->hostPort:I
+
+    move-object/from16 v8, p8
+
+    iput-object v8, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    .line 44
+    iput-object v3, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    iput v4, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localSlot:I
+
+    iput v5, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remoteSlot:I
+
+    if-eqz v3, :cond_2
+
+    if-lt v4, v6, :cond_1
+
+    const/4 v8, 0x4
+
+    if-gt v4, v8, :cond_1
+
+    if-lt v5, v6, :cond_1
+
+    if-gt v5, v8, :cond_1
+
+    if-eq v4, v5, :cond_1
+
+    if-ne v4, v6, :cond_0
+
+    move v8, v6
+
+    goto :goto_0
+
+    :cond_0
+    move v8, v7
+
+    :goto_0
+    if-ne v2, v8, :cond_1
+
+    if-nez v2, :cond_2
+
+    if-ne v5, v6, :cond_1
+
+    goto :goto_1
+
+    .line 45
+    :cond_1
+    new-instance v1, Ljava/io/IOException;
+
+    const-string v2, "ENDPOINT_SLOT"
+
+    invoke-direct {v1, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_2
+    :goto_1
+    if-eqz v3, :cond_4
+
+    .line 46
+    invoke-interface/range {p9 .. p9}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;->wire()Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Wire;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_3
+
+    invoke-interface/range {p9 .. p9}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;->wire()Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Wire;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v4, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Wire;->binding(II)V
+
+    goto :goto_2
+
+    :cond_3
+    new-instance v1, Ljava/io/IOException;
+
+    const-string v2, "ENDPOINT_WIRE"
+
+    invoke-direct {v1, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    .line 47
+    :cond_4
+    :goto_2
+    new-instance v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-direct {v4, v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;-><init>(I)V
+
+    iput-object v4, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    new-instance v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-direct {v4, v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;-><init>(I)V
+
+    iput-object v4, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    if-nez v3, :cond_6
+
+    if-eqz v2, :cond_5
+
+    goto :goto_3
+
+    .line 48
+    :cond_5
+    new-instance v2, Ljava/net/ServerSocket;
+
+    const-string v3, "127.0.0.1"
+
+    invoke-static {v3}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+
+    move-result-object v3
+
+    invoke-direct {v2, v7, v6, v3}, Ljava/net/ServerSocket;-><init>(IILjava/net/InetAddress;)V
+
+    goto :goto_4
+
+    :cond_6
+    :goto_3
+    const/4 v2, 0x0
+
+    :goto_4
+    iput-object v2, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accept:Ljava/net/ServerSocket;
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    .line 49
+    invoke-virtual {p0, p2, p3, v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->provide(Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-void
+
+    .line 42
+    :cond_7
+    new-instance v1, Ljava/io/IOException;
+
+    const-string v2, "ENDPOINT"
+
+    invoke-direct {v1, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method static synthetic access$000(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Ljava/lang/Object;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1000(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Ljavax/net/ssl/SSLSocketFactory;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tls:Ljavax/net/ssl/SSLSocketFactory;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Ljava/util/Set;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->activeReaders:Ljava/util/Set;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1200(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;Ljava/lang/String;)V
+    .locals 0
+
+    .line 15
+    invoke-direct {p0, p1, p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1300(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1400(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)J
+    .locals 2
+
+    .line 15
+    iget-wide v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accepted:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$1402(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;J)J
+    .locals 0
+
+    .line 15
+    iput-wide p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accepted:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$1502(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;J)J
+    .locals 0
+
+    .line 15
+    iput-wide p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->lastReceive:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$1600(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Z
+    .locals 0
+
+    .line 15
+    iget-boolean p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1700(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)J
+    .locals 2
+
+    .line 15
+    iget-wide v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$1702(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;J)J
+    .locals 0
+
+    .line 15
+    iput-wide p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$1800(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)J
+    .locals 2
+
+    .line 15
+    iget-wide v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->state:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$1802(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;J)J
+    .locals 0
+
+    .line 15
+    iput-wide p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->state:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$1900(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->waitDiagnostics:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Z
+    .locals 0
+
+    .line 15
+    iget-boolean p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    return p0
+.end method
+
+.method static synthetic access$2002(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;J)J
+    .locals 0
+
+    .line 15
+    iput-wide p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pauseSent:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$2100(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2202(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;J)J
+    .locals 0
+
+    .line 15
+    iput-wide p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->cursor:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$2302(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;J)J
+    .locals 0
+
+    .line 15
+    iput-wide p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ackSent:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$2402(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;Z)Z
+    .locals 0
+
+    .line 15
+    iput-boolean p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    return p1
+.end method
+
+.method static synthetic access$2502(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;I)I
+    .locals 0
+
+    .line 15
+    iput p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->attempts:I
+
+    return p1
+.end method
+
+.method static synthetic access$2600(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)J
+    .locals 2
+
+    .line 15
+    iget-wide v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pingSent:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$2700(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)J
+    .locals 2
+
+    .line 15
+    iget-wide v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->started:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$2800(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2900(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+    .locals 0
+
+    .line 15
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->notifyReady()V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Z
+    .locals 0
+
+    .line 15
+    iget-boolean p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localReady:Z
+
+    return p0
+.end method
+
+.method static synthetic access$3000(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)V
+    .locals 0
+
+    .line 15
+    invoke-direct {p0, p1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->lost(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    return-object p0
+.end method
+
+.method static synthetic access$502(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;J)J
+    .locals 0
+
+    .line 15
+    iput-wide p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$600(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+    .locals 0
+
+    .line 15
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+
+    return-void
+.end method
+
+.method static synthetic access$700(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Ljava/util/concurrent/Semaphore;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nativeHint:Ljava/util/concurrent/Semaphore;
+
+    return-object p0
+.end method
+
+.method static synthetic access$800(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)Ljava/net/URI;
+    .locals 0
+
+    .line 15
+    iget-object p0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->uri:Ljava/net/URI;
+
+    return-object p0
+.end method
+
+.method static synthetic access$900(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    .locals 0
+
+    .line 15
+    invoke-static {p0, p1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->headers(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private connectHost()Ljava/net/Socket;
+    .locals 8
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    const-string v0, "127.0.0.1"
+
+    .line 79
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v1
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v4, 0x2d
+
+    invoke-virtual {v3, v4, v5}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v3
+
+    add-long/2addr v1, v3
+
+    .line 80
+    :goto_0
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v3
+
+    if-nez v3, :cond_5
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v3
+
+    cmp-long v3, v3, v1
+
+    if-gez v3, :cond_5
+
+    .line 81
+    new-instance v3, Ljava/net/Socket;
+
+    invoke-direct {v3}, Ljava/net/Socket;-><init>()V
+
+    iput-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    const/4 v4, 0x0
+
+    .line 83
+    :try_start_0
+    new-instance v5, Ljava/net/InetSocketAddress;
+
+    invoke-static {v0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6, v4}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
+
+    invoke-virtual {v3, v5}, Ljava/net/Socket;->bind(Ljava/net/SocketAddress;)V
+
+    invoke-virtual {v3}, Ljava/net/Socket;->getLocalPort()I
+
+    move-result v5
+    :try_end_0
+    .catch Ljava/net/ConnectException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 84
+    :try_start_1
+    iget-object v6, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->socketBinding:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;
+
+    if-eqz v6, :cond_1
+
+    invoke-interface {v6, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;->bind(I)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    const/4 v4, 0x1
+
+    .line 85
+    new-instance v6, Ljava/net/InetSocketAddress;
+
+    iget v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->hostPort:I
+
+    invoke-direct {v6, v0, v7}, Ljava/net/InetSocketAddress;-><init>(Ljava/lang/String;I)V
+
+    const/16 v7, 0xfa
+
+    invoke-virtual {v3, v6, v7}, Ljava/net/Socket;->connect(Ljava/net/SocketAddress;I)V
+
+    .line 86
+    iget-object v6, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    return-object v3
+
+    :cond_0
+    new-instance v6, Ljava/io/IOException;
+
+    const-string v7, "CLOSED"
+
+    invoke-direct {v6, v7}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v6
+
+    .line 84
+    :cond_1
+    new-instance v6, Ljava/io/IOException;
+
+    const-string v7, "SLOT_BINDING"
+
+    invoke-direct {v6, v7}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v6
+    :try_end_1
+    .catch Ljava/net/ConnectException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/net/SocketTimeoutException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catch_0
+    move-exception v6
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v6
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    move v5, v4
+
+    goto :goto_3
+
+    :catch_2
+    move-exception v6
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v6
+
+    :goto_1
+    move v5, v4
+
+    .line 88
+    :goto_2
+    :try_start_2
+    iget-object v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v7
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    if-nez v7, :cond_3
+
+    .line 89
+    invoke-virtual {v3}, Ljava/net/Socket;->close()V
+
+    if-eqz v4, :cond_2
+
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->socketBinding:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;
+
+    invoke-interface {v3, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;->release(I)V
+
+    .line 90
+    :cond_2
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nativeHint:Ljava/util/concurrent/Semaphore;
+
+    const-wide/16 v4, 0x32
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v3, v4, v5, v6}, Ljava/util/concurrent/Semaphore;->tryAcquire(JLjava/util/concurrent/TimeUnit;)Z
+
+    goto :goto_0
+
+    .line 88
+    :cond_3
+    :try_start_3
+    throw v6
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    .line 89
+    :goto_3
+    invoke-virtual {v3}, Ljava/net/Socket;->close()V
+
+    if-eqz v4, :cond_4
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->socketBinding:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;
+
+    invoke-interface {v1, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;->release(I)V
+
+    :cond_4
+    throw v0
+
+    .line 92
+    :cond_5
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "NATIVE_LISTENER"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method private endpointInput()V
+    .locals 11
+
+    const/4 v0, 0x0
+
+    .line 115
+    :try_start_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_8
+
+    const/4 v2, 0x1
+
+    :try_start_1
+    iput-boolean v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localReady:Z
+
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_7
+
+    :try_start_2
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->notifyReady()V
+
+    .line 116
+    :goto_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    .line 118
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v1
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_8
+
+    :goto_1
+    :try_start_3
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    iget-boolean v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez v3, :cond_0
+
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v3}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->credit()I
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    :cond_0
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->wait()V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_5
+
+    .line 134
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_4
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v2
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw v0
+
+    .line 118
+    :cond_2
+    :try_start_5
+    iput-boolean v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    const-wide/16 v3, -0x1
+
+    iput-wide v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    monitor-exit v1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_5
+
+    .line 119
+    :try_start_6
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    const/16 v5, 0x64
+
+    invoke-interface {v1, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;->takeOutgoing(I)[B
+
+    move-result-object v1
+
+    if-eqz v1, :cond_8
+
+    .line 120
+    array-length v5, v1
+
+    if-nez v5, :cond_3
+
+    goto/16 :goto_4
+
+    .line 124
+    :cond_3
+    iget-object v5, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    invoke-interface {v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;->wire()Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Wire;
+
+    move-result-object v5
+
+    iget v6, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localSlot:I
+
+    iget v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remoteSlot:I
+
+    invoke-virtual {v5, v1, v6, v7}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Wire;->outgoing([BII)V
+
+    move v5, v0
+
+    .line 126
+    :goto_2
+    array-length v6, v1
+
+    if-ge v5, v6, :cond_7
+
+    iget-object v6, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v6
+
+    if-nez v6, :cond_7
+
+    .line 127
+    iget-object v6, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v6
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_8
+
+    :goto_3
+    :try_start_7
+    iget-object v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v7
+
+    if-nez v7, :cond_5
+
+    iget-boolean v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez v7, :cond_4
+
+    iget-object v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v7}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->credit()I
+
+    move-result v7
+
+    if-nez v7, :cond_5
+
+    :cond_4
+    iget-object v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v7}, Ljava/lang/Object;->wait()V
+
+    goto :goto_3
+
+    :cond_5
+    iget-object v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    monitor-exit v6
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    .line 134
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_8
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    throw v0
+
+    .line 128
+    :cond_6
+    :try_start_9
+    iget-object v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v7}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->credit()I
+
+    move-result v7
+
+    array-length v8, v1
+
+    sub-int/2addr v8, v5
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->min(II)I
+
+    move-result v7
+
+    iget-object v8, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v9, v8, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    add-int/2addr v7, v5
+
+    invoke-static {v1, v5, v7}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object v5
+
+    invoke-virtual {v8, v9, v10, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->append(J[B)V
+
+    iput-wide v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    iget-object v5, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v6
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    .line 129
+    :try_start_a
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_0
+    .catchall {:try_start_a .. :try_end_a} :catchall_8
+
+    move v5, v7
+
+    goto :goto_2
+
+    :catchall_2
+    move-exception v1
+
+    .line 128
+    :try_start_b
+    monitor-exit v6
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_2
+
+    :try_start_c
+    throw v1
+
+    .line 131
+    :cond_7
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v1
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
+    .catchall {:try_start_c .. :try_end_c} :catchall_8
+
+    :try_start_d
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v1
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_3
+
+    :try_start_e
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+    :try_end_e
+    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_0
+    .catchall {:try_start_e .. :try_end_e} :catchall_8
+
+    goto/16 :goto_0
+
+    :catchall_3
+    move-exception v2
+
+    :try_start_f
+    monitor-exit v1
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_3
+
+    :try_start_10
+    throw v2
+
+    .line 121
+    :cond_8
+    :goto_4
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v1
+    :try_end_10
+    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_0
+    .catchall {:try_start_10 .. :try_end_10} :catchall_8
+
+    :try_start_11
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v1
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_4
+
+    :try_start_12
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+
+    .line 122
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nativeHint:Ljava/util/concurrent/Semaphore;
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v4, 0x19
+
+    invoke-virtual {v1, v4, v5, v3}, Ljava/util/concurrent/Semaphore;->tryAcquire(JLjava/util/concurrent/TimeUnit;)Z
+    :try_end_12
+    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_0
+    .catchall {:try_start_12 .. :try_end_12} :catchall_8
+
+    goto/16 :goto_0
+
+    :catchall_4
+    move-exception v2
+
+    .line 121
+    :try_start_13
+    monitor-exit v1
+    :try_end_13
+    .catchall {:try_start_13 .. :try_end_13} :catchall_4
+
+    :try_start_14
+    throw v2
+    :try_end_14
+    .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_0
+    .catchall {:try_start_14 .. :try_end_14} :catchall_8
+
+    :catchall_5
+    move-exception v2
+
+    .line 118
+    :try_start_15
+    monitor-exit v1
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_5
+
+    :try_start_16
+    throw v2
+    :try_end_16
+    .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_16} :catch_0
+    .catchall {:try_start_16 .. :try_end_16} :catchall_8
+
+    .line 134
+    :cond_9
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_17
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v1
+
+    goto :goto_5
+
+    :catchall_6
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_17
+    .catchall {:try_start_17 .. :try_end_17} :catchall_6
+
+    throw v0
+
+    :catchall_7
+    move-exception v2
+
+    .line 115
+    :try_start_18
+    monitor-exit v1
+    :try_end_18
+    .catchall {:try_start_18 .. :try_end_18} :catchall_7
+
+    :try_start_19
+    throw v2
+    :try_end_19
+    .catch Ljava/lang/Exception; {:try_start_19 .. :try_end_19} :catch_0
+    .catchall {:try_start_19 .. :try_end_19} :catchall_8
+
+    :catchall_8
+    move-exception v1
+
+    goto :goto_6
+
+    .line 133
+    :catch_0
+    :try_start_1a
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-nez v1, :cond_a
+
+    const-string v1, "NATIVE_DATAGRAM"
+
+    invoke-direct {p0, v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Ljava/lang/String;)V
+    :try_end_1a
+    .catchall {:try_start_1a .. :try_end_1a} :catchall_8
+
+    .line 134
+    :cond_a
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_1b
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v1
+
+    :goto_5
+    return-void
+
+    :catchall_9
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_1b
+    .catchall {:try_start_1b .. :try_end_1b} :catchall_9
+
+    throw v0
+
+    :goto_6
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_1c
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v2
+    :try_end_1c
+    .catchall {:try_start_1c .. :try_end_1c} :catchall_a
+
+    throw v1
+
+    :catchall_a
+    move-exception v0
+
+    :try_start_1d
+    monitor-exit v2
+    :try_end_1d
+    .catchall {:try_start_1d .. :try_end_1d} :catchall_a
+
+    throw v0
+.end method
+
+.method private endpointOutput()V
+    .locals 7
+
+    .line 136
+    :try_start_0
+    new-instance v6, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Receiver;
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    iget v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localSlot:I
+
+    iget v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remoteSlot:I
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v4, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->delivered:J
+
+    move-object v0, v6
+
+    invoke-direct/range {v0 .. v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Receiver;-><init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;IIJ)V
+
+    .line 137
+    new-instance v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$1;
+
+    invoke-direct {v0, p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$1;-><init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+
+    invoke-virtual {v6, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Receiver;->run(Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint$Receiver$Source;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 146
+    :catch_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "NATIVE_DATAGRAM"
+
+    invoke-direct {p0, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Ljava/lang/String;)V
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
+.method private fatal(Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 221
+    invoke-direct {p0, v0, p1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private fatal(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;Ljava/lang/String;)V
+    .locals 6
+
+    .line 223
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    if-eqz p1, :cond_0
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    if-eq v1, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    iget-wide v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    iget-boolean v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    iget-object v5, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_1
+
+    const/16 v0, 0x3e8
+
+    const-string v5, ""
+
+    .line 224
+    invoke-virtual {v1, v0, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->closeConnection(ILjava/lang/String;)V
+
+    :cond_1
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {v0, v2, v3, p1, v4}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->nativeControl(JZZ)V
+
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {p1, p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->unrecoverable(Ljava/lang/String;)V
+
+    return-void
+
+    .line 223
+    :cond_2
+    :goto_0
+    :try_start_1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method private static headers(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 304
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "StationRelay "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "Authorization"
+
+    invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string p0, "X-Station-Request-Proof"
+
+    invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method static synthetic lambda$new$0(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
+
+    .line 25
+    new-instance v0, Ljava/lang/Thread;
+
+    const-string v1, "Station-recovery"
+
+    invoke-direct {v0, p0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    const/4 p0, 0x1
+
+    invoke-virtual {v0, p0}, Ljava/lang/Thread;->setDaemon(Z)V
+
+    return-object v0
+.end method
+
+.method static synthetic lambda$new$1(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
+
+    .line 26
+    new-instance v0, Ljava/lang/Thread;
+
+    const-string v1, "Station-recovery-send"
+
+    invoke-direct {v0, p0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    const/4 p0, 0x1
+
+    invoke-virtual {v0, p0}, Ljava/lang/Thread;->setDaemon(Z)V
+
+    return-object v0
+.end method
+
+.method private lost(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)V
+    .locals 11
+
+    .line 217
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    if-ne v1, p1, :cond_1
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    iput-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readyNotified:Z
+
+    iput-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pauseSent:J
+
+    iput-wide v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    iget-wide v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    iget-boolean v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    iget v5, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->attempts:I
+
+    const/4 v6, 0x1
+
+    add-int/2addr v5, v6
+
+    const/4 v7, 0x5
+
+    invoke-static {v5, v7}, Ljava/lang/Math;->min(II)I
+
+    move-result v5
+
+    iput v5, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->attempts:I
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v7
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget v9, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->attempts:I
+
+    shl-int v9, v6, v9
+
+    const/16 v10, 0xa
+
+    invoke-static {v10, v9}, Ljava/lang/Math;->min(II)I
+
+    move-result v9
+
+    int-to-long v9, v9
+
+    invoke-virtual {v5, v9, v10}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v9
+
+    add-long/2addr v7, v9
+
+    iput-wide v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nextTicket:J
+
+    iget-object v5, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 218
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v7, "event=transport-wait epoch="
+
+    invoke-direct {v5, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v7, " accepted="
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accepted:J
+
+    invoke-virtual {v5, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v7, " delivered="
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v7, v7, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->delivered:J
+
+    invoke-virtual {v5, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-interface {v0, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->trace(Ljava/lang/String;)V
+
+    const/16 v0, 0x3e8
+
+    const-string v5, ""
+
+    .line 219
+    invoke-virtual {p1, v0, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->closeConnection(ILjava/lang/String;)V
+
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {p1, v2, v3, v6, v4}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->nativeControl(JZZ)V
+
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {p1, v6, v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->state(ZZ)V
+
+    return-void
+
+    .line 217
+    :cond_1
+    :goto_0
+    :try_start_1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method private nativeInput()V
+    .locals 7
+
+    .line 94
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointInput()V
+
+    return-void
+
+    .line 95
+    :cond_0
+    :try_start_0
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->host:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->connectHost()Ljava/net/Socket;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accept:Ljava/net/ServerSocket;
+
+    invoke-virtual {v0}, Ljava/net/ServerSocket;->accept()Ljava/net/Socket;
+
+    move-result-object v0
+
+    :goto_0
+    iput-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    .line 96
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/net/Socket;->setTcpNoDelay(Z)V
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    const v2, 0x8000
+
+    invoke-virtual {v0, v2}, Ljava/net/Socket;->setReceiveBufferSize(I)V
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    invoke-virtual {v0, v2}, Ljava/net/Socket;->setSendBufferSize(I)V
+
+    .line 97
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    iput-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localReady:Z
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    :try_start_2
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->notifyReady()V
+
+    .line 98
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    invoke-virtual {v0}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object v0
+
+    .line 99
+    :goto_1
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    .line 100
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v1
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
+    :try_start_3
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    iget-boolean v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez v2, :cond_2
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->credit()I
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    :cond_2
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->wait()V
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    monitor-exit v1
+
+    return-void
+
+    :cond_4
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->credit()I
+
+    move-result v2
+
+    const/16 v3, 0x4000
+
+    invoke-static {v3, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 101
+    :try_start_4
+    new-array v1, v2, [B
+
+    invoke-virtual {v0, v1}, Ljava/io/InputStream;->read([B)I
+
+    move-result v2
+
+    if-ltz v2, :cond_6
+
+    if-nez v2, :cond_5
+
+    goto :goto_1
+
+    .line 103
+    :cond_5
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v3
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+
+    :try_start_5
+    iget-object v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v5, v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v1
+
+    invoke-virtual {v4, v5, v6, v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->append(J[B)V
+
+    const-wide/16 v1, -0x1
+
+    iput-wide v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v3
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :try_start_6
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_7
+    monitor-exit v3
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    :try_start_8
+    throw v0
+
+    .line 102
+    :cond_6
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "NATIVE_EOF"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
+
+    :catchall_1
+    move-exception v0
+
+    .line 100
+    :try_start_9
+    monitor-exit v1
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+
+    :try_start_a
+    throw v0
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_0
+
+    :catchall_2
+    move-exception v1
+
+    .line 97
+    :try_start_b
+    monitor-exit v0
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_2
+
+    :try_start_c
+    throw v1
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
+
+    .line 105
+    :catch_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    const-string v0, "NATIVE_STREAM"
+
+    invoke-direct {p0, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Ljava/lang/String;)V
+
+    :cond_7
+    return-void
+.end method
+
+.method private nativeOutput()V
+    .locals 7
+
+    .line 106
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointOutput()V
+
+    return-void
+
+    .line 107
+    :cond_0
+    :goto_0
+    :try_start_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 109
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_1
+    :try_start_1
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localReady:Z
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->pending()J
+
+    move-result-wide v1
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-nez v1, :cond_2
+
+    :cond_1
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->wait()V
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_3
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v1, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->delivered:J
+
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v3, v1, v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->read(J)[B
+
+    move-result-object v3
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 110
+    :try_start_2
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    invoke-virtual {v0}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Ljava/io/OutputStream;->write([B)V
+
+    .line 111
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :try_start_3
+    iget-object v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    array-length v3, v3
+
+    int-to-long v5, v3
+
+    add-long/2addr v1, v5
+
+    invoke-virtual {v4, v1, v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->confirm(J)V
+
+    const-wide/16 v1, -0x1
+
+    iput-wide v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_5
+    monitor-exit v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :try_start_6
+    throw v1
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
+
+    :catchall_1
+    move-exception v1
+
+    .line 109
+    :try_start_7
+    monitor-exit v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    :try_start_8
+    throw v1
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
+
+    .line 113
+    :catch_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    const-string v0, "NATIVE_STREAM"
+
+    invoke-direct {p0, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Ljava/lang/String;)V
+
+    :cond_4
+    return-void
+.end method
+
+.method private notifyReady()V
+    .locals 3
+
+    .line 147
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localReady:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readyNotified:Z
+
+    if-nez v1, :cond_0
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    iput-boolean v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readyNotified:Z
+
+    :cond_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_2
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->ready()V
+
+    :cond_2
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method private pump()V
+    .locals 3
+
+    .line 188
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 189
+    :cond_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 190
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    .line 191
+    :cond_1
+    :try_start_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->writes:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda5;
+
+    invoke-direct {v1, p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda5;-><init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 213
+    :catch_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :goto_0
+    return-void
+.end method
+
+.method private static queued(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)J
+    .locals 4
+
+    .line 215
+    invoke-virtual {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->getConnection()Lorg/emulationstation/frontend/relay/ws/WebSocket;
+
+    move-result-object p0
+
+    check-cast p0, Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;
+
+    iget-object p0, p0, Lorg/emulationstation/frontend/relay/ws/WebSocketImpl;->outQueue:Ljava/util/concurrent/BlockingQueue;
+
+    invoke-interface {p0}, Ljava/util/concurrent/BlockingQueue;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    const-wide/16 v0, 0x0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->remaining()I
+
+    move-result v2
+
+    int-to-long v2, v2
+
+    add-long/2addr v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    return-wide v0
+.end method
+
+.method private tick()V
+    .locals 15
+
+    .line 149
+    :try_start_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 150
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    .line 151
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v2
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    iget-boolean v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-eqz v3, :cond_1
+
+    monitor-exit v2
+
+    return-void
+
+    :cond_1
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    .line 152
+    iget-boolean v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    const-wide/16 v5, 0x2
+
+    const/4 v7, 0x0
+
+    if-eqz v4, :cond_2
+
+    iget-wide v8, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketRequested:J
+
+    sub-long v8, v0, v8
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v10, 0x14
+
+    invoke-virtual {v4, v10, v11}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v10
+
+    cmp-long v4, v8, v10
+
+    if-lez v4, :cond_2
+
+    iput-boolean v7, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v8
+
+    add-long/2addr v8, v0
+
+    iput-wide v8, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nextTicket:J
+
+    .line 153
+    :cond_2
+    iget-boolean v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    const/4 v8, 0x1
+
+    if-eqz v4, :cond_4
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->isClosed()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    :cond_3
+    iget-boolean v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    if-nez v4, :cond_4
+
+    iget-wide v9, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nextTicket:J
+
+    cmp-long v4, v0, v9
+
+    if-ltz v4, :cond_4
+
+    iput-boolean v8, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    iput-wide v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketRequested:J
+
+    move v4, v8
+
+    goto :goto_0
+
+    :cond_4
+    move v4, v7
+
+    .line 154
+    :goto_0
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-eqz v4, :cond_5
+
+    .line 155
+    :try_start_2
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->ticket()V
+
+    .line 157
+    :cond_5
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v2
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :try_start_3
+    iget-wide v9, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->state:J
+
+    cmp-long v4, v9, v5
+
+    if-nez v4, :cond_6
+
+    iget-boolean v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    if-eqz v4, :cond_6
+
+    if-eqz v3, :cond_6
+
+    invoke-virtual {v3}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->isOpen()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    iget-wide v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->syncRequested:J
+
+    iget-wide v9, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    cmp-long v4, v4, v9
+
+    if-eqz v4, :cond_6
+
+    iget-object v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {v4}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->nativeStalled()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    iget-wide v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    iput-wide v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->syncRequested:J
+
+    move-wide v11, v4
+
+    move v4, v8
+
+    goto :goto_1
+
+    :cond_6
+    const-wide/16 v4, 0x0
+
+    move-wide v11, v4
+
+    move v4, v7
+
+    :goto_1
+    monitor-exit v2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    if-eqz v4, :cond_7
+
+    .line 158
+    :try_start_4
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    iget-boolean v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    invoke-interface {v2, v11, v12, v8, v4}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->nativeControl(JZZ)V
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {v2, v8, v7}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->state(ZZ)V
+
+    new-instance v2, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;
+
+    const/16 v10, 0xd
+
+    const-wide/16 v13, 0x0
+
+    move-object v9, v2
+
+    invoke-direct/range {v9 .. v14}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;-><init>(IJJ)V
+
+    invoke-virtual {v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;->encode()[B
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->send([B)V
+
+    :cond_7
+    if-eqz v3, :cond_8
+
+    .line 159
+    invoke-virtual {v3}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->isOpen()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    iget-wide v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->lastReceive:J
+
+    sub-long v4, v0, v4
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v6, 0x1e
+
+    invoke-virtual {v2, v6, v7}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v6
+
+    cmp-long v2, v4, v6
+
+    if-lez v2, :cond_8
+
+    invoke-direct {p0, v3}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->lost(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)V
+
+    .line 160
+    :cond_8
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+
+    invoke-direct {p0, v0, v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->traceWaiting(J)V
+    :try_end_4
+    .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    .line 157
+    :try_start_5
+    monitor-exit v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :try_start_6
+    throw v0
+    :try_end_6
+    .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
+
+    :catchall_1
+    move-exception v0
+
+    .line 154
+    :try_start_7
+    monitor-exit v2
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    :try_start_8
+    throw v0
+    :try_end_8
+    .catch Ljava/lang/RuntimeException; {:try_start_8 .. :try_end_8} :catch_0
+
+    :catch_0
+    const-string v0, "CONTROL"
+
+    .line 161
+    invoke-direct {p0, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Ljava/lang/String;)V
+
+    :goto_2
+    return-void
+.end method
+
+.method private traceWaiting(J)V
+    .locals 26
+
+    move-object/from16 v1, p0
+
+    .line 165
+    :try_start_0
+    iget-object v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v2
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 166
+    :try_start_1
+    iget-wide v3, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->state:J
+
+    const-wide/16 v5, 0x2
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->waitDiagnostics:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;
+
+    invoke-virtual {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;->reset()V
+
+    monitor-exit v2
+
+    return-void
+
+    .line 167
+    :cond_0
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-boolean v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez v0, :cond_2
+
+    iget-boolean v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    invoke-virtual {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->isOpen()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->waitDiagnostics:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;
+
+    move-wide/from16 v4, p1
+
+    invoke-virtual {v0, v4, v5}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;->due(J)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    .line 168
+    :cond_1
+    iget-object v3, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->waitDiagnostics:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;
+
+    iget-wide v6, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    iget-wide v8, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->state:J
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->nativeStatus()J
+
+    move-result-wide v10
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v12, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    iget-wide v14, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accepted:J
+
+    move-wide/from16 v16, v14
+
+    iget-wide v14, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->cursor:J
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    move-wide/from16 v18, v14
+
+    iget-wide v14, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    move-wide/from16 v20, v14
+
+    iget-wide v14, v0, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->delivered:J
+
+    iget-boolean v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localReady:Z
+
+    move-wide/from16 v22, v14
+
+    iget-wide v14, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    move-wide/from16 v4, p1
+
+    move-wide/from16 v24, v14
+
+    move-wide/from16 v14, v16
+
+    move-wide/from16 v16, v18
+
+    move-wide/from16 v18, v20
+
+    move-wide/from16 v20, v22
+
+    move/from16 v22, v0
+
+    move-wide/from16 v23, v24
+
+    invoke-virtual/range {v3 .. v24}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$WaitDiagnostics;->sample(JJJJJJJJJZJ)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 169
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v0, :cond_3
+
+    .line 170
+    :try_start_2
+    iget-object v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {v2, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->trace(Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_1
+
+    .line 167
+    :cond_2
+    :goto_0
+    :try_start_3
+    monitor-exit v2
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    .line 169
+    monitor-exit v2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw v0
+    :try_end_4
+    .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
+
+    :catch_0
+    :cond_3
+    :goto_1
+    return-void
+.end method
+
+
+# virtual methods
+.method available()Z
+    .locals 2
+
+    .line 53
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez v1, :cond_0
+
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->localReady:Z
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    invoke-virtual {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->isOpen()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method awaitClosed(J)Z
+    .locals 12
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    const-wide/16 v0, 0x1
+
+    cmp-long v2, p1, v0
+
+    if-ltz v2, :cond_13
+
+    const-wide/32 v2, 0xea60
+
+    cmp-long v2, p1, v2
+
+    if-gtz v2, :cond_13
+
+    .line 279
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    return v3
+
+    .line 280
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v4
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide p1
+
+    add-long/2addr v4, p1
+
+    .line 281
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->inputThread:Ljava/lang/Thread;
+
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->outputThread:Ljava/lang/Thread;
+
+    filled-new-array {p1, p2}, [Ljava/lang/Thread;
+
+    move-result-object p1
+
+    move p2, v3
+
+    :goto_0
+    const-wide/16 v6, 0x0
+
+    const/4 v2, 0x2
+
+    if-ge p2, v2, :cond_5
+
+    aget-object v2, p1, p2
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    .line 282
+    :cond_1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v8
+
+    if-ne v2, v8, :cond_2
+
+    return v3
+
+    .line 283
+    :cond_2
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v8
+
+    sub-long v8, v4, v8
+
+    cmp-long v6, v8, v6
+
+    if-gtz v6, :cond_3
+
+    return v3
+
+    .line 284
+    :cond_3
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v6, v8, v9}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v6
+
+    invoke-static {v0, v1, v6, v7}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v6
+
+    invoke-virtual {v2, v6, v7}, Ljava/lang/Thread;->join(J)V
+
+    invoke-virtual {v2}, Ljava/lang/Thread;->isAlive()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    return v3
+
+    :cond_4
+    :goto_1
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    .line 286
+    :cond_5
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide p1
+
+    sub-long p1, v4, p1
+
+    cmp-long v2, p1, v6
+
+    if-lez v2, :cond_12
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->worker:Ljava/util/concurrent/ScheduledExecutorService;
+
+    sget-object v8, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v2, p1, p2, v8}, Ljava/util/concurrent/ScheduledExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    goto/16 :goto_5
+
+    .line 287
+    :cond_6
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide p1
+
+    sub-long p1, v4, p1
+
+    cmp-long v2, p1, v6
+
+    if-lez v2, :cond_12
+
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->writes:Ljava/util/concurrent/ExecutorService;
+
+    sget-object v8, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v2, p1, p2, v8}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    goto/16 :goto_5
+
+    .line 290
+    :cond_7
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->activeReaders:Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_2
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_11
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    invoke-virtual {p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->getSocket()Ljava/net/Socket;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_8
+
+    .line 291
+    invoke-virtual {v2}, Ljava/net/Socket;->isClosed()Z
+
+    move-result v8
+
+    if-nez v8, :cond_8
+
+    :try_start_0
+    invoke-virtual {v2}, Ljava/net/Socket;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    return v3
+
+    .line 292
+    :cond_8
+    :goto_3
+    invoke-static {p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->access$3100(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)Ljava/lang/Thread;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_10
+
+    .line 293
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v8
+
+    if-ne v2, v8, :cond_9
+
+    goto :goto_4
+
+    .line 294
+    :cond_9
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v8
+
+    sub-long v8, v4, v8
+
+    cmp-long v10, v8, v6
+
+    if-gtz v10, :cond_a
+
+    return v3
+
+    .line 295
+    :cond_a
+    sget-object v10, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v10, v8, v9}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v8
+
+    invoke-static {v0, v1, v8, v9}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v8
+
+    invoke-virtual {v2, v8, v9}, Ljava/lang/Thread;->join(J)V
+
+    .line 296
+    invoke-virtual {p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->getSocket()Ljava/net/Socket;
+
+    move-result-object v8
+
+    invoke-virtual {v2}, Ljava/lang/Thread;->isAlive()Z
+
+    move-result v9
+
+    if-nez v9, :cond_10
+
+    if-eqz v8, :cond_b
+
+    invoke-virtual {v8}, Ljava/net/Socket;->isClosed()Z
+
+    move-result v8
+
+    if-nez v8, :cond_b
+
+    goto :goto_4
+
+    .line 297
+    :cond_b
+    :try_start_1
+    invoke-static {p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->access$3200(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)Ljava/lang/Thread;
+
+    move-result-object v8
+    :try_end_1
+    .catch Ljava/lang/ReflectiveOperationException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+
+    if-eqz v8, :cond_e
+
+    .line 298
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v9
+
+    if-ne v8, v9, :cond_c
+
+    return v3
+
+    :cond_c
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v9
+
+    sub-long v9, v4, v9
+
+    cmp-long v11, v9, v6
+
+    if-gtz v11, :cond_d
+
+    return v3
+
+    :cond_d
+    sget-object v11, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v11, v9, v10}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v9
+
+    invoke-static {v0, v1, v9, v10}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v9
+
+    invoke-virtual {v8, v9, v10}, Ljava/lang/Thread;->join(J)V
+
+    invoke-virtual {v8}, Ljava/lang/Thread;->getState()Ljava/lang/Thread$State;
+
+    move-result-object v8
+
+    sget-object v9, Ljava/lang/Thread$State;->TERMINATED:Ljava/lang/Thread$State;
+
+    if-eq v8, v9, :cond_e
+
+    return v3
+
+    .line 299
+    :cond_e
+    invoke-virtual {v2}, Ljava/lang/Thread;->getState()Ljava/lang/Thread$State;
+
+    move-result-object v2
+
+    sget-object v8, Ljava/lang/Thread$State;->TERMINATED:Ljava/lang/Thread$State;
+
+    if-eq v2, v8, :cond_f
+
+    return v3
+
+    .line 300
+    :cond_f
+    iget-object v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->activeReaders:Ljava/util/Set;
+
+    invoke-interface {v2, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    goto/16 :goto_2
+
+    :catch_1
+    :cond_10
+    :goto_4
+    return v3
+
+    .line 302
+    :cond_11
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->activeReaders:Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
+
+    move-result p1
+
+    return p1
+
+    :cond_12
+    :goto_5
+    return v3
+
+    .line 278
+    :cond_13
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "CLEANUP_WAIT"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public close()V
+    .locals 3
+
+    .line 226
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 227
+    :cond_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nativeHint:Ljava/util/concurrent/Semaphore;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    if-eqz v0, :cond_1
+
+    const/16 v1, 0x3e8
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->closeConnection(ILjava/lang/String;)V
+
+    .line 228
+    :cond_1
+    :try_start_1
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accept:Ljava/net/ServerSocket;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/net/ServerSocket;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :catch_0
+    :cond_2
+    :try_start_2
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->local:Ljava/net/Socket;
+
+    invoke-virtual {v0}, Ljava/net/Socket;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+
+    .line 229
+    :catch_1
+    :cond_3
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    if-eqz v0, :cond_4
+
+    :try_start_3
+    invoke-interface {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
+
+    .line 230
+    :catch_2
+    :cond_4
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->worker:Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ScheduledExecutorService;->shutdownNow()Ljava/util/List;
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->writes:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 227
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw v1
+.end method
+
+.method synthetic lambda$pump$2$org-emulationstation-frontend-netplay-StationMultiplayerTunnel()V
+    .locals 23
+
+    .line 0
+    move-object/from16 v1, p0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    move-object v2, v0
+
+    :goto_1
+    const/4 v3, 0x0
+
+    .line 192
+    :try_start_0
+    iget-object v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v4, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    iget-object v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {v4}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->nativeStatus()J
+
+    move-result-wide v4
+
+    .line 193
+    iget-object v6, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v6
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iget-object v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    iget-object v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v7
+
+    if-nez v7, :cond_f
+
+    iget-boolean v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez v7, :cond_f
+
+    iget-boolean v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    if-eqz v7, :cond_f
+
+    if-eqz v2, :cond_f
+
+    invoke-virtual {v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->isOpen()Z
+
+    move-result v7
+
+    if-nez v7, :cond_0
+
+    goto/16 :goto_4
+
+    :cond_0
+    const-wide/16 v7, 0x0
+
+    cmp-long v9, v4, v7
+
+    const/4 v10, 0x1
+
+    if-ltz v9, :cond_1
+
+    const-wide/16 v11, 0x4
+
+    and-long/2addr v11, v4
+
+    cmp-long v11, v11, v7
+
+    if-eqz v11, :cond_1
+
+    move-object v4, v0
+
+    move/from16 v17, v3
+
+    goto/16 :goto_3
+
+    .line 195
+    :cond_1
+    iget-boolean v11, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    if-eqz v11, :cond_2
+
+    invoke-static {v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->access$3300(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_2
+
+    invoke-static {v2, v10}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->access$3302(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;Z)Z
+
+    new-instance v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;
+
+    const/16 v13, 0xc
+
+    iget-wide v14, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    const-wide/16 v16, 0x0
+
+    move-object v12, v4
+
+    invoke-direct/range {v12 .. v17}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;-><init>(IJJ)V
+
+    :goto_2
+    move v10, v3
+
+    move/from16 v17, v10
+
+    goto/16 :goto_3
+
+    .line 196
+    :cond_2
+    iget-object v11, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v11, v11, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->delivered:J
+
+    iget-wide v13, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ackSent:J
+
+    cmp-long v11, v11, v13
+
+    if-eqz v11, :cond_3
+
+    iget-object v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v9, v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->delivered:J
+
+    iput-wide v9, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ackSent:J
+
+    new-instance v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;
+
+    const/4 v8, 0x4
+
+    const-wide/16 v11, 0x0
+
+    move-object v7, v4
+
+    invoke-direct/range {v7 .. v12}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;-><init>(IJJ)V
+
+    goto :goto_2
+
+    .line 197
+    :cond_3
+    iget-wide v11, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->state:J
+
+    const-wide/16 v13, 0x2
+
+    cmp-long v11, v11, v13
+
+    const/4 v12, 0x3
+
+    if-eqz v11, :cond_4
+
+    if-ltz v9, :cond_4
+
+    shr-long v15, v4, v12
+
+    iget-wide v10, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    cmp-long v15, v15, v10
+
+    if-nez v15, :cond_4
+
+    const-wide/16 v15, 0x1
+
+    and-long/2addr v15, v4
+
+    cmp-long v15, v15, v7
+
+    if-eqz v15, :cond_4
+
+    iget-wide v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pauseSent:J
+
+    cmp-long v7, v7, v10
+
+    if-eqz v7, :cond_4
+
+    iput-wide v10, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pauseSent:J
+
+    new-instance v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;
+
+    const/16 v18, 0x7
+
+    const-wide/16 v21, 0x0
+
+    move-object/from16 v17, v4
+
+    move-wide/from16 v19, v10
+
+    invoke-direct/range {v17 .. v22}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;-><init>(IJJ)V
+
+    goto :goto_2
+
+    .line 198
+    :cond_4
+    iget-wide v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->cursor:J
+
+    iget-object v10, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v10, v10, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    cmp-long v7, v7, v10
+
+    if-gez v7, :cond_6
+
+    invoke-static {v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->queued(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)J
+
+    move-result-wide v4
+
+    const-wide/32 v7, 0x10000
+
+    cmp-long v4, v4, v7
+
+    if-lez v4, :cond_5
+
+    move-object v4, v0
+
+    move v10, v3
+
+    const/16 v17, 0x1
+
+    goto/16 :goto_3
+
+    :cond_5
+    iget-object v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->cursor:J
+
+    invoke-virtual {v4, v7, v8}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->read(J)[B
+
+    move-result-object v4
+
+    new-instance v5, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;
+
+    const/4 v10, 0x3
+
+    iget-wide v11, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->cursor:J
+
+    const-wide/16 v13, 0x0
+
+    move-object v9, v5
+
+    move-object v15, v4
+
+    invoke-direct/range {v9 .. v15}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;-><init>(IJJ[B)V
+
+    iget-wide v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->cursor:J
+
+    array-length v4, v4
+
+    int-to-long v9, v4
+
+    add-long/2addr v7, v9
+
+    iput-wide v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->cursor:J
+
+    move v10, v3
+
+    move/from16 v17, v10
+
+    move-object v4, v5
+
+    goto/16 :goto_3
+
+    .line 199
+    :cond_6
+    iget-wide v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->state:J
+
+    cmp-long v7, v7, v13
+
+    if-eqz v7, :cond_8
+
+    iget-boolean v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    if-eqz v7, :cond_8
+
+    if-ltz v9, :cond_8
+
+    shr-long v7, v4, v12
+
+    iget-wide v9, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    cmp-long v7, v7, v9
+
+    if-nez v7, :cond_8
+
+    const-wide/16 v7, 0x3
+
+    and-long/2addr v4, v7
+
+    cmp-long v4, v4, v7
+
+    if-nez v4, :cond_8
+
+    iget-wide v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accepted:J
+
+    iget-object v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v7, v7, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    cmp-long v4, v4, v7
+
+    if-nez v4, :cond_8
+
+    iget-object v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->rx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v4}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->pending()J
+
+    move-result-wide v4
+
+    const-wide/16 v7, 0x0
+
+    cmp-long v4, v4, v7
+
+    if-nez v4, :cond_8
+
+    iget-object v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    if-eqz v4, :cond_7
+
+    iget-boolean v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpointReading:Z
+
+    if-nez v4, :cond_8
+
+    :cond_7
+    iget-wide v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    iget-object v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v7, v7, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    cmp-long v4, v4, v7
+
+    if-eqz v4, :cond_8
+
+    iget-object v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v4, v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    iput-wide v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    new-instance v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;
+
+    const/16 v8, 0x8
+
+    iget-wide v9, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    iget-object v5, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    iget-wide v11, v5, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->next:J
+
+    move-object v7, v4
+
+    invoke-direct/range {v7 .. v12}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;-><init>(IJJ)V
+
+    goto/16 :goto_2
+
+    .line 200
+    :cond_8
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v4
+
+    iget-wide v7, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pingSent:J
+
+    sub-long/2addr v4, v7
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v8, 0xa
+
+    invoke-virtual {v7, v8, v9}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v7
+
+    cmp-long v4, v4, v7
+
+    if-lez v4, :cond_9
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v4
+
+    iput-wide v4, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pingSent:J
+
+    new-instance v4, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;
+
+    const/16 v8, 0x9
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-wide v9, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pingSent:J
+
+    iget-wide v11, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->started:J
+
+    sub-long/2addr v9, v11
+
+    invoke-virtual {v5, v9, v10}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v9
+
+    const-wide/16 v11, 0x0
+
+    move-object v7, v4
+
+    invoke-direct/range {v7 .. v12}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;-><init>(IJJ)V
+
+    goto/16 :goto_2
+
+    :cond_9
+    move-object v4, v0
+
+    goto/16 :goto_2
+
+    .line 201
+    :goto_3
+    monitor-exit v6
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v10, :cond_b
+
+    :try_start_2
+    const-string v0, "NATIVE_PROTOCOL"
+
+    .line 202
+    invoke-direct {v1, v2, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 210
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 212
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    invoke-direct/range {p0 .. p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+
+    :cond_a
+    return-void
+
+    :cond_b
+    if-eqz v17, :cond_c
+
+    const-wide/16 v4, 0x19
+
+    .line 203
+    :try_start_3
+    invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_3
+    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    goto/16 :goto_1
+
+    :cond_c
+    if-nez v4, :cond_e
+
+    .line 210
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 212
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_d
+
+    invoke-direct/range {p0 .. p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+
+    :cond_d
+    return-void
+
+    .line 205
+    :cond_e
+    :try_start_4
+    invoke-virtual {v4}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;->encode()[B
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->send([B)V
+    :try_end_4
+    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    goto/16 :goto_0
+
+    .line 193
+    :cond_f
+    :goto_4
+    :try_start_5
+    monitor-exit v6
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    .line 210
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 212
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_10
+
+    invoke-direct/range {p0 .. p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+
+    :cond_10
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    .line 201
+    :try_start_6
+    monitor-exit v6
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    :try_start_7
+    throw v0
+    :try_end_7
+    .catch Ljava/lang/InterruptedException; {:try_start_7 .. :try_end_7} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_7
+
+    :catch_0
+    if-eqz v2, :cond_11
+
+    .line 208
+    :try_start_8
+    invoke-direct {v1, v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->lost(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;)V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    .line 210
+    :cond_11
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 212
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_12
+
+    :goto_5
+    invoke-direct/range {p0 .. p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+
+    goto :goto_6
+
+    .line 207
+    :catch_1
+    :try_start_9
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+
+    .line 210
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 212
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    iget-object v0, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_12
+
+    goto :goto_5
+
+    :cond_12
+    :goto_6
+    return-void
+
+    .line 210
+    :goto_7
+    iget-object v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpPending:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 212
+    iget-object v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pumpRequested:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_13
+
+    iget-object v2, v1, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-nez v2, :cond_13
+
+    invoke-direct/range {p0 .. p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->pump()V
+
+    .line 213
+    :cond_13
+    throw v0
+.end method
+
+.method listening()V
+    .locals 1
+
+    .line 52
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nativeHint:Ljava/util/concurrent/Semaphore;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
+
+    return-void
+.end method
+
+.method localPort()I
+    .locals 1
+
+    .line 51
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->endpoint:Lorg/emulationstation/frontend/netplay/StationMultiplayerEndpoint;
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->host:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->accept:Ljava/net/ServerSocket;
+
+    invoke-virtual {v0}, Ljava/net/ServerSocket;->getLocalPort()I
+
+    move-result v0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iget v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->hostPort:I
+
+    :goto_1
+    return v0
+.end method
+
+.method provide(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    if-eqz p1, :cond_3
+
+    const-string v0, "[A-Za-z0-9_-]{43}"
+
+    .line 62
+    invoke-virtual {p1, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    if-eqz p2, :cond_3
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/16 v1, 0x400
+
+    if-gt v0, v1, :cond_3
+
+    const-string v0, "v1\\.[0-9]{9,12}\\.[A-Za-z0-9_-]{22}\\.[A-Za-z0-9_-]+"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tx:Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;
+
+    invoke-virtual {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire$Bytes;->capacity()I
+
+    move-result v0
+
+    if-ne p3, v0, :cond_3
+
+    .line 63
+    new-instance p3, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    invoke-direct {p3, p0, p1, p2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;-><init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 64
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object p2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->closed:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    iget-boolean p2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->terminal:Z
+
+    if-nez p2, :cond_2
+
+    iget-boolean p2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput-object p3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    const/4 p2, 0x0
+
+    iput-boolean p2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    iput-boolean p2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 65
+    iget-boolean p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->startedTransport:Z
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p3}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->begin()V
+
+    :cond_1
+    return-void
+
+    .line 64
+    :cond_2
+    :goto_0
+    :try_start_1
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p2
+
+    .line 62
+    :cond_3
+    new-instance p1, Ljava/io/IOException;
+
+    const-string p2, "CREDENTIAL"
+
+    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method reject()V
+    .locals 1
+
+    const-string v0, "AUTHORITY"
+
+    .line 68
+    invoke-direct {p0, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->fatal(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method socketBinding(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;)V
+    .locals 1
+
+    .line 77
+    iget-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->startedTransport:Z
+
+    if-nez v0, :cond_0
+
+    iput-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->socketBinding:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$SocketBinding;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Started"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method start()V
+    .locals 11
+
+    const/4 v0, 0x1
+
+    .line 55
+    iput-boolean v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->startedTransport:Z
+
+    .line 56
+    new-instance v1, Ljava/lang/Thread;
+
+    new-instance v2, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda2;
+
+    invoke-direct {v2, p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda2;-><init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+
+    const-string v3, "Station-recovery-native-input"
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    iput-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->inputThread:Ljava/lang/Thread;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Thread;->setDaemon(Z)V
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
+
+    .line 57
+    new-instance v1, Ljava/lang/Thread;
+
+    new-instance v2, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda3;
+
+    invoke-direct {v2, p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda3;-><init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+
+    const-string v3, "Station-recovery-native-output"
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    iput-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->outputThread:Ljava/lang/Thread;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Thread;->setDaemon(Z)V
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
+
+    .line 58
+    iget-object v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->worker:Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v5, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda4;
+
+    invoke-direct {v5, p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$$ExternalSyntheticLambda4;-><init>(Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;)V
+
+    const-wide/16 v6, 0x0
+
+    const-wide/16 v8, 0xfa
+
+    sget-object v10, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface/range {v4 .. v10}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    .line 59
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->begin()V
+
+    :cond_0
+    return-void
+.end method
+
+.method unavailable()V
+    .locals 7
+
+    .line 67
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    iput-boolean v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    iget v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->attempts:I
+
+    const/4 v2, 0x1
+
+    add-int/2addr v1, v2
+
+    const/4 v3, 0x5
+
+    invoke-static {v1, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    iput v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->attempts:I
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v3
+
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget v5, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->attempts:I
+
+    shl-int/2addr v2, v5
+
+    const/16 v5, 0xa
+
+    invoke-static {v5, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    int-to-long v5, v2
+
+    invoke-virtual {v1, v5, v6}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v1
+
+    add-long/2addr v3, v1
+
+    iput-wide v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nextTicket:J
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method visible(Z)V
+    .locals 8
+
+    .line 71
+    iget-object v0, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iput-boolean p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->foreground:Z
+
+    iget-object v1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    iget-wide v4, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->epoch:J
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->readySent:J
+
+    const/4 v2, 0x0
+
+    if-nez p1, :cond_0
+
+    iput-boolean v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->welcome:Z
+
+    iput-boolean v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    const/4 v3, 0x0
+
+    iput-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->remote:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v6, 0x0
+
+    iput-wide v6, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->nextTicket:J
+
+    iput-boolean v2, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->ticketPending:Z
+
+    :goto_0
+    iget-object v3, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->gate:Ljava/lang/Object;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v0, 0x1
+
+    if-nez p1, :cond_2
+
+    .line 72
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {p1, v4, v5, v0, v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->nativeControl(JZZ)V
+
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {p1, v0, v2}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->state(ZZ)V
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->isOpen()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    :try_start_1
+    new-instance p1, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;
+
+    const/16 v3, 0xb
+
+    const-wide/16 v6, 0x0
+
+    move-object v2, p1
+
+    invoke-direct/range {v2 .. v7}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;-><init>(IJJ)V
+
+    invoke-virtual {p1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerWire;->encode()[B
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->send([B)V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :catch_0
+    :cond_1
+    const/16 p1, 0x3e8
+
+    const-string v0, ""
+
+    invoke-virtual {v1, p1, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Remote;->closeConnection(ILjava/lang/String;)V
+
+    goto :goto_1
+
+    .line 73
+    :cond_2
+    iget-object p1, p0, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->listener:Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;
+
+    invoke-interface {p1, v4, v5, v0, v0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel$Listener;->nativeControl(JZZ)V
+
+    invoke-direct {p0}, Lorg/emulationstation/frontend/netplay/StationMultiplayerTunnel;->tick()V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 71
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
+.end method

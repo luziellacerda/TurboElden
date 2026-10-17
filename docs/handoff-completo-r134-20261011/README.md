@@ -1,5 +1,11 @@
 # TurboStations aplicativo completo e repasse de manutenção
 
+## Atualização R135 em 12/10/2026
+
+O dossiê e os inventários abaixo conservam a auditoria integral da base R134. A [entrega R135](../../versions/station-online-exit-r135-20261012/README.md) é o suplemento atual: correções solicitadas de saída em DEX35, compilação/assinatura, mapa de preservação e instalação comprovada no Edge 30, moto g52 e Samsung A56. O [estado R135](../../versions/station-online-exit-r135-20261012/STATUS.json) prevalece sobre os snapshots históricos de preparação abaixo. A abertura visual do moto g52 não foi observada com a tela apagada; gameplay com três aparelhos e aceite do servidor continuam pendentes.
+
+## Auditoria integral R134 preservada
+
 A referência instalada é o APK **R134**, fonte executável `4f9039eb9ce13907ce043870bfe1f6e294888556`, SHA256 `f8cb09184f41bc7c942ce84541dbd90d575b7240467ce0033d35be65e57caee2`. Edge 30 e Samsung A56 receberam os mesmos bytes, com assinatura e dados preservados. O proprietário relatou carregamento contínuo em uma partida com três pessoas e pedido para fechar o app ao sair do online. A qualificação do multiplayer para entrega ao consumidor está pendente.
 
 ## Leitura principal

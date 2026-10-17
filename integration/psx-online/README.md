@@ -1,6 +1,24 @@
-# R128 — montagem atual
+<!-- STATION-PSX-RESUME-PACING-20261016 -->
+## Correção posterior à R169: retomada, primeiro FRAME e envio por evento
 
-A implementação PSX abaixo permanece congelada. A montagem atual e seus quatro IDs estão em [overlay R128](../ps3-ps4-offline/README.md), que adiciona apenas PS3/PS4 offline. Usar os recibos R128 para o pacote atual; os hashes abaixo descrevem a R127 histórica.
+O diagnóstico está em `docs/server/r169/diagnostics/psx-resume-race-20261016`.
+Correção de fonte ainda não instalada. Os cinco Java e três fontes/cabeçalho
+nativos alterados devem entrar juntos, com novo fingerprint/kit exato e
+preservação das correções XML/CAS. Não usar só a receita de uma instrução R169.
+O novo `nativeAwaitOutgoing` bloqueia somente IO, no máximo100ms; a espera do
+endpoint ocorre fora de `endpointReading`, e o default mantém Dolphin/TCP.
+`run_resume_race_probe.py`, `outbound_wake_probe.cpp` e `pacing_probe.cpp`
+separam regressão real do protocolo, espera nativa e modelo discreto. Fixtures
+nunca entram no APK. Verificar o contrato completo do diagnóstico e o instalador
+manual antes de publicar uma sucessora. Nenhuma nova aprovação universal.
+
+## Histórico de montagem R127/R128
+
+As identidades e os recibos abaixo descrevem a R127/R128 histórica. A fonte
+recebeu a correção indicada no topo; para montar sua sucessora, usar a R169
+como base e o contrato completo do diagnóstico atual. O [overlay R128](../ps3-ps4-offline/README.md)
+registra a adição histórica de PS3/PS4 offline; seus IDs não identificam a R169
+nem uma compilação desta correção.
 
 ## Implementação PSX R127 preservada
 
