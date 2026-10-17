@@ -57,7 +57,7 @@ public final class VerifyScopedPartition {
             throw new IllegalStateException("Scope identity");
         Set<String> families=list(properties.getProperty("families"));
         Set<String> expected=new TreeSet<>();
-        for(String name:Set.of("StationApi","StationCatalog","StationCatalogPoll","StationCoverQueue","StationHttp","StationFrontend"))
+        for(String name:Set.of("StationApi","StationCatalog","StationCatalogPoll","StationCoverQueue","StationCatalogPlayerEvidence","StationCatalogPlayerEvidenceLoader","StationHttp","StationFrontend"))
             expected.add("Lorg/emulationstation/frontend/station/"+name+";");
         if (!partition.equals("classes28.dex") || !families.equals(expected)) throw new IllegalStateException("R175 catalogue family scope");
         Scope scope=new Scope(partition,checksum,families,list(properties.getProperty("originalAllowed")),list(properties.getProperty("finalAllowed")));

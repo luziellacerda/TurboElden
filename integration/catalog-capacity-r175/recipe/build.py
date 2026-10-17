@@ -9,14 +9,14 @@ BASE_SHA='6ab94ff0999ef2f0d5febe0d46fd27e715692c1aea8c216a2ce87d9cb8b51c4d'
 BASE_SIZE=2714238050
 CERT='7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825'
 DEX_PINS={'classes28.dex':'dcd7349cc874a6652f6b6530f68ab595d8d6ea92bcab59e76f06177d834bb161'}
-COMPILED={'StationApi','StationCatalog','StationCatalogPoll','StationCoverQueue'}
+COMPILED={'StationApi','StationCatalog','StationCatalogPoll','StationCoverQueue','StationCatalogPlayerEvidence','StationCatalogPlayerEvidenceLoader'}
 HOOKED={'StationFrontend','StationHttp'}
 OWNERS=COMPILED|HOOKED
 NATIVE=['StationPsxEntry.cpp','StationPsxOwner.cpp','StationPsxProtocol.cpp','StationPsxSha256.cpp']
 WRAPPERS={'psx':'libstation_psx_online.so','n64':'libstation_mupen64plus_runtime.so','dolphin':'libstation_dolphin_runtime.so'}
 PREFIX='lib/arm64-v8a/'
 ENGINE='assets/station-online/engines.json'
-ALLOWED=set(DEX_PINS)|{'AndroidManifest.xml',ENGINE}|{PREFIX+n for n in WRAPPERS.values()}
+ALLOWED=set(DEX_PINS)|{'AndroidManifest.xml',ENGINE,PREFIX+'libstation_frontend.so'}|{PREFIX+n for n in WRAPPERS.values()}
 
 def need(ok,reason):
     if not ok:raise ValueError(reason)
@@ -46,6 +46,7 @@ def freeze(revision,task):
         need(digest(subprocess.check_output(['git','-C',str(REPO),'show',revision+':'+name]))==pin,'R174 source changed: '+name)
     sources=list(HERE.glob('*.py'))+list(HERE.glob('*.java'))+[HERE/'COMPILER-INPUTS.json']
     sources+=list((HERE.parent/'java').rglob('*.java'))+list((HERE.parent/'tests').glob('*.java'))
+    sources+=list((HERE.parent/'native').iterdir())
     sources+=list((HERE.parent/'signing').glob('*.py'))+[HERE.parent/'SCOPE.json',HERE.parent/'SOURCE-PROVENANCE.json']
     sources+=list((REPO/'integration/psx-online/native').glob('*.cpp'))+list((REPO/'integration/psx-online/native').glob('*.hpp'))+[REPO/'integration/psx-online/native/PsxPinnedOptions.h']
     sources+=[REPO/'integration/psx-updater-r170/recipe/manifest_delta.py']
@@ -154,6 +155,42 @@ def fingerprint(raw):
         except (ValueError,UnicodeError):pass
     need(len(matches)==1,'Exactly one runtime manifest');return matches[0]
 
+def build_frontend(task,ndk):
+    import struct
+    out=task/'native';root=HERE.parent/'native';tools=ndk/'toolchains/llvm/prebuilt/linux-x86_64/bin'
+    before=(root/'station_frontend-before-capacity.cpp').read_bytes();after=(root/'station_frontend.cpp').read_bytes()
+    expected=before
+    for old,new in [(b'total>4096',b'total>20000'),(b'GetArrayLength(rows)>4096',b'GetArrayLength(rows)>20000')]:
+        need(expected.count(old)==1 and new not in expected,'Exact JNI capacity source anchors');expected=expected.replace(old,new)
+    need(expected==after,'Only two JNI catalogue limits may change')
+    base=task/'inputs/TurboStations-Premium-R174.apk';original=out/'frontend-parent.so'
+    with zipfile.ZipFile(base) as z:original.write_bytes(z.read(PREFIX+'libstation_frontend.so'))
+    need(sha(original)=='438789d8e328ef6416b990ec64a41f96747a32714745088d16f88c65839a888d','Current signed native frontend')
+    flags=[tools/'clang++','--target=aarch64-linux-android26','-std=c++17','-shared','-fPIC','-O2','-Wl,-z,max-page-size=16384','-Wl,--no-undefined',
+           '-fvisibility=hidden','-Wall','-Wextra','-Werror','-Wno-return-type-c-linkage','-static-libstdc++','-Wl,--exclude-libs,ALL','-I',root]
+    baseline=out/'frontend-baseline-linux.so';candidate=out/'libstation_frontend.so'
+    run([*flags,root/'station_frontend-before-capacity.cpp','-ldl','-llog','-o',baseline],out/'frontend-baseline-compile.log')
+    def allocated(p):
+        raw=p.read_bytes();need(raw[:6]==b'\x7fELF\x02\x01','AArch64 ELF required')
+        offset=struct.unpack_from('<Q',raw,40)[0];size,count,index=struct.unpack_from('<HHH',raw,58)
+        rows=[struct.unpack_from('<IIQQQQIIQQ',raw,offset+i*size) for i in range(count)];strings=rows[index];names=raw[strings[4]:strings[4]+strings[5]]
+        return {names[r[0]:names.find(b'\0',r[0])].decode():(r[1],r[2],r[3],r[5],b'' if r[1]==8 else raw[r[4]:r[4]+r[5]]) for r in rows if r[2]&2}
+    need(allocated(original)==allocated(baseline),'Every allocated baseline section must exactly reproduce effective R174 frontend')
+    run([*flags,root/'station_frontend.cpp','-ldl','-llog','-o',candidate],out/'frontend-capacity-compile.log')
+    def exports(p,label):
+        result=run([tools/'llvm-nm','-D','--defined-only',p],out/(label+'-exports.log'))
+        return {line.split()[-1] for line in result.splitlines() if len(line.split())>=2}
+    need(exports(original,'frontend-parent')==exports(candidate,'frontend-candidate'),'Native frontend ABI must stay exact')
+    loads=run([tools/'llvm-readelf','-lW',candidate],out/'frontend-loads.log')
+    alignment=re.findall(r'^\s*LOAD\s+.*\s(0x[0-9a-fA-F]+)\s*$',loads,re.M)
+    need(alignment and all(int(v,16)>=16384 for v in alignment),'Native frontend 16 KiB alignment')
+    asm=run([tools/'llvm-objdump','-d','--disassemble-symbols=Java_org_emulationstation_frontend_station_StationFrontend_publishCatalog,Java_org_emulationstation_frontend_station_StationFrontend_publishPreparation',candidate],out/'frontend-capacity-disassembly.log')
+    need(asm.count('#0x4e20')==2,'Both productive JNI methods must compare against 20000')
+    write(out/'frontend-proof.json',dict(passed=True,parentSha256=sha(original),baselineLinuxSha256=sha(baseline),candidateSha256=sha(candidate),
+        allAllocatedBaselineSectionsIdentical=True,onlyTwoSourceComparisonsChanged=True,maximumItems=20000,abiExportsPreserved=True,loadingGraphicsAndWarmCachePreserved=True,
+        preservedBackgroundModeMaximum=3,elfLoadAlignmentBytes=16384,physicalAndroidValidated=False))
+    return candidate
+
 def native(task,ndk,revision):
     out=fresh(task/'native');compiled=json.loads((task/'compile/receipt.json').read_text())
     pins=freeze(revision,task);need(compiled['sourceSha256']==pins and compiled['passed'],'Frozen compiled payload required')
@@ -161,13 +198,14 @@ def native(task,ndk,revision):
     tools=ndk/'toolchains/llvm/prebuilt/linux-x86_64/bin'
     base=task/'inputs/TurboStations-Premium-R174.apk'
     need(sha(base)==BASE_SHA,'Exact R174 native donor')
+    frontend=build_frontend(task,ndk)
     with zipfile.ZipFile(base) as z:
         previous={k:fingerprint(z.read(PREFIX+n)) for k,n in WRAPPERS.items()}
         payload=previous['psx']['payloadSha256']
         need(all(v['payloadSha256']==payload for v in previous.values()),'Parent payload identity disagreement')
         need(all(entry_sha(z,n)==h for n,h in payload.items()),'Actual parent payload mismatch')
         old_registry=json.loads(z.read(ENGINE))
-    payload={**payload,**{n:sha(task/'compile'/n) for n in [*DEX_PINS,'AndroidManifest.xml']}}
+    payload={**payload,**{n:sha(task/'compile'/n) for n in [*DEX_PINS,'AndroidManifest.xml']},PREFIX+'libstation_frontend.so':sha(frontend)}
     transforms={**previous['psx']['productiveTransforms'],**{'station-r175/'+n:h for n,h in pins.items()}}
     markers={};identities={};abi={}
     for kind,name in WRAPPERS.items():
@@ -228,7 +266,8 @@ def package(task,revision):
     base=task/'inputs/TurboStations-Premium-R174.apk';need(sha(base)==BASE_SHA,'Exact R174 package donor')
     replacements={n:task/'compile'/n for n in [*DEX_PINS,'AndroidManifest.xml']}
     replacements[ENGINE]=task/'native/engines.json';replacements.update({PREFIX+n:task/'native'/n for n in WRAPPERS.values()})
-    need(set(replacements)==ALLOWED,'Six-entry scope')
+    replacements[PREFIX+'libstation_frontend.so']=task/'native/libstation_frontend.so'
+    need(set(replacements)==ALLOWED,'Seven-entry catalogue scope')
     for n in DEX_PINS:need(sha(replacements[n])==compiled['partitions'][n]['candidateSha256'],'DEX receipt mismatch')
     need(sha(replacements['AndroidManifest.xml'])==compiled['manifestSha256'],'Manifest receipt mismatch')
     for kind,name in WRAPPERS.items():need(sha(replacements[PREFIX+name])==identity['markers'][kind]['runtimeSha256'],'Native receipt mismatch')

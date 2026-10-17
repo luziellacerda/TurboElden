@@ -12,10 +12,10 @@ resposta completa substitui o cache e atualiza a interface mesmo sem aumento
 da revisão. O plano de capas usa o mesmo limite, com um único trabalhador e
 as prioridades/cancelamentos existentes.
 
-Quatro famílias Java são compiladas. Duas alterações pequenas são aplicadas
+Seis famílias Java são compiladas, incluindo os vínculos de quantidade de jogadores. Duas alterações pequenas são aplicadas
 às classes efetivas da R174: a comparação do catálogo em StationFrontend e a
 permissão da consulta GET em StationHttp. Nenhum transporte aninhado ou outra
-instrução dessas classes é recompilado. O verificador confere todas as classes
+instrução dessas classes é recompilado. Os dois limites JNI de catálogo e preparação também passam a 20.000. A fonte nativa corrente é recomposta com o loading R132 e fundo 0..3; todos os segmentos alocados da compilação de referência devem reproduzir exatamente o frontend assinado R174 antes dessas duas alterações. O verificador confere todas as classes
 fora desse escopo e as referências nos 40 DEX. Os três invólucros de identidade
 dos motores são atualizados para refletir o payload; os núcleos/opções ficam
 preservados, incluindo o atraso PSX R172 e a correção GameCube R174.

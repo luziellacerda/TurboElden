@@ -27,9 +27,9 @@ def entries(path,expected):
 
 def main(task,sdk,signing):
     package=task/'package';receipt=json.loads((package/'unsigned-package.json').read_text())
-    need(receipt['schema']=='station.r175.package.v1' and receipt['passed'] is True and receipt['baseApkSha256']==BASE and receipt['entryCount']==13861 and receipt['preservedEntryCount']==13855 and receipt['preservedDexPartitions']==39,'Exact R175 scoped receipt required')
-    allowed={'classes28.dex','AndroidManifest.xml','assets/station-online/engines.json',*('lib/arm64-v8a/'+n for n in ['libstation_psx_online.so','libstation_mupen64plus_runtime.so','libstation_dolphin_runtime.so'])}
-    need(set(receipt['replacedEntries'])==allowed,'Six-entry scope required')
+    need(receipt['schema']=='station.r175.package.v1' and receipt['passed'] is True and receipt['baseApkSha256']==BASE and receipt['entryCount']==13861 and receipt['preservedEntryCount']==13854 and receipt['preservedDexPartitions']==39,'Exact R175 scoped receipt required')
+    allowed={'lib/arm64-v8a/libstation_frontend.so','classes28.dex','AndroidManifest.xml','assets/station-online/engines.json',*('lib/arm64-v8a/'+n for n in ['libstation_psx_online.so','libstation_mupen64plus_runtime.so','libstation_dolphin_runtime.so'])}
+    need(set(receipt['replacedEntries'])==allowed,'Seven-entry scope required')
     for name,value in receipt['sourceSha256'].items():
         source=Path(__file__).resolve().parents[3]/name
         need(sha(source)==value,'Frozen source changed since assembly')
@@ -62,7 +62,7 @@ def main(task,sdk,signing):
     proof={'schema':'station.catalog-capacity.final.r175.v1','passed':True,'packageRevision':'R175','sourceCommit':receipt['sourceCommit'],
         'apkSha256':sha(apk),'apkBytes':apk.stat().st_size,'baseApkSha256':BASE,'signatureCertificateSha256':CERT,
         'v2':True,'v3':True,'zipAlignment16KiB':True,'versionCode':17,'minimumSdk':26,'targetSdk':34,
-        'checkedEntries':13861,'preservedEntryCount':13855,'replacedEntries':sorted(allowed),'changedDexPartitions':['classes28.dex'],'preservedDexPartitions':39,
+        'checkedEntries':13861,'preservedEntryCount':13854,'replacedEntries':sorted(allowed),'changedDexPartitions':['classes28.dex'],'preservedDexPartitions':39,
         'unsignedPackageReceiptSha256':sha(package/'unsigned-package.json'),'signerRecipeSha256':sha(Path(__file__)),
         'installed':False,'serverRegistered':False,'productionUpdaterEnabled':False,'physicalGameplayValidated':False,'physicalInstallerValidated':False,'stable':False}
     (final/'final-apk-proof.json').write_text(json.dumps(proof,indent=2)+'\n')

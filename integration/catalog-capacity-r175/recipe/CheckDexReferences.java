@@ -36,7 +36,7 @@ public final class CheckDexReferences {
     }
     static boolean changed(String t) {
         String n=t.substring(t.lastIndexOf('/')+1).split("\\$",2)[0].replace(";", "");
-        return Set.of("StationApi","StationCatalog","StationCatalogPoll","StationCoverQueue","StationFrontend","StationHttp").contains(n);
+        return Set.of("StationApi","StationCatalog","StationCatalogPoll","StationCoverQueue","StationCatalogPlayerEvidence","StationCatalogPlayerEvidenceLoader","StationFrontend","StationHttp").contains(n);
     }
     public static void main(String[] a)throws Exception {
         if(a.length!=2)throw new IllegalArgumentException("BASE_APK COMPILED_PARTITION_DIRECTORY");

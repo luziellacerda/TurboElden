@@ -119,8 +119,23 @@ public final class StationCatalogCapacityProbe {
             check(maximum.get()==1,"Exactly one global cover worker preserved");
         }
     }
+    static void playerEvidenceCapacity() throws Exception {
+        StationCatalogPlayerEvidence.CatalogBinding[] bindings=new StationCatalogPlayerEvidence.CatalogBinding[20000];
+        Map<String,StationCatalogPlayerEvidence.Result> values=new LinkedHashMap<>();String hash="a".repeat(64);
+        StationCatalogPlayerEvidence.Mode mode=new StationCatalogPlayerEvidence.Mode("synthetic-mode","simultaneous",new int[]{2},new String[]{"synthetic-primary"});
+        for(int i=0;i<bindings.length;i++){
+            String id=String.format("evidence_test_%05d",i);bindings[i]=new StationCatalogPlayerEvidence.CatalogBinding(id,1,hash);
+            values.put(id,StationCatalogPlayerEvidence.evaluate(id,1,hash,new StationCatalogPlayerEvidence.Evidence(id,1,hash,StationCatalogPlayerEvidence.VERIFIED,new StationCatalogPlayerEvidence.Mode[]{mode})));
+        }
+        StationCatalogPlayerEvidence.publish(bindings,values);
+        check("2 sim.".equals(new String(StationCatalogPlayerEvidence.labelFor("evidence_test_00000"),StandardCharsets.UTF_8)),"Verified player display retained at 20000 rows");
+        check("2 sim.".equals(new String(StationCatalogPlayerEvidence.labelFor("evidence_test_19999"),StandardCharsets.UTF_8)),"Final verified player binding retained");
+        StationCatalogPlayerEvidence.CatalogBinding[] tooMany=Arrays.copyOf(bindings,20001);
+        StationCatalogPlayerEvidence.publish(tooMany,values);
+        check(!"2 sim.".equals(new String(StationCatalogPlayerEvidence.labelFor("evidence_test_19999"),StandardCharsets.UTF_8)),"Over-limit evidence still fails closed");
+    }
     public static void main(String[] args) throws Exception {
-        parser();signedApiAndCache(Paths.get(args[0]));coverCapacity();
+        parser();signedApiAndCache(Paths.get(args[0]));coverCapacity();playerEvidenceCapacity();
         System.out.println("PASS "+checks+" catalogue capacity, signed API/cache, migration, validation and cover queue checks");
     }
 }

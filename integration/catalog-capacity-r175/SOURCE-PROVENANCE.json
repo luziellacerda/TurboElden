@@ -30,5 +30,24 @@
     "effectiveR170HookSourceSha256": "dd42741801c31cf211340e157046c803d511302aef60636a9e1bb585fdba82f7",
     "compiled": false,
     "scope": "Exact new catalogue GET allowlist; preserve all effective transport bytecode"
+  },
+  "StationCatalogPlayerEvidence.java": {
+    "source": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogPlayerEvidence.java",
+    "sha256": "ad20a55c98552d7ae6e03799253f1b3ec69a80cdb7591e40e10903972fa45379",
+    "compiled": true,
+    "onlyCountLimitsChanged": true
+  },
+  "StationCatalogPlayerEvidenceLoader.java": {
+    "source": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogPlayerEvidenceLoader.java",
+    "sha256": "c5e3b6e7f4f6c0ca6778181cc9e1abc2bec132a015100ba4c442d5943a3788d2",
+    "compiled": true,
+    "onlyCountLimitsChanged": true
+  },
+  "station_frontend.cpp": {
+    "source": "R124 frontend + exact R132 loading overlay + current background modes 0..3",
+    "beforeSha256": "eff107828ed4add494ecc4ade4d5024e9be808b1b2ebe84bedb133074d29ea69",
+    "afterSha256": "5340862dba743d4c440e612d6f1faca87f96ff10286814a5fed1ef95b3e89f16",
+    "onlyTwoCatalogLimitsChanged": true,
+    "baselineAllocatedSectionsMustMatchActualR174": true
   }
 }

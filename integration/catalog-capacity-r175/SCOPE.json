@@ -6,7 +6,9 @@
     "StationApi",
     "StationCatalog",
     "StationCatalogPoll",
-    "StationCoverQueue"
+    "StationCoverQueue",
+    "StationCatalogPlayerEvidence",
+    "StationCatalogPlayerEvidenceLoader"
   ],
   "effectiveMethodHooks": [
     "StationFrontend catalogue comparison",
@@ -22,5 +24,10 @@
     "licences/data/games/saves",
     "one global artwork worker"
   ],
-  "productionUpdaterEnabled": false
+  "productionUpdaterEnabled": false,
+  "nativeFrontend": {
+    "onlyTwoCatalogLimitsChanged": true,
+    "maximumItems": 20000,
+    "baselineAllocatedSectionsMustReproduceExactR174": true
+  }
 }
