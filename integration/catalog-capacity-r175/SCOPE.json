@@ -1,0 +1,26 @@
+{
+  "schema": "station.catalog-capacity.scope.r175.v1",
+  "donor": "exact signed R174",
+  "maximumItems": 20000,
+  "compiledFamilies": [
+    "StationApi",
+    "StationCatalog",
+    "StationCatalogPoll",
+    "StationCoverQueue"
+  ],
+  "effectiveMethodHooks": [
+    "StationFrontend catalogue comparison",
+    "StationHttp exact GET allowlist"
+  ],
+  "preserved": [
+    "all unrelated classes",
+    "R174 GameCube CPU correction",
+    "R173 room recognition",
+    "R172 PSX input buffer",
+    "TLS/request proof/direct download/updater",
+    "old offline catalogue",
+    "licences/data/games/saves",
+    "one global artwork worker"
+  ],
+  "productionUpdaterEnabled": false
+}

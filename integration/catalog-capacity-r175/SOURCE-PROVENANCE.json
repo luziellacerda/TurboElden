@@ -1,0 +1,34 @@
+{
+  "StationCatalog.java": {
+    "source": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalog.java",
+    "sha256": "f8775fc40290a23167199205cb77ed45f7200942a903ec897b7a667befec74ea",
+    "compiled": true
+  },
+  "StationCatalogPoll.java": {
+    "source": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCatalogPoll.java",
+    "sha256": "ca03baafce7af515d907eaa5b3e40ae7efff0efb3a50b4f1f571bcaba03e844b",
+    "compiled": true
+  },
+  "StationCoverQueue.java": {
+    "source": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationCoverQueue.java",
+    "sha256": "11decbdb7db269a0fcd6894116d8fae8f876ff584185d684af43ee51c724340a",
+    "compiled": true
+  },
+  "StationFrontend.java": {
+    "source": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationFrontend.java",
+    "sha256": "059ebe29d30e62203bd048d54421757c220a0055440b6ae03f50dabce62070fd",
+    "compiled": false
+  },
+  "StationApi.java": {
+    "source": "versions/station-video-room-footer-r124-20261011/java/client/src/java/org/emulationstation/frontend/station/StationApi.java",
+    "effectiveR170HookSourceSha256": "0d474c94a7e435a605fea0996697b2cbd932506dbdf183d7c7fdfd7137d5feeb",
+    "compiled": true,
+    "preservedUpdaterHooks": true
+  },
+  "StationHttp.java": {
+    "source": "integration/direct-downloads-preserved-r141-20261013/java/org/emulationstation/frontend/station/StationHttp.java",
+    "effectiveR170HookSourceSha256": "dd42741801c31cf211340e157046c803d511302aef60636a9e1bb585fdba82f7",
+    "compiled": false,
+    "scope": "Exact new catalogue GET allowlist; preserve all effective transport bytecode"
+  }
+}
