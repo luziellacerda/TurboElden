@@ -42,13 +42,15 @@ public final class StationPsxSession {
         Control(long e,long s,boolean p,boolean v){epoch=e;serial=s;pause=p;visible=v;}
     }
     private static final class Session implements StationMultiplayerSession.Listener {
-        final Activity activity;final String name;
+        final Activity activity;final String name;final StationPsxWifiLatency wifiLatency;
         final ScheduledExecutorService worker=Executors.newSingleThreadScheduledExecutor(r->{Thread t=new Thread(r,"Station-PSX-session");t.setDaemon(true);return t;});
         final AtomicReference<Control> desired=new AtomicReference<>(new Control(1,1,true,false));
         volatile JSONObject launch;volatile ResultReceiver events;volatile StationSessionLink owner;volatile StationMultiplayerSession transport;
         volatile boolean descriptorValid,ownerReady,visible,rendererReady,configured,loaded,failed,human,closed,ownerReturned,localPaused,exitDialog,started,humanCleanupComplete;
         volatile long reportedStatus=-8;private ScheduledFuture<?> updates;private Dialog waiting;private TextView waitingText;
-        Session(Activity activity,String name){this.activity=activity;this.name=name;}
+        Session(Activity activity,String name){this.activity=activity;this.name=name;this.wifiLatency=new StationPsxWifiLatency(activity);}
+        private void refreshWifiLatency(){activity.runOnUiThread(()->wifiLatency.setActive(
+            descriptorValid&&visible&&!localPaused&&!failed&&!human&&!closed));}
         void initialize(){worker.execute(()->{try {
             launch=StationPsxLaunch.consume(activity,name);
             events=StationSessionChannel.read(activity.getIntent().getExtras(),StationGameSession.EXTRA);
@@ -56,7 +58,7 @@ public final class StationPsxSession {
             if(events==null||anchor==null||anchor.isEmpty())throw new IOException("PSX_ROOM_AUTHORITY");
             if(!StationPsxBridge.nativePrepare(new File(activity.getApplicationInfo().nativeLibraryDir,"libpcsx_rearmed_libretro_android.so").getCanonicalPath(),
                 launch.getString("rom"),launch.getString("privateHome"),StationPsxLaunch.unhex(launch.getString("bindingSha256")),launch.getInt("localSlot"),3))throw new IOException("PSX_NATIVE_PREPARE");
-            configured=true;descriptorValid=true;
+            configured=true;descriptorValid=true;refreshWifiLatency();
             Control c=desired.get();StationPsxBridge.nativeControl(c.epoch,c.serial,true,c.visible);
             if(human){StationPsxBridge.nativeAuthorizeHumanExit();return;}
             owner=new StationSessionLink(activity,anchor,launch.getString("roomId"),launch.getLong("generation"),new StationSessionLink.Listener(){
@@ -71,12 +73,12 @@ public final class StationPsxSession {
             loaded=true;transport=new StationMultiplayerSession(new JSONObject(launch.toString()).put("port",0),this,StationPsxEndpoint.factory());
             transport.listening();if(visible&&ownerReady&&!localPaused)startOwner();
         }catch(Exception failure){fatal("PSX_CORE_BINDING");}}
-        void visibility(boolean shown){if(closed||human)return;visible=shown;
+        void visibility(boolean shown){if(closed||human)return;visible=shown;refreshWifiLatency();
             if(!shown){pauseLocally();StationMultiplayerSession t=transport;if(t!=null)t.visible(false);ResultReceiver e=events;if(e!=null)e.send(2,null);hideWaiting();}
             else if(ownerReady){refreshSdlGate();if(loaded&&!localPaused)startOwner();}
             else showWaiting("Preparando a partida\u2026");
         }
-        void localPause(boolean paused){if(closed||human)return;localPaused=paused;
+        void localPause(boolean paused){if(closed||human)return;localPaused=paused;refreshWifiLatency();
             if(paused){pauseLocally();if(transport!=null)transport.visible(false);if(events!=null)events.send(2,null);}
             else if(visible&&ownerReady&&loaded&&!failed)startOwner();
         }
@@ -121,7 +123,7 @@ public final class StationPsxSession {
         public void ready(){if(!closed&&!human&&!failed&&visible&&ownerReady&&events!=null)events.send(3,null);}
         public void state(boolean waiting,boolean sync){if(waiting)showWaiting(sync?"Sincronizando os jogadores\u2026":"Aguardando a conex\u00e3o da sala\u2026");else hideWaiting();}
         public void trace(String event){android.util.Log.i("StationPsx",event);}
-        public synchronized void fatal(String category){if(closed||human||failed)return;failed=true;reportedStatus=-8;
+        public synchronized void fatal(String category){if(closed||human||failed)return;failed=true;reportedStatus=-8;refreshWifiLatency();
             Control old=desired.get();desired.set(new Control(old.epoch,old.serial==Long.MAX_VALUE?Long.MAX_VALUE:old.serial+1,true,false));
             if(configured)StationPsxBridge.nativeFail(category);if(events!=null)events.send(6,null);
             showWaiting("A partida precisa de aten\u00e7\u00e3o. Aguarde a conex\u00e3o ou saia pelo menu para criar uma nova sala.");
@@ -148,7 +150,7 @@ public final class StationPsxSession {
             // Bound their diagnostic queue without logging inputs or identities.
             for(int i=0;i<64&&StationPsxBridge.nativeTakeCommit()!=null;i++){}
         }catch(Exception failure){fatal("PSX_CONTROL_STATUS");}}
-        void humanExit(){synchronized(this){if(closed||human)return;human=true;reportedStatus=-8;}
+        void humanExit(){synchronized(this){if(closed||human)return;human=true;reportedStatus=-8;}refreshWifiLatency();
             activity.runOnUiThread(()->activity.setResult(Activity.RESULT_OK));
             if(events!=null)events.send(4,null);hideWaiting();StationPsxLaunch.discard(activity,name);
             worker.execute(()->{StationMultiplayerSession t=transport;if(t!=null)t.close();if(updates!=null)updates.cancel(false);

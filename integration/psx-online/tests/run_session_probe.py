@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse,hashlib,json,subprocess,shutil,os
 ap=argparse.ArgumentParser();ap.add_argument('--jdk',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();suffix='.exe' if os.name=='nt' else '';a.jdk=a.jdk if (a.jdk/('javac'+suffix)).exists() else a.jdk/'bin';module=Path(__file__).resolve().parent.parent;repo=module.parent.parent;a.out.mkdir(parents=True,exist_ok=True)
-java=module/'java/org/emulationstation/frontend/netplay';files=[java/'StationPsxSession.java',java/'StationPsxLaunch.java',java/'StationPsxPolicy.java',module/'tests/StationPsxSessionProbe.java',repo/'versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationContentIdentity.java']+sorted((module/'tests/session-fixtures').rglob('*.java'))
+java=module/'java/org/emulationstation/frontend/netplay';files=[java/'StationPsxSession.java',java/'StationPsxWifiLatency.java',java/'StationPsxLaunch.java',java/'StationPsxPolicy.java',module/'tests/StationPsxSessionProbe.java',repo/'versions/station-video-room-footer-r124-20261011/java/netplay-src/org/emulationstation/frontend/netplay/StationContentIdentity.java']+sorted((module/'tests/session-fixtures').rglob('*.java'))
 classes=a.out/'classes';classes.mkdir(exist_ok=True);aliases=a.out/'aliases';paths=[]
 for i,p in enumerate(files):
  q=aliases/str(i)/p.name;q.parent.mkdir(parents=True,exist_ok=True);q.write_bytes(Path('\\\\?\\'+str(p.resolve())).read_bytes() if os.name=='nt' else p.read_bytes());paths.append(q)

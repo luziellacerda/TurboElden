@@ -73,5 +73,52 @@ public final class StationPsxSessionProbe {
   check(Files.readString(source.toPath()).equals(nativeSettings),"native preferences remain byte-identical");
   for(String body:new String[]{"<bool name=\"LibretroStretch\" value=\"yes\"/>","<bool name=\"LibretroStretch\" value=\"true\"/><bool name=\"LibretroStretch\" value=\"false\"/>"}){Files.writeString(source.toPath(),"<config>"+body+"</config>");try{copy.invoke(null,source,home,new StationApi.Cancellation());throw new AssertionError("unsafe display value accepted");}catch(InvocationTargetException expected){check(expected.getCause() instanceof IOException&&"PSX_DISPLAY_PREFERENCE_VALUE".equals(expected.getCause().getMessage()),"invalid/duplicate display preference rejected");}}
  }
- public static void main(String[] args)throws Exception{try{testSession();testLaunch();testPresentation();System.out.println("PASS PSX Session/Launch checks="+checks+" fixtureOnly=true physicalGameplay=false");}finally{Object current=CURRENT.get(null);if(current!=null)end(current);}}
+ static void testWifiLease()throws Exception{
+  for(int sdk:new int[]{26,28,29,33,36}){
+   Build.VERSION.SDK_INT=sdk;Activity a=new Activity();StationPsxWifiLatency lease=new StationPsxWifiLatency(a);
+   lease.setActive(false);check(a.wifi.creates==0,"inactive never creates OS lease API"+sdk);
+   lease.setActive(true);check(a.wifi.last.held&&!a.wifi.last.referenceCounted,"one non-reference-counted lease API"+sdk);
+   check(a.wifi.last.mode==(sdk>=29?4:3),"real API-level mode API"+sdk);
+   for(int i=0;i<100;i++)lease.setActive(true);check(a.wifi.creates==1&&a.wifi.acquires==1,"repeated foreground does not accumulate locks");
+   lease.setActive(false);lease.setActive(false);check(!a.wifi.last.held&&a.wifi.releases==1,"release once on background API"+sdk);
+  }
+  Build.VERSION.SDK_INT=36;
+  Activity denied=new Activity();denied.wifi.denyAcquire=true;StationPsxWifiLatency lease=new StationPsxWifiLatency(denied);
+  lease.setActive(true);lease.setActive(true);check(!denied.wifi.last.held&&denied.wifi.acquires==1,"permission refusal is nonfatal without retry polling");
+  lease.setActive(false);denied.wifi.denyAcquire=false;lease.setActive(true);check(denied.wifi.last.held,"next foreground can retry optional hint");lease.setActive(false);
+  Activity vendor=new Activity();vendor.wifi.failAfterAcquire=true;lease=new StationPsxWifiLatency(vendor);lease.setActive(true);check(!vendor.wifi.last.held&&vendor.wifi.releases==1,"vendor exception after acquire never loses a held handle");
+  Activity retry=new Activity();lease=new StationPsxWifiLatency(retry);lease.setActive(true);retry.wifi.failReleaseOnce=true;lease.setActive(false);check(retry.wifi.last.held,"release failure retains original lease handle");lease.setActive(true);check(retry.wifi.creates==1,"release failure cannot acquire another lease");lease.setActive(false);check(!retry.wifi.last.held&&retry.wifi.releases==1,"later lifecycle retries release without polling");
+  Activity missing=new Activity();missing.wifiAvailable=false;lease=new StationPsxWifiLatency(missing);lease.setActive(true);check(missing.wifi.creates==0,"absent service does not block session");lease.setActive(false);
+  Activity activity=new Activity(),app=new Activity();activity.application=app;lease=new StationPsxWifiLatency(activity);lease.setActive(true);check(activity.wifi.creates==0&&app.wifi.creates==1,"application context owns OS lease");lease.setActive(false);
+  StationPsxBridge.reset();StationPsxOnlineActivity a=new StationPsxOnlineActivity();Object s=session(a);
+  try{
+   call(s,"visibility",new Class<?>[]{boolean.class},true);check(a.wifi.creates==0,"unvalidated descriptor cannot hold radio lease");
+   set(s,"descriptorValid",true);call(s,"visibility",new Class<?>[]{boolean.class},true);check(a.wifi.last.held,"actual Session foreground acquires");
+   call(s,"localPause",new Class<?>[]{boolean.class},true);check(!a.wifi.last.held,"actual native-menu pause releases");
+   call(s,"localPause",new Class<?>[]{boolean.class},false);check(a.wifi.last.held,"actual local resume reacquires");
+   call(s,"visibility",new Class<?>[]{boolean.class},false);check(!a.wifi.last.held,"actual background releases");
+   call(s,"visibility",new Class<?>[]{boolean.class},true);check(a.wifi.last.held,"actual foreground reacquires");
+   ((StationMultiplayerSession.Listener)s).fatal("TEST");check(!a.wifi.last.held,"terminal failure releases actual session lease");
+   call(s,"visibility",new Class<?>[]{boolean.class},true);check(!a.wifi.last.held,"late foreground cannot reacquire after terminal failure");
+   check(!StationPsxSession.humanExitAuthorized()&&StationPsxBridge.exitCalls==0,"optional lease failure never grants native exit");
+  }finally{end(s);}
+  StationPsxBridge.reset();a=new StationPsxOnlineActivity();s=session(a);
+  try{
+   set(s,"descriptorValid",true);call(s,"visibility",new Class<?>[]{boolean.class},true);check(a.wifi.last.held,"human-exit test starts held");
+   StationPsxSession.confirmExit(a);AlertDialog.Builder.negative.onClick(null,0);check(a.wifi.last.held,"cancel exit keeps foreground lease");
+   StationPsxSession.confirmExit(a);AlertDialog.Builder.positive.onClick(null,0);idle(s);check(!a.wifi.last.held&&StationPsxSession.humanExitAuthorized(),"positive human exit releases lease before cleanup");
+  }finally{end(s);}
+  QueuedActivity queued=new QueuedActivity();s=session(queued);
+  try{
+   set(s,"descriptorValid",true);call(s,"visibility",new Class<?>[]{boolean.class},true);
+   call(s,"visibility",new Class<?>[]{boolean.class},false);queued.flush();check(queued.wifi.creates==0,"queued stale foreground never acquires in background");
+   call(s,"visibility",new Class<?>[]{boolean.class},true);((StationMultiplayerSession.Listener)s).fatal("TEST");queued.flush();check(queued.wifi.creates==0,"queued stale foreground never acquires after terminal failure");
+  }finally{end(s);}
+  Build.VERSION.SDK_INT=28;
+ }
+ static final class QueuedActivity extends StationPsxOnlineActivity {
+  final Queue<Runnable> ui=new ArrayDeque<>();public void runOnUiThread(Runnable r){ui.add(r);}
+  void flush(){for(Runnable r;(r=ui.poll())!=null;)r.run();}
+ }
+ public static void main(String[] args)throws Exception{try{testSession();testLaunch();testPresentation();testWifiLease();System.out.println("PASS PSX Session/Launch/WiFi lifecycle checks="+checks+" fixtureOnly=true physicalGameplay=false");}finally{Object current=CURRENT.get(null);if(current!=null)end(current);}}
 }
