@@ -1,3 +1,19 @@
+# TurboStations R172 estável — aprovada em 17/10/2026
+
+Tag e ramo `estavel-station-r172-20261017`. APK
+`4a92627952a4f9673ff402667825fcb1f926aaf85a44bef7882559f000c56c5b`, versão14,
+instalado e conferido no Moto g52 e Samsung A56. Melhora PSX medida e relatada
+em Capcom vs.SNK VS; designação estável expressamente pedida pelo proprietário.
+Fonte congelada8317792; servidor R172 cadastrado/qualificado. Cópia privada
+`/mnt/DADOS/station-estavel-r172-20261017`, com APK, insumos, assinatura,
+ferramentas, kit/cadastro/release da API, recibos e bundles dos dois Git.
+
+[Checkpoint e limites](versions/estavel-station-r172-20261017/README.md) ·
+[Manifesto](versions/estavel-station-r172-20261017/MANIFESTO-ESTAVEL.json) ·
+[Restauração](versions/estavel-station-r172-20261017/RESTAURACAO.md).
+
+## Histórico preservado
+
 # TurboStations R143 estável aprovado em 13/10/2026
 
 Tag e ramo `estavel-station-r143-20261013` fixam o ponto de recuperação aprovado pelo proprietário. APK `508480e3671ae924f037bd32f6d71efda7a9d905c45c7b2571bd9f219add83d4`, fonte executável `26257869b59af8ecea44932ab287705990a9acbe`, g52 instalado; Top Gear 3000 VS três participantes e Bomberman com relatos positivos. A56/Edge30 última R141. Kit independente R143 preparado, não aplicado; SNES cadastro existente.
