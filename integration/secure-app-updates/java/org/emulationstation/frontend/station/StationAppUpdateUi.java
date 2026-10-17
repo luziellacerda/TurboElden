@@ -20,8 +20,19 @@ public final class StationAppUpdateUi {
     private static long nextNotice;
     private static final Runnable POLL=StationAppUpdateUi::poll;
     private StationAppUpdateUi(){}
+    private static boolean mainProcess(Context context){
+        if(Build.VERSION.SDK_INT>=28)return context.getPackageName().equals(Application.getProcessName());
+        try{
+            ActivityManager manager=(ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+            if(manager==null)return false;
+            java.util.List<ActivityManager.RunningAppProcessInfo> processes=manager.getRunningAppProcesses();
+            if(processes!=null)for(ActivityManager.RunningAppProcessInfo process:processes)
+                if(process.pid==android.os.Process.myPid())return context.getPackageName().equals(process.processName);
+        }catch(RuntimeException restricted){return false;}
+        return false;
+    }
     static synchronized void install(StationAndroid app,Context context){
-        if(!Application.getProcessName().equals(context.getPackageName()))return;
+        if(!mainProcess(context))return;
         StationAppUpdater.initialize(app);
         if(!installed){
             installed=true;

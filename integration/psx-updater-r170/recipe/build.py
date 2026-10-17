@@ -68,10 +68,31 @@ def compile_dex(task,sdk,revision):
     pins=freeze(revision,task);out=fresh(task/'compile')
     module=REPO/'integration/secure-app-updates'
     run([sys.executable,module/'recipe/patch_sources.py','--source-dir',task/'inputs/client-current-sources','--out',out/'patched'],'%s/hooks.log'%out)
-    # Real received production classpath and current panel/origin sources only.
+    # Rebuild the classpath-only surface from real frozen sources; no fixture or
+    # arbitrary private overlay JAR can change inlined constants or signatures.
     inputs=task/'inputs'
-    classpath=[inputs/'current-client-dependencies.jar',inputs/'rooms.jar',inputs/'client.jar',inputs/'sdl-abi-only.jar']
     classes=fresh(out/'classes');android=sdk/'platforms/android-36/android.jar'
+    for name,pin in {'rooms.jar':'6b2929eb3621b208593a886b6f06a32de52af9c931663cb314e197af155f773d',
+                     'client.jar':'011bce981b609d2cc5cfbad49c386e7f54dea1f560a17fe79bae3a56b3f8f313',
+                     'sdl-abi-only.jar':'3ee0b749135162fa08178f07ba7ce2cb22ca569e4f1128887aebc9b106d8ef75',
+                     'apktool.jar':'dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423'}.items():
+        need(sha(inputs/name)==pin,'Received dependency differs: '+name)
+    original=REPO/'versions/station-video-room-footer-r124-20261011/java/client/src/java'
+    for name in ['StationApi.java','StationAndroid.java']:
+        need(sha(inputs/'client-current-sources'/name)==sha(original/'org/emulationstation/frontend/station'/name),'Current hook source differs')
+    need(sha(inputs/'client-current-sources/StationHttp.java')==sha(REPO/'integration/direct-downloads-preserved-r141-20261013/java/org/emulationstation/frontend/station/StationHttp.java'),'Current HTTP source differs')
+    dependency_sources={f.relative_to(original).as_posix():f for f in original.rglob('*.java')}
+    for rel in ['integration/direct-downloads-preserved-r141-20261013/java','integration/sky-blue-waves-r145-20261013/java']:
+        root=REPO/rel
+        for f in root.rglob('*.java'):
+            if '/frontend/station/' in f.as_posix():dependency_sources[f.relative_to(root).as_posix()]=f
+    need({str(f.relative_to(REPO)):sha(f) for f in dependency_sources.values()}==json.loads((inputs/'dependency-source-map.json').read_text()),'Exact classpath source set')
+    dep_classes=fresh(out/'dependency-classes')
+    run(['javac','--release','8','-Xlint:-options','-encoding','UTF-8','-proc:none','-sourcepath','','-cp',os.pathsep.join(map(str,[android,inputs/'rooms.jar',inputs/'client.jar'])),'-d',dep_classes,*dependency_sources.values()],out/'dependency-classes.log')
+    deps=out/'production-classpath-only.jar'
+    with zipfile.ZipFile(deps,'x') as z:
+        for f in sorted(dep_classes.rglob('*.class')):z.write(f,f.relative_to(dep_classes).as_posix())
+    classpath=[deps,inputs/'rooms.jar',inputs/'client.jar',inputs/'sdl-abi-only.jar']
     sources=sorted((module/'java').rglob('*.java'))+sorted((out/'patched').glob('*.java'))
     sources+=[REPO/'integration/psx-online/java/org/emulationstation/frontend/netplay'/(n+'.java') for n in sorted(PSX)]
     run(['javac','--release','8','-encoding','UTF-8','-Xlint:-options','-proc:none','-sourcepath','','-cp',os.pathsep.join(map(str,[android,*classpath])),'-d',classes,*sources],out/'javac.log')
@@ -226,6 +247,7 @@ def package(task,revision):
     need({n for n in names if expected[n]!=before[n]}==ALLOWED,'Unexpected package difference')
     with zipfile.ZipFile(unsigned) as z:
         need(z.namelist()==names and all(entry_sha(z,n)==h for n,h in expected.items()),'Full APK readback failed')
+    need(freeze(revision,task)==pins,'Source changed during package assembly')
     write(out/'unsigned-package.json',{'schema':'station.r170.package.v1','passed':True,'sourceCommit':revision,'sourceSha256':pins,
           'baseApkSha256':BASE_SHA,'unsignedApkSha256':sha(unsigned),'unsignedApkBytes':unsigned.stat().st_size,'entryCount':len(names),
           'expectedEntrySha256':expected,'replacedEntries':sorted(ALLOWED),'preservedEntryCount':len(names)-len(ALLOWED),'changedDexPartitions':sorted(DEX_PINS),'preservedDexPartitions':38,'compileReceiptSha256':sha(task/'compile/receipt.json'),'nativeReceiptSha256':sha(task/'native/receipt.json')})
