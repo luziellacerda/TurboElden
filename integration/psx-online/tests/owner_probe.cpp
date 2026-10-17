@@ -113,15 +113,15 @@ int main(){try{
  require(failed()&&!failedHost.status().inFrame&&!failedHost.status().stateReady&&!failedHost.status().closed&&field(Running)==1,"failed original run aborts lease and no false Ready/exit");
  unsigned savesBefore=saves;std::thread wrong([&]{require(!guardedSave(coreMemory.data(),64),"IO cannot serialize");});wrong.join();require(saves==savesBefore,"no decoder invoked by IO");
 
- // Productive signed delay4 exercises the same real adapter checkpoints.
- Session pipelineHost({1,1,64,identity(),4}),pipelineGuest({2,1,64,identity(),4});
- expectedDelay=4;initialize(pipelineHost);checkpoint();finishCheckpoint();sync(pipelineHost,pipelineGuest,id);
+ // Productive signed delay8 exercises the same real adapter checkpoints.
+ Session pipelineHost({1,1,64,identity(),station_psx::input_delay_frames}),pipelineGuest({2,1,64,identity(),station_psx::input_delay_frames});
+ expectedDelay=station_psx::input_delay_frames;initialize(pipelineHost);checkpoint();finishCheckpoint();sync(pipelineHost,pipelineGuest,id);
  unsigned pipelineRuns=runs,pipelinePolls=polls;
  for(unsigned frame=0;frame<256;++frame){
  require(pipelineGuest.needsLocalSample(),"pipeline future sample required once per cursor");
- require(pipelineGuest.ownerSampleLocal(0x0040)==Result::Ok,"guest sample N+4");link(pipelineGuest,pipelineHost,2,id);
+ require(pipelineGuest.ownerSampleLocal(0x0040)==Result::Ok,"guest sample N+signedDelay");link(pipelineGuest,pipelineHost,2,id);
  checkpoint();require(r.leased&&field(Pause)==0,"pipeline real gate has canonical future input");
- require(r.lease.frame.pads[0]==(frame<4?0:0x0020)&&r.lease.frame.pads[1]==(frame<4?0:0x0040),"only first four synchronized neutral frames");
+ require(r.lease.frame.pads[0]==(frame<station_psx::input_delay_frames?0:0x0020)&&r.lease.frame.pads[1]==(frame<station_psx::input_delay_frames?0:0x0040),"only signed-delay synchronized neutral frames");
  runCore();finishCheckpoint();require(pipelineHost.status().nextFrame==frame+1&&coreFrame==frame+1,"pipeline cursor follows raw run only");
  link(pipelineHost,pipelineGuest,1,id);Lease peerLease;require(pipelineGuest.ownerBegin(peerLease)==Result::Ok,"guest pipeline frame post host run");
  require(pipelineGuest.ownerComplete(peerLease)==Result::Ok,"guest pipeline executed");link(pipelineGuest,pipelineHost,2,id);drain(pipelineHost);drain(pipelineGuest);
@@ -135,7 +135,7 @@ int main(){try{
  require(pipelineHost.status().initialStateSynced&&pipelineGuest.status().initialStateSynced,"snapshot peer application completes recovery");
  require(pipelineHost.control(1,4,false,true)==Result::Ok&&pipelineGuest.control(1,4,false,true)==Result::Ok,"fresh resume control");
  pipelineHost.ownerCheckpoint();pipelineGuest.ownerCheckpoint();require(pipelineHost.resume(1,4)==Result::Ok&&pipelineGuest.resume(1,4)==Result::Ok,"real exact epoch serial resume");
- expectedDelay=260; // restart primes only four neutral inputs at actual cursor256.
+ expectedDelay=256+station_psx::input_delay_frames; // restart primes only the signed neutral inputs at actual cursor256.
  require(pipelineGuest.ownerSampleLocal(0x0040)==Result::Ok,"future after recovery");link(pipelineGuest,pipelineHost,2,id);
  checkpoint();require(r.leased&&r.lease.frame.pads[0]==0&&r.lease.frame.pads[1]==0,"recovery neutral prime after state and readiness");runCore();finishCheckpoint();
  require(coreFrame==257&&pipelineHost.status().nextFrame==257,"no hidden recovery catchup frame");

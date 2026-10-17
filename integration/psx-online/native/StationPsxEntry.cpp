@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 // Opt-in shim: executes the bundled normal LibretroPlayer owner, never RetroArch.
 #include "StationPsxOwner.hpp"
+#include "PsxPinnedOptions.h"
 #include <jni.h>
 #include <dlfcn.h>
 #include <sys/stat.h>
@@ -89,7 +90,7 @@ Session* makeSession(std::size_t bytes,const Digest&,const Digest&,void*){
     {
       std::lock_guard lock(mutex);
       if(protocol||!prepared||bytes>station::psx::MaxState||bytes==0)return nullptr;
-      protocol=std::make_unique<Session>(station::psx::Config{config.slot,requestedEpoch,bytes,config.binding});
+      protocol=std::make_unique<Session>(station::psx::Config{config.slot,requestedEpoch,bytes,config.binding,station_psx::input_delay_frames});
       result=protocol.get();
       if(requestedSerial)result->control(requestedEpoch,requestedSerial,requestedPause,requestedVisible);
       if(!failure.empty())result->automaticStop(failure.c_str());

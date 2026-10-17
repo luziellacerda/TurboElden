@@ -1,6 +1,7 @@
 /* Generated from the exact normal core's compiled option table. */
 #pragma once
 #include <cstddef>
+#include <cstdint>
 #include <cstring>
 namespace station_psx {
 struct PinnedOption { const char* key; const char* value; };
@@ -74,9 +75,10 @@ inline constexpr PinnedOption option_overrides[] = {
     {"pcsx_rearmed_multitap", "disabled"},
     {"pcsx_rearmed_spu_thread", "disabled"},
 };
+inline constexpr std::uint32_t input_delay_frames=8; // signed PSX online pipeline, not an emulator speed option.
 inline constexpr const char* compiled_defaults_sha256 = "bcbb221ea532b6caffa5c78d807e2264ad6843e18b5e84a433fbd6aff7514d49";
-inline constexpr const char* canonical_options = "backend=psx-player-station-v1\nwire=PXL1\nownerSha256=62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6\ncoreSha256=e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9\ncompiledDefaultsSha256=bcbb221ea532b6caffa5c78d807e2264ad6843e18b5e84a433fbd6aff7514d49\noptionsPolicy=compiled-defaults+explicit-overrides-v1\ninputPolicy=standard-two-ports-v1\nsynchronization=host-authoritative-lockstep-v1\ninputDelayFrames=4\nstatePolicy=owner-thread-snapshot-v1\nsaves=session-only-fresh\nhumanExitOnly=true\npcsx_rearmed_analog_combo=disabled\npcsx_rearmed_bios=HLE\npcsx_rearmed_drc_thread=disabled\npcsx_rearmed_frameskip_type=disabled\npcsx_rearmed_gpu_thread_rendering=disabled\npcsx_rearmed_multitap=disabled\npcsx_rearmed_spu_thread=disabled\n";
-inline constexpr const char* options_sha256 = "8c1e81460dc19b6e8d151ec6231c9092000b4946e6f084222cb40d3aab2e66a9";
+inline constexpr const char* canonical_options = "backend=psx-player-station-v1\nwire=PXL1\nownerSha256=62ad07ba8e62e3227d488f9075eb15167c2e95b721c43e480e2535b4319467f6\ncoreSha256=e7534aa6f4a993e03f4563152f0e017324b710f5a5c224b0f1f722abeabed2b9\ncompiledDefaultsSha256=bcbb221ea532b6caffa5c78d807e2264ad6843e18b5e84a433fbd6aff7514d49\noptionsPolicy=compiled-defaults+explicit-overrides-v1\ninputPolicy=standard-two-ports-v1\nsynchronization=host-authoritative-lockstep-v1\ninputDelayFrames=8\nstatePolicy=owner-thread-snapshot-v1\nsaves=session-only-fresh\nhumanExitOnly=true\npcsx_rearmed_analog_combo=disabled\npcsx_rearmed_bios=HLE\npcsx_rearmed_drc_thread=disabled\npcsx_rearmed_frameskip_type=disabled\npcsx_rearmed_gpu_thread_rendering=disabled\npcsx_rearmed_multitap=disabled\npcsx_rearmed_spu_thread=disabled\n";
+inline constexpr const char* options_sha256 = "09f7154252899f1e4e3e118154adf2ef3519fd2a7e4a14b301fb6f4070888fd8";
 template<std::size_t N> inline const char* lookup(const PinnedOption (&rows)[N], const char* key) {
     if (!key) return nullptr;
     for (const auto& row : rows) if (std::strcmp(row.key, key)==0) return row.value;
