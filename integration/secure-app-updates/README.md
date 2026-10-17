@@ -1,3 +1,10 @@
+## Candidata R170 compilada em 17/10
+
+O backup privado foi recebido. O atualizador e as correções PSX estão no APK
+R170 assinado; cadastro, implantação e testes físicos continuam pendentes.
+Leia [o recibo atual](../../docs/server/r170/README.md). O texto de preparo
+abaixo é histórico e não exige receber novamente o backup.
+
 # Atualizador interno protegido do TurboStation
 
 Implementação de fonte preparada, com backend no Servidor-pix. **Ainda não
