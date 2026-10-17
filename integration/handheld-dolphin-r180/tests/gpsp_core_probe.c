@@ -25,7 +25,7 @@ static bool environment(unsigned command, void *data)
         struct retro_variable *variable = data;
         variable->value = NULL;
         if (!strcmp(variable->key, "gpsp_serial")) variable->value = "auto";
-        else if (!strcmp(variable->key, "gpsp_rtc")) variable->value = "deterministic";
+        else if (!strcmp(variable->key, "gpsp_rtc_time_source")) variable->value = "deterministic";
         else if (definitions) {
             for (const struct retro_core_option_v2_definition *d = definitions; d->key; ++d)
                 if (!strcmp(d->key, variable->key)) { variable->value = d->default_value; break; }

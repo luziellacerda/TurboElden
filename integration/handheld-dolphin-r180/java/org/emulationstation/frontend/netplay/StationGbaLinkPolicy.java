@@ -8,7 +8,7 @@ import org.json.JSONObject;
  * No sockets, threads, timers, native changes or offline save imports here. */
 public final class StationGbaLinkPolicy {
     public static final String CONTROLLER = "gba-gpsp-netpacket-v1";
-    public static final String OPTIONS = "gpsp_serial = \"auto\"\ngpsp_rtc = \"deterministic\"\n";
+    public static final String OPTIONS = "gpsp_serial = \"auto\"\ngpsp_rtc_time_source = \"deterministic\"\n";
     private StationGbaLinkPolicy() {}
 
     /** Called only from the unknown-controller branch of the verified profile.

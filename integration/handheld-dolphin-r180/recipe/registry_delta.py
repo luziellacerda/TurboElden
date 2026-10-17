@@ -2,16 +2,27 @@
 import copy
 import hashlib
 import json
+import re
 
 CORE = 'lib/arm64-v8a/libgpsp_station_online.so'
 OVERLAY = 'assets/station-online/overlays/station-local/gba.cfg'
-OPTIONS = 'gpsp_serial = "auto"\ngpsp_rtc = "deterministic"\n'
+OPTIONS = 'gpsp_serial = "auto"\ngpsp_rtc_time_source = "deterministic"\n'
 CONTROLLER = 'gba-gpsp-netpacket-v1'
 UPSTREAM = '5819380c2ffb0900219d700a382ee68c464ebb99'
 
 def need(value, message):
     if not value:
         raise ValueError(message)
+
+def validate_core_options(header, options):
+    for line in options.splitlines():
+        match = re.fullmatch(r'([a-z0-9_]+) = "([^"\\]+)"', line)
+        need(match is not None, 'Canonical gpSP option')
+        key, value = match.groups()
+        block = re.search(r'(?ms)^   \{\n      "' + re.escape(key) + r'",(.*?)(?=^   \{|^\};)', header)
+        need(block is not None, 'gpSP option absent from pinned upstream: ' + key)
+        allowed = re.findall(r'\{\s*"([^"\\]+)"\s*,', block.group(1))
+        need(value in allowed, 'Invalid value for pinned gpSP option: ' + key)
 
 def core_input(task, source):
     proof = json.loads((task / 'gpsp/build-receipt.json').read_text())
@@ -22,6 +33,7 @@ def core_input(task, source):
          'Reviewed pinned gpSP binary and recipe')
     java = source.parent / 'java/org/emulationstation/frontend/netplay/StationGbaLinkPolicy.java'
     need('OPTIONS = ' + json.dumps(OPTIONS) + ';' in java.read_text(), 'Exact Java and manifest GBA options')
+    validate_core_options((task / "inputs/gpsp-core-options.h").read_text(), OPTIONS)
     return binary, proof
 
 def restore_dolphin_identity(identity):
