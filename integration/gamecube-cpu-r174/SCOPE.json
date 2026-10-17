@@ -1,0 +1,19 @@
+{
+  "schema": "station.gamecube-cpu.scope.r174.v1",
+  "baselineRevision": "R173",
+  "baselineApkSha256": "7e15d21c04499a77772fd3aa046a27a0d71959974f20df746c7df6b6afc7fd4a",
+  "request": "GameCube online frame drops after successful Mario Kart entry",
+  "functionalChange": "CurrentRun Core.CPUThread=false only for gamecube, before official nativeConnect",
+  "allowedClassFamilies": [
+    "StationDolphinSession",
+    "StationDolphinCpuPolicy"
+  ],
+  "retainedGamecubeRoomFix": true,
+  "otherPlatformsUnchanged": true,
+  "nativeCoresAndDependenciesUnchanged": true,
+  "psxInputDelayFrames": 8,
+  "noNewThreadsTimersOrFrameWork": true,
+  "offlinePreferencesSaved": false,
+  "settingsVerifiedByNativeConfigReadback": true,
+  "physicalImprovementValidated": false
+}
