@@ -1,0 +1,23 @@
+{
+  "schema": "station.gamecube-restore.scope.r176.v1",
+  "request": "Remove the R174 single-core trial that worsened real GameCube play",
+  "baselineRevision": "R175",
+  "rollbackDexSourceRevision": "R173",
+  "rollbackDexSha256": "be5f233f1cccf7f5e94e77bea10c5e8e8452619d407d2c129f34479ce8572413",
+  "functionalChange": "Restore the exact R173 classes35.dex only after verifying all other class projections against the signed R175 donor",
+  "originalAllowedTypes": [
+    "StationDolphinSession$Session",
+    "StationDolphinCpuPolicy"
+  ],
+  "finalAllowedTypes": [
+    "StationDolphinSession$Session"
+  ],
+  "removedHelper": "StationDolphinCpuPolicy",
+  "preserveCatalogCapacityR175": true,
+  "preserveGamecubeRoomRecognitionR173": true,
+  "preservePsxInput8N64AndAllRealNativeBinaries": true,
+  "newThreadsTimersOrFrameWork": false,
+  "physicalPerformanceSolutionValidated": false,
+  "baselineApkSha256": "c55017acd4dc7b866bb0b2248fcf4103c9936a80f4b98b815b24478bb0adbf9a",
+  "parentCompiledSourceCommit": "2d7a14aeb7245ef6876c47400ad03905fadd5014"
+}
