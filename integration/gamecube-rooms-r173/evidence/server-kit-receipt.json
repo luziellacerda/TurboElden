@@ -1,0 +1,18 @@
+{
+  "schema": "station.r173.private-kit-receipt.v1",
+  "passed": true,
+  "apkSha256": "7e15d21c04499a77772fd3aa046a27a0d71959974f20df746c7df6b6afc7fd4a",
+  "zipSha256": "ff4dc7bde0fae8a4506803773d0bc9c5537f454fb337c294c9853d5ff5ba4580",
+  "zipBytes": 15027848,
+  "fileCount": 64,
+  "elfCount": 27,
+  "engineIds": {
+    "psx": "pcsx-rearmed-ff81ed17-player-v3-a7c5c8aa45d8",
+    "n64": "mupen64plus-ae-33bf7021-n64-v3-fcbb4c272d8e",
+    "gamecube": "dolphin-5102a033-gamecube-v3-27da50adc1c5",
+    "wii": "dolphin-5102a033-wii-v3-27da50adc1c5"
+  },
+  "recipeSha256": "2badd111c3a2c6ccaef129cb722d4c2924c83df75332897f575fef6049a6ebf5",
+  "serverApplied": false,
+  "physicalGameplayValidated": false
+}

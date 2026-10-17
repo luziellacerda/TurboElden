@@ -1,0 +1,16 @@
+{
+  "checks": 2085,
+  "passed": true,
+  "gameplay": false,
+  "schema": "station.gamecube.native-transport-probe.v1",
+  "upstreamCommit": "5102a0339c2177575378107b76541e47cc52122d",
+  "enetCommit": "2662c0de09e36f2a2030ccc2c528a3e4c9e8138a",
+  "scope": "Actual unchanged StationDolphinTransport compiled on Linux with the pinned ENet; no Android core, renderer, game or public server executed",
+  "apkChanged": false,
+  "physicalGameplayValidated": false,
+  "sourceSha256": {
+    "native/StationDolphinTransport.cpp": "a1cf756191c060d6ee333a7b4de642572616128b2a6106ff7ef42a37fa10b03c",
+    "native/StationDolphinTransport.h": "f004314e5c710adaa911ec55a8ffce0854c0be54db393453820df1155b04a082",
+    "tests/transport_probe.cpp": "69bb67f30727f2806640f8263fe43cee98d01a743525c82fd1588553e41f7219"
+  }
+}

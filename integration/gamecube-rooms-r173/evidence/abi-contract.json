@@ -1,0 +1,31 @@
+{
+  "schema": "station.r173.identity-wrapper-abi.v1",
+  "passed": true,
+  "scope": "Three runtime identity wrappers; all actual core/dependency bytes verified separately by full APK and private kit comparison",
+  "wrappers": {
+    "psx": {
+      "exportsPreserved": true,
+      "exportCount": 100,
+      "parentSha256": "7a14d3a4d3047a15b2225ef64db9175a76c579b04eab366428ceab952f0b86be",
+      "candidateSha256": "a7c5c8aa45d8933d1baacefcf66ae8ee2a17b9540a379f78021c51733ac67d3b",
+      "nativeSourcesUnchangedSinceR172": true,
+      "psxInputDelayFrames": 8
+    },
+    "n64": {
+      "exportsPreserved": true,
+      "exportCount": 2,
+      "parentSha256": "8cfc9b1a45d4709a7b031dcf6857b6432a4234e6c082c66bab600a9affb9f072",
+      "candidateSha256": "fcbb4c272d8e7888991a410161e39dcf6ee26182882aa487c8094a6bb4f0a104",
+      "nativeSourcesUnchangedSinceR172": true,
+      "psxInputDelayFrames": null
+    },
+    "dolphin": {
+      "exportsPreserved": true,
+      "exportCount": 2,
+      "parentSha256": "ff5113148661d4da2761a981d52aa21ff93082c056e5e95ac3de2cbc31841abb",
+      "candidateSha256": "27da50adc1c5b3b271f2e24e161510479143c8013fe1a14c11f97f248b67ac21",
+      "nativeSourcesUnchangedSinceR172": true,
+      "psxInputDelayFrames": null
+    }
+  }
+}

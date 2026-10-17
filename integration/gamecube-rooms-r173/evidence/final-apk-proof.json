@@ -1,0 +1,38 @@
+{
+  "schema": "station.gamecube-rooms.final.r173.v1",
+  "passed": true,
+  "packageRevision": "R173",
+  "sourceCommit": "69f90f80e98a9dcf1f37d41be5617abb240b2b37",
+  "apkSha256": "7e15d21c04499a77772fd3aa046a27a0d71959974f20df746c7df6b6afc7fd4a",
+  "apkBytes": 2714238050,
+  "baseApkSha256": "4a92627952a4f9673ff402667825fcb1f926aaf85a44bef7882559f000c56c5b",
+  "signatureCertificateSha256": "7b16ee1aca7db7a50e7cc6c8612cf2a3568f474894a468865d842bf720c89825",
+  "v2": true,
+  "v3": true,
+  "zipAlignment16KiB": true,
+  "versionCode": 15,
+  "minimumSdk": 26,
+  "targetSdk": 34,
+  "checkedEntries": 13861,
+  "preservedEntryCount": 13855,
+  "replacedEntries": [
+    "AndroidManifest.xml",
+    "assets/station-online/engines.json",
+    "classes35.dex",
+    "lib/arm64-v8a/libstation_dolphin_runtime.so",
+    "lib/arm64-v8a/libstation_mupen64plus_runtime.so",
+    "lib/arm64-v8a/libstation_psx_online.so"
+  ],
+  "changedDexPartitions": [
+    "classes35.dex"
+  ],
+  "preservedDexPartitions": 39,
+  "unsignedPackageReceiptSha256": "fae54153d1c8bc633b32fe6f3ed4b97ec55ad881f15d717292cc53cdf9785c01",
+  "signerRecipeSha256": "2d68ab68e8bbb9bd8fbda9d420d5fe062482742b584a7bc75b2cfd3dbc1f8420",
+  "installed": false,
+  "serverRegistered": false,
+  "productionUpdaterEnabled": false,
+  "physicalGameplayValidated": false,
+  "physicalInstallerValidated": false,
+  "stable": false
+}

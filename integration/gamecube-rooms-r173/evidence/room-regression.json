@@ -1,0 +1,38 @@
+{
+  "baselineActualR172": {
+    "gamecubeRecognized": false,
+    "rosterConfirmed": false,
+    "acceptingPlayers": false,
+    "vacancies": -1
+  },
+  "sourceAndJarSha256": "8245787c3f2575401d8c5f514377e7817c4dae7a1f873d548c135cedeb260fb5",
+  "candidateJvmChecks": 82,
+  "unrelatedRegression": {
+    "passed": true,
+    "unrelatedPresentationComparisons": 672,
+    "byteIdentical": true,
+    "baselineDefectReproduced": true,
+    "gamecubeChecks": 82,
+    "physicalGameplayValidated": false
+  },
+  "actualCandidateDex35OnAndroid": {
+    "passed": true,
+    "devices": [
+      {
+        "device": "moto_g52",
+        "passed": true,
+        "checks": 82,
+        "scope": "ART execution of actual candidate DEX35; separate shell VM, app/install/room not changed"
+      },
+      {
+        "device": "SM_A566E",
+        "passed": true,
+        "checks": 82,
+        "scope": "ART execution of actual candidate DEX35; separate shell VM, app/install/room not changed"
+      }
+    ],
+    "appChanged": false,
+    "physicalGameplayValidated": false
+  },
+  "physicalGameplayValidated": false
+}

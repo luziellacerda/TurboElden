@@ -1,0 +1,35 @@
+{
+  "schema": "station.r173.compile.v1",
+  "passed": true,
+  "sourceCommit": "69f90f80e98a9dcf1f37d41be5617abb240b2b37",
+  "baselineApkSha256": "4a92627952a4f9673ff402667825fcb1f926aaf85a44bef7882559f000c56c5b",
+  "partitions": {
+    "classes35.dex": {
+      "baselineSha256": "bc7f4d4516f957a38ed1860583a7ece6982c7cb0ab51604709453ed4fa7d6199",
+      "candidateSha256": "be5f233f1cccf7f5e94e77bea10c5e8e8452619d407d2c129f34479ce8572413",
+      "beforeClassCount": 612,
+      "afterClassCount": 612,
+      "unrelatedClassCount": 607,
+      "unrelatedProjectionSha256": "9c01393e2b6b5953aee2639a65323451a1ee12c0232e39fd72aaed525f03e2fb",
+      "originalAllowedTypes": [
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo$1;",
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo$Participant;",
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo$Position;",
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo$RoomInfo;",
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo;"
+      ],
+      "finalAllowedTypes": [
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo$1;",
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo$Participant;",
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo$Position;",
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo$RoomInfo;",
+        "Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo;"
+      ]
+    }
+  },
+  "manifestSha256": "b3193856e55f9fe3dda664bbbff1e213321e25c5564e49fae94a8e588f95e474",
+  "minimumSdk": 26,
+  "targetSdk": 34,
+  "testOrFixtureTypesPackaged": false,
+  "apkAssembled": false
+}
