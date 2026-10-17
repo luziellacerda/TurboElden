@@ -22,10 +22,9 @@ public final class VerifyScopedPartition {
             this.originalAllowed=originalAllowed; this.finalAllowed=finalAllowed;
         }
         boolean belongs(String type) {
-            if (type.equals("Lorg/emulationstation/frontend/station/StationHttp$ResponseBody;")) return false;
-            for (String family : families)
-                if (type.equals(family) || type.startsWith(family.substring(0,family.length()-1)+"$")) return true;
-            return false;
+            // The outer session and all its other nested classes are protected.
+            return type.equals("Lorg/emulationstation/frontend/netplay/StationDolphinSession$Session;") ||
+                   type.equals("Lorg/emulationstation/frontend/netplay/StationDolphinCpuPolicy;");
         }
         Set<String> finalTypes(Set<String> donor) {
             Set<String> result=new HashSet<>(donor);

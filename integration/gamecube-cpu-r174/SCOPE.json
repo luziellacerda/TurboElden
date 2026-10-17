@@ -15,5 +15,10 @@
   "noNewThreadsTimersOrFrameWork": true,
   "offlinePreferencesSaved": false,
   "settingsVerifiedByNativeConfigReadback": true,
-  "physicalImprovementValidated": false
+  "physicalImprovementValidated": false,
+  "changedEffectiveClasses": [
+    "StationDolphinSession$Session",
+    "StationDolphinCpuPolicy"
+  ],
+  "unrelatedSessionClassesPreserved": true
 }
