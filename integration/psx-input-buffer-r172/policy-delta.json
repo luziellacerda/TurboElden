@@ -1,0 +1,11 @@
+{
+  "schema": "station.r172.policy-delta.v1",
+  "optionsSha256Before": "8c1e81460dc19b6e8d151ec6231c9092000b4946e6f084222cb40d3aab2e66a9",
+  "optionsSha256After": "09f7154252899f1e4e3e118154adf2ef3519fd2a7e4a14b301fb6f4070888fd8",
+  "inputDelayFramesBefore": 4,
+  "inputDelayFramesAfter": 8,
+  "addedNominalControlDelayMilliseconds": 66.66666666666667,
+  "coreAndBiosOptionsChanged": false,
+  "otherPlatformsChanged": false,
+  "physicalPerformanceValidated": false
+}
