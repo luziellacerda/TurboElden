@@ -1,0 +1,13 @@
+{
+  "schema": "station.gamecube-room-scope.r173.v1",
+  "baseRevision": "R172",
+  "baseSourceCommit": "8317792fa231831f788cb10b7061bb11bc9fa97d",
+  "baseApkSha256": "4a92627952a4f9673ff402667825fcb1f926aaf85a44bef7882559f000c56c5b",
+  "baseSourceSha256": "8245787c3f2575401d8c5f514377e7817c4dae7a1f873d548c135cedeb260fb5",
+  "functionalChange": "Recognize only the exact existing Dolphin GameCube controller profile in signed room presentation, with existing maximum <= 4 and all existing approval/count/roster gates.",
+  "gamecubeEngineCoreChanged": false,
+  "psxOptionsPreserved": true,
+  "n64LogicPreserved": true,
+  "wiiPresentationPreserved": true,
+  "gameplayValidated": false
+}
