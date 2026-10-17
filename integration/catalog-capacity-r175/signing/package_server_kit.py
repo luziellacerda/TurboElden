@@ -38,16 +38,21 @@ with zipfile.ZipFile(apk) as z:
   if not n.startswith('artifacts/'):continue
   data=z.read('lib/arm64-v8a/'+Path(n).name)
   require(data[:6]==b'\x7fELF\x02\x01','Actual AArch64 ELF required')
-  if Path(n).name not in ['libstation_psx_online.so','libstation_mupen64plus_runtime.so','libstation_dolphin_runtime.so']:
+  if Path(n).name not in ['libstation_psx_online.so','libstation_mupen64plus_runtime.so','libstation_dolphin_runtime.so','libstation_frontend.so']:
    require(data==old[n],'Core or dependency changed')
   files[n]=data
 for row in incoming['engines']:
  actual=selected[row['platform']]
  strip=lambda e:{k:v for k,v in e.items() if k not in ['engineId','runtimeSha256','controllerProfiles','requireExplicitEngineModes']}
  expected=copy.deepcopy(row)
- if row['platform']=='psx':require(expected['options'].count('inputDelayFrames=8\n')==1,'Preserve stable PSX input delay')
+ if row['platform']=='psx':
+  require(expected['options'].count('inputDelayFrames=8\n')==1,'Preserve stable PSX input delay')
+  frontend=json.loads((p/'native/frontend-proof.json').read_text())
+  require(frontend['passed'] and frontend['allAllocatedBaselineSectionsIdentical'] and frontend['onlyTwoSourceComparisonsChanged'] and frontend['maximumItems']==20000,'Exact current native frontend capacity proof')
+  require(digest(files['artifacts/libstation_frontend.so'])==frontend['candidateSha256'],'Actual frontend binary')
+  expected['dependencySha256']['libstation_frontend.so']=frontend['candidateSha256']
  require(strip(expected)==strip(actual),'Unrequested engine policy change')
- if row['platform']=='psx':row.update(options=expected['options'],controllerProfiles=expected['controllerProfiles'])
+ if row['platform']=='psx':row.update(options=expected['options'],controllerProfiles=expected['controllerProfiles'],dependencySha256=expected['dependencySha256'])
  row['engineId']=actual['engineId'];row['runtimeSha256']=actual['runtimeSha256']
  policy=policies['profiles'][row['platform']]
  require(policy['coreSha256']==row['coreSha256'],'Core policy changed')
@@ -63,7 +68,9 @@ files['engines-apk.json']=encoded(rows);files['incoming.json']=encoded(incoming)
 for name,source in [('proofs/final-apk-proof.json',p/'final/final-apk-proof.json'),('proofs/compile-receipt.json',p/'compile/receipt.json'),('proofs/native-receipt.json',p/'native/receipt.json'),('proofs/native-abi-contract.json',p/'native/abi-contract.json'),('proofs/unsigned-package.json',p/'package/unsigned-package.json')]:files[name]=source.read_bytes()
 files['LEIA-ME.txt']=('R175 candidata assinada: Complete 20000-item catalogue; GBA and cache repair; physical game test pending.\nAPK SHA256 '+proof['apkSha256']+'\nBase R174 original e SDK26/34 preservados. Exatamente sete entradas substituidas; zero adicoes/remoções no ZIP.\nCadastrar quatro IDs aditivamente contra a autoridade R174 efetiva/fresca, preservando cada modo e recusa por edicao exata.\nO parentesco com R174 nao aprova jogo novo nem amplia numero de jogadores.\nEste kit nao publica APK ou API, nao reinicia servico e nao instala telefone.\nProva fisica de partida e instalador Android ainda pendente. Sem APK, ROM, BIOS, chave, senha ou logs brutos.\n').encode('utf-8')
 meta={'schema':'station.r175.private-kit.v1','revision':'R175','sourceCommit':proof['sourceCommit'],'apkSha256':proof['apkSha256'],'apkBytes':proof['apkBytes'],'baselineApkSha256':proof['baseApkSha256'],'referenceKitR174Sha256':digest(basekit.read_bytes()),'independentEngineIds':{k:v['engineId'] for k,v in selected.items()},'binaryCount':6,'distinctDependencyCount':21,'elfCount':27,'changedApkEntries':proof['replacedEntries'],'preservedDexPartitions':39,'sdk':{'minimum':26,'target':34},'preservedCoreBinaries':True,'gamecubeOnlineCpuThread':False,'gamecubeCpuModeOnly':False,'catalogMaximumItems':20000,'psxInputDelayBefore':8,'psxInputDelayAfter':8,'gamecubeRoomRecognitionFixed':True,'otherEmulationOptionsPreserved':True,'exactModeApprovalRequired':True,'serverApplied':False,'physicalGameplayValidated':False,'installed':False,'productionUpdaterEnabled':False,'containsApkRomBiosKeySerialOrRawLogs':False,'filesSha256':{n:digest(data) for n,data in files.items() if n.startswith('artifacts/')}}
+meta['nativeFrontendSha256']=frontend['candidateSha256'];meta['nativeFrontendOnlyTwoCatalogLimitsChanged']=True
 files['MANIFESTO-KIT.json']=encoded(meta)
+files['proofs/native-frontend-proof.json']=(p/'native/frontend-proof.json').read_bytes()
 filemeta={'schema':'station.private-kit.files.v1','revision':'R175','files':{n:{'bytes':len(data),'sha256':digest(data)} for n,data in sorted(files.items())}}
 files['MANIFESTO-ARQUIVOS.json']=encoded(filemeta)
 out=p/'private-server-kit';out.mkdir(exist_ok=False);target=out/'Kit-Servidor-TurboStations-R175-Independentes.zip'

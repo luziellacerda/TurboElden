@@ -249,12 +249,16 @@ def native(task,ndk,revision):
         p=row['platform']
         if p not in ['psx','n64','gamecube','wii']:continue
         kind='dolphin' if p in ['gamecube','wii'] else p
-        if p=='psx':need(row['options'].count('inputDelayFrames=8\n')==1,'Preserve stable R174 PSX input delay')
+        if p=='psx':
+            need(row['options'].count('inputDelayFrames=8\n')==1,'Preserve stable R174 PSX input delay')
+            need(row['dependencySha256']['libstation_frontend.so']=='438789d8e328ef6416b990ec64a41f96747a32714745088d16f88c65839a888d','Exact frontend dependency lineage')
+            row['dependencySha256']['libstation_frontend.so']=sha(frontend)
         row['engineId']=row['engineId'].rsplit('-',1)[0]+'-'+markers[kind]['runtimeSha256'][:12]
         row['runtimeSha256']=markers[kind]['runtimeSha256'];selected[p]=row['engineId']
     need(len(selected)==4 and len(registry['engines'])==13,'Four renewed owners only')
     for before,after in zip(old_registry['engines'],registry['engines']):
         expected=copy.deepcopy(before)
+        if before['platform']=='psx':expected['dependencySha256']['libstation_frontend.so']=sha(frontend)
         need({k:v for k,v in expected.items() if k not in ['engineId','runtimeSha256']}=={k:v for k,v in after.items() if k not in ['engineId','runtimeSha256']},'Unrequested engine policy changed')
     write(out/'engines.json',registry)
     write(out/'abi-contract.json',{'schema':'station.r175.identity-wrapper-abi.v1','passed':True,'scope':'Three runtime identity wrappers; all actual core/dependency bytes verified separately by full APK and private kit comparison','wrappers':abi})
