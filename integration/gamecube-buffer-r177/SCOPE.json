@@ -1,0 +1,12 @@
+{
+  "revision": "R177",
+  "baseline": "R176; GameCube session and native cores equal R173",
+  "functionalDelta": "GameCube online fixed-delay pad buffer 5 to 8",
+  "currentRunLayer": 4,
+  "activeReadbackLayer": 3,
+  "changedClasses": ["StationDolphinSession$Session", "StationDolphinLaunch", "StationMultiplayerProfile"],
+  "newClass": "StationDolphinBufferPolicy",
+  "unchanged": ["CPU policy", "native emulator cores", "PSX input8", "N64", "Wii", "offline settings", "catalog capacity", "room approvals", "controls"],
+  "physicalImprovementConfirmed": false,
+  "stableR172Changed": false
+}
