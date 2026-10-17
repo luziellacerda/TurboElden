@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-17T22:32:08.485632+00:00",
+  "request": "Prepare GBA, Wii and GameCube online services and app for physical tests; audit byte deltas, resources, lifecycle and each Station endpoint; no further Linux password requests",
+  "baseRevision": "R179",
+  "baseApkSha256": "aad5358bc1920a94eda414cf3edcccd5acd46daaaa54eed73ed4c005aec7032d",
+  "gamecubeOwnerResult": "Eight-frame trial worse than pre-R174 small-loss reference",
+  "gamecubeAction": "Restore exact pre-trial GameCube session classes after documenting current capture; preserve other stable systems",
+  "gbaAction": "Add an actual independently networked link implementation using official gpSP netpacket support; approve only source-supported game/mode combinations",
+  "wiiAction": "Verify emulated Wii Remote topology, native netplay and launch bindings for every available game and supported mode",
+  "preserve": [
+    "R172 immutable stable backup and tags",
+    "PSX input delay8 and emulation options",
+    "N64 normalized native code and options",
+    "Existing covers, console photos, catalogue, accounts, games and saves",
+    "Original signing authority",
+    "Other PC services, network, QoS and Cloudflare topology"
+  ],
+  "linuxNoninteractiveAdministrationAvailable": false,
+  "physicalTwoPhoneValidationAfterOwnerReturns": true,
+  "updaterUiAndNetworkPerformanceDeferred": true
+}
