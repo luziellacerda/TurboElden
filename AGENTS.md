@@ -1,3 +1,45 @@
+<!-- STATION-GBA-PS4-R179-20261017 -->
+## R179: foto do GBA ao lado da sinopse e biblioteca PS4 publicadas
+
+Fonte produtiva f2ca5b4caa3c5cffff6ac0a896dd645c685cbe96; APK privado
+ aad5358bc1920a94eda414cf3edcccd5acd46daaaa54eed73ed4c005aec7032d,
+versão21/1.0.8-R179, mesma assinatura/16KiB. A R179 herda o APK R178
+0ceb4146 integralmente: 40 DEX, GameCube buffer8, correção Android do updater,
+motores, opções, jogos, dados, licença e saves. Acrescenta somente a foto
+GBA/9aliases ao renderer com 22 fotos anteriores preservadas. Não usar a
+candidata GBA R177 antiga: nunca foi instalada ou cadastrada, pois uma
+R177 GameCube concorrente já havia avançado; sua tentativa parou antes de gravar.
+
+Catálogo108:4846 IDs/4589 visíveis,99 GBA com sinopses PT e2 PS4 (Minecraft:
+PlayStation4 Edition e Sonic Mania). PS4 foi COPIADO de snes/ps4 para a raiz,
+com PKG integral verificado, capas alternativas específicas e sinopses PT.
+Originais SNES preservados; nenhum outro registro mudou. Sonic tem Plus no
+nome de arquivo, mas o SFO informa Sonic Mania: não prometer DLC.
+Capas geradas pela imagegen integrada,1024x1536 e JPEG servido480x720.
+Não gerar mais imagens SNES; a autorização de duas artes foi específica PS4.
+
+R179 cadastrada sobre a R178 efetivamente aplicada:135 owners/22428 perfis/
+13472 modos,507 decisões/vínculos novos,zero novas linhas de modo.
+Aprovações,recusas,individual e controles herdados preservados. Catálogo,
+capas,grants,downloads e99 descrições passaram local/público; os quatro novos
+owners passaram capabilities/admissão/saída. Contas sintéticas removidas.
+A verificação inicial consultou antes do monitor periódico de10s; sucessora
+somente de prova concluiu SEM repetir cadastro. R179 não reiniciou a API,
+não alterou rede,oferta geral,PlayStore ou referência estável R172.
+Autoridade: station-r179-gba-console-activation-20261017/completed.json.
+
+Samsung atualizado R17820→R17921 porUSB, SHA integral do base.apk e UID
+conferidos, sem desinstalar/limpar dados. Foto GBA ao lado da sinopse de
+Pokémon Emerald e99 jogos observados. Os dois PS4 apareceram com capas,
+textos PT e foto PS4 ao lado; arquivos locais já marcados instalados.
+Nenhum novo download Android ou emulador PS4 executado nesta prova; não
+confundir catálogo com gameplay. Conferir estado fresco dos outros aparelhos;
+o Motorola pertence à prova R178 da outra tarefa e não foi manipulado aqui.
+Autoridade: station-r179-gba-console-usb-install-20261017/SM_A566E;
+fontes/limites em docs/server/r179/README.md e server-return.json.
+Não reinstalar, recadastrar ou recompilar por causa deste registro.
+<!-- END-STATION-GBA-PS4-R179-20261017 -->
+
 <!-- STATION-GAMECUBE-R177-20261017 -->
 ## GameCube R177: buffer de oito quadros cadastrado e atualização publicada
 
