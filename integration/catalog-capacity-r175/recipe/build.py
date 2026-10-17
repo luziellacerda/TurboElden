@@ -185,7 +185,10 @@ def build_frontend(task,ndk):
     alignment=re.findall(r'^\s*LOAD\s+.*\s(0x[0-9a-fA-F]+)\s*$',loads,re.M)
     need(alignment and all(int(v,16)>=16384 for v in alignment),'Native frontend 16 KiB alignment')
     asm=run([tools/'llvm-objdump','-d','--disassemble-symbols=Java_org_emulationstation_frontend_station_StationFrontend_publishCatalog,Java_org_emulationstation_frontend_station_StationFrontend_publishPreparation',candidate],out/'frontend-capacity-disassembly.log')
-    need(asm.count('#0x4e20')==2,'Both productive JNI methods must compare against 20000')
+    # LLVM emits >20000 for preparation and the equivalent >=20001 for JNI array length.
+    preparation=re.search(r'mov\s+w8, #0x4e20[^\n]*\n[^\n]*cmp\s+w3, w8[^\n]*\n[^\n]*b\.gt\s',asm)
+    catalogue=re.search(r'mov\s+w8, #0x4e21[^\n]*\n[^\n]*cmp\s+w0, w8[^\n]*\n[^\n]*b\.ge\s',asm)
+    need(preparation and catalogue,'Both productive JNI comparisons must enforce a 20000-item maximum')
     write(out/'frontend-proof.json',dict(passed=True,parentSha256=sha(original),baselineLinuxSha256=sha(baseline),candidateSha256=sha(candidate),
         allAllocatedBaselineSectionsIdentical=True,onlyTwoSourceComparisonsChanged=True,maximumItems=20000,abiExportsPreserved=True,loadingGraphicsAndWarmCachePreserved=True,
         preservedBackgroundModeMaximum=3,elfLoadAlignmentBytes=16384,physicalAndroidValidated=False))
