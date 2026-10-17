@@ -6,11 +6,12 @@ package org.emulationstation.frontend.netplay;
 public final class StationPsxBridge {
     private StationPsxBridge() {}
     static Runnable beforeStatus;static long[] status=new long[20];static int resumeCalls,controlCalls,failCalls,exitCalls;static long controlEpoch,controlSerial;static boolean controlPause,controlVisible;
-    static void reset(){status=new long[20];resumeCalls=controlCalls=failCalls=exitCalls=0;beforeStatus=null;}
+    static java.util.function.LongBinaryOperator resumeHook;
+    static void reset(){status=new long[20];resumeCalls=controlCalls=failCalls=exitCalls=0;beforeStatus=null;resumeHook=null;}
     public static boolean nativePrepare(String c,String r,String h,byte[] b,int s,int m){return true;}
     public static void nativePreparationFailed(String s){}public static void nativeAuthorizeHumanExit(){exitCalls++;}
     public static void nativeFail(String c){failCalls++;}public static int nativeControl(long e,long s,boolean p,boolean v){controlCalls++;controlEpoch=e;controlSerial=s;controlPause=p;controlVisible=v;return 0;}
-    public static int nativeResume(long e,long s){resumeCalls++;return 0;}public static long[] nativeTakeCommit(){return null;}
+    public static int nativeResume(long e,long s){resumeCalls++;return resumeHook==null?0:(int)resumeHook.applyAsLong(e,s);}public static long[] nativeTakeCommit(){return null;}
     // EXACT 20-field status, all 64-bit. RendererReady does NOT imply core READY.
     // 0 coreReady,1 failed,2 localPaused,3 humanAuthorized,4 epoch,5 controlSerial,
     // 6 nextFrame,7 stateSerial,8 paused,9 stateReady,10 inFrame,11 applyingState,

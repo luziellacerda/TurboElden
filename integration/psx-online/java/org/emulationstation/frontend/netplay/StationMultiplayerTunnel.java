@@ -119,7 +119,7 @@ final class StationMultiplayerTunnel implements Closeable {
             byte[] frame=endpoint.takeOutgoing(100);
             if(frame==null||frame.length==0){
                 synchronized(gate){endpointReading=false;gate.notifyAll();}pump();
-                nativeHint.tryAcquire(25,TimeUnit.MILLISECONDS);continue;
+                if(!endpoint.awaitOutgoingWake(100))nativeHint.tryAcquire(25,TimeUnit.MILLISECONDS);continue;
             }
             endpoint.wire().outgoing(frame,localSlot,remoteSlot);
             int at=0;

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Isolated JVM PSX PXL1 tests plus the unchanged R126 Dolphin/TCP regressions."""
-import argparse, hashlib, json, shutil, subprocess
+import argparse, hashlib, json, os, shutil, subprocess
 from pathlib import Path
 
 def native(path):
@@ -14,19 +14,21 @@ def main():
     here=Path(__file__).resolve().parent;module=here.parent;repo=module.parent.parent
     old=repo/"versions/station-dolphin-online-r126-20261011";java=module/"java/org/emulationstation/frontend/netplay"
     files=[java/"StationMultiplayerEndpoint.java",java/"StationMultiplayerTunnel.java",java/"StationPsxEndpoint.java",
-           here/"StationPsxEndpointProbe.java",here/"fixtures/org/emulationstation/frontend/netplay/StationPsxBridge.java",
+           here/"StationPsxEndpointProbe.java",here/"fixtures/org/emulationstation/frontend/netplay/StationPsxBridge.java",here/"session-fixtures/android/util/Log.java",
            old/"tests/StationDolphinEndpointProbe.java",java/"StationMultiplayerSession.java",a.wire]
     files.extend(sorted((old/"tests/fixtures").rglob("*.java")))
     sources=a.out/"sources";classes=a.out/"classes";sources.mkdir(parents=True,exist_ok=True);classes.mkdir(parents=True,exist_ok=True)
     aliases=[]
     for i,source in enumerate(files):
         dest=sources/str(i)/source.name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(native(source).read_bytes());aliases.append(dest)
-    command=[a.jdk/"javac.exe","-encoding","UTF-8","-cp",a.classes_jar,"-d",classes,*aliases]
+    suffix=".exe" if os.name=="nt" else ""
+    jdk=a.jdk/"bin" if (a.jdk/"bin"/("javac"+suffix)).exists() else a.jdk
+    command=[jdk/("javac"+suffix),"-encoding","UTF-8","-cp",a.classes_jar,"-d",classes,*aliases]
     result=subprocess.run(list(map(str,command)),capture_output=True,text=True,encoding="utf-8");(a.out/"javac.log").write_text(result.stdout+result.stderr,encoding="utf-8")
     if result.returncode: raise RuntimeError("JVM endpoint compilation failed: "+result.stderr)
     outputs={}
     for name in ["StationDolphinEndpointProbe","StationPsxEndpointProbe"]:
-        r=subprocess.run([str(a.jdk/"java.exe"),"-cp",str(classes)+";"+str(a.classes_jar),"org.emulationstation.frontend.netplay."+name],capture_output=True,text=True,encoding="utf-8")
+        r=subprocess.run([str(jdk/("java"+suffix)),"-cp",str(classes)+os.pathsep+str(a.classes_jar),"org.emulationstation.frontend.netplay."+name],capture_output=True,text=True,encoding="utf-8")
         (a.out/(name+".log")).write_text(r.stdout+r.stderr,encoding="utf-8")
         if r.returncode: raise RuntimeError(name+" failed: "+r.stdout+r.stderr)
         outputs[name]=r.stdout.strip()

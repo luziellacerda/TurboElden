@@ -100,6 +100,9 @@ public:
     bool copied(std::uint64_t uniqueId) const;
     Result releaseReceipt(std::uint64_t uniqueId); // after outer v3 DATA ACK.
     std::vector<std::uint8_t> takeOutgoing(); // one whole packet, nonblocking.
+    // IO worker only: wait for an outbound notification, never dequeue or run a
+    // core. Bounded to 100ms; the actual owner is never permitted to block here.
+    bool awaitOutgoing(std::uint32_t timeoutMs);
     bool takeCommit(Commit&); // separate GAMEPLAY proof, never the DATA byte ACK.
 private:
     struct Impl;

@@ -39,6 +39,7 @@ public final class StationPsxEndpointProbe {
         reject(()->StationPsxEndpoint.factory().create(1,3),"PSX factory bounds before JNI");
         StationMultiplayerEndpoint ordinary=new StationMultiplayerEndpoint(){public byte[] takeOutgoing(int t){return null;}public int deliver(long n,byte[] b){return 1;}public boolean awaitDelivery(long n,int t){return true;}};
         check(ordinary.wire()==StationMultiplayerEndpoint.Wire.DPL1,"default DPL1 preserved");ordinary.deliveryConfirmed(1);checks++;
+        check(!ordinary.awaitOutgoingWake(100),"ordinary endpoint retains legacy nativeHint wait");
     }
     static void adapter()throws Exception{
         for(int result:new int[]{0,1,8,2,4,3,5,6,7,9,10,11,99}){
@@ -57,6 +58,15 @@ public final class StationPsxEndpointProbe {
         StationPsxBridge.releaseResult=1;endpoint.deliveryConfirmed(18);checks++;
         StationPsxBridge.receipts.remove(18L);reject(()->endpoint.deliveryConfirmed(18),"Duplicate release without actual retired receipt rejected");
         StationPsxBridge.outgoing.add(packet("DPL1",2,1,28));reject(()->endpoint.takeOutgoing(10),"native outgoing wire mismatch rejected");
+        check(endpoint.awaitOutgoingWake(100)&&StationPsxBridge.awaited==100,"PSX event wait forwarded without dequeue");
+        reject(()->endpoint.awaitOutgoingWake(0),"zero event timeout rejected");
+        reject(()->endpoint.awaitOutgoingWake(101),"unbounded event timeout rejected");
+        StationPsxBridge.awaited=-1;endpoint.close();
+        check(endpoint.awaitOutgoingWake(100)&&StationPsxBridge.awaited==-1,"closed endpoint never enters native wait");
+        StationPsxBridge.reset();StationPsxBridge.result=5;
+        StationMultiplayerEndpoint malformed=StationPsxEndpoint.factory().create(2,1);
+        byte[] shortPacket=Arrays.copyOf(packet("PXL1",1,2,28),8);
+        check(malformed.deliver(21,shortPacket)==-1,"native rejection of truncated payload keeps diagnostics bounded");
     }
     static void fragmentation()throws Exception{
         for(int result:new int[]{0,8})for(int fragment:new int[]{1,3,7,8,29,1400,16384}){

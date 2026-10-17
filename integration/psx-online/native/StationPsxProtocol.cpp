@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include "StationPsxProtocol.hpp"
 #include <algorithm>
+#include <chrono>
+#include <condition_variable>
 #include <deque>
 #include <map>
 #include <mutex>
@@ -40,7 +42,7 @@ struct Session::Impl {
     struct Inputs {std::array<std::uint16_t,2> pads{};unsigned present{};bool remoteInput{};};
     struct State {Stamp stamp;Digest digest{};Bytes bytes;std::size_t received{};bool end{};};
     struct Export {Stamp stamp;Digest digest{};Bytes bytes;std::size_t offset{};unsigned phase{};};
-    Config config;mutable std::mutex mutex;std::thread::id owner{};bool hasOwner{};
+    Config config;mutable std::mutex mutex;std::condition_variable outboundChanged;std::thread::id owner{};bool hasOwner{};
     std::uint64_t epoch{},controlSerial{},stateSerial{},nextFrame{},nextLease{1};
     bool controlPause{true},visible{true},permit{},paused{true},stateReady{},inFrame{},applying{},
         human{},closed{},stateRequest{true},peerApplied{},pipelinePrimed{};
@@ -62,7 +64,7 @@ struct Session::Impl {
     }
     void failLocked(const char* why){if(failure.empty())failure=category(why);permit=false;paused=true;stateReady=false;ack.valid=false;}
     bool queue(Bytes b){
-        if(outgoingBytes+b.size()<=LinkWindow){outgoingBytes+=b.size();outgoing.push_back(std::move(b));return true;}
+        if(outgoingBytes+b.size()<=LinkWindow){outgoingBytes+=b.size();outgoing.push_back(std::move(b));outboundChanged.notify_one();return true;}
         if(pendingOutput.size()>=PendingOutputWindow)return false;
         pendingOutput.push_back(std::move(b));return true;
     }
@@ -235,6 +237,7 @@ Result Session::ownerPublishState(Bytes bytes,std::uint64_t nextFrame){
     p.supersedeInbox();++p.stateSerial;auto stamp=Stamp{p.epoch,p.stateSerial,nextFrame};
     auto digest=sha256(bytes);p.lastStateDigest=digest;p.lastStateStamp=stamp;
     p.exportState=Impl::Export{stamp,digest,std::move(bytes),0,0};
+    p.outboundChanged.notify_one();
     p.pipelinePrimed=false;p.stateReady=true;p.peerApplied=false;p.stateRequest=false;p.ackLocked();return Result::Ok;
 }
 Result Session::ownerApplyState(ApplyState apply,void* core){
@@ -268,7 +271,7 @@ Result Session::automaticStop(const char* why){auto& p=*p_;std::lock_guard lock(
 Result Session::ownerClose(){auto& p=*p_;std::lock_guard lock(p.mutex);auto own=p.ownerLocked();if(own!=Result::Ok)return own;
     if(p.closed)return Result::Closed;if(!p.human)return Result::HumanRequired;if(p.inFrame||p.applying)return Result::Wait;
     p.closed=true;p.permit=false;p.paused=true;p.ack.valid=false;p.inputs.clear();p.frames.clear();p.receipts.clear();
-    p.outgoing.clear();p.pendingOutput.clear();p.outgoingBytes=0;p.pendingCommits.clear();p.incomingState.reset();p.exportState.reset();return Result::Ok;}
+    p.outgoing.clear();p.pendingOutput.clear();p.outgoingBytes=0;p.pendingCommits.clear();p.incomingState.reset();p.exportState.reset();p.outboundChanged.notify_all();return Result::Ok;}
 Status Session::status()const{auto& p=*p_;std::lock_guard lock(p.mutex);return {p.ack,p.epoch,p.controlSerial,p.nextFrame,p.stateSerial,
     p.paused,p.stateReady,p.stateReady&&!p.stateRequest&&!p.incomingState&&
     (p.config.localSlot==2||p.peerApplied)&&p.failure.empty(),p.inFrame,p.applying,!p.failure.empty(),p.closed};}
@@ -309,7 +312,16 @@ Result Session::deliver(std::uint8_t remote,std::uint64_t id,std::span<const std
             if(!p.sendCommit(kind,Outcome::Superseded,s))return Result::Backpressure;result=Result::Superseded;}
         else {if(s.stateSerial!=p.stateSerial||!p.stateReady)return Result::Wait;
             if(!p.inWindow(s.frame))return Result::Backpressure;
-            auto it=p.inputs.find(s.frame);if(it==p.inputs.end()||!(it->second.present&2)||it->second.pads[1]!=f.pads[1])return Result::Invalid;
+            auto it=p.inputs.find(s.frame);
+            if(it==p.inputs.end()||!(it->second.present&2)){
+                // A faster host can emit a neutral bootstrap FRAME before the
+                // guest has resumed and primed its signed delay window. Keep
+                // that exact bounded packet in the transport until resume;
+                // do not reject valid ordering, fabricate a sample or ACK it.
+                if(!p.pipelinePrimed&&p.paused&&s.frame-p.nextFrame<p.config.inputDelay&&f.pads[1]==0)return Result::Wait;
+                return Result::Invalid;
+            }
+            if(it->second.pads[1]!=f.pads[1])return Result::Invalid;
             if(auto old=p.frames.find(s.frame);old!=p.frames.end()&&old->second!=f)return Result::Invalid;
             p.frames.emplace(s.frame,f);}
     } else if(kind==Kind::StateBegin){
@@ -384,6 +396,13 @@ bool Session::copied(std::uint64_t id)const{auto& p=*p_;std::lock_guard lock(p.m
 Result Session::releaseReceipt(std::uint64_t id){auto& p=*p_;std::lock_guard lock(p.mutex);auto it=p.receipts.find(id);
     if(it==p.receipts.end())return std::any_of(p.retired.begin(),p.retired.end(),[&](const auto& old){return old.first==id;})?Result::Duplicate:Result::Invalid;
     p.retired.emplace_back(id,it->second);if(p.retired.size()>ReceiptWindow)p.retired.pop_front();p.receipts.erase(it);return Result::Ok;}
+bool Session::awaitOutgoing(std::uint32_t timeoutMs){
+    auto& p=*p_;std::unique_lock lock(p.mutex);
+    if(p.hasOwner&&p.owner==std::this_thread::get_id())return false;
+    p.outboundChanged.wait_for(lock,std::chrono::milliseconds(std::min(timeoutMs,100u)),
+        [&]{return p.closed||!p.outgoing.empty()||p.exportState.has_value();});
+    return !p.closed&&(!p.outgoing.empty()||p.exportState.has_value());
+}
 Bytes Session::takeOutgoing(){
     auto& p=*p_;std::lock_guard lock(p.mutex);if(p.closed)return {};
     if(!p.outgoing.empty()){auto b=std::move(p.outgoing.front());p.outgoing.pop_front();p.outgoingBytes-=b.size();
