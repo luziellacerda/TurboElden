@@ -55,14 +55,12 @@ public final class VerifyScopedPartition {
                 !checksum.equals(properties.getProperty("donorSha256")) || !checksum.matches("[0-9a-f]{64}"))
             throw new IllegalStateException("Scope identity");
         Set<String> families=list(properties.getProperty("families"));
-        Set<String> expected=Set.of("Lorg/emulationstation/frontend/netplay/StationPsxLaunch;",
-                "Lorg/emulationstation/frontend/netplay/StationPsxPolicy;");
+        Set<String> expected=Set.of("Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo;");
         if (!partition.equals("classes35.dex") || !families.equals(expected))
-            throw new IllegalStateException("R172 two-family scope");
+            throw new IllegalStateException("R173 single-family scope");
         Scope scope=new Scope(partition,checksum,families,list(properties.getProperty("originalAllowed")),list(properties.getProperty("finalAllowed")));
-        if (!scope.originalAllowed.contains("Lorg/emulationstation/frontend/netplay/StationPsxLaunch;") ||
-                !scope.originalAllowed.contains("Lorg/emulationstation/frontend/netplay/StationPsxPolicy;") ||
-                !scope.finalAllowed.containsAll(expected)) throw new IllegalStateException("R172 owner roots");
+        if (!scope.originalAllowed.contains("Lorg/emulationstation/frontend/netplay/StationGamePlayerInfo;") ||
+                !scope.finalAllowed.containsAll(expected)) throw new IllegalStateException("R173 owner root");
         for (String type : scope.originalAllowed) if (!scope.belongs(type)) throw new IllegalStateException("Foreign original allowed type");
         for (String type : scope.finalAllowed) if (!scope.belongs(type)) throw new IllegalStateException("Foreign final allowed type");
         return scope;
