@@ -3,6 +3,7 @@ import java.util.*;
 import java.util.zip.ZipFile;
 import com.android.tools.smali.dexlib2.dexbacked.*;
 import com.android.tools.smali.dexlib2.iface.*;
+import com.android.tools.smali.dexlib2.iface.instruction.Instruction;
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction;
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference;
 
@@ -11,12 +12,18 @@ public final class CheckDexReferences {
     static String signature(MethodReference m) {
         return m.getName()+"("+String.join("",m.getParameterTypes())+")"+m.getReturnType();
     }
+    static List<Method> methods(ClassDef def) {
+        List<Method> result=new ArrayList<>();
+        for(Object m:def.getDirectMethods())result.add((Method)m);
+        for(Object m:def.getVirtualMethods())result.add((Method)m);
+        return result;
+    }
     static boolean has(ClassDef def,String signature,Map<String,ClassDef> all,Set<String> seen,boolean exact) {
         if(def==null || !seen.add(def.getType())) return false;
-        for(Method m:def.getMethods()) if(signature(m).equals(signature))return true;
+        for(Method m:methods(def)) if(signature(m).equals(signature))return true;
         if(exact)return false;
         if(has(all.get(def.getSuperclass()),signature,all,seen,false))return true;
-        for(String i:def.getInterfaces())if(has(all.get(i),signature,all,seen,false))return true;
+        for(Object i:def.getInterfaces())if(has(all.get(i),signature,all,seen,false))return true;
         return false;
     }
     static boolean externalParent(ClassDef def,Map<String,ClassDef> all,Set<String> seen) {
@@ -24,7 +31,7 @@ public final class CheckDexReferences {
         String p=def.getSuperclass();
         if(p!=null && !all.containsKey(p) && !p.equals("Ljava/lang/Object;"))return true;
         if(externalParent(all.get(p),all,seen))return true;
-        for(String i:def.getInterfaces())if(!all.containsKey(i)||externalParent(all.get(i),all,seen))return true;
+        for(Object i:def.getInterfaces())if(!all.containsKey(i)||externalParent(all.get(i),all,seen))return true;
         return false;
     }
     static boolean changed(String t) {
@@ -51,9 +58,10 @@ public final class CheckDexReferences {
         }
         if(partitions!=40)throw new IllegalStateException("Forty partitions required");
         int checked=0;
-        for(ClassDef def:all.values())if(changed(def.getType()))for(Method method:def.getMethods()){
+        for(ClassDef def:all.values())if(changed(def.getType()))for(Method method:methods(def)){
             if(method.getImplementation()==null)continue;
-            for(var instruction:method.getImplementation().getInstructions()){
+            for(Object entry:method.getImplementation().getInstructions()){
+                Instruction instruction=(Instruction)entry;
                 if(!(instruction instanceof ReferenceInstruction r) || !(r.getReference() instanceof MethodReference ref))continue;
                 String owner=ref.getDefiningClass();ClassDef target=all.get(owner);
                 if(target==null){

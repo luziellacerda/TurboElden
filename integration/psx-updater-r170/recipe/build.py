@@ -65,7 +65,7 @@ def freeze(revision,task):
 def compile_dex(task,sdk,revision):
     base=task/'inputs/TurboStations-Premium-R169-psx.apk'
     need(base.stat().st_size==BASE_SIZE and sha(base)==BASE_SHA,'Exact signed R169 required')
-    out=fresh(task/'compile');pins=freeze(revision,task)
+    pins=freeze(revision,task);out=fresh(task/'compile')
     module=REPO/'integration/secure-app-updates'
     run([sys.executable,module/'recipe/patch_sources.py','--source-dir',task/'inputs/client-current-sources','--out',out/'patched'],'%s/hooks.log'%out)
     # Real received production classpath and current panel/origin sources only.
