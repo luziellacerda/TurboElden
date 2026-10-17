@@ -39,6 +39,34 @@ def entry_sha(z,name):
 def belongs(t,names):return t.split('/')[-1].rstrip(';').split('$')[0] in names
 def projections(path):return {p.relative_to(path).as_posix():sha(p) for p in path.rglob('*.smali')}
 def descriptor(path):return 'L'+str(path).removesuffix('.smali')+';'
+def instruction_projection(raw):
+    # Smali rebuilds rename branch labels and move .line across a label at the
+    # same code address. Compare all other text and each label's actual target.
+    lines=[line.strip() for line in raw.splitlines()
+           if line.strip() and not line.strip().startswith('.line ')]
+    result=[]; section=[]
+    def normalized(block):
+        labels={};position=0;data=False;definitions=[]
+        for index,line in enumerate(block):
+            if re.fullmatch(r':[A-Za-z0-9_]+',line) and not data:
+                need(line not in labels,'Duplicate patched label');labels[line]=':target_'+str(position)
+                definitions.append(index)
+            else:position+=1
+            if line.startswith(('.packed-switch ','.sparse-switch ','.array-data ')):data=True
+            if line in ('.end packed-switch','.end sparse-switch','.end array-data'):data=False
+        def token(match):
+            value=match.group()
+            return value if value.startswith('"') else labels.get(value,value)
+        return [re.sub(r'"(?:\\.|[^"\\])*"|:[A-Za-z0-9_]+',token,line)
+                for index,line in enumerate(block) if index not in definitions]
+    for line in lines:
+        if line.startswith('.method '):
+            need(not section,'Nested method');section=[line]
+        elif section:
+            section.append(line)
+            if line=='.end method':result+=normalized(section);section=[]
+        else:result.append(line)
+    need(not section,'Unclosed patched method');return result
 def fresh(path):Path(path).mkdir(parents=True,exist_ok=False);return Path(path)
 
 def freeze(revision,task):
@@ -94,7 +122,7 @@ def compile_dex(task,sdk,revision):
     from patch_payload import patch
     before,after=patch(donor,decoded_rollback,decoded_overlay)
     need(all(belongs(descriptor(n),OWNERS) for n in before|after),'Delta escaped its named owners')
-    expected_changed={n:sha(donor/n) for n in after}
+    expected_changed={n:instruction_projection((donor/n).read_text()) for n in after}
     scope=out/(partition+'.scope')
     fields={'schema':'station.three-platforms.scoped-types.r180.v1','partition':partition,'donorSha256':pin,
             'families':'|'.join(sorted('Lorg/emulationstation/frontend/netplay/'+n+';' for n in OWNERS)),
@@ -108,7 +136,7 @@ def compile_dex(task,sdk,revision):
     run(['java','-cp',cp,'VerifyScopedPartition',base,partition,pin,decoded,scope],out/(partition+'-verify.log'))
     actual=projections(decoded);unchanged={n:h for n,h in original.items() if n not in before}
     need(set(actual)==(set(original)-before)|after and all(actual[n]==h for n,h in unchanged.items()),'Unrelated class changed')
-    need(all(actual[n]==h for n,h in expected_changed.items()),'DEX readback differs from reviewed patch')
+    need(all(instruction_projection((decoded/n).read_text())==v for n,v in expected_changed.items()),'DEX instructions or branch targets differ from reviewed patch')
     run(['java','-cp',cp,'CheckDexReferences',base,out],out/'final-references.log')
     with zipfile.ZipFile(base) as z:manifest=patch_manifest(z.read('AndroidManifest.xml'))
     (out/'AndroidManifest.xml').write_bytes(manifest)
