@@ -1,3 +1,67 @@
+<!-- STATION-GAMECUBE-R178-20261017 -->
+## R178: atualização corrigida; prioridade atual é testar GameCube
+
+A R176 instalada nos aparelhos falhava antes de baixar: `Files.getFileStore`
+lança `SecurityException` no Android. A reprodução USB nos Android 33 e 36
+confirmou isso e também o funcionamento de `File.getUsableSpace`. R178 troca
+somente essa consulta no worker, mantendo os controles e toda a lógica de
+autorização, assinatura, confirmação do Android e limpeza do APK temporário.
+Fonte: [implementação oficial do Android](https://android.googlesource.com/platform/prebuilts/fullsdk/sources/+/refs/heads/androidx-constraintlayout-release/android-35/sun/nio/fs/UnixFileSystemProvider.java).
+
+GameCube conserva integralmente a mudança R177: buffer compartilhado oito,
+CurrentRun 4 com leitura Active 3 antes da conexão; BufferSizeClient um e CPU
+normal da R173, anterior ao ensaio R174. Classes35.dex e os núcleos reais são
+idênticos à R177; PSX input8, N64, Wii e catálogo de 20 mil itens mantidos.
+Não há novo ajuste de CPU, resolução, clock ou frameskip.
+
+Fonte compilada `68012f759a56a607c910d570c0896fbcbe8c3cd1`; APK `0ceb4146bb031b923d101f0aba2773f8b10a6afc30222c16697664ae4c3b445c`,
+1.0.8-R178 / versionCode 20, certificado original e alinhamento de 16 KiB.
+Uma classe funcional alterada em classes28.dex; outras 297 classes da partição,
+39 DEX e 13.855 entradas preservadas. Kit `aad49ea86dec0694e706b609e6d7d60a11565216bba38f57b80924638ec104e6`.
+
+Servidor: 131 motores / 21.921 perfis / 13.472 modos; catálogo fresco 108 / 4.846
+preservado. As 507 decisões e os vínculos anteriores seguem exatos; quatro
+identidades novas, nenhum jogo ou modo inventado. O registro ultrapassava o
+antigo limite de 18 MiB; API, scanner e publisher agora concordam em 32 MiB,
+conservando os demais limites. São 1.472 verificações C# e 15 do publisher;
+o processo isolado carregou o registro real e os quatro owners. Houve um
+reinício controlado somente do Station, sem sala ativa. DLL `660839baf1d18167a96c78160b2a58cd3f5c44bb4ca50eaf718b9a1bb3bf99d4`.
+Rotas locais e públicas: 20 edições / 20 admissões / 28 recusas cada; relay
+sintético de quatro participantes e os outros três owners passaram.
+
+Autoridade concluída: `station-r178-update-storage-activation-20261017/reviewed-runtime/`:
+`completed.json`, `data-applied.json`, `update-published.json` e recibo de rollout.
+As recusas iniciais ocorreram antes do cadastro; a publicação foi retomada
+sozinha depois de alinhar seu limite de leitura. Não repetir cadastro, rollout
+ou operadores históricos. A configuração fresca do catálogo foi preservada.
+
+Ambos receberam a R178 por USB, com os bytes instalados conferidos; agora os dois estão na sucessora real R179 / versionCode 21, também conferida em cada telefone. UID e dados preservados. A R179 do console GBA conserva os 40 DEX da R178, incluindo GameCube com buffer oito e a correção do atualizador. Autoridade: station-r179-gba-console-usb-install-20261017/installed-verified-pair-gamecube.json.
+
+O atualizador real chegou a receber pelo menos 599 MiB da R178. O proprietário
+pediu interromper a transferência e usar USB devido à demora. Isso comprova a
+correção do início do download, sem declarar instalação completa pela rede ou
+remoção física do staging. A oferta geral R178 permanece ativa. Confirmação do
+Android continua obrigatória. O bootstrap privado foi apenas um ensaio do
+atualizador, nunca publicado, homologado para jogos ou promovido a estável.
+
+O proprietário pediu uma janela de atualização pequena, bonita e sem textos
+técnicos, depois adiou esse trabalho para voltar ao GameCube. Existe somente
+uma edição parcial, não compilada, de StationAppUpdateActivity no worktree
+`turboelden-station-update-ui-deferred-20261017`. Essa edição parcial não é a
+R179 real do console GBA; não compilar nem instalar a UI enquanto estiver adiada.
+
+Próximo teste: ambos na R179 real do console GBA; sala NOVA de Mario Kart: Double Dash!!,
+Motorola anfitrião / Samsung convidado, 2 jogadores → VS e corrida realmente
+iniciada com tela dividida. Captura preparada em `station-r179-gamecube-online-test-20261017`.
+O cadastro R179 já concluiu sem outro restart: 135 motores / 22.428 perfis /
+13.472 modos, catálogo 108 / 4.846 preservado. Autoridade separada:
+`station-r179-gba-console-activation-20261017/completed.json`. Não recadastrar.
+O atualizador geral continua oferecendo R178; R179 foi distribuída pela USB.
+Não declarar melhora de FPS ou velocidade até medir o relógio do jogo, as
+threads e as duas conexões nessa corrida. R172 estável e seu backup/tags seguem
+intocáveis. Consolidar resultados neste MESMO handoff e nos mesmos dois JSONs.
+<!-- END-STATION-GAMECUBE-R178-20261017 -->
+
 <!-- STATION-GAMECUBE-R177-20261017 -->
 ## GameCube R177: buffer de oito quadros cadastrado e atualização publicada
 
