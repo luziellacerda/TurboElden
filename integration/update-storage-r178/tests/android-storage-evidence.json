@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "observedUpdaterFailure": "SecurityException on both R176 apps",
+  "codeLocation": "StationAppUpdater.download: Files.getFileStore(root).getUsableSpace()",
+  "androidRuntimeResults": [
+    {
+      "phone": "moto_g52",
+      "oldStorageCallThrowsSecurityException": true,
+      "replacementStorageCallSucceeds": true,
+      "scope": "Real Android runtime under USB shell; no app-data access"
+    },
+    {
+      "phone": "SM_A566E",
+      "oldStorageCallThrowsSecurityException": true,
+      "replacementStorageCallSucceeds": true,
+      "scope": "Real Android runtime under USB shell; no app-data access"
+    }
+  ],
+  "source": "https://android.googlesource.com/platform/prebuilts/fullsdk/sources/+/refs/heads/androidx-constraintlayout-release/android-35/sun/nio/fs/UnixFileSystemProvider.java",
+  "androidSdks": [
+    33,
+    36
+  ],
+  "observedInstalledRevision": "R176",
+  "correctedRevision": "R178",
+  "didNotAccessPrivateAppFiles": true
+}

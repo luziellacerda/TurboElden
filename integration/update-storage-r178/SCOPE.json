@@ -1,0 +1,24 @@
+{
+  "revision": "R178",
+  "baseline": "Exact signed R177",
+  "functionalDelta": "Use Android-compatible File.getUsableSpace instead of blocked Files.getFileStore before APK download",
+  "changedClasses": [
+    "StationAppUpdater"
+  ],
+  "newClasses": [],
+  "gamecubePadBuffer": 8,
+  "gamecubeCpuPolicy": "R173 normal selection",
+  "unchanged": [
+    "all emulation policies",
+    "cores",
+    "controls",
+    "catalog capacity",
+    "update authentication",
+    "grant binding",
+    "signature verification",
+    "Android confirmation",
+    "staging cleanup"
+  ],
+  "stableR172Changed": false,
+  "physicalGameplayImprovementConfirmed": false
+}

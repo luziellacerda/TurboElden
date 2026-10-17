@@ -122,7 +122,7 @@ public final class StationAppUpdater {
             message="Conferindo atualização…";changed();
             Path file=StationAppUpdateFiles.cached(root,selected,cancel);cancel.check();
             long required=(file==null?selected.sizeBytes*2:selected.sizeBytes)+128L*1024*1024;
-            if(Files.getFileStore(root).getUsableSpace()<required)throw new IOException("UPDATE_STORAGE_FULL");
+            if(root.toFile().getUsableSpace()<required)throw new IOException("UPDATE_STORAGE_FULL");
             if(file==null){
                 message="Baixando atualização…";changed();
                 StationApi.Response response;
