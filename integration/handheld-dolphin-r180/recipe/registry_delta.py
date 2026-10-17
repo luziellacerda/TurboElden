@@ -45,10 +45,19 @@ def restore_dolphin_identity(identity):
     identity['platformOptions']['gamecube'] = gc.replace('padBuffer=8\n', 'padBuffer=5\n')
     del identity['gamecubePadBufferOverride']
 
+def gba_identity(core_sha256, runtime_sha256, options=OPTIONS):
+    # The registrar makes an engine ID immutable. Changing the runtime or its
+    # options must produce a successor ID even when the gpSP core is unchanged.
+    material = dict(coreSha256=core_sha256, runtimeSha256=runtime_sha256,
+                    options=options, controllerProfile=CONTROLLER,
+                    maximumPlayers=5, recoveryProtocol='station-stream.v3')
+    canonical = json.dumps(material, sort_keys=True, separators=(',', ':'), ensure_ascii=True).encode('ascii')
+    return 'gpsp-5819380c-gba-netpacket-v1-' + hashlib.sha256(canonical).hexdigest()[:12]
+
 def append_gba(registry, core_sha256, runtime_sha256):
     need(len(registry['engines']) == 13 and all(e['platform'] != 'gba' for e in registry['engines']),
          'Thirteen exact donor engines without an existing GBA online owner')
-    row = dict(engineId='gpsp-5819380c-gba-netpacket-v1-' + core_sha256[:12], platform='gba',
+    row = dict(engineId=gba_identity(core_sha256, runtime_sha256), platform='gba',
                backend='retroarch', library='libgpsp_station_online.so',
                extensions=['gba'], overlay='station-local/gba.cfg', options=OPTIONS,
                launchReady=True, license='GPL-2.0', sourceDirectory='gpsp-' + UPSTREAM,
