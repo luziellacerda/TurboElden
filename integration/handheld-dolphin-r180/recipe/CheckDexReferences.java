@@ -7,7 +7,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.Instruction;
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction;
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference;
 
-/** Check the actual final 40-partition view, including synthetic CAS targets. */
+/** Resolve changed-owner references against the actual final forty DEX files. */
 public final class CheckDexReferences {
     static String signature(MethodReference m) {
         return m.getName()+"("+String.join("",m.getParameterTypes())+")"+m.getReturnType();
@@ -36,7 +36,7 @@ public final class CheckDexReferences {
     }
     static boolean changed(String t) {
         String n=t.substring(t.lastIndexOf('/')+1).split("\\$",2)[0].replace(";", "");
-        return Set.of("StationAppUpdater","StationDolphinSession","StationDolphinBufferPolicy","StationDolphinLaunch","StationMultiplayerProfile","StationGamePlayerInfo","StationPsxLaunch","StationPsxPolicy").contains(n);
+        return Set.of("StationDolphinSession","StationDolphinBufferPolicy","StationDolphinLaunch","StationMultiplayerProfile","StationGamePlayerInfo","StationOnlinePlatformPolicy","StationRetroLaunch","StationGbaLinkPolicy").contains(n);
     }
     public static void main(String[] a)throws Exception {
         if(a.length!=2)throw new IllegalArgumentException("BASE_APK COMPILED_PARTITION_DIRECTORY");

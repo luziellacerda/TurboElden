@@ -10,7 +10,7 @@ import com.android.tools.smali.baksmali.Adaptors.ClassDefinition;
 import com.android.tools.smali.baksmali.BaksmaliOptions;
 import com.android.tools.smali.baksmali.formatter.BaksmaliWriter;
 
-/** Exact R179 donor projection; only the updater free-space call changes. */
+/** Exact R179 projection with an explicit three-platform class delta. */
 public final class VerifyScopedPartition {
     static final int MAX_DEX_BYTES = 16 * 1024 * 1024;
     static final class Scope {
@@ -22,7 +22,7 @@ public final class VerifyScopedPartition {
             this.originalAllowed=originalAllowed; this.finalAllowed=finalAllowed;
         }
         boolean belongs(String type) {
-            return type.equals("Lorg/emulationstation/frontend/station/StationAppUpdater;");
+            return originalAllowed.contains(type);
         }
         Set<String> finalTypes(Set<String> donor) {
             Set<String> result=new HashSet<>(donor);
@@ -47,19 +47,29 @@ public final class VerifyScopedPartition {
                 throw new IllegalArgumentException("Duplicate or malformed scope field");
         }
         if (!properties.stringPropertyNames().equals(Set.of("schema","partition","donorSha256","families","originalAllowed","finalAllowed")) ||
-                !"station.update-storage.scoped-types.r180.v1".equals(properties.getProperty("schema")) ||
+                !"station.three-platforms.scoped-types.r180.v1".equals(properties.getProperty("schema")) ||
                 !partition.equals(properties.getProperty("partition")) ||
                 !checksum.equals(properties.getProperty("donorSha256")) || !checksum.matches("[0-9a-f]{64}"))
             throw new IllegalStateException("Scope identity");
         Set<String> families=list(properties.getProperty("families"));
-        Set<String> expected=Set.of("Lorg/emulationstation/frontend/station/StationAppUpdater;");
-        if (!partition.equals("classes28.dex") || !families.equals(expected))
-            throw new IllegalStateException("R180 updater-storage scope");
+        String prefix="Lorg/emulationstation/frontend/netplay/";
+        Set<String> expected=new TreeSet<>();
+        for(String name: List.of("StationDolphinSession","StationDolphinLaunch","StationMultiplayerProfile",
+                "StationDolphinBufferPolicy","StationGamePlayerInfo","StationOnlinePlatformPolicy",
+                "StationRetroLaunch","StationGbaLinkPolicy")) expected.add(prefix+name+";");
+        if (!partition.equals("classes35.dex") || !families.equals(expected))
+            throw new IllegalStateException("R180 three-platform family scope");
         Scope scope=new Scope(partition,checksum,families,list(properties.getProperty("originalAllowed")),list(properties.getProperty("finalAllowed")));
-        if (!scope.originalAllowed.equals(expected) || !scope.finalAllowed.equals(expected))
-            throw new IllegalStateException("R180 exact existing updater owner");
-        for (String type : scope.originalAllowed) if (!scope.belongs(type)) throw new IllegalStateException("Foreign original allowed type");
-        for (String type : scope.finalAllowed) if (!scope.belongs(type)) throw new IllegalStateException("Foreign final allowed type");
+        Set<String> original=new TreeSet<>();
+        for(String name: List.of("StationDolphinSession$Session","StationDolphinLaunch","StationMultiplayerProfile",
+                "StationDolphinBufferPolicy","StationGamePlayerInfo","StationGamePlayerInfo$Participant",
+                "StationGamePlayerInfo$Position","StationGamePlayerInfo$RoomInfo","StationOnlinePlatformPolicy",
+                "StationRetroLaunch")) original.add(prefix+name+";");
+        Set<String> after=new TreeSet<>(original);
+        after.remove(prefix+"StationDolphinBufferPolicy;");
+        after.add(prefix+"StationGbaLinkPolicy;");
+        if(!scope.originalAllowed.equals(original) || !scope.finalAllowed.equals(after))
+            throw new IllegalStateException("R180 exact existing and final owners");
         return scope;
     }
     static byte[] readDonor(String apk, String partition, String checksum) throws Exception {
