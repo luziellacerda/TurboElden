@@ -1,3 +1,44 @@
+<!-- STATION-HOURLY-20261018-01Z -->
+## Manutenção 01h UTC de 18/10: entrega final R180 conciliada, ativação pendente
+
+A entrega final R180 foi recebida e conferida: app `f677d03a`, servidor
+`99774ac5`, kit `eabf6dc1` de 20.033.513 bytes, 82 arquivos/81 hashes e 29 ELF
+AArch64. Selo `b46ac6f8`: 110 inputs e 73 auxiliares íntegros. O código e o
+plano já estavam concluídos; este ciclo fez conferência e retorno documental.
+A projeção 140 motores/23.054 perfis/13.591 modos continua **não aplicada**.
+
+ExecStart e processo observados continuam R178/`660839ba`, PID 880193 e
+NRestarts=0; loopback informa 22.428 perfis e nenhuma sala/conexão/replay naquele
+instante. Cadastro R179 135/22.428/13.472 e catálogo 108/4.846 são a última
+autoridade protegida aplicada, não uma nova leitura integral deste ciclo.
+DLL, configuração e ferramentas protegidas recusaram leitura sem autenticação.
+Nenhuma janela foi aberta: o proprietário está ausente e pediu essa restrição.
+Oferta geral segue R178; última instalação conferida dos dois é R179/21.
+
+As duas branches de capas e o manifesto SNES `c78c2fed` continuam iguais;
+zero importações. Os três PNGs exatos continuam ausentes e as 20 artes sem
+edição correspondente permanecem retidas. Capas corretas/precedência USB/SNES,
+ROMs, saves, licenças, rede e outros produtos preservados. O scanner executou
+seu ciclo normal; não houve parada, publicação, restart ou prova histórica repetida.
+
+Backups `backup/station-before-hourly-20261018-01z` publicados e relidos nos dois
+Gits antes da edição. R172 estável e suas tags intactas. Recibo sanitizado em
+`online-plataformas-20261009/maintenance/20261018-01z/sanitized-receipt.json`;
+autoridade local `/mnt/DADOS/station-maintenance-20261018-01z`.
+
+Próximo: conciliar primeiro `started.json`, `publication-committed.json`,
+`data-applied.json`, `completed.json` e eventuais erros do pacote R180.
+Enquanto o proprietário estiver ausente, somente conferir novidades.
+Quando ele retornar, fora da lease do monitor e sem salas/transferências,
+validar o mesmo selo e autenticar nativamente a ativação preparada; ela deve
+obter baseline fresca, compartilhar scan.lock, parar só o timer do scanner,
+aguardar o oneshot e qualificar a entrega. Nunca reaplicar R179/R178.
+Depois dos cinco cadastros concluídos, mesma R180 autorizada nos dois aparelhos
+e testes físicos GBA/Wii/GameCube, saída/reentrada e temperatura. GameCube
+ainda sem melhora comprovada; PSX exige ledger HLE real e PS3/PS4 ficam offline.
+Monitor pai 980275 mantém maintenance.lock até receber o resultado final.
+<!-- END-STATION-HOURLY-20261018-01Z -->
+
 <!-- STATION-HOURLY-20261015-23Z -->
 # Ciclo23z: R168 conferida; R169 somente receitas, sem kit final recebido
 

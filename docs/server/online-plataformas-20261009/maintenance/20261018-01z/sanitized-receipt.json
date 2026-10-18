@@ -1,0 +1,257 @@
+{
+  "schema": "station.hourly-reconciliation.20261018-01z.v1",
+  "utc": "2026-10-18T01:06:31.938197+00:00",
+  "status": "partial",
+  "scope": "Final R180 receipt reconciliation, read-only checks and documentary return; no production activation",
+  "eventFingerprint": "1776623806404ac39f07d679a58aa0f923ae01685a810d591fd6d17e94a6b215",
+  "receivedFinalHandoff": true,
+  "newImplementationRequired": false,
+  "finalDeliveryAuthority": "/mnt/DADOS/station-handheld-dolphin-online-20261017/r180-delivery-completed.json",
+  "sourceRefs": {
+    "server": {
+      "ref": "refs/heads/fix/station-gba-wii-gamecube-r180-20261017",
+      "commit": "99774ac570ff267baff2d8322b364604846decde"
+    },
+    "app": {
+      "ref": "refs/heads/fix/station-gba-wii-gamecube-r180-20261017",
+      "commit": "f677d03a00de3134b1f0723952291d0f41fde45f"
+    },
+    "serverFinalAlsoCheckedOutsideConfiguredIncomingPrefixes": true
+  },
+  "remoteObservation": {
+    "utc": "2026-10-18T01:03:36.989040+00:00",
+    "repositories": [
+      {
+        "repository": "server",
+        "branchCount": 222,
+        "incomingChanges": []
+      },
+      {
+        "repository": "app",
+        "branchCount": 210,
+        "incomingChanges": []
+      },
+      {
+        "repository": "covers",
+        "branchCount": 2,
+        "incomingChanges": []
+      }
+    ]
+  },
+  "backups": {
+    "utc": "2026-10-18T01:03:36.989385+00:00",
+    "passed": true,
+    "backups": [
+      {
+        "repository": "server",
+        "ref": "refs/heads/backup/station-before-hourly-20261018-01z",
+        "commit": "99774ac570ff267baff2d8322b364604846decde",
+        "remoteReadbackVerified": true,
+        "stableR172Unchanged": true
+      },
+      {
+        "repository": "app",
+        "ref": "refs/heads/backup/station-before-hourly-20261018-01z",
+        "commit": "f677d03a00de3134b1f0723952291d0f41fde45f",
+        "remoteReadbackVerified": true,
+        "stableR172Unchanged": true
+      }
+    ],
+    "productionMutation": false
+  },
+  "r180": {
+    "apkSourceCommit": "a8a27c18131f7a358b8ce365ee3114ee3154efca",
+    "serverSourceCommit": "b790dd9517c2e19eaf4bbb6f85a8e571e209b112",
+    "apkSha256": "1e298c3ef0f9e581d7f3f0ffee012ed8fe052c73322cd1e7d67953a41d896e6a",
+    "kitSha256": "eabf6dc1ff11920dd1d82416675c8d855d285c14efeec2690a2b194452890cbc",
+    "kitBytes": 20033513,
+    "fileCount": 82,
+    "fileHashesVerified": 81,
+    "elfAarch64Count": 29,
+    "engineIds": {
+      "psx": "pcsx-rearmed-ff81ed17-player-v3-92f2370a8b09",
+      "n64": "mupen64plus-ae-33bf7021-n64-v3-1cc2cb9f31b9",
+      "gamecube": "dolphin-5102a033-gamecube-v3-90113bad5e9d",
+      "wii": "dolphin-5102a033-wii-v3-90113bad5e9d",
+      "gba": "gpsp-5819380c-gba-netpacket-v1-8333f19f9272"
+    },
+    "sealSha256": "b46ac6f896bb736a9e1a20a21cb2dff3aa6e86060efa8ef6e9f26e82474e21e9",
+    "sealedInputCount": 110,
+    "externalHelpersVerified": 73,
+    "wholeApkRehashedThisCycle": false,
+    "originalSignatureProofReconciled": true,
+    "preparedBefore": {
+      "engines": 135,
+      "profiles": 22428,
+      "modes": 13472,
+      "catalogRevision": 108,
+      "catalogItems": 4846
+    },
+    "preparedAfter": {
+      "engines": 140,
+      "profiles": 23054,
+      "modes": 13591,
+      "catalogRevision": 108,
+      "catalogItems": 4846
+    },
+    "inheritedDecisionsPreserved": 507,
+    "operationReceipts": {
+      "started.json": false,
+      "publication-committed.json": false,
+      "data-applied.json": false,
+      "completed.json": false,
+      "rolled-back.json": false
+    },
+    "serverApplied": false,
+    "installed": false,
+    "updaterPublished": false,
+    "physicalGameplayValidated": false,
+    "productionProofsRepeated": false
+  },
+  "production": {
+    "apiPid": 880193,
+    "apiNRestarts": 0,
+    "execStart": "{ path=/usr/bin/dotnet ; argv[]=/usr/bin/dotnet /opt/turborama-station-r178-profile-capacity-20261017-660839baf1d1/TurboRamaSuiteOnlineServer.dll ; ignore_errors=no ; start_time=[Sat 2026-10-17 18:51:58 -03] ; stop_time=[n/a] ; pid=880193 ; code=(null) ; status=0/0 }",
+    "workingDirectory": "/opt/turborama-station-r178-profile-capacity-20261017-660839baf1d1",
+    "expectedCurrentDllSha256": "660839baf1d18167a96c78160b2a58cd3f5c44bb4ca50eaf718b9a1bb3bf99d4",
+    "expectedCurrentDllSource": "Existing R178 applied authority; direct protected read denied this cycle",
+    "candidateDllSha256": "acce8dd2745f4806076c62695f91b5c970f602430b428ce80f7b3c449ec545f3",
+    "effectiveBinaryHashFreshlyRead": false,
+    "protectedConfigurationFreshlyRead": false,
+    "protectedReadResults": {
+      "checked": 37,
+      "read": 1,
+      "denied": 36
+    },
+    "registeredRevisionFromExistingAuthority": "R179",
+    "enginesFromExistingAuthority": 135,
+    "profilesObservedOnLoopback": 22428,
+    "modesFromExistingAuthority": 13472,
+    "lastVerifiedCatalogRevision": 108,
+    "lastVerifiedCatalogItems": 4846,
+    "generalUpdaterRevisionFromExistingAuthority": "R178",
+    "lastVerifiedInstalledPhoneRevision": "R179/21",
+    "phonesInspectedThisCycle": false
+  },
+  "liveChecks": {
+    "utc": "2026-10-18T01:04:31.856750+00:00",
+    "endpoints": [
+      {
+        "path": "/health",
+        "status": 200,
+        "responseBytes": 47,
+        "milliseconds": 2.868,
+        "numericAndBooleanFieldsOnly": {}
+      },
+      {
+        "path": "/ready/station/online",
+        "status": 200,
+        "responseBytes": 514,
+        "milliseconds": 19.141,
+        "numericAndBooleanFieldsOnly": {
+          "maximumRooms": 512,
+          "maximumConnections": 1024,
+          "activeRooms": 0,
+          "activeConnections": 0,
+          "forwardedBytes": 0,
+          "recovery": {
+            "maximumRooms": 64,
+            "windowBytes": 262144,
+            "retainedRooms": 0,
+            "activeConnections": 0,
+            "pendingBytes": 0,
+            "maximumRetainedBytes": 33554432,
+            "persistent": false
+          },
+          "multiplayer": {
+            "maximumPlayers": 5,
+            "maximumRooms": 100,
+            "activeRooms": 0,
+            "activeConnections": 0,
+            "approvedProfiles": 22122,
+            "profileCount": 22428,
+            "retainedBytes": 0,
+            "maximumRetainedBytes": 134217728
+          }
+        }
+      },
+      {
+        "path": "/ready/station/online/multiplayer-diagnostics",
+        "status": 200,
+        "responseBytes": 192,
+        "milliseconds": 1.121,
+        "numericAndBooleanFieldsOnly": {
+          "schemaVersion": 1,
+          "activeRooms": 0,
+          "activeConnections": 0,
+          "retainedBytes": 0,
+          "maximumRetainedBytes": 134217728
+        }
+      }
+    ],
+    "signedCatalogOrCapabilitiesReplayed": false,
+    "syntheticLicensesCreated": false
+  },
+  "covers": {
+    "utc": "2026-10-18T01:04:31.800092+00:00",
+    "manifestSha256": "c78c2fed7eb724347896dd9b8ae92f566a5bd113c379521fc8dbedff7cc48f05",
+    "manifestRows": 1003,
+    "requiredMissingOriginals": [
+      {
+        "title": "Fighter's History",
+        "sourceFile": "capas/FIGHTER_S_HISTORY_4K.png",
+        "present": false
+      },
+      {
+        "title": "FIFA International Soccer",
+        "sourceFile": "capas/FIFA_INTERNATIONAL_SOCCER_4K.png",
+        "present": false
+      },
+      {
+        "title": "FIFA Soccer 96",
+        "sourceFile": "capas/FIFA_SOCCER_96_4K.png",
+        "present": false
+      }
+    ],
+    "importedCovers": 0,
+    "productionCoversChanged": false,
+    "romsReadCopiedRehashedOrRebuilt": false,
+    "previousUnmatchedArtworksRetained": 20,
+    "sourceAuthority": "station-maintenance-20261015-13z/covers-pending.json",
+    "main": "5c6cc32c06e6944b9258df36ffdb846baa368a7f",
+    "superNintendo": "9f85e9df1ec0c82d77156ed072b997855f719288",
+    "remoteRefsUnchanged": true,
+    "manifestUnchanged": true
+  },
+  "actions": {
+    "dataPublished": false,
+    "enginesRegistered": false,
+    "apiRestarted": false,
+    "gamesInterrupted": false,
+    "scannerTimerStopped": false,
+    "scannerInvoked": false,
+    "apkModifiedOrInstalled": false,
+    "historicalOperatorMainExecuted": false,
+    "networkChanged": false,
+    "linuxAuthenticationRequested": false,
+    "newAutomationsCreated": false,
+    "externalMessagesSent": false,
+    "subagentsRequested": false
+  },
+  "maintenanceLock": {
+    "utc": "2026-10-18T01:04:31.917488+00:00",
+    "owner": "existing parent monitor",
+    "parentPid": 980275,
+    "held": true,
+    "notReleasedByChild": true,
+    "willRemainHeldUntilParentReceivesFinalResult": true
+  },
+  "pending": [
+    "R180 final recebida e selo/kit conferidos; ativação Linux ainda não realizada. O proprietário está ausente e determinou não abrir janelas de senha. Ao retornar, conciliar os recibos R180, liberar a lease do monitor, autenticar nativamente e obter baseline protegida fresca antes de aplicar o plano selado; não repetir R179/R178.",
+    "Depois do cadastro R180 concluído, instalar a mesma revisão autorizada nos dois telefones preservando dados e verificar link GBA, periféricos Wii, corrida GameCube comparável, saída/reentrada e temperatura. A lentidão GameCube não está comprovadamente resolvida.",
+    "Restaurar somente o ajuste USB original de tela do Samsung quando a mesma USB autorizada voltar e o teste terminar, preservando eventual alteração intencional posterior. Moto já restaurado.",
+    "Capas: faltam os PNGs exatos de Fighter's History, FIFA International Soccer e FIFA Soccer 96; 20 artes continuam sem edição instalada correspondente. Não importar por aproximação.",
+    "UI compacta e piloto completo de atualização pela rede continuam adiados pelo proprietário; oferta geral R178. Instalação integral pela rede e remoção física do APK temporário não comprovadas.",
+    "Preservar cobertura pendente por edição, 17 modos PSX impedidos e ledger HLE real, sinopses/campos editoriais, N64 em três/quatro Android e saída física não homologados, HTTP502 histórico sem causa estabelecida. PS3/PS4 somente offline; R172 estável intocada."
+  ]
+}
