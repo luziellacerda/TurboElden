@@ -1,3 +1,65 @@
+<!-- STATION-GBA-WII-GAMECUBE-R180-20261017 -->
+## R180 preparada: GBA, Wii, retorno do GameCube e auditoria final
+
+**Candidata compilada e qualificada; ainda não ativada ou instalada.** O proprietário
+está ausente e pediu preparo sem janelas de senha. O Linux continua exigindo
+autenticação para os cadastros protegidos. Nenhuma janela foi aberta. Produção
+permanece na API R178/DLL660839ba, PID880193, com cadastro R179 135/22.428/13.472.
+Oferta geral R178; última instalação conferida dos dois telefones é R179/21.
+
+Fonte APK `a8a27c18131f7a358b8ce365ee3114ee3154efca`; 1.0.8-R180/22,
+SHA `1e298c3ef0f9e581d7f3f0ffee012ed8fe052c73322cd1e7d67953a41d896e6a`.
+Fonte servidor `b790dd9517c2e19eaf4bbb6f85a8e571e209b112`, DLL Release
+`acce8dd2745f4806076c62695f91b5c970f602430b428ce80f7b3c449ec545f3`.
+Kit `eabf6dc1ff11920dd1d82416675c8d855d285c14efeec2690a2b194452890cbc`.
+Commits posteriores de documentação não mudam essas fontes congeladas.
+
+GameCube: R179 realmente foi medida em corrida de dois visores; relógio ~67% do
+real e proprietário rejeitou o ensaio de oito quadros. R180 restaura o estado
+R173/R176 com buffer cinco/client um, CPU normal. Não há novo ajuste de CPU,
+renderer, resolução, clock ou frameskip. A lentidão original ainda não está
+comprovadamente resolvida. PSX input8, N64, núcleos antigos, capacidade 20mil,
+correção do atualizador e foto do console GBA da R179 foram preservados.
+
+GBA: núcleo gpSP oficial fixado em5819380c, link de consoles independentes com
+P1 local em cada celular, saves online próprios persistentes. Todas as 99
+edições reais mapeadas: **10 têm link implementado pelo núcleo**, 25 modos,
+40 combinações de lotação; as outras89 têm recusa explícita de link. Isso não
+as classifica como jogos individuais. Não existe aprovação automática por pasta.
+Wii: sete edições revistas, oito decisões e 13 combinações; controles/movimento,
+Nunchuk e Co-Star descritos por modo. Corrigida a apresentação do perfil Wii
+verificado que o app mostrava como pendente. GameCube: 21 registros/20 visíveis,
+24 decisões, nove jogos multiplayer/dez modos. Integração GameCube↔GBA segue
+explicitamente indisponível; GBA independente não implementa esse cabo.
+
+Projeção pronta:140 motores/23.054 perfis/13.591 modos. Todos os registros e as
+507 decisões herdadas preservados. Leitor de modos de manutenção9→12MiB para o
+arquivo real de9.463.592bytes; limite16mil modos/32MiB de perfis mantidos.
+Teste completo com metadados reais:20.396 verificações,626 consultas de perfis,
+618 admissões e626 recusas esperadas, sem sala/replay retido. Regressões C#,
+TLS/WSS para2–5 participantes, PostgreSQL descartável com papel real da API e
+17 rotas Station passaram no escopo documentado. A prova local não é gameplay Android.
+
+Comparação integral:20.350 entradas do backup estável conferidas; nenhum núcleo
+antigo alterado. Contra R179:13.855 entradas/39DEX exatos, seis substituições e
+duas adições. Contra R172:13.852 entradas/38DEX exatos; diferenças herdadas da
+capacidade20mil, atualizador e foto GBA identificadas. Nenhum worker Java ou
+serviço de fundo acrescentado; testes terminaram sem processos próprios soltos.
+Não há prova térmica R180: zero aparelhos disponíveis ao fechar esta etapa.
+
+Continuar neste MESMO handoff e nos dois JSONs GameCube. Ver README do GameCube,
+`r180-edition-map.json` e `r180-final-audit.json`. Pacote pronto e selado em
+`/mnt/DADOS/station-r180-gba-wii-gamecube-activation-20261017`, validação sem root
+aprovada; contém operador de ativação/retorno, backup fresco, prova sombra e
+conferência local/pública. Não repetir R179/R178 ou instalar antes de cadastrar
+os cinco IDs exatos. Nenhuma publicação R180 no atualizador, restart de produção,
+migration ou mudança de rede foi feita. R172 estável/backup/tags preservados.
+Ao retornar: uma autenticação Linux para aplicar; depois mesma R180 nos dois e
+provas físicas GBA/Wii/GameCube, saída/reentrada e temperatura. Ajuste USB de tela
+Moto já restaurado; Samsung pendente quando reconectar (não declarar resolvido).
+UI compacta e download do atualizador continuam adiados pelo proprietário.
+<!-- END-STATION-GBA-WII-GAMECUBE-R180-20261017 -->
+
 <!-- STATION-GBA-PS4-R179-20261017 -->
 ## R179: foto do GBA ao lado da sinopse e biblioteca PS4 publicadas
 
